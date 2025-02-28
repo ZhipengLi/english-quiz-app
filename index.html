@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>English Vocabulary Quiz</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 100%;
+      width: 800px;
+      margin: 0 auto;
+      padding: 15px;
+      background-color: #f5f5f5;
+      touch-action: manipulation;
+    }
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+    }
+    .nav-bar {
+      background-color: #2c3e50;
+      padding: 8px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: flex-start;
+      gap: 12px;
+      flex-wrap: wrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .nav-bar a {
+      color: white;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+    .nav-bar a:hover {
+      background-color: #3498db;
+    }
+    .nav-bar a.active {
+      background-color: #3498db;
+    }
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .container {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 768px) {
+      .container {
+        padding: 12px;
+      }
+    }
+    textarea {
+      width: 100%;
+      height: 180px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+      resize: vertical;
+      margin-bottom: 10px;
+      -webkit-appearance: none;
+    }
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 12px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      transition: background-color 0.2s;
+      touch-action: manipulation;
+      -webkit-appearance: none;
+      min-height: 44px; /* Apple's recommended minimum touch target size */
+    }
+    @media (max-width: 768px) {
+      button {
+        padding: 10px 12px;
+        font-size: 15px;
+        margin-right: 6px;
+        margin-bottom: 8px;
+        width: calc(50% - 6px);
+      }
+    }
+    @media (max-width: 480px) {
+      button {
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    .quiz-container {
+      margin-top: 20px;
+    }
+    .quiz {
+      margin-bottom: 30px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      background-color: #f9f9f9;
+    }
+    .sentence {
+      margin-bottom: 15px;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+    .dropzone {
+      display: inline-block;
+      width: 120px;
+      height: 30px;
+      border: 2px dashed #3498db;
+      border-radius: 4px;
+      background-color: #e8f4fc;
+      vertical-align: middle;
+      transition: all 0.2s;
+    }
+    .dropzone.highlight {
+      background-color: #d6eaf8;
+      border-color: #2980b9;
+    }
+    .dropzone.correct {
+      background-color: #d4edda;
+      border-color: #28a745;
+    }
+    .dropzone.incorrect {
+      background-color: #f8d7da;
+      border-color: #dc3545;
+    }
+    .words-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+      min-height: 40px;
+      padding: 10px;
+      border: 1px solid #eee;
+      border-radius: 4px;
+      background-color: white;
+    }
+    .word {
+      display: inline-block;
+      padding: 6px 12px;
+      background-color: #3498db;
+      color: white;
+      border-radius: 20px;
+      cursor: grab;
+      user-select: none;
+      transition: transform 0.1s;
+    }
+    .word:hover {
+      transform: scale(1.05);
+    }
+    .word.dragging {
+      opacity: 0.5;
+    }
+    .status {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 768px) {
+      .navigation {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .navigation button {
+        width: 48%;
+        margin: 0 1% 8px 1%;
+      }
+    }
+    .progress {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #2c3e50;
+      width: 100%;
+      margin: 8px 0;
+    }
+    .quiz-selection {
+      margin: 0 10px;
+      width: 100%;
+      max-width: 300px;
+    }
+    @media (max-width: 768px) {
+      .quiz-selection {
+        margin: 8px 0;
+        max-width: 100%;
+      }
+    }
+    .quiz-selection select {
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      background-color: white;
+      width: 100%;
+      height: 44px;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 1em;
+    }
+    .intro-screen {
+      text-align: center;
+    }
+    .results-screen {
+      text-align: center;
+    }
+    .score {
+      font-size: 24px;
+      margin: 20px 0;
+      color: #2c3e50;
+    }
+    @media (max-width: 600px) {
+      .dropzone {
+        width: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-bar">
+    <a href="index.html" class="active">Vocabulary Quiz</a>
+    <a href="another-quiz.html">Another Quiz</a>
+    <a href="third-quiz.html">Third Quiz</a>
+  </div>
+  
+  <h1>English Vocabulary Quiz</h1>
+  
+  <div id="material-screen" class="container">
+    <h2>Enter Quiz Materials</h2>
+    <p>Paste your text below. Words for the quiz should be in brackets like: (word).</p>
+    <p>Each paragraph will create one separate quiz.</p>
+    <textarea id="material-input" placeholder="Example: The cat (jumped) over the (fence). The dog (barked) loudly. Or paste a URL to load content."></textarea>
+    <div>
+      <button id="start-quiz">Start Quiz</button>
+      <button id="load-sample">Load Sample</button>
+      <button id="load-from-url" style="display: none;">Load From URL</button>
+      <button id="load-from-input-url" style="display: none;">Load From This URL</button>
+    </div>
+    <div id="url-info" style="margin-top: 10px; display: none;">
+      <p>URL to load: <span id="url-display"></span></p>
+    </div>
+    <div id="input-url-info" style="margin-top: 10px; display: none;">
+      <p>URL detected in input. Click "Load From This URL" to fetch content.</p>
+    </div>
+  </div>
+  
+  <div id="quiz-screen" class="container" style="display: none;">
+    <div id="quiz-container" class="quiz-container"></div>
+    <div class="navigation">
+      <button id="prev-quiz" disabled>Previous</button>
+      <div class="quiz-selection">
+        <select id="quiz-dropdown"></select>
+      </div>
+      <div id="progress" class="progress">Quiz 1 of 1</div>
+      <button id="next-quiz" disabled>Next</button>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+      <button id="check-answers">Check Answers</button>
+      <button id="reset-quiz">Reset</button>
+      <button id="new-material">New Material</button>
+      <button id="translate-quiz">Translate to Chinese</button>
+    </div>
+  </div>
+  
+  <div id="results-screen" class="container results-screen" style="display: none;">
+    <h2>Quiz Results</h2>
+    <div id="score" class="score"></div>
+    <p>Great job practicing your English vocabulary!</p>
+    <button id="restart-quiz">Try Again</button>
+    <button id="new-material-from-results">Try New Material</button>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // DOM elements
+      const materialScreen = document.getElementById('material-screen');
+      const quizScreen = document.getElementById('quiz-screen');
+      const resultsScreen = document.getElementById('results-screen');
+      const materialInput = document.getElementById('material-input');
+      const quizContainer = document.getElementById('quiz-container');
+      const progressDisplay = document.getElementById('progress');
+      const scoreDisplay = document.getElementById('score');
+      const urlInfoDiv = document.getElementById('url-info');
+      const inputUrlInfoDiv = document.getElementById('input-url-info');
+      const urlDisplay = document.getElementById('url-display');
+      const quizDropdown = document.getElementById('quiz-dropdown');
+      
+      // Buttons
+      const startQuizBtn = document.getElementById('start-quiz');
+      const loadSampleBtn = document.getElementById('load-sample');
+      const loadFromUrlBtn = document.getElementById('load-from-url');
+      const loadFromInputUrlBtn = document.getElementById('load-from-input-url');
+      const prevQuizBtn = document.getElementById('prev-quiz');
+      const nextQuizBtn = document.getElementById('next-quiz');
+      const checkAnswersBtn = document.getElementById('check-answers');
+      const resetQuizBtn = document.getElementById('reset-quiz');
+      const newMaterialBtn = document.getElementById('new-material');
+      const translateQuizBtn = document.getElementById('translate-quiz');
+      const restartQuizBtn = document.getElementById('restart-quiz');
+      const newMaterialFromResultsBtn = document.getElementById('new-material-from-results');
+      
+      // Quiz state
+      let quizzes = [];
+      let currentQuizIndex = 0;
+      let contentUrl = null;
+      let lastSavedMaterial = '';
+      
+      // Cookie helper functions
+      function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = name + "=" + encodeURIComponent(value) + ";" + expires + ";path=/";
+      }
+      
+      function getCookie(name) {
+        const decodedCookie = decodeURIComponent(document.cookie);
+        const cookies = decodedCookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+          let cookie = cookies[i].trim();
+          if (cookie.indexOf(name + "=") === 0) {
+            return cookie.substring(name.length + 1);
+          }
+        }
+        return "";
+      }
+      
+      // Load saved material from cookies if available
+      function loadSavedMaterial() {
+        const savedMaterial = getCookie('quizMaterial');
+        if (savedMaterial) {
+          materialInput.value = savedMaterial;
+          lastSavedMaterial = savedMaterial;
+        }
+      }
+      
+      // Save material to cookies
+      function saveMaterial(material) {
+        setCookie('quizMaterial', material, 30); // Save for 30 days
+        lastSavedMaterial = material;
+      }
+      
+      // Parse input text to create quizzes
+      function parseQuizMaterial(text) {
+        const paragraphs = text.split(/\n+/).filter(p => p.trim() !== '');
+        
+        return paragraphs.map(paragraph => {
+          const quizWords = [];
+          let processedText = paragraph;
+          
+          // Extract words in brackets and replace them with dropzones
+          const regex = /\(([^)]+)\)/g;
+          let match;
+          let index = 0;
+          
+          while ((match = regex.exec(paragraph)) !== null) {
+            quizWords.push({
+              word: match[1],
+              originalPosition: index
+            });
+            index++;
+          }
+          
+          // Replace bracketed words with dropzones
+          processedText = processedText.replace(regex, '___');
+          
+          return {
+            originalText: paragraph,
+            processedText: processedText,
+            quizWords: quizWords,
+            userAnswers: Array(quizWords.length).fill(null)
+          };
+        });
+      }
+      
+      // Update quiz dropdown
+      function updateQuizDropdown() {
+        quizDropdown.innerHTML = '';
+        
+        quizzes.forEach((quiz, index) => {
+          const option = document.createElement('option');
+          option.value = index;
+          
+          // Get the first 30 characters of the quiz as preview text
+          let previewText = quiz.processedText.replace(/___/g, '___').substring(0, 30);
+          if (quiz.processedText.length > 30) {
+            previewText += '...';
+          }
+          
+          option.textContent = `Quiz ${index + 1}: ${previewText}`;
+          quizDropdown.appendChild(option);
+        });
+        
+        quizDropdown.value = currentQuizIndex;
+      }
+      
+      // Create and display the current quiz
+      function displayCurrentQuiz() {
+        if (quizzes.length === 0) return;
+        
+        const currentQuiz = quizzes[currentQuizIndex];
+        quizContainer.innerHTML = '';
+        
+        // Create quiz element
+        const quizElement = document.createElement('div');
+        quizElement.className = 'quiz';
+        
+        // Create sentence with dropzones
+        const sentenceElement = document.createElement('div');
+        sentenceElement.className = 'sentence';
+        
+        let sentenceHtml = currentQuiz.processedText;
+        sentenceHtml = sentenceHtml.replace(/___/g, '<span class="dropzone" data-index="$&"></span>');
+        
+        // Replace placeholder indices with actual indices
+        let dropzoneIndex = 0;
+        sentenceHtml = sentenceHtml.replace(/data-index="___"/g, function() {
+          return `data-index="${dropzoneIndex++}"`;
+        });
+        
+        sentenceElement.innerHTML = sentenceHtml;
+        quizElement.appendChild(sentenceElement);
+        
+        // Create word bank
+        const wordsContainer = document.createElement('div');
+        wordsContainer.className = 'words-container';
+        
+        // Shuffle words
+        const shuffledWords = [...currentQuiz.quizWords].sort(() => Math.random() - 0.5);
+        
+        shuffledWords.forEach((wordObj, index) => {
+          const wordElement = document.createElement('div');
+          wordElement.className = 'word';
+          wordElement.textContent = wordObj.word;
+          wordElement.setAttribute('draggable', 'true');
+          wordElement.setAttribute('data-word', wordObj.word);
+          wordElement.setAttribute('data-original-position', wordObj.originalPosition);
+          
+          // Check if this word is already placed in a dropzone
+          const placedDropzoneIndex = currentQuiz.userAnswers.findIndex(answer => 
+            answer && answer.word === wordObj.word);
+          
+          if (placedDropzoneIndex !== -1) {
+            wordElement.style.display = 'none';
+          }
+          
+          // Setup drag events
+          wordElement.addEventListener('dragstart', handleDragStart);
+          
+          // Setup click event
+          wordElement.addEventListener('click', handleWordClick);
+          
+          wordsContainer.appendChild(wordElement);
+        });
+        
+        quizElement.appendChild(wordsContainer);
+        
+        // Create status display
+        const statusElement = document.createElement('div');
+        statusElement.className = 'status';
+        statusElement.id = 'status';
+        quizElement.appendChild(statusElement);
+        
+        quizContainer.appendChild(quizElement);
+        
+        // Initialize dropzones
+        const dropzones = document.querySelectorAll('.dropzone');
+        dropzones.forEach((dropzone, index) => {
+          dropzone.addEventListener('dragover', handleDragOver);
+          dropzone.addEventListener('dragleave', handleDragLeave);
+          dropzone.addEventListener('drop', handleDrop);
+          dropzone.addEventListener('click', handleFilledDropzoneClick);
+          
+          // If there's a user answer for this dropzone, display it
+          if (currentQuiz.userAnswers[index]) {
+            dropzone.textContent = currentQuiz.userAnswers[index].word;
+            dropzone.setAttribute('data-filled', 'true');
+            dropzone.setAttribute('data-word', currentQuiz.userAnswers[index].word);
+          }
+        });
+        
+        // Update progress display
+        updateProgress();
+        
+        // Update quiz dropdown
+        updateQuizDropdown();
+        
+        // Update navigation buttons
+        prevQuizBtn.disabled = currentQuizIndex === 0;
+        nextQuizBtn.disabled = currentQuizIndex === quizzes.length - 1;
+      }
+      
+      // Update progress display
+      function updateProgress() {
+        progressDisplay.textContent = `Quiz ${currentQuizIndex + 1} of ${quizzes.length}`;
+      }
+      
+      // Drag and drop handlers
+      function handleDragStart(e) {
+        e.dataTransfer.setData('text/plain', e.target.getAttribute('data-word'));
+        e.dataTransfer.setData('original-position', e.target.getAttribute('data-original-position'));
+        e.target.classList.add('dragging');
+      }
+      
+      function handleDragOver(e) {
+        e.preventDefault();
+        if (!this.getAttribute('data-filled')) {
+          this.classList.add('highlight');
+        }
+      }
+      
+      function handleDragLeave(e) {
+        this.classList.remove('highlight');
+      }
+      
+      function handleDrop(e) {
+        e.preventDefault();
+        this.classList.remove('highlight');
+        
+        const word = e.dataTransfer.getData('text/plain');
+        const originalPosition = e.dataTransfer.getData('original-position');
+        const dropzoneIndex = parseInt(this.getAttribute('data-index'));
+        
+        // If dropzone is already filled, do nothing
+        if (this.getAttribute('data-filled')) return;
+        
+        // Place word in dropzone
+        placeWordInDropzone(word, originalPosition, dropzoneIndex);
+      }
+      
+      // Click handlers for words and dropzones
+      function handleWordClick(e) {
+        const word = e.target.getAttribute('data-word');
+        const originalPosition = e.target.getAttribute('data-original-position');
+        
+        // Find the first empty dropzone
+        const emptyDropzone = document.querySelector('.dropzone:not([data-filled])');
+        if (emptyDropzone) {
+          const dropzoneIndex = parseInt(emptyDropzone.getAttribute('data-index'));
+          placeWordInDropzone(word, originalPosition, dropzoneIndex);
+        }
+      }
+      
+      function handleFilledDropzoneClick(e) {
+        if (e.target.hasAttribute('data-filled')) {
+          const word = e.target.getAttribute('data-word');
+          const dropzoneIndex = parseInt(e.target.getAttribute('data-index'));
+          
+          // Remove word from dropzone
+          e.target.textContent = '';
+          e.target.removeAttribute('data-filled');
+          e.target.removeAttribute('data-word');
+          
+          // Show the word back in the word bank
+          const wordElements = document.querySelectorAll(`.word[data-word="${word}"]`);
+          wordElements.forEach(wordElement => {
+            if (wordElement.style.display === 'none') {
+              wordElement.style.display = 'inline-block';
+              return;
+            }
+          });
+          
+          // Update the user answers
+          quizzes[currentQuizIndex].userAnswers[dropzoneIndex] = null;
+          
+          // Clear status
+          document.getElementById('status').textContent = '';
+        }
+      }
+      
+      // Common function to place word in dropzone
+      function placeWordInDropzone(word, originalPosition, dropzoneIndex) {
+        const dropzone = document.querySelector(`.dropzone[data-index="${dropzoneIndex}"]`);
+        
+        // Place word in dropzone
+        dropzone.textContent = word;
+        dropzone.setAttribute('data-filled', 'true');
+        dropzone.setAttribute('data-word', word);
+        
+        // Hide the word
+        const wordElement = document.querySelector(`.word[data-word="${word}"]:not([style*="display: none"])`);
+        if (wordElement) {
+          wordElement.style.display = 'none';
+        }
+        
+        // Save the answer
+        quizzes[currentQuizIndex].userAnswers[dropzoneIndex] = {
+          word: word,
+          originalPosition: parseInt(originalPosition)
+        };
+        
+        // Clear status
+        document.getElementById('status').textContent = '';
+      }
+      
+      // Check answers
+      function checkAnswers() {
+        const currentQuiz = quizzes[currentQuizIndex];
+        const dropzones = document.querySelectorAll('.dropzone');
+        let allCorrect = true;
+        let correctCount = 0;
+        
+        dropzones.forEach((dropzone, index) => {
+          const userAnswer = currentQuiz.userAnswers[index];
+          
+          // Skip empty dropzones
+          if (!userAnswer) {
+            allCorrect = false;
+            return;
+          }
+          
+          // Check if the word is in the correct position
+          const expectedWord = currentQuiz.quizWords.find(w => w.originalPosition === index);
+          const isCorrect = expectedWord && userAnswer.word === expectedWord.word;
+          
+          if (isCorrect) {
+            dropzone.classList.add('correct');
+            dropzone.classList.remove('incorrect');
+            correctCount++;
+          } else {
+            dropzone.classList.add('incorrect');
+            dropzone.classList.remove('correct');
+            allCorrect = false;
+          }
+        });
+        
+        const statusElement = document.getElementById('status');
+        if (allCorrect) {
+          statusElement.textContent = 'Perfect! All answers are correct!';
+          statusElement.style.color = '#28a745';
+        } else {
+          const total = currentQuiz.quizWords.length;
+          statusElement.textContent = `You got ${correctCount} out of ${total} correct.`;
+          statusElement.style.color = '#dc3545';
+        }
+        
+        return { correctCount, total: currentQuiz.quizWords.length };
+      }
+      
+      // Reset current quiz
+      function resetQuiz() {
+        quizzes[currentQuizIndex].userAnswers = Array(quizzes[currentQuizIndex].quizWords.length).fill(null);
+        displayCurrentQuiz();
+        
+        const statusElement = document.getElementById('status');
+        statusElement.textContent = '';
+      }
+      
+      // Calculate overall score
+      function calculateOverallScore() {
+        let totalCorrect = 0;
+        let totalQuestions = 0;
+        
+        quizzes.forEach(quiz => {
+          const dropzones = quiz.quizWords.length;
+          totalQuestions += dropzones;
+          
+          quiz.userAnswers.forEach((answer, index) => {
+            if (answer) {
+              const expectedWord = quiz.quizWords.find(w => w.originalPosition === index);
+              if (expectedWord && answer.word === expectedWord.word) {
+                totalCorrect++;
+              }
+            }
+          });
+        });
+        
+        return { totalCorrect, totalQuestions };
+      }
+      
+      // Show results screen
+      function showResults() {
+        const { totalCorrect, totalQuestions } = calculateOverallScore();
+        const percentage = Math.round((totalCorrect / totalQuestions) * 100);
+        
+        scoreDisplay.textContent = `Your score: ${totalCorrect} out of ${totalQuestions} (${percentage}%)`;
+        
+        quizScreen.style.display = 'none';
+        resultsScreen.style.display = 'block';
+      }
+      
+      // Check URL parameters for content URL
+      function getContentUrlFromParams() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('url');
+      }
+      
+      // Check if text is a valid URL
+      function isValidUrl(text) {
+        try {
+          // Try to create a URL object
+          const url = new URL(text.trim());
+          // Check if it's http or https
+          return url.protocol === 'http:' || url.protocol === 'https:';
+        } catch (e) {
+          return false;
+        }
+      }
+      
+      // Fetch content from URL
+      async function fetchContentFromUrl(url) {
+        try {
+          const response = await fetch(url, {
+            mode: 'cors',
+            cache: 'no-cache',
+            headers: {
+              'Accept': 'text/plain,text/html'
+            }
+          });
+          
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          
+          const text = await response.text();
+          return text;
+        } catch (error) {
+          console.error('Error fetching content:', error);
+          
+          // More user-friendly error message explaining possible reasons
+          let errorMessage = `Failed to load content from URL: ${error.message}\n\n`;
+          errorMessage += "This may be due to:\n";
+          errorMessage += "1. CORS restrictions (most common) - The server doesn't allow the content to be accessed from other websites\n";
+          errorMessage += "2. The URL doesn't exist or is inaccessible\n";
+          errorMessage += "3. Network connectivity issues\n\n";
+          errorMessage += "Try downloading the file and pasting its contents directly instead.";
+          
+          alert(errorMessage);
+          return null;
+        }
+      }
+      
+      // Initialize the app
+      function initApp() {
+        // Load saved material from cookies
+        loadSavedMaterial();
+        
+        // Check for URL parameter
+        contentUrl = getContentUrlFromParams();
+        if (contentUrl) {
+          loadFromUrlBtn.style.display = 'inline-block';
+          urlInfoDiv.style.display = 'block';
+          urlDisplay.textContent = contentUrl;
+        }
+        
+        // Add input event listener to detect URLs pasted into the textarea
+        materialInput.addEventListener('input', function() {
+          const text = materialInput.value.trim();
+          if (isValidUrl(text)) {
+            loadFromInputUrlBtn.style.display = 'inline-block';
+            inputUrlInfoDiv.style.display = 'block';
+          } else {
+            loadFromInputUrlBtn.style.display = 'none';
+            inputUrlInfoDiv.style.display = 'none';
+          }
+        });
+        
+        // Event listeners
+        startQuizBtn.addEventListener('click', function() {
+          const material = materialInput.value.trim();
+          if (material === '') {
+            alert('Please enter quiz material first.');
+            return;
+          }
+          
+          // If the material is a URL, suggest loading from it first
+          if (isValidUrl(material) && !confirm('The text appears to be a URL. Do you want to continue with this as quiz content instead of loading from the URL?')) {
+            loadFromInputUrlBtn.click();
+            return;
+          }
+          
+          startQuiz(material);
+        });
+        
+        loadSampleBtn.addEventListener('click', function() {
+          const sample = "1. The Potions classroom echoed with a sudden (shriek) as Neville's (cauldron) erupted. Professor Snape let out a low (growl), his face twisted in a (frown). \"I (reckon) we're in for it now,\" Ron (muttered) to Harry, who nodded grimly. The Slytherin (prefect) smirked, clearly enjoying the Gryffindors' misfortune. Hermione's (quill) scratched furiously as she tried to (hiss) instructions to Neville. A collective (gasp) filled the room as Snape approached, his black robes billowing. \"Longbottom,\" he sneered, \"your incompetence never ceases to amaze me.\" Neville's face turned as red as a Remembrall, wishing he could disappear into the dungeon floor.\n\n2. Harry (leapt) onto his Firebolt, heart racing as he (glared) at the opposing Seeker. The Quidditch pitch (gleamed) in the sunlight, a stark contrast to the (sideways) rain of their last match. Madam Hooch's whistle (squeaked), barely audible over the crowd's (bellow). As he soared upward, Harry caught sight of Ron, looking (hastily) away from Hermione. A Bludger (swung) dangerously close, causing Harry to (snarl) in frustration. Below, he could see Ginny's red hair (tremble) in the wind as she raced towards the goalposts. Suddenly, a glint of gold caught his eye – the Snitch! Without hesitation, he dove, leaving his opponent to (squeak) in surprise.";
+          materialInput.value = sample;
+        });
+        
+        loadFromUrlBtn.addEventListener('click', async function() {
+          if (contentUrl) {
+            loadFromUrlBtn.disabled = true;
+            loadFromUrlBtn.textContent = 'Loading...';
+            
+            const content = await fetchContentFromUrl(contentUrl);
+            if (content) {
+              materialInput.value = content;
+            }
+            
+            loadFromUrlBtn.disabled = false;
+            loadFromUrlBtn.textContent = 'Load From URL';
+          }
+        });
+        
+        loadFromInputUrlBtn.addEventListener('click', async function() {
+          const inputUrl = materialInput.value.trim();
+          
+          if (isValidUrl(inputUrl)) {
+            loadFromInputUrlBtn.disabled = true;
+            loadFromInputUrlBtn.textContent = 'Loading...';
+            
+            const content = await fetchContentFromUrl(inputUrl);
+            if (content) {
+              materialInput.value = content;
+              // Hide the URL button after successful load
+              loadFromInputUrlBtn.style.display = 'none';
+              inputUrlInfoDiv.style.display = 'none';
+            }
+            
+            loadFromInputUrlBtn.disabled = false;
+            loadFromInputUrlBtn.textContent = 'Load From This URL';
+          }
+        });
+        
+        prevQuizBtn.addEventListener('click', function() {
+          if (currentQuizIndex > 0) {
+            currentQuizIndex--;
+            displayCurrentQuiz();
+          }
+        });
+        
+        nextQuizBtn.addEventListener('click', function() {
+          if (currentQuizIndex < quizzes.length - 1) {
+            currentQuizIndex++;
+            displayCurrentQuiz();
+          }
+        });
+        
+        // Quiz dropdown change event
+        quizDropdown.addEventListener('change', function() {
+          currentQuizIndex = parseInt(this.value);
+          displayCurrentQuiz();
+        });
+        
+        checkAnswersBtn.addEventListener('click', function() {
+          checkAnswers();
+        });
+        
+        resetQuizBtn.addEventListener('click', function() {
+          resetQuiz();
+        });
+        
+        newMaterialBtn.addEventListener('click', function() {
+          quizScreen.style.display = 'none';
+          materialScreen.style.display = 'block';
+        });
+        
+        translateQuizBtn.addEventListener('click', function() {
+          const currentQuiz = quizzes[currentQuizIndex];
+          if (!currentQuiz) return;
+          
+          // Get the quiz words from the current quiz
+          const quizWords = currentQuiz.quizWords.map(wordObj => wordObj.word);
+          
+          // Replace brackets with empty strings to get clean text
+          let cleanText = currentQuiz.originalText.replace(/\([^)]+\)/g, match => {
+            // Extract the word without brackets
+            return match.substring(1, match.length - 1);
+          });
+          
+          // Create the full text to translate - combine words and text
+          let textToTranslate = quizWords.join(', ') + '\n\n' + cleanText;
+          
+          // Encode for URL
+          const encodedText = encodeURIComponent(textToTranslate);
+          
+          // Create Google Translate URL
+          const translateUrl = `https://translate.google.com/?sl=en&tl=zh-CN&op=translate&text=${encodedText}`;
+          
+          // Open in a new tab
+          window.open(translateUrl, '_blank');
+        });
+        
+        restartQuizBtn.addEventListener('click', function() {
+          quizzes.forEach(quiz => {
+            quiz.userAnswers = Array(quiz.quizWords.length).fill(null);
+          });
+          
+          currentQuizIndex = 0;
+          resultsScreen.style.display = 'none';
+          quizScreen.style.display = 'block';
+          displayCurrentQuiz();
+        });
+        
+        newMaterialFromResultsBtn.addEventListener('click', function() {
+          resultsScreen.style.display = 'none';
+          materialScreen.style.display = 'block';
+        });
+      }
+      
+      // Start quiz with provided material
+      function startQuiz(material) {
+        // Save material to cookies
+        saveMaterial(material);
+        
+        // Parse quiz material
+        quizzes = parseQuizMaterial(material);
+        
+        if (quizzes.length === 0) {
+          alert('No valid quiz material found. Make sure to include words in brackets like: (word)');
+          return;
+        }
+        
+        currentQuizIndex = 0;
+        
+        // Switch to quiz screen
+        materialScreen.style.display = 'none';
+        quizScreen.style.display = 'block';
+        resultsScreen.style.display = 'none';
+        
+        // Display the first quiz
+        displayCurrentQuiz();
+      }
+      
+      // Initialize the app
+      initApp();
+    });
+  </script>
+</body>
+</html>
