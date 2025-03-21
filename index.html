@@ -478,6 +478,11 @@
         const shuffledWords = [...currentQuiz.quizWords].sort(() => Math.random() - 0.5);
         
         shuffledWords.forEach((wordObj, index) => {
+          // Create word wrapper div
+          const wordWrapper = document.createElement('div');
+          wordWrapper.className = 'word-wrapper';
+          
+          // Create word element
           const wordElement = document.createElement('div');
           wordElement.className = 'word';
           wordElement.textContent = wordObj.word;
@@ -490,7 +495,7 @@
             answer && answer.word === wordObj.word);
           
           if (placedDropzoneIndex !== -1) {
-            wordElement.style.display = 'none';
+            wordWrapper.style.display = 'none';
           }
           
           // Setup drag events
@@ -499,7 +504,23 @@
           // Setup click event
           wordElement.addEventListener('click', handleWordClick);
           
-          wordsContainer.appendChild(wordElement);
+          // Add pronunciation link
+          const pronunciationLink = document.createElement('a');
+          pronunciationLink.className = 'pronunciation-link';
+          pronunciationLink.textContent = '🔊';
+          pronunciationLink.href = `https://youglish.com/pronounce/${wordObj.word}/english`;
+          pronunciationLink.setAttribute('target', '_blank');
+          pronunciationLink.setAttribute('title', `Hear pronunciation of "${wordObj.word}"`);
+          
+          // Prevent click on link from triggering word click
+          pronunciationLink.addEventListener('click', function(e) {
+            e.stopPropagation();
+          });
+          
+          // Add elements to the DOM
+          wordWrapper.appendChild(wordElement);
+          wordWrapper.appendChild(pronunciationLink);
+          wordsContainer.appendChild(wordWrapper);
         });
         
         quizElement.appendChild(wordsContainer);
@@ -601,11 +622,11 @@
           e.target.removeAttribute('data-word');
           
           // Show the word back in the word bank
-          const wordElements = document.querySelectorAll(`.word[data-word="${word}"]`);
-          wordElements.forEach(wordElement => {
-            if (wordElement.style.display === 'none') {
-              wordElement.style.display = 'inline-block';
-              return;
+          const wordWrappers = document.querySelectorAll(`.word-wrapper`);
+          wordWrappers.forEach(wrapper => {
+            const wordElement = wrapper.querySelector(`.word[data-word="${word}"]`);
+            if (wordElement) {
+              wrapper.style.display = 'inline-block';
             }
           });
           
@@ -626,11 +647,14 @@
         dropzone.setAttribute('data-filled', 'true');
         dropzone.setAttribute('data-word', word);
         
-        // Hide the word
-        const wordElement = document.querySelector(`.word[data-word="${word}"]:not([style*="display: none"])`);
-        if (wordElement) {
-          wordElement.style.display = 'none';
-        }
+        // Hide the word wrapper
+        const wordWrappers = document.querySelectorAll(`.word-wrapper`);
+        wordWrappers.forEach(wrapper => {
+          const wordElement = wrapper.querySelector(`.word[data-word="${word}"]`);
+          if (wordElement && wrapper.style.display !== 'none') {
+            wrapper.style.display = 'none';
+          }
+        });
         
         // Save the answer
         quizzes[currentQuizIndex].userAnswers[dropzoneIndex] = {
