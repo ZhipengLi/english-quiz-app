@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Reader App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overscroll-behavior-y: contain; /* Prevents pull-to-refresh on mobile when scrolling body */
+        }
+        /* Custom scrollbar for text area for better aesthetics */
+        textarea::-webkit-scrollbar {
+            width: 8px;
+        }
+        textarea::-webkit-scrollbar-track {
+            background: #e2e8f0; /* slate-200 */
+            border-radius: 4px;
+        }
+        textarea::-webkit-scrollbar-thumb {
+            background: #94a3b8; /* slate-400 */
+            border-radius: 4px;
+        }
+        textarea::-webkit-scrollbar-thumb:hover {
+            background: #64748b; /* slate-500 */
+        }
+        /* Ensure the text scroller does not shrink or grow unexpectedly */
+        #text-scroller {
+            display: inline-block; /* Important for scrollWidth calculation */
+            text-align: left; /* Ensure text starts from left */
+        }
+        /* Prevent selection of text in reading window during animation */
+        #reading-window {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-900 flex flex-col items-center min-h-screen p-4 selection:bg-sky-500 selection:text-white">
+
+    <div class="w-full max-w-3xl space-y-6">
+        <header>
+            <h1 class="text-3xl sm:text-4xl font-bold text-center text-sky-600">Speed Reader</h1>
+        </header>
+
+        <section aria-labelledby="text-input-label">
+            <label id="text-input-label" for="text-input" class="block text-sm font-medium text-slate-700 mb-1">Paste your text here or load from URL:</label>
+            <textarea id="text-input" rows="8" class="w-full p-3 bg-white border border-slate-300 rounded-lg shadow-sm text-slate-900 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 resize-y" placeholder="Enter or paste your reading material..."></textarea>
+        </section>
+
+        <section aria-label="Reading controls" class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 items-center">
+            <button id="start-pause-btn" class="col-span-1 bg-sky-500 hover:bg-sky-600 active:bg-sky-700 text-white font-semibold py-2.5 px-4 rounded-lg shadow transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-75">Start</button>
+            <button id="backward-btn" class="col-span-1 bg-slate-500 hover:bg-slate-600 active:bg-slate-700 text-white font-semibold py-2.5 px-4 rounded-lg shadow transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-opacity-75">Backward</button>
+            
+            <div class="col-span-2 sm:col-span-2">
+                <label for="speed-control" class="block text-sm font-medium text-slate-700 mb-1">Speed: <span id="speed-value" class="font-semibold">2.0</span> px/frame</label>
+                <input type="range" id="speed-control" min="1" max="20" value="4" class="w-full h-2.5 bg-slate-300 rounded-lg appearance-none cursor-pointer accent-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-75">
+            </div>
+        </section>
+
+        <section aria-label="Reading display">
+            <div id="reading-window-container" class="bg-white border border-slate-300 rounded-lg p-1 h-24 overflow-hidden shadow-inner">
+                <div id="reading-window" class="h-full flex items-center relative">
+                    <span id="text-scroller" class="text-xl sm:text-2xl md:text-3xl whitespace-nowrap text-slate-800 absolute left-0 top-1/2 transform -translate-y-1/2"></span>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p id="status-message" class="text-sm text-slate-600 text-center min-h-[1.25em]">&nbsp;</p> </footer>
+    </div>
+
+    <script>
+        // DOM Elements
+        const textInputElement = document.getElementById('text-input');
+        const startPauseButton = document.getElementById('start-pause-btn');
+        const backwardButton = document.getElementById('backward-btn');
+        const speedControlElement = document.getElementById('speed-control');
+        const speedValueElement = document.getElementById('speed-value');
+        const readingWindowElement = document.getElementById('reading-window');
+        const textScrollerElement = document.getElementById('text-scroller');
+        const statusMessageElement = document.getElementById('status-message');
+
+        // State Variables
+        let fullText = "";
+        let startCharacterIndex = 0; 
+        let isPlaying = false;
+        let currentSpeedSetting = 4; // Default slider value (4 / 2 = 2.0 px/frame)
+        let animationFrameId = null;
+        let currentScrollPixelOffset = 0;
+
+        // --- Initialization ---
+        async function initialize() {
+            loadState(); // Load any saved state (like custom speed)
+            
+            // Check for textUrl parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const textUrl = urlParams.get('textUrl');
+
+            if (textUrl) {
+                statusMessageElement.textContent = 'Loading text from URL...';
+                try {
+                    const response = await fetch(textUrl);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    const textFromUrl = await response.text();
+                    textInputElement.value = textFromUrl;
+                    fullText = textFromUrl; // Update fullText state
+                    statusMessageElement.textContent = 'Text loaded from URL. Click in text to set start or press Start.';
+                    saveState(); // Save the loaded text
+                } catch (error) {
+                    console.error('Error fetching text from URL:', error);
+                    statusMessageElement.textContent = `Error loading from URL: ${error.message}. Paste text manually.`;
+                    // Fallback to any locally stored text or empty
+                    textInputElement.value = fullText; 
+                }
+            } else {
+                 textInputElement.value = fullText; // Populate textarea if text was loaded from localStorage
+            }
+            
+            // Set speed control value from state (or default if not in state)
+            speedControlElement.value = currentSpeedSetting;
+            updateSpeedDisplay();
+
+            if (!textUrl && !fullText) {
+                 statusMessageElement.textContent = "Paste text and press Start, or provide a 'textUrl' parameter.";
+            } else if (!textUrl && fullText) {
+                statusMessageElement.textContent = `Text loaded. Click in text to set start or press Start.`;
+            }
+        }
+        
+        // --- Event Listeners ---
+        textInputElement.addEventListener('input', () => {
+            fullText = textInputElement.value;
+            saveState(); 
+            if (isPlaying) {
+                pauseReading();
+                statusMessageElement.textContent = "Text changed. Press Start to read new content.";
+            }
+            if (!fullText.trim()) {
+                startCharacterIndex = 0;
+            }
+        });
+
+        textInputElement.addEventListener('click', () => {
+            if (isPlaying) return; 
+            startCharacterIndex = textInputElement.selectionStart;
+            statusMessageElement.textContent = `Start position set to character: ${startCharacterIndex}.`;
+        });
+
+        speedControlElement.addEventListener('input', () => {
+            currentSpeedSetting = parseInt(speedControlElement.value, 10);
+            updateSpeedDisplay();
+            saveState(); 
+        });
+
+        startPauseButton.addEventListener('click', handleStartPause);
+        document.addEventListener('keydown', (event) => {
+            if (event.code === 'Space' && event.target !== textInputElement) { 
+                event.preventDefault();
+                handleStartPause();
+            }
+        });
+
+        backwardButton.addEventListener('click', handleBackward);
+
+        // --- Core Logic Functions ---
+        function handleStartPause() {
+            if (isPlaying) {
+                pauseReading();
+            } else {
+                startReading();
+            }
+        }
+
+        function startReading() {
+            if (!fullText.trim()) {
+                statusMessageElement.textContent = 'Please paste some text first.';
+                return;
+            }
+
+            const textToDisplay = fullText.substring(startCharacterIndex);
+            textScrollerElement.textContent = textToDisplay;
+
+            Promise.resolve().then(() => {
+                const scrollerWidth = textScrollerElement.scrollWidth;
+                const windowWidth = readingWindowElement.clientWidth;
+
+                if (!textToDisplay.trim()) {
+                    statusMessageElement.textContent = 'No text from the selected start point.';
+                    startPauseButton.textContent = 'Start';
+                    isPlaying = false;
+                    return;
+                }
+                
+                if (scrollerWidth <= windowWidth) {
+                    statusMessageElement.textContent = 'Text (from start point) fits in window or is too short to scroll.';
+                    startPauseButton.textContent = 'Start';
+                    isPlaying = false;
+                    textScrollerElement.style.transform = 'translateX(0px)';
+                    return;
+                }
+
+                isPlaying = true;
+                startPauseButton.textContent = 'Pause';
+                statusMessageElement.textContent = 'Reading...';
+                
+                currentScrollPixelOffset = 0; 
+                textScrollerElement.style.transform = `translateX(0px)`;
+                
+                animateText();
+            });
+        }
+
+        function pauseReading() {
+            if (!isPlaying) return;
+            isPlaying = false;
+            startPauseButton.textContent = 'Start';
+            statusMessageElement.textContent = 'Paused.';
+            cancelAnimationFrame(animationFrameId);
+        }
+
+        function animateText() {
+            if (!isPlaying) return;
+
+            const actualSpeed = currentSpeedSetting / 2; 
+            currentScrollPixelOffset += actualSpeed;
+            textScrollerElement.style.transform = `translateX(-${currentScrollPixelOffset}px)`;
+
+            const scrollerWidth = textScrollerElement.scrollWidth;
+            const windowWidth = readingWindowElement.clientWidth;
+
+            if (currentScrollPixelOffset >= scrollerWidth - windowWidth) {
+                currentScrollPixelOffset = Math.max(0, scrollerWidth - windowWidth); 
+                textScrollerElement.style.transform = `translateX(-${currentScrollPixelOffset}px)`;
+                
+                pauseReading(); 
+                startPauseButton.textContent = 'Start'; 
+                statusMessageElement.textContent = 'Finished!';
+                return;
+            }
+            animationFrameId = requestAnimationFrame(animateText);
+        }
+
+        function handleBackward() {
+            if (isPlaying) {
+                pauseReading();
+            }
+            
+            const charactersToRewind = 30; 
+            startCharacterIndex = Math.max(0, startCharacterIndex - charactersToRewind);
+            
+            textInputElement.focus(); 
+            textInputElement.setSelectionRange(startCharacterIndex, startCharacterIndex);
+
+            statusMessageElement.textContent = `Rewound. New start at char: ${startCharacterIndex}. Press Start.`;
+            
+            textScrollerElement.textContent = fullText.substring(startCharacterIndex);
+            currentScrollPixelOffset = 0; 
+            textScrollerElement.style.transform = `translateX(0px)`;
+        }
+
+        function updateSpeedDisplay() {
+            const actualSpeed = currentSpeedSetting / 2;
+            speedValueElement.textContent = actualSpeed.toFixed(1);
+        }
+
+        // --- Local Storage for Persistence ---
+        function saveState() {
+            try {
+                localStorage.setItem('speedReaderAppState', JSON.stringify({
+                    fullText: fullText, // Save current text (could be from URL or pasted)
+                    speed: currentSpeedSetting
+                }));
+            } catch (e) {
+                console.warn("Could not save state to localStorage:", e);
+            }
+        }
+
+        function loadState() {
+            try {
+                const savedState = localStorage.getItem('speedReaderAppState');
+                if (savedState) {
+                    const state = JSON.parse(savedState);
+                    fullText = state.fullText || "";
+                    // Ensure default speed is set correctly if not in localStorage or if it's the old default
+                    currentSpeedSetting = state.speed !== undefined ? state.speed : 4; // Default to 4 (2.0 px/frame)
+                } else {
+                    // If no saved state, ensure currentSpeedSetting is the new default
+                    currentSpeedSetting = 4;
+                }
+            } catch (e) {
+                console.warn("Could not load state from localStorage:", e);
+                fullText = ""; 
+                currentSpeedSetting = 4; // Default to 4 on error
+            }
+        }
+        
+        // --- Call Initialize on page load ---
+        initialize();
+
+    </script>
+</body>
+</html>
