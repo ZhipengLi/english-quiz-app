@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karaoke Reader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --read-text-color: #f1f5f9; /* Tailwind slate-100, for "black" text on dark bg */
+            --unread-text-color: #64748b; /* Tailwind slate-500, for "gray" text */
+        }
+        .word {
+            background-image: linear-gradient(to right, var(--read-text-color) 50%, var(--unread-text-color) 50%);
+            background-size: 200% 100%;
+            background-position: 100%; /* Start with unread part visible (fully gray) */
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            transition-property: background-position;
+            transition-timing-function: linear;
+            display: inline; /* Allows words to flow naturally with spaces */
+            white-space: pre-wrap; /* Preserve spaces within words if any, and allow wrapping */
+        }
+        /* Custom scrollbar for textarea (optional, for aesthetics) */
+        #text-input::-webkit-scrollbar {
+            width: 8px;
+        }
+        #text-input::-webkit-scrollbar-track {
+            background: #334155; /* slate-700 */
+            border-radius: 4px;
+        }
+        #text-input::-webkit-scrollbar-thumb {
+            background: #475569; /* slate-600 */
+            border-radius: 4px;
+        }
+        #text-input::-webkit-scrollbar-thumb:hover {
+            background: #64748b; /* slate-500 */
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans p-4 flex flex-col items-center min-h-screen selection:bg-sky-500 selection:text-white">
+
+    <div class="w-full max-w-3xl space-y-6">
+        <header class="text-center py-4">
+            <h1 class="text-4xl font-bold text-sky-400">Karaoke Reader</h1>
+            <p class="text-slate-400 mt-1">Read text at your own pace, karaoke-style.</p>
+        </header>
+
+        <section class="bg-slate-800 p-4 sm:p-6 rounded-lg shadow-xl">
+            <label for="text-input" class="block text-lg font-medium text-sky-300 mb-2">Paste your text here (or load from URL):</label>
+            <textarea id="text-input" 
+                      class="w-full h-48 p-3 bg-slate-700 text-slate-100 rounded-md border border-slate-600 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 resize-y"
+                      placeholder="Enter or paste text..."></textarea>
+        </section>
+
+        <section class="bg-slate-800 p-4 sm:p-6 rounded-lg shadow-xl space-y-4">
+            <div class="flex flex-col sm:flex-row flex-wrap gap-3 justify-center items-center">
+                <button id="start-pause-btn" 
+                        class="w-full sm:w-auto px-6 py-3 bg-sky-500 hover:bg-sky-600 text-white font-semibold rounded-lg shadow-md transition-all duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-75 flex items-center justify-center gap-2">
+                    <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <svg id="pause-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+                    <span id="start-pause-text">Start</span>
+                </button>
+                <button id="backward-btn" 
+                        class="w-full sm:w-auto px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-lg shadow-md transition-all duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-opacity-75 flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="19 20 9 12 19 4 19 20"></polygon><line x1="5" y1="19" x2="5" y2="5"></line></svg>
+                    <span>Backward</span>
+                </button>
+            </div>
+            <div class="flex flex-col sm:flex-row items-center gap-3 pt-2">
+                <label for="speed-control" class="text-lg font-medium text-sky-300 whitespace-nowrap">Speed (WPM):</label>
+                <input type="range" id="speed-control" min="30" max="600" value="100" 
+                       class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2 focus:ring-offset-slate-800">
+                <span id="speed-value" class="text-lg text-sky-300 w-12 text-right tabular-nums">100</span>
+            </div>
+        </section>
+
+        <section id="display-area-container" class="bg-slate-800 p-4 sm:p-6 rounded-lg shadow-xl min-h-[120px]">
+            <div id="display-area" class="text-2xl sm:text-3xl leading-relaxed sm:leading-loose">
+                <p class="text-slate-400 initial-message">Paste text above and press Start. Click on the pasted text to choose your starting point.</p>
+            </div>
+        </section>
+        
+        <footer class="text-center text-sm text-slate-500 py-4">
+            <p>&copy; 2024 Karaoke Reader. Enjoy!</p>
+        </footer>
+    </div>
+
+    <script>
+        // DOM Elements
+        const textInput = document.getElementById('text-input');
+        const startPauseBtn = document.getElementById('start-pause-btn');
+        const startPauseText = document.getElementById('start-pause-text');
+        const playIcon = document.getElementById('play-icon');
+        const pauseIcon = document.getElementById('pause-icon');
+        const backwardBtn = document.getElementById('backward-btn');
+        const speedControl = document.getElementById('speed-control');
+        const speedValueDisplay = document.getElementById('speed-value');
+        const displayArea = document.getElementById('display-area');
+
+        // State Variables
+        let fullText = "";
+        let words = []; // Array of all words from the input
+        let chunks = []; // Array of word arrays (chunks)
+        const WORDS_PER_CHUNK = 15; // Number of words per displayed chunk
+
+        let currentChunkIndex = 0;
+        let currentWordInChunkIndex = 0; // Index of the word being animated within the current chunk
+
+        let isPlaying = false;
+        let readingSpeedWPM = 100; // Default speed updated
+        let currentAnimationTimeoutId = null;
+        let userStartCharIndex = 0; // Character index from textarea click, for starting position
+
+        // --- Initialization ---
+        function initialize() {
+            // Set speed control and display to the default WPM
+            speedControl.value = readingSpeedWPM; 
+            speedValueDisplay.textContent = readingSpeedWPM;
+            updateButtonUI();
+            loadTextFromUrlParameter(); // Attempt to load text from URL
+        }
+
+        // --- Load text from URL parameter ---
+        async function loadTextFromUrlParameter() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const textFileUrl = urlParams.get('textUrl');
+
+            if (textFileUrl) {
+                displayArea.innerHTML = '<p class="text-sky-300 initial-message">Loading text from URL...</p>';
+                try {
+                    const response = await fetch(textFileUrl);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status} - ${response.statusText}`);
+                    }
+                    const text = await response.text();
+                    textInput.value = text;
+                    handleTextInputChange(); // Process the newly loaded text
+                    displayArea.innerHTML = '<p class="text-green-400 initial-message">Text loaded from URL. Press Start to read.</p>';
+                } catch (error) {
+                    console.error('Error fetching text from URL:', error);
+                    displayArea.innerHTML = `<p class="text-red-400 initial-message">Error loading text: ${error.message}. Check console for details. Ensure the URL is correct and allows cross-origin requests (CORS).</p>`;
+                }
+            }
+        }
+
+
+        // --- Event Listeners ---
+        textInput.addEventListener('input', handleTextInputChange);
+        textInput.addEventListener('click', handleTextAreaClick);
+        startPauseBtn.addEventListener('click', togglePlayPause);
+        backwardBtn.addEventListener('click', handleBackward);
+        speedControl.addEventListener('input', handleSpeedChange);
+        document.addEventListener('keydown', handleKeyboardInput);
+
+        // --- Event Handlers ---
+        function handleTextInputChange() {
+            if (isPlaying) {
+                pauseReading();
+            }
+            fullText = ""; // Mark as needing reprocessing
+            words = [];
+            chunks = [];
+            currentChunkIndex = 0;
+            currentWordInChunkIndex = 0;
+            userStartCharIndex = 0; // Reset user-selected start position on new text
+            // Only update display message if not already showing a URL load status
+            if (!displayArea.querySelector('.initial-message') || 
+                !displayArea.querySelector('.initial-message').textContent.includes('URL')) {
+                displayArea.innerHTML = '<p class="text-slate-400 initial-message">Text changed. Press Start to read.</p>';
+            }
+            updateButtonUI();
+        }
+
+        function handleTextAreaClick() {
+            userStartCharIndex = textInput.selectionStart;
+        }
+
+        function togglePlayPause() {
+            if (isPlaying) {
+                pauseReading();
+            } else {
+                startReading();
+            }
+        }
+
+        function handleBackward() {
+            if (chunks.length === 0) return;
+
+            let wasPlaying = isPlaying;
+            if (isPlaying) {
+                pauseReading();
+            }
+
+            if (currentWordInChunkIndex > 0) {
+                currentWordInChunkIndex = 0; 
+            } else if (currentChunkIndex > 0) {
+                currentChunkIndex--;
+                currentWordInChunkIndex = 0; 
+            } else {
+                currentChunkIndex = 0;
+                currentWordInChunkIndex = 0;
+            }
+
+            renderCurrentChunk();
+
+            if (wasPlaying) {
+                isPlaying = true; 
+                updateButtonUI();
+                animateNextWord();
+            }
+        }
+
+        function handleSpeedChange(e) {
+            readingSpeedWPM = parseInt(e.target.value);
+            speedValueDisplay.textContent = readingSpeedWPM;
+
+            if (isPlaying) {
+                clearTimeout(currentAnimationTimeoutId);
+                currentAnimationTimeoutId = null;
+                const wordSpans = displayArea.querySelectorAll('.word');
+                if (currentWordInChunkIndex < wordSpans.length) {
+                    const currentWordSpan = wordSpans[currentWordInChunkIndex];
+                    if (currentWordSpan) {
+                         currentWordSpan.style.transitionDuration = '0s'; 
+                    }
+                }
+                animateNextWord(); 
+            }
+        }
+        
+        function handleKeyboardInput(e) {
+            if (e.code === 'Space' && e.target.tagName !== 'TEXTAREA') { 
+                e.preventDefault();
+                togglePlayPause();
+            }
+        }
+
+        // --- Core Logic Functions ---
+        function preprocessAndDetermineStart(rawText) {
+            fullText = rawText;
+            if (!fullText) {
+                words = [];
+                chunks = [];
+                currentChunkIndex = 0;
+                currentWordInChunkIndex = 0;
+                renderCurrentChunk(); 
+                return false; 
+            }
+
+            words = fullText.split(/\s+/).filter(word => word.length > 0);
+
+            if (words.length === 0) {
+                chunks = [];
+                currentChunkIndex = 0;
+                currentWordInChunkIndex = 0;
+                renderCurrentChunk();
+                return false; 
+            }
+
+            let charCount = 0;
+            let globalStartWordIndex = 0;
+            let foundStartIndex = false;
+            for (let i = 0; i < words.length; i++) {
+                if (charCount >= userStartCharIndex) {
+                    globalStartWordIndex = i;
+                    foundStartIndex = true;
+                    break;
+                }
+                charCount += words[i].length + 1; 
+            }
+             if (!foundStartIndex && words.length > 0) { 
+                globalStartWordIndex = words.length -1;
+            }
+
+
+            chunks = [];
+            for (let i = 0; i < words.length; i += WORDS_PER_CHUNK) {
+                chunks.push(words.slice(i, i + WORDS_PER_CHUNK));
+            }
+            
+            if (chunks.length === 0 && words.length > 0) {
+                chunks.push(words); 
+            }
+
+            currentChunkIndex = Math.floor(globalStartWordIndex / WORDS_PER_CHUNK);
+            currentWordInChunkIndex = globalStartWordIndex % WORDS_PER_CHUNK;
+            
+            if (currentChunkIndex >= chunks.length && chunks.length > 0) {
+                currentChunkIndex = chunks.length - 1;
+                currentWordInChunkIndex = chunks[currentChunkIndex] ? chunks[currentChunkIndex].length -1 : 0;
+            } else if (chunks.length === 0) {
+                currentChunkIndex = 0;
+                currentWordInChunkIndex = 0;
+                return false; 
+            }
+            
+            if (chunks[currentChunkIndex] && currentWordInChunkIndex >= chunks[currentChunkIndex].length) {
+                 currentWordInChunkIndex = chunks[currentChunkIndex].length -1;
+            }
+            if (currentWordInChunkIndex < 0) currentWordInChunkIndex = 0;
+            
+            return true; 
+        }
+
+        function startReading() {
+            const newText = textInput.value.trim();
+            if (!newText) {
+                displayArea.innerHTML = '<p class="text-red-400 initial-message">Please paste some text first.</p>';
+                return;
+            }
+
+            let needsProcessing = fullText !== newText || chunks.length === 0 || (currentChunkIndex >= chunks.length && chunks.length > 0);
+            
+            if (needsProcessing) {
+                if (!preprocessAndDetermineStart(newText)) {
+                     displayArea.innerHTML = '<p class="text-red-400 initial-message">No readable text found.</p>';
+                     return; 
+                }
+            }
+            
+            if (chunks.length === 0) { 
+                displayArea.innerHTML = '<p class="text-red-400 initial-message">No content to read.</p>';
+                return;
+            }
+
+            isPlaying = true;
+            updateButtonUI();
+            renderCurrentChunk(); // Make sure the correct chunk is rendered before starting animation
+            animateNextWord();
+        }
+
+        function pauseReading() {
+            isPlaying = false;
+            updateButtonUI();
+            if (currentAnimationTimeoutId) {
+                clearTimeout(currentAnimationTimeoutId);
+                currentAnimationTimeoutId = null;
+            }
+        }
+        
+        function renderCurrentChunk() {
+            const initialMessage = displayArea.querySelector('.initial-message');
+            if (initialMessage) initialMessage.remove();
+
+            displayArea.innerHTML = ''; 
+
+            if (chunks.length === 0 || currentChunkIndex >= chunks.length || !chunks[currentChunkIndex]) {
+                displayArea.innerHTML = '<p class="text-slate-500 initial-message">End of text or no text loaded.</p>';
+                if (isPlaying) pauseReading();
+                return;
+            }
+
+            const chunkWords = chunks[currentChunkIndex];
+            chunkWords.forEach((word, indexInChunk) => {
+                const wordSpan = document.createElement('span');
+                wordSpan.textContent = word + ' '; 
+                wordSpan.classList.add('word');
+                
+                if (indexInChunk < currentWordInChunkIndex) {
+                    wordSpan.style.backgroundPosition = '0%'; 
+                } else {
+                    wordSpan.style.backgroundPosition = '100%'; 
+                }
+                displayArea.appendChild(wordSpan);
+            });
+        }
+
+        function animateNextWord() {
+            if (!isPlaying || chunks.length === 0 || currentChunkIndex >= chunks.length || !chunks[currentChunkIndex]) {
+                if (isPlaying) pauseReading(); 
+                return;
+            }
+
+            const chunkWords = chunks[currentChunkIndex];
+            if (currentWordInChunkIndex >= chunkWords.length) {
+                currentChunkIndex++;
+                currentWordInChunkIndex = 0;
+                if (currentChunkIndex >= chunks.length) { 
+                    pauseReading();
+                    displayArea.innerHTML = '<p class="text-green-400 initial-message">Finished reading!</p>';
+                    currentChunkIndex = 0; 
+                    userStartCharIndex = 0; 
+                    return;
+                }
+                renderCurrentChunk(); 
+                currentAnimationTimeoutId = setTimeout(animateNextWord, 150); 
+                return;
+            }
+
+            const wordSpans = displayArea.querySelectorAll('.word');
+             if (currentWordInChunkIndex >= wordSpans.length || !wordSpans[currentWordInChunkIndex]) {
+                console.error("Word index out of bounds for available spans or span not found. CurrentWordInChunkIndex:", currentWordInChunkIndex, "Spans count:", wordSpans.length);
+                pauseReading();
+                return;
+            }
+            const currentWordSpan = wordSpans[currentWordInChunkIndex];
+
+            const wordDurationSec = 60 / readingSpeedWPM;
+            currentWordSpan.style.transitionDuration = wordDurationSec + 's';
+            currentWordSpan.style.backgroundPosition = '0%'; 
+
+            currentAnimationTimeoutId = setTimeout(() => {
+                currentWordSpan.style.transitionDuration = '0s';
+                currentWordSpan.style.backgroundPosition = '0%';
+
+                currentWordInChunkIndex++;
+                animateNextWord();
+            }, wordDurationSec * 1000);
+        }
+
+        function updateButtonUI() {
+            if (isPlaying) {
+                startPauseText.textContent = 'Pause';
+                startPauseBtn.classList.remove('bg-sky-500', 'hover:bg-sky-600');
+                startPauseBtn.classList.add('bg-red-500', 'hover:bg-red-600');
+                playIcon.classList.add('hidden');
+                pauseIcon.classList.remove('hidden');
+            } else {
+                startPauseText.textContent = 'Start';
+                startPauseBtn.classList.remove('bg-red-500', 'hover:bg-red-600');
+                startPauseBtn.classList.add('bg-sky-500', 'hover:bg-sky-600');
+                playIcon.classList.remove('hidden');
+                pauseIcon.classList.add('hidden');
+            }
+        }
+
+        // Initialize the app when the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', initialize);
+    </script>
+</body>
+</html>
