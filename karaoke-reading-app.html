@@ -7,13 +7,103 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root {
-            --read-text-color: #f1f5f9; /* Tailwind slate-100, for "black" text on dark bg */
-            --unread-text-color: #64748b; /* Tailwind slate-500, for "gray" text */
+            --page-bg: #0f172a; /* slate-900 */
+            --text-color: #f1f5f9; /* slate-100 */
+            --text-secondary-color: #94a3b8; /* slate-400 */
+            --text-muted-color: #64748b; /* slate-500 */
+            
+            --card-bg: #1e293b; /* slate-800 */
+            --input-bg: #334155; /* slate-700 */
+            --input-border-color: #475569; /* slate-600 */
+            
+            --button-primary-bg: #38bdf8; /* sky-500 */
+            --button-primary-hover-bg: #0ea5e9; /* sky-600 */
+            --button-primary-text: white;
+
+            --button-secondary-bg: #f59e0b; /* amber-500 */
+            --button-secondary-hover-bg: #d97706; /* amber-600 */
+            --button-secondary-text: white;
+
+            --button-tertiary-bg: #818cf8; /* indigo-500 */
+            --button-tertiary-hover-bg: #6366f1; /* indigo-600 */
+            --button-tertiary-text: white;
+            
+            --button-neutral-bg: #475569; /* slate-600 */
+            --button-neutral-hover-bg: #334155; /* slate-700 */
+            --button-neutral-text: white;
+
+            --accent-color: #38bdf8; /* sky-400 / sky-500 */
+            --range-thumb-color: #38bdf8; /* sky-500 */
+            --ring-focus-color: #38bdf8; /* sky-500 */
+
+            --read-text-color: #f1f5f9; 
+            --unread-text-color: #64748b; 
+
+            --scrollbar-track-bg: #334155;
+            --scrollbar-thumb-bg: #475569;
+            --scrollbar-thumb-hover-bg: #64748b;
+
+            --selection-bg: #38bdf8;
+            --selection-text: white;
         }
+
+        body.light-mode {
+            --page-bg: #f8fafc;    /* slate-50 */
+            --text-color: #1e293b;  /* slate-800 */
+            --text-secondary-color: #475569; /* slate-600 */
+            --text-muted-color: #6b7280; /* gray-500 */
+
+            --card-bg: #ffffff;  /* white */
+            --input-bg: #f1f5f9;   /* slate-100 */
+            --input-border-color: #cbd5e1; /* slate-300 */
+
+            /* Buttons can keep vibrant colors or be adjusted */
+            /* --button-primary-bg: #0ea5e9; */
+            /* --button-primary-hover-bg: #0284c7; */
+            --button-primary-text: white;
+
+            /* --button-secondary-bg: #d97706; */
+            /* --button-secondary-hover-bg: #b45309; */
+            --button-secondary-text: white;
+            
+            /* --button-tertiary-bg: #6366f1; */
+            /* --button-tertiary-hover-bg: #4f46e5; */
+            --button-tertiary-text: white;
+
+            --button-neutral-bg: #e5e7eb; /* gray-200 */
+            --button-neutral-hover-bg: #d1d5db; /* gray-300 */
+            --button-neutral-text: #1f2937; /* gray-800 */
+            
+            --accent-color: #0ea5e9; /* sky-600 */
+            --range-thumb-color: #0ea5e9;
+            --ring-focus-color: #0ea5e9;
+
+            --read-text-color: #1e293b;   
+            --unread-text-color: #9ca3af; /* gray-400 */
+
+            --scrollbar-track-bg: #e2e8f0; /* slate-200 */
+            --scrollbar-thumb-bg: #cbd5e1; /* slate-300 */
+            --scrollbar-thumb-hover-bg: #94a3b8; /* slate-400 */
+            
+            /* --selection-bg: #0ea5e9; */
+            /* --selection-text: white; */
+        }
+
+        body {
+            background-color: var(--page-bg);
+            color: var(--text-color);
+            font-family: Inter, system-ui, sans-serif; /* Using a common sans-serif stack */
+        }
+
+        ::selection {
+            background-color: var(--selection-bg);
+            color: var(--selection-text);
+        }
+
         .word {
             background-image: linear-gradient(to right, var(--read-text-color) 50%, var(--unread-text-color) 50%);
             background-size: 200% 100%;
-            background-position: 100%; /* Start with unread part visible (fully gray) */
+            background-position: 100%;
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -22,90 +112,103 @@
             display: inline; 
             white-space: pre-wrap; 
         }
-        /* Custom scrollbar for textarea */
-        #text-input::-webkit-scrollbar {
-            width: 8px;
-        }
-        #text-input::-webkit-scrollbar-track {
-            background: #334155; /* slate-700 */
-            border-radius: 4px;
-        }
-        #text-input::-webkit-scrollbar-thumb {
-            background: #475569; /* slate-600 */
-            border-radius: 4px;
-        }
-        #text-input::-webkit-scrollbar-thumb:hover {
-            background: #64748b; /* slate-500 */
-        }
+        
+        #text-input::-webkit-scrollbar { width: 8px; }
+        #text-input::-webkit-scrollbar-track { background: var(--scrollbar-track-bg); border-radius: 4px; }
+        #text-input::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb-bg); border-radius: 4px; }
+        #text-input::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover-bg); }
 
-        /* Styles for the display area when in fullscreen mode */
         #display-area-container:fullscreen {
-            background-color: #1e293b; /* Equivalent to bg-slate-800. Using var() might be tricky with pseudo-classes directly */
+            background-color: var(--card-bg) !important; /* Use themed card background */
             padding: 2rem !important;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            overflow-y: auto; /* Allow scrolling if content ever overflows */
-            border-radius: 0 !important; /* Remove rounded corners in fullscreen */
+            overflow-y: auto;
+            border-radius: 0 !important;
+        }
+        #display-area-container:fullscreen #display-area {
+            color: var(--text-color) !important; /* Ensure text color in fullscreen also themes */
+        }
+        
+        /* Helper for focus rings */
+        .focus-ring {
+            outline: 2px solid transparent;
+            outline-offset: 2px;
+        }
+        .focus-ring:focus-visible { /* Using focus-visible for better accessibility */
+             box-shadow: 0 0 0 2px var(--page-bg), 0 0 0 4px var(--ring-focus-color);
+        }
+         input[type="range"].focus-ring:focus-visible {
+            box-shadow: 0 0 0 2px var(--card-bg), 0 0 0 4px var(--ring-focus-color); /* Range needs offset from its card */
         }
 
-        #display-area-container:fullscreen #display-area {
-            /* Text size is already responsive. Ensure it's well-centered. */
-            /* max-width: 90%; */ /* Optional: if lines become too long */
-        }
+
     </style>
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans p-4 flex flex-col items-center min-h-screen selection:bg-sky-500 selection:text-white">
+<body class="p-4 flex flex-col items-center min-h-screen">
 
     <div class="w-full max-w-3xl space-y-6">
         <header class="text-center py-4">
-            <h1 class="text-4xl font-bold text-sky-400">Karaoke Reader</h1>
-            <p class="text-slate-400 mt-1">Read text at your own pace, karaoke-style.</p>
+            <h1 class="text-4xl font-bold" style="color: var(--accent-color);">Karaoke Reader</h1>
+            <p class="mt-1" style="color: var(--text-secondary-color);">Read text at your own pace, karaoke-style.</p>
         </header>
 
-        <section class="bg-slate-800 p-4 sm:p-6 rounded-lg shadow-xl">
-            <label for="text-input" class="block text-lg font-medium text-sky-300 mb-2">Paste your text here (or load from URL):</label>
+        <section style="background-color: var(--card-bg);" class="p-4 sm:p-6 rounded-lg shadow-xl">
+            <label for="text-input" class="block text-lg font-medium mb-2" style="color: var(--accent-color);">Paste your text here (or load from URL):</label>
             <textarea id="text-input" 
-                      class="w-full h-48 p-3 bg-slate-700 text-slate-100 rounded-md border border-slate-600 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 resize-y"
+                      class="w-full h-48 p-3 rounded-md border resize-y focus-ring"
+                      style="background-color: var(--input-bg); color: var(--text-color); border-color: var(--input-border-color);"
                       placeholder="Enter or paste text..."></textarea>
         </section>
 
-        <section class="bg-slate-800 p-4 sm:p-6 rounded-lg shadow-xl space-y-4">
+        <section style="background-color: var(--card-bg);" class="p-4 sm:p-6 rounded-lg shadow-xl space-y-4">
             <div class="flex flex-col sm:flex-row flex-wrap gap-3 justify-center items-center">
                 <button id="start-pause-btn" 
-                        class="w-full sm:w-auto px-6 py-3 bg-sky-500 hover:bg-sky-600 text-white font-semibold rounded-lg shadow-md transition-all duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-75 flex items-center justify-center gap-2">
+                        class="w-full sm:w-auto px-6 py-3 text-white font-semibold rounded-lg shadow-md transition-colors duration-150 ease-in-out flex items-center justify-center gap-2 focus-ring"
+                        style="background-color: var(--button-primary-bg); color:var(--button-primary-text);">
                     <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
                     <svg id="pause-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
                     <span id="start-pause-text">Start</span>
                 </button>
                 <button id="backward-btn" 
-                        class="w-full sm:w-auto px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-lg shadow-md transition-all duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-opacity-75 flex items-center justify-center gap-2">
+                        class="w-full sm:w-auto px-6 py-3 font-semibold rounded-lg shadow-md transition-colors duration-150 ease-in-out flex items-center justify-center gap-2 focus-ring"
+                        style="background-color: var(--button-secondary-bg); color:var(--button-secondary-text);">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="19 20 9 12 19 4 19 20"></polygon><line x1="5" y1="19" x2="5" y2="5"></line></svg>
                     <span>Backward</span>
                 </button>
                 <button id="fullscreen-btn" 
-                        class="w-full sm:w-auto px-6 py-3 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold rounded-lg shadow-md transition-all duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-opacity-75 flex items-center justify-center gap-2">
+                        class="w-full sm:w-auto px-6 py-3 font-semibold rounded-lg shadow-md transition-colors duration-150 ease-in-out flex items-center justify-center gap-2 focus-ring"
+                        style="background-color: var(--button-tertiary-bg); color:var(--button-tertiary-text);">
                     <svg id="fullscreen-enter-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
                     <svg id="fullscreen-exit-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"/></svg>
                     <span id="fullscreen-btn-text">Fullscreen</span>
                 </button>
+                <button id="theme-toggle-btn" 
+                        class="w-full sm:w-auto px-6 py-3 font-semibold rounded-lg shadow-md transition-colors duration-150 ease-in-out flex items-center justify-center gap-2 focus-ring"
+                        style="background-color: var(--button-neutral-bg); color:var(--button-neutral-text);">
+                    <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <span id="theme-toggle-text">Light Mode</span>
+                </button>
             </div>
             <div class="flex flex-col sm:flex-row items-center gap-3 pt-2">
-                <label for="speed-control" class="text-lg font-medium text-sky-300 whitespace-nowrap">Speed (WPM):</label>
+                <label for="speed-control" class="text-lg font-medium whitespace-nowrap" style="color: var(--accent-color);">Speed (WPM):</label>
                 <input type="range" id="speed-control" min="30" max="600" value="100" 
-                       class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2 focus:ring-offset-slate-800">
-                <span id="speed-value" class="text-lg text-sky-300 w-12 text-right tabular-nums">100</span>
+                       class="w-full h-2 rounded-lg appearance-none cursor-pointer focus-ring"
+                       style="background-color: var(--input-bg); accent-color: var(--range-thumb-color);">
+                <span id="speed-value" class="text-lg w-12 text-right tabular-nums" style="color: var(--accent-color);">100</span>
             </div>
         </section>
 
-        <section id="display-area-container" class="bg-slate-800 p-4 sm:p-6 rounded-lg shadow-xl min-h-[120px]">
+        <section id="display-area-container" style="background-color: var(--card-bg);" class="p-4 sm:p-6 rounded-lg shadow-xl min-h-[120px]">
             <div id="display-area" class="text-2xl sm:text-3xl leading-relaxed sm:leading-loose">
-                <p class="text-slate-400 initial-message">Paste text above and press Start. Click on the pasted text to choose your starting point.</p>
+                <p style="color: var(--text-secondary-color);" class="initial-message">Paste text above and press Start. Click on the pasted text to choose your starting point.</p>
             </div>
         </section>
         
-        <footer class="text-center text-sm text-slate-500 py-4">
+        <footer class="text-center text-sm py-4" style="color: var(--text-muted-color);">
             <p>&copy; 2024 Karaoke Reader. Enjoy!</p>
         </footer>
     </div>
@@ -126,37 +229,112 @@
         const fullscreenBtnText = document.getElementById('fullscreen-btn-text');
         const fullscreenEnterIcon = document.getElementById('fullscreen-enter-icon');
         const fullscreenExitIcon = document.getElementById('fullscreen-exit-icon');
-
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        const themeToggleText = document.getElementById('theme-toggle-text');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
 
         // State Variables
         let fullText = "";
         let words = []; 
         let chunks = []; 
         const WORDS_PER_CHUNK = 15; 
-
         let currentChunkIndex = 0;
         let currentWordInChunkIndex = 0; 
-
         let isPlaying = false;
         let readingSpeedWPM = 100; 
         let currentAnimationTimeoutId = null;
         let userStartCharIndex = 0; 
+        let isLightMode = false; // Default to dark
 
         // --- Initialization ---
         function initialize() {
             speedControl.value = readingSpeedWPM; 
             speedValueDisplay.textContent = readingSpeedWPM;
-            updateButtonUI();
+            loadInitialTheme(); // Load theme before other UI updates
+            updateButtonUI(); // General button UI (play/pause)
             loadTextFromUrlParameter(); 
         }
+
+        // --- Theme Management ---
+        function applyTheme() {
+            if (isLightMode) {
+                document.body.classList.add('light-mode');
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+                themeToggleText.textContent = 'Dark Mode';
+            } else {
+                document.body.classList.remove('light-mode');
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+                themeToggleText.textContent = 'Light Mode';
+            }
+            // Update button hover styles dynamically
+            updateButtonHoverStyles();
+        }
+
+        function toggleTheme() {
+            isLightMode = !isLightMode;
+            localStorage.setItem('karaokeReaderTheme', isLightMode ? 'light' : 'dark');
+            applyTheme();
+        }
+
+        function loadInitialTheme() {
+            const savedTheme = localStorage.getItem('karaokeReaderTheme');
+            if (savedTheme) {
+                isLightMode = savedTheme === 'light';
+            } else {
+                // Optional: Check system preference if no saved theme
+                // isLightMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+            }
+            applyTheme(); // Apply the determined theme
+        }
+        
+        function updateButtonHoverStyles() {
+            // Start/Pause Button
+            startPauseBtn.onmouseover = () => {
+                if(isPlaying) { // If it's a "Pause" button
+                     startPauseBtn.style.backgroundColor = isLightMode ? '#d9534f' : '#c9302c'; // Lighter/Darker red
+                } else { // If it's a "Start" button
+                    startPauseBtn.style.backgroundColor = isLightMode ? 'var(--button-primary-hover-bg)' : 'var(--button-primary-hover-bg)';
+                }
+            };
+            startPauseBtn.onmouseout = () => {
+                 if(isPlaying) {
+                     startPauseBtn.style.backgroundColor = isLightMode ? '#ef4444' : '#dc2626'; // Default red
+                 } else {
+                    startPauseBtn.style.backgroundColor = 'var(--button-primary-bg)';
+                 }
+            };
+            
+            // Other buttons
+            const buttonsToStyle = [
+                { el: backwardBtn, base: 'var(--button-secondary-bg)', hover: 'var(--button-secondary-hover-bg)' },
+                { el: fullscreenBtn, base: 'var(--button-tertiary-bg)', hover: 'var(--button-tertiary-hover-bg)' },
+                { el: themeToggleBtn, base: 'var(--button-neutral-bg)', hover: 'var(--button-neutral-hover-bg)' }
+            ];
+
+            buttonsToStyle.forEach(btnConfig => {
+                btnConfig.el.onmouseover = () => btnConfig.el.style.backgroundColor = btnConfig.hover;
+                btnConfig.el.onmouseout = () => btnConfig.el.style.backgroundColor = btnConfig.base;
+            });
+        }
+
 
         // --- Load text from URL parameter ---
         async function loadTextFromUrlParameter() {
             const urlParams = new URLSearchParams(window.location.search);
             const textFileUrl = urlParams.get('textUrl');
+            const initialMsgElement = displayArea.querySelector('.initial-message') || document.createElement('p');
+            if (!initialMsgElement.classList.contains('initial-message')) {
+                 initialMsgElement.classList.add('initial-message');
+                 displayArea.appendChild(initialMsgElement);
+            }
+
 
             if (textFileUrl) {
-                displayArea.innerHTML = '<p class="text-sky-300 initial-message">Loading text from URL...</p>';
+                initialMsgElement.textContent = 'Loading text from URL...';
+                initialMsgElement.style.color = 'var(--accent-color)';
                 try {
                     const response = await fetch(textFileUrl);
                     if (!response.ok) {
@@ -165,11 +343,16 @@
                     const text = await response.text();
                     textInput.value = text;
                     handleTextInputChange(); 
-                    displayArea.innerHTML = '<p class="text-green-400 initial-message">Text loaded from URL. Press Start to read.</p>';
+                    initialMsgElement.textContent = 'Text loaded from URL. Press Start to read.';
+                    initialMsgElement.style.color = isLightMode ? '#16a34a' : '#22c55e'; // Green
                 } catch (error) {
                     console.error('Error fetching text from URL:', error);
-                    displayArea.innerHTML = `<p class="text-red-400 initial-message">Error loading text: ${error.message}. Check console. Ensure CORS is enabled.</p>`;
+                    initialMsgElement.textContent = `Error loading text: ${error.message}. Check console. Ensure CORS is enabled.`;
+                    initialMsgElement.style.color = isLightMode ? '#dc2626' : '#ef4444'; // Red
                 }
+            } else if (!textInput.value) { // Only show default prompt if no URL and no text
+                 initialMsgElement.textContent = 'Paste text above and press Start. Click on the pasted text to choose your starting point.';
+                 initialMsgElement.style.color = 'var(--text-secondary-color)';
             }
         }
 
@@ -183,6 +366,7 @@
         document.addEventListener('keydown', handleKeyboardInput);
         fullscreenBtn.addEventListener('click', toggleFullscreen);
         document.addEventListener('fullscreenchange', handleFullscreenChange);
+        themeToggleBtn.addEventListener('click', toggleTheme);
 
 
         // --- Event Handlers ---
@@ -196,9 +380,17 @@
             currentChunkIndex = 0;
             currentWordInChunkIndex = 0;
             userStartCharIndex = 0; 
-            if (!displayArea.querySelector('.initial-message') || 
-                !displayArea.querySelector('.initial-message').textContent.includes('URL')) {
-                displayArea.innerHTML = '<p class="text-slate-400 initial-message">Text changed. Press Start to read.</p>';
+            
+            const initialMsgElement = displayArea.querySelector('.initial-message') || document.createElement('p');
+             if (!initialMsgElement.classList.contains('initial-message')) {
+                 initialMsgElement.classList.add('initial-message');
+                 displayArea.innerHTML = ''; // Clear if it wasn't an initial message before
+                 displayArea.appendChild(initialMsgElement);
+            }
+            // Only update display message if not currently showing a URL load status
+            if (!initialMsgElement.textContent.includes('URL') && !initialMsgElement.textContent.includes('Error loading text')) {
+                initialMsgElement.textContent = 'Text changed. Press Start to read.';
+                initialMsgElement.style.color = 'var(--text-secondary-color)';
             }
             updateButtonUI();
         }
@@ -217,44 +409,24 @@
 
         function handleBackward() {
             if (chunks.length === 0) return;
-
             let wasPlaying = isPlaying;
-            if (isPlaying) {
-                pauseReading();
-            }
-
-            if (currentWordInChunkIndex > 0) {
-                currentWordInChunkIndex = 0; 
-            } else if (currentChunkIndex > 0) {
-                currentChunkIndex--;
-                currentWordInChunkIndex = 0; 
-            } else {
-                currentChunkIndex = 0;
-                currentWordInChunkIndex = 0;
-            }
-
+            if (isPlaying) pauseReading();
+            if (currentWordInChunkIndex > 0) currentWordInChunkIndex = 0; 
+            else if (currentChunkIndex > 0) { currentChunkIndex--; currentWordInChunkIndex = 0; }
+            else { currentChunkIndex = 0; currentWordInChunkIndex = 0; }
             renderCurrentChunk();
-
-            if (wasPlaying) {
-                isPlaying = true; 
-                updateButtonUI();
-                animateNextWord();
-            }
+            if (wasPlaying) { isPlaying = true; updateButtonUI(); animateNextWord(); }
         }
 
         function handleSpeedChange(e) {
             readingSpeedWPM = parseInt(e.target.value);
             speedValueDisplay.textContent = readingSpeedWPM;
-
             if (isPlaying) {
-                clearTimeout(currentAnimationTimeoutId);
-                currentAnimationTimeoutId = null;
+                clearTimeout(currentAnimationTimeoutId); currentAnimationTimeoutId = null;
                 const wordSpans = displayArea.querySelectorAll('.word');
                 if (currentWordInChunkIndex < wordSpans.length) {
                     const currentWordSpan = wordSpans[currentWordInChunkIndex];
-                    if (currentWordSpan) {
-                         currentWordSpan.style.transitionDuration = '0s'; 
-                    }
+                    if (currentWordSpan) currentWordSpan.style.transitionDuration = '0s'; 
                 }
                 animateNextWord(); 
             }
@@ -262,29 +434,25 @@
         
         function handleKeyboardInput(e) {
             if (e.code === 'Space' && e.target.tagName !== 'TEXTAREA') { 
-                e.preventDefault();
-                togglePlayPause();
+                e.preventDefault(); togglePlayPause();
             }
         }
 
-        // --- Fullscreen Handlers ---
         function toggleFullscreen() {
+            const initialMsgElement = displayArea.querySelector('.initial-message') || document.createElement('p');
             if (!document.fullscreenElement) {
                 displayAreaContainer.requestFullscreen().catch(err => {
                     console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-                    const existingMessage = displayArea.querySelector('.initial-message');
-                    if (existingMessage) {
-                        existingMessage.textContent = `Fullscreen not available: ${err.message}`;
-                        existingMessage.classList.remove('text-slate-400', 'text-green-400', 'text-sky-300');
-                        existingMessage.classList.add('text-red-400');
-                    } else {
-                         displayArea.innerHTML = `<p class="text-red-400 initial-message">Fullscreen not available: ${err.message}</p>`;
+                    if (!initialMsgElement.classList.contains('initial-message')) {
+                        initialMsgElement.classList.add('initial-message');
+                        displayArea.innerHTML = ''; 
+                        displayArea.appendChild(initialMsgElement);
                     }
+                    initialMsgElement.textContent = `Fullscreen not available: ${err.message}`;
+                    initialMsgElement.style.color = isLightMode ? '#dc2626' : '#ef4444'; // Red
                 });
             } else {
-                if (document.exitFullscreen) {
-                    document.exitFullscreen();
-                }
+                if (document.exitFullscreen) document.exitFullscreen();
             }
         }
 
@@ -293,77 +461,54 @@
                 fullscreenBtnText.textContent = 'Exit FS';
                 fullscreenEnterIcon.classList.add('hidden');
                 fullscreenExitIcon.classList.remove('hidden');
-                // Add click listener to the container to exit fullscreen
                 displayAreaContainer.addEventListener('click', exitFullscreenOnClickWhenFullscreen);
             } else {
                 fullscreenBtnText.textContent = 'Fullscreen';
                 fullscreenEnterIcon.classList.remove('hidden');
                 fullscreenExitIcon.classList.add('hidden');
-                // Remove click listener when exiting fullscreen
                 displayAreaContainer.removeEventListener('click', exitFullscreenOnClickWhenFullscreen);
             }
         }
 
         function exitFullscreenOnClickWhenFullscreen(event) {
-            // Ensure the click is on the container or its direct children (displayArea or words)
             if (event.target === displayAreaContainer || event.target === displayArea || event.target.classList.contains('word')) {
-                if (document.fullscreenElement) {
-                    document.exitFullscreen();
-                }
+                if (document.fullscreenElement) document.exitFullscreen();
             }
         }
 
-
-        // --- Core Logic Functions ---
         function preprocessAndDetermineStart(rawText) {
             fullText = rawText;
-            if (!fullText) {
-                words = []; chunks = []; currentChunkIndex = 0; currentWordInChunkIndex = 0;
-                renderCurrentChunk(); return false; 
-            }
+            if (!fullText) { words = []; chunks = []; currentChunkIndex = 0; currentWordInChunkIndex = 0; renderCurrentChunk(); return false; }
             words = fullText.split(/\s+/).filter(word => word.length > 0);
-            if (words.length === 0) {
-                chunks = []; currentChunkIndex = 0; currentWordInChunkIndex = 0;
-                renderCurrentChunk(); return false; 
-            }
+            if (words.length === 0) { chunks = []; currentChunkIndex = 0; currentWordInChunkIndex = 0; renderCurrentChunk(); return false; }
             let charCount = 0, globalStartWordIndex = 0, foundStartIndex = false;
-            for (let i = 0; i < words.length; i++) {
-                if (charCount >= userStartCharIndex) { globalStartWordIndex = i; foundStartIndex = true; break; }
-                charCount += words[i].length + 1; 
-            }
+            for (let i = 0; i < words.length; i++) { if (charCount >= userStartCharIndex) { globalStartWordIndex = i; foundStartIndex = true; break; } charCount += words[i].length + 1; }
             if (!foundStartIndex && words.length > 0) globalStartWordIndex = words.length - 1;
             chunks = [];
             for (let i = 0; i < words.length; i += WORDS_PER_CHUNK) chunks.push(words.slice(i, i + WORDS_PER_CHUNK));
             if (chunks.length === 0 && words.length > 0) chunks.push(words);
             currentChunkIndex = Math.floor(globalStartWordIndex / WORDS_PER_CHUNK);
             currentWordInChunkIndex = globalStartWordIndex % WORDS_PER_CHUNK;
-            if (currentChunkIndex >= chunks.length && chunks.length > 0) {
-                currentChunkIndex = chunks.length - 1;
-                currentWordInChunkIndex = chunks[currentChunkIndex] ? chunks[currentChunkIndex].length - 1 : 0;
-            } else if (chunks.length === 0) {
-                currentChunkIndex = 0; currentWordInChunkIndex = 0; return false; 
-            }
-            if (chunks[currentChunkIndex] && currentWordInChunkIndex >= chunks[currentChunkIndex].length) {
-                 currentWordInChunkIndex = chunks[currentChunkIndex].length - 1;
-            }
+            if (currentChunkIndex >= chunks.length && chunks.length > 0) { currentChunkIndex = chunks.length - 1; currentWordInChunkIndex = chunks[currentChunkIndex] ? chunks[currentChunkIndex].length - 1 : 0; }
+            else if (chunks.length === 0) { currentChunkIndex = 0; currentWordInChunkIndex = 0; return false; }
+            if (chunks[currentChunkIndex] && currentWordInChunkIndex >= chunks[currentChunkIndex].length) currentWordInChunkIndex = chunks[currentChunkIndex].length - 1;
             if (currentWordInChunkIndex < 0) currentWordInChunkIndex = 0;
             return true; 
         }
 
         function startReading() {
             const newText = textInput.value.trim();
-            if (!newText) {
-                displayArea.innerHTML = '<p class="text-red-400 initial-message">Please paste some text first.</p>'; return;
+            const initialMsgElement = displayArea.querySelector('.initial-message') || document.createElement('p');
+            if (!initialMsgElement.classList.contains('initial-message')) {
+                initialMsgElement.classList.add('initial-message');
+                displayArea.innerHTML = ''; 
+                displayArea.appendChild(initialMsgElement);
             }
+
+            if (!newText) { initialMsgElement.textContent = 'Please paste some text first.'; initialMsgElement.style.color = isLightMode ? '#dc2626' : '#ef4444'; return; }
             let needsProcessing = fullText !== newText || chunks.length === 0 || (currentChunkIndex >= chunks.length && chunks.length > 0);
-            if (needsProcessing) {
-                if (!preprocessAndDetermineStart(newText)) {
-                     displayArea.innerHTML = '<p class="text-red-400 initial-message">No readable text found.</p>'; return; 
-                }
-            }
-            if (chunks.length === 0) { 
-                displayArea.innerHTML = '<p class="text-red-400 initial-message">No content to read.</p>'; return;
-            }
+            if (needsProcessing) { if (!preprocessAndDetermineStart(newText)) { initialMsgElement.textContent = 'No readable text found.'; initialMsgElement.style.color = isLightMode ? '#dc2626' : '#ef4444'; return; } }
+            if (chunks.length === 0) { initialMsgElement.textContent = 'No content to read.'; initialMsgElement.style.color = isLightMode ? '#dc2626' : '#ef4444'; return; }
             isPlaying = true; updateButtonUI(); renderCurrentChunk(); animateNextWord();
         }
 
@@ -377,7 +522,11 @@
             if (initialMessage) initialMessage.remove();
             displayArea.innerHTML = ''; 
             if (chunks.length === 0 || currentChunkIndex >= chunks.length || !chunks[currentChunkIndex]) {
-                displayArea.innerHTML = '<p class="text-slate-500 initial-message">End of text or no text loaded.</p>';
+                const endMsg = document.createElement('p');
+                endMsg.classList.add('initial-message'); // So it can be styled/found
+                endMsg.textContent = 'End of text or no text loaded.';
+                endMsg.style.color = 'var(--text-muted-color)';
+                displayArea.appendChild(endMsg);
                 if (isPlaying) pauseReading(); return;
             }
             const chunkWords = chunks[currentChunkIndex];
@@ -392,49 +541,52 @@
         }
 
         function animateNextWord() {
-            if (!isPlaying || chunks.length === 0 || currentChunkIndex >= chunks.length || !chunks[currentChunkIndex]) {
-                if (isPlaying) pauseReading(); return;
-            }
+            if (!isPlaying || chunks.length === 0 || currentChunkIndex >= chunks.length || !chunks[currentChunkIndex]) { if (isPlaying) pauseReading(); return; }
             const chunkWords = chunks[currentChunkIndex];
             if (currentWordInChunkIndex >= chunkWords.length) {
                 currentChunkIndex++; currentWordInChunkIndex = 0;
                 if (currentChunkIndex >= chunks.length) { 
-                    pauseReading(); displayArea.innerHTML = '<p class="text-green-400 initial-message">Finished reading!</p>';
+                    pauseReading(); 
+                    const finishedMsg = document.createElement('p');
+                    finishedMsg.classList.add('initial-message');
+                    finishedMsg.textContent = 'Finished reading!';
+                    finishedMsg.style.color = isLightMode ? '#16a34a' : '#22c55e'; // Green
+                    displayArea.innerHTML = ''; // Clear previous words
+                    displayArea.appendChild(finishedMsg);
                     currentChunkIndex = 0; userStartCharIndex = 0; return;
                 }
                 renderCurrentChunk(); 
                 currentAnimationTimeoutId = setTimeout(animateNextWord, 150); return;
             }
             const wordSpans = displayArea.querySelectorAll('.word');
-            if (currentWordInChunkIndex >= wordSpans.length || !wordSpans[currentWordInChunkIndex]) {
-                console.error("Word index out of bounds. Index:", currentWordInChunkIndex, "Spans:", wordSpans.length);
-                pauseReading(); return;
-            }
+            if (currentWordInChunkIndex >= wordSpans.length || !wordSpans[currentWordInChunkIndex]) { console.error("Word index out of bounds. Index:", currentWordInChunkIndex, "Spans:", wordSpans.length); pauseReading(); return; }
             const currentWordSpan = wordSpans[currentWordInChunkIndex];
             const wordDurationSec = 60 / readingSpeedWPM;
             currentWordSpan.style.transitionDuration = wordDurationSec + 's';
             currentWordSpan.style.backgroundPosition = '0%'; 
             currentAnimationTimeoutId = setTimeout(() => {
-                currentWordSpan.style.transitionDuration = '0s';
-                currentWordSpan.style.backgroundPosition = '0%';
+                currentWordSpan.style.transitionDuration = '0s'; currentWordSpan.style.backgroundPosition = '0%';
                 currentWordInChunkIndex++; animateNextWord();
             }, wordDurationSec * 1000);
         }
 
         function updateButtonUI() {
+            const startPauseButton = document.getElementById('start-pause-btn');
             if (isPlaying) {
                 startPauseText.textContent = 'Pause';
-                startPauseBtn.classList.remove('bg-sky-500', 'hover:bg-sky-600');
-                startPauseBtn.classList.add('bg-red-500', 'hover:bg-red-600');
+                // Use specific red colors for pause state, respecting theme
+                startPauseButton.style.backgroundColor = isLightMode ? '#ef4444' : '#dc2626'; // Tailwind red-500 / red-600
+                startPauseButton.style.color = 'white'; // Text color for pause button is white
                 playIcon.classList.add('hidden');
                 pauseIcon.classList.remove('hidden');
             } else {
                 startPauseText.textContent = 'Start';
-                startPauseBtn.classList.remove('bg-red-500', 'hover:bg-red-600');
-                startPauseBtn.classList.add('bg-sky-500', 'hover:bg-sky-600');
+                startPauseButton.style.backgroundColor = 'var(--button-primary-bg)';
+                startPauseButton.style.color = 'var(--button-primary-text)';
                 playIcon.classList.remove('hidden');
                 pauseIcon.classList.add('hidden');
             }
+            updateButtonHoverStyles(); // Re-apply hover styles as base color might have changed
         }
 
         document.addEventListener('DOMContentLoaded', initialize);
