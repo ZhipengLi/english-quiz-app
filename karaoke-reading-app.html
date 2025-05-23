@@ -52,47 +52,29 @@
             --text-color: #1e293b;  /* slate-800 */
             --text-secondary-color: #475569; /* slate-600 */
             --text-muted-color: #6b7280; /* gray-500 */
-
             --card-bg: #ffffff;  /* white */
             --input-bg: #f1f5f9;   /* slate-100 */
             --input-border-color: #cbd5e1; /* slate-300 */
-
-            /* Buttons can keep vibrant colors or be adjusted */
-            /* --button-primary-bg: #0ea5e9; */
-            /* --button-primary-hover-bg: #0284c7; */
             --button-primary-text: white;
-
-            /* --button-secondary-bg: #d97706; */
-            /* --button-secondary-hover-bg: #b45309; */
             --button-secondary-text: white;
-            
-            /* --button-tertiary-bg: #6366f1; */
-            /* --button-tertiary-hover-bg: #4f46e5; */
             --button-tertiary-text: white;
-
             --button-neutral-bg: #e5e7eb; /* gray-200 */
             --button-neutral-hover-bg: #d1d5db; /* gray-300 */
             --button-neutral-text: #1f2937; /* gray-800 */
-            
             --accent-color: #0ea5e9; /* sky-600 */
             --range-thumb-color: #0ea5e9;
             --ring-focus-color: #0ea5e9;
-
             --read-text-color: #1e293b;   
             --unread-text-color: #9ca3af; /* gray-400 */
-
             --scrollbar-track-bg: #e2e8f0; /* slate-200 */
             --scrollbar-thumb-bg: #cbd5e1; /* slate-300 */
             --scrollbar-thumb-hover-bg: #94a3b8; /* slate-400 */
-            
-            /* --selection-bg: #0ea5e9; */
-            /* --selection-text: white; */
         }
 
         body {
             background-color: var(--page-bg);
             color: var(--text-color);
-            font-family: Inter, system-ui, sans-serif; /* Using a common sans-serif stack */
+            font-family: Inter, system-ui, sans-serif;
         }
 
         ::selection {
@@ -102,15 +84,10 @@
 
         .word {
             background-image: linear-gradient(to right, var(--read-text-color) 50%, var(--unread-text-color) 50%);
-            background-size: 200% 100%;
-            background-position: 100%;
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            transition-property: background-position;
-            transition-timing-function: linear;
-            display: inline; 
-            white-space: pre-wrap; 
+            background-size: 200% 100%; background-position: 100%;
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+            transition-property: background-position; transition-timing-function: linear;
+            display: inline; white-space: pre-wrap; 
         }
         
         #text-input::-webkit-scrollbar { width: 8px; }
@@ -119,32 +96,16 @@
         #text-input::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover-bg); }
 
         #display-area-container:fullscreen {
-            background-color: var(--card-bg) !important; /* Use themed card background */
-            padding: 2rem !important;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            overflow-y: auto;
-            border-radius: 0 !important;
+            background-color: var(--card-bg) !important; 
+            padding: 2rem !important; display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            overflow-y: auto; border-radius: 0 !important;
         }
-        #display-area-container:fullscreen #display-area {
-            color: var(--text-color) !important; /* Ensure text color in fullscreen also themes */
-        }
+        #display-area-container:fullscreen #display-area { color: var(--text-color) !important; }
         
-        /* Helper for focus rings */
-        .focus-ring {
-            outline: 2px solid transparent;
-            outline-offset: 2px;
-        }
-        .focus-ring:focus-visible { /* Using focus-visible for better accessibility */
-             box-shadow: 0 0 0 2px var(--page-bg), 0 0 0 4px var(--ring-focus-color);
-        }
-         input[type="range"].focus-ring:focus-visible {
-            box-shadow: 0 0 0 2px var(--card-bg), 0 0 0 4px var(--ring-focus-color); /* Range needs offset from its card */
-        }
-
-
+        .focus-ring { outline: 2px solid transparent; outline-offset: 2px; }
+        .focus-ring:focus-visible { box-shadow: 0 0 0 2px var(--page-bg), 0 0 0 4px var(--ring-focus-color); }
+        input[type="range"].focus-ring:focus-visible { box-shadow: 0 0 0 2px var(--card-bg), 0 0 0 4px var(--ring-focus-color); }
     </style>
 </head>
 <body class="p-4 flex flex-col items-center min-h-screen">
@@ -156,7 +117,7 @@
         </header>
 
         <section style="background-color: var(--card-bg);" class="p-4 sm:p-6 rounded-lg shadow-xl">
-            <label for="text-input" class="block text-lg font-medium mb-2" style="color: var(--accent-color);">Paste your text here (or load from URL):</label>
+            <label for="text-input" class="block text-lg font-medium mb-2" style="color: var(--accent-color);">Paste your text here (or load from URL/cache):</label>
             <textarea id="text-input" 
                       class="w-full h-48 p-3 rounded-md border resize-y focus-ring"
                       style="background-color: var(--input-bg); color: var(--text-color); border-color: var(--input-border-color);"
@@ -177,6 +138,12 @@
                         style="background-color: var(--button-secondary-bg); color:var(--button-secondary-text);">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="19 20 9 12 19 4 19 20"></polygon><line x1="5" y1="19" x2="5" y2="5"></line></svg>
                     <span>Backward</span>
+                </button>
+                 <button id="forward-btn" 
+                        class="w-full sm:w-auto px-6 py-3 font-semibold rounded-lg shadow-md transition-colors duration-150 ease-in-out flex items-center justify-center gap-2 focus-ring"
+                        style="background-color: var(--button-secondary-bg); color:var(--button-secondary-text);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 4 15 12 5 20 5 4"></polygon><line x1="19" y1="5" x2="19" y2="19"></line></svg>
+                    <span>Forward</span>
                 </button>
                 <button id="fullscreen-btn" 
                         class="w-full sm:w-auto px-6 py-3 font-semibold rounded-lg shadow-md transition-colors duration-150 ease-in-out flex items-center justify-center gap-2 focus-ring"
@@ -221,6 +188,7 @@
         const playIcon = document.getElementById('play-icon');
         const pauseIcon = document.getElementById('pause-icon');
         const backwardBtn = document.getElementById('backward-btn');
+        const forwardBtn = document.getElementById('forward-btn');
         const speedControl = document.getElementById('speed-control');
         const speedValueDisplay = document.getElementById('speed-value');
         const displayAreaContainer = document.getElementById('display-area-container');
@@ -245,31 +213,74 @@
         let readingSpeedWPM = 100; 
         let currentAnimationTimeoutId = null;
         let userStartCharIndex = 0; 
-        let isLightMode = false; // Default to dark
+        let isLightMode = false; 
+        const KARAOKE_DATA_COOKIE_NAME = 'karaokeReaderData'; // Stores {text, progress}
 
         // --- Initialization ---
         function initialize() {
             speedControl.value = readingSpeedWPM; 
             speedValueDisplay.textContent = readingSpeedWPM;
-            loadInitialTheme(); // Load theme before other UI updates
-            updateButtonUI(); // General button UI (play/pause)
-            loadTextFromUrlParameter(); 
+            loadInitialTheme(); 
+            updateButtonUI(); 
+            loadTextAndAttemptProgress(); 
+        }
+
+        // --- Cookie Management ---
+        function setCookie(name, value, days = 7) {
+            let expires = "";
+            if (days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            // Ensure value is a string before encoding
+            const stringValue = typeof value === 'object' ? JSON.stringify(value) : String(value);
+            document.cookie = name + "=" + (encodeURIComponent(stringValue) || "")  + expires + "; path=/; SameSite=Lax";
+        }
+
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) {
+                    const value = decodeURIComponent(c.substring(nameEQ.length, c.length));
+                    try {
+                        return JSON.parse(value); // Attempt to parse as JSON
+                    } catch (e) {
+                        return value; // Return as string if not valid JSON
+                    }
+                }
+            }
+            return null;
+        }
+        
+        function saveCurrentProgressToCookie() {
+            const currentText = textInput.value.trim();
+            if (!currentText) return; // Don't save if no text
+
+            const dataToSave = {
+                text: currentText,
+                progress: {
+                    chunkIndex: currentChunkIndex,
+                    wordIndex: currentWordInChunkIndex
+                }
+            };
+            setCookie(KARAOKE_DATA_COOKIE_NAME, dataToSave, 7);
         }
 
         // --- Theme Management ---
         function applyTheme() {
             if (isLightMode) {
                 document.body.classList.add('light-mode');
-                sunIcon.classList.remove('hidden');
-                moonIcon.classList.add('hidden');
+                sunIcon.classList.remove('hidden'); moonIcon.classList.add('hidden');
                 themeToggleText.textContent = 'Dark Mode';
             } else {
                 document.body.classList.remove('light-mode');
-                sunIcon.classList.add('hidden');
-                moonIcon.classList.remove('hidden');
+                sunIcon.classList.add('hidden'); moonIcon.classList.remove('hidden');
                 themeToggleText.textContent = 'Light Mode';
             }
-            // Update button hover styles dynamically
             updateButtonHoverStyles();
         }
 
@@ -281,48 +292,34 @@
 
         function loadInitialTheme() {
             const savedTheme = localStorage.getItem('karaokeReaderTheme');
-            if (savedTheme) {
-                isLightMode = savedTheme === 'light';
-            } else {
-                // Optional: Check system preference if no saved theme
-                // isLightMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
-            }
-            applyTheme(); // Apply the determined theme
+            isLightMode = savedTheme === 'light';
+            applyTheme(); 
         }
         
         function updateButtonHoverStyles() {
-            // Start/Pause Button
             startPauseBtn.onmouseover = () => {
-                if(isPlaying) { // If it's a "Pause" button
-                     startPauseBtn.style.backgroundColor = isLightMode ? '#d9534f' : '#c9302c'; // Lighter/Darker red
-                } else { // If it's a "Start" button
-                    startPauseBtn.style.backgroundColor = isLightMode ? 'var(--button-primary-hover-bg)' : 'var(--button-primary-hover-bg)';
-                }
+                if(isPlaying) startPauseBtn.style.backgroundColor = isLightMode ? '#d9534f' : '#c9302c';
+                else startPauseBtn.style.backgroundColor = 'var(--button-primary-hover-bg)';
             };
             startPauseBtn.onmouseout = () => {
-                 if(isPlaying) {
-                     startPauseBtn.style.backgroundColor = isLightMode ? '#ef4444' : '#dc2626'; // Default red
-                 } else {
-                    startPauseBtn.style.backgroundColor = 'var(--button-primary-bg)';
-                 }
+                 if(isPlaying) startPauseBtn.style.backgroundColor = isLightMode ? '#ef4444' : '#dc2626';
+                 else startPauseBtn.style.backgroundColor = 'var(--button-primary-bg)';
             };
             
-            // Other buttons
             const buttonsToStyle = [
                 { el: backwardBtn, base: 'var(--button-secondary-bg)', hover: 'var(--button-secondary-hover-bg)' },
+                { el: forwardBtn, base: 'var(--button-secondary-bg)', hover: 'var(--button-secondary-hover-bg)' },
                 { el: fullscreenBtn, base: 'var(--button-tertiary-bg)', hover: 'var(--button-tertiary-hover-bg)' },
                 { el: themeToggleBtn, base: 'var(--button-neutral-bg)', hover: 'var(--button-neutral-hover-bg)' }
             ];
-
             buttonsToStyle.forEach(btnConfig => {
                 btnConfig.el.onmouseover = () => btnConfig.el.style.backgroundColor = btnConfig.hover;
                 btnConfig.el.onmouseout = () => btnConfig.el.style.backgroundColor = btnConfig.base;
             });
         }
 
-
-        // --- Load text from URL parameter ---
-        async function loadTextFromUrlParameter() {
+        // --- Load text and attempt to apply progress ---
+        async function loadTextAndAttemptProgress() {
             const urlParams = new URLSearchParams(window.location.search);
             const textFileUrl = urlParams.get('textUrl');
             const initialMsgElement = displayArea.querySelector('.initial-message') || document.createElement('p');
@@ -331,26 +328,40 @@
                  displayArea.appendChild(initialMsgElement);
             }
 
+            let loadedTextSource = null; // 'url', 'cookie', or null
 
             if (textFileUrl) {
                 initialMsgElement.textContent = 'Loading text from URL...';
                 initialMsgElement.style.color = 'var(--accent-color)';
                 try {
                     const response = await fetch(textFileUrl);
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status} - ${response.statusText}`);
-                    }
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status} - ${response.statusText}`);
                     const text = await response.text();
                     textInput.value = text;
-                    handleTextInputChange(); 
-                    initialMsgElement.textContent = 'Text loaded from URL. Press Start to read.';
-                    initialMsgElement.style.color = isLightMode ? '#16a34a' : '#22c55e'; // Green
+                    handleTextInputChange(); // Reset internal state for the new text
+                    initialMsgElement.textContent = 'Text loaded from URL. Press Start to read or resume.';
+                    initialMsgElement.style.color = isLightMode ? '#16a34a' : '#22c55e'; 
+                    loadedTextSource = 'url';
                 } catch (error) {
                     console.error('Error fetching text from URL:', error);
-                    initialMsgElement.textContent = `Error loading text: ${error.message}. Check console. Ensure CORS is enabled.`;
-                    initialMsgElement.style.color = isLightMode ? '#dc2626' : '#ef4444'; // Red
+                    initialMsgElement.textContent = `Error loading text from URL: ${error.message}. Trying cache.`;
+                    initialMsgElement.style.color = isLightMode ? '#dc2626' : '#ef4444'; 
+                    // Fall through to try cookie if URL load fails
                 }
-            } else if (!textInput.value) { // Only show default prompt if no URL and no text
+            }
+
+            if (!loadedTextSource) { // If no URL or URL failed
+                const savedData = getCookie(KARAOKE_DATA_COOKIE_NAME);
+                if (savedData && typeof savedData.text === 'string') {
+                    textInput.value = savedData.text;
+                    handleTextInputChange(); // Reset internal state
+                    initialMsgElement.textContent = 'Text loaded from previous session. Press Start to read or resume.';
+                    initialMsgElement.style.color = isLightMode ? '#16a34a' : '#22c55e';
+                    loadedTextSource = 'cookie';
+                }
+            }
+            
+            if (!loadedTextSource && !textInput.value) { // Default message if nothing loaded
                  initialMsgElement.textContent = 'Paste text above and press Start. Click on the pasted text to choose your starting point.';
                  initialMsgElement.style.color = 'var(--text-secondary-color)';
             }
@@ -362,59 +373,64 @@
         textInput.addEventListener('click', handleTextAreaClick);
         startPauseBtn.addEventListener('click', togglePlayPause);
         backwardBtn.addEventListener('click', handleBackward);
+        forwardBtn.addEventListener('click', handleForward); 
         speedControl.addEventListener('input', handleSpeedChange);
         document.addEventListener('keydown', handleKeyboardInput);
         fullscreenBtn.addEventListener('click', toggleFullscreen);
         document.addEventListener('fullscreenchange', handleFullscreenChange);
         themeToggleBtn.addEventListener('click', toggleTheme);
 
-
         // --- Event Handlers ---
-        function handleTextInputChange() {
-            if (isPlaying) {
-                pauseReading();
-            }
-            fullText = ""; 
-            words = [];
-            chunks = [];
-            currentChunkIndex = 0;
-            currentWordInChunkIndex = 0;
-            userStartCharIndex = 0; 
+        function handleTextInputChange() { // Called when textInput.value changes manually or by load
+            if (isPlaying) pauseReading(); // Pause if playing, as text changed
+            fullText = ""; words = []; chunks = []; // Reset processed text
+            currentChunkIndex = 0; currentWordInChunkIndex = 0; // Reset progress pointers
+            userStartCharIndex = 0; // Reset user click position for new text
             
             const initialMsgElement = displayArea.querySelector('.initial-message') || document.createElement('p');
-             if (!initialMsgElement.classList.contains('initial-message')) {
+            if (!initialMsgElement.classList.contains('initial-message')) {
                  initialMsgElement.classList.add('initial-message');
-                 displayArea.innerHTML = ''; // Clear if it wasn't an initial message before
-                 displayArea.appendChild(initialMsgElement);
+                 displayArea.innerHTML = ''; displayArea.appendChild(initialMsgElement);
             }
-            // Only update display message if not currently showing a URL load status
-            if (!initialMsgElement.textContent.includes('URL') && !initialMsgElement.textContent.includes('Error loading text')) {
+            // Set a generic message if text is changed, unless it's one of the loading messages
+            if (!initialMsgElement.textContent.includes('URL') && 
+                !initialMsgElement.textContent.includes('Error loading') && 
+                !initialMsgElement.textContent.includes('previous session') &&
+                !initialMsgElement.textContent.includes('Resuming')) {
                 initialMsgElement.textContent = 'Text changed. Press Start to read.';
                 initialMsgElement.style.color = 'var(--text-secondary-color)';
             }
             updateButtonUI();
         }
 
-        function handleTextAreaClick() {
-            userStartCharIndex = textInput.selectionStart;
-        }
-
-        function togglePlayPause() {
-            if (isPlaying) {
-                pauseReading();
-            } else {
-                startReading();
-            }
-        }
+        function handleTextAreaClick() { userStartCharIndex = textInput.selectionStart; }
+        function togglePlayPause() { if (isPlaying) pauseReading(); else startReading(); }
 
         function handleBackward() {
             if (chunks.length === 0) return;
             let wasPlaying = isPlaying;
-            if (isPlaying) pauseReading();
+            if (isPlaying) pauseReading(); // This will save current progress before moving
             if (currentWordInChunkIndex > 0) currentWordInChunkIndex = 0; 
             else if (currentChunkIndex > 0) { currentChunkIndex--; currentWordInChunkIndex = 0; }
             else { currentChunkIndex = 0; currentWordInChunkIndex = 0; }
             renderCurrentChunk();
+            saveCurrentProgressToCookie(); // Save new position
+            if (wasPlaying) { isPlaying = true; updateButtonUI(); animateNextWord(); }
+        }
+
+        function handleForward() {
+            if (chunks.length === 0 || (currentChunkIndex >= chunks.length -1 && currentWordInChunkIndex >= (chunks[currentChunkIndex]?.length || 0)) ) return;
+            let wasPlaying = isPlaying;
+            if (isPlaying) pauseReading(); // This will save current progress
+            
+            if (currentChunkIndex < chunks.length - 1) {
+                currentChunkIndex++;
+                currentWordInChunkIndex = 0;
+            } else { // Already on the last chunk, ensure we are at the start of it if not already.
+                currentWordInChunkIndex = 0; // Go to start of last chunk if "forward" is pressed on it.
+            }
+            renderCurrentChunk();
+            saveCurrentProgressToCookie(); // Save new position
             if (wasPlaying) { isPlaying = true; updateButtonUI(); animateNextWord(); }
         }
 
@@ -424,75 +440,99 @@
             if (isPlaying) {
                 clearTimeout(currentAnimationTimeoutId); currentAnimationTimeoutId = null;
                 const wordSpans = displayArea.querySelectorAll('.word');
-                if (currentWordInChunkIndex < wordSpans.length) {
-                    const currentWordSpan = wordSpans[currentWordInChunkIndex];
-                    if (currentWordSpan) currentWordSpan.style.transitionDuration = '0s'; 
+                if (currentWordInChunkIndex < wordSpans.length && wordSpans[currentWordInChunkIndex]) {
+                    wordSpans[currentWordInChunkIndex].style.transitionDuration = '0s'; 
                 }
                 animateNextWord(); 
             }
         }
         
         function handleKeyboardInput(e) {
-            if (e.code === 'Space' && e.target.tagName !== 'TEXTAREA') { 
-                e.preventDefault(); togglePlayPause();
-            }
+            if (e.target.tagName === 'TEXTAREA') return; 
+            if (e.code === 'Space') { e.preventDefault(); togglePlayPause(); }
+            if (e.code === 'ArrowLeft') { e.preventDefault(); handleBackward(); }
+            if (e.code === 'ArrowRight') { e.preventDefault(); handleForward(); }
         }
 
-        function toggleFullscreen() {
+        function toggleFullscreen() { /* ... (no changes needed here) ... */ 
             const initialMsgElement = displayArea.querySelector('.initial-message') || document.createElement('p');
             if (!document.fullscreenElement) {
                 displayAreaContainer.requestFullscreen().catch(err => {
                     console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
                     if (!initialMsgElement.classList.contains('initial-message')) {
-                        initialMsgElement.classList.add('initial-message');
-                        displayArea.innerHTML = ''; 
-                        displayArea.appendChild(initialMsgElement);
+                        initialMsgElement.classList.add('initial-message'); displayArea.innerHTML = ''; displayArea.appendChild(initialMsgElement);
                     }
                     initialMsgElement.textContent = `Fullscreen not available: ${err.message}`;
-                    initialMsgElement.style.color = isLightMode ? '#dc2626' : '#ef4444'; // Red
+                    initialMsgElement.style.color = isLightMode ? '#dc2626' : '#ef4444';
                 });
-            } else {
-                if (document.exitFullscreen) document.exitFullscreen();
-            }
+            } else { if (document.exitFullscreen) document.exitFullscreen(); }
         }
-
-        function handleFullscreenChange() {
+        function handleFullscreenChange() { /* ... (no changes needed here) ... */ 
             if (document.fullscreenElement === displayAreaContainer) {
                 fullscreenBtnText.textContent = 'Exit FS';
-                fullscreenEnterIcon.classList.add('hidden');
-                fullscreenExitIcon.classList.remove('hidden');
+                fullscreenEnterIcon.classList.add('hidden'); fullscreenExitIcon.classList.remove('hidden');
                 displayAreaContainer.addEventListener('click', exitFullscreenOnClickWhenFullscreen);
             } else {
                 fullscreenBtnText.textContent = 'Fullscreen';
-                fullscreenEnterIcon.classList.remove('hidden');
-                fullscreenExitIcon.classList.add('hidden');
+                fullscreenEnterIcon.classList.remove('hidden'); fullscreenExitIcon.classList.add('hidden');
                 displayAreaContainer.removeEventListener('click', exitFullscreenOnClickWhenFullscreen);
             }
         }
-
-        function exitFullscreenOnClickWhenFullscreen(event) {
+        function exitFullscreenOnClickWhenFullscreen(event) { /* ... (no changes needed here) ... */ 
             if (event.target === displayAreaContainer || event.target === displayArea || event.target.classList.contains('word')) {
                 if (document.fullscreenElement) document.exitFullscreen();
             }
         }
 
-        function preprocessAndDetermineStart(rawText) {
-            fullText = rawText;
-            if (!fullText) { words = []; chunks = []; currentChunkIndex = 0; currentWordInChunkIndex = 0; renderCurrentChunk(); return false; }
-            words = fullText.split(/\s+/).filter(word => word.length > 0);
+        function preprocessAndDetermineStart(rawText, forcedStartIndices = null) {
+            fullText = rawText; // Set the global fullText for reference
+            if (!rawText) { words = []; chunks = []; currentChunkIndex = 0; currentWordInChunkIndex = 0; renderCurrentChunk(); return false; }
+            words = rawText.split(/\s+/).filter(word => word.length > 0);
             if (words.length === 0) { chunks = []; currentChunkIndex = 0; currentWordInChunkIndex = 0; renderCurrentChunk(); return false; }
-            let charCount = 0, globalStartWordIndex = 0, foundStartIndex = false;
-            for (let i = 0; i < words.length; i++) { if (charCount >= userStartCharIndex) { globalStartWordIndex = i; foundStartIndex = true; break; } charCount += words[i].length + 1; }
-            if (!foundStartIndex && words.length > 0) globalStartWordIndex = words.length - 1;
+            
             chunks = [];
             for (let i = 0; i < words.length; i += WORDS_PER_CHUNK) chunks.push(words.slice(i, i + WORDS_PER_CHUNK));
-            if (chunks.length === 0 && words.length > 0) chunks.push(words);
-            currentChunkIndex = Math.floor(globalStartWordIndex / WORDS_PER_CHUNK);
-            currentWordInChunkIndex = globalStartWordIndex % WORDS_PER_CHUNK;
-            if (currentChunkIndex >= chunks.length && chunks.length > 0) { currentChunkIndex = chunks.length - 1; currentWordInChunkIndex = chunks[currentChunkIndex] ? chunks[currentChunkIndex].length - 1 : 0; }
-            else if (chunks.length === 0) { currentChunkIndex = 0; currentWordInChunkIndex = 0; return false; }
-            if (chunks[currentChunkIndex] && currentWordInChunkIndex >= chunks[currentChunkIndex].length) currentWordInChunkIndex = chunks[currentChunkIndex].length - 1;
+            if (chunks.length === 0 && words.length > 0) chunks.push(words); // Should not happen if words.length > 0
+
+            if (forcedStartIndices && chunks.length > 0) {
+                currentChunkIndex = parseInt(forcedStartIndices.chunkIndex, 10) || 0;
+                currentWordInChunkIndex = parseInt(forcedStartIndices.wordIndex, 10) || 0;
+
+                // Validate resumed indices
+                if (currentChunkIndex >= chunks.length) currentChunkIndex = chunks.length - 1;
+                if (currentChunkIndex < 0) currentChunkIndex = 0;
+                if (chunks[currentChunkIndex] && currentWordInChunkIndex >= chunks[currentChunkIndex].length) {
+                    currentWordInChunkIndex = chunks[currentChunkIndex].length - 1;
+                }
+                if (currentWordInChunkIndex < 0) currentWordInChunkIndex = 0;
+                 userStartCharIndex = 0; // Resumed progress overrides user click for this start
+            } else { // Use userStartCharIndex if no forced start or if text is new
+                let charCount = 0; 
+                let globalStartWordIndex = 0; 
+                let foundStartIndex = false;
+                for (let i = 0; i < words.length; i++) { 
+                    if (charCount >= userStartCharIndex) { globalStartWordIndex = i; foundStartIndex = true; break; } 
+                    charCount += words[i].length + 1; 
+                }
+                if (!foundStartIndex && words.length > 0) globalStartWordIndex = words.length - 1;
+                
+                currentChunkIndex = Math.floor(globalStartWordIndex / WORDS_PER_CHUNK);
+                currentWordInChunkIndex = globalStartWordIndex % WORDS_PER_CHUNK;
+            }
+
+            // Final validation of calculated/set indices
+            if (chunks.length === 0) { // Should be caught earlier, but as a safeguard
+                currentChunkIndex = 0; currentWordInChunkIndex = 0; return false;
+            }
+            if (currentChunkIndex >= chunks.length) currentChunkIndex = chunks.length > 0 ? chunks.length - 1 : 0;
+            if (currentChunkIndex < 0) currentChunkIndex = 0;
+            
+            const currentActualChunk = chunks[currentChunkIndex];
+            if (currentActualChunk && currentWordInChunkIndex >= currentActualChunk.length) {
+                currentWordInChunkIndex = currentActualChunk.length > 0 ? currentActualChunk.length - 1 : 0;
+            }
             if (currentWordInChunkIndex < 0) currentWordInChunkIndex = 0;
+            
             return true; 
         }
 
@@ -500,35 +540,64 @@
             const newText = textInput.value.trim();
             const initialMsgElement = displayArea.querySelector('.initial-message') || document.createElement('p');
             if (!initialMsgElement.classList.contains('initial-message')) {
-                initialMsgElement.classList.add('initial-message');
-                displayArea.innerHTML = ''; 
-                displayArea.appendChild(initialMsgElement);
+                initialMsgElement.classList.add('initial-message'); displayArea.innerHTML = ''; displayArea.appendChild(initialMsgElement);
             }
 
             if (!newText) { initialMsgElement.textContent = 'Please paste some text first.'; initialMsgElement.style.color = isLightMode ? '#dc2626' : '#ef4444'; return; }
-            let needsProcessing = fullText !== newText || chunks.length === 0 || (currentChunkIndex >= chunks.length && chunks.length > 0);
-            if (needsProcessing) { if (!preprocessAndDetermineStart(newText)) { initialMsgElement.textContent = 'No readable text found.'; initialMsgElement.style.color = isLightMode ? '#dc2626' : '#ef4444'; return; } }
-            if (chunks.length === 0) { initialMsgElement.textContent = 'No content to read.'; initialMsgElement.style.color = isLightMode ? '#dc2626' : '#ef4444'; return; }
-            isPlaying = true; updateButtonUI(); renderCurrentChunk(); animateNextWord();
+            
+            let forcedStart = null;
+            const savedData = getCookie(KARAOKE_DATA_COOKIE_NAME);
+            if (savedData && typeof savedData === 'object' && savedData.text === newText && savedData.progress) {
+                forcedStart = savedData.progress;
+                 if (initialMsgElement) {
+                    initialMsgElement.textContent = 'Resuming progress...';
+                    initialMsgElement.style.color = 'var(--accent-color)';
+                }
+            } else if (initialMsgElement && !initialMsgElement.textContent.includes('URL') && !initialMsgElement.textContent.includes('previous session')) {
+                // If not resuming, and not a loading message, clear it or set to reading.
+                // This might remove "Text changed" too soon. Let renderCurrentChunk handle it.
+            }
+
+
+            if (!preprocessAndDetermineStart(newText, forcedStart)) { 
+                initialMsgElement.textContent = 'No readable text found or error in processing.'; 
+                initialMsgElement.style.color = isLightMode ? '#dc2626' : '#ef4444'; return; 
+            }
+            // If preprocessAndDetermineStart was successful, fullText is now newText.
+            
+            if (chunks.length === 0) { 
+                initialMsgElement.textContent = 'No content to read.'; 
+                initialMsgElement.style.color = isLightMode ? '#dc2626' : '#ef4444'; return; 
+            }
+
+            isPlaying = true; 
+            updateButtonUI(); 
+            renderCurrentChunk(); // This will clear the initial message if text is present
+            animateNextWord();
+            saveCurrentProgressToCookie(); // Save the position we are starting from
         }
 
         function pauseReading() {
-            isPlaying = false; updateButtonUI();
+            isPlaying = false; 
+            updateButtonUI();
             if (currentAnimationTimeoutId) { clearTimeout(currentAnimationTimeoutId); currentAnimationTimeoutId = null; }
+            saveCurrentProgressToCookie(); // Save progress on pause
         }
         
         function renderCurrentChunk() {
             const initialMessage = displayArea.querySelector('.initial-message');
-            if (initialMessage) initialMessage.remove();
+            if (initialMessage) initialMessage.remove(); // Remove any status/initial message
             displayArea.innerHTML = ''; 
+
             if (chunks.length === 0 || currentChunkIndex >= chunks.length || !chunks[currentChunkIndex]) {
                 const endMsg = document.createElement('p');
-                endMsg.classList.add('initial-message'); // So it can be styled/found
-                endMsg.textContent = 'End of text or no text loaded.';
+                endMsg.classList.add('initial-message'); 
+                endMsg.textContent = (chunks.length === 0 && textInput.value.trim()) ? 'No words found in text.' : 'End of text or no text loaded.';
                 endMsg.style.color = 'var(--text-muted-color)';
                 displayArea.appendChild(endMsg);
                 if (isPlaying) pauseReading(); return;
             }
+
             const chunkWords = chunks[currentChunkIndex];
             chunkWords.forEach((word, indexInChunk) => {
                 const wordSpan = document.createElement('span');
@@ -542,51 +611,60 @@
 
         function animateNextWord() {
             if (!isPlaying || chunks.length === 0 || currentChunkIndex >= chunks.length || !chunks[currentChunkIndex]) { if (isPlaying) pauseReading(); return; }
+            
             const chunkWords = chunks[currentChunkIndex];
-            if (currentWordInChunkIndex >= chunkWords.length) {
-                currentChunkIndex++; currentWordInChunkIndex = 0;
-                if (currentChunkIndex >= chunks.length) { 
+            if (currentWordInChunkIndex >= chunkWords.length) { // Current chunk finished
+                currentChunkIndex++; 
+                currentWordInChunkIndex = 0;
+                saveCurrentProgressToCookie(); // Save progress when moving to a new chunk
+
+                if (currentChunkIndex >= chunks.length) { // All text finished
                     pauseReading(); 
                     const finishedMsg = document.createElement('p');
                     finishedMsg.classList.add('initial-message');
                     finishedMsg.textContent = 'Finished reading!';
-                    finishedMsg.style.color = isLightMode ? '#16a34a' : '#22c55e'; // Green
-                    displayArea.innerHTML = ''; // Clear previous words
+                    finishedMsg.style.color = isLightMode ? '#16a34a' : '#22c55e'; 
+                    displayArea.innerHTML = ''; 
                     displayArea.appendChild(finishedMsg);
-                    currentChunkIndex = 0; userStartCharIndex = 0; return;
+                    // Optionally reset progress for this text to start for next time, or leave as finished
+                    // currentChunkIndex = 0; currentWordInChunkIndex = 0; saveCurrentProgressToCookie(); 
+                    return;
                 }
                 renderCurrentChunk(); 
-                currentAnimationTimeoutId = setTimeout(animateNextWord, 150); return;
+                currentAnimationTimeoutId = setTimeout(animateNextWord, 150); // Delay before starting next chunk
+                return;
             }
+
             const wordSpans = displayArea.querySelectorAll('.word');
             if (currentWordInChunkIndex >= wordSpans.length || !wordSpans[currentWordInChunkIndex]) { console.error("Word index out of bounds. Index:", currentWordInChunkIndex, "Spans:", wordSpans.length); pauseReading(); return; }
+            
             const currentWordSpan = wordSpans[currentWordInChunkIndex];
             const wordDurationSec = 60 / readingSpeedWPM;
             currentWordSpan.style.transitionDuration = wordDurationSec + 's';
             currentWordSpan.style.backgroundPosition = '0%'; 
+
             currentAnimationTimeoutId = setTimeout(() => {
                 currentWordSpan.style.transitionDuration = '0s'; currentWordSpan.style.backgroundPosition = '0%';
-                currentWordInChunkIndex++; animateNextWord();
+                currentWordInChunkIndex++; 
+                // Do not save progress on every word, too frequent. Save on pause/nav/chunk change.
+                animateNextWord();
             }, wordDurationSec * 1000);
         }
 
-        function updateButtonUI() {
+        function updateButtonUI() { /* ... (no changes needed here) ... */ 
             const startPauseButton = document.getElementById('start-pause-btn');
             if (isPlaying) {
                 startPauseText.textContent = 'Pause';
-                // Use specific red colors for pause state, respecting theme
-                startPauseButton.style.backgroundColor = isLightMode ? '#ef4444' : '#dc2626'; // Tailwind red-500 / red-600
-                startPauseButton.style.color = 'white'; // Text color for pause button is white
-                playIcon.classList.add('hidden');
-                pauseIcon.classList.remove('hidden');
+                startPauseButton.style.backgroundColor = isLightMode ? '#ef4444' : '#dc2626'; 
+                startPauseButton.style.color = 'white'; 
+                playIcon.classList.add('hidden'); pauseIcon.classList.remove('hidden');
             } else {
                 startPauseText.textContent = 'Start';
                 startPauseButton.style.backgroundColor = 'var(--button-primary-bg)';
                 startPauseButton.style.color = 'var(--button-primary-text)';
-                playIcon.classList.remove('hidden');
-                pauseIcon.classList.add('hidden');
+                playIcon.classList.remove('hidden'); pauseIcon.classList.add('hidden');
             }
-            updateButtonHoverStyles(); // Re-apply hover styles as base color might have changed
+            updateButtonHoverStyles(); 
         }
 
         document.addEventListener('DOMContentLoaded', initialize);
