@@ -157,8 +157,7 @@
                         style="background-color: var(--button-neutral-bg); color:var(--button-neutral-text);">
                     <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                     <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-                    <span id="theme-toggle-text">Light Mode</span>
-                </button>
+                    <span id="theme-toggle-text">Dark Mode</span> </button>
             </div>
             <div class="flex flex-col sm:flex-row items-center gap-3 pt-2">
                 <label for="speed-control" class="text-lg font-medium whitespace-nowrap" style="color: var(--accent-color);">Speed (WPM):</label>
@@ -213,8 +212,8 @@
         let readingSpeedWPM = 100; 
         let currentAnimationTimeoutId = null;
         let userStartCharIndex = 0; 
-        let isLightMode = false; 
-        const KARAOKE_DATA_LOCALSTORAGE_KEY = 'karaokeReaderData'; // Changed from cookie to localStorage key
+        let isLightMode = true; // Default to light mode now
+        const KARAOKE_DATA_LOCALSTORAGE_KEY = 'karaokeReaderData'; 
 
         // --- Initialization ---
         function initialize() {
@@ -230,7 +229,6 @@
             try {
                 const stringData = JSON.stringify(data);
                 localStorage.setItem(key, stringData);
-                // console.log("Data saved to localStorage:", key, data); // Optional debug
             } catch (error) {
                 console.error("Error saving data to localStorage:", error);
             }
@@ -252,10 +250,8 @@
         function saveCurrentProgressToLocalStorage() {
             const currentText = textInput.value.trim();
             if (!currentText) {
-                // localStorage.removeItem(KARAOKE_DATA_LOCALSTORAGE_KEY); // Optional: clear if no text
                 return; 
             }
-
             const dataToSave = {
                 text: currentText,
                 progress: {
@@ -270,11 +266,13 @@
         function applyTheme() {
             if (isLightMode) {
                 document.body.classList.add('light-mode');
-                sunIcon.classList.remove('hidden'); moonIcon.classList.add('hidden');
+                sunIcon.classList.remove('hidden'); 
+                moonIcon.classList.add('hidden'); // Moon icon hidden in light mode by default
                 themeToggleText.textContent = 'Dark Mode';
             } else {
                 document.body.classList.remove('light-mode');
-                sunIcon.classList.add('hidden'); moonIcon.classList.remove('hidden');
+                sunIcon.classList.add('hidden'); // Sun icon hidden in dark mode
+                moonIcon.classList.remove('hidden'); 
                 themeToggleText.textContent = 'Light Mode';
             }
             updateButtonHoverStyles();
@@ -282,13 +280,19 @@
 
         function toggleTheme() {
             isLightMode = !isLightMode;
-            localStorage.setItem('karaokeReaderTheme', isLightMode ? 'light' : 'dark'); // Theme preference still uses its own key
+            localStorage.setItem('karaokeReaderTheme', isLightMode ? 'light' : 'dark');
             applyTheme();
         }
 
         function loadInitialTheme() {
             const savedTheme = localStorage.getItem('karaokeReaderTheme');
-            isLightMode = savedTheme === 'light';
+            // isLightMode is already true by default
+            if (savedTheme === 'dark') { // Explicitly set to dark if saved preference is dark
+                isLightMode = false;
+            } else if (savedTheme === 'light') { // Or if preference is light (though it's already default)
+                 isLightMode = true;
+            }
+            // If savedTheme is null, isLightMode remains its initial value (true for light default)
             applyTheme(); 
         }
         
