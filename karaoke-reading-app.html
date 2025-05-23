@@ -214,7 +214,7 @@
         let currentAnimationTimeoutId = null;
         let userStartCharIndex = 0; 
         let isLightMode = false; 
-        const KARAOKE_DATA_COOKIE_NAME = 'karaokeReaderData'; // Stores {text, progress}
+        const KARAOKE_DATA_LOCALSTORAGE_KEY = 'karaokeReaderData'; // Changed from cookie to localStorage key
 
         // --- Initialization ---
         function initialize() {
@@ -225,40 +225,36 @@
             loadTextAndAttemptProgress(); 
         }
 
-        // --- Cookie Management ---
-        function setCookie(name, value, days = 7) {
-            let expires = "";
-            if (days) {
-                const date = new Date();
-                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                expires = "; expires=" + date.toUTCString();
+        // --- localStorage Management ---
+        function saveDataToLocalStorage(key, data) {
+            try {
+                const stringData = JSON.stringify(data);
+                localStorage.setItem(key, stringData);
+                // console.log("Data saved to localStorage:", key, data); // Optional debug
+            } catch (error) {
+                console.error("Error saving data to localStorage:", error);
             }
-            // Ensure value is a string before encoding
-            const stringValue = typeof value === 'object' ? JSON.stringify(value) : String(value);
-            document.cookie = name + "=" + (encodeURIComponent(stringValue) || "")  + expires + "; path=/; SameSite=Lax";
         }
 
-        function getCookie(name) {
-            const nameEQ = name + "=";
-            const ca = document.cookie.split(';');
-            for(let i = 0; i < ca.length; i++) {
-                let c = ca[i];
-                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-                if (c.indexOf(nameEQ) === 0) {
-                    const value = decodeURIComponent(c.substring(nameEQ.length, c.length));
-                    try {
-                        return JSON.parse(value); // Attempt to parse as JSON
-                    } catch (e) {
-                        return value; // Return as string if not valid JSON
-                    }
+        function getDataFromLocalStorage(key) {
+            try {
+                const stringData = localStorage.getItem(key);
+                if (stringData === null) {
+                    return null;
                 }
+                return JSON.parse(stringData);
+            } catch (error) {
+                console.error("Error reading or parsing data from localStorage:", error);
+                return null;
             }
-            return null;
         }
         
-        function saveCurrentProgressToCookie() {
+        function saveCurrentProgressToLocalStorage() {
             const currentText = textInput.value.trim();
-            if (!currentText) return; // Don't save if no text
+            if (!currentText) {
+                // localStorage.removeItem(KARAOKE_DATA_LOCALSTORAGE_KEY); // Optional: clear if no text
+                return; 
+            }
 
             const dataToSave = {
                 text: currentText,
@@ -267,7 +263,7 @@
                     wordIndex: currentWordInChunkIndex
                 }
             };
-            setCookie(KARAOKE_DATA_COOKIE_NAME, dataToSave, 7);
+            saveDataToLocalStorage(KARAOKE_DATA_LOCALSTORAGE_KEY, dataToSave);
         }
 
         // --- Theme Management ---
@@ -286,7 +282,7 @@
 
         function toggleTheme() {
             isLightMode = !isLightMode;
-            localStorage.setItem('karaokeReaderTheme', isLightMode ? 'light' : 'dark');
+            localStorage.setItem('karaokeReaderTheme', isLightMode ? 'light' : 'dark'); // Theme preference still uses its own key
             applyTheme();
         }
 
@@ -328,7 +324,7 @@
                  displayArea.appendChild(initialMsgElement);
             }
 
-            let loadedTextSource = null; // 'url', 'cookie', or null
+            let loadedTextSource = null; 
 
             if (textFileUrl) {
                 initialMsgElement.textContent = 'Loading text from URL...';
@@ -338,7 +334,7 @@
                     if (!response.ok) throw new Error(`HTTP error! status: ${response.status} - ${response.statusText}`);
                     const text = await response.text();
                     textInput.value = text;
-                    handleTextInputChange(); // Reset internal state for the new text
+                    handleTextInputChange(); 
                     initialMsgElement.textContent = 'Text loaded from URL. Press Start to read or resume.';
                     initialMsgElement.style.color = isLightMode ? '#16a34a' : '#22c55e'; 
                     loadedTextSource = 'url';
@@ -346,22 +342,23 @@
                     console.error('Error fetching text from URL:', error);
                     initialMsgElement.textContent = `Error loading text from URL: ${error.message}. Trying cache.`;
                     initialMsgElement.style.color = isLightMode ? '#dc2626' : '#ef4444'; 
-                    // Fall through to try cookie if URL load fails
                 }
             }
 
-            if (!loadedTextSource) { // If no URL or URL failed
-                const savedData = getCookie(KARAOKE_DATA_COOKIE_NAME);
-                if (savedData && typeof savedData.text === 'string') {
+            if (!loadedTextSource) { 
+                const savedData = getDataFromLocalStorage(KARAOKE_DATA_LOCALSTORAGE_KEY);
+                if (savedData && typeof savedData === 'object' && typeof savedData.text === 'string') {
                     textInput.value = savedData.text;
-                    handleTextInputChange(); // Reset internal state
+                    handleTextInputChange(); 
                     initialMsgElement.textContent = 'Text loaded from previous session. Press Start to read or resume.';
                     initialMsgElement.style.color = isLightMode ? '#16a34a' : '#22c55e';
-                    loadedTextSource = 'cookie';
+                    loadedTextSource = 'localstorage';
+                } else if (savedData) { 
+                    console.warn("Saved localStorage data is not in the expected format:", savedData);
                 }
             }
             
-            if (!loadedTextSource && !textInput.value) { // Default message if nothing loaded
+            if (!loadedTextSource && !textInput.value) { 
                  initialMsgElement.textContent = 'Paste text above and press Start. Click on the pasted text to choose your starting point.';
                  initialMsgElement.style.color = 'var(--text-secondary-color)';
             }
@@ -381,18 +378,17 @@
         themeToggleBtn.addEventListener('click', toggleTheme);
 
         // --- Event Handlers ---
-        function handleTextInputChange() { // Called when textInput.value changes manually or by load
-            if (isPlaying) pauseReading(); // Pause if playing, as text changed
-            fullText = ""; words = []; chunks = []; // Reset processed text
-            currentChunkIndex = 0; currentWordInChunkIndex = 0; // Reset progress pointers
-            userStartCharIndex = 0; // Reset user click position for new text
+        function handleTextInputChange() { 
+            if (isPlaying) pauseReading(); 
+            fullText = ""; words = []; chunks = []; 
+            currentChunkIndex = 0; currentWordInChunkIndex = 0; 
+            userStartCharIndex = 0; 
             
             const initialMsgElement = displayArea.querySelector('.initial-message') || document.createElement('p');
             if (!initialMsgElement.classList.contains('initial-message')) {
                  initialMsgElement.classList.add('initial-message');
                  displayArea.innerHTML = ''; displayArea.appendChild(initialMsgElement);
             }
-            // Set a generic message if text is changed, unless it's one of the loading messages
             if (!initialMsgElement.textContent.includes('URL') && 
                 !initialMsgElement.textContent.includes('Error loading') && 
                 !initialMsgElement.textContent.includes('previous session') &&
@@ -409,28 +405,28 @@
         function handleBackward() {
             if (chunks.length === 0) return;
             let wasPlaying = isPlaying;
-            if (isPlaying) pauseReading(); // This will save current progress before moving
+            if (isPlaying) pauseReading(); 
             if (currentWordInChunkIndex > 0) currentWordInChunkIndex = 0; 
             else if (currentChunkIndex > 0) { currentChunkIndex--; currentWordInChunkIndex = 0; }
             else { currentChunkIndex = 0; currentWordInChunkIndex = 0; }
             renderCurrentChunk();
-            saveCurrentProgressToCookie(); // Save new position
+            saveCurrentProgressToLocalStorage(); 
             if (wasPlaying) { isPlaying = true; updateButtonUI(); animateNextWord(); }
         }
 
         function handleForward() {
             if (chunks.length === 0 || (currentChunkIndex >= chunks.length -1 && currentWordInChunkIndex >= (chunks[currentChunkIndex]?.length || 0)) ) return;
             let wasPlaying = isPlaying;
-            if (isPlaying) pauseReading(); // This will save current progress
+            if (isPlaying) pauseReading(); 
             
             if (currentChunkIndex < chunks.length - 1) {
                 currentChunkIndex++;
                 currentWordInChunkIndex = 0;
-            } else { // Already on the last chunk, ensure we are at the start of it if not already.
-                currentWordInChunkIndex = 0; // Go to start of last chunk if "forward" is pressed on it.
+            } else { 
+                currentWordInChunkIndex = 0; 
             }
             renderCurrentChunk();
-            saveCurrentProgressToCookie(); // Save new position
+            saveCurrentProgressToLocalStorage(); 
             if (wasPlaying) { isPlaying = true; updateButtonUI(); animateNextWord(); }
         }
 
@@ -454,7 +450,7 @@
             if (e.code === 'ArrowRight') { e.preventDefault(); handleForward(); }
         }
 
-        function toggleFullscreen() { /* ... (no changes needed here) ... */ 
+        function toggleFullscreen() { 
             const initialMsgElement = displayArea.querySelector('.initial-message') || document.createElement('p');
             if (!document.fullscreenElement) {
                 displayAreaContainer.requestFullscreen().catch(err => {
@@ -467,7 +463,7 @@
                 });
             } else { if (document.exitFullscreen) document.exitFullscreen(); }
         }
-        function handleFullscreenChange() { /* ... (no changes needed here) ... */ 
+        function handleFullscreenChange() { 
             if (document.fullscreenElement === displayAreaContainer) {
                 fullscreenBtnText.textContent = 'Exit FS';
                 fullscreenEnterIcon.classList.add('hidden'); fullscreenExitIcon.classList.remove('hidden');
@@ -478,35 +474,27 @@
                 displayAreaContainer.removeEventListener('click', exitFullscreenOnClickWhenFullscreen);
             }
         }
-        function exitFullscreenOnClickWhenFullscreen(event) { /* ... (no changes needed here) ... */ 
+        function exitFullscreenOnClickWhenFullscreen(event) { 
             if (event.target === displayAreaContainer || event.target === displayArea || event.target.classList.contains('word')) {
                 if (document.fullscreenElement) document.exitFullscreen();
             }
         }
 
         function preprocessAndDetermineStart(rawText, forcedStartIndices = null) {
-            fullText = rawText; // Set the global fullText for reference
+            fullText = rawText; 
             if (!rawText) { words = []; chunks = []; currentChunkIndex = 0; currentWordInChunkIndex = 0; renderCurrentChunk(); return false; }
             words = rawText.split(/\s+/).filter(word => word.length > 0);
             if (words.length === 0) { chunks = []; currentChunkIndex = 0; currentWordInChunkIndex = 0; renderCurrentChunk(); return false; }
             
             chunks = [];
             for (let i = 0; i < words.length; i += WORDS_PER_CHUNK) chunks.push(words.slice(i, i + WORDS_PER_CHUNK));
-            if (chunks.length === 0 && words.length > 0) chunks.push(words); // Should not happen if words.length > 0
+            if (chunks.length === 0 && words.length > 0) chunks.push(words);
 
             if (forcedStartIndices && chunks.length > 0) {
                 currentChunkIndex = parseInt(forcedStartIndices.chunkIndex, 10) || 0;
                 currentWordInChunkIndex = parseInt(forcedStartIndices.wordIndex, 10) || 0;
-
-                // Validate resumed indices
-                if (currentChunkIndex >= chunks.length) currentChunkIndex = chunks.length - 1;
-                if (currentChunkIndex < 0) currentChunkIndex = 0;
-                if (chunks[currentChunkIndex] && currentWordInChunkIndex >= chunks[currentChunkIndex].length) {
-                    currentWordInChunkIndex = chunks[currentChunkIndex].length - 1;
-                }
-                if (currentWordInChunkIndex < 0) currentWordInChunkIndex = 0;
-                 userStartCharIndex = 0; // Resumed progress overrides user click for this start
-            } else { // Use userStartCharIndex if no forced start or if text is new
+                userStartCharIndex = 0; 
+            } else { 
                 let charCount = 0; 
                 let globalStartWordIndex = 0; 
                 let foundStartIndex = false;
@@ -520,10 +508,7 @@
                 currentWordInChunkIndex = globalStartWordIndex % WORDS_PER_CHUNK;
             }
 
-            // Final validation of calculated/set indices
-            if (chunks.length === 0) { // Should be caught earlier, but as a safeguard
-                currentChunkIndex = 0; currentWordInChunkIndex = 0; return false;
-            }
+            if (chunks.length === 0) { currentChunkIndex = 0; currentWordInChunkIndex = 0; return false; }
             if (currentChunkIndex >= chunks.length) currentChunkIndex = chunks.length > 0 ? chunks.length - 1 : 0;
             if (currentChunkIndex < 0) currentChunkIndex = 0;
             
@@ -546,24 +531,19 @@
             if (!newText) { initialMsgElement.textContent = 'Please paste some text first.'; initialMsgElement.style.color = isLightMode ? '#dc2626' : '#ef4444'; return; }
             
             let forcedStart = null;
-            const savedData = getCookie(KARAOKE_DATA_COOKIE_NAME);
+            const savedData = getDataFromLocalStorage(KARAOKE_DATA_LOCALSTORAGE_KEY);
             if (savedData && typeof savedData === 'object' && savedData.text === newText && savedData.progress) {
                 forcedStart = savedData.progress;
                  if (initialMsgElement) {
                     initialMsgElement.textContent = 'Resuming progress...';
                     initialMsgElement.style.color = 'var(--accent-color)';
                 }
-            } else if (initialMsgElement && !initialMsgElement.textContent.includes('URL') && !initialMsgElement.textContent.includes('previous session')) {
-                // If not resuming, and not a loading message, clear it or set to reading.
-                // This might remove "Text changed" too soon. Let renderCurrentChunk handle it.
             }
-
-
+            
             if (!preprocessAndDetermineStart(newText, forcedStart)) { 
                 initialMsgElement.textContent = 'No readable text found or error in processing.'; 
                 initialMsgElement.style.color = isLightMode ? '#dc2626' : '#ef4444'; return; 
             }
-            // If preprocessAndDetermineStart was successful, fullText is now newText.
             
             if (chunks.length === 0) { 
                 initialMsgElement.textContent = 'No content to read.'; 
@@ -572,21 +552,21 @@
 
             isPlaying = true; 
             updateButtonUI(); 
-            renderCurrentChunk(); // This will clear the initial message if text is present
+            renderCurrentChunk(); 
             animateNextWord();
-            saveCurrentProgressToCookie(); // Save the position we are starting from
+            saveCurrentProgressToLocalStorage(); 
         }
 
         function pauseReading() {
             isPlaying = false; 
             updateButtonUI();
             if (currentAnimationTimeoutId) { clearTimeout(currentAnimationTimeoutId); currentAnimationTimeoutId = null; }
-            saveCurrentProgressToCookie(); // Save progress on pause
+            saveCurrentProgressToLocalStorage(); 
         }
         
         function renderCurrentChunk() {
             const initialMessage = displayArea.querySelector('.initial-message');
-            if (initialMessage) initialMessage.remove(); // Remove any status/initial message
+            if (initialMessage) initialMessage.remove(); 
             displayArea.innerHTML = ''; 
 
             if (chunks.length === 0 || currentChunkIndex >= chunks.length || !chunks[currentChunkIndex]) {
@@ -613,12 +593,12 @@
             if (!isPlaying || chunks.length === 0 || currentChunkIndex >= chunks.length || !chunks[currentChunkIndex]) { if (isPlaying) pauseReading(); return; }
             
             const chunkWords = chunks[currentChunkIndex];
-            if (currentWordInChunkIndex >= chunkWords.length) { // Current chunk finished
+            if (currentWordInChunkIndex >= chunkWords.length) { 
                 currentChunkIndex++; 
                 currentWordInChunkIndex = 0;
-                saveCurrentProgressToCookie(); // Save progress when moving to a new chunk
+                saveCurrentProgressToLocalStorage(); 
 
-                if (currentChunkIndex >= chunks.length) { // All text finished
+                if (currentChunkIndex >= chunks.length) { 
                     pauseReading(); 
                     const finishedMsg = document.createElement('p');
                     finishedMsg.classList.add('initial-message');
@@ -626,12 +606,10 @@
                     finishedMsg.style.color = isLightMode ? '#16a34a' : '#22c55e'; 
                     displayArea.innerHTML = ''; 
                     displayArea.appendChild(finishedMsg);
-                    // Optionally reset progress for this text to start for next time, or leave as finished
-                    // currentChunkIndex = 0; currentWordInChunkIndex = 0; saveCurrentProgressToCookie(); 
                     return;
                 }
                 renderCurrentChunk(); 
-                currentAnimationTimeoutId = setTimeout(animateNextWord, 150); // Delay before starting next chunk
+                currentAnimationTimeoutId = setTimeout(animateNextWord, 150); 
                 return;
             }
 
@@ -646,12 +624,11 @@
             currentAnimationTimeoutId = setTimeout(() => {
                 currentWordSpan.style.transitionDuration = '0s'; currentWordSpan.style.backgroundPosition = '0%';
                 currentWordInChunkIndex++; 
-                // Do not save progress on every word, too frequent. Save on pause/nav/chunk change.
                 animateNextWord();
             }, wordDurationSec * 1000);
         }
 
-        function updateButtonUI() { /* ... (no changes needed here) ... */ 
+        function updateButtonUI() { 
             const startPauseButton = document.getElementById('start-pause-btn');
             if (isPlaying) {
                 startPauseText.textContent = 'Pause';
