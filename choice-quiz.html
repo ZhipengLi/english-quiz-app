@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Quiz App</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --background-color: #ecf0f1;
+            --card-bg-color: #ffffff;
+            --correct-color: #27ae60;
+            --incorrect-color: #e74c3c;
+            --font-color: #34495e;
+            --border-radius: 12px;
+            --box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--font-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: var(--card-bg-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            width: 100%;
+            max-width: 700px;
+            overflow: hidden;
+        }
+
+        .view {
+            padding: 30px 40px;
+            display: none; /* Hidden by default */
+        }
+
+        .view.active {
+            display: block;
+        }
+
+        /* --- Setup View --- */
+        #setup-view h1 {
+            text-align: center;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        #setup-view p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        
+        #json-input {
+            width: 100%;
+            height: 150px;
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+            resize: vertical;
+        }
+
+        .order-options {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+            align-items: center;
+        }
+
+        .order-options label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        /* --- Quiz View --- */
+        .quiz-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        #progress-bar-container {
+            flex-grow: 1;
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+        
+        #progress-bar {
+            height: 100%;
+            width: 0%;
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            transition: width 0.3s ease-in-out;
+        }
+
+        #question-container {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        #options-container {
+            display: grid;
+            gap: 15px;
+        }
+
+        .option-btn {
+            background-color: var(--card-bg-color);
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            padding: 15px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+
+        .option-btn:hover:not(:disabled) {
+            background-color: #f1f2f6;
+            border-color: var(--primary-color);
+        }
+        
+        .option-btn:disabled {
+            cursor: not-allowed;
+        }
+
+        .option-btn.correct {
+            background-color: var(--correct-color);
+            color: white;
+            border-color: var(--correct-color);
+        }
+
+        .option-btn.incorrect {
+            background-color: var(--incorrect-color);
+            color: white;
+            border-color: var(--incorrect-color);
+        }
+
+        #feedback-container {
+            margin-top: 25px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            border-left: 5px solid var(--primary-color);
+            display: none; /* Hidden until an answer is selected */
+        }
+
+        #feedback-container p {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        /* --- Summary View --- */
+        #summary-view h2 {
+            text-align: center;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        #score-container {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        
+        #score-container span {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+        }
+        
+        /* --- General Controls --- */
+        .controls {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-secondary {
+            background-color: #7f8c8d;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+        .btn-secondary:hover {
+            background-color: #95a5a6;
+        }
+
+        #next-btn {
+            display: none; /* Hidden until an answer is selected */
+        }
+        
+        #error-message {
+            color: var(--incorrect-color);
+            margin-top: 15px;
+            text-align: center;
+            font-weight: 600;
+            display: none;
+        }
+        
+        /* --- Text Modal --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .modal-overlay.visible {
+            display: flex;
+            opacity: 1;
+        }
+        
+        .modal-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.visible .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-content h2 {
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+            padding-right: 40px; /* Space for close button */
+        }
+
+        .modal-content .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #95a5a6;
+            line-height: 1;
+        }
+        .modal-content .close-btn:hover {
+            color: var(--secondary-color);
+        }
+
+        #reference-text-content {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow-y: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            flex-grow: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- View 1: Setup Screen -->
+        <div id="setup-view" class="view active">
+            <h1>Quiz Setup</h1>
+            <p>Paste your quiz JSON data into the text box below.</p>
+            <textarea id="json-input" placeholder="Paste quiz JSON here..."></textarea>
+            
+            <p>Choose the question order:</p>
+            <div class="order-options">
+                <label>
+                    <input type="radio" name="order" value="sequence" checked> Sequential
+                </label>
+                <label>
+                    <input type="radio" name="order" value="random"> Random
+                </label>
+            </div>
+            
+            <div class="controls">
+                <button id="start-btn" class="btn">Start Quiz</button>
+            </div>
+            <p id="error-message"></p>
+        </div>
+
+        <!-- View 2: Quiz Screen -->
+        <div id="quiz-view" class="view">
+            <div class="quiz-header">
+                 <div id="progress-bar-container">
+                    <div id="progress-bar"></div>
+                </div>
+                <button id="show-text-btn" class="btn btn-secondary">Show Text</button>
+            </div>
+            <div id="question-container"></div>
+            <div id="options-container"></div>
+            <div id="feedback-container">
+                <p id="feedback-result"></p>
+                <span id="feedback-explanation"></span>
+            </div>
+            <div class="controls">
+                <button id="next-btn" class="btn">Next Question</button>
+            </div>
+        </div>
+
+        <!-- View 3: Summary Screen -->
+        <div id="summary-view" class="view">
+            <h2>Quiz Complete!</h2>
+            <div id="score-container"></div>
+            <div class="controls">
+                <button id="restart-btn" class="btn">Take Another Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for displaying reference text -->
+    <div id="text-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn">&times;</button>
+            <h2>Reference Text</h2>
+            <pre id="reference-text-content"></pre>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- STATE MANAGEMENT ---
+            let quizData = [];
+            let referenceText = '';
+            let questionOrder = [];
+            let currentQuestionIndex = 0;
+            let score = 0;
+
+            // --- DOM ELEMENTS ---
+            const views = {
+                setup: document.getElementById('setup-view'),
+                quiz: document.getElementById('quiz-view'),
+                summary: document.getElementById('summary-view'),
+            };
+
+            const jsonInput = document.getElementById('json-input');
+            const startBtn = document.getElementById('start-btn');
+            const errorMessage = document.getElementById('error-message');
+            
+            const progressBar = document.getElementById('progress-bar');
+            const questionContainer = document.getElementById('question-container');
+            const optionsContainer = document.getElementById('options-container');
+            const feedbackContainer = document.getElementById('feedback-container');
+            const feedbackResult = document.getElementById('feedback-result');
+            const feedbackExplanation = document.getElementById('feedback-explanation');
+            const nextBtn = document.getElementById('next-btn');
+
+            const scoreContainer = document.getElementById('score-container');
+            const restartBtn = document.getElementById('restart-btn');
+
+            const showTextBtn = document.getElementById('show-text-btn');
+            const textModal = document.getElementById('text-modal');
+            const closeBtn = document.querySelector('.close-btn');
+            const referenceTextContent = document.getElementById('reference-text-content');
+
+            const defaultQuizObject = {
+              "text": "test",
+              "quiz": [
+                {
+                  "question": "In the `Embedding` class, what is the purpose of the `backward` method?",
+                  "options": [
+                    "To select random word embeddings.",
+                    "To update the embedding weights for specific words seen in the forward pass.",
+                    "To normalize the embedding vectors.",
+                    "To apply dropout to the embeddings."
+                  ],
+                  "answer": "To update the embedding weights for specific words seen in the forward pass.",
+                  "explanation": "The line `np.add.at(self.W.grad, self.cache_ids, dout)` in the `backward` method specifically adds the incoming gradients (`dout`) to the rows of the embedding matrix (`self.W.grad`) corresponding to the word IDs (`self.cache_ids`) that were used in the forward pass. This is how the model learns the vector representations for words."
+                },
+                {
+                  "question": "What is the primary role of `gamma` and `beta` in the `LayerNorm` class?",
+                  "options": [
+                    "They store the mean and variance of the input.",
+                    "They are used to calculate the attention scores.",
+                    "They are non-trainable constants for numerical stability.",
+                    "They are learnable parameters that scale and shift the normalized output."
+                  ],
+                  "answer": "They are learnable parameters that scale and shift the normalized output.",
+                  "explanation": "`LayerNorm` first standardizes the input to have a mean of 0 and variance of 1. The learnable `gamma` (scale) and `beta` (shift) parameters are then applied. This allows the network to learn the optimal distribution for its activations, rather than being forced into a standard normal distribution."
+                }
+              ]
+            };
+            const DEFAULT_QUIZ_JSON = JSON.stringify(defaultQuizObject, null, 2);
+
+            // --- COOKIE FUNCTIONS ---
+            const setCookie = (name, value, days) => {
+                let expires = "";
+                if (days) {
+                    const date = new Date();
+                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "") + expires + "; path=/; SameSite=Lax";
+            };
+
+            const getCookie = (name) => {
+                const nameEQ = name + "=";
+                const ca = document.cookie.split(';');
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            };
+            
+            const loadFromCookie = () => {
+                const savedJson = getCookie('quizJson');
+                if (savedJson) {
+                    jsonInput.value = savedJson;
+                } else {
+                    jsonInput.value = DEFAULT_QUIZ_JSON;
+                }
+            };
+
+            // --- UTILITY FUNCTIONS ---
+            const switchView = (viewName) => {
+                Object.values(views).forEach(view => view.classList.remove('active'));
+                if (views[viewName]) {
+                    views[viewName].classList.add('active');
+                }
+            };
+            
+            const shuffleArray = (array) => {
+                // Create a copy to avoid modifying the original array
+                const newArray = [...array];
+                for (let i = newArray.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    // Swap elements
+                    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+                }
+                return newArray;
+            };
+
+            // --- CORE LOGIC ---
+            const startQuiz = () => {
+                let parsedJson;
+                const jsonText = jsonInput.value;
+                try {
+                    parsedJson = JSON.parse(jsonText);
+                    // Base validation
+                    if (!parsedJson.quiz || !Array.isArray(parsedJson.quiz) || parsedJson.quiz.length === 0) {
+                        throw new Error("JSON must have a non-empty 'quiz' array.");
+                    }
+                    if (typeof parsedJson.text !== 'string') {
+                         throw new Error("JSON must have a 'text' property of type string.");
+                    }
+                    // In-depth validation for each quiz question
+                    for (const question of parsedJson.quiz) {
+                        if (typeof question.answer !== 'string') {
+                            throw new Error(`Question "${question.question.substring(0,20)}..." must have an 'answer' of type string.`);
+                        }
+                        if (!question.options || !question.options.includes(question.answer)) {
+                            throw new Error(`The answer for question "${question.question.substring(0,20)}..." was not found in its options.`);
+                        }
+                    }
+                    errorMessage.style.display = 'none';
+                } catch (error) {
+                    errorMessage.textContent = `Invalid JSON: ${error.message}`;
+                    errorMessage.style.display = 'block';
+                    return;
+                }
+                
+                setCookie('quizJson', jsonText, 7);
+
+                quizData = parsedJson.quiz;
+                referenceText = parsedJson.text;
+                currentQuestionIndex = 0;
+                score = 0;
+
+                questionOrder = [...Array(quizData.length).keys()];
+                const selectedOrder = document.querySelector('input[name="order"]:checked').value;
+                if (selectedOrder === 'random') {
+                    shuffleArray(questionOrder);
+                }
+                
+                referenceTextContent.textContent = referenceText;
+                
+                switchView('quiz');
+                displayQuestion();
+            };
+
+            const displayQuestion = () => {
+                optionsContainer.innerHTML = '';
+                feedbackContainer.style.display = 'none';
+                nextBtn.style.display = 'none';
+
+                const questionIdx = questionOrder[currentQuestionIndex];
+                const question = quizData[questionIdx];
+
+                const correctAnswerText = question.answer;
+                let shuffledOptions = shuffleArray(question.options);
+                
+                updateProgressBar();
+                questionContainer.textContent = question.question;
+
+                shuffledOptions.forEach((optionText) => {
+                    const button = document.createElement('button');
+                    button.classList.add('option-btn');
+                    button.textContent = optionText;
+                    button.dataset.isCorrect = (optionText === correctAnswerText);
+                    button.addEventListener('click', handleOptionClick);
+                    optionsContainer.appendChild(button);
+                });
+            };
+
+            const handleOptionClick = (event) => {
+                const selectedButton = event.target;
+                const isCorrect = selectedButton.dataset.isCorrect === 'true';
+                
+                const questionIdx = questionOrder[currentQuestionIndex];
+                
+                Array.from(optionsContainer.children).forEach(btn => {
+                    btn.disabled = true;
+                });
+                
+                if (isCorrect) {
+                    score++;
+                    selectedButton.classList.add('correct');
+                    feedbackResult.textContent = "Correct! 🎉";
+                } else {
+                    selectedButton.classList.add('incorrect');
+                    const correctButton = optionsContainer.querySelector('[data-is-correct="true"]');
+                    if (correctButton) {
+                        correctButton.classList.add('correct');
+                    }
+                    feedbackResult.textContent = "Incorrect! 😔";
+                }
+                
+                feedbackExplanation.textContent = quizData[questionIdx].explanation;
+                feedbackContainer.style.display = 'block';
+                
+                if (currentQuestionIndex < quizData.length - 1) {
+                    nextBtn.textContent = 'Next Question';
+                } else {
+                    nextBtn.textContent = 'Finish Quiz';
+                }
+                nextBtn.style.display = 'block';
+            };
+
+            const nextQuestion = () => {
+                currentQuestionIndex++;
+                if (currentQuestionIndex < quizData.length) {
+                    displayQuestion();
+                } else {
+                    showSummary();
+                }
+            };
+            
+            const showSummary = () => {
+                scoreContainer.innerHTML = `Your final score is <span>${score}</span> out of ${quizData.length}.`;
+                switchView('summary');
+            };
+
+            const restartQuiz = () => {
+                switchView('setup');
+            };
+            
+            const updateProgressBar = () => {
+                const progress = ((currentQuestionIndex) / quizData.length) * 100;
+                progressBar.style.width = `${progress}%`;
+            };
+            
+            // --- MODAL LOGIC ---
+            const showModal = () => textModal.classList.add('visible');
+            const hideModal = () => textModal.classList.remove('visible');
+
+            // --- INITIALIZATION ---
+            loadFromCookie();
+
+            // --- EVENT LISTENERS ---
+            startBtn.addEventListener('click', startQuiz);
+            nextBtn.addEventListener('click', nextQuestion);
+            restartBtn.addEventListener('click', restartQuiz);
+            showTextBtn.addEventListener('click', showModal);
+            closeBtn.addEventListener('click', hideModal);
+            textModal.addEventListener('click', (event) => {
+                if (event.target === textModal) { // Hide if overlay is clicked, not content
+                    hideModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
