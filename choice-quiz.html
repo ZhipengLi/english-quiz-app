@@ -161,6 +161,28 @@
             color: white;
             border-color: var(--incorrect-color);
         }
+        
+        /* Styles for "blank" question type */
+        #options-container.blank-form {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        #blank-input {
+            flex-grow: 1;
+            padding: 15px;
+            font-size: 1rem;
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.2s ease;
+        }
+        
+        #blank-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
 
         #feedback-container {
             margin-top: 25px;
@@ -214,12 +236,17 @@
             transition: background-color 0.2s ease, transform 0.1s ease;
         }
         
-        .btn:hover {
+        .btn:hover:not(:disabled) {
             background-color: #2980b9;
         }
         
-        .btn:active {
+        .btn:active:not(:disabled) {
             transform: scale(0.98);
+        }
+        
+        .btn:disabled {
+            background-color: #bdc3c7;
+            cursor: not-allowed;
         }
 
         .btn-secondary {
@@ -418,10 +445,11 @@
             const referenceTextContent = document.getElementById('reference-text-content');
 
             const defaultQuizObject = {
-              "text": "test",
+              "text": "This is a sample text for the quiz. You can replace it with your own content.",
               "quiz": [
                 {
                   "question": "In the `Embedding` class, what is the purpose of the `backward` method?",
+                  "type": "choice",
                   "options": [
                     "To select random word embeddings.",
                     "To update the embedding weights for specific words seen in the forward pass.",
@@ -429,10 +457,11 @@
                     "To apply dropout to the embeddings."
                   ],
                   "answer": "To update the embedding weights for specific words seen in the forward pass.",
-                  "explanation": "The line `np.add.at(self.W.grad, self.cache_ids, dout)` in the `backward` method specifically adds the incoming gradients (`dout`) to the rows of the embedding matrix (`self.W.grad`) corresponding to the word IDs (`self.cache_ids`) that were used in the forward pass. This is how the model learns the vector representations for words."
+                  "explanation": "The backward method adds incoming gradients to the specific rows of the embedding matrix that were used, enabling learning."
                 },
                 {
                   "question": "What is the primary role of `gamma` and `beta` in the `LayerNorm` class?",
+                  "type": "choice",
                   "options": [
                     "They store the mean and variance of the input.",
                     "They are used to calculate the attention scores.",
@@ -440,7 +469,13 @@
                     "They are learnable parameters that scale and shift the normalized output."
                   ],
                   "answer": "They are learnable parameters that scale and shift the normalized output.",
-                  "explanation": "`LayerNorm` first standardizes the input to have a mean of 0 and variance of 1. The learnable `gamma` (scale) and `beta` (shift) parameters are then applied. This allows the network to learn the optimal distribution for its activations, rather than being forced into a standard normal distribution."
+                  "explanation": "They allow the network to learn the optimal scale and shift for activations after normalization."
+                },
+                {
+                  "question":"The core architecture of the model discussed is called a...",
+                  "type":"blank",
+                  "answer":"Transformer",
+                  "explanation":"The Transformer architecture, introduced in 'Attention Is All You Need', is the basis for this model."
                 }
               ]
             };
@@ -486,11 +521,9 @@
             };
             
             const shuffleArray = (array) => {
-                // Create a copy to avoid modifying the original array
                 const newArray = [...array];
                 for (let i = newArray.length - 1; i > 0; i--) {
                     const j = Math.floor(Math.random() * (i + 1));
-                    // Swap elements
                     [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
                 }
                 return newArray;
@@ -510,12 +543,20 @@
                          throw new Error("JSON must have a 'text' property of type string.");
                     }
                     // In-depth validation for each quiz question
-                    for (const question of parsedJson.quiz) {
-                        if (typeof question.answer !== 'string') {
-                            throw new Error(`Question "${question.question.substring(0,20)}..." must have an 'answer' of type string.`);
+                    for (const [index, question] of parsedJson.quiz.entries()) {
+                        const type = question.type || 'choice';
+                        const qIdentifier = `Question ${index + 1} ("${question.question.substring(0,20)}...")`;
+
+                        if (typeof question.answer !== 'string' || question.answer.trim() === '') {
+                             throw new Error(`${qIdentifier} must have a non-empty 'answer' of type string.`);
                         }
-                        if (!question.options || !question.options.includes(question.answer)) {
-                            throw new Error(`The answer for question "${question.question.substring(0,20)}..." was not found in its options.`);
+
+                        if (type === 'choice') {
+                             if (!question.options || !Array.isArray(question.options) || !question.options.includes(question.answer)) {
+                                 throw new Error(`The answer for ${qIdentifier} was not found in its 'options' array.`);
+                            }
+                        } else if (type !== 'blank') {
+                            throw new Error(`${qIdentifier} has an invalid type: '${type}'. Must be 'choice' or 'blank'.`);
                         }
                     }
                     errorMessage.style.display = 'none';
@@ -535,7 +576,8 @@
                 questionOrder = [...Array(quizData.length).keys()];
                 const selectedOrder = document.querySelector('input[name="order"]:checked').value;
                 if (selectedOrder === 'random') {
-                    shuffleArray(questionOrder);
+                    // Note: This shuffles the *indices*, not the questions themselves
+                    questionOrder = shuffleArray(questionOrder);
                 }
                 
                 referenceTextContent.textContent = referenceText;
@@ -546,33 +588,61 @@
 
             const displayQuestion = () => {
                 optionsContainer.innerHTML = '';
+                optionsContainer.className = '';
                 feedbackContainer.style.display = 'none';
                 nextBtn.style.display = 'none';
 
                 const questionIdx = questionOrder[currentQuestionIndex];
                 const question = quizData[questionIdx];
+                const type = question.type || 'choice';
 
-                const correctAnswerText = question.answer;
-                let shuffledOptions = shuffleArray(question.options);
-                
                 updateProgressBar();
                 questionContainer.textContent = question.question;
 
-                shuffledOptions.forEach((optionText) => {
-                    const button = document.createElement('button');
-                    button.classList.add('option-btn');
-                    button.textContent = optionText;
-                    button.dataset.isCorrect = (optionText === correctAnswerText);
-                    button.addEventListener('click', handleOptionClick);
-                    optionsContainer.appendChild(button);
-                });
+                if (type === 'choice') {
+                    optionsContainer.classList.add('choice-options');
+                    const correctAnswerText = question.answer;
+                    let shuffledOptions = shuffleArray(question.options);
+                    
+                    shuffledOptions.forEach((optionText) => {
+                        const button = document.createElement('button');
+                        button.classList.add('option-btn');
+                        button.textContent = optionText;
+                        button.dataset.isCorrect = (optionText === correctAnswerText);
+                        button.addEventListener('click', handleOptionClick);
+                        optionsContainer.appendChild(button);
+                    });
+                } else if (type === 'blank') {
+                    optionsContainer.classList.add('blank-form');
+                    const input = document.createElement('input');
+                    input.type = 'text';
+                    input.id = 'blank-input';
+                    input.placeholder = 'Type your answer...';
+                    input.autocomplete = 'off';
+
+                    const submitBtn = document.createElement('button');
+                    submitBtn.id = 'submit-blank-btn';
+                    submitBtn.textContent = 'Submit';
+                    submitBtn.classList.add('btn');
+
+                    optionsContainer.appendChild(input);
+                    optionsContainer.appendChild(submitBtn);
+
+                    submitBtn.addEventListener('click', handleBlankSubmit);
+                    input.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter') {
+                            e.preventDefault();
+                            handleBlankSubmit();
+                        }
+                    });
+                    
+                    setTimeout(() => input.focus(), 100);
+                }
             };
 
             const handleOptionClick = (event) => {
                 const selectedButton = event.target;
                 const isCorrect = selectedButton.dataset.isCorrect === 'true';
-                
-                const questionIdx = questionOrder[currentQuestionIndex];
                 
                 Array.from(optionsContainer.children).forEach(btn => {
                     btn.disabled = true;
@@ -585,15 +655,47 @@
                 } else {
                     selectedButton.classList.add('incorrect');
                     const correctButton = optionsContainer.querySelector('[data-is-correct="true"]');
-                    if (correctButton) {
-                        correctButton.classList.add('correct');
-                    }
+                    if (correctButton) correctButton.classList.add('correct');
                     feedbackResult.textContent = "Incorrect! 😔";
                 }
                 
-                feedbackExplanation.textContent = quizData[questionIdx].explanation;
+                const questionIdx = questionOrder[currentQuestionIndex];
+                feedbackExplanation.textContent = quizData[questionIdx].explanation || "";
                 feedbackContainer.style.display = 'block';
                 
+                if (currentQuestionIndex < quizData.length - 1) {
+                    nextBtn.textContent = 'Next Question';
+                } else {
+                    nextBtn.textContent = 'Finish Quiz';
+                }
+                nextBtn.style.display = 'block';
+            };
+
+            const handleBlankSubmit = () => {
+                const input = document.getElementById('blank-input');
+                const submitBtn = document.getElementById('submit-blank-btn');
+                if (!input || !submitBtn || submitBtn.disabled) return;
+
+                const userAnswer = input.value.trim();
+                const questionIdx = questionOrder[currentQuestionIndex];
+                const question = quizData[questionIdx];
+                const correctAnswer = question.answer;
+
+                input.disabled = true;
+                submitBtn.disabled = true;
+
+                if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+                    score++;
+                    feedbackResult.textContent = "Correct! 🎉";
+                    input.style.borderColor = 'var(--correct-color)';
+                } else {
+                    feedbackResult.innerHTML = `Incorrect! 😔 <br><small>Correct answer: <strong>${correctAnswer}</strong></small>`;
+                    input.style.borderColor = 'var(--incorrect-color)';
+                }
+
+                feedbackExplanation.textContent = question.explanation || "";
+                feedbackContainer.style.display = 'block';
+
                 if (currentQuestionIndex < quizData.length - 1) {
                     nextBtn.textContent = 'Next Question';
                 } else {
@@ -639,7 +741,7 @@
             showTextBtn.addEventListener('click', showModal);
             closeBtn.addEventListener('click', hideModal);
             textModal.addEventListener('click', (event) => {
-                if (event.target === textModal) { // Hide if overlay is clicked, not content
+                if (event.target === textModal) {
                     hideModal();
                 }
             });
