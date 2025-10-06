@@ -343,6 +343,18 @@
             flex-grow: 1;
         }
 
+        /* --- Responsive adjustments --- */
+        @media (max-width: 480px) {
+            .view {
+                padding: 20px;
+            }
+
+            #options-container.blank-form {
+                flex-direction: column;
+                align-items: stretch; /* Make items fill width */
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -749,3 +761,6 @@
     </script>
 </body>
 </html>
+
+
+
