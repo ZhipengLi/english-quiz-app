@@ -1,0 +1,215 @@
+{
+  "text": "Over the past decade, artificial intelligence (AI) has been a subject of intense media hype. Machine learning, deep learning, and AI come up in countless articles, often outside of technology-minded publications. Artificial intelligence was born in the 1950s, when a handful of pioneers from the nascent field of computer science started asking whether computers could be made to 'think'. Concisely, AI can be described as the effort to automate intellectual tasks normally performed by humans. Early chess programs only involved hardcoded rules crafted by programmers and didn't qualify as machine learning. This approach is known as symbolic AI. A new approach arose to take symbolic AI's place: machine learning. The usual way to make a computer do useful work is to have a human programmer write down rules to be followed to turn input data into appropriate answers. Machine learning turns this around: the machine looks at the input data and the corresponding answers, and figures out what the rules should be. A machine learning system is trained rather than explicitly programmed. The central problem in machine learning and deep learning is to meaningfully transform data: in other words, to learn useful representations of the input data at hand. Deep learning is a specific subfield of machine learning; it's a new take on learning representations from data, which emphasizes learning successive layers of increasingly meaningful representations. In deep learning, these layered representations are learned via models called neural networks. The specification of what a layer does to its input data is stored in the layer's weights. The loss function takes the predictions of the network and the true target and computes a distance score, capturing how well the network has done. The fundamental trick in deep learning is to use this score as a feedback signal to adjust the value of the weights a little, in a direction that will lower the loss score for the current example. This adjustment is the job of the optimizer, which implements what's called the Backpropagation algorithm. Deep learning makes problem solving much easier, because it automates what used to be the most crucial step in a machine learning workflow: feature engineering. Generative AI is powered by very large 'foundation models' that learn to reconstruct the text and image content fed into them. This is referred to as self-supervised learning, and it enables those models to use vast amounts of unlabeled data.",
+  "quiz": [
+    {
+      "question": "What fundamental approach does symbolic AI rely on to solve problems?",
+      "type": "choice",
+      "options": [
+        "Learning patterns from training data and adjusting parameters.",
+        "Handcrafting explicit rules for manipulating knowledge.",
+        "Extracting statistical features from large datasets.",
+        "Optimizing neural network weights through backpropagation."
+      ],
+      "answer": "Handcrafting explicit rules for manipulating knowledge.",
+      "explanation": "Symbolic AI was based on programmers manually creating explicit rules for problem-solving, rather than learning from data."
+    },
+    {
+      "question": "How does machine learning fundamentally differ from traditional programming?",
+      "type": "choice",
+      "options": [
+        "Machine learning requires larger computing resources than traditional programming.",
+        "Machine learning derives rules from data and outputs, while traditional programming follows predefined rules.",
+        "Machine learning uses neural networks, while traditional programming uses algorithms.",
+        "Machine learning processes images and text, while traditional programming handles numbers."
+      ],
+      "answer": "Machine learning derives rules from data and outputs, while traditional programming follows predefined rules.",
+      "explanation": "Machine learning reverses the traditional approach by having the machine figure out what the rules should be based on input-output examples."
+    },
+    {
+      "question": "What are the three essential components needed to perform machine learning?",
+      "type": "choice",
+      "options": [
+        "Input data, expected outputs, and a way to measure performance.",
+        "Neural networks, backpropagation, and optimization algorithms.",
+        "Training data, validation data, and test data sets.",
+        "Feature extraction, model selection, and hyperparameter tuning."
+      ],
+      "answer": "Input data, expected outputs, and a way to measure performance.",
+      "explanation": "Machine learning requires input data points, examples of expected output, and a measurement method to determine algorithm performance."
+    },
+    {
+      "question": "In machine learning, what is a representation?",
+      "type": "choice",
+      "options": [
+        "A visualization of the neural network architecture.",
+        "A different way to encode or look at data.",
+        "The final output produced by a trained model.",
+        "A mathematical function that maps inputs to outputs."
+      ],
+      "answer": "A different way to encode or look at data.",
+      "explanation": "A representation is an alternative way to view or encode data, such as RGB versus HSV format for color images."
+    },
+    {
+      "question": "The central problem in machine learning is learning useful... of input data.",
+      "type": "blank",
+      "answer": "representations",
+      "explanation": "Machine learning focuses on finding appropriate representations or transformations that make data more suitable for the task at hand."
+    },
+    {
+      "question": "What does the term 'deep' in deep learning primarily refer to?",
+      "type": "choice",
+      "options": [
+        "The profound understanding achieved by the models.",
+        "The successive layers of increasingly meaningful representations.",
+        "The complexity of the mathematical operations involved.",
+        "The extensive training time required for the models."
+      ],
+      "answer": "The successive layers of increasingly meaningful representations.",
+      "explanation": "Deep learning gets its name from learning multiple successive layers of representations, not from achieving deeper understanding."
+    },
+    {
+      "question": "How many layers of representations do deep learning models typically involve?",
+      "type": "choice",
+      "options": [
+        "One or two layers, similar to shallow learning methods.",
+        "Exactly ten layers for optimal performance.",
+        "Tens or even hundreds of successive layers.",
+        "Three to five layers for most practical applications."
+      ],
+      "answer": "Tens or even hundreds of successive layers.",
+      "explanation": "Modern deep learning often involves tens or even hundreds of successive layers of representations, unlike shallow learning which uses only one or two."
+    },
+    {
+      "question": "Deep learning models are structured as layers of...",
+      "type": "blank",
+      "answer": "neural networks",
+      "explanation": "In deep learning, layered representations are learned via models called neural networks, which are literally stacked in layers."
+    },
+    {
+      "question": "Where is the specification of what a layer does to its input stored?",
+      "type": "choice",
+      "options": [
+        "In the layer's activation functions and biases.",
+        "In the layer's weights or parameters.",
+        "In the layer's input and output dimensions.",
+        "In the layer's gradient descent optimizer."
+      ],
+      "answer": "In the layer's weights or parameters.",
+      "explanation": "A layer's transformation is parameterized by its weights (also called parameters), which are essentially numbers that define the layer's behavior."
+    },
+    {
+      "question": "What is the primary purpose of a loss function in deep learning?",
+      "type": "choice",
+      "options": [
+        "To measure the distance between predictions and true targets.",
+        "To calculate the computational cost of training.",
+        "To determine the optimal number of layers needed.",
+        "To select the best training examples for learning."
+      ],
+      "answer": "To measure the distance between predictions and true targets.",
+      "explanation": "The loss function computes a distance score that captures how well the network's predictions match the expected targets."
+    },
+    {
+      "question": "The algorithm that adjusts weights using the loss score as feedback is called...",
+      "type": "blank",
+      "answer": "Backpropagation",
+      "explanation": "Backpropagation is the central algorithm in deep learning that adjusts weights based on the loss score feedback signal."
+    },
+    {
+      "question": "What are the initial weights in a neural network typically set to?",
+      "type": "choice",
+      "options": [
+        "Zeros for all parameters to ensure stability.",
+        "Random values before training begins.",
+        "Values derived from statistical analysis of the data.",
+        "Optimal values calculated through mathematical proofs."
+      ],
+      "answer": "Random values before training begins.",
+      "explanation": "Initially, weights are assigned random values, so the network starts by implementing random transformations before learning."
+    },
+    {
+      "question": "What crucial step in traditional machine learning workflows does deep learning automate?",
+      "type": "choice",
+      "options": [
+        "Data collection and preprocessing steps.",
+        "Feature engineering and representation design.",
+        "Model deployment and production monitoring.",
+        "Hyperparameter optimization and validation."
+      ],
+      "answer": "Feature engineering and representation design.",
+      "explanation": "Deep learning automates feature engineering, which was the most crucial manual step in previous machine learning workflows."
+    },
+    {
+      "question": "Previous shallow learning methods typically transformed input data into how many representation spaces?",
+      "type": "choice",
+      "options": [
+        "Five to ten successive representation spaces.",
+        "One or two successive representation spaces.",
+        "Dozens of hierarchical representation layers.",
+        "Three to four intermediate representation levels."
+      ],
+      "answer": "One or two successive representation spaces.",
+      "explanation": "Shallow learning involved only one or two layers of representations, which wasn't expressive enough for complex problems."
+    },
+    {
+      "question": "In self-supervised learning, the training targets are derived from the...",
+      "type": "blank",
+      "answer": "input",
+      "explanation": "Self-supervised learning uses targets taken from the input itself, such as reconstructing images or predicting next words."
+    },
+    {
+      "question": "What key advantage allows foundation models in generative AI to use vast amounts of data?",
+      "type": "choice",
+      "options": [
+        "They require extensive human annotation for every data point.",
+        "They eliminate the need for manual data annotations.",
+        "They only process small, carefully curated datasets.",
+        "They rely on supervised learning with labeled examples."
+      ],
+      "answer": "They eliminate the need for manual data annotations.",
+      "explanation": "Self-supervised learning enables foundation models to train on vast amounts of unlabeled data without manual annotations."
+    },
+    {
+      "question": "According to the text, what is today's AI more accurately described as?",
+      "type": "choice",
+      "options": [
+        "General artificial intelligence with human-level reasoning.",
+        "Cognitive automation that encodes human skills.",
+        "Self-aware systems capable of independent thought.",
+        "Digital consciousness mimicking biological brains."
+      ],
+      "answer": "Cognitive automation that encodes human skills.",
+      "explanation": "The text describes current AI as cognitive automation - the encoding and operationalization of human skills and knowledge, not true intelligence."
+    },
+    {
+      "question": "What fundamental ability distinguishes true intelligence from automation?",
+      "type": "choice",
+      "options": [
+        "The capacity to process information at high speeds.",
+        "The ability to adapt to unknown situations and learn.",
+        "The skill to memorize large amounts of training data.",
+        "The power to execute complex mathematical operations."
+      ],
+      "answer": "The ability to adapt to unknown situations and learn.",
+      "explanation": "Intelligence is defined as the ability to face the unknown and adapt to it, while automation can only handle situations it was trained or programmed for."
+    },
+    {
+      "question": "Deep learning is highly amenable to parallelization on specialized hardware like...",
+      "type": "blank",
+      "answer": "GPUs",
+      "explanation": "Deep learning is highly amenable to parallelization on GPUs or specialized machine learning hardware, allowing it to scale efficiently."
+    },
+    {
+      "question": "What metaphor does the text use to distinguish AI from true intelligence?",
+      "type": "choice",
+      "options": [
+        "AI is like a calculator, while intelligence is like a mathematician.",
+        "AI is like a cartoon character, while intelligence is like a living being.",
+        "AI is like a robot, while intelligence is like a human brain.",
+        "AI is like a computer program, while intelligence is like creative thinking."
+      ],
+      "answer": "AI is like a cartoon character, while intelligence is like a living being.",
+      "explanation": "The text compares AI to a cartoon that can only act out scenes it was drawn for, while intelligence is like a living being that can adapt to the unexpected."
+    }
+  ]
+}
