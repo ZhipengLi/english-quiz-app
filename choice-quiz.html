@@ -101,6 +101,13 @@
             margin-bottom: 20px;
         }
         
+        #progress-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-grow: 1;
+        }
+
         #progress-bar-container {
             flex-grow: 1;
             height: 10px;
@@ -114,6 +121,13 @@
             background-color: var(--primary-color);
             border-radius: 5px;
             transition: width 0.3s ease-in-out;
+        }
+
+        #progress-text {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            white-space: nowrap;
         }
 
         #question-container {
@@ -218,6 +232,24 @@
             font-size: 2.5rem;
         }
         
+        #summary-message {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .summary-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .summary-controls .btn {
+            width: 100%;
+            max-width: 320px;
+        }
+
         /* --- General Controls --- */
         .controls {
             margin-top: 30px;
@@ -363,8 +395,8 @@
         <!-- View 1: Setup Screen -->
         <div id="setup-view" class="view active">
             <h1>Quiz Setup</h1>
-            <p>Paste your quiz JSON data into the text box below.</p>
-            <textarea id="json-input" placeholder="Paste quiz JSON here..."></textarea>
+            <p>Paste your quiz JSON data or URL into the text box below.</p>
+            <textarea id="json-input" placeholder="Paste quiz JSON or URL here..."></textarea>
             
             <p>Choose the question order:</p>
             <div class="order-options">
@@ -385,9 +417,12 @@
         <!-- View 2: Quiz Screen -->
         <div id="quiz-view" class="view">
             <div class="quiz-header">
-                 <div id="progress-bar-container">
-                    <div id="progress-bar"></div>
-                </div>
+                 <div id="progress-wrapper">
+                    <div id="progress-bar-container">
+                        <div id="progress-bar"></div>
+                    </div>
+                    <span id="progress-text"></span>
+                 </div>
                 <button id="show-text-btn" class="btn btn-secondary">Show Text</button>
             </div>
             <div id="question-container"></div>
@@ -403,10 +438,12 @@
 
         <!-- View 3: Summary Screen -->
         <div id="summary-view" class="view">
-            <h2>Quiz Complete!</h2>
+            <h2 id="summary-title">Quiz Complete!</h2>
+            <p id="summary-message"></p>
             <div id="score-container"></div>
-            <div class="controls">
-                <button id="restart-btn" class="btn">Take Another Quiz</button>
+            <div class="controls summary-controls">
+                <button id="retake-btn" class="btn"></button>
+                <button id="restart-btn" class="btn">Start a New Quiz</button>
             </div>
         </div>
     </div>
@@ -426,6 +463,7 @@
             let quizData = [];
             let referenceText = '';
             let questionOrder = [];
+            let incorrectlyAnsweredQuestions = [];
             let currentQuestionIndex = 0;
             let score = 0;
 
@@ -441,6 +479,7 @@
             const errorMessage = document.getElementById('error-message');
             
             const progressBar = document.getElementById('progress-bar');
+            const progressText = document.getElementById('progress-text');
             const questionContainer = document.getElementById('question-container');
             const optionsContainer = document.getElementById('options-container');
             const feedbackContainer = document.getElementById('feedback-container');
@@ -448,8 +487,11 @@
             const feedbackExplanation = document.getElementById('feedback-explanation');
             const nextBtn = document.getElementById('next-btn');
 
+            const summaryTitle = document.getElementById('summary-title');
+            const summaryMessage = document.getElementById('summary-message');
             const scoreContainer = document.getElementById('score-container');
             const restartBtn = document.getElementById('restart-btn');
+            const retakeBtn = document.getElementById('retake-btn');
 
             const showTextBtn = document.getElementById('show-text-btn');
             const textModal = document.getElementById('text-modal');
@@ -542,19 +584,40 @@
             };
 
             // --- CORE LOGIC ---
-            const startQuiz = () => {
+            const startQuiz = async () => {
+                const inputText = jsonInput.value.trim();
                 let parsedJson;
-                const jsonText = jsonInput.value;
+                let finalJsonText; // This will hold the text to be saved in the cookie
+
+                // Provide user feedback during async operations
+                startBtn.disabled = true;
+                startBtn.textContent = 'Loading...';
+                errorMessage.style.display = 'none';
+
                 try {
-                    parsedJson = JSON.parse(jsonText);
-                    // Base validation
+                    // Check if the input is a URL
+                    if (inputText.startsWith('http://') || inputText.startsWith('https://')) {
+                        const response = await fetch(inputText);
+                        if (!response.ok) {
+                            throw new Error(`Failed to fetch from URL (Status: ${response.status})`);
+                        }
+                        parsedJson = await response.json();
+                        // Prettify the fetched JSON to display in the text area and save to cookie
+                        finalJsonText = JSON.stringify(parsedJson, null, 2);
+                        jsonInput.value = finalJsonText;
+                    } else {
+                        // Otherwise, parse the input text as JSON directly
+                        parsedJson = JSON.parse(inputText);
+                        finalJsonText = inputText;
+                    }
+
+                    // --- Validation (now runs on both fetched and pasted JSON) ---
                     if (!parsedJson.quiz || !Array.isArray(parsedJson.quiz) || parsedJson.quiz.length === 0) {
                         throw new Error("JSON must have a non-empty 'quiz' array.");
                     }
                     if (typeof parsedJson.text !== 'string') {
                          throw new Error("JSON must have a 'text' property of type string.");
                     }
-                    // In-depth validation for each quiz question
                     for (const [index, question] of parsedJson.quiz.entries()) {
                         const type = question.type || 'choice';
                         const qIdentifier = `Question ${index + 1} ("${question.question.substring(0,20)}...")`;
@@ -571,31 +634,35 @@
                             throw new Error(`${qIdentifier} has an invalid type: '${type}'. Must be 'choice' or 'blank'.`);
                         }
                     }
-                    errorMessage.style.display = 'none';
+                    
+                    // --- If validation passes, set up the quiz ---
+                    setCookie('quizJson', finalJsonText, 7);
+
+                    quizData = parsedJson.quiz;
+                    referenceText = parsedJson.text;
+                    currentQuestionIndex = 0;
+                    score = 0;
+                    incorrectlyAnsweredQuestions = [];
+
+                    questionOrder = [...Array(quizData.length).keys()];
+                    const selectedOrder = document.querySelector('input[name="order"]:checked').value;
+                    if (selectedOrder === 'random') {
+                        questionOrder = shuffleArray(questionOrder);
+                    }
+                    
+                    referenceTextContent.textContent = referenceText;
+                    
+                    switchView('quiz');
+                    displayQuestion();
+
                 } catch (error) {
-                    errorMessage.textContent = `Invalid JSON: ${error.message}`;
+                    errorMessage.textContent = `Error: ${error.message}`;
                     errorMessage.style.display = 'block';
-                    return;
+                } finally {
+                    // Always re-enable the button
+                    startBtn.disabled = false;
+                    startBtn.textContent = 'Start Quiz';
                 }
-                
-                setCookie('quizJson', jsonText, 7);
-
-                quizData = parsedJson.quiz;
-                referenceText = parsedJson.text;
-                currentQuestionIndex = 0;
-                score = 0;
-
-                questionOrder = [...Array(quizData.length).keys()];
-                const selectedOrder = document.querySelector('input[name="order"]:checked').value;
-                if (selectedOrder === 'random') {
-                    // Note: This shuffles the *indices*, not the questions themselves
-                    questionOrder = shuffleArray(questionOrder);
-                }
-                
-                referenceTextContent.textContent = referenceText;
-                
-                switchView('quiz');
-                displayQuestion();
             };
 
             const displayQuestion = () => {
@@ -669,13 +736,14 @@
                     const correctButton = optionsContainer.querySelector('[data-is-correct="true"]');
                     if (correctButton) correctButton.classList.add('correct');
                     feedbackResult.textContent = "Incorrect! 😔";
+                    incorrectlyAnsweredQuestions.push(questionOrder[currentQuestionIndex]);
                 }
                 
                 const questionIdx = questionOrder[currentQuestionIndex];
                 feedbackExplanation.textContent = quizData[questionIdx].explanation || "";
                 feedbackContainer.style.display = 'block';
                 
-                if (currentQuestionIndex < quizData.length - 1) {
+                if (currentQuestionIndex < questionOrder.length - 1) {
                     nextBtn.textContent = 'Next Question';
                 } else {
                     nextBtn.textContent = 'Finish Quiz';
@@ -703,12 +771,13 @@
                 } else {
                     feedbackResult.innerHTML = `Incorrect! 😔 <br><small>Correct answer: <strong>${correctAnswer}</strong></small>`;
                     input.style.borderColor = 'var(--incorrect-color)';
+                    incorrectlyAnsweredQuestions.push(questionIdx);
                 }
 
                 feedbackExplanation.textContent = question.explanation || "";
                 feedbackContainer.style.display = 'block';
 
-                if (currentQuestionIndex < quizData.length - 1) {
+                if (currentQuestionIndex < questionOrder.length - 1) {
                     nextBtn.textContent = 'Next Question';
                 } else {
                     nextBtn.textContent = 'Finish Quiz';
@@ -718,7 +787,7 @@
 
             const nextQuestion = () => {
                 currentQuestionIndex++;
-                if (currentQuestionIndex < quizData.length) {
+                if (currentQuestionIndex < questionOrder.length) {
                     displayQuestion();
                 } else {
                     showSummary();
@@ -726,8 +795,31 @@
             };
             
             const showSummary = () => {
-                scoreContainer.innerHTML = `Your final score is <span>${score}</span> out of ${quizData.length}.`;
+                const questionsInRound = questionOrder.length;
+                scoreContainer.innerHTML = `You scored <span>${score}</span> out of ${questionsInRound}.`;
+
+                if (incorrectlyAnsweredQuestions.length > 0) {
+                    summaryTitle.textContent = 'Round Complete!';
+                    summaryMessage.textContent = 'You have a few incorrect answers. Ready for another round?';
+                    retakeBtn.textContent = `Retake ${incorrectlyAnsweredQuestions.length} Incorrect Questions`;
+                    retakeBtn.style.display = 'block';
+                } else {
+                    summaryTitle.textContent = 'Quiz Mastered!';
+                    summaryMessage.textContent = 'Congratulations! You answered all questions correctly.';
+                    retakeBtn.style.display = 'none';
+                }
+                
                 switchView('summary');
+            };
+
+            const retakeIncorrectQuiz = () => {
+                questionOrder = shuffleArray(incorrectlyAnsweredQuestions); // Shuffle the incorrect ones for variety
+                incorrectlyAnsweredQuestions = [];
+                currentQuestionIndex = 0;
+                score = 0;
+                
+                switchView('quiz');
+                displayQuestion();
             };
 
             const restartQuiz = () => {
@@ -735,8 +827,9 @@
             };
             
             const updateProgressBar = () => {
-                const progress = ((currentQuestionIndex) / quizData.length) * 100;
+                const progress = ((currentQuestionIndex) / questionOrder.length) * 100;
                 progressBar.style.width = `${progress}%`;
+                progressText.textContent = `${currentQuestionIndex + 1} / ${questionOrder.length}`;
             };
             
             // --- MODAL LOGIC ---
@@ -744,12 +837,47 @@
             const hideModal = () => textModal.classList.remove('visible');
 
             // --- INITIALIZATION ---
-            loadFromCookie();
+            const initialize = async () => {
+                const urlParams = new URLSearchParams(window.location.search);
+                const url = urlParams.get('url');
+
+                if (url) {
+                    jsonInput.placeholder = 'Loading quiz from URL parameter...';
+                    jsonInput.disabled = true;
+                    startBtn.disabled = true;
+                    try {
+                        const response = await fetch(url);
+                        if (!response.ok) {
+                            throw new Error(`Failed to fetch from URL (Status: ${response.status})`);
+                        }
+                        const data = await response.json();
+                        // Prettify the fetched JSON to display in the text area
+                        const finalJsonText = JSON.stringify(data, null, 2);
+                        jsonInput.value = finalJsonText;
+                    } catch (error) {
+                        console.error("Failed to load from URL parameter:", error);
+                        errorMessage.textContent = `Error loading from URL: ${error.message}`;
+                        errorMessage.style.display = 'block';
+                        // If fetching fails, fall back to cookie/default
+                        loadFromCookie();
+                    } finally {
+                        jsonInput.placeholder = 'Paste quiz JSON or URL here...';
+                        jsonInput.disabled = false;
+                        startBtn.disabled = false;
+                    }
+                } else {
+                    // If no URL parameter, load from cookie or default
+                    loadFromCookie();
+                }
+            };
+
+            initialize();
 
             // --- EVENT LISTENERS ---
             startBtn.addEventListener('click', startQuiz);
             nextBtn.addEventListener('click', nextQuestion);
             restartBtn.addEventListener('click', restartQuiz);
+            retakeBtn.addEventListener('click', retakeIncorrectQuiz);
             showTextBtn.addEventListener('click', showModal);
             closeBtn.addEventListener('click', hideModal);
             textModal.addEventListener('click', (event) => {
@@ -761,6 +889,3 @@
     </script>
 </body>
 </html>
-
-
-
