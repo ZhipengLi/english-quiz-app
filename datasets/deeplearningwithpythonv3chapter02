@@ -1,0 +1,539 @@
+{
+  "text": "This quiz is based on Chapter 2: Mathematical Building Blocks of Neural Networks from Deep Learning with Python. It covers fundamental concepts including tensors, tensor operations, neural network architecture, gradient descent, backpropagation, and optimization techniques. The material explains how deep learning models learn through iterative weight updates using gradient-based optimization.",
+  "quiz": [
+    {
+      "question": "What distinguishes a scalar tensor from other tensor types?",
+      "type": "choice",
+      "options": [
+        "It contains exactly one number and has zero axes.",
+        "It contains multiple numbers arranged in a single row.",
+        "It has one axis with multiple dimensions.",
+        "It stores data in a two-dimensional grid format."
+      ],
+      "answer": "It contains exactly one number and has zero axes.",
+      "explanation": "A scalar (rank-0 tensor) contains only one number and has ndim == 0, meaning it has zero axes."
+    },
+    {
+      "question": "How does broadcasting enable operations between tensors of different shapes?",
+      "type": "choice",
+      "options": [
+        "By reducing the larger tensor to match the smaller one's dimensions.",
+        "By adding axes to the smaller tensor and repeating it to match the larger shape.",
+        "By compressing both tensors into a common intermediate shape.",
+        "By selecting matching elements and discarding non-aligned portions."
+      ],
+      "answer": "By adding axes to the smaller tensor and repeating it to match the larger shape.",
+      "explanation": "Broadcasting adds broadcast axes to the smaller tensor, then repeats it alongside these axes to match the larger tensor's shape."
+    },
+    {
+      "question": "What is the primary purpose of the relu activation function in a Dense layer?",
+      "type": "choice",
+      "options": [
+        "To normalize output values between zero and one.",
+        "To introduce nonlinearity by returning the maximum of the input and zero.",
+        "To compute probability distributions across output classes.",
+        "To reduce the dimensionality of intermediate representations."
+      ],
+      "answer": "To introduce nonlinearity by returning the maximum of the input and zero.",
+      "explanation": "ReLU (max(x, 0)) introduces nonlinearity, allowing the network to learn complex transformations beyond simple linear operations."
+    },
+    {
+      "question": "Why can't a multi-layer network of only Dense layers without activations learn complex patterns?",
+      "type": "choice",
+      "options": [
+        "The network would become too slow to train effectively.",
+        "Multiple affine transforms compose into a single affine transform.",
+        "The weights would grow exponentially during training.",
+        "Input data would be distorted beyond recognition."
+      ],
+      "answer": "Multiple affine transforms compose into a single affine transform.",
+      "explanation": "Chaining affine transforms without activations results in just another affine transform, making the network equivalent to a single layer."
+    },
+    {
+      "question": "In the context of gradient descent, what does the learning rate control?",
+      "type": "choice",
+      "options": [
+        "The number of training samples processed in each batch.",
+        "The magnitude of weight updates in the opposite direction of the gradient.",
+        "The accuracy threshold that determines when training stops.",
+        "The frequency at which the model evaluates validation data."
+      ],
+      "answer": "The magnitude of weight updates in the opposite direction of the gradient.",
+      "explanation": "The learning rate scales the gradient to determine how much to adjust weights during each update step."
+    },
+    {
+      "question": "What does the chain rule enable in neural network training?",
+      "type": "choice",
+      "options": [
+        "Computing gradients of composed functions by multiplying individual derivatives.",
+        "Connecting multiple independent networks into a single architecture.",
+        "Distributing training across multiple processing units efficiently.",
+        "Selecting optimal hyperparameters through systematic search."
+      ],
+      "answer": "Computing gradients of composed functions by multiplying individual derivatives.",
+      "explanation": "The chain rule allows computing derivatives of function compositions, which is essential for backpropagation through layers."
+    },
+    {
+      "question": "How does momentum improve upon basic stochastic gradient descent?",
+      "type": "choice",
+      "options": [
+        "By using larger batch sizes to reduce gradient noise.",
+        "By incorporating past velocity to avoid local minima and speed convergence.",
+        "By automatically adjusting the learning rate based on loss values.",
+        "By randomly skipping weight updates to prevent overfitting."
+      ],
+      "answer": "By incorporating past velocity to avoid local minima and speed convergence.",
+      "explanation": "Momentum uses both current gradients and previous updates, helping the optimization process escape local minima and converge faster."
+    },
+    {
+      "question": "What is the fundamental operation performed by a Dense layer?",
+      "type": "choice",
+      "options": [
+        "Applying dropout to randomly disable neurons during training.",
+        "Computing a matrix product with weights, adding bias, then applying activation.",
+        "Pooling adjacent values to reduce spatial dimensions.",
+        "Normalizing inputs to have zero mean and unit variance."
+      ],
+      "answer": "Computing a matrix product with weights, adding bias, then applying activation.",
+      "explanation": "A Dense layer computes output = activation(matmul(input, W) + b), where W and b are learnable parameters."
+    },
+    {
+      "question": "Why is the softmax activation typically used in the final layer for classification?",
+      "type": "choice",
+      "options": [
+        "It reduces all negative values to zero for cleaner outputs.",
+        "It transforms outputs into probability scores that sum to one.",
+        "It amplifies the strongest signal while suppressing others completely.",
+        "It ensures all output values remain between negative one and one."
+      ],
+      "answer": "It transforms outputs into probability scores that sum to one.",
+      "explanation": "Softmax converts raw scores into probabilities across classes, with all values summing to 1, ideal for multi-class classification."
+    },
+    {
+      "question": "What does the term 'rank' refer to when describing a tensor?",
+      "type": "choice",
+      "options": [
+        "The number of axes or dimensions the tensor has.",
+        "The importance or priority of the tensor in the model.",
+        "The total count of individual elements stored in the tensor.",
+        "The precision level of the numerical values it contains."
+      ],
+      "answer": "The number of axes or dimensions the tensor has.",
+      "explanation": "A tensor's rank (or ndim) is the number of axes it has: scalars have rank 0, vectors rank 1, matrices rank 2, etc."
+    },
+    {
+      "question": "How does element-wise addition between tensors differ from matrix multiplication?",
+      "type": "choice",
+      "options": [
+        "Addition requires identical shapes, while multiplication needs matching inner dimensions.",
+        "Addition is slower because it cannot be vectorized efficiently.",
+        "Addition changes tensor shapes, while multiplication preserves them.",
+        "Addition only works with rank-2 tensors, while multiplication handles any rank."
+      ],
+      "answer": "Addition requires identical shapes, while multiplication needs matching inner dimensions.",
+      "explanation": "Element-wise operations require tensors to have the same shape, while matrix multiplication only needs x.shape[1] == y.shape[0]."
+    },
+    {
+      "question": "What role does the loss function play in neural network training?",
+      "type": "choice",
+      "options": [
+        "It determines the network architecture and number of layers needed.",
+        "It provides a feedback signal measuring prediction quality to minimize.",
+        "It initializes the starting weights for all trainable parameters.",
+        "It controls how many epochs are required for convergence."
+      ],
+      "answer": "It provides a feedback signal measuring prediction quality to minimize.",
+      "explanation": "The loss function quantifies how far predictions are from targets, providing the signal that drives weight optimization."
+    },
+    {
+      "question": "Why does backpropagation start from the loss and work backward through layers?",
+      "type": "choice",
+      "options": [
+        "Because earlier layers have less impact on the final output.",
+        "To apply the chain rule by computing gradients from output to input.",
+        "Because the loss must be zeroed out before the next batch.",
+        "To preserve computational efficiency by avoiding redundant calculations."
+      ],
+      "answer": "To apply the chain rule by computing gradients from output to input.",
+      "explanation": "Backpropagation applies the chain rule by computing gradients backward, from loss to input, multiplying derivatives along the path."
+    },
+    {
+      "question": "What is the key advantage of using mini-batch gradient descent over full-batch?",
+      "type": "choice",
+      "options": [
+        "It guarantees finding the global minimum in fewer iterations.",
+        "It balances computational efficiency with gradient estimation accuracy.",
+        "It eliminates the need for a learning rate hyperparameter.",
+        "It prevents overfitting by adding noise to the training process."
+      ],
+      "answer": "It balances computational efficiency with gradient estimation accuracy.",
+      "explanation": "Mini-batches provide a good compromise: more efficient than single samples, better gradient estimates than processing everything."
+    },
+    {
+      "question": "What does a computation graph represent in deep learning?",
+      "type": "choice",
+      "options": [
+        "The hierarchical structure of classes in object-oriented code.",
+        "A directed acyclic graph of operations showing data flow through the model.",
+        "A visualization of training loss decreasing over time.",
+        "The dependency tree of imported libraries and modules."
+      ],
+      "answer": "A directed acyclic graph of operations showing data flow through the model.",
+      "explanation": "A computation graph is a DAG representing the sequence of operations, enabling automatic differentiation and other optimizations."
+    },
+    {
+      "question": "How does automatic differentiation simplify the implementation of backpropagation?",
+      "type": "choice",
+      "options": [
+        "By approximating gradients using numerical methods instead of exact derivatives.",
+        "By eliminating the need to manually write gradient computations for each operation.",
+        "By reducing memory requirements through gradient checkpointing techniques.",
+        "By parallelizing gradient calculations across multiple computational devices."
+      ],
+      "answer": "By eliminating the need to manually write gradient computations for each operation.",
+      "explanation": "Automatic differentiation frameworks automatically compute gradients by recording operations and applying the chain rule."
+    },
+    {
+      "question": "What distinguishes a training set from a test set?",
+      "type": "choice",
+      "options": [
+        "Training data is smaller to allow faster iteration cycles.",
+        "The model learns from training data but is evaluated on unseen test data.",
+        "Test data contains labels while training data does not.",
+        "Training data is preprocessed while test data remains in raw form."
+      ],
+      "answer": "The model learns from training data but is evaluated on unseen test data.",
+      "explanation": "Training data is used for learning weights, while test data evaluates generalization to new, unseen examples."
+    },
+    {
+      "question": "Why do we reshape MNIST images from (28, 28) to (784,) before feeding them to a Dense layer?",
+      "type": "choice",
+      "options": [
+        "To reduce the total number of pixels processed by the model.",
+        "Because Dense layers expect vectors as input, not matrices.",
+        "To apply data augmentation techniques more effectively.",
+        "Because convolutional layers require flattened inputs."
+      ],
+      "answer": "Because Dense layers expect vectors as input, not matrices.",
+      "explanation": "Dense layers perform matrix multiplication, requiring inputs as vectors. Reshaping (28,28) to (784,) flattens the image."
+    },
+    {
+      "question": "What happens during the forward pass in neural network training?",
+      "type": "choice",
+      "options": [
+        "The model's weights are adjusted based on computed gradients.",
+        "Input data flows through layers to produce predictions.",
+        "Loss values are differentiated with respect to each parameter.",
+        "Batch normalization statistics are updated for inference."
+      ],
+      "answer": "Input data flows through layers to produce predictions.",
+      "explanation": "The forward pass computes outputs by passing inputs through each layer sequentially to generate predictions."
+    },
+    {
+      "question": "Why is it important to scale pixel values from [0, 255] to [0, 1]?",
+      "type": "choice",
+      "options": [
+        "To ensure neural networks converge more stably with normalized inputs.",
+        "To reduce the file size of image data stored in memory.",
+        "To make visualization of images clearer on screen.",
+        "To comply with the MNIST dataset's official format requirements."
+      ],
+      "answer": "To ensure neural networks converge more stably with normalized inputs.",
+      "explanation": "Normalizing inputs to a smaller range helps gradient descent converge more effectively and prevents numerical instability."
+    },
+    {
+      "question": "What geometric transformation does a Dense layer without activation perform?",
+      "type": "choice",
+      "options": [
+        "A rotation followed by a reflection across the origin.",
+        "An affine transformation combining linear transform and translation.",
+        "A nonlinear warping of the input space into higher dimensions.",
+        "A projection that reduces dimensionality while preserving distances."
+      ],
+      "answer": "An affine transformation combining linear transform and translation.",
+      "explanation": "A Dense layer without activation computes W @ x + b, which is an affine transform: linear transform plus translation."
+    },
+    {
+      "question": "What is overfitting in the context of machine learning models?",
+      "type": "choice",
+      "options": [
+        "When the model uses too many parameters for the available data.",
+        "When training accuracy is high but test accuracy is significantly lower.",
+        "When the loss function fails to decrease during training.",
+        "When computational resources are insufficient for the model size."
+      ],
+      "answer": "When training accuracy is high but test accuracy is significantly lower.",
+      "explanation": "Overfitting occurs when a model performs well on training data but poorly on new data, indicating it memorized rather than learned."
+    },
+    {
+      "question": "What is the purpose of using multiple epochs during training?",
+      "type": "choice",
+      "options": [
+        "To expose the model to training data multiple times for better learning.",
+        "To test different random initialization strategies iteratively.",
+        "To gradually increase the batch size for stability.",
+        "To validate the model on different subsets of test data."
+      ],
+      "answer": "To expose the model to training data multiple times for better learning.",
+      "explanation": "An epoch is one complete pass through the training data; multiple epochs allow the model to refine its weights progressively."
+    },
+    {
+      "question": "How does the derivative of a function help in optimization?",
+      "type": "choice",
+      "options": [
+        "It identifies the exact point where the function reaches its minimum value.",
+        "It indicates the direction and rate of change to move toward lower values.",
+        "It computes the average value of the function over a given interval.",
+        "It measures the total distance between current and optimal parameters."
+      ],
+      "answer": "It indicates the direction and rate of change to move toward lower values.",
+      "explanation": "The derivative shows which direction to move parameters and how steeply the function changes, guiding optimization steps."
+    },
+    {
+      "question": "What does the batch axis (axis 0) represent in a data tensor?",
+      "type": "choice",
+      "options": [
+        "The feature dimensions or channels of each sample.",
+        "The individual samples or examples in a batch.",
+        "The temporal sequence length for time series data.",
+        "The spatial dimensions like height and width."
+      ],
+      "answer": "The individual samples or examples in a batch.",
+      "explanation": "The first axis (axis 0) is conventionally the batch axis, representing different samples in the dataset."
+    },
+    {
+      "question": "Why are BLAS implementations used for tensor operations?",
+      "type": "choice",
+      "options": [
+        "They provide high-level abstractions for neural network design.",
+        "They offer highly optimized, parallel routines for numerical computations.",
+        "They automatically determine optimal network architectures.",
+        "They handle data loading and preprocessing efficiently."
+      ],
+      "answer": "They offer highly optimized, parallel routines for numerical computations.",
+      "explanation": "BLAS (Basic Linear Algebra Subprograms) are low-level, highly optimized routines that efficiently execute tensor operations."
+    },
+    {
+      "question": "What is the relationship between tensors and machine learning?",
+      "type": "choice",
+      "options": [
+        "Tensors are optional data structures used only in advanced models.",
+        "Tensors are the fundamental data structure for all modern ML systems.",
+        "Tensors are specific to computer vision applications only.",
+        "Tensors were replaced by dataframes in contemporary frameworks."
+      ],
+      "answer": "Tensors are the fundamental data structure for all modern ML systems.",
+      "explanation": "All current machine learning systems use tensors as their basic data structure for representing and processing data."
+    },
+    {
+      "question": "How does transposing a matrix affect its shape?",
+      "type": "choice",
+      "options": [
+        "It reverses the order of all elements in the matrix.",
+        "It exchanges rows and columns, swapping the shape dimensions.",
+        "It converts the matrix into a one-dimensional vector.",
+        "It normalizes all values to have zero mean."
+      ],
+      "answer": "It exchanges rows and columns, swapping the shape dimensions.",
+      "explanation": "Transposing swaps rows and columns: a matrix of shape (m, n) becomes (n, m) after transposition."
+    },
+    {
+      "question": "What makes a function differentiable?",
+      "type": "choice",
+      "options": [
+        "It must be discrete and defined only at integer points.",
+        "It must be continuous and smooth without abrupt changes.",
+        "It must be linear without any curved portions.",
+        "It must output values within a bounded range."
+      ],
+      "answer": "It must be continuous and smooth without abrupt changes.",
+      "explanation": "A function is differentiable if it's smooth and continuous, allowing us to compute derivatives at every point."
+    },
+    {
+      "question": "Why is it inefficient to update weights one coefficient at a time?",
+      "type": "choice",
+      "options": [
+        "Because it requires computing two expensive forward passes per coefficient.",
+        "Because individual coefficients have no impact on the overall loss.",
+        "Because modern hardware cannot process single values efficiently.",
+        "Because the loss function becomes undefined for partial updates."
+      ],
+      "answer": "Because it requires computing two expensive forward passes per coefficient.",
+      "explanation": "Testing each coefficient individually would need multiple forward passes per weight, making training extremely slow."
+    },
+    {
+      "question": "What advantage does SGD with momentum have over plain SGD?",
+      "type": "choice",
+      "options": [
+        "It eliminates the need for manual learning rate tuning.",
+        "It can escape local minima and converge faster using past velocity.",
+        "It automatically adjusts batch size based on gradient magnitudes.",
+        "It requires less memory by not storing previous gradients."
+      ],
+      "answer": "It can escape local minima and converge faster using past velocity.",
+      "explanation": "Momentum uses accumulated velocity from past updates, helping overcome local minima and speeding up convergence."
+    },
+    {
+      "question": "How does a rank-4 tensor typically represent image data?",
+      "type": "choice",
+      "options": [
+        "As (samples, channels, height, width) or (samples, height, width, channels).",
+        "As (height, width, channels, time) for temporal sequences.",
+        "As (batches, epochs, samples, features) for training data.",
+        "As (layers, neurons, weights, biases) for model parameters."
+      ],
+      "answer": "As (samples, channels, height, width) or (samples, height, width, channels).",
+      "explanation": "Image batches are stored as rank-4 tensors with dimensions for samples, height, width, and color channels."
+    },
+    {
+      "question": "What does the 'stochastic' in stochastic gradient descent refer to?",
+      "type": "choice",
+      "options": [
+        "The random initialization of model weights before training.",
+        "The random sampling of data batches at each iteration.",
+        "The probabilistic nature of activation functions like softmax.",
+        "The unpredictable convergence time of the optimization process."
+      ],
+      "answer": "The random sampling of data batches at each iteration.",
+      "explanation": "Stochastic means each batch is randomly sampled from the training data, introducing randomness into the optimization process."
+    },
+    {
+      "question": "Why are weights initialized with small random values rather than zeros?",
+      "type": "choice",
+      "options": [
+        "To ensure all neurons learn different features through symmetry breaking.",
+        "To prevent the model from converging too quickly to local minima.",
+        "To match the expected distribution of input data values.",
+        "To comply with mathematical requirements of gradient descent."
+      ],
+      "answer": "To ensure all neurons learn different features through symmetry breaking.",
+      "explanation": "Random initialization breaks symmetry, allowing different neurons to learn different features during training."
+    },
+    {
+      "question": "What property must tensors have to be compatible for the dot product operation?",
+      "type": "choice",
+      "options": [
+        "They must have identical shapes across all dimensions.",
+        "The last dimension of the first must equal the first dimension of the second.",
+        "They must both be square matrices with equal row and column counts.",
+        "They must have the same data type and total number of elements."
+      ],
+      "answer": "The last dimension of the first must equal the first dimension of the second.",
+      "explanation": "For matrix multiplication x @ y, the shape compatibility requires x.shape[1] == y.shape[0]."
+    },
+    {
+      "question": "How does deep learning 'uncrumple' complex data manifolds?",
+      "type": "choice",
+      "options": [
+        "By applying a single complex transformation in high-dimensional space.",
+        "By decomposing the transformation into a chain of simple geometric steps.",
+        "By reducing dimensionality until patterns become linearly separable.",
+        "By clustering similar samples and creating decision boundaries."
+      ],
+      "answer": "By decomposing the transformation into a chain of simple geometric steps.",
+      "explanation": "Deep learning breaks down complex transformations into many simple steps, each layer performing an elementary transformation."
+    },
+    {
+      "question": "What is the role of the optimizer in neural network training?",
+      "type": "choice",
+      "options": [
+        "It determines the architecture and number of layers in the model.",
+        "It defines how gradients are used to update weights during training.",
+        "It preprocesses input data into the required tensor format.",
+        "It evaluates model performance on validation datasets."
+      ],
+      "answer": "It defines how gradients are used to update weights during training.",
+      "explanation": "The optimizer (like Adam or SGD) specifies the exact algorithm for updating parameters based on computed gradients."
+    },
+    {
+      "question": "The basic data structure used in all modern machine learning systems is called a...",
+      "type": "blank",
+      "answer": "tensor",
+      "explanation": "Tensors are multidimensional arrays that serve as the fundamental data structure in machine learning."
+    },
+    {
+      "question": "A tensor containing only one number with zero axes is called a...",
+      "type": "blank",
+      "answer": "scalar",
+      "explanation": "A scalar (or rank-0 tensor) contains a single number and has ndim equal to 0."
+    },
+    {
+      "question": "The activation function that returns max(x, 0) is called...",
+      "type": "blank",
+      "answer": "relu",
+      "explanation": "ReLU (Rectified Linear Unit) applies the operation max(x, 0), setting negative values to zero."
+    },
+    {
+      "question": "The process of updating model weights based on gradients is called...",
+      "type": "blank",
+      "answer": "gradient descent",
+      "explanation": "Gradient descent is the optimization technique that updates weights to minimize loss using gradient information."
+    },
+    {
+      "question": "The algorithm that computes gradients by working backward from loss to input is...",
+      "type": "blank",
+      "answer": "backpropagation",
+      "explanation": "Backpropagation applies the chain rule backward through the network to compute parameter gradients."
+    },
+    {
+      "question": "The number of axes in a tensor is also called its...",
+      "type": "blank",
+      "answer": "rank",
+      "explanation": "A tensor's rank (or ndim) indicates how many axes it has: scalars have rank 0, vectors rank 1, etc."
+    },
+    {
+      "question": "When a model performs well on training data but poorly on test data, this is called...",
+      "type": "blank",
+      "answer": "overfitting",
+      "explanation": "Overfitting occurs when a model memorizes training data rather than learning generalizable patterns."
+    },
+    {
+      "question": "The hyperparameter that controls the step size in gradient descent is the...",
+      "type": "blank",
+      "answer": "learning rate",
+      "explanation": "The learning rate determines how much to adjust weights in the opposite direction of the gradient."
+    },
+    {
+      "question": "A complete pass through all training data is called an...",
+      "type": "blank",
+      "answer": "epoch",
+      "explanation": "An epoch represents one full iteration through the entire training dataset."
+    },
+    {
+      "question": "The operation of adding axes to a smaller tensor to match a larger shape is called...",
+      "type": "blank",
+      "answer": "broadcasting",
+      "explanation": "Broadcasting allows operations between different-shaped tensors by expanding the smaller tensor virtually."
+    },
+    {
+      "question": "The function that measures the difference between predictions and true labels is the...",
+      "type": "blank",
+      "answer": "loss function",
+      "explanation": "The loss function quantifies prediction errors, providing the signal for optimization."
+    },
+    {
+      "question": "Exchanging the rows and columns of a matrix is called...",
+      "type": "blank",
+      "answer": "transposition",
+      "explanation": "Transposing a matrix swaps its rows and columns, changing shape from (m, n) to (n, m)."
+    },
+    {
+      "question": "The first axis in a data tensor, representing individual examples, is the...",
+      "type": "blank",
+      "answer": "batch axis",
+      "explanation": "Axis 0 is conventionally the batch axis or samples axis in deep learning data tensors."
+    },
+    {
+      "question": "A layer where every input is connected to every output is called a...",
+      "type": "blank",
+      "answer": "Dense layer",
+      "explanation": "Dense (or fully connected) layers connect every input neuron to every output neuron."
+    },
+    {
+      "question": "The mathematical rule used to compute derivatives of composed functions is the...",
+      "type": "blank",
+      "answer": "chain rule",
+      "explanation": "The chain rule enables computing gradients by multiplying derivatives along the function composition path."
+    }
+  ]
+}
