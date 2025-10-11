@@ -1,0 +1,341 @@
+{
+  "text": "This quiz is based on the foundational concepts of classification and regression in machine learning. It covers topics such as binary and multiclass classification, loss functions (crossentropy), activation functions (sigmoid, softmax), regression tasks, evaluation metrics (accuracy, MSE), and the problem of overfitting.",
+  "quiz": [
+    {
+      "question": "Which activation function is typically used in the output layer for binary classification?",
+      "type": "choice",
+      "options": [
+        "Softmax",
+        "Sigmoid",
+        "ReLU",
+        "Linear, which is also commonly referred to as no activation function at all."
+      ],
+      "answer": "Sigmoid",
+      "explanation": "The sigmoid function outputs a value between 0 and 1, which can be interpreted as the probability of belonging to the positive class."
+    },
+    {
+      "question": "The task of predicting a continuous numerical value, such as a price or temperature, is called...",
+      "type": "blank",
+      "answer": "regression",
+      "explanation": "Regression is a type of supervised learning where the goal is to predict a continuous output."
+    },
+    {
+      "question": "What is the primary purpose of a loss function in machine learning?",
+      "type": "choice",
+      "options": [
+        "To measure the model's performance on the training data, guiding the weight updates.",
+        "To measure the number of layers and neurons in the model architecture before training begins.",
+        "To select the best hyperparameters for the model.",
+        "To normalize the input data before it is fed into the network."
+      ],
+      "answer": "To measure the model's performance on the training data, guiding the weight updates.",
+      "explanation": "The loss function quantifies the error between the model's predictions and the true labels, which the optimizer then tries to minimize."
+    },
+    {
+      "question": "For multiclass classification, the standard loss function used is...",
+      "type": "blank",
+      "answer": "categorical crossentropy",
+      "explanation": "Categorical crossentropy is designed to measure the difference between two probability distributions, making it ideal for multiclass problems."
+    },
+    {
+      "question": "In a multiclass classification problem, the output layer of the neural network should have an activation function of...",
+      "type": "choice",
+      "options": [
+        "Sigmoid",
+        "Softmax",
+        "ReLU",
+        "Tanh"
+      ],
+      "answer": "Softmax",
+      "explanation": "The softmax function outputs a probability distribution across all classes, where the probabilities sum to 1."
+    },
+    {
+      "question": "The most common evaluation metric for regression tasks is...",
+      "type": "blank",
+      "answer": "mean squared error",
+      "explanation": "Mean Squared Error (MSE) measures the average of the squares of the errors between predicted and actual values."
+    },
+    {
+      "question": "What does it mean if a model is 'overfitting'?",
+      "type": "choice",
+      "options": [
+        "It performs well on training data but poorly on unseen data.",
+        "It performs poorly on both training data and unseen data.",
+        "It performs exceptionally well on both training and unseen data, indicating a perfect model.",
+        "The model is too simple to capture the underlying patterns in the training data."
+      ],
+      "answer": "It performs well on training data but poorly on unseen data.",
+      "explanation": "Overfitting occurs when a model learns the training data's noise and details too well, failing to generalize to new data."
+    },
+    {
+      "question": "In a regression problem, the output layer typically has no activation function, which is also known as a ... activation.",
+      "type": "blank",
+      "answer": "linear",
+      "explanation": "A linear activation allows the network to output values in any range, which is necessary for predicting continuous quantities."
+    },
+    {
+      "question": "The `binary_crossentropy` loss function is specifically designed for what type of problem?",
+      "type": "choice",
+      "options": [
+        "Multiclass classification",
+        "Binary classification",
+        "Regression with two output variables",
+        "Any classification problem with a small number of samples."
+      ],
+      "answer": "Binary classification",
+      "explanation": "It is the standard choice for problems with two output classes, measuring the distance between probability distributions."
+    },
+    {
+      "question": "A model with too much capacity for a small dataset is likely to...",
+      "type": "blank",
+      "answer": "overfit",
+      "explanation": "High model capacity (e.g., many layers or neurons) allows the model to memorize the training data instead of learning general patterns."
+    },
+    {
+      "question": "What is the purpose of splitting data into training, validation, and test sets?",
+      "type": "choice",
+      "options": [
+        "To train on one part, tune hyperparameters on another, and finally evaluate on a third.",
+        "To train the model three separate times for a more robust result.",
+        "To use all the data for training, which ensures the model learns as much as possible.",
+        "To decrease the total amount of time required to train the model."
+      ],
+      "answer": "To train on one part, tune hyperparameters on another, and finally evaluate on a third.",
+      "explanation": "This separation ensures a reliable evaluation of the model's ability to generalize to new, unseen data."
+    },
+    {
+      "question": "The number of output units in the final layer of a multiclass classification model should be equal to the number of...",
+      "type": "blank",
+      "answer": "classes",
+      "explanation": "Each output unit in the final layer corresponds to one of the possible classes in the classification problem."
+    },
+    {
+      "question": "Which of the following is a common technique to combat overfitting?",
+      "type": "choice",
+      "options": [
+        "Using a smaller network.",
+        "Training the model for more epochs.",
+        "Using a very large and complex network architecture.",
+        "Increasing the size of the training batches."
+      ],
+      "answer": "Using a smaller network.",
+      "explanation": "Reducing the model's capacity (fewer layers or units) makes it harder for the model to memorize the training data."
+    },
+    {
+      "question": "When your training loss continuously decreases but your validation loss starts to increase, you are witnessing...",
+      "type": "blank",
+      "answer": "overfitting",
+      "explanation": "This divergence is the classic sign that the model is no longer generalizing and is beginning to memorize the training data."
+    },
+    {
+      "question": "For a regression task predicting house prices, what would be the shape of the final output layer?",
+      "type": "choice",
+      "options": [
+        "A single unit with no activation.",
+        "A single unit with a sigmoid activation.",
+        "Multiple units with a softmax activation, one for each price range.",
+        "Two units with no activation, representing a price range."
+      ],
+      "answer": "A single unit with no activation.",
+      "explanation": "Since the goal is to predict a single continuous value (the price), a single output unit with a linear activation is appropriate."
+    },
+    {
+      "question": "The process of converting text data into numerical tensors is a form of...",
+      "type": "blank",
+      "answer": "vectorization",
+      "explanation": "Vectorization is the general process of turning non-numeric data into a numerical format that neural networks can process."
+    },
+    {
+      "question": "Which metric is often misleading for a dataset with a severe class imbalance?",
+      "type": "choice",
+      "options": [
+        "Accuracy",
+        "Mean Squared Error",
+        "Precision, especially when combined with recall to understand the full picture.",
+        "Mean Absolute Error"
+      ],
+      "answer": "Accuracy",
+      "explanation": "A model can achieve high accuracy on an imbalanced dataset by simply predicting the majority class every time."
+    },
+    {
+      "question": "A model that performs poorly on the training data is said to be...",
+      "type": "blank",
+      "answer": "underfitting",
+      "explanation": "Underfitting occurs when the model is not complex enough to capture the underlying patterns in the data."
+    },
+    {
+      "question": "If your model's predictions for a binary classification task are probabilistic (e.g., 0.87), what is the final step to get a concrete class label?",
+      "type": "choice",
+      "options": [
+        "Rounding the output to 0 or 1 based on a threshold.",
+        "Applying a softmax function to the output.",
+        "Calculating the mean squared error of the output.",
+        "Retraining the model with a different loss function."
+      ],
+      "answer": "Rounding the output to 0 or 1 based on a threshold.",
+      "explanation": "The probabilistic output from the sigmoid function is typically rounded (e.g., > 0.5 becomes 1) to get the final prediction."
+    },
+    {
+      "question": "The fundamental trade-off in machine learning is between optimization and...",
+      "type": "blank",
+      "answer": "generalization",
+      "explanation": "The goal is not just to optimize performance on the training data, but to build a model that generalizes well to new data."
+    },
+    {
+      "question": "What is the purpose of using hidden layers with ReLU activation in a deep neural network?",
+      "type": "choice",
+      "options": [
+        "To introduce non-linearity, allowing the network to learn complex patterns.",
+        "To ensure the final output is a probability distribution.",
+        "To constrain the output of the network to be between 0 and 1.",
+        "To directly calculate the loss function for the regression task."
+      ],
+      "answer": "To introduce non-linearity, allowing the network to learn complex patterns.",
+      "explanation": "Without non-linearities like ReLU, a deep network would behave like a single, simple linear model."
+    },
+    {
+      "question": "Information 'leaking' from the test set into the model during development can lead to an unreliable evaluation of...",
+      "type": "blank",
+      "answer": "generalization",
+      "explanation": "If the model's development is influenced by the test set, its final performance metric on that set will be artificially inflated."
+    },
+    {
+      "question": "The IMDB dataset for sentiment analysis is a classic example of what type of problem?",
+      "type": "choice",
+      "options": [
+        "Binary classification",
+        "Multiclass classification",
+        "Scalar regression",
+        "Vector regression with multiple continuous outputs."
+      ],
+      "answer": "Binary classification",
+      "explanation": "Each movie review is classified into one of two categories: positive or negative."
+    },
+    {
+      "question": "When working with small datasets, a technique called K-fold ... is often used for more reliable model evaluation.",
+      "type": "blank",
+      "answer": "cross-validation",
+      "explanation": "K-fold cross-validation involves splitting the data into K partitions and training K models, providing a more robust performance estimate."
+    },
+    {
+      "question": "Increasing the number of epochs in training will always result in...",
+      "type": "choice",
+      "options": [
+        "a lower loss on the training data.",
+        "a lower loss on the validation data.",
+        "a better overall model that generalizes more effectively.",
+        "a faster convergence to the optimal solution."
+      ],
+      "answer": "a lower loss on the training data.",
+      "explanation": "The model will continue to fit the training data better with more epochs, but this often leads to overfitting and worse validation performance."
+    },
+    {
+      "question": "Mean Absolute Error (MAE) is another metric for ... tasks.",
+      "type": "blank",
+      "answer": "regression",
+      "explanation": "MAE measures the average absolute difference between predictions and true values, and is less sensitive to outliers than MSE."
+    },
+    {
+      "question": "The process of adjusting a model's hyperparameters based on performance on the validation set is a form of...",
+      "type": "choice",
+      "options": [
+        "learning.",
+        "predicting.",
+        "inference on the unseen test data.",
+        "vectorizing."
+      ],
+      "answer": "learning.",
+      "explanation": "This is a form of 'meta-learning' where you are learning the best settings for the model's architecture and training process."
+    },
+    {
+      "question": "A model's 'capacity' refers to its ability to fit a wide variety of...",
+      "type": "blank",
+      "answer": "functions",
+      "explanation": "A model with higher capacity (more parameters) can learn more complex relationships in the data, but is also more prone to overfitting."
+    },
+    {
+      "question": "Why is it important to have a separate test set that is never used during training or validation?",
+      "type": "choice",
+      "options": [
+        "To get a final, unbiased measure of the model's performance.",
+        "To use for one final round of training after hyperparameters are tuned.",
+        "To speed up the training process by reducing the dataset size.",
+        "To check for bugs in the implementation of the model."
+      ],
+      "answer": "To get a final, unbiased measure of the model's performance.",
+      "explanation": "The test set simulates real-world, unseen data, providing the most accurate assessment of how the model will perform after deployment."
+    },
+    {
+      "question": "The labels for a multiclass classification problem are often converted into an all-zero vector with a single '1' using ... encoding.",
+      "type": "blank",
+      "answer": "one-hot",
+      "explanation": "One-hot encoding is a standard way to represent categorical labels in a format suitable for training with categorical crossentropy."
+    },
+    {
+      "question": "If your regression model predicts a price of $500k and the actual price was $450k, the Mean Absolute Error for this one sample is...",
+      "type": "choice",
+      "options": [
+        "$50k",
+        "$2500k^2",
+        "$475k",
+        "$950k"
+      ],
+      "answer": "$50k",
+      "explanation": "MAE is the absolute difference between the predicted value and the true value (|$500k - $450k| = $50k)."
+    },
+    {
+      "question": "The core issue with overfitting is a failure to...",
+      "type": "blank",
+      "answer": "generalize",
+      "explanation": "A model that overfits has learned specifics from the training set that do not apply to new, unseen data."
+    },
+    {
+      "question": "The final layer of a neural network is often referred to as the ... layer.",
+      "type": "choice",
+      "options": [
+        "output",
+        "input",
+        "hidden",
+        "dense"
+      ],
+      "answer": "output",
+      "explanation": "The output layer produces the final predictions of the model."
+    },
+    {
+      "question": "A network that is too small or trained for too few epochs might...",
+      "type": "blank",
+      "answer": "underfit",
+      "explanation": "Underfitting occurs when the model lacks the capacity or training time to learn the important patterns in the data."
+    },
+    {
+      "question": "The Boston Housing dataset is a classic example of what type of problem?",
+      "type": "choice",
+      "options": [
+        "Scalar regression",
+        "Binary classification",
+        "Multiclass classification with 13 classes",
+        "Vector regression"
+      ],
+      "answer": "Scalar regression",
+      "explanation": "The goal is to predict a single continuous value: the median price of homes in a neighborhood."
+    },
+    {
+      "question": "When monitoring training, plotting the training and validation ... over epochs is crucial.",
+      "type": "blank",
+      "answer": "loss",
+      "explanation": "Plotting the loss curves is the primary way to diagnose issues like overfitting or underfitting."
+    },
+    {
+      "question": "What is the key difference between binary and multiclass classification?",
+      "type": "choice",
+      "options": [
+        "The number of exclusive classes to choose from.",
+        "The type of data used (text vs. images).",
+        "The need for a validation set, which is only required for multiclass problems.",
+        "The total size of the dataset."
+      ],
+      "answer": "The number of exclusive classes to choose from.",
+      "explanation": "Binary classification involves choosing between two classes, while multiclass involves choosing between more than two."
+    },
+    {
+      "
