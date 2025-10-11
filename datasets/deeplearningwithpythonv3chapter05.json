@@ -1,0 +1,413 @@
+{
+  "text": "This quiz is based on the fundamental workflow and concepts of machine learning. It covers topics such as defining a problem, choosing an evaluation protocol (hold-out, K-fold), data preparation (feature normalization, vectorization), feature engineering, overfitting, and regularization techniques like L1, L2, and Dropout.",
+  "quiz": [
+    {
+      "question": "What is the very first step in the universal machine learning workflow?",
+      "type": "choice",
+      "options": [
+        "Defining the problem and collecting a dataset.",
+        "Developing a model that significantly overfits the training data.",
+        "Choosing a measure of success on your validation data.",
+        "Preparing and normalizing your training and testing data."
+      ],
+      "answer": "Defining the problem and collecting a dataset.",
+      "explanation": "Before any modeling can begin, you must clearly define what you are trying to predict and gather the necessary data."
+    },
+    {
+      "question": "The process of using domain knowledge to create new features from existing data is called...",
+      "type": "blank",
+      "answer": "feature engineering",
+      "explanation": "Feature engineering is a critical step where you apply your own knowledge to make the underlying patterns more accessible to the model."
+    },
+    {
+      "question": "Which evaluation protocol is the best choice when you have a very small dataset?",
+      "type": "choice",
+      "options": [
+        "Simple hold-out validation, which is fast and easy to implement.",
+        "Iterated K-fold validation",
+        "Using the entire dataset for both training and validation to maximize data usage.",
+        "K-fold cross-validation"
+      ],
+      "answer": "Iterated K-fold validation",
+      "explanation": "Iterated K-fold validation with shuffling provides the most reliable evaluation by training and testing on multiple different data splits."
+    },
+    {
+      "question": "A model with a large number of parameters has a high...",
+      "type": "blank",
+      "answer": "capacity",
+      "explanation": "Model capacity refers to its ability to fit a wide variety of functions. High capacity models are more prone to overfitting."
+    },
+    {
+      "question": "What is the main purpose of feature normalization?",
+      "type": "choice",
+      "options": [
+        "To make gradient descent converge more smoothly.",
+        "To convert all features into a one-hot encoded format for easier processing by the model.",
+        "To remove any features that have a low correlation with the target variable.",
+        "To increase the overall complexity and capacity of the model."
+      ],
+      "answer": "To make gradient descent converge more smoothly.",
+      "explanation": "Normalization ensures that all features are on a similar scale, which prevents the optimization landscape from being overly elongated and difficult to navigate."
+    },
+    {
+      "question": "A common strategy for developing a model is to first create a model that...",
+      "type": "blank",
+      "answer": "overfits",
+      "explanation": "Starting with a model that has enough capacity to overfit confirms that you have a powerful enough model. You can then regularize it to improve generalization."
+    },
+    {
+      "question": "What is the 'validation set' used for in the machine learning workflow?",
+      "type": "choice",
+      "options": [
+        "To train the final version of the model before deployment.",
+        "To tune the model's hyperparameters.",
+        "To provide a final, unbiased evaluation of the model after all development is complete.",
+        "To gather more data points for the initial training phase of the model."
+      ],
+      "answer": "To tune the model's hyperparameters.",
+      "explanation": "The validation set is used to evaluate the model during development, allowing you to make decisions about its architecture and settings."
+    },
+    {
+      "question": "Regularization techniques are primarily used to combat...",
+      "type": "blank",
+      "answer": "overfitting",
+      "explanation": "Regularization methods introduce constraints or penalties on the model's complexity to improve its ability to generalize to new data."
+    },
+    {
+      "question": "Which form of regularization adds a penalty proportional to the square of the weight coefficients?",
+      "type": "choice",
+      "options": [
+        "L1 regularization (Lasso)",
+        "L2 regularization (Ridge)",
+        "Dropout, which randomly drops units during training to prevent co-adaptation among neurons.",
+        "Early stopping"
+      ],
+      "answer": "L2 regularization (Ridge)",
+      "explanation": "L2 regularization, also known as weight decay, encourages smaller weight values, leading to a simpler and more robust model."
+    },
+    {
+      "question": "The process of turning data into numerical tensors is called...",
+      "type": "blank",
+      "answer": "vectorization",
+      "explanation": "All inputs to a neural network must be tensors of numerical data, so vectorization is a required preprocessing step."
+    },
+    {
+      "question": "What is the main drawback of simple hold-out validation?",
+      "type": "choice",
+      "options": [
+        "It is computationally very expensive to run compared to other more advanced methods.",
+        "The evaluation can be sensitive to the data split.",
+        "It requires all data to be of the same type, such as all images or all text.",
+        "It cannot be used for regression problems."
+      ],
+      "answer": "The evaluation can be sensitive to the data split.",
+      "explanation": "If the data split is unlucky, the validation set might not be representative of the overall data, leading to a misleading evaluation."
+    },
+    {
+      "question": "The ultimate goal of machine learning is to achieve good...",
+      "type": "blank",
+      "answer": "generalization",
+      "explanation": "A model is only useful if it can make accurate predictions on new, unseen data, which is known as generalization."
+    },
+    {
+      "question": "In K-fold cross-validation, the data is split into how many partitions?",
+      "type": "choice",
+      "options": [
+        "Two: one for training and one for testing.",
+        "K partitions of equal size.",
+        "Three partitions: one for training, one for validation, and one for final testing.",
+        "As many partitions as there are samples in the entire dataset."
+      ],
+      "answer": "K partitions of equal size.",
+      "explanation": "The model is then trained K times, each time holding out a different partition for validation."
+    },
+    {
+      "question": "The fundamental tension in machine learning is between optimization and...",
+      "type": "blank",
+      "answer": "generalization",
+      "explanation": "You must optimize the model on the training data, but not so much that it fails to generalize to new data."
+    },
+    {
+      "question": "Which regularization technique encourages sparse weights, effectively performing feature selection?",
+      "type": "choice",
+      "options": [
+        "L2 regularization",
+        "L1 regularization",
+        "Dropout, which is a technique that involves randomly setting a fraction of input units to 0 during training.",
+        "Batch normalization"
+      ],
+      "answer": "L1 regularization",
+      "explanation": "L1 regularization adds a penalty based on the absolute value of weights, which can force some weight coefficients to become exactly zero."
+    },
+    {
+      "question": "The 'test set' should only be used ... during model development.",
+      "type": "blank",
+      "answer": "once",
+      "explanation": "The test set must be held out until the very end to provide a final, unbiased assessment of the model's performance."
+    },
+    {
+      "question": "Handling missing values in the data is a crucial part of which workflow step?",
+      "type": "choice",
+      "options": [
+        "Data preparation",
+        "Developing a baseline model to establish a performance floor.",
+        "Scaling up and final model tuning before deployment.",
+        "Problem definition"
+      ],
+      "answer": "Data preparation",
+      "explanation": "Missing values must be dealt with before training, for instance by filling them with 0, the mean, or the median of the feature."
+    },
+    {
+      "question": "A model that performs poorly on the training data is said to be...",
+      "type": "blank",
+      "answer": "underfitting",
+      "explanation": "Underfitting occurs when the model is too simple (has low capacity) to capture the underlying patterns in the data."
+    },
+    {
+      "question": "Why is it important to have a 'common-sense' baseline model?",
+      "type": "choice",
+      "options": [
+        "To justify the use of more complex models.",
+        "To provide a final production-ready model as quickly as possible.",
+        "To ensure the model overfits from the very start of the training process.",
+        "Because baseline models are always the most accurate and reliable."
+      ],
+      "answer": "To justify the use of more complex models.",
+      "explanation": "A simple baseline gives you a sanity check and a benchmark to beat. Any complex model should perform better than this simple one."
+    },
+    {
+      "question": "Dropout involves randomly ... a number of output features of a layer during training.",
+      "type": "blank",
+      "answer": "zeroing out",
+      "explanation": "This technique helps prevent neurons from co-adapting too much, making the model more robust."
+    },
+    {
+      "question": "What defines a supervised learning problem?",
+      "type": "choice",
+      "options": [
+        "The dataset contains both inputs and target labels.",
+        "The model learns without any predefined labels, finding structure on its own.",
+        "The model learns through a system of rewards and punishments.",
+        "The data is processed in a sequential order from start to finish."
+      ],
+      "answer": "The dataset contains both inputs and target labels.",
+      "explanation": "Supervised learning is 'supervised' because the model learns from examples where the correct answer is already known."
+    },
+    {
+      "question": "The final phase of the workflow, where you might train on all available data, is called...",
+      "type": "blank",
+      "answer": "scaling up",
+      "explanation": "Once you have found the best model architecture, you can train it on all data (training + validation) to get the best possible performance."
+    },
+    {
+      "question": "Which of the following would NOT be considered feature engineering?",
+      "type": "choice",
+      "options": [
+        "Training a final model on all available data.",
+        "Creating a new 'time of day' feature from a raw timestamp.",
+        "Creating a new 'is_weekend' feature from a date.",
+        "Using principal component analysis (PCA) to find more informative projections of the data."
+      ],
+      "answer": "Training a final model on all available data.",
+      "explanation": "Feature engineering is part of the data preparation phase and involves transforming raw features into a more useful representation."
+    },
+    {
+      "question": "A model with high bias and low variance typically...",
+      "type": "blank",
+      "answer": "underfits",
+      "explanation": "High bias means the model is too simple, and low variance means it doesn't change much with different training data. This is a classic sign of underfitting."
+    },
+    {
+      "question": "The most common and effective regularization techniques include weight regularization, dropout, and...",
+      "type": "choice",
+      "options": [
+        "reducing the network size.",
+        "increasing the network size significantly to capture more patterns.",
+        "training the model for many more epochs until the training loss is zero.",
+        "using a larger batch size during the training process."
+      ],
+      "answer": "reducing the network size.",
+      "explanation": "A smaller network has fewer parameters, which naturally constrains its capacity and acts as a form of regularization."
+    },
+    {
+      "question": "A model with low bias and high variance typically...",
+      "type": "blank",
+      "answer": "overfits",
+      "explanation": "Low bias means the model is complex enough to fit the data, but high variance means it is too sensitive to the training data, capturing noise."
+    },
+    {
+      "question": "When does data leakage occur in a validation setup?",
+      "type": "choice",
+      "options": [
+        "When information from the validation set influences the model's development.",
+        "When the model is trained for too many epochs without any form of early stopping.",
+        "When the network size is too small to capture all patterns in the data.",
+        "When the test set is used to train the final version of the model."
+      ],
+      "answer": "When information from the validation set influences the model's development.",
+      "explanation": "Every time you tune a hyperparameter based on the validation set's performance, a small amount of information leaks into the model."
+    },
+    {
+      "question": "The 'Occam's razor' principle in machine learning suggests that one should prefer ... models.",
+      "type": "blank",
+      "answer": "simpler",
+      "explanation": "The principle states that given two explanations (models) for something, the simpler one is usually better."
+    },
+    {
+      "question": "Normalizing a feature by subtracting the mean and dividing by the standard deviation is called...",
+      "type": "choice",
+      "options": [
+        "Standardization",
+        "Min-Max scaling, which scales the data to a fixed range, usually 0 to 1.",
+        "Vectorization",
+        "Regularization"
+      ],
+      "answer": "Standardization",
+      "explanation": "This centers the feature around 0 and gives it a unit standard deviation, a very common preprocessing step."
+    },
+    {
+      "question": "The hyperparameters of a model are tuned using the ... set.",
+      "type": "blank",
+      "answer": "validation",
+      "explanation": "The validation set's performance guides the tuning of hyperparameters like the number of layers or the learning rate."
+    },
+    {
+      "question": "Why should you never use the test set to tune hyperparameters?",
+      "type": "choice",
+      "options": [
+        "It would cause information leakage.",
+        "The test set is typically too small to provide a stable gradient for tuning.",
+        "The test set does not contain labels, so performance cannot be calculated.",
+        "It is computationally more expensive to use the test set for tuning."
+      ],
+      "answer": "It would cause information leakage.",
+      "explanation": "Using the test set for tuning would mean your model is effectively being trained on it, and its final performance score would be meaningless."
+    },
+    {
+      "question": "A model that can perfectly memorize its training data has a high...",
+      "type": "blank",
+      "answer": "variance",
+      "explanation": "High variance means the model's predictions would change drastically if the training data were slightly different, a sign of memorization."
+    },
+    {
+      "question": "Which of these is a key step in data preparation for a neural network?",
+      "type": "choice",
+      "options": [
+        "Ensuring all data is formatted as numerical tensors.",
+        "Defining the problem as either a classification or regression task.",
+        "Training the model for a fixed number of epochs.",
+        "Choosing the final model architecture to be used for deployment."
+      ],
+      "answer": "Ensuring all data is formatted as numerical tensors.",
+      "explanation": "Neural networks can only process numerical data in the form of tensors, so all inputs must be converted to this format."
+    },
+    {
+      "question": "The number of samples processed before the model's weights are updated is the...",
+      "type": "blank",
+      "answer": "batch size",
+      "explanation": "The batch size is a hyperparameter that affects the stability and speed of the training process."
+    },
+    {
+      "question": "A key part of defining your problem is choosing your measure of success, which becomes your...",
+      "type": "choice",
+      "options": [
+        "loss function or metric.",
+        "model architecture and number of layers.",
+        "data collection method and strategy.",
+        "final deployment strategy and platform."
+      ],
+      "answer": "loss function or metric.",
+      "explanation": "The metric you choose to monitor on your validation set should align with the high-level goal of your project."
+    },
+    {
+      "question": "The set of data used to adjust the weights of the model is the ... set.",
+      "type": "blank",
+      "answer": "training",
+      "explanation": "The training set is what the model directly 'learns' from during the optimization process."
+    },
+    {
+      "question": "What is the primary risk of not having enough training data?",
+      "type": "choice",
+      "options": [
+        "The model is more likely to overfit.",
+        "The model is more likely to underfit, as it cannot learn anything.",
+        "The training process will be extremely slow.",
+        "The model will be unable to use a GPU for training."
+      ],
+      "answer": "The model is more likely to overfit.",
+      "explanation": "With too little data, it's easier for a model to find and memorize spurious correlations that don't generalize."
+    },
+    {
+      "question": "The goal of regularization is to make a model that performs better on ... data.",
+      "type": "blank",
+      "answer": "unseen",
+      "explanation": "Regularization hurts performance on the training data slightly but improves performance on new, unseen data (generalization)."
+    },
+    {
+      "question": "Developing a model that achieves 'statistical power' means...",
+      "type": "choice",
+      "options": [
+        "The model performs better than a simple baseline.",
+        "The model achieves perfect accuracy on the test set.",
+        "The model trains in less than one minute, showing high efficiency.",
+        "The model is a deep neural network with many layers."
+      ],
+      "answer": "The model performs better than a simple baseline.",
+      "explanation": "A model has statistical power if it can actually learn meaningful patterns from the data, which is demonstrated by beating a trivial baseline."
+    },
+    {
+      "question": "The rate at which Dropout is applied is a ... that needs to be tuned.",
+      "type": "blank",
+      "answer": "hyperparameter",
+      "explanation": "The dropout rate, like learning rate or number of layers, is a setting that you must choose and tune for your specific problem."
+    },
+    {
+      "question": "Why is shuffling the data important before creating a validation split?",
+      "type": "choice",
+      "options": [
+        "To prevent order-based biases from affecting the split.",
+        "To ensure the model trains faster on the shuffled data.",
+        "To reduce the amount of memory required for training.",
+        "Because deep learning frameworks require the data to be in a random order to function correctly."
+      ],
+      "answer": "To prevent order-based biases from affecting the split.",
+      "explanation": "If the data is ordered (e.g., by date), a simple split would result in training and validation sets that cover different time periods, which is not ideal."
+    },
+    {
+      "question": "The most common way to tune a model is to adjust its...",
+      "type": "blank",
+      "answer": "hyperparameters",
+      "explanation": "Hyperparameters are the model's configuration settings, which are adjusted iteratively based on validation performance."
+    },
+    {
+      "question": "Which statement about the universal machine learning workflow is true?",
+      "type": "choice",
+      "options": [
+        "It is a formal blueprint that should be followed.",
+        "It is a rigid set of rules that must never be broken under any circumstances.",
+        "It only applies to deep learning models, not other types of machine learning.",
+        "It is only useful for regression problems and not applicable to classification."
+      ],
+      "answer": "It is a formal blueprint that should be followed.",
+      "explanation": "While specific implementations vary, this workflow provides a reliable framework for approaching and solving machine learning problems."
+    },
+    {
+      "question": "A model that is too simple for the data has too little...",
+      "type": "blank",
+      "answer": "capacity",
+      "explanation": "A low-capacity model cannot learn the complex patterns required to solve the problem, leading to underfitting."
+    },
+    {
+      "question": "When you have achieved a model that performs well on your validation set, what is the final step before deployment?",
+      "type": "choice",
+      "options": [
+        "Check its performance on the test set.",
+        "Retrain the model on the test set to get a final boost in performance.",
+        "Add more layers to the model to increase its power.",
+        "Collect a completely new dataset and start over."
+      ],
+      "answer": "Check its performance on the test set.",
+      "explanation": "The final, crucial step is to get an unbiased estimate of its real-world performance by evaluating it on the held-out test set."
+    }
+  ]
+}
