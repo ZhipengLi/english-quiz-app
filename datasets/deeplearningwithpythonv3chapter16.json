@@ -1,1 +1,449 @@
-test
+{
+  "text": "This quiz is based on the concepts of text generation using deep learning. It covers the task of language modeling (predicting the next token), different sampling strategies for controlling text generation (greedy, temperature, top-k), the distinction between word-level and character-level models, sequence-to-sequence tasks like text summarization, and the typical training and generation loop for such models.",
+  "quiz": [
+    {
+      "question": "What is the fundamental task of a language model?",
+      "type": "choice",
+      "options": [
+        "To predict the next token in a sequence.",
+        "To predict the first token in a sequence.",
+        "To predict a random token in a sequence.",
+        "To predict the length of a sequence."
+      ],
+      "answer": "To predict the next token in a sequence.",
+      "explanation": "A language model learns the probability distribution of a sequence of tokens, which allows it to predict the most likely next token given the preceding ones."
+    },
+    {
+      "question": "The process of generating text one token at a time and feeding the output back as input is called ... generation.",
+      "type": "blank",
+      "answer": "autoregressive",
+      "explanation": "The autoregressive loop is the standard method for text generation, where the model's own predictions are used to condition the generation of the next token."
+    },
+    {
+      "question": "Which sampling strategy always chooses the single most likely token as the next token?",
+      "type": "choice",
+      "options": [
+        "Greedy sampling.",
+        "Temperature sampling.",
+        "Top-k sampling.",
+        "Random sampling."
+      ],
+      "answer": "Greedy sampling.",
+      "explanation": "Greedy sampling is a deterministic approach that always picks the token with the highest probability, often leading to repetitive and predictable text."
+    },
+    {
+      "question": "A model that predicts the next character in a sequence is a ...-level model.",
+      "type": "blank",
+      "answer": "character",
+      "explanation": "Character-level models learn from and generate sequences of individual characters rather than whole words."
+    },
+    {
+      "question": "What does a high 'temperature' value in temperature sampling encourage?",
+      "type": "choice",
+      "options": [
+        "More randomness and creativity.",
+        "Less randomness and creativity.",
+        "More determinism and repetition.",
+        "Less determinism and repetition."
+      ],
+      "answer": "More randomness and creativity.",
+      "explanation": "A high temperature flattens the probability distribution, making less likely tokens more likely to be chosen, which increases surprise and creativity in the generated text."
+    },
+    {
+      "question": "The initial text provided to a generative model to start the generation process is called a...",
+      "type": "blank",
+      "answer": "prompt",
+      "explanation": "The prompt, or context, is the seed text that the model uses to condition its initial predictions."
+    },
+    {
+      "question": "What is top-k sampling?",
+      "type": "choice",
+      "options": [
+        "Sampling from the k most likely next tokens.",
+        "Sampling from the k least likely next tokens.",
+        "Sampling from all tokens except the k most likely.",
+        "Sampling only the single most likely token k times."
+      ],
+      "answer": "Sampling from the k most likely next tokens.",
+      "explanation": "Top-k sampling restricts the sampling pool to the top k most probable tokens, which helps to avoid nonsensical words while still allowing for variety."
+    },
+    {
+      "question": "Text summarization is an example of a ... task.",
+      "type": "blank",
+      "answer": "sequence-to-sequence",
+      "explanation": "It's a sequence-to-sequence task because the model takes a long sequence (the article) as input and generates a shorter sequence (the summary) as output."
+    },
+    {
+      "question": "A model trained to predict the next token given all previous tokens is a ... language model.",
+      "type": "choice",
+      "options": [
+        "causal",
+        "masked",
+        "bidirectional",
+        "non-causal"
+      ],
+      "answer": "causal",
+      "explanation": "Causal language modeling is the standard forward-prediction task, where the model cannot look ahead in the sequence."
+    },
+    {
+      "question": "A model that can generate text with very flexible and creative structure, but may misspell words, is likely a ...-level model.",
+      "type": "blank",
+      "answer": "character",
+      "explanation": "Character-level models have a small vocabulary (just the characters) and learn all spelling and grammar rules from scratch, giving them flexibility but also the potential to make spelling errors."
+    },
+    {
+      "question": "What does a low 'temperature' value (e.g., 0.2) in temperature sampling lead to?",
+      "type": "choice",
+      "options": [
+        "More deterministic and predictable text.",
+        "More random and surprising text.",
+        "More grammatically incorrect text.",
+        "More factually accurate text."
+      ],
+      "answer": "More deterministic and predictable text.",
+      "explanation": "A low temperature sharpens the probability distribution, making the model more likely to pick the highest-probability words, similar to greedy sampling."
+    },
+    {
+      "question": "In a sequence-to-sequence model, the component that reads the input sequence is the...",
+      "type": "blank",
+      "answer": "encoder",
+      "explanation": "The encoder's job is to process the entire source sequence and condense its information into a context representation."
+    },
+    {
+      "question": "The final layer of a generative language model typically has a ... activation function.",
+      "type": "choice",
+      "options": [
+        "softmax",
+        "sigmoid",
+        "relu",
+        "tanh"
+      ],
+      "answer": "softmax",
+      "explanation": "The softmax function is used to convert the model's output logits into a probability distribution over the entire vocabulary."
+    },
+    {
+      "question": "In a sequence-to-sequence model, the component that generates the output sequence is the...",
+      "type": "blank",
+      "answer": "decoder",
+      "explanation": "The decoder takes the context from the encoder and generates the target sequence one token at a time."
+    },
+    {
+      "question": "Which of these is a primary challenge of text generation?",
+      "type": "choice",
+      "options": [
+        "Maintaining long-term coherence.",
+        "Maintaining correct spelling.",
+        "Maintaining a small vocabulary.",
+        "Maintaining a fast generation speed."
+      ],
+      "answer": "Maintaining long-term coherence.",
+      "explanation": "It is difficult for models to stay on topic and maintain a consistent narrative over long stretches of generated text."
+    },
+    {
+      "question": "The loss function used to train a language model is typically `SparseCategorical...`.",
+      "type": "blank",
+      "answer": "Crossentropy",
+      "explanation": "This loss function is suitable for classification problems where the goal is to predict one correct class (the next token) from a large number of possibilities (the vocabulary)."
+    },
+    {
+      "question": "A model that can translate French to English is a ... model.",
+      "type": "choice",
+      "options": [
+        "sequence-to-sequence",
+        "sequence-to-vector",
+        "vector-to-sequence",
+        "vector-to-vector"
+      ],
+      "answer": "sequence-to-sequence",
+      "explanation": "Machine translation is a classic example of a sequence-to-sequence task, as it maps an input text sequence to an output text sequence."
+    },
+    {
+      "question": "The vocabulary of a character-level model is very...",
+      "type": "blank",
+      "answer": "small",
+      "explanation": "The vocabulary only needs to include the letters, numbers, and symbols present in the text, which is a small, fixed set."
+    },
+    {
+      "question": "What is the primary trade-off when choosing between word-level and character-level models?",
+      "type": "choice",
+      "options": [
+        "Structure vs. spelling.",
+        "Speed vs. accuracy.",
+        "Training data vs. vocabulary size.",
+        "Coherence vs. creativity."
+      ],
+      "answer": "Structure vs. spelling.",
+      "explanation": "Word-level models handle structure well but are limited by a fixed vocabulary. Character-level models are very flexible and can spell anything but have to learn linguistic structure from a much lower level."
+    },
+    {
+      "question": "The output of a language model before the softmax function is a vector of...",
+      "type": "blank",
+      "answer": "logits",
+      "explanation": "Logits are the raw, unnormalized scores for each token in the vocabulary."
+    },
+    {
+      "question": "Combining top-k sampling and temperature sampling allows for more ... control over generation.",
+      "type": "choice",
+      "options": [
+        "nuanced",
+        "deterministic",
+        "random",
+        "unpredictable"
+      ],
+      "answer": "nuanced",
+      "explanation": "These techniques can be combined to strike a balance, preventing nonsensical words (with top-k) while controlling the creativity of the output (with temperature)."
+    },
+    {
+      "question": "The task of creating a language model is often framed as a ... prediction problem.",
+      "type": "blank",
+      "answer": "self-supervised",
+      "explanation": "It's considered self-supervised because the labels (the next token) are automatically derived from the input data itself, requiring no manual annotation."
+    },
+    {
+      "question": "In the autoregressive generation loop, what happens after a token is sampled?",
+      "type": "choice",
+      "options": [
+        "It is appended to the generated sequence.",
+        "It is discarded and a new token is sampled.",
+        "The generation process stops.",
+        "The model is retrained with the new token."
+      ],
+      "answer": "It is appended to the generated sequence.",
+      "explanation": "The newly sampled token is added to the sequence, which then becomes the new input for the next prediction step."
+    },
+    {
+      "question": "A model that can answer questions based on a given context is a type of ... model.",
+      "type": "blank",
+      "answer": "conditional",
+      "explanation": "It's a conditional language model because its output is conditioned on the provided context (the question and passage)."
+    },
+    {
+      "question": "Why is greedy sampling often avoided for creative text generation?",
+      "type": "choice",
+      "options": [
+        "It leads to repetitive and boring text.",
+        "It leads to random and incoherent text.",
+        "It is computationally very expensive.",
+        "It is very difficult to implement."
+      ],
+      "answer": "It leads to repetitive and boring text.",
+      "explanation": "By always picking the most obvious next word, greedy sampling can easily get stuck in loops and lacks the surprise needed for creative generation."
+    },
+    {
+      "question": "To train a text generation model, the text is typically transformed into sequences of...",
+      "type": "blank",
+      "answer": "integers",
+      "explanation": "Each unique token (word or character) is mapped to a specific integer index from a vocabulary."
+    },
+    {
+      "question": "A key component for enabling a model to handle a large vocabulary is the ... layer.",
+      "type": "choice",
+      "options": [
+        "Embedding",
+        "Dense",
+        "Convolutional",
+        "Pooling"
+      ],
+      "answer": "Embedding",
+      "explanation": "The Embedding layer maps the high-dimensional, sparse integer representation of words into a lower-dimensional, dense vector space."
+    },
+    {
+      "question": "The data for a language model is created by taking a sequence and using the next token as the...",
+      "type": "blank",
+      "answer": "label",
+      "explanation": "For an input sequence `[t1, t2, t3]`, the target label would be `t4`."
+    },
+    {
+      "question": "What is a major advantage of a word-level model?",
+      "type": "choice",
+      "options": [
+        "It has a better grasp of high-level linguistic structure.",
+        "It can generate words that were not in its training data.",
+        "It requires less memory than a character-level model.",
+        "It is more flexible and creative than a character-level model."
+      ],
+      "answer": "It has a better grasp of high-level linguistic structure.",
+      "explanation": "By working with words as atomic units, it can focus on learning the relationships between them, rather than learning spelling and word formation from scratch."
+    },
+    {
+      "question": "The creativity of a generative model is controlled by introducing ... into the token selection process.",
+      "type": "blank",
+      "answer": "randomness",
+      "explanation": "Sampling strategies like temperature and top-k introduce controlled randomness to move beyond the deterministic and repetitive nature of greedy sampling."
+    },
+    {
+      "question": "The number of tokens in the vocabulary determines the size of the output of the final ... layer.",
+      "type": "choice",
+      "options": [
+        "Dense",
+        "Embedding",
+        "Recurrent",
+        "Convolutional"
+      ],
+      "answer": "Dense",
+      "explanation": "The final Dense layer must output a logit for every possible token in the vocabulary, so its size is equal to the vocabulary size."
+    },
+    {
+      "question": "The state of an ... is passed from the encoder to the decoder in a seq2seq model.",
+      "type": "blank",
+      "answer": "RNN",
+      "explanation": "In older RNN-based seq2seq models, the final hidden state of the encoder RNN is used to initialize the state of the decoder RNN."
+    },
+    {
+      "question": "In temperature sampling, reweighting the original probability distribution is done by applying the temperature to the...",
+      "type": "choice",
+      "options": [
+        "logits.",
+        "embeddings.",
+        "hidden states.",
+        "final probabilities."
+      ],
+      "answer": "logits.",
+      "explanation": "The logits are divided by the temperature value before being passed to the softmax function, which has the effect of sharpening or flattening the final distribution."
+    },
+    {
+      "question": "The 'end-of-sequence' token is used to signal the model to ... generation.",
+      "type": "blank",
+      "answer": "stop",
+      "explanation": "In the autoregressive loop, generation continues until either a maximum length is reached or the model samples a special end-of-sequence token."
+    },
+    {
+      "question": "Which of these is NOT a common application of sequence-to-sequence models?",
+      "type": "choice",
+      "options": [
+        "Sentiment analysis.",
+        "Machine translation.",
+        "Text summarization.",
+        "Conversational bots."
+      ],
+      "answer": "Sentiment analysis.",
+      "explanation": "Sentiment analysis is a classification task (sequence-to-vector), not a sequence-to-sequence task, as it outputs a single class label, not a new sequence."
+    },
+    {
+      "question": "The training process for a language model aims to minimize the ... between the predicted and actual next tokens.",
+      "type": "blank",
+      "answer": "difference",
+      "explanation": "The loss function (like cross-entropy) measures the difference, and the optimizer's job is to adjust the weights to minimize this difference."
+    },
+    {
+      "question": "A model's ability to generate fluent and grammatically correct text is a sign that it has learned the ... of the language.",
+      "type": "choice",
+      "options": [
+        "statistical structure",
+        "alphabetical order",
+        "character count",
+        "semantic meaning"
+      ],
+      "answer": "statistical structure",
+      "explanation": "Language models don't understand language in a human sense; they learn the statistical patterns of how tokens follow each other."
+    },
+    {
+      "question": "The sampling strategy that balances creativity and coherence by limiting the choice of words is ... sampling.",
+      "type": "blank",
+      "answer": "top-k",
+      "explanation": "Top-k sampling prevents the model from picking absurdly unlikely words while still allowing for variety among the most probable options."
+    },
+    {
+      "question": "For a model to generate text, it must first be ... on a large corpus of text.",
+      "type": "choice",
+      "options": [
+        "trained",
+        "validated",
+        "tested",
+        "deployed"
+      ],
+      "answer": "trained",
+      "explanation": "The training process is where the model learns the patterns of the language from the provided text data."
+    },
+    {
+      "question": "In text generation, the term 'sampling' refers to the process of ... the next token.",
+      "type": "blank",
+      "answer": "choosing",
+      "explanation": "Sampling is the method used to choose the next token from the probability distribution output by the model."
+    },
+    {
+      "question": "A Transformer-based model is often used for modern text generation because it is good at handling...",
+      "type": "choice",
+      "options": [
+        "long-range dependencies.",
+        "short-range dependencies.",
+        "only character-level data.",
+        "only word-level data."
+      ],
+      "answer": "long-range dependencies.",
+      "explanation": "The self-attention mechanism allows the model to directly relate words that are far apart in a sequence, which is crucial for maintaining coherence."
+    },
+    {
+      "question": "A key challenge for word-level models is handling ... words.",
+      "type": "blank",
+      "answer": "out-of-vocabulary",
+      "explanation": "If a word was not in the training vocabulary, a basic word-level model has no way to represent it."
+    },
+    {
+      "question": "The size of the vocabulary for a word-level model is typically much ... than for a character-level model.",
+      "type": "choice",
+      "options": [
+        "larger",
+        "smaller",
+        "simpler",
+        "faster"
+      ],
+      "answer": "larger",
+      "explanation": "There are many thousands of unique words in a language, but only a small, fixed number of characters."
+    },
+    {
+      "question": "The input to the decoder in a seq2seq model during training is the...",
+      "type": "blank",
+      "answer": "target sequence",
+      "explanation": "During training, the decoder is given the true target sequence (shifted by one step) to learn to predict the next token at each position, a technique called teacher forcing."
+    },
+    {
+      "question": "A model that can complete the sentence 'The cat sat on the...' is performing...",
+      "type": "choice",
+      "options": [
+        "language modeling.",
+        "text classification.",
+        "text summarization.",
+        "text translation."
+      ],
+      "answer": "language modeling.",
+      "explanation": "This is the canonical task of a language model: predicting the next token in a sequence."
+    },
+    {
+      "question": "The softmax function is applied to the logits to produce a...",
+      "type": "blank",
+      "answer": "probability distribution",
+      "explanation": "The output of the softmax is a vector of probabilities, one for each word in the vocabulary, that all sum to 1."
+    },
+    {
+      "question": "All modern text generation is based on the simple idea of predicting the next token from the...",
+      "type": "choice",
+      "options": [
+        "previous ones.",
+        "following ones.",
+        "random ones.",
+        "most frequent ones."
+      ],
+      "answer": "previous ones.",
+      "explanation": "This fundamental, causal principle underlies all autoregressive language models, from simple RNNs to large-scale Transformers."
+    },
+    {
+      "question": "In the generation loop, the model's prediction at step `t` becomes part of the ... for step `t+1`.",
+      "type": "blank",
+      "answer": "input",
+      "explanation": "This autoregressive process is how a sequence is built one token at a time."
+    },
+    {
+      "question": "Which of these is a key innovation that enables modern large language models?",
+      "type": "choice",
+      "options": [
+        "The Transformer architecture.",
+        "The bag-of-words model.",
+        "The one-hot encoding technique.",
+        "The greedy sampling algorithm."
+      ],
+      "answer": "The Transformer architecture.",
+      "explanation": "The Transformer's parallelizable self-attention mechanism was the architectural breakthrough that allowed models to be scaled up to billions of parameters effectively."
+    }
+  ]
+}
