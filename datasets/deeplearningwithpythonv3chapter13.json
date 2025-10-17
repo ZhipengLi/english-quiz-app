@@ -1,1 +1,413 @@
-test
+{
+  "text": "This quiz is based on the concepts of time series forecasting with deep learning. It covers data windowing, baselines, evaluation metrics, the importance of temporal order, and the application of various architectures like Dense, 1D Convnets, and Recurrent Neural Networks (RNNs) to sequence data.",
+  "quiz": [
+    {
+      "question": "What is the primary characteristic of time series data?",
+      "type": "choice",
+      "options": [
+        "The temporal ordering of data points matters.",
+        "The temporal ordering of data points is irrelevant.",
+        "The spatial ordering of data points matters.",
+        "The data points must be independent and identically distributed."
+      ],
+      "answer": "The temporal ordering of data points matters.",
+      "explanation": "Time series data is a sequence of observations where the order is critical, as past events influence future events."
+    },
+    {
+      "question": "A simple baseline for forecasting is to predict that the next value will be the same as the ... value.",
+      "type": "blank",
+      "answer": "last",
+      "explanation": "This is known as a naive forecast and serves as a common-sense baseline that any more complex model should outperform."
+    },
+    {
+      "question": "When preparing time series data, why should you avoid shuffling the samples?",
+      "type": "choice",
+      "options": [
+        "It would destroy the temporal relationship between data points.",
+        "It would destroy the spatial relationship between data points.",
+        "It would make the training process computationally more expensive.",
+        "It would require more memory to store the dataset."
+      ],
+      "answer": "It would destroy the temporal relationship between data points.",
+      "explanation": "Shuffling breaks the sequence, making it impossible for the model to learn patterns that evolve over time."
+    },
+    {
+      "question": "In data windowing, the number of past timesteps used as input is called the...",
+      "type": "blank",
+      "answer": "lookback",
+      "explanation": "The lookback period, or window size, defines how much past information the model uses to make a prediction."
+    },
+    {
+      "question": "Which type of neural network layer is specifically designed to process sequence data by maintaining an internal state?",
+      "type": "choice",
+      "options": [
+        "A recurrent layer (e.g., GRU, LSTM).",
+        "A dense layer (e.g., fully-connected).",
+        "A convolutional layer (e.g., Conv1D).",
+        "A max-pooling layer (e.g., MaxPooling1D)."
+      ],
+      "answer": "A recurrent layer (e.g., GRU, LSTM).",
+      "explanation": "Recurrent layers process sequences one timestep at a time and use their internal state to remember information from past timesteps."
+    },
+    {
+      "question": "The parameter that defines how far in the future we want to predict is the...",
+      "type": "blank",
+      "answer": "delay",
+      "explanation": "The delay, or forecast horizon, specifies the number of timesteps between the end of the input window and the target value."
+    },
+    {
+      "question": "When normalizing time series data, you should compute the mean and standard deviation on the...",
+      "type": "choice",
+      "options": [
+        "training data only.",
+        "validation data only.",
+        "test data only.",
+        "entire dataset."
+      ],
+      "answer": "training data only.",
+      "explanation": "To prevent data leakage, the statistics used for normalization must be derived only from the training set and then applied to the validation and test sets."
+    },
+    {
+      "question": "A 1D convnet processes time series data by learning ... patterns in the sequence.",
+      "type": "blank",
+      "answer": "local",
+      "explanation": "1D convolutions are effective at recognizing motifs or local patterns (like specific shapes in a temperature curve) within a larger sequence."
+    },
+    {
+      "question": "What is the main advantage of a 1D convnet over an RNN for time series?",
+      "type": "choice",
+      "options": [
+        "It is computationally less expensive.",
+        "It is computationally more expensive.",
+        "It is more sensitive to the order of timesteps.",
+        "It is less sensitive to the order of timesteps."
+      ],
+      "answer": "It is computationally less expensive.",
+      "explanation": "Convnets can process sequences in parallel, making them much faster to train than RNNs, which process data sequentially."
+    },
+    {
+      "question": "The `sampling_rate` or `step` parameter in data windowing controls the ... between successive data points in the input.",
+      "type": "blank",
+      "answer": "period",
+      "explanation": "A sampling rate of 6 would mean you pick one data point every 6 timesteps, which is useful for downsampling high-frequency data."
+    },
+    {
+      "question": "Which metric is commonly used to evaluate the performance of a forecasting model?",
+      "type": "choice",
+      "options": [
+        "Mean Absolute Error (MAE).",
+        "Mean Squared Error (MSE).",
+        "Categorical Accuracy.",
+        "Binary Accuracy."
+      ],
+      "answer": "Mean Absolute Error (MAE).",
+      "explanation": "MAE is often preferred for forecasting because it is easy to interpret, as it's in the same unit as the original data."
+    },
+    {
+      "question": "A Gated Recurrent Unit (GRU) is a type of ... layer.",
+      "type": "blank",
+      "answer": "recurrent",
+      "explanation": "GRU layers are a more modern and slightly simpler alternative to LSTM layers, both of which are types of recurrent layers."
+    },
+    {
+      "question": "What is the primary drawback of a naive forecast baseline?",
+      "type": "choice",
+      "options": [
+        "It assumes the future will be the same as the past.",
+        "It assumes the future will be different from the past.",
+        "It is very complex to implement.",
+        "It requires a large amount of training data."
+      ],
+      "answer": "It assumes the future will be the same as the past.",
+      "explanation": "A naive forecast can't account for trends or seasonality and assumes the time series is static."
+    },
+    {
+      "question": "A time series with a single feature at each timestep is called...",
+      "type": "blank",
+      "answer": "univariate",
+      "explanation": "An example is a time series of only temperature data."
+    },
+    {
+      "question": "When combining a 1D convnet and an RNN, what is the typical architecture?",
+      "type": "choice",
+      "options": [
+        "The convnet acts as a preprocessor for the RNN.",
+        "The RNN acts as a preprocessor for the convnet.",
+        "The convnet and RNN are run in parallel.",
+        "The convnet and RNN are trained on different data."
+      ],
+      "answer": "The convnet acts as a preprocessor for the RNN.",
+      "explanation": "The convnet processes long input sequences into shorter, higher-level feature sequences, which are then fed into the RNN."
+    },
+    {
+      "question": "To convert the output of a model back to its original scale after normalization, you perform ... normalization.",
+      "type": "blank",
+      "answer": "inverse",
+      "explanation": "This involves multiplying by the standard deviation and adding the mean that were calculated from the training set."
+    },
+    {
+      "question": "A key challenge in time series forecasting is that the future is not perfectly...",
+      "type": "choice",
+      "options": [
+        "predictable.",
+        "random.",
+        "ordered.",
+        "scaled."
+      ],
+      "answer": "predictable.",
+      "explanation": "Unlike some other machine learning tasks, there is an inherent level of uncertainty in forecasting future events."
+    },
+    {
+      "question": "Stacking `GRU` layers allows a model to learn more complex ... representations.",
+      "type": "blank",
+      "answer": "temporal",
+      "explanation": "Deeper RNNs can learn hierarchical temporal features, similar to how deeper CNNs learn hierarchical spatial features."
+    },
+    {
+      "question": "Which of these is NOT a parameter of the `timeseries_dataset_from_array` utility?",
+      "type": "choice",
+      "options": [
+        "lookback",
+        "delay",
+        "batch_size",
+        "optimizer"
+      ],
+      "answer": "optimizer",
+      "explanation": "The optimizer is part of the model compilation step, not the data preparation step."
+    },
+    {
+      "question": "A time series with multiple features at each timestep is called...",
+      "type": "blank",
+      "answer": "multivariate",
+      "explanation": "An example is a time series containing temperature, pressure, and humidity data."
+    },
+    {
+      "question": "A simple moving average is a type of ... model.",
+      "type": "choice",
+      "options": [
+        "non-machine-learning baseline",
+        "deep-learning baseline",
+        "recurrent-neural-network",
+        "convolutional-neural-network"
+      ],
+      "answer": "non-machine-learning baseline",
+      "explanation": "Like a naive forecast, a moving average is a simple statistical method that provides a common-sense baseline to beat."
+    },
+    {
+      "question": "In a recurrent layer like GRU, the ... parameter is used to address overfitting.",
+      "type": "blank",
+      "answer": "dropout",
+      "explanation": "Dropout and recurrent dropout are regularization techniques specifically adapted for recurrent layers."
+    },
+    {
+      "question": "Why might a simple `Dense` layer work reasonably well for forecasting?",
+      "type": "choice",
+      "options": [
+        "It can learn simple patterns if the input sequence is flattened.",
+        "It can learn complex patterns if the input sequence is not flattened.",
+        "It maintains an internal state to remember past timesteps.",
+        "It is designed to process sequential data efficiently."
+      ],
+      "answer": "It can learn simple patterns if the input sequence is flattened.",
+      "explanation": "By flattening the lookback window, a dense layer can learn relationships between the past timesteps, but it loses the explicit notion of temporal order."
+    },
+    {
+      "question": "The validation set for time series data should always come ... the training set.",
+      "type": "blank",
+      "answer": "after",
+      "explanation": "To simulate a realistic forecasting scenario, you must validate your model on data from the 'future' relative to the training data."
+    },
+    {
+      "question": "What is a primary limitation of an RNN's ability to process very long sequences?",
+      "type": "choice",
+      "options": [
+        "It can be computationally expensive and slow.",
+        "It is unable to learn from long sequences.",
+        "It can only process sequences of a fixed length.",
+        "It requires the entire sequence to be in memory at once."
+      ],
+      "answer": "It can be computationally expensive and slow.",
+      "explanation": "The sequential nature of RNNs (processing one step at a time) makes them inherently slower than parallelizable models like convnets for very long sequences."
+    },
+    {
+      "question": "The Keras utility for creating batches of windowed time series data is `timeseries_dataset_from_...`.",
+      "type": "blank",
+      "answer": "array",
+      "explanation": "This function is a highly convenient way to prepare time series data for ingestion by a Keras model."
+    },
+    {
+      "question": "Using a 1D pooling layer after a 1D convolutional layer helps...",
+      "type": "choice",
+      "options": [
+        "downsample the sequence.",
+        "upsample the sequence.",
+        "normalize the sequence.",
+        "shuffle the sequence."
+      ],
+      "answer": "downsample the sequence.",
+      "explanation": "Pooling (like MaxPooling1D) reduces the length of the sequence, which helps the model learn features that are invariant to small shifts in time."
+    },
+    {
+      "question": "For a stacked RNN, you must set `return_sequences=True` on all layers except the...",
+      "type": "blank",
+      "answer": "last layer",
+      "explanation": "This ensures that each recurrent layer passes its full sequence of outputs to the next layer in the stack."
+    },
+    {
+      "question": "Which model is generally more sensitive to the order of timesteps within the input window?",
+      "type": "choice",
+      "options": [
+        "An RNN.",
+        "A 1D Convnet.",
+        "A Dense model on flattened data.",
+        "A linear regression model."
+      ],
+      "answer": "An RNN.",
+      "explanation": "RNNs are explicitly designed to be order-sensitive, processing the sequence step-by-step. A 1D convnet is only locally order-sensitive, and a dense model loses most order information."
+    },
+    {
+      "question": "The test set for time series data must be chronologically ... the validation set.",
+      "type": "blank",
+      "answer": "after",
+      "explanation": "The proper chronological split is Train -> Validate -> Test, to avoid looking into the future during development."
+    },
+    {
+      "question": "The combination of a 1D convnet and an RNN is powerful because...",
+      "type": "choice",
+      "options": [
+        "it combines the speed of convnets with the order-sensitivity of RNNs.",
+        "it combines the speed of RNNs with the order-sensitivity of convnets.",
+        "it allows the model to ignore the temporal order of the data.",
+        "it can only be used for univariate time series data."
+      ],
+      "answer": "it combines the speed of convnets with the order-sensitivity of RNNs.",
+      "explanation": "This hybrid approach gets the best of both worlds: the convnet efficiently processes long sequences, and the RNN interprets the order of the extracted features."
+    },
+    {
+      "question": "The input to a `GRU` layer is typically a 3D tensor of shape (batch, timesteps, ...).",
+      "type": "blank",
+      "answer": "features",
+      "explanation": "This shape represents a batch of sequences, where each sequence has a certain number of timesteps, and each timestep has a certain number of features."
+    },
+    {
+      "question": "What does a 'common-sense' baseline provide?",
+      "type": "choice",
+      "options": [
+        "A performance floor to beat.",
+        "A performance ceiling to aim for.",
+        "The final deployable model.",
+        "A method for data augmentation."
+      ],
+      "answer": "A performance floor to beat.",
+      "explanation": "Any machine learning model you build should be able to perform better than a simple, non-learning baseline."
+    },
+    {
+      "question": "The idea that 'the weather tomorrow will be the same as the weather today' is an example of a ... forecast.",
+      "type": "blank",
+      "answer": "naive",
+      "explanation": "This simple assumption forms the basis of the naive forecasting baseline."
+    },
+    {
+      "question": "In a forecasting task, the 'target' is the value you are trying to...",
+      "type": "choice",
+      "options": [
+        "predict.",
+        "input.",
+        "normalize.",
+        "ignore."
+      ],
+      "answer": "predict.",
+      "explanation": "The target is the future value that the model is trained to predict based on the input sequence."
+    },
+    {
+      "question": "If you are predicting temperature, your MAE score will be in the unit of...",
+      "type": "blank",
+      "answer": "degrees",
+      "explanation": "The Mean Absolute Error is expressed in the same units as the target variable, making it highly interpretable."
+    },
+    {
+      "question": "Using a bidirectional RNN for forecasting is generally not recommended because...",
+      "type": "choice",
+      "options": [
+        "it uses future information to predict the past.",
+        "it uses past information to predict the future.",
+        "it is computationally cheaper than a standard RNN.",
+        "it cannot be used for multivariate time series."
+      ],
+      "answer": "it uses future information to predict the past.",
+      "explanation": "A bidirectional RNN processes the sequence in both chronological and antichronological order, which violates the premise of forecasting."
+    },
+    {
+      "question": "The input to a time series forecasting model is a window of ... data.",
+      "type": "blank",
+      "answer": "past",
+      "explanation": "The model learns to map a window of past observations to a future target value."
+    },
+    {
+      "question": "Which of these tasks is a time series problem?",
+      "type": "choice",
+      "options": [
+        "Predicting stock prices.",
+        "Classifying images of cats and dogs.",
+        "Identifying customer segments.",
+        "Translating text from one language to another."
+      ],
+      "answer": "Predicting stock prices.",
+      "explanation": "Stock price prediction is a classic example of time series forecasting, as the data is a sequence ordered by time."
+    },
+    {
+      "question": "The output of the final GRU layer in a forecasting model is typically fed into a ... layer to produce the final prediction.",
+      "type": "blank",
+      "answer": "Dense",
+      "explanation": "A final Dense layer is used to transform the RNN's output vector into a single scalar prediction."
+    },
+    {
+      "question": "If a time series has a strong yearly pattern, it is said to have...",
+      "type": "choice",
+      "options": [
+        "seasonality.",
+        "a trend.",
+        "noise.",
+        "a high variance."
+      ],
+      "answer": "seasonality.",
+      "explanation": "Seasonality refers to predictable, repeating patterns that occur at regular intervals in a time series."
+    },
+    {
+      "question": "A model that simply learns to copy the last value of the input sequence is effectively learning a ... forecast.",
+      "type": "blank",
+      "answer": "naive",
+      "explanation": "If a complex model cannot outperform this simple baseline, it indicates that it is not learning meaningful patterns."
+    },
+    {
+      "question": "The main purpose of the `timeseries_dataset_from_array` function is to automate the process of...",
+      "type": "choice",
+      "options": [
+        "data windowing.",
+        "data normalization.",
+        "model training.",
+        "model evaluation."
+      ],
+      "answer": "data windowing.",
+      "explanation": "It efficiently creates the (input_window, target) pairs needed to train a forecasting model."
+    },
+    {
+      "question": "The core data for a time series is a sequence of values indexed by...",
+      "type": "blank",
+      "answer": "time",
+      "explanation": "The time index is the defining characteristic that orders the data points in the sequence."
+    },
+    {
+      "question": "What is a key assumption made when using machine learning for time series?",
+      "type": "choice",
+      "options": [
+        "That patterns from the past will continue in the future.",
+        "That patterns from the past will not continue in the future.",
+        "That the data has no temporal order.",
+        "That the future is completely deterministic."
+      ],
+      "answer": "That patterns from the past will continue in the future.",
+      "explanation": "The model learns patterns from historical data with the assumption that these patterns will be informative for making future predictions."
+    }
+  ]
+}
