@@ -1,1 +1,413 @@
-test
+{
+  "text": "This quiz is based on the concepts of object detection with deep learning. It covers the core task of localization and classification, the distinction between one-stage (e.g., YOLO) and two-stage (e.g., Faster R-CNN) detectors, the role of anchor boxes, the Non-Max Suppression algorithm, and key evaluation metrics like Intersection over Union (IoU) and mean Average Precision (mAP).",
+  "quiz": [
+    {
+      "question": "Object detection is a computer vision task that combines localization and...",
+      "type": "choice",
+      "options": [
+        "classification.",
+        "segmentation.",
+        "registration.",
+        "augmentation."
+      ],
+      "answer": "classification.",
+      "explanation": "Object detection answers two questions: 'What is in the image?' (classification) and 'Where is it?' (localization)."
+    },
+    {
+      "question": "The algorithm used to filter out redundant, overlapping bounding boxes for the same object is called Non-Max...",
+      "type": "blank",
+      "answer": "Suppression",
+      "explanation": "Non-Max Suppression (NMS) is a crucial post-processing step that selects the best bounding box from a set of overlapping predictions."
+    },
+    {
+      "question": "What is the primary role of anchor boxes in an object detection model?",
+      "type": "choice",
+      "options": [
+        "To act as predefined reference boxes for prediction.",
+        "To act as the final predicted bounding boxes.",
+        "To act as a measure of model accuracy.",
+        "To act as a method for data augmentation."
+      ],
+      "answer": "To act as predefined reference boxes for prediction.",
+      "explanation": "The model learns to predict offsets from these predefined anchor boxes rather than predicting the box coordinates from scratch."
+    },
+    {
+      "question": "The metric that measures the degree of overlap between two bounding boxes is Intersection over...",
+      "type": "blank",
+      "answer": "Union",
+      "explanation": "Intersection over Union (IoU) is the ratio of the area of overlap to the area of the union of the two boxes."
+    },
+    {
+      "question": "A key difference between one-stage and two-stage detectors is that a two-stage detector first...",
+      "type": "choice",
+      "options": [
+        "proposes regions of interest.",
+        "classifies regions of interest.",
+        "predicts final bounding boxes.",
+        "predicts final class labels."
+      ],
+      "answer": "proposes regions of interest.",
+      "explanation": "Two-stage detectors, like Faster R-CNN, have a dedicated first stage (the Region Proposal Network) to identify potential object locations."
+    },
+    {
+      "question": "The loss function used for predicting bounding box coordinates is often called ... loss.",
+      "type": "blank",
+      "answer": "localization",
+      "explanation": "The total loss in an object detector is typically a sum of the localization (or regression) loss and the classification loss."
+    },
+    {
+      "question": "In the YOLO (You Only Look Once) algorithm, the input image is divided into a...",
+      "type": "choice",
+      "options": [
+        "grid of cells.",
+        "set of proposals.",
+        "list of anchors.",
+        "stack of layers."
+      ],
+      "answer": "grid of cells.",
+      "explanation": "Each grid cell is responsible for predicting objects whose center falls within that cell."
+    },
+    {
+      "question": "The Faster R-CNN architecture introduced a Region ... Network.",
+      "type": "blank",
+      "answer": "Proposal",
+      "explanation": "The Region Proposal Network (RPN) is a key innovation of Faster R-CNN that makes the region proposal step learnable and efficient."
+    },
+    {
+      "question": "What is a common trade-off between one-stage and two-stage detectors?",
+      "type": "choice",
+      "options": [
+        "Speed versus accuracy.",
+        "Speed versus complexity.",
+        "Accuracy versus simplicity.",
+        "Simplicity versus cost."
+      ],
+      "answer": "Speed versus accuracy.",
+      "explanation": "Generally, one-stage detectors are faster but slightly less accurate, while two-stage detectors are slower but often more accurate."
+    },
+    {
+      "question": "The standard evaluation metric for object detection challenges is mean Average...",
+      "type": "blank",
+      "answer": "Precision",
+      "explanation": "Mean Average Precision (mAP) summarizes the model's performance across different classes and IoU thresholds."
+    },
+    {
+      "question": "The output of an object detector's 'regression head' is typically...",
+      "type": "choice",
+      "options": [
+        "an offset from an anchor box.",
+        "a probability for each class.",
+        "a feature map of the input.",
+        "a single confidence score."
+      ],
+      "answer": "an offset from an anchor box.",
+      "explanation": "The regression head predicts the adjustments (e.g., for x, y, width, height) needed to transform an anchor box into the final predicted box."
+    },
+    {
+      "question": "The output of an object detector's 'classification head' is typically...",
+      "type": "blank",
+      "answer": "class probabilities",
+      "explanation": "The classification head predicts the probability that the object within a given box belongs to each of the possible classes."
+    },
+    {
+      "question": "An IoU score is a value between...",
+      "type": "choice",
+      "options": [
+        "0 and 1.",
+        "-1 and 1.",
+        "0 and infinity.",
+        "1 and 100."
+      ],
+      "answer": "0 and 1.",
+      "explanation": "An IoU of 0 means no overlap, while an IoU of 1 means the boxes are a perfect match."
+    },
+    {
+      "question": "In Non-Max Suppression, boxes with a high IoU with the highest-scoring box are...",
+      "type": "blank",
+      "answer": "discarded",
+      "explanation": "The algorithm keeps the box with the highest confidence and suppresses (discards) other highly overlapping boxes, assuming they are duplicate detections."
+    },
+    {
+      "question": "YOLO is an example of what kind of object detector?",
+      "type": "choice",
+      "options": [
+        "A one-stage detector.",
+        "A two-stage detector.",
+        "A multi-stage detector.",
+        "A region-based detector."
+      ],
+      "answer": "A one-stage detector.",
+      "explanation": "YOLO is a single-shot, one-stage detector because it predicts bounding boxes and class probabilities directly from the image in a single pass."
+    },
+    {
+      "question": "The localization task in object detection can be framed as a ... problem.",
+      "type": "blank",
+      "answer": "regression",
+      "explanation": "The model regresses the continuous numerical values of the bounding box coordinates."
+    },
+    {
+      "question": "Anchor boxes are designed with different sizes and ... to match objects of various shapes.",
+      "type": "choice",
+      "options": [
+        "aspect ratios.",
+        "confidence scores.",
+        "class labels.",
+        "IoU thresholds."
+      ],
+      "answer": "aspect ratios.",
+      "explanation": "Using a variety of aspect ratios (e.g., tall and thin, short and wide) helps the model detect objects that are not perfectly square."
+    },
+    {
+      "question": "The 'background' is often treated as a special ... in object detection.",
+      "type": "blank",
+      "answer": "class",
+      "explanation": "The classification head must be able to predict that a proposed region or anchor box contains no object (i.e., it belongs to the background class)."
+    },
+    {
+      "question": "What does a bounding box typically represent?",
+      "type": "choice",
+      "options": [
+        "The coordinates of an object.",
+        "The classification of an object.",
+        "The segmentation of an object.",
+        "The confidence of an object."
+      ],
+      "answer": "The coordinates of an object.",
+      "explanation": "A bounding box is defined by a set of coordinates (e.g., top-left corner, width, and height) that specify the object's location."
+    },
+    {
+      "question": "A model that first extracts features with a CNN and then feeds them to regression and classification heads is a common ... for object detection.",
+      "type": "blank",
+      "answer": "architecture",
+      "explanation": "This backbone-and-head architecture is a standard pattern in modern object detection models."
+    },
+    {
+      "question": "To be considered a 'true positive', a predicted box must have an IoU with a ground-truth box that is...",
+      "type": "choice",
+      "options": [
+        "above a certain threshold.",
+        "below a certain threshold.",
+        "exactly equal to 1.",
+        "exactly equal to 0."
+      ],
+      "answer": "above a certain threshold.",
+      "explanation": "A common threshold for IoU is 0.5; any prediction with an IoU above this value is considered a correct detection."
+    },
+    {
+      "question": "The 'backbone' of an object detector is typically a pre-trained...",
+      "type": "blank",
+      "answer": "CNN",
+      "explanation": "Models often use a powerful, pre-trained Convolutional Neural Network (like ResNet) as a feature-extracting backbone."
+    },
+    {
+      "question": "What is a primary challenge that object detection addresses, which classification does not?",
+      "type": "choice",
+      "options": [
+        "Handling multiple objects in a single image.",
+        "Handling different image sizes.",
+        "Handling different lighting conditions.",
+        "Handling noisy image data."
+      ],
+      "answer": "Handling multiple objects in a single image.",
+      "explanation": "Image classification assigns one label to the whole image, while object detection can identify and locate many different objects."
+    },
+    {
+      "question": "The loss function for object detection is a weighted sum of classification loss and ... loss.",
+      "type": "blank",
+      "answer": "regression",
+      "explanation": "The total loss combines the error from misclassifying the object and the error from incorrectly placing the bounding box."
+    },
+    {
+      "question": "Faster R-CNN is an example of what kind of object detector?",
+      "type": "choice",
+      "options": [
+        "A two-stage detector.",
+        "A one-stage detector.",
+        "A single-shot detector.",
+        "A grid-based detector."
+      ],
+      "answer": "A two-stage detector.",
+      "explanation": "It is a two-stage detector because it first proposes regions with its RPN and then classifies and refines those regions in a second stage."
+    },
+    {
+      "question": "The confidence score predicted by a detector represents the probability that a box contains an...",
+      "type": "blank",
+      "answer": "object",
+      "explanation": "This score indicates how confident the model is that an object is present within the predicted bounding box, regardless of its class."
+    },
+    {
+      "question": "The process of matching ground-truth boxes to anchor boxes is a crucial step during...",
+      "type": "choice",
+      "options": [
+        "model training.",
+        "model inference.",
+        "model deployment.",
+        "model evaluation."
+      ],
+      "answer": "model training.",
+      "explanation": "During training, the model needs to know which anchor boxes are 'positive' (should detect an object) and which are 'negative' (background)."
+    },
+    {
+      "question": "A model that outputs a dense set of predictions across the image is a characteristic of ... detectors.",
+      "type": "blank",
+      "answer": "one-stage",
+      "explanation": "One-stage detectors make predictions at a large number of predetermined locations (anchors) across the image."
+    },
+    {
+      "question": "How is object detection different from semantic segmentation?",
+      "type": "choice",
+      "options": [
+        "Detection uses bounding boxes; segmentation uses pixel-level masks.",
+        "Detection uses pixel-level masks; segmentation uses bounding boxes.",
+        "Detection classifies objects; segmentation does not.",
+        "Segmentation classifies objects; detection does not."
+      ],
+      "answer": "Detection uses bounding boxes; segmentation uses pixel-level masks.",
+      "explanation": "While both tasks localize objects, detection provides a coarse localization with a box, whereas segmentation provides a fine-grained, pixel-perfect outline."
+    },
+    {
+      "question": "Smooth L1 loss is often preferred for ... regression because it is less sensitive to outliers.",
+      "type": "blank",
+      "answer": "bounding box",
+      "explanation": "It behaves like L2 loss for small errors and L1 loss for large errors, making it more robust during training."
+    },
+    {
+      "question": "In Non-Max Suppression, the 'Max' refers to keeping the box with the maximum...",
+      "type": "choice",
+      "options": [
+        "confidence score.",
+        "bounding box size.",
+        "IoU with other boxes.",
+        "class probability."
+      ],
+      "answer": "confidence score.",
+      "explanation": "The algorithm iteratively selects the remaining box with the highest confidence score and suppresses its neighbors."
+    },
+    {
+      "question": "The final output of an object detection model is a list of bounding boxes, scores, and...",
+      "type": "blank",
+      "answer": "class labels",
+      "explanation": "For each detected object, the model provides its location, its class, and a score indicating the confidence of the prediction."
+    },
+    {
+      "question": "What does the 'Single Shot' in Single Shot MultiBox Detector (SSD) refer to?",
+      "type": "choice",
+      "options": [
+        "The model makes predictions in a single pass.",
+        "The model can only detect a single object.",
+        "The model only uses a single anchor box.",
+        "The model only trains for a single epoch."
+      ],
+      "answer": "The model makes predictions in a single pass.",
+      "explanation": "Like YOLO, SSD is a one-stage detector that predicts all boxes and classes in one forward pass of the network."
+    },
+    {
+      "question": "Detectors that make predictions on feature maps of multiple scales are better at handling objects of varying...",
+      "type": "blank",
+      "answer": "sizes",
+      "explanation": "Using features from different levels of the backbone allows the model to detect both small and large objects effectively."
+    },
+    {
+      "question": "The R-CNN family of models are all ... detectors.",
+      "type": "choice",
+      "options": [
+        "two-stage",
+        "one-stage",
+        "single-shot",
+        "grid-based"
+      ],
+      "answer": "two-stage",
+      "explanation": "R-CNN, Fast R-CNN, and Faster R-CNN are all seminal two-stage detectors that follow the region-proposal-then-classification paradigm."
+    },
+    {
+      "question": "A model that predicts offsets for `dx, dy, dw, dh` is learning to ... an anchor box.",
+      "type": "blank",
+      "answer": "refine",
+      "explanation": "These predicted offsets refine the position and size of the initial anchor box to better fit the ground-truth object."
+    },
+    {
+      "question": "The precision-recall curve is used to calculate the ... for a given class.",
+      "type": "choice",
+      "options": [
+        "Average Precision (AP).",
+        "Intersection over Union (IoU).",
+        "localization loss.",
+        "classification loss."
+      ],
+      "answer": "Average Precision (AP).",
+      "explanation": "The Average Precision is the area under the precision-recall curve, and the mAP is the mean of this value across all classes."
+    },
+    {
+      "question": "The process of assigning a predicted box to a ground-truth object is called...",
+      "type": "blank",
+      "answer": "matching",
+      "explanation": "A matching strategy, usually based on IoU, is needed during training to determine which predictions should be considered correct."
+    },
+    {
+      "question": "An object detector must be invariant to an object's position, scale, and...",
+      "type": "choice",
+      "options": [
+        "viewpoint.",
+        "classification.",
+        "color.",
+        "brightness."
+      ],
+      "answer": "viewpoint.",
+      "explanation": "A robust detector should be able to identify an object regardless of its position, size, or the angle from which it is viewed."
+    },
+    {
+      "question": "Hard negative mining is a technique used to train the ... more effectively.",
+      "type": "blank",
+      "answer": "classifier",
+      "explanation": "It involves focusing the training on the background patches that the classifier finds most difficult, improving its ability to distinguish objects from the background."
+    },
+    {
+      "question": "What problem do anchor boxes help solve?",
+      "type": "choice",
+      "options": [
+        "Detecting multiple objects of different shapes and sizes.",
+        "Classifying objects with high accuracy.",
+        "Reducing the computational cost of the model.",
+        "Visualizing the model's predictions."
+      ],
+      "answer": "Detecting multiple objects of different shapes and sizes.",
+      "explanation": "By providing a diverse set of reference boxes, anchors allow a single network head to predict objects with varied geometries."
+    },
+    {
+      "question": "The confidence score in Non-Max Suppression is often a combination of the 'objectness' score and the...",
+      "type": "blank",
+      "answer": "class probability",
+      "explanation": "The final confidence is often the probability of an object being present, multiplied by the probability of it belonging to a specific class."
+    },
+    {
+      "question": "A fully convolutional design is important for modern object detectors because it makes them...",
+      "type": "choice",
+      "options": [
+        "independent of the input image size.",
+        "dependent on the input image size.",
+        "faster to train from scratch.",
+        "easier to convert to a different task."
+      ],
+      "answer": "independent of the input image size.",
+      "explanation": "A fully convolutional network can be applied to images of any resolution without requiring architectural changes."
+    },
+    {
+      "question": "Detecting a 'car' and a 'person' in the same image is an example of multi-... detection.",
+      "type": "blank",
+      "answer": "class",
+      "explanation": "The detector is capable of identifying objects from multiple different categories."
+    },
+    {
+      "question": "The two main components of an object detection model's loss are for classification and...",
+      "type": "choice",
+      "options": [
+        "localization.",
+        "segmentation.",
+        "detection.",
+        "recognition."
+      ],
+      "answer": "localization.",
+      "explanation": "The model is penalized for both getting the class wrong and for getting the location (bounding box) wrong."
+    }
+  ]
+}
