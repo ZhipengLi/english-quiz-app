@@ -1,1 +1,413 @@
-test
+{
+  "text": "This quiz is based on the concepts of image segmentation using deep learning. It covers the distinction between classification and segmentation, the typical encoder-decoder architecture of segmentation models (like U-Net), the roles of downsampling and upsampling layers (transposed convolutions), the importance of skip connections, and the use of transfer learning.",
+  "quiz": [
+    {
+      "question": "What is the primary goal of semantic image segmentation?",
+      "type": "choice",
+      "options": [
+        "To classify an entire image into one category.",
+        "To classify each pixel of an image into a category.",
+        "To classify some pixels of an image into a category.",
+        "To classify each object instance in an image."
+      ],
+      "answer": "To classify each pixel of an image into a category.",
+      "explanation": "Semantic segmentation assigns a class label to every pixel in the input image, unlike image classification, which assigns a single label to the whole image."
+    },
+    {
+      "question": "A typical segmentation model consists of a downsampling path called an encoder and an upsampling path called a...",
+      "type": "blank",
+      "answer": "decoder",
+      "explanation": "The encoder-decoder architecture is a common pattern where the encoder extracts features and the decoder reconstructs the segmentation map."
+    },
+    {
+      "question": "What is the primary purpose of skip connections in a U-Net-like architecture?",
+      "type": "choice",
+      "options": [
+        "To combine low-level features with high-level features.",
+        "To combine low-level features with the input image.",
+        "To combine high-level features with the final output.",
+        "To combine only high-level features from different branches."
+      ],
+      "answer": "To combine low-level features with high-level features.",
+      "explanation": "Skip connections feed high-resolution feature maps from the encoder to the decoder, which helps the decoder recover fine-grained spatial details."
+    },
+    {
+      "question": "A common layer used for learnable upsampling in a decoder is...",
+      "type": "blank",
+      "answer": "Conv2DTranspose",
+      "explanation": "A transposed convolution is a type of learnable upsampling that projects features to a larger spatial grid."
+    },
+    {
+      "question": "In semantic segmentation, the output of the model is a...",
+      "type": "choice",
+      "options": [
+        "segmentation mask.",
+        "segmentation vector.",
+        "segmentation value.",
+        "segmentation score."
+      ],
+      "answer": "segmentation mask.",
+      "explanation": "The model outputs a mask (an image) where the value of each pixel corresponds to a predicted class."
+    },
+    {
+      "question": "For a multiclass segmentation task, the loss function is typically calculated on a ... basis.",
+      "type": "blank",
+      "answer": "per-pixel",
+      "explanation": "The loss is computed by comparing the predicted class of each pixel to its true class."
+    },
+    {
+      "question": "What is the primary role of the encoder in a segmentation model?",
+      "type": "choice",
+      "options": [
+        "To downsample the input and extract features.",
+        "To upsample feature maps to the original resolution.",
+        "To downsample the input and classify each pixel.",
+        "To upsample the input and refine object boundaries."
+      ],
+      "answer": "To downsample the input and extract features.",
+      "explanation": "The encoder, often a pre-trained CNN, acts as a feature extractor, creating low-resolution, semantically rich feature maps."
+    },
+    {
+      "question": "Using a pre-trained image classification model as the encoder is a form of...",
+      "type": "blank",
+      "answer": "transfer learning",
+      "explanation": "This leverages the powerful, generic features learned by the model on a large dataset like ImageNet."
+    },
+    {
+      "question": "The final activation function in a multiclass segmentation model with N classes is typically...",
+      "type": "choice",
+      "options": [
+        "`softmax` over N channels.",
+        "`sigmoid` over N channels.",
+        "`softmax` over 1 channel.",
+        "`sigmoid` over 1 channel."
+      ],
+      "answer": "`softmax` over N channels.",
+      "explanation": "A softmax function is applied to the channel dimension of the final feature map to get a per-pixel probability distribution over the N classes."
+    },
+    {
+      "question": "The `Conv2DTranspose` layer is sometimes misleadingly referred to as a...",
+      "type": "blank",
+      "answer": "deconvolution",
+      "explanation": "While often called deconvolution, this term is technically incorrect; transposed convolution is the more accurate name."
+    },
+    {
+      "question": "What is the key difference between `UpSampling2D` and `Conv2DTranspose`?",
+      "type": "choice",
+      "options": [
+        "`UpSampling2D` is not learnable.",
+        "`Conv2DTranspose` is not learnable.",
+        "`UpSampling2D` cannot increase spatial dimensions.",
+        "`Conv2DTranspose` cannot increase spatial dimensions."
+      ],
+      "answer": "`UpSampling2D` is not learnable.",
+      "explanation": "`UpSampling2D` uses a fixed rule (like nearest-neighbor), while `Conv2DTranspose` has trainable weights to learn the optimal upsampling."
+    },
+    {
+      "question": "In a segmentation dataset, the ground truth is provided as a set of...",
+      "type": "blank",
+      "answer": "masks",
+      "explanation": "Each training image is paired with a target mask where each pixel has a value corresponding to its class."
+    },
+    {
+      "question": "What is the role of the decoder in a segmentation model?",
+      "type": "choice",
+      "options": [
+        "To generate a full-resolution segmentation map.",
+        "To generate a low-resolution feature map.",
+        "To classify the entire image into a single category.",
+        "To extract features from the input image."
+      ],
+      "answer": "To generate a full-resolution segmentation map.",
+      "explanation": "The decoder takes the low-resolution feature maps from the encoder and progressively upsamples them to reconstruct the final mask."
+    },
+    {
+      "question": "A segmentation model's performance can be evaluated using per-pixel...",
+      "type": "blank",
+      "answer": "accuracy",
+      "explanation": "This metric calculates the percentage of pixels in the image that were correctly classified."
+    },
+    {
+      "question": "When using transfer learning for segmentation, it is common practice to ... the weights of the encoder base initially.",
+      "type": "choice",
+      "options": [
+        "freeze",
+        "randomize",
+        "fine-tune",
+        "double"
+      ],
+      "answer": "freeze",
+      "explanation": "Freezing the encoder prevents its powerful pre-trained weights from being destroyed by large random gradients from the newly initialized decoder."
+    },
+    {
+      "question": "The output of a segmentation model has the same height and ... as the input image.",
+      "type": "blank",
+      "answer": "width",
+      "explanation": "The goal is to produce a full-resolution mask that aligns perfectly with the input image."
+    },
+    {
+      "question": "What is a major challenge in semantic segmentation?",
+      "type": "choice",
+      "options": [
+        "Achieving precise localization of object boundaries.",
+        "Classifying the image into a single category.",
+        "Preventing the model from underfitting.",
+        "Finding a suitable pre-trained encoder model."
+      ],
+      "answer": "Achieving precise localization of object boundaries.",
+      "explanation": "The downsampling in the encoder loses spatial information, which the decoder must painstakingly recover, making sharp boundaries difficult."
+    },
+    {
+      "question": "The number of filters in the final layer of a segmentation model corresponds to the number of...",
+      "type": "blank",
+      "answer": "classes",
+      "explanation": "The final layer produces a feature map where the channel dimension represents the different classes."
+    },
+    {
+      "question": "Skip connections help fight the loss of ... information in the encoder.",
+      "type": "choice",
+      "options": [
+        "spatial",
+        "semantic",
+        "color",
+        "textural"
+      ],
+      "answer": "spatial",
+      "explanation": "By re-introducing high-resolution feature maps from early in the encoder, skip connections help the decoder pinpoint object locations and boundaries."
+    },
+    {
+      "question": "The process of unfreezing the top layers of the encoder and retraining them with a small learning rate is called...",
+      "type": "blank",
+      "answer": "fine-tuning",
+      "explanation": "Fine-tuning allows the model to adapt its pre-trained features to the specifics of the new dataset."
+    },
+    {
+      "question": "A model that can distinguish between 'car 1' and 'car 2' is performing...",
+      "type": "choice",
+      "options": [
+        "instance segmentation.",
+        "semantic segmentation.",
+        "image classification.",
+        "object detection."
+      ],
+      "answer": "instance segmentation.",
+      "explanation": "Instance segmentation goes beyond semantic segmentation by identifying individual object instances."
+    },
+    {
+      "question": "A model that classifies every pixel as 'car' without distinguishing between them is performing ... segmentation.",
+      "type": "blank",
+      "answer": "semantic",
+      "explanation": "Semantic segmentation is concerned with the class of each pixel, not the instance it belongs to."
+    },
+    {
+      "question": "In the context of segmentation, 'downsampling' refers to...",
+      "type": "choice",
+      "options": [
+        "reducing the spatial dimensions of feature maps.",
+        "reducing the number of channels in feature maps.",
+        "reducing the number of samples in the dataset.",
+        "reducing the bit depth of the input image."
+      ],
+      "answer": "reducing the spatial dimensions of feature maps.",
+      "explanation": "The encoder progressively downsamples the feature maps (e.g., via max pooling) to create a smaller, more semantically dense representation."
+    },
+    {
+      "question": "A common loss function for segmentation with integer masks (e.g., 0, 1, 2) is `SparseCategorical...`.",
+      "type": "blank",
+      "answer": "Crossentropy",
+      "explanation": "This loss function is suitable when the true labels are integers rather than one-hot encoded vectors."
+    },
+    {
+      "question": "The decoder part of a segmentation network is conceptually similar to a...",
+      "type": "choice",
+      "options": [
+        "reversed convnet.",
+        "standard convnet.",
+        "recurrent neural network.",
+        "transformer network."
+      ],
+      "answer": "reversed convnet.",
+      "explanation": "It mirrors the encoder's structure but uses upsampling layers (like transposed convolutions) instead of downsampling layers."
+    },
+    {
+      "question": "The final output of a segmentation model before the activation function is often called...",
+      "type": "blank",
+      "answer": "logits",
+      "explanation": "Logits are the raw, unnormalized scores for each class at each pixel, which are then passed to the softmax function."
+    },
+    {
+      "question": "Why is a fully convolutional network (FCN) well-suited for segmentation?",
+      "type": "choice",
+      "options": [
+        "It can process inputs of any spatial size.",
+        "It contains no convolutional layers.",
+        "It can only process inputs of a fixed spatial size.",
+        "It contains only dense layers."
+      ],
+      "answer": "It can process inputs of any spatial size.",
+      "explanation": "Because it doesn't have any size-dependent dense layers, an FCN can be applied to images of arbitrary height and width."
+    },
+    {
+      "question": "The process of retrieving the feature maps from intermediate layers of an encoder is necessary for implementing...",
+      "type": "blank",
+      "answer": "skip connections",
+      "explanation": "These saved feature maps are later concatenated with the corresponding feature maps in the decoder."
+    },
+    {
+      "question": "Using a pre-trained ... as the encoder is a highly effective strategy.",
+      "type": "choice",
+      "options": [
+        "feature extractor",
+        "feature generator",
+        "feature classifier",
+        "feature predictor"
+      ],
+      "answer": "feature extractor",
+      "explanation": "A pre-trained model like MobileNetV2 acts as a powerful feature extractor, providing a strong starting point for the segmentation task."
+    },
+    {
+      "question": "The output shape of a segmentation model is (batch, height, width, ...).",
+      "type": "blank",
+      "answer": "classes",
+      "explanation": "The final dimension's size is equal to the number of classes in the segmentation task."
+    },
+    {
+      "question": "What is a key trade-off in segmentation model architecture?",
+      "type": "choice",
+      "options": [
+        "Spatial accuracy vs. semantic understanding.",
+        "Training speed vs. inference speed.",
+        "Number of layers vs. number of epochs.",
+        "Classification accuracy vs. regression accuracy."
+      ],
+      "answer": "Spatial accuracy vs. semantic understanding.",
+      "explanation": "The deep layers of the encoder understand semantics ('what') but lose spatial accuracy ('where'). Skip connections are a key tool to balance this trade-off."
+    },
+    {
+      "question": "A segmentation mask where pixel values are 0, 1, or 2 represents a ... class problem.",
+      "type": "blank",
+      "answer": "three",
+      "explanation": "Each integer value corresponds to a unique class label."
+    },
+    {
+      "question": "In the U-Net architecture, the decoder is...",
+      "type": "choice",
+      "options": [
+        "symmetric to the encoder.",
+        "larger than the encoder.",
+        "smaller than the encoder.",
+        "independent of the encoder."
+      ],
+      "answer": "symmetric to the encoder.",
+      "explanation": "The U-Net's characteristic U-shape comes from a decoder that mirrors the structure of the encoder, with skip connections linking the corresponding levels."
+    },
+    {
+      "question": "To get a final segmentation mask of integer labels from softmax probabilities, you would apply an ... operation.",
+      "type": "blank",
+      "answer": "argmax",
+      "explanation": "The `argmax` function finds the class index with the highest probability for each pixel."
+    },
+    {
+      "question": "The task of assigning a label to every pixel is also known as ... classification.",
+      "type": "choice",
+      "options": [
+        "dense",
+        "sparse",
+        "local",
+        "global"
+      ],
+      "answer": "dense",
+      "explanation": "It's considered a dense prediction task because a prediction is made at every single pixel location."
+    },
+    {
+      "question": "A simple, non-learnable upsampling method is `UpSampling2D` with ... interpolation.",
+      "type": "blank",
+      "answer": "bilinear",
+      "explanation": "Bilinear interpolation is a common and effective method for simple upsampling, though it is not learnable."
+    },
+    {
+      "question": "Why are the features from the deeper layers of an encoder important?",
+      "type": "choice",
+      "options": [
+        "They contain more semantic information.",
+        "They contain more spatial information.",
+        "They are the same size as the input image.",
+        "They are computationally cheap to produce."
+      ],
+      "answer": "They contain more semantic information.",
+      "explanation": "Deeper layers capture high-level concepts about what is in the image, which is crucial for correctly classifying pixels."
+    },
+    {
+      "question": "The 'strides' parameter in a `Conv2DTranspose` layer controls the upsampling...",
+      "type": "blank",
+      "answer": "factor",
+      "explanation": "A stride of 2 will typically double the spatial dimensions of the input feature map."
+    },
+    {
+      "question": "Concatenating feature maps from the encoder and decoder is a key part of implementing...",
+      "type": "choice",
+      "options": [
+        "skip connections.",
+        "residual connections.",
+        "dense connections.",
+        "separable connections."
+      ],
+      "answer": "skip connections.",
+      "explanation": "The concatenation operation merges the high-resolution features from the encoder with the upsampled features in the decoder."
+    },
+    {
+      "question": "Image segmentation models are often used in medical imaging and...",
+      "type": "blank",
+      "answer": "autonomous driving",
+      "explanation": "These are two of the most common applications, used for identifying tumors or delineating roads, pedestrians, and vehicles."
+    },
+    {
+      "question": "A segmentation model without skip connections would likely produce masks with very ... boundaries.",
+      "type": "choice",
+      "options": [
+        "blurry",
+        "sharp",
+        "accurate",
+        "colorful"
+      ],
+      "answer": "blurry",
+      "explanation": "Without access to the high-resolution features from the encoder, the decoder would struggle to reconstruct precise object boundaries."
+    },
+    {
+      "question": "When building a U-Net, the number of filters typically ... as you go down the encoder.",
+      "type": "blank",
+      "answer": "increases",
+      "explanation": "A common pattern is to halve the spatial dimensions and double the number of filters at each step of the encoder."
+    },
+    {
+      "question": "The main benefit of using a pre-trained model for the encoder is that it has already learned a rich ... of features.",
+      "type": "choice",
+      "options": [
+        "hierarchy",
+        "list",
+        "set",
+        "array"
+      ],
+      "answer": "hierarchy",
+      "explanation": "The model has learned a hierarchy of visual features, from simple edges and textures to complex object parts, which is a powerful starting point."
+    },
+    {
+      "question": "Unlike classification, segmentation models retain ... information throughout the network.",
+      "type": "blank",
+      "answer": "spatial",
+      "explanation": "While the encoder compresses spatial information, the decoder's job is to restore it, making it a central concern of the architecture."
+    },
+    {
+      "question": "The final layer of a segmentation model is often a ... convolution.",
+      "type": "choice",
+      "options": [
+        "1x1",
+        "3x3",
+        "5x5",
+        "7x7"
+      ],
+      "answer": "1x1",
+      "explanation": "A 1x1 convolution is used to project the feature maps from the last upsampling block to the desired number of output channels (classes) without changing the spatial dimensions."
+    }
+  ]
+}
