@@ -1,1 +1,449 @@
-test
+{
+  "text": "This quiz is based on a deep dive into the Keras API. It covers the functional API for building complex models, creating custom layers and models by subclassing, and implementing custom training logic with GradientTape, in addition to the standard compile() and fit() workflow.",
+  "quiz": [
+    {
+      "question": "What is the primary advantage of the Keras functional API over the Sequential API?",
+      "type": "choice",
+      "options": [
+        "It supports models with multiple inputs or outputs.",
+        "It supports models with only a single input and output.",
+        "It is computationally more efficient for simple linear models.",
+        "It automatically handles all data preprocessing steps for you."
+      ],
+      "answer": "It supports models with multiple inputs or outputs.",
+      "explanation": "The functional API allows for building complex model architectures, such as multi-input/multi-output models and models with shared layers, which is not possible with the simple linear stack of the Sequential API."
+    },
+    {
+      "question": "To create a custom layer in Keras, you should subclass the `keras.layers....` class.",
+      "type": "blank",
+      "answer": "Layer",
+      "explanation": "Subclassing `keras.layers.Layer` is the standard way to create custom layers with their own state (weights) and logic."
+    },
+    {
+      "question": "In a custom Keras layer, in which method should you define the layer's weights?",
+      "type": "choice",
+      "options": [
+        "The `call()` method.",
+        "The `build()` method.",
+        "The `__init__()` method.",
+        "The `compute_output_shape()` method."
+      ],
+      "answer": "The `build()` method.",
+      "explanation": "The `build()` method is the standard place to create weights. It's called automatically the first time the layer is used, and it receives the shape of the input, which is often necessary to determine the shape of the weights."
+    },
+    {
+      "question": "The method that contains the forward pass logic for a custom layer is the ... method.",
+      "type": "blank",
+      "answer": "call",
+      "explanation": "The `call()` method defines how the layer transforms its input tensors into output tensors; it's the core of the layer's functionality."
+    },
+    {
+      "question": "To implement a custom training loop from scratch in Keras, you would typically use a `tf....` object.",
+      "type": "choice",
+      "options": [
+        "GradientTape",
+        "GradientDescent",
+        "Function",
+        "Session"
+      ],
+      "answer": "GradientTape",
+      "explanation": "The `tf.GradientTape` context manager automatically records operations to compute gradients, which is the foundation of a custom training loop."
+    },
+    {
+      "question": "After computing the gradients with the tape, you use an optimizer's ... method to update the weights.",
+      "type": "blank",
+      "answer": "apply_gradients",
+      "explanation": "The `optimizer.apply_gradients()` method takes a list of (gradient, variable) pairs and applies the updates to the model's weights."
+    },
+    {
+      "question": "What is the primary purpose of a Keras `Callback`?",
+      "type": "choice",
+      "options": [
+        "To define the model's architecture.",
+        "To perform actions at various stages of training.",
+        "To calculate the final loss of the model on the test set.",
+        "To load and preprocess the dataset before training."
+      ],
+      "answer": "To perform actions at various stages of training.",
+      "explanation": "Callbacks are used to monitor the model, save checkpoints, stop training early, and perform other actions at points like the end of an epoch."
+    },
+    {
+      "question": "To create a custom model, you should subclass the `keras....` class.",
+      "type": "blank",
+      "answer": "Model",
+      "explanation": "Subclassing `keras.Model` allows you to create fully custom architectures where you define the layers and the forward pass logic yourself."
+    },
+    {
+      "question": "In the functional API, how are layers connected?",
+      "type": "choice",
+      "options": [
+        "By calling a layer instance on a tensor.",
+        "By passing a list of layers to the `Model` constructor.",
+        "By using the `model.add()` method.",
+        "By manually defining the connections in a config file."
+      ],
+      "answer": "By calling a layer instance on a tensor.",
+      "explanation": "In the functional API, you treat layers like functions: `output_tensor = layer_instance(input_tensor)`."
+    },
+    {
+      "question": "A custom training loop gives you more ... than using `fit()`.",
+      "type": "blank",
+      "answer": "flexibility",
+      "explanation": "While `fit()` is convenient, a custom loop allows for non-standard training procedures, like those used in GANs."
+    },
+    {
+      "question": "Which of these is a built-in Keras callback?",
+      "type": "choice",
+      "options": [
+        "ModelCheckpoint",
+        "GradientTape",
+        "AdamOptimizer",
+        "CategoricalCrossentropy"
+      ],
+      "answer": "ModelCheckpoint",
+      "explanation": "`ModelCheckpoint` is a callback that saves the model at regular intervals during training."
+    },
+    {
+      "question": "In a custom model's `__init__` method, you should define the model's...",
+      "type": "blank",
+      "answer": "layers",
+      "explanation": "The constructor (`__init__`) is the standard place to instantiate all the layers that the model will use in its forward pass."
+    },
+    {
+      "question": "The `compile()` method in Keras configures the model for training by specifying the optimizer, loss, and...",
+      "type": "choice",
+      "options": [
+        "metrics.",
+        "layers.",
+        "callbacks.",
+        "input data shape."
+      ],
+      "answer": "metrics.",
+      "explanation": "The `compile()` method brings together the optimizer that drives the updates, the loss function to be minimized, and any metrics to monitor."
+    },
+    {
+      "question": "When building a custom layer, weights are typically created using the `self....` method.",
+      "type": "blank",
+      "answer": "add_weight",
+      "explanation": "The `add_weight()` method is a convenient way to create trainable weights with a specific shape and initializer."
+    },
+    {
+      "question": "Which of the following is NOT a good reason to write a custom training loop?",
+      "type": "choice",
+      "options": [
+        "Your training procedure is highly standard and straightforward.",
+        "You are implementing a Generative Adversarial Network (GAN).",
+        "You need to apply different optimizers to different parts of your model.",
+        "You want to implement a custom learning rate schedule that `fit()` does not support."
+      ],
+      "answer": "Your training procedure is highly standard and straightforward.",
+      "explanation": "If your training is standard, `fit()` is the recommended approach as it is highly optimized, less error-prone, and requires less code."
+    },
+    {
+      "question": "The `fit()` method in Keras abstracts away the entire...",
+      "type": "blank",
+      "answer": "training loop",
+      "explanation": "The `fit()` method handles iterating over data, computing loss, backpropagation, and weight updates automatically."
+    },
+    {
+      "question": "To make a custom layer's weights non-trainable, you would set the `trainable` argument in `add_weight` to...",
+      "type": "choice",
+      "options": [
+        "False.",
+        "True.",
+        "None.",
+        "\"off\"."
+      ],
+      "answer": "False.",
+      "explanation": "The `trainable` boolean flag controls whether the variable's value can be updated by the optimizer during training."
+    },
+    {
+      "question": "The `keras.Input` object is used to instantiate a...",
+      "type": "blank",
+      "answer": "symbolic tensor",
+      "explanation": "This symbolic tensor has a shape and dtype but no actual value; it's the entry point for a functional model."
+    },
+    {
+      "question": "When creating a functional model, you must specify the model's inputs and ... to the `keras.Model` constructor.",
+      "type": "choice",
+      "options": [
+        "outputs.",
+        "layers.",
+        "optimizer.",
+        "loss function."
+      ],
+      "answer": "outputs.",
+      "explanation": "A functional model is defined as a graph of layers, and you must tell Keras where the graph starts (inputs) and where it ends (outputs)."
+    },
+    {
+      "question": "A custom metric in Keras should subclass `keras.metrics....`.",
+      "type": "blank",
+      "answer": "Metric",
+      "explanation": "Subclassing `keras.metrics.Metric` and implementing methods like `update_state`, `result`, and `reset_state` is the standard way to create custom metrics."
+    },
+    {
+      "question": "What is the primary role of `model.summary()`?",
+      "type": "choice",
+      "options": [
+        "To display the model's architecture and parameter counts.",
+        "To save the model's weights to a file.",
+        "To start the model's training process on a dataset.",
+        "To provide a summary of the model's performance on the test set."
+      ],
+      "answer": "To display the model's architecture and parameter counts.",
+      "explanation": "It's a useful utility for quickly inspecting the layers, output shapes, and number of trainable/non-trainable parameters in your model."
+    },
+    {
+      "question": "A custom loss function in Keras is typically a Python function that takes `y_true` and ... as arguments.",
+      "type": "blank",
+      "answer": "y_pred",
+      "explanation": "The loss function's purpose is to compute a scalar score quantifying the discrepancy between the true targets (`y_true`) and the model's predictions (`y_pred`)."
+    },
+    {
+      "question": "The `EarlyStopping` callback is used to...",
+      "type": "choice",
+      "options": [
+        "stop training when a monitored metric has stopped improving.",
+        "stop training when a specific number of epochs has been reached.",
+        "stop training when the training loss reaches exactly zero.",
+        "stop training if the model's weights become too large."
+      ],
+      "answer": "stop training when a monitored metric has stopped improving.",
+      "explanation": "This is a form of regularization that helps prevent overfitting by stopping the training process before the model starts to memorize the training data."
+    },
+    {
+      "question": "To use a custom object like a layer or model after saving it, you may need to provide it via the ... argument when loading.",
+      "type": "blank",
+      "answer": "custom_objects",
+      "explanation": "When loading a model, Keras needs to know how to reconstruct your custom classes. The `custom_objects` dictionary maps the class name to the class definition."
+    },
+    {
+      "question": "In a `GradientTape` context, which variables are watched by default?",
+      "type": "choice",
+      "options": [
+        "Only trainable `tf.Variable` objects.",
+        "All `tf.Variable` objects, regardless of their trainable status.",
+        "Only `tf.Tensor` objects that are not variables.",
+        "All Python variables currently in scope."
+      ],
+      "answer": "Only trainable `tf.Variable` objects.",
+      "explanation": "By default, the tape is optimized to only track the variables that will be updated by the optimizer, which are the trainable ones."
+    },
+    {
+      "question": "The `keras.layers.Concatenate` layer is used in the ... API.",
+      "type": "blank",
+      "answer": "functional",
+      "explanation": "Concatenation is used to merge multiple branches in a complex model, which is a feature of the functional API."
+    },
+    {
+      "question": "What does `tape.gradient()` compute?",
+      "type": "choice",
+      "options": [
+        "The gradient of a target with respect to a source.",
+        "The loss function for the current batch of data.",
+        "The accuracy of the model on the validation set.",
+        "The total number of trainable parameters in the model."
+      ],
+      "answer": "The gradient of a target with respect to a source.",
+      "explanation": "It computes the gradients of a target tensor (usually the loss) with respect to a list of source tensors (usually the model's trainable weights)."
+    },
+    {
+      "question": "When you call `fit()`, Keras automatically handles splitting data into...",
+      "type": "blank",
+      "answer": "batches",
+      "explanation": "The `fit` method iterates through the dataset in batches, performing a weight update for each one."
+    },
+    {
+      "question": "If you want to create a model with a non-linear topology (e.g., residual connections), you should use the...",
+      "type": "choice",
+      "options": [
+        "Functional API or subclassing.",
+        "Sequential API.",
+        "Callbacks API.",
+        "Metrics API."
+      ],
+      "answer": "Functional API or subclassing.",
+      "explanation": "The Sequential API is strictly for linear stacks of layers. More complex architectures like ResNets require the flexibility of the Functional API or model subclassing."
+    },
+    {
+      "question": "The `on_epoch_end` method is part of a Keras...",
+      "type": "blank",
+      "answer": "Callback",
+      "explanation": "You can define custom logic to be executed at the end of each training epoch by implementing this method in a custom callback."
+    },
+    {
+      "question": "When you subclass `keras.Model`, you must implement which method for the forward pass?",
+      "type": "choice",
+      "options": [
+        "The `call()` method.",
+        "The `build()` method.",
+        "The `fit()` method.",
+        "The `compile()` method."
+      ],
+      "answer": "The `call()` method.",
+      "explanation": "Similar to a custom layer, a subclassed model's `call` method defines its forward pass logic."
+    },
+    {
+      "question": "The functional API creates models that are explicit graphs of...",
+      "type": "blank",
+      "answer": "layers",
+      "explanation": "The model is a data structure that represents the graph of connections between layers, which can be easily inspected and plotted."
+    },
+    {
+      "question": "Which of these allows you to combine the convenience of `fit()` with custom training logic?",
+      "type": "choice",
+      "options": [
+        "Subclassing `keras.Model` and overriding `train_step`.",
+        "Writing a complete training loop from scratch with `GradientTape`.",
+        "Using the Sequential API exclusively for all tasks.",
+        "Creating a custom callback to perform backpropagation."
+      ],
+      "answer": "Subclassing `keras.Model` and overriding `train_step`.",
+      "explanation": "Overriding the `train_step` method allows you to customize what happens in a single training iteration, while still leveraging the power and convenience of the `fit()` method to handle the overall loop."
+    },
+    {
+      "question": "When you instantiate a `Model` from inputs and outputs, the model's layers are those reachable from the...",
+      "type": "blank",
+      "answer": "inputs",
+      "explanation": "Keras automatically traverses the graph of layers starting from the specified inputs to determine all the layers that belong to the model."
+    },
+    {
+      "question": "To add a new metric to monitor during training with `fit()`, you pass it to the ... method.",
+      "type": "choice",
+      "options": [
+        "`compile()`",
+        "`fit()`",
+        "`add()`",
+        "`build()`"
+      ],
+      "answer": "`compile()`",
+      "explanation": "The `metrics` argument of the `compile()` method is where you specify all the metrics you want Keras to compute and log during training and evaluation."
+    },
+    {
+      "question": "In a custom layer, the `__init__` method is where you should call `super().__init__()` and perform...",
+      "type": "blank",
+      "answer": "initialization",
+      "explanation": "The constructor should handle any initial setup that doesn't depend on the shape of the input."
+    },
+    {
+      "question": "The main difference between a subclassed `Model` and the functional API is that a subclassed model is...",
+      "type": "choice",
+      "options": [
+        "defined as a Python class.",
+        "defined as a graph of layers.",
+        "always faster to train.",
+        "unable to use custom layers."
+      ],
+      "answer": "defined as a Python class.",
+      "explanation": "In subclassing, the model is a Python class where the forward pass is defined in the `call` method. The functional API defines a model as an explicit, static graph structure."
+    },
+    {
+      "question": "The `train_on_batch` method performs a single gradient update on a...",
+      "type": "blank",
+      "answer": "single batch",
+      "explanation": "This method is a lower-level alternative to `fit` that gives you more control over data iteration."
+    },
+    {
+      "question": "Which component is responsible for updating the model's weights based on gradients?",
+      "type": "choice",
+      "options": [
+        "The optimizer.",
+        "The loss function.",
+        "The metric.",
+        "The callback."
+      ],
+      "answer": "The optimizer.",
+      "explanation": "The optimizer implements an algorithm (like Adam or SGD) that takes the gradients and uses them to update the trainable variables."
+    },
+    {
+      "question": "To get the list of trainable weights from any `Layer` or `Model`, you can access its `.trainable_...` attribute.",
+      "type": "blank",
+      "answer": "weights",
+      "explanation": "This attribute returns a list of all variables that are marked as trainable within that layer or model."
+    },
+    {
+      "question": "The `tf.data` API is often used with custom training loops to handle...",
+      "type": "choice",
+      "options": [
+        "efficient data loading and batching.",
+        "model saving and serialization.",
+        "automatic differentiation.",
+        "hyperparameter tuning."
+      ],
+      "answer": "efficient data loading and batching.",
+      "explanation": "The `tf.data` API is highly optimized for creating efficient input pipelines, which is crucial for performance in custom loops."
+    },
+    {
+      "question": "You can pass a list of callbacks to the ... method.",
+      "type": "blank",
+      "answer": "fit",
+      "explanation": "The `callbacks` argument of the `fit` method takes a list of callback objects that will be called during the training process."
+    },
+    {
+      "question": "When you create a custom `Metric`, what does the `result()` method do?",
+      "type": "choice",
+      "options": [
+        "It returns the current value of the metric.",
+        "It updates the state of the metric with new data.",
+        "It resets the state of the metric to its initial value.",
+        "It compiles the metric into the model."
+      ],
+      "answer": "It returns the current value of the metric.",
+      "explanation": "The `result()` method computes and returns the final metric value based on the state accumulated by `update_state()`."
+    },
+    {
+      "question": "The `keras.utils.plot_model` function can be used to visualize a model created with the ... API.",
+      "type": "blank",
+      "answer": "functional",
+      "explanation": "Since a functional model is an explicit graph, this utility can inspect it and create a plot of the layer connections."
+    },
+    {
+      "question": "If you don't call `compile()` on a model, you cannot use...",
+      "type": "choice",
+      "options": [
+        "`fit()`.",
+        "`predict()`.",
+        "a custom training loop.",
+        "the functional API."
+      ],
+      "answer": "`fit()`.",
+      "explanation": "The `fit()` method relies on the optimizer, loss, and metrics defined during the `compile()` step. A custom loop does not require `compile()`."
+    },
+    {
+      "question": "To freeze the weights of a layer, you can set `layer.... = False`.",
+      "type": "blank",
+      "answer": "trainable",
+      "explanation": "Setting the `trainable` attribute of a layer to `False` recursively freezes all of its weights."
+    },
+    {
+      "question": "A Keras `Model` can be used just like a Keras `Layer`, which means you can...",
+      "type": "choice",
+      "options": [
+        "call it on a tensor.",
+        "add it to a Sequential model.",
+        "pass it as a callback.",
+        "All of the above."
+      ],
+      "answer": "All of the above.",
+      "explanation": "The Model class inherits from the Layer class, so a model can be treated as a layer within a larger model, making it a highly composable building block."
+    },
+    {
+      "question": "The functional API is ideal for models with a ... acyclic graph topology.",
+      "type": "blank",
+      "answer": "directed",
+      "explanation": "The connections in the functional API have a clear direction from inputs to outputs, forming a DAG."
+    },
+    {
+      "question": "What is the primary benefit of subclassing `keras.Model` over using the functional API?",
+      "type": "choice",
+      "options": [
+        "It offers more flexibility for models with complex, dynamic architectures.",
+        "It is easier to debug and inspect the model's structure.",
+        "It always results in better performance and faster training times.",
+        "It provides a more detailed summary when `model.summary()` is called."
+      ],
+      "answer": "It offers more flexibility for models with complex, dynamic architectures.",
+      "explanation": "Because the forward pass is defined in a standard Python method (`call`), you can use loops, if-statements, and other dynamic control flow, which is not possible with the static graph of the functional API."
+    }
+  ]
+}
