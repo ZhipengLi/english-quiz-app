@@ -1,1 +1,143 @@
-test
+{
+  "text": "This quiz is based on the conclusion of 'Deep Learning with Python', summarizing the key takeaways about the capabilities and limitations of modern AI, the future directions of the field, and the long-term vision for human-AI collaboration.",
+  "quiz": [
+    {
+      "question": "The intuitive, pattern-matching intelligence that current AI excels at is referred to as the ... Mind.",
+      "type": "blank",
+      "answer": "Geometric",
+      "explanation": "The Geometric Mind (or System 1) is associated with perception and intuition, which is analogous to the function of deep learning models that operate on high-dimensional vector spaces."
+    },
+    {
+      "question": "A major limitation of modern deep learning is its poor ability to handle...",
+      "type": "choice",
+      "options": [
+        "out-of-distribution data.",
+        "in-distribution data.",
+        "large-scale datasets.",
+        "small-scale datasets."
+      ],
+      "answer": "out-of-distribution data.",
+      "explanation": "Models often fail when presented with data that comes from a different distribution than the training data, showing a lack of robust generalization."
+    },
+    {
+      "question": "The AI paradigm that aims to combine deep learning with classical symbolic AI is called ... AI.",
+      "type": "choice",
+      "options": [
+        "neuro-symbolic",
+        "neuro-generative",
+        "geo-symbolic",
+        "geo-algorithmic"
+      ],
+      "answer": "neuro-symbolic",
+      "explanation": "Neuro-symbolic AI seeks to integrate the pattern-matching strengths of neural networks with the reasoning capabilities of symbolic systems."
+    },
+    {
+      "question": "The abstract reasoning and planning intelligence that AI currently lacks is the ... Mind.",
+      "type": "blank",
+      "answer": "Algorithmic",
+      "explanation": "The Algorithmic Mind (or System 2) is associated with formal logic, planning, and symbolic reasoning, which remains a major challenge for AI."
+    },
+    {
+      "question": "The long-term vision of AI is not the replacement of humans, but the ... of human and machine intelligence.",
+      "type": "choice",
+      "options": [
+        "merging",
+        "separation",
+        "competition",
+        "replacement"
+      ],
+      "answer": "merging",
+      "explanation": "The ultimate goal could be a symbiotic relationship where AI acts as an extension of the human mind, creating a new form of intelligence."
+    },
+    {
+      "question": "A model that can adapt to a new task with very few examples is exhibiting...",
+      "type": "blank",
+      "answer": "extreme generalization",
+      "explanation": "This is a key capability of human intelligence that current AI largely lacks—the ability to reuse abstract knowledge in completely novel situations."
+    },
+    {
+      "question": "The intelligence of deep learning models can be described as...",
+      "type": "choice",
+      "options": [
+        "alien to human intelligence.",
+        "identical to human intelligence.",
+        "superior to human intelligence in all aspects.",
+        "inferior to human intelligence in all aspects."
+      ],
+      "answer": "alien to human intelligence.",
+      "explanation": "Deep learning models 'think' in a fundamentally different way from humans, using high-dimensional geometric transformations rather than abstract reasoning."
+    },
+    {
+      "question": "The current trend in AI is toward larger, more general models known as ... models.",
+      "type": "blank",
+      "answer": "foundational",
+      "explanation": "Foundational models are trained on vast, broad datasets and can be adapted to a wide range of downstream tasks."
+    },
+    {
+      "question": "A key weakness of current AI is its lack of robust...",
+      "type": "choice",
+      "options": [
+        "common sense.",
+        "data storage capacity.",
+        "computational speed.",
+        "pattern recognition ability."
+      ],
+      "answer": "common sense.",
+      "explanation": "Models lack a basic, human-like understanding of how the world works, which limits their ability to reason about new situations."
+    },
+    {
+      "question": "The future of AI development will require a stronger focus on safety and...",
+      "type": "blank",
+      "answer": "ethics",
+      "explanation": "As AI becomes more powerful, ensuring it is developed and used responsibly, safely, and ethically becomes critically important."
+    },
+    {
+      "question": "The path to general AI will likely involve a synthesis of deep learning and...",
+      "type": "choice",
+      "options": [
+        "symbolic AI.",
+        "reinforcement learning.",
+        "unsupervised learning.",
+        "supervised learning."
+      ],
+      "answer": "symbolic AI.",
+      "explanation": "Combining the strengths of both paradigms (neuro-symbolic AI) is seen as a promising direction for creating more capable and robust systems."
+    },
+    {
+      "question": "The problem of ensuring that an AI's goals are aligned with human values is the ... problem.",
+      "type": "blank",
+      "answer": "alignment",
+      "explanation": "The value alignment problem is a central challenge in AI safety, especially for highly autonomous systems."
+    },
+    {
+      "question": "The 'black box' nature of deep learning refers to its lack of...",
+      "type": "choice",
+      "options": [
+        "interpretability.",
+        "accuracy.",
+        "speed.",
+        "scalability."
+      ],
+      "answer": "interpretability.",
+      "explanation": "It is often difficult to understand precisely why a deep learning model makes a particular decision."
+    },
+    {
+      "question": "An AI that can write code to solve a problem is an example of...",
+      "type": "blank",
+      "answer": "program synthesis",
+      "explanation": "Program synthesis is a key example of the Algorithmic Mind, where the AI generates a formal, executable program to solve a task."
+    },
+    {
+      "question": "The ultimate promise of AI is to serve as a tool to amplify human...",
+      "type": "choice",
+      "options": [
+        "ingenuity.",
+        "memory.",
+        "strength.",
+        "speed."
+      ],
+      "answer": "ingenuity.",
+      "explanation": "By automating intelligence itself, AI has the potential to be a powerful amplifier for human creativity, science, and problem-solving."
+    }
+  ]
+}
