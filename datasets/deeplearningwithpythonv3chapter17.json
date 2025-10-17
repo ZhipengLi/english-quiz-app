@@ -1,1 +1,449 @@
-test
+{
+  "text": "This quiz is based on the concepts of deep learning for image generation. It covers Generative Adversarial Networks (GANs), including the generator and discriminator roles, the adversarial training loop, the latent space, and challenges like mode collapse. It also touches on Variational Autoencoders (VAEs) and key architectural components like transposed convolutions.",
+  "quiz": [
+    {
+      "question": "A Generative Adversarial Network (GAN) consists of a generator and a...",
+      "type": "choice",
+      "options": [
+        "discriminator.",
+        "differentiator.",
+        "distributor.",
+        "decoder."
+      ],
+      "answer": "discriminator.",
+      "explanation": "A GAN is composed of two competing networks: a generator that creates images and a discriminator that tries to distinguish real images from fake ones."
+    },
+    {
+      "question": "The input to a GAN's generator is typically a random vector from the...",
+      "type": "blank",
+      "answer": "latent space",
+      "explanation": "The latent space is a low-dimensional vector space where points are sampled and then mapped to complex, high-dimensional data like images."
+    },
+    {
+      "question": "What is the primary goal of the generator in a GAN?",
+      "type": "choice",
+      "options": [
+        "To generate images that fool the discriminator.",
+        "To generate images that assist the discriminator.",
+        "To classify images that fool the discriminator.",
+        "To classify images that are real."
+      ],
+      "answer": "To generate images that fool the discriminator.",
+      "explanation": "The generator is trained to produce images that are so realistic that the discriminator classifies them as 'real'."
+    },
+    {
+      "question": "The layer used in a generator to upsample feature maps is the ... convolution.",
+      "type": "blank",
+      "answer": "transposed",
+      "explanation": "A transposed convolution (`Conv2DTranspose`) is a learnable upsampling layer that projects a feature map to a larger spatial grid."
+    },
+    {
+      "question": "What is the primary goal of the discriminator in a GAN?",
+      "type": "choice",
+      "options": [
+        "To distinguish real images from fake ones.",
+        "To distinguish good images from bad ones.",
+        "To generate images from a latent vector.",
+        "To generate a latent vector from images."
+      ],
+      "answer": "To distinguish real images from fake ones.",
+      "explanation": "The discriminator acts as a classifier, learning to output a high probability for real images and a low probability for fake (generated) images."
+    },
+    {
+      "question": "A common failure mode in GAN training where the generator produces only a few types of images is called...",
+      "type": "blank",
+      "answer": "mode collapse",
+      "explanation": "Mode collapse occurs when the generator finds a few outputs that are highly effective at fooling the discriminator and stops exploring the full diversity of the data distribution."
+    },
+    {
+      "question": "In a GAN, the generator and discriminator are trained in an ... process.",
+      "type": "choice",
+      "options": [
+        "adversarial",
+        "cooperative",
+        "sequential",
+        "unsupervised"
+      ],
+      "answer": "adversarial",
+      "explanation": "The two networks are in a competition: the generator tries to fool the discriminator, and the discriminator tries to not be fooled. This competition drives both to improve."
+    },
+    {
+      "question": "The loss of the discriminator is used to train the...",
+      "type": "blank",
+      "answer": "discriminator",
+      "explanation": "The discriminator is trained like a standard classifier, using its own loss to update its weights."
+    },
+    {
+      "question": "The loss of the generator is based on the output of the...",
+      "type": "choice",
+      "options": [
+        "discriminator.",
+        "generator.",
+        "encoder.",
+        "decoder."
+      ],
+      "answer": "discriminator.",
+      "explanation": "The generator is trained based on how well it fools the discriminator. Its goal is to make the discriminator output a high probability for its fake images."
+    },
+    {
+      "question": "Meaningful vector arithmetic (e.g., 'man with glasses' - 'man' + 'woman') is a property of a well-structured...",
+      "type": "blank",
+      "answer": "latent space",
+      "explanation": "A continuous and disentangled latent space allows for semantic manipulation of generated images through vector operations."
+    },
+    {
+      "question": "A Variational Autoencoder (VAE) consists of an encoder and a...",
+      "type": "choice",
+      "options": [
+        "decoder.",
+        "discriminator.",
+        "generator.",
+        "classifier."
+      ],
+      "answer": "decoder.",
+      "explanation": "A VAE learns to encode an image into a latent space and then decode it back into an image, with the goal of making the reconstruction as accurate as possible."
+    },
+    {
+      "question": "Unlike a GAN's generator, a VAE's decoder can be used to reconstruct a specific...",
+      "type": "blank",
+      "answer": "input image",
+      "explanation": "Because a VAE has an encoder, it can map a specific input image to the latent space and then reconstruct it."
+    },
+    {
+      "question": "The 'reparameterization trick' is a technique used to train...",
+      "type": "choice",
+      "options": [
+        "VAEs.",
+        "GANs.",
+        "CNNs.",
+        "RNNs."
+      ],
+      "answer": "VAEs.",
+      "explanation": "It's a way to allow gradients to backpropagate through the random sampling step in the VAE's latent space, which is necessary for training."
+    },
+    {
+      "question": "The loss function of a VAE combines a reconstruction loss and a ... loss.",
+      "type": "blank",
+      "answer": "regularization",
+      "explanation": "The regularization loss (often the KL divergence) encourages the latent space to be well-structured and continuous."
+    },
+    {
+      "question": "Compared to VAEs, the images generated by GANs are typically...",
+      "type": "choice",
+      "options": [
+        "sharper and more realistic.",
+        "blurrier and less realistic.",
+        "sharper and less realistic.",
+        "blurrier and more realistic."
+      ],
+      "answer": "sharper and more realistic.",
+      "explanation": "The adversarial training process pushes the generator to produce highly realistic textures, whereas VAEs tend to produce blurrier, smoother images."
+    },
+    {
+      "question": "A DCGAN is a type of GAN that primarily uses ... layers.",
+      "type": "blank",
+      "answer": "convolutional",
+      "explanation": "DCGAN stands for Deep Convolutional Generative Adversarial Network, and it established a set of architectural best practices for building GANs with convolutional layers."
+    },
+    {
+      "question": "In a DCGAN, the discriminator's downsampling is done with...",
+      "type": "choice",
+      "options": [
+        "strided convolutions.",
+        "max pooling layers.",
+        "average pooling layers.",
+        "transposed convolutions."
+      ],
+      "answer": "strided convolutions.",
+      "explanation": "Using strided convolutions instead of pooling layers allows the network to learn its own spatial downsampling, which often leads to better results."
+    },
+    {
+      "question": "In a GAN, the weights of the ... are frozen while training the generator.",
+      "type": "blank",
+      "answer": "discriminator",
+      "explanation": "When training the generator, you only want to compute gradients with respect to the generator's weights, not the discriminator's."
+    },
+    {
+      "question": "The latent space of a VAE is designed to be...",
+      "type": "choice",
+      "options": [
+        "continuous and structured.",
+        "discrete and unstructured.",
+        "continuous and unstructured.",
+        "discrete and structured."
+      ],
+      "answer": "continuous and structured.",
+      "explanation": "The regularization loss forces the latent space to be continuous and normally distributed, making it easy to sample from and interpolate within."
+    },
+    {
+      "question": "The output of the discriminator is a single scalar value representing a...",
+      "type": "blank",
+      "answer": "probability",
+      "explanation": "It outputs a probability, typically between 0 ('fake') and 1 ('real')."
+    },
+    {
+      "question": "A key challenge in training GANs is achieving...",
+      "type": "choice",
+      "options": [
+        "a stable equilibrium.",
+        "a dominant generator.",
+        "a dominant discriminator.",
+        "a fast convergence."
+      ],
+      "answer": "a stable equilibrium.",
+      "explanation": "Training GANs is notoriously unstable because you are trying to find an equilibrium in a complex game between two networks, not just minimizing a single loss function."
+    },
+    {
+      "question": "A VAE's encoder maps an input image to the parameters of a ... distribution.",
+      "type": "blank",
+      "answer": "probability",
+      "explanation": "Specifically, it predicts the mean and variance of a Gaussian distribution from which the latent vector is then sampled."
+    },
+    {
+      "question": "Which of these is a generative model?",
+      "type": "choice",
+      "options": [
+        "A GAN.",
+        "A ResNet.",
+        "An Inception model.",
+        "A VGG model."
+      ],
+      "answer": "A GAN.",
+      "explanation": "A generative model is one that can learn the underlying distribution of data and generate new samples from it. ResNet, Inception, and VGG are discriminative models used for classification."
+    },
+    {
+      "question": "The 'adversarial' part of a GAN's name refers to the ... between the two networks.",
+      "type": "blank",
+      "answer": "competition",
+      "explanation": "The two networks have opposing (adversarial) goals, and their competition is what drives the learning process."
+    },
+    {
+      "question": "What kind of activation function is often used in the output layer of a GAN's generator?",
+      "type": "choice",
+      "options": [
+        "`tanh`.",
+        "`sigmoid`.",
+        "`relu`.",
+        "`softmax`."
+      ],
+      "answer": "`tanh`.",
+      "explanation": "The `tanh` function outputs values between -1 and 1. If the training images are scaled to this range, `tanh` is a natural choice for the final activation."
+    },
+    {
+      "question": "The process of smoothly transitioning between two points in the latent space is called...",
+      "type": "blank",
+      "answer": "interpolation",
+      "explanation": "Interpolating in a well-structured latent space results in a smooth visual transition in the generated images."
+    },
+    {
+      "question": "The training loop for a GAN involves alternating between training the discriminator and training the...",
+      "type": "choice",
+      "options": [
+        "generator.",
+        "encoder.",
+        "decoder.",
+        "classifier."
+      ],
+      "answer": "generator.",
+      "explanation": "In each step, you typically perform one update for the discriminator and one update for the generator."
+    },
+    {
+      "question": "Unlike classification, image generation is often an ... learning task.",
+      "type": "blank",
+      "answer": "unsupervised",
+      "explanation": "You can train a GAN on a dataset of images without needing any explicit labels."
+    },
+    {
+      "question": "What is the role of a `LeakyReLU` activation in a GAN's discriminator?",
+      "type": "choice",
+      "options": [
+        "To allow gradients to flow for negative values.",
+        "To prevent gradients from flowing for negative values.",
+        "To ensure the output is between 0 and 1.",
+        "To ensure the output is between -1 and 1."
+      ],
+      "answer": "To allow gradients to flow for negative values.",
+      "explanation": "Using a leaky ReLU instead of a standard ReLU can help prevent 'dying' neurons and can lead to more stable training in GANs."
+    },
+    {
+      "question": "A model that learns a mapping from a high-dimensional space to a low-dimensional space is an...",
+      "type": "blank",
+      "answer": "encoder",
+      "explanation": "An encoder, like the one in a VAE, compresses the input data into a compact latent representation."
+    },
+    {
+      "question": "A model that learns a mapping from a low-dimensional space to a high-dimensional space is a...",
+      "type": "choice",
+      "options": [
+        "generator or decoder.",
+        "discriminator or classifier.",
+        "encoder or regressor.",
+        "detector or segmenter."
+      ],
+      "answer": "generator or decoder.",
+      "explanation": "Both a GAN's generator and a VAE's decoder perform this function, mapping a latent vector to a full image."
+    },
+    {
+      "question": "In a GAN, the discriminator is essentially a binary...",
+      "type": "blank",
+      "answer": "classifier",
+      "explanation": "Its job is to classify its input into one of two classes: 'real' or 'fake'."
+    },
+    {
+      "question": "Which model architecture is better for tasks requiring a highly structured latent space, like style transfer?",
+      "type": "choice",
+      "options": [
+        "A VAE.",
+        "A GAN.",
+        "A DCGAN.",
+        "A standard CNN."
+      ],
+      "answer": "A VAE.",
+      "explanation": "The probabilistic and regularized nature of a VAE's latent space makes it more suitable for applications that rely on smooth interpolation and manipulation."
+    },
+    {
+      "question": "The labels for training a GAN's discriminator are 'real' for real images and '...' for generated images.",
+      "type": "blank",
+      "answer": "fake",
+      "explanation": "The discriminator is trained on a combined dataset of real and fake images with these corresponding labels."
+    },
+    {
+      "question": "A GAN's training is a delicate balancing act; if the discriminator becomes too good too quickly, the generator...",
+      "type": "choice",
+      "options": [
+        "fails to learn.",
+        "learns very quickly.",
+        "starts to overfit.",
+        "starts to underfit."
+      ],
+      "answer": "fails to learn.",
+      "explanation": "If the discriminator is perfect, the gradients passed back to the generator can vanish, providing no signal for how to improve."
+    },
+    {
+      "question": "The input to a VAE's decoder is a sample from the latent...",
+      "type": "blank",
+      "answer": "distribution",
+      "explanation": "The decoder takes a point sampled from the probability distribution defined by the encoder's output."
+    },
+    {
+      "question": "To generate a new image with a GAN, you only need the trained...",
+      "type": "choice",
+      "options": [
+        "generator.",
+        "discriminator.",
+        "generator and discriminator.",
+        "latent space."
+      ],
+      "answer": "generator.",
+      "explanation": "Once training is complete, the discriminator is typically discarded, and the generator is used on its own to create new images from random latent vectors."
+    },
+    {
+      "question": "A DCGAN architecture avoids using any ... layers.",
+      "type": "blank",
+      "answer": "pooling",
+      "explanation": "DCGANs use strided convolutions for downsampling and transposed convolutions for upsampling, avoiding deterministic pooling layers."
+    },
+    {
+      "question": "The concept of an 'adversarial loss' is central to the training of...",
+      "type": "choice",
+      "options": [
+        "GANs.",
+        "VAEs.",
+        "CNNs.",
+        "RNNs."
+      ],
+      "answer": "GANs.",
+      "explanation": "The adversarial loss arises from the competition between the generator and the discriminator."
+    },
+    {
+      "question": "Batch normalization is used in DCGANs to help stabilize...",
+      "type": "blank",
+      "answer": "training",
+      "explanation": "It helps to normalize the inputs to each layer, which can prevent issues like exploding or vanishing gradients in deep GANs."
+    },
+    {
+      "question": "The reconstruction loss in a VAE measures how similar the output image is to the...",
+      "type": "choice",
+      "options": [
+        "input image.",
+        "latent vector.",
+        "real images.",
+        "fake images."
+      ],
+      "answer": "input image.",
+      "explanation": "This loss (often binary cross-entropy or mean squared error) pushes the decoder to generate a faithful reconstruction of the original input."
+    },
+    {
+      "question": "The 'KL divergence' is a measure of the difference between two ... distributions.",
+      "type": "blank",
+      "answer": "probability",
+      "explanation": "In a VAE, it's used as a regularization loss to encourage the latent space distribution to be close to a standard normal distribution."
+    },
+    {
+      "question": "A generative model learns the ... of the training data.",
+      "type": "choice",
+      "options": [
+        "data distribution",
+        "data labels",
+        "data features",
+        "data dimensions"
+      ],
+      "answer": "data distribution",
+      "explanation": "The goal of a generative model is to learn a representation of the underlying probability distribution of the data, allowing it to create new samples from that distribution."
+    },
+    {
+      "question": "If a generator's loss goes to zero, it means it is perfectly ... the discriminator.",
+      "type": "blank",
+      "answer": "fooling",
+      "explanation": "A low generator loss indicates that the discriminator is classifying its fake images as 'real' with high probability."
+    },
+    {
+      "question": "The 'minimax game' in GANs refers to the generator minimizing the loss that the discriminator is trying to...",
+      "type": "choice",
+      "options": [
+        "maximize.",
+        "minimize.",
+        "ignore.",
+        "stabilize."
+      ],
+      "answer": "maximize.",
+      "explanation": "This two-player game is at the core of the GAN training dynamic, where each player's action affects the other."
+    },
+    {
+      "question": "A key innovation of GANs is that the loss function is...",
+      "type": "blank",
+      "answer": "learned",
+      "explanation": "Instead of using a fixed, hand-engineered loss function (like MSE), the discriminator itself is a learned loss function that adapts to the quality of the generated images."
+    },
+    {
+      "question": "To prevent the generator from simply memorizing training images, its input is...",
+      "type": "choice",
+      "options": [
+        "random.",
+        "fixed.",
+        "sequential.",
+        "ordered."
+      ],
+      "answer": "random.",
+      "explanation": "By taking random vectors as input, the generator is forced to learn a general mapping from the latent space to the image space, rather than just memorizing a few examples."
+    },
+    {
+      "question": "Which model is generally easier and more stable to train?",
+      "type": "blank",
+      "answer": "VAE",
+      "explanation": "VAEs are trained by minimizing a single, well-defined loss function, which is a much more stable optimization problem than the complex equilibrium game of GANs."
+    },
+    {
+      "question": "A generative model is one that can create new ... that resembles its training data.",
+      "type": "choice",
+      "options": [
+        "content",
+        "labels",
+        "predictions",
+        "classifications"
+      ],
+      "answer": "content",
+      "explanation": "The defining characteristic of a generative model is its ability to synthesize new, plausible data samples."
+    }
+  ]
+}
