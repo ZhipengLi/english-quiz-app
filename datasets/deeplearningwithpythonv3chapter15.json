@@ -1,1 +1,449 @@
-test
+{
+  "text": "This quiz is based on the concepts of modern natural language processing, focusing on language models and the Transformer architecture. It covers sequence-to-sequence models, the limitations of RNNs, the attention mechanism, self-attention, positional encoding, and the key components of the Transformer encoder and decoder.",
+  "quiz": [
+    {
+      "question": "A language model is a model that computes a ... over a sequence of tokens.",
+      "type": "choice",
+      "options": [
+        "probability distribution",
+        "vector representation",
+        "classification score",
+        "regression value"
+      ],
+      "answer": "probability distribution",
+      "explanation": "A language model learns the probability of a sequence of words, which allows it to predict the next word or generate text."
+    },
+    {
+      "question": "The task of converting one sequence into another, like in translation, is called a ... task.",
+      "type": "blank",
+      "answer": "sequence-to-sequence",
+      "explanation": "Sequence-to-sequence (seq2seq) models are designed for tasks where both the input and output are sequences of variable length."
+    },
+    {
+      "question": "What is the primary architectural pattern for sequence-to-sequence models?",
+      "type": "choice",
+      "options": [
+        "An encoder-decoder.",
+        "A classifier-regressor.",
+        "A generator-discriminator.",
+        "A convnet-recurrent."
+      ],
+      "answer": "An encoder-decoder.",
+      "explanation": "The encoder processes the input sequence into a fixed-size representation, and the decoder generates the output sequence from that representation."
+    },
+    {
+      "question": "The main performance bottleneck of RNNs that the Transformer was designed to solve is their ... nature.",
+      "type": "blank",
+      "answer": "sequential",
+      "explanation": "RNNs must process sequences one token at a time, which prevents parallelization and makes them slow on long sequences."
+    },
+    {
+      "question": "The core innovation that allows a model to focus on specific parts of an input sequence is the ... mechanism.",
+      "type": "choice",
+      "options": [
+        "attention",
+        "convolution",
+        "pooling",
+        "normalization"
+      ],
+      "answer": "attention",
+      "explanation": "Attention allows the model to dynamically weigh the importance of different input tokens when producing an output token."
+    },
+    {
+      "question": "In the attention mechanism, the three learned vectors for each token are the query, key, and...",
+      "type": "blank",
+      "answer": "value",
+      "explanation": "The query of the current token is matched against the keys of all other tokens to compute scores, which are then used to create a weighted sum of the values."
+    },
+    {
+      "question": "What is self-attention?",
+      "type": "choice",
+      "options": [
+        "An attention mechanism applied to a single sequence.",
+        "An attention mechanism applied between two sequences.",
+        "An attention mechanism applied to the model's output.",
+        "An attention mechanism applied to the model's loss."
+      ],
+      "answer": "An attention mechanism applied to a single sequence.",
+      "explanation": "Self-attention allows tokens within the same sequence to interact with and attend to each other, creating context-aware representations."
+    },
+    {
+      "question": "The Transformer architecture is built almost entirely on...",
+      "type": "blank",
+      "answer": "self-attention",
+      "explanation": "The Transformer discards recurrence and convolutions in favor of self-attention as its primary computational block."
+    },
+    {
+      "question": "What is the purpose of positional encoding in a Transformer?",
+      "type": "choice",
+      "options": [
+        "To provide information about word order.",
+        "To provide information about word meaning.",
+        "To provide information about word frequency.",
+        "To provide information about word sentiment."
+      ],
+      "answer": "To provide information about word order.",
+      "explanation": "Since self-attention is permutation-invariant (order-agnostic), positional encodings are added to the input embeddings to give the model information about the sequence order."
+    },
+    {
+      "question": "The 'Multi-Head' in Multi-Head Attention refers to performing the attention mechanism in...",
+      "type": "blank",
+      "answer": "parallel",
+      "explanation": "Multi-Head Attention runs the attention mechanism multiple times in parallel with different learned projections, allowing the model to focus on different aspects of the sequence."
+    },
+    {
+      "question": "A key component in each Transformer block, borrowed from ResNet, is the...",
+      "type": "choice",
+      "options": [
+        "residual connection.",
+        "convolutional layer.",
+        "pooling layer.",
+        "bottleneck layer."
+      ],
+      "answer": "residual connection.",
+      "explanation": "Residual (or skip) connections are used around each sub-layer, which helps with gradient flow in deep models."
+    },
+    {
+      "question": "In a Transformer block, what follows the residual connection?",
+      "type": "blank",
+      "answer": "Layer Normalization",
+      "explanation": "Each sub-layer (attention and feed-forward) is followed by a residual connection and then layer normalization, which helps stabilize training."
+    },
+    {
+      "question": "Besides the self-attention sub-layer, what is the other major sub-layer in a Transformer encoder block?",
+      "type": "choice",
+      "options": [
+        "A feed-forward network.",
+        "A recurrent network.",
+        "A convolutional network.",
+        "A recursive network."
+      ],
+      "answer": "A feed-forward network.",
+      "explanation": "Each Transformer block contains a position-wise feed-forward network, which consists of two dense layers."
+    },
+    {
+      "question": "The purpose of the encoder in a Transformer is to produce a rich representation of the...",
+      "type": "blank",
+      "answer": "input sequence",
+      "explanation": "The encoder's job is to create context-aware representations of the input tokens, which are then used by the decoder."
+    },
+    {
+      "question": "What is a key difference in the self-attention mechanism of a Transformer decoder compared to the encoder?",
+      "type": "choice",
+      "options": [
+        "The decoder uses masked self-attention.",
+        "The encoder uses masked self-attention.",
+        "The decoder does not use self-attention.",
+        "The encoder does not use self-attention."
+      ],
+      "answer": "The decoder uses masked self-attention.",
+      "explanation": "The decoder's self-attention is masked to prevent it from attending to future tokens in the output sequence during training."
+    },
+    {
+      "question": "The purpose of masking in the decoder's self-attention is to prevent the model from...",
+      "type": "blank",
+      "answer": "looking ahead",
+      "explanation": "This ensures that the prediction for a token at position `i` can only depend on the known outputs at positions less than `i`."
+    },
+    {
+      "question": "In addition to its own self-attention layer, the Transformer decoder has a second attention layer that attends to the output of the...",
+      "type": "choice",
+      "options": [
+        "encoder.",
+        "decoder.",
+        "tokenizer.",
+        "embedding layer."
+      ],
+      "answer": "encoder.",
+      "explanation": "This is often called encoder-decoder attention, and it's how the decoder accesses the information from the input sequence to generate the output."
+    },
+    {
+      "question": "Models like BERT are examples of ...-only architectures.",
+      "type": "blank",
+      "answer": "encoder",
+      "explanation": "Encoder-only models are excellent for tasks that require understanding the entire input sequence, like classification and question answering."
+    },
+    {
+      "question": "Models like GPT are examples of ...-only architectures.",
+      "type": "choice",
+      "options": [
+        "decoder-only",
+        "encoder-only",
+        "encoder-decoder",
+        "seq2seq-only"
+      ],
+      "answer": "decoder-only",
+      "explanation": "Decoder-only models are autoregressive and excel at text generation tasks."
+    },
+    {
+      "question": "The final layer of a Transformer-based language model is typically a `Dense` layer with a ... activation.",
+      "type": "blank",
+      "answer": "softmax",
+      "explanation": "The softmax activation function is used to convert the output logits into a probability distribution over the entire vocabulary."
+    },
+    {
+      "question": "In attention, the similarity between a query and a key is often computed using a...",
+      "type": "choice",
+      "options": [
+        "dot product.",
+        "cross product.",
+        "sum.",
+        "concatenation."
+      ],
+      "answer": "dot product.",
+      "explanation": "The scaled dot-product attention is the most common variant used in Transformers."
+    },
+    {
+      "question": "The 'context' in a sequence-to-sequence model is the output of the...",
+      "type": "blank",
+      "answer": "encoder",
+      "explanation": "The encoder condenses the entire input sequence into a context vector (or set of vectors) that summarizes its meaning."
+    },
+    {
+      "question": "The Transformer architecture allows for significantly more ... than RNNs.",
+      "type": "choice",
+      "options": [
+        "parallelization.",
+        "sequentialization.",
+        "regularization.",
+        "generalization."
+      ],
+      "answer": "parallelization.",
+      "explanation": "Since the computations for each token in self-attention do not depend on the previous token's output, they can be performed in parallel."
+    },
+    {
+      "question": "Positional encodings are not learned; they are typically fixed vectors based on sine and ... functions.",
+      "type": "blank",
+      "answer": "cosine",
+      "explanation": "Using sinusoidal functions allows the model to easily learn to attend to relative positions, as positions have a consistent linear relationship."
+    },
+    {
+      "question": "The 'query' in attention can be thought of as representing the...",
+      "type": "choice",
+      "options": [
+        "current token's question.",
+        "current token's answer.",
+        "current token's label.",
+        "current token's context."
+      ],
+      "answer": "current token's question.",
+      "explanation": "The query from one token is like a question it asks of all other tokens: 'How relevant are you to me?'"
+    },
+    {
+      "question": "The 'key' in attention can be thought of as the token's...",
+      "type": "blank",
+      "answer": "label",
+      "explanation": "The key is like a label or description of the token that the query can match against to determine relevance."
+    },
+    {
+      "question": "The 'value' in attention can be thought of as the token's...",
+      "type": "choice",
+      "options": [
+        "actual content.",
+        "actual position.",
+        "actual score.",
+        "actual length."
+      ],
+      "answer": "actual content.",
+      "explanation": "Once the relevance scores are computed, they are used to create a weighted sum of the values, effectively extracting the content from the most relevant tokens."
+    },
+    {
+      "question": "Layer Normalization normalizes features across the ... dimension.",
+      "type": "blank",
+      "answer": "feature",
+      "explanation": "Unlike Batch Normalization, which normalizes across the batch dimension, Layer Normalization computes statistics independently for each sample."
+    },
+    {
+      "question": "A model that generates an output sequence one token at a time, feeding its own output back as input, is called...",
+      "type": "choice",
+      "options": [
+        "autoregressive.",
+        "autoencoding.",
+        "autocorrecting.",
+        "automated."
+      ],
+      "answer": "autoregressive.",
+      "explanation": "This is the standard generation process for decoder-based language models."
+    },
+    {
+      "question": "A model that is pre-trained on a massive text corpus and then fine-tuned on a specific task is a ... model.",
+      "type": "blank",
+      "answer": "foundational",
+      "explanation": "Foundational models like BERT and GPT are pre-trained on general language understanding and can be adapted to many downstream tasks."
+    },
+    {
+      "question": "The attention scores are passed through a ... function to convert them into weights that sum to 1.",
+      "type": "choice",
+      "options": [
+        "softmax",
+        "sigmoid",
+        "relu",
+        "tanh"
+      ],
+      "answer": "softmax",
+      "explanation": "The softmax function is ideal for converting a set of arbitrary scores into a probability-like distribution."
+    },
+    {
+      "question": "The output of a Multi-Head Attention layer is the ... of the outputs of all heads.",
+      "type": "blank",
+      "answer": "concatenation",
+      "explanation": "The results from each parallel attention head are concatenated and then linearly projected back to the original dimension."
+    },
+    {
+      "question": "What is the primary role of the position-wise feed-forward network in a Transformer block?",
+      "type": "choice",
+      "options": [
+        "To provide additional non-linearity and feature transformation.",
+        "To provide information about the sequence order.",
+        "To compute the attention scores between tokens.",
+        "To normalize the outputs of the attention layer."
+      ],
+      "answer": "To provide additional non-linearity and feature transformation.",
+      "explanation": "It processes each token's representation independently, allowing for more complex transformations beyond what the attention mechanism provides."
+    },
+    {
+      "question": "In a seq2seq model with an RNN encoder, the final hidden state is used as the...",
+      "type": "blank",
+      "answer": "context vector",
+      "explanation": "This single vector was traditionally expected to summarize the entire meaning of the input sequence, a major bottleneck."
+    },
+    {
+      "question": "How does attention solve the context vector bottleneck of older seq2seq models?",
+      "type": "choice",
+      "options": [
+        "It allows the decoder to look at all encoder hidden states.",
+        "It forces the decoder to only look at the final encoder hidden state.",
+        "It makes the context vector much larger.",
+        "It removes the need for a context vector entirely."
+      ],
+      "answer": "It allows the decoder to look at all encoder hidden states.",
+      "explanation": "Instead of relying on a single context vector, the decoder uses attention to access the entire set of encoder outputs, focusing on the most relevant ones at each step."
+    },
+    {
+      "question": "A Transformer without positional encodings would treat the input text as a...",
+      "type": "blank",
+      "answer": "bag of words",
+      "explanation": "Without positional information, the model would lose all sense of word order, which is critical for understanding language."
+    },
+    {
+      "question": "The Transformer was a paradigm shift because it showed that competitive results could be achieved without...",
+      "type": "choice",
+      "options": [
+        "recurrence.",
+        "attention.",
+        "embeddings.",
+        "normalization."
+      ],
+      "answer": "recurrence.",
+      "explanation": "It demonstrated that architectures based solely on attention could outperform the dominant recurrent and convolutional models of the time."
+    },
+    {
+      "question": "Each head in Multi-Head Attention learns a different...",
+      "type": "blank",
+      "answer": "subspace",
+      "explanation": "This means each head can learn to focus on different types of relationships between tokens (e.g., syntactic, semantic)."
+    },
+    {
+      "question": "The 'add & norm' step in a Transformer block refers to the residual connection and...",
+      "type": "choice",
+      "options": [
+        "Layer Normalization.",
+        "Batch Normalization.",
+        "Instance Normalization.",
+        "Weight Normalization."
+      ],
+      "answer": "Layer Normalization.",
+      "explanation": "This is the standard normalization technique used in the Transformer architecture."
+    },
+    {
+      "question": "In the decoder, the queries for encoder-decoder attention come from the previous ... layer.",
+      "type": "blank",
+      "answer": "decoder",
+      "explanation": "The decoder layer uses its own state as the query to ask the encoder's output, 'Which of you is most relevant to the token I'm trying to generate now?'"
+    },
+    {
+      "question": "In the decoder, the keys and values for encoder-decoder attention come from the...",
+      "type": "choice",
+      "options": [
+        "encoder output.",
+        "decoder output.",
+        "raw input embeddings.",
+        "raw output embeddings."
+      ],
+      "answer": "encoder output.",
+      "explanation": "The decoder attends to the encoder's output, using its representations as the keys and values to draw information from."
+    },
+    {
+      "question": "A Transformer's ability to process all tokens in a sequence at once gives it a constant path length between any two tokens, unlike an...",
+      "type": "blank",
+      "answer": "RNN",
+      "explanation": "In an RNN, the path length between distant tokens is long, making it hard to capture long-range dependencies. In a Transformer, the path length is O(1) for all pairs."
+    },
+    {
+      "question": "A model that predicts the next word in a sentence is performing...",
+      "type": "choice",
+      "options": [
+        "causal language modeling.",
+        "masked language modeling.",
+        "sentiment analysis.",
+        "text summarization."
+      ],
+      "answer": "causal language modeling.",
+      "explanation": "This is the standard left-to-right language modeling task, typical of decoder-only models like GPT."
+    },
+    {
+      "question": "A model that predicts a missing word in the middle of a sentence is performing...",
+      "type": "blank",
+      "answer": "masked language modeling",
+      "explanation": "This is the pre-training task used for BERT, which allows the model to learn deep bidirectional representations."
+    },
+    {
+      "question": "The scaling factor in scaled dot-product attention is the square root of the...",
+      "type": "choice",
+      "options": [
+        "key dimension.",
+        "query dimension.",
+        "value dimension.",
+        "head dimension."
+      ],
+      "answer": "key dimension.",
+      "explanation": "Scaling by the square root of the key dimension prevents the dot products from becoming too large, which helps to stabilize gradients."
+    },
+    {
+      "question": "Which of these is NOT a core component of the Transformer architecture?",
+      "type": "blank",
+      "answer": "Recurrent layer",
+      "explanation": "The Transformer was explicitly designed to replace recurrence with self-attention."
+    },
+    {
+      "question": "The encoder stack in a Transformer is a series of identical...",
+      "type": "choice",
+      "options": [
+        "encoder layers.",
+        "decoder layers.",
+        "attention heads.",
+        "feed-forward networks."
+      ],
+      "answer": "encoder layers.",
+      "explanation": "The architecture is built by stacking multiple, identical encoder layers on top of each other."
+    },
+    {
+      "question": "The final output of the Transformer decoder is a vector of...",
+      "type": "blank",
+      "answer": "logits",
+      "explanation": "These logits are then passed through a softmax layer to get the probability distribution for the next token."
+    },
+    {
+      "question": "The 'self' in self-attention signifies that the queries, keys, and values all come from the...",
+      "type": "choice",
+      "options": [
+        "same sequence.",
+        "different sequences.",
+        "encoder sequence.",
+        "decoder sequence."
+      ],
+      "answer": "same sequence.",
+      "explanation": "This is what allows the model to build representations of a sequence by relating its own tokens to each other."
+    }
+  ]
+}
