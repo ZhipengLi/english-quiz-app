@@ -1,1 +1,449 @@
-test
+{
+  "text": "This quiz is based on the concepts of text classification using deep learning. It covers text preprocessing (tokenization, vocabulary creation), vectorization techniques (one-hot encoding, word embeddings), the Keras Embedding layer, using pre-trained word embeddings like GloVe, and building models for sentiment analysis using architectures like 1D Convnets and Recurrent Neural Networks (RNNs).",
+  "quiz": [
+    {
+      "question": "The process of converting text into numerical tensors is called...",
+      "type": "choice",
+      "options": [
+        "text vectorization.",
+        "text normalization.",
+        "text tokenization.",
+        "text generation."
+      ],
+      "answer": "text vectorization.",
+      "explanation": "Vectorization is the general process of turning text into a numerical format that neural networks can process."
+    },
+    {
+      "question": "Dense, low-dimensional vector representations of words are called word...",
+      "type": "blank",
+      "answer": "embeddings",
+      "explanation": "Word embeddings capture the semantic relationships between words in a dense vector space."
+    },
+    {
+      "question": "What is the primary drawback of one-hot encoding for words?",
+      "type": "choice",
+      "options": [
+        "It creates very large and sparse vectors.",
+        "It creates very small and dense vectors.",
+        "It captures semantic relationships between words.",
+        "It cannot be used with a deep learning model."
+      ],
+      "answer": "It creates very large and sparse vectors.",
+      "explanation": "For a large vocabulary, one-hot vectors become extremely high-dimensional and inefficient."
+    },
+    {
+      "question": "The Keras `Embedding` layer is functionally a ... table.",
+      "type": "blank",
+      "answer": "lookup",
+      "explanation": "It maps integer indices (representing words) to their corresponding dense vector embeddings."
+    },
+    {
+      "question": "Using pre-trained word embeddings is a form of...",
+      "type": "choice",
+      "options": [
+        "transfer learning.",
+        "reinforcement learning.",
+        "unsupervised learning.",
+        "active learning."
+      ],
+      "answer": "transfer learning.",
+      "explanation": "It involves leveraging knowledge (word representations) learned from a large, general-purpose text corpus and applying it to a new task."
+    },
+    {
+      "question": "To make all integer sequences in a batch the same length, you use...",
+      "type": "blank",
+      "answer": "padding",
+      "explanation": "Padding adds zeros to shorter sequences to ensure that all sequences in a batch have a uniform length."
+    },
+    {
+      "question": "What is the primary role of the `TextVectorization` layer in Keras?",
+      "type": "choice",
+      "options": [
+        "To handle the entire text preprocessing workflow.",
+        "To handle the model training workflow.",
+        "To handle the final classification of the text.",
+        "To handle the loading of pre-trained embeddings."
+      ],
+      "answer": "To handle the entire text preprocessing workflow.",
+      "explanation": "It standardizes, tokenizes, and converts text into integer sequences, creating a vocabulary in the process."
+    },
+    {
+      "question": "The weights of a trained `Embedding` layer represent the learned...",
+      "type": "blank",
+      "answer": "word embeddings",
+      "explanation": "The weight matrix of the Embedding layer is the collection of all the word vectors for the vocabulary."
+    },
+    {
+      "question": "When is it most beneficial to use pre-trained word embeddings?",
+      "type": "choice",
+      "options": [
+        "When your dataset is small.",
+        "When your dataset is very large.",
+        "When your dataset is highly domain-specific.",
+        "When your task is simple enough for a dense layer."
+      ],
+      "answer": "When your dataset is small.",
+      "explanation": "With a small dataset, you don't have enough data to learn meaningful embeddings from scratch, so leveraging pre-trained ones is highly effective."
+    },
+    {
+      "question": "The process of breaking text down into individual words or subwords is called...",
+      "type": "blank",
+      "answer": "tokenization",
+      "explanation": "Tokenization is the first step in preparing raw text for a neural network."
+    },
+    {
+      "question": "A 1D convnet processes text by identifying local patterns, which are similar to...",
+      "type": "choice",
+      "options": [
+        "n-grams of words.",
+        "the sentiment of sentences.",
+        "the grammar of sentences.",
+        "the length of sentences."
+      ],
+      "answer": "n-grams of words.",
+      "explanation": "A 1D convolution with a kernel size of 3, for example, would learn patterns in sequences of 3 consecutive words (trigrams)."
+    },
+    {
+      "question": "A `GlobalMaxPooling1D` layer extracts the ... value from each feature map.",
+      "type": "blank",
+      "answer": "maximum",
+      "explanation": "This is a common way to downsample the output of a 1D convnet and produce a fixed-size vector for the classifier."
+    },
+    {
+      "question": "What is the main advantage of a 1D convnet over an RNN for text classification?",
+      "type": "choice",
+      "options": [
+        "It is much faster to train.",
+        "It is much slower to train.",
+        "It is more sensitive to word order.",
+        "It is better at handling long sequences."
+      ],
+      "answer": "It is much faster to train.",
+      "explanation": "Convolutions are parallelizable operations, whereas RNNs must process sequences sequentially, making them slower."
+    },
+    {
+      "question": "An RNN processes sequences by iterating through the elements and maintaining a...",
+      "type": "blank",
+      "answer": "state",
+      "explanation": "The state, or memory, of the RNN allows it to retain information from past timesteps to inform the processing of the current timestep."
+    },
+    {
+      "question": "GloVe (Global Vectors for Word Representation) is a popular set of...",
+      "type": "choice",
+      "options": [
+        "pre-trained word embeddings.",
+        "pre-trained classification models.",
+        "pre-trained tokenization algorithms.",
+        "pre-trained language translation models."
+      ],
+      "answer": "pre-trained word embeddings.",
+      "explanation": "GloVe provides high-quality, general-purpose word vectors that can be used as a starting point for many NLP tasks."
+    },
+    {
+      "question": "When using pre-trained embeddings, it is common to ... the `Embedding` layer during initial training.",
+      "type": "blank",
+      "answer": "freeze",
+      "explanation": "Freezing the layer (setting `trainable=False`) prevents the valuable pre-trained representations from being destroyed by large random gradients."
+    },
+    {
+      "question": "What does 'masking' in an `Embedding` layer do?",
+      "type": "choice",
+      "options": [
+        "It tells downstream layers to ignore padded timesteps.",
+        "It tells downstream layers to focus on padded timesteps.",
+        "It removes the padded timesteps from the sequence.",
+        "It replaces the padded timesteps with a special token."
+      ],
+      "answer": "It tells downstream layers to ignore padded timesteps.",
+      "explanation": "Masking ensures that the padding zeros do not affect the output of subsequent layers like RNNs."
+    },
+    {
+      "question": "The IMDB dataset is a classic benchmark for binary ... classification.",
+      "type": "blank",
+      "answer": "sentiment",
+      "explanation": "The task is to classify movie reviews as either positive or negative."
+    },
+    {
+      "question": "Why is a `Bidirectional` wrapper useful for an RNN layer in text classification?",
+      "type": "choice",
+      "options": [
+        "It processes the text in both chronological and anti-chronological order.",
+        "It processes the text twice to get a more stable result.",
+        "It can only be used for very long text sequences.",
+        "It significantly speeds up the training process of the RNN."
+      ],
+      "answer": "It processes the text in both chronological and anti-chronological order.",
+      "explanation": "This allows the model to capture patterns based on both past and future context, which is very useful for understanding language."
+    },
+    {
+      "question": "The output of an `Embedding` layer is a 3D tensor of shape (batch, sequence_length, ...).",
+      "type": "blank",
+      "answer": "embedding_dim",
+      "explanation": "This tensor represents a batch of integer sequences that have been converted into sequences of dense vectors."
+    },
+    {
+      "question": "When should you learn word embeddings from scratch instead of using pre-trained ones?",
+      "type": "choice",
+      "options": [
+        "When you have a large dataset and a domain-specific vocabulary.",
+        "When you have a very small dataset.",
+        "When your model is a 1D convnet.",
+        "When your task is regression instead of classification."
+      ],
+      "answer": "When you have a large dataset and a domain-specific vocabulary.",
+      "explanation": "With enough data, you can learn powerful, task-specific embeddings that may outperform general-purpose ones."
+    },
+    {
+      "question": "The integer '0' in a padded sequence typically represents the...",
+      "type": "blank",
+      "answer": "padding token",
+      "explanation": "The `Embedding` layer can be configured to ignore this specific index via masking."
+    },
+    {
+      "question": "What is the purpose of the `max_tokens` argument in the `TextVectorization` layer?",
+      "type": "choice",
+      "options": [
+        "It controls the size of the vocabulary.",
+        "It controls the maximum length of a sequence.",
+        "It controls the dimensionality of the embeddings.",
+        "It controls the number of epochs for training."
+      ],
+      "answer": "It controls the size of the vocabulary.",
+      "explanation": "It restricts the vocabulary to the top `max_tokens` most frequent words, which is a common way to manage complexity."
+    },
+    {
+      "question": "An `LSTM` layer is a type of ... layer.",
+      "type": "blank",
+      "answer": "recurrent",
+      "explanation": "LSTM (Long Short-Term Memory) is an advanced type of RNN that is better at handling long-term dependencies in sequences."
+    },
+    {
+      "question": "The geometric relationship between word vectors in an embedding space can capture...",
+      "type": "choice",
+      "options": [
+        "semantic relationships.",
+        "syntactic relationships.",
+        "grammatical relationships.",
+        "alphabetical relationships."
+      ],
+      "answer": "semantic relationships.",
+      "explanation": "For example, the vector from 'king' to 'queen' is similar to the vector from 'man' to 'woman', capturing the concept of gender."
+    },
+    {
+      "question": "To use pre-trained embeddings, you first parse the embeddings file and build an ... matrix.",
+      "type": "blank",
+      "answer": "embedding",
+      "explanation": "This matrix holds the vector for each word in your vocabulary and is then loaded into the `Embedding` layer's weights."
+    },
+    {
+      "question": "Which of these architectures is generally best for capturing the meaning of long-term dependencies in text?",
+      "type": "choice",
+      "options": [
+        "An RNN (like LSTM or GRU).",
+        "A 1D Convnet.",
+        "A simple `Dense` model.",
+        "A bag-of-words model."
+      ],
+      "answer": "An RNN (like LSTM or GRU).",
+      "explanation": "The recurrent nature and internal state of an RNN are specifically designed to handle long-range context and word order."
+    },
+    {
+      "question": "A token that represents words not present in the vocabulary is the ... token.",
+      "type": "blank",
+      "answer": "OOV",
+      "explanation": "OOV stands for 'out-of-vocabulary'. This token handles unknown words encountered in new text."
+    },
+    {
+      "question": "The final layer of a binary text classifier typically has one unit and a ... activation.",
+      "type": "choice",
+      "options": [
+        "sigmoid",
+        "softmax",
+        "relu",
+        "tanh"
+      ],
+      "answer": "sigmoid",
+      "explanation": "The sigmoid function outputs a value between 0 and 1, which is ideal for representing the probability in a binary classification task."
+    },
+    {
+      "question": "When you flatten the output of an `Embedding` layer, you lose the ... information.",
+      "type": "blank",
+      "answer": "sequence",
+      "explanation": "Flattening turns the sequence of vectors into a single large vector, discarding the word order."
+    },
+    {
+      "question": "A `GlobalAveragePooling1D` layer is an alternative to...",
+      "type": "choice",
+      "options": [
+        "`GlobalMaxPooling1D`.",
+        "`Conv1D`.",
+        "`LSTM`.",
+        "`Dense`."
+      ],
+      "answer": "`GlobalMaxPooling1D`.",
+      "explanation": "Both are used to convert a sequence of feature vectors into a single feature vector, either by taking the max or the average across the time dimension."
+    },
+    {
+      "question": "The first step in using raw text data is to ... it.",
+      "type": "blank",
+      "answer": "standardize",
+      "explanation": "Standardization involves cleaning the text, such as converting to lowercase and removing punctuation."
+    },
+    {
+      "question": "What is a major downside of a simple bag-of-words model?",
+      "type": "choice",
+      "options": [
+        "It discards word order.",
+        "It preserves word order.",
+        "It is computationally very expensive.",
+        "It requires pre-trained embeddings."
+      ],
+      "answer": "It discards word order.",
+      "explanation": "Bag-of-words models only consider the presence or frequency of words, not their sequential arrangement, losing important context."
+    },
+    {
+      "question": "The vocabulary of a text dataset is the set of unique ... found in it.",
+      "type": "blank",
+      "answer": "tokens",
+      "explanation": "The vocabulary defines all the words the model knows."
+    },
+    {
+      "question": "Stacking `Conv1D` layers allows a model to learn a ... of patterns.",
+      "type": "choice",
+      "options": [
+        "hierarchy",
+        "list",
+        "set",
+        "bag"
+      ],
+      "answer": "hierarchy",
+      "explanation": "Similar to 2D convnets for images, deeper 1D convnets can learn larger and more complex patterns by combining simpler ones from earlier layers."
+    },
+    {
+      "question": "When loading GloVe embeddings, you can ignore words that are not present in your dataset's...",
+      "type": "blank",
+      "answer": "vocabulary",
+      "explanation": "You only need to build an embedding matrix for the specific words that your model will encounter."
+    },
+    {
+      "question": "In NLP, the structure of language is just as important as the ... themselves.",
+      "type": "choice",
+      "options": [
+        "words",
+        "letters",
+        "numbers",
+        "symbols"
+      ],
+      "answer": "words",
+      "explanation": "The order and relationship between words (structure) are key to understanding the meaning of a sentence."
+    },
+    {
+      "question": "The dimensionality of the embedding vectors is a model...",
+      "type": "blank",
+      "answer": "hyperparameter",
+      "explanation": "The embedding dimension (e.g., 50, 100, 300) is a choice you make when designing your model."
+    },
+    {
+      "question": "Which layer is best suited to handle the variable-length nature of text?",
+      "type": "choice",
+      "options": [
+        "An RNN layer.",
+        "A Dense layer.",
+        "A Flatten layer.",
+        "An Activation layer."
+      ],
+      "answer": "An RNN layer.",
+      "explanation": "RNNs are inherently designed to process sequences one step at a time, making them naturally suited for inputs of varying lengths (though in practice padding is still used for batching)."
+    },
+    {
+      "question": "The `output_sequence_length` argument in `TextVectorization` is used for...",
+      "type": "blank",
+      "answer": "padding",
+      "explanation": "This argument ensures that all output sequences are padded or truncated to the specified length."
+    },
+    {
+      "question": "In an embedding space, words with similar meanings should have ... vectors.",
+      "type": "choice",
+      "options": [
+        "similar",
+        "dissimilar",
+        "orthogonal",
+        "random"
+      ],
+      "answer": "similar",
+      "explanation": "The distance and direction between vectors in the embedding space correspond to semantic similarity."
+    },
+    {
+      "question": "The `binary_crossentropy` loss function is used for ... classification.",
+      "type": "blank",
+      "answer": "binary",
+      "explanation": "It is the standard loss function for two-class classification problems like positive/negative sentiment analysis."
+    },
+    {
+      "question": "A model that can distinguish between 'happy', 'sad', and 'neutral' is performing...",
+      "type": "choice",
+      "options": [
+        "multiclass classification.",
+        "binary classification.",
+        "multilabel classification.",
+        "regression."
+      ],
+      "answer": "multiclass classification.",
+      "explanation": "Multiclass classification involves choosing one class from three or more mutually exclusive classes."
+    },
+    {
+      "question": "The `max_features` in an embedding layer corresponds to the size of the...",
+      "type": "blank",
+      "answer": "vocabulary",
+      "explanation": "It tells the layer how many unique word vectors to create in its lookup table."
+    },
+    {
+      "question": "What is the main challenge with learning embeddings from a very small dataset?",
+      "type": "choice",
+      "options": [
+        "There is not enough data to learn meaningful relationships.",
+        "There is too much data to process efficiently.",
+        "The vocabulary size is always too large.",
+        "The sequences are always too long."
+      ],
+      "answer": "There is not enough data to learn meaningful relationships.",
+      "explanation": "Word embeddings require a lot of data to learn the subtle semantic relationships between words, which is why pre-trained embeddings are so useful for small datasets."
+    },
+    {
+      "question": "The `Embedding` layer is a powerful way to handle ... data.",
+      "type": "blank",
+      "answer": "categorical",
+      "explanation": "While used for words, embeddings are a general technique for creating dense representations of any discrete, categorical feature."
+    },
+    {
+      "question": "What is the role of the `adapt()` method of the `TextVectorization` layer?",
+      "type": "choice",
+      "options": [
+        "To build the vocabulary from a dataset.",
+        "To adapt the model to a new task.",
+        "To adapt the learning rate of the optimizer.",
+        "To adapt the text to a different language."
+      ],
+      "answer": "To build the vocabulary from a dataset.",
+      "explanation": "The `adapt()` method iterates through the training text to create the word-to-integer index (the vocabulary)."
+    },
+    {
+      "question": "The core idea of word embeddings is to map words to a ... vector space.",
+      "type": "blank",
+      "answer": "geometric",
+      "explanation": "This geometric space allows for the measurement of relationships between words as distances and directions between their vectors."
+    },
+    {
+      "question": "For text classification, which type of model is NOT typically used?",
+      "type": "choice",
+      "options": [
+        "A 2D Convnet.",
+        "A 1D Convnet.",
+        "An RNN.",
+        "A Transformer."
+      ],
+      "answer": "A 2D Convnet.",
+      "explanation": "2D Convnets are designed for 2D spatial data like images. While text has a 1D sequential structure, it does not have a meaningful 2D structure."
+    }
+  ]
+}
