@@ -1,1 +1,449 @@
-test
+{
+  "text": "This quiz is based on the architectural patterns of modern convolutional neural networks. It covers concepts like residual connections, batch normalization, depthwise separable convolutions, inverted residuals, and model scaling (depth, width, and resolution).",
+  "quiz": [
+    {
+      "question": "What is the primary purpose of a residual connection in a deep neural network?",
+      "type": "choice",
+      "options": [
+        "To allow gradients to flow through deep networks.",
+        "To allow features to flow through deep networks.",
+        "To reduce the number of parameters in a network.",
+        "To normalize the activations within a network."
+      ],
+      "answer": "To allow gradients to flow through deep networks.",
+      "explanation": "Residual connections provide a shortcut for gradients, which helps to mitigate the vanishing gradient problem in very deep networks, enabling them to be trained effectively."
+    },
+    {
+      "question": "Batch normalization is a technique that normalizes the ... of a layer's output.",
+      "type": "blank",
+      "answer": "activations",
+      "explanation": "Batch normalization rescales and recenters the activations of a layer to have a mean of 0 and a standard deviation of 1, which helps stabilize training."
+    },
+    {
+      "question": "A depthwise separable convolution is composed of a depthwise convolution followed by a...",
+      "type": "choice",
+      "options": [
+        "pointwise convolution.",
+        "standard convolution.",
+        "max pooling operation.",
+        "residual connection."
+      ],
+      "answer": "pointwise convolution.",
+      "explanation": "This two-step process separates the spatial and channel-wise learning, making it more efficient than a standard convolution."
+    },
+    {
+      "question": "The three key dimensions for scaling a convnet model are depth, width, and...",
+      "type": "blank",
+      "answer": "resolution",
+      "explanation": "Model scaling involves adjusting the network's depth (number of layers), width (number of channels), and the resolution of the input images."
+    },
+    {
+      "question": "What is the main benefit of using depthwise separable convolutions over standard convolutions?",
+      "type": "choice",
+      "options": [
+        "They are more parameter-efficient.",
+        "They are more accurate in all cases.",
+        "They are better at preventing vanishing gradients.",
+        "They are easier to implement from scratch."
+      ],
+      "answer": "They are more parameter-efficient.",
+      "explanation": "By splitting the convolution into two steps, they use significantly fewer parameters and require fewer computations, making them ideal for mobile and embedded devices."
+    },
+    {
+      "question": "A connection that adds its input back to its own output is called a ... connection.",
+      "type": "blank",
+      "answer": "residual",
+      "explanation": "This is also known as a 'skip connection' and is the defining feature of ResNet-like architectures."
+    },
+    {
+      "question": "Batch normalization acts as a form of...",
+      "type": "choice",
+      "options": [
+        "regularization.",
+        "activation.",
+        "optimization.",
+        "initialization."
+      ],
+      "answer": "regularization.",
+      "explanation": "The slight noise introduced by using batch statistics has a regularizing effect, making the model more robust and sometimes reducing the need for dropout."
+    },
+    {
+      "question": "A pointwise convolution is functionally equivalent to a ... convolution.",
+      "type": "blank",
+      "answer": "1x1",
+      "explanation": "A pointwise convolution uses a 1x1 kernel to process the channels of the feature maps."
+    },
+    {
+      "question": "In an inverted residual block, the 'bottleneck' layers have a ... number of channels than the expansion layer.",
+      "type": "choice",
+      "options": [
+        "smaller",
+        "larger",
+        "similar",
+        "variable"
+      ],
+      "answer": "smaller",
+      "explanation": "The architecture expands the channel depth in the middle of the block and then projects it back down, which is the inverse of traditional residual blocks."
+    },
+    {
+      "question": "Increasing the number of layers in a model is an example of scaling its...",
+      "type": "blank",
+      "answer": "depth",
+      "explanation": "Depth scaling refers to making a network deeper by adding more layers or blocks."
+    },
+    {
+      "question": "Residual connections were introduced to solve what primary problem in very deep networks?",
+      "type": "choice",
+      "options": [
+        "Vanishing gradients",
+        "Exploding gradients",
+        "Overfitting",
+        "Underfitting"
+      ],
+      "answer": "Vanishing gradients",
+      "explanation": "As networks get deeper, gradients can shrink exponentially during backpropagation, making it impossible to train the early layers. Residual connections provide a direct path for gradients to flow."
+    },
+    {
+      "question": "In addition to normalizing, Batch Normalization also includes learnable scaling and ... parameters.",
+      "type": "blank",
+      "answer": "shifting",
+      "explanation": "These parameters (gamma for scaling, beta for shifting) allow the network to learn the optimal distribution for the activations, not just a fixed one."
+    },
+    {
+      "question": "The Xception architecture is built almost entirely from ... convolutions.",
+      "type": "choice",
+      "options": [
+        "depthwise separable",
+        "standard 3x3",
+        "grouped 1x1",
+        "dilated"
+      ],
+      "answer": "depthwise separable",
+      "explanation": "Xception pushes the idea of separating spatial and cross-channel correlations to its extreme, using depthwise separable convolutions as its main building block."
+    },
+    {
+      "question": "The 'width' of a network typically refers to the number of ... in its layers.",
+      "type": "blank",
+      "answer": "channels",
+      "explanation": "Width scaling, or making a network 'wider', involves increasing the number of filters/channels in its convolutional layers."
+    },
+    {
+      "question": "Which component of a depthwise separable convolution handles spatial filtering?",
+      "type": "choice",
+      "options": [
+        "The depthwise convolution.",
+        "The pointwise convolution.",
+        "The 1x1 convolution.",
+        "The channel-wise convolution."
+      ],
+      "answer": "The depthwise convolution.",
+      "explanation": "The depthwise step applies a single spatial filter to each input channel independently."
+    },
+    {
+      "question": "To implement a residual connection, you add the input tensor to the ... tensor.",
+      "type": "blank",
+      "answer": "output",
+      "explanation": "The core operation is `output = layer(input) + input`."
+    },
+    {
+      "question": "During inference (prediction), Batch Normalization uses ... statistics of the training data.",
+      "type": "choice",
+      "options": [
+        "moving average",
+        "current batch",
+        "random",
+        "maximum value"
+      ],
+      "answer": "moving average",
+      "explanation": "Since there are no batches at inference time, it uses the aggregated mean and variance learned during training to perform the normalization."
+    },
+    {
+      "question": "Architectures like MobileNet are designed to be efficient for deployment on ... devices.",
+      "type": "blank",
+      "answer": "mobile",
+      "explanation": "They use efficient building blocks like depthwise separable convolutions to create small, fast, yet accurate models."
+    },
+    {
+      "question": "The idea that a deep learning model is a sequence of modules that can be reused is the principle of...",
+      "type": "choice",
+      "options": [
+        "modularity.",
+        "hierarchy.",
+        "regularization.",
+        "optimization."
+      ],
+      "answer": "modularity.",
+      "explanation": "Modern architectures are built by stacking and reusing a small set of distinct modules or blocks (e.g., a conv block, a residual block)."
+    },
+    {
+      "question": "Scaling up the resolution of the input images generally ... the model's accuracy and computational cost.",
+      "type": "blank",
+      "answer": "increases",
+      "explanation": "Higher resolution images provide more detail, which can improve accuracy, but they also require more computation to process."
+    },
+    {
+      "question": "What is the purpose of the 1x1 convolution in a residual block when the input and output shapes differ?",
+      "type": "choice",
+      "options": [
+        "To project the input to match the output shape.",
+        "To reduce the number of channels in the input.",
+        "To increase the spatial dimensions of the input.",
+        "To apply a non-linear activation to the input."
+      ],
+      "answer": "To project the input to match the output shape.",
+      "explanation": "If the main branch changes the shape (e.g., through striding or changing the number of channels), a linear projection is needed on the skip connection so the two tensors can be added."
+    },
+    {
+      "question": "The idea that features in a convnet are learned in stages, from simple to complex, is the principle of...",
+      "type": "blank",
+      "answer": "hierarchy",
+      "explanation": "Neural networks learn a hierarchy of features, with early layers learning edges and later layers learning complex concepts like object parts."
+    },
+    {
+      "question": "Which component of a depthwise separable convolution handles cross-channel mixing?",
+      "type": "choice",
+      "options": [
+        "The pointwise convolution.",
+        "The depthwise convolution.",
+        "The spatial convolution.",
+        "The channel-wise convolution."
+      ],
+      "answer": "The pointwise convolution.",
+      "explanation": "The pointwise (1x1) convolution is responsible for mixing the information from the channels processed by the depthwise step."
+    },
+    {
+      "question": "Inverted residual blocks are a key component of the ... architecture.",
+      "type": "blank",
+      "answer": "MobileNetV2",
+      "explanation": "This block design proved to be very efficient and is the core of the MobileNetV2 model."
+    },
+    {
+      "question": "Compound scaling, as used in EfficientNet, involves scaling...",
+      "type": "choice",
+      "options": [
+        "depth, width, and resolution together.",
+        "only the depth of the network.",
+        "only the width of the network.",
+        "only the resolution of the input images."
+      ],
+      "answer": "depth, width, and resolution together.",
+      "explanation": "Compound scaling uses a fixed ratio to scale all three dimensions simultaneously, which has been shown to be more effective than scaling just one."
+    },
+    {
+      "question": "Batch Normalization is typically placed ... the activation function in a convolutional block.",
+      "type": "blank",
+      "answer": "before",
+      "explanation": "The common pattern is Conv -> BatchNorm -> Activation. This normalizes the inputs to the activation function."
+    },
+    {
+      "question": "A network without residual connections that is too deep can suffer from performance...",
+      "type": "choice",
+      "options": [
+        "degradation.",
+        "improvement.",
+        "stabilization.",
+        "acceleration."
+      ],
+      "answer": "degradation.",
+      "explanation": "This is the phenomenon where adding more layers to a sufficiently deep 'plain' network leads to higher training error, which residual connections solve."
+    },
+    {
+      "question": "The 'bottleneck' in a traditional residual block refers to using 1x1 convolutions to ... the number of channels.",
+      "type": "blank",
+      "answer": "reduce",
+      "explanation": "The block reduces the channel depth, applies a more expensive 3x3 convolution, and then restores the depth, saving computation."
+    },
+    {
+      "question": "Depthwise separable convolutions are an example of what core architectural principle?",
+      "type": "choice",
+      "options": [
+        "Modularity and reuse.",
+        "Factoring a complex operation into simpler parts.",
+        "Hierarchical feature learning.",
+        "Ensemble learning through multiple branches."
+      ],
+      "answer": "Factoring a complex operation into simpler parts.",
+      "explanation": "They factor the standard convolution into two simpler, more efficient steps: spatial filtering and channel mixing."
+    },
+    {
+      "question": "The 'skip connection' is another name for a...",
+      "type": "blank",
+      "answer": "residual connection",
+      "explanation": "This term describes how the connection 'skips' over one or more layers in the network."
+    },
+    {
+      "question": "Where is Batch Normalization most effective?",
+      "type": "choice",
+      "options": [
+        "In very deep neural networks.",
+        "In very shallow neural networks.",
+        "Only in recurrent neural networks.",
+        "Only in the final classifier part of a network."
+      ],
+      "answer": "In very deep neural networks.",
+      "explanation": "The deeper the network, the more likely it is to suffer from unstable gradients, a problem that batch normalization helps to address."
+    },
+    {
+      "question": "Which part of `Conv -> BatchNorm -> ReLU` is the 'activation'?",
+      "type": "blank",
+      "answer": "ReLU",
+      "explanation": "ReLU (Rectified Linear Unit) is the non-linear activation function in this common block structure."
+    },
+    {
+      "question": "The core idea of the Xception architecture is that cross-channel and spatial correlations can be...",
+      "type": "choice",
+      "options": [
+        "considered separately.",
+        "considered jointly.",
+        "ignored completely.",
+        "processed by dense layers."
+      ],
+      "answer": "considered separately.",
+      "explanation": "Xception proposes that it's more efficient to map spatial correlations for each channel separately, and then perform cross-channel correlation via 1x1 convolutions."
+    },
+    {
+      "question": "Making a network 'wider' is an example of ... scaling.",
+      "type": "blank",
+      "answer": "width",
+      "explanation": "Width scaling adjusts the number of channels/filters in the network's layers."
+    },
+    {
+      "question": "A residual block where the skip connection bypasses a 3x3 convolution is a ... block.",
+      "type": "choice",
+      "options": [
+        "basic",
+        "bottleneck",
+        "inverted",
+        "separable"
+      ],
+      "answer": "basic",
+      "explanation": "This is the simplest form of a residual block, as seen in earlier versions of ResNet."
+    },
+    {
+      "question": "The learnable parameters in Batch Normalization are gamma and...",
+      "type": "blank",
+      "answer": "beta",
+      "explanation": "Gamma is the scaling factor and beta is the shifting factor that are learned during training."
+    },
+    {
+      "question": "The main motivation for developing architectures like MobileNet was to improve...",
+      "type": "choice",
+      "options": [
+        "computational efficiency.",
+        "maximum possible accuracy.",
+        "ease of implementation.",
+        "theoretical understanding."
+      ],
+      "answer": "computational efficiency.",
+      "explanation": "These architectures were designed to run effectively on devices with limited computational power, like mobile phones."
+    },
+    {
+      "question": "If you add the input to the output in a residual connection, their ... must match.",
+      "type": "blank",
+      "answer": "shapes",
+      "explanation": "Element-wise addition requires that the tensors have the same shape. If they don't, a projection is needed."
+    },
+    {
+      "question": "The 'depthwise' part of a depthwise separable convolution acts on each channel...",
+      "type": "choice",
+      "options": [
+        "independently.",
+        "dependently.",
+        "randomly.",
+        "sequentially."
+      ],
+      "answer": "independently.",
+      "explanation": "It applies a single spatial filter to each input channel without mixing information between channels."
+    },
+    {
+      "question": "Training a very deep 'plain' network (without skip connections) often fails due to...",
+      "type": "blank",
+      "answer": "vanishing gradients",
+      "explanation": "The gradients become too small to effectively update the weights in the early layers of the network."
+    },
+    {
+      "question": "Which of these is NOT a direct benefit of batch normalization?",
+      "type": "choice",
+      "options": [
+        "It reduces the number of parameters.",
+        "It allows for higher learning rates.",
+        "It has a regularizing effect.",
+        "It helps mitigate vanishing gradients."
+      ],
+      "answer": "It reduces the number of parameters.",
+      "explanation": "Batch normalization adds a small number of parameters (gamma and beta per channel); it does not reduce them."
+    },
+    {
+      "question": "Increasing the number of channels by a 'width multiplier' is a form of ... scaling.",
+      "type": "blank",
+      "answer": "width",
+      "explanation": "This hyperparameter allows for easy adjustment of the network's width."
+    },
+    {
+      "question": "The core principle of modern convnet architecture is building models by stacking reusable...",
+      "type": "choice",
+      "options": [
+        "blocks or modules.",
+        "individual layers.",
+        "activation functions.",
+        "optimization algorithms."
+      ],
+      "answer": "blocks or modules.",
+      "explanation": "Architectures are designed by creating and repeating well-defined blocks, such as a residual block or an inverted residual block."
+    },
+    {
+      "question": "The 'identity' connection is another name for a...",
+      "type": "blank",
+      "answer": "skip connection",
+      "explanation": "It's called an identity connection because if the main branch were to learn a zero mapping, the block would simply output its input identity."
+    },
+    {
+      "question": "A model that is both highly accurate and computationally efficient has a good balance between accuracy and...",
+      "type": "choice",
+      "options": [
+        "performance.",
+        "regularization.",
+        "capacity.",
+        "depth."
+      ],
+      "answer": "performance.",
+      "explanation": "In this context, 'performance' refers to the computational resources (like FLOPS and latency) required to run the model."
+    },
+    {
+      "question": "A depthwise convolution has a 'depth multiplier' of...",
+      "type": "blank",
+      "answer": "one",
+      "explanation": "A standard depthwise convolution applies exactly one filter per input channel."
+    },
+    {
+      "question": "The success of residual networks demonstrated that ... is a critical factor for model performance.",
+      "type": "choice",
+      "options": [
+        "network depth",
+        "network width",
+        "batch size",
+        "learning rate"
+      ],
+      "answer": "network depth",
+      "explanation": "ResNets enabled the successful training of networks that were far deeper than any previous architectures, showing the importance of scale."
+    },
+    {
+      "question": "The 'expansion factor' in an inverted residual block controls the network's...",
+      "type": "blank",
+      "answer": "width",
+      "explanation": "It determines how much the number of channels is increased within the block, directly affecting the model's width and capacity."
+    },
+    {
+      "question": "Which of these architectural patterns does NOT primarily address the vanishing gradient problem?",
+      "type": "choice",
+      "options": [
+        "Depthwise separable convolutions",
+        "Residual connections",
+        "Batch normalization",
+        "Using ReLU activations"
+      ],
+      "answer": "Depthwise separable convolutions",
+      "explanation": "Depthwise separable convolutions are designed for computational and parameter efficiency, not specifically for solving the vanishing gradient problem. The other options all help with gradient flow."
+    }
+  ]
+}
