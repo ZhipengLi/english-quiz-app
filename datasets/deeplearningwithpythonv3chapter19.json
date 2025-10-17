@@ -1,1 +1,449 @@
-test
+{
+  "text": "This quiz is based on the future of AI and the limitations of current deep learning. It covers the distinction between the 'geometric' and 'algorithmic' minds, the path towards more general AI through neuro-symbolic systems and program synthesis, the trend of foundational models, the long-term vision of human-AI collaboration, and the societal and ethical implications of advanced AI.",
+  "quiz": [
+    {
+      "question": "Current deep learning models are excellent at tasks that are close to their training data, a form of...",
+      "type": "choice",
+      "options": [
+        "local generalization.",
+        "global generalization.",
+        "local optimization.",
+        "global optimization."
+      ],
+      "answer": "local generalization.",
+      "explanation": "Deep learning models excel at interpolating within the data manifold they were trained on (local generalization), but struggle with new situations that are far from it (extreme generalization)."
+    },
+    {
+      "question": "The intuitive, pattern-matching intelligence that current AI excels at is referred to as the ... Mind.",
+      "type": "blank",
+      "answer": "Geometric",
+      "explanation": "The Geometric Mind (or System 1) is associated with perception and intuition, which is analogous to the function of deep learning models."
+    },
+    {
+      "question": "A major limitation of modern deep learning is its poor ability to handle...",
+      "type": "choice",
+      "options": [
+        "out-of-distribution data.",
+        "in-distribution data.",
+        "large-scale datasets.",
+        "small-scale datasets."
+      ],
+      "answer": "out-of-distribution data.",
+      "explanation": "Models often fail when presented with data that comes from a different distribution than the training data, showing a lack of robust generalization."
+    },
+    {
+      "question": "The abstract reasoning and planning intelligence that AI currently lacks is the ... Mind.",
+      "type": "blank",
+      "answer": "Algorithmic",
+      "explanation": "The Algorithmic Mind (or System 2) is associated with formal logic, planning, and symbolic reasoning, which remains a major challenge for AI."
+    },
+    {
+      "question": "The AI paradigm that aims to combine deep learning with classical symbolic AI is called ... AI.",
+      "type": "choice",
+      "options": [
+        "neuro-symbolic",
+        "neuro-generative",
+        "geo-symbolic",
+        "geo-algorithmic"
+      ],
+      "answer": "neuro-symbolic",
+      "explanation": "Neuro-symbolic AI seeks to integrate the pattern-matching strengths of neural networks with the reasoning capabilities of symbolic systems."
+    },
+    {
+      "question": "An AI that can write code to solve a problem is an example of...",
+      "type": "blank",
+      "answer": "program synthesis",
+      "explanation": "Program synthesis is a key example of the Algorithmic Mind, where the AI generates a formal, executable program to solve a task."
+    },
+    {
+      "question": "A key weakness of current AI is its lack of robust...",
+      "type": "choice",
+      "options": [
+        "common sense.",
+        "data storage.",
+        "computational speed.",
+        "pattern recognition."
+      ],
+      "answer": "common sense.",
+      "explanation": "Models lack a basic, human-like understanding of how the world works, which limits their ability to reason about new situations."
+    },
+    {
+      "question": "The current trend in AI is toward larger, more general models known as ... models.",
+      "type": "blank",
+      "answer": "foundational",
+      "explanation": "Foundational models are trained on vast, broad datasets and can be adapted to a wide range of downstream tasks."
+    },
+    {
+      "question": "To achieve more human-like learning, future AI models will need to learn from...",
+      "type": "choice",
+      "options": [
+        "far less data.",
+        "far more data.",
+        "only image data.",
+        "only text data."
+      ],
+      "answer": "far less data.",
+      "explanation": "A key goal is to move beyond the brute-force approach of using massive datasets and develop models that can learn abstract concepts more efficiently, like humans do."
+    },
+    {
+      "question": "The long-term vision of AI is not replacement of humans, but the ... of human and machine intelligence.",
+      "type": "blank",
+      "answer": "merging",
+      "explanation": "The ultimate goal could be a symbiotic relationship where AI acts as an extension of the human mind, creating a new form of intelligence."
+    },
+    {
+      "question": "A model that can adapt to a new task with very few examples is exhibiting...",
+      "type": "choice",
+      "options": [
+        "extreme generalization.",
+        "local generalization.",
+        "strong regularization.",
+        "weak regularization."
+      ],
+      "answer": "extreme generalization.",
+      "explanation": "This is a key capability of human intelligence that current AI largely lacks—the ability to reuse abstract knowledge in completely novel situations."
+    },
+    {
+      "question": "Integrating classical search algorithms with learned heuristics is a step towards the ... Mind.",
+      "type": "blank",
+      "answer": "Algorithmic",
+      "explanation": "This approach combines the strengths of classical, systematic search with the pattern-matching intuition of deep learning."
+    },
+    {
+      "question": "The intelligence of deep learning models can be described as...",
+      "type": "choice",
+      "options": [
+        "alien to human intelligence.",
+        "identical to human intelligence.",
+        "superior to human intelligence.",
+        "inferior to human intelligence."
+      ],
+      "answer": "alien to human intelligence.",
+      "explanation": "Deep learning models 'think' in a fundamentally different way from humans, using high-dimensional geometric transformations rather than abstract reasoning."
+    },
+    {
+      "question": "The idea that AI could recursively self-improve, leading to a runaway effect, is the intelligence...",
+      "type": "blank",
+      "answer": "explosion",
+      "explanation": "The intelligence explosion is a hypothetical scenario where an AI's ability to improve itself leads to an exponential increase in intelligence."
+    },
+    {
+      "question": "Which of these is a significant risk associated with the future of AI?",
+      "type": "choice",
+      "options": [
+        "Job automation and economic disruption.",
+        "Job creation and economic growth.",
+        "The slowing down of technological progress.",
+        "The reduction of algorithmic bias."
+      ],
+      "answer": "Job automation and economic disruption.",
+      "explanation": "The widespread automation of cognitive tasks poses a significant challenge to the future labor market and economy."
+    },
+    {
+      "question": "The future of AI development will require a stronger focus on safety and...",
+      "type": "blank",
+      "answer": "ethics",
+      "explanation": "As AI becomes more powerful, ensuring it is developed and used responsibly, safely, and ethically becomes critically important."
+    },
+    {
+      "question": "Current deep learning models learn from data in a way that is mostly...",
+      "type": "choice",
+      "options": [
+        "brute-force.",
+        "elegant.",
+        "abstract.",
+        "efficient."
+      ],
+      "answer": "brute-force.",
+      "explanation": "They rely on processing massive amounts of data to learn patterns, rather than learning abstract models of the world from a few examples."
+    },
+    {
+      "question": "An AI that can understand and use analogies is demonstrating a form of ... reasoning.",
+      "type": "blank",
+      "answer": "abstract",
+      "explanation": "Abstract reasoning is a key component of the Algorithmic Mind and a major hurdle for current systems."
+    },
+    {
+      "question": "The ultimate goal for AI is to create systems that can...",
+      "type": "choice",
+      "options": [
+        "learn to solve novel problems.",
+        "learn to classify known patterns.",
+        "store large amounts of data.",
+        "execute predefined instructions."
+      ],
+      "answer": "learn to solve novel problems.",
+      "explanation": "This is the essence of true intelligence—the ability to adapt and apply knowledge to new and unforeseen challenges."
+    },
+    {
+      "question": "The ability of a system to understand its own capabilities and limitations is a form of...",
+      "type": "blank",
+      "answer": "self-awareness",
+      "explanation": "This is a higher-level cognitive function that is far beyond the scope of current AI models."
+    },
+    {
+      "question": "A key difference between the Geometric and Algorithmic minds is...",
+      "type": "choice",
+      "options": [
+        "reusability of components.",
+        "speed of computation.",
+        "amount of data required.",
+        "use of neural networks."
+      ],
+      "answer": "reusability of components.",
+      "explanation": "The Algorithmic Mind relies on reusing a small set of primitive components (like logic and search) in novel ways, which is key to its generality."
+    },
+    {
+      "question": "The path to general AI will likely involve a synthesis of deep learning and...",
+      "type": "blank",
+      "answer": "symbolic AI",
+      "explanation": "Combining the strengths of both paradigms (neuro-symbolic AI) is seen as a promising direction for creating more capable and robust systems."
+    },
+    {
+      "question": "In the long-term, AI could function as a personalized ... for the human mind.",
+      "type": "choice",
+      "options": [
+        "exocortex",
+        "endocortex",
+        "neocortex",
+        "subcortex"
+      ],
+      "answer": "exocortex",
+      "explanation": "An exocortex is a hypothetical external information processing system that would augment a brain's biological high-level cognitive processes."
+    },
+    {
+      "question": "The 'intelligence' of current models is a narrow form of intelligence, specialized for a specific...",
+      "type": "blank",
+      "answer": "task",
+      "explanation": "Unlike human general intelligence, current AI systems are highly specialized and their performance does not transfer well to different tasks."
+    },
+    {
+      "question": "The future of user interfaces will likely be driven by...",
+      "type": "choice",
+      "options": [
+        "natural language and gestures.",
+        "keyboards and mice.",
+        "command-line interfaces.",
+        "graphical user interfaces."
+      ],
+      "answer": "natural language and gestures.",
+      "explanation": "AI will enable more natural and intuitive ways for humans to interact with computers and information."
+    },
+    {
+      "question": "A model that can explain its reasoning process is...",
+      "type": "blank",
+      "answer": "interpretable",
+      "explanation": "Interpretability is a key aspect of building trustworthy and debuggable AI systems."
+    },
+    {
+      "question": "The current paradigm of deep learning is primarily based on differentiable...",
+      "type": "choice",
+      "options": [
+        "transformations.",
+        "algorithms.",
+        "programs.",
+        "reasoning."
+      ],
+      "answer": "transformations.",
+      "explanation": "Deep learning models are long chains of simple, differentiable geometric transformations, optimized via gradient descent."
+    },
+    {
+      "question": "The ability to plan a sequence of steps to achieve a goal is a hallmark of the ... Mind.",
+      "type": "blank",
+      "answer": "Algorithmic",
+      "explanation": "Planning requires systematic, step-by-step reasoning, which is a core function of algorithmic intelligence."
+    },
+    {
+      "question": "One of the most significant societal impacts of advanced AI will be the automation of...",
+      "type": "choice",
+      "options": [
+        "cognitive labor.",
+        "manual labor.",
+        "creative labor.",
+        "emotional labor."
+      ],
+      "answer": "cognitive labor.",
+      "explanation": "Unlike previous waves of automation that affected manual labor, AI is poised to automate many white-collar and knowledge-based jobs."
+    },
+    {
+      "question": "The concept of a 'data flywheel' describes a ... cycle in an AI product.",
+      "type": "blank",
+      "answer": "self-improving",
+      "explanation": "A better product attracts more users, who generate more data, which is used to train a better model, which improves the product further."
+    },
+    {
+      "question": "Future AI systems will need to build abstract ... of the world.",
+      "type": "choice",
+      "options": [
+        "models",
+        "datasets",
+        "geometries",
+        "architectures"
+      ],
+      "answer": "models",
+      "explanation": "To achieve robust, human-like generalization, AI will need to move beyond simple pattern matching and learn abstract models of situations and concepts."
+    },
+    {
+      "question": "The problem of ensuring that an AI's goals are aligned with human values is the ... problem.",
+      "type": "blank",
+      "answer": "alignment",
+      "explanation": "The value alignment problem is a central challenge in AI safety, especially for highly autonomous systems."
+    },
+    {
+      "question": "The current generation of AI models learn representations that are not very...",
+      "type": "choice",
+      "options": [
+        "abstract.",
+        "dense.",
+        "complex.",
+        "large."
+      ],
+      "answer": "abstract.",
+      "explanation": "The features learned by deep learning models are still closely tied to the perceptual patterns in the training data and lack true abstraction."
+    },
+    {
+      "question": "The ability for a model to handle tasks it has never seen before is a sign of ... intelligence.",
+      "type": "blank",
+      "answer": "general",
+      "explanation": "Artificial General Intelligence (AGI) is the hypothetical ability of an AI to understand or learn any intellectual task that a human being can."
+    },
+    {
+      "question": "The future of software development itself will be transformed by AI, a trend called AI-driven...",
+      "type": "choice",
+      "options": [
+        "software engineering.",
+        "software deployment.",
+        "software testing.",
+        "software documentation."
+      ],
+      "answer": "software engineering.",
+      "explanation": "AI tools will increasingly assist with and automate tasks like code generation, debugging, and testing."
+    },
+    {
+      "question": "An AI that can discover new scientific principles would be demonstrating a high level of ... intelligence.",
+      "type": "blank",
+      "answer": "algorithmic",
+      "explanation": "Scientific discovery requires systematic reasoning, hypothesis testing, and abstraction, all hallmarks of the Algorithmic Mind."
+    },
+    {
+      "question": "The ultimate promise of AI is to serve as a tool to amplify human...",
+      "type": "choice",
+      "options": [
+        "ingenuity.",
+        "memory.",
+        "speed.",
+        "strength."
+      ],
+      "answer": "ingenuity.",
+      "explanation": "By automating intelligence itself, AI has the potential to be a powerful amplifier for human creativity, science, and problem-solving."
+    },
+    {
+      "question": "The 'black box' nature of deep learning refers to its lack of...",
+      "type": "blank",
+      "answer": "interpretability",
+      "explanation": "It is often difficult to understand precisely why a deep learning model makes a particular decision."
+    },
+    {
+      "question": "Which of these is NOT a limitation of current deep learning?",
+      "type": "choice",
+      "options": [
+        "Its ability to handle perceptual tasks.",
+        "Its need for large amounts of data.",
+        "Its poor out-of-distribution generalization.",
+        "Its lack of common sense."
+      ],
+      "answer": "Its ability to handle perceptual tasks.",
+      "explanation": "Deep learning has proven to be extremely effective at perceptual tasks like image classification and speech recognition, which is its primary strength."
+    },
+    {
+      "question": "The idea that AI will be the 'last invention' humans need to make refers to the concept of an intelligence...",
+      "type": "blank",
+      "answer": "explosion",
+      "explanation": "If a superintelligent AI could solve the problem of invention itself, it could theoretically automate all future innovation."
+    },
+    {
+      "question": "A key challenge for the future of AI is moving from pattern recognition to pattern...",
+      "type": "choice",
+      "options": [
+        "understanding.",
+        "storing.",
+        "matching.",
+        "scaling."
+      ],
+      "answer": "understanding.",
+      "explanation": "Current models are excellent at matching patterns but lack any deeper, human-like understanding of the concepts behind those patterns."
+    },
+    {
+      "question": "The human brain is a hybrid system, combining the geometric and ... minds.",
+      "type": "blank",
+      "answer": "algorithmic",
+      "explanation": "Human cognition involves both fast, intuitive perception (Geometric) and slow, deliberate reasoning (Algorithmic)."
+    },
+    {
+      "question": "The most important responsibility for AI engineers in the future will be to develop AI...",
+      "type": "choice",
+      "options": [
+        "responsibly.",
+        "quickly.",
+        "cheaply.",
+        "powerfully."
+      ],
+      "answer": "responsibly.",
+      "explanation": "As the impact of AI grows, the ethical and societal responsibilities of its creators become paramount."
+    },
+    {
+      "question": "A model that can reason about 'what would have happened if' is engaging in ... reasoning.",
+      "type": "blank",
+      "answer": "counterfactual",
+      "explanation": "Counterfactual reasoning is a sophisticated form of abstract thought that is currently beyond the capabilities of deep learning models."
+    },
+    {
+      "question": "The future of AI is not just about building better models, but also better...",
+      "type": "choice",
+      "options": [
+        "human-computer interfaces.",
+        "data storage systems.",
+        "graphics processing units.",
+        "programming languages."
+      ],
+      "answer": "human-computer interfaces.",
+      "explanation": "For AI to be a true partner to humanity, the interface between humans and AI systems must become seamless and intuitive."
+    },
+    {
+      "question": "The trend towards ... models is driven by the observation that scale is a major driver of performance.",
+      "type": "blank",
+      "answer": "foundational",
+      "explanation": "Experience has shown that increasing the size of the model and the training dataset often leads to more capable and general models."
+    },
+    {
+      "question": "To build a model that truly 'understands', it needs to be grounded in...",
+      "type": "choice",
+      "options": [
+        "experience.",
+        "mathematics.",
+        "text.",
+        "images."
+      ],
+      "answer": "experience.",
+      "explanation": "A key hypothesis is that true understanding cannot be learned from passive data alone, but requires active interaction with an environment."
+    },
+    {
+      "question": "The 'alignment problem' is concerned with aligning an AI's goals with human...",
+      "type": "blank",
+      "answer": "values",
+      "explanation": "This is a critical safety problem to ensure that highly intelligent and autonomous systems act in ways that are beneficial to humanity."
+    },
+    {
+      "question": "The ultimate form of AI would be indistinguishable from...",
+      "type": "choice",
+      "options": [
+        "magic.",
+        "science.",
+        "art.",
+        "nature."
+      ],
+      "answer": "magic.",
+      "explanation": "This references Arthur C. Clarke's third law, suggesting that a sufficiently advanced technology (or AI) would be incomprehensible and appear magical to us."
+    }
+  ]
+}
