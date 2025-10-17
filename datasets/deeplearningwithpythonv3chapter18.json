@@ -1,1 +1,449 @@
-test
+{
+  "text": "This quiz is based on best practices for building and deploying machine learning models in the real world. It covers the end-to-end workflow, including project setup, data management, model development, deployment strategies (cloud, edge, browser), and crucial post-deployment concepts like monitoring, maintenance, model optimization (quantization, pruning), and responsible AI.",
+  "quiz": [
+    {
+      "question": "What is the very first step in creating a successful machine learning product?",
+      "type": "choice",
+      "options": [
+        "Defining the business goal.",
+        "Choosing a deep learning model architecture like a Transformer or a ResNet.",
+        "Collecting and annotating a massive dataset.",
+        "Setting up the deployment infrastructure on a cloud provider."
+      ],
+      "answer": "Defining the business goal.",
+      "explanation": "Before any technical work, you must clearly define the problem you're solving and how it creates value, which will guide all subsequent decisions."
+    },
+    {
+      "question": "The gradual change in the statistical properties of the target variable over time is called concept...",
+      "type": "blank",
+      "answer": "drift",
+      "explanation": "Concept drift is a key challenge in production systems, as it can cause a model's performance to degrade over time."
+    },
+    {
+      "question": "Which deployment strategy involves running the model directly on the user's device?",
+      "type": "choice",
+      "options": [
+        "On-device or edge deployment.",
+        "Cloud-based deployment via a REST API.",
+        "Batch prediction on a scheduled basis.",
+        "Serverless deployment with cloud functions."
+      ],
+      "answer": "On-device or edge deployment.",
+      "explanation": "Edge deployment is crucial for applications requiring low latency, offline functionality, and high data privacy."
+    },
+    {
+      "question": "Reducing a model's weights from 32-bit floats to 8-bit integers is a technique called...",
+      "type": "blank",
+      "answer": "quantization",
+      "explanation": "Quantization is a model optimization technique that significantly reduces model size and can speed up inference, especially on specialized hardware."
+    },
+    {
+      "question": "What is the primary purpose of model monitoring?",
+      "type": "choice",
+      "options": [
+        "To detect performance degradation.",
+        "To detect the model's initial training accuracy.",
+        "To perform A/B testing on different model versions before deployment.",
+        "To continuously retrain the model on new data."
+      ],
+      "answer": "To detect performance degradation.",
+      "explanation": "Monitoring production models is crucial for identifying when their performance drops due to issues like data drift, indicating a need for retraining."
+    },
+    {
+      "question": "The process of removing unnecessary weights from a neural network is known as...",
+      "type": "blank",
+      "answer": "pruning",
+      "explanation": "Pruning can create smaller and faster models by removing weights that have little impact on the output, often those with a magnitude close to zero."
+    },
+    {
+      "question": "Which of these is a major advantage of browser-based (TensorFlow.js) deployment?",
+      "type": "choice",
+      "options": [
+        "Lower inference latency.",
+        "Ability to use massive, server-side models.",
+        "Simplified data collection and annotation process.",
+        "Access to more powerful GPU hardware."
+      ],
+      "answer": "Lower inference latency.",
+      "explanation": "Running the model in the browser eliminates the network round-trip to a server, resulting in faster predictions."
+    },
+    {
+      "question": "Before building a complex deep learning model, it is essential to first establish a...",
+      "type": "blank",
+      "answer": "simple baseline",
+      "explanation": "A simple, common-sense baseline provides a performance floor that any complex model must significantly outperform to justify its complexity."
+    },
+    {
+      "question": "Knowledge distillation is a model compression technique where a smaller 'student' model learns from a larger '...' model.",
+      "type": "choice",
+      "options": [
+        "teacher",
+        "parent",
+        "master",
+        "expert"
+      ],
+      "answer": "teacher",
+      "explanation": "The student model is trained to mimic the outputs (often the soft probabilities) of the larger, more powerful teacher model."
+    },
+    {
+      "question": "When a model's predictions disproportionately harm certain demographic groups, the model is exhibiting...",
+      "type": "blank",
+      "answer": "bias",
+      "explanation": "Algorithmic bias is a critical issue in responsible AI, often stemming from biased training data."
+    },
+    {
+      "question": "What is the 'last mile' of the machine learning workflow?",
+      "type": "choice",
+      "options": [
+        "Deployment and monitoring.",
+        "Data collection and cleaning.",
+        "Model training and hyperparameter tuning.",
+        "Defining the business problem and success metrics."
+      ],
+      "answer": "Deployment and monitoring.",
+      "explanation": "The 'last mile' refers to the often-underestimated effort required to get a model into a real-world product and maintain it."
+    },
+    {
+      "question": "The three key components of a data flywheel are more data, better models, and better...",
+      "type": "blank",
+      "answer": "products",
+      "explanation": "A better product attracts more users, who generate more data, which is used to train better models, creating a virtuous cycle."
+    },
+    {
+      "question": "Which deployment option generally offers the highest scalability and access to the most powerful hardware?",
+      "type": "choice",
+      "options": [
+        "Cloud-based REST API.",
+        "On-device mobile app.",
+        "In-browser TensorFlow.js.",
+        "Deployment to an embedded system."
+      ],
+      "answer": "Cloud-based REST API.",
+      "explanation": "Cloud providers offer massive scalability and access to high-end GPUs and TPUs that are not available on edge devices."
+    },
+    {
+      "question": "A model's ability to be understood by humans is called...",
+      "type": "blank",
+      "answer": "interpretability",
+      "explanation": "Interpretability is a key aspect of responsible AI, helping to debug models and build trust in their decisions."
+    },
+    {
+      "question": "The most important asset in a machine learning project is the...",
+      "type": "choice",
+      "options": [
+        "data.",
+        "model architecture.",
+        "deployment infrastructure.",
+        "training algorithm and optimization method."
+      ],
+      "answer": "data.",
+      "explanation": "High-quality, relevant data is the most critical ingredient for building a successful machine learning model."
+    },
+    {
+      "question": "The process of continually updating a model with new data in production is called...",
+      "type": "blank",
+      "answer": "online learning",
+      "explanation": "Online learning allows a model to adapt to new data patterns as they emerge, which can help combat concept drift."
+    },
+    {
+      "question": "What is A/B testing in the context of model deployment?",
+      "type": "choice",
+      "options": [
+        "Comparing a new model to an old one in production.",
+        "Comparing two different training datasets.",
+        "Comparing the accuracy and bias of a model before deployment.",
+        "Comparing two different deep learning frameworks."
+      ],
+      "answer": "Comparing a new model to an old one in production.",
+      "explanation": "A/B testing involves directing a small fraction of user traffic to a new model to safely evaluate its real-world impact before a full rollout."
+    },
+    {
+      "question": "Deploying a model to a mobile phone is an example of ... deployment.",
+      "type": "blank",
+      "answer": "edge",
+      "explanation": "Edge devices include mobile phones, IoT devices, and other hardware where computation happens locally."
+    },
+    {
+      "question": "The principle of preferring simpler models over more complex ones is known as...",
+      "type": "choice",
+      "options": [
+        "Occam's razor.",
+        "Moore's law.",
+        "The central limit theorem.",
+        "The law of large numbers."
+      ],
+      "answer": "Occam's razor.",
+      "explanation": "In machine learning, this means you should start with simple models and only increase complexity if it provides a significant performance benefit."
+    },
+    {
+      "question": "The main technical challenge of edge deployment is model...",
+      "type": "blank",
+      "answer": "optimization",
+      "explanation": "Models must be highly optimized (small, fast, and power-efficient) to run on resource-constrained edge devices."
+    },
+    {
+      "question": "When developing an ML product, it is crucial to iterate quickly and get a first version out...",
+      "type": "choice",
+      "options": [
+        "as soon as possible.",
+        "after a long research phase.",
+        "only when you have achieved state-of-the-art results.",
+        "after you have collected all the data you will ever need."
+      ],
+      "answer": "as soon as possible.",
+      "explanation": "Rapid iteration and launching an end-to-end prototype early is key to getting real-world feedback and building momentum."
+    },
+    {
+      "question": "A model that can be attacked by an adversary using specially crafted inputs has a ... vulnerability.",
+      "type": "blank",
+      "answer": "security",
+      "explanation": "Adversarial attacks are a significant security concern for production machine learning systems."
+    },
+    {
+      "question": "Which of these is a primary benefit of on-device deployment?",
+      "type": "choice",
+      "options": [
+        "Data privacy.",
+        "Model scalability.",
+        "Ease of updating the model for all users instantly.",
+        "Access to large-scale computational resources."
+      ],
+      "answer": "Data privacy.",
+      "explanation": "Since user data is processed locally and never leaves the device, on-device deployment offers strong privacy guarantees."
+    },
+    {
+      "question": "The first step in building a data pipeline is data...",
+      "type": "blank",
+      "answer": "ingestion",
+      "explanation": "Data ingestion is the process of collecting and bringing raw data into your system for subsequent processing and labeling."
+    },
+    {
+      "question": "What is the main reason to prefer a simple, non-deep-learning baseline initially?",
+      "type": "choice",
+      "options": [
+        "To ensure there is a signal in the data.",
+        "To ensure the final model is a deep learning model.",
+        "To make the project take longer.",
+        "To avoid using a GPU for the project."
+      ],
+      "answer": "To ensure there is a signal in the data.",
+      "explanation": "If a simple model can't achieve any predictive power, it might mean the problem is not learnable from the current data, and a complex model won't help."
+    },
+    {
+      "question": "The process of labeling your training data is called data...",
+      "type": "blank",
+      "answer": "annotation",
+      "explanation": "Data annotation is often one of the most time-consuming and expensive parts of a machine learning project."
+    },
+    {
+      "question": "A continuous feedback loop between the live product and the model development process is essential for...",
+      "type": "choice",
+      "options": [
+        "long-term success.",
+        "initial deployment.",
+        "data collection.",
+        "model selection."
+      ],
+      "answer": "long-term success.",
+      "explanation": "A static model will eventually become obsolete. Long-term success requires a system for monitoring, collecting new data, and regularly retraining the model."
+    },
+    {
+      "question": "Optimizing for the wrong metric is a common pitfall during the ... phase.",
+      "type": "blank",
+      "answer": "scoping",
+      "explanation": "It's critical to choose a technical success metric (like accuracy) that is a good proxy for the actual business goal."
+    },
+    {
+      "question": "Which of these is NOT a model optimization technique?",
+      "type": "choice",
+      "options": [
+        "Data augmentation.",
+        "Model pruning.",
+        "Model quantization.",
+        "Knowledge distillation."
+      ],
+      "answer": "Data augmentation.",
+      "explanation": "Data augmentation is a technique to improve model generalization by creating more training data; the others are techniques to make a trained model smaller and faster."
+    },
+    {
+      "question": "The full machine learning workflow, from data to deployment, is often called an ML...",
+      "type": "blank",
+      "answer": "pipeline",
+      "explanation": "An ML pipeline automates the steps of data preparation, model training, evaluation, and deployment."
+    },
+    {
+      "question": "What is a major challenge of online learning?",
+      "type": "choice",
+      "options": [
+        "It can be exploited by malicious users.",
+        "It is much slower than offline training.",
+        "It cannot adapt to new data.",
+        "It requires a very large initial dataset to start."
+      ],
+      "answer": "It can be exploited by malicious users.",
+      "explanation": "If a model learns continuously from user-generated data, adversaries can feed it bad data to degrade its performance or introduce biases."
+    },
+    {
+      "question": "The ideal machine learning project is a ... system.",
+      "type": "blank",
+      "answer": "self-improving",
+      "explanation": "The ultimate goal is to create a data flywheel where the system automatically gets better over time as more data is collected."
+    },
+    {
+      "question": "To ensure fairness, a model's performance should be evaluated across different...",
+      "type": "choice",
+      "options": [
+        "demographic subgroups.",
+        "model architectures.",
+        "training epochs.",
+        "hardware types."
+      ],
+      "answer": "demographic subgroups.",
+      "explanation": "Evaluating a model's performance on slices of the data corresponding to different user groups is a key step in auditing for fairness."
+    },
+    {
+      "question": "The term 'shipping' a model refers to the process of...",
+      "type": "blank",
+      "answer": "deployment",
+      "explanation": "Shipping is the engineering practice of integrating a trained model into a production application."
+    },
+    {
+      "question": "Which of these is a key aspect of building a production-ready system?",
+      "type": "choice",
+      "options": [
+        "Reliability and scalability.",
+        "Achieving the highest possible accuracy on a static benchmark.",
+        "Using the most complex and recent model architecture.",
+        "Training the model only once."
+      ],
+      "answer": "Reliability and scalability.",
+      "explanation": "A production system must be robust, reliable, and able to handle the load of real-world user traffic."
+    },
+    {
+      "question": "Changes in the statistical properties of the input data over time is called data...",
+      "type": "blank",
+      "answer": "drift",
+      "explanation": "Data drift can cause performance degradation because the model is encountering data that is different from what it was trained on."
+    },
+    {
+      "question": "A model that requires an internet connection to work is likely deployed in the...",
+      "type": "choice",
+      "options": [
+        "cloud.",
+        "browser.",
+        "edge.",
+        "device."
+      ],
+      "answer": "cloud.",
+      "explanation": "Cloud deployment typically involves the client application making API calls to a remote server over the internet."
+    },
+    {
+      "question": "In the early stages of a project, the biggest risk is ... risk, not technical risk.",
+      "type": "blank",
+      "answer": "product",
+      "explanation": "The primary risk is building something that nobody wants or that doesn't solve a real business problem."
+    },
+    {
+      "question": "A model's predictions should always be accompanied by a measure of...",
+      "type": "choice",
+      "options": [
+        "uncertainty.",
+        "complexity.",
+        "latency.",
+        "accuracy."
+      ],
+      "answer": "uncertainty.",
+      "explanation": "Providing an uncertainty estimate helps users understand how much to trust a given prediction, which is crucial for responsible AI."
+    },
+    {
+      "question": "The practice of having humans review a model's most uncertain predictions is called a human-in-the-... loop.",
+      "type": "blank",
+      "answer": "loop",
+      "explanation": "This approach combines the scalability of machine learning with the reliability of human judgment for difficult cases."
+    },
+    {
+      "question": "What is the main advantage of developing a model in a framework like TensorFlow or PyTorch?",
+      "type": "choice",
+      "options": [
+        "Access to a rich ecosystem for the entire workflow.",
+        "They guarantee the highest possible model accuracy.",
+        "They can only be used for cloud deployment.",
+        "They do not require any data preprocessing."
+      ],
+      "answer": "Access to a rich ecosystem for the entire workflow.",
+      "explanation": "Modern frameworks provide tools not just for modeling, but for the entire lifecycle, including data pipelines, optimization, and deployment (e.g., TFX, TensorFlow Lite)."
+    },
+    {
+      "question": "A model that can be easily updated for all users simultaneously is likely deployed in the...",
+      "type": "blank",
+      "answer": "cloud",
+      "explanation": "With cloud deployment, you only need to update the model on the server, and all users immediately get the new version."
+    },
+    {
+      "question": "The grand goal of machine learning is to automate...",
+      "type": "choice",
+      "options": [
+        "value creation.",
+        "data collection.",
+        "model training.",
+        "software engineering."
+      ],
+      "answer": "value creation.",
+      "explanation": "The ultimate aim is to build systems that learn from data to create tangible business value with minimal human intervention."
+    },
+    {
+      "question": "When launching a product, you should start with a simple model and...",
+      "type": "blank",
+      "answer": "iterate",
+      "explanation": "The best practice is to launch a simple but functional end-to-end system and then iteratively improve it based on real-world feedback."
+    },
+    {
+      "question": "Which of these is a social bias that can be encoded by a machine learning model?",
+      "type": "choice",
+      "options": [
+        "Gender bias.",
+        "Statistical bias.",
+        "Inductive bias.",
+        "Variance bias."
+      ],
+      "answer": "Gender bias.",
+      "explanation": "If a model is trained on historical data that reflects societal biases (like gender or racial stereotypes), it will learn and perpetuate those biases."
+    },
+    {
+      "question": "The most important part of the ML workflow is getting the ... right.",
+      "type": "blank",
+      "answer": "data",
+      "explanation": "Data is the foundation of any ML project; without high-quality, relevant data, even the best model will fail."
+    },
+    {
+      "question": "What does it mean to build a 'product-first' AI system?",
+      "type": "choice",
+      "options": [
+        "Focus on the end-user application and business goal.",
+        "Focus on using the latest state-of-the-art model.",
+        "Focus on achieving the highest benchmark score.",
+        "Focus on publishing a research paper about the system."
+      ],
+      "answer": "Focus on the end-user application and business goal.",
+      "explanation": "A product-first approach means that all technical decisions are driven by the needs of the product and the value it delivers to users."
+    },
+    {
+      "question": "The three pillars of a successful ML system are the data, the model, and the...",
+      "type": "blank",
+      "answer": "product",
+      "explanation": "These three components are deeply intertwined and must be developed together in a holistic workflow."
+    },
+    {
+      "question": "The best machine learning models are often those that...",
+      "type": "choice",
+      "options": [
+        "augment and collaborate with humans.",
+        "replace humans in all tasks.",
+        "are fully autonomous and require no human oversight.",
+        "are the largest and most computationally expensive."
+      ],
+      "answer": "augment and collaborate with humans.",
+      "explanation": "Many of the most successful AI systems are designed to be tools that augment human expertise rather than completely replacing it."
+    }
+  ]
+}
