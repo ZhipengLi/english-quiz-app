@@ -1,1 +1,449 @@
-test
+{
+  "text": "This quiz is based on techniques for interpreting and visualizing what convolutional neural networks (convnets) learn. It covers visualizing intermediate activations, visualizing filters via gradient ascent, and using class activation maps (CAMs) to understand a model's decisions.",
+  "quiz": [
+    {
+      "question": "What is the primary goal of visualizing intermediate activations?",
+      "type": "choice",
+      "options": [
+        "To see how an input is transformed by layers.",
+        "To see what an input is transformed into.",
+        "To see why an input is transformed.",
+        "To see when an input is transformed."
+      ],
+      "answer": "To see how an input is transformed by layers.",
+      "explanation": "Visualizing intermediate activations allows us to see the feature maps output by each layer, showing how the input data is decomposed and processed through the network."
+    },
+    {
+      "question": "The technique of generating an image that maximizes a filter's response is called gradient...",
+      "type": "blank",
+      "answer": "ascent",
+      "explanation": "Gradient ascent is an optimization technique used to find an input that results in the maximum activation of a specific filter, thus visualizing the pattern it detects."
+    },
+    {
+      "question": "Class Activation Maps (CAM) are a type of heatmap that shows...",
+      "type": "choice",
+      "options": [
+        "which parts of an image are important for a decision.",
+        "which parts of an image are ignored by a decision.",
+        "which parts of an image are blurry.",
+        "which parts of an image are colorful."
+      ],
+      "answer": "which parts of an image are important for a decision.",
+      "explanation": "CAMs highlight the regions in an input image that were most influential in the network's decision to assign it a certain class label."
+    },
+    {
+      "question": "As you go deeper into a convnet, the features learned become more abstract and less...",
+      "type": "blank",
+      "answer": "visually interpretable",
+      "explanation": "Early layers learn simple patterns like edges, while deeper layers learn complex concepts that don't always have a straightforward visual representation."
+    },
+    {
+      "question": "The activations of the first few layers of a convnet retain almost all of the...",
+      "type": "choice",
+      "options": [
+        "information in the initial image.",
+        "information in the final prediction.",
+        "information about the model's weights.",
+        "information about the model's loss."
+      ],
+      "answer": "information in the initial image.",
+      "explanation": "Early feature maps act like various filters on the original image, preserving most of the initial information."
+    },
+    {
+      "question": "Visualizing a filter helps you understand what kind of ... it is looking for.",
+      "type": "blank",
+      "answer": "pattern",
+      "explanation": "The visualization shows the optimal stimulus for a filter, revealing the texture, shape, or color pattern it is tuned to detect."
+    },
+    {
+      "question": "The process of visualizing convnet filters via gradient ascent starts from a...",
+      "type": "choice",
+      "options": [
+        "blank image with some noise.",
+        "blank image with no noise.",
+        "specific image from the dataset.",
+        "specific image not from the dataset."
+      ],
+      "answer": "blank image with some noise.",
+      "explanation": "Starting from a noisy gray image prevents the optimization process from getting stuck on a blank input and helps it generate more detailed patterns."
+    },
+    {
+      "question": "As information progresses through a convnet, it becomes increasingly about 'what' and less about...",
+      "type": "blank",
+      "answer": "where",
+      "explanation": "The network gradually discards spatial information ('where') in favor of more abstract information about the objects present ('what')."
+    },
+    {
+      "question": "Class Activation Maps are particularly useful for debugging a model's...",
+      "type": "choice",
+      "options": [
+        "decision process.",
+        "training process.",
+        "compilation process.",
+        "initialization process."
+      ],
+      "answer": "decision process.",
+      "explanation": "By seeing what the model is looking at, you can determine if it's making decisions based on the correct features or on spurious artifacts."
+    },
+    {
+      "question": "The patterns learned by filters in a single layer are relatively ... of each other.",
+      "type": "blank",
+      "answer": "independent",
+      "explanation": "Filters in a layer are not typically correlated; they learn different transformations, forming a basis for representing the input."
+    },
+    {
+      "question": "To generate a CAM, you compute the gradient of the predicted class with respect to the...",
+      "type": "choice",
+      "options": [
+        "feature maps of a convolutional layer.",
+        "weights of a convolutional layer.",
+        "pixels of the input image.",
+        "activations of the final dense layer."
+      ],
+      "answer": "feature maps of a convolutional layer.",
+      "explanation": "The gradient tells us how intensely a feature map activates for a particular class, which is then used to weight the maps and create the heatmap."
+    },
+    {
+      "question": "An 'empty' channel in an intermediate activation map means that the filter it corresponds to did not find any ... in the input.",
+      "type": "blank",
+      "answer": "pattern",
+      "explanation": "If a feature map channel is all zeros, it indicates that the filter's specific pattern was not detected in the input image."
+    },
+    {
+      "question": "The visualization of filters from deeper layers of a convnet often shows...",
+      "type": "choice",
+      "options": [
+        "complex patterns like textures or object parts.",
+        "simple patterns like edges and colors.",
+        "patterns identical to the input image.",
+        "patterns that are completely random noise."
+      ],
+      "answer": "complex patterns like textures or object parts.",
+      "explanation": "Deeper layers build upon the features of earlier layers to learn more sophisticated and abstract patterns."
+    },
+    {
+      "question": "The loss function used for gradient ascent when visualizing a filter is the activation of the filter's...",
+      "type": "blank",
+      "answer": "output",
+      "explanation": "The goal is to maximize this loss, which means maximizing the filter's activation."
+    },
+    {
+      "question": "Which of these is a limitation of Class Activation Maps?",
+      "type": "choice",
+      "options": [
+        "They only show the most important region for a class.",
+        "They show every region relevant to a class.",
+        "They cannot be used on models trained with transfer learning.",
+        "They can only be used for binary classification problems."
+      ],
+      "answer": "They only show the most important region for a class.",
+      "explanation": "If an object appears twice in an image, the CAM may only highlight one instance—the one that was sufficient for the classification."
+    },
+    {
+      "question": "Interpretability techniques help make deep learning models less of a...",
+      "type": "blank",
+      "answer": "black box",
+      "explanation": "These methods provide insights into the internal workings of the model, making its decision-making process more transparent."
+    },
+    {
+      "question": "The visualization of filters from the first layer of a convnet often shows...",
+      "type": "choice",
+      "options": [
+        "simple directional edges and colors.",
+        "complex textures and object parts.",
+        "fully formed objects like eyes or faces.",
+        "patterns that are mostly random noise."
+      ],
+      "answer": "simple directional edges and colors.",
+      "explanation": "The first layer acts as a collection of simple feature detectors, much like the Gabor filters found in the early visual cortex."
+    },
+    {
+      "question": "In the gradient ascent process, the input image is iteratively modified to ... the filter's response.",
+      "type": "blank",
+      "answer": "increase",
+      "explanation": "Each step in the gradient ascent process makes a small change to the image in the direction that most increases the filter's activation."
+    },
+    {
+      "question": "The spatial footprint of filters tends to ... as you go deeper into the network.",
+      "type": "choice",
+      "options": [
+        "increase.",
+        "decrease.",
+        "stay the same.",
+        "become random."
+      ],
+      "answer": "increase.",
+      "explanation": "Due to stacking layers (and pooling), a single unit in a deeper layer is influenced by a larger region of the initial input."
+    },
+    {
+      "question": "A channel in an activation map corresponds to a specific...",
+      "type": "blank",
+      "answer": "filter",
+      "explanation": "Each channel is the output of one filter from the convolutional layer, showing where that filter's pattern was found."
+    },
+    {
+      "question": "CAMs are a way to inspect the ... of a convnet.",
+      "type": "choice",
+      "options": [
+        "decision-making.",
+        "weight-initialization.",
+        "optimization-process.",
+        "data-augmentation."
+      ],
+      "answer": "decision-making.",
+      "explanation": "They provide a visual explanation for why the model made a particular prediction."
+    },
+    {
+      "question": "Deep learning models are often criticized for their lack of...",
+      "type": "blank",
+      "answer": "interpretability",
+      "explanation": "Their complex, multi-layered structure can make it difficult to understand exactly why they produce a certain output."
+    },
+    {
+      "question": "To get a high-quality filter visualization, it is common to apply post-processing techniques like...",
+      "type": "choice",
+      "options": [
+        "blurring and normalizing the image.",
+        "sharpening and colorizing the image.",
+        "cropping and rotating the image.",
+        "inverting the colors of the image."
+      ],
+      "answer": "blurring and normalizing the image.",
+      "explanation": "Techniques like applying a slight blur (total variation regularization) and normalizing the pixel values help produce smoother, more visually coherent patterns."
+    },
+    {
+      "question": "The sparsity of activations generally ... as you go deeper into the network.",
+      "type": "blank",
+      "answer": "increases",
+      "explanation": "As features become more abstract, they are activated more selectively, leading to sparser feature maps."
+    },
+    {
+      "question": "Which of these is NOT a primary technique for convnet interpretation?",
+      "type": "choice",
+      "options": [
+        "Visualizing model weights directly as numbers.",
+        "Visualizing intermediate layer activations.",
+        "Visualizing the patterns that filters respond to.",
+        "Visualizing heatmaps of class activation."
+      ],
+      "answer": "Visualizing model weights directly as numbers.",
+      "explanation": "Looking at the raw numerical values of the weights is generally not informative for understanding what a convnet does."
+    },
+    {
+      "question": "The output of a `Conv2D` layer is a 3D tensor called a...",
+      "type": "blank",
+      "answer": "feature map",
+      "explanation": "The feature map's dimensions are (height, width, channels), where channels correspond to the number of filters."
+    },
+    {
+      "question": "What does a high activation value in a feature map signify?",
+      "type": "choice",
+      "options": [
+        "The filter's pattern was found at that location.",
+        "The filter's pattern was not found at that location.",
+        "The input image at that location was very bright.",
+        "The input image at that location was very dark."
+      ],
+      "answer": "The filter's pattern was found at that location.",
+      "explanation": "A high value indicates a strong response from the filter, meaning the pattern it is looking for is present in its receptive field."
+    },
+    {
+      "question": "Class activation visualization helps answer the question of '...' the model made its decision.",
+      "type": "blank",
+      "answer": "why",
+      "explanation": "It provides a crucial piece of the puzzle for understanding the model's reasoning by showing where it looked."
+    },
+    {
+      "question": "The features learned by convnets are hierarchical in...",
+      "type": "choice",
+      "options": [
+        "nature.",
+        "size.",
+        "color.",
+        "value."
+      ],
+      "answer": "nature.",
+      "explanation": "This means that features in deeper layers are built upon the features from earlier layers, forming a hierarchy of complexity."
+    },
+    {
+      "question": "To perform gradient ascent, you need a loss function, an input, and an...",
+      "type": "blank",
+      "answer": "optimizer",
+      "explanation": "An optimizer, like SGD, is used to iteratively apply the gradient updates to the input image."
+    },
+    {
+      "question": "The final CAM heatmap is generated by upsampling the weighted feature maps to the size of the...",
+      "type": "choice",
+      "options": [
+        "original input image.",
+        "first convolutional layer.",
+        "final dense layer.",
+        "output prediction vector."
+      ],
+      "answer": "original input image.",
+      "explanation": "The heatmap is resized so it can be overlaid on the original image for easy interpretation."
+    },
+    {
+      "question": "The more filters a layer has, the more ... its feature space.",
+      "type": "blank",
+      "answer": "abstract",
+      "explanation": "More filters allow the layer to learn a richer, more complex set of transformations on the input data."
+    },
+    {
+      "question": "The main idea behind filter visualization is to treat the ... as the quantity to be optimized.",
+      "type": "choice",
+      "options": [
+        "value of a filter activation",
+        "value of the final loss",
+        "value of the model's accuracy",
+        "value of the input pixels"
+      ],
+      "answer": "value of a filter activation",
+      "explanation": "You are optimizing the input image to maximize the response of a single filter, not the overall model loss."
+    },
+    {
+      "question": "A model making a correct prediction for the wrong reasons is a common failure mode detected by...",
+      "type": "blank",
+      "answer": "CAMs",
+      "explanation": "A Class Activation Map might reveal that a model classified a 'dog' correctly, but only because it was focusing on the leash in the image, not the dog itself."
+    },
+    {
+      "question": "What is a key difference between visualizing activations and visualizing filters?",
+      "type": "choice",
+      "options": [
+        "Activations are per-input; filters are per-model.",
+        "Activations are per-model; filters are per-input.",
+        "Activations are visualized with gradient ascent; filters are not.",
+        "Filters are visualized with heatmaps; activations are not."
+      ],
+      "answer": "Activations are per-input; filters are per-model.",
+      "explanation": "Activation visualization shows how a specific input is processed. Filter visualization shows the general pattern a filter has learned, independent of any specific input."
+    },
+    {
+      "question": "The 'receptive field' of a filter in a deeper layer is ... than in an earlier layer.",
+      "type": "blank",
+      "answer": "larger",
+      "explanation": "Because of the stacking of layers, a single unit in a deep layer is influenced by a larger patch of the original input image."
+    },
+    {
+      "question": "Which of these questions can be answered by visualizing intermediate activations?",
+      "type": "choice",
+      "options": [
+        "Did the model learn any redundant filters?",
+        "Did the model overfit the training data?",
+        "What was the model's final accuracy?",
+        "How long did the model take to train?"
+      ],
+      "answer": "Did the model learn any redundant filters?",
+      "explanation": "By looking at the activation maps for a given input, you might notice that some channels are consistently empty or that several filters appear to be detecting the exact same feature."
+    },
+    {
+      "question": "A CAM is created from the output of the last ... layer.",
+      "type": "blank",
+      "answer": "convolutional",
+      "explanation": "The last convolutional layer contains the richest spatial and semantic information before the data is flattened for the classifier."
+    },
+    {
+      "question": "The two main families of convnet interpretation techniques are visualizing activations and...",
+      "type": "choice",
+      "options": [
+        "visualizing filters.",
+        "visualizing weights.",
+        "visualizing losses.",
+        "visualizing optimizers."
+      ],
+      "answer": "visualizing filters.",
+      "explanation": "These two approaches provide complementary insights into what the model has learned and how it processes information."
+    },
+    {
+      "question": "The information about an object's class is primarily encoded in how ... the feature maps are.",
+      "type": "blank",
+      "answer": "active",
+      "explanation": "The presence of a class is indicated by which filters have high activations."
+    },
+    {
+      "question": "Gradient-based CAM methods are a powerful tool for increasing the ... of deep learning models.",
+      "type": "choice",
+      "options": [
+        "transparency.",
+        "accuracy.",
+        "speed.",
+        "capacity."
+      ],
+      "answer": "transparency.",
+      "explanation": "They make the model's decision-making process more transparent and understandable to humans."
+    },
+    {
+      "question": "The gradient in gradient ascent points in the direction of the steepest ... of a function.",
+      "type": "blank",
+      "answer": "ascent",
+      "explanation": "This is in contrast to gradient descent, where the gradient points in the direction of steepest descent, used for minimizing loss."
+    },
+    {
+      "question": "When interpreting a convnet, we are trying to build a ... model of its learned representations.",
+      "type": "choice",
+      "options": [
+        "mental",
+        "mathematical",
+        "statistical",
+        "physical"
+      ],
+      "answer": "mental",
+      "explanation": "The goal is to develop a human-understandable intuition for what the model is doing internally."
+    },
+    {
+      "question": "The filters in a convnet are learned automatically from...",
+      "type": "blank",
+      "answer": "data",
+      "explanation": "Unlike traditional computer vision where filters were hand-engineered, in deep learning the filters are learned during the training process."
+    },
+    {
+      "question": "A key benefit of interpretability is building ... in a model's predictions.",
+      "type": "choice",
+      "options": [
+        "trust.",
+        "complexity.",
+        "speed.",
+        "capacity."
+      ],
+      "answer": "trust.",
+      "explanation": "If you can see that a model is making decisions for the right reasons, you can have more confidence in its predictions, especially in high-stakes applications."
+    },
+    {
+      "question": "The filters from different layers of a convnet form a ... of representations.",
+      "type": "blank",
+      "answer": "hierarchy",
+      "explanation": "The network learns a hierarchy of features, from simple low-level patterns to complex high-level concepts."
+    },
+    {
+      "question": "Visualizing what a model 'sees' is a step towards more ... AI.",
+      "type": "choice",
+      "options": [
+        "explainable",
+        "accurate",
+        "efficient",
+        "powerful"
+      ],
+      "answer": "explainable",
+      "explanation": "These techniques are part of the broader field of Explainable AI (XAI), which aims to make AI systems more transparent and understandable."
+    },
+    {
+      "question": "The CAM technique weights feature maps by their importance for a given...",
+      "type": "blank",
+      "answer": "class",
+      "explanation": "The importance is determined by the gradient of the class score with respect to the feature map."
+    },
+    {
+      "question": "Ultimately, interpreting a convnet helps us understand the relationship between the model's ... and its learned features.",
+      "type": "choice",
+      "options": [
+        "inputs",
+        "outputs",
+        "weights",
+        "biases"
+      ],
+      "answer": "inputs",
+      "explanation": "These techniques reveal what aspects of the input data the learned features are responding to."
+    }
+  ]
+}
