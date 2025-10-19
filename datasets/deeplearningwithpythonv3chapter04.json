@@ -338,4 +338,112 @@
       "explanation": "Binary classification involves choosing between two classes, while multiclass involves choosing between more than two."
     },
     {
-      "
+      "question": "Another technique to mitigate overfitting is ..., which randomly zeros out features during training.",
+      "type": "blank",
+      "answer": "dropout",
+      "explanation": "Dropout is a regularization technique that prevents the network from becoming too reliant on any single feature."
+    },
+    {
+      "question": "In Keras, `model.compile()` is where you configure the model's...",
+      "type": "choice",
+      "options": [
+        "learning process.",
+        "layer architecture.",
+        "input data shape and type.",
+        "deployment environment and server settings."
+      ],
+      "answer": "learning process.",
+      "explanation": "The compile step specifies the optimizer, loss function, and metrics that define how the model will be trained and evaluated."
+    },
+    {
+      "question": "The ultimate goal of machine learning is to build models that perform well on ... data.",
+      "type": "blank",
+      "answer": "unseen",
+      "explanation": "Good performance on the training data is necessary, but the true test of a model is its ability to generalize to new, previously unseen data."
+    },
+    {
+      "question": "If your validation loss is much lower than your training loss, it might indicate...",
+      "type": "choice",
+      "options": [
+        "an issue with your data split or a non-representative validation set.",
+        "a perfectly generalized model.",
+        "severe underfitting of the training data.",
+        "that you should stop training immediately."
+      ],
+      "answer": "an issue with your data split or a non-representative validation set.",
+      "explanation": "Typically, validation loss should not be significantly lower than training loss; this suggests the validation set might be 'easier' than the training set."
+    },
+    {
+      "question": "For a multiclass classification problem with 46 classes, the final `Dense` layer should have ... units.",
+      "type": "blank",
+      "answer": "46",
+      "explanation": "The number of units in the output layer must match the number of classes for multiclass classification."
+    },
+    {
+      "question": "Which of these is considered a supervised learning problem?",
+      "type": "choice",
+      "options": [
+        "Predicting if an email is spam based on a labeled dataset of spam and non-spam emails.",
+        "Grouping customers into different market segments based on their purchasing behavior without predefined groups.",
+        "Finding the underlying structure in a large, unlabeled dataset of images.",
+        "A robot learning to walk through trial and error."
+      ],
+      "answer": "Predicting if an email is spam based on a labeled dataset of spam and non-spam emails.",
+      "explanation": "Supervised learning involves learning from a dataset containing both input features and corresponding target labels."
+    },
+    {
+      "question": "The process of feeding data to a model and getting predictions is called...",
+      "type": "blank",
+      "answer": "inference",
+      "explanation": "Inference is the phase where a trained model is used to make predictions on new data."
+    },
+    {
+      "question": "A model with high bias is likely...",
+      "type": "choice",
+      "options": [
+        "underfitting.",
+        "overfitting.",
+        "just right.",
+        "computationally very expensive to train and run."
+      ],
+      "answer": "underfitting.",
+      "explanation": "High bias means the model is too simple and makes strong assumptions about the data, leading to underfitting."
+    },
+    {
+      "question": "The shape of the input data for a sentiment analysis model is typically (samples, ...).",
+      "type": "blank",
+      "answer": "features",
+      "explanation": "The standard data representation is a 2D tensor where rows are samples (e.g., reviews) and columns are features (e.g., word indices)."
+    },
+    {
+      "question": "A model with high variance is likely...",
+      "type": "choice",
+      "options": [
+        "overfitting.",
+        "underfitting.",
+        "a linear model with few parameters.",
+        "very fast to train."
+      ],
+      "answer": "overfitting.",
+      "explanation": "High variance means the model is too sensitive to the training data, capturing noise and leading to overfitting."
+    },
+    {
+      "question": "In machine learning, the term for a single data point (e.g., one movie review, one house) is a...",
+      "type": "blank",
+      "answer": "sample",
+      "explanation": "A dataset is composed of many samples, each with its own set of features and a label (for supervised learning)."
+    },
+    {
+      "question": "The main challenge in supervised learning is finding the right balance between...",
+      "type": "choice",
+      "options": [
+        "fitting the training data well and generalizing to new data.",
+        "the speed of training and the accuracy of the final model.",
+        "the number of layers and the number of neurons per layer.",
+        "using a GPU versus using a CPU for the training process."
+      ],
+      "answer": "fitting the training data well and generalizing to new data.",
+      "explanation": "This is the core tension between optimization and generalization that every machine learning practitioner must manage."
+    }
+  ]
+}
