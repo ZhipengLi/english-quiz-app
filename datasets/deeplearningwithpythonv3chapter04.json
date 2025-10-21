@@ -1,449 +1,449 @@
 {
-  "text": "This quiz is based on the foundational concepts of classification and regression in machine learning. It covers topics such as binary and multiclass classification, loss functions (crossentropy), activation functions (sigmoid, softmax), regression tasks, evaluation metrics (accuracy, MSE), and the problem of overfitting.",
+  "text": "Fundamentals of machine learning. 4.1 Four branches of machine learning: Supervised learning, Unsupervised learning, Self-supervised learning, Reinforcement learning. 4.2 Evaluating machine-learning models: Training, validation, and test sets. 4.3 Data preprocessing, feature engineering, and feature learning: Data preprocessing for neural networks, Feature engineering. 4.4 Overfitting and underfitting: Reducing the network's size, Adding weight regularization, Adding dropout. 4.5 The universal workflow of machine learning.",
   "quiz": [
     {
-      "question": "Which activation function is typically used in the output layer for binary classification?",
+      "question": "Which branch of machine learning deals with data that has no pre-existing labels?",
       "type": "choice",
       "options": [
-        "Softmax",
-        "Sigmoid",
-        "ReLU",
-        "Linear, which is also commonly referred to as no activation function at all."
+        "Supervised learning, which is a method that involves a lot of data.",
+        "Reinforcement learning",
+        "Unsupervised learning",
+        "Self-supervised learning"
       ],
-      "answer": "Sigmoid",
-      "explanation": "The sigmoid function outputs a value between 0 and 1, which can be interpreted as the probability of belonging to the positive class."
+      "answer": "Unsupervised learning",
+      "explanation": "Unsupervised learning is used to find patterns in data that has not been labeled or categorized."
     },
     {
-      "question": "The task of predicting a continuous numerical value, such as a price or temperature, is called...",
+      "question": "The three fundamental sets for model evaluation are training, validation, and...",
       "type": "blank",
-      "answer": "regression",
-      "explanation": "Regression is a type of supervised learning where the goal is to predict a continuous output."
+      "answer": "test",
+      "explanation": "The test set is used to provide an unbiased evaluation of a final model fit on the training dataset."
     },
     {
-      "question": "What is the primary purpose of a loss function in machine learning?",
+      "question": "What is the primary purpose of a validation set in machine learning?",
       "type": "choice",
       "options": [
-        "To measure the model's performance on the training data, guiding the weight updates.",
-        "To measure the number of layers and neurons in the model architecture before training begins.",
-        "To select the best hyperparameters for the model.",
-        "To normalize the input data before it is fed into the network."
+        "To train the model on a final, unseen dataset.",
+        "To provide an unbiased evaluation of the final model.",
+        "To tune the model's hyperparameters.",
+        "To gather more data for the training process."
       ],
-      "answer": "To measure the model's performance on the training data, guiding the weight updates.",
-      "explanation": "The loss function quantifies the error between the model's predictions and the true labels, which the optimizer then tries to minimize."
+      "answer": "To tune the model's hyperparameters.",
+      "explanation": "The validation set is used to fine-tune the model's hyperparameters and prevent overfitting."
     },
     {
-      "question": "For multiclass classification, the standard loss function used is...",
+      "question": "The process of transforming raw data into a format that is more suitable for a machine learning model is called...",
       "type": "blank",
-      "answer": "categorical crossentropy",
-      "explanation": "Categorical crossentropy is designed to measure the difference between two probability distributions, making it ideal for multiclass problems."
+      "answer": "data preprocessing",
+      "explanation": "Data preprocessing is a crucial step in the machine learning pipeline."
     },
     {
-      "question": "In a multiclass classification problem, the output layer of the neural network should have an activation function of...",
+      "question": "Which of the following is a common technique to combat overfitting in a neural network?",
       "type": "choice",
       "options": [
-        "Sigmoid",
-        "Softmax",
-        "ReLU",
-        "Tanh"
+        "Adding more layers to the network, which will always improve performance.",
+        "Increasing the number of epochs.",
+        "Adding dropout.",
+        "Using a more complex activation function."
       ],
-      "answer": "Softmax",
-      "explanation": "The softmax function outputs a probability distribution across all classes, where the probabilities sum to 1."
+      "answer": "Adding dropout.",
+      "explanation": "Dropout is a regularization technique that helps prevent overfitting by randomly setting a fraction of input units to 0 at each update during training time."
     },
     {
-      "question": "The most common evaluation metric for regression tasks is...",
-      "type": "blank",
-      "answer": "mean squared error",
-      "explanation": "Mean Squared Error (MSE) measures the average of the squares of the errors between predicted and actual values."
-    },
-    {
-      "question": "What does it mean if a model is 'overfitting'?",
-      "type": "choice",
-      "options": [
-        "It performs well on training data but poorly on unseen data.",
-        "It performs poorly on both training data and unseen data.",
-        "It performs exceptionally well on both training and unseen data, indicating a perfect model.",
-        "The model is too simple to capture the underlying patterns in the training data."
-      ],
-      "answer": "It performs well on training data but poorly on unseen data.",
-      "explanation": "Overfitting occurs when a model learns the training data's noise and details too well, failing to generalize to new data."
-    },
-    {
-      "question": "In a regression problem, the output layer typically has no activation function, which is also known as a ... activation.",
-      "type": "blank",
-      "answer": "linear",
-      "explanation": "A linear activation allows the network to output values in any range, which is necessary for predicting continuous quantities."
-    },
-    {
-      "question": "The `binary_crossentropy` loss function is specifically designed for what type of problem?",
-      "type": "choice",
-      "options": [
-        "Multiclass classification",
-        "Binary classification",
-        "Regression with two output variables",
-        "Any classification problem with a small number of samples."
-      ],
-      "answer": "Binary classification",
-      "explanation": "It is the standard choice for problems with two output classes, measuring the distance between probability distributions."
-    },
-    {
-      "question": "A model with too much capacity for a small dataset is likely to...",
-      "type": "blank",
-      "answer": "overfit",
-      "explanation": "High model capacity (e.g., many layers or neurons) allows the model to memorize the training data instead of learning general patterns."
-    },
-    {
-      "question": "What is the purpose of splitting data into training, validation, and test sets?",
-      "type": "choice",
-      "options": [
-        "To train on one part, tune hyperparameters on another, and finally evaluate on a third.",
-        "To train the model three separate times for a more robust result.",
-        "To use all the data for training, which ensures the model learns as much as possible.",
-        "To decrease the total amount of time required to train the model."
-      ],
-      "answer": "To train on one part, tune hyperparameters on another, and finally evaluate on a third.",
-      "explanation": "This separation ensures a reliable evaluation of the model's ability to generalize to new, unseen data."
-    },
-    {
-      "question": "The number of output units in the final layer of a multiclass classification model should be equal to the number of...",
-      "type": "blank",
-      "answer": "classes",
-      "explanation": "Each output unit in the final layer corresponds to one of the possible classes in the classification problem."
-    },
-    {
-      "question": "Which of the following is a common technique to combat overfitting?",
-      "type": "choice",
-      "options": [
-        "Using a smaller network.",
-        "Training the model for more epochs.",
-        "Using a very large and complex network architecture.",
-        "Increasing the size of the training batches."
-      ],
-      "answer": "Using a smaller network.",
-      "explanation": "Reducing the model's capacity (fewer layers or units) makes it harder for the model to memorize the training data."
-    },
-    {
-      "question": "When your training loss continuously decreases but your validation loss starts to increase, you are witnessing...",
+      "question": "A model that performs well on the training data but poorly on unseen data is said to be...",
       "type": "blank",
       "answer": "overfitting",
-      "explanation": "This divergence is the classic sign that the model is no longer generalizing and is beginning to memorize the training data."
+      "explanation": "Overfitting occurs when a model learns the training data too well, including its noise and fluctuations."
     },
     {
-      "question": "For a regression task predicting house prices, what would be the shape of the final output layer?",
+      "question": "What is the main idea behind supervised learning?",
       "type": "choice",
       "options": [
-        "A single unit with no activation.",
-        "A single unit with a sigmoid activation.",
-        "Multiple units with a softmax activation, one for each price range.",
-        "Two units with no activation, representing a price range."
+        "Learning from data without any labels.",
+        "Learning from labeled data.",
+        "Learning through trial and error.",
+        "Learning to generate new data."
       ],
-      "answer": "A single unit with no activation.",
-      "explanation": "Since the goal is to predict a single continuous value (the price), a single output unit with a linear activation is appropriate."
+      "answer": "Learning from labeled data.",
+      "explanation": "In supervised learning, the model learns from data that has been manually labeled with the correct output."
     },
     {
-      "question": "The process of converting text data into numerical tensors is a form of...",
+      "question": "The process of creating new features from existing ones is known as...",
       "type": "blank",
-      "answer": "vectorization",
-      "explanation": "Vectorization is the general process of turning non-numeric data into a numerical format that neural networks can process."
+      "answer": "feature engineering",
+      "explanation": "Feature engineering is often a critical step in improving model performance."
     },
     {
-      "question": "Which metric is often misleading for a dataset with a severe class imbalance?",
+      "question": "Which of the following best describes reinforcement learning?",
       "type": "choice",
       "options": [
-        "Accuracy",
-        "Mean Squared Error",
-        "Precision, especially when combined with recall to understand the full picture.",
-        "Mean Absolute Error"
+        "Learning from a labeled dataset provided by a supervisor.",
+        "Learning to act based on rewards and punishments.",
+        "Learning to find hidden patterns in unlabeled data.",
+        "Learning to generate new data that resembles the training data."
       ],
-      "answer": "Accuracy",
-      "explanation": "A model can achieve high accuracy on an imbalanced dataset by simply predicting the majority class every time."
+      "answer": "Learning to act based on rewards and punishments.",
+      "explanation": "Reinforcement learning involves an agent that learns to make decisions by taking actions in an environment to maximize some notion of cumulative reward."
     },
     {
-      "question": "A model that performs poorly on the training data is said to be...",
+      "question": "A model that is too simple to capture the underlying patterns in the data is said to be...",
       "type": "blank",
       "answer": "underfitting",
-      "explanation": "Underfitting occurs when the model is not complex enough to capture the underlying patterns in the data."
+      "explanation": "Underfitting is the opposite of overfitting and occurs when a model is not complex enough to capture the trends in the data."
     },
     {
-      "question": "If your model's predictions for a binary classification task are probabilistic (e.g., 0.87), what is the final step to get a concrete class label?",
+      "question": "What is the purpose of a test set?",
       "type": "choice",
       "options": [
-        "Rounding the output to 0 or 1 based on a threshold.",
-        "Applying a softmax function to the output.",
-        "Calculating the mean squared error of the output.",
-        "Retraining the model with a different loss function."
+        "To train the model and learn the parameters.",
+        "To provide an unbiased evaluation of the final model.",
+        "To tune the hyperparameters of the model.",
+        "To perform feature engineering and data preprocessing."
       ],
-      "answer": "Rounding the output to 0 or 1 based on a threshold.",
-      "explanation": "The probabilistic output from the sigmoid function is typically rounded (e.g., > 0.5 becomes 1) to get the final prediction."
+      "answer": "To provide an unbiased evaluation of the final model.",
+      "explanation": "The test set should only be used once the model is finalized to get a true sense of its performance on unseen data."
     },
     {
-      "question": "The fundamental trade-off in machine learning is between optimization and...",
+      "question": "In the context of machine learning, 'self-supervised learning' is a type of...",
       "type": "blank",
-      "answer": "generalization",
-      "explanation": "The goal is not just to optimize performance on the training data, but to build a model that generalizes well to new data."
+      "answer": "unsupervised learning",
+      "explanation": "Self-supervised learning is often considered a subset of unsupervised learning where the labels are generated from the data itself."
     },
     {
-      "question": "What is the purpose of using hidden layers with ReLU activation in a deep neural network?",
+      "question": "Reducing the size of a neural network is one way to combat...",
       "type": "choice",
       "options": [
-        "To introduce non-linearity, allowing the network to learn complex patterns.",
-        "To ensure the final output is a probability distribution.",
-        "To constrain the output of the network to be between 0 and 1.",
-        "To directly calculate the loss function for the regression task."
+        "Underfitting, as a smaller network is always better.",
+        "Overfitting.",
+        "Data leakage.",
+        "High variance."
       ],
-      "answer": "To introduce non-linearity, allowing the network to learn complex patterns.",
-      "explanation": "Without non-linearities like ReLU, a deep network would behave like a single, simple linear model."
+      "answer": "Overfitting.",
+      "explanation": "A smaller network has less capacity to memorize the training data, which can help prevent overfitting."
     },
     {
-      "question": "Information 'leaking' from the test set into the model during development can lead to an unreliable evaluation of...",
+      "question": "A technique that adds a penalty to the loss function to discourage large weights is called...",
       "type": "blank",
-      "answer": "generalization",
-      "explanation": "If the model's development is influenced by the test set, its final performance metric on that set will be artificially inflated."
+      "answer": "weight regularization",
+      "explanation": "Weight regularization is another common technique to prevent overfitting."
     },
     {
-      "question": "The IMDB dataset for sentiment analysis is a classic example of what type of problem?",
+      "question": "The branch of machine learning that is most similar to how humans learn from experience is...",
       "type": "choice",
       "options": [
-        "Binary classification",
-        "Multiclass classification",
-        "Scalar regression",
-        "Vector regression with multiple continuous outputs."
+        "Supervised learning",
+        "Unsupervised learning",
+        "Reinforcement learning",
+        "Self-supervised learning"
       ],
-      "answer": "Binary classification",
-      "explanation": "Each movie review is classified into one of two categories: positive or negative."
+      "answer": "Reinforcement learning",
+      "explanation": "Reinforcement learning's trial-and-error approach is analogous to how humans and animals learn."
     },
     {
-      "question": "When working with small datasets, a technique called K-fold ... is often used for more reliable model evaluation.",
+        "question": "The universal workflow of machine learning begins with defining the problem and assembling a...",
+        "type": "blank",
+        "answer": "dataset",
+        "explanation": "The first step in any machine learning project is to understand the problem and gather the necessary data."
+    },
+    {
+        "question": "Which of the following is a key part of data preprocessing for neural networks?",
+        "type": "choice",
+        "options": [
+            "Visualizing the data",
+            "Scaling the features",
+            "Training the model",
+            "All of the above"
+        ],
+        "answer": "Scaling the features",
+        "explanation": "Scaling features to a similar range is important for the stable training of neural networks."
+    },
+    {
+        "question": "The goal of machine learning is to build models that can...",
+        "type": "blank",
+        "answer": "generalize",
+        "explanation": "A good machine learning model should be able to make accurate predictions on new, unseen data."
+    },
+    {
+        "question": "In classification tasks, the model predicts a...",
+        "type": "choice",
+        "options": [
+            "Continuous value",
+            "Categorical label",
+            "Probability distribution",
+            "Time series"
+        ],
+        "answer": "Categorical label",
+        "explanation": "Classification models assign a category to each input."
+    },
+    {
+        "question": "In regression tasks, the model predicts a...",
+        "type": "blank",
+        "answer": "continuous value",
+        "explanation": "Regression models predict a numerical value."
+    },
+    {
+        "question": "Which of these is NOT one of the four main branches of machine learning?",
+        "type": "choice",
+        "options": [
+            "Deep learning",
+            "Supervised learning",
+            "Unsupervised learning",
+            "Reinforcement learning"
+        ],
+        "answer": "Deep learning",
+        "explanation": "Deep learning is a subfield of machine learning, not one of the four main branches."
+    },
+    {
+        "question": "When a model is overfitting, it has high...",
+        "type": "blank",
+        "answer": "variance",
+        "explanation": "High variance means the model is too sensitive to the training data."
+    },
+    {
+        "question": "When a model is underfitting, it has high...",
+        "type": "choice",
+        "options": [
+            "Variance",
+            "Bias",
+            "Accuracy",
+            "Precision"
+        ],
+        "answer": "Bias",
+        "explanation": "High bias means the model is too simple and makes strong assumptions about the data."
+    },
+    {
+        "question": "The process of splitting data into training, validation, and test sets is called...",
+        "type": "blank",
+        "answer": "data splitting",
+        "explanation": "This is a crucial step for evaluating a model's performance."
+    },
+    {
+        "question": "Which of the following is an example of a supervised learning task?",
+        "type": "choice",
+        "options": [
+            "Customer segmentation",
+            "Image classification",
+            "Anomaly detection",
+            "Playing a game of chess"
+        ],
+        "answer": "Image classification",
+        "explanation": "In image classification, the model is trained on a dataset of images with corresponding labels."
+    },
+    {
+        "question": "The universal workflow of machine learning is a...",
+        "type": "blank",
+        "answer": "template",
+        "explanation": "It provides a general framework for approaching machine learning problems."
+    },
+    {
+        "question": "Feature learning is the process of automatically discovering new...",
+        "type": "choice",
+        "options": [
+            "Features",
+            "Models",
+            "Algorithms",
+            "Datasets"
+        ],
+        "answer": "Features",
+        "explanation": "Deep learning models are particularly good at feature learning."
+    },
+    {
+        "question": "What is the final step in the universal workflow of machine learning?",
+        "type": "blank",
+        "answer": "deployment",
+        "explanation": "After a model is trained and evaluated, it needs to be deployed to be used in a real-world application."
+    },
+    {
+        "question": "Which of the following is NOT a data preprocessing technique?",
+        "type": "choice",
+        "options": [
+            "Normalization",
+            "Standardization",
+            "Model training",
+            "Handling missing values"
+        ],
+        "answer": "Model training",
+        "explanation": "Model training is a separate step from data preprocessing."
+    },
+    {
+        "question": "Regularization techniques are used to prevent...",
+        "type": "blank",
+        "answer": "overfitting",
+        "explanation": "Regularization helps to control the complexity of the model."
+    },
+    {
+      "question": "What kind of problem is predicting the price of a house?",
+      "type": "choice",
+      "options": [
+        "Classification",
+        "Regression",
+        "Clustering",
+        "Reinforcement learning"
+      ],
+      "answer": "Regression",
+      "explanation": "Predicting a continuous value like price is a regression problem."
+    },
+    {
+      "question": "A common metric for evaluating a classification model is...",
       "type": "blank",
-      "answer": "cross-validation",
-      "explanation": "K-fold cross-validation involves splitting the data into K partitions and training K models, providing a more robust performance estimate."
+      "answer": "accuracy",
+      "explanation": "Accuracy measures the proportion of correct predictions."
     },
     {
-      "question": "Increasing the number of epochs in training will always result in...",
+      "question": "A common metric for evaluating a regression model is...",
       "type": "choice",
       "options": [
-        "a lower loss on the training data.",
-        "a lower loss on the validation data.",
-        "a better overall model that generalizes more effectively.",
-        "a faster convergence to the optimal solution."
+        "Mean squared error",
+        "Accuracy",
+        "Precision",
+        "Recall"
       ],
-      "answer": "a lower loss on the training data.",
-      "explanation": "The model will continue to fit the training data better with more epochs, but this often leads to overfitting and worse validation performance."
+      "answer": "Mean squared error",
+      "explanation": "Mean squared error measures the average of the squares of the errors."
     },
     {
-      "question": "Mean Absolute Error (MAE) is another metric for ... tasks.",
+      "question": "The learning rate is a hyperparameter that controls how much to change the model in response to the estimated...",
       "type": "blank",
-      "answer": "regression",
-      "explanation": "MAE measures the average absolute difference between predictions and true values, and is less sensitive to outliers than MSE."
+      "answer": "error",
+      "explanation": "The learning rate is a critical hyperparameter to tune during training."
     },
     {
-      "question": "The process of adjusting a model's hyperparameters based on performance on the validation set is a form of...",
+      "question": "The loss function measures how well the model's predictions match the...",
       "type": "choice",
       "options": [
-        "learning.",
-        "predicting.",
-        "inference on the unseen test data.",
-        "vectorizing."
+        "Training data",
+        "True labels",
+        "Validation data",
+        "Test data"
       ],
-      "answer": "learning.",
-      "explanation": "This is a form of 'meta-learning' where you are learning the best settings for the model's architecture and training process."
+      "answer": "True labels",
+      "explanation": "The goal of training is to minimize the loss function."
     },
     {
-      "question": "A model's 'capacity' refers to its ability to fit a wide variety of...",
+      "question": "An epoch is one complete pass through the entire...",
       "type": "blank",
-      "answer": "functions",
-      "explanation": "A model with higher capacity (more parameters) can learn more complex relationships in the data, but is also more prone to overfitting."
+      "answer": "training dataset",
+      "explanation": "The number of epochs is a hyperparameter that can be tuned."
     },
     {
-      "question": "Why is it important to have a separate test set that is never used during training or validation?",
+      "question": "Batch size is the number of training examples utilized in one...",
       "type": "choice",
       "options": [
-        "To get a final, unbiased measure of the model's performance.",
-        "To use for one final round of training after hyperparameters are tuned.",
-        "To speed up the training process by reducing the dataset size.",
-        "To check for bugs in the implementation of the model."
+        "Epoch",
+        "Iteration",
+        "Model",
+        "Layer"
       ],
-      "answer": "To get a final, unbiased measure of the model's performance.",
-      "explanation": "The test set simulates real-world, unseen data, providing the most accurate assessment of how the model will perform after deployment."
+      "answer": "Iteration",
+      "explanation": "The batch size is another important hyperparameter to tune."
     },
     {
-      "question": "The labels for a multiclass classification problem are often converted into an all-zero vector with a single '1' using ... encoding.",
+      "question": "The activation function of a neuron defines the output of that neuron given a set of...",
       "type": "blank",
-      "answer": "one-hot",
-      "explanation": "One-hot encoding is a standard way to represent categorical labels in a format suitable for training with categorical crossentropy."
+      "answer": "inputs",
+      "explanation": "Activation functions introduce non-linearity into the model."
     },
     {
-      "question": "If your regression model predicts a price of $500k and the actual price was $450k, the Mean Absolute Error for this one sample is...",
+      "question": "Which of the following is a common activation function?",
       "type": "choice",
       "options": [
-        "$50k",
-        "$2500k^2",
-        "$475k",
-        "$950k"
+        "ReLU",
+        "Adam",
+        "Dropout",
+        "L2"
       ],
-      "answer": "$50k",
-      "explanation": "MAE is the absolute difference between the predicted value and the true value (|$500k - $450k| = $50k)."
+      "answer": "ReLU",
+      "explanation": "ReLU (Rectified Linear Unit) is a popular activation function."
     },
     {
-      "question": "The core issue with overfitting is a failure to...",
+      "question": "The optimizer is an algorithm used to change the attributes of the neural network such as weights and learning rate to reduce the...",
       "type": "blank",
-      "answer": "generalize",
-      "explanation": "A model that overfits has learned specifics from the training set that do not apply to new, unseen data."
+      "answer": "losses",
+      "explanation": "The optimizer is what drives the learning process."
     },
     {
-      "question": "The final layer of a neural network is often referred to as the ... layer.",
+      "question": "Which of the following is a common optimizer?",
       "type": "choice",
       "options": [
-        "output",
-        "input",
-        "hidden",
-        "dense"
+        "Adam",
+        "ReLU",
+        "Sigmoid",
+        "Tanh"
       ],
-      "answer": "output",
-      "explanation": "The output layer produces the final predictions of the model."
+      "answer": "Adam",
+      "explanation": "Adam is a popular and effective optimizer."
     },
     {
-      "question": "A network that is too small or trained for too few epochs might...",
+      "question": "A deep neural network has multiple hidden...",
       "type": "blank",
-      "answer": "underfit",
-      "explanation": "Underfitting occurs when the model lacks the capacity or training time to learn the important patterns in the data."
+      "answer": "layers",
+      "explanation": "The 'deep' in deep learning refers to the number of layers."
     },
     {
-      "question": "The Boston Housing dataset is a classic example of what type of problem?",
+      "question": "The input layer of a neural network receives the...",
       "type": "choice",
       "options": [
-        "Scalar regression",
-        "Binary classification",
-        "Multiclass classification with 13 classes",
-        "Vector regression"
+        "Raw data",
+        "Predictions",
+        "Loss",
+        "Labels"
       ],
-      "answer": "Scalar regression",
-      "explanation": "The goal is to predict a single continuous value: the median price of homes in a neighborhood."
+      "answer": "Raw data",
+      "explanation": "The input layer is the first layer of the network."
     },
     {
-      "question": "When monitoring training, plotting the training and validation ... over epochs is crucial.",
+      "question": "The output layer of a neural network produces the final...",
       "type": "blank",
-      "answer": "loss",
-      "explanation": "Plotting the loss curves is the primary way to diagnose issues like overfitting or underfitting."
+      "answer": "predictions",
+      "explanation": "The output layer is the last layer of the network."
     },
     {
-      "question": "What is the key difference between binary and multiclass classification?",
+      "question": "Backpropagation is the algorithm used to train...",
       "type": "choice",
       "options": [
-        "The number of exclusive classes to choose from.",
-        "The type of data used (text vs. images).",
-        "The need for a validation set, which is only required for multiclass problems.",
-        "The total size of the dataset."
+        "Neural networks",
+        "Decision trees",
+        "Support vector machines",
+        "K-means clustering"
       ],
-      "answer": "The number of exclusive classes to choose from.",
-      "explanation": "Binary classification involves choosing between two classes, while multiclass involves choosing between more than two."
+      "answer": "Neural networks",
+      "explanation": "Backpropagation is the core algorithm for training deep learning models."
     },
     {
-      "question": "Another technique to mitigate overfitting is ..., which randomly zeros out features during training.",
+      "question": "Gradient descent is an optimization algorithm used to find the...",
       "type": "blank",
-      "answer": "dropout",
-      "explanation": "Dropout is a regularization technique that prevents the network from becoming too reliant on any single feature."
+      "answer": "local minimum",
+      "explanation": "It iteratively moves in the direction of the negative gradient of the loss function."
     },
     {
-      "question": "In Keras, `model.compile()` is where you configure the model's...",
+      "question": "A hyperparameter is a parameter whose value is set before the...",
       "type": "choice",
       "options": [
-        "learning process.",
-        "layer architecture.",
-        "input data shape and type.",
-        "deployment environment and server settings."
+        "Training process begins",
+        "Model is evaluated",
+        "Data is preprocessed",
+        "Model is deployed"
       ],
-      "answer": "learning process.",
-      "explanation": "The compile step specifies the optimizer, loss function, and metrics that define how the model will be trained and evaluated."
+      "answer": "Training process begins",
+      "explanation": "Hyperparameters are not learned by the model itself."
     },
     {
-      "question": "The ultimate goal of machine learning is to build models that perform well on ... data.",
+      "question": "Cross-validation is a technique for assessing how the results of a statistical analysis will generalize to an independent...",
       "type": "blank",
-      "answer": "unseen",
-      "explanation": "Good performance on the training data is necessary, but the true test of a model is its ability to generalize to new, previously unseen data."
+      "answer": "dataset",
+      "explanation": "It is a robust method for model evaluation."
     },
     {
-      "question": "If your validation loss is much lower than your training loss, it might indicate...",
+      "question": "A confusion matrix is a table that is often used to describe the performance of a...",
       "type": "choice",
       "options": [
-        "an issue with your data split or a non-representative validation set.",
-        "a perfectly generalized model.",
-        "severe underfitting of the training data.",
-        "that you should stop training immediately."
+        "Classification model",
+        "Regression model",
+        "Clustering model",
+        "Reinforcement learning model"
       ],
-      "answer": "an issue with your data split or a non-representative validation set.",
-      "explanation": "Typically, validation loss should not be significantly lower than training loss; this suggests the validation set might be 'easier' than the training set."
-    },
-    {
-      "question": "For a multiclass classification problem with 46 classes, the final `Dense` layer should have ... units.",
-      "type": "blank",
-      "answer": "46",
-      "explanation": "The number of units in the output layer must match the number of classes for multiclass classification."
-    },
-    {
-      "question": "Which of these is considered a supervised learning problem?",
-      "type": "choice",
-      "options": [
-        "Predicting if an email is spam based on a labeled dataset of spam and non-spam emails.",
-        "Grouping customers into different market segments based on their purchasing behavior without predefined groups.",
-        "Finding the underlying structure in a large, unlabeled dataset of images.",
-        "A robot learning to walk through trial and error."
-      ],
-      "answer": "Predicting if an email is spam based on a labeled dataset of spam and non-spam emails.",
-      "explanation": "Supervised learning involves learning from a dataset containing both input features and corresponding target labels."
-    },
-    {
-      "question": "The process of feeding data to a model and getting predictions is called...",
-      "type": "blank",
-      "answer": "inference",
-      "explanation": "Inference is the phase where a trained model is used to make predictions on new data."
-    },
-    {
-      "question": "A model with high bias is likely...",
-      "type": "choice",
-      "options": [
-        "underfitting.",
-        "overfitting.",
-        "just right.",
-        "computationally very expensive to train and run."
-      ],
-      "answer": "underfitting.",
-      "explanation": "High bias means the model is too simple and makes strong assumptions about the data, leading to underfitting."
-    },
-    {
-      "question": "The shape of the input data for a sentiment analysis model is typically (samples, ...).",
-      "type": "blank",
-      "answer": "features",
-      "explanation": "The standard data representation is a 2D tensor where rows are samples (e.g., reviews) and columns are features (e.g., word indices)."
-    },
-    {
-      "question": "A model with high variance is likely...",
-      "type": "choice",
-      "options": [
-        "overfitting.",
-        "underfitting.",
-        "a linear model with few parameters.",
-        "very fast to train."
-      ],
-      "answer": "overfitting.",
-      "explanation": "High variance means the model is too sensitive to the training data, capturing noise and leading to overfitting."
-    },
-    {
-      "question": "In machine learning, the term for a single data point (e.g., one movie review, one house) is a...",
-      "type": "blank",
-      "answer": "sample",
-      "explanation": "A dataset is composed of many samples, each with its own set of features and a label (for supervised learning)."
-    },
-    {
-      "question": "The main challenge in supervised learning is finding the right balance between...",
-      "type": "choice",
-      "options": [
-        "fitting the training data well and generalizing to new data.",
-        "the speed of training and the accuracy of the final model.",
-        "the number of layers and the number of neurons per layer.",
-        "using a GPU versus using a CPU for the training process."
-      ],
-      "answer": "fitting the training data well and generalizing to new data.",
-      "explanation": "This is the core tension between optimization and generalization that every machine learning practitioner must manage."
+      "answer": "Classification model",
+      "explanation": "It shows the number of correct and incorrect predictions for each class."
     }
   ]
 }
