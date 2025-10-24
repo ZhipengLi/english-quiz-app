@@ -1,1 +1,605 @@
-
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "pounce __ ____",
+      "type": "blank",
+      "answer": "on prey",
+      "explanation": "猛扑，猛扑猎物。The cat would pounce on prey with lightning speed. 猫会以闪电般的速度猛扑猎物。"
+    },
+    {
+      "question": "___ ___ reminisce",
+      "type": "blank",
+      "answer": "sit and",
+      "explanation": "回忆，坐下来回忆。The old friends would sit and reminisce about their school days. 老朋友们会坐下来回忆他们的学生时代。"
+    },
+    {
+      "question": "_________ deduce",
+      "type": "blank",
+      "answer": "logically",
+      "explanation": "推断，逻辑推断。Sherlock Holmes could logically deduce the solution from small clues. 夏洛克·福尔摩斯可以从小线索中逻辑地推断出答案。"
+    },
+    {
+      "question": "puce _____",
+      "type": "blank",
+      "answer": "dress",
+      "explanation": "紫褐色，紫褐色连衣裙。She wore an elegant puce dress to the evening gala. 她穿着一件优雅的紫褐色连衣裙参加晚宴。"
+    },
+    {
+      "question": "______ barricade",
+      "type": "blank",
+      "answer": "police",
+      "explanation": "路障，警察路障。Officers set up a police barricade to control the crowd. 警察设置了警察路障来控制人群。"
+    },
+    {
+      "question": "______ marmalade",
+      "type": "blank",
+      "answer": "orange",
+      "explanation": "果酱，橙子果酱。She spread thick orange marmalade on her morning toast. 她在早餐吐司上涂了厚厚的橙子果酱。"
+    },
+    {
+      "question": "________ serenade",
+      "type": "blank",
+      "answer": "romantic",
+      "explanation": "小夜曲，浪漫小夜曲。The guitarist performed a romantic serenade under her window. 吉他手在她的窗下演奏了一首浪漫小夜曲。"
+    },
+    {
+      "question": "_____ grenade",
+      "type": "blank",
+      "answer": "throw",
+      "explanation": "手榴弹，投掷手榴弹。The soldier was trained to throw grenade with precision. 士兵接受训练以精确投掷手榴弹。"
+    },
+    {
+      "question": "______ spade",
+      "type": "blank",
+      "answer": "garden",
+      "explanation": "铁锹，园艺铁锹。The gardener used a sharp garden spade to dig the flower bed. 园丁用锋利的园艺铁锹挖花坛。"
+    },
+    {
+      "question": "dissuade _______",
+      "type": "blank",
+      "answer": "someone",
+      "explanation": "劝阻，劝阻某人。They tried to dissuade someone from making a rash decision. 他们试图劝阻某人做出草率的决定。"
+    },
+    {
+      "question": "evade _____",
+      "type": "blank",
+      "answer": "taxes",
+      "explanation": "逃避，逃税。The businessman was arrested for attempting to evade taxes. 这位商人因试图逃税而被捕。"
+    },
+    {
+      "question": "____ pervade",
+      "type": "blank",
+      "answer": "fear",
+      "explanation": "弥漫，恐惧弥漫。A sense of unease would fear pervade the abandoned building. 一种不安感会在废弃建筑中弥漫恐惧。"
+    },
+    {
+      "question": "recede ____ ________",
+      "type": "blank",
+      "answer": "into distance",
+      "explanation": "后退，消失在远方。The ship's lights would recede into distance as it sailed away. 船驶离时，船上的灯光会消失在远方。"
+    },
+    {
+      "question": "precede ______",
+      "type": "blank",
+      "answer": "speech",
+      "explanation": "在...之前，演讲之前。A moment of silence would precede speech at the memorial. 在纪念活动上，演讲之前会有片刻的沉默。"
+    },
+    {
+      "question": "concede ______",
+      "type": "blank",
+      "answer": "defeat",
+      "explanation": "承认，承认失败。The candidate was forced to concede defeat after the final count. 在最终计票后，候选人被迫承认失败。"
+    },
+    {
+      "question": "____ stampede",
+      "type": "blank",
+      "answer": "wild",
+      "explanation": "惊跑，野性的惊跑。A wild stampede of buffalo thundered across the plain. 一群野牛的惊跑在平原上轰鸣而过。"
+    },
+    {
+      "question": "impede ________",
+      "type": "blank",
+      "answer": "progress",
+      "explanation": "阻碍，阻碍进展。Bureaucratic red tape can impede progress on important projects. 官僚繁文缛节会阻碍重要项目的进展。"
+    },
+    {
+      "question": "bide ____",
+      "type": "blank",
+      "answer": "time",
+      "explanation": "等待，等待时机。The hunter would bide time until the perfect moment to strike. 猎人会等待时机直到完美的出击时刻。"
+    },
+    {
+      "question": "confide __ ______",
+      "type": "blank",
+      "answer": "in friend",
+      "explanation": "倾诉，向朋友倾诉。She needed someone to confide in friend about her troubles. 她需要有人能向朋友倾诉她的烦恼。"
+    },
+    {
+      "question": "chide ______",
+      "type": "blank",
+      "answer": "gently",
+      "explanation": "责备，温和地责备。The teacher would chide gently when students forgot their homework. 当学生忘记作业时，老师会温和地责备。"
+    },
+    {
+      "question": "snide ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "讥讽的，讥讽的评论。His snide remark about her appearance was completely uncalled for. 他对她外貌的讥讽评论完全不合时宜。"
+    },
+    {
+      "question": "override ____",
+      "type": "blank",
+      "answer": "veto",
+      "explanation": "推翻，推翻否决。Congress voted to override veto with a two-thirds majority. 国会以三分之二多数投票推翻否决。"
+    },
+    {
+      "question": "____ stride",
+      "type": "blank",
+      "answer": "long",
+      "explanation": "大步，大步走。The tall man walked with a long stride across the room. 这个高个子男人迈着大步穿过房间。"
+    },
+    {
+      "question": "___ astride",
+      "type": "blank",
+      "answer": "sit",
+      "explanation": "跨坐，跨坐。The cowboy would sit astride his horse with confidence. 牛仔会自信地跨坐在马上。"
+    },
+    {
+      "question": "floodwaters ______",
+      "type": "blank",
+      "answer": "subside",
+      "explanation": "消退，洪水消退。It took days for the floodwaters subside after the storm. 暴风雨后，洪水花了好几天才消退。"
+    },
+    {
+      "question": "____ backside",
+      "type": "blank",
+      "answer": "bare",
+      "explanation": "臀部，裸露的臀部。The streaker ran across the field showing his bare backside. 裸奔者跑过场地，露出他裸露的臀部。"
+    },
+    {
+      "question": "underside __ ___",
+      "type": "blank",
+      "answer": "of car",
+      "explanation": "底部，汽车底部。The mechanic inspected the underside of car for damage. 机械师检查了汽车底部是否有损坏。"
+    },
+    {
+      "question": "________ wayside",
+      "type": "blank",
+      "answer": "roadside",
+      "explanation": "路边，路边。They stopped at a roadside wayside rest area for lunch. 他们在路边休息区停下来吃午饭。"
+    },
+    {
+      "question": "___ betide",
+      "type": "blank",
+      "answer": "woe",
+      "explanation": "降临，祸事降临。Woe betide anyone who crosses the angry king. 任何触怒国王的人都会有祸事降临。"
+    },
+    {
+      "question": "seclude _______",
+      "type": "blank",
+      "answer": "oneself",
+      "explanation": "隐居，隐居自己。The writer would seclude oneself in a cabin to work on the novel. 作家会在小屋里隐居以写作小说。"
+    },
+    {
+      "question": "elude _______",
+      "type": "blank",
+      "answer": "capture",
+      "explanation": "躲避，躲避抓捕。The fugitive managed to elude capture for several months. 逃犯设法躲避抓捕好几个月。"
+    },
+    {
+      "question": "delude _______",
+      "type": "blank",
+      "answer": "oneself",
+      "explanation": "欺骗，自欺。Don't delude oneself into thinking success comes without effort. 不要自欺认为成功不需要努力。"
+    },
+    {
+      "question": "________ collude",
+      "type": "blank",
+      "answer": "secretly",
+      "explanation": "勾结，秘密勾结。The competitors were accused of trying to secretly collude to fix prices. 竞争者被指控试图秘密勾结操纵价格。"
+    },
+    {
+      "question": "protrude _______",
+      "type": "blank",
+      "answer": "outward",
+      "explanation": "突出，向外突出。The broken bone would protrude outward through the skin. 断骨会向外突出穿过皮肤。"
+    },
+    {
+      "question": "_______ aptitude",
+      "type": "blank",
+      "answer": "natural",
+      "explanation": "天赋，天生的天赋。She demonstrated a natural aptitude for mathematics from an early age. 她从小就表现出数学方面的天生天赋。"
+    },
+    {
+      "question": "______ servitude",
+      "type": "blank",
+      "answer": "forced",
+      "explanation": "奴役，强制奴役。The prisoners were subjected to years of forced servitude. 囚犯们遭受了多年的强制奴役。"
+    },
+    {
+      "question": "banshee ____",
+      "type": "blank",
+      "answer": "wail",
+      "explanation": "女妖，女妖哀嚎。The eerie banshee wail echoed through the Irish countryside. 诡异的女妖哀嚎在爱尔兰乡村回荡。"
+    },
+    {
+      "question": "________ glee",
+      "type": "blank",
+      "answer": "childish",
+      "explanation": "欢乐，孩子般的欢乐。The children jumped with childish glee when they saw the presents. 孩子们看到礼物时带着孩子般的欢乐跳了起来。"
+    },
+    {
+      "question": "née _____",
+      "type": "blank",
+      "answer": "Smith",
+      "explanation": "娘家姓，娘家姓史密斯。Mrs. Johnson, née Smith, graduated from Harvard in 1990. 约翰逊夫人，娘家姓史密斯，1990年毕业于哈佛大学。"
+    },
+    {
+      "question": "____ addressee",
+      "type": "blank",
+      "answer": "dear",
+      "explanation": "收信人，亲爱的收信人。The letter began with a formal greeting to the dear addressee. 这封信以对亲爱的收信人的正式问候开始。"
+    },
+    {
+      "question": "goatee _____",
+      "type": "blank",
+      "answer": "beard",
+      "explanation": "山羊胡，山羊胡子。The professor stroked his distinguished goatee beard thoughtfully. 教授若有所思地抚摸着他出众的山羊胡子。"
+    },
+    {
+      "question": "penknife _____",
+      "type": "blank",
+      "answer": "blade",
+      "explanation": "小刀，小刀刀片。He carefully sharpened the penknife blade before carving the wood. 他在雕刻木头前小心地磨快了小刀刀片。"
+    },
+    {
+      "question": "_____ strife",
+      "type": "blank",
+      "answer": "civil",
+      "explanation": "冲突，内部冲突。The nation was torn apart by years of civil strife. 这个国家被多年的内部冲突撕裂了。"
+    },
+    {
+      "question": "birdcage ____",
+      "type": "blank",
+      "answer": "door",
+      "explanation": "鸟笼，鸟笼门。The parrot escaped when someone left the birdcage door open. 有人没关鸟笼门，鹦鹉逃跑了。"
+    },
+    {
+      "question": "___ bandage",
+      "type": "blank",
+      "answer": "arm",
+      "explanation": "绷带，手臂绷带。The nurse carefully wrapped an arm bandage around the wound. 护士小心地在伤口周围缠上手臂绷带。"
+    },
+    {
+      "question": "______ poundage",
+      "type": "blank",
+      "answer": "import",
+      "explanation": "按重量计费，进口重量税。The company had to pay substantial import poundage on the shipment. 该公司不得不为这批货物支付大量的进口重量税。"
+    },
+    {
+      "question": "disengage ____",
+      "type": "blank",
+      "answer": "gear",
+      "explanation": "脱离，脱离齿轮。Remember to disengage gear before starting the engine. 记得在启动发动机前脱离齿轮。"
+    },
+    {
+      "question": "______ miscarriage",
+      "type": "blank",
+      "answer": "tragic",
+      "explanation": "流产，悲惨的流产。The couple grieved after experiencing a tragic miscarriage. 这对夫妇在经历悲惨的流产后悲痛不已。"
+    },
+    {
+      "question": "_____ wreckage",
+      "type": "blank",
+      "answer": "plane",
+      "explanation": "残骸，飞机残骸。Investigators combed through the plane wreckage looking for clues. 调查人员仔细搜查飞机残骸寻找线索。"
+    },
+    {
+      "question": "______ rummage",
+      "type": "blank",
+      "answer": "garage",
+      "explanation": "翻找，车库大甩卖。She found a vintage lamp at the neighborhood garage rummage sale. 她在邻居的车库大甩卖上找到了一盏复古台灯。"
+    },
+    {
+      "question": "____ plumage",
+      "type": "blank",
+      "answer": "bird",
+      "explanation": "羽毛，鸟类羽毛。The peacock displayed its magnificent bird plumage to attract a mate. 孔雀展示其华丽的鸟类羽毛以吸引配偶。"
+    },
+    {
+      "question": "orphanage ____",
+      "type": "blank",
+      "answer": "home",
+      "explanation": "孤儿院，孤儿院之家。The children grew up in a small orphanage home in the countryside. 孩子们在乡下的一个小孤儿院之家长大。"
+    },
+    {
+      "question": "______ carnage",
+      "type": "blank",
+      "answer": "bloody",
+      "explanation": "大屠杀，血腥大屠杀。The battlefield was a scene of bloody carnage after the fight. 战斗后，战场上是一片血腥大屠杀的景象。"
+    },
+    {
+      "question": "_______ rampage",
+      "type": "blank",
+      "answer": "violent",
+      "explanation": "暴怒，暴力狂暴。The angry mob went on a violent rampage through the city streets. 愤怒的暴徒在城市街道上进行暴力狂暴。"
+    },
+    {
+      "question": "overage ___",
+      "type": "blank",
+      "answer": "fee",
+      "explanation": "超龄，超龄费。The rental car company charged an overage fee for the extra miles. 租车公司对额外里程收取超龄费。"
+    },
+    {
+      "question": "enrage _____",
+      "type": "blank",
+      "answer": "crowd",
+      "explanation": "激怒，激怒人群。The politician's insensitive comments would enrage crowd at the rally. 这位政治家的冷漠言论会激怒集会上的人群。"
+    },
+    {
+      "question": "forage ___ ____",
+      "type": "blank",
+      "answer": "for food",
+      "explanation": "觅食，觅食。The squirrels would forage for food to prepare for winter. 松鼠会觅食为冬天做准备。"
+    },
+    {
+      "question": "______ outrage",
+      "type": "blank",
+      "answer": "public",
+      "explanation": "愤怒，公众愤怒。The scandal sparked widespread public outrage across the nation. 这起丑闻在全国范围内引发了广泛的公众愤怒。"
+    },
+    {
+      "question": "discourage ______",
+      "type": "blank",
+      "answer": "effort",
+      "explanation": "阻止，阻止努力。Don't let failure discourage effort to achieve your goals. 不要让失败阻止你实现目标的努力。"
+    },
+    {
+      "question": "_____ visage",
+      "type": "blank",
+      "answer": "human",
+      "explanation": "面容，人类面容。The ancient statue bore a serene human visage carved in marble. 这座古代雕像有着用大理石雕刻的宁静人类面容。"
+    },
+    {
+      "question": "_____ parentage",
+      "type": "blank",
+      "answer": "royal",
+      "explanation": "出身，皇室出身。The prince's royal parentage gave him certain privileges. 王子的皇室出身给了他某些特权。"
+    },
+    {
+      "question": "__________ sabotage",
+      "type": "blank",
+      "answer": "industrial",
+      "explanation": "破坏，工业破坏。The factory was shut down due to suspected industrial sabotage. 由于涉嫌工业破坏，工厂被关闭。"
+    },
+    {
+      "question": "____ lovage",
+      "type": "blank",
+      "answer": "herb",
+      "explanation": "欧当归，欧当归草本植物。The chef used fresh herb lovage to flavor the soup. 厨师用新鲜的欧当归草本植物给汤调味。"
+    },
+    {
+      "question": "cadge _ ____",
+      "type": "blank",
+      "answer": "a ride",
+      "explanation": "乞讨，讨个便车。He tried to cadge a ride from strangers at the gas station. 他试图在加油站向陌生人讨个便车。"
+    },
+    {
+      "question": "______ ledge",
+      "type": "blank",
+      "answer": "window",
+      "explanation": "窗台，窗台。A pigeon perched on the narrow window ledge outside. 一只鸽子栖息在外面狭窄的窗台上。"
+    },
+    {
+      "question": "_____ fledge",
+      "type": "blank",
+      "answer": "young",
+      "explanation": "羽翼丰满，幼鸟羽翼丰满。The baby birds were ready to young fledge and leave the nest. 幼鸟已经准备好羽翼丰满离开巢穴了。"
+    },
+    {
+      "question": "____ sledge",
+      "type": "blank",
+      "answer": "snow",
+      "explanation": "雪橇，雪橇。Children rode their snow sledge down the snowy hillside. 孩子们乘着雪橇滑下雪坡。"
+    },
+    {
+      "question": "_____ dredge",
+      "type": "blank",
+      "answer": "river",
+      "explanation": "挖泥，河道挖泥。Workers used a river dredge to clear the harbor of sediment. 工人使用河道挖泥机清理港口的沉积物。"
+    },
+    {
+      "question": "____ midge",
+      "type": "blank",
+      "answer": "tiny",
+      "explanation": "蠓，微小的蠓。Swarms of tiny midge hovered over the lake at dusk. 黄昏时分，成群的微小蠓在湖面上盘旋。"
+    },
+    {
+      "question": "dodge ______",
+      "type": "blank",
+      "answer": "bullet",
+      "explanation": "躲避，躲避子弹。The action hero managed to dodge bullet in slow motion. 动作英雄设法慢动作躲避子弹。"
+    },
+    {
+      "question": "dislodge _____",
+      "type": "blank",
+      "answer": "stone",
+      "explanation": "移除，移除石头。The workers struggled to dislodge stone from the blocked drain. 工人们努力从堵塞的排水管中移除石头。"
+    },
+    {
+      "question": "won't _____",
+      "type": "blank",
+      "answer": "budge",
+      "explanation": "移动，不肯移动。The stubborn mule won't budge no matter how hard they pushed. 无论他们怎么用力推，这头固执的骡子都不肯移动。"
+    },
+    {
+      "question": "___ smudge",
+      "type": "blank",
+      "answer": "ink",
+      "explanation": "污迹，墨水污迹。There was an ugly ink smudge on the important document. 重要文件上有一个难看的墨水污迹。"
+    },
+    {
+      "question": "____ _ nudge",
+      "type": "blank",
+      "answer": "give a",
+      "explanation": "轻推，轻轻推一下。She would give a nudge to wake him up during the boring lecture. 她会在无聊的讲座中轻轻推一下叫醒他。"
+    },
+    {
+      "question": "____ trudge",
+      "type": "blank",
+      "answer": "slow",
+      "explanation": "跋涉，缓慢跋涉。The exhausted hikers began a slow trudge back to base camp. 筋疲力尽的徒步旅行者开始缓慢跋涉回到大本营。"
+    },
+    {
+      "question": "allege _____",
+      "type": "blank",
+      "answer": "crime",
+      "explanation": "声称，声称犯罪。The prosecutor would allege crime without sufficient evidence. 检察官会在没有足够证据的情况下声称犯罪。"
+    },
+    {
+      "question": "____ obliged",
+      "type": "blank",
+      "answer": "feel",
+      "explanation": "感到有义务，感到有义务。She didn't feel obliged to attend the party if she was tired. 如果她累了，她不觉得有义务参加聚会。"
+    },
+    {
+      "question": "_______ vestige",
+      "type": "blank",
+      "answer": "ancient",
+      "explanation": "遗迹，古代遗迹。Archaeologists discovered an ancient vestige of a lost civilization. 考古学家发现了一个失落文明的古代遗迹。"
+    },
+    {
+      "question": "_____ water",
+      "type": "blank",
+      "answer": "bilge",
+      "explanation": "舱底水，舱底水。The crew had to pump out the foul-smelling bilge water from the ship. 船员不得不从船上抽出散发恶臭的舱底水。"
+    },
+    {
+      "question": "___ bulge",
+      "type": "blank",
+      "answer": "eye",
+      "explanation": "凸出，眼睛凸出。His eyes would eye bulge in surprise at the shocking news. 听到令人震惊的消息，他的眼睛会惊讶地凸出。"
+    },
+    {
+      "question": "divulge ______",
+      "type": "blank",
+      "answer": "secret",
+      "explanation": "泄露，泄露秘密。He refused to divulge secret despite intense interrogation. 尽管受到严厉审问，他仍拒绝泄露秘密。"
+    },
+    {
+      "question": "______ blancmange",
+      "type": "blank",
+      "answer": "creamy",
+      "explanation": "牛奶冻，奶油牛奶冻。The dessert table featured a wobbly creamy blancmange. 甜点桌上有一个摇摇晃晃的奶油牛奶冻。"
+    },
+    {
+      "question": "______ derange",
+      "type": "blank",
+      "answer": "mental",
+      "explanation": "精神错乱，精神错乱。The trauma caused a mental derange that required treatment. 创伤导致了需要治疗的精神错乱。"
+    },
+    {
+      "question": "prearrange _______",
+      "type": "blank",
+      "answer": "meeting",
+      "explanation": "预先安排，预先安排会议。They decided to prearrange meeting to ensure everyone could attend. 他们决定预先安排会议以确保每个人都能参加。"
+    },
+    {
+      "question": "scavenge ____",
+      "type": "blank",
+      "answer": "food",
+      "explanation": "拾荒，拾荒寻找食物。Wild dogs would scavenge food from garbage dumps at night. 野狗在夜间会从垃圾场拾荒寻找食物。"
+    },
+    {
+      "question": "unhinge ____",
+      "type": "blank",
+      "answer": "mind",
+      "explanation": "使失常，使精神失常。The horrific experience would unhinge mind of the traumatized witness. 这次可怕的经历会使受创伤的证人精神失常。"
+    },
+    {
+      "question": "cringe __ ____",
+      "type": "blank",
+      "answer": "in fear",
+      "explanation": "畏缩，恐惧地畏缩。The frightened child would cringe in fear at loud noises. 受惊的孩子会因巨大的噪音而恐惧地畏缩。"
+    },
+    {
+      "question": "singe ____",
+      "type": "blank",
+      "answer": "hair",
+      "explanation": "烧焦，烧焦头发。The candle flame was close enough to singe hair on his arm. 蜡烛火焰近到足以烧焦他手臂上的头发。"
+    },
+    {
+      "question": "______ tinge",
+      "type": "blank",
+      "answer": "slight",
+      "explanation": "一丝，一丝色彩。The autumn leaves showed a slight tinge of red and gold. 秋叶显示出一丝红色和金色。"
+    },
+    {
+      "question": "____ ___ swinge",
+      "type": "blank",
+      "answer": "flog and",
+      "explanation": "鞭打，鞭打和抽打。Medieval punishments would flog and swinge criminals publicly. 中世纪的惩罚会公开鞭打和抽打罪犯。"
+    },
+    {
+      "question": "_____ twinge",
+      "type": "blank",
+      "answer": "sharp",
+      "explanation": "刺痛，剧烈刺痛。She felt a sharp twinge in her back when lifting the box. 她在搬箱子时感到背部一阵剧烈刺痛。"
+    },
+    {
+      "question": "_______ lunge",
+      "type": "blank",
+      "answer": "forward",
+      "explanation": "猛冲，向前猛冲。The fencer made a swift forward lunge at his opponent. 击剑手向对手做出了一个迅速的向前猛冲。"
+    },
+    {
+      "question": "scrounge _____",
+      "type": "blank",
+      "answer": "money",
+      "explanation": "搜寻，搜寻钱。The broke student tried to scrounge money for bus fare. 这个身无分文的学生试图搜寻钱来买公交车票。"
+    },
+    {
+      "question": "_____ barge",
+      "type": "blank",
+      "answer": "cargo",
+      "explanation": "驳船，货物驳船。The cargo barge slowly made its way down the canal. 货物驳船缓慢地沿着运河前进。"
+    },
+    {
+      "question": "__ ___ verge",
+      "type": "blank",
+      "answer": "on the",
+      "explanation": "边缘，在...边缘。The company was on the verge of bankruptcy before the bailout. 公司在救助前处于破产的边缘。"
+    },
+    {
+      "question": "______ converge",
+      "type": "blank",
+      "answer": "forces",
+      "explanation": "汇聚，力量汇聚。Multiple military units would forces converge at the strategic location. 多个军事单位的力量会在战略位置汇聚。"
+    },
+    {
+      "question": "disgorge ________",
+      "type": "blank",
+      "answer": "contents",
+      "explanation": "吐出，吐出内容物。The volcano would disgorge contents of hot lava and ash. 火山会吐出热熔岩和灰烬的内容物。"
+    },
+    {
+      "question": "______ upsurge",
+      "type": "blank",
+      "answer": "sudden",
+      "explanation": "激增，突然激增。There was a sudden upsurge in demand for the popular product. 对这种流行产品的需求出现了突然激增。"
+    },
+    {
+      "question": "_____ deluge",
+      "type": "blank",
+      "answer": "great",
+      "explanation": "洪水，大洪水。The biblical story tells of a great deluge that covered the earth. 圣经故事讲述了一场覆盖地球的大洪水。"
+    },
+    {
+      "question": "gouge ___",
+      "type": "blank",
+      "answer": "out",
+      "explanation": "挖出，挖出。The sculptor would gouge out sections of wood with a chisel. 雕刻家会用凿子挖出木头的部分。"
+    }
+  ]
+}
