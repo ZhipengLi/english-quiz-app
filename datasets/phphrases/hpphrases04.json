@@ -1,1 +1,605 @@
-
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "_________ mustache",
+      "type": "blank",
+      "answer": "handlebar",
+      "explanation": "小胡子，八字胡。The old-fashioned gentleman twirled his elaborate handlebar mustache. 这位老派绅士捻着他精致的八字胡。"
+    },
+    {
+      "question": "______ moustache",
+      "type": "blank",
+      "answer": "French",
+      "explanation": "小胡子，法式小胡子。The waiter sported a thin French moustache above his upper lip. 服务员上唇上方留着一撮细细的法式小胡子。"
+    },
+    {
+      "question": "unsheathe _____",
+      "type": "blank",
+      "answer": "sword",
+      "explanation": "拔出，拔出剑。The samurai would unsheathe sword only when absolutely necessary. 武士只有在绝对必要时才会拔出剑。"
+    },
+    {
+      "question": "swathe __ ____",
+      "type": "blank",
+      "answer": "of land",
+      "explanation": "一片，一片土地。A vast swathe of land was destroyed by the wildfire. 一大片土地被野火摧毁。"
+    },
+    {
+      "question": "seethe ____ _____",
+      "type": "blank",
+      "answer": "with anger",
+      "explanation": "怒火中烧，怒火中烧。She would seethe with anger at the unfair treatment. 她会因不公平的待遇而怒火中烧。"
+    },
+    {
+      "question": "teething ____",
+      "type": "blank",
+      "answer": "baby",
+      "explanation": "出牙，出牙的婴儿。The teething baby kept the parents awake all night with crying. 出牙的婴儿哭闹让父母整晚无法入睡。"
+    },
+    {
+      "question": "writhe __ ____",
+      "type": "blank",
+      "answer": "in pain",
+      "explanation": "扭动，痛苦地扭动。The injured soldier would writhe in pain on the battlefield. 受伤的士兵在战场上痛苦地扭动。"
+    },
+    {
+      "question": "soothe ______",
+      "type": "blank",
+      "answer": "nerves",
+      "explanation": "安抚，安抚神经。The warm bath helped soothe nerves after a stressful day. 温水澡有助于在压力大的一天后安抚神经。"
+    },
+    {
+      "question": "____ specie",
+      "type": "blank",
+      "answer": "gold",
+      "explanation": "硬币，金币。The pirate's treasure chest was filled with gold specie. 海盗的宝箱里装满了金币。"
+    },
+    {
+      "question": "___ laddie",
+      "type": "blank",
+      "answer": "wee",
+      "explanation": "小伙子，小小伙子。The Scottish grandfather called his grandson a wee laddie. 苏格兰祖父称他的孙子为小小伙子。"
+    },
+    {
+      "question": "___ budgie",
+      "type": "blank",
+      "answer": "pet",
+      "explanation": "虎皮鹦鹉，宠物虎皮鹦鹉。Her colorful pet budgie chirped happily in its cage. 她五颜六色的宠物虎皮鹦鹉在笼子里快乐地啁啾。"
+    },
+    {
+      "question": "_____ bogie",
+      "type": "blank",
+      "answer": "train",
+      "explanation": "转向架，火车转向架。The engineer inspected the train bogie for any mechanical issues. 工程师检查火车转向架是否有任何机械问题。"
+    },
+    {
+      "question": "hie ____",
+      "type": "blank",
+      "answer": "away",
+      "explanation": "赶快，赶快离开。The messenger would hie away to deliver the urgent news. 信使会赶快离开去传递紧急消息。"
+    },
+    {
+      "question": "underlie _____",
+      "type": "blank",
+      "answer": "cause",
+      "explanation": "潜在，潜在原因。Economic factors often underlie cause of social unrest. 经济因素往往是社会动荡的潜在原因。"
+    },
+    {
+      "question": "_____ kelpie",
+      "type": "blank",
+      "answer": "water",
+      "explanation": "水妖，水妖。Scottish folklore tells of the dangerous water kelpie that lures travelers. 苏格兰民间传说讲述了诱惑旅行者的危险水妖。"
+    },
+    {
+      "question": "eerie _______",
+      "type": "blank",
+      "answer": "silence",
+      "explanation": "怪异的，怪异的寂静。An eerie silence fell over the abandoned house. 一种怪异的寂静笼罩着这座废弃的房子。"
+    },
+    {
+      "question": "_____ reverie",
+      "type": "blank",
+      "answer": "sweet",
+      "explanation": "遐想，甜蜜的遐想。She was lost in sweet reverie about her upcoming vacation. 她沉浸在对即将到来的假期的甜蜜遐想中。"
+    },
+    {
+      "question": "___________ pixie",
+      "type": "blank",
+      "answer": "mischievous",
+      "explanation": "小精灵，淘气的小精灵。The fairy tale featured a mischievous pixie who played tricks. 这个童话故事里有一个爱恶作剧的淘气小精灵。"
+    },
+    {
+      "question": "____ flake",
+      "type": "blank",
+      "answer": "snow",
+      "explanation": "雪花，雪花。Each delicate snow flake was unique in its crystalline pattern. 每片精致的雪花在其晶体结构上都是独特的。"
+    },
+    {
+      "question": "forsake _______",
+      "type": "blank",
+      "answer": "friends",
+      "explanation": "抛弃，抛弃朋友。He promised never to forsake friends in times of trouble. 他承诺在困难时期永远不会抛弃朋友。"
+    },
+    {
+      "question": "overtake ___",
+      "type": "blank",
+      "answer": "car",
+      "explanation": "超车，超车。It's dangerous to overtake car on a curved mountain road. 在弯曲的山路上超车很危险。"
+    },
+    {
+      "question": "businesslike ______",
+      "type": "blank",
+      "answer": "manner",
+      "explanation": "务实的，务实的态度。She conducted the meeting in a professional businesslike manner. 她以专业务实的态度主持会议。"
+    },
+    {
+      "question": "choke ____",
+      "type": "blank",
+      "answer": "hold",
+      "explanation": "窒息，锁喉。The wrestler applied a choke hold to his opponent. 摔跤手对他的对手使用了锁喉。"
+    },
+    {
+      "question": "artichoke _____",
+      "type": "blank",
+      "answer": "heart",
+      "explanation": "洋蓟，洋蓟心。The salad featured tender artichoke heart as the main ingredient. 沙拉以嫩洋蓟心作为主要食材。"
+    },
+    {
+      "question": "_______ bloke",
+      "type": "blank",
+      "answer": "British",
+      "explanation": "家伙，英国佬。The cheerful British bloke bought everyone a round at the pub. 这个快乐的英国佬在酒吧给大家买了一轮酒。"
+    },
+    {
+      "question": "poke ___",
+      "type": "blank",
+      "answer": "fun",
+      "explanation": "戳，取笑。Friends like to poke fun at each other in good humor. 朋友们喜欢善意地互相取笑。"
+    },
+    {
+      "question": "_____ fluke",
+      "type": "blank",
+      "answer": "lucky",
+      "explanation": "侥幸，幸运的侥幸。His victory was just a lucky fluke and not based on skill. 他的胜利只是幸运的侥幸，并非基于技能。"
+    },
+    {
+      "question": "____ puke",
+      "type": "blank",
+      "answer": "feel",
+      "explanation": "呕吐，感觉想吐。The rough sea made passengers feel puke on the ferry. 汹涌的海浪让乘客在渡轮上感觉想吐。"
+    },
+    {
+      "question": "______ tyke",
+      "type": "blank",
+      "answer": "little",
+      "explanation": "小孩，小淘气。The little tyke ran around the playground with boundless energy. 这个小淘气在操场上精力充沛地跑来跑去。"
+    },
+    {
+      "question": "___ bale",
+      "type": "blank",
+      "answer": "hay",
+      "explanation": "大包，干草包。The farmer stacked hay bale in the barn for winter. 农民在谷仓里堆放干草包过冬。"
+    },
+    {
+      "question": "exhale ______",
+      "type": "blank",
+      "answer": "deeply",
+      "explanation": "呼气，深深呼气。Remember to exhale deeply during your yoga practice. 记得在瑜伽练习中深深呼气。"
+    },
+    {
+      "question": "impale ______",
+      "type": "blank",
+      "answer": "victim",
+      "explanation": "刺穿，刺穿受害者。Medieval warriors would impale victim on sharp spears. 中世纪的战士会用锋利的长矛刺穿受害者。"
+    },
+    {
+      "question": "telltale ____",
+      "type": "blank",
+      "answer": "sign",
+      "explanation": "泄露秘密的，明显的迹象。The muddy footprints were a telltale sign of his presence. 泥泞的脚印是他在场的明显迹象。"
+    },
+    {
+      "question": "_____ bread",
+      "type": "blank",
+      "answer": "stale",
+      "explanation": "陈旧的，陈面包。The stale bread was too hard to eat without toasting. 陈面包太硬了，不烤就无法食用。"
+    },
+    {
+      "question": "despicable ___",
+      "type": "blank",
+      "answer": "act",
+      "explanation": "卑鄙的，卑鄙的行为。Stealing from the poor is a truly despicable act. 从穷人那里偷窃是真正卑鄙的行为。"
+    },
+    {
+      "question": "formidable _________",
+      "type": "blank",
+      "answer": "challenge",
+      "explanation": "强大的，强大的挑战。Climbing Mount Everest presents a formidable challenge even for experts. 攀登珠穆朗玛峰即使对专家来说也是一个强大的挑战。"
+    },
+    {
+      "question": "unmanageable _________",
+      "type": "blank",
+      "answer": "situation",
+      "explanation": "难以控制的，难以控制的情况。The riot quickly became an unmanageable situation for police. 骚乱迅速成为警察难以控制的情况。"
+    },
+    {
+      "question": "breakable _____",
+      "type": "blank",
+      "answer": "glass",
+      "explanation": "易碎的，易碎的玻璃。Handle the breakable glass items with extreme care. 处理易碎的玻璃物品时要格外小心。"
+    },
+    {
+      "question": "unremarkable ___",
+      "type": "blank",
+      "answer": "man",
+      "explanation": "平凡的，平凡的人。He appeared to be an unremarkable man in the crowd. 他在人群中看起来是一个平凡的人。"
+    },
+    {
+      "question": "unassailable ________",
+      "type": "blank",
+      "answer": "fortress",
+      "explanation": "坚不可摧的，坚不可摧的堡垒。The medieval castle was built as an unassailable fortress. 这座中世纪城堡被建成坚不可摧的堡垒。"
+    },
+    {
+      "question": "______ syllable",
+      "type": "blank",
+      "answer": "single",
+      "explanation": "音节，单音节。The word 'cat' consists of a single syllable. 单词'cat'由一个单音节组成。"
+    },
+    {
+      "question": "impregnable ____",
+      "type": "blank",
+      "answer": "wall",
+      "explanation": "坚不可摧的，坚不可摧的墙。The fortress was protected by an impregnable wall. 堡垒由坚不可摧的墙保护。"
+    },
+    {
+      "question": "undoable ____",
+      "type": "blank",
+      "answer": "task",
+      "explanation": "做不到的，做不到的任务。The project seemed like an undoable task with limited resources. 在资源有限的情况下，这个项目似乎是一个做不到的任务。"
+    },
+    {
+      "question": "inescapable ____",
+      "type": "blank",
+      "answer": "fate",
+      "explanation": "不可避免的，不可避免的命运。Death is the inescapable fate that awaits all living things. 死亡是等待所有生物的不可避免的命运。"
+    },
+    {
+      "question": "palpable _______",
+      "type": "blank",
+      "answer": "tension",
+      "explanation": "明显的，明显的紧张。There was palpable tension in the room before the announcement. 宣布之前，房间里有明显的紧张气氛。"
+    },
+    {
+      "question": "innumerable _____",
+      "type": "blank",
+      "answer": "stars",
+      "explanation": "无数的，无数的星星。Innumerable stars sparkled in the clear night sky. 无数的星星在晴朗的夜空中闪烁。"
+    },
+    {
+      "question": "admirable _______",
+      "type": "blank",
+      "answer": "quality",
+      "explanation": "令人钦佩的，令人钦佩的品质。Her honesty is an admirable quality that everyone respects. 她的诚实是一个令人钦佩的品质，每个人都尊重。"
+    },
+    {
+      "question": "_______ recognisable",
+      "type": "blank",
+      "answer": "legally",
+      "explanation": "可识别的，法律上可识别的。The signature must be legally recognisable to be valid. 签名必须在法律上可识别才有效。"
+    },
+    {
+      "question": "advisable ______",
+      "type": "blank",
+      "answer": "action",
+      "explanation": "明智的，明智的行动。Consulting a lawyer is an advisable action before signing. 签字前咨询律师是明智的行动。"
+    },
+    {
+      "question": "respectable ______",
+      "type": "blank",
+      "answer": "family",
+      "explanation": "受人尊敬的，受人尊敬的家庭。She came from a respectable family with strong values. 她来自一个有强大价值观的受人尊敬的家庭。"
+    },
+    {
+      "question": "excitable _____",
+      "type": "blank",
+      "answer": "child",
+      "explanation": "易激动的，易激动的孩子。The excitable child jumped up and down at the circus. 这个易激动的孩子在马戏团里上蹦下跳。"
+    },
+    {
+      "question": "creditable ______",
+      "type": "blank",
+      "answer": "effort",
+      "explanation": "值得称赞的，值得称赞的努力。The team made a creditable effort despite losing the match. 尽管输了比赛，球队还是做出了值得称赞的努力。"
+    },
+    {
+      "question": "veritable _____",
+      "type": "blank",
+      "answer": "feast",
+      "explanation": "真正的，真正的盛宴。The Thanksgiving dinner was a veritable feast with countless dishes. 感恩节晚餐是一场有无数菜肴的真正盛宴。"
+    },
+    {
+      "question": "irritable ____",
+      "type": "blank",
+      "answer": "mood",
+      "explanation": "易怒的，易怒的情绪。Lack of sleep put him in an irritable mood all day. 睡眠不足让他整天都处于易怒的情绪。"
+    },
+    {
+      "question": "lamentable _____",
+      "type": "blank",
+      "answer": "state",
+      "explanation": "令人遗憾的，令人遗憾的状态。The building had fallen into a lamentable state of disrepair. 这座建筑已经陷入了令人遗憾的失修状态。"
+    },
+    {
+      "question": "inscrutable ____",
+      "type": "blank",
+      "answer": "face",
+      "explanation": "神秘莫测的，神秘莫测的面孔。The poker player maintained an inscrutable face throughout the game. 扑克玩家在整个游戏过程中保持着神秘莫测的面孔。"
+    },
+    {
+      "question": "lovable _________",
+      "type": "blank",
+      "answer": "character",
+      "explanation": "可爱的，可爱的角色。The puppy was such a lovable character that everyone adored. 这只小狗是一个如此可爱的角色，每个人都喜欢。"
+    },
+    {
+      "question": "sizable _______",
+      "type": "blank",
+      "answer": "fortune",
+      "explanation": "相当大的，相当大的财富。He inherited a sizable fortune from his wealthy uncle. 他从富有的叔叔那里继承了相当大的财富。"
+    },
+    {
+      "question": "babble ____________",
+      "type": "blank",
+      "answer": "incoherently",
+      "explanation": "含糊不清地说，含糊不清地说。The confused patient would babble incoherently after the accident. 困惑的病人在事故后会含糊不清地说话。"
+    },
+    {
+      "question": "dabble __ ________",
+      "type": "blank",
+      "answer": "in politics",
+      "explanation": "涉猎，涉猎政治。He decided to dabble in politics by joining the local council. 他决定通过加入地方议会来涉猎政治。"
+    },
+    {
+      "question": "gabble ________",
+      "type": "blank",
+      "answer": "nonsense",
+      "explanation": "急促而含糊地说，急促地说胡话。The nervous speaker would gabble nonsense when under pressure. 紧张的演讲者在压力下会急促地说胡话。"
+    },
+    {
+      "question": "______ squabble",
+      "type": "blank",
+      "answer": "family",
+      "explanation": "争吵，家庭争吵。The siblings had a minor family squabble over the inheritance. 兄弟姐妹因遗产问题发生了一次小的家庭争吵。"
+    },
+    {
+      "question": "_____ pebble",
+      "type": "blank",
+      "answer": "small",
+      "explanation": "鹅卵石，小鹅卵石。She picked up a smooth small pebble from the beach. 她从海滩上捡起一块光滑的小鹅卵石。"
+    },
+    {
+      "question": "nibble ______",
+      "type": "blank",
+      "answer": "cheese",
+      "explanation": "小口咬，小口咬奶酪。The mouse would nibble cheese quietly in the corner. 老鼠会在角落里安静地小口咬奶酪。"
+    },
+    {
+      "question": "scribble _____",
+      "type": "blank",
+      "answer": "notes",
+      "explanation": "潦草地写，潦草地写笔记。Students would scribble notes quickly during the lecture. 学生们会在讲座期间快速潦草地写笔记。"
+    },
+    {
+      "question": "dribble ____",
+      "type": "blank",
+      "answer": "ball",
+      "explanation": "运球，运球。The basketball player could dribble ball with incredible skill. 这位篮球运动员能够以惊人的技巧运球。"
+    },
+    {
+      "question": "quibble ____",
+      "type": "blank",
+      "answer": "over",
+      "explanation": "争辩，争辩于。Don't quibble over minor details when the bigger picture matters. 当大局更重要时，不要争辩于小细节。"
+    },
+    {
+      "question": "____ bobble",
+      "type": "blank",
+      "answer": "hair",
+      "explanation": "发圈，发圈。She tied her ponytail with a colorful hair bobble. 她用一个五颜六色的发圈扎起马尾辫。"
+    },
+    {
+      "question": "______ street",
+      "type": "blank",
+      "answer": "cobble",
+      "explanation": "鹅卵石，鹅卵石街道。The old European town featured charming cobble street. 这个古老的欧洲小镇有迷人的鹅卵石街道。"
+    },
+    {
+      "question": "hobble _____",
+      "type": "blank",
+      "answer": "along",
+      "explanation": "蹒跚，蹒跚而行。The injured hiker could only hobble along slowly. 受伤的徒步旅行者只能慢慢蹒跚而行。"
+    },
+    {
+      "question": "wobble _____",
+      "type": "blank",
+      "answer": "chair",
+      "explanation": "摇晃，摇晃的椅子。The old wobble chair needed to be fixed or replaced. 这把旧摇晃椅需要修理或更换。"
+    },
+    {
+      "question": "_____ stubble",
+      "type": "blank",
+      "answer": "shave",
+      "explanation": "胡茬，剃胡茬。He needed to shave stubble before the important meeting. 他需要在重要会议前剃掉胡茬。"
+    },
+    {
+      "question": "____ feeble",
+      "type": "blank",
+      "answer": "feel",
+      "explanation": "虚弱的，感到虚弱。After the illness, she would feel feeble for weeks. 生病后，她会感到虚弱好几周。"
+    },
+    {
+      "question": "______ clef",
+      "type": "blank",
+      "answer": "treble",
+      "explanation": "高音，高音谱号。The soprano part is written in treble clef notation. 女高音部分用高音谱号记谱。"
+    },
+    {
+      "question": "invincible ____",
+      "type": "blank",
+      "answer": "army",
+      "explanation": "不可战胜的，不可战胜的军队。The Romans believed they had an invincible army. 罗马人相信他们有一支不可战胜的军队。"
+    },
+    {
+      "question": "irascible ___ ___",
+      "type": "blank",
+      "answer": "old man",
+      "explanation": "易怒的，易怒的老人。The irascible old man shouted at children on his lawn. 这个易怒的老人对他草坪上的孩子们大喊大叫。"
+    },
+    {
+      "question": "legible ___________",
+      "type": "blank",
+      "answer": "handwriting",
+      "explanation": "清晰易读的，清晰易读的笔迹。The doctor's legible handwriting made prescriptions easy to read. 医生清晰易读的笔迹使处方容易阅读。"
+    },
+    {
+      "question": "______ discernible",
+      "type": "blank",
+      "answer": "barely",
+      "explanation": "可辨别的，勉强可辨别的。The faint stars were barely discernible in the city lights. 微弱的星星在城市灯光中勉强可辨别。"
+    },
+    {
+      "question": "collapsible _____",
+      "type": "blank",
+      "answer": "chair",
+      "explanation": "可折叠的，可折叠的椅子。The campers brought a lightweight collapsible chair for the trip. 露营者为这次旅行带了一把轻便的可折叠椅子。"
+    },
+    {
+      "question": "amble _____",
+      "type": "blank",
+      "answer": "along",
+      "explanation": "漫步，悠闲地走。The couple would amble along the beach at sunset. 这对夫妇会在日落时分沿着海滩悠闲地走。"
+    },
+    {
+      "question": "preamble _________",
+      "type": "blank",
+      "answer": "statement",
+      "explanation": "序言，序言声明。The Constitution begins with a famous preamble statement. 宪法以一个著名的序言声明开始。"
+    },
+    {
+      "question": "ramble __",
+      "type": "blank",
+      "answer": "on",
+      "explanation": "漫谈，漫谈下去。The elderly professor would ramble on about his youth. 这位年长的教授会漫谈他的青年时代。"
+    },
+    {
+      "question": "__________ bramble",
+      "type": "blank",
+      "answer": "blackberry",
+      "explanation": "荆棘，黑莓荆棘。They picked berries from the thick blackberry bramble. 他们从茂密的黑莓荆棘中采摘浆果。"
+    },
+    {
+      "question": "scramble ____",
+      "type": "blank",
+      "answer": "eggs",
+      "explanation": "炒，炒鸡蛋。She would scramble eggs for breakfast every morning. 她每天早上都会炒鸡蛋作为早餐。"
+    },
+    {
+      "question": "_____ tremble",
+      "type": "blank",
+      "answer": "hands",
+      "explanation": "颤抖，手颤抖。His hands tremble with fear as he approached the edge. 当他接近边缘时，他的手因恐惧而颤抖。"
+    },
+    {
+      "question": "fumble ____",
+      "type": "blank",
+      "answer": "keys",
+      "explanation": "摸索，摸索钥匙。He would fumble keys nervously while trying to unlock the door. 他试图开门时会紧张地摸索钥匙。"
+    },
+    {
+      "question": "______ sale",
+      "type": "blank",
+      "answer": "jumble",
+      "explanation": "杂物，杂物义卖。The church organized a jumble sale to raise funds. 教堂组织了一次杂物义卖来筹集资金。"
+    },
+    {
+      "question": "mumble _______",
+      "type": "blank",
+      "answer": "quietly",
+      "explanation": "咕哝，轻声咕哝。The shy student would mumble quietly when answering questions. 这个害羞的学生在回答问题时会轻声咕哝。"
+    },
+    {
+      "question": "crumble ____",
+      "type": "blank",
+      "answer": "cake",
+      "explanation": "碎裂，蛋糕碎裂。The old crumble cake fell apart when she tried to cut it. 当她试图切割时，旧蛋糕碎裂了。"
+    },
+    {
+      "question": "grumble __________",
+      "type": "blank",
+      "answer": "constantly",
+      "explanation": "抱怨，不断抱怨。The dissatisfied employee would grumble constantly about work. 不满意的员工会不断抱怨工作。"
+    },
+    {
+      "question": "stumble ____",
+      "type": "blank",
+      "answer": "over",
+      "explanation": "绊倒，绊倒。Be careful not to stumble over the uneven pavement. 小心不要被不平整的路面绊倒。"
+    },
+    {
+      "question": "garble _______",
+      "type": "blank",
+      "answer": "message",
+      "explanation": "混淆，混淆信息。Poor phone reception would garble message making it unclear. 糟糕的电话接收会混淆信息使其不清楚。"
+    },
+    {
+      "question": "_________ bauble",
+      "type": "blank",
+      "answer": "Christmas",
+      "explanation": "小饰品，圣诞小饰品。She hung colorful Christmas bauble on the tree. 她在树上挂了五颜六色的圣诞小饰品。"
+    },
+    {
+      "question": "redouble _______",
+      "type": "blank",
+      "answer": "efforts",
+      "explanation": "加倍，加倍努力。The team decided to redouble efforts after the setback. 球队决定在挫折后加倍努力。"
+    },
+    {
+      "question": "_____ treacle",
+      "type": "blank",
+      "answer": "sweet",
+      "explanation": "糖浆，甜糖浆。The sticky sweet treacle was used in the traditional pudding. 粘稠的甜糖浆被用于传统布丁中。"
+    },
+    {
+      "question": "____ manacle",
+      "type": "blank",
+      "answer": "iron",
+      "explanation": "镣铐，铁镣铐。The prisoner's wrists were bound with heavy iron manacle. 囚犯的手腕被沉重的铁镣铐束缚着。"
+    },
+    {
+      "question": "_____ spectacle",
+      "type": "blank",
+      "answer": "grand",
+      "explanation": "奇观，壮观的奇观。The fireworks display was a truly grand spectacle. 烟花表演是一个真正壮观的奇观。"
+    },
+    {
+      "question": "_______ tentacle",
+      "type": "blank",
+      "answer": "octopus",
+      "explanation": "触手，章鱼触手。The octopus tentacle reached out to grasp its prey. 章鱼触手伸出去抓住猎物。"
+    },
+    {
+      "question": "_______ glass",
+      "type": "blank",
+      "answer": "monocle",
+      "explanation": "单片眼镜，单片眼镜。The Victorian gentleman adjusted his monocle glass to read. 维多利亚时代的绅士调整他的单片眼镜来阅读。"
+    },
+    {
+      "question": "encircle _____",
+      "type": "blank",
+      "answer": "enemy",
+      "explanation": "包围，包围敌人。The army planned to encircle enemy forces completely. 军队计划完全包围敌军。"
+    }
+  ]
+}
