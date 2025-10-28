@@ -1,1 +1,605 @@
-
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "____ blemish",
+      "type": "blank",
+      "answer": "skin",
+      "explanation": "blemish 瑕疵,皮肤瑕疵。The teenager worried about every tiny skin blemish on her face.这个青少年担心她脸上每一个微小的皮肤瑕疵。"
+    },
+    {
+      "question": "banish ____",
+      "type": "blank",
+      "answer": "fear",
+      "explanation": "banish 驱除,驱除恐惧。The therapist helped her banish fear through gradual exposure therapy.治疗师通过渐进式暴露疗法帮助她驱除恐惧。"
+    },
+    {
+      "question": "replenish _____",
+      "type": "blank",
+      "answer": "stock",
+      "explanation": "replenish 补充,补充库存。The store manager needed to replenish stock before the holiday rush.商店经理需要在假日高峰前补充库存。"
+    },
+    {
+      "question": "diminish _____",
+      "type": "blank",
+      "answer": "value",
+      "explanation": "diminish 减少,减少价值。Poor maintenance will diminish value of the property over time.维护不善会随着时间推移减少财产的价值。"
+    },
+    {
+      "question": "mannish _____",
+      "type": "blank",
+      "answer": "style",
+      "explanation": "mannish 男性化的,男性化的风格。She preferred wearing clothes with a mannish style for professional settings.她更喜欢在职业场合穿男性化风格的衣服。"
+    },
+    {
+      "question": "astonish _____",
+      "type": "blank",
+      "answer": "crowd",
+      "explanation": "astonish 使惊讶,使人群惊讶。The magician's incredible trick would astonish crowd beyond belief.魔术师令人难以置信的戏法会让人群惊讶到难以置信。"
+    },
+    {
+      "question": "tarnish __________",
+      "type": "blank",
+      "answer": "reputation",
+      "explanation": "tarnish 玷污,玷污名誉。The scandal would tarnish reputation of the once-respected politician.这起丑闻会玷污这位曾受尊敬的政治家的名誉。"
+    },
+    {
+      "question": "_____ varnish",
+      "type": "blank",
+      "answer": "apply",
+      "explanation": "varnish 清漆,涂清漆。The carpenter would apply varnish to protect the wooden furniture from moisture.木匠会涂清漆以保护木制家具免受潮湿。"
+    },
+    {
+      "question": "burnish _____",
+      "type": "blank",
+      "answer": "metal",
+      "explanation": "burnish 擦亮,擦亮金属。The craftsman would carefully burnish metal until it gleamed brilliantly.工匠会仔细擦亮金属,直到它闪闪发光。"
+    },
+    {
+      "question": "snappish ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "snappish 暴躁的,暴躁的评论。Her snappish remark revealed her irritation with the constant interruptions.她暴躁的评论显示了她对不断打扰的恼怒。"
+    },
+    {
+      "question": "waspish ______",
+      "type": "blank",
+      "answer": "temper",
+      "explanation": "waspish 尖刻的,尖刻的脾气。The critic was known for his waspish temper and harsh reviews.这位评论家以其尖刻的脾气和严厉的评论而闻名。"
+    },
+    {
+      "question": "garish ______",
+      "type": "blank",
+      "answer": "colors",
+      "explanation": "garish 俗艳的,俗艳的颜色。The room was decorated with garish colors that clashed terribly.房间装饰着俗艳的颜色,搭配得很糟糕。"
+    },
+    {
+      "question": "perish __ ____",
+      "type": "blank",
+      "answer": "in fire",
+      "explanation": "perish 丧生,在火灾中丧生。Many ancient manuscripts would perish in fire during the library's destruction.许多古代手稿会在图书馆被毁时在火灾中丧生。"
+    },
+    {
+      "question": "feverish ________",
+      "type": "blank",
+      "answer": "activity",
+      "explanation": "feverish 狂热的,狂热的活动。The office showed feverish activity as the deadline approached rapidly.随着截止日期快速临近,办公室显示出狂热的活动。"
+    },
+    {
+      "question": "flourish ________",
+      "type": "blank",
+      "answer": "business",
+      "explanation": "flourish 繁荣,繁荣的生意。The restaurant would flourish business thanks to its excellent reputation.由于其出色的声誉,这家餐厅的生意会繁荣。"
+    },
+    {
+      "question": "sweetish _____",
+      "type": "blank",
+      "answer": "taste",
+      "explanation": "sweetish 微甜的,微甜的味道。The medicine had a sweetish taste that made it easier for children to swallow.这种药有微甜的味道,让孩子更容易吞咽。"
+    },
+    {
+      "question": "whitish _____",
+      "type": "blank",
+      "answer": "color",
+      "explanation": "whitish 发白的,发白的颜色。The walls had faded to a whitish color after years of sun exposure.经过多年的阳光照射,墙壁已经褪色成发白的颜色。"
+    },
+    {
+      "question": "____ anguish",
+      "type": "blank",
+      "answer": "deep",
+      "explanation": "anguish 痛苦,深深的痛苦。The parents experienced deep anguish over their missing child.父母因失踪的孩子而经历深深的痛苦。"
+    },
+    {
+      "question": "roguish _____",
+      "type": "blank",
+      "answer": "charm",
+      "explanation": "roguish 调皮的,调皮的魅力。His roguish charm made him popular despite his mischievous behavior.尽管他行为顽皮,他调皮的魅力使他很受欢迎。"
+    },
+    {
+      "question": "vanquish _____",
+      "type": "blank",
+      "answer": "enemy",
+      "explanation": "vanquish 征服,征服敌人。The brave army fought valiantly to vanquish enemy forces completely.勇敢的军队英勇战斗以彻底征服敌军。"
+    },
+    {
+      "question": "relinquish _______",
+      "type": "blank",
+      "answer": "control",
+      "explanation": "relinquish 放弃,放弃控制。The dictator refused to relinquish control despite international pressure.尽管国际压力,独裁者拒绝放弃控制。"
+    },
+    {
+      "question": "squish ___",
+      "type": "blank",
+      "answer": "bug",
+      "explanation": "squish 压扁,压扁虫子。She used a tissue to squish bug that was crawling on the wall.她用纸巾压扁爬在墙上的虫子。"
+    },
+    {
+      "question": "swish _____",
+      "type": "blank",
+      "answer": "sound",
+      "explanation": "swish 嗖嗖声,嗖嗖声。The dancer's long skirt made a gentle swish sound as she moved.舞者的长裙在她移动时发出轻柔的嗖嗖声。"
+    },
+    {
+      "question": "______ galosh",
+      "type": "blank",
+      "answer": "rubber",
+      "explanation": "galosh 胶鞋,橡胶胶鞋。She wore rubber galoshes to protect her shoes from the muddy streets.她穿着橡胶胶鞋以保护她的鞋子免受泥泞街道的影响。"
+    },
+    {
+      "question": "slosh ______",
+      "type": "blank",
+      "answer": "around",
+      "explanation": "slosh 晃荡,到处晃荡。Water would slosh around in the bucket as he carried it carefully.当他小心翼翼地提着水桶时,水会在桶里晃荡。"
+    },
+    {
+      "question": "whoosh ____",
+      "type": "blank",
+      "answer": "past",
+      "explanation": "whoosh 呼啸而过,呼啸而过。The racing car would whoosh past spectators at incredible speed.赛车会以难以置信的速度呼啸而过观众。"
+    },
+    {
+      "question": "____ swoosh",
+      "type": "blank",
+      "answer": "Nike",
+      "explanation": "swoosh 旋风标志,耐克旋风标志。The famous Nike swoosh logo is recognized worldwide by sports enthusiasts.著名的耐克旋风标志被全世界的体育爱好者认可。"
+    },
+    {
+      "question": "_____ tosh",
+      "type": "blank",
+      "answer": "utter",
+      "explanation": "tosh 胡说,彻头彻尾的胡说。The tabloid article was dismissed as utter tosh by serious journalists.这篇小报文章被严肃记者斥为彻头彻尾的胡说。"
+    },
+    {
+      "question": "____ mackintosh",
+      "type": "blank",
+      "answer": "rain",
+      "explanation": "mackintosh 雨衣,雨衣。He grabbed his rain mackintosh before heading out into the storm.他在冒着暴风雨出门前抓起了雨衣。"
+    },
+    {
+      "question": "gush __ _____",
+      "type": "blank",
+      "answer": "of blood",
+      "explanation": "gush 涌出,血液涌出。The wound caused a frightening gush of blood that required immediate attention.伤口引起了可怕的血液涌出,需要立即处理。"
+    },
+    {
+      "question": "_____ birdbath",
+      "type": "blank",
+      "answer": "stone",
+      "explanation": "birdbath 鸟浴盆,石制鸟浴盆。A decorative stone birdbath became the centerpiece of the garden.一个装饰性的石制鸟浴盆成为了花园的中心装饰。"
+    },
+    {
+      "question": "_________ wreath",
+      "type": "blank",
+      "answer": "Christmas",
+      "explanation": "wreath 花环,圣诞花环。They hung a beautiful Christmas wreath on their front door for the holidays.他们在前门挂了一个漂亮的圣诞花环过节。"
+    },
+    {
+      "question": "bequeath ______",
+      "type": "blank",
+      "answer": "estate",
+      "explanation": "bequeath 遗赠,遗赠财产。The wealthy benefactor decided to bequeath estate to various charities.这位富有的恩人决定将财产遗赠给各种慈善机构。"
+    },
+    {
+      "question": "__ ___ warpath",
+      "type": "blank",
+      "answer": "on the",
+      "explanation": "warpath 战争状态,处于战争状态。After discovering the betrayal, the CEO was on the warpath against disloyal employees.在发现背叛后,首席执行官对不忠的员工处于战争状态。"
+    },
+    {
+      "question": "forthwith _______",
+      "type": "blank",
+      "answer": "removed",
+      "explanation": "forthwith 立即,立即移除。The offensive material was forthwith removed from the website after complaints.在投诉后,攻击性材料立即从网站上移除。"
+    },
+    {
+      "question": "umpteenth ____",
+      "type": "blank",
+      "answer": "time",
+      "explanation": "umpteenth 无数次的,无数次。For the umpteenth time, she reminded him to lock the door before leaving.她无数次地提醒他离开前锁门。"
+    },
+    {
+      "question": "_____ plinth",
+      "type": "blank",
+      "answer": "stone",
+      "explanation": "plinth 基座,石制基座。The marble statue stood proudly on its stone plinth in the town square.大理石雕像骄傲地站在市中心广场的石制基座上。"
+    },
+    {
+      "question": "loincloth _______",
+      "type": "blank",
+      "answer": "garment",
+      "explanation": "loincloth 缠腰布,缠腰布服装。Ancient warriors wore a simple loincloth garment for battle in hot climates.古代战士在炎热气候中穿着简单的缠腰布服装作战。"
+    },
+    {
+      "question": "____ sloth",
+      "type": "blank",
+      "answer": "lazy",
+      "explanation": "sloth 树懒,懒惰的树懒。The lazy sloth moved so slowly that moss grew on its fur.懒惰的树懒移动得如此缓慢,以至于苔藓长在它的皮毛上。"
+    },
+    {
+      "question": "____ froth",
+      "type": "blank",
+      "answer": "beer",
+      "explanation": "froth 泡沫,啤酒泡沫。The freshly poured beer had a thick layer of beer froth on top.新倒的啤酒上面有一层厚厚的啤酒泡沫。"
+    },
+    {
+      "question": "_________ hearth",
+      "type": "blank",
+      "answer": "fireplace",
+      "explanation": "hearth 壁炉地面,壁炉地面。The family gathered around the warm fireplace hearth on cold winter evenings.家人在寒冷的冬夜围坐在温暖的壁炉地面旁。"
+    },
+    {
+      "question": "____ berth",
+      "type": "blank",
+      "answer": "ship",
+      "explanation": "berth 泊位,船泊位。The cruise liner secured a ship berth at the busy harbor.游轮在繁忙的港口获得了一个船泊位。"
+    },
+    {
+      "question": "mirth ___ ________",
+      "type": "blank",
+      "answer": "and laughter",
+      "explanation": "mirth 欢乐,欢乐与笑声。The comedy show filled the theater with mirth and laughter throughout the evening.喜剧表演整个晚上都让剧院充满了欢乐与笑声。"
+    },
+    {
+      "question": "henceforth _______",
+      "type": "blank",
+      "answer": "applied",
+      "explanation": "henceforth 今后,今后适用。The new rules will be henceforth applied to all members without exception.新规则今后将适用于所有成员,无一例外。"
+    },
+    {
+      "question": "______ undergrowth",
+      "type": "blank",
+      "answer": "forest",
+      "explanation": "undergrowth 灌木丛,森林灌木丛。The explorer hacked through dense forest undergrowth with a machete.探险家用砍刀砍穿茂密的森林灌木丛。"
+    },
+    {
+      "question": "khaki _______",
+      "type": "blank",
+      "answer": "uniform",
+      "explanation": "khaki 卡其色,卡其色制服。The soldiers wore khaki uniforms that blended with the desert environment.士兵们穿着与沙漠环境融为一体的卡其色制服。"
+    },
+    {
+      "question": "___ chilli",
+      "type": "blank",
+      "answer": "red",
+      "explanation": "chilli 辣椒,红辣椒。She added fresh red chilli to the curry for extra heat and flavor.她在咖喱中加入新鲜的红辣椒以增加辣味和风味。"
+    },
+    {
+      "question": "_____ salami",
+      "type": "blank",
+      "answer": "slice",
+      "explanation": "salami 意大利腊肠,切片意大利腊肠。The delicatessen offered thin slice salami on fresh crusty bread.熟食店在新鲜脆皮面包上提供薄片意大利腊肠。"
+    },
+    {
+      "question": "_____ confetti",
+      "type": "blank",
+      "answer": "throw",
+      "explanation": "confetti 五彩纸屑,抛五彩纸屑。Wedding guests would throw confetti as the newlyweds emerged from the church.当新婚夫妇从教堂出来时,婚礼宾客会抛五彩纸屑。"
+    },
+    {
+      "question": "____ beak",
+      "type": "blank",
+      "answer": "bird",
+      "explanation": "beak 喙,鸟喙。The parrot used its strong bird beak to crack open hard nuts.鹦鹉用它强壮的鸟喙敲开坚硬的坚果。"
+    },
+    {
+      "question": "bleak _______",
+      "type": "blank",
+      "answer": "outlook",
+      "explanation": "bleak 暗淡的,暗淡的前景。Economic analysts painted a bleak outlook for the struggling industry.经济分析师为陷入困境的行业描绘了暗淡的前景。"
+    },
+    {
+      "question": "__________ creak",
+      "type": "blank",
+      "answer": "floorboard",
+      "explanation": "creak 嘎吱声,地板嘎吱声。The old floorboard creak revealed the intruder's presence in the darkness.老旧的地板嘎吱声在黑暗中暴露了入侵者的存在。"
+    },
+    {
+      "question": "wreak _____",
+      "type": "blank",
+      "answer": "havoc",
+      "explanation": "wreak 造成,造成破坏。The hurricane would wreak havoc on the coastal communities for weeks.飓风会在沿海社区造成数周的破坏。"
+    },
+    {
+      "question": "_____ squeak",
+      "type": "blank",
+      "answer": "mouse",
+      "explanation": "squeak 吱吱声,老鼠吱吱声。A tiny mouse squeak came from behind the kitchen cupboard.厨房橱柜后面传来微小的老鼠吱吱声。"
+    },
+    {
+      "question": "____ croak",
+      "type": "blank",
+      "answer": "frog",
+      "explanation": "croak 呱呱叫,青蛙呱呱叫。The distinctive frog croak echoed across the pond at nightfall.独特的青蛙呱呱叫在黄昏时分在池塘上回响。"
+    },
+    {
+      "question": "yak ____",
+      "type": "blank",
+      "answer": "milk",
+      "explanation": "yak 牦牛,牦牛奶。Himalayan herders use yak milk to make butter and cheese.喜马拉雅牧民用牦牛奶制作黄油和奶酪。"
+    },
+    {
+      "question": "_____ aback",
+      "type": "blank",
+      "answer": "taken",
+      "explanation": "aback 吃惊,感到吃惊。She was taken aback by his sudden and unexpected marriage proposal.她对他突然而意外的求婚感到吃惊。"
+    },
+    {
+      "question": "hunchback ___",
+      "type": "blank",
+      "answer": "man",
+      "explanation": "hunchback 驼背,驼背的人。The famous novel told the tragic story of the hunchback man living in Notre Dame.这部著名小说讲述了住在巴黎圣母院的驼背人的悲剧故事。"
+    },
+    {
+      "question": "whack ____",
+      "type": "blank",
+      "answer": "hard",
+      "explanation": "whack 重击,用力重击。The carpenter would whack hard on the stubborn nail to drive it into the wood.木匠会用力重击顽固的钉子以将其钉入木头。"
+    },
+    {
+      "question": "smack ____",
+      "type": "blank",
+      "answer": "lips",
+      "explanation": "smack 咂嘴,咂嘴。The hungry child would smack lips in anticipation of the delicious meal.饥饿的孩子会期待美味的饭菜而咂嘴。"
+    },
+    {
+      "question": "knack ___",
+      "type": "blank",
+      "answer": "for",
+      "explanation": "knack 诀窍,有诀窍。She had a natural knack for learning languages quickly and effortlessly.她有快速轻松学习语言的天生诀窍。"
+    },
+    {
+      "question": "_____ rucksack",
+      "type": "blank",
+      "answer": "carry",
+      "explanation": "rucksack 背包,背背包。Hikers must carry rucksacks with essential supplies for the mountain trek.徒步旅行者必须背着装有山地徒步必需品的背包。"
+    },
+    {
+      "question": "ransack _____",
+      "type": "blank",
+      "answer": "house",
+      "explanation": "ransack 洗劫,洗劫房子。Burglars would ransack house looking for valuables while the owners were away.当房主不在时,窃贼会洗劫房子寻找贵重物品。"
+    },
+    {
+      "question": "____ haversack",
+      "type": "blank",
+      "answer": "army",
+      "explanation": "haversack 帆布背包,军用帆布背包。Soldiers carried their rations in a sturdy army haversack during campaigns.士兵在战役期间将口粮装在结实的军用帆布背包中。"
+    },
+    {
+      "question": "bedeck ____ ______",
+      "type": "blank",
+      "answer": "with lights",
+      "explanation": "bedeck 装饰,用灯装饰。They would bedeck with lights the entire house for the festive celebration.他们会用灯装饰整个房子以庆祝节日。"
+    },
+    {
+      "question": "fleck __ _____",
+      "type": "blank",
+      "answer": "of paint",
+      "explanation": "fleck 斑点,油漆斑点。A tiny fleck of paint landed on his shirt while he was renovating.他在装修时,一小块油漆斑点落在他的衬衫上。"
+    },
+    {
+      "question": "breakneck _____",
+      "type": "blank",
+      "answer": "speed",
+      "explanation": "breakneck 极快的,极快的速度。The motorcycle raced at breakneck speed through the winding mountain roads.摩托车以极快的速度在蜿蜒的山路上疾驰。"
+    },
+    {
+      "question": "____ speck",
+      "type": "blank",
+      "answer": "tiny",
+      "explanation": "speck 微粒,微小的微粒。Through the telescope, Earth appeared as a tiny speck in the vast universe.通过望远镜,地球在广袤的宇宙中显得像一个微小的微粒。"
+    },
+    {
+      "question": "_____ sidekick",
+      "type": "blank",
+      "answer": "loyal",
+      "explanation": "sidekick 助手,忠诚的助手。The superhero's loyal sidekick helped him fight crime throughout the city.超级英雄的忠诚助手帮助他在全城打击犯罪。"
+    },
+    {
+      "question": "____ crick",
+      "type": "blank",
+      "answer": "neck",
+      "explanation": "crick 抽筋,颈部抽筋。Sleeping in an awkward position gave him a painful neck crick.以尴尬的姿势睡觉让他的颈部抽筋疼痛。"
+    },
+    {
+      "question": "_____ prick",
+      "type": "blank",
+      "answer": "sharp",
+      "explanation": "prick 刺痛,尖锐的刺痛。She felt a sharp prick as the nurse inserted the vaccination needle.当护士插入疫苗针头时,她感到尖锐的刺痛。"
+    },
+    {
+      "question": "________ light",
+      "type": "blank",
+      "answer": "pinprick",
+      "explanation": "pinprick 针孔,针孔光。Distant stars appeared as tiny pinprick lights in the night sky.遥远的星星在夜空中显得像微小的针孔光。"
+    },
+    {
+      "question": "_______ drumstick",
+      "type": "blank",
+      "answer": "chicken",
+      "explanation": "drumstick 鸡腿,鸡腿。The children fought over the crispy chicken drumstick at dinner.孩子们在晚餐时争夺酥脆的鸡腿。"
+    },
+    {
+      "question": "______ wick",
+      "type": "blank",
+      "answer": "candle",
+      "explanation": "wick 灯芯,蜡烛灯芯。She carefully trimmed the candle wick before lighting it for the ceremony.她在点燃蜡烛参加仪式前仔细修剪了蜡烛灯芯。"
+    },
+    {
+      "question": "______ haddock",
+      "type": "blank",
+      "answer": "smoked",
+      "explanation": "haddock 黑线鳕,熏制黑线鳕。The traditional British breakfast included smoked haddock with poached eggs.传统的英式早餐包括熏制黑线鳕配水波蛋。"
+    },
+    {
+      "question": "______ paddock",
+      "type": "blank",
+      "answer": "grassy",
+      "explanation": "paddock 围场,草地围场。The horses grazed peacefully in the lush grassy paddock behind the barn.马儿在谷仓后面郁郁葱葱的草地围场中安静地吃草。"
+    },
+    {
+      "question": "_________ headlock",
+      "type": "blank",
+      "answer": "wrestling",
+      "explanation": "headlock 头部锁定,摔跤头部锁定。The wrestler applied a tight wrestling headlock on his opponent during the match.摔跤手在比赛中对对手使用了紧密的摔跤头部锁定。"
+    },
+    {
+      "question": "____ dreadlock",
+      "type": "blank",
+      "answer": "wear",
+      "explanation": "dreadlock 脏辫,留脏辫。The musician decided to wear dreadlocks as a symbol of his cultural heritage.音乐家决定留脏辫作为他文化遗产的象征。"
+    },
+    {
+      "question": "_____ hillock",
+      "type": "blank",
+      "answer": "grass",
+      "explanation": "hillock 小丘,草地小丘。The shepherd stood atop a grass hillock surveying his flock below.牧羊人站在草地小丘顶上俯瞰下面的羊群。"
+    },
+    {
+      "question": "_____ pillock",
+      "type": "blank",
+      "answer": "silly",
+      "explanation": "pillock 傻瓜,愚蠢的傻瓜。The silly pillock forgot his own birthday and made no plans.这个愚蠢的傻瓜忘记了自己的生日,没有做任何计划。"
+    },
+    {
+      "question": "____ warlock",
+      "type": "blank",
+      "answer": "evil",
+      "explanation": "warlock 男巫,邪恶的男巫。The fantasy novel featured an evil warlock who terrorized the kingdom.这部奇幻小说讲述了一个恐吓王国的邪恶男巫。"
+    },
+    {
+      "question": "______ smock",
+      "type": "blank",
+      "answer": "cotton",
+      "explanation": "smock 工作服,棉质工作服。The artist wore a paint-stained cotton smock while working in the studio.艺术家在工作室工作时穿着沾满颜料的棉质工作服。"
+    },
+    {
+      "question": "_____ shamrock",
+      "type": "blank",
+      "answer": "green",
+      "explanation": "shamrock 三叶草,绿色三叶草。The green shamrock is the national symbol of Ireland and represents good luck.绿色三叶草是爱尔兰的国家象征,代表好运。"
+    },
+    {
+      "question": "_______ pain",
+      "type": "blank",
+      "answer": "buttock",
+      "explanation": "buttock 臀部,臀部疼痛。After sitting for hours, she experienced severe buttock pain from the hard chair.坐了几个小时后,她因硬椅子而经历了严重的臀部疼痛。"
+    },
+    {
+      "question": "___ cluck",
+      "type": "blank",
+      "answer": "hen",
+      "explanation": "cluck 咯咯叫,母鸡咯咯叫。The contented hen cluck echoed throughout the farmyard each morning.满足的母鸡咯咯叫每天早晨在农场里回响。"
+    },
+    {
+      "question": "pluck ________",
+      "type": "blank",
+      "answer": "feathers",
+      "explanation": "pluck 拔,拔羽毛。The cook had to pluck feathers from the chicken before preparing it for dinner.厨师在准备鸡肉晚餐前必须拔掉鸡的羽毛。"
+    },
+    {
+      "question": "___ muck",
+      "type": "blank",
+      "answer": "cow",
+      "explanation": "muck 粪便,牛粪。The farmer spread cow muck across the fields to enrich the soil naturally.农民在田地里撒牛粪以自然地丰富土壤。"
+    },
+    {
+      "question": "dumbstruck __________",
+      "type": "blank",
+      "answer": "amazement",
+      "explanation": "dumbstruck 目瞪口呆的,目瞪口呆的惊讶。The audience sat in dumbstruck amazement at the magician's incredible illusion.观众目瞪口呆地惊讶于魔术师令人难以置信的幻觉。"
+    },
+    {
+      "question": "awestruck _______",
+      "type": "blank",
+      "answer": "silence",
+      "explanation": "awestruck 敬畏的,敬畏的沉默。Visitors maintained awestruck silence while viewing the magnificent cathedral interior.参观者在观看宏伟的大教堂内部时保持敬畏的沉默。"
+    },
+    {
+      "question": "thunderstruck _____",
+      "type": "blank",
+      "answer": "crowd",
+      "explanation": "thunderstruck 震惊的,震惊的人群。The unexpected announcement left the thunderstruck crowd in stunned disbelief.意外的公告让震惊的人群陷入震惊的难以置信。"
+    },
+    {
+      "question": "____ shriek",
+      "type": "blank",
+      "answer": "loud",
+      "explanation": "shriek 尖叫,响亮的尖叫。A loud shriek of terror pierced the quiet night air suddenly.一声响亮的恐惧尖叫突然刺破了宁静的夜空。"
+    },
+    {
+      "question": "___ whelk",
+      "type": "blank",
+      "answer": "sea",
+      "explanation": "whelk 海螺,海螺。Beachcombers discovered several large sea whelks along the shoreline at low tide.赶海人在退潮时沿着海岸线发现了几个大海螺。"
+    },
+    {
+      "question": "___ yolk",
+      "type": "blank",
+      "answer": "egg",
+      "explanation": "yolk 蛋黄,蛋黄。The chef carefully separated the egg yolk from the white for the recipe.厨师仔细地将蛋黄从蛋白中分离出来以用于食谱。"
+    },
+    {
+      "question": "skulk __ _______",
+      "type": "blank",
+      "answer": "in shadows",
+      "explanation": "skulk 潜行,在阴影中潜行。The suspicious figure would skulk in shadows avoiding detection by security guards.可疑的人物会在阴影中潜行以避免被保安发现。"
+    },
+    {
+      "question": "sulk __ _______",
+      "type": "blank",
+      "answer": "in silence",
+      "explanation": "sulk 生闷气,默默地生闷气。After the argument, he would sulk in silence refusing to speak to anyone.争吵后,他会默默地生闷气,拒绝和任何人说话。"
+    },
+    {
+      "question": "____ cellar",
+      "type": "blank",
+      "answer": "dank",
+      "explanation": "cellar 地窖,潮湿的地窖。The old house had a dank cellar that smelled of mildew and decay.这座老房子有一个潮湿的地窖,闻起来有霉味和腐烂味。"
+    },
+    {
+      "question": "lank ____",
+      "type": "blank",
+      "answer": "hair",
+      "explanation": "lank 稀疏的,稀疏的头发。His lank hair hung limply around his face, badly needing a wash.他稀疏的头发无力地垂在脸上,急需清洗。"
+    },
+    {
+      "question": "_____ clank",
+      "type": "blank",
+      "answer": "metal",
+      explanation": "clank 金属碰撞声,金属碰撞声。The prison chains made a haunting metal clank as the prisoner walked.囚犯走动时,监狱的锁链发出令人不安的金属碰撞声。"
+    },
+    {
+      "question": "____ flank",
+      "type": "blank",
+      "answer": "left",
+      "explanation": "flank 侧翼,左侧翼。The general ordered troops to attack the enemy's vulnerable left flank.将军命令部队攻击敌人脆弱的左侧翼。"
+    },
+    {
+      "question": "______ plank",
+      "type": "blank",
+      "answer": "wooden",
+      "explanation": "plank 木板,木板。The pirate captain forced his prisoners to walk the wooden plank into shark-infested waters.海盗船长强迫他的囚犯走上木板进入鲨鱼出没的水域。"
+    }
+  ]
+}
