@@ -1,1 +1,599 @@
-
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "_____ idiot",
+      "type": "blank",
+      "answer": "moron",
+      "explanation": "moron 白痴,白痴傻瓜。Only a complete moron idiot would attempt such a dangerous stunt without safety equipment.只有一个完全的白痴傻瓜才会在没有安全设备的情况下尝试如此危险的特技。"
+    },
+    {
+      "question": "__ unison",
+      "type": "blank",
+      "answer": "in",
+      "explanation": "unison 一致,一致地。The choir sang in unison creating a beautiful harmonious sound.合唱团一致地歌唱,创造出美丽和谐的声音。"
+    },
+    {
+      "question": "imprison _________",
+      "type": "blank",
+      "answer": "criminals",
+      "explanation": "imprison 监禁,监禁罪犯。The court decided to imprison criminals for their violent offenses.法院决定监禁罪犯因其暴力犯罪。"
+    },
+    {
+      "question": "frisson __ __________",
+      "type": "blank",
+      "answer": "of excitement",
+      "explanation": "frisson 颤栗,兴奋的颤栗。A frisson of excitement ran through the crowd before the performance began.在表演开始前,兴奋的颤栗传遍了人群。"
+    },
+    {
+      "question": "emblazon ______",
+      "type": "blank",
+      "answer": "banner",
+      "explanation": "emblazon 装饰,装饰旗帜。The knights would emblazon banners with their family coat of arms.骑士们会用家族徽章装饰旗帜。"
+    },
+    {
+      "question": "yearn ___ _______",
+      "type": "blank",
+      "answer": "for freedom",
+      "explanation": "yearn 渴望,渴望自由。The oppressed people would yearn for freedom from tyrannical rule.被压迫的人民会渴望摆脱专制统治获得自由。"
+    },
+    {
+      "question": "forewarn ______",
+      "type": "blank",
+      "answer": "danger",
+      "explanation": "forewarn 预先警告,预先警告危险。Meteorologists tried to forewarn danger of the approaching hurricane.气象学家试图预先警告即将到来的飓风的危险。"
+    },
+    {
+      "question": "________ unconcern",
+      "type": "blank",
+      "answer": "complete",
+      "explanation": "unconcern 漠不关心,完全漠不关心。His complete unconcern about the crisis worried his colleagues deeply.他对危机的完全漠不关心让同事们深感担忧。"
+    },
+    {
+      "question": "________ child",
+      "type": "blank",
+      "answer": "stubborn",
+      "explanation": "stubborn 固执的,固执的孩子。The stubborn child refused to eat vegetables despite parental encouragement.固执的孩子拒绝吃蔬菜,尽管父母鼓励。"
+    },
+    {
+      "question": "______ hat",
+      "type": "blank",
+      "answer": "bicorn",
+      "explanation": "bicorn 两角帽,两角帽。Napoleon famously wore a distinctive bicorn hat in military portraits.拿破仑在军事肖像中著名地戴着独特的两角帽。"
+    },
+    {
+      "question": "____ scorn",
+      "type": "blank",
+      "answer": "pour",
+      "explanation": "scorn 轻蔑,倾注轻蔑。Critics would pour scorn on the politician's unrealistic campaign promises.批评家会对政治家不切实际的竞选承诺倾注轻蔑。"
+    },
+    {
+      "question": "adorn ____ ______",
+      "type": "blank",
+      "answer": "with jewels",
+      "explanation": "adorn 装饰,用珠宝装饰。Queens would adorn with jewels their elaborate crowns for royal ceremonies.女王会用珠宝装饰她们精致的王冠以参加皇家仪式。"
+    },
+    {
+      "question": "_____ foghorn",
+      "type": "blank",
+      "answer": "blast",
+      "explanation": "foghorn 雾角,吹响雾角。Ships would blast foghorn warnings in the thick maritime fog.船只会在浓雾中吹响雾角警告。"
+    },
+    {
+      "question": "____ thorn",
+      "type": "blank",
+      "answer": "rose",
+      "explanation": "thorn 刺,玫瑰刺。Be careful of the sharp rose thorn when picking flowers from the garden.从花园摘花时要小心锋利的玫瑰刺。"
+    },
+    {
+      "question": "_______ hope",
+      "type": "blank",
+      "answer": "forlorn",
+      "explanation": "forlorn 绝望的,绝望的希望。The rescue team made a forlorn hope attempt to find survivors.救援队做出了一次绝望的希望尝试以寻找幸存者。"
+    },
+    {
+      "question": "______ sunburn",
+      "type": "blank",
+      "answer": "severe",
+      "explanation": "sunburn 晒伤,严重晒伤。After hours at the beach, she suffered from severe sunburn requiring treatment.在海滩待了几个小时后,她遭受了需要治疗的严重晒伤。"
+    },
+    {
+      "question": "______ churn",
+      "type": "blank",
+      "answer": "butter",
+      "explanation": "churn 搅拌器,黄油搅拌器。The farm used a traditional butter churn to make fresh dairy products.农场使用传统的黄油搅拌器制作新鲜的乳制品。"
+    },
+    {
+      "question": "_____ sojourn",
+      "type": "blank",
+      "answer": "short",
+      "explanation": "sojourn 逗留,短暂逗留。The diplomat enjoyed a short sojourn in Paris before returning home.外交官在返回家之前在巴黎享受了短暂的逗留。"
+    },
+    {
+      "question": "_________ man",
+      "type": "blank",
+      "answer": "taciturn",
+      "explanation": "taciturn 沉默寡言的,沉默寡言的人。The taciturn man rarely spoke during social gatherings.这个沉默寡言的人在社交聚会中很少说话。"
+    },
+    {
+      "question": "________ upturn",
+      "type": "blank",
+      "answer": "economic",
+      "explanation": "upturn 好转,经济好转。Analysts predicted an economic upturn after years of recession.分析师预测在多年衰退后经济好转。"
+    },
+    {
+      "question": "_________ overturn",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "overturn 推翻,政治推翻。The revolution led to a complete political overturn of the government.革命导致了政府的完全政治推翻。"
+    },
+    {
+      "question": "______ leprechaun",
+      "type": "blank",
+      "answer": "tricky",
+      "explanation": "leprechaun 小妖精,狡猾的小妖精。Irish folklore tells of a tricky leprechaun guarding pots of gold.爱尔兰民间传说讲述了一个守护着金罐的狡猾小妖精。"
+    },
+    {
+      "question": "________ bun",
+      "type": "blank",
+      "answer": "cinnamon",
+      "explanation": "bun 圆面包,肉桂圆面包。She enjoyed a warm cinnamon bun with her morning coffee.她在早晨的咖啡中享用了一个温暖的肉桂圆面包。"
+    },
+    {
+      "question": "________ nun",
+      "type": "blank",
+      "answer": "Catholic",
+      "explanation": "nun 修女,天主教修女。The devoted Catholic nun dedicated her life to serving the poor.虔诚的天主教修女献身于为穷人服务。"
+    },
+    {
+      "question": "__________ overrun",
+      "type": "blank",
+      "answer": "population",
+      "explanation": "overrun 过度蔓延,人口过度蔓延。The island faced population overrun threatening its natural resources.该岛面临人口过度蔓延威胁其自然资源。"
+    },
+    {
+      "question": "stun _______",
+      "type": "blank",
+      "answer": "grenade",
+      "explanation": "stun 震晕,震晕手榴弹。Police used a stun grenade to disorient the barricaded suspect.警察使用震晕手榴弹使被围困的嫌疑人迷失方向。"
+    },
+    {
+      "question": "____ fawn",
+      "type": "blank",
+      "answer": "baby",
+      "explanation": "fawn 小鹿,小鹿。The delicate baby fawn took its first wobbly steps in the forest.娇嫩的小鹿在森林中迈出了它摇摆的第一步。"
+    },
+    {
+      "question": "pawn ____",
+      "type": "blank",
+      "answer": "shop",
+      "explanation": "pawn 典当,典当行。Desperate for cash, he sold his watch at the pawn shop.迫切需要现金,他在典当行卖掉了他的手表。"
+    },
+    {
+      "question": "___ yawn",
+      "type": "blank",
+      "answer": "big",
+      "explanation": "yawn 打哈欠,大打哈欠。The bored student let out a big yawn during the lengthy lecture.无聊的学生在漫长的讲座中大打哈欠。"
+    },
+    {
+      "question": "_______ building",
+      "type": "blank",
+      "answer": "rundown",
+      "explanation": "rundown 破旧的,破旧的建筑。The abandoned rundown building was scheduled for demolition.废弃的破旧建筑被安排拆除。"
+    },
+    {
+      "question": "_______ prayer",
+      "type": "blank",
+      "answer": "sundown",
+      "explanation": "sundown 日落,日落祈祷。The faithful gathered for sundown prayer at the mosque.信徒在清真寺聚集进行日落祈祷。"
+    },
+    {
+      "question": "____ nightgown",
+      "type": "blank",
+      "answer": "silk",
+      "explanation": "nightgown 睡袍,丝绸睡袍。She wore an elegant silk nightgown to bed each evening.她每晚睡觉都穿着优雅的丝绸睡袍。"
+    },
+    {
+      "question": "_________ rhetoric",
+      "type": "blank",
+      "answer": "overblown",
+      "explanation": "overblown 夸大的,夸大的言辞。The politician's overblown rhetoric failed to convince skeptical voters.政治家夸大的言辞未能说服持怀疑态度的选民。"
+    },
+    {
+      "question": "_____ renown",
+      "type": "blank",
+      "answer": "world",
+      "explanation": "renown 声誉,世界声誉。The scientist achieved world renown for her groundbreaking research discoveries.科学家因其开创性的研究发现而获得了世界声誉。"
+    },
+    {
+      "question": "drown __ ___",
+      "type": "blank",
+      "answer": "at sea",
+      "explanation": "drown 溺水,在海上溺水。Many sailors would drown at sea during violent storms.许多水手会在猛烈的风暴中在海上溺水。"
+    },
+    {
+      "question": "_____ frown",
+      "type": "blank",
+      "answer": "angry",
+      "explanation": "frown 皱眉,愤怒的皱眉。His angry frown revealed his displeasure with the situation.他愤怒的皱眉显示了他对情况的不满。"
+    },
+    {
+      "question": "__________ garden",
+      "type": "blank",
+      "answer": "overgrown",
+      "explanation": "overgrown 杂草丛生的,杂草丛生的花园。The neglected overgrown garden needed extensive clearing and maintenance.被忽视的杂草丛生的花园需要大量清理和维护。"
+    },
+    {
+      "question": "disown ______________",
+      "type": "blank",
+      "answer": "responsibility",
+      "explanation": "disown 否认,否认责任。The company tried to disown responsibility for the environmental damage.公司试图否认对环境破坏的责任。"
+    },
+    {
+      "question": "_________ limbo",
+      "type": "blank",
+      "answer": "religious",
+      "explanation": "limbo 地狱边缘,宗教地狱边缘。Medieval theology described religious limbo as a place for unbaptized souls.中世纪神学将宗教地狱边缘描述为未受洗灵魂的地方。"
+    },
+    {
+      "question": "_____ fiasco",
+      "type": "blank",
+      "answer": "total",
+      "explanation": "fiasco 彻底失败,彻底的彻底失败。The product launch was a total fiasco resulting in massive losses.产品发布是彻底的彻底失败,导致巨大损失。"
+    },
+    {
+      "question": "____ ado",
+      "type": "blank",
+      "answer": "much",
+      "explanation": "ado 麻烦,很多麻烦。Shakespeare wrote the comedy Much Ado About Nothing in the 1590s.莎士比亚在1590年代写了喜剧《无事生非》。"
+    },
+    {
+      "question": "_______ crescendo",
+      "type": "blank",
+      "answer": "musical",
+      "explanation": "crescendo 渐强,音乐渐强。The symphony built to a dramatic musical crescendo in the final movement.交响乐在最后乐章中达到了戏剧性的音乐渐强。"
+    },
+    {
+      "question": "______ guy",
+      "type": "blank",
+      "answer": "weirdo",
+      "explanation": "weirdo 怪人,怪人家伙。The eccentric weirdo guy collected strange objects from garage sales.古怪的怪人家伙从车库拍卖中收集奇怪的物品。"
+    },
+    {
+      "question": "outdo __________",
+      "type": "blank",
+      "answer": "competitors",
+      "explanation": "outdo 超过,超过竞争对手。The company worked hard to outdo competitors with innovative products.公司努力用创新产品超过竞争对手。"
+    },
+    {
+      "question": "________ lumbago",
+      "type": "blank",
+      "answer": "backache",
+      "explanation": "lumbago 腰痛,背痛腰痛。The elderly man suffered from chronic backache lumbago limiting his mobility.老人患有慢性背痛腰痛,限制了他的活动能力。"
+    },
+    {
+      "question": "______ lingo",
+      "type": "blank",
+      "answer": "street",
+      "explanation": "lingo 行话,街头行话。The detective needed to understand street lingo to communicate with informants.侦探需要理解街头行话以与线人沟通。"
+    },
+    {
+      "question": "_____ embargo",
+      "type": "blank",
+      "answer": "trade",
+      "explanation": "embargo 禁运,贸易禁运。The government imposed a trade embargo on the hostile nation.政府对敌对国家实施了贸易禁运。"
+    },
+    {
+      "question": "forgo _______",
+      "type": "blank",
+      "answer": "dessert",
+      "explanation": "forgo 放弃,放弃甜点。He decided to forgo dessert to maintain his healthy diet.他决定放弃甜点以保持健康饮食。"
+    },
+    {
+      "question": "_______ poncho",
+      "type": "blank",
+      "answer": "Mexican",
+      "explanation": "poncho 斗篷,墨西哥斗篷。The traveler wore a colorful Mexican poncho to stay warm.旅行者穿着五颜六色的墨西哥斗篷以保持温暖。"
+    },
+    {
+      "question": "_________ shell",
+      "type": "blank",
+      "answer": "armadillo",
+      "explanation": "armadillo 犰狳,犰狳壳。The protective armadillo shell helps defend against predators in nature.保护性的犰狳壳有助于在自然界中防御捕食者。"
+    },
+    {
+      "question": "________ horse",
+      "type": "blank",
+      "answer": "palomino",
+      "explanation": "palomino 金黄色马,金黄色马。The beautiful palomino horse had a golden coat and white mane.美丽的金黄色马有金色的毛皮和白色的鬃毛。"
+    },
+    {
+      "question": "______ coo",
+      "type": "blank",
+      "answer": "pigeon",
+      "explanation": "coo 咕咕叫,鸽子咕咕叫。The gentle pigeon coo could be heard from the rooftop nest.温柔的鸽子咕咕叫可以从屋顶巢穴听到。"
+    },
+    {
+      "question": "shoo ____",
+      "type": "blank",
+      "answer": "away",
+      "explanation": "shoo 嘘走,嘘走。The farmer would shoo away birds trying to eat his crops.农民会嘘走试图吃他庄稼的鸟。"
+    },
+    {
+      "question": "______ loo",
+      "type": "blank",
+      "answer": "public",
+      "explanation": "loo 厕所,公共厕所。Tourists searched for a clean public loo in the busy city center.游客在繁忙的市中心寻找干净的公共厕所。"
+    },
+    {
+      "question": "_____ lasso",
+      "type": "blank",
+      "answer": "swing",
+      "explanation": "lasso 套索,挥舞套索。The skilled cowboy would swing lasso expertly to catch cattle.熟练的牛仔会熟练地挥舞套索以捕捉牛。"
+    },
+    {
+      "question": "_________ mode",
+      "type": "blank",
+      "answer": "incognito",
+      "explanation": "incognito 隐姓埋名,隐姓埋名模式。The celebrity traveled in incognito mode to avoid media attention.这位名人以隐姓埋名模式旅行以避免媒体关注。"
+    },
+    {
+      "question": "______ delivery",
+      "type": "blank",
+      "answer": "pronto",
+      "explanation": "pronto 迅速,迅速交付。The urgent package needed pronto delivery by the end of day.紧急包裹需要在当天结束前迅速交付。"
+    },
+    {
+      "question": "________ unknown",
+      "type": "blank",
+      "answer": "hitherto",
+      "explanation": "hitherto 迄今,迄今未知。The archaeologists discovered a hitherto unknown ancient civilization.考古学家发现了一个迄今未知的古代文明。"
+    },
+    {
+      "question": "____ gusto",
+      "type": "blank",
+      "answer": "full",
+      "explanation": "gusto 热情,充满热情。The children played with full gusto in the sunny playground.孩子们在阳光明媚的操场上充满热情地玩耍。"
+    },
+    {
+      "question": "____ grotto",
+      "type": "blank",
+      "answer": "rock",
+      "explanation": "grotto 洞穴,岩石洞穴。Pilgrims visited the sacred rock grotto for spiritual reflection.朝圣者参观神圣的岩石洞穴进行精神反思。"
+    },
+    {
+      "question": "Iwo ____",
+      "type": "blank",
+      "answer": "Jima",
+      "explanation": "Iwo 硫磺,硫磺岛。The Battle of Iwo Jima was a major World War II conflict.硫磺岛战役是第二次世界大战的重大冲突。"
+    },
+    {
+      "question": "___ hubcap",
+      "type": "blank",
+      "answer": "car",
+      "explanation": "hubcap 轮毂盖,汽车轮毂盖。The shiny car hubcap fell off during the bumpy road trip.闪亮的汽车轮毂盖在颠簸的公路旅行中掉了下来。"
+    },
+    {
+      "question": "_______ nightcap",
+      "type": "blank",
+      "answer": "bedtime",
+      "explanation": "nightcap 睡前酒,睡前睡前酒。He enjoyed a warm bedtime nightcap before retiring for the evening.他在晚上就寝前享用了一杯温暖的睡前酒。"
+    },
+    {
+      "question": "_______ hat",
+      "type": "blank",
+      "answer": "earflap",
+      "explanation": "earflap 护耳,护耳帽。The winter earflap hat protected his ears from freezing temperatures.冬天的护耳帽保护他的耳朵免受冰冻温度的影响。"
+    },
+    {
+      "question": "___________ storm",
+      "type": "blank",
+      "answer": "thunderclap",
+      "explanation": "thunderclap 雷鸣,雷鸣风暴。A sudden thunderclap storm frightened everyone at the outdoor concert.一场突然的雷鸣风暴吓坏了户外音乐会上的每个人。"
+    },
+    {
+      "question": "zap _______",
+      "type": "blank",
+      "answer": "enemies",
+      "explanation": "zap 击毙,击毙敌人。The video game character could zap enemies with lightning bolts.视频游戏角色可以用闪电击毙敌人。"
+    },
+    {
+      "question": "creep ______",
+      "type": "blank",
+      "answer": "slowly",
+      "explanation": "creep 爬行,缓慢爬行。The spy had to creep slowly through the dark corridor undetected.间谍必须在黑暗的走廊中缓慢爬行而不被发现。"
+    },
+    {
+      "question": "_____ seep",
+      "type": "blank",
+      "answer": "water",
+      "explanation": "seep 渗透,水渗透。Groundwater seep gradually through the porous rock layers.地下水逐渐渗透通过多孔岩层。"
+    },
+    {
+      "question": "weep ________",
+      "type": "blank",
+      "answer": "bitterly",
+      "explanation": "weep 哭泣,痛苦地哭泣。The grieving widow would weep bitterly at her husband's funeral.悲痛的寡妇会在丈夫的葬礼上痛苦地哭泣。"
+    },
+    {
+      "question": "sidestep _____",
+      "type": "blank",
+      "answer": "issue",
+      "explanation": "sidestep 回避,回避问题。The politician tried to sidestep issue by changing the subject quickly.政治家试图通过迅速改变话题来回避问题。"
+    },
+    {
+      "question": "_________ dance",
+      "type": "blank",
+      "answer": "quickstep",
+      "explanation": "quickstep 快步舞,快步舞。The couple performed an energetic quickstep dance at the competition.这对夫妇在比赛中表演了充满活力的快步舞。"
+    },
+    {
+      "question": "____ sportsmanship",
+      "type": "blank",
+      "answer": "good",
+      "explanation": "sportsmanship 体育精神,良好的体育精神。The coach emphasized good sportsmanship over winning at all costs.教练强调良好的体育精神而不是不惜一切代价获胜。"
+    },
+    {
+      "question": "_________ kip",
+      "type": "blank",
+      "answer": "afternoon",
+      "explanation": "kip 小睡,午后小睡。The tired worker took a quick afternoon kip before returning to work.疲惫的工人在返回工作前进行了快速的午后小睡。"
+    },
+    {
+      "question": "______ turnip",
+      "type": "blank",
+      "answer": "boiled",
+      "explanation": "turnip 萝卜,煮萝卜。The traditional meal included mashed potatoes and boiled turnip vegetables.传统餐包括土豆泥和煮萝卜蔬菜。"
+    },
+    {
+      "question": "_____ strip",
+      "type": "blank",
+      "answer": "comic",
+      "explanation": "comic strip 连环画,连环画。The Sunday newspaper featured a popular comic strip that everyone enjoyed.周日报纸刊登了一个每个人都喜欢的流行连环画。"
+    },
+    {
+      "question": "outstrip ______",
+      "type": "blank",
+      "answer": "rivals",
+      "explanation": "outstrip 超过,超过对手。The company's innovation would outstrip rivals in the market.公司的创新会在市场上超过对手。"
+    },
+    {
+      "question": "_________ control",
+      "type": "blank",
+      "answer": "fingertip",
+      "explanation": "fingertip 指尖,指尖控制。The pilot had fingertip control over the aircraft's sensitive instruments.飞行员对飞机的敏感仪器有指尖控制。"
+    },
+    {
+      "question": "scalp _______",
+      "type": "blank",
+      "answer": "massage",
+      "explanation": "scalp 头皮,头皮按摩。The spa offered a relaxing scalp massage treatment for stressed clients.水疗中心为压力大的客户提供放松的头皮按摩治疗。"
+    },
+    {
+      "question": "___ yelp",
+      "type": "blank",
+      "answer": "dog",
+      "explanation": "yelp 尖叫,狗尖叫。The injured dog yelp in pain when it stepped on broken glass.受伤的狗踩到碎玻璃时痛苦地尖叫。"
+    },
+    {
+      "question": "gulp _____",
+      "type": "blank",
+      "answer": "water",
+      "explanation": "gulp 大口喝,大口喝水。The thirsty runner would gulp water eagerly after the marathon.口渴的跑步者在马拉松后会急切地大口喝水。"
+    },
+    {
+      "question": "___ cramp",
+      "type": "blank",
+      "answer": "leg",
+      "explanation": "cramp 抽筋,腿抽筋。The swimmer experienced a painful leg cramp in the middle of the race.游泳运动员在比赛中途经历了痛苦的腿抽筋。"
+    },
+    {
+      "question": "tramp ______",
+      "type": "blank",
+      "answer": "around",
+      "explanation": "tramp 踏步,到处踏步。The hikers would tramp around the countryside exploring scenic trails.徒步旅行者会在乡村到处踏步探索风景优美的小径。"
+    },
+    {
+      "question": "chomp ____",
+      "type": "blank",
+      "answer": "food",
+      "explanation": "chomp 大声咀嚼,大声咀嚼食物。The hungry teenager would chomp food noisily at the dinner table.饥饿的青少年会在餐桌上大声咀嚼食物。"
+    },
+    {
+      "question": "stomp ____",
+      "type": "blank",
+      "answer": "feet",
+      "explanation": "stomp 跺脚,跺脚。The angry child would stomp feet loudly to express frustration.愤怒的孩子会大声跺脚以表达沮丧。"
+    },
+    {
+      "question": "_____ hump",
+      "type": "blank",
+      "answer": "camel",
+      "explanation": "hump 驼峰,骆驼驼峰。The camel hump stores fat that provides energy during desert journeys.骆驼驼峰储存脂肪,在沙漠旅行中提供能量。"
+    },
+    {
+      "question": "____ thump",
+      "type": "blank",
+      "answer": "loud",
+      "explanation": "thump 重击声,响亮的重击声。A loud thump came from upstairs startling everyone in the house.一声响亮的重击声从楼上传来,吓了房子里的每个人一跳。"
+    },
+    {
+      "question": "_____ clump",
+      "type": "blank",
+      "answer": "grass",
+      "explanation": "clump 丛,草丛。A thick grass clump grew in the middle of the garden path.一丛厚厚的草丛生长在花园小径的中间。"
+    },
+    {
+      "question": "flump ____",
+      "type": "blank",
+      "answer": "down",
+      "explanation": "flump 重重坐下,重重坐下。The exhausted worker would flump down on the sofa after work.筋疲力尽的工人下班后会重重坐在沙发上。"
+    },
+    {
+      "question": "________ slump",
+      "type": "blank",
+      "answer": "economic",
+      "explanation": "slump 萧条,经济萧条。The country faced a severe economic slump with rising unemployment.该国面临严重的经济萧条,失业率上升。"
+    },
+    {
+      "question": "rump _____",
+      "type": "blank",
+      "answer": "steak",
+      "explanation": "rump 臀部,臀部牛排。The restaurant served tender rump steak with roasted vegetables.餐厅供应嫩的臀部牛排配烤蔬菜。"
+    },
+    {
+      "question": "____ stump",
+      "type": "blank",
+      "answer": "tree",
+      "explanation": "stump 树桩,树桩。The old tree stump remained in the yard after the tree was cut down.树被砍倒后,旧树桩留在院子里。"
+    },
+    {
+      "question": "_____ gallop",
+      "type": "blank",
+      "answer": "horse",
+      "explanation": "gallop 疾驰,马疾驰。The wild horse galloped freely across the open plains.野马在开阔的平原上自由疾驰。"
+    },
+    {
+      "question": "____ wallop",
+      "type": "blank",
+      "answer": "hard",
+      "explanation": "wallop 重击,用力重击。The boxer delivered a hard wallop that knocked out his opponent.拳击手给予了一记用力重击,击倒了他的对手。"
+    },
+    {
+      "question": "_____ codswallop",
+      "type": "blank",
+      "answer": "utter",
+      "explanation": "codswallop 胡说,彻头彻尾的胡说。The conspiracy theory was dismissed as utter codswallop by experts.阴谋论被专家斥为彻头彻尾的胡说。"
+    },
+    {
+      "question": "_____ dollop",
+      "type": "blank",
+      "answer": "cream",
+      "explanation": "dollop 一团,一团奶油。She added a generous cream dollop to the hot chocolate dessert.她在热巧克力甜点上加了一大团奶油。"
+    },
+    {
+      "question": "_____ lollop",
+      "type": "blank",
+      "answer": "puppy",
+      "explanation": "lollop 蹦跳,小狗蹦跳。The playful puppy lolloped across the lawn chasing butterflies.顽皮的小狗蹦跳着穿过草坪追逐蝴蝶。"
+    },
+    {
+      "question": "_____ slop",
+      "type": "blank",
+      "answer": "dirty",
+      "explanation": "slop 泔水,脏泔水。The farmer fed dirty slop to the pigs in the muddy pen.农民在泥泞的围栏里给猪喂脏泔水。"
+    },
+    {
+      "question": "whoop ______",
+      "type": "blank",
+      "answer": "loudly",
+      "explanation": "whoop 欢呼,大声欢呼。Fans would whoop loudly when their team scored a touchdown.当他们的队得分时,粉丝会大声欢呼。"
+    },
+    {
+      "question": "_____ droop",
+      "type": "blank",
+      "answer": "plant",
+      "explanation": "droop 下垂,植物下垂。Without water, the neglected plant droop sadly in the hot sun.没有水,被忽视的植物在烈日下悲伤地下垂。"
+    }
+  ]
+}
