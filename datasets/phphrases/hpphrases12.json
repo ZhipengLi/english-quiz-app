@@ -1,1 +1,605 @@
-
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "yank ____",
+      "type": "blank",
+      "answer": "cord",
+      "explanation": "yank 猛拉,猛拉绳索。He had to yank cord forcefully to start the stubborn lawnmower engine.他不得不用力猛拉绳索以启动顽固的割草机引擎。"
+    },
+    {
+      "question": "dink ____",
+      "type": "blank",
+      "answer": "shot",
+      "explanation": "dink 轻击,轻击球。The tennis player executed a perfect dink shot that barely cleared the net.网球运动员完成了一个完美的轻击球,刚好越过网。"
+    },
+    {
+      "question": "clink _______",
+      "type": "blank",
+      "answer": "glasses",
+      "explanation": "clink 碰杯,碰杯。The guests would clink glasses together in a toast to the newlyweds.宾客们会碰杯为新婚夫妇干杯。"
+    },
+    {
+      "question": "slink ____",
+      "type": "blank",
+      "answer": "away",
+      "explanation": "slink 溜走,溜走。The embarrassed dog would slink away after being scolded for bad behavior.尴尬的狗在因不良行为被责骂后会溜走。"
+    },
+    {
+      "question": "___ stink",
+      "type": "blank",
+      "answer": "bad",
+      "explanation": "stink 臭味,难闻的臭味。A bad stink emanated from the garbage that hadn't been collected for weeks.从几周没收集的垃圾中散发出难闻的臭味。"
+    },
+    {
+      "question": "hoodwink ______",
+      "type": "blank",
+      "answer": "people",
+      "explanation": "hoodwink 欺骗,欺骗人们。The fraudulent scheme was designed to hoodwink people into investing fake companies.这个欺诈计划旨在欺骗人们投资虚假公司。"
+    },
+    {
+      "question": "dunk ____",
+      "type": "blank",
+      "answer": "ball",
+      "explanation": "dunk 扣篮,扣篮。The basketball star leaped high to dunk ball with incredible force.篮球明星高高跃起以令人难以置信的力量扣篮。"
+    },
+    {
+      "question": "____ thunk",
+      "type": "blank",
+      "answer": "loud",
+      "explanation": "thunk 重击声,响亮的重击声。A loud thunk echoed through the house when the heavy book fell.当厚重的书掉落时,响亮的重击声在房子里回响。"
+    },
+    {
+      "question": "______ clunk",
+      "type": "blank",
+      "answer": "engine",
+      "explanation": "clunk 咔嗒声,引擎咔嗒声。The worrying engine clunk indicated serious mechanical problems ahead.令人担忧的引擎咔嗒声表明前方有严重的机械问题。"
+    },
+    {
+      "question": "plunk ____ _____",
+      "type": "blank",
+      "answer": "down money",
+      "explanation": "plunk 重重放下,重重放下钱。The customer would plunk down money on the counter impatiently.顾客会不耐烦地在柜台上重重放下钱。"
+    },
+    {
+      "question": "___ amok",
+      "type": "blank",
+      "answer": "run",
+      "explanation": "amok 发狂,发狂乱跑。The escaped zoo animals would run amok through the city streets.逃跑的动物园动物会在城市街道上发狂乱跑。"
+    },
+    {
+      "question": "__ ___________",
+      "type": "blank",
+      "answer": "on tenterhooks",
+      "explanation": "tenterhook 焦急,焦急不安。The family was on tenterhooks waiting for news about the missing child.家人焦急不安地等待失踪孩子的消息。"
+    },
+    {
+      "question": "_____ nook",
+      "type": "blank",
+      "answer": "quiet",
+      "explanation": "nook 角落,安静的角落。She found a quiet nook in the library to read her favorite book.她在图书馆找到了一个安静的角落读她最喜欢的书。"
+    },
+    {
+      "question": "crook ____",
+      "type": "blank",
+      "answer": "nose",
+      "explanation": "crook 弯曲,弯曲的鼻子。The boxer's crook nose was evidence of years in the ring.拳击手弯曲的鼻子是多年在拳击场上的证据。"
+    },
+    {
+      "question": "embark __ _______",
+      "type": "blank",
+      "answer": "on journey",
+      "explanation": "embark 开始,开始旅程。The adventurers prepared to embark on journey across the dangerous desert.冒险家们准备开始穿越危险沙漠的旅程。"
+    },
+    {
+      "question": "disembark __________",
+      "type": "blank",
+      "answer": "passengers",
+      "explanation": "disembark 下船,乘客下船。The cruise ship would disembark passengers at the picturesque island port.游轮会在风景如画的岛屿港口让乘客下船。"
+    },
+    {
+      "question": "lark _____",
+      "type": "blank",
+      "answer": "about",
+      "explanation": "lark 嬉戏,嬉戏玩耍。Children would lark about in the playground during their lunch break.孩子们会在午休时间在操场上嬉戏玩耍。"
+    },
+    {
+      "question": "____ pockmark",
+      "type": "blank",
+      "answer": "face",
+      "explanation": "pockmark 痘疤,脸上的痘疤。The childhood illness left permanent face pockmarks on his cheeks.童年的疾病在他脸颊上留下了永久的痘疤。"
+    },
+    {
+      "question": "_____ berk",
+      "type": "blank",
+      "answer": "silly",
+      "explanation": "berk 笨蛋,愚蠢的笨蛋。The silly berk forgot his keys and locked himself out of the house.这个愚蠢的笨蛋忘了钥匙,把自己锁在门外。"
+    },
+    {
+      "question": "__ berserk",
+      "type": "blank",
+      "answer": "go",
+      "explanation": "berserk 发狂,发狂。The angry customer would go berserk when denied a refund for the defective product.当被拒绝退还有缺陷产品的退款时,愤怒的顾客会发狂。"
+    },
+    {
+      "question": "irk _______",
+      "type": "blank",
+      "answer": "someone",
+      "explanation": "irk 使恼怒,使某人恼怒。His constant whistling would irk someone trying to concentrate on work.他不断的吹口哨会使试图专心工作的人恼怒。"
+    },
+    {
+      "question": "smirk ____",
+      "type": "blank",
+      "answer": "face",
+      "explanation": "smirk 得意的笑,得意的笑脸。The arrogant winner wore a smirk face that annoyed his defeated opponents.傲慢的赢家脸上带着得意的笑,这让他被击败的对手恼火。"
+    },
+    {
+      "question": "patchwork _____",
+      "type": "blank",
+      "answer": "quilt",
+      "explanation": "patchwork 拼布,拼布被子。Grandmother lovingly stitched a colorful patchwork quilt from old fabric scraps.祖母用旧布料碎片深情地缝制了一床五颜六色的拼布被子。"
+    },
+    {
+      "question": "____ handiwork",
+      "type": "blank",
+      "answer": "fine",
+      "explanation": "handiwork 手工,精美的手工。The intricate carvings were examples of the craftsman's fine handiwork.复杂的雕刻是工匠精美手工的例子。"
+    },
+    {
+      "question": "wickerwork _____",
+      "type": "blank",
+      "answer": "chair",
+      "explanation": "wickerwork 柳条制品,柳条椅。The comfortable wickerwork chair sat on the sunny porch overlooking the garden.舒适的柳条椅放在阳光充足的门廊上,俯瞰着花园。"
+    },
+    {
+      "question": "____ guesswork",
+      "type": "blank",
+      "answer": "wild",
+      "explanation": "guesswork 猜测,胡乱猜测。Without proper data, their conclusions were based on wild guesswork rather than facts.没有适当的数据,他们的结论是基于胡乱猜测而不是事实。"
+    },
+    {
+      "question": "lurk __ ____",
+      "type": "blank",
+      "answer": "in dark",
+      "explanation": "lurk 潜伏,在黑暗中潜伏。Dangerous predators would lurk in dark waiting for unsuspecting prey.危险的捕食者会在黑暗中潜伏等待毫无戒备的猎物。"
+    },
+    {
+      "question": "bask __ ___",
+      "type": "blank",
+      "answer": "in sun",
+      "explanation": "bask 晒太阳,在阳光下晒太阳。The lazy cat would bask in sun on the warm windowsill for hours.懒猫会在温暖的窗台上在阳光下晒太阳好几个小时。"
+    },
+    {
+      "question": "____ flask",
+      "type": "blank",
+      "answer": "wine",
+      "explanation": "flask 烧瓶,酒瓶。The traveler carried a leather wine flask filled with refreshing beverage.旅行者携带着一个装满清爽饮料的皮革酒瓶。"
+    },
+    {
+      "question": "hipflask ______",
+      "type": "blank",
+      "answer": "pocket",
+      "explanation": "hipflask 扁酒瓶,口袋扁酒瓶。He discreetly kept a silver hipflask pocket for sipping whiskey at events.他谨慎地在口袋里放了一个银制扁酒瓶,在活动中啜饮威士忌。"
+    },
+    {
+      "question": "whisk ____",
+      "type": "blank",
+      "answer": "eggs",
+      "explanation": "whisk 搅打,搅打鸡蛋。The chef used a wire beater to whisk eggs until they became fluffy.厨师用钢丝搅拌器搅打鸡蛋,直到它们变得蓬松。"
+    },
+    {
+      "question": "________ basilisk",
+      "type": "blank",
+      "answer": "mythical",
+      "explanation": "basilisk 蛇怪,神话中的蛇怪。In legends, the mythical basilisk could kill victims with its deadly gaze.在传说中,神话中的蛇怪可以用致命的凝视杀死受害者。"
+    },
+    {
+      "question": "brisk ____",
+      "type": "blank",
+      "answer": "walk",
+      "explanation": "brisk 轻快的,轻快的步行。A brisk walk in the morning air helped clear his mind before work.早晨空气中的轻快步行帮助他在工作前理清思路。"
+    },
+    {
+      "question": "frisk _______",
+      "type": "blank",
+      "answer": "suspect",
+      "explanation": "frisk 搜身,搜查嫌疑人。Security officers would frisk suspect for weapons before entering the courthouse.安全人员会在嫌疑人进入法院前搜查他是否携带武器。"
+    },
+    {
+      "question": "gawk __",
+      "type": "blank",
+      "answer": "at",
+      "explanation": "gawk 呆看,呆看。Tourists would gawk at the towering skyscrapers in the busy city center.游客会呆看繁忙市中心高耸的摩天大楼。"
+    },
+    {
+      "question": "____ squawk",
+      "type": "blank",
+      "answer": "bird",
+      "explanation": "squawk 尖叫,鸟尖叫。The angry parrot's loud bird squawk disturbed the entire neighborhood.愤怒的鹦鹉响亮的鸟尖叫声扰乱了整个社区。"
+    },
+    {
+      "question": "comical _____",
+      "type": "blank",
+      "answer": "scene",
+      "explanation": "comical 滑稽的,滑稽的场景。The dog chasing its own tail created a comical scene that made everyone laugh.狗追着自己的尾巴创造了一个让每个人都笑的滑稽场景。"
+    },
+    {
+      "question": "pyrotechnical _______",
+      "type": "blank",
+      "answer": "display",
+      "explanation": "pyrotechnical 烟火的,烟火表演。The celebration ended with a spectacular pyrotechnical display lighting up the night sky.庆祝活动以壮观的烟火表演照亮夜空而结束。"
+    },
+    {
+      "question": "cylindrical _____",
+      "type": "blank",
+      "answer": "shape",
+      "explanation": "cylindrical 圆柱形的,圆柱形状。The ancient column had a perfect cylindrical shape carved from marble.古老的柱子有一个用大理石雕刻的完美圆柱形状。"
+    },
+    {
+      "question": "hysterical ________",
+      "type": "blank",
+      "answer": "laughter",
+      "explanation": "hysterical 歇斯底里的,歇斯底里的笑声。The comedian's jokes provoked hysterical laughter from the entire audience.喜剧演员的笑话引发了全体观众歇斯底里的笑声。"
+    },
+    {
+      "question": "fanatical _________",
+      "type": "blank",
+      "answer": "supporter",
+      "explanation": "fanatical 狂热的,狂热的支持者。The fanatical supporter traveled thousands of miles to attend every game.这位狂热的支持者旅行了数千英里参加每一场比赛。"
+    },
+    {
+      "question": "quizzical ____",
+      "type": "blank",
+      "answer": "look",
+      "explanation": "quizzical 疑惑的,疑惑的表情。She gave him a quizzical look when he made the strange proposal.当他提出奇怪的建议时,她给了他一个疑惑的表情。"
+    },
+    {
+      "question": "________ vandal",
+      "type": "blank",
+      "answer": "mindless",
+      "explanation": "vandal 破坏者,无意识的破坏者。The mindless vandal spray-painted graffiti on the historic monument.无意识的破坏者在历史纪念碑上喷涂涂鸦。"
+    },
+    {
+      "question": "_______ ordeal",
+      "type": "blank",
+      "answer": "painful",
+      "explanation": "ordeal 折磨,痛苦的折磨。The hostages endured a painful ordeal during their captivity.人质在被囚禁期间忍受了痛苦的折磨。"
+    },
+    {
+      "question": "_____ congeal",
+      "type": "blank",
+      "answer": "blood",
+      "explanation": "congeal 凝结,血液凝结。In cold temperatures, blood congeal more quickly at the wound site.在寒冷的温度下,血液会在伤口处更快地凝结。"
+    },
+    {
+      "question": "____ peal __ _____",
+      "type": "blank",
+      "answer": "loud of bells",
+      "explanation": "peal 响亮的钟声,响亮的钟声。A loud peal of bells announced the wedding ceremony's joyful conclusion.响亮的钟声宣布了婚礼的欢乐结束。"
+    },
+    {
+      "question": "_________ body",
+      "type": "blank",
+      "answer": "corporeal",
+      "explanation": "corporeal 肉体的,肉体的身体。The ghost story questioned whether spirits needed a corporeal body to exist.鬼故事质疑灵魂是否需要肉体的身体才能存在。"
+    },
+    {
+      "question": "___ squeal",
+      "type": "blank",
+      "answer": "pig",
+      "explanation": "squeal 尖叫,猪尖叫。The loud pig squeal could be heard across the entire farm at feeding time.响亮的猪尖叫在喂食时间可以在整个农场听到。"
+    },
+    {
+      "question": "______ weal",
+      "type": "blank",
+      "answer": "common",
+      "explanation": "weal 福祉,公共福祉。Politicians should work for the common weal rather than personal gain.政治家应该为公共福祉而不是个人利益工作。"
+    },
+    {
+      "question": "_____ sundial",
+      "type": "blank",
+      "answer": "stone",
+      "explanation": "sundial 日晷,石制日晷。The ancient stone sundial in the garden told time using the sun's shadow.花园里古老的石制日晷利用太阳的阴影来报时。"
+    },
+    {
+      "question": "_____ phial",
+      "type": "blank",
+      "answer": "glass",
+      "explanation": "phial 小瓶,玻璃小瓶。The alchemist stored the precious potion in a delicate glass phial.炼金术士将珍贵的药水储存在精致的玻璃小瓶中。"
+    },
+    {
+      "question": "pestilential _______",
+      "type": "blank",
+      "answer": "disease",
+      "explanation": "pestilential 瘟疫的,瘟疫疾病。The pestilential disease spread rapidly through the overcrowded medieval city.瘟疫疾病在过度拥挤的中世纪城市中迅速传播。"
+    },
+    {
+      "question": "torrential ____",
+      "type": "blank",
+      "answer": "rain",
+      "explanation": "torrential 倾盆的,倾盆大雨。The torrential rain caused severe flooding throughout the low-lying areas.倾盆大雨在低洼地区造成了严重的洪水。"
+    },
+    {
+      "question": "________ vial",
+      "type": "blank",
+      "answer": "medicine",
+      "explanation": "vial 小瓶,药瓶。The nurse carefully extracted the vaccine from the sealed medicine vial.护士小心地从密封的药瓶中提取疫苗。"
+    },
+    {
+      "question": "jovial ____",
+      "type": "blank",
+      "answer": "mood",
+      "explanation": "jovial 愉快的,愉快的心情。Santa Claus is always depicted in a jovial mood spreading Christmas cheer.圣诞老人总是被描绘成愉快的心情传播圣诞欢乐。"
+    },
+    {
+      "question": "______ jackal",
+      "type": "blank",
+      "answer": "desert",
+      "explanation": "jackal 豺狼,沙漠豺狼。The cunning desert jackal scavenged for food in the harsh wilderness.狡猾的沙漠豺狼在严酷的荒野中寻找食物。"
+    },
+    {
+      "question": "infinitesimal ______",
+      "type": "blank",
+      "answer": "amount",
+      "explanation": "infinitesimal 极小的,极小的数量。Only an infinitesimal amount of the rare element exists in nature.这种稀有元素在自然界中只存在极小的数量。"
+    },
+    {
+      "question": "subnormal _____",
+      "type": "blank",
+      "answer": "child",
+      "explanation": "subnormal 低于正常的,低于正常的孩子。Special education programs help subnormal children reach their full potential.特殊教育项目帮助低于正常的孩子发挥他们的全部潜力。"
+    },
+    {
+      "question": "dismal _______",
+      "type": "blank",
+      "answer": "weather",
+      "explanation": "dismal 阴郁的,阴郁的天气。The dismal weather matched everyone's somber mood at the funeral.阴郁的天气与葬礼上每个人忧郁的心情相匹配。"
+    },
+    {
+      "question": "abysmal _______",
+      "type": "blank",
+      "answer": "failure",
+      "explanation": "abysmal 糟糕的,糟糕的失败。The company's new product launch was an abysmal failure costing millions.公司的新产品发布是一次糟糕的失败,损失了数百万。"
+    },
+    {
+      "question": "phenomenal _______",
+      "type": "blank",
+      "answer": "success",
+      "explanation": "phenomenal 非凡的,非凡的成功。The debut album achieved phenomenal success selling millions of copies worldwide.首张专辑取得了非凡的成功,在全球售出数百万张。"
+    },
+    {
+      "question": "delusional ______",
+      "type": "blank",
+      "answer": "belief",
+      "explanation": "delusional 妄想的,妄想的信念。The patient's delusional belief that he could fly required psychiatric treatment.病人认为自己能飞的妄想信念需要精神治疗。"
+    },
+    {
+      "question": "sensational ____",
+      "type": "blank",
+      "answer": "news",
+      "explanation": "sensational 轰动的,轰动的新闻。The newspaper published sensational news about the celebrity scandal on the front page.报纸在头版刊登了关于名人丑闻的轰动新闻。"
+    },
+    {
+      "question": "impersonal ____",
+      "type": "blank",
+      "answer": "tone",
+      "explanation": "impersonal 冷淡的,冷淡的语气。The rejection letter was written in an impersonal tone without any warmth.拒绝信以冷淡的语气写成,没有任何温暖。"
+    },
+    {
+      "question": "________ noise",
+      "type": "blank",
+      "answer": "infernal",
+      "explanation": "infernal 恼人的,恼人的噪音。The infernal noise from the construction site continued throughout the night.建筑工地恼人的噪音持续了整个晚上。"
+    },
+    {
+      "question": "paternal ____",
+      "type": "blank",
+      "answer": "love",
+      "explanation": "paternal 父亲的,父爱。His paternal love for his children was evident in everything he did.他对孩子们的父爱在他所做的一切中都显而易见。"
+    },
+    {
+      "question": "_____ foal",
+      "type": "blank",
+      "answer": "horse",
+      "explanation": "foal 小马驹,小马驹。The newborn horse foal stood on wobbly legs for the first time.新生的小马驹第一次用摇晃的腿站立。"
+    },
+    {
+      "question": "appal ________",
+      "type": "blank",
+      "answer": "audience",
+      "explanation": "appal 使惊骇,使观众惊骇。The graphic violence in the documentary would appal audience members deeply.纪录片中的血腥暴力会深深地使观众惊骇。"
+    },
+    {
+      "question": "sepulchral _____",
+      "type": "blank",
+      "answer": "voice",
+      "explanation": "sepulchral 阴森的,阴森的声音。The ghost spoke in a sepulchral voice that sent shivers down everyone's spine.鬼魂用阴森的声音说话,让每个人都不寒而栗。"
+    },
+    {
+      "question": "enthral _______",
+      "type": "blank",
+      "answer": "readers",
+      "explanation": "enthral 迷住,迷住读者。The fantasy novel would enthral readers with its magical world and complex characters.这部奇幻小说会以其神奇的世界和复杂的人物迷住读者。"
+    },
+    {
+      "question": "_______ perusal",
+      "type": "blank",
+      "answer": "careful",
+      "explanation": "perusal 细读,仔细细读。The legal document required careful perusal before signing the contract.法律文件在签署合同前需要仔细细读。"
+    },
+    {
+      "question": "_____ recital",
+      "type": "blank",
+      "answer": "piano",
+      "explanation": "recital 独奏会,钢琴独奏会。The talented student performed brilliantly at her first piano recital.这位才华横溢的学生在她的第一场钢琴独奏会上表现出色。"
+    },
+    {
+      "question": "temperamental ______",
+      "type": "blank",
+      "answer": "artist",
+      "explanation": "temperamental 喜怒无常的,喜怒无常的艺术家。The temperamental artist refused to work unless conditions were absolutely perfect.这位喜怒无常的艺术家拒绝工作,除非条件绝对完美。"
+    },
+    {
+      "question": "noncommittal ______",
+      "type": "blank",
+      "answer": "answer",
+      "explanation": "noncommittal 含糊的,含糊的回答。The politician gave a noncommittal answer avoiding any definite commitment.这位政治家给出了一个含糊的回答,避免任何明确的承诺。"
+    },
+    {
+      "question": "asphodel ______",
+      "type": "blank",
+      "answer": "flower",
+      "explanation": "asphodel 水仙,水仙花。In Greek mythology, asphodel flowers grew in the meadows of the underworld.在希腊神话中,水仙花生长在冥界的草地上。"
+    },
+    {
+      "question": "cartwheel ____",
+      "type": "blank",
+      "answer": "move",
+      "explanation": "cartwheel 侧手翻,侧手翻动作。The gymnast executed a perfect cartwheel move during her floor routine.体操运动员在自由体操中完成了一个完美的侧手翻动作。"
+    },
+    {
+      "question": "____ keel",
+      "type": "blank",
+      "answer": "ship",
+      "explanation": "keel 龙骨,船龙骨。The ship keel was laid in the shipyard marking the vessel's construction beginning.船龙骨在造船厂铺设,标志着船只建造的开始。"
+    },
+    {
+      "question": "kneel ____",
+      "type": "blank",
+      "answer": "down",
+      "explanation": "kneel 跪下,跪下。The knight would kneel down before the king to receive his honor.骑士会在国王面前跪下接受他的荣誉。"
+    },
+    {
+      "question": "pummel ________",
+      "type": "blank",
+      "answer": "opponent",
+      "explanation": "pummel 连续猛击,连续猛击对手。The boxer continued to pummel opponent until the referee stopped the fight.拳击手继续连续猛击对手,直到裁判停止比赛。"
+    },
+    {
+      "question": "______ flannel",
+      "type": "blank",
+      "answer": "cotton",
+      "explanation": "flannel 法兰绒,棉法兰绒。The soft cotton flannel pajamas kept her warm on cold winter nights.柔软的棉法兰绒睡衣让她在寒冷的冬夜保持温暖。"
+    },
+    {
+      "question": "repel ______",
+      "type": "blank",
+      "answer": "attack",
+      "explanation": "repel 击退,击退攻击。The defenders fought bravely to repel attack from the invading army.守军勇敢地战斗以击退入侵军队的攻击。"
+    },
+    {
+      "question": "_____ scalpel",
+      "type": "blank",
+      "answer": "sharp",
+      "explanation": "scalpel 手术刀,锋利的手术刀。The surgeon used a sharp scalpel to make a precise incision.外科医生用锋利的手术刀做了一个精确的切口。"
+    },
+    {
+      "question": "propel _______",
+      "type": "blank",
+      "answer": "forward",
+      "explanation": "propel 推进,向前推进。The rocket engines would propel forward the spacecraft toward distant planets.火箭引擎会向前推进宇宙飞船向遥远的行星。"
+    },
+    {
+      "question": "dispel ______",
+      "type": "blank",
+      "answer": "doubts",
+      "explanation": "dispel 消除,消除疑虑。The scientist provided evidence to dispel doubts about the research findings.科学家提供了证据以消除对研究结果的疑虑。"
+    },
+    {
+      "question": "_______ dog",
+      "type": "blank",
+      "answer": "mongrel",
+      "explanation": "mongrel 杂种狗,杂种狗。The friendly mongrel dog was adopted from the local animal shelter.这只友好的杂种狗是从当地动物收容所领养的。"
+    },
+    {
+      "question": "____ wastrel",
+      "type": "blank",
+      "answer": "lazy",
+      "explanation": "wastrel 败家子,懒惰的败家子。The lazy wastrel squandered his inheritance on gambling and drink.这个懒惰的败家子把遗产挥霍在赌博和酗酒上。"
+    },
+    {
+      "question": "______ weasel",
+      "type": "blank",
+      "answer": "sneaky",
+      "explanation": "weasel 黄鼠狼,狡猾的黄鼠狼。The sneaky weasel stole eggs from the chicken coop at night.狡猾的黄鼠狼在夜里从鸡舍偷鸡蛋。"
+    },
+    {
+      "question": "_____ chisel",
+      "type": "blank",
+      "answer": "stone",
+      "explanation": "chisel 凿子,石凿。The sculptor used a stone chisel to carve intricate details into marble.雕塑家用石凿在大理石上雕刻精致的细节。"
+    },
+    {
+      "question": "_________ tinsel",
+      "type": "blank",
+      "answer": "Christmas",
+      "explanation": "tinsel 金属丝,圣诞金属丝。The children decorated the tree with shiny Christmas tinsel and colorful ornaments.孩子们用闪亮的圣诞金属丝和彩色装饰品装饰树。"
+    },
+    {
+      "question": "____ morsel",
+      "type": "blank",
+      "answer": "tiny",
+      "explanation": "morsel 一小口,一小口食物。She offered the hungry bird a tiny morsel of bread from her sandwich.她从三明治中给饥饿的鸟提供了一小口面包。"
+    },
+    {
+      "question": "_____________ carousel",
+      "type": "blank",
+      "answer": "merry-go-round",
+      "explanation": "carousel 旋转木马,旋转木马。Children rode the colorful merry-go-round carousel at the amusement park.孩子们在游乐园里骑着五颜六色的旋转木马。"
+    },
+    {
+      "question": "____ lintel",
+      "type": "blank",
+      "answer": "door",
+      "explanation": "lintel 门楣,门楣。The heavy stone door lintel supported the weight of the wall above.沉重的石门楣支撑着上方墙壁的重量。"
+    },
+    {
+      "question": "___________ navel",
+      "type": "blank",
+      "answer": "belly button",
+      "explanation": "navel 肚脐,肚脐。The baby's belly button navel healed completely after the umbilical cord fell off.婴儿的肚脐在脐带脱落后完全愈合。"
+    },
+    {
+      "question": "unravel _______",
+      "type": "blank",
+      "answer": "mystery",
+      "explanation": "unravel 解开,解开谜团。The detective worked tirelessly to unravel mystery surrounding the strange disappearance.侦探不知疲倦地工作以解开围绕着奇怪失踪的谜团。"
+    },
+    {
+      "question": "disheveled ____",
+      "type": "blank",
+      "answer": "hair",
+      "explanation": "disheveled 凌乱的,凌乱的头发。After the long flight, she arrived with disheveled hair and wrinkled clothes.长途飞行后,她到达时头发凌乱,衣服皱巴巴的。"
+    },
+    {
+      "question": "multilevel ________",
+      "type": "blank",
+      "answer": "building",
+      "explanation": "multilevel 多层的,多层建筑。The multilevel building housed offices, shops, and restaurants on different floors.这座多层建筑在不同楼层设有办公室、商店和餐厅。"
+    },
+    {
+      "question": "snivel _____",
+      "type": "blank",
+      "answer": "child",
+      "explanation": "snivel 哭泣,哭泣的孩子。The snivel child wiped tears from his face after falling from the swing.这个哭泣的孩子从秋千上摔下来后擦掉脸上的眼泪。"
+    },
+    {
+      "question": "shrivel __",
+      "type": "blank",
+      "answer": "up",
+      "explanation": "shrivel 枯萎,枯萎。Without water, the delicate flowers would shrivel up within a few days.没有水,娇嫩的花会在几天内枯萎。"
+    },
+    {
+      "question": "_____ hovel",
+      "type": "blank",
+      "answer": "dirty",
+      "explanation": "hovel 简陋小屋,肮脏的简陋小屋。The poor family lived in a dirty hovel with no running water or electricity.这个贫穷的家庭住在一个没有自来水或电的肮脏简陋小屋里。"
+    },
+    {
+      "question": "shovel ____",
+      "type": "blank",
+      "answer": "snow",
+      "explanation": "shovel 铲,铲雪。After the blizzard, neighbors helped shovel snow from the elderly woman's driveway.暴风雪过后,邻居们帮忙从老妇人的车道上铲雪。"
+    }
+  ]
+}
