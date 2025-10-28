@@ -1,1 +1,605 @@
-
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "stoop ____",
+      "type": "blank",
+      "answer": "down",
+      "explanation": "stoop 弯腰,弯腰。The tall man had to stoop down to enter the low doorway.高个子男人必须弯腰才能进入低矮的门口。"
+    },
+    {
+      "question": "____ swoop",
+      "type": "blank",
+      "answer": "hawk",
+      "explanation": "swoop 俯冲,鹰俯冲。The predatory hawk swooped down suddenly to catch its prey.掠食性的鹰突然俯冲下来抓住猎物。"
+    },
+    {
+      "question": "________ shape",
+      "type": "blank",
+      "answer": "teardrop",
+      "explanation": "teardrop 泪珠,泪珠形状。The pendant had an elegant teardrop shape hanging from a silver chain.吊坠有优雅的泪珠形状,挂在银链上。"
+    },
+    {
+      "question": "eavesdrop ____________",
+      "type": "blank",
+      "answer": "conversation",
+      "explanation": "eavesdrop 窃听,窃听对话。It's rude to eavesdrop on a private conversation between others.窃听他人之间的私人对话是不礼貌的。"
+    },
+    {
+      "question": "___ sop",
+      "type": "blank",
+      "answer": "hot",
+      "explanation": "sop 浸湿的面包,热浸湿的面包。He enjoyed hot sop dipped in gravy for breakfast.他喜欢早餐吃浸在肉汁中的热面包。"
+    },
+    {
+      "question": "atop ____",
+      "type": "blank",
+      "answer": "hill",
+      "explanation": "atop 在顶上,在山顶上。The ancient castle stood majestically atop the hill overlooking the valley.古老的城堡雄伟地矗立在山顶上,俯瞰山谷。"
+    },
+    {
+      "question": "____ burp",
+      "type": "blank",
+      "answer": "baby",
+      "explanation": "burp 打嗝,婴儿打嗝。The mother gently patted the baby's back to help baby burp after feeding.母亲轻轻拍打婴儿的背部以帮助婴儿在喂食后打嗝。"
+    },
+    {
+      "question": "____ slurp",
+      "type": "blank",
+      "answer": "loud",
+      "explanation": "slurp 发出啜饮声,大声啜饮。The child made a loud slurp while drinking soup at dinner.孩子在晚餐时喝汤时发出大声的啜饮声。"
+    },
+    {
+      "question": "gasp ___ ___",
+      "type": "blank",
+      "answer": "for air",
+      "explanation": "gasp 喘气,喘气。The exhausted swimmer would gasp for air after completing the race.精疲力竭的游泳运动员在完成比赛后会喘气。"
+    },
+    {
+      "question": "clasp _____",
+      "type": "blank",
+      "answer": "hands",
+      "explanation": "clasp 紧握,紧握双手。The nervous speaker would clasp hands tightly during the presentation.紧张的演讲者会在演讲期间紧紧握住双手。"
+    },
+    {
+      "question": "_____ rasp",
+      "type": "blank",
+      "answer": "metal",
+      "explanation": "rasp 锉刀,金属锉刀。The carpenter used a metal rasp to smooth rough edges on wood.木匠使用金属锉刀来平滑木材上的粗糙边缘。"
+    },
+    {
+      "question": "_____ wasp",
+      "type": "blank",
+      "answer": "sting",
+      "explanation": "wasp 黄蜂,蜇人的黄蜂。The aggressive sting wasp can deliver painful attacks when disturbed.好斗的蜇人黄蜂在受到干扰时会发起痛苦的攻击。"
+    },
+    {
+      "question": "____ wisp __ _____",
+      "type": "blank",
+      "answer": "thin of smoke",
+      "explanation": "wisp 一缕,一缕烟。A thin wisp of smoke rose from the extinguished campfire.一缕薄烟从熄灭的篝火中升起。"
+    },
+    {
+      "question": "_______ pressure",
+      "type": "blank",
+      "answer": "buildup",
+      "explanation": "buildup 积累,压力积累。The gradual buildup of pressure eventually caused the pipe to burst.压力的逐渐积累最终导致管道破裂。"
+    },
+    {
+      "question": "_____ holdup",
+      "type": "blank",
+      "answer": "armed",
+      "explanation": "holdup 持械抢劫,武装持械抢劫。Police responded quickly to the armed holdup at the convenience store.警察迅速响应便利店的武装持械抢劫。"
+    },
+    {
+      "question": "_______ shot",
+      "type": "blank",
+      "answer": "closeup",
+      "explanation": "closeup 特写,特写镜头。The photographer captured a dramatic closeup shot of the actor's face.摄影师捕捉了演员脸部的戏剧性特写镜头。"
+    },
+    {
+      "question": "_______ checkup",
+      "type": "blank",
+      "answer": "medical",
+      "explanation": "checkup 检查,医疗检查。The doctor recommended an annual medical checkup for preventive care.医生建议进行年度医疗检查以进行预防性护理。"
+    },
+    {
+      "question": "__________ turnup",
+      "type": "blank",
+      "answer": "unexpected",
+      "explanation": "turnup 出现,意外出现。His unexpected turnup at the party surprised all the guests.他在派对上的意外出现让所有客人都感到惊讶。"
+    },
+    {
+      "question": "________ runup",
+      "type": "blank",
+      "answer": "election",
+      "explanation": "runup 准备期,选举准备期。Political tensions increased during the election runup to voting day.在选举准备期到投票日期间,政治紧张局势加剧。"
+    },
+    {
+      "question": "____ pup",
+      "type": "blank",
+      "answer": "cute",
+      "explanation": "pup 小狗,可爱的小狗。The adorable cute pup wagged its tail excitedly at visitors.可爱的小狗兴奋地向访客摇尾巴。"
+    },
+    {
+      "question": "____ chirrup",
+      "type": "blank",
+      "answer": "bird",
+      "explanation": "chirrup 啁啾,鸟啁啾。The cheerful bird chirrup filled the garden at dawn each morning.欢快的鸟啁啾每天早晨在黎明时分充满花园。"
+    },
+    {
+      "question": "getup ______",
+      "type": "blank",
+      "answer": "outfit",
+      "explanation": "getup 装束,装束。Her elaborate getup outfit attracted attention at the costume party.她精致的装束在化装舞会上引起了注意。"
+    },
+    {
+      "question": "gawp __",
+      "type": "blank",
+      "answer": "at",
+      "explanation": "gawp 呆呆地看,呆呆地看着。Tourists would gawp at the spectacular architectural wonders before them.游客会呆呆地看着面前壮观的建筑奇迹。"
+    },
+    {
+      "question": "_______ vicar",
+      "type": "blank",
+      "answer": "village",
+      "explanation": "vicar 教区牧师,村庄教区牧师。The kindly village vicar visited parishioners regularly offering spiritual guidance.和蔼的村庄教区牧师定期拜访教区居民,提供精神指导。"
+    },
+    {
+      "question": "endear __",
+      "type": "blank",
+      "answer": "to",
+      "explanation": "endear 使受喜爱,使受人喜爱。His generous nature would endear him to everyone he met.他慷慨的性格会使他受到所有见过他的人的喜爱。"
+    },
+    {
+      "question": "overhear ____________",
+      "type": "blank",
+      "answer": "conversation",
+      "explanation": "overhear 无意中听到,无意中听到对话。She accidentally overhear the private conversation in the next room.她不小心无意中听到了隔壁房间的私人对话。"
+    },
+    {
+      "question": "______ smear",
+      "type": "blank",
+      "answer": "spread",
+      "explanation": "smear 涂抹,涂抹。The tabloid tried to spread smear lies about the politician's reputation.小报试图涂抹关于政治家声誉的谎言。"
+    },
+    {
+      "question": "____ sear",
+      "type": "blank",
+      "answer": "meat",
+      "explanation": "sear 烤焦,烤肉。The chef would sear the meat quickly over high heat to lock in juices.厨师会在高温下快速烤肉以锁住汁液。"
+    },
+    {
+      "question": "outwear _____",
+      "type": "blank",
+      "answer": "shoes",
+      "explanation": "outwear 比...耐穿,比鞋子耐穿。Quality leather boots can outwear shoes made from synthetic materials.优质皮靴比合成材料制成的鞋子耐穿。"
+    },
+    {
+      "question": "afar ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "afar 远处,远处的景色。From the mountain peak, we enjoyed an afar view of the distant ocean.从山顶上,我们欣赏了远处海洋的远处景色。"
+    },
+    {
+      "question": "gar ____",
+      "type": "blank",
+      "answer": "fish",
+      "explanation": "gar 雀鳝,雀鳝鱼。The ancient gar fish has long needle-like jaws and primitive scales.古老的雀鳝鱼有长长的针状颚和原始的鳞片。"
+    },
+    {
+      "question": "___ budgerigar",
+      "type": "blank",
+      "answer": "pet",
+      "explanation": "budgerigar 虎皮鹦鹉,宠物虎皮鹦鹉。The colorful pet budgerigar chirped happily in its cage.色彩鲜艳的宠物虎皮鹦鹉在笼子里快乐地鸣叫。"
+    },
+    {
+      "question": "____ ajar",
+      "type": "blank",
+      "answer": "door",
+      "explanation": "ajar 微开,门微开。The mysterious door stood ajar allowing a sliver of light through.神秘的门微开着,让一丝光线透过。"
+    },
+    {
+      "question": "_________ vision",
+      "type": "blank",
+      "answer": "binocular",
+      "explanation": "binocular 双眼的,双眼视觉。Humans have binocular vision allowing depth perception and 3D viewing.人类有双眼视觉,允许深度感知和3D观看。"
+    },
+    {
+      "question": "____ boar",
+      "type": "blank",
+      "answer": "wild",
+      "explanation": "boar 野猪,野猪。The dangerous wild boar roamed freely through the dense forest.危险的野猪在茂密的森林中自由漫游。"
+    },
+    {
+      "question": "______ uproar",
+      "type": "blank",
+      "answer": "public",
+      "explanation": "uproar 喧嚣,公众喧嚣。The scandal caused a massive public uproar demanding immediate investigation.丑闻引起了要求立即调查的巨大公众喧嚣。"
+    },
+    {
+      "question": "gibber ________",
+      "type": "blank",
+      "answer": "nonsense",
+      "explanation": "gibber 说胡话,说胡话。The feverish patient would gibber nonsense in his delirious state.发烧的病人在谵妄状态下会说胡话。"
+    },
+    {
+      "question": "clobber ________",
+      "type": "blank",
+      "answer": "opponent",
+      "explanation": "clobber 痛打,痛打对手。The heavyweight champion would clobber his opponent with powerful punches.重量级冠军会用强有力的拳头痛打对手。"
+    },
+    {
+      "question": "_______ dog",
+      "type": "blank",
+      "answer": "slobber",
+      "explanation": "slobber 流口水,流口水的狗。The excited slobber dog drooled everywhere when seeing its favorite toy.兴奋的流口水的狗看到它最喜欢的玩具时到处流口水。"
+    },
+    {
+      "question": "_____ blubber",
+      "type": "blank",
+      "answer": "whale",
+      "explanation": "blubber 鲸脂,鲸脂。The thick whale blubber layer provides insulation in cold arctic waters.厚厚的鲸脂层在寒冷的北极水域提供隔热。"
+    },
+    {
+      "question": "clamber __",
+      "type": "blank",
+      "answer": "up",
+      "explanation": "clamber 攀爬,向上攀爬。Children love to clamber up trees in the neighborhood park.孩子们喜欢在附近公园的树上向上攀爬。"
+    },
+    {
+      "question": "_____ ember",
+      "type": "blank",
+      "answer": "dying",
+      "explanation": "ember 余烬,垂死的余烬。Only a few dying embers remained from last night's campfire.昨晚篝火只剩下几个垂死的余烬。"
+    },
+    {
+      "question": "______ mood",
+      "type": "blank",
+      "answer": "somber",
+      "explanation": "somber 忧郁的,忧郁的情绪。The funeral attendees maintained a somber mood throughout the service.葬礼参加者在整个仪式中保持忧郁的情绪。"
+    },
+    {
+      "question": "______ movement",
+      "type": "blank",
+      "answer": "pincer",
+      "explanation": "pincer 钳形,钳形运动。The army executed a pincer movement to surround enemy forces.军队执行钳形运动以包围敌军。"
+    },
+    {
+      "question": "_____ saucer",
+      "type": "blank",
+      "answer": "china",
+      "explanation": "saucer 茶碟,瓷茶碟。The delicate china saucer matched the fine porcelain teacup perfectly.精致的瓷茶碟与精美的瓷茶杯完美匹配。"
+    },
+    {
+      "question": "______ bird",
+      "type": "blank",
+      "answer": "wader",
+      "explanation": "wader 涉禽,涉禽。The long-legged wading bird hunted for fish in shallow water.长腿的涉禽在浅水中捕鱼。"
+    },
+    {
+      "question": "____ stepladder",
+      "type": "blank",
+      "answer": "wood",
+      "explanation": "stepladder 活梯,木制活梯。The painter climbed the sturdy wood stepladder to reach the ceiling.画家爬上坚固的木制活梯以到达天花板。"
+    },
+    {
+      "question": "______ root",
+      "type": "blank",
+      "answer": "madder",
+      "explanation": "madder 茜草,茜草根。Historically, madder root was used to produce red dye for textiles.历史上,茜草根被用来为纺织品生产红色染料。"
+    },
+    {
+      "question": "______ bedder",
+      "type": "blank",
+      "answer": "garden",
+      "explanation": "bedder 花坛植物,花园花坛植物。The colorful garden bedder plants created attractive seasonal displays.五颜六色的花园花坛植物创造了有吸引力的季节性展示。"
+    },
+    {
+      "question": "shudder __ ____",
+      "type": "blank",
+      "answer": "in fear",
+      "explanation": "shudder 发抖,恐惧地发抖。The terrified witness would shudder in fear recalling the traumatic event.受惊的证人回忆创伤事件时会恐惧地发抖。"
+    },
+    {
+      "question": "______ judder",
+      "type": "blank",
+      "answer": "engine",
+      "explanation": "judder 震动,发动机震动。The faulty engine judder indicated serious mechanical problems ahead.有故障的发动机震动表明前方有严重的机械问题。"
+    },
+    {
+      "question": "embroider _____",
+      "type": "blank",
+      "answer": "cloth",
+      "explanation": "embroider 刺绣,刺绣布料。The skilled artisan would embroider cloth with intricate decorative patterns.熟练的工匠会用复杂的装饰图案刺绣布料。"
+    },
+    {
+      "question": "molder ____",
+      "type": "blank",
+      "answer": "away",
+      "explanation": "molder 腐朽,腐朽掉。The abandoned building would slowly molder away over the years.废弃的建筑多年来会慢慢腐朽掉。"
+    },
+    {
+      "question": "____ smolder",
+      "type": "blank",
+      "answer": "fire",
+      "explanation": "smolder 闷烧,火闷烧。The dangerous fire continued to smolder beneath the forest debris.危险的火继续在森林碎片下闷烧。"
+    },
+    {
+      "question": "____ smoulder",
+      "type": "blank",
+      "answer": "fire",
+      "explanation": "smoulder 闷烧,火闷烧。The extinguished campfire continued to smoulder for hours afterward.熄灭的篝火之后继续闷烧了几个小时。"
+    },
+    {
+      "question": "_____ slander",
+      "type": "blank",
+      "answer": "false",
+      "explanation": "slander 诽谤,虚假诽谤。The journalist sued for false slander after malicious rumors spread.在恶意谣言传播后,记者起诉虚假诽谤。"
+    },
+    {
+      "question": "__________ lizard",
+      "type": "blank",
+      "answer": "salamander",
+      "explanation": "salamander 蝾螈,蝾螈蜥蜴。The spotted salamander lizard lives in moist woodland habitats.斑点蝾螈蜥蜴生活在潮湿的林地栖息地。"
+    },
+    {
+      "question": "________ bystander",
+      "type": "blank",
+      "answer": "innocent",
+      "explanation": "bystander 旁观者,无辜的旁观者。An innocent bystander was accidentally injured during the robbery.在抢劫期间,一名无辜的旁观者意外受伤。"
+    },
+    {
+      "question": "_____ contender",
+      "type": "blank",
+      "answer": "title",
+      "explanation": "contender 竞争者,冠军竞争者。The boxer emerged as a strong title contender after winning consecutively.拳击手在连续获胜后成为强大的冠军竞争者。"
+    },
+    {
+      "question": "____ cinder",
+      "type": "blank",
+      "answer": "coal",
+      "explanation": "cinder 煤渣,煤渣。The old furnace produced coal cinders that needed regular disposal.旧炉子产生需要定期处理的煤渣。"
+    },
+    {
+      "question": "ponder ______",
+      "type": "blank",
+      "answer": "deeply",
+      "explanation": "ponder 沉思,深深沉思。The philosopher would ponder deeply about life's fundamental questions.哲学家会深深沉思关于生命的基本问题。"
+    },
+    {
+      "question": "launder _____",
+      "type": "blank",
+      "answer": "money",
+      "explanation": "launder 洗钱,洗钱。Criminals attempted to launder money through offshore bank accounts.罪犯试图通过离岸银行账户洗钱。"
+    },
+    {
+      "question": "_______ blunder",
+      "type": "blank",
+      "answer": "serious",
+      "explanation": "blunder 大错,严重的大错。The general made a serious blunder that cost many soldiers' lives.将军犯了一个严重的大错,使许多士兵失去了生命。"
+    },
+    {
+      "question": "____ flounder",
+      "type": "blank",
+      "answer": "fish",
+      "explanation": "flounder 比目鱼,比目鱼。The flatfish flounder lives camouflaged on the ocean floor.扁平的比目鱼伪装生活在海底。"
+    },
+    {
+      "question": "____ asunder",
+      "type": "blank",
+      "answer": "torn",
+      "explanation": "asunder 分离,撕裂分离。The violent earthquake tore the landscape asunder with devastating force.猛烈的地震以毁灭性的力量撕裂了地貌。"
+    },
+    {
+      "question": "______ reindeer",
+      "type": "blank",
+      "answer": "Santa's",
+      "explanation": "reindeer 驯鹿,圣诞老人的驯鹿。According to legend, Santa's reindeer pull his sleigh on Christmas Eve.根据传说,圣诞老人的驯鹿在平安夜拉着他的雪橇。"
+    },
+    {
+      "question": "jeer __",
+      "type": "blank",
+      "answer": "at",
+      "explanation": "jeer 嘲笑,嘲笑。Rude spectators would jeer at the losing team during the match.粗鲁的观众会在比赛期间嘲笑失败的队伍。"
+    },
+    {
+      "question": "leer ____",
+      "type": "blank",
+      "answer": "eyes",
+      "explanation": "leer 色迷迷地看,色迷迷的眼神。The creepy stranger would leer with eyes making everyone uncomfortable.令人毛骨悚然的陌生人会色迷迷地看着眼睛,让每个人都不舒服。"
+    },
+    {
+      "question": "sneer ______________",
+      "type": "blank",
+      "answer": "contemptuously",
+      "explanation": "sneer 冷笑,轻蔑地冷笑。The arrogant critic would sneer contemptuously at amateur artwork.傲慢的批评家会轻蔑地冷笑业余艺术品。"
+    },
+    {
+      "question": "peer _____",
+      "type": "blank",
+      "answer": "group",
+      "explanation": "peer 同龄人,同龄人群体。Teenagers are heavily influenced by their peer group during adolescence.青少年在青春期受到他们同龄人群体的严重影响。"
+    },
+    {
+      "question": "____ seer",
+      "type": "blank",
+      "answer": "wise",
+      "explanation": "seer 预言家,智慧的预言家。The ancient wise seer predicted future events through mystical visions.古老的智慧预言家通过神秘的幻象预测未来事件。"
+    },
+    {
+      "question": "__________ controls",
+      "type": "blank",
+      "answer": "puppeteer",
+      "explanation": "puppeteer 操纵木偶者,操纵木偶者控制。The skilled puppeteer controls marionettes with impressive dexterity and precision.熟练的操纵木偶者以令人印象深刻的灵巧和精确控制木偶。"
+    },
+    {
+      "question": "veer ___ ______",
+      "type": "blank",
+      "answer": "off course",
+      "explanation": "veer 转向,偏离航线。Strong winds caused the ship to veer off course dangerously.强风使船危险地偏离航线。"
+    },
+    {
+      "question": "proffer ______",
+      "type": "blank",
+      "answer": "advice",
+      "explanation": "proffer 提供,提供建议。The experienced mentor would proffer advice to struggling young entrepreneurs.经验丰富的导师会向挣扎的年轻企业家提供建议。"
+    },
+    {
+      "question": "________ duffer",
+      "type": "blank",
+      "answer": "helpless",
+      "explanation": "duffer 笨蛋,无助的笨蛋。The helpless duffer couldn't understand simple instructions despite repeated explanations.无助的笨蛋尽管反复解释也无法理解简单的指示。"
+    },
+    {
+      "question": "pilfer _____",
+      "type": "blank",
+      "answer": "goods",
+      "explanation": "pilfer 偷窃,偷窃货物。Dishonest employees would pilfer goods from the warehouse inventory.不诚实的员工会从仓库库存中偷窃货物。"
+    },
+    {
+      "question": "confer ______",
+      "type": "blank",
+      "answer": "degree",
+      "explanation": "confer 授予,授予学位。The university would confer degrees upon graduating students at commencement.大学会在毕业典礼上向毕业生授予学位。"
+    },
+    {
+      "question": "______ codger",
+      "type": "blank",
+      "answer": "grumpy",
+      "explanation": "codger 古怪老头,脾气暴躁的古怪老头。The grumpy codger complained constantly about neighborhood children.脾气暴躁的古怪老头不断抱怨邻里的孩子。"
+    },
+    {
+      "question": "_____ stagger",
+      "type": "blank",
+      "answer": "drunk",
+      "explanation": "stagger 摇晃,醉汉摇晃。The drunk stagger unsteadily down the street after leaving the bar.醉汉离开酒吧后在街上不稳定地摇晃。"
+    },
+    {
+      "question": "_______ walk",
+      "type": "blank",
+      "answer": "swagger",
+      "explanation": "swagger 趾高气扬地走,趾高气扬地走。The confident champion would swagger with walk showing his arrogance.自信的冠军会趾高气扬地走,显示出他的傲慢。"
+    },
+    {
+      "question": "snigger _______",
+      "type": "blank",
+      "answer": "quietly",
+      "explanation": "snigger 窃笑,悄悄地窃笑。The mischievous students would snigger quietly during the boring lecture.淘气的学生会在无聊的讲座中悄悄地窃笑。"
+    },
+    {
+      "question": "_____ forefinger",
+      "type": "blank",
+      "answer": "point",
+      "explanation": "forefinger 食指,用食指指。It's considered rude to point forefinger directly at people in some cultures.在某些文化中,用食指直接指着人被认为是不礼貌的。"
+    },
+    {
+      "question": "linger __",
+      "type": "blank",
+      "answer": "on",
+      "explanation": "linger 徘徊,徘徊。The sweet fragrance would linger on long after the flowers wilted.甜美的香味会在花朵枯萎后徘徊很久。"
+    },
+    {
+      "question": "______ plunger",
+      "type": "blank",
+      "answer": "toilet",
+      "explanation": "plunger 马桶吸,马桶吸。The homeowner used a toilet plunger to unclog the blocked drain.房主用马桶吸疏通堵塞的排水管。"
+    },
+    {
+      "question": "____ scrounger",
+      "type": "blank",
+      "answer": "lazy",
+      "explanation": "scrounger 乞讨者,懒惰的乞讨者。The lazy scrounger constantly borrowed money without ever repaying debts.懒惰的乞讨者不断借钱而从不偿还债务。"
+    },
+    {
+      "question": "____ booger",
+      "type": "blank",
+      "answer": "pick",
+      "explanation": "booger 鼻屎,挖鼻屎。Children are taught not to pick booger in public places.孩子们被教导不要在公共场所挖鼻屎。"
+    },
+    {
+      "question": "_______ protest",
+      "type": "blank",
+      "answer": "marcher",
+      "explanation": "marcher 游行者,抗议游行者。Thousands of protesters joined the marcher during the demonstration.成千上万的抗议者加入了示威期间的游行者。"
+    },
+    {
+      "question": "________ stretcher",
+      "type": "blank",
+      "answer": "hospital",
+      "explanation": "stretcher 担架,医院担架。Paramedics carried the injured patient on a hospital stretcher to the ambulance.护理人员用医院担架将受伤的病人抬到救护车上。"
+    },
+    {
+      "question": "tether _____",
+      "type": "blank",
+      "answer": "horse",
+      "explanation": "tether 拴住,拴住马。The cowboy would tether horses securely to the hitching post.牛仔会把马牢固地拴在拴马桩上。"
+    },
+    {
+      "question": "dither _____",
+      "type": "blank",
+      "answer": "about",
+      "explanation": "dither 犹豫不决,犹豫不决。The indecisive manager would dither about making important business decisions.优柔寡断的经理会在做重要的商业决策时犹豫不决。"
+    },
+    {
+      "question": "hither ___ _______",
+      "type": "blank",
+      "answer": "and thither",
+      "explanation": "hither 到这里,到处。The confused tourist wandered hither and thither searching for directions.困惑的游客到处游荡寻找方向。"
+    },
+    {
+      "question": "_______ ___ _______",
+      "type": "blank",
+      "answer": "hither and thither",
+      "explanation": "thither 到那里,到处。The frightened rabbits scattered hither and thither when the fox appeared.当狐狸出现时,受惊的兔子四处逃散。"
+    },
+    {
+      "question": "_____ slither",
+      "type": "blank",
+      "answer": "snake",
+      "explanation": "slither 滑行,蛇滑行。The dangerous snake would slither silently through the tall grass.危险的蛇会在高草丛中悄悄地滑行。"
+    },
+    {
+      "question": "wither ____",
+      "type": "blank",
+      "answer": "away",
+      "explanation": "wither 枯萎,枯萎掉。Without water, the beautiful flowers would wither away quickly.没有水,美丽的花朵会很快枯萎掉。"
+    },
+    {
+      "question": "smother ____",
+      "type": "blank",
+      "answer": "fire",
+      "explanation": "smother 窒息,窒息火焰。Firefighters used blankets to smother the fire by cutting off oxygen.消防员用毯子通过切断氧气来窒息火焰。"
+    },
+    {
+      "question": "_______ story",
+      "type": "blank",
+      "answer": "fishier",
+      "explanation": "fishier 更可疑的,更可疑的故事。His excuse sounded fishier the more he tried to explain himself.他的借口越解释听起来越可疑。"
+    },
+    {
+      "question": "flier _______",
+      "type": "blank",
+      "answer": "leaflet",
+      "explanation": "flier 传单,传单。Volunteers distributed advertising flier leaflets throughout the neighborhood.志愿者在整个社区分发广告传单。"
+    },
+    {
+      "question": "________ day",
+      "type": "blank",
+      "answer": "breezier",
+      "explanation": "breezier 更有微风的,更有微风的日子。Spring brought breezier days with pleasant weather conditions.春天带来了更有微风的日子和宜人的天气条件。"
+    },
+    {
+      "question": "beaker __ _____",
+      "type": "blank",
+      "answer": "of water",
+      "explanation": "beaker 烧杯,一烧杯水。The scientist poured a beaker of water into the test solution.科学家将一烧杯水倒入测试溶液中。"
+    },
+    {
+      "question": "_______ shoe",
+      "type": "blank",
+      "answer": "sneaker",
+      "explanation": "sneaker 运动鞋,运动鞋。The basketball player wore comfortable sneaker shoes for the game.篮球运动员为比赛穿着舒适的运动鞋。"
+    }
+  ]
+}
