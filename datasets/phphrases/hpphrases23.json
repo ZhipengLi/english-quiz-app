@@ -1,1 +1,605 @@
-
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "divert _______",
+      "type": "blank",
+      "answer": "traffic",
+      "explanation": "转移,转移交通。Police had to divert traffic around the accident scene.警察不得不转移交通绕过事故现场。"
+    },
+    {
+      "question": "_____ overt",
+      "type": "blank",
+      "answer": "action",
+      "explanation": "公开的,公开行动。The government took overt action against the rebel forces.政府对叛军采取了公开行动。"
+    },
+    {
+      "question": "exert ________",
+      "type": "blank",
+      "answer": "pressure",
+      "explanation": "施加,施加压力。Labor unions began to exert pressure on management for better wages.工会开始对管理层施加压力以争取更好的工资。"
+    },
+    {
+      "question": "______ nightshirt",
+      "type": "blank",
+      "answer": "cotton",
+      "explanation": "睡衣,棉质睡衣。He wore a comfortable cotton nightshirt to bed each night.他每晚穿着舒适的棉质睡衣睡觉。"
+    },
+    {
+      "question": "____ outskirt",
+      "type": "blank",
+      "answer": "city",
+      "explanation": "郊区,城市郊区。They bought a house on the city outskirt where land was cheaper.他们在城市郊区买了房子,那里的土地更便宜。"
+    },
+    {
+      "question": "_____ snort",
+      "type": "blank",
+      "answer": "horse",
+      "explanation": "喷鼻息,马喷鼻息。The horse began to snort nervously as the storm approached.随着暴风雨临近,马开始紧张地喷鼻息。"
+    },
+    {
+      "question": "________ spoilsport",
+      "type": "blank",
+      "answer": "killjoy",
+      "explanation": "扫兴的人,令人扫兴的人。Don't be such a killjoy spoilsport and let the children have fun.别做这样令人扫兴的人,让孩子们玩得开心。"
+    },
+    {
+      "question": "_____ consort",
+      "type": "blank",
+      "answer": "royal",
+      "explanation": "配偶,皇室配偶。The queen's royal consort attended the state ceremony with her.女王的皇室配偶陪她出席了国家仪式。"
+    },
+    {
+      "question": "assort _____",
+      "type": "blank",
+      "answer": "goods",
+      "explanation": "分类,分类货物。Workers spent hours trying to assort goods by size and color.工人们花了几个小时按尺寸和颜色分类货物。"
+    },
+    {
+      "question": "_____ retort",
+      "type": "blank",
+      "answer": "angry",
+      "explanation": "反驳,愤怒的反驳。She fired back an angry retort when accused of lying.当被指控撒谎时,她愤怒地反驳回去。"
+    },
+    {
+      "question": "contort ____",
+      "type": "blank",
+      "answer": "face",
+      "explanation": "扭曲,扭曲面部。Pain caused him to contort face into an agonized expression.疼痛使他的面部扭曲成痛苦的表情。"
+    },
+    {
+      "question": "distort _____",
+      "type": "blank",
+      "answer": "truth",
+      "explanation": "歪曲,歪曲事实。The tabloid newspaper tried to distort truth with misleading headlines.小报试图用误导性的标题歪曲事实。"
+    },
+    {
+      "question": "cavort ______",
+      "type": "blank",
+      "answer": "around",
+      "explanation": "嬉戏,四处嬉戏。The children would cavort around the playground during recess.孩子们在课间休息时在操场上四处嬉戏。"
+    },
+    {
+      "question": "sneezewort ____",
+      "type": "blank",
+      "answer": "herb",
+      "explanation": "蓍草,蓍草药草。The herbalist used sneezewort herb for its medicinal properties.草药师利用蓍草药草的药用特性。"
+    },
+    {
+      "question": "blurt ___",
+      "type": "blank",
+      "answer": "out",
+      "explanation": "脱口而出,脱口说出。He accidentally blurt out the secret during the conversation.他在谈话中不小心脱口说出了秘密。"
+    },
+    {
+      "question": "spurt _____",
+      "type": "blank",
+      "answer": "blood",
+      "explanation": "喷出,喷血。The wound began to spurt blood requiring immediate medical attention.伤口开始喷血,需要立即就医。"
+    },
+    {
+      "question": "____ downcast",
+      "type": "blank",
+      "answer": "look",
+      "explanation": "沮丧的,看起来沮丧。She continued to look downcast after hearing the disappointing news.听到令人失望的消息后,她继续看起来很沮丧。"
+    },
+    {
+      "question": "flabbergast ________",
+      "type": "blank",
+      "answer": "audience",
+      "explanation": "使目瞪口呆,使观众目瞪口呆。The magician's impossible trick managed to flabbergast audience completely.魔术师不可能的戏法完全使观众目瞪口呆。"
+    },
+    {
+      "question": "___ aghast",
+      "type": "blank",
+      "answer": "sit",
+      "explanation": "惊骇的,惊骇地坐着。The spectators could only sit aghast at the horrific accident.观众只能惊骇地坐着看着可怕的事故。"
+    },
+    {
+      "question": "____ infest",
+      "type": "blank",
+      "answer": "rats",
+      "explanation": "侵扰,老鼠侵扰。Rats began to infest the abandoned warehouse near the docks.老鼠开始侵扰码头附近废弃的仓库。"
+    },
+    {
+      "question": "____ _ jest",
+      "type": "blank",
+      "answer": "make a",
+      "explanation": "开玩笑,开个玩笑。He liked to make a jest to lighten the mood at meetings.他喜欢开个玩笑来缓和会议气氛。"
+    },
+    {
+      "question": "wrest _______",
+      "type": "blank",
+      "answer": "control",
+      "explanation": "夺取,夺取控制权。The rebels tried to wrest control from the government forces.叛军试图从政府军手中夺取控制权。"
+    },
+    {
+      "question": "detest ________",
+      "type": "blank",
+      "answer": "violence",
+      "explanation": "憎恨,憎恨暴力。She had always detest violence in any form.她一直憎恨任何形式的暴力。"
+    },
+    {
+      "question": "_____ poltergeist",
+      "type": "blank",
+      "answer": "angry",
+      "explanation": "吵闹鬼,愤怒的吵闹鬼。The family believed an angry poltergeist was responsible for the flying objects.这家人相信一个愤怒的吵闹鬼是物体飞行的罪魁祸首。"
+    },
+    {
+      "question": "____ gist",
+      "type": "blank",
+      "answer": "main",
+      "explanation": "要点,主要要点。Let me give you the main gist of what happened at the meeting.让我告诉你会议上发生的事情的主要要点。"
+    },
+    {
+      "question": "_______ alchemist",
+      "type": "blank",
+      "answer": "skilled",
+      "explanation": "炼金术士,熟练的炼金术士。The skilled alchemist claimed to turn base metals into gold.熟练的炼金术士声称能将贱金属变成黄金。"
+    },
+    {
+      "question": "foist ____",
+      "type": "blank",
+      "answer": "idea",
+      "explanation": "强加,强加想法。Don't try to foist idea on us that wasn't agreed upon.不要试图强加给我们未达成一致的想法。"
+    },
+    {
+      "question": "hoist ____",
+      "type": "blank",
+      "answer": "flag",
+      "explanation": "升起,升旗。The soldiers gathered to hoist flag at dawn each morning.士兵们每天黎明时分聚集升旗。"
+    },
+    {
+      "question": "desist ___________",
+      "type": "blank",
+      "answer": "immediately",
+      "explanation": "停止,立即停止。The judge ordered the defendant to desist immediately from all illegal activities.法官命令被告立即停止所有非法活动。"
+    },
+    {
+      "question": "ventriloquist _____",
+      "type": "blank",
+      "answer": "dummy",
+      "explanation": "腹语表演者,腹语表演者的木偶。The ventriloquist dummy seemed to have a personality of its own.腹语表演者的木偶似乎有自己的个性。"
+    },
+    {
+      "question": "________ accost",
+      "type": "blank",
+      "answer": "suddenly",
+      "explanation": "搭讪,突然搭讪。A stranger tried to suddenly accost her on the dark street.一个陌生人试图在黑暗的街道上突然搭讪她。"
+    },
+    {
+      "question": "________ goalpost",
+      "type": "blank",
+      "answer": "football",
+      "explanation": "球门柱,足球球门柱。The ball hit the football goalpost and bounced back into play.球击中了足球球门柱并弹回比赛场地。"
+    },
+    {
+      "question": "signpost _____",
+      "type": "blank",
+      "answer": "ahead",
+      "explanation": "路标,前方路标。The signpost ahead indicated the next town was five miles away.前方路标表明下一个城镇在五英里外。"
+    },
+    {
+      "question": "______ lamppost",
+      "type": "blank",
+      "answer": "street",
+      "explanation": "路灯柱,街道路灯柱。The old street lamppost cast a warm glow on the cobblestone path.旧的街道路灯柱在鹅卵石路上投下温暖的光芒。"
+    },
+    {
+      "question": "______ doorpost",
+      "type": "blank",
+      "answer": "wooden",
+      "explanation": "门框,木制门框。He leaned against the wooden doorpost watching the sunset.他倚靠在木制门框上看日落。"
+    },
+    {
+      "question": "__ headfirst",
+      "type": "blank",
+      "answer": "go",
+      "explanation": "头朝前,头朝前冲。The diver prepared to go headfirst into the deep pool.潜水员准备头朝前跳入深池。"
+    },
+    {
+      "question": "_________ outburst",
+      "type": "blank",
+      "answer": "emotional",
+      "explanation": "爆发,情绪爆发。Her emotional outburst shocked everyone at the funeral.她的情绪爆发让葬礼上的每个人都震惊了。"
+    },
+    {
+      "question": "readjust ________",
+      "type": "blank",
+      "answer": "schedule",
+      "explanation": "重新调整,重新调整时间表。We need to readjust schedule to accommodate the new deadline.我们需要重新调整时间表以适应新的截止日期。"
+    },
+    {
+      "question": "oust ______",
+      "type": "blank",
+      "answer": "leader",
+      "explanation": "驱逐,驱逐领导人。The board voted to oust leader after the financial scandal.董事会在财务丑闻后投票驱逐领导人。"
+    },
+    {
+      "question": "___ encrust",
+      "type": "blank",
+      "answer": "sea",
+      "explanation": "结壳,海洋结壳。Barnacles and algae began to sea encrust the ship's hull.藤壶和藻类开始在船体上结壳。"
+    },
+    {
+      "question": "entrust ____",
+      "type": "blank",
+      "answer": "task",
+      "explanation": "委托,委托任务。The manager decided to entrust task to his most reliable employee.经理决定将任务委托给他最可靠的员工。"
+    },
+    {
+      "question": "mistrust _________",
+      "type": "blank",
+      "answer": "authority",
+      "explanation": "不信任,不信任权威。Years of corruption led citizens to mistrust authority figures.多年的腐败导致公民不信任权威人物。"
+    },
+    {
+      "question": "____ taut",
+      "type": "blank",
+      "answer": "rope",
+      "explanation": "拉紧的,绷紧的绳索。The rope remained taut as the climber ascended the cliff.当攀登者登上悬崖时,绳索保持绷紧。"
+    },
+    {
+      "question": "uppercut _____",
+      "type": "blank",
+      "answer": "punch",
+      "explanation": "上勾拳,上勾拳出击。The boxer delivered a powerful uppercut punch to his opponent's jaw.拳击手向对手的下巴打出了有力的上勾拳。"
+    },
+    {
+      "question": "jut ___",
+      "type": "blank",
+      "answer": "out",
+      "explanation": "突出,突出来。Sharp rocks jut out from the cliff face dangerously.尖锐的岩石危险地从悬崖面突出来。"
+    },
+    {
+      "question": "____ layabout",
+      "type": "blank",
+      "answer": "lazy",
+      "explanation": "懒汉,懒惰的懒汉。The lazy layabout refused to find work and lived off others.懒惰的懒汉拒绝找工作,靠别人生活。"
+    },
+    {
+      "question": "______ hideout",
+      "type": "blank",
+      "answer": "hidden",
+      "explanation": "藏身处,隐藏的藏身处。The criminals used a hidden hideout deep in the forest.罪犯使用了森林深处隐藏的藏身处。"
+    },
+    {
+      "question": "_________ clout",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "影响力,政治影响力。The senator wielded considerable political clout in the legislature.参议员在立法机构中拥有相当大的政治影响力。"
+    },
+    {
+      "question": "flout _____",
+      "type": "blank",
+      "answer": "rules",
+      "explanation": "藐视,藐视规则。The company continued to flout rules despite repeated warnings.尽管多次警告,该公司继续藐视规则。"
+    },
+    {
+      "question": "___ snout",
+      "type": "blank",
+      "answer": "pig",
+      "explanation": "鼻子,猪鼻子。The pig used its snout to root around in the mud for food.猪用它的鼻子在泥里拱来拱去寻找食物。"
+    },
+    {
+      "question": "_____ spout",
+      "type": "blank",
+      "answer": "water",
+      "explanation": "喷口,水喷口。The whale's water spout was visible from the shore.鲸鱼的水喷口从岸上就能看到。"
+    },
+    {
+      "question": "____ sprout",
+      "type": "blank",
+      "answer": "bean",
+      "explanation": "豆芽,豆芽。Fresh bean sprouts added a crunchy texture to the stir-fry.新鲜豆芽为炒菜增添了爽脆的口感。"
+    },
+    {
+      "question": "____ tryout",
+      "type": "blank",
+      "answer": "team",
+      "explanation": "选拔赛,球队选拔赛。Hundreds of athletes attended the team tryout hoping to make the roster.数百名运动员参加了球队选拔赛,希望能入选名单。"
+    },
+    {
+      "question": "____ strut",
+      "type": "blank",
+      "answer": "walk",
+      "explanation": "昂首阔步,昂首阔步走。The peacock began to walk strut proudly across the lawn.孔雀开始昂首阔步地走过草坪。"
+    },
+    {
+      "question": "___ tut",
+      "type": "blank",
+      "answer": "tut",
+      "explanation": "啧啧声,啧啧声。She made a disapproving tut tut sound at the messy room.她对凌乱的房间发出不赞成的啧啧声。"
+    },
+    {
+      "question": "_____ newt",
+      "type": "blank",
+      "answer": "small",
+      "explanation": "蝾螈,小蝾螈。A small newt crawled out from under the damp leaves.一只小蝾螈从潮湿的树叶下爬出来。"
+    },
+    {
+      "question": "_____ pretext",
+      "type": "blank",
+      "answer": "false",
+      "explanation": "借口,虚假借口。He visited under the false pretext of delivering a package.他以递送包裹的虚假借口来访。"
+    },
+    {
+      "question": "_________ gateau",
+      "type": "blank",
+      "answer": "chocolate",
+      "explanation": "奶油蛋糕,巧克力奶油蛋糕。The bakery's chocolate gateau was layered with rich cream.面包店的巧克力奶油蛋糕分层铺满了浓郁的奶油。"
+    },
+    {
+      "question": "____ caw",
+      "type": "blank",
+      "answer": "crow",
+      "explanation": "鸦叫声,乌鸦叫声。The crow began to caw loudly from the tree branch.乌鸦开始从树枝上大声鸦叫。"
+    },
+    {
+      "question": "____ guffaw",
+      "type": "blank",
+      "answer": "loud",
+      "explanation": "大笑,大声的大笑。His loud guffaw echoed through the quiet library.他大声的大笑在安静的图书馆里回荡。"
+    },
+    {
+      "question": "_______ lockjaw",
+      "type": "blank",
+      "answer": "disease",
+      "explanation": "破伤风,破伤风疾病。The patient showed symptoms of lockjaw disease after the rusty nail injury.病人在生锈钉子受伤后出现了破伤风疾病的症状。"
+    },
+    {
+      "question": "____ gnaw ____",
+      "type": "blank",
+      "answer": "dogs bone",
+      "explanation": "啃咬,狗啃骨头。Dogs love to gnaw bone for hours in the backyard.狗喜欢在后院啃骨头好几个小时。"
+    },
+    {
+      "question": "hew ____",
+      "type": "blank",
+      "answer": "wood",
+      "explanation": "砍,砍木头。The lumberjack used an axe to hew wood for the winter fire.伐木工用斧头砍木头准备冬天的火。"
+    },
+    {
+      "question": "____ askew",
+      "type": "blank",
+      "answer": "look",
+      "explanation": "歪斜的,看起来歪斜。The painting began to look askew after the earthquake.地震后,这幅画看起来歪斜了。"
+    },
+    {
+      "question": "___ mew",
+      "type": "blank",
+      "answer": "cat",
+      "explanation": "猫叫声,猫叫。The hungry cat began to mew pitifully at the door.饥饿的猫开始在门口可怜地叫。"
+    },
+    {
+      "question": "_____ anew",
+      "type": "blank",
+      "answer": "start",
+      "explanation": "重新,重新开始。After the failure, she decided to start anew with fresh determination.失败后,她决定带着新的决心重新开始。"
+    },
+    {
+      "question": "spew ____",
+      "type": "blank",
+      "answer": "lava",
+      "explanation": "喷出,喷出熔岩。The volcano began to spew lava down its slopes.火山开始向山坡喷出熔岩。"
+    },
+    {
+      "question": "____ thumbscrew",
+      "type": "blank",
+      "answer": "iron",
+      "explanation": "拇指夹,铁制拇指夹。Medieval torturers used an iron thumbscrew to extract confessions.中世纪的刑讯者使用铁制拇指夹来逼供。"
+    },
+    {
+      "question": "strew _______",
+      "type": "blank",
+      "answer": "flowers",
+      "explanation": "撒,撒花。The flower girls would strew flowers along the wedding aisle.花童沿着婚礼走道撒花。"
+    },
+    {
+      "question": "___ yew",
+      "type": "blank",
+      "answer": "tree",
+      "explanation": "紫杉,紫杉树。The ancient yew tree in the churchyard was over a thousand years old.教堂墓地里的古老紫杉树已有一千多年的历史。"
+    },
+    {
+      "question": "overshadow _____",
+      "type": "blank",
+      "answer": "event",
+      "explanation": "使黯然失色,使事件黯然失色。The scandal threatened to overshadow event completely.丑闻威胁要使事件完全黯然失色。"
+    },
+    {
+      "question": "___ meow",
+      "type": "blank",
+      "answer": "cat",
+      "explanation": "猫叫声,猫叫。The cat began to meow loudly when its food bowl was empty.当食物碗空了时,猫开始大声叫。"
+    },
+    {
+      "question": "____ aglow",
+      "type": "blank",
+      "answer": "face",
+      "explanation": "容光焕发的,容光焕发的脸。Her face was aglow with happiness on her wedding day.她的脸在婚礼那天容光焕发。"
+    },
+    {
+      "question": "_____ marshmallow",
+      "type": "blank",
+      "answer": "roast",
+      "explanation": "棉花糖,烤棉花糖。Children love to roast marshmallows over the campfire.孩子们喜欢在篝火上烤棉花糖。"
+    },
+    {
+      "question": "sallow __________",
+      "type": "blank",
+      "answer": "complexion",
+      "explanation": "蜡黄的,蜡黄的肤色。The illness gave him a sallow complexion that worried his family.疾病使他面色蜡黄,让家人担心。"
+    },
+    {
+      "question": "wallow __ ________",
+      "type": "blank",
+      "answer": "in self-pity",
+      "explanation": "沉溺,沉溺于自怜。Instead of taking action, he chose to wallow in self-pity.他选择沉溺于自怜,而不是采取行动。"
+    },
+    {
+      "question": "____ bellow",
+      "type": "blank",
+      "answer": "bull",
+      "explanation": "吼叫,公牛吼叫。The angry bull began to bellow loudly in the field.愤怒的公牛开始在田野里大声吼叫。"
+    },
+    {
+      "question": "______ mellow",
+      "type": "blank",
+      "answer": "fruit",
+      "explanation": "成熟的,成熟的水果。The mellow fruit had a sweet, rich flavor perfect for dessert.成熟的水果有甜美浓郁的味道,非常适合做甜点。"
+    },
+    {
+      "question": "_______ billow",
+      "type": "blank",
+      "answer": "rolling",
+      "explanation": "翻腾,翻滚的波浪。The ship rode over the rolling billow of the stormy sea.船只在暴风雨海面的翻滚波浪上航行。"
+    },
+    {
+      "question": "plow _____",
+      "type": "blank",
+      "answer": "field",
+      "explanation": "犁,犁地。The farmer woke early to plow field before planting season.农民早起犁地,准备播种季节。"
+    },
+    {
+      "question": "mow ____",
+      "type": "blank",
+      "answer": "lawn",
+      "explanation": "割草,割草坪。He needed to mow lawn before the guests arrived.他需要在客人到达之前割草坪。"
+    },
+    {
+      "question": "________ brow",
+      "type": "blank",
+      "answer": "furrowed",
+      "explanation": "眉毛,皱起的眉毛。His furrowed brow showed deep concentration on the problem.他皱起的眉毛显示出对问题的深度专注。"
+    },
+    {
+      "question": "outgrow _______",
+      "type": "blank",
+      "answer": "clothes",
+      "explanation": "长大而不适合,长大后穿不下衣服。Children quickly outgrow clothes and need new ones every season.孩子们很快就长大穿不下衣服,每个季节都需要新的。"
+    },
+    {
+      "question": "______ burrow",
+      "type": "blank",
+      "answer": "rabbit",
+      "explanation": "洞穴,兔子洞穴。The rabbit disappeared into its burrow to escape the fox.兔子消失在它的洞穴里以逃避狐狸。"
+    },
+    {
+      "question": "furrow ____",
+      "type": "blank",
+      "answer": "soil",
+      "explanation": "犁沟,犁土。The plow created deep furrows in the soil for planting seeds.犁在土壤中犁出深沟以播种。"
+    },
+    {
+      "question": "stow _______",
+      "type": "blank",
+      "answer": "luggage",
+      "explanation": "装载,装载行李。Passengers must stow luggage in the overhead compartment.乘客必须将行李装载在头顶的行李舱中。"
+    },
+    {
+      "question": "______ vow",
+      "type": "blank",
+      "answer": "solemn",
+      "explanation": "誓言,庄严的誓言。They exchanged solemn vows in front of their families.他们在家人面前交换了庄严的誓言。"
+    },
+    {
+      "question": "pickax ____",
+      "type": "blank",
+      "answer": "tool",
+      "explanation": "镐,镐工具。Miners used a pickax tool to break through the hard rock.矿工们使用镐工具来凿穿坚硬的岩石。"
+    },
+    {
+      "question": "coax ______",
+      "type": "blank",
+      "answer": "gently",
+      "explanation": "哄劝,温柔地哄劝。She tried to coax gently the frightened cat out from under the bed.她试图温柔地哄劝受惊的猫从床下出来。"
+    },
+    {
+      "question": "affix _____",
+      "type": "blank",
+      "answer": "stamp",
+      "explanation": "贴上,贴上邮票。Remember to affix stamp to the envelope before mailing.寄信前记得在信封上贴上邮票。"
+    },
+    {
+      "question": "transfix ____ ____",
+      "type": "blank",
+      "answer": "with fear",
+      "explanation": "使呆住,吓得呆住。The horror movie scene managed to transfix with fear the entire audience.恐怖电影场景设法使整个观众吓得呆住。"
+    },
+    {
+      "question": "___ jinx",
+      "type": "blank",
+      "answer": "bad",
+      "explanation": "厄运,坏厄运。The team seemed to be under a bad jinx, losing every game.球队似乎受到坏厄运的影响,输掉了每场比赛。"
+    },
+    {
+      "question": "snuffbox _______",
+      "type": "blank",
+      "answer": "antique",
+      "explanation": "鼻烟盒,古董鼻烟盒。The collector treasured the silver snuffbox antique from the 18th century.收藏家珍视这个18世纪的银质古董鼻烟盒。"
+    },
+    {
+      "question": "______ matchbox",
+      "type": "blank",
+      "answer": "wooden",
+      "explanation": "火柴盒,木制火柴盒。The old wooden matchbox sat on the mantelpiece as a decoration.旧的木制火柴盒作为装饰放在壁炉架上。"
+    },
+    {
+      "question": "______ flummox",
+      "type": "blank",
+      "answer": "sudden",
+      "explanation": "使困惑,突然使困惑。The unexpected question caused a sudden flummox among the students.意外的问题在学生中引起了突然的困惑。"
+    },
+    {
+      "question": "___ pox",
+      "type": "blank",
+      "answer": "virus",
+      "explanation": "痘,痘病毒。The chicken pox virus spread quickly through the elementary school.水痘病毒在小学里迅速传播。"
+    },
+    {
+      "question": "____ popinjay",
+      "type": "blank",
+      "answer": "vain",
+      "explanation": "自负的人,自负的花花公子。The vain popinjay spent hours admiring himself in the mirror.自负的花花公子花几个小时在镜子前欣赏自己。"
+    },
+    {
+      "question": "flay _____",
+      "type": "blank",
+      "answer": "alive",
+      "explanation": "剥皮,活剥皮。The tyrant threatened to flay alive anyone who opposed him.暴君威胁要活剥任何反对他的人的皮。"
+    },
+    {
+      "question": "_____ inlay",
+      "type": "blank",
+      "answer": "work",
+      "explanation": "镶嵌,镶嵌工艺。The furniture featured beautiful inlay work with mother-of-pearl.家具以珍珠母镶嵌的美丽镶嵌工艺为特色。"
+    },
+    {
+      "question": "splay ___",
+      "type": "blank",
+      "answer": "leg",
+      "explanation": "张开,张开腿。The frog sat with its legs splay wide apart on the lily pad.青蛙坐在睡莲叶上,腿张开得很宽。"
+    }
+  ]
+}
