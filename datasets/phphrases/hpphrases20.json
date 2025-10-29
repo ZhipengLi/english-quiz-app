@@ -1,1 +1,605 @@
-
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "______ prowess",
+      "type": "blank",
+      "answer": "battle",
+      "explanation": "prowess 勇猛,战斗勇猛。The warrior's legendary battle prowess made him feared by all enemies.战士传奇的战斗勇猛使他被所有敌人所惧怕。"
+    },
+    {
+      "question": "_____ hiss",
+      "type": "blank",
+      "answer": "snake",
+      "explanation": "hiss 嘶嘶声,蛇嘶嘶声。The threatening snake hiss warned intruders to stay away from the den.威胁性的蛇嘶嘶声警告入侵者远离巢穴。"
+    },
+    {
+      "question": "_________ amiss",
+      "type": "blank",
+      "answer": "something",
+      "explanation": "amiss 有问题,出了问题。The detective sensed something amiss at the seemingly normal crime scene.侦探在看似正常的犯罪现场感觉到出了问题。"
+    },
+    {
+      "question": "__________ pattern",
+      "type": "blank",
+      "answer": "crisscross",
+      "explanation": "crisscross 纵横交错,纵横交错的图案。The fabric featured an intricate crisscross pattern of intersecting lines.织物具有交叉线的复杂纵横交错图案。"
+    },
+    {
+      "question": "engross __ ____",
+      "type": "blank",
+      "answer": "in work",
+      "explanation": "engross 全神贯注,全神贯注于工作。The scientist would engross in work for hours without noticing time passing.科学家会全神贯注于工作几个小时而不注意时间流逝。"
+    },
+    {
+      "question": "____ concuss",
+      "type": "blank",
+      "answer": "head",
+      "explanation": "concuss 震荡,头部震荡。The violent impact would concuss his head causing temporary memory loss.猛烈的撞击会震荡他的头部,导致暂时性记忆丧失。"
+    },
+    {
+      "question": "____ _ ____",
+      "type": "blank",
+      "answer": "make a fuss",
+      "explanation": "fuss 大惊小怪,大惊小怪。The demanding customer would make a fuss over minor service issues constantly.挑剔的顾客会不断对轻微的服务问题大惊小怪。"
+    },
+    {
+      "question": "____ callus",
+      "type": "blank",
+      "answer": "skin",
+      "explanation": "callus 老茧,皮肤老茧。Years of manual labor formed thick skin calluses on his hardened hands.多年的体力劳动在他坚硬的手上形成了厚厚的皮肤老茧。"
+    },
+    {
+      "question": "____ nonplus",
+      "type": "blank",
+      "answer": "left",
+      "explanation": "nonplus 困惑,使困惑。The unexpected question left nonplus the normally confident debater completely speechless.意外的问题使通常自信的辩论者完全无言以对。"
+    },
+    {
+      "question": "_______ nose",
+      "type": "blank",
+      "answer": "bulbous",
+      "explanation": "bulbous 球根状的,球根状的鼻子。The cartoon character had a distinctive bulbous nose that made him recognizable.卡通人物有一个独特的球根状鼻子,使他易于识别。"
+    },
+    {
+      "question": "_______ laugh",
+      "type": "blank",
+      "answer": "raucous",
+      "explanation": "raucous 刺耳的,刺耳的笑声。The drunk man's raucous laugh disturbed other patrons in the quiet restaurant.醉汉刺耳的笑声打扰了安静餐厅里的其他顾客。"
+    },
+    {
+      "question": "__________ view",
+      "type": "blank",
+      "answer": "stupendous",
+      "explanation": "stupendous 惊人的,惊人的景色。The mountain summit offered a stupendous view of the surrounding valleys below.山顶提供了下面周围山谷的惊人景色。"
+    },
+    {
+      "question": "_______ monster",
+      "type": "blank",
+      "answer": "hideous",
+      "explanation": "hideous 可怕的,可怕的怪物。The horror movie featured a hideous monster that terrified audiences worldwide.恐怖电影中有一个在全球范围内吓坏观众的可怕怪物。"
+    },
+    {
+      "question": "________ smell",
+      "type": "blank",
+      "answer": "nauseous",
+      "explanation": "nauseous 令人作呕的,令人作呕的气味。The nauseous smell from the garbage made everyone feel sick immediately.来自垃圾的令人作呕的气味立即让每个人感到恶心。"
+    },
+    {
+      "question": "_______ claim",
+      "type": "blank",
+      "answer": "dubious",
+      "explanation": "dubious 可疑的,可疑的声明。The scientist expressed doubt about the researcher's dubious claim of discovery.科学家对研究人员可疑的发现声明表示怀疑。"
+    },
+    {
+      "question": "___________ remedy",
+      "type": "blank",
+      "answer": "efficacious",
+      "explanation": "efficacious 有效的,有效的疗法。The ancient herbalist recommended an efficacious remedy for common ailments.古代草药师推荐了一种治疗常见疾病的有效疗法。"
+    },
+    {
+      "question": "________ host",
+      "type": "blank",
+      "answer": "gracious",
+      "explanation": "gracious 亲切的,亲切的主人。The gracious host welcomed guests warmly into his beautiful home.亲切的主人热情地欢迎客人进入他美丽的家。"
+    },
+    {
+      "question": "_________ girl",
+      "type": "blank",
+      "answer": "vivacious",
+      "explanation": "vivacious 活泼的,活泼的女孩。The vivacious girl's infectious energy lifted everyone's spirits at the party.活泼女孩的感染力提升了派对上每个人的精神。"
+    },
+    {
+      "question": "__________ child",
+      "type": "blank",
+      "answer": "precocious",
+      "explanation": "precocious 早熟的,早熟的孩子。The precocious child displayed remarkable intelligence far beyond her years.早熟的孩子展示了远超她年龄的非凡智力。"
+    },
+    {
+      "question": "_________ beast",
+      "type": "blank",
+      "answer": "ferocious",
+      "explanation": "ferocious 凶猛的,凶猛的野兽。The ferocious beast attacked anything that entered its territorial domain.凶猛的野兽攻击进入其领地的任何东西。"
+    },
+    {
+      "question": "_______ task",
+      "type": "blank",
+      "answer": "tedious",
+      "explanation": "tedious 乏味的,乏味的任务。The tedious task of data entry bored the employee to tears daily.数据输入的乏味任务每天让员工无聊到哭。"
+    },
+    {
+      "question": "____________ look",
+      "type": "blank",
+      "answer": "supercilious",
+      "explanation": "supercilious 傲慢的,傲慢的表情。His supercilious look conveyed disdain for those he considered beneath him.他傲慢的表情传达了对他认为低于他的人的轻蔑。"
+    },
+    {
+      "question": "__________ teenager",
+      "type": "blank",
+      "answer": "rebellious",
+      "explanation": "rebellious 叛逆的,叛逆的青少年。The rebellious teenager defied parental authority at every possible opportunity.叛逆的青少年在每一个可能的机会都反抗父母的权威。"
+    },
+    {
+      "question": "_________ idea",
+      "type": "blank",
+      "answer": "ingenious",
+      "explanation": "ingenious 巧妙的,巧妙的想法。The inventor's ingenious idea revolutionized the entire manufacturing industry completely.发明家巧妙的想法彻底革新了整个制造业。"
+    },
+    {
+      "question": "_____________ tone",
+      "type": "blank",
+      "answer": "sanctimonious",
+      "explanation": "sanctimonious 假装虔诚的,假装虔诚的语气。His sanctimonious tone irritated listeners who saw through his false piety.他假装虔诚的语气激怒了看穿他虚假虔诚的听众。"
+    },
+    {
+      "question": "_______ notes",
+      "type": "blank",
+      "answer": "copious",
+      "explanation": "copious 大量的,大量的笔记。The diligent student took copious notes during every lecture without exception.勤奋的学生在每次讲座中毫无例外地做了大量的笔记。"
+    },
+    {
+      "question": "_______ plan",
+      "type": "blank",
+      "answer": "devious",
+      "explanation": "devious 狡猾的,狡猾的计划。The villain's devious plan involved elaborate deception and clever manipulation.反派狡猾的计划涉及精心的欺骗和巧妙的操纵。"
+    },
+    {
+      "question": "_________ man",
+      "type": "blank",
+      "answer": "oblivious",
+      "explanation": "oblivious 毫无察觉的,毫无察觉的人。The oblivious man walked into danger completely unaware of the threat.毫无察觉的人完全不知道威胁地走进危险。"
+    },
+    {
+      "question": "__________ view",
+      "type": "blank",
+      "answer": "marvellous",
+      "explanation": "marvellous 奇妙的,奇妙的景色。The sunset created a marvellous view of brilliant colors across the sky.日落在天空中创造了绚丽色彩的奇妙景色。"
+    },
+    {
+      "question": "_________ lawsuit",
+      "type": "blank",
+      "answer": "frivolous",
+      "explanation": "frivolous 轻率的,轻率的诉讼。The judge dismissed the frivolous lawsuit as a waste of court time.法官驳回了轻率的诉讼,认为是浪费法庭时间。"
+    },
+    {
+      "question": "_________ voice",
+      "type": "blank",
+      "answer": "tremulous",
+      "explanation": "tremulous 颤抖的,颤抖的声音。Her tremulous voice betrayed deep fear despite attempts to appear confident.她颤抖的声音尽管试图表现出自信,但暴露了深深的恐惧。"
+    },
+    {
+      "question": "________ hunger",
+      "type": "blank",
+      "answer": "ravenous",
+      "explanation": "ravenous 贪婪的,贪婪的饥饿。After hiking all day, they felt ravenous hunger demanding immediate satisfaction.徒步旅行了一整天后,他们感到要求立即满足的贪婪饥饿。"
+    },
+    {
+      "question": "_______ crime",
+      "type": "blank",
+      "answer": "heinous",
+      "explanation": "heinous 令人发指的,令人发指的罪行。The heinous crime shocked the nation with its brutal senseless violence.令人发指的罪行以其残酷的无意义暴力震惊了全国。"
+    },
+    {
+      "question": "_______ sign",
+      "type": "blank",
+      "answer": "ominous",
+      "explanation": "ominous 不祥的,不祥的迹象。Dark clouds gathered forming an ominous sign of the approaching storm.黑云聚集,形成了即将到来的风暴的不祥迹象。"
+    },
+    {
+      "question": "________ stars",
+      "type": "blank",
+      "answer": "luminous",
+      "explanation": "luminous 发光的,发光的星星。The luminous stars shone brilliantly in the clear night sky above.发光的星星在上面清澈的夜空中闪耀着光芒。"
+    },
+    {
+      "question": "_________ rice",
+      "type": "blank",
+      "answer": "glutinous",
+      "explanation": "glutinous 糯性的,糯米。Asian cuisine often features sticky glutinous rice in traditional dishes.亚洲美食经常在传统菜肴中使用粘性糯米。"
+    },
+    {
+      "question": "________ sailors",
+      "type": "blank",
+      "answer": "mutinous",
+      "explanation": "mutinous 反叛的,反叛的水手。The mutinous sailors plotted to overthrow their cruel tyrannical captain.反叛的水手密谋推翻他们残酷的暴君船长。"
+    },
+    {
+      "question": "__________ job",
+      "type": "blank",
+      "answer": "monotonous",
+      "explanation": "monotonous 单调的,单调的工作。The monotonous job of assembly line work dulled workers' minds daily.装配线工作的单调工作每天使工人的头脑变得迟钝。"
+    },
+    {
+      "question": "_________ hall",
+      "type": "blank",
+      "answer": "cavernous",
+      "explanation": "cavernous 洞穴般的,洞穴般的大厅。The cavernous hall echoed with footsteps creating an eerie atmospheric effect.洞穴般的大厅回荡着脚步声,创造出诡异的氛围效果。"
+    },
+    {
+      "question": "_________ idea",
+      "type": "blank",
+      "answer": "ludicrous",
+      "explanation": "ludicrous 荒谬的,荒谬的想法。The ludicrous idea was immediately rejected by all sensible committee members.荒谬的想法立即被所有理智的委员会成员拒绝。"
+    },
+    {
+      "question": "________ sight",
+      "type": "blank",
+      "answer": "wondrous",
+      "explanation": "wondrous 奇妙的,奇妙的景象。The aurora borealis created a wondrous sight dancing across arctic skies.北极光在北极天空中舞动,创造了奇妙的景象。"
+    },
+    {
+      "question": "_________ rage",
+      "type": "blank",
+      "answer": "murderous",
+      "explanation": "murderous 杀气腾腾的,杀气腾腾的愤怒。The betrayed man's murderous rage threatened violence against his enemies.被背叛的人杀气腾腾的愤怒威胁要对他的敌人使用暴力。"
+    },
+    {
+      "question": "__________ protest",
+      "type": "blank",
+      "answer": "vociferous",
+      "explanation": "vociferous 大声疾呼的,大声疾呼的抗议。The vociferous protest demanded immediate government action on climate change.大声疾呼的抗议要求政府立即对气候变化采取行动。"
+    },
+    {
+      "question": "___________ waters",
+      "type": "blank",
+      "answer": "treacherous",
+      "explanation": "treacherous 危险的,危险的水域。Sailors navigated carefully through the treacherous waters filled with hidden rocks.水手小心地穿过充满隐藏岩石的危险水域。"
+    },
+    {
+      "question": "_______ duty",
+      "type": "blank",
+      "answer": "onerous",
+      "explanation": "onerous 繁重的,繁重的职责。The onerous duty of executor required countless hours managing the estate.执行人的繁重职责需要无数小时管理遗产。"
+    },
+    {
+      "question": "__________ crowd",
+      "type": "blank",
+      "answer": "boisterous",
+      "explanation": "boisterous 喧闹的,喧闹的人群。The boisterous crowd celebrated wildly after their team's championship victory.喧闹的人群在他们队赢得冠军后疯狂庆祝。"
+    },
+    {
+      "question": "________ look",
+      "type": "blank",
+      "answer": "desirous",
+      "explanation": "desirous 渴望的,渴望的眼神。The hungry child cast desirous looks at the forbidden candy jar.饥饿的孩子向禁止的糖果罐投以渴望的眼神。"
+    },
+    {
+      "question": "__________ act",
+      "type": "blank",
+      "answer": "traitorous",
+      "explanation": "traitorous 叛国的,叛国的行为。The spy's traitorous act resulted in execution for betraying state secrets.间谍叛国的行为因背叛国家机密而被处决。"
+    },
+    {
+      "question": "_________ lie",
+      "type": "blank",
+      "answer": "monstrous",
+      "explanation": "monstrous 骇人听闻的,骇人听闻的谎言。The politician's monstrous lie deceived millions of trusting voters completely.政治家骇人听闻的谎言完全欺骗了数百万信任的选民。"
+    },
+    {
+      "question": "_________ applause",
+      "type": "blank",
+      "answer": "rapturous",
+      "explanation": "rapturous 狂喜的,狂喜的掌声。The performance received rapturous applause from the enthusiastic audience members.表演从热情的观众那里得到了狂喜的掌声。"
+    },
+    {
+      "question": "________ eyes",
+      "type": "blank",
+      "answer": "covetous",
+      "explanation": "covetous 贪婪的,贪婪的眼睛。The thief's covetous eyes studied the jewelry display case intently.小偷贪婪的眼睛专注地研究珠宝展示柜。"
+    },
+    {
+      "question": "________ tone",
+      "type": "blank",
+      "answer": "unctuous",
+      "explanation": "unctuous 谄媚的,谄媚的语气。The salesman's unctuous tone made customers distrust his insincere flattery.推销员谄媚的语气使顾客不信任他虚伪的奉承。"
+    },
+    {
+      "question": "__________ applause",
+      "type": "blank",
+      "answer": "tumultuous",
+      "explanation": "tumultuous 喧嚣的,喧嚣的掌声。The rock concert ended with tumultuous applause lasting several minutes.摇滚音乐会以持续数分钟的喧嚣掌声结束。"
+    },
+    {
+      "question": "____________ sneer",
+      "type": "blank",
+      "answer": "contemptuous",
+      "explanation": "contemptuous 轻蔑的,轻蔑的冷笑。The aristocrat's contemptuous sneer showed disdain for common people clearly.贵族轻蔑的冷笑清楚地显示了对普通人的蔑视。"
+    },
+    {
+      "question": "_________ feast",
+      "type": "blank",
+      "answer": "sumptuous",
+      "explanation": "sumptuous 奢华的,奢华的盛宴。The royal wedding featured a sumptuous feast with elaborate dishes everywhere.皇家婚礼有一个到处都是精致菜肴的奢华盛宴。"
+    },
+    {
+      "question": "________ injury",
+      "type": "blank",
+      "answer": "grievous",
+      "explanation": "grievous 严重的,严重的伤害。The accident victim suffered grievous injuries requiring extensive medical treatment.事故受害者遭受了需要大量医疗的严重伤害。"
+    },
+    {
+      "question": "pus ______",
+      "type": "blank",
+      "answer": "filled",
+      "explanation": "pus 脓,充满脓。The infected wound became pus filled requiring immediate antibiotic treatment.受感染的伤口变得充满脓,需要立即进行抗生素治疗。"
+    },
+    {
+      "question": "____ detritus",
+      "type": "blank",
+      "answer": "rock",
+      "explanation": "detritus 碎屑,岩石碎屑。Geologists studied the rock detritus accumulated at the mountain base.地质学家研究了积累在山基底的岩石碎屑。"
+    },
+    {
+      "question": "____ sideways",
+      "type": "blank",
+      "answer": "look",
+      "explanation": "sideways 斜着,斜着看。The suspicious stranger would look sideways at passersby in the street.可疑的陌生人会斜着看街上的路人。"
+    },
+    {
+      "question": "_____ dingbat",
+      "type": "blank",
+      "answer": "silly",
+      "explanation": "dingbat 傻瓜,愚蠢的傻瓜。The silly dingbat couldn't understand simple instructions despite repeated explanations.愚蠢的傻瓜尽管反复解释也无法理解简单的指示。"
+    },
+    {
+      "question": "____ polecat",
+      "type": "blank",
+      "answer": "wild",
+      "explanation": "polecat 鸡貂,野生鸡貂。The wild polecat is a fierce carnivorous mammal related to weasels.野生鸡貂是一种与黄鼠狼有关的凶猛食肉哺乳动物。"
+    },
+    {
+      "question": "_____ bleat",
+      "type": "blank",
+      "answer": "sheep",
+      "explanation": "bleat 咩咩叫,羊咩咩叫。The anxious sheep bleats could be heard across the entire farm.焦虑的羊咩咩叫可以在整个农场听到。"
+    },
+    {
+      "question": "mistreat _____",
+      "type": "blank",
+      "answer": "badly",
+      "explanation": "mistreat 虐待,严重虐待。The cruel owner would mistreat badly his animals causing them suffering.残忍的主人会严重虐待他的动物,使它们遭受痛苦。"
+    },
+    {
+      "question": "unseat _____",
+      "type": "blank",
+      "answer": "rider",
+      "explanation": "unseat 使摔下马,使骑手摔下马。The bucking bronco managed to unseat the rider within seconds.狂野的野马在几秒钟内设法使骑手摔下马。"
+    },
+    {
+      "question": "_____ nougat",
+      "type": "blank",
+      "answer": "chewy",
+      "explanation": "nougat 牛轧糖,有嚼劲的牛轧糖。The candy bar contained chewy nougat mixed with caramel and nuts.糖果棒包含与焦糖和坚果混合的有嚼劲的牛轧糖。"
+    },
+    {
+      "question": "____ splat",
+      "type": "blank",
+      "answer": "loud",
+      "explanation": "splat 啪嗒声,响亮的啪嗒声。The tomato hit the wall with a loud splat creating a messy stain.西红柿以响亮的啪嗒声击中墙壁,造成了一个凌乱的污渍。"
+    },
+    {
+      "question": "____ doormat",
+      "type": "blank",
+      "answer": "wipe",
+      "explanation": "doormat 门垫,擦门垫。Please wipe your feet on the doormat before entering the house.请在进入房子前在门垫上擦脚。"
+    },
+    {
+      "question": "_______ ride",
+      "type": "blank",
+      "answer": "rowboat",
+      "explanation": "rowboat 划艇,划艇游。The romantic couple enjoyed a peaceful rowboat ride across the quiet lake.浪漫的情侣在宁静的湖上享受了和平的划艇游。"
+    },
+    {
+      "question": "________ suit",
+      "type": "blank",
+      "answer": "tailcoat",
+      "explanation": "tailcoat 燕尾服,燕尾服套装。The groom wore a formal tailcoat suit for the elegant wedding ceremony.新郎为优雅的婚礼仪式穿着正式的燕尾服套装。"
+    },
+    {
+      "question": "________ traitor",
+      "type": "blank",
+      "answer": "turncoat",
+      "explanation": "turncoat 叛徒,叛徒背叛者。The turncoat traitor switched allegiance to the enemy during the war.叛徒背叛者在战争期间转向敌人的忠诚。"
+    },
+    {
+      "question": "____ overcoat",
+      "type": "blank",
+      "answer": "wool",
+      "explanation": "overcoat 大衣,羊毛大衣。The gentleman wore a heavy wool overcoat against the winter cold.绅士穿着厚重的羊毛大衣抵御冬季寒冷。"
+    },
+    {
+      "question": "_________ vest",
+      "type": "blank",
+      "answer": "waistcoat",
+      "explanation": "waistcoat 背心,背心。The three-piece suit included a matching waistcoat vest under the jacket.三件套西装包括夹克下的配套背心。"
+    },
+    {
+      "question": "gloat ____",
+      "type": "blank",
+      "answer": "over",
+      "explanation": "gloat 洋洋得意,洋洋得意。The victor would gloat over his defeated opponent's humiliating loss.胜利者会洋洋得意于他被击败对手的屈辱失败。"
+    },
+    {
+      "question": "_____ fur",
+      "type": "blank",
+      "answer": "stoat",
+      "explanation": "stoat 白鼬,白鼬毛皮。The winter stoat fur turns white providing excellent camouflage in snow.冬季白鼬毛皮变成白色,在雪中提供极好的伪装。"
+    },
+    {
+      "question": "_______ brat",
+      "type": "blank",
+      "answer": "spoiled",
+      "explanation": "brat 顽童,被宠坏的顽童。The spoiled brat threw tantrums whenever denied anything he wanted.被宠坏的顽童在被拒绝他想要的任何东西时都会发脾气。"
+    },
+    {
+      "question": "_____ prat",
+      "type": "blank",
+      "answer": "silly",
+      "explanation": "prat 傻瓜,愚蠢的傻瓜。The silly prat made foolish mistakes that amused everyone around him.愚蠢的傻瓜犯了让周围每个人都觉得好笑的愚蠢错误。"
+    },
+    {
+      "question": "_____ kumquat",
+      "type": "blank",
+      "answer": "juicy",
+      "explanation": "kumquat 金橘,多汁的金橘。The sweet juicy kumquat is a small citrus fruit eaten whole.甜美多汁的金橘是一种整个吃的小柑橘类水果。"
+    },
+    {
+      "question": "squat ____",
+      "type": "blank",
+      "answer": "down",
+      "explanation": "squat 蹲下,蹲下。The athlete would squat down to pick up the heavy weight carefully.运动员会蹲下小心地拾起沉重的重量。"
+    },
+    {
+      "question": "swat ___",
+      "type": "blank",
+      "answer": "fly",
+      "explanation": "swat 拍打,拍打苍蝇。The annoyed person tried to swat the fly buzzing around persistently.恼怒的人试图拍打持续嗡嗡作响的苍蝇。"
+    },
+    {
+      "question": "_______ artefact",
+      "type": "blank",
+      "answer": "ancient",
+      "explanation": "artefact 文物,古代文物。The museum displayed an ancient artefact from the Roman Empire era.博物馆展示了一件来自罗马帝国时代的古代文物。"
+    },
+    {
+      "question": "reenact _____",
+      "type": "blank",
+      "answer": "scene",
+      "explanation": "reenact 重演,重演场景。Actors would reenact the historic battle scene for the documentary film.演员会为纪录片重演历史战斗场景。"
+    },
+    {
+      "question": "______ poverty",
+      "type": "blank",
+      "answer": "abject",
+      "explanation": "abject 赤贫的,赤贫。The refugees lived in abject poverty without basic necessities or hope.难民生活在没有基本必需品或希望的赤贫中。"
+    },
+    {
+      "question": "deject _______",
+      "type": "blank",
+      "answer": "spirits",
+      "explanation": "deject 沮丧,使精神沮丧。The constant failures would deject spirits of even the most optimistic person.不断的失败会使即使是最乐观的人精神沮丧。"
+    },
+    {
+      "question": "interject _______",
+      "type": "blank",
+      "answer": "comment",
+      "explanation": "interject 插话,插话评论。The rude man would constantly interject comments during others' conversations.粗鲁的人会在别人的谈话中不断插话评论。"
+    },
+    {
+      "question": "deflect ______",
+      "type": "blank",
+      "answer": "attack",
+      "explanation": "deflect 转移,转移攻击。The skilled debater learned to deflect personal attacks with humor.熟练的辩论者学会了用幽默转移人身攻击。"
+    },
+    {
+      "question": "____ disrespect",
+      "type": "blank",
+      "answer": "show",
+      "explanation": "disrespect 不尊重,表现出不尊重。The student's behavior would show disrespect toward the teacher constantly.学生的行为会不断表现出对教师的不尊重。"
+    },
+    {
+      "question": "_____ intersect",
+      "type": "blank",
+      "answer": "roads",
+      "explanation": "intersect 相交,道路相交。Two major highways roads intersect at this busy junction causing traffic congestion.两条主要高速公路在这个繁忙的路口相交,造成交通拥堵。"
+    },
+    {
+      "question": "contradict _________",
+      "type": "blank",
+      "answer": "statement",
+      "explanation": "contradict 矛盾,矛盾陈述。The witness's testimony would directly contradict the defendant's sworn statement.证人的证词会直接与被告的宣誓陈述矛盾。"
+    },
+    {
+      "question": "_____ derelict",
+      "type": "blank",
+      "answer": "urban",
+      "explanation": "derelict 废弃的,城市废弃建筑。The urban derelict building stood abandoned for decades attracting squatters.城市废弃建筑被遗弃了几十年,吸引了非法占用者。"
+    },
+    {
+      "question": "inflict ____",
+      "type": "blank",
+      "answer": "pain",
+      "explanation": "inflict 造成,造成痛苦。The torturer's job was to inflict pain on prisoners extracting information.施刑者的工作是对囚犯造成痛苦以提取信息。"
+    },
+    {
+      "question": "___ constrict",
+      "type": "blank",
+      "answer": "boa",
+      "explanation": "constrict 收缩,蟒蛇收缩。The powerful boa would constrict around prey squeezing until suffocation occurred.强大的蟒蛇会收缩缠绕猎物直到发生窒息。"
+    },
+    {
+      "question": "__________ shape",
+      "type": "blank",
+      "answer": "indistinct",
+      "explanation": "indistinct 模糊的,模糊的形状。Through the fog, only an indistinct shape could be seen approaching slowly.透过雾,只能看到一个缓慢接近的模糊形状。"
+    },
+    {
+      "question": "__ extinct",
+      "type": "blank",
+      "answer": "go",
+      "explanation": "extinct 灭绝,灭绝。Many species will go extinct due to habitat destruction and climate change.由于栖息地破坏和气候变化,许多物种将灭绝。"
+    },
+    {
+      "question": "concoct ____",
+      "type": "blank",
+      "answer": "plan",
+      "explanation": "concoct 策划,策划计划。The conspirators would concoct an elaborate plan to overthrow the government.阴谋者会策划一个推翻政府的精心计划。"
+    },
+    {
+      "question": "_____ viaduct",
+      "type": "blank",
+      "answer": "stone",
+      "explanation": "viaduct 高架桥,石高架桥。The ancient stone viaduct carried trains across the deep valley below.古老的石高架桥承载着火车穿过下面的深谷。"
+    },
+    {
+      "question": "induct ______",
+      "type": "blank",
+      "answer": "member",
+      "explanation": "induct 引入,引入成员。The fraternity would formally induct new members during the initiation ceremony.兄弟会会在入会仪式期间正式引入新成员。"
+    },
+    {
+      "question": "obstruct _______",
+      "type": "blank",
+      "answer": "justice",
+      "explanation": "obstruct 妨碍,妨碍司法。The defendant was charged with attempting to obstruct justice by hiding evidence.被告被指控试图通过隐藏证据妨碍司法。"
+    },
+    {
+      "question": "_____ sherbet",
+      "type": "blank",
+      "answer": "fruit",
+      "explanation": "sherbet 果汁冰糕,水果果汁冰糕。The refreshing fruit sherbet provided a light dessert on hot summer days.清爽的水果果汁冰糕在炎热的夏日提供了清淡的甜点。"
+    },
+    {
+      "question": "______ tones",
+      "type": "blank",
+      "answer": "dulcet",
+      "explanation": "dulcet 悦耳的,悦耳的音调。The singer's dulcet tones enchanted the audience during the concert.歌手悦耳的音调在音乐会期间迷住了观众。"
+    },
+    {
+      "question": "beet ____",
+      "type": "blank",
+      "answer": "root",
+      "explanation": "beet 甜菜,甜菜根。The nutritious beet root can be roasted, pickled, or eaten raw.营养丰富的甜菜根可以烤、腌制或生吃。"
+    }
+  ]
+}
