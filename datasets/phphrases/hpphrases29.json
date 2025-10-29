@@ -1,1 +1,407 @@
-
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "_______ velvety",
+      "type": "blank",
+      "answer": "voice",
+      "explanation": "天鹅绒般的,天鹅绒般的声音。The singer's velvety voice captivated the entire audience.歌手天鹅绒般的声音迷住了整个观众。"
+    },
+    {
+      "question": "______ drafty",
+      "type": "blank",
+      "answer": "room",
+      "explanation": "透风的,透风的房间。The drafty room made it impossible to stay warm in winter.透风的房间使得冬天无法保持温暖。"
+    },
+    {
+      "question": "______ shifty",
+      "type": "blank",
+      "answer": "eyes",
+      "explanation": "狡猾的,狡猾的眼睛。The suspect's shifty eyes made the detective suspicious.嫌疑人狡猾的眼睛让侦探起疑。"
+    },
+    {
+      "question": "_____ lofty",
+      "type": "blank",
+      "answer": "ideals",
+      "explanation": "崇高的,崇高的理想。The politician spoke of lofty ideals but delivered little.政治家谈论崇高的理想,但兑现很少。"
+    },
+    {
+      "question": "_______ weighty",
+      "type": "blank",
+      "answer": "matter",
+      "explanation": "重大的,重大的问题。The committee discussed the weighty matter of budget allocation.委员会讨论了预算分配的重大问题。"
+    },
+    {
+      "question": "______ ferocity",
+      "type": "blank",
+      "answer": "savage",
+      "explanation": "凶猛,野蛮的凶猛。The tiger attacked with savage ferocity to protect its territory.老虎以野蛮的凶猛攻击以保护其领地。"
+    },
+    {
+      "question": "rapidity __ ______",
+      "type": "blank",
+      "answer": "of change",
+      "explanation": "快速,变化的快速。The rapidity of change in technology surprised everyone.技术变化的快速让每个人都感到惊讶。"
+    },
+    {
+      "question": "_____ technicality",
+      "type": "blank",
+      "answer": "legal",
+      "explanation": "技术细节,法律技术细节。The case was dismissed on a legal technicality rather than merit.案件因法律技术细节而被驳回,而不是根据案情。"
+    },
+    {
+      "question": "___ __ finality",
+      "type": "blank",
+      "answer": "air of",
+      "explanation": "终结性,终结性的气氛。He spoke with an air of finality that ended all discussion.他以终结性的气氛说话,结束了所有讨论。"
+    },
+    {
+      "question": "______ punctuality",
+      "type": "blank",
+      "answer": "strict",
+      "explanation": "守时,严格守时。The military demanded strict punctuality from all soldiers.军队要求所有士兵严格守时。"
+    },
+    {
+      "question": "__ ___ eventuality",
+      "type": "blank",
+      "answer": "in any",
+      "explanation": "可能性,在任何可能性下。The plan was designed to work in any eventuality.该计划被设计为在任何可能性下都能奏效。"
+    },
+    {
+      "question": "nobility __ ______",
+      "type": "blank",
+      "answer": "of spirit",
+      "explanation": "高贵,精神的高贵。Her nobility of spirit inspired everyone she met.她精神的高贵激励了她遇到的每个人。"
+    },
+    {
+      "question": "______ servility",
+      "type": "blank",
+      "answer": "abject",
+      "explanation": "奴性,卑贱的奴性。The prisoner's abject servility disgusted the guards.囚犯卑贱的奴性让看守感到厌恶。"
+    },
+    {
+      "question": "_____ __ incredulity",
+      "type": "blank",
+      "answer": "stare in",
+      "explanation": "怀疑,怀疑地凝视。The audience could only stare in incredulity at the impossible feat.观众只能怀疑地凝视着不可能的壮举。"
+    },
+    {
+      "question": "____ enmity",
+      "type": "blank",
+      "answer": "deep",
+      "explanation": "敌意,深深的敌意。Deep enmity existed between the rival families for generations.对立家族之间世代存在深深的敌意。"
+    },
+    {
+      "question": "______ ___ indignity",
+      "type": "blank",
+      "answer": "suffer the",
+      "explanation": "侮辱,遭受侮辱。The prisoner had to suffer the indignity of public humiliation.囚犯不得不遭受公开羞辱的侮辱。"
+    },
+    {
+      "question": "_____ hilarity",
+      "type": "blank",
+      "answer": "cause",
+      "explanation": "欢闹,引起欢闹。The comedian's jokes would cause hilarity throughout the theater.喜剧演员的笑话会在整个剧院引起欢闹。"
+    },
+    {
+      "question": "_____ ____ asperity",
+      "type": "blank",
+      "answer": "speak with",
+      "explanation": "严厉,严厉地说话。The angry teacher would speak with asperity to misbehaving students.愤怒的老师会对行为不端的学生严厉地说话。"
+    },
+    {
+      "question": "_____ __ superiority",
+      "type": "blank",
+      "answer": "sense of",
+      "explanation": "优越感,优越感。His arrogant sense of superiority alienated his colleagues.他傲慢的优越感疏远了他的同事。"
+    },
+    {
+      "question": "___ immensity __ _____",
+      "type": "blank",
+      "answer": "the of space",
+      "explanation": "广阔,空间的广阔。Astronauts are awed by the immensity of space surrounding Earth.宇航员对围绕地球的空间的广阔感到敬畏。"
+    },
+    {
+      "question": "_ ____ nonentity",
+      "type": "blank",
+      "answer": "a mere",
+      "explanation": "无足轻重的人,无足轻重的人。In the company hierarchy, he felt like a mere nonentity.在公司层级中,他觉得自己像个无足轻重的人。"
+    },
+    {
+      "question": "______ fruity",
+      "type": "blank",
+      "answer": "aroma",
+      "explanation": "果味的,果味的香气。The wine had a rich fruity aroma of berries and plums.葡萄酒有浓郁的浆果和李子的果味香气。"
+    },
+    {
+      "question": "receptivity __ ______",
+      "type": "blank",
+      "answer": "to change",
+      "explanation": "接受性,对变化的接受性。The company's receptivity to change helped it survive.公司对变化的接受性帮助它存活下来。"
+    },
+    {
+      "question": "_______ festivities",
+      "type": "blank",
+      "answer": "holiday",
+      "explanation": "庆祝活动,节日庆祝活动。The town prepared for the holiday festivities with decorations.小镇用装饰品为节日庆祝活动做准备。"
+    },
+    {
+      "question": "______ jaunty",
+      "type": "blank",
+      "answer": "walk",
+      "explanation": "活泼的,活泼的步伐。He had a jaunty walk that showed his confident mood.他有活泼的步伐,显示出自信的心情。"
+    },
+    {
+      "question": "_____ runty",
+      "type": "blank",
+      "answer": "kid",
+      "explanation": "矮小的,矮小的孩子。The runty kid was always the last picked for sports teams.矮小的孩子总是最后被选入运动队。"
+    },
+    {
+      "question": "_______ maggoty",
+      "type": "blank",
+      "answer": "meat",
+      "explanation": "生蛆的,生蛆的肉。The maggoty meat had been left out in the heat too long.生蛆的肉在高温下放置太久了。"
+    },
+    {
+      "question": "_____ sooty",
+      "type": "blank",
+      "answer": "smoke",
+      "explanation": "煤烟的,煤烟的烟雾。Sooty smoke billowed from the factory chimney.煤烟的烟雾从工厂烟囱中滚滚而出。"
+    },
+    {
+      "question": "______ hearty",
+      "type": "blank",
+      "answer": "meal",
+      "explanation": "丰盛的,丰盛的一餐。The travelers enjoyed a hearty meal after their long journey.旅行者在长途旅行后享用了丰盛的一餐。"
+    },
+    {
+      "question": "_____ warty",
+      "type": "blank",
+      "answer": "growth",
+      "explanation": "有疣的,有疣的生长物。The warty growth on the tree trunk looked unsightly.树干上有疣的生长物看起来很难看。"
+    },
+    {
+      "question": "___ shirty",
+      "type": "blank",
+      "answer": "get",
+      "explanation": "生气的,变得生气。Don't get shirty with me just because you're having a bad day.不要仅仅因为你今天心情不好就对我生气。"
+    },
+    {
+      "question": "_____ hasty",
+      "type": "blank",
+      "answer": "decision",
+      "explanation": "草率的,草率的决定。The hasty decision led to regrettable consequences later.草率的决定后来导致了令人遗憾的后果。"
+    },
+    {
+      "question": "_____ pasty",
+      "type": "blank",
+      "answer": "complexion",
+      "explanation": "苍白的,苍白的肤色。His pasty complexion suggested he spent too much time indoors.他苍白的肤色表明他在室内待得太久了。"
+    },
+    {
+      "question": "_____ testy",
+      "type": "blank",
+      "answer": "reply",
+      "explanation": "易怒的,易怒的回答。The tired doctor gave a testy reply to the repeated question.疲惫的医生对重复的问题给出了易怒的回答。"
+    },
+    {
+      "question": "_ travesty __ _______",
+      "type": "blank",
+      "answer": "a of justice",
+      "explanation": "歪曲,对正义的歪曲。The unfair trial was a travesty of justice that shocked everyone.不公平的审判是对正义的歪曲,震惊了所有人。"
+    },
+    {
+      "question": "_____ pigsty",
+      "type": "blank",
+      "answer": "messy",
+      "explanation": "猪圈,凌乱的猪圈。Your bedroom looks like a messy pigsty; clean it up immediately.你的卧室看起来像个凌乱的猪圈,立即清理它。"
+    },
+    {
+      "question": "______ frosty",
+      "type": "blank",
+      "answer": "reception",
+      "explanation": "冷淡的,冷淡的接待。The proposal received a frosty reception from the committee.该提案受到委员会的冷淡接待。"
+    },
+    {
+      "question": "_____ musty",
+      "type": "blank",
+      "answer": "smell",
+      "explanation": "发霉的,发霉的气味。The old basement had a musty smell of mildew and decay.旧地下室有发霉和腐烂的发霉气味。"
+    },
+    {
+      "question": "______ crusty",
+      "type": "blank",
+      "answer": "bread",
+      "explanation": "有硬皮的,有硬皮的面包。The freshly baked crusty bread was delicious with butter.新鲜烘焙的有硬皮面包配黄油很美味。"
+    },
+    {
+      "question": "__ batty",
+      "type": "blank",
+      "answer": "go",
+      "explanation": "发疯的,发疯。The isolation was enough to make anyone go batty.孤立足以让任何人发疯。"
+    },
+    {
+      "question": "_____ tatty",
+      "type": "blank",
+      "answer": "clothes",
+      "explanation": "破旧的,破旧的衣服。The homeless man wore tatty clothes that were falling apart.无家可归的男人穿着正在破碎的破旧衣服。"
+    },
+    {
+      "question": "_____ bitty",
+      "type": "blank",
+      "answer": "pieces",
+      "explanation": "小碎片的,小碎片。The vase shattered into bitty pieces across the floor.花瓶在地板上摔成小碎片。"
+    },
+    {
+      "question": "______ gritty",
+      "type": "blank",
+      "answer": "determination",
+      "explanation": "坚毅的,坚毅的决心。Her gritty determination helped her overcome every obstacle.她坚毅的决心帮助她克服了每一个障碍。"
+    },
+    {
+      "question": "______ knotty",
+      "type": "blank",
+      "answer": "problem",
+      "explanation": "棘手的,棘手的问题。The lawyers struggled with the knotty problem for weeks.律师们与棘手的问题斗争了几周。"
+    },
+    {
+      "question": "_____ potty",
+      "type": "blank",
+      "answer": "training",
+      "explanation": "便盆,便盆训练。The toddler was ready to begin potty training at age two.幼儿在两岁时准备开始便盆训练。"
+    },
+    {
+      "question": "______ spotty",
+      "type": "blank",
+      "answer": "record",
+      "explanation": "参差不齐的,参差不齐的记录。The employee's spotty record made promotion unlikely.员工参差不齐的记录使晋升不太可能。"
+    },
+    {
+      "question": "_____ nutty",
+      "type": "blank",
+      "answer": "flavor",
+      "explanation": "坚果味的,坚果味。The dessert had a rich nutty flavor from toasted almonds.甜点有烤杏仁的浓郁坚果味。"
+    },
+    {
+      "question": "_____ gravy",
+      "type": "blank",
+      "answer": "boat",
+      "explanation": "肉汁,肉汁船。She poured the gravy from the gravy boat over the potatoes.她从肉汁船里把肉汁倒在土豆上。"
+    },
+    {
+      "question": "chivy _____",
+      "type": "blank",
+      "answer": "along",
+      "explanation": "催促,催促前进。The shepherd would chivy along the slow-moving sheep.牧羊人会催促行动缓慢的羊前进。"
+    },
+    {
+      "question": "_____ curvy",
+      "type": "blank",
+      "answer": "figure",
+      "explanation": "曲线美的,曲线美的身材。The actress was admired for her curvy figure.这位女演员因其曲线美的身材而受到赞赏。"
+    },
+    {
+      "question": "______ scurvy",
+      "type": "blank",
+      "answer": "disease",
+      "explanation": "坏血病,坏血病。Sailors suffered from scurvy disease due to lack of vitamin C.水手因缺乏维生素C而患坏血病。"
+    },
+    {
+      "question": "chivvy _____",
+      "type": "blank",
+      "answer": "along",
+      "explanation": "催促,催促前进。The teacher would chivvy along students who were dawdling.老师会催促磨蹭的学生前进。"
+    },
+    {
+      "question": "____ dewy",
+      "type": "blank",
+      "answer": "skin",
+      "explanation": "露珠般的,露珠般的皮肤。The moisturizer promised to give her dewy skin like a baby's.保湿霜承诺给她像婴儿般露珠般的皮肤。"
+    },
+    {
+      "question": "______ sinewy",
+      "type": "blank",
+      "answer": "arms",
+      "explanation": "肌肉发达的,肌肉发达的手臂。The rock climber had strong sinewy arms from years of training.攀岩者经过多年训练有强壮肌肉发达的手臂。"
+    },
+    {
+      "question": "____ waxy",
+      "type": "blank",
+      "answer": "buildup",
+      "explanation": "蜡质的,蜡质堆积。Waxy buildup on the furniture needed to be cleaned off.家具上的蜡质堆积需要清除。"
+    },
+    {
+      "question": "____ hazy",
+      "type": "blank",
+      "answer": "memory",
+      "explanation": "模糊的,模糊的记忆。He had only a hazy memory of that night's events.他对那晚事件只有模糊的记忆。"
+    },
+    {
+      "question": "______ breezy",
+      "type": "blank",
+      "answer": "day",
+      "explanation": "微风习习的,微风习习的一天。It was a perfect breezy day for sailing on the lake.这是在湖上航行的完美微风习习的一天。"
+    },
+    {
+      "question": "____ dozy",
+      "type": "blank",
+      "answer": "feel",
+      "explanation": "困倦的,感到困倦。The warm afternoon sun made him feel dozy and relaxed.温暖的午后阳光使他感到困倦和放松。"
+    },
+    {
+      "question": "_____ gauzy",
+      "type": "blank",
+      "answer": "fabric",
+      "explanation": "薄纱的,薄纱面料。The curtains were made of light gauzy fabric that moved in the breeze.窗帘由轻薄纱面料制成,在微风中摆动。"
+    },
+    {
+      "question": "____ dizzy",
+      "type": "blank",
+      "answer": "feel",
+      "explanation": "头晕的,感到头晕。The spinning ride made her feel dizzy and nauseous.旋转的游乐设施使她感到头晕和恶心。"
+    },
+    {
+      "question": "_____ fizzy",
+      "type": "blank",
+      "answer": "drink",
+      "explanation": "起泡的,起泡的饮料。The children enjoyed the sweet fizzy drink at the party.孩子们在聚会上享用甜的起泡饮料。"
+    },
+    {
+      "question": "___ fez",
+      "type": "blank",
+      "answer": "red",
+      "explanation": "土耳其毡帽,红色土耳其毡帽。The man wore a traditional red fez as part of his costume.男人戴着传统的红色土耳其毡帽作为服装的一部分。"
+    },
+    {
+      "question": "________ whiz",
+      "type": "blank",
+      "answer": "computer",
+      "explanation": "能手,电脑能手。The teenager was a computer whiz who could fix any problem.这个青少年是个电脑能手,能解决任何问题。"
+    },
+    {
+      "question": "______ chintz",
+      "type": "blank",
+      "answer": "curtains",
+      "explanation": "印花棉布,印花棉布窗帘。The cottage had floral chintz curtains in every room.小屋的每个房间都有花卉印花棉布窗帘。"
+    },
+    {
+      "question": "____ fizz",
+      "type": "blank",
+      "answer": "soda",
+      "explanation": "嘶嘶声,苏打水的嘶嘶声。The soda lost its fizz after being left open overnight.苏打水开着放了一夜后失去了嘶嘶声。"
+    },
+    {
+      "question": "_____ whizz",
+      "type": "blank",
+      "answer": "past",
+      "explanation": "飞驰而过,飞驰而过。Cars would whizz past on the busy highway.汽车会在繁忙的高速公路上飞驰而过。"
+    },
+    {
+      "question": "_____ fuzz",
+      "type": "blank",
+      "answer": "peach",
+      "explanation": "绒毛,桃子绒毛。The peach had soft peach fuzz covering its skin.桃子的皮肤上覆盖着柔软的桃子绒毛。"
+    }
+  ]
+}
