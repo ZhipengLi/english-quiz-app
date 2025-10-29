@@ -1,1 +1,605 @@
-
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "mislay ____",
+      "type": "blank",
+      "answer": "keys",
+      "explanation": "放错地方,放错钥匙。I always seem to mislay keys right when I need to leave.我总是在需要离开时放错钥匙。"
+    },
+    {
+      "question": "waylay _ ________",
+      "type": "blank",
+      "answer": "a traveler",
+      "explanation": "伏击,伏击旅行者。Bandits would waylay a traveler on the lonely mountain road.强盗会在荒凉的山路上伏击旅行者。"
+    },
+    {
+      "question": "dismay __ ____",
+      "type": "blank",
+      "answer": "at news",
+      "explanation": "沮丧,对消息感到沮丧。She felt deep dismay at news of the company's closure.她对公司倒闭的消息感到深深的沮丧。"
+    },
+    {
+      "question": "fray __ ___ _____",
+      "type": "blank",
+      "answer": "at the edges",
+      "explanation": "磨损,边缘磨损。The old carpet began to fray at the edges after years of use.旧地毯经过多年使用后开始边缘磨损。"
+    },
+    {
+      "question": "foray ____ _______",
+      "type": "blank",
+      "answer": "into markets",
+      "explanation": "尝试,尝试进入市场。The company's first foray into markets abroad was unsuccessful.该公司首次尝试进入海外市场未获成功。"
+    },
+    {
+      "question": "__ disarray",
+      "type": "blank",
+      "answer": "in",
+      "explanation": "混乱,处于混乱中。The office was in disarray after the sudden staff departures.在员工突然离职后,办公室陷入混乱。"
+    },
+    {
+      "question": "__ astray",
+      "type": "blank",
+      "answer": "go",
+      "explanation": "迷路,走入歧途。Without proper guidance, young people can easily go astray.没有适当的指导,年轻人很容易走入歧途。"
+    },
+    {
+      "question": "________ giveaway",
+      "type": "blank",
+      "answer": "prize",
+      "explanation": "赠品,赠品奖品。The radio station offered a giveaway prize to lucky callers.广播电台向幸运来电者提供赠品奖品。"
+    },
+    {
+      "question": "straightaway ______",
+      "type": "blank",
+      "answer": "winner",
+      "explanation": "立即的,立即的获胜者。She was the straightaway winner with her outstanding performance.她凭借出色的表现立即成为获胜者。"
+    },
+    {
+      "question": "_________ throwaway",
+      "type": "blank",
+      "answer": "line",
+      "explanation": "随口说的,随口说的台词。The actor's throwaway line ended up being the funniest moment in the film.演员随口说的台词最终成为电影中最有趣的时刻。"
+    },
+    {
+      "question": "_______ flyaway",
+      "type": "blank",
+      "answer": "hair",
+      "explanation": "飞扬的,飞扬的头发。Static electricity caused her flyaway hair to stick out in all directions.静电导致她飞扬的头发向各个方向翘起。"
+    },
+    {
+      "question": "____ headway",
+      "type": "blank",
+      "answer": "make",
+      "explanation": "进展,取得进展。The research team struggled to make headway on the complex problem.研究团队在复杂问题上难以取得进展。"
+    },
+    {
+      "question": "passageway ____",
+      "type": "blank",
+      "answer": "door",
+      "explanation": "走廊,走廊的门。The narrow passageway door led to a hidden chamber.狭窄走廊的门通向一个隐藏的房间。"
+    },
+    {
+      "question": "_____ archway",
+      "type": "blank",
+      "answer": "stone",
+      "explanation": "拱门,石拱门。They walked through the ancient stone archway into the courtyard.他们穿过古老的石拱门进入庭院。"
+    },
+    {
+      "question": "_____ doorway",
+      "type": "blank",
+      "answer": "front",
+      "explanation": "门口,前门口。She stood in the front doorway welcoming guests to the party.她站在前门口欢迎客人参加聚会。"
+    },
+    {
+      "question": "________ motorway",
+      "type": "blank",
+      "answer": "traffic",
+      "explanation": "高速公路,高速公路交通。Heavy motorway traffic delayed their arrival by two hours.繁重的高速公路交通使他们的到达延迟了两个小时。"
+    },
+    {
+      "question": "sway ______",
+      "type": "blank",
+      "answer": "gently",
+      "explanation": "摇摆,轻轻摇摆。The trees began to sway gently in the evening breeze.树木在晚风中开始轻轻摇摆。"
+    },
+    {
+      "question": "______ alleyway",
+      "type": "blank",
+      "answer": "narrow",
+      "explanation": "小巷,狭窄的小巷。The detective followed the suspect down a narrow alleyway.侦探跟着嫌疑人走进一条狭窄的小巷。"
+    },
+    {
+      "question": "____ _ lullaby",
+      "type": "blank",
+      "answer": "sing a",
+      "explanation": "摇篮曲,唱摇篮曲。The mother would sing a lullaby to help her baby fall asleep.母亲会唱摇篮曲帮助宝宝入睡。"
+    },
+    {
+      "question": "scabby ____",
+      "type": "blank",
+      "answer": "knee",
+      "explanation": "结痂的,结痂的膝盖。The child's scabby knee was evidence of yesterday's fall.孩子结痂的膝盖是昨天摔倒的证据。"
+    },
+    {
+      "question": "shabby _________",
+      "type": "blank",
+      "answer": "treatment",
+      "explanation": "破旧的,不公正的待遇。He complained about the shabby treatment he received from management.他抱怨从管理层那里受到的不公正待遇。"
+    },
+    {
+      "question": "flabby ____",
+      "type": "blank",
+      "answer": "arms",
+      "explanation": "松弛的,松弛的手臂。Years without exercise left him with flabby arms.多年不锻炼使他手臂松弛。"
+    },
+    {
+      "question": "_____ tabby",
+      "type": "blank",
+      "answer": "cat",
+      "explanation": "虎斑猫,虎斑猫。The orange tabby cat lounged in the sunny window.橙色虎斑猫在阳光明媚的窗户里懒洋洋地躺着。"
+    },
+    {
+      "question": "cobwebby _______",
+      "type": "blank",
+      "answer": "corners",
+      "explanation": "布满蜘蛛网的,布满蜘蛛网的角落。The abandoned house had cobwebby corners in every room.废弃的房子每个房间都有布满蜘蛛网的角落。"
+    },
+    {
+      "question": "knobby _____",
+      "type": "blank",
+      "answer": "knees",
+      "explanation": "多节的,多节的膝盖。The old man's knobby knees ached in cold weather.老人多节的膝盖在寒冷天气里疼痛。"
+    },
+    {
+      "question": "scrubby ______",
+      "type": "blank",
+      "answer": "bushes",
+      "explanation": "矮小的,矮小的灌木。Only scrubby bushes grew in the harsh desert climate.只有矮小的灌木在恶劣的沙漠气候中生长。"
+    },
+    {
+      "question": "grubby _____",
+      "type": "blank",
+      "answer": "hands",
+      "explanation": "肮脏的,肮脏的手。The mechanic wiped his grubby hands on a rag.机械师用抹布擦他肮脏的手。"
+    },
+    {
+      "question": "stubby _______",
+      "type": "blank",
+      "answer": "fingers",
+      "explanation": "短粗的,短粗的手指。His stubby fingers struggled with the tiny buttons.他短粗的手指难以处理小纽扣。"
+    },
+    {
+      "question": "____ lacy",
+      "type": "blank",
+      "answer": "dress",
+      "explanation": "花边的,花边连衣裙。She wore a delicate lacy dress to the summer wedding.她穿着精致的花边连衣裙参加夏季婚礼。"
+    },
+    {
+      "question": "_____ lunacy",
+      "type": "blank",
+      "answer": "sheer",
+      "explanation": "疯狂,纯粹的疯狂。Attempting to climb the mountain in winter was sheer lunacy.试图在冬天爬山是纯粹的疯狂。"
+    },
+    {
+      "question": "____ captaincy",
+      "type": "blank",
+      "answer": "team",
+      "explanation": "队长职位,球队队长职位。He was honored to receive the team captaincy for the season.他很荣幸获得本赛季的球队队长职位。"
+    },
+    {
+      "question": "____ idiocy",
+      "type": "blank",
+      "answer": "pure",
+      "explanation": "愚蠢,纯粹的愚蠢。Investing all his savings in that scheme was pure idiocy.把所有积蓄投资在那个计划上是纯粹的愚蠢。"
+    },
+    {
+      "question": "_____ beady",
+      "type": "blank",
+      "answer": "eyes",
+      "explanation": "珠子般的,珠子般的眼睛。The bird watched with its small beady eyes for any movement.鸟儿用它珠子般的小眼睛观察任何动静。"
+    },
+    {
+      "question": "_____ malady",
+      "type": "blank",
+      "answer": "fatal",
+      "explanation": "疾病,致命疾病。The doctor diagnosed him with a rare and fatal malady.医生诊断他患有罕见的致命疾病。"
+    },
+    {
+      "question": "_____ giddy",
+      "type": "blank",
+      "answer": "height",
+      "explanation": "眩晕的,令人眩晕的高度。Standing at the giddy height of the tower made her feel nauseous.站在塔的令人眩晕的高度让她感到恶心。"
+    },
+    {
+      "question": "______ shoddy",
+      "type": "blank",
+      "answer": "goods",
+      "explanation": "劣质的,劣质商品。The store was shut down for selling shoddy goods to customers.这家商店因向顾客出售劣质商品而被关闭。"
+    },
+    {
+      "question": "_____ ruddy",
+      "type": "blank",
+      "answer": "cheeks",
+      "explanation": "红润的,红润的脸颊。The cold wind gave him ruddy cheeks and a rosy glow.寒风使他的脸颊红润,泛着玫瑰色光泽。"
+    },
+    {
+      "question": "_____ reedy",
+      "type": "blank",
+      "answer": "voice",
+      "explanation": "尖细的,尖细的声音。The old man spoke in a thin reedy voice that was hard to hear.老人用难以听清的尖细声音说话。"
+    },
+    {
+      "question": "______ tweedy",
+      "type": "blank",
+      "answer": "jacket",
+      "explanation": "粗花呢的,粗花呢夹克。The professor wore a classic tweedy jacket with leather patches.教授穿着一件带皮革补丁的经典粗花呢夹克。"
+    },
+    {
+      "question": "_____ moldy",
+      "type": "blank",
+      "answer": "bread",
+      "explanation": "发霉的,发霉的面包。She threw away the moldy bread that had been forgotten in the cupboard.她扔掉了被遗忘在橱柜里的发霉面包。"
+    },
+    {
+      "question": "______ mouldy",
+      "type": "blank",
+      "answer": "cheese",
+      "explanation": "发霉的,发霉的奶酪。The mouldy cheese had to be discarded as it was no longer safe to eat.发霉的奶酪必须被丢弃,因为它不再安全食用。"
+    },
+    {
+      "question": "bandy _____",
+      "type": "blank",
+      "answer": "words",
+      "explanation": "争论,争论话语。The politicians continued to bandy words back and forth during the debate.政治家们在辩论中继续来回争论。"
+    },
+    {
+      "question": "disembody ______",
+      "type": "blank",
+      "answer": "spirit",
+      "explanation": "脱离肉体的,脱离肉体的灵魂。A disembody spirit was said to haunt the old mansion.据说有一个脱离肉体的灵魂在老宅中出没。"
+    },
+    {
+      "question": "foolhardy ____",
+      "type": "blank",
+      "answer": "move",
+      "explanation": "鲁莽的,鲁莽的举动。Crossing the desert without water was a foolhardy move.不带水穿越沙漠是鲁莽的举动。"
+    },
+    {
+      "question": "_____ gaudy",
+      "type": "blank",
+      "answer": "outfit",
+      "explanation": "俗丽的,俗丽的服装。She wore a gaudy outfit covered in sequins and bright colors.她穿着一套布满亮片和鲜艳颜色的俗丽服装。"
+    },
+    {
+      "question": "_____ rowdy",
+      "type": "blank",
+      "answer": "crowd",
+      "explanation": "喧闹的,喧闹的人群。The rowdy crowd at the concert pushed and shouted excitedly.音乐会上喧闹的人群兴奋地推搡和呼喊。"
+    },
+    {
+      "question": "disobey ______",
+      "type": "blank",
+      "answer": "orders",
+      "explanation": "违抗,违抗命令。The soldier was punished for choosing to disobey orders.士兵因选择违抗命令而受到惩罚。"
+    },
+    {
+      "question": "volley __ _____",
+      "type": "blank",
+      "answer": "of shots",
+      "explanation": "齐射,连续射击。A volley of shots rang out from the firing squad.行刑队发出了连续射击。"
+    },
+    {
+      "question": "_______ paisley",
+      "type": "blank",
+      "answer": "pattern",
+      "explanation": "佩斯利花纹,佩斯利花纹。The silk tie featured an intricate paisley pattern in blues and golds.丝绸领带以蓝色和金色的复杂佩斯利花纹为特色。"
+    },
+    {
+      "question": "____ _ curtsey",
+      "type": "blank",
+      "answer": "make a",
+      "explanation": "行屈膝礼,行屈膝礼。The young girl learned to make a curtsey when meeting the queen.小女孩学会了在见到女王时行屈膝礼。"
+    },
+    {
+      "question": "_____ matey",
+      "type": "blank",
+      "answer": "tone",
+      "explanation": "友好的,友好的语调。The salesman used a matey tone to make customers feel comfortable.推销员使用友好的语调让顾客感到舒适。"
+    },
+    {
+      "question": "_____ gluey",
+      "type": "blank",
+      "answer": "mess",
+      "explanation": "胶状的,胶状的混乱。Spilled honey created a gluey mess all over the kitchen counter.洒出的蜂蜜在厨房台面上造成了胶状的混乱。"
+    },
+    {
+      "question": "_____ leafy",
+      "type": "blank",
+      "answer": "suburb",
+      "explanation": "绿树成荫的,绿树成荫的郊区。They moved to a quiet leafy suburb to raise their family.他们搬到了一个安静的绿树成荫的郊区抚养家人。"
+    },
+    {
+      "question": "defy ____",
+      "type": "blank",
+      "answer": "odds",
+      "explanation": "违抗,违抗概率。The athlete managed to defy odds and win despite her injury.这位运动员设法违抗概率,尽管受伤仍然获胜。"
+    },
+    {
+      "question": "stupefy ______",
+      "type": "blank",
+      "answer": "senses",
+      "explanation": "使麻木,使感官麻木。The strong medication began to stupefy senses within minutes.强效药物在几分钟内开始使感官麻木。"
+    },
+    {
+      "question": "__ _ jiffy",
+      "type": "blank",
+      "answer": "in a",
+      "explanation": "瞬间,一瞬间。I'll be back in a jiffy; just need to grab my keys.我马上回来,只需要拿我的钥匙。"
+    },
+    {
+      "question": "______ sniffy",
+      "type": "blank",
+      "answer": "comment",
+      "explanation": "不屑的,不屑的评论。Her sniffy comment about the restaurant offended the chef.她对餐厅不屑的评论冒犯了厨师。"
+    },
+    {
+      "question": "_____ huffy",
+      "type": "blank",
+      "answer": "mood",
+      "explanation": "生气的,生气的情绪。He was in a huffy mood after the argument with his boss.与老板争吵后,他情绪很生气。"
+    },
+    {
+      "question": "mollify _____",
+      "type": "blank",
+      "answer": "anger",
+      "explanation": "平息,平息愤怒。She tried to mollify anger by offering a sincere apology.她试图通过真诚道歉来平息愤怒。"
+    },
+    {
+      "question": "exemplify _____",
+      "type": "blank",
+      "answer": "point",
+      "explanation": "例证,例证观点。Let me use this case to exemplify point I'm trying to make.让我用这个案例来例证我想表达的观点。"
+    },
+    {
+      "question": "dignify ___ ____",
+      "type": "blank",
+      "answer": "the post",
+      "explanation": "使有尊严,使职位有尊严。Her distinguished career helped dignify the post of ambassador.她杰出的职业生涯帮助使大使职位有尊严。"
+    },
+    {
+      "question": "electrify ___ _____",
+      "type": "blank",
+      "answer": "the crowd",
+      "explanation": "使激动,使人群激动。The rock star's performance managed to electrify the crowd instantly.摇滚明星的表演立即使人群激动起来。"
+    },
+    {
+      "question": "petrify ____ ____",
+      "type": "blank",
+      "answer": "with fear",
+      "explanation": "使吓呆,吓得发呆。The horror movie scene seemed to petrify with fear even the bravest viewers.恐怖电影场景似乎连最勇敢的观众都吓得发呆。"
+    },
+    {
+      "question": "gratify ______",
+      "type": "blank",
+      "answer": "desire",
+      "explanation": "满足,满足欲望。The luxurious meal helped gratify desire for fine dining.豪华的一餐帮助满足了对美食的欲望。"
+    },
+    {
+      "question": "rectify _____",
+      "type": "blank",
+      "answer": "error",
+      "explanation": "纠正,纠正错误。The accountant worked overtime to rectify error in the financial report.会计师加班纠正财务报告中的错误。"
+    },
+    {
+      "question": "mortify ____ _____",
+      "type": "blank",
+      "answer": "with shame",
+      "explanation": "使羞愧,使羞愧难当。The public humiliation seemed to mortify with shame the young politician.公开羞辱似乎使年轻政治家羞愧难当。"
+    },
+    {
+      "question": "____ edgy",
+      "type": "blank",
+      "answer": "vibe",
+      "explanation": "紧张不安的,紧张不安的氛围。The dark alley had an edgy vibe that made her walk faster.黑暗的小巷有一种紧张不安的氛围,让她走得更快。"
+    },
+    {
+      "question": "_____ dodgy",
+      "type": "blank",
+      "answer": "deal",
+      "explanation": "可疑的,可疑的交易。Something about the dodgy deal made him suspicious from the start.这笔可疑交易的某些方面从一开始就让他起了疑心。"
+    },
+    {
+      "question": "_____ pudgy",
+      "type": "blank",
+      "answer": "toddler",
+      "explanation": "矮胖的,矮胖的幼儿。The pudgy toddler waddled across the room with outstretched arms.矮胖的幼儿张开双臂摇摇晃晃地走过房间。"
+    },
+    {
+      "question": "_____ baggy",
+      "type": "blank",
+      "answer": "pants",
+      "explanation": "宽松的,宽松的裤子。He wore baggy pants that hung low on his hips.他穿着宽松的裤子,低低地挂在臀部。"
+    },
+    {
+      "question": "______ shaggy",
+      "type": "blank",
+      "answer": "dog",
+      "explanation": "毛茸茸的,毛茸茸的狗。The shaggy dog needed a trim as its fur covered its eyes.毛茸茸的狗需要修剪,因为它的毛盖住了眼睛。"
+    },
+    {
+      "question": "_____ piggy",
+      "type": "blank",
+      "answer": "bank",
+      "explanation": "存钱罐,存钱罐。The child saved coins in a ceramic piggy bank on the shelf.孩子把硬币存在架子上的陶瓷存钱罐里。"
+    },
+    {
+      "question": "_____ foggy",
+      "type": "blank",
+      "answer": "morning",
+      "explanation": "有雾的,有雾的早晨。The foggy morning made driving conditions hazardous.有雾的早晨使驾驶条件变得危险。"
+    },
+    {
+      "question": "groggy ____ _____",
+      "type": "blank",
+      "answer": "from sleep",
+      "explanation": "昏昏沉沉的,睡得昏昏沉沉。He felt groggy from sleep and stumbled toward the coffee maker.他睡得昏昏沉沉,蹒跚着走向咖啡机。"
+    },
+    {
+      "question": "_____ soggy",
+      "type": "blank",
+      "answer": "ground",
+      "explanation": "湿透的,湿透的地面。The soggy ground squelched under their boots after the heavy rain.大雨过后,湿透的地面在他们的靴子下吱吱作响。"
+    },
+    {
+      "question": "_____ muggy",
+      "type": "blank",
+      "answer": "weather",
+      "explanation": "闷热的,闷热的天气。The muggy weather made everyone uncomfortable and irritable.闷热的天气让每个人都感到不舒服和烦躁。"
+    },
+    {
+      "question": "_____ mangy",
+      "type": "blank",
+      "answer": "mutt",
+      "explanation": "患疥癣的,患疥癣的杂种狗。The mangy mutt scratched constantly at its patchy fur.患疥癣的杂种狗不断抓挠它的斑驳皮毛。"
+    },
+    {
+      "question": "_____ dingy",
+      "type": "blank",
+      "answer": "room",
+      "explanation": "昏暗的,昏暗的房间。The dingy room needed fresh paint and better lighting.昏暗的房间需要重新粉刷和更好的照明。"
+    },
+    {
+      "question": "_______ springy",
+      "type": "blank",
+      "answer": "step",
+      "explanation": "有弹性的,有弹性的步伐。She walked with a springy step after receiving the good news.收到好消息后,她以有弹性的步伐行走。"
+    },
+    {
+      "question": "_______ stringy",
+      "type": "blank",
+      "answer": "meat",
+      "explanation": "有筋的,有筋的肉。The overcooked stringy meat was difficult to chew.煮过头的有筋的肉很难咀嚼。"
+    },
+    {
+      "question": "lethargy ____ __",
+      "type": "blank",
+      "answer": "sets in",
+      "explanation": "无精打采,无精打采开始。After lunch, lethargy sets in and productivity drops.午餐后,无精打采开始,生产力下降。"
+    },
+    {
+      "question": "________ screechy",
+      "type": "blank",
+      "answer": "brakes",
+      "explanation": "刺耳的,刺耳的刹车。The screechy brakes on the old car needed immediate repair.旧车上刺耳的刹车需要立即修理。"
+    },
+    {
+      "question": "_______ paunchy",
+      "type": "blank",
+      "answer": "belly",
+      "explanation": "大腹便便的,大腹便便的肚子。The middle-aged man developed a paunchy belly from lack of exercise.中年男子因缺乏锻炼而有了大腹便便的肚子。"
+    },
+    {
+      "question": "______ patchy",
+      "type": "blank",
+      "answer": "coverage",
+      "explanation": "不完全的,不完全的覆盖。The cell phone had patchy coverage in rural areas.手机在农村地区覆盖不完全。"
+    },
+    {
+      "question": "________ scratchy",
+      "type": "blank",
+      "answer": "sweater",
+      "explanation": "粗糙刺人的,粗糙刺人的毛衣。The wool scratchy sweater irritated her sensitive skin.羊毛粗糙刺人的毛衣刺激了她敏感的皮肤。"
+    },
+    {
+      "question": "______ tetchy",
+      "type": "blank",
+      "answer": "reply",
+      "explanation": "易怒的,易怒的回答。His tetchy reply suggested he was stressed about the deadline.他易怒的回答表明他对截止日期感到压力。"
+    },
+    {
+      "question": "_______ blotchy",
+      "type": "blank",
+      "answer": "skin",
+      "explanation": "有斑点的,有斑点的皮肤。The allergic reaction caused red blotchy skin across her arms.过敏反应导致她手臂上出现红色有斑点的皮肤。"
+    },
+    {
+      "question": "_______ grouchy",
+      "type": "blank",
+      "answer": "old man",
+      "explanation": "脾气坏的,脾气坏的老人。The grouchy old man complained about children playing near his house.脾气坏的老人抱怨孩子们在他家附近玩耍。"
+    },
+    {
+      "question": "______ touchy",
+      "type": "blank",
+      "answer": "subject",
+      "explanation": "敏感的,敏感的话题。Money was always a touchy subject at family gatherings.金钱在家庭聚会上总是一个敏感的话题。"
+    },
+    {
+      "question": "______ doughy",
+      "type": "blank",
+      "answer": "texture",
+      "explanation": "面团般的,面团般的质地。The undercooked bread had an unpleasant doughy texture.未煮熟的面包有令人不快的面团般质地。"
+    },
+    {
+      "question": "______ flashy",
+      "type": "blank",
+      "answer": "car",
+      "explanation": "华而不实的,华而不实的汽车。He drove a flashy car covered in chrome and bright paint.他开着一辆镀铬和鲜艳油漆覆盖的华而不实的汽车。"
+    },
+    {
+      "question": "_______ splashy",
+      "type": "blank",
+      "answer": "headline",
+      "explanation": "引人注目的,引人注目的标题。The newspaper ran a splashy headline about the celebrity scandal.报纸刊登了关于名人丑闻的引人注目的标题。"
+    },
+    {
+      "question": "_______ squashy",
+      "type": "blank",
+      "answer": "tomato",
+      "explanation": "软烂的,软烂的番茄。The overripe squashy tomato burst when she picked it up.过熟的软烂番茄在她拿起时破裂了。"
+    },
+    {
+      "question": "______ fleshy",
+      "type": "blank",
+      "answer": "leaves",
+      "explanation": "肉质的,肉质的叶子。Succulents have thick fleshy leaves that store water.多肉植物有厚厚的肉质叶子来储存水分。"
+    },
+    {
+      "question": "_____ fishy",
+      "type": "blank",
+      "answer": "story",
+      "explanation": "可疑的,可疑的故事。His explanation sounded like a fishy story that nobody believed.他的解释听起来像一个可疑的故事,没人相信。"
+    },
+    {
+      "question": "______ swishy",
+      "type": "blank",
+      "answer": "skirt",
+      "explanation": "沙沙作响的,沙沙作响的裙子。She loved the swishy skirt that moved gracefully when she walked.她喜欢那条她走路时优雅摆动的沙沙作响的裙子。"
+    },
+    {
+      "question": "_____ bushy",
+      "type": "blank",
+      "answer": "eyebrows",
+      "explanation": "浓密的,浓密的眉毛。The old professor had thick bushy eyebrows that moved when he talked.老教授有浓密的眉毛,说话时会动。"
+    },
+    {
+      "question": "______ slushy",
+      "type": "blank",
+      "answer": "snow",
+      "explanation": "泥泞的,泥泞的雪。The slushy snow made sidewalks slippery and dangerous.泥泞的雪使人行道又滑又危险。"
+    },
+    {
+      "question": "______ earthy",
+      "type": "blank",
+      "answer": "tone",
+      "explanation": "朴实的,朴实的色调。The interior designer chose warm earthy tones for the living room.室内设计师为客厅选择了温暖朴实的色调。"
+    },
+    {
+      "question": "_______ swarthy",
+      "type": "blank",
+      "answer": "complexion",
+      "explanation": "黝黑的,黝黑的肤色。The sailor had a swarthy complexion from years at sea.水手因多年在海上而有黝黑的肤色。"
+    }
+  ]
+}
