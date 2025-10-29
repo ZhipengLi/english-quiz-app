@@ -1,1 +1,605 @@
-
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "sleet _____",
+      "type": "blank",
+      "answer": "storm",
+      "explanation": "雨夹雪,雨夹雪风暴。The travelers struggled through the sleet storm, their faces numb from the icy precipitation.旅行者们在雨夹雪风暴中艰难前行,他们的脸被冰冷的降水冻得麻木。"
+    },
+    {
+      "question": "tuffet ____",
+      "type": "blank",
+      "answer": "seat",
+      "explanation": "矮凳,矮凳座位。Little Miss Muffet sat on her tuffet seat, enjoying her curds and whey.小玛菲特小姐坐在她的矮凳座位上,享用着凝乳和乳清。"
+    },
+    {
+      "question": "fidget _________",
+      "type": "blank",
+      "answer": "nervously",
+      "explanation": "坐立不安,紧张地坐立不安。The student began to fidget nervously as the teacher approached his desk.当老师走近他的课桌时,这个学生开始紧张地坐立不安。"
+    },
+    {
+      "question": "ricochet ______",
+      "type": "blank",
+      "answer": "bullet",
+      "explanation": "跳飞,跳飞的子弹。The ricochet bullet struck the wall after bouncing off the metal surface.跳飞的子弹从金属表面反弹后击中了墙壁。"
+    },
+    {
+      "question": "hatchet ___",
+      "type": "blank",
+      "answer": "job",
+      "explanation": "短柄斧,恶意诋毁。The journalist did a hatchet job on the politician's reputation with false accusations.那位记者用虚假指控对政治家的声誉进行了恶意诋毁。"
+    },
+    {
+      "question": "disquiet ____",
+      "type": "blank",
+      "answer": "mind",
+      "explanation": "不安,不安的心绪。The mysterious sounds in the night created a disquiet mind that prevented sleep.夜晚神秘的声音让人心绪不安,无法入睡。"
+    },
+    {
+      "question": "straitjacket ___________",
+      "type": "blank",
+      "answer": "confinement",
+      "explanation": "紧身衣,紧身衣束缚。The patient endured straitjacket confinement in the old asylum.病人在旧精神病院里忍受着紧身衣的束缚。"
+    },
+    {
+      "question": "______ racket",
+      "type": "blank",
+      "answer": "tennis",
+      "explanation": "球拍,网球拍。She gripped her tennis racket tightly before serving the final point.在发出最后一球前,她紧紧握住网球拍。"
+    },
+    {
+      "question": "_____ thicket",
+      "type": "blank",
+      "answer": "dense",
+      "explanation": "灌木丛,茂密的灌木丛。The rabbit disappeared into the dense thicket to escape the fox.兔子消失在茂密的灌木丛中以逃避狐狸。"
+    },
+    {
+      "question": "____ locket",
+      "type": "blank",
+      "answer": "gold",
+      "explanation": "小饰盒,金质小饰盒。She wore a gold locket containing a photograph of her grandmother.她戴着一个装有祖母照片的金质小饰盒。"
+    },
+    {
+      "question": "_______ casket",
+      "type": "blank",
+      "answer": "funeral",
+      "explanation": "棺材,葬礼棺材。The funeral casket was adorned with white roses and lilies.葬礼棺材上装饰着白玫瑰和百合花。"
+    },
+    {
+      "question": "______ doublet",
+      "type": "blank",
+      "answer": "velvet",
+      "explanation": "紧身上衣,天鹅绒紧身上衣。The nobleman wore an elegant velvet doublet to the royal banquet.贵族穿着优雅的天鹅绒紧身上衣参加皇家宴会。"
+    },
+    {
+      "question": "_____ ringlet",
+      "type": "blank",
+      "answer": "curly",
+      "explanation": "卷发,卷曲的发卷。The little girl's curly ringlets bounced as she ran through the garden.小女孩跑过花园时,她卷曲的发卷一跳一跳的。"
+    },
+    {
+      "question": "_________ pamphlet",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "小册子,政治小册子。Revolutionary ideas spread quickly through the political pamphlet distributed in the town square.革命思想通过在城镇广场分发的政治小册子迅速传播。"
+    },
+    {
+      "question": "______ mallet",
+      "type": "blank",
+      "answer": "wooden",
+      "explanation": "木槌,木制槌子。The carpenter used a wooden mallet to gently tap the joints into place.木匠用木制槌子轻轻敲打接头使其就位。"
+    },
+    {
+      "question": "____ pellet",
+      "type": "blank",
+      "answer": "lead",
+      "explanation": "小球,铅弹。The air rifle fired a lead pellet at the target with precision.气步枪精确地向目标发射铅弹。"
+    },
+    {
+      "question": "raindroplet",
+      "type": "blank",
+      "answer": "",
+      "explanation": "雨滴,雨珠。A single raindroplet clung to the edge of the leaf before falling.一颗雨珠挂在叶子边缘,然后落下。"
+    },
+    {
+      "question": "_____ amulet",
+      "type": "blank",
+      "answer": "lucky",
+      "explanation": "护身符,幸运护身符。The ancient warrior carried a lucky amulet into every battle.古代战士每次战斗都带着幸运护身符。"
+    },
+    {
+      "question": "plummet ____",
+      "type": "blank",
+      "answer": "down",
+      "explanation": "骤降,急剧下降。Stock prices began to plummet down after the scandal broke.丑闻曝光后,股价开始急剧下降。"
+    },
+    {
+      "question": "___ bonnet",
+      "type": "blank",
+      "answer": "car",
+      "explanation": "引擎盖,汽车引擎盖。He opened the car bonnet to check the engine temperature.他打开汽车引擎盖检查发动机温度。"
+    },
+    {
+      "question": "_____ hornet",
+      "type": "blank",
+      "answer": "sting",
+      "explanation": "大黄蜂,蜇人的大黄蜂。The gardener was attacked by an angry sting hornet near the nest.园丁在巢穴附近被一只愤怒的蜇人大黄蜂袭击。"
+    },
+    {
+      "question": "_____ parapet",
+      "type": "blank",
+      "answer": "stone",
+      "explanation": "矮墙,石制矮墙。Guards patrolled along the stone parapet of the medieval fortress.守卫在中世纪堡垒的石制矮墙上巡逻。"
+    },
+    {
+      "question": "___ crumpet",
+      "type": "blank",
+      "answer": "tea",
+      "explanation": "烤饼,茶点烤饼。She enjoyed a warm tea crumpet with butter and jam for breakfast.她早餐享用了一个涂有黄油和果酱的温热茶点烤饼。"
+    },
+    {
+      "question": "fret _____",
+      "type": "blank",
+      "answer": "about",
+      "explanation": "担心,为某事担心。Don't fret about the exam; you've studied thoroughly.不要为考试担心,你已经彻底复习过了。"
+    },
+    {
+      "question": "___ ferret",
+      "type": "blank",
+      "answer": "pet",
+      "explanation": "雪貂,宠物雪貂。The children loved playing with their pet ferret in the garden.孩子们喜欢在花园里和他们的宠物雪貂玩耍。"
+    },
+    {
+      "question": "______ turret",
+      "type": "blank",
+      "answer": "castle",
+      "explanation": "塔楼,城堡塔楼。The princess waved from the castle turret to the crowd below.公主从城堡塔楼向下面的人群挥手。"
+    },
+    {
+      "question": "thickset ___",
+      "type": "blank",
+      "answer": "man",
+      "explanation": "矮胖的,矮胖的男人。The thickset man moved with surprising agility despite his build.这个矮胖的男人尽管体格粗壮,动作却出奇地敏捷。"
+    },
+    {
+      "question": "basset _____",
+      "type": "blank",
+      "answer": "hound",
+      "explanation": "巴吉度猎犬,巴吉度猎犬。The basset hound's long ears dragged along the ground as it walked.巴吉度猎犬走路时,它的长耳朵拖在地上。"
+    },
+    {
+      "question": "__ ___ outset",
+      "type": "blank",
+      "answer": "at the",
+      "explanation": "开始,一开始。At the outset of the project, everyone was full of enthusiasm.在项目一开始,每个人都充满了热情。"
+    },
+    {
+      "question": "_____ rivet",
+      "type": "blank",
+      "answer": "metal",
+      "explanation": "铆钉,金属铆钉。The engineer secured the steel plates with metal rivets.工程师用金属铆钉固定钢板。"
+    },
+    {
+      "question": "waft __ _______",
+      "type": "blank",
+      "answer": "of perfume",
+      "explanation": "飘荡,香水的飘香。A waft of perfume lingered in the air after she left the room.她离开房间后,一缕香水味在空气中飘荡。"
+    },
+    {
+      "question": "heft ______",
+      "type": "blank",
+      "answer": "weight",
+      "explanation": "重量,举起重物。The weightlifter could heft weight that would crush an ordinary person.举重运动员能举起足以压垮普通人的重量。"
+    },
+    {
+      "question": "makeshift _______",
+      "type": "blank",
+      "answer": "shelter",
+      "explanation": "临时的,临时庇护所。The refugees built a makeshift shelter from branches and plastic sheets.难民用树枝和塑料布搭建了一个临时庇护所。"
+    },
+    {
+      "question": "_________ uplift",
+      "type": "blank",
+      "answer": "emotional",
+      "explanation": "振奋,情感上的振奋。The touching story provided emotional uplift during difficult times.这个感人的故事在困难时期提供了情感上的振奋。"
+    },
+    {
+      "question": "___ aloft",
+      "type": "blank",
+      "answer": "fly",
+      "explanation": "在高处,高飞。The eagle soared and began to fly aloft over the mountain peaks.老鹰翱翔着,开始在山峰上高飞。"
+    },
+    {
+      "question": "_____ tuft",
+      "type": "blank",
+      "answer": "grass",
+      "explanation": "一簇,草丛。A small rabbit peeked out from behind the grass tuft.一只小兔子从草丛后面探出头来。"
+    },
+    {
+      "question": "_____ alight",
+      "type": "blank",
+      "answer": "house",
+      "explanation": "着火的,房子着火。The house alight could be seen for miles in the dark night.着火的房子在黑夜中几英里外都能看到。"
+    },
+    {
+      "question": "____ ____ limelight",
+      "type": "blank",
+      "answer": "step into",
+      "explanation": "聚光灯,走进聚光灯下。The shy actress was reluctant to step into limelight after winning the award.这位害羞的女演员在获奖后不愿走进聚光灯下。"
+    },
+    {
+      "question": "searchlight ____",
+      "type": "blank",
+      "answer": "beam",
+      "explanation": "探照灯,探照灯光束。The searchlight beam swept across the prison yard during the escape attempt.在越狱企图期间,探照灯光束扫过监狱院子。"
+    },
+    {
+      "question": "___ plight",
+      "type": "blank",
+      "answer": "sad",
+      "explanation": "困境,悲惨的困境。The documentary highlighted the sad plight of homeless families.这部纪录片突出了无家可归家庭的悲惨困境。"
+    },
+    {
+      "question": "___ _____ fortnight",
+      "type": "blank",
+      "answer": "two weeks",
+      "explanation": "两周,两周时间。We will return from our vacation in a two weeks fortnight.我们将在两周后从假期返回。"
+    },
+    {
+      "question": "_____ fright",
+      "type": "blank",
+      "answer": "child",
+      "explanation": "惊吓,孩子的惊吓。The child fright was evident in her wide eyes and trembling hands.从她睁大的眼睛和颤抖的双手可以明显看出孩子的惊吓。"
+    },
+    {
+      "question": "downright ___",
+      "type": "blank",
+      "answer": "lie",
+      "explanation": "彻底的,彻头彻尾的谎言。That accusation is a downright lie with no basis in fact.那项指控是彻头彻尾的谎言,毫无事实根据。"
+    },
+    {
+      "question": "uptight ______",
+      "type": "blank",
+      "answer": "parent",
+      "explanation": "紧张的,紧张的家长。The uptight parent worried constantly about every small decision.这位紧张的家长不断为每个小决定担心。"
+    },
+    {
+      "question": "aught __ _____",
+      "type": "blank",
+      "answer": "of value",
+      "explanation": "任何东西,任何有价值的东西。The treasure hunters found aught of value in the ancient tomb.寻宝者在古墓中找到了有价值的东西。"
+    },
+    {
+      "question": "____ __ naught",
+      "type": "blank",
+      "answer": "come to",
+      "explanation": "一无所获,化为乌有。All their careful plans came to naught when the storm hit.当暴风雨袭来时,他们所有精心的计划都化为乌有。"
+    },
+    {
+      "question": "____ draught",
+      "type": "blank",
+      "answer": "beer",
+      "explanation": "生啤酒,扎啤。The pub served cold beer draught from wooden barrels.这家酒吧用木桶供应冰镇扎啤。"
+    },
+    {
+      "question": "distraught ______",
+      "type": "blank",
+      "answer": "mother",
+      "explanation": "心烦意乱的,心烦意乱的母亲。The distraught mother searched frantically for her lost child.心烦意乱的母亲疯狂地寻找她走失的孩子。"
+    },
+    {
+      "question": "afterthought ______",
+      "type": "blank",
+      "answer": "excuse",
+      "explanation": "事后想法,事后借口。His apology seemed like an afterthought excuse rather than genuine remorse.他的道歉似乎像是事后借口,而不是真诚的悔恨。"
+    },
+    {
+      "question": "nought _____",
+      "type": "blank",
+      "answer": "point",
+      "explanation": "零,零点。The score was nought point five after the first round.第一轮后的分数是零点五。"
+    },
+    {
+      "question": "overwrought ______",
+      "type": "blank",
+      "answer": "nerves",
+      "explanation": "过度紧张的,过度紧张的神经。Her overwrought nerves made it impossible to relax before the performance.她过度紧张的神经使她在表演前无法放松。"
+    },
+    {
+      "question": "_____ plait",
+      "type": "blank",
+      "answer": "braid",
+      "explanation": "辫子,编辫子。She learned to braid plait her daughter's long hair into intricate patterns.她学会了给女儿的长发编成复杂图案的辫子。"
+    },
+    {
+      "question": "discredit _______",
+      "type": "blank",
+      "answer": "witness",
+      "explanation": "使丧失信誉,使证人丧失信誉。The lawyer tried to discredit witness testimony with contradictory evidence.律师试图用矛盾的证据使证人的证词丧失信誉。"
+    },
+    {
+      "question": "forfeit ____",
+      "type": "blank",
+      "answer": "game",
+      "explanation": "丧失,放弃比赛。The team had to forfeit game when too many players were injured.当太多球员受伤时,球队不得不放弃比赛。"
+    },
+    {
+      "question": "discomfit _____",
+      "type": "blank",
+      "answer": "enemy",
+      "explanation": "使困惑,使敌人困惑。The clever strategy helped discomfit enemy forces and win the battle.巧妙的策略帮助使敌军困惑并赢得了战斗。"
+    },
+    {
+      "question": "_____ git",
+      "type": "blank",
+      "answer": "silly",
+      "explanation": "笨蛋,傻笨蛋。Stop being such a silly git and help us with the work.别再像个傻笨蛋了,来帮我们干活。"
+    },
+    {
+      "question": "floodlit _______",
+      "type": "blank",
+      "answer": "stadium",
+      "explanation": "被泛光灯照亮的,被泛光灯照亮的体育场。The floodlit stadium glowed brightly against the night sky.被泛光灯照亮的体育场在夜空中明亮地发光。"
+    },
+    {
+      "question": "flit _____",
+      "type": "blank",
+      "answer": "about",
+      "explanation": "轻快地移动,四处飞来飞去。Butterflies flit about the garden from flower to flower.蝴蝶在花园里从一朵花飞到另一朵花。"
+    },
+    {
+      "question": "sunlit ______",
+      "type": "blank",
+      "answer": "valley",
+      "explanation": "阳光照耀的,阳光照耀的山谷。The sunlit valley was a perfect spot for a picnic.阳光照耀的山谷是野餐的完美地点。"
+    },
+    {
+      "question": "lamplit ______",
+      "type": "blank",
+      "answer": "street",
+      "explanation": "灯光照亮的,灯光照亮的街道。The couple walked down the lamplit street hand in hand.这对夫妇手拉手走在灯光照亮的街道上。"
+    },
+    {
+      "question": "____ slit",
+      "type": "blank",
+      "answer": "tiny",
+      "explanation": "狭缝,小狭缝。Light entered through a tiny slit in the curtains.光线从窗帘的小狭缝中透进来。"
+    },
+    {
+      "question": "vomit _____",
+      "type": "blank",
+      "answer": "blood",
+      "explanation": "呕吐,呕血。The patient began to vomit blood, prompting immediate medical attention.病人开始呕血,需要立即就医。"
+    },
+    {
+      "question": "______ armpit",
+      "type": "blank",
+      "answer": "sweaty",
+      "explanation": "腋窝,出汗的腋窝。After the intense workout, his sweaty armpits needed a shower.经过激烈的锻炼后,他出汗的腋窝需要洗个澡。"
+    },
+    {
+      "question": "spit ___",
+      "type": "blank",
+      "answer": "out",
+      "explanation": "吐出,吐出来。The child had to spit out the bitter medicine immediately.孩子不得不立即吐出苦药。"
+    },
+    {
+      "question": "____ grit",
+      "type": "blank",
+      "answer": "true",
+      "explanation": "勇气,真正的勇气。The marathon runner showed true grit by finishing despite her injury.马拉松选手尽管受伤仍完成比赛,展现了真正的勇气。"
+    },
+    {
+      "question": "dispirit _______",
+      "type": "blank",
+      "answer": "workers",
+      "explanation": "使沮丧,使工人沮丧。The constant criticism began to dispirit workers and lower morale.持续的批评开始使工人沮丧并降低士气。"
+    },
+    {
+      "question": "________ culprit",
+      "type": "blank",
+      "answer": "criminal",
+      "explanation": "罪犯,犯罪罪犯。The police finally caught the criminal culprit after months of investigation.经过数月的调查,警方终于抓获了犯罪罪犯。"
+    },
+    {
+      "question": "acquit _________",
+      "type": "blank",
+      "answer": "defendant",
+      "explanation": "宣判无罪,宣判被告无罪。The jury decided to acquit defendant due to lack of evidence.由于缺乏证据,陪审团决定宣判被告无罪。"
+    },
+    {
+      "question": "outwit ________",
+      "type": "blank",
+      "answer": "opponent",
+      "explanation": "智胜,智胜对手。The chess master managed to outwit opponent with a brilliant move.国际象棋大师用一步妙棋智胜了对手。"
+    },
+    {
+      "question": "pelt __ ____",
+      "type": "blank",
+      "answer": "of rain",
+      "explanation": "倾盆大雨,雨点。The sudden pelt of rain caught everyone without umbrellas.突如其来的倾盆大雨让所有人都没带伞。"
+    },
+    {
+      "question": "welt ____",
+      "type": "blank",
+      "answer": "mark",
+      "explanation": "伤痕,伤痕印记。The rope left a red welt mark on his wrist.绳子在他的手腕上留下了红色的伤痕印记。"
+    },
+    {
+      "question": "_____ hilt",
+      "type": "blank",
+      "answer": "sword",
+      "explanation": "剑柄,剑的剑柄。The knight gripped the sword hilt firmly before charging into battle.骑士在冲锋前紧紧握住剑柄。"
+    },
+    {
+      "question": "________ kilt",
+      "type": "blank",
+      "answer": "Scottish",
+      "explanation": "苏格兰短裙,苏格兰短裙。The bagpiper wore a traditional Scottish kilt at the wedding.风笛手在婚礼上穿着传统的苏格兰短裙。"
+    },
+    {
+      "question": "_________ lilt",
+      "type": "blank",
+      "answer": "sing-song",
+      "explanation": "轻快的节奏,抑扬顿挫的节奏。Her voice had a charming sing-song lilt that made stories come alive.她的声音有着迷人的抑扬顿挫的节奏,使故事栩栩如生。"
+    },
+    {
+      "question": "____ spilt",
+      "type": "blank",
+      "answer": "milk",
+      "explanation": "溢出,牛奶溢出。No use crying over milk spilt; let's just clean it up.为溢出的牛奶哭泣没有用,我们把它清理干净吧。"
+    },
+    {
+      "question": "_____ silt",
+      "type": "blank",
+      "answer": "river",
+      "explanation": "淤泥,河流淤泥。The river silt deposited rich nutrients in the delta soil.河流淤泥在三角洲土壤中沉积了丰富的营养物质。"
+    },
+    {
+      "question": "inbuilt _______",
+      "type": "blank",
+      "answer": "feature",
+      "explanation": "内置的,内置功能。The smartphone has an inbuilt feature for facial recognition.这款智能手机具有面部识别的内置功能。"
+    },
+    {
+      "question": "wilted ______",
+      "type": "blank",
+      "answer": "flower",
+      "explanation": "枯萎,枯萎的花。The wilted flower drooped sadly in the vase without water.枯萎的花在没有水的花瓶里悲伤地低垂着。"
+    },
+    {
+      "question": "unbolt ____",
+      "type": "blank",
+      "answer": "door",
+      "explanation": "拔开门栓,拔开门栓。She had to unbolt door before the guests could enter.她必须拔开门栓客人才能进来。"
+    },
+    {
+      "question": "thunderbolt ______",
+      "type": "blank",
+      "answer": "strike",
+      "explanation": "雷击,雷击打击。The thunderbolt strike split the old oak tree in half.雷击将这棵老橡树劈成两半。"
+    },
+    {
+      "question": "______ dolt",
+      "type": "blank",
+      "answer": "stupid",
+      "explanation": "笨蛋,愚蠢的笨蛋。Only a stupid dolt would believe such an obvious lie.只有愚蠢的笨蛋才会相信如此明显的谎言。"
+    },
+    {
+      "question": "_____ jolt",
+      "type": "blank",
+      "answer": "sharp",
+      "explanation": "震动,剧烈震动。The car hit a pothole with a sharp jolt that startled everyone.汽车撞到坑洼处发出剧烈震动,吓了大家一跳。"
+    },
+    {
+      "question": "_____ molt",
+      "type": "blank",
+      "answer": "snake",
+      "explanation": "蜕皮,蛇蜕皮。The snake molt process left behind a perfect skin replica.蛇蜕皮过程留下了一个完美的皮肤复制品。"
+    },
+    {
+      "question": "__________ somersault",
+      "type": "blank",
+      "answer": "gymnastics",
+      "explanation": "翻筋斗,体操翻筋斗。The athlete performed a perfect gymnastics somersault during the routine.运动员在例行表演中完成了一个完美的体操翻筋斗。"
+    },
+    {
+      "question": "tumult _____",
+      "type": "blank",
+      "answer": "crowd",
+      "explanation": "喧嚣,喧嚣的人群。The tumult crowd erupted in cheers when the team scored.当球队得分时,喧嚣的人群爆发出欢呼声。"
+    },
+    {
+      "question": "discordant ____",
+      "type": "blank",
+      "answer": "note",
+      "explanation": "不和谐的,不和谐的音符。The discordant note jarred against the otherwise beautiful melody.不和谐的音符与原本优美的旋律格格不入。"
+    },
+    {
+      "question": "__ leant",
+      "type": "blank",
+      "answer": "he",
+      "explanation": "倾斜,他倾斜。He leant against the wall, exhausted from the long journey.他倚靠着墙,因长途旅行而精疲力竭。"
+    },
+    {
+      "question": "____ miscreant",
+      "type": "blank",
+      "answer": "vile",
+      "explanation": "恶棍,邪恶的恶棍。The vile miscreant was finally brought to justice for his crimes.这个邪恶的恶棍终于因其罪行被绳之以法。"
+    },
+    {
+      "question": "extravagant _________",
+      "type": "blank",
+      "answer": "lifestyle",
+      "explanation": "奢侈的,奢侈的生活方式。His extravagant lifestyle eventually led to financial ruin.他奢侈的生活方式最终导致了财务破产。"
+    },
+    {
+      "question": "chant ____",
+      "type": "blank",
+      "answer": "hymn",
+      "explanation": "吟诵,吟诵赞美诗。The monks would chant hymns at dawn in the monastery chapel.僧侣们会在黎明时分在修道院礼拜堂吟诵赞美诗。"
+    },
+    {
+      "question": "triumphant ______",
+      "type": "blank",
+      "answer": "return",
+      "explanation": "胜利的,胜利的归来。The hero's triumphant return was celebrated with a grand parade.英雄胜利的归来用盛大的游行来庆祝。"
+    },
+    {
+      "question": "defiant _____",
+      "type": "blank",
+      "answer": "child",
+      "explanation": "反抗的,反抗的孩子。The defiant child refused to apologize despite multiple warnings.反抗的孩子尽管多次警告仍拒绝道歉。"
+    },
+    {
+      "question": "gallant ______",
+      "type": "blank",
+      "answer": "knight",
+      "explanation": "勇敢的,勇敢的骑士。The gallant knight rescued the maiden from the dragon's lair.勇敢的骑士从龙穴中救出了少女。"
+    },
+    {
+      "question": "slant _____",
+      "type": "blank",
+      "answer": "rhyme",
+      "explanation": "斜的,斜韵。The poet used slant rhyme to create a subtle musical effect.诗人使用斜韵创造出微妙的音乐效果。"
+    },
+    {
+      "question": "stimulant ____",
+      "type": "blank",
+      "answer": "drug",
+      "explanation": "兴奋剂,兴奋剂药物。Coffee contains caffeine, a mild stimulant drug that increases alertness.咖啡含有咖啡因,一种能提高警觉性的温和兴奋剂药物。"
+    },
+    {
+      "question": "adamant ______",
+      "type": "blank",
+      "answer": "stance",
+      "explanation": "坚定的,坚定的立场。The politician maintained an adamant stance on environmental protection.这位政治家在环境保护方面保持着坚定的立场。"
+    },
+    {
+      "question": "______ informant",
+      "type": "blank",
+      "answer": "police",
+      "explanation": "告密者,警方线人。The police informant provided crucial information about the criminal network.警方线人提供了有关犯罪网络的关键信息。"
+    },
+    {
+      "question": "indignant _______",
+      "type": "blank",
+      "answer": "protest",
+      "explanation": "愤慨的,愤慨的抗议。The workers staged an indignant protest against unfair wages.工人们对不公平的工资发起了愤慨的抗议。"
+    },
+    {
+      "question": "_____ remnant",
+      "type": "blank",
+      "answer": "small",
+      "explanation": "残余,小残余。Only a small remnant of the ancient civilization remains today.古代文明只有一小部分残余保留至今。"
+    },
+    {
+      "question": "protuberant _____",
+      "type": "blank",
+      "answer": "belly",
+      "explanation": "突出的,突出的肚子。The frog had a protuberant belly after swallowing a large insect.青蛙吞下一只大昆虫后肚子突出了。"
+    }
+  ]
+}
