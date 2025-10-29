@@ -1,1 +1,605 @@
-
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "____ taker",
+      "type": "blank",
+      "answer": "risk",
+      "explanation": "taker 接受者,风险承担者。The entrepreneur was known as a bold risk taker willing to try new ventures.这位企业家被称为勇敢的风险承担者,愿意尝试新的冒险。"
+    },
+    {
+      "question": "________ caretaker",
+      "type": "blank",
+      "answer": "building",
+      "explanation": "caretaker 看管人,建筑看管人。The building caretaker maintained the property and handled repairs diligently.建筑看管人勤奋地维护财产并处理维修。"
+    },
+    {
+      "question": "_________ backer",
+      "type": "blank",
+      "answer": "financial",
+      "explanation": "backer 支持者,财务支持者。The startup needed a financial backer to fund its expansion plans.这家初创公司需要一位财务支持者来资助其扩张计划。"
+    },
+    {
+      "question": "___________ bird",
+      "type": "blank",
+      "answer": "woodpecker",
+      "explanation": "pecker 啄木鸟,啄木鸟。The woodpecker bird pecked rhythmically at the tree trunk searching for insects.啄木鸟有节奏地啄树干寻找昆虫。"
+    },
+    {
+      "question": "bicker __________",
+      "type": "blank",
+      "answer": "endlessly",
+      "explanation": "bicker 争吵,无休止地争吵。The couple would bicker endlessly over trivial household matters.这对夫妇会无休止地争吵琐碎的家庭事务。"
+    },
+    {
+      "question": "______ flicker",
+      "type": "blank",
+      "answer": "candle",
+      "explanation": "flicker 闪烁,蜡烛闪烁。The dying candle's flame began to flicker in the drafty room.垂死的蜡烛火焰开始在通风的房间里闪烁。"
+    },
+    {
+      "question": "________ snicker",
+      "type": "blank",
+      "answer": "suppress",
+      "explanation": "snicker 窃笑,压制窃笑。Students tried to suppress snicker when the teacher made a mistake.当老师犯错时,学生们试图压制窃笑。"
+    },
+    {
+      "question": "____ knocker",
+      "type": "blank",
+      "answer": "door",
+      "explanation": "knocker 门环,门环。The brass door knocker gleamed brightly on the elegant front entrance.黄铜门环在优雅的前门入口处闪闪发光。"
+    },
+    {
+      "question": "____ doorknocker",
+      "type": "blank",
+      "answer": "iron",
+      "explanation": "doorknocker 门环,铁门环。The antique iron doorknocker had been on the house for centuries.古老的铁门环已经在房子上几个世纪了。"
+    },
+    {
+      "question": "____ sucker",
+      "type": "blank",
+      "answer": "tree",
+      "explanation": "sucker 吸根,树吸根。The gardener removed tree suckers growing from the base of the trunk.园丁移除了从树干底部生长的树吸根。"
+    },
+    {
+      "question": "___ blinker",
+      "type": "blank",
+      "answer": "car",
+      "explanation": "blinker 转向灯,汽车转向灯。The driver forgot to turn off the car blinker after changing lanes.司机在变道后忘记关闭汽车转向灯。"
+    },
+    {
+      "question": "tinker ____",
+      "type": "blank",
+      "answer": "with",
+      "explanation": "tinker 修补,修补。The mechanic would tinker with the engine to improve its performance.机械师会修补发动机以提高其性能。"
+    },
+    {
+      "question": "_____ choker",
+      "type": "blank",
+      "answer": "tight",
+      "explanation": "choker 颈链,紧颈链。She wore an elegant tight choker necklace for the formal dinner.她为正式晚餐戴着优雅的紧颈链项链。"
+    },
+    {
+      "question": "_________ joker",
+      "type": "blank",
+      "answer": "practical",
+      "explanation": "joker 爱开玩笑的人,恶作剧者。The practical joker enjoyed playing harmless pranks on his friends.这位恶作剧者喜欢对朋友们开无害的玩笑。"
+    },
+    {
+      "question": "_______ onlooker",
+      "type": "blank",
+      "answer": "curious",
+      "explanation": "onlooker 旁观者,好奇的旁观者。A crowd of curious onlookers gathered at the accident scene.一群好奇的旁观者聚集在事故现场。"
+    },
+    {
+      "question": "___ whisker",
+      "type": "blank",
+      "answer": "cat",
+      "explanation": "whisker 胡须,猫胡须。The cat's sensitive whiskers helped it navigate in the dark.猫敏感的胡须帮助它在黑暗中导航。"
+    },
+    {
+      "question": "_______ attempt",
+      "type": "blank",
+      "answer": "feebler",
+      "explanation": "feebler 更无力的,更无力的尝试。Each feebler attempt to escape made him more exhausted.每一次更无力的逃跑尝试都让他更加筋疲力尽。"
+    },
+    {
+      "question": "_____ tumbler",
+      "type": "blank",
+      "answer": "glass",
+      "explanation": "tumbler 平底杯,玻璃平底杯。The bartender poured whiskey into a heavy glass tumbler with ice.酒保将威士忌倒入带冰的沉重玻璃平底杯中。"
+    },
+    {
+      "question": "____ meddler",
+      "type": "blank",
+      "answer": "nosy",
+      "explanation": "meddler 爱管闲事的人,爱管闲事的人。The nosy meddler constantly interfered in other people's private business.这个爱管闲事的人不断干涉他人的私事。"
+    },
+    {
+      "question": "feelers ___",
+      "type": "blank",
+      "answer": "out",
+      "explanation": "feeler 试探,试探。The company put feelers out to gauge interest in their new product.公司进行试探以衡量对新产品的兴趣。"
+    },
+    {
+      "question": "______ dueler",
+      "type": "blank",
+      "answer": "pistol",
+      "explanation": "dueler 决斗者,手枪决斗者。The skilled pistol dueler faced his opponent at dawn.熟练的手枪决斗者在黎明时分面对他的对手。"
+    },
+    {
+      "question": "___ muffler",
+      "type": "blank",
+      "answer": "car",
+      "explanation": "muffler 消音器,汽车消音器。The broken car muffler made loud rumbling noises while driving.破损的汽车消音器在驾驶时发出响亮的隆隆声。"
+    },
+    {
+      "question": "____ straggler",
+      "type": "blank",
+      "answer": "late",
+      "explanation": "straggler 落后者,迟到的落后者。The late straggler finally arrived hours after everyone else.迟到的落后者最终在其他人之后几个小时才到达。"
+    },
+    {
+      "question": "______ sprinkler",
+      "type": "blank",
+      "answer": "garden",
+      "explanation": "sprinkler 洒水器,花园洒水器。The garden sprinkler watered the lawn automatically each morning.花园洒水器每天早晨自动浇灌草坪。"
+    },
+    {
+      "question": "________ firework",
+      "type": "blank",
+      "answer": "sparkler",
+      "explanation": "sparkler 烟花棒,烟花棒烟花。Children waved sparkler fireworks excitedly during the celebration.孩子们在庆祝活动期间兴奋地挥舞烟花棒烟花。"
+    },
+    {
+      "question": "___________ tactic",
+      "type": "blank",
+      "answer": "steamroller",
+      "explanation": "steamroller 强力压倒,强力压倒策略。The politician used a steamroller tactic to force the bill through parliament.政治家使用强力压倒策略迫使议案通过议会。"
+    },
+    {
+      "question": "_____ patroller",
+      "type": "blank",
+      "answer": "night",
+      "explanation": "patroller 巡逻者,夜间巡逻者。The security night patroller checked the premises every hour after dark.安全夜间巡逻者在天黑后每小时检查一次场所。"
+    },
+    {
+      "question": "______ hat",
+      "type": "blank",
+      "answer": "bowler",
+      "explanation": "bowler 圆顶硬礼帽,圆顶硬礼帽。The gentleman wore a traditional bowler hat in Victorian fashion.绅士穿着维多利亚式的传统圆顶硬礼帽。"
+    },
+    {
+      "question": "_____ streamer",
+      "type": "blank",
+      "answer": "video",
+      "explanation": "streamer 主播,视频主播。The popular video streamer attracted thousands of viewers during broadcasts.受欢迎的视频主播在广播期间吸引了数千名观众。"
+    },
+    {
+      "question": "________ thread",
+      "type": "blank",
+      "answer": "gossamer",
+      "explanation": "gossamer 蛛丝,蛛丝线。The delicate gossamer thread of spider silk glistened in morning dew.精致的蛛丝线在晨露中闪闪发光。"
+    },
+    {
+      "question": "______ stammer",
+      "type": "blank",
+      "answer": "speech",
+      "explanation": "stammer 口吃,言语口吃。His nervous speech stammer made public speaking extremely difficult for him.他紧张的言语口吃使他的公开演讲极其困难。"
+    },
+    {
+      "question": "______ switch",
+      "type": "blank",
+      "answer": "dimmer",
+      "explanation": "dimmer 调光器,调光开关。She adjusted the dimmer switch to create romantic lighting for dinner.她调整调光开关以为晚餐营造浪漫的灯光。"
+    },
+    {
+      "question": "____ shimmer",
+      "type": "blank",
+      "answer": "moon",
+      "explanation": "shimmer 闪烁,月光闪烁。The moon's reflection created a beautiful shimmer on the calm lake surface.月亮的倒影在平静的湖面上创造了美丽的闪烁。"
+    },
+    {
+      "question": "____ glimmer",
+      "type": "blank",
+      "answer": "hope",
+      "explanation": "glimmer 微光,希望的微光。Even in despair, there remained a small hope glimmer of recovery.即使在绝望中,仍然存在一丝希望的微光。"
+    },
+    {
+      "question": "____ simmer",
+      "type": "blank",
+      "answer": "soup",
+      "explanation": "simmer 慢炖,汤慢炖。The chef let the soup simmer gently for hours to develop flavor.厨师让汤慢炖几个小时以发展风味。"
+    },
+    {
+      "question": "_____ bummer",
+      "type": "blank",
+      "answer": "total",
+      "explanation": "bummer 扫兴的事,彻底扫兴的事。The cancelled concert was a total bummer for disappointed fans.取消的音乐会对失望的粉丝来说是彻底扫兴的事。"
+    },
+    {
+      "question": "________",
+      "type": "blank",
+      "answer": "newcomer",
+      "explanation": "comer 来者,新来者。The talented newcomer quickly impressed everyone with exceptional skills.有才华的新来者迅速以非凡的技能给每个人留下了深刻印象。"
+    },
+    {
+      "question": "____ bloomer",
+      "type": "blank",
+      "answer": "late",
+      "explanation": "bloomer 开花者,晚开花者。As a late bloomer, he found success later in life than others.作为晚开花者,他比其他人更晚找到了成功。"
+    },
+    {
+      "question": "________ charmer",
+      "type": "blank",
+      "answer": "charming",
+      "explanation": "charmer 迷人的人,迷人的迷人者。The smooth-talking charming charmer won everyone over with his personality.说话圆滑的迷人者以他的个性赢得了每个人的心。"
+    },
+    {
+      "question": "________ whiner",
+      "type": "blank",
+      "answer": "constant",
+      "explanation": "whiner 抱怨者,不断抱怨者。The constant whiner complained about everything making him unpopular.不断抱怨者抱怨一切,使他不受欢迎。"
+    },
+    {
+      "question": "____ goner",
+      "type": "blank",
+      "answer": "dead",
+      "explanation": "goner 没希望的人,死定的人。Without immediate medical help, the injured man was a dead goner.没有立即的医疗帮助,受伤的人是死定的人。"
+    },
+    {
+      "question": "______ executioner",
+      "type": "blank",
+      "answer": "public",
+      "explanation": "executioner 刽子手,公开刽子手。The hooded public executioner carried out sentences in medieval times.戴头罩的公开刽子手在中世纪执行判决。"
+    },
+    {
+      "question": "________ commoner",
+      "type": "blank",
+      "answer": "ordinary",
+      "explanation": "commoner 平民,普通平民。The prince married an ordinary commoner against royal tradition.王子违背皇室传统娶了一位普通平民。"
+    },
+    {
+      "question": "______ taper",
+      "type": "blank",
+      "answer": "candle",
+      "explanation": "taper 细蜡烛,细蜡烛。The long thin candle taper burned slowly throughout the night.细长的细蜡烛整夜缓慢燃烧。"
+    },
+    {
+      "question": "____ creeper",
+      "type": "blank",
+      "answer": "vine",
+      "explanation": "creeper 蔓生植物,藤蔓蔓生植物。The invasive vine creeper covered the entire side of the building.入侵性的藤蔓蔓生植物覆盖了建筑物的整个侧面。"
+    },
+    {
+      "question": "scamper ___",
+      "type": "blank",
+      "answer": "off",
+      "explanation": "scamper 快跑,快跑离开。The frightened squirrels would scamper off when people approached.受惊的松鼠在人们接近时会快跑离开。"
+    },
+    {
+      "question": "pamper ________",
+      "type": "blank",
+      "answer": "yourself",
+      "explanation": "pamper 宠爱,宠爱自己。Take a spa day to pamper yourself and relax completely.去水疗中心宠爱自己并完全放松。"
+    },
+    {
+      "question": "tamper ____ ________",
+      "type": "blank",
+      "answer": "with evidence",
+      "explanation": "tamper 篡改,篡改证据。The corrupt official tried to tamper with evidence to cover crimes.腐败官员试图篡改证据以掩盖罪行。"
+    },
+    {
+      "question": "_____ whimper",
+      "type": "blank",
+      "answer": "child",
+      "explanation": "whimper 呜咽,孩子呜咽。The frightened child began to whimper softly in the dark room.受惊的孩子在黑暗的房间里开始轻声呜咽。"
+    },
+    {
+      "question": "simper _____",
+      "type": "blank",
+      "answer": "smile",
+      "explanation": "simper 傻笑,傻笑。Her artificial simper smile made everyone feel uncomfortable around her.她做作的傻笑使每个人在她周围感到不舒服。"
+    },
+    {
+      "question": "____ romper",
+      "type": "blank",
+      "answer": "baby",
+      "explanation": "romper 连身衣,婴儿连身衣。The infant wore a cute baby romper with animal patterns.婴儿穿着带有动物图案的可爱婴儿连身衣。"
+    },
+    {
+      "question": "______ kipper",
+      "type": "blank",
+      "answer": "smoked",
+      "explanation": "kipper 熏鲱鱼,熏鲱鱼。The traditional breakfast included smoked kipper with eggs and toast.传统早餐包括熏鲱鱼配鸡蛋和吐司。"
+    },
+    {
+      "question": "_______ flipper",
+      "type": "blank",
+      "answer": "dolphin",
+      "explanation": "flipper 鳍状肢,海豚鳍状肢。The dolphin's strong flipper propelled it through the water gracefully.海豚强壮的鳍状肢优雅地推动它在水中前进。"
+    },
+    {
+      "question": "_______ slipper",
+      "type": "blank",
+      "answer": "bedroom",
+      "explanation": "slipper 拖鞋,卧室拖鞋。She wore comfortable bedroom slippers while relaxing at home.她在家放松时穿着舒适的卧室拖鞋。"
+    },
+    {
+      "question": "______ eavesdropper",
+      "type": "blank",
+      "answer": "secret",
+      "explanation": "eavesdropper 窃听者,秘密窃听者。The secret eavesdropper hid behind the door listening to private conversations.秘密窃听者躲在门后听私人对话。"
+    },
+    {
+      "question": "____ stopper",
+      "type": "blank",
+      "answer": "wine",
+      "explanation": "stopper 塞子,葡萄酒塞子。The cork wine stopper preserved the bottle's contents for years.软木葡萄酒塞子保存了瓶子的内容物多年。"
+    },
+    {
+      "question": "_________ pirate",
+      "type": "blank",
+      "answer": "plunderer",
+      "explanation": "plunderer 掠夺者,掠夺者海盗。The ruthless plunderer pirate stole treasures from merchant ships.无情的掠夺者海盗从商船上偷走宝藏。"
+    },
+    {
+      "question": "________ torturer",
+      "type": "blank",
+      "answer": "ruthless",
+      "explanation": "torturer 施刑者,无情的施刑者。The ruthless torturer inflicted pain on prisoners to extract information.无情的施刑者对囚犯施加痛苦以提取信息。"
+    },
+    {
+      "question": "______ crosser",
+      "type": "blank",
+      "answer": "border",
+      "explanation": "crosser 跨越者,边境跨越者。The illegal border crosser was caught by patrol agents at night.非法边境跨越者在夜间被巡逻特工抓获。"
+    },
+    {
+      "question": "_____ boater",
+      "type": "blank",
+      "answer": "river",
+      "explanation": "boater 划船者,河流划船者。The leisurely river boater enjoyed peaceful afternoons on the water.悠闲的河流划船者在水上享受宁静的下午。"
+    },
+    {
+      "question": "_______ skeptic",
+      "type": "blank",
+      "answer": "doubter",
+      "explanation": "doubter 怀疑者,怀疑者怀疑论者。The persistent doubter questioned every claim requiring solid proof.坚持的怀疑者质疑每一个需要确凿证据的声明。"
+    },
+    {
+      "question": "_______ specter",
+      "type": "blank",
+      "answer": "ghostly",
+      "explanation": "specter 幽灵,幽灵般的幽灵。A ghostly specter appeared in the haunted mansion at midnight.一个幽灵般的幽灵在午夜出现在闹鬼的豪宅里。"
+    },
+    {
+      "question": "_____ teeter",
+      "type": "blank",
+      "answer": "board",
+      "explanation": "teeter 摇晃,跷跷板摇晃。Children played on the teeter totter board in the playground.孩子们在操场上玩跷跷板摇晃。"
+    },
+    {
+      "question": "____ rafter",
+      "type": "blank",
+      "answer": "roof",
+      "explanation": "rafter 椽子,屋顶椽子。The carpenter installed strong roof rafters to support the structure.木匠安装了坚固的屋顶椽子以支撑结构。"
+    },
+    {
+      "question": "______ blighter",
+      "type": "blank",
+      "answer": "rotten",
+      "explanation": "blighter 讨厌鬼,讨厌的讨厌鬼。The rotten blighter cheated innocent people out of their savings.这个讨厌的讨厌鬼欺骗无辜的人失去了他们的积蓄。"
+    },
+    {
+      "question": "_____ falter",
+      "type": "blank",
+      "answer": "voice",
+      "explanation": "falter 颤抖,声音颤抖。Her voice began to falter with emotion during the heartfelt speech.她的声音在真挚的演讲中开始因情绪而颤抖。"
+    },
+    {
+      "question": "______ swelter",
+      "type": "blank",
+      "answer": "summer",
+      "explanation": "swelter 酷热,夏季酷热。Citizens suffered through the oppressive summer swelter without air conditioning.市民在没有空调的情况下忍受了压抑的夏季酷热。"
+    },
+    {
+      "question": "_____ canter",
+      "type": "blank",
+      "answer": "horse",
+      "explanation": "canter 慢跑,马慢跑。The horse moved at a steady canter across the open field.马以稳定的慢跑穿过开阔的田野。"
+    },
+    {
+      "question": "_____ barter",
+      "type": "blank",
+      "answer": "goods",
+      "explanation": "barter 以物易物,货物以物易物。Ancient civilizations would barter goods instead of using currency for trade.古代文明会以物易物货物而不是使用货币进行贸易。"
+    },
+    {
+      "question": "___________ meat",
+      "type": "blank",
+      "answer": "hindquarter",
+      "explanation": "hindquarter 后腿肉,后腿肉。The butcher prepared tender hindquarter meat cuts for customers.屠夫为顾客准备了嫩的后腿肉切块。"
+    },
+    {
+      "question": "____ sorter",
+      "type": "blank",
+      "answer": "mail",
+      "explanation": "sorter 分拣员,邮件分拣员。The postal mail sorter organized letters by destination each morning.邮政邮件分拣员每天早晨按目的地整理信件。"
+    },
+    {
+      "question": "______ wheel",
+      "type": "blank",
+      "answer": "caster",
+      "explanation": "caster 脚轮,脚轮。The office chair rolled smoothly on four caster wheels across the floor.办公椅在四个脚轮上平稳地在地板上滚动。"
+    },
+    {
+      "question": "__ newscaster",
+      "type": "blank",
+      "answer": "TV",
+      "explanation": "newscaster 新闻播音员,电视新闻播音员。The experienced TV newscaster delivered breaking news with professionalism.经验丰富的电视新闻播音员以专业精神播报突发新闻。"
+    },
+    {
+      "question": "____ waster",
+      "type": "blank",
+      "answer": "time",
+      "explanation": "waster 浪费者,时间浪费者。The procrastinator was known as a terrible time waster at work.这个拖延者在工作中被称为可怕的时间浪费者。"
+    },
+    {
+      "question": "_______ youngster",
+      "type": "blank",
+      "answer": "teenage",
+      "explanation": "youngster 年轻人,青少年年轻人。The energetic teenage youngster participated enthusiastically in sports activities.精力充沛的青少年年轻人热情地参加体育活动。"
+    },
+    {
+      "question": "____ blister",
+      "type": "blank",
+      "answer": "foot",
+      "explanation": "blister 水泡,脚水泡。The long hike caused a painful foot blister on her heel.长途徒步在她脚后跟上造成了痛苦的脚水泡。"
+    },
+    {
+      "question": "_____ banister",
+      "type": "blank",
+      "answer": "stair",
+      "explanation": "banister 栏杆,楼梯栏杆。She held the polished wood stair banister while descending carefully.她在小心下楼时握着抛光的木楼梯栏杆。"
+    },
+    {
+      "question": "____ rooster",
+      "type": "blank",
+      "answer": "farm",
+      "explanation": "rooster 公鸡,农场公鸡。The proud farm rooster crowed loudly at dawn every morning.骄傲的农场公鸡每天早晨在黎明时大声啼叫。"
+    },
+    {
+      "question": "_______ duster",
+      "type": "blank",
+      "answer": "feather",
+      "explanation": "duster 掸子,羽毛掸子。The housekeeper used a feather duster to clean delicate antiques gently.管家用羽毛掸子轻轻地清洁精致的古董。"
+    },
+    {
+      "question": "_____ bluster",
+      "type": "blank",
+      "answer": "angry",
+      "explanation": "bluster 咆哮,愤怒的咆哮。The politician's angry bluster failed to intimidate his opponents.政治家愤怒的咆哮未能恐吓他的对手。"
+    },
+    {
+      "question": "_________ fluster",
+      "type": "blank",
+      "answer": "emotional",
+      "explanation": "fluster 慌乱,情绪慌乱。Her emotional fluster caused mistakes during the important presentation.她的情绪慌乱在重要演示期间导致了错误。"
+    },
+    {
+      "question": "_____ muster",
+      "type": "blank",
+      "answer": "troop",
+      "explanation": "muster 集合,军队集合。The commanding officer called for troop muster at dawn for inspection.指挥官要求在黎明时进行军队集合以进行检查。"
+    },
+    {
+      "question": "______ clatter",
+      "type": "blank",
+      "answer": "dishes",
+      "explanation": "clatter 碰撞声,盘子碰撞声。The loud dishes clatter echoed through the busy restaurant kitchen.响亮的盘子碰撞声在繁忙的餐厅厨房里回响。"
+    },
+    {
+      "question": "_______ flatter",
+      "type": "blank",
+      "answer": "sincere",
+      "explanation": "flatter 奉承,真诚的奉承。A sincere flatter compliment can brighten someone's entire day.真诚的奉承赞美可以照亮某人的整天。"
+    },
+    {
+      "question": "______ platter",
+      "type": "blank",
+      "answer": "silver",
+      "explanation": "platter 大浅盘,银大浅盘。The chef presented the roast on an elegant silver platter ceremoniously.厨师在优雅的银大浅盘上庄严地呈现烤肉。"
+    },
+    {
+      "question": "_____ splatter",
+      "type": "blank",
+      "answer": "paint",
+      "explanation": "splatter 溅,颜料溅。Accidental paint splatter covered the artist's studio floor completely.意外的颜料溅完全覆盖了艺术家的工作室地板。"
+    },
+    {
+      "question": "_____ smatter",
+      "type": "blank",
+      "answer": "small",
+      "explanation": "smatter 一点点,一点点知识。He possessed only a small smattering of knowledge about the subject.他对这个主题只拥有一点点知识。"
+    },
+    {
+      "question": "____ patter",
+      "type": "blank",
+      "answer": "rain",
+      "explanation": "patter 滴答声,雨滴答声。The gentle rain patter on the roof created a soothing sound.屋顶上温柔的雨滴答声创造了一种舒缓的声音。"
+    },
+    {
+      "question": "_____ spatter",
+      "type": "blank",
+      "answer": "blood",
+      "explanation": "spatter 溅,血溅。Forensic experts analyzed blood spatter patterns at the crime scene.法医专家分析了犯罪现场的血溅模式。"
+    },
+    {
+      "question": "______ tatter",
+      "type": "blank",
+      "answer": "ragged",
+      "explanation": "tatter 破布,破烂的破布。The homeless man wore clothes in ragged tatters from years outdoors.无家可归的人穿着多年在户外形成的破烂破布衣服。"
+    },
+    {
+      "question": "____ fetter",
+      "type": "blank",
+      "answer": "iron",
+      "explanation": "fetter 镣铐,铁镣铐。The prisoner's heavy iron fetters restricted movement severely during transport.囚犯沉重的铁镣铐在运输期间严重限制了移动。"
+    },
+    {
+      "question": "_________ shop",
+      "type": "blank",
+      "answer": "outfitter",
+      "explanation": "outfitter 装备店,装备店。The outdoor outfitter shop sold camping gear and hiking equipment.户外装备店出售露营装备和徒步设备。"
+    },
+    {
+      "question": "_______ skitter",
+      "type": "blank",
+      "answer": "insects",
+      "explanation": "skitter 疾走,昆虫疾走。Small insects would skitter quickly across the forest floor seeking cover.小昆虫会快速疾走穿过森林地面寻找掩护。"
+    },
+    {
+      "question": "______ knitter",
+      "type": "blank",
+      "answer": "expert",
+      "explanation": "knitter 编织者,专家编织者。The expert knitter created intricate sweater patterns with remarkable skill.专家编织者以非凡的技能创造了复杂的毛衣图案。"
+    },
+    {
+      "question": "fritter ____ ____",
+      "type": "blank",
+      "answer": "away time",
+      "explanation": "fritter 浪费,浪费时间。Lazy students would fritter away time instead of studying diligently.懒惰的学生会浪费时间而不是勤奋学习。"
+    },
+    {
+      "question": "titter _____",
+      "type": "blank",
+      "answer": "laugh",
+      "explanation": "titter 窃笑,窃笑。The audience began to titter with nervous laughter at the joke.观众开始对这个笑话紧张地窃笑。"
+    },
+    {
+      "question": "_______ post",
+      "type": "blank",
+      "answer": "Twitter",
+      "explanation": "twitter 推特,推特帖子。The celebrity's controversial Twitter post sparked heated online debate.名人有争议的推特帖子引发了激烈的在线辩论。"
+    },
+    {
+      "question": "____ rotter",
+      "type": "blank",
+      "answer": "evil",
+      "explanation": "rotter 坏蛋,邪恶的坏蛋。The evil rotter betrayed his friends for personal gain shamelessly.邪恶的坏蛋无耻地为了个人利益背叛了他的朋友。"
+    },
+    {
+      "question": "totter _____",
+      "type": "blank",
+      "answer": "along",
+      "explanation": "totter 蹒跚,蹒跚前行。The elderly woman would totter along slowly using her walking stick.老妇人用拐杖缓慢地蹒跚前行。"
+    },
+    {
+      "question": "____ flutter",
+      "type": "blank",
+      "answer": "bird",
+      "explanation": "flutter 拍动,鸟拍动翅膀。The small bird's wings would flutter rapidly during takeoff from branches.小鸟的翅膀在从树枝起飞时会快速拍动。"
+    }
+  ]
+}
