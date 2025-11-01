@@ -1,105 +1,605 @@
 {
   "text": "",
   "quiz": [
-    {"question": "_____ in dark", "type": "blank", "answer": "grope", "explanation": "摸索，在黑暗中摸索。Lost in the cave, they had to grope in dark for an exit. 在洞穴中迷路了，他们不得不在黑暗中摸索出口。"},
-    {"question": "_____ troupe", "type": "blank", "answer": "dance", "explanation": "剧团，舞蹈团。The dance troupe performed across the country. 舞蹈团在全国各地演出。"},
-    {"question": "__________ clothes", "type": "blank", "answer": "threadbare", "explanation": "破旧的，破旧的衣服。The refugee wore threadbare clothes from years of wear. 难民穿着多年穿着的破旧衣服。"},
-    {"question": "main ____________", "type": "blank", "answer": "thoroughfare", "explanation": "大道，主要大道。The main thoroughfare was closed for repairs. 主要大道因维修而关闭。"},
-    {"question": "horn _____", "type": "blank", "answer": "blare", "explanation": "刺耳的声音，喇叭刺耳声。The horn blare startled pedestrians on the street. 喇叭刺耳声吓到了街上的行人。"},
-    {"question": "_____ glare", "type": "blank", "answer": "angry", "explanation": "怒视，愤怒的怒视。She shot him an angry glare across the room. 她从房间那头向他投去愤怒的怒视。"},
-    {"question": "_______ prey", "type": "blank", "answer": "ensnare", "explanation": "诱捕，诱捕猎物。The spider's web would ensnare prey effectively. 蜘蛛网会有效地诱捕猎物。"},
-    {"question": "_______ lifestyle", "type": "blank", "answer": "austere", "explanation": "简朴的，简朴的生活方式。The monks lived an austere lifestyle in the monastery. 僧侣们在修道院过着简朴的生活方式。"},
-    {"question": "_________ ogre", "type": "blank", "answer": "mythical", "explanation": "食人魔，神话中的食人魔。Fairy tales often featured a mythical ogre as the villain. 童话故事经常以神话中的食人魔为反派。"},
-    {"question": "______ quagmire", "type": "blank", "answer": "sticky", "explanation": "困境，棘手的困境。The project became a sticky quagmire of complications. 这个项目变成了一个棘手的困境。"},
-    {"question": "_____ transpire", "type": "blank", "answer": "event", "explanation": "发生，事件发生。We waited to see what would event transpire. 我们等待看会有什么事件发生。"},
-    {"question": "________ heavily", "type": "blank", "answer": "perspire", "explanation": "出汗，大量出汗。Athletes perspire heavily during intense training. 运动员在高强度训练中大量出汗。"},
-    {"question": "go _______", "type": "blank", "answer": "haywire", "explanation": "失控，失控。The computer system went haywire during the update. 计算机系统在更新期间失控了。"},
-    {"question": "_____ hellebore", "type": "blank", "answer": "plant", "explanation": "嚏根草，嚏根草植物。The garden featured the poisonous plant hellebore. 花园里有有毒的嚏根草植物。"},
-    {"question": "________ manticore", "type": "blank", "answer": "fearsome", "explanation": "狮尾怪，可怕的狮尾怪。The legend described a fearsome manticore with a lion's body. 传说描述了一只有狮子身体的可怕狮尾怪。"},
-    {"question": "child's ________", "type": "blank", "answer": "pinafore", "explanation": "围裙，儿童围裙。The little girl wore a child's pinafore over her dress. 小女孩在裙子外面穿着儿童围裙。"},
-    {"question": "_______ mercy", "type": "blank", "answer": "implore", "explanation": "恳求，恳求怜悯。The prisoner would implore mercy from the judge. 囚犯会向法官恳求怜悯。"},
-    {"question": "_____ sycamore", "type": "blank", "answer": "giant", "explanation": "梧桐树，巨大的梧桐树。A giant sycamore tree shaded the playground. 一棵巨大的梧桐树为操场遮荫。"},
-    {"question": "_________ remembered", "type": "blank", "answer": "evermore", "explanation": "永远，永远被记住。The hero would be evermore remembered for his sacrifice. 这位英雄会因他的牺牲而永远被记住。"},
-    {"question": "___________ mine", "type": "blank", "answer": "forevermore", "explanation": "永远，永远是我的。My heart is forevermore mine to give. 我的心永远是我的可以给予。"},
-    {"question": "____ snore", "type": "blank", "answer": "loud", "explanation": "打鼾，大声打鼾。His loud snore kept everyone awake at night. 他大声的打鼾让每个人晚上都睡不着。"},
-    {"question": "____ pore", "type": "blank", "answer": "skin", "explanation": "毛孔，皮肤毛孔。The cleanser helps clear clogged skin pore. 清洁剂有助于清除堵塞的皮肤毛孔。"},
-    {"question": "_____ amphitheatre", "type": "blank", "answer": "Roman", "explanation": "圆形剧场，罗马圆形剧场。Tourists visited the ancient Roman amphitheatre. 游客参观了古罗马圆形剧场。"},
-    {"question": "do ________", "type": "blank", "answer": "manicure", "explanation": "修指甲，做修指甲。She went to the salon to do manicure. 她去沙龙做修指甲。"},
-    {"question": "_______ supplies", "type": "blank", "answer": "procure", "explanation": "获得，获得供应品。The army needed to procure supplies urgently. 军队需要紧急获得供应品。"},
-    {"question": "_________ face", "type": "blank", "answer": "disfigure", "explanation": "毁容，毁容脸部。The acid would disfigure face permanently. 酸会永久毁容脸部。"},
-    {"question": "__________ Christ", "type": "blank", "answer": "transfigure", "explanation": "变容，基督变容。The painting depicted transfigure Christ on the mountain. 这幅画描绘了山上基督变容。"},
-    {"question": "_______ up", "type": "blank", "answer": "conjure", "explanation": "变出，变出。The magician could conjure up objects from thin air. 魔术师可以凭空变出物体。"},
-    {"question": "_____ reassurance", "type": "blank", "answer": "offer", "explanation": "安慰，提供安慰。The doctor tried to offer reassurance to the patient. 医生试图向病人提供安慰。"},
-    {"question": "____ fissure", "type": "blank", "answer": "rock", "explanation": "裂缝，岩石裂缝。Water seeped through the rock fissure. 水从岩石裂缝中渗出。"},
-    {"question": "____ puncture", "type": "blank", "answer": "tyre", "explanation": "刺破，轮胎刺破。The nail caused a tyre puncture on the highway. 钉子在高速公路上导致轮胎刺破。"},
-    {"question": "_______ vulture", "type": "blank", "answer": "carrion", "explanation": "秃鹫，食腐秃鹫。The carrion vulture circled above the carcass. 食腐秃鹫在尸体上空盘旋。"},
-    {"question": "_________ city", "type": "blank", "answer": "recapture", "explanation": "收复，收复城市。The army planned to recapture city from rebels. 军队计划从叛军手中收复城市。"},
-    {"question": "_________ audience", "type": "blank", "answer": "enrapture", "explanation": "使狂喜，使观众狂喜。The soprano's voice would enrapture audience completely. 女高音的声音会使观众完全狂喜。"},
-    {"question": "__________ rupture", "type": "blank", "answer": "intestinal", "explanation": "破裂，肠道破裂。The patient suffered an intestinal rupture. 病人遭受了肠道破裂。"},
-    {"question": "________ nurture", "type": "blank", "answer": "parental", "explanation": "养育，父母的养育。Parental nurture is crucial for child development. 父母的养育对儿童发展至关重要。"},
-    {"question": "_______ manoeuvre", "type": "blank", "answer": "complex", "explanation": "机动，复杂的机动。The pilot executed a complex manoeuvre to avoid collision. 飞行员执行了复杂的机动以避免碰撞。"},
-    {"question": "______ bookcase", "type": "blank", "answer": "wooden", "explanation": "书柜，木制书柜。The study featured a large wooden bookcase. 书房里有一个大型木制书柜。"},
-    {"question": "_____ suitcase", "type": "blank", "answer": "carry", "explanation": "手提箱，携带手提箱。She struggled to carry suitcase up the stairs. 她费力地把手提箱搬上楼梯。"},
-    {"question": "___ nutcase", "type": "blank", "answer": "mad", "explanation": "疯子，疯疯癫癫的人。His colleagues thought he was a mad nutcase. 他的同事认为他是个疯疯癫癫的人。"},
-    {"question": "_______ unease", "type": "blank", "answer": "feeling", "explanation": "不安，感到不安。She had a feeling unease about the situation. 她对这种情况感到不安。"},
-    {"question": "_____ crease", "type": "blank", "answer": "shirt", "explanation": "褶皱，衬衫褶皱。She ironed out the shirt crease carefully. 她小心地熨平衬衫褶皱。"},
-    {"question": "______ with", "type": "blank", "answer": "liaise", "explanation": "联络，与...联络。The manager will liaise with other departments. 经理将与其他部门联络。"},
-    {"question": "________ value", "type": "blank", "answer": "appraise", "explanation": "评估，评估价值。An expert came to appraise value of the antiques. 专家来评估古董的价值。"},
-    {"question": "__________ about", "type": "blank", "answer": "rhapsodise", "explanation": "热情洋溢地谈论，热情洋溢地谈论。Critics would rhapsodise about the new exhibition. 评论家会热情洋溢地谈论新展览。"},
-    {"question": "__________ society", "type": "blank", "answer": "scandalise", "explanation": "使震惊，使社会震惊。Her behavior would scandalise society in Victorian times. 她的行为会在维多利亚时代使社会震惊。"},
-    {"question": "_________ agreement", "type": "blank", "answer": "formalise", "explanation": "正式化，正式化协议。Both parties agreed to formalise agreement in writing. 双方同意以书面形式正式化协议。"},
-    {"question": "_________ tastebuds", "type": "blank", "answer": "tantalise", "explanation": "诱惑，诱惑味蕾。The aroma would tantalise tastebuds before the meal. 香味会在用餐前诱惑味蕾。"},
-    {"question": "__________ limb", "type": "blank", "answer": "immobilise", "explanation": "固定，固定肢体。The cast would immobilise limb during healing. 石膏会在愈合期间固定肢体。"},
-    {"question": "______ demise", "type": "blank", "answer": "tragic", "explanation": "死亡，悲惨的死亡。The king's tragic demise shocked the nation. 国王悲惨的死亡震惊了国家。"},
-    {"question": "__________ surmise", "type": "blank", "answer": "reasonable", "explanation": "推测，合理的推测。It's a reasonable surmise based on the evidence. 这是基于证据的合理推测。"},
-    {"question": "_____________ industry", "type": "blank", "answer": "revolutionise", "explanation": "彻底改变，彻底改变行业。New technology will revolutionise industry practices. 新技术将彻底改变行业实践。"},
-    {"question": "________ poise", "type": "blank", "answer": "graceful", "explanation": "镇静，优雅的镇静。The ballet dancer moved with graceful poise. 芭蕾舞者以优雅的镇静移动。"},
-    {"question": "_____ tortoise", "type": "blank", "answer": "giant", "explanation": "乌龟，巨大的乌龟。The Galápagos is home to giant tortoise. 加拉帕戈斯群岛是巨大乌龟的家园。"},
-    {"question": "_______ coward", "type": "blank", "answer": "despise", "explanation": "鄙视，鄙视懦夫。Soldiers despise coward who flee from battle. 士兵们鄙视从战斗中逃跑的懦夫。"},
-    {"question": "_____ from", "type": "blank", "answer": "arise", "explanation": "产生，产生于。Problems can arise from poor communication. 问题可能产生于沟通不良。"},
-    {"question": "_________ audience", "type": "blank", "answer": "mesmerise", "explanation": "使着迷，使观众着迷。The performer's skill would mesmerise audience. 表演者的技巧会使观众着迷。"},
-    {"question": "_____ open", "type": "blank", "answer": "prise", "explanation": "撬开，撬开。They had to prise open the locked door. 他们不得不撬开锁着的门。"},
-    {"question": "______ uprise", "type": "blank", "answer": "people", "explanation": "起义，人民起义。The oppressed people uprise against tyranny. 被压迫的人民起义反抗暴政。"},
-    {"question": "_________ wildly", "type": "blank", "answer": "fantasise", "explanation": "幻想，疯狂幻想。Children often fantasise wildly about adventures. 孩子们经常疯狂幻想冒险。"},
-    {"question": "_________ subject", "type": "blank", "answer": "hypnotise", "explanation": "催眠，催眠对象。The therapist would hypnotise subject to access memories. 治疗师会催眠对象以访问记忆。"},
-    {"question": "________ identity", "type": "blank", "answer": "disguise", "explanation": "伪装，伪装身份。The spy had to disguise identity with a fake passport. 间谍不得不用假护照伪装身份。"},
-    {"question": "_____ bruise", "type": "blank", "answer": "black", "explanation": "瘀伤，黑色瘀伤。The fall left a large black bruise on his leg. 摔倒在他腿上留下了一大块黑色瘀伤。"},
-    {"question": "______ plan", "type": "blank", "answer": "devise", "explanation": "设计，设计计划。Engineers must devise plan to solve the problem. 工程师必须设计计划来解决问题。"},
-    {"question": "_______ of land", "type": "blank", "answer": "expanse", "explanation": "广阔，广阔的土地。An endless expanse of land stretched before them. 无尽的广阔土地在他们面前延伸。"},
-    {"question": "________ justice", "type": "blank", "answer": "dispense", "explanation": "执行，执行正义。Courts exist to dispense justice fairly. 法院的存在是为了公正地执行正义。"},
-    {"question": "______ of soul", "type": "blank", "answer": "repose", "explanation": "安息，灵魂的安息。The cemetery offered repose of soul for the departed. 墓地为逝者提供灵魂的安息。"},
-    {"question": "__________ him", "type": "blank", "answer": "discompose", "explanation": "使不安，使他不安。The unexpected question would discompose him. 意外的问题会使他不安。"},
-    {"question": "____ indisposed", "type": "blank", "answer": "feel", "explanation": "不适，感到不适。She had to cancel the meeting as she feel indisposed. 她不得不取消会议，因为她感到不适。"},
-    {"question": "______ expression", "type": "blank", "answer": "morose", "explanation": "阴郁的，阴郁的表情。He wore a morose expression all day. 他整天都带着阴郁的表情。"},
-    {"question": "____ lapse", "type": "blank", "answer": "time", "explanation": "流逝，时间流逝。The video showed flowers blooming in time lapse. 视频展示了花朵在时间流逝中绽放。"},
-    {"question": "_____ elapse", "type": "blank", "answer": "years", "explanation": "过去，年月过去。Many years elapse before they met again. 许多年过去了他们才再次见面。"},
-    {"question": "_______ around", "type": "blank", "answer": "traipse", "explanation": "闲逛，到处闲逛。She would traipse around the city all day. 她会整天在城市里到处闲逛。"},
-    {"question": "______ voice", "type": "blank", "answer": "hoarse", "explanation": "嘶哑的，嘶哑的声音。After shouting all night, he had a hoarse voice. 喊了一整夜后，他的声音嘶哑了。"},
-    {"question": "_______ fully", "type": "blank", "answer": "immerse", "explanation": "沉浸，完全沉浸。Students should immerse fully in the language. 学生应该完全沉浸在语言中。"},
-    {"question": "________ crowd", "type": "blank", "answer": "disperse", "explanation": "驱散，驱散人群。Police used tear gas to disperse crowd. 警察使用催泪瓦斯驱散人群。"},
-    {"question": "_______ intersperse", "type": "blank", "answer": "flowers", "explanation": "点缀，花朵点缀。Colorful flowers intersperse throughout the garden. 五颜六色的花朵点缀在整个花园中。"},
-    {"question": "cart _____", "type": "blank", "answer": "horse", "explanation": "拉车马，拉车马。The old cart horse pulled the wagon slowly. 老拉车马缓慢地拉着马车。"},
-    {"question": "_____ accursed", "type": "blank", "answer": "curse", "explanation": "诅咒，被诅咒的。The ancient tomb was curse accursed by legend. 古墓被传说诅咒。"},
-    {"question": "____ bouillabaisse", "type": "blank", "answer": "fish", "explanation": "马赛鱼汤，鱼马赛鱼汤。The restaurant served authentic fish bouillabaisse. 这家餐厅供应正宗的鱼马赛鱼汤。"},
-    {"question": "_________ mousse", "type": "blank", "answer": "chocolate", "explanation": "慕斯，巧克力慕斯。Dessert was a rich chocolate mousse. 甜点是浓郁的巧克力慕斯。"},
-    {"question": "_______ with light", "type": "blank", "answer": "suffuse", "explanation": "充满，充满光芒。Dawn would suffuse with light the eastern sky. 黎明会使东方的天空充满光芒。"},
-    {"question": "_____ children", "type": "blank", "answer": "amuse", "explanation": "逗乐，逗乐孩子。The clown tried to amuse children with tricks. 小丑试图用把戏逗乐孩子。"},
-    {"question": "______ audience", "type": "blank", "answer": "bemuse", "explanation": "使困惑，使观众困惑。The abstract art would bemuse audience. 抽象艺术会使观众困惑。"},
-    {"question": "_____ fire", "type": "blank", "answer": "douse", "explanation": "浇灭，浇灭火。Firefighters rushed to douse fire with water. 消防员赶紧用水浇灭火。"},
-    {"question": "____ blouse", "type": "blank", "answer": "silk", "explanation": "女衬衫，丝绸女衬衫。She wore an elegant silk blouse to the dinner. 她穿着优雅的丝绸女衬衫去吃晚饭。"},
-    {"question": "_____ from sleep", "type": "blank", "answer": "rouse", "explanation": "唤醒，从睡眠中唤醒。The alarm would rouse from sleep abruptly. 闹钟会突然从睡眠中唤醒。"},
-    {"question": "______ book", "type": "blank", "answer": "peruse", "explanation": "细读，细读书籍。She liked to peruse book in the library. 她喜欢在图书馆细读书籍。"},
-    {"question": "______ angle", "type": "blank", "answer": "obtuse", "explanation": "钝角，钝角。The triangle had one obtuse angle. 三角形有一个钝角。"},
-    {"question": "____ breath", "type": "blank", "answer": "bate", "explanation": "屏息，屏息。The audience would bate breath in anticipation. 观众会屏息以待。"},
-    {"question": "_____ storm", "type": "blank", "answer": "abate", "explanation": "减弱，暴风雨减弱。The wind began to abate storm as night fell. 夜幕降临时，风开始使暴风雨减弱。"},
-    {"question": "_________ yourself", "type": "blank", "answer": "extricate", "explanation": "解脱，解脱自己。You must extricate yourself from this situation. 你必须从这种情况中解脱自己。"},
-    {"question": "_________ victim", "type": "blank", "answer": "suffocate", "explanation": "窒息，窒息受害者。The smoke could suffocate victim in minutes. 烟雾可能在几分钟内窒息受害者。"},
-    {"question": "__________ goods", "type": "blank", "answer": "confiscate", "explanation": "没收，没收货物。Customs would confiscate goods that were illegal. 海关会没收非法货物。"},
-    {"question": "__________ witness", "type": "blank", "answer": "intimidate", "explanation": "恐吓，恐吓证人。The gang tried to intimidate witness before trial. 黑帮试图在审判前恐吓证人。"},
-    {"question": "___________ house", "type": "blank", "answer": "dilapidated", "explanation": "破旧的，破旧的房子。The family lived in a dilapidated house. 这家人住在一所破旧的房子里。"},
-    {"question": "__________ together", "type": "blank", "answer": "congregate", "explanation": "聚集，聚集在一起。Protesters would congregate together in the square. 抗议者会在广场上聚集在一起。"},
-    {"question": "___________ suspect", "type": "blank", "answer": "interrogate", "explanation": "审问，审问嫌疑人。Detectives will interrogate suspect for hours. 侦探将审问嫌疑人数小时。"},
-    {"question": "___ __ surrogate", "type": "blank", "answer": "act as", "explanation": "代理人，担任代理人。She agreed to act as surrogate for the couple. 她同意为这对夫妇担任代理人。"},
-    {"question": "_______ happiness", "type": "blank", "answer": "radiate", "explanation": "散发，散发幸福。The bride would radiate happiness on her wedding day. 新娘会在婚礼当天散发幸福。"}
+    {
+      "question": "grope __ ____",
+      "type": "blank",
+      "answer": "in dark",
+      "explanation": "摸索, 在黑暗中摸索. After the power outage, they had to grope in the dark to find candles. 停电后,他们不得不在黑暗中摸索寻找蜡烛。"
+    },
+    {
+      "question": "_____ troupe",
+      "type": "blank",
+      "answer": "dance",
+      "explanation": "剧团, 舞蹈团. The talented dance troupe performed at venues across the country. 才华横溢的舞蹈团在全国各地的场馆演出。"
+    },
+    {
+      "question": "threadbare _______",
+      "type": "blank",
+      "answer": "clothes",
+      "explanation": "磨破的, 磨破的衣服. The homeless man wore threadbare clothes that barely kept him warm. 这个无家可归的人穿着几乎无法保暖的磨破的衣服。"
+    },
+    {
+      "question": "____ thoroughfare",
+      "type": "blank",
+      "answer": "main",
+      "explanation": "大道, 主要大道. The busy main thoroughfare was lined with shops and restaurants. 繁忙的主要大道两旁排列着商店和餐馆。"
+    },
+    {
+      "question": "____ blare",
+      "type": "blank",
+      "answer": "horn",
+      "explanation": "刺耳的响声, 喇叭刺耳的响声. The loud horn blare startled pedestrians crossing the street. 响亮的喇叭刺耳的响声惊吓了过马路的行人。"
+    },
+    {
+      "question": "_____ glare",
+      "type": "blank",
+      "answer": "angry",
+      "explanation": "怒视, 愤怒的怒视. She shot him an angry glare when he interrupted her presentation. 当他打断她的演讲时,她向他投去愤怒的怒视。"
+    },
+    {
+      "question": "ensnare ____",
+      "type": "blank",
+      "answer": "prey",
+      "explanation": "诱捕, 诱捕猎物. The spider's web was perfectly positioned to ensnare its prey. 蜘蛛网的位置完美地设置来诱捕猎物。"
+    },
+    {
+      "question": "austere _________",
+      "type": "blank",
+      "answer": "lifestyle",
+      "explanation": "简朴的, 简朴的生活方式. The monk embraced an austere lifestyle of meditation and prayer. 这位僧侣接受了冥想和祈祷的简朴生活方式。"
+    },
+    {
+      "question": "________ ogre",
+      "type": "blank",
+      "answer": "mythical",
+      "explanation": "食人魔, 神话中的食人魔. Children listened wide-eyed to stories about the mythical ogre in the forest. 孩子们睁大眼睛听关于森林里神话中的食人魔的故事。"
+    },
+    {
+      "question": "______ quagmire",
+      "type": "blank",
+      "answer": "sticky",
+      "explanation": "泥潭, 棘手的困境. The political scandal became a sticky quagmire for the administration. 这场政治丑闻成了政府的棘手困境。"
+    },
+    {
+      "question": "_____ transpire",
+      "type": "blank",
+      "answer": "event",
+      "explanation": "发生, 事件发生. Witnesses were asked to describe exactly what events transpired that night. 目击者被要求准确描述那晚发生的事件。"
+    },
+    {
+      "question": "perspire _______",
+      "type": "blank",
+      "answer": "heavily",
+      "explanation": "出汗, 大量出汗. Athletes began to perspire heavily during the intense workout session. 运动员在激烈的训练中开始大量出汗。"
+    },
+    {
+      "question": "__ haywire",
+      "type": "blank",
+      "answer": "go",
+      "explanation": "失控, 失控. The carefully planned event began to go haywire when the storm hit. 当暴风雨来临时,精心计划的活动开始失控。"
+    },
+    {
+      "question": "_____ hellebore",
+      "type": "blank",
+      "answer": "plant",
+      "explanation": "嚏根草, 种植嚏根草. Gardeners plant hellebore for its beautiful winter blooms. 园丁种植嚏根草是为了欣赏它美丽的冬季花朵。"
+    },
+    {
+      "question": "________ manticore",
+      "type": "blank",
+      "answer": "fearsome",
+      "explanation": "狮身人面怪兽, 可怕的狮身人面怪兽. Ancient legends described the fearsome manticore with its lion body and human head. 古代传说描述了拥有狮子身体和人类头颅的可怕狮身人面怪兽。"
+    },
+    {
+      "question": "_____'_ pinafore",
+      "type": "blank",
+      "answer": "child's",
+      "explanation": "围裙, 孩子的围裙. The little girl's white child's pinafore was embroidered with flowers. 小女孩的白色孩子围裙上绣着花朵。"
+    },
+    {
+      "question": "implore _____",
+      "type": "blank",
+      "answer": "mercy",
+      "explanation": "恳求, 恳求怜悯. The prisoner began to implore for mercy from the judge. 囚犯开始向法官恳求怜悯。"
+    },
+    {
+      "question": "_____ sycamore",
+      "type": "blank",
+      "answer": "giant",
+      "explanation": "梧桐树, 巨大的梧桐树. The ancient giant sycamore provided shade for generations of families. 这棵古老的巨大梧桐树为几代家庭提供了荫凉。"
+    },
+    {
+      "question": "evermore __________",
+      "type": "blank",
+      "answer": "remembered",
+      "explanation": "永远, 永远被记住. The hero's sacrifice would be evermore remembered by grateful citizens. 英雄的牺牲将永远被感激的市民记住。"
+    },
+    {
+      "question": "forevermore ____",
+      "type": "blank",
+      "answer": "mine",
+      "explanation": "永远, 永远是我的. He vowed that she would be forevermore his beloved companion. 他发誓她将永远是他心爱的伴侣。"
+    },
+    {
+      "question": "____ snore",
+      "type": "blank",
+      "answer": "loud",
+      "explanation": "打鼾, 响亮的打鼾. His loud snore kept his roommate awake throughout the night. 他响亮的打鼾让室友整夜无法入睡。"
+    },
+    {
+      "question": "____ pore",
+      "type": "blank",
+      "answer": "skin",
+      "explanation": "毛孔, 皮肤毛孔. The facial treatment helped to cleanse each skin pore thoroughly. 面部护理有助于彻底清洁每个皮肤毛孔。"
+    },
+    {
+      "question": "_____ amphitheatre",
+      "type": "blank",
+      "answer": "Roman",
+      "explanation": "圆形剧场, 罗马圆形剧场. Tourists flocked to see the ancient Roman amphitheatre in its restored glory. 游客们蜂拥而至,观看修复后辉煌的古罗马圆形剧场。"
+    },
+    {
+      "question": "__ manicure",
+      "type": "blank",
+      "answer": "do",
+      "explanation": "修指甲, 做修指甲. She scheduled an appointment to do a manicure before the wedding. 她预约了在婚礼前做修指甲。"
+    },
+    {
+      "question": "procure ________",
+      "type": "blank",
+      "answer": "supplies",
+      "explanation": "获得, 获得物资. The expedition team needed to procure supplies before heading into the wilderness. 探险队需要在进入荒野之前获得物资。"
+    },
+    {
+      "question": "disfigure ____",
+      "type": "blank",
+      "answer": "face",
+      "explanation": "毁容, 毁容面部. The accident threatened to disfigure her face permanently. 这次事故有可能永久毁容她的面部。"
+    },
+    {
+      "question": "transfigure ______",
+      "type": "blank",
+      "answer": "Christ",
+      "explanation": "变容, 基督变容. The painting depicted the moment when angels appeared to transfigure Christ on the mountain. 这幅画描绘了天使在山上显现使基督变容的时刻。"
+    },
+    {
+      "question": "conjure __",
+      "type": "blank",
+      "answer": "up",
+      "explanation": "变出, 变出. The magician claimed he could conjure up objects from thin air. 魔术师声称他可以从空气中变出物体。"
+    },
+    {
+      "question": "_____ reassurance",
+      "type": "blank",
+      "answer": "offer",
+      "explanation": "安慰, 提供安慰. The counselor tried to offer reassurance to the anxious student. 辅导员试图向焦虑的学生提供安慰。"
+    },
+    {
+      "question": "____ fissure",
+      "type": "blank",
+      "answer": "rock",
+      "explanation": "裂缝, 岩石裂缝. Climbers spotted a narrow rock fissure they could use for their ascent. 登山者发现了一条可以用来攀登的狭窄岩石裂缝。"
+    },
+    {
+      "question": "____ puncture",
+      "type": "blank",
+      "answer": "tyre",
+      "explanation": "刺穿, 轮胎刺穿. The sharp nail caused a tyre puncture that left them stranded on the highway. 锋利的钉子造成轮胎刺穿,让他们在高速公路上抛锚。"
+    },
+    {
+      "question": "_______ vulture",
+      "type": "blank",
+      "answer": "carrion",
+      "explanation": "秃鹫, 食腐秃鹫. The hungry carrion vultures circled overhead waiting for their meal. 饥饿的食腐秃鹫在头顶盘旋等待它们的食物。"
+    },
+    {
+      "question": "recapture ____",
+      "type": "blank",
+      "answer": "city",
+      "explanation": "夺回, 夺回城市. The army launched an offensive to recapture the city from enemy forces. 军队发起攻势从敌军手中夺回城市。"
+    },
+    {
+      "question": "enrapture ________",
+      "type": "blank",
+      "answer": "audience",
+      "explanation": "使狂喜, 使观众狂喜. The soprano's beautiful voice managed to enrapture the entire audience. 女高音美妙的声音成功使整个观众狂喜。"
+    },
+    {
+      "question": "__________ rupture",
+      "type": "blank",
+      "answer": "intestinal",
+      "explanation": "破裂, 肠道破裂. The surgeon operated immediately to repair the dangerous intestinal rupture. 外科医生立即手术修复危险的肠道破裂。"
+    },
+    {
+      "question": "________ nurture",
+      "type": "blank",
+      "answer": "parental",
+      "explanation": "培养, 父母的培养. Children thrive with loving parental nurture during their formative years. 孩子们在成长期通过充满爱的父母培养而茁壮成长。"
+    },
+    {
+      "question": "_______ manoeuvre",
+      "type": "blank",
+      "answer": "complex",
+      "explanation": "策略, 复杂的策略. The pilot executed a complex manoeuvre to avoid the incoming aircraft. 飞行员执行了复杂的策略来避开来袭的飞机。"
+    },
+    {
+      "question": "______ bookcase",
+      "type": "blank",
+      "answer": "wooden",
+      "explanation": "书柜, 木制书柜. The antique wooden bookcase held her collection of rare first editions. 这个古董木制书柜存放着她收藏的稀有初版书。"
+    },
+    {
+      "question": "_____ suitcase",
+      "type": "blank",
+      "answer": "carry",
+      "explanation": "手提箱, 携带手提箱. Travelers struggled to carry their heavy suitcases through the crowded terminal. 旅客们努力携带沉重的手提箱穿过拥挤的航站楼。"
+    },
+    {
+      "question": "___ nutcase",
+      "type": "blank",
+      "answer": "mad",
+      "explanation": "疯子, 疯狂的疯子. His colleagues thought he was a mad nutcase for attempting the dangerous stunt. 他的同事认为他是个疯狂的疯子,竟然尝试这个危险的特技。"
+    },
+    {
+      "question": "_______ unease",
+      "type": "blank",
+      "answer": "feeling",
+      "explanation": "不安, 感到不安. A strange feeling of unease came over her as she entered the abandoned house. 当她进入废弃的房子时,一种奇怪的不安感涌上心头。"
+    },
+    {
+      "question": "_____ crease",
+      "type": "blank",
+      "answer": "shirt",
+      "explanation": "褶皱, 衬衫褶皱. She carefully ironed out every shirt crease before the job interview. 她在面试前仔细熨平了衬衫的每一个褶皱。"
+    },
+    {
+      "question": "liaise ____",
+      "type": "blank",
+      "answer": "with",
+      "explanation": "联络, 联络. The project manager needed to liaise with multiple departments daily. 项目经理需要每天与多个部门联络。"
+    },
+    {
+      "question": "appraise _____",
+      "type": "blank",
+      "answer": "value",
+      "explanation": "评估, 评估价值. An expert was hired to appraise the value of the antique jewelry collection. 聘请了一位专家来评估古董珠宝收藏的价值。"
+    },
+    {
+      "question": "rhapsodise _____",
+      "type": "blank",
+      "answer": "about",
+      "explanation": "热情洋溢地谈论, 热情洋溢地谈论. Food critics would rhapsodise about the chef's innovative culinary creations. 食评家们会热情洋溢地谈论这位厨师的创新烹饪作品。"
+    },
+    {
+      "question": "scandalise _______",
+      "type": "blank",
+      "answer": "society",
+      "explanation": "使震惊, 使社会震惊. Her unconventional behavior threatened to scandalise polite society. 她的非传统行为有可能使上流社会震惊。"
+    },
+    {
+      "question": "formalise _________",
+      "type": "blank",
+      "answer": "agreement",
+      "explanation": "正式确定, 正式确定协议. Both parties signed documents to formalise their business agreement. 双方签署文件以正式确定他们的商业协议。"
+    },
+    {
+      "question": "tantalise _________",
+      "type": "blank",
+      "answer": "tastebuds",
+      "explanation": "挑逗, 挑逗味蕾. The aroma from the kitchen began to tantalise everyone's tastebuds. 厨房里飘来的香味开始挑逗每个人的味蕾。"
+    },
+    {
+      "question": "immobilise ____",
+      "type": "blank",
+      "answer": "limb",
+      "explanation": "固定, 固定肢体. The paramedics used a splint to immobilise the injured limb. 护理人员使用夹板来固定受伤的肢体。"
+    },
+    {
+      "question": "______ demise",
+      "type": "blank",
+      "answer": "tragic",
+      "explanation": "死亡, 悲剧性死亡. The newspaper reported the tragic demise of the beloved actor. 报纸报道了这位深受喜爱的演员的悲剧性死亡。"
+    },
+    {
+      "question": "__________ surmise",
+      "type": "blank",
+      "answer": "reasonable",
+      "explanation": "推测, 合理的推测. Based on the evidence, it was a reasonable surmise that he had been there. 根据证据,推测他曾在那里是合理的。"
+    },
+    {
+      "question": "revolutionise ________",
+      "type": "blank",
+      "answer": "industry",
+      "explanation": "彻底改革, 彻底改革行业. The new technology promised to revolutionise the entire industry. 新技术有望彻底改革整个行业。"
+    },
+    {
+      "question": "________ poise",
+      "type": "blank",
+      "answer": "graceful",
+      "explanation": "优雅, 优雅的姿态. The ballerina maintained her graceful poise throughout the demanding performance. 这位芭蕾舞演员在要求严格的表演中始终保持优雅的姿态。"
+    },
+    {
+      "question": "_____ tortoise",
+      "type": "blank",
+      "answer": "giant",
+      "explanation": "乌龟, 巨型乌龟. The Galapagos Islands are famous for their ancient giant tortoises. 加拉帕戈斯群岛以其古老的巨型乌龟而闻名。"
+    },
+    {
+      "question": "despise ______",
+      "type": "blank",
+      "answer": "coward",
+      "explanation": "鄙视, 鄙视懦夫. The warrior culture taught its members to despise any coward who fled from battle. 这种武士文化教导其成员鄙视任何从战斗中逃跑的懦夫。"
+    },
+    {
+      "question": "arise ____",
+      "type": "blank",
+      "answer": "from",
+      "explanation": "产生, 从...产生. Many misunderstandings arise from poor communication between teams. 许多误解从团队之间的糟糕沟通中产生。"
+    },
+    {
+      "question": "mesmerise ________",
+      "type": "blank",
+      "answer": "audience",
+      "explanation": "迷住, 迷住观众. The hypnotist's swinging watch seemed to mesmerise the entire audience. 催眠师摆动的手表似乎迷住了整个观众。"
+    },
+    {
+      "question": "prise ____",
+      "type": "blank",
+      "answer": "open",
+      "explanation": "撬开, 撬开. They had to prise open the jammed door with a crowbar. 他们不得不用撬棍撬开卡住的门。"
+    },
+    {
+      "question": "______ uprise",
+      "type": "blank",
+      "answer": "people",
+      "explanation": "起义, 人民起义. When oppression became unbearable, the people began to uprise against the regime. 当压迫变得无法忍受时,人民开始起义反抗政权。"
+    },
+    {
+      "question": "fantasise ______",
+      "type": "blank",
+      "answer": "wildly",
+      "explanation": "幻想, 疯狂幻想. Children would fantasise wildly about adventures in magical kingdoms. 孩子们会疯狂幻想在魔法王国的冒险。"
+    },
+    {
+      "question": "hypnotise _______",
+      "type": "blank",
+      "answer": "subject",
+      "explanation": "催眠, 催眠对象. The therapist attempted to hypnotise the subject to help recover repressed memories. 治疗师试图催眠对象以帮助恢复被压抑的记忆。"
+    },
+    {
+      "question": "disguise ________",
+      "type": "blank",
+      "answer": "identity",
+      "explanation": "伪装, 伪装身份. The spy used elaborate makeup to disguise his true identity. 间谍使用精心设计的化妆来伪装他的真实身份。"
+    },
+    {
+      "question": "_____ bruise",
+      "type": "blank",
+      "answer": "black",
+      "explanation": "瘀伤, 黑色瘀伤. The fall left a painful black bruise on her shin. 摔倒在她的小腿上留下了疼痛的黑色瘀伤。"
+    },
+    {
+      "question": "devise ____",
+      "type": "blank",
+      "answer": "plan",
+      "explanation": "设计, 设计计划. The team worked together to devise a plan for the marketing campaign. 团队共同努力为营销活动设计计划。"
+    },
+    {
+      "question": "expanse __ ____",
+      "type": "blank",
+      "answer": "of land",
+      "explanation": "广阔区域, 广阔的土地. The settlers gazed upon the vast expanse of land stretching to the horizon. 定居者凝视着延伸到地平线的广阔土地。"
+    },
+    {
+      "question": "dispense _______",
+      "type": "blank",
+      "answer": "justice",
+      "explanation": "施行, 施行正义. The judge was known for his ability to dispense justice fairly and impartially. 这位法官以公正无私地施行正义的能力而闻名。"
+    },
+    {
+      "question": "repose __ ____",
+      "type": "blank",
+      "answer": "of soul",
+      "explanation": "安息, 灵魂的安息. The peaceful garden offered a place of repose for the soul. 宁静的花园为灵魂提供了一个安息之所。"
+    },
+    {
+      "question": "discompose ___",
+      "type": "blank",
+      "answer": "him",
+      "explanation": "使不安, 使他不安. The unexpected question seemed to discompose him during the interview. 这个意外的问题似乎在面试中使他不安。"
+    },
+    {
+      "question": "____ indisposed",
+      "type": "blank",
+      "answer": "feel",
+      "explanation": "身体不适, 感到身体不适. She had to cancel the meeting because she began to feel indisposed. 她不得不取消会议,因为她开始感到身体不适。"
+    },
+    {
+      "question": "morose __________",
+      "type": "blank",
+      "answer": "expression",
+      "explanation": "郁闷的, 郁闷的表情. His morose expression revealed his disappointment with the results. 他郁闷的表情透露出对结果的失望。"
+    },
+    {
+      "question": "____ lapse",
+      "type": "blank",
+      "answer": "time",
+      "explanation": "间隔, 时间间隔. The camera captured the flower's blooming in a stunning time lapse sequence. 相机在令人惊叹的时间间隔序列中捕捉到了花朵的绽放。"
+    },
+    {
+      "question": "_____ elapse",
+      "type": "blank",
+      "answer": "years",
+      "explanation": "消逝, 岁月消逝. Many years would elapse before they met again. 许多岁月将消逝,他们才会再次见面。"
+    },
+    {
+      "question": "traipse ______",
+      "type": "blank",
+      "answer": "around",
+      "explanation": "漫步, 四处漫步. Tourists would traipse around the historic district with their guidebooks. 游客们会拿着旅游指南在历史街区四处漫步。"
+    },
+    {
+      "question": "hoarse _____",
+      "type": "blank",
+      "answer": "voice",
+      "explanation": "嘶哑的, 嘶哑的声音. After shouting at the concert, she woke up with a hoarse voice. 在音乐会上大喊后,她醒来时声音嘶哑。"
+    },
+    {
+      "question": "immerse _____",
+      "type": "blank",
+      "answer": "fully",
+      "explanation": "沉浸, 完全沉浸. To learn the language quickly, you must immerse yourself fully in the culture. 要快速学习语言,你必须完全沉浸在文化中。"
+    },
+    {
+      "question": "disperse _____",
+      "type": "blank",
+      "answer": "crowd",
+      "explanation": "驱散, 驱散人群. Police used water cannons to disperse the unruly crowd. 警察使用水炮驱散失控的人群。"
+    },
+    {
+      "question": "_______ intersperse",
+      "type": "blank",
+      "answer": "flowers",
+      "explanation": "点缀, 花朵点缀. The gardener decided to intersperse colorful flowers throughout the green hedge. 园丁决定在绿色树篱中点缀彩色花朵。"
+    },
+    {
+      "question": "______ carthorse",
+      "type": "blank",
+      "answer": "strong",
+      "explanation": "役马, 强壮的役马. The farmer relied on his strong carthorse to pull heavy loads. 农民依靠他强壮的役马来拉重物。"
+    },
+    {
+      "question": "accursed ____",
+      "type": "blank",
+      "answer": "city",
+      "explanation": "被诅咒的, 被诅咒的城市. Legends spoke of an accursed city buried beneath the desert sands. 传说讲述了一座被沙漠沙子掩埋的被诅咒的城市。"
+    },
+    {
+      "question": "____ bouillabaisse",
+      "type": "blank",
+      "answer": "fish",
+      "explanation": "马赛鱼汤, 鱼马赛鱼汤. The chef prepared an authentic fish bouillabaisse using the day's fresh catch. 厨师用当天的新鲜渔获准备了正宗的鱼马赛鱼汤。"
+    },
+    {
+      "question": "_________ mousse",
+      "type": "blank",
+      "answer": "chocolate",
+      "explanation": "慕斯, 巧克力慕斯. For dessert, they served a rich chocolate mousse topped with whipped cream. 作为甜点,他们提供了一份浓郁的巧克力慕斯,上面加了鲜奶油。"
+    },
+    {
+      "question": "suffuse ____ _____",
+      "type": "blank",
+      "answer": "with light",
+      "explanation": "充满, 充满光线. The sunrise began to suffuse the sky with warm golden light. 日出开始让天空充满温暖的金色光线。"
+    },
+    {
+      "question": "amuse ________",
+      "type": "blank",
+      "answer": "children",
+      "explanation": "逗乐, 逗乐孩子. The clown performed silly tricks to amuse the children at the party. 小丑表演愚蠢的把戏来逗乐派对上的孩子们。"
+    },
+    {
+      "question": "bemuse ________",
+      "type": "blank",
+      "answer": "audience",
+      "explanation": "使困惑, 使观众困惑. The comedian's abstract humor seemed to bemuse rather than entertain the audience. 这位喜剧演员的抽象幽默似乎使观众困惑而不是娱乐他们。"
+    },
+    {
+      "question": "douse ____",
+      "type": "blank",
+      "answer": "fire",
+      "explanation": "浇灭, 浇灭火. Firefighters worked quickly to douse the fire before it spread. 消防员迅速工作以在火势蔓延前浇灭火。"
+    },
+    {
+      "question": "____ blouse",
+      "type": "blank",
+      "answer": "silk",
+      "explanation": "女式衬衫, 丝绸女式衬衫. She wore an elegant silk blouse to the business meeting. 她穿着优雅的丝绸女式衬衫参加商务会议。"
+    },
+    {
+      "question": "rouse ____ _____",
+      "type": "blank",
+      "answer": "from sleep",
+      "explanation": "唤醒, 从睡眠中唤醒. The loud noise was enough to rouse him from deep sleep. 响亮的噪音足以把他从深度睡眠中唤醒。"
+    },
+    {
+      "question": "peruse ____",
+      "type": "blank",
+      "answer": "book",
+      "explanation": "细读, 细读书. He spent the afternoon in the library attempting to peruse an ancient book. 他在图书馆度过了下午,试图细读一本古书。"
+    },
+    {
+      "question": "obtuse _____",
+      "type": "blank",
+      "answer": "angle",
+      "explanation": "钝角, 钝角. The geometry student learned to identify an obtuse angle greater than 90 degrees. 几何学学生学会识别大于90度的钝角。"
+    },
+    {
+      "question": "bate ______",
+      "type": "blank",
+      "answer": "breath",
+      "explanation": "屏息, 屏息. The audience watched with bated breath as the acrobat performed the dangerous stunt. 观众屏息观看杂技演员表演危险的特技。"
+    },
+    {
+      "question": "abate _____",
+      "type": "blank",
+      "answer": "storm",
+      "explanation": "减弱, 风暴减弱. They waited for the violent storm to abate before continuing their journey. 他们等待猛烈的风暴减弱后才继续旅程。"
+    },
+    {
+      "question": "extricate ________",
+      "type": "blank",
+      "answer": "yourself",
+      "explanation": "解救, 解救自己. She had to find a way to extricate herself from the awkward situation. 她必须找到办法从尴尬的处境中解救自己。"
+    },
+    {
+      "question": "suffocate ______",
+      "type": "blank",
+      "answer": "victim",
+      "explanation": "使窒息, 使受害者窒息. The tight collar seemed designed to suffocate the victim slowly. 紧绷的领子似乎是设计来慢慢使受害者窒息的。"
+    },
+    {
+      "question": "confiscate _____",
+      "type": "blank",
+      "answer": "goods",
+      "explanation": "没收, 没收货物. Customs officers have the authority to confiscate illegal goods at the border. 海关官员有权在边境没收非法货物。"
+    },
+    {
+      "question": "intimidate _______",
+      "type": "blank",
+      "answer": "witness",
+      "explanation": "恐吓, 恐吓证人. The gang members attempted to intimidate the witness before the trial. 帮派成员试图在审判前恐吓证人。"
+    },
+    {
+      "question": "dilapidated _____",
+      "type": "blank",
+      "answer": "house",
+      "explanation": "破败的, 破败的房子. The abandoned dilapidated house stood as a reminder of better days. 被遗弃的破败房子矗立着,提醒着人们曾经的美好时光。"
+    },
+    {
+      "question": "congregate ________",
+      "type": "blank",
+      "answer": "together",
+      "explanation": "聚集, 聚集在一起. Birds would congregate together on the power lines at dusk. 鸟儿会在黄昏时聚集在电线上。"
+    },
+    {
+      "question": "interrogate _______",
+      "type": "blank",
+      "answer": "suspect",
+      "explanation": "审问, 审问嫌疑人. Detectives spent hours trying to interrogate the uncooperative suspect. 侦探们花了几个小时试图审问不合作的嫌疑人。"
+    },
+    {
+      "question": "___ __ surrogate",
+      "type": "blank",
+      "answer": "act as",
+      "explanation": "代理人, 充当代理人. She agreed to act as a surrogate mother for her infertile sister. 她同意为不孕的姐姐充当代孕母亲。"
+    },
+    {
+      "question": "radiate _________",
+      "type": "blank",
+      "answer": "happiness",
+      "explanation": "散发, 散发快乐. The bride seemed to radiate happiness on her wedding day. 新娘在婚礼当天似乎散发着快乐。"
+    }
   ]
 }
