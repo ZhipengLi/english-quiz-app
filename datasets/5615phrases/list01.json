@@ -1,1 +1,605 @@
-
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "_____ replica",
+      "type": "blank",
+      "answer": "exact",
+      "explanation": "复制品，精确的复制品。The museum displayed an exact replica of the ancient artifact. 博物馆展出了古代文物的精确的复制品。"
+    },
+    {
+      "question": "_______ armada",
+      "type": "blank",
+      "answer": "Spanish",
+      "explanation": "舰队，西班牙舰队。The Spanish armada sailed against England in 1588. 西班牙舰队在1588年向英格兰进发。"
+    },
+    {
+      "question": "_______ agenda",
+      "type": "blank",
+      "answer": "meeting",
+      "explanation": "议程，会议议程。The secretary prepared the meeting agenda for discussion. 秘书准备了讨论的会议议程。"
+    },
+    {
+      "question": "_____ coda",
+      "type": "blank",
+      "answer": "music",
+      "explanation": "尾声，音乐尾声。The symphony ended with a beautiful music coda. 交响乐以美妙的音乐尾声结束。"
+    },
+    {
+      "question": "_________ panacea",
+      "type": "blank",
+      "answer": "universal",
+      "explanation": "万能药，万能的万能药。There is no universal panacea for all of life's problems. 没有万能的万能药能解决生活中的所有问题。"
+    },
+    {
+      "question": "______ saga",
+      "type": "blank",
+      "answer": "family",
+      "explanation": "传奇故事，家族传奇故事。The novel told a long family saga spanning generations. 这部小说讲述了一个跨越几代人的漫长家族传奇故事。"
+    },
+    {
+      "question": "________ apocrypha",
+      "type": "blank",
+      "answer": "biblical",
+      "explanation": "伪经，圣经伪经。Scholars debate the authenticity of biblical apocrypha. 学者们争论圣经伪经的真实性。"
+    },
+    {
+      "question": "______ phobia",
+      "type": "blank",
+      "answer": "social",
+      "explanation": "恐惧症，社交恐惧症。She struggled with social phobia in crowded places. 她在拥挤的地方与社交恐惧症作斗争。"
+    },
+    {
+      "question": "____ acrophobia",
+      "type": "blank",
+      "answer": "have",
+      "explanation": "恐高症，患有恐高症。People who have acrophobia fear heights intensely. 患有恐高症的人非常害怕高度。"
+    },
+    {
+      "question": "fascia _____",
+      "type": "blank",
+      "answer": "board",
+      "explanation": "筋膜板，筋膜板。The carpenter installed the fascia board under the roof edge. 木匠在屋顶边缘下安装了筋膜板。"
+    },
+    {
+      "question": "______ encyclopedia",
+      "type": "blank",
+      "answer": "pocket",
+      "explanation": "百科全书，袖珍百科全书。She carried a pocket encyclopedia for quick reference. 她随身携带袖珍百科全书以便快速查阅。"
+    },
+    {
+      "question": "_____ nostalgia",
+      "type": "blank",
+      "answer": "sweet",
+      "explanation": "怀旧，甜蜜的怀旧。He felt sweet nostalgia when visiting his childhood home. 他访问童年住所时感到甜蜜的怀旧。"
+    },
+    {
+      "question": "hemophilia _______",
+      "type": "blank",
+      "answer": "carrier",
+      "explanation": "血友病，血友病携带者。She was a hemophilia carrier but showed no symptoms. 她是血友病携带者，但没有表现出症状。"
+    },
+    {
+      "question": "____-__________ anemia",
+      "type": "blank",
+      "answer": "iron-deficiency",
+      "explanation": "贫血，缺铁性贫血。The doctor diagnosed iron-deficiency anemia and prescribed supplements. 医生诊断为缺铁性贫血并开了补充剂。"
+    },
+    {
+      "question": "________ mania",
+      "type": "blank",
+      "answer": "football",
+      "explanation": "狂热，足球狂热。During the World Cup, football mania swept the nation. 世界杯期间，足球狂热席卷全国。"
+    },
+    {
+      "question": "_________ megalomania",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "自大狂，政治自大狂。The dictator's political megalomania knew no bounds. 独裁者的政治自大狂没有界限。"
+    },
+    {
+      "question": "monomania ___ _____",
+      "type": "blank",
+      "answer": "for order",
+      "explanation": "偏执狂，对秩序的偏执狂。His monomania for order made him organize everything obsessively. 他对秩序的偏执狂让他强迫性地整理一切。"
+    },
+    {
+      "question": "pyromania ____",
+      "type": "blank",
+      "answer": "case",
+      "explanation": "纵火狂，纵火狂案例。The psychiatrist studied the pyromania case carefully. 精神病医生仔细研究了纵火狂案例。"
+    },
+    {
+      "question": "_______ dipsomania",
+      "type": "blank",
+      "answer": "alcohol",
+      "explanation": "酗酒狂，酒精酗酒狂。His alcohol dipsomania required professional treatment. 他的酒精酗酒狂需要专业治疗。"
+    },
+    {
+      "question": "gardenia _______",
+      "type": "blank",
+      "answer": "blossom",
+      "explanation": "栀子花，栀子花花朵。The fragrant gardenia blossom filled the garden with perfume. 芳香的栀子花花朵让花园充满香气。"
+    },
+    {
+      "question": "________ insignia",
+      "type": "blank",
+      "answer": "military",
+      "explanation": "徽章，军事徽章。The officer wore military insignia on his uniform. 军官在制服上佩戴军事徽章。"
+    },
+    {
+      "question": "______ insomnia",
+      "type": "blank",
+      "answer": "suffer",
+      "explanation": "失眠，遭受失眠。Many people suffer insomnia due to stress. 许多人因压力而遭受失眠。"
+    },
+    {
+      "question": "paranoia ________",
+      "type": "blank",
+      "answer": "disorder",
+      "explanation": "偏执症，偏执症障碍。The patient was diagnosed with paranoia disorder. 患者被诊断患有偏执症障碍。"
+    },
+    {
+      "question": "cornucopia __ _______",
+      "type": "blank",
+      "answer": "of options",
+      "explanation": "丰饶，选择的丰饶。The buffet offered a cornucopia of options for diners. 自助餐为食客提供了选择的丰饶。"
+    },
+    {
+      "question": "_____ utopia",
+      "type": "blank",
+      "answer": "ideal",
+      "explanation": "乌托邦，理想的乌托邦。The philosopher described his vision of an ideal utopia. 哲学家描述了他对理想的乌托邦的愿景。"
+    },
+    {
+      "question": "_________ myopia",
+      "type": "blank",
+      "answer": "marketing",
+      "explanation": "短视，营销短视。The company suffered from marketing myopia and lost customers. 公司遭受营销短视并失去了客户。"
+    },
+    {
+      "question": "_____ aria",
+      "type": "blank",
+      "answer": "opera",
+      "explanation": "咏叹调，歌剧咏叹调。The soprano sang a beautiful opera aria. 女高音唱了一首美妙的歌剧咏叹调。"
+    },
+    {
+      "question": "_______ bacteria",
+      "type": "blank",
+      "answer": "harmful",
+      "explanation": "细菌，有害的细菌。Washing hands removes harmful bacteria. 洗手可以去除有害的细菌。"
+    },
+    {
+      "question": "____ __ euphoria",
+      "type": "blank",
+      "answer": "wave of",
+      "explanation": "欣快感，欣快感的浪潮。The victory brought a wave of euphoria to the fans. 胜利给球迷带来了欣快感的浪潮。"
+    },
+    {
+      "question": "__________ fantasia",
+      "type": "blank",
+      "answer": "orchestral",
+      "explanation": "幻想曲，管弦乐幻想曲。The composer wrote an elaborate orchestral fantasia. 作曲家创作了一首精心制作的管弦乐幻想曲。"
+    },
+    {
+      "question": "_____ analgesia",
+      "type": "blank",
+      "answer": "local",
+      "explanation": "镇痛，局部镇痛。The dentist applied local analgesia before the procedure. 牙医在手术前进行了局部镇痛。"
+    },
+    {
+      "question": "_________ amnesia",
+      "type": "blank",
+      "answer": "temporary",
+      "explanation": "失忆症，暂时性失忆症。After the accident, he suffered temporary amnesia. 事故后，他患上了暂时性失忆症。"
+    },
+    {
+      "question": "_____ militia",
+      "type": "blank",
+      "answer": "local",
+      "explanation": "民兵，地方民兵。The local militia defended the village. 地方民兵保卫了村庄。"
+    },
+    {
+      "question": "_________ inertia",
+      "type": "blank",
+      "answer": "Newtonian",
+      "explanation": "惯性，牛顿惯性。Physics students study Newtonian inertia. 物理学生学习牛顿惯性。"
+    },
+    {
+      "question": "_______ minutia",
+      "type": "blank",
+      "answer": "trivial",
+      "explanation": "细节，琐碎的细节。Don't get lost in trivial minutia; focus on the big picture. 不要迷失在琐碎的细节中；关注大局。"
+    },
+    {
+      "question": "_______ trivia",
+      "type": "blank",
+      "answer": "useless",
+      "explanation": "琐事，无用的琐事。His head was full of useless trivia. 他的脑子里充满了无用的琐事。"
+    },
+    {
+      "question": "dyslexia _________",
+      "type": "blank",
+      "answer": "diagnosis",
+      "explanation": "阅读障碍，阅读障碍诊断。Early dyslexia diagnosis can help with treatment. 早期阅读障碍诊断可以帮助治疗。"
+    },
+    {
+      "question": "anorexia _______",
+      "type": "blank",
+      "answer": "nervosa",
+      "explanation": "厌食症，神经性厌食症。She received treatment for anorexia nervosa. 她接受了神经性厌食症的治疗。"
+    },
+    {
+      "question": "asphyxia _____",
+      "type": "blank",
+      "answer": "death",
+      "explanation": "窒息，窒息死亡。The autopsy revealed asphyxia death as the cause. 尸检显示窒息死亡是死因。"
+    },
+    {
+      "question": "___-_____ parka",
+      "type": "blank",
+      "answer": "fur-lined",
+      "explanation": "派克大衣，毛皮内衬派克大衣。She wore a warm fur-lined parka in the Arctic. 她在北极穿着温暖的毛皮内衬派克大衣。"
+    },
+    {
+      "question": "_______ sequela",
+      "type": "blank",
+      "answer": "disease",
+      "explanation": "后遗症，疾病后遗症。The disease sequela affected him for years. 疾病后遗症影响了他多年。"
+    },
+    {
+      "question": "________ gorilla",
+      "type": "blank",
+      "answer": "mountain",
+      "explanation": "大猩猩，山地大猩猩。The mountain gorilla is an endangered species. 山地大猩猩是濒危物种。"
+    },
+    {
+      "question": "parabola _____",
+      "type": "blank",
+      "answer": "curve",
+      "explanation": "抛物线，抛物线曲线。The mathematics teacher explained the parabola curve. 数学老师解释了抛物线曲线。"
+    },
+    {
+      "question": "________ formula",
+      "type": "blank",
+      "answer": "chemical",
+      "explanation": "公式，化学公式。The chemist wrote the chemical formula on the board. 化学家在黑板上写下化学公式。"
+    },
+    {
+      "question": "_______ peninsula",
+      "type": "blank",
+      "answer": "Iberian",
+      "explanation": "半岛，伊比利亚半岛。Spain and Portugal are located on the Iberian peninsula. 西班牙和葡萄牙位于伊比利亚半岛上。"
+    },
+    {
+      "question": "_______ spatula",
+      "type": "blank",
+      "answer": "kitchen",
+      "explanation": "铲子，厨房铲子。She used a kitchen spatula to flip the pancakes. 她用厨房铲子翻煎饼。"
+    },
+    {
+      "question": "______ melodrama",
+      "type": "blank",
+      "answer": "family",
+      "explanation": "情节剧，家庭情节剧。The TV show was a typical family melodrama. 这个电视节目是典型的家庭情节剧。"
+    },
+    {
+      "question": "________ panorama",
+      "type": "blank",
+      "answer": "mountain",
+      "explanation": "全景，山景全景。The lookout offered a breathtaking mountain panorama. 瞭望台提供了令人惊叹的山景全景。"
+    },
+    {
+      "question": "_____ anathema",
+      "type": "blank",
+      "answer": "utter",
+      "explanation": "诅咒，彻底的诅咒。Such behavior was utter anathema to their beliefs. 这种行为对他们的信仰来说是彻底的诅咒。"
+    },
+    {
+      "question": "_________ dogma",
+      "type": "blank",
+      "answer": "religious",
+      "explanation": "教条，宗教教条。The sect followed strict religious dogma. 这个教派遵循严格的宗教教条。"
+    },
+    {
+      "question": "asthma ______",
+      "type": "blank",
+      "answer": "attack",
+      "explanation": "哮喘，哮喘发作。She carried an inhaler in case of an asthma attack. 她随身携带吸入器以防哮喘发作。"
+    },
+    {
+      "question": "_____ dilemma",
+      "type": "blank",
+      "answer": "moral",
+      "explanation": "困境，道德困境。The doctor faced a difficult moral dilemma. 医生面临着困难的道德困境。"
+    },
+    {
+      "question": "______ comma",
+      "type": "blank",
+      "answer": "Oxford",
+      "explanation": "逗号，牛津逗号。Writers debate whether to use the Oxford comma. 作家们争论是否使用牛津逗号。"
+    },
+    {
+      "question": "____ ____ coma",
+      "type": "blank",
+      "answer": "fall into",
+      "explanation": "昏迷，陷入昏迷。The patient would fall into coma after the accident. 患者会在事故后陷入昏迷。"
+    },
+    {
+      "question": "____ aroma",
+      "type": "blank",
+      "answer": "rich",
+      "explanation": "香味，浓郁的香味。The coffee had a rich aroma that filled the room. 咖啡有浓郁的香味弥漫整个房间。"
+    },
+    {
+      "question": "_____ miasma",
+      "type": "blank",
+      "answer": "toxic",
+      "explanation": "瘴气，有毒的瘴气。A toxic miasma rose from the swamp. 有毒的瘴气从沼泽升起。"
+    },
+    {
+      "question": "________ charisma",
+      "type": "blank",
+      "answer": "magnetic",
+      "explanation": "魅力，磁性的魅力。The leader had magnetic charisma that attracted followers. 领导者有磁性的魅力吸引追随者。"
+    },
+    {
+      "question": "_______ phenomena",
+      "type": "blank",
+      "answer": "natural",
+      "explanation": "现象，自然现象。Scientists study natural phenomena to understand the world. 科学家研究自然现象以了解世界。"
+    },
+    {
+      "question": "_____ _ subpoena",
+      "type": "blank",
+      "answer": "serve a",
+      "explanation": "传票，送达传票。The court officer would serve a subpoena to the witness. 法庭官员会向证人送达传票。"
+    },
+    {
+      "question": "______ ballerina",
+      "type": "blank",
+      "answer": "ballet",
+      "explanation": "芭蕾舞女演员，芭蕾舞女演员。The graceful ballet ballerina performed beautifully. 优雅的芭蕾舞女演员表演得很美。"
+    },
+    {
+      "question": "_____ patina",
+      "type": "blank",
+      "answer": "green",
+      "explanation": "铜绿，绿色铜绿。The old bronze statue had a green patina. 旧青铜雕像有绿色铜绿。"
+    },
+    {
+      "question": "__ antenna",
+      "type": "blank",
+      "answer": "TV",
+      "explanation": "天线，电视天线。They adjusted the TV antenna to improve reception. 他们调整电视天线以改善接收。"
+    },
+    {
+      "question": "penumbra __ _____",
+      "type": "blank",
+      "answer": "of doubt",
+      "explanation": "半影，疑云的半影。A penumbra of doubt surrounded the decision. 疑云的半影笼罩着这个决定。"
+    },
+    {
+      "question": "______ tundra",
+      "type": "blank",
+      "answer": "frozen",
+      "explanation": "苔原，冰冻的苔原。The Arctic frozen tundra is a harsh environment. 北极冰冻的苔原是严酷的环境。"
+    },
+    {
+      "question": "____ chimera",
+      "type": "blank",
+      "answer": "wild",
+      "explanation": "幻想，狂野的幻想。His plan was just a wild chimera with no basis in reality. 他的计划只是没有现实基础的狂野的幻想。"
+    },
+    {
+      "question": "_ plethora __",
+      "type": "blank",
+      "answer": "a of",
+      "explanation": "过剩，过剩的。The store offered a plethora of choices. 商店提供了过剩的选择。"
+    },
+    {
+      "question": "______ flora",
+      "type": "blank",
+      "answer": "alpine",
+      "explanation": "植物群，高山植物群。Botanists study the unique alpine flora. 植物学家研究独特的高山植物群。"
+    },
+    {
+      "question": "________ orchestra",
+      "type": "blank",
+      "answer": "symphony",
+      "explanation": "管弦乐队，交响乐团。The symphony orchestra performed Beethoven. 交响乐团演奏了贝多芬的作品。"
+    },
+    {
+      "question": "bravura ___________",
+      "type": "blank",
+      "answer": "performance",
+      "explanation": "华丽的技巧，华丽的技巧表演。The pianist gave a bravura performance. 钢琴家进行了华丽的技巧表演。"
+    },
+    {
+      "question": "______ mesa",
+      "type": "blank",
+      "answer": "desert",
+      "explanation": "平顶山，沙漠平顶山。The desert mesa rose dramatically from the plain. 沙漠平顶山从平原上戏剧性地升起。"
+    },
+    {
+      "question": "_____ sonata",
+      "type": "blank",
+      "answer": "piano",
+      "explanation": "奏鸣曲，钢琴奏鸣曲。She practiced the piano sonata for hours. 她练习钢琴奏鸣曲好几个小时。"
+    },
+    {
+      "question": "____ cantata",
+      "type": "blank",
+      "answer": "Bach",
+      "explanation": "康塔塔，巴赫康塔塔。The choir performed a Bach cantata at the church. 合唱团在教堂演唱了巴赫康塔塔。"
+    },
+    {
+      "question": "_____ delta",
+      "type": "blank",
+      "answer": "river",
+      "explanation": "三角洲，河流三角洲。The Nile river delta is extremely fertile. 尼罗河河流三角洲极其肥沃。"
+    },
+    {
+      "question": "magenta _____",
+      "type": "blank",
+      "answer": "dress",
+      "explanation": "品红色，品红色连衣裙。She wore a bright magenta dress to the party. 她穿着鲜艳的品红色连衣裙去参加派对。"
+    },
+    {
+      "question": "___ __ iota",
+      "type": "blank",
+      "answer": "not an",
+      "explanation": "一点点，一点都没有。There is not an iota of truth in his story. 他的故事中一点都没有真实性。"
+    },
+    {
+      "question": "_____ quota",
+      "type": "blank",
+      "answer": "sales",
+      "explanation": "配额，销售配额。The salesman exceeded his sales quota this month. 销售员这个月超额完成了销售配额。"
+    },
+    {
+      "question": "aorta ________",
+      "type": "blank",
+      "answer": "aneurysm",
+      "explanation": "主动脉，主动脉动脉瘤。The surgeon repaired the dangerous aorta aneurysm. 外科医生修复了危险的主动脉动脉瘤。"
+    },
+    {
+      "question": "vista _____",
+      "type": "blank",
+      "answer": "point",
+      "explanation": "远景，远景点。The hiking trail offered a beautiful vista point. 徒步小径提供了美丽的远景点。"
+    },
+    {
+      "question": "_____ operetta",
+      "type": "blank",
+      "answer": "comic",
+      "explanation": "轻歌剧，喜剧轻歌剧。The theater staged a delightful comic operetta. 剧院上演了令人愉快的喜剧轻歌剧。"
+    },
+    {
+      "question": "______ lava",
+      "type": "blank",
+      "answer": "molten",
+      "explanation": "熔岩，熔融的熔岩。Molten lava flowed down the volcano's sides. 熔融的熔岩从火山的侧面流下。"
+    },
+    {
+      "question": "_______ nova",
+      "type": "blank",
+      "answer": "stellar",
+      "explanation": "新星，恒星新星。Astronomers observed a bright stellar nova. 天文学家观察到一颗明亮的恒星新星。"
+    },
+    {
+      "question": "_______ supernova",
+      "type": "blank",
+      "answer": "stellar",
+      "explanation": "超新星，恒星超新星。The stellar supernova was visible from Earth. 恒星超新星从地球上可见。"
+    },
+    {
+      "question": "________ larva",
+      "type": "blank",
+      "answer": "mosquito",
+      "explanation": "幼虫，蚊子幼虫。The mosquito larva develops in standing water. 蚊子幼虫在死水中发育。"
+    },
+    {
+      "question": "____ stanza",
+      "type": "blank",
+      "answer": "poem",
+      "explanation": "诗节，诗歌诗节。The poem stanza contained four lines. 诗歌诗节包含四行。"
+    },
+    {
+      "question": "_____ piazza",
+      "type": "blank",
+      "answer": "sunny",
+      "explanation": "广场，阳光明媚的广场。Tourists gathered in the sunny piazza. 游客们聚集在阳光明媚的广场上。"
+    },
+    {
+      "question": "scab _____",
+      "type": "blank",
+      "answer": "wound",
+      "explanation": "痂，伤口痂。Don't pick at the scab wound or it will scar. 不要抠伤口痂，否则会留疤。"
+    },
+    {
+      "question": "_____ slab",
+      "type": "blank",
+      "answer": "stone",
+      "explanation": "厚板，石头厚板。The workers lifted the heavy stone slab. 工人们抬起沉重的石头厚板。"
+    },
+    {
+      "question": "drab _____",
+      "type": "blank",
+      "answer": "color",
+      "explanation": "单调的，单调的颜色。The room was painted in drab color. 房间涂着单调的颜色。"
+    },
+    {
+      "question": "stab _____",
+      "type": "blank",
+      "answer": "wound",
+      "explanation": "刺伤，刺伤伤口。The victim suffered a stab wound to the chest. 受害者胸部遭受刺伤伤口。"
+    },
+    {
+      "question": "adlib ______",
+      "type": "blank",
+      "answer": "speech",
+      "explanation": "即兴，即兴演讲。The speaker gave an impressive adlib speech. 演讲者进行了令人印象深刻的即兴演讲。"
+    },
+    {
+      "question": "glib ______",
+      "type": "blank",
+      "answer": "answer",
+      "explanation": "油嘴滑舌的，油嘴滑舌的回答。His glib answer didn't convince anyone. 他油嘴滑舌的回答没有说服任何人。"
+    },
+    {
+      "question": "___ nib",
+      "type": "blank",
+      "answer": "pen",
+      "explanation": "笔尖，钢笔笔尖。The fountain pen nib needed to be replaced. 钢笔笔尖需要更换。"
+    },
+    {
+      "question": "____ jamb",
+      "type": "blank",
+      "answer": "door",
+      "explanation": "门框，门框。The carpenter measured the door jamb carefully. 木匠仔细测量了门框。"
+    },
+    {
+      "question": "_____ limb",
+      "type": "blank",
+      "answer": "upper",
+      "explanation": "肢体，上肢。The physical therapist examined the upper limb. 物理治疗师检查了上肢。"
+    },
+    {
+      "question": "____ aplomb",
+      "type": "blank",
+      "answer": "cool",
+      "explanation": "沉着，冷静的沉着。She handled the crisis with cool aplomb. 她以冷静的沉着处理了危机。"
+    },
+    {
+      "question": "succumb __ _______",
+      "type": "blank",
+      "answer": "to illness",
+      "explanation": "屈服，屈服于疾病。The elderly man would succumb to illness after a long battle. 老人在长期斗争后会屈服于疾病。"
+    },
+    {
+      "question": "numb _______",
+      "type": "blank",
+      "answer": "fingers",
+      "explanation": "麻木的，麻木的手指。The cold made her numb fingers unable to move. 寒冷让她麻木的手指无法移动。"
+    },
+    {
+      "question": "____ cob",
+      "type": "blank",
+      "answer": "corn",
+      "explanation": "玉米棒，玉米棒。They roasted corn cob over the fire. 他们在火上烤玉米棒。"
+    },
+    {
+      "question": "snob ______",
+      "type": "blank",
+      "answer": "appeal",
+      "explanation": "势利，势利吸引力。The luxury brand has snob appeal. 这个奢侈品牌有势利吸引力。"
+    },
+    {
+      "question": "barb __ _______",
+      "type": "blank",
+      "answer": "of sarcasm",
+      "explanation": "倒钩，讽刺的倒钩。His comment had a sharp barb of sarcasm. 他的评论有尖锐的讽刺的倒钩。"
+    }
+  ]
+}
