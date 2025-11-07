@@ -6,7 +6,6 @@
     <title>Modern Quiz App</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
         :root {
             --primary-color: #3498db;
             --secondary-color: #2c3e50;
@@ -18,13 +17,11 @@
             --border-radius: 12px;
             --box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--background-color);
@@ -35,7 +32,6 @@
             min-height: 100vh;
             padding: 20px;
         }
-
         .container {
             background-color: var(--card-bg-color);
             border-radius: var(--border-radius);
@@ -44,28 +40,23 @@
             max-width: 700px;
             overflow: hidden;
         }
-
         .view {
             padding: 30px 40px;
             display: none; /* Hidden by default */
         }
-
         .view.active {
             display: block;
         }
-
         /* --- Setup View --- */
         #setup-view h1 {
             text-align: center;
             color: var(--secondary-color);
             margin-bottom: 20px;
         }
-
         #setup-view p {
             margin-bottom: 15px;
             font-size: 1rem;
         }
-        
         #json-input {
             width: 100%;
             height: 150px;
@@ -77,21 +68,18 @@
             margin-bottom: 20px;
             resize: vertical;
         }
-
         .order-options {
             display: flex;
             gap: 20px;
             margin-bottom: 25px;
             align-items: center;
         }
-
         .order-options label {
             display: flex;
             align-items: center;
             gap: 8px;
             cursor: pointer;
         }
-
         /* --- Quiz View --- */
         .quiz-header {
             display: flex;
@@ -100,21 +88,18 @@
             gap: 20px;
             margin-bottom: 20px;
         }
-        
         #progress-wrapper {
             display: flex;
             align-items: center;
             gap: 15px;
             flex-grow: 1;
         }
-
         #progress-bar-container {
             flex-grow: 1;
             height: 10px;
             background-color: #e0e0e0;
             border-radius: 5px;
         }
-        
         #progress-bar {
             height: 100%;
             width: 0%;
@@ -122,26 +107,22 @@
             border-radius: 5px;
             transition: width 0.3s ease-in-out;
         }
-
         #progress-text {
             font-size: 0.9rem;
             font-weight: 600;
             color: var(--secondary-color);
             white-space: nowrap;
         }
-
         #question-container {
             font-size: 1.25rem;
             font-weight: 600;
             margin-bottom: 25px;
             line-height: 1.5;
         }
-
         #options-container {
             display: grid;
             gap: 15px;
         }
-
         .option-btn {
             background-color: var(--card-bg-color);
             border: 2px solid #bdc3c7;
@@ -154,35 +135,29 @@
             transition: all 0.2s ease;
             width: 100%;
         }
-
         .option-btn:hover:not(:disabled) {
             background-color: #f1f2f6;
             border-color: var(--primary-color);
         }
-        
         .option-btn:disabled {
             cursor: not-allowed;
         }
-
         .option-btn.correct {
             background-color: var(--correct-color);
             color: white;
             border-color: var(--correct-color);
         }
-
         .option-btn.incorrect {
             background-color: var(--incorrect-color);
             color: white;
             border-color: var(--incorrect-color);
         }
-        
         /* Styles for "blank" question type */
         #options-container.blank-form {
             display: flex;
             gap: 10px;
             align-items: center;
         }
-        
         #blank-input {
             flex-grow: 1;
             padding: 15px;
@@ -192,12 +167,10 @@
             font-family: 'Poppins', sans-serif;
             transition: border-color 0.2s ease;
         }
-        
         #blank-input:focus {
             outline: none;
             border-color: var(--primary-color);
         }
-
         #feedback-container {
             margin-top: 25px;
             padding: 15px;
@@ -206,56 +179,54 @@
             border-left: 5px solid var(--primary-color);
             display: none; /* Hidden until an answer is selected */
         }
-
+        /* --- CHANGE 1: Added new CSS rules --- */
+        #feedback-container.correct {
+            border-left-color: var(--correct-color);
+        }
+        #feedback-container.incorrect {
+            border-left-color: var(--incorrect-color);
+        }
         #feedback-container p {
             font-weight: bold;
             font-size: 1.1rem;
             margin-bottom: 8px;
         }
-
         /* --- Summary View --- */
         #summary-view h2 {
             text-align: center;
             color: var(--secondary-color);
             margin-bottom: 15px;
         }
-        
         #score-container {
             text-align: center;
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 30px;
         }
-        
         #score-container span {
             color: var(--primary-color);
             font-size: 2.5rem;
         }
-        
         #summary-message {
             text-align: center;
             font-size: 1.1rem;
             margin-bottom: 20px;
         }
-
         .summary-controls {
             display: flex;
             flex-direction: column;
             gap: 15px;
             align-items: center;
         }
-
         .summary-controls .btn {
             width: 100%;
             max-width: 320px;
         }
-
         /* --- General Controls --- */
         .controls {
             margin-top: 30px;
             text-align: center;
         }
-
         .btn {
             background-color: var(--primary-color);
             color: white;
@@ -267,20 +238,16 @@
             cursor: pointer;
             transition: background-color 0.2s ease, transform 0.1s ease;
         }
-        
         .btn:hover:not(:disabled) {
             background-color: #2980b9;
         }
-        
         .btn:active:not(:disabled) {
             transform: scale(0.98);
         }
-        
         .btn:disabled {
             background-color: #bdc3c7;
             cursor: not-allowed;
         }
-
         .btn-secondary {
             background-color: #7f8c8d;
             padding: 10px 20px;
@@ -289,11 +256,9 @@
         .btn-secondary:hover {
             background-color: #95a5a6;
         }
-
         #next-btn {
             display: none; /* Hidden until an answer is selected */
         }
-        
         #error-message {
             color: var(--incorrect-color);
             margin-top: 15px;
@@ -301,7 +266,6 @@
             font-weight: 600;
             display: none;
         }
-        
         /* --- Text Modal --- */
         .modal-overlay {
             position: fixed;
@@ -317,12 +281,10 @@
             opacity: 0;
             transition: opacity 0.3s ease;
         }
-        
         .modal-overlay.visible {
             display: flex;
             opacity: 1;
         }
-        
         .modal-content {
             background-color: white;
             padding: 30px;
@@ -336,17 +298,14 @@
             transform: scale(0.95);
             transition: transform 0.3s ease;
         }
-
         .modal-overlay.visible .modal-content {
             transform: scale(1);
         }
-
         .modal-content h2 {
             margin-bottom: 20px;
             color: var(--secondary-color);
             padding-right: 40px; /* Space for close button */
         }
-
         .modal-content .close-btn {
             position: absolute;
             top: 15px;
@@ -361,7 +320,6 @@
         .modal-content .close-btn:hover {
             color: var(--secondary-color);
         }
-
         #reference-text-content {
             background-color: #f8f9fa;
             border: 1px solid #e0e0e0;
@@ -374,30 +332,25 @@
             font-size: 0.9rem;
             flex-grow: 1;
         }
-
         /* --- Responsive adjustments --- */
         @media (max-width: 480px) {
             .view {
                 padding: 20px;
             }
-
             #options-container.blank-form {
                 flex-direction: column;
                 align-items: stretch; /* Make items fill width */
             }
         }
-
     </style>
 </head>
 <body>
-
     <div class="container">
         <!-- View 1: Setup Screen -->
         <div id="setup-view" class="view active">
             <h1>Quiz Setup</h1>
             <p>Paste your quiz JSON data or URL into the text box below.</p>
             <textarea id="json-input" placeholder="Paste quiz JSON or URL here..."></textarea>
-            
             <p>Choose the question order:</p>
             <div class="order-options">
                 <label>
@@ -407,13 +360,11 @@
                     <input type="radio" name="order" value="random"> Random
                 </label>
             </div>
-            
             <div class="controls">
                 <button id="start-btn" class="btn">Start Quiz</button>
             </div>
             <p id="error-message"></p>
         </div>
-
         <!-- View 2: Quiz Screen -->
         <div id="quiz-view" class="view">
             <div class="quiz-header">
@@ -435,7 +386,6 @@
                 <button id="next-btn" class="btn">Next Question</button>
             </div>
         </div>
-
         <!-- View 3: Summary Screen -->
         <div id="summary-view" class="view">
             <h2 id="summary-title">Quiz Complete!</h2>
@@ -447,7 +397,6 @@
             </div>
         </div>
     </div>
-
     <!-- Modal for displaying reference text -->
     <div id="text-modal" class="modal-overlay">
         <div class="modal-content">
@@ -456,7 +405,6 @@
             <pre id="reference-text-content"></pre>
         </div>
     </div>
-
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // --- STATE MANAGEMENT ---
@@ -466,18 +414,15 @@
             let incorrectlyAnsweredQuestions = [];
             let currentQuestionIndex = 0;
             let score = 0;
-
             // --- DOM ELEMENTS ---
             const views = {
                 setup: document.getElementById('setup-view'),
                 quiz: document.getElementById('quiz-view'),
                 summary: document.getElementById('summary-view'),
             };
-
             const jsonInput = document.getElementById('json-input');
             const startBtn = document.getElementById('start-btn');
             const errorMessage = document.getElementById('error-message');
-            
             const progressBar = document.getElementById('progress-bar');
             const progressText = document.getElementById('progress-text');
             const questionContainer = document.getElementById('question-container');
@@ -486,18 +431,15 @@
             const feedbackResult = document.getElementById('feedback-result');
             const feedbackExplanation = document.getElementById('feedback-explanation');
             const nextBtn = document.getElementById('next-btn');
-
             const summaryTitle = document.getElementById('summary-title');
             const summaryMessage = document.getElementById('summary-message');
             const scoreContainer = document.getElementById('score-container');
             const restartBtn = document.getElementById('restart-btn');
             const retakeBtn = document.getElementById('retake-btn');
-
             const showTextBtn = document.getElementById('show-text-btn');
             const textModal = document.getElementById('text-modal');
             const closeBtn = document.querySelector('.close-btn');
             const referenceTextContent = document.getElementById('reference-text-content');
-
             const defaultQuizObject = {
               "text": "This is a sample text for the quiz. You can replace it with your own content.",
               "quiz": [
@@ -534,7 +476,6 @@
               ]
             };
             const DEFAULT_QUIZ_JSON = JSON.stringify(defaultQuizObject, null, 2);
-
             // --- COOKIE FUNCTIONS ---
             const setCookie = (name, value, days) => {
                 let expires = "";
@@ -545,7 +486,6 @@
                 }
                 document.cookie = name + "=" + (value || "") + expires + "; path=/; SameSite=Lax";
             };
-
             const getCookie = (name) => {
                 const nameEQ = name + "=";
                 const ca = document.cookie.split(';');
@@ -556,7 +496,6 @@
                 }
                 return null;
             };
-            
             const loadFromCookie = () => {
                 const savedJson = getCookie('quizJson');
                 if (savedJson) {
@@ -565,7 +504,6 @@
                     jsonInput.value = DEFAULT_QUIZ_JSON;
                 }
             };
-
             // --- UTILITY FUNCTIONS ---
             const switchView = (viewName) => {
                 Object.values(views).forEach(view => view.classList.remove('active'));
@@ -573,7 +511,6 @@
                     views[viewName].classList.add('active');
                 }
             };
-            
             const shuffleArray = (array) => {
                 const newArray = [...array];
                 for (let i = newArray.length - 1; i > 0; i--) {
@@ -582,18 +519,15 @@
                 }
                 return newArray;
             };
-
             // --- CORE LOGIC ---
             const startQuiz = async () => {
                 const inputText = jsonInput.value.trim();
                 let parsedJson;
                 let finalJsonText; // This will hold the text to be saved in the cookie
-
                 // Provide user feedback during async operations
                 startBtn.disabled = true;
                 startBtn.textContent = 'Loading...';
                 errorMessage.style.display = 'none';
-
                 try {
                     // Check if the input is a URL
                     if (inputText.startsWith('http://') || inputText.startsWith('https://')) {
@@ -610,7 +544,6 @@
                         parsedJson = JSON.parse(inputText);
                         finalJsonText = inputText;
                     }
-
                     // --- Validation (now runs on both fetched and pasted JSON) ---
                     if (!parsedJson.quiz || !Array.isArray(parsedJson.quiz) || parsedJson.quiz.length === 0) {
                         throw new Error("JSON must have a non-empty 'quiz' array.");
@@ -621,11 +554,9 @@
                     for (const [index, question] of parsedJson.quiz.entries()) {
                         const type = question.type || 'choice';
                         const qIdentifier = `Question ${index + 1} ("${question.question.substring(0,20)}...")`;
-
                         if (typeof question.answer !== 'string' || question.answer.trim() === '') {
                              throw new Error(`${qIdentifier} must have a non-empty 'answer' of type string.`);
                         }
-
                         if (type === 'choice') {
                              if (!question.options || !Array.isArray(question.options) || !question.options.includes(question.answer)) {
                                  throw new Error(`The answer for ${qIdentifier} was not found in its 'options' array.`);
@@ -634,27 +565,21 @@
                             throw new Error(`${qIdentifier} has an invalid type: '${type}'. Must be 'choice' or 'blank'.`);
                         }
                     }
-                    
                     // --- If validation passes, set up the quiz ---
                     setCookie('quizJson', finalJsonText, 7);
-
                     quizData = parsedJson.quiz;
                     referenceText = parsedJson.text;
                     currentQuestionIndex = 0;
                     score = 0;
                     incorrectlyAnsweredQuestions = [];
-
                     questionOrder = [...Array(quizData.length).keys()];
                     const selectedOrder = document.querySelector('input[name="order"]:checked').value;
                     if (selectedOrder === 'random') {
                         questionOrder = shuffleArray(questionOrder);
                     }
-                    
                     referenceTextContent.textContent = referenceText;
-                    
                     switchView('quiz');
                     displayQuestion();
-
                 } catch (error) {
                     errorMessage.textContent = `Error: ${error.message}`;
                     errorMessage.style.display = 'block';
@@ -664,25 +589,21 @@
                     startBtn.textContent = 'Start Quiz';
                 }
             };
-
             const displayQuestion = () => {
                 optionsContainer.innerHTML = '';
                 optionsContainer.className = '';
                 feedbackContainer.style.display = 'none';
+                feedbackContainer.classList.remove('correct', 'incorrect'); // <-- CHANGE 2: Reset classes
                 nextBtn.style.display = 'none';
-
                 const questionIdx = questionOrder[currentQuestionIndex];
                 const question = quizData[questionIdx];
                 const type = question.type || 'choice';
-
                 updateProgressBar();
                 questionContainer.textContent = question.question;
-
                 if (type === 'choice') {
                     optionsContainer.classList.add('choice-options');
                     const correctAnswerText = question.answer;
                     let shuffledOptions = shuffleArray(question.options);
-                    
                     shuffledOptions.forEach((optionText) => {
                         const button = document.createElement('button');
                         button.classList.add('option-btn');
@@ -698,15 +619,12 @@
                     input.id = 'blank-input';
                     input.placeholder = 'Type your answer...';
                     input.autocomplete = 'off';
-
                     const submitBtn = document.createElement('button');
                     submitBtn.id = 'submit-blank-btn';
                     submitBtn.textContent = 'Submit';
                     submitBtn.classList.add('btn');
-
                     optionsContainer.appendChild(input);
                     optionsContainer.appendChild(submitBtn);
-
                     submitBtn.addEventListener('click', handleBlankSubmit);
                     input.addEventListener('keydown', (e) => {
                         if (e.key === 'Enter') {
@@ -714,35 +632,31 @@
                             handleBlankSubmit();
                         }
                     });
-                    
                     setTimeout(() => input.focus(), 100);
                 }
             };
-
             const handleOptionClick = (event) => {
                 const selectedButton = event.target;
                 const isCorrect = selectedButton.dataset.isCorrect === 'true';
-                
                 Array.from(optionsContainer.children).forEach(btn => {
                     btn.disabled = true;
                 });
-                
                 if (isCorrect) {
                     score++;
                     selectedButton.classList.add('correct');
                     feedbackResult.textContent = "Correct! 🎉";
+                    feedbackContainer.classList.add('correct'); // <-- CHANGE 3a: Add correct class
                 } else {
                     selectedButton.classList.add('incorrect');
                     const correctButton = optionsContainer.querySelector('[data-is-correct="true"]');
                     if (correctButton) correctButton.classList.add('correct');
                     feedbackResult.textContent = "Incorrect! 😔";
+                    feedbackContainer.classList.add('incorrect'); // <-- CHANGE 3b: Add incorrect class
                     incorrectlyAnsweredQuestions.push(questionOrder[currentQuestionIndex]);
                 }
-                
                 const questionIdx = questionOrder[currentQuestionIndex];
                 feedbackExplanation.textContent = quizData[questionIdx].explanation || "";
                 feedbackContainer.style.display = 'block';
-                
                 if (currentQuestionIndex < questionOrder.length - 1) {
                     nextBtn.textContent = 'Next Question';
                 } else {
@@ -751,33 +665,29 @@
                 nextBtn.style.display = 'block';
                 nextBtn.focus();
             };
-
             const handleBlankSubmit = () => {
                 const input = document.getElementById('blank-input');
                 const submitBtn = document.getElementById('submit-blank-btn');
                 if (!input || !submitBtn || submitBtn.disabled) return;
-
                 const userAnswer = input.value.trim();
                 const questionIdx = questionOrder[currentQuestionIndex];
                 const question = quizData[questionIdx];
                 const correctAnswer = question.answer;
-
                 input.disabled = true;
                 submitBtn.disabled = true;
-
                 if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
                     score++;
                     feedbackResult.textContent = "Correct! 🎉";
                     input.style.borderColor = 'var(--correct-color)';
+                    feedbackContainer.classList.add('correct'); // <-- CHANGE 4a: Add correct class
                 } else {
                     feedbackResult.innerHTML = `Incorrect! 😔 <br><small>Correct answer: <strong>${correctAnswer}</strong></small>`;
                     input.style.borderColor = 'var(--incorrect-color)';
+                    feedbackContainer.classList.add('incorrect'); // <-- CHANGE 4b: Add incorrect class
                     incorrectlyAnsweredQuestions.push(questionIdx);
                 }
-
                 feedbackExplanation.textContent = question.explanation || "";
                 feedbackContainer.style.display = 'block';
-
                 if (currentQuestionIndex < questionOrder.length - 1) {
                     nextBtn.textContent = 'Next Question';
                 } else {
@@ -786,7 +696,6 @@
                 nextBtn.style.display = 'block';
                 nextBtn.focus();
             };
-
             const nextQuestion = () => {
                 currentQuestionIndex++;
                 if (currentQuestionIndex < questionOrder.length) {
@@ -795,11 +704,9 @@
                     showSummary();
                 }
             };
-            
             const showSummary = () => {
                 const questionsInRound = questionOrder.length;
                 scoreContainer.innerHTML = `You scored <span>${score}</span> out of ${questionsInRound}.`;
-
                 if (incorrectlyAnsweredQuestions.length > 0) {
                     summaryTitle.textContent = 'Round Complete!';
                     summaryMessage.textContent = 'You have a few incorrect answers. Ready for another round?';
@@ -810,39 +717,31 @@
                     summaryMessage.textContent = 'Congratulations! You answered all questions correctly.';
                     retakeBtn.style.display = 'none';
                 }
-                
                 switchView('summary');
             };
-
             const retakeIncorrectQuiz = () => {
                 questionOrder = shuffleArray(incorrectlyAnsweredQuestions); // Shuffle the incorrect ones for variety
                 incorrectlyAnsweredQuestions = [];
                 currentQuestionIndex = 0;
                 score = 0;
-                
                 switchView('quiz');
                 displayQuestion();
             };
-
             const restartQuiz = () => {
                 switchView('setup');
             };
-            
             const updateProgressBar = () => {
                 const progress = ((currentQuestionIndex) / questionOrder.length) * 100;
                 progressBar.style.width = `${progress}%`;
                 progressText.textContent = `${currentQuestionIndex + 1} / ${questionOrder.length}`;
             };
-            
             // --- MODAL LOGIC ---
             const showModal = () => textModal.classList.add('visible');
             const hideModal = () => textModal.classList.remove('visible');
-
             // --- INITIALIZATION ---
             const initialize = async () => {
                 const urlParams = new URLSearchParams(window.location.search);
                 const url = urlParams.get('url');
-
                 if (url) {
                     jsonInput.placeholder = 'Loading quiz from URL parameter...';
                     jsonInput.disabled = true;
@@ -872,9 +771,7 @@
                     loadFromCookie();
                 }
             };
-
             initialize();
-
             // --- EVENT LISTENERS ---
             startBtn.addEventListener('click', startQuiz);
             nextBtn.addEventListener('click', nextQuestion);
