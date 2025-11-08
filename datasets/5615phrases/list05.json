@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "other-directed ___________",
+      "type": "blank",
+      "answer": "personality",
+      "explanation": "他人导向的，他人导向的人格。People with an other-directed personality are influenced by external social pressures. 拥有他人导向的人格的人受外部社会压力的影响。"
+    },
+    {
+      "question": "undirected _____",
+      "type": "blank",
+      "answer": "graph",
+      "explanation": "无向的，无向图。An undirected graph has edges with no direction. 无向图的边没有方向。"
+    },
+    {
+      "question": "blighted _____",
+      "type": "blank",
+      "answer": "hopes",
+      "explanation": "破灭的，破灭的希望。The economic crisis led to blighted hopes for many families. 经济危机导致许多家庭破灭的希望。"
+    },
+    {
+      "question": "____ discomfited",
+      "type": "blank",
+      "answer": "look",
+      "explanation": "尴尬的，看起来尴尬。She would look discomfited when caught in a lie. 当谎言被揭穿时，她会看起来尴尬。"
+    },
+    {
+      "question": "merited ______",
+      "type": "blank",
+      "answer": "praise",
+      "explanation": "应得的，应得的赞扬。His hard work received merited praise from the manager. 他的辛勤工作得到了经理应得的赞扬。"
+    },
+    {
+      "question": "unrequited ____",
+      "type": "blank",
+      "answer": "love",
+      "explanation": "单恋的，单恋的爱。He suffered from unrequited love for years. 他遭受了多年的单恋的爱。"
+    },
+    {
+      "question": "stilted _____",
+      "type": "blank",
+      "answer": "prose",
+      "explanation": "生硬的，生硬的散文。The novelist's stilted prose was difficult to read. 小说家生硬的散文难以阅读。"
+    },
+    {
+      "question": "warranted ______",
+      "type": "blank",
+      "answer": "action",
+      "explanation": "有正当理由的，有正当理由的行动。The emergency situation called for warranted action. 紧急情况需要有正当理由的行动。"
+    },
+    {
+      "question": "unwarranted _____",
+      "type": "blank",
+      "answer": "claim",
+      "explanation": "无根据的，无根据的声明。The lawsuit was based on an unwarranted claim. 诉讼基于无根据的声明。"
+    },
+    {
+      "question": "unscented ______",
+      "type": "blank",
+      "answer": "lotion",
+      "explanation": "无香味的，无香味的乳液。She preferred unscented lotion for sensitive skin. 她更喜欢敏感皮肤用的无香味的乳液。"
+    },
+    {
+      "question": "unprecedented ____",
+      "type": "blank",
+      "answer": "move",
+      "explanation": "史无前例的，史无前例的举动。The company made an unprecedented move to cut prices. 公司做出了史无前例的举动降低价格。"
+    },
+    {
+      "question": "demented ____",
+      "type": "blank",
+      "answer": "rant",
+      "explanation": "疯狂的，疯狂的咆哮。His demented rant scared everyone in the room. 他疯狂的咆哮吓坏了房间里的每个人。"
+    },
+    {
+      "question": "____ contented",
+      "type": "blank",
+      "answer": "feel",
+      "explanation": "满足的，感到满足。After the meal, everyone would feel contented. 用餐后，每个人都会感到满足。"
+    },
+    {
+      "question": "__ acquainted ____",
+      "type": "blank",
+      "answer": "be with",
+      "explanation": "熟悉的，熟悉。I need to be acquainted with the new procedures. 我需要熟悉新程序。"
+    },
+    {
+      "question": "unwonted ________",
+      "type": "blank",
+      "answer": "kindness",
+      "explanation": "不寻常的，不寻常的善意。His unwonted kindness surprised everyone. 他不寻常的善意让每个人都感到惊讶。"
+    },
+    {
+      "question": "devoted ___",
+      "type": "blank",
+      "answer": "fan",
+      "explanation": "忠诚的，忠诚的粉丝。She was a devoted fan of the band. 她是乐队的忠诚的粉丝。"
+    },
+    {
+      "question": "halfhearted _______",
+      "type": "blank",
+      "answer": "attempt",
+      "explanation": "三心二意的，三心二意的尝试。His halfhearted attempt failed predictably. 他三心二意的尝试可预见地失败了。"
+    },
+    {
+      "question": "fainthearted ________",
+      "type": "blank",
+      "answer": "approach",
+      "explanation": "胆怯的，胆怯的方法。The fainthearted approach would not succeed. 胆怯的方法不会成功。"
+    },
+    {
+      "question": "stouthearted ____",
+      "type": "blank",
+      "answer": "hero",
+      "explanation": "勇敢的，勇敢的英雄。The stouthearted hero rescued the child from the fire. 勇敢的英雄从火中救出了孩子。"
+    },
+    {
+      "question": "deserted ______",
+      "type": "blank",
+      "answer": "island",
+      "explanation": "荒芜的，荒芜的岛屿。They were stranded on a deserted island. 他们被困在荒芜的岛屿上。"
+    },
+    {
+      "question": "purported ________",
+      "type": "blank",
+      "answer": "evidence",
+      "explanation": "声称的，声称的证据。The purported evidence was never verified. 声称的证据从未得到验证。"
+    },
+    {
+      "question": "assorted ______",
+      "type": "blank",
+      "answer": "snacks",
+      "explanation": "各种各样的，各种各样的零食。The party had assorted snacks for guests. 派对为客人准备了各种各样的零食。"
+    },
+    {
+      "question": "disinterested ______",
+      "type": "blank",
+      "answer": "advice",
+      "explanation": "公正的，公正的建议。The mediator provided disinterested advice. 调解员提供了公正的建议。"
+    },
+    {
+      "question": "tightfisted _____",
+      "type": "blank",
+      "answer": "miser",
+      "explanation": "吝啬的，吝啬的守财奴。The tightfisted miser never spent money. 吝啬的守财奴从不花钱。"
+    },
+    {
+      "question": "committed ____",
+      "type": "blank",
+      "answer": "team",
+      "explanation": "尽心尽力的，尽心尽力的团队。The committed team worked overtime to finish. 尽心尽力的团队加班完成工作。"
+    },
+    {
+      "question": "______ uncommitted",
+      "type": "blank",
+      "answer": "remain",
+      "explanation": "未承诺的，保持未承诺。The voters chose to remain uncommitted. 选民选择保持未承诺。"
+    },
+    {
+      "question": "unspotted ______",
+      "type": "blank",
+      "answer": "record",
+      "explanation": "清白的，清白的记录。He maintained an unspotted record throughout his career. 他在整个职业生涯中保持了清白的记录。"
+    },
+    {
+      "question": "convoluted ____",
+      "type": "blank",
+      "answer": "plot",
+      "explanation": "复杂的，复杂的情节。The movie had a convoluted plot that was hard to follow. 这部电影有复杂的情节难以理解。"
+    },
+    {
+      "question": "muted _____",
+      "type": "blank",
+      "answer": "color",
+      "explanation": "柔和的，柔和的颜色。The room was decorated in muted color. 房间用柔和的颜色装饰。"
+    },
+    {
+      "question": "subdued ____",
+      "type": "blank",
+      "answer": "tone",
+      "explanation": "低沉的，低沉的语气。She spoke in a subdued tone. 她用低沉的语气说话。"
+    },
+    {
+      "question": "depraved ___",
+      "type": "blank",
+      "answer": "act",
+      "explanation": "堕落的，堕落的行为。The criminal committed a depraved act. 罪犯犯下了堕落的行为。"
+    },
+    {
+      "question": "____ relieved",
+      "type": "blank",
+      "answer": "feel",
+      "explanation": "放心的，感到放心。She would feel relieved when the exam was over. 当考试结束时，她会感到放心。"
+    },
+    {
+      "question": "contrived ____",
+      "type": "blank",
+      "answer": "plot",
+      "explanation": "牵强的，牵强的情节。The novel's contrived plot lacked authenticity. 小说牵强的情节缺乏真实性。"
+    },
+    {
+      "question": "______ unmoved",
+      "type": "blank",
+      "answer": "remain",
+      "explanation": "无动于衷的，保持无动于衷。He would remain unmoved by her tears. 他会对她的眼泪保持无动于衷。"
+    },
+    {
+      "question": "undeserved ______",
+      "type": "blank",
+      "answer": "praise",
+      "explanation": "不应得的，不应得的赞扬。The politician received undeserved praise. 政客得到了不应得的赞扬。"
+    },
+    {
+      "question": "unreserved _______",
+      "type": "blank",
+      "answer": "support",
+      "explanation": "无保留的，无保留的支持。The team gave unreserved support to their captain. 球队给予队长无保留的支持。"
+    },
+    {
+      "question": "hallowed ______",
+      "type": "blank",
+      "answer": "ground",
+      "explanation": "神圣的，神圣的土地。The cemetery was hallowed ground. 墓地是神圣的土地。"
+    },
+    {
+      "question": "hackneyed ______",
+      "type": "blank",
+      "answer": "phrase",
+      "explanation": "陈腐的，陈腐的短语。The speaker used a hackneyed phrase. 演讲者使用了陈腐的短语。"
+    },
+    {
+      "question": "specialized ________",
+      "type": "blank",
+      "answer": "training",
+      "explanation": "专业的，专业的培训。The job requires specialized training. 这份工作需要专业的培训。"
+    },
+    {
+      "question": "institutionalized ______",
+      "type": "blank",
+      "answer": "racism",
+      "explanation": "制度化的，制度化的种族主义。The country struggled with institutionalized racism. 该国与制度化的种族主义作斗争。"
+    },
+    {
+      "question": "underutilized ______",
+      "type": "blank",
+      "answer": "assets",
+      "explanation": "未充分利用的，未充分利用的资产。The company had underutilized assets. 公司有未充分利用的资产。"
+    },
+    {
+      "question": "______ mermaid",
+      "type": "blank",
+      "answer": "little",
+      "explanation": "美人鱼，小美人鱼。The fairy tale was about a little mermaid. 这个童话讲述了一个小美人鱼。"
+    },
+    {
+      "question": "______ raid",
+      "type": "blank",
+      "answer": "police",
+      "explanation": "突袭，警察突袭。The police raid uncovered illegal weapons. 警察突袭发现了非法武器。"
+    },
+    {
+      "question": "upbraid ________",
+      "type": "blank",
+      "answer": "severely",
+      "explanation": "责备，严厉责备。The teacher would upbraid severely the misbehaving student. 老师会严厉责备行为不端的学生。"
+    },
+    {
+      "question": "staid _________",
+      "type": "blank",
+      "answer": "character",
+      "explanation": "稳重的，稳重的性格。He had a staid character that never changed. 他有从不改变的稳重的性格。"
+    },
+    {
+      "question": "rabid ___",
+      "type": "blank",
+      "answer": "fan",
+      "explanation": "狂热的，狂热的粉丝。He was a rabid fan of the sports team. 他是体育队的狂热的粉丝。"
+    },
+    {
+      "question": "underbid _ _____",
+      "type": "blank",
+      "answer": "a rival",
+      "explanation": "出价低于，出价低于对手。The company tried to underbid a rival for the contract. 公司试图在合同上出价低于对手。"
+    },
+    {
+      "question": "forbid _____",
+      "type": "blank",
+      "answer": "entry",
+      "explanation": "禁止，禁止进入。The sign would forbid entry to unauthorized personnel. 标志会禁止进入未经授权的人员。"
+    },
+    {
+      "question": "morbid _________",
+      "type": "blank",
+      "answer": "curiosity",
+      "explanation": "病态的，病态的好奇心。She had a morbid curiosity about death. 她对死亡有病态的好奇心。"
+    },
+    {
+      "question": "placid ____",
+      "type": "blank",
+      "answer": "lake",
+      "explanation": "平静的，平静的湖。The placid lake reflected the mountains perfectly. 平静的湖完美地倒映着山脉。"
+    },
+    {
+      "question": "viscid ______",
+      "type": "blank",
+      "answer": "liquid",
+      "explanation": "粘稠的，粘稠的液体。The viscid liquid was difficult to pour. 粘稠的液体难以倾倒。"
+    },
+    {
+      "question": "pellucid _____",
+      "type": "blank",
+      "answer": "water",
+      "explanation": "清澈的，清澈的水。The mountain stream had pellucid water. 山溪有清澈的水。"
+    },
+    {
+      "question": "candid _____",
+      "type": "blank",
+      "answer": "photo",
+      "explanation": "自然的，自然的照片。The photographer took candid photo at the wedding. 摄影师在婚礼上拍摄了自然的照片。"
+    },
+    {
+      "question": "sordid ______",
+      "type": "blank",
+      "answer": "affair",
+      "explanation": "肮脏的，肮脏的事件。The scandal revealed a sordid affair. 丑闻揭露了肮脏的事件。"
+    },
+    {
+      "question": "rigid _____",
+      "type": "blank",
+      "answer": "rules",
+      "explanation": "严格的，严格的规则。The school had rigid rules about uniforms. 学校有关于制服的严格的规则。"
+    },
+    {
+      "question": "frigid _______",
+      "type": "blank",
+      "answer": "climate",
+      "explanation": "寒冷的，寒冷的气候。Antarctica has a frigid climate year-round. 南极洲全年都有寒冷的气候。"
+    },
+    {
+      "question": "turgid _____",
+      "type": "blank",
+      "answer": "prose",
+      "explanation": "浮夸的，浮夸的散文。The writer's turgid prose was hard to read. 作家浮夸的散文难以阅读。"
+    },
+    {
+      "question": "orchid ______",
+      "type": "blank",
+      "answer": "garden",
+      "explanation": "兰花，兰花园。The botanical orchid garden displayed rare species. 植物兰花园展示了稀有物种。"
+    },
+    {
+      "question": "squalid __________",
+      "type": "blank",
+      "answer": "conditions",
+      "explanation": "肮脏的，肮脏的环境。The refugees lived in squalid conditions. 难民生活在肮脏的环境中。"
+    },
+    {
+      "question": "stolid __________",
+      "type": "blank",
+      "answer": "expression",
+      "explanation": "木然的，木然的表情。He maintained a stolid expression during the trial. 他在审判期间保持木然的表情。"
+    },
+    {
+      "question": "humid _______",
+      "type": "blank",
+      "answer": "climate",
+      "explanation": "潮湿的，潮湿的气候。The tropical region has a humid climate. 热带地区有潮湿的气候。"
+    },
+    {
+      "question": "tumid _____",
+      "type": "blank",
+      "answer": "river",
+      "explanation": "肿胀的，肿胀的河流。Heavy rains caused the tumid river to overflow. 大雨导致肿胀的河流溢出。"
+    },
+    {
+      "question": "_____-______ arachnid",
+      "type": "blank",
+      "answer": "eight-legged",
+      "explanation": "蛛形纲动物，八条腿的蛛形纲动物。Spiders are eight-legged arachnid creatures. 蜘蛛是八条腿的蛛形纲动物生物。"
+    },
+    {
+      "question": "anthropoid ___",
+      "type": "blank",
+      "answer": "ape",
+      "explanation": "类人的，类人猿。Gorillas are anthropoid ape species. 大猩猩是类人猿物种。"
+    },
+    {
+      "question": "asteroid ____",
+      "type": "blank",
+      "answer": "belt",
+      "explanation": "小行星，小行星带。The asteroid belt lies between Mars and Jupiter. 小行星带位于火星和木星之间。"
+    },
+    {
+      "question": "_______ sangfroid",
+      "type": "blank",
+      "answer": "display",
+      "explanation": "沉着，展现沉着。The pilot would display sangfroid during the emergency. 飞行员会在紧急情况下展现沉着。"
+    },
+    {
+      "question": "intrepid ________",
+      "type": "blank",
+      "answer": "explorer",
+      "explanation": "无畏的，无畏的探险家。The intrepid explorer ventured into unknown territory. 无畏的探险家冒险进入未知领域。"
+    },
+    {
+      "question": "tepid ________",
+      "type": "blank",
+      "answer": "response",
+      "explanation": "冷淡的，冷淡的反应。The proposal received a tepid response. 该提案得到了冷淡的反应。"
+    },
+    {
+      "question": "insipid ____",
+      "type": "blank",
+      "answer": "soup",
+      "explanation": "乏味的，乏味的汤。The insipid soup lacked flavor. 乏味的汤缺乏味道。"
+    },
+    {
+      "question": "limpid ______",
+      "type": "blank",
+      "answer": "stream",
+      "explanation": "清澈的，清澈的溪流。The limpid stream flowed through the meadow. 清澈的溪流流过草地。"
+    },
+    {
+      "question": "arid ______",
+      "type": "blank",
+      "answer": "desert",
+      "explanation": "干旱的，干旱的沙漠。The arid desert received little rainfall. 干旱的沙漠很少降雨。"
+    },
+    {
+      "question": "hybrid _______",
+      "type": "blank",
+      "answer": "vehicle",
+      "explanation": "混合动力的，混合动力的车辆。The hybrid vehicle uses both gas and electricity. 混合动力的车辆同时使用汽油和电力。"
+    },
+    {
+      "question": "florid _____",
+      "type": "blank",
+      "answer": "prose",
+      "explanation": "华丽的，华丽的散文。The author's florid prose was overly decorative. 作者华丽的散文过于华丽。"
+    },
+    {
+      "question": "torrid _______",
+      "type": "blank",
+      "answer": "romance",
+      "explanation": "炽热的，炽热的恋情。They had a torrid romance that summer. 那年夏天他们有炽热的恋情。"
+    },
+    {
+      "question": "fetid ____",
+      "type": "blank",
+      "answer": "odor",
+      "explanation": "恶臭的，恶臭的气味。A fetid odor came from the garbage. 垃圾发出恶臭的气味。"
+    },
+    {
+      "question": "languid _________",
+      "type": "blank",
+      "answer": "afternoon",
+      "explanation": "慵懒的，慵懒的午后。They spent a languid afternoon by the pool. 他们在泳池边度过了慵懒的午后。"
+    },
+    {
+      "question": "liquid ______",
+      "type": "blank",
+      "answer": "assets",
+      "explanation": "流动的，流动资产。The company had plenty of liquid assets. 公司有充足的流动资产。"
+    },
+    {
+      "question": "fervid ______",
+      "type": "blank",
+      "answer": "debate",
+      "explanation": "热烈的，热烈的辩论。The politicians engaged in fervid debate. 政客们进行了热烈的辩论。"
+    },
+    {
+      "question": "perfervid ____",
+      "type": "blank",
+      "answer": "zeal",
+      "explanation": "极度热情的，极度热情的热忱。His perfervid zeal for the cause was inspiring. 他对事业的极度热情的热忱令人鼓舞。"
+    },
+    {
+      "question": "piebald ____",
+      "type": "blank",
+      "answer": "pony",
+      "explanation": "花斑的，花斑的小马。The children loved the piebald pony. 孩子们喜欢花斑的小马。"
+    },
+    {
+      "question": "ribald ____",
+      "type": "blank",
+      "answer": "joke",
+      "explanation": "粗俗的，粗俗的笑话。He told a ribald joke that embarrassed everyone. 他讲了一个粗俗的笑话让每个人都很尴尬。"
+    },
+    {
+      "question": "_____ shield",
+      "type": "blank",
+      "answer": "blast",
+      "explanation": "盾牌，防爆盾牌。The soldiers used a blast shield for protection. 士兵们使用防爆盾牌保护。"
+    },
+    {
+      "question": "wield _____",
+      "type": "blank",
+      "answer": "power",
+      "explanation": "行使，行使权力。The king would wield power over his subjects. 国王会对臣民行使权力。"
+    },
+    {
+      "question": "meld ________",
+      "type": "blank",
+      "answer": "together",
+      "explanation": "融合，融合在一起。The cultures would meld together over time. 文化会随着时间融合在一起。"
+    },
+    {
+      "question": "weld ____",
+      "type": "blank",
+      "answer": "seam",
+      "explanation": "焊接，焊接接缝。The worker would weld seam on the metal pipe. 工人会焊接金属管上的接缝。"
+    },
+    {
+      "question": "fold ___ _______",
+      "type": "blank",
+      "answer": "the clothes",
+      "explanation": "折叠，折叠衣服。Please fold the clothes after they dry. 衣服干了之后请折叠衣服。"
+    },
+    {
+      "question": "scaffold ________",
+      "type": "blank",
+      "answer": "platform",
+      "explanation": "脚手架，脚手架平台。Workers stood on the scaffold platform. 工人们站在脚手架平台上。"
+    },
+    {
+      "question": "manifold ________",
+      "type": "blank",
+      "answer": "benefits",
+      "explanation": "多种多样的，多种多样的好处。Exercise has manifold benefits for health. 运动对健康有多种多样的好处。"
+    },
+    {
+      "question": "behold ___ ____",
+      "type": "blank",
+      "answer": "the view",
+      "explanation": "看见，看见风景。Climb the tower to behold the view. 爬上塔楼看见风景。"
+    },
+    {
+      "question": "withhold _______",
+      "type": "blank",
+      "answer": "payment",
+      "explanation": "扣留，扣留付款。The client decided to withhold payment until completion. 客户决定在完成之前扣留付款。"
+    },
+    {
+      "question": "____ _ foothold",
+      "type": "blank",
+      "answer": "gain a",
+      "explanation": "立足点，获得立足点。The company tried to gain a foothold in the market. 公司试图在市场上获得立足点。"
+    },
+    {
+      "question": "mold ______",
+      "type": "blank",
+      "answer": "growth",
+      "explanation": "霉菌，霉菌生长。Damp conditions caused mold growth on the walls. 潮湿的条件导致墙上霉菌生长。"
+    },
+    {
+      "question": "contraband _____",
+      "type": "blank",
+      "answer": "goods",
+      "explanation": "违禁品，违禁品货物。Customs officials seized contraband goods. 海关官员查获了违禁品货物。"
+    },
+    {
+      "question": "disband _ _____",
+      "type": "blank",
+      "answer": "a group",
+      "explanation": "解散，解散团体。The organization decided to disband a group. 该组织决定解散团体。"
+    },
+    {
+      "question": "bland ____",
+      "type": "blank",
+      "answer": "diet",
+      "explanation": "清淡的，清淡的饮食。The doctor recommended a bland diet after surgery. 医生建议手术后清淡的饮食。"
+    },
+    {
+      "question": "______ garland",
+      "type": "blank",
+      "answer": "flower",
+      "explanation": "花环，花环。The bride wore a beautiful flower garland. 新娘戴着美丽的花环。"
+    },
+    {
+      "question": "______ hinterland",
+      "type": "blank",
+      "answer": "remote",
+      "explanation": "内陆，偏远的内陆。They explored the remote hinterland. 他们探索了偏远的内陆。"
+    },
+    {
+      "question": "____ demand",
+      "type": "blank",
+      "answer": "meet",
+      "explanation": "需求，满足需求。The factory struggled to meet demand. 工厂努力满足需求。"
+    },
+    {
+      "question": "_____ reprimand",
+      "type": "blank",
+      "answer": "stern",
+      "explanation": "训斥，严厉的训斥。The manager issued a stern reprimand. 经理发出了严厉的训斥。"
+    },
+    {
+      "question": "countermand _____",
+      "type": "blank",
+      "answer": "order",
+      "explanation": "撤销，撤销命令。The general decided to countermand order. 将军决定撤销命令。"
+    }
+  ]
+}
