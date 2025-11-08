@@ -1,1 +1,605 @@
-{}
+{}{
+  "text": "",
+  "quiz": [
+    {
+      "question": "superb ___________",
+      "type": "blank",
+      "answer": "performance",
+      "explanation": "极好的，极好的表演。The orchestra gave a superb performance of Beethoven's symphony. 管弦乐队对贝多芬交响曲进行了极好的表演。"
+    },
+    {
+      "question": "curb _________",
+      "type": "blank",
+      "answer": "inflation",
+      "explanation": "抑制，抑制通货膨胀。The government introduced measures to curb inflation. 政府采取措施抑制通货膨胀。"
+    },
+    {
+      "question": "____ blurb",
+      "type": "blank",
+      "answer": "book",
+      "explanation": "简介，书籍简介。The book blurb on the back cover was intriguing. 封底的书籍简介很吸引人。"
+    },
+    {
+      "question": "____ cub",
+      "type": "blank",
+      "answer": "lion",
+      "explanation": "幼兽，狮子幼兽。The lion cub played with its mother. 狮子幼兽和妈妈玩耍。"
+    },
+    {
+      "question": "snub _______",
+      "type": "blank",
+      "answer": "attempt",
+      "explanation": "冷落，冷落尝试。His snub attempt to ignore her was obvious. 他冷落尝试忽视她是显而易见的。"
+    },
+    {
+      "question": "pharisaic _________",
+      "type": "blank",
+      "answer": "hypocrisy",
+      "explanation": "伪善的，伪善的虚伪。The politician's pharisaic hypocrisy was exposed. 政客伪善的虚伪被揭露了。"
+    },
+    {
+      "question": "mosaic _______",
+      "type": "blank",
+      "answer": "pattern",
+      "explanation": "马赛克，马赛克图案。The ancient mosaic pattern adorned the temple floor. 古老的马赛克图案装饰着寺庙地板。"
+    },
+    {
+      "question": "prosaic _____",
+      "type": "blank",
+      "answer": "style",
+      "explanation": "平淡的，平淡的风格。His prosaic style of writing lacked creativity. 他平淡的风格缺乏创造力。"
+    },
+    {
+      "question": "anaerobic _________",
+      "type": "blank",
+      "answer": "digestion",
+      "explanation": "厌氧的，厌氧的消化。The bacteria perform anaerobic digestion. 细菌进行厌氧的消化。"
+    },
+    {
+      "question": "acerbic _______",
+      "type": "blank",
+      "answer": "comment",
+      "explanation": "尖刻的，尖刻的评论。Her acerbic comment silenced the room. 她尖刻的评论让房间安静下来。"
+    },
+    {
+      "question": "cherubic ______",
+      "type": "blank",
+      "answer": "cheeks",
+      "explanation": "天使般的，天使般的脸颊。The baby had adorable cherubic cheeks. 婴儿有可爱的天使般的脸颊。"
+    },
+    {
+      "question": "nomadic _____",
+      "type": "blank",
+      "answer": "tribe",
+      "explanation": "游牧的，游牧的部落。The nomadic tribe moved with the seasons. 游牧的部落随季节迁徙。"
+    },
+    {
+      "question": "sporadic _____",
+      "type": "blank",
+      "answer": "cases",
+      "explanation": "零星的，零星的病例。There were sporadic cases of the disease reported. 报告了零星的病例。"
+    },
+    {
+      "question": "encyclopedic _________",
+      "type": "blank",
+      "answer": "knowledge",
+      "explanation": "百科全书式的，百科全书式的知识。He possessed encyclopedic knowledge of history. 他拥有历史的百科全书式的知识。"
+    },
+    {
+      "question": "spasmodic _____",
+      "type": "blank",
+      "answer": "cough",
+      "explanation": "痉挛性的，痉挛性的咳嗽。The patient had a spasmodic cough. 患者有痉挛性的咳嗽。"
+    },
+    {
+      "question": "episodic ______",
+      "type": "blank",
+      "answer": "memory",
+      "explanation": "情节性的，情节性的记忆。Episodic memory stores personal experiences. 情节性的记忆储存个人经历。"
+    },
+    {
+      "question": "prolific ______",
+      "type": "blank",
+      "answer": "writer",
+      "explanation": "多产的，多产的作家。She was a prolific writer who published dozens of books. 她是一位多产的作家，出版了几十本书。"
+    },
+    {
+      "question": "horrific _____",
+      "type": "blank",
+      "answer": "scene",
+      "explanation": "可怕的，可怕的场景。The accident left a horrific scene. 事故留下了可怕的场景。"
+    },
+    {
+      "question": "beatific _____",
+      "type": "blank",
+      "answer": "smile",
+      "explanation": "幸福的，幸福的微笑。She had a beatific smile of pure joy. 她有纯粹喜悦的幸福的微笑。"
+    },
+    {
+      "question": "synergic ______",
+      "type": "blank",
+      "answer": "effect",
+      "explanation": "协同的，协同的效果。The drugs had a synergic effect when combined. 这些药物结合时有协同的效果。"
+    },
+    {
+      "question": "chic ______",
+      "type": "blank",
+      "answer": "outfit",
+      "explanation": "时髦的，时髦的装束。She wore a chic outfit to the gala. 她穿着时髦的装束参加晚会。"
+    },
+    {
+      "question": "seraphic _____",
+      "type": "blank",
+      "answer": "smile",
+      "explanation": "天使般的，天使般的微笑。The child's seraphic smile melted hearts. 孩子天使般的微笑融化了人们的心。"
+    },
+    {
+      "question": "graphic ________",
+      "type": "blank",
+      "answer": "designer",
+      "explanation": "图形的，平面设计师。The graphic designer created the company logo. 平面设计师创作了公司标志。"
+    },
+    {
+      "question": "hieroglyphic ______",
+      "type": "blank",
+      "answer": "script",
+      "explanation": "象形文字的，象形文字的文字。Scholars decoded the ancient hieroglyphic script. 学者们破译了古老的象形文字的文字。"
+    },
+    {
+      "question": "paleolithic ___",
+      "type": "blank",
+      "answer": "era",
+      "explanation": "旧石器时代的，旧石器时代的时代。Cave paintings date from the paleolithic era. 洞穴壁画可追溯到旧石器时代的时代。"
+    },
+    {
+      "question": "neolithic ____",
+      "type": "blank",
+      "answer": "tool",
+      "explanation": "新石器时代的，新石器时代的工具。Archaeologists found a neolithic tool at the site. 考古学家在遗址发现了新石器时代的工具。"
+    },
+    {
+      "question": "cephalic _____",
+      "type": "blank",
+      "answer": "index",
+      "explanation": "头部的，头部指数。Anthropologists measure the cephalic index of skulls. 人类学家测量头骨的头部指数。"
+    },
+    {
+      "question": "diabolic ______",
+      "type": "blank",
+      "answer": "scheme",
+      "explanation": "恶魔般的，恶魔般的阴谋。The villain hatched a diabolic scheme. 恶棍策划了恶魔般的阴谋。"
+    },
+    {
+      "question": "bucolic _________",
+      "type": "blank",
+      "answer": "landscape",
+      "explanation": "田园的，田园的风景。The painting depicted a peaceful bucolic landscape. 这幅画描绘了宁静的田园的风景。"
+    },
+    {
+      "question": "catholic ______",
+      "type": "blank",
+      "answer": "tastes",
+      "explanation": "广泛的，广泛的品味。He had catholic tastes in music. 他在音乐方面有广泛的品味。"
+    },
+    {
+      "question": "vitriolic ______",
+      "type": "blank",
+      "answer": "attack",
+      "explanation": "刻薄的，刻薄的攻击。The critic launched a vitriolic attack on the film. 评论家对这部电影发起了刻薄的攻击。"
+    },
+    {
+      "question": "ceramic ____",
+      "type": "blank",
+      "answer": "tile",
+      "explanation": "陶瓷的，陶瓷的瓷砖。The bathroom floor was covered with ceramic tile. 浴室地板铺着陶瓷的瓷砖。"
+    },
+    {
+      "question": "panoramic ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "全景的，全景的视野。The tower offered a panoramic view of the city. 塔楼提供了城市的全景的视野。"
+    },
+    {
+      "question": "___ epidemic",
+      "type": "blank",
+      "answer": "flu",
+      "explanation": "流行病，流感流行病。The flu epidemic affected thousands of people. 流感流行病影响了成千上万的人。"
+    },
+    {
+      "question": "______ pandemic",
+      "type": "blank",
+      "answer": "global",
+      "explanation": "大流行病，全球大流行病。The global pandemic changed the world. 全球大流行病改变了世界。"
+    },
+    {
+      "question": "endemic _______",
+      "type": "blank",
+      "answer": "disease",
+      "explanation": "地方性的，地方性的疾病。Malaria is an endemic disease in tropical regions. 疟疾是热带地区地方性的疾病。"
+    },
+    {
+      "question": "______ polemic",
+      "type": "blank",
+      "answer": "heated",
+      "explanation": "论战，激烈的论战。The debate turned into a heated polemic. 辩论变成了激烈的论战。"
+    },
+    {
+      "question": "anemic _______",
+      "type": "blank",
+      "answer": "economy",
+      "explanation": "贫血的，贫血的经济。The country suffered from an anemic economy. 这个国家遭受贫血的经济。"
+    },
+    {
+      "question": "arrhythmic _________",
+      "type": "blank",
+      "answer": "heartbeat",
+      "explanation": "心律不齐的，心律不齐的心跳。The patient had an arrhythmic heartbeat. 患者有心律不齐的心跳。"
+    },
+    {
+      "question": "comic _____",
+      "type": "blank",
+      "answer": "strip",
+      "explanation": "喜剧的，连环漫画。She enjoyed reading the Sunday comic strip. 她喜欢阅读周日的连环漫画。"
+    },
+    {
+      "question": "gnomic ______",
+      "type": "blank",
+      "answer": "saying",
+      "explanation": "格言式的，格言式的格言。The philosopher offered a gnomic saying. 哲学家提供了格言式的格言。"
+    },
+    {
+      "question": "hypodermic ______",
+      "type": "blank",
+      "answer": "needle",
+      "explanation": "皮下注射的，皮下注射的针头。The nurse prepared the hypodermic needle. 护士准备了皮下注射的针头。"
+    },
+    {
+      "question": "seismic ________",
+      "type": "blank",
+      "answer": "activity",
+      "explanation": "地震的，地震的活动。Scientists monitor seismic activity near volcanoes. 科学家监测火山附近的地震的活动。"
+    },
+    {
+      "question": "cosmic ____",
+      "type": "blank",
+      "answer": "rays",
+      "explanation": "宇宙的，宇宙的射线。Cosmic rays bombard the Earth constantly. 宇宙的射线不断轰击地球。"
+    },
+    {
+      "question": "satanic ____",
+      "type": "blank",
+      "answer": "cult",
+      "explanation": "撒旦的，撒旦的邪教。The police investigated the satanic cult. 警方调查了撒旦的邪教。"
+    },
+    {
+      "question": "titanic ________",
+      "type": "blank",
+      "answer": "struggle",
+      "explanation": "巨大的，巨大的斗争。It was a titanic struggle between good and evil. 这是善与恶之间巨大的斗争。"
+    },
+    {
+      "question": "cryogenic _______",
+      "type": "blank",
+      "answer": "storage",
+      "explanation": "低温的，低温的储存。The lab used cryogenic storage for samples. 实验室使用低温的储存保存样本。"
+    },
+    {
+      "question": "eugenic ______",
+      "type": "blank",
+      "answer": "policy",
+      "explanation": "优生的，优生的政策。The eugenic policy was controversial. 优生的政策有争议。"
+    },
+    {
+      "question": "ethnic ________",
+      "type": "blank",
+      "answer": "minority",
+      "explanation": "民族的，少数民族。The ethnic minority preserved their traditions. 少数民族保留了他们的传统。"
+    },
+    {
+      "question": "laconic _____",
+      "type": "blank",
+      "answer": "reply",
+      "explanation": "简洁的，简洁的回答。His laconic reply was just one word. 他简洁的回答只有一个字。"
+    },
+    {
+      "question": "hedonic ________",
+      "type": "blank",
+      "answer": "pleasure",
+      "explanation": "享乐的，享乐的快乐。The philosophy focused on hedonic pleasure. 这种哲学专注于享乐的快乐。"
+    },
+    {
+      "question": "histrionic _______",
+      "type": "blank",
+      "answer": "display",
+      "explanation": "做作的，做作的表演。Her histrionic display was embarrassing. 她做作的表演令人尴尬。"
+    },
+    {
+      "question": "chronic _______",
+      "type": "blank",
+      "answer": "disease",
+      "explanation": "慢性的，慢性的疾病。Diabetes is a chronic disease requiring management. 糖尿病是需要管理的慢性的疾病。"
+    },
+    {
+      "question": "platonic ____",
+      "type": "blank",
+      "answer": "love",
+      "explanation": "柏拉图式的，柏拉图式的爱。They maintained a platonic love relationship. 他们保持着柏拉图式的爱情关系。"
+    },
+    {
+      "question": "embryonic _____",
+      "type": "blank",
+      "answer": "stage",
+      "explanation": "胚胎的，胚胎的阶段。The project was still in its embryonic stage. 该项目仍处于胚胎的阶段。"
+    },
+    {
+      "question": "runic ___________",
+      "type": "blank",
+      "answer": "inscription",
+      "explanation": "符文的，符文的铭文。The stone bore an ancient runic inscription. 石头上有古老的符文的铭文。"
+    },
+    {
+      "question": "cynic's ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "愤世嫉俗者的，愤世嫉俗者的观点。The cynic's view was pessimistic. 愤世嫉俗者的观点是悲观的。"
+    },
+    {
+      "question": "kaleidoscopic ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "万花筒般的，万花筒般的视野。The city offered a kaleidoscopic view of cultures. 这座城市提供了文化的万花筒般的视野。"
+    },
+    {
+      "question": "microscopic ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "微观的，微观的视野。The microscope provided a microscopic view of cells. 显微镜提供了细胞的微观的视野。"
+    },
+    {
+      "question": "philanthropic ____",
+      "type": "blank",
+      "answer": "work",
+      "explanation": "慈善的，慈善的工作。She devoted her life to philanthropic work. 她一生致力于慈善的工作。"
+    },
+    {
+      "question": "myopic ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "短视的，短视的观点。His myopic view ignored long-term consequences. 他短视的观点忽略了长期后果。"
+    },
+    {
+      "question": "choleric ______",
+      "type": "blank",
+      "answer": "temper",
+      "explanation": "易怒的，易怒的脾气。The boss had a choleric temper. 老板有易怒的脾气。"
+    },
+    {
+      "question": "generic _____",
+      "type": "blank",
+      "answer": "brand",
+      "explanation": "通用的，通用的品牌。The generic brand was much cheaper. 通用的品牌便宜得多。"
+    },
+    {
+      "question": "esoteric _________",
+      "type": "blank",
+      "answer": "knowledge",
+      "explanation": "深奥的，深奥的知识。Only experts understood the esoteric knowledge. 只有专家理解深奥的知识。"
+    },
+    {
+      "question": "meteoric ____",
+      "type": "blank",
+      "answer": "rise",
+      "explanation": "流星般的，流星般的崛起。The young star had a meteoric rise to fame. 年轻明星流星般的崛起成名。"
+    },
+    {
+      "question": "_____ rhetoric",
+      "type": "blank",
+      "answer": "empty",
+      "explanation": "修辞，空洞的修辞。The politician's speech was full of empty rhetoric. 政客的演讲充满了空洞的修辞。"
+    },
+    {
+      "question": "prehistoric ____",
+      "type": "blank",
+      "answer": "cave",
+      "explanation": "史前的，史前的洞穴。Artifacts were found in the prehistoric cave. 在史前的洞穴中发现了文物。"
+    },
+    {
+      "question": "asymmetric ______",
+      "type": "blank",
+      "answer": "design",
+      "explanation": "不对称的，不对称的设计。The building had an asymmetric design. 这座建筑有不对称的设计。"
+    },
+    {
+      "question": "concentric _______",
+      "type": "blank",
+      "answer": "circles",
+      "explanation": "同心的，同心的圆圈。The target had concentric circles. 目标有同心的圆圈。"
+    },
+    {
+      "question": "egocentric ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "自我中心的，自我中心的观点。His egocentric view ignored others' needs. 他自我中心的观点忽视了他人的需求。"
+    },
+    {
+      "question": "gastric _____",
+      "type": "blank",
+      "answer": "ulcer",
+      "explanation": "胃的，胃溃疡。The patient was treated for a gastric ulcer. 患者接受了胃溃疡的治疗。"
+    },
+    {
+      "question": "_____ panegyric",
+      "type": "blank",
+      "answer": "lofty",
+      "explanation": "颂词，崇高的颂词。The speaker delivered a lofty panegyric. 演讲者发表了崇高的颂词。"
+    },
+    {
+      "question": "____ analgesic",
+      "type": "blank",
+      "answer": "oral",
+      "explanation": "止痛的，口服止痛药。The doctor prescribed an oral analgesic. 医生开了口服止痛药。"
+    },
+    {
+      "question": "forensic ________",
+      "type": "blank",
+      "answer": "evidence",
+      "explanation": "法医的，法医的证据。The forensic evidence proved his innocence. 法医的证据证明了他的清白。"
+    },
+    {
+      "question": "extrinsic ______",
+      "type": "blank",
+      "answer": "factor",
+      "explanation": "外在的，外在的因素。An extrinsic factor influenced the outcome. 外在的因素影响了结果。"
+    },
+    {
+      "question": "emphatic ______",
+      "type": "blank",
+      "answer": "denial",
+      "explanation": "强调的，强调的否认。He issued an emphatic denial of the charges. 他发表了对指控的强调的否认。"
+    },
+    {
+      "question": "schematic _______",
+      "type": "blank",
+      "answer": "diagram",
+      "explanation": "示意的，示意的图表。The engineer drew a schematic diagram. 工程师绘制了示意的图表。"
+    },
+    {
+      "question": "thematic _____",
+      "type": "blank",
+      "answer": "focus",
+      "explanation": "主题的，主题的焦点。The essay lacked a clear thematic focus. 这篇文章缺乏明确的主题的焦点。"
+    },
+    {
+      "question": "emblematic _______",
+      "type": "blank",
+      "answer": "gesture",
+      "explanation": "象征性的，象征性的姿态。The handshake was an emblematic gesture of peace. 握手是和平的象征性的姿态。"
+    },
+    {
+      "question": "pragmatic ________",
+      "type": "blank",
+      "answer": "approach",
+      "explanation": "实用的，实用的方法。She took a pragmatic approach to problem-solving. 她采取了实用的方法解决问题。"
+    },
+    {
+      "question": "phlegmatic ___________",
+      "type": "blank",
+      "answer": "temperament",
+      "explanation": "冷静的，冷静的气质。His phlegmatic temperament kept him calm. 他冷静的气质让他保持冷静。"
+    },
+    {
+      "question": "astigmatic ____",
+      "type": "blank",
+      "answer": "lens",
+      "explanation": "散光的，散光的镜片。The optician prescribed an astigmatic lens. 验光师开了散光的镜片。"
+    },
+    {
+      "question": "diplomatic _________",
+      "type": "blank",
+      "answer": "relations",
+      "explanation": "外交的，外交的关系。The countries maintained diplomatic relations. 这些国家保持着外交的关系。"
+    },
+    {
+      "question": "aromatic _____",
+      "type": "blank",
+      "answer": "herbs",
+      "explanation": "芳香的，芳香的草药。The chef used aromatic herbs in the dish. 厨师在菜肴中使用了芳香的草药。"
+    },
+    {
+      "question": "chromatic _____",
+      "type": "blank",
+      "answer": "scale",
+      "explanation": "半音阶的，半音阶。The musician practiced the chromatic scale. 音乐家练习半音阶。"
+    },
+    {
+      "question": "achromatic ____",
+      "type": "blank",
+      "answer": "lens",
+      "explanation": "消色差的，消色差的镜片。The telescope used an achromatic lens. 望远镜使用了消色差的镜片。"
+    },
+    {
+      "question": "monochromatic _____",
+      "type": "blank",
+      "answer": "light",
+      "explanation": "单色的，单色的光。The laser produced monochromatic light. 激光产生单色的光。"
+    },
+    {
+      "question": "somatic _____",
+      "type": "blank",
+      "answer": "cells",
+      "explanation": "体细胞的，体细胞的细胞。Somatic cells contain all the organism's DNA. 体细胞的细胞包含生物体的所有DNA。"
+    },
+    {
+      "question": "numismatic __________",
+      "type": "blank",
+      "answer": "collection",
+      "explanation": "钱币的，钱币的收藏。The museum displayed a numismatic collection. 博物馆展出了钱币的收藏。"
+    },
+    {
+      "question": "_________ fanatic",
+      "type": "blank",
+      "answer": "religious",
+      "explanation": "狂热者，宗教狂热者。The religious fanatic preached on the street. 宗教狂热者在街上布道。"
+    },
+    {
+      "question": "static ___________",
+      "type": "blank",
+      "answer": "electricity",
+      "explanation": "静电的，静电。Static electricity caused the clothes to cling. 静电让衣服粘在一起。"
+    },
+    {
+      "question": "aquatic ______",
+      "type": "blank",
+      "answer": "plants",
+      "explanation": "水生的，水生的植物。Aquatic plants grow in the pond. 水生的植物在池塘里生长。"
+    },
+    {
+      "question": "didactic ____",
+      "type": "blank",
+      "answer": "tale",
+      "explanation": "说教的，说教的故事。The didactic tale taught a moral lesson. 说教的故事传授了道德教训。"
+    },
+    {
+      "question": "lactic ____",
+      "type": "blank",
+      "answer": "acid",
+      "explanation": "乳酸的，乳酸。Lactic acid builds up in muscles during exercise. 运动时乳酸在肌肉中积累。"
+    },
+    {
+      "question": "_______ tactic",
+      "type": "blank",
+      "answer": "winning",
+      "explanation": "策略，获胜的策略。They devised a winning tactic for the game. 他们为比赛设计了获胜的策略。"
+    },
+    {
+      "question": "hectic ________",
+      "type": "blank",
+      "answer": "schedule",
+      "explanation": "忙碌的，忙碌的日程。She managed a hectic schedule. 她应付着忙碌的日程。"
+    },
+    {
+      "question": "eclectic _____",
+      "type": "blank",
+      "answer": "style",
+      "explanation": "折衷的，折衷的风格。The artist had an eclectic style. 这位艺术家有折衷的风格。"
+    },
+    {
+      "question": "arctic _______",
+      "type": "blank",
+      "answer": "climate",
+      "explanation": "北极的，北极的气候。The arctic climate is harsh and cold. 北极的气候严酷而寒冷。"
+    },
+    {
+      "question": "antarctic ___",
+      "type": "blank",
+      "answer": "ice",
+      "explanation": "南极的，南极的冰。The antarctic ice sheet is melting. 南极的冰盖正在融化。"
+    },
+    {
+      "question": "ascetic _________",
+      "type": "blank",
+      "answer": "lifestyle",
+      "explanation": "禁欲的，禁欲的生活方式。The monk lived an ascetic lifestyle. 僧侣过着禁欲的生活方式。"
+    }
+  ]
+}
