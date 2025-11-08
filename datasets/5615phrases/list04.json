@@ -1,1 +1,607 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "verified _______",
+      "type": "blank",
+      "answer": "account",
+      "explanation": "经过验证的，经过验证的账户。Her social media verified account had a blue checkmark. 她的社交媒体经过验证的账户有蓝色标记。"
+    },
+    {
+      "question": "unjustified _____",
+      "type": "blank",
+      "answer": "claim",
+      "explanation": "不合理的，不合理的声明。The lawsuit was based on an unjustified claim. 这起诉讼基于不合理的声明。"
+    },
+    {
+      "question": "pied _______",
+      "type": "blank",
+      "answer": "wagtail",
+      "explanation": "斑驳的，斑驳的鹡鸰。The pied wagtail is a common British bird. 斑驳的鹡鸰是常见的英国鸟类。"
+    },
+    {
+      "question": "serried _____",
+      "type": "blank",
+      "answer": "ranks",
+      "explanation": "密集的，密集的队列。The soldiers stood in serried ranks. 士兵们站成密集的队列。"
+    },
+    {
+      "question": "packed _______",
+      "type": "blank",
+      "answer": "stadium",
+      "explanation": "拥挤的，拥挤的体育场。The packed stadium roared with excitement. 拥挤的体育场充满兴奋的欢呼。"
+    },
+    {
+      "question": "henpecked _______",
+      "type": "blank",
+      "answer": "husband",
+      "explanation": "怕老婆的，怕老婆的丈夫。The henpecked husband never made decisions alone. 怕老婆的丈夫从不独自做决定。"
+    },
+    {
+      "question": "wicked ____",
+      "type": "blank",
+      "answer": "deed",
+      "explanation": "邪恶的，邪恶的行为。The villain committed a wicked deed. 恶棍犯下了邪恶的行为。"
+    },
+    {
+      "question": "landlocked _______",
+      "type": "blank",
+      "answer": "country",
+      "explanation": "内陆的，内陆的国家。Switzerland is a landlocked country with no coastline. 瑞士是没有海岸线的内陆的国家。"
+    },
+    {
+      "question": "marked ___________",
+      "type": "blank",
+      "answer": "improvement",
+      "explanation": "显著的，显著的改进。There was a marked improvement in his grades. 他的成绩有显著的改进。"
+    },
+    {
+      "question": "garbled _______",
+      "type": "blank",
+      "answer": "message",
+      "explanation": "混乱的，混乱的信息。The garbled message was impossible to understand. 混乱的信息无法理解。"
+    },
+    {
+      "question": "unbridled _______",
+      "type": "blank",
+      "answer": "passion",
+      "explanation": "不受约束的，不受约束的激情。His unbridled passion for music was evident. 他对音乐不受约束的激情是显而易见的。"
+    },
+    {
+      "question": "brindled ____",
+      "type": "blank",
+      "answer": "coat",
+      "explanation": "有斑纹的，有斑纹的皮毛。The dog had a distinctive brindled coat. 这只狗有独特的有斑纹的皮毛。"
+    },
+    {
+      "question": "disheveled ____",
+      "type": "blank",
+      "answer": "hair",
+      "explanation": "凌乱的，凌乱的头发。She woke up with disheveled hair. 她醒来时头发凌乱的头发。"
+    },
+    {
+      "question": "muffled _____",
+      "type": "blank",
+      "answer": "sound",
+      "explanation": "低沉的，低沉的声音。A muffled sound came from behind the door. 门后传来低沉的声音。"
+    },
+    {
+      "question": "unspoiled ______",
+      "type": "blank",
+      "answer": "nature",
+      "explanation": "未受破坏的，未受破坏的自然。The island had beautiful unspoiled nature. 该岛有美丽的未受破坏的自然。"
+    },
+    {
+      "question": "unprincipled _____",
+      "type": "blank",
+      "answer": "rogue",
+      "explanation": "无原则的，无原则的恶棍。The unprincipled rogue would do anything for money. 无原则的恶棍会为钱做任何事。"
+    },
+    {
+      "question": "dappled ________",
+      "type": "blank",
+      "answer": "sunlight",
+      "explanation": "斑驳的，斑驳的阳光。Dappled sunlight filtered through the trees. 斑驳的阳光透过树木。"
+    },
+    {
+      "question": "gnarled ____",
+      "type": "blank",
+      "answer": "tree",
+      "explanation": "扭曲的，扭曲的树。The ancient gnarled tree stood in the park. 古老的扭曲的树矗立在公园里。"
+    },
+    {
+      "question": "settled _____",
+      "type": "blank",
+      "answer": "habit",
+      "explanation": "固定的，固定的习惯。Reading before bed became a settled habit. 睡前阅读成为固定的习惯。"
+    },
+    {
+      "question": "inflamed ______",
+      "type": "blank",
+      "answer": "tissue",
+      "explanation": "发炎的，发炎的组织。The doctor treated the inflamed tissue. 医生治疗了发炎的组织。"
+    },
+    {
+      "question": "mistimed ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "不合时宜的，不合时宜的评论。His mistimed remark embarrassed everyone. 他不合时宜的评论让每个人都很尴尬。"
+    },
+    {
+      "question": "well-groomed __________",
+      "type": "blank",
+      "answer": "appearance",
+      "explanation": "仪表整洁的，仪表整洁的外表。The executive maintained a well-groomed appearance. 这位高管保持着仪表整洁的外表。"
+    },
+    {
+      "question": "____ informed",
+      "type": "blank",
+      "answer": "well",
+      "explanation": "消息灵通的，消息灵通的。She was well informed about current events. 她对时事消息灵通的。"
+    },
+    {
+      "question": "unenlightened ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "愚昧的，愚昧的观点。His unenlightened view was outdated. 他愚昧的观点过时了。"
+    },
+    {
+      "question": "wizened ____",
+      "type": "blank",
+      "answer": "face",
+      "explanation": "干瘪的，干瘪的脸。The old woman had a wizened face. 老妇人有一张干瘪的脸。"
+    },
+    {
+      "question": "feigned _______",
+      "type": "blank",
+      "answer": "illness",
+      "explanation": "假装的，假装的疾病。His feigned illness didn't fool the doctor. 他假装的疾病没有骗过医生。"
+    },
+    {
+      "question": "unfeigned _______",
+      "type": "blank",
+      "answer": "delight",
+      "explanation": "真诚的，真诚的喜悦。She expressed unfeigned delight at the news. 她对这个消息表达了真诚的喜悦。"
+    },
+    {
+      "question": "resigned __________",
+      "type": "blank",
+      "answer": "acceptance",
+      "explanation": "顺从的，顺从的接受。He showed resigned acceptance of his fate. 他表现出对命运的顺从的接受。"
+    },
+    {
+      "question": "ingrained _____",
+      "type": "blank",
+      "answer": "habit",
+      "explanation": "根深蒂固的，根深蒂固的习惯。Smoking was an ingrained habit he couldn't break. 吸烟是他无法打破的根深蒂固的习惯。"
+    },
+    {
+      "question": "constrained _____",
+      "type": "blank",
+      "answer": "smile",
+      "explanation": "勉强的，勉强的微笑。She gave a constrained smile at the bad joke. 她对这个糟糕的笑话露出勉强的微笑。"
+    },
+    {
+      "question": "sustained ______",
+      "type": "blank",
+      "answer": "effort",
+      "explanation": "持续的，持续的努力。Success requires sustained effort over time. 成功需要长期持续的努力。"
+    },
+    {
+      "question": "____ defined",
+      "type": "blank",
+      "answer": "well",
+      "explanation": "明确的，明确定义的。The project had well defined objectives. 该项目有明确定义的目标。"
+    },
+    {
+      "question": "___ tined ____",
+      "type": "blank",
+      "answer": "two fork",
+      "explanation": "叉齿的，两叉齿的叉子。The salad was served with a two tined fork. 沙拉配有两叉齿的叉子。"
+    },
+    {
+      "question": "impassioned ____",
+      "type": "blank",
+      "answer": "plea",
+      "explanation": "激昂的，激昂的恳求。The lawyer made an impassioned plea for mercy. 律师发表了激昂的恳求请求宽恕。"
+    },
+    {
+      "question": "unimpassioned ________",
+      "type": "blank",
+      "answer": "analysis",
+      "explanation": "冷静的，冷静的分析。The scientist provided an unimpassioned analysis of the data. 科学家提供了数据的冷静的分析。"
+    },
+    {
+      "question": "seasoned _______",
+      "type": "blank",
+      "answer": "veteran",
+      "explanation": "经验丰富的，经验丰富的老手。The seasoned veteran knew how to handle pressure. 经验丰富的老手知道如何应对压力。"
+    },
+    {
+      "question": "biped ____",
+      "type": "blank",
+      "answer": "gait",
+      "explanation": "两足动物的，两足动物的步态。Humans walk with a distinctive biped gait. 人类以独特的两足动物的步态行走。"
+    },
+    {
+      "question": "damped ___________",
+      "type": "blank",
+      "answer": "oscillation",
+      "explanation": "阻尼的，阻尼的振荡。The engineer designed a damped oscillation system. 工程师设计了阻尼的振荡系统。"
+    },
+    {
+      "question": "untapped _________",
+      "type": "blank",
+      "answer": "potential",
+      "explanation": "未开发的，未开发的潜力。The region has vast untapped potential. 该地区有巨大的未开发的潜力。"
+    },
+    {
+      "question": "____-______ quadruped",
+      "type": "blank",
+      "answer": "four-legged",
+      "explanation": "四足动物，四条腿的四足动物。Dogs are four-legged quadruped mammals. 狗是四条腿的四足动物哺乳动物。"
+    },
+    {
+      "question": "vinegared _____",
+      "type": "blank",
+      "answer": "taste",
+      "explanation": "醋味的，醋味的味道。The salad had a vinegared taste. 沙拉有醋味的味道。"
+    },
+    {
+      "question": "lowbred ______",
+      "type": "blank",
+      "answer": "fellow",
+      "explanation": "粗俗的，粗俗的家伙。The lowbred fellow lacked manners. 粗俗的家伙缺乏礼貌。"
+    },
+    {
+      "question": "sacred ___",
+      "type": "blank",
+      "answer": "vow",
+      "explanation": "神圣的，神圣的誓言。The monks took a sacred vow of silence. 僧侣们立下了神圣的誓言保持沉默。"
+    },
+    {
+      "question": "kindred _______",
+      "type": "blank",
+      "answer": "spirits",
+      "explanation": "志同道合的，志同道合的灵魂。They were kindred spirits who shared the same values. 他们是志同道合的灵魂，有着相同的价值观。"
+    },
+    {
+      "question": "checkered ____",
+      "type": "blank",
+      "answer": "past",
+      "explanation": "有污点的，有污点的过去。The politician had a checkered past. 这位政客有有污点的过去。"
+    },
+    {
+      "question": "mannered _____",
+      "type": "blank",
+      "answer": "style",
+      "explanation": "矫揉造作的，矫揉造作的风格。The writer's mannered style was criticized. 这位作家矫揉造作的风格受到批评。"
+    },
+    {
+      "question": "even-tempered ______",
+      "type": "blank",
+      "answer": "leader",
+      "explanation": "性情平和的，性情平和的领导者。The even-tempered leader remained calm in crises. 性情平和的领导者在危机中保持冷静。"
+    },
+    {
+      "question": "____ flustered",
+      "type": "blank",
+      "answer": "feel",
+      "explanation": "慌乱的，感到慌乱。The unexpected question made her feel flustered. 意外的问题让她感到慌乱。"
+    },
+    {
+      "question": "shattered _____",
+      "type": "blank",
+      "answer": "glass",
+      "explanation": "破碎的，破碎的玻璃。Shattered glass covered the floor. 破碎的玻璃覆盖了地板。"
+    },
+    {
+      "question": "acquired _____",
+      "type": "blank",
+      "answer": "taste",
+      "explanation": "后天养成的，后天养成的品味。Caviar is an acquired taste. 鱼子酱是后天养成的品味。"
+    },
+    {
+      "question": "labored _________",
+      "type": "blank",
+      "answer": "breathing",
+      "explanation": "费力的，费力的呼吸。The patient had labored breathing. 患者有费力的呼吸。"
+    },
+    {
+      "question": "enamored __",
+      "type": "blank",
+      "answer": "of",
+      "explanation": "迷恋的，迷恋。She was enamored of the handsome stranger. 她迷恋那个英俊的陌生人。"
+    },
+    {
+      "question": "_____ restored",
+      "type": "blank",
+      "answer": "fully",
+      "explanation": "修复的，完全修复的。The antique car was fully restored. 古董车被完全修复的。"
+    },
+    {
+      "question": "untutored ___",
+      "type": "blank",
+      "answer": "ear",
+      "explanation": "未受训练的，未受训练的耳朵。To the untutored ear, the music sounded similar. 对未受训练的耳朵来说，音乐听起来相似。"
+    },
+    {
+      "question": "marred __________",
+      "type": "blank",
+      "answer": "reputation",
+      "explanation": "损坏的，损坏的声誉。The scandal marred reputation of the company. 丑闻损坏的声誉了公司的。"
+    },
+    {
+      "question": "inured __ ____",
+      "type": "blank",
+      "answer": "to pain",
+      "explanation": "习惯于，习惯于痛苦。The boxer was inured to pain from years of training. 拳击手经过多年训练习惯于痛苦。"
+    },
+    {
+      "question": "measured ________",
+      "type": "blank",
+      "answer": "response",
+      "explanation": "慎重的，慎重的回应。The diplomat gave a measured response. 外交官给出了慎重的回应。"
+    },
+    {
+      "question": "assured _______",
+      "type": "blank",
+      "answer": "victory",
+      "explanation": "确定的，确定的胜利。The team's assured victory seemed certain. 球队确定的胜利似乎是肯定的。"
+    },
+    {
+      "question": "improvised ______",
+      "type": "blank",
+      "answer": "speech",
+      "explanation": "即兴的，即兴的演讲。The mayor gave an impressive improvised speech. 市长发表了令人印象深刻的即兴的演讲。"
+    },
+    {
+      "question": "______ composed",
+      "type": "blank",
+      "answer": "remain",
+      "explanation": "镇定的，保持镇定。She managed to remain composed during the interview. 她在面试期间设法保持镇定。"
+    },
+    {
+      "question": "__ disposed",
+      "type": "blank",
+      "answer": "so",
+      "explanation": "有意向的，有此意向。If you are so disposed, please join us. 如果你有此意向，请加入我们。"
+    },
+    {
+      "question": "depressed ______",
+      "type": "blank",
+      "answer": "market",
+      "explanation": "萧条的，萧条的市场。The depressed market showed no signs of recovery. 萧条的市场没有复苏的迹象。"
+    },
+    {
+      "question": "repressed ______",
+      "type": "blank",
+      "answer": "memory",
+      "explanation": "压抑的，压抑的记忆。The therapist helped unlock repressed memory. 治疗师帮助解锁压抑的记忆。"
+    },
+    {
+      "question": "______ impressed",
+      "type": "blank",
+      "answer": "deeply",
+      "explanation": "印象深刻的，深深印象深刻。I was deeply impressed by her presentation. 我对她的演讲深深印象深刻。"
+    },
+    {
+      "question": "possessed __ ____",
+      "type": "blank",
+      "answer": "by fear",
+      "explanation": "被控制的，被恐惧控制。He was possessed by fear and couldn't move. 他被恐惧控制，无法移动。"
+    },
+    {
+      "question": "star-crossed ______",
+      "type": "blank",
+      "answer": "lovers",
+      "explanation": "命运多舛的，命运多舛的恋人。Romeo and Juliet were star-crossed lovers. 罗密欧和朱丽叶是命运多舛的恋人。"
+    },
+    {
+      "question": "sophisticated ________",
+      "type": "blank",
+      "answer": "analysis",
+      "explanation": "复杂的，复杂的分析。The researcher provided a sophisticated analysis. 研究人员提供了复杂的分析。"
+    },
+    {
+      "question": "dilapidated _____",
+      "type": "blank",
+      "answer": "house",
+      "explanation": "破旧的，破旧的房子。The dilapidated house needed extensive repairs. 破旧的房子需要大量维修。"
+    },
+    {
+      "question": "unmitigated ________",
+      "type": "blank",
+      "answer": "disaster",
+      "explanation": "完全的，完全的灾难。The project was an unmitigated disaster. 该项目是完全的灾难。"
+    },
+    {
+      "question": "striated ______",
+      "type": "blank",
+      "answer": "muscle",
+      "explanation": "有条纹的，有条纹的肌肉。Striated muscle tissue contracts voluntarily. 有条纹的肌肉组织自主收缩。"
+    },
+    {
+      "question": "satiated ________",
+      "type": "blank",
+      "answer": "appetite",
+      "explanation": "满足的，满足的食欲。The large meal satiated appetite. 大餐满足的食欲。"
+    },
+    {
+      "question": "___ uninitiated",
+      "type": "blank",
+      "answer": "the",
+      "explanation": "外行的，外行人。The technical jargon confused the uninitiated. 专业术语让外行人感到困惑。"
+    },
+    {
+      "question": "unsubstantiated _____",
+      "type": "blank",
+      "answer": "claim",
+      "explanation": "未经证实的，未经证实的声明。The unsubstantiated claim was dismissed. 未经证实的声明被驳回。"
+    },
+    {
+      "question": "belated _______",
+      "type": "blank",
+      "answer": "apology",
+      "explanation": "迟来的，迟来的道歉。He offered a belated apology for his mistake. 他为自己的错误提供了迟来的道歉。"
+    },
+    {
+      "question": "deflated ___",
+      "type": "blank",
+      "answer": "ego",
+      "explanation": "受挫的，受挫的自我。His failure left him with a deflated ego. 他的失败让他有受挫的自我。"
+    },
+    {
+      "question": "____ discombobulated",
+      "type": "blank",
+      "answer": "feel",
+      "explanation": "混乱的，感到混乱。The complicated instructions made him feel discombobulated. 复杂的说明让他感到混乱。"
+    },
+    {
+      "question": "maculated ____",
+      "type": "blank",
+      "answer": "leaf",
+      "explanation": "有斑点的，有斑点的叶子。The disease caused maculated leaf. 疾病导致有斑点的叶子。"
+    },
+    {
+      "question": "calculated ____",
+      "type": "blank",
+      "answer": "move",
+      "explanation": "精心策划的，精心策划的举动。It was a calculated move to gain advantage. 这是精心策划的举动以获得优势。"
+    },
+    {
+      "question": "unregulated ______",
+      "type": "blank",
+      "answer": "market",
+      "explanation": "不受监管的，不受监管的市场。The unregulated market led to chaos. 不受监管的市场导致混乱。"
+    },
+    {
+      "question": "animated ____",
+      "type": "blank",
+      "answer": "film",
+      "explanation": "动画的，动画电影。The children watched an animated film. 孩子们观看了动画电影。"
+    },
+    {
+      "question": "_______ underestimated",
+      "type": "blank",
+      "answer": "grossly",
+      "explanation": "被低估的，被严重低估。The cost was grossly underestimated. 成本被严重低估。"
+    },
+    {
+      "question": "opinionated ______",
+      "type": "blank",
+      "answer": "stance",
+      "explanation": "固执己见的，固执己见的立场。He took an opinionated stance on the issue. 他对这个问题采取了固执己见的立场。"
+    },
+    {
+      "question": "bloated ___________",
+      "type": "blank",
+      "answer": "bureaucracy",
+      "explanation": "臃肿的，臃肿的官僚机构。The bloated bureaucracy needed reform. 臃肿的官僚机构需要改革。"
+    },
+    {
+      "question": "celebrated ______",
+      "type": "blank",
+      "answer": "artist",
+      "explanation": "著名的，著名的艺术家。The celebrated artist displayed her work. 著名的艺术家展示了她的作品。"
+    },
+    {
+      "question": "serrated _____",
+      "type": "blank",
+      "answer": "knife",
+      "explanation": "锯齿状的，锯齿状的刀。Use a serrated knife to cut the bread. 用锯齿状的刀切面包。"
+    },
+    {
+      "question": "saturated ___",
+      "type": "blank",
+      "answer": "fat",
+      "explanation": "饱和的，饱和脂肪。Saturated fat should be limited in diet. 饮食中应限制饱和脂肪。"
+    },
+    {
+      "question": "sated ________",
+      "type": "blank",
+      "answer": "appetite",
+      "explanation": "满足的，满足的食欲。After the feast, everyone had a sated appetite. 盛宴后，每个人都有满足的食欲。"
+    },
+    {
+      "question": "premeditated ______",
+      "type": "blank",
+      "answer": "murder",
+      "explanation": "预谋的，预谋的谋杀。The crime was premeditated murder. 这起犯罪是预谋的谋杀。"
+    },
+    {
+      "question": "unpremeditated ___",
+      "type": "blank",
+      "answer": "act",
+      "explanation": "非预谋的，非预谋的行为。It was an unpremeditated act of passion. 这是激情的非预谋的行为。"
+    },
+    {
+      "question": "agitated _____",
+      "type": "blank",
+      "answer": "crowd",
+      "explanation": "激动的，激动的人群。The agitated crowd demanded answers. 激动的人群要求答案。"
+    },
+    {
+      "question": "understated ________",
+      "type": "blank",
+      "answer": "elegance",
+      "explanation": "低调的，低调的优雅。The room had understated elegance. 房间有低调的优雅。"
+    },
+    {
+      "question": "graduated ___",
+      "type": "blank",
+      "answer": "tax",
+      "explanation": "累进的，累进税。The country has a graduated tax system. 该国有累进税制度。"
+    },
+    {
+      "question": "superannuated _________",
+      "type": "blank",
+      "answer": "equipment",
+      "explanation": "过时的，过时的设备。The factory used superannuated equipment. 工厂使用过时的设备。"
+    },
+    {
+      "question": "antiquated ______",
+      "type": "blank",
+      "answer": "system",
+      "explanation": "陈旧的，陈旧的系统。The antiquated system needed updating. 陈旧的系统需要更新。"
+    },
+    {
+      "question": "infatuated ___",
+      "type": "blank",
+      "answer": "fan",
+      "explanation": "迷恋的，迷恋的粉丝。The infatuated fan followed the celebrity everywhere. 迷恋的粉丝到处跟着这位名人。"
+    },
+    {
+      "question": "cultivated _____",
+      "type": "blank",
+      "answer": "taste",
+      "explanation": "有修养的，有修养的品味。He had cultivated taste in art. 他在艺术方面有有修养的品味。"
+    },
+    {
+      "question": "______ indebted",
+      "type": "blank",
+      "answer": "deeply",
+      "explanation": "负债的，深深负债。The company was deeply indebted. 公司深深负债。"
+    },
+    {
+      "question": "distracted _______",
+      "type": "blank",
+      "answer": "driving",
+      "explanation": "分心的，分心的驾驶。Distracted driving causes many accidents. 分心的驾驶导致许多事故。"
+    },
+    {
+      "question": "dejected ____",
+      "type": "blank",
+      "answer": "look",
+      "type": "blank",
+      "answer": "look",
+      "explanation": "沮丧的，沮丧的表情。He had a dejected look after losing the game. 输掉比赛后，他有沮丧的表情。"
+    },
+    {
+      "question": "______ collected",
+      "type": "blank",
+      "answer": "remain",
+      "explanation": "镇定的，保持镇定。Despite the chaos, she managed to remain collected. 尽管一片混乱，她还是设法保持镇定。"
+    }
+  ]
+}
