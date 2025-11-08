@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "bathetic ______",
+      "type": "blank",
+      "answer": "ending",
+      "explanation": "平淡的，平淡的结局。The grand epic had a disappointing bathetic ending that left audiences unsatisfied. 宏大的史诗有一个令人失望的平淡的结局，让观众不满意。"
+    },
+    {
+      "question": "pathetic _____",
+      "type": "blank",
+      "answer": "sight",
+      "explanation": "可怜的，可怜的景象。The abandoned dog was a pathetic sight shivering in the rain. 被遗弃的狗在雨中颤抖是一个可怜的景象。"
+    },
+    {
+      "question": "aesthetic _____",
+      "type": "blank",
+      "answer": "taste",
+      "explanation": "美学的，美学的品味。The interior designer had impeccable aesthetic taste. 室内设计师有无可挑剔的美学的品味。"
+    },
+    {
+      "question": "_____ anesthetic",
+      "type": "blank",
+      "answer": "local",
+      "explanation": "麻醉剂，局部麻醉剂。The dentist administered a local anesthetic before the procedure. 牙医在手术前施用了局部麻醉剂。"
+    },
+    {
+      "question": "hermetic ____",
+      "type": "blank",
+      "answer": "seal",
+      "explanation": "密封的，密封的封条。The jar had a hermetic seal to preserve freshness. 罐子有密封的封条以保持新鲜。"
+    },
+    {
+      "question": "genetic ______",
+      "type": "blank",
+      "answer": "marker",
+      "explanation": "遗传的，遗传的标记。Scientists identified a genetic marker for the disease. 科学家发现了该疾病的遗传的标记。"
+    },
+    {
+      "question": "frenetic ____",
+      "type": "blank",
+      "answer": "pace",
+      "explanation": "狂热的，狂热的节奏。The city moved at a frenetic pace. 这座城市以狂热的节奏运转。"
+    },
+    {
+      "question": "kinetic ______",
+      "type": "blank",
+      "answer": "energy",
+      "explanation": "动能的，动能。The moving car possessed kinetic energy. 行驶的汽车具有动能。"
+    },
+    {
+      "question": "phonetic ______",
+      "type": "blank",
+      "answer": "symbol",
+      "explanation": "语音的，语音的符号。Linguists use phonetic symbol to represent sounds. 语言学家使用语音的符号来表示声音。"
+    },
+    {
+      "question": "_________ heretic",
+      "type": "blank",
+      "answer": "religious",
+      "explanation": "异教徒，宗教异教徒。The religious heretic was excommunicated from the church. 宗教异教徒被逐出教会。"
+    },
+    {
+      "question": "peripatetic _______",
+      "type": "blank",
+      "answer": "teacher",
+      "explanation": "巡回的，巡回的教师。The peripatetic teacher traveled between schools. 巡回的教师在学校之间奔波。"
+    },
+    {
+      "question": "impolitic ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "不明智的，不明智的评论。His impolitic remark offended many voters. 他不明智的评论冒犯了许多选民。"
+    },
+    {
+      "question": "sybaritic _________",
+      "type": "blank",
+      "answer": "lifestyle",
+      "explanation": "奢华享乐的，奢华享乐的生活方式。The millionaire lived a sybaritic lifestyle. 百万富翁过着奢华享乐的生活方式。"
+    },
+    {
+      "question": "____ critic",
+      "type": "blank",
+      "answer": "film",
+      "explanation": "评论家，电影评论家。The film critic gave the movie a poor review. 电影评论家给这部电影差评。"
+    },
+    {
+      "question": "authentic ________",
+      "type": "blank",
+      "answer": "document",
+      "explanation": "真实的，真实的文件。The historian verified the authentic document. 历史学家核实了真实的文件。"
+    },
+    {
+      "question": "narcotic ____",
+      "type": "blank",
+      "answer": "drug",
+      "explanation": "麻醉的，麻醉药物。The patient was prescribed a narcotic drug for pain. 患者被开了麻醉药物止痛。"
+    },
+    {
+      "question": "demotic ______",
+      "type": "blank",
+      "answer": "script",
+      "explanation": "通俗的，通俗的文字。Ancient Egyptians used demotic script for everyday writing. 古埃及人使用通俗的文字进行日常书写。"
+    },
+    {
+      "question": "hypnotic ______",
+      "type": "blank",
+      "answer": "rhythm",
+      "explanation": "催眠的，催眠的节奏。The music had a hypnotic rhythm that mesmerized listeners. 音乐有催眠的节奏让听众着迷。"
+    },
+    {
+      "question": "despotic _____",
+      "type": "blank",
+      "answer": "ruler",
+      "explanation": "专制的，专制的统治者。The despotic ruler suppressed all dissent. 专制的统治者镇压了所有异议。"
+    },
+    {
+      "question": "exotic ______",
+      "type": "blank",
+      "answer": "flower",
+      "explanation": "异国的，异国的花朵。The garden featured rare exotic flower from the tropics. 花园里有来自热带的稀有异国的花朵。"
+    },
+    {
+      "question": "quixotic ______",
+      "type": "blank",
+      "answer": "scheme",
+      "explanation": "不切实际的，不切实际的计划。His quixotic scheme to save the world was admirable but impractical. 他拯救世界的不切实际的计划令人钦佩但不实际。"
+    },
+    {
+      "question": "peptic _____",
+      "type": "blank",
+      "answer": "ulcer",
+      "explanation": "消化性的，消化性溃疡。Stress can contribute to peptic ulcer formation. 压力会导致消化性溃疡形成。"
+    },
+    {
+      "question": "dyspeptic _________",
+      "type": "blank",
+      "answer": "complaint",
+      "explanation": "消化不良的，消化不良的抱怨。The patient visited the doctor with a dyspeptic complaint. 患者带着消化不良的抱怨去看医生。"
+    },
+    {
+      "question": "septic ____",
+      "type": "blank",
+      "answer": "tank",
+      "explanation": "化粪池的，化粪池。The rural property had a septic tank for waste disposal. 农村房产有一个化粪池用于废物处理。"
+    },
+    {
+      "question": "aseptic _________",
+      "type": "blank",
+      "answer": "technique",
+      "explanation": "无菌的，无菌的技术。Surgeons use aseptic technique to prevent infection. 外科医生使用无菌的技术预防感染。"
+    },
+    {
+      "question": "antiseptic ____",
+      "type": "blank",
+      "answer": "wipe",
+      "explanation": "消毒的，消毒的湿巾。The nurse cleaned the wound with an antiseptic wipe. 护士用消毒的湿巾清洁伤口。"
+    },
+    {
+      "question": "synoptic _____",
+      "type": "blank",
+      "answer": "chart",
+      "explanation": "概要的，概要的图表。Meteorologists study the synoptic chart for weather patterns. 气象学家研究天气模式的概要的图表。"
+    },
+    {
+      "question": "apocalyptic ______",
+      "type": "blank",
+      "answer": "vision",
+      "explanation": "启示录的，启示录的景象。The prophet described an apocalyptic vision of the end times. 先知描述了末日的启示录的景象。"
+    },
+    {
+      "question": "cryptic _______",
+      "type": "blank",
+      "answer": "message",
+      "explanation": "神秘的，神秘的信息。The spy left a cryptic message that needed decoding. 间谍留下了需要解码的神秘的信息。"
+    },
+    {
+      "question": "bombastic ______",
+      "type": "blank",
+      "answer": "speech",
+      "explanation": "夸大的，夸大的演讲。The politician's bombastic speech was full of empty promises. 政客夸大的演讲充满了空洞的承诺。"
+    },
+    {
+      "question": "sarcastic ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "讽刺的，讽刺的评论。His sarcastic remark hurt her feelings. 他讽刺的评论伤害了她的感情。"
+    },
+    {
+      "question": "iconoclastic _______",
+      "type": "blank",
+      "answer": "thinker",
+      "explanation": "打破传统的，打破传统的思想家。The iconoclastic thinker challenged conventional wisdom. 打破传统的思想家挑战传统智慧。"
+    },
+    {
+      "question": "pleonastic ______",
+      "type": "blank",
+      "answer": "phrase",
+      "explanation": "冗余的，冗余的短语。'Free gift' is a pleonastic phrase. '免费礼物'是一个冗余的短语。"
+    },
+    {
+      "question": "periphrastic _____",
+      "type": "blank",
+      "answer": "style",
+      "explanation": "迂回的，迂回的风格。The writer's periphrastic style was difficult to follow. 作家迂回的风格难以理解。"
+    },
+    {
+      "question": "majestic _________",
+      "type": "blank",
+      "answer": "mountains",
+      "explanation": "雄伟的，雄伟的山脉。The majestic mountains towered over the valley. 雄伟的山脉矗立在山谷之上。"
+    },
+    {
+      "question": "sadistic ______",
+      "type": "blank",
+      "answer": "streak",
+      "explanation": "虐待狂的，虐待狂的倾向。The villain had a cruel sadistic streak. 恶棍有残忍的虐待狂的倾向。"
+    },
+    {
+      "question": "eulogistic ______",
+      "type": "blank",
+      "answer": "speech",
+      "explanation": "颂扬的，颂扬的演讲。The funeral featured a eulogistic speech about the deceased. 葬礼上有关于逝者的颂扬的演讲。"
+    },
+    {
+      "question": "moralistic ____",
+      "type": "blank",
+      "answer": "tone",
+      "explanation": "说教的，说教的语气。The article had an annoying moralistic tone. 这篇文章有令人讨厌的说教的语气。"
+    },
+    {
+      "question": "chauvinistic ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "沙文主义的，沙文主义的观点。His chauvinistic view offended many colleagues. 他沙文主义的观点冒犯了许多同事。"
+    },
+    {
+      "question": "anachronistic ___",
+      "type": "blank",
+      "answer": "law",
+      "explanation": "过时的，过时的法律。The anachronistic law needed to be updated. 过时的法律需要更新。"
+    },
+    {
+      "question": "characteristic _______",
+      "type": "blank",
+      "answer": "feature",
+      "explanation": "特征性的，特征性的特点。Blue eyes are a characteristic feature of the breed. 蓝眼睛是该品种特征性的特点。"
+    },
+    {
+      "question": "linguistic _______",
+      "type": "blank",
+      "answer": "feature",
+      "explanation": "语言的，语言的特征。Tone is an important linguistic feature in Chinese. 声调是中文中重要的语言的特征。"
+    },
+    {
+      "question": "altruistic ___",
+      "type": "blank",
+      "answer": "act",
+      "explanation": "无私的，无私的行为。Donating to charity is an altruistic act. 向慈善机构捐款是无私的行为。"
+    },
+    {
+      "question": "agnostic ______",
+      "type": "blank",
+      "answer": "stance",
+      "explanation": "不可知论的，不可知论的立场。He maintained an agnostic stance on religious matters. 他在宗教问题上保持不可知论的立场。"
+    },
+    {
+      "question": "caustic _______",
+      "type": "blank",
+      "answer": "remarks",
+      "explanation": "刻薄的，刻薄的评论。Her caustic remarks wounded his pride. 她刻薄的评论伤害了他的自尊。"
+    },
+    {
+      "question": "acoustic ______",
+      "type": "blank",
+      "answer": "guitar",
+      "explanation": "原声的，原声吉他。The musician played an acoustic guitar at the concert. 音乐家在音乐会上演奏了原声吉他。"
+    },
+    {
+      "question": "rustic _____",
+      "type": "blank",
+      "answer": "charm",
+      "explanation": "乡村的，乡村的魅力。The cottage had rustic charm with its wooden beams. 小屋有木梁的乡村的魅力。"
+    },
+    {
+      "question": "mystic ______",
+      "type": "blank",
+      "answer": "vision",
+      "explanation": "神秘的，神秘的幻象。The holy man experienced a mystic vision. 圣人经历了神秘的幻象。"
+    },
+    {
+      "question": "attic ____",
+      "type": "blank",
+      "answer": "room",
+      "explanation": "阁楼，阁楼房间。Old furniture was stored in the attic room. 旧家具存放在阁楼房间里。"
+    },
+    {
+      "question": "therapeutic ______",
+      "type": "blank",
+      "answer": "effect",
+      "explanation": "治疗的，治疗的效果。The massage had a therapeutic effect on sore muscles. 按摩对酸痛的肌肉有治疗的效果。"
+    },
+    {
+      "question": "_____ havoc",
+      "type": "blank",
+      "answer": "cause",
+      "explanation": "浩劫，造成浩劫。The storm would cause havoc in the coastal town. 风暴会在沿海城镇造成浩劫。"
+    },
+    {
+      "question": "scad __ _______",
+      "type": "blank",
+      "answer": "of options",
+      "explanation": "大量，大量选择。The restaurant offered a scad of options on the menu. 餐厅菜单上提供了大量选择。"
+    },
+    {
+      "question": "_____ figurehead",
+      "type": "blank",
+      "answer": "royal",
+      "explanation": "傀儡，皇家傀儡。The king was merely a royal figurehead with no real power. 国王只是没有实权的皇家傀儡。"
+    },
+    {
+      "question": "proofread _ _____",
+      "type": "blank",
+      "answer": "a draft",
+      "explanation": "校对，校对草稿。The editor would proofread a draft before publication. 编辑会在出版前校对草稿。"
+    },
+    {
+      "question": "_______ fad",
+      "type": "blank",
+      "answer": "fashion",
+      "explanation": "时尚，时尚潮流。The fashion fad came and went quickly. 时尚潮流来去匆匆。"
+    },
+    {
+      "question": "_ myriad __ _____",
+      "type": "blank",
+      "answer": "a of stars",
+      "explanation": "无数的，无数的星星。The night sky showed a myriad of stars. 夜空中呈现无数的星星。"
+    },
+    {
+      "question": "ironclad ____",
+      "type": "blank",
+      "answer": "rule",
+      "explanation": "铁定的，铁定的规则。The school had an ironclad rule against cheating. 学校有反对作弊的铁定的规则。"
+    },
+    {
+      "question": "____ ballad",
+      "type": "blank",
+      "answer": "folk",
+      "explanation": "民谣，民间民谣。The musician sang a traditional folk ballad. 音乐家唱了一首传统的民间民谣。"
+    },
+    {
+      "question": "nomad _____",
+      "type": "blank",
+      "answer": "tribe",
+      "explanation": "游牧民，游牧民部落。The nomad tribe traveled across the desert. 游牧民部落穿越沙漠。"
+    },
+    {
+      "question": "____ inroads",
+      "type": "blank",
+      "answer": "make",
+      "explanation": "进展，取得进展。The company began to make inroads into the Asian market. 公司开始在亚洲市场取得进展。"
+    },
+    {
+      "question": "crabbed ___________",
+      "type": "blank",
+      "answer": "handwriting",
+      "explanation": "难辨认的，难辨认的笔迹。The old letter had crabbed handwriting. 旧信上有难辨认的笔迹。"
+    },
+    {
+      "question": "self-absorbed ________",
+      "type": "blank",
+      "answer": "teenager",
+      "explanation": "自我陶醉的，自我陶醉的青少年。The self-absorbed teenager rarely thought of others. 自我陶醉的青少年很少考虑别人。"
+    },
+    {
+      "question": "barefaced ___",
+      "type": "blank",
+      "answer": "lie",
+      "explanation": "厚颜无耻的，厚颜无耻的谎言。He told a barefaced lie without any shame. 他厚颜无耻地说了厚颜无耻的谎言。"
+    },
+    {
+      "question": "jaundiced ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "有偏见的，有偏见的观点。His past experiences gave him a jaundiced view of politicians. 他过去的经历让他对政客有有偏见的观点。"
+    },
+    {
+      "question": "__ unnoticed",
+      "type": "blank",
+      "answer": "go",
+      "explanation": "未被注意的，未被注意。His good deeds often would go unnoticed. 他的善行经常未被注意。"
+    },
+    {
+      "question": "pronounced ______",
+      "type": "blank",
+      "answer": "effect",
+      "explanation": "明显的，明显的效果。The medicine had a pronounced effect on her symptoms. 药物对她的症状有明显的效果。"
+    },
+    {
+      "question": "hardheaded _______",
+      "type": "blank",
+      "answer": "realist",
+      "explanation": "务实的，务实的现实主义者。He was a hardheaded realist who dealt with facts. 他是一个处理事实的务实的现实主义者。"
+    },
+    {
+      "question": "levelheaded ________",
+      "type": "blank",
+      "answer": "approach",
+      "explanation": "冷静的，冷静的方法。She took a levelheaded approach to the crisis. 她对危机采取了冷静的方法。"
+    },
+    {
+      "question": "jaded ______",
+      "type": "blank",
+      "answer": "palate",
+      "explanation": "厌倦的，厌倦的味觉。The food critic had a jaded palate from tasting too many dishes. 美食评论家因品尝太多菜肴而有厌倦的味觉。"
+    },
+    {
+      "question": "lopsided _____",
+      "type": "blank",
+      "answer": "score",
+      "explanation": "一边倒的，一边倒的比分。The game ended with a lopsided score of 50 to 10. 比赛以50比10的一边倒的比分结束。"
+    },
+    {
+      "question": "backhanded __________",
+      "type": "blank",
+      "answer": "compliment",
+      "explanation": "挖苦的，挖苦的恭维。His backhanded compliment was actually an insult. 他挖苦的恭维实际上是侮辱。"
+    },
+    {
+      "question": "evenhanded _________",
+      "type": "blank",
+      "answer": "treatment",
+      "explanation": "公正的，公正的对待。The judge provided evenhanded treatment to all parties. 法官对所有当事人提供公正的对待。"
+    },
+    {
+      "question": "underhanded _______",
+      "type": "blank",
+      "answer": "tactics",
+      "explanation": "卑鄙的，卑鄙的手段。The competitor used underhanded tactics to win. 竞争对手使用卑鄙的手段获胜。"
+    },
+    {
+      "question": "closed-minded ________",
+      "type": "blank",
+      "answer": "attitude",
+      "explanation": "固执己见的，固执己见的态度。His closed-minded attitude prevented him from learning. 他固执己见的态度阻止了他学习。"
+    },
+    {
+      "question": "long-winded ______",
+      "type": "blank",
+      "answer": "speech",
+      "explanation": "冗长的，冗长的演讲。The politician's long-winded speech bored the audience. 政客冗长的演讲让观众感到无聊。"
+    },
+    {
+      "question": "unfounded _____",
+      "type": "blank",
+      "answer": "rumor",
+      "explanation": "没有根据的，没有根据的谣言。The unfounded rumor spread quickly through the town. 没有根据的谣言在镇上迅速传播。"
+    },
+    {
+      "question": "____ grounded",
+      "type": "blank",
+      "answer": "well",
+      "explanation": "有根据的，有充分根据的。Her theory was well grounded in scientific evidence. 她的理论有充分根据在科学证据上。"
+    },
+    {
+      "question": "outmoded ________",
+      "type": "blank",
+      "answer": "practice",
+      "explanation": "过时的，过时的做法。The company abandoned its outmoded practice. 公司放弃了过时的做法。"
+    },
+    {
+      "question": "unguarded ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "不谨慎的，不谨慎的评论。His unguarded remark caused controversy. 他不谨慎的评论引起了争议。"
+    },
+    {
+      "question": "________ deed",
+      "type": "blank",
+      "answer": "property",
+      "explanation": "契约，财产契约。The lawyer reviewed the property deed. 律师审查了财产契约。"
+    },
+    {
+      "question": "reed ___",
+      "type": "blank",
+      "answer": "bed",
+      "explanation": "芦苇，芦苇床。Birds nested in the reed bed by the river. 鸟儿在河边的芦苇床筑巢。"
+    },
+    {
+      "question": "____ screed",
+      "type": "blank",
+      "answer": "long",
+      "explanation": "冗长的文章，冗长的文章。The critic wrote a long screed attacking the film. 评论家写了一篇攻击这部电影的冗长的文章。"
+    },
+    {
+      "question": "engaged ______",
+      "type": "blank",
+      "answer": "couple",
+      "explanation": "订婚的，订婚的情侣。The engaged couple planned their wedding. 订婚的情侣计划他们的婚礼。"
+    },
+    {
+      "question": "full-fledged ______",
+      "type": "blank",
+      "answer": "member",
+      "explanation": "完全成熟的，完全成熟的成员。She became a full-fledged member of the organization. 她成为该组织的完全成熟的成员。"
+    },
+    {
+      "question": "jagged ____",
+      "type": "blank",
+      "answer": "edge",
+      "explanation": "锯齿状的，锯齿状的边缘。The broken glass had a dangerous jagged edge. 破碎的玻璃有危险的锯齿状的边缘。"
+    },
+    {
+      "question": "ragged _______",
+      "type": "blank",
+      "answer": "clothes",
+      "explanation": "破烂的，破烂的衣服。The homeless man wore ragged clothes. 无家可归的人穿着破烂的衣服。"
+    },
+    {
+      "question": "dogged _____________",
+      "type": "blank",
+      "answer": "determination",
+      "explanation": "顽强的，顽强的决心。Her dogged determination helped her succeed. 她顽强的决心帮助她成功。"
+    },
+    {
+      "question": "deranged ______",
+      "type": "blank",
+      "answer": "killer",
+      "explanation": "精神错乱的，精神错乱的杀手。The police searched for the deranged killer. 警方搜寻精神错乱的杀手。"
+    },
+    {
+      "question": "estranged ______",
+      "type": "blank",
+      "answer": "couple",
+      "explanation": "疏远的，疏远的夫妇。The estranged couple filed for divorce. 疏远的夫妇申请离婚。"
+    },
+    {
+      "question": "detached _____",
+      "type": "blank",
+      "answer": "house",
+      "explanation": "独立的，独立的房子。They bought a detached house with a garden. 他们买了一座带花园的独立的房子。"
+    },
+    {
+      "question": "drenched _______",
+      "type": "blank",
+      "answer": "clothes",
+      "explanation": "湿透的，湿透的衣服。Her drenched clothes needed to be changed. 她湿透的衣服需要更换。"
+    },
+    {
+      "question": "wretched ____",
+      "type": "blank",
+      "answer": "life",
+      "explanation": "悲惨的，悲惨的生活。The poor family lived a wretched life. 贫困的家庭过着悲惨的生活。"
+    },
+    {
+      "question": "shed _____",
+      "type": "blank",
+      "answer": "tears",
+      "explanation": "流下，流下眼泪。She would shed tears at the sad movie. 她会在悲伤的电影中流下眼泪。"
+    },
+    {
+      "question": "accomplished ________",
+      "type": "blank",
+      "answer": "musician",
+      "explanation": "有造诣的，有造诣的音乐家。The accomplished musician performed at Carnegie Hall. 有造诣的音乐家在卡内基音乐厅演出。"
+    },
+    {
+      "question": "distinguished ______",
+      "type": "blank",
+      "answer": "career",
+      "explanation": "杰出的，杰出的职业生涯。He retired after a distinguished career in medicine. 他在杰出的职业生涯后退休了。"
+    },
+    {
+      "question": "______ watershed",
+      "type": "blank",
+      "answer": "policy",
+      "explanation": "分水岭，政策分水岭。The new law marked a policy watershed. 新法律标志着政策分水岭。"
+    },
+    {
+      "question": "full-bodied ____",
+      "type": "blank",
+      "answer": "wine",
+      "explanation": "醇厚的，醇厚的葡萄酒。The sommelier recommended a full-bodied wine. 侍酒师推荐了醇厚的葡萄酒。"
+    },
+    {
+      "question": "disembodied _____",
+      "type": "blank",
+      "answer": "voice",
+      "explanation": "无形的，无形的声音。A mysterious disembodied voice echoed in the hall. 神秘的无形的声音在大厅里回荡。"
+    },
+    {
+      "question": "studied ___________",
+      "type": "blank",
+      "answer": "nonchalance",
+      "explanation": "故意装出的，故意装出的漠不关心。His studied nonchalance didn't fool anyone. 他故意装出的漠不关心没有骗过任何人。"
+    },
+    {
+      "question": "unqualified _______",
+      "type": "blank",
+      "answer": "success",
+      "explanation": "完全的，完全的成功。The performance was an unqualified success. 演出是完全的成功。"
+    }
+  ]
+}
