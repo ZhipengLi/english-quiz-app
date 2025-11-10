@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "_____ gourmand",
+      "type": "blank",
+      "answer": "noted",
+      "explanation": "美食家，著名的美食家。The noted gourmand wrote reviews for the finest restaurants. 著名的美食家为最好的餐厅撰写评论。"
+    },
+    {
+      "question": "expand ______",
+      "type": "blank",
+      "answer": "market",
+      "explanation": "扩展，扩展市场。The company plans to expand market share internationally. 公司计划在国际上扩展市场份额。"
+    },
+    {
+      "question": "_________ firebrand",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "煽动者，政治煽动者。The political firebrand stirred up the crowd with passionate speeches. 政治煽动者用激情的演讲煽动人群。"
+    },
+    {
+      "question": "___ __ errand",
+      "type": "blank",
+      "answer": "run an",
+      "explanation": "差事，跑差事。She had to run an errand at the post office. 她不得不在邮局跑差事。"
+    },
+    {
+      "question": "____ __ ___ grandstand",
+      "type": "blank",
+      "answer": "play to the",
+      "explanation": "看台，迎合看台观众。The politician would play to the grandstand with dramatic gestures. 政客会用戏剧性的姿态迎合看台观众。"
+    },
+    {
+      "question": "withstand ________",
+      "type": "blank",
+      "answer": "pressure",
+      "explanation": "承受，承受压力。The structure was designed to withstand pressure from earthquakes. 该结构旨在承受地震的压力。"
+    },
+    {
+      "question": "bend ___ _____",
+      "type": "blank",
+      "answer": "the rules",
+      "explanation": "弯曲，违反规则。Sometimes you have to bend the rules to get things done. 有时你必须违反规则才能把事情办成。"
+    },
+    {
+      "question": "unbend _ ______",
+      "type": "blank",
+      "answer": "a little",
+      "explanation": "放松，稍微放松。He needed to unbend a little and enjoy life. 他需要稍微放松享受生活。"
+    },
+    {
+      "question": "descend ___ ______",
+      "type": "blank",
+      "answer": "the stairs",
+      "explanation": "下降，下楼梯。Carefully descend the stairs in the dark. 在黑暗中小心下楼梯。"
+    },
+    {
+      "question": "condescend __ ____",
+      "type": "blank",
+      "answer": "to help",
+      "explanation": "屈尊，屈尊帮忙。He wouldn't condescend to help with menial tasks. 他不会屈尊帮忙做琐碎的工作。"
+    },
+    {
+      "question": "transcend ______",
+      "type": "blank",
+      "answer": "limits",
+      "explanation": "超越，超越极限。Great art can transcend limits of time and culture. 伟大的艺术可以超越时间和文化的极限。"
+    },
+    {
+      "question": "reprehend __________",
+      "type": "blank",
+      "answer": "misconduct",
+      "explanation": "谴责，谴责不当行为。The committee voted to reprehend misconduct by the official. 委员会投票谴责官员的不当行为。"
+    },
+    {
+      "question": "_____ comprehend",
+      "type": "blank",
+      "answer": "fully",
+      "explanation": "理解，完全理解。It took time to fully comprehend the complexity of the issue. 需要时间才能完全理解这个问题的复杂性。"
+    },
+    {
+      "question": "apprehend _ _______",
+      "type": "blank",
+      "answer": "a suspect",
+      "explanation": "逮捕，逮捕嫌疑人。Police worked to apprehend a suspect in the robbery. 警方努力逮捕抢劫案的嫌疑人。"
+    },
+    {
+      "question": "fiendish ____",
+      "type": "blank",
+      "answer": "plot",
+      "explanation": "恶魔般的，恶魔般的阴谋。The villain devised a fiendish plot. 恶棍设计了恶魔般的阴谋。"
+    },
+    {
+      "question": "mend _ _____",
+      "type": "blank",
+      "answer": "a fence",
+      "explanation": "修补，修补篱笆。He spent the afternoon trying to mend a fence. 他花了一下午试图修补篱笆。"
+    },
+    {
+      "question": "amend ___ ____",
+      "type": "blank",
+      "answer": "the bill",
+      "explanation": "修改，修改法案。Congress voted to amend the bill before passage. 国会投票在通过前修改法案。"
+    },
+    {
+      "question": "emend _ ____",
+      "type": "blank",
+      "answer": "a text",
+      "explanation": "校订，校订文本。The scholar worked to emend a text from ancient manuscripts. 学者努力从古代手稿中校订文本。"
+    },
+    {
+      "question": "______ impends",
+      "type": "blank",
+      "answer": "danger",
+      "explanation": "即将发生，危险即将发生。Everyone sensed that danger impends. 每个人都感觉到危险即将发生。"
+    },
+    {
+      "question": "expend _________",
+      "type": "blank",
+      "answer": "resources",
+      "explanation": "花费，花费资源。The project would expend resources over several years. 该项目将在几年内花费资源。"
+    },
+    {
+      "question": "rend _______",
+      "type": "blank",
+      "answer": "asunder",
+      "explanation": "撕裂，撕裂成碎片。The conflict threatened to rend asunder the community. 冲突威胁要撕裂成碎片社区。"
+    },
+    {
+      "question": "tend _ ______",
+      "type": "blank",
+      "answer": "a garden",
+      "explanation": "照料，照料花园。She would tend a garden every morning. 她每天早上都会照料花园。"
+    },
+    {
+      "question": "pretend _________",
+      "type": "blank",
+      "answer": "ignorance",
+      "explanation": "假装，假装无知。He would pretend ignorance when questioned. 被质问时他会假装无知。"
+    },
+    {
+      "question": "superintend _____",
+      "type": "blank",
+      "answer": "works",
+      "explanation": "监督，监督工程。The engineer was hired to superintend works at the site. 工程师被雇来监督现场的工程。"
+    },
+    {
+      "question": "distend _______",
+      "type": "blank",
+      "answer": "stomach",
+      "explanation": "膨胀，膨胀胃部。Eating too much can distend stomach uncomfortably. 吃得太多会让胃部不舒服地膨胀。"
+    },
+    {
+      "question": "extend _ ________",
+      "type": "blank",
+      "answer": "a deadline",
+      "explanation": "延长，延长截止日期。The professor agreed to extend a deadline for the paper. 教授同意延长论文的截止日期。"
+    },
+    {
+      "question": "rescind __ _____",
+      "type": "blank",
+      "answer": "an offer",
+      "explanation": "撤销，撤销提议。The company decided to rescind an offer of employment. 公司决定撤销工作提议。"
+    },
+    {
+      "question": "purblind ________",
+      "type": "blank",
+      "answer": "judgment",
+      "explanation": "愚钝的，愚钝的判断。His purblind judgment led to poor decisions. 他愚钝的判断导致了糟糕的决定。"
+    },
+    {
+      "question": "grind ______",
+      "type": "blank",
+      "answer": "coffee",
+      "explanation": "研磨，研磨咖啡。She would grind coffee beans fresh each morning. 她每天早上都会研磨新鲜的咖啡豆。"
+    },
+    {
+      "question": "_________ vagabond",
+      "type": "blank",
+      "answer": "wandering",
+      "explanation": "流浪者，流浪的流浪者。The wandering vagabond had no fixed home. 流浪的流浪者没有固定的家。"
+    },
+    {
+      "question": "abscond ____ _____",
+      "type": "blank",
+      "answer": "with funds",
+      "explanation": "潜逃，携款潜逃。The accountant would abscond with funds from the company. 会计会携款潜逃。"
+    },
+    {
+      "question": "almond ____",
+      "type": "blank",
+      "answer": "tree",
+      "explanation": "杏仁，杏仁树。The almond tree blossomed in spring. 杏仁树在春天开花。"
+    },
+    {
+      "question": "____ frond",
+      "type": "blank",
+      "answer": "palm",
+      "explanation": "叶子，棕榈叶子。The palm frond swayed in the breeze. 棕榈叶子在微风中摇曳。"
+    },
+    {
+      "question": "moribund _______",
+      "type": "blank",
+      "answer": "company",
+      "explanation": "垂死的，垂死的公司。The moribund company was on the verge of bankruptcy. 垂死的公司濒临破产。"
+    },
+    {
+      "question": "fecund ___________",
+      "type": "blank",
+      "answer": "imagination",
+      "explanation": "富饶的，富饶的想象力。The writer had a fecund imagination that produced countless stories. 作家有富饶的想象力创作了无数故事。"
+    },
+    {
+      "question": "rubicund ____",
+      "type": "blank",
+      "answer": "face",
+      "explanation": "红润的，红润的脸。The jolly man had a rubicund face. 快活的男人有红润的脸。"
+    },
+    {
+      "question": "jocund ____",
+      "type": "blank",
+      "answer": "mood",
+      "explanation": "欢乐的，欢乐的心情。He was in a jocund mood at the party. 他在派对上心情欢乐的心情。"
+    },
+    {
+      "question": "hidebound _______",
+      "type": "blank",
+      "answer": "mindset",
+      "explanation": "顽固的，顽固的思维。His hidebound mindset prevented innovation. 他顽固的思维阻止了创新。"
+    },
+    {
+      "question": "confound ____________",
+      "type": "blank",
+      "answer": "expectations",
+      "explanation": "使困惑，使预期困惑。The results would confound expectations of the experts. 结果会使专家的预期困惑。"
+    },
+    {
+      "question": "profound _______",
+      "type": "blank",
+      "answer": "insight",
+      "explanation": "深刻的，深刻的见解。The philosopher offered profound insight into human nature. 哲学家对人性提供了深刻的见解。"
+    },
+    {
+      "question": "________ compound",
+      "type": "blank",
+      "answer": "chemical",
+      "explanation": "化合物，化学化合物。The laboratory analyzed the chemical compound. 实验室分析了化学化合物。"
+    },
+    {
+      "question": "unsound _________",
+      "type": "blank",
+      "answer": "reasoning",
+      "explanation": "不健全的，不健全的推理。His argument was based on unsound reasoning. 他的论点基于不健全的推理。"
+    },
+    {
+      "question": "rotund ______",
+      "type": "blank",
+      "answer": "figure",
+      "explanation": "圆胖的，圆胖的身材。The rotund figure of the chef was recognizable. 厨师圆胖的身材很容易辨认。"
+    },
+    {
+      "question": "orotund _____",
+      "type": "blank",
+      "answer": "voice",
+      "explanation": "洪亮的，洪亮的声音。The speaker had an orotund voice that filled the hall. 演讲者有洪亮的声音充满了大厅。"
+    },
+    {
+      "question": "slipshod ____",
+      "type": "blank",
+      "answer": "work",
+      "explanation": "马虎的，马虎的工作。The contractor's slipshod work needed redoing. 承包商马虎的工作需要重做。"
+    },
+    {
+      "question": "plod _____",
+      "type": "blank",
+      "answer": "along",
+      "explanation": "沉重地走，沉重地走。The tired workers would plod along the muddy road. 疲惫的工人会在泥泞的路上沉重地走。"
+    },
+    {
+      "question": "______ falsehood",
+      "type": "blank",
+      "answer": "spread",
+      "explanation": "谎言，传播谎言。The malicious person would spread falsehood about others. 恶意的人会传播关于他人的谎言。"
+    },
+    {
+      "question": "____ hardihood",
+      "type": "blank",
+      "answer": "show",
+      "explanation": "大胆，显示大胆。The explorers would show hardihood in facing dangers. 探险者会在面对危险时显示大胆。"
+    },
+    {
+      "question": "___ pod",
+      "type": "blank",
+      "answer": "pea",
+      "explanation": "豆荚，豌豆豆荚。The pea pod contained several seeds. 豌豆豆荚里有几颗种子。"
+    },
+    {
+      "question": "prod ____ ______",
+      "type": "blank",
+      "answer": "into action",
+      "explanation": "刺激，刺激采取行动。The crisis would prod into action the government. 危机会刺激政府采取行动。"
+    },
+    {
+      "question": "sod ____",
+      "type": "blank",
+      "answer": "farm",
+      "explanation": "草皮，草皮农场。The sod farm supplied turf for lawns. 草皮农场为草坪供应草皮。"
+    },
+    {
+      "question": "_________ bard",
+      "type": "blank",
+      "answer": "wandering",
+      "explanation": "吟游诗人，流浪的吟游诗人。The wandering bard sang tales of heroes. 流浪的吟游诗人唱英雄的故事。"
+    },
+    {
+      "question": "discard _____",
+      "type": "blank",
+      "answer": "trash",
+      "explanation": "丢弃，丢弃垃圾。Please discard trash in the proper bin. 请在适当的垃圾箱中丢弃垃圾。"
+    },
+    {
+      "question": "______ disregard",
+      "type": "blank",
+      "answer": "blithe",
+      "explanation": "漠视，漫不经心的漠视。His blithe disregard for rules caused problems. 他对规则漫不经心的漠视造成了问题。"
+    },
+    {
+      "question": "haggard ____",
+      "type": "blank",
+      "answer": "face",
+      "explanation": "憔悴的，憔悴的脸。After days without sleep, she had a haggard face. 几天没睡后，她有憔悴的脸。"
+    },
+    {
+      "question": "laggard _______",
+      "type": "blank",
+      "answer": "economy",
+      "explanation": "落后的，落后的经济。The laggard economy needed stimulus measures. 落后的经济需要刺激措施。"
+    },
+    {
+      "question": "______ niggard",
+      "type": "blank",
+      "answer": "stingy",
+      "explanation": "吝啬鬼，吝啬的吝啬鬼。The stingy niggard refused to donate anything. 吝啬的吝啬鬼拒绝捐赠任何东西。"
+    },
+    {
+      "question": "____ sluggard",
+      "type": "blank",
+      "answer": "lazy",
+      "explanation": "懒汉，懒惰的懒汉。The lazy sluggard avoided all work. 懒惰的懒汉逃避所有工作。"
+    },
+    {
+      "question": "diehard ___",
+      "type": "blank",
+      "answer": "fan",
+      "explanation": "死忠，死忠粉丝。He was a diehard fan who never missed a game. 他是从不错过比赛的死忠粉丝。"
+    },
+    {
+      "question": "________ blowhard",
+      "type": "blank",
+      "answer": "boastful",
+      "explanation": "吹牛者，自夸的吹牛者。The boastful blowhard exaggerated his achievements. 自夸的吹牛者夸大了他的成就。"
+    },
+    {
+      "question": "_____ dullard",
+      "type": "blank",
+      "answer": "utter",
+      "explanation": "笨蛋，完全的笨蛋。He was considered an utter dullard by his classmates. 他被同学认为是完全的笨蛋。"
+    },
+    {
+      "question": "______ _ canard",
+      "type": "blank",
+      "answer": "spread a",
+      "explanation": "谣言，传播谣言。The tabloid would spread a canard about the celebrity. 小报会传播关于名人的谣言。"
+    },
+    {
+      "question": "aboveboard ____",
+      "type": "blank",
+      "answer": "deal",
+      "explanation": "光明正大的，光明正大的交易。The business conducted an aboveboard deal. 企业进行了光明正大的交易。"
+    },
+    {
+      "question": "hoard ____",
+      "type": "blank",
+      "answer": "cash",
+      "explanation": "囤积，囤积现金。Some people hoard cash during economic uncertainty. 有些人在经济不确定时期囤积现金。"
+    },
+    {
+      "question": "retard ______",
+      "type": "blank",
+      "answer": "growth",
+      "explanation": "阻碍，阻碍增长。Poor soil conditions can retard growth of plants. 土壤条件差会阻碍植物的增长。"
+    },
+    {
+      "question": "________ dastard",
+      "type": "blank",
+      "answer": "cowardly",
+      "explanation": "懦夫，懦弱的懦夫。The cowardly dastard fled from battle. 懦弱的懦夫从战场逃跑了。"
+    },
+    {
+      "question": "safeguard _______",
+      "type": "blank",
+      "answer": "privacy",
+      "explanation": "保护，保护隐私。New laws aim to safeguard privacy online. 新法律旨在保护网上隐私。"
+    },
+    {
+      "question": "leeward ____",
+      "type": "blank",
+      "answer": "side",
+      "explanation": "背风的，背风的一侧。The sailors anchored on the leeward side of the island. 水手们在岛屿的背风的一侧下锚。"
+    },
+    {
+      "question": "untoward ________",
+      "type": "blank",
+      "answer": "incident",
+      "explanation": "不幸的，不幸的事件。An untoward incident marred the celebration. 不幸的事件破坏了庆祝活动。"
+    },
+    {
+      "question": "straightforward ______",
+      "type": "blank",
+      "answer": "answer",
+      "explanation": "直截了当的，直截了当的回答。She gave a straightforward answer to the question. 她对问题给出了直截了当的回答。"
+    },
+    {
+      "question": "_________ hazard",
+      "type": "blank",
+      "answer": "workplace",
+      "explanation": "危险，工作场所危险。Unsafe equipment is a workplace hazard. 不安全的设备是工作场所危险。"
+    },
+    {
+      "question": "haphazard ________",
+      "type": "blank",
+      "answer": "approach",
+      "explanation": "随意的，随意的方法。His haphazard approach led to poor results. 他随意的方法导致了糟糕的结果。"
+    },
+    {
+      "question": "_ herd __ ______",
+      "type": "blank",
+      "answer": "a of cattle",
+      "explanation": "群，一群牛。A herd of cattle grazed in the pasture. 一群牛在牧场上吃草。"
+    },
+    {
+      "question": "undergird _________",
+      "type": "blank",
+      "answer": "arguments",
+      "explanation": "支撑，支撑论点。Strong evidence should undergird arguments. 强有力的证据应该支撑论点。"
+    },
+    {
+      "question": "_____ cord",
+      "type": "blank",
+      "answer": "power",
+      "explanation": "电线，电源线。The power cord was too short to reach the outlet. 电源线太短无法够到插座。"
+    },
+    {
+      "question": "_____ accord",
+      "type": "blank",
+      "answer": "reach",
+      "explanation": "协议，达成协议。The negotiators worked to reach accord. 谈判者努力达成协议。"
+    },
+    {
+      "question": "________ concord",
+      "type": "blank",
+      "answer": "national",
+      "explanation": "和谐，国家和谐。The treaty promoted national concord. 该条约促进了国家和谐。"
+    },
+    {
+      "question": "ford ___ _____",
+      "type": "blank",
+      "answer": "the river",
+      "explanation": "涉水而过，涉水过河。The travelers had to ford the river on horseback. 旅行者不得不骑马涉水过河。"
+    },
+    {
+      "question": "______ chord",
+      "type": "blank",
+      "answer": "guitar",
+      "explanation": "和弦，吉他和弦。The musician strummed a guitar chord. 音乐家弹奏了吉他和弦。"
+    },
+    {
+      "question": "____ harpsichord",
+      "type": "blank",
+      "answer": "play",
+      "explanation": "大键琴，演奏大键琴。The baroque musician would play harpsichord. 巴洛克音乐家会演奏大键琴。"
+    },
+    {
+      "question": "____ foreword",
+      "type": "blank",
+      "answer": "book",
+      "explanation": "前言，书的前言。A famous author wrote the book foreword. 一位著名作家写了书的前言。"
+    },
+    {
+      "question": "curd ______",
+      "type": "blank",
+      "answer": "cheese",
+      "explanation": "凝乳，凝乳奶酪。Curd cheese is used in many recipes. 凝乳奶酪用于许多食谱。"
+    },
+    {
+      "question": "defraud _________",
+      "type": "blank",
+      "answer": "investors",
+      "explanation": "欺诈，欺诈投资者。The scheme aimed to defraud investors of millions. 该计划旨在欺诈投资者数百万。"
+    },
+    {
+      "question": "______ feud",
+      "type": "blank",
+      "answer": "family",
+      "explanation": "世仇，家族世仇。The family feud lasted for generations. 家族世仇持续了几代人。"
+    },
+    {
+      "question": "_______ astrolabe",
+      "type": "blank",
+      "answer": "ancient",
+      "explanation": "星盘，古代星盘。Sailors used an ancient astrolabe for navigation. 水手们使用古代星盘进行导航。"
+    },
+    {
+      "question": "imbibe _______",
+      "type": "blank",
+      "answer": "culture",
+      "explanation": "吸收，吸收文化。Living abroad allowed her to imbibe culture deeply. 在国外生活让她深入吸收文化。"
+    },
+    {
+      "question": "_____ gibe",
+      "type": "blank",
+      "answer": "trade",
+      "explanation": "嘲讽，互相嘲讽。The rivals would trade gibe during debates. 对手会在辩论中互相嘲讽。"
+    },
+    {
+      "question": "jibe ____ _____",
+      "type": "blank",
+      "answer": "with facts",
+      "explanation": "一致，与事实一致。His story didn't jibe with facts. 他的故事与事实不一致。"
+    },
+    {
+      "question": "_____ _ bribe",
+      "type": "blank",
+      "answer": "offer a",
+      "explanation": "贿赂，提供贿赂。It is illegal to offer a bribe to officials. 向官员提供贿赂是非法的。"
+    },
+    {
+      "question": "ascribe __",
+      "type": "blank",
+      "answer": "to",
+      "explanation": "归因于，归因于。We can ascribe to his success to hard work. 我们可以将他的成功归因于努力工作。"
+    },
+    {
+      "question": "circumscribe ______",
+      "type": "blank",
+      "answer": "powers",
+      "explanation": "限制，限制权力。The constitution seeks to circumscribe powers of government. 宪法试图限制政府的权力。"
+    },
+    {
+      "question": "transcribe _____",
+      "type": "blank",
+      "answer": "notes",
+      "explanation": "抄写，抄写笔记。The assistant would transcribe notes from the meeting. 助理会抄写会议的笔记。"
+    },
+    {
+      "question": "inscribe _ ____",
+      "type": "blank",
+      "answer": "a name",
+      "explanation": "刻写，刻写名字。They would inscribe a name on the memorial. 他们会在纪念碑上刻写名字。"
+    },
+    {
+      "question": "proscribe _ ________",
+      "type": "blank",
+      "answer": "a practice",
+      "explanation": "禁止，禁止做法。The law would proscribe a practice deemed harmful. 法律会禁止被认为有害的做法。"
+    },
+    {
+      "question": "adobe _____",
+      "type": "blank",
+      "answer": "house",
+      "explanation": "土坯，土坯房子。The adobe house kept cool in the desert heat. 土坯房子在沙漠炎热中保持凉爽。"
+    },
+    {
+      "question": "________ lobe",
+      "type": "blank",
+      "answer": "temporal",
+      "explanation": "叶，颞叶。The temporal lobe processes auditory information. 颞叶处理听觉信息。"
+    },
+    {
+      "question": "_______ microbe",
+      "type": "blank",
+      "answer": "harmful",
+      "explanation": "微生物，有害的微生物。Harmful microbe can cause disease. 有害的微生物会导致疾病。"
+    },
+    {
+      "question": "_____-__ wardrobe",
+      "type": "blank",
+      "answer": "built-in",
+      "explanation": "衣柜，嵌入式衣柜。The bedroom featured a built-in wardrobe. 卧室有嵌入式衣柜。"
+    },
+    {
+      "question": "_____ probe",
+      "type": "blank",
+      "answer": "space",
+      "explanation": "探测器，太空探测器。The space probe sent back images from Mars. 太空探测器从火星发回图像。"
+    },
+    {
+      "question": "deface ________",
+      "type": "blank",
+      "answer": "property",
+      "explanation": "损坏，损坏财产。It is a crime to deface property with graffiti. 用涂鸦损坏财产是犯罪。"
+    }
+  ]
+}
