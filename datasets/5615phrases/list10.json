@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "_____ lounge",
+      "type": "blank",
+      "answer": "hotel",
+      "explanation": "休息室，酒店休息室。Guests gathered in the hotel lounge. 客人们聚集在酒店休息室。"
+    },
+    {
+      "question": "expunge ___ ______",
+      "type": "blank",
+      "answer": "the record",
+      "explanation": "删除，删除记录。The court agreed to expunge the record. 法院同意删除记录。"
+    },
+    {
+      "question": "____ surcharge",
+      "type": "blank",
+      "answer": "fuel",
+      "explanation": "附加费，燃油附加费。Airlines added a fuel surcharge to tickets. 航空公司在机票上增加了燃油附加费。"
+    },
+    {
+      "question": "_________ discharge",
+      "type": "blank",
+      "answer": "honorable",
+      "explanation": "解雇，光荣退伍。The soldier received an honorable discharge. 士兵获得了光荣退伍。"
+    },
+    {
+      "question": "_____ diverge",
+      "type": "blank",
+      "answer": "paths",
+      "explanation": "分歧，道路分歧。The paths diverge at the fork. 道路在岔口分歧。"
+    },
+    {
+      "question": "_______ dirge",
+      "type": "blank",
+      "answer": "funeral",
+      "explanation": "挽歌，葬礼挽歌。The choir sang a somber funeral dirge. 合唱团唱了一首庄严的葬礼挽歌。"
+    },
+    {
+      "question": "forge _ _________",
+      "type": "blank",
+      "answer": "a signature",
+      "explanation": "伪造，伪造签名。It is illegal to forge a signature. 伪造签名是非法的。"
+    },
+    {
+      "question": "splurge ________",
+      "type": "blank",
+      "answer": "shopping",
+      "explanation": "挥霍，挥霍购物。She decided to splurge shopping during the sale. 她决定在促销期间挥霍购物。"
+    },
+    {
+      "question": "scourge __ ___",
+      "type": "blank",
+      "answer": "of war",
+      "explanation": "灾祸，战争灾祸。The scourge of war affected millions. 战争灾祸影响了数百万人。"
+    },
+    {
+      "question": "purge _______",
+      "type": "blank",
+      "answer": "records",
+      "explanation": "清除，清除记录。The company would purge records annually. 公司每年会清除记录。"
+    },
+    {
+      "question": "resurge __ __________",
+      "type": "blank",
+      "answer": "in popularity",
+      "explanation": "复兴，复兴流行。Vinyl records would resurge in popularity. 黑胶唱片会复兴流行。"
+    },
+    {
+      "question": "____ gauge",
+      "type": "blank",
+      "answer": "fuel",
+      "explanation": "仪表，燃油仪表。Check the fuel gauge before driving. 驾驶前检查燃油仪表。"
+    },
+    {
+      "question": "____ __ subterfuge",
+      "type": "blank",
+      "answer": "ploy of",
+      "explanation": "诡计，诡计的策略。His claim was just a ploy of subterfuge. 他的声明只是诡计的策略。"
+    },
+    {
+      "question": "______ cache",
+      "type": "blank",
+      "answer": "secret",
+      "explanation": "藏匿处，秘密藏匿处。They discovered a secret cache of weapons. 他们发现了秘密藏匿处武器。"
+    },
+    {
+      "question": "___ _ _____ __ panache",
+      "type": "blank",
+      "answer": "add a touch of",
+      "explanation": "神气，增添一丝神气。She would add a touch of panache to every outfit. 她会为每套服装增添一丝神气。"
+    },
+    {
+      "question": "_____ cliché",
+      "type": "blank",
+      "answer": "stale",
+      "explanation": "陈词滥调，陈腐的陈词滥调。The speech was full of stale cliché. 演讲充满了陈腐的陈词滥调。"
+    },
+    {
+      "question": "______ niche",
+      "type": "blank",
+      "answer": "market",
+      "explanation": "利基，市场利基。The company found a profitable market niche. 公司找到了有利可图的市场利基。"
+    },
+    {
+      "question": "________ pastiche",
+      "type": "blank",
+      "answer": "artistic",
+      "explanation": "模仿作品，艺术模仿作品。The film was an artistic pastiche of noir classics. 这部电影是黑色经典的艺术模仿作品。"
+    },
+    {
+      "question": "____ avalanche",
+      "type": "blank",
+      "answer": "snow",
+      "explanation": "雪崩，雪崩。The snow avalanche buried the village. 雪崩掩埋了村庄。"
+    },
+    {
+      "question": "______ gauche",
+      "type": "blank",
+      "answer": "social",
+      "explanation": "笨拙的，社交笨拙的。His social gauche behavior embarrassed everyone. 他社交笨拙的行为让每个人都尴尬。"
+    },
+    {
+      "question": "_____ psyche",
+      "type": "blank",
+      "answer": "human",
+      "explanation": "心灵，人类心灵。The study explored the human psyche. 这项研究探索了人类心灵。"
+    },
+    {
+      "question": "___ apostrophe",
+      "type": "blank",
+      "answer": "use",
+      "explanation": "撇号，使用撇号。Remember to use apostrophe in contractions. 记得在缩写中使用撇号。"
+    },
+    {
+      "question": "wreathe __ ______",
+      "type": "blank",
+      "answer": "in smiles",
+      "explanation": "环绕，笑容环绕。Her face would wreathe in smiles. 她的脸会笑容环绕。"
+    },
+    {
+      "question": "____ lathe",
+      "type": "blank",
+      "answer": "wood",
+      "explanation": "车床，木工车床。The craftsman used a wood lathe. 工匠使用木工车床。"
+    },
+    {
+      "question": "loathe __ _____",
+      "type": "blank",
+      "answer": "to admit",
+      "explanation": "厌恶，厌恶承认。He was loathe to admit his mistake. 他厌恶承认自己的错误。"
+    },
+    {
+      "question": "lithe ______",
+      "type": "blank",
+      "answer": "figure",
+      "explanation": "柔软的，柔软的身材。The dancer had a lithe figure. 舞者有柔软的身材。"
+    },
+    {
+      "question": "blithe ______",
+      "type": "blank",
+      "answer": "spirit",
+      "explanation": "无忧无虑的，无忧无虑的精神。She had a blithe spirit that charmed everyone. 她有无忧无虑的精神迷住了每个人。"
+    },
+    {
+      "question": "_____ scythe",
+      "type": "blank",
+      "answer": "sharp",
+      "explanation": "镰刀，锋利的镰刀。The farmer used a sharp scythe to cut wheat. 农民用锋利的镰刀割麦子。"
+    },
+    {
+      "question": "belie ___ _____",
+      "type": "blank",
+      "answer": "the claim",
+      "explanation": "掩饰，掩饰声明。The facts belie the claim. 事实掩饰声明。"
+    },
+    {
+      "question": "bonhomie ___ ______",
+      "type": "blank",
+      "answer": "and warmth",
+      "explanation": "友善，友善和温暖。He greeted everyone with bonhomie and warmth. 他以友善和温暖迎接每个人。"
+    },
+    {
+      "question": "stymie ________",
+      "type": "blank",
+      "answer": "progress",
+      "explanation": "阻碍，阻碍进展。Bureaucracy would stymie progress. 官僚主义会阻碍进展。"
+    },
+    {
+      "question": "magpie __________",
+      "type": "blank",
+      "answer": "collecting",
+      "explanation": "喜鹊，喜鹊收集。She had a habit of magpie collecting shiny objects. 她有喜鹊收集闪亮物品的习惯。"
+    },
+    {
+      "question": "______ gaucherie",
+      "type": "blank",
+      "answer": "social",
+      "explanation": "笨拙，社交笨拙。His social gaucherie was obvious. 他的社交笨拙很明显。"
+    },
+    {
+      "question": "_____ coterie",
+      "type": "blank",
+      "answer": "elite",
+      "explanation": "小圈子，精英小圈子。An elite coterie controlled the organization. 精英小圈子控制着该组织。"
+    },
+    {
+      "question": "calorie ______",
+      "type": "blank",
+      "answer": "intake",
+      "explanation": "卡路里，卡路里摄入量。Monitor your calorie intake for health. 监控你的卡路里摄入量以保持健康。"
+    },
+    {
+      "question": "vie ___ ________",
+      "type": "blank",
+      "answer": "for position",
+      "explanation": "竞争，竞争位置。Candidates vie for position in the race. 候选人竞争位置在竞选中。"
+    },
+    {
+      "question": "slake ___'_ ______",
+      "type": "blank",
+      "answer": "one's thirst",
+      "explanation": "解渴，解渴。Cold water would slake one's thirst. 冷水会解渴。"
+    },
+    {
+      "question": "stake _ _____",
+      "type": "blank",
+      "answer": "a claim",
+      "explanation": "立桩，立桩声明。The prospectors would stake a claim. 勘探者会立桩声明。"
+    },
+    {
+      "question": "_____ hike",
+      "type": "blank",
+      "answer": "price",
+      "explanation": "上涨，价格上涨。The company announced a price hike. 公司宣布价格上涨。"
+    },
+    {
+      "question": "spike __ _____",
+      "type": "blank",
+      "answer": "in cases",
+      "explanation": "激增，病例激增。There was a spike in cases last month. 上个月病例激增。"
+    },
+    {
+      "question": "_____ spoke",
+      "type": "blank",
+      "answer": "wheel",
+      "explanation": "辐条，车轮辐条。A wheel spoke was broken. 车轮辐条断了。"
+    },
+    {
+      "question": "stoke _ ____",
+      "type": "blank",
+      "answer": "a fire",
+      "explanation": "添柴，添柴生火。He would stoke a fire throughout the night. 他整夜都会添柴生火。"
+    },
+    {
+      "question": "evoke _______",
+      "type": "blank",
+      "answer": "emotion",
+      "explanation": "唤起，唤起情感。The music would evoke emotion. 音乐会唤起情感。"
+    },
+    {
+      "question": "convoke _ _______",
+      "type": "blank",
+      "answer": "a meeting",
+      "explanation": "召集，召集会议。The chairman would convoke a meeting. 主席会召集会议。"
+    },
+    {
+      "question": "yoke ________",
+      "type": "blank",
+      "answer": "together",
+      "explanation": "束缚，束缚在一起。The oxen were yoked together. 牛被束缚在一起。"
+    },
+    {
+      "question": "_____ rebuke",
+      "type": "blank",
+      "answer": "sharp",
+      "explanation": "斥责，严厉的斥责。The teacher gave a sharp rebuke. 老师给予了严厉的斥责。"
+    },
+    {
+      "question": "_______ locale",
+      "type": "blank",
+      "answer": "tourist",
+      "explanation": "地点，旅游地点。The town was a popular tourist locale. 这个镇是受欢迎的旅游地点。"
+    },
+    {
+      "question": "gale _______",
+      "type": "blank",
+      "answer": "warning",
+      "explanation": "大风，大风警报。The weather service issued a gale warning. 气象局发布了大风警报。"
+    },
+    {
+      "question": "regale ______",
+      "type": "blank",
+      "answer": "guests",
+      "explanation": "款待，款待客人。The host would regale guests with stories. 主人会用故事款待客人。"
+    },
+    {
+      "question": "hale ___ ______",
+      "type": "blank",
+      "answer": "and hearty",
+      "explanation": "健壮的，健壮和精神饱满。He remained hale and hearty in old age. 他在老年保持健壮和精神饱满。"
+    },
+    {
+      "question": "inhale ______",
+      "type": "blank",
+      "answer": "deeply",
+      "explanation": "吸入，深深吸入。Inhale deeply to relax. 深深吸入以放松。"
+    },
+    {
+      "question": "shale ___",
+      "type": "blank",
+      "answer": "gas",
+      "explanation": "页岩，页岩气。Shale gas extraction is controversial. 页岩气开采存在争议。"
+    },
+    {
+      "question": "_____ finale",
+      "type": "blank",
+      "answer": "grand",
+      "explanation": "终曲，宏大的终曲。The concert ended with a grand finale. 音乐会以宏大的终曲结束。"
+    },
+    {
+      "question": "_____ morale",
+      "type": "blank",
+      "answer": "boost",
+      "explanation": "士气，提高士气。The victory would boost morale. 胜利会提高士气。"
+    },
+    {
+      "question": "imperturbable ____",
+      "type": "blank",
+      "answer": "calm",
+      "explanation": "沉着的，沉着的冷静。He maintained imperturbable calm. 他保持沉着的冷静。"
+    },
+    {
+      "question": "impeccable _____",
+      "type": "blank",
+      "answer": "taste",
+      "explanation": "无可挑剔的，无可挑剔的品味。She had impeccable taste in fashion. 她在时尚方面有无可挑剔的品味。"
+    },
+    {
+      "question": "irradicable ____",
+      "type": "blank",
+      "answer": "bias",
+      "explanation": "根深蒂固的，根深蒂固的偏见。The irradicable bias affected decisions. 根深蒂固的偏见影响了决定。"
+    },
+    {
+      "question": "applicable ___",
+      "type": "blank",
+      "answer": "law",
+      "explanation": "适用的，适用的法律。The applicable law was unclear. 适用的法律不明确。"
+    },
+    {
+      "question": "explicable ______",
+      "type": "blank",
+      "answer": "reason",
+      "explanation": "可解释的，可解释的原因。There must be an explicable reason. 必须有可解释的原因。"
+    },
+    {
+      "question": "inexplicable _____",
+      "type": "blank",
+      "answer": "event",
+      "explanation": "无法解释的，无法解释的事件。The inexplicable event puzzled scientists. 无法解释的事件困扰着科学家。"
+    },
+    {
+      "question": "amicable __________",
+      "type": "blank",
+      "answer": "settlement",
+      "explanation": "友好的，友好的和解。They reached an amicable settlement. 他们达成了友好的和解。"
+    },
+    {
+      "question": "______ extricable",
+      "type": "blank",
+      "answer": "easily",
+      "explanation": "可解脱的，容易可解脱的。The problem was easily extricable. 这个问题是容易可解脱的。"
+    },
+    {
+      "question": "irrevocable ________",
+      "type": "blank",
+      "answer": "decision",
+      "explanation": "不可撤销的，不可撤销的决定。He made an irrevocable decision. 他做出了不可撤销的决定。"
+    },
+    {
+      "question": "affordable _______",
+      "type": "blank",
+      "answer": "housing",
+      "explanation": "负担得起的，负担得起的住房。The city needs more affordable housing. 城市需要更多负担得起的住房。"
+    },
+    {
+      "question": "ineffaceable __________",
+      "type": "blank",
+      "answer": "impression",
+      "explanation": "不可磨灭的，不可磨灭的印象。She left an ineffaceable impression. 她留下了不可磨灭的印象。"
+    },
+    {
+      "question": "traceable ______",
+      "type": "blank",
+      "answer": "source",
+      "explanation": "可追溯的，可追溯的来源。The problem had a traceable source. 问题有可追溯的来源。"
+    },
+    {
+      "question": "serviceable _________",
+      "type": "blank",
+      "answer": "condition",
+      "explanation": "可用的，可用的状态。The car was in serviceable condition. 汽车处于可用的状态。"
+    },
+    {
+      "question": "agreeable _______",
+      "type": "blank",
+      "answer": "climate",
+      "explanation": "宜人的，宜人的气候。The region had an agreeable climate. 该地区有宜人的气候。"
+    },
+    {
+      "question": "disagreeable ____",
+      "type": "blank",
+      "answer": "odor",
+      "explanation": "令人不快的，令人不快的气味。A disagreeable odor filled the room. 令人不快的气味充满了房间。"
+    },
+    {
+      "question": "interchangeable _____",
+      "type": "blank",
+      "answer": "parts",
+      "explanation": "可互换的，可互换的零件。The machine used interchangeable parts. 机器使用可互换的零件。"
+    },
+    {
+      "question": "malleable _____",
+      "type": "blank",
+      "answer": "metal",
+      "explanation": "可塑的，可塑的金属。Gold is a malleable metal. 黄金是可塑的金属。"
+    },
+    {
+      "question": "permeable ________",
+      "type": "blank",
+      "answer": "membrane",
+      "explanation": "可渗透的，可渗透的膜。The permeable membrane allows water through. 可渗透的膜允许水通过。"
+    },
+    {
+      "question": "impermeable ________",
+      "type": "blank",
+      "answer": "membrane",
+      "explanation": "不透水的，不透水的膜。The impermeable membrane blocked all moisture. 不透水的膜阻止了所有湿气。"
+    },
+    {
+      "question": "affable ____",
+      "type": "blank",
+      "answer": "host",
+      "explanation": "和蔼可亲的，和蔼可亲的主人。The affable host welcomed everyone. 和蔼可亲的主人欢迎每个人。"
+    },
+    {
+      "question": "ineffable ___",
+      "type": "blank",
+      "answer": "joy",
+      "explanation": "难以言表的，难以言表的喜悦。She experienced ineffable joy. 她经历了难以言表的喜悦。"
+    },
+    {
+      "question": "indefatigable ______",
+      "type": "blank",
+      "answer": "worker",
+      "explanation": "不知疲倦的，不知疲倦的工人。He was an indefatigable worker. 他是不知疲倦的工人。"
+    },
+    {
+      "question": "unimpeachable ______",
+      "type": "blank",
+      "answer": "source",
+      "explanation": "无可指责的，无可指责的来源。The information came from an unimpeachable source. 信息来自无可指责的来源。"
+    },
+    {
+      "question": "perishable _____",
+      "type": "blank",
+      "answer": "goods",
+      "explanation": "易腐的，易腐的商品。Store perishable goods in the refrigerator. 将易腐的商品存放在冰箱中。"
+    },
+    {
+      "question": "appreciable __________",
+      "type": "blank",
+      "answer": "difference",
+      "explanation": "可察觉的，可察觉的差异。There was an appreciable difference. 有可察觉的差异。"
+    },
+    {
+      "question": "inappreciable ______",
+      "type": "blank",
+      "answer": "change",
+      "explanation": "微不足道的，微不足道的变化。The inappreciable change went unnoticed. 微不足道的变化未被注意到。"
+    },
+    {
+      "question": "sociable ______",
+      "type": "blank",
+      "answer": "nature",
+      "explanation": "好交际的，好交际的本性。He had a sociable nature. 他有好交际的本性。"
+    },
+    {
+      "question": "irremediable ____",
+      "type": "blank",
+      "answer": "harm",
+      "explanation": "无法补救的，无法补救的伤害。The accident caused irremediable harm. 事故造成了无法补救的伤害。"
+    },
+    {
+      "question": "justifiable ________",
+      "type": "blank",
+      "answer": "homicide",
+      "explanation": "正当的，正当的杀人。The court ruled it was justifiable homicide. 法院裁定这是正当的杀人。"
+    },
+    {
+      "question": "pliable ________",
+      "type": "blank",
+      "answer": "material",
+      "explanation": "柔韧的，柔韧的材料。The pliable material bent easily. 柔韧的材料容易弯曲。"
+    },
+    {
+      "question": "amiable ___________",
+      "type": "blank",
+      "answer": "personality",
+      "explanation": "和蔼可亲的，和蔼可亲的性格。She had an amiable personality. 她有和蔼可亲的性格。"
+    },
+    {
+      "question": "inexpiable _____",
+      "type": "blank",
+      "answer": "guilt",
+      "explanation": "无法赎罪的，无法赎罪的罪行。He felt inexpiable guilt. 他感到无法赎罪的罪行。"
+    },
+    {
+      "question": "friable ____",
+      "type": "blank",
+      "answer": "soil",
+      "explanation": "易碎的，易碎的土壤。The friable soil crumbled easily. 易碎的土壤容易碎裂。"
+    },
+    {
+      "question": "insatiable ________",
+      "type": "blank",
+      "answer": "appetite",
+      "explanation": "贪得无厌的，贪得无厌的食欲。He had an insatiable appetite for knowledge. 他对知识有贪得无厌的食欲。"
+    },
+    {
+      "question": "viable ____",
+      "type": "blank",
+      "answer": "plan",
+      "explanation": "可行的，可行的计划。They developed a viable plan. 他们制定了可行的计划。"
+    },
+    {
+      "question": "nonviable ______",
+      "type": "blank",
+      "answer": "embryo",
+      "explanation": "不能存活的，不能存活的胚胎。The nonviable embryo could not develop. 不能存活的胚胎无法发育。"
+    },
+    {
+      "question": "irreconcilable ___________",
+      "type": "blank",
+      "answer": "differences",
+      "explanation": "不可调和的，不可调和的分歧。They had irreconcilable differences. 他们有不可调和的分歧。"
+    },
+    {
+      "question": "inviolable ______",
+      "type": "blank",
+      "answer": "rights",
+      "explanation": "不可侵犯的，不可侵犯的权利。Human dignity is an inviolable rights. 人的尊严是不可侵犯的权利。"
+    },
+    {
+      "question": "irredeemable ____",
+      "type": "blank",
+      "answer": "debt",
+      "explanation": "无法挽回的，无法挽回的债务。The company faced irredeemable debt. 公司面临无法挽回的债务。"
+    },
+    {
+      "question": "estimable _________",
+      "type": "blank",
+      "answer": "character",
+      "explanation": "值得尊敬的，值得尊敬的品格。He was known for his estimable character. 他以值得尊敬的品格闻名。"
+    },
+    {
+      "question": "flammable ______",
+      "type": "blank",
+      "answer": "liquid",
+      "explanation": "易燃的，易燃的液体。Store flammable liquid carefully. 小心存放易燃的液体。"
+    },
+    {
+      "question": "nonflammable ________",
+      "type": "blank",
+      "answer": "material",
+      "explanation": "不易燃的，不易燃的材料。Use nonflammable material for safety. 为了安全使用不易燃的材料。"
+    },
+    {
+      "question": "presumable _____",
+      "type": "blank",
+      "answer": "cause",
+      "explanation": "可推测的，可推测的原因。The presumable cause was equipment failure. 可推测的原因是设备故障。"
+    },
+    {
+      "question": "inalienable ______",
+      "type": "blank",
+      "answer": "rights",
+      "explanation": "不可剥夺的，不可剥夺的权利。All people have inalienable rights. 所有人都有不可剥夺的权利。"
+    },
+    {
+      "question": "amenable __ ______",
+      "type": "blank",
+      "answer": "to reason",
+      "explanation": "顺从的，顺从理性。He was amenable to reason. 他顺从理性。"
+    },
+    {
+      "question": "tenable ________",
+      "type": "blank",
+      "answer": "argument",
+      "explanation": "站得住脚的，站得住脚的论点。She presented a tenable argument. 她提出了站得住脚的论点。"
+    }
+  ]
+}
