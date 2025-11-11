@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "_____ ___ pinnacle",
+      "type": "blank",
+      "answer": "reach the",
+      "explanation": "顶峰，达到顶峰。She worked hard to reach the pinnacle of success. 她努力工作以达到成功的顶峰。"
+    },
+    {
+      "question": "_____ receptacle",
+      "type": "blank",
+      "answer": "trash",
+      "explanation": "容器，垃圾容器。Put waste in the trash receptacle. 把废物放进垃圾容器。"
+    },
+    {
+      "question": "____ __ obstacle",
+      "type": "blank",
+      "answer": "form an",
+      "explanation": "障碍，形成障碍。The debris would form an obstacle to traffic. 碎片会形成交通的障碍。"
+    },
+    {
+      "question": "______ cubicle",
+      "type": "blank",
+      "answer": "office",
+      "explanation": "小隔间，办公室小隔间。He worked in a small office cubicle. 他在一个小办公室小隔间工作。"
+    },
+    {
+      "question": "____ cuticle",
+      "type": "blank",
+      "answer": "nail",
+      "explanation": "表皮，指甲表皮。Push back the nail cuticle gently. 轻轻推回指甲表皮。"
+    },
+    {
+      "question": "_____ corpuscle",
+      "type": "blank",
+      "answer": "blood",
+      "explanation": "血球，血液血球。Red blood corpuscle carry oxygen. 红血液血球携带氧气。"
+    },
+    {
+      "question": "saddle __",
+      "type": "blank",
+      "answer": "up",
+      "explanation": "上马鞍，备好马鞍。The cowboy would saddle up for the ride. 牛仔会备好马鞍骑行。"
+    },
+    {
+      "question": "____ twaddle",
+      "type": "blank",
+      "answer": "talk",
+      "explanation": "废话，说废话。Don't talk twaddle about things you don't understand. 不要说你不懂的废话。"
+    },
+    {
+      "question": "_____ _ riddle",
+      "type": "blank",
+      "answer": "solve a",
+      "explanation": "谜语，解谜语。Can you solve a riddle? 你能解谜语吗？"
+    },
+    {
+      "question": "coddle _ _____",
+      "type": "blank",
+      "answer": "a child",
+      "explanation": "溺爱，溺爱孩子。Don't coddle a child too much. 不要过分溺爱孩子。"
+    },
+    {
+      "question": "cuddle __",
+      "type": "blank",
+      "answer": "up",
+      "explanation": "拥抱，依偎。The baby would cuddle up to his mother. 婴儿会依偎母亲。"
+    },
+    {
+      "question": "muddle _______",
+      "type": "blank",
+      "answer": "through",
+      "explanation": "胡乱应付，胡乱应付度过。We'll just muddle through somehow. 我们总会胡乱应付度过。"
+    },
+    {
+      "question": "bridle _____",
+      "type": "blank",
+      "answer": "anger",
+      "explanation": "抑制，抑制愤怒。She tried to bridle anger. 她试图抑制愤怒。"
+    },
+    {
+      "question": "kindle ________",
+      "type": "blank",
+      "answer": "interest",
+      "explanation": "激起，激起兴趣。The lecture would kindle interest in science. 讲座会激起对科学的兴趣。"
+    },
+    {
+      "question": "dwindle _________",
+      "type": "blank",
+      "answer": "resources",
+      "explanation": "减少，减少资源。The supplies would dwindle resources over time. 供应会随着时间减少资源。"
+    },
+    {
+      "question": "swindle _____",
+      "type": "blank",
+      "answer": "money",
+      "explanation": "诈骗，诈骗钱财。The con artist would swindle money from victims. 骗子会诈骗受害者的钱财。"
+    },
+    {
+      "question": "fondle _ ___",
+      "type": "blank",
+      "answer": "a pet",
+      "explanation": "抚摸，抚摸宠物。She would fondle a pet lovingly. 她会爱抚地抚摸宠物。"
+    },
+    {
+      "question": "girdle ___ _____",
+      "type": "blank",
+      "answer": "the waist",
+      "explanation": "束腰，束腰。The belt would girdle the waist. 腰带会束腰。"
+    },
+    {
+      "question": "____ curdle",
+      "type": "blank",
+      "answer": "milk",
+      "explanation": "凝结，牛奶凝结。Heat will make milk curdle. 加热会使牛奶凝结。"
+    },
+    {
+      "question": "_____ clientele",
+      "type": "blank",
+      "answer": "loyal",
+      "explanation": "客户群，忠诚的客户群。The shop had a loyal clientele. 商店有忠诚的客户群。"
+    },
+    {
+      "question": "baffle ________",
+      "type": "blank",
+      "answer": "attempts",
+      "explanation": "挫败，挫败企图。The security system would baffle attempts at entry. 安全系统会挫败进入的企图。"
+    },
+    {
+      "question": "riffle _______",
+      "type": "blank",
+      "answer": "through",
+      "explanation": "快速翻阅，快速翻阅。She would riffle through the pages. 她会快速翻阅页面。"
+    },
+    {
+      "question": "_______ rifle",
+      "type": "blank",
+      "answer": "assault",
+      "explanation": "步枪，突击步枪。The soldier carried an assault rifle. 士兵携带突击步枪。"
+    },
+    {
+      "question": "snuggle __",
+      "type": "blank",
+      "answer": "up",
+      "explanation": "依偎，依偎。The cat would snuggle up on the couch. 猫会在沙发上依偎。"
+    },
+    {
+      "question": "inveigle ____",
+      "type": "blank",
+      "answer": "into",
+      "explanation": "诱骗，诱骗进入。He tried to inveigle into her confidence. 他试图诱骗进入她的信任。"
+    },
+    {
+      "question": "________ quadrangle",
+      "type": "blank",
+      "answer": "academic",
+      "explanation": "四方院，学术四方院。Students gathered in the academic quadrangle. 学生们聚集在学术四方院。"
+    },
+    {
+      "question": "rectangle _____",
+      "type": "blank",
+      "answer": "shape",
+      "explanation": "长方形，长方形形状。The table had a rectangle shape. 桌子有长方形形状。"
+    },
+    {
+      "question": "______ shingle",
+      "type": "blank",
+      "answer": "wooden",
+      "explanation": "木瓦，木制木瓦。The roof was covered with wooden shingle. 屋顶覆盖着木制木瓦。"
+    },
+    {
+      "question": "commingle _____",
+      "type": "blank",
+      "answer": "funds",
+      "explanation": "混合，混合资金。Don't commingle funds from different accounts. 不要混合不同账户的资金。"
+    },
+    {
+      "question": "___________ labile",
+      "type": "blank",
+      "answer": "emotionally",
+      "explanation": "不稳定的，情绪不稳定的。The patient was emotionally labile. 患者情绪不稳定的。"
+    },
+    {
+      "question": "nubile _____",
+      "type": "blank",
+      "answer": "bride",
+      "explanation": "适婚的，适婚的新娘。The nubile bride looked beautiful. 适婚的新娘看起来很美。"
+    },
+    {
+      "question": "facile ________",
+      "type": "blank",
+      "answer": "solution",
+      "explanation": "肤浅的，肤浅的解决方案。He proposed a facile solution. 他提出了肤浅的解决方案。"
+    },
+    {
+      "question": "_____ imbecile",
+      "type": "blank",
+      "answer": "utter",
+      "explanation": "低能者，十足的低能者。He acted like an utter imbecile. 他表现得像十足的低能者。"
+    },
+    {
+      "question": "_____ domicile",
+      "type": "blank",
+      "answer": "legal",
+      "explanation": "住所，法定住所。His legal domicile was in Texas. 他的法定住所在德克萨斯州。"
+    },
+    {
+      "question": "reconcile ___________",
+      "type": "blank",
+      "answer": "differences",
+      "explanation": "调解，调解分歧。They tried to reconcile differences. 他们试图调解分歧。"
+    },
+    {
+      "question": "docile _____",
+      "type": "blank",
+      "answer": "child",
+      "explanation": "温顺的，温顺的孩子。The docile child followed instructions. 温顺的孩子遵循指示。"
+    },
+    {
+      "question": "defile _ ______",
+      "type": "blank",
+      "answer": "a shrine",
+      "explanation": "亵渎，亵渎神殿。Vandals would defile a shrine. 破坏者会亵渎神殿。"
+    },
+    {
+      "question": "fragile _____",
+      "type": "blank",
+      "answer": "glass",
+      "explanation": "易碎的，易碎的玻璃。Handle the fragile glass carefully. 小心处理易碎的玻璃。"
+    },
+    {
+      "question": "____ bibliophile",
+      "type": "blank",
+      "answer": "avid",
+      "explanation": "藏书家，热衷的藏书家。The avid bibliophile collected rare books. 热衷的藏书家收集珍本书籍。"
+    },
+    {
+      "question": "______ simile",
+      "type": "blank",
+      "answer": "poetic",
+      "explanation": "明喻，诗意的明喻。The poet used a poetic simile. 诗人使用了诗意的明喻。"
+    },
+    {
+      "question": "____ _ facsimile",
+      "type": "blank",
+      "answer": "send a",
+      "explanation": "传真，发送传真。Please send a facsimile of the document. 请发送文件的传真。"
+    },
+    {
+      "question": "senile ________",
+      "type": "blank",
+      "answer": "dementia",
+      "explanation": "衰老的，老年痴呆症。He suffered from senile dementia. 他患有老年痴呆症。"
+    },
+    {
+      "question": "juvenile ___________",
+      "type": "blank",
+      "answer": "delinquency",
+      "explanation": "青少年的，青少年犯罪。The city struggled with juvenile delinquency. 城市与青少年犯罪作斗争。"
+    },
+    {
+      "question": "febrile _______",
+      "type": "blank",
+      "answer": "illness",
+      "explanation": "发热的，发热的疾病。The child had a febrile illness. 孩子患有发热的疾病。"
+    },
+    {
+      "question": "sterile __________",
+      "type": "blank",
+      "answer": "instrument",
+      "explanation": "无菌的，无菌的器械。Use sterile instrument in surgery. 在手术中使用无菌的器械。"
+    },
+    {
+      "question": "puerile ____",
+      "type": "blank",
+      "answer": "joke",
+      "explanation": "幼稚的，幼稚的笑话。His puerile joke wasn't funny. 他幼稚的笑话不好笑。"
+    },
+    {
+      "question": "virile ________",
+      "type": "blank",
+      "answer": "strength",
+      "explanation": "男性的，男性的力量。He displayed virile strength. 他展示了男性的力量。"
+    },
+    {
+      "question": "prehensile ____",
+      "type": "blank",
+      "answer": "tail",
+      "explanation": "能抓握的，能抓握的尾巴。The monkey had a prehensile tail. 猴子有能抓握的尾巴。"
+    },
+    {
+      "question": "tensile ________",
+      "type": "blank",
+      "answer": "strength",
+      "explanation": "拉伸的，拉伸强度。Steel has high tensile strength. 钢具有高拉伸强度。"
+    },
+    {
+      "question": "fissile ________",
+      "type": "blank",
+      "answer": "material",
+      "explanation": "可裂变的，可裂变的材料。Uranium is fissile material. 铀是可裂变的材料。"
+    },
+    {
+      "question": "versatile ____",
+      "type": "blank",
+      "answer": "tool",
+      "explanation": "多用途的，多用途的工具。This is a versatile tool. 这是多用途的工具。"
+    },
+    {
+      "question": "tactile _________",
+      "type": "blank",
+      "answer": "sensation",
+      "explanation": "触觉的，触觉感觉。The tactile sensation was pleasant. 触觉感觉很愉快。"
+    },
+    {
+      "question": "ductile _____",
+      "type": "blank",
+      "answer": "metal",
+      "explanation": "可延展的，可延展的金属。Copper is a ductile metal. 铜是可延展的金属。"
+    },
+    {
+      "question": "mercantile ___",
+      "type": "blank",
+      "answer": "law",
+      "explanation": "商业的，商业法。He studied mercantile law. 他学习商业法。"
+    },
+    {
+      "question": "infantile ________",
+      "type": "blank",
+      "answer": "behavior",
+      "explanation": "幼稚的，幼稚的行为。His infantile behavior was embarrassing. 他幼稚的行为很尴尬。"
+    },
+    {
+      "question": "motile _____",
+      "type": "blank",
+      "answer": "sperm",
+      "explanation": "能动的，能动的精子。Motile sperm can swim. 能动的精子可以游动。"
+    },
+    {
+      "question": "fertile ____",
+      "type": "blank",
+      "answer": "soil",
+      "explanation": "肥沃的，肥沃的土壤。The valley had fertile soil. 山谷有肥沃的土壤。"
+    },
+    {
+      "question": "futile ______",
+      "type": "blank",
+      "answer": "effort",
+      "explanation": "徒劳的，徒劳的努力。His futile effort achieved nothing. 他徒劳的努力一无所获。"
+    },
+    {
+      "question": "___ guile",
+      "type": "blank",
+      "answer": "use",
+      "explanation": "狡诈，使用狡诈。He would use guile to achieve his goals. 他会使用狡诈达到目的。"
+    },
+    {
+      "question": "beguile ___ ________",
+      "type": "blank",
+      "answer": "the audience",
+      "explanation": "欺骗，欺骗观众。The magician would beguile the audience. 魔术师会欺骗观众。"
+    },
+    {
+      "question": "vile ________",
+      "type": "blank",
+      "answer": "behavior",
+      "explanation": "卑鄙的，卑鄙的行为。His vile behavior shocked everyone. 他卑鄙的行为震惊了每个人。"
+    },
+    {
+      "question": "servile ________",
+      "type": "blank",
+      "answer": "attitude",
+      "explanation": "奴性的，奴性的态度。His servile attitude was disturbing. 他奴性的态度令人不安。"
+    },
+    {
+      "question": "_____ ___ wile",
+      "type": "blank",
+      "answer": "craft and",
+      "explanation": "诡计，狡诈和诡计。He used craft and wile to deceive. 他用狡诈和诡计欺骗。"
+    },
+    {
+      "question": "shackle ________",
+      "type": "blank",
+      "answer": "progress",
+      "explanation": "束缚，束缚进步。Regulations can shackle progress. 法规会束缚进步。"
+    },
+    {
+      "question": "ramshackle ___",
+      "type": "blank",
+      "answer": "hut",
+      "explanation": "摇摇欲坠的，摇摇欲坠的小屋。They lived in a ramshackle hut. 他们住在摇摇欲坠的小屋里。"
+    },
+    {
+      "question": "spackle ___ ____",
+      "type": "blank",
+      "answer": "the wall",
+      "explanation": "填补，填补墙面。Use compound to spackle the wall. 用填料填补墙面。"
+    },
+    {
+      "question": "tackle _ _______",
+      "type": "blank",
+      "answer": "a problem",
+      "explanation": "处理，处理问题。We need to tackle a problem immediately. 我们需要立即处理问题。"
+    },
+    {
+      "question": "heckle _ _______",
+      "type": "blank",
+      "answer": "a speaker",
+      "explanation": "起哄，起哄演讲者。Don't heckle a speaker during the presentation. 在演讲期间不要起哄演讲者。"
+    },
+    {
+      "question": "buckle _____",
+      "type": "blank",
+      "answer": "under",
+      "explanation": "屈服，屈服于。Don't buckle under pressure. 不要屈服于压力。"
+    },
+    {
+      "question": "___ ______ rankle",
+      "type": "blank",
+      "answer": "old wounds",
+      "explanation": "使恼怒，旧伤使恼怒。Old wounds rankle still. 旧伤仍然使恼怒。"
+    },
+    {
+      "question": "__________ hyperbole",
+      "type": "blank",
+      "answer": "rhetorical",
+      "explanation": "夸张，修辞夸张。The speech used rhetorical hyperbole. 演讲使用了修辞夸张。"
+    },
+    {
+      "question": "condole ____",
+      "type": "blank",
+      "answer": "with",
+      "explanation": "吊唁，表示吊唁。Friends came to condole with the family. 朋友们来表示吊唁家人。"
+    },
+    {
+      "question": "___ aureole",
+      "type": "blank",
+      "answer": "sun",
+      "explanation": "光环，太阳光环。The sun aureole glowed beautifully. 太阳光环美丽地发光。"
+    },
+    {
+      "question": "tadpole _____",
+      "type": "blank",
+      "answer": "stage",
+      "explanation": "蝌蚪，蝌蚪阶段。Frogs go through a tadpole stage. 青蛙经历蝌蚪阶段。"
+    },
+    {
+      "question": "_________ rigmarole",
+      "type": "blank",
+      "answer": "pointless",
+      "explanation": "冗长的废话，无意义的冗长的废话。The pointless rigmarole wasted time. 无意义的冗长的废话浪费时间。"
+    },
+    {
+      "question": "console ___ _____",
+      "type": "blank",
+      "answer": "the child",
+      "explanation": "安慰，安慰孩子。She tried to console the child. 她试图安慰孩子。"
+    },
+    {
+      "question": "maple _____",
+      "type": "blank",
+      "answer": "syrup",
+      "explanation": "枫树，枫树糖浆。They poured maple syrup on pancakes. 他们在煎饼上倒枫树糖浆。"
+    },
+    {
+      "question": "staple ____",
+      "type": "blank",
+      "answer": "food",
+      "explanation": "主食，主食食物。Rice is a staple food in Asia. 大米是亚洲的主食食物。"
+    },
+    {
+      "question": "______ steeple",
+      "type": "blank",
+      "answer": "church",
+      "explanation": "尖塔，教堂尖塔。The church steeple reached toward the sky. 教堂尖塔直指天空。"
+    },
+    {
+      "question": "____ principle",
+      "type": "blank",
+      "answer": "core",
+      "explanation": "原则，核心原则。Honesty is a core principle. 诚实是核心原则。"
+    },
+    {
+      "question": "_______ disciple",
+      "type": "blank",
+      "answer": "devoted",
+      "explanation": "门徒，忠实的门徒。He was a devoted disciple. 他是忠实的门徒。"
+    },
+    {
+      "question": "ample ________",
+      "type": "blank",
+      "answer": "evidence",
+      "explanation": "充足的，充足的证据。There was ample evidence. 有充足的证据。"
+    },
+    {
+      "question": "cripple ___ ______",
+      "type": "blank",
+      "answer": "the system",
+      "explanation": "使瘫痪，使系统瘫痪。The virus would cripple the system. 病毒会使系统瘫痪。"
+    },
+    {
+      "question": "_______ tipple",
+      "type": "blank",
+      "answer": "evening",
+      "explanation": "小酌，晚间小酌。He enjoyed his evening tipple. 他喜欢晚间小酌。"
+    },
+    {
+      "question": "stipple ______",
+      "type": "blank",
+      "answer": "effect",
+      "explanation": "点画，点画效果。The artist used a stipple effect. 艺术家使用了点画效果。"
+    },
+    {
+      "question": "_____ scruple",
+      "type": "blank",
+      "answer": "moral",
+      "explanation": "顾虑，道德顾虑。He had no moral scruple about lying. 他对说谎没有道德顾虑。"
+    },
+    {
+      "question": "_____ hassle",
+      "type": "blank",
+      "answer": "daily",
+      "explanation": "麻烦，日常麻烦。Commuting was a daily hassle. 通勤是日常麻烦。"
+    },
+    {
+      "question": "tousle ____",
+      "type": "blank",
+      "answer": "hair",
+      "explanation": "弄乱，弄乱头发。The wind would tousle hair. 风会弄乱头发。"
+    },
+    {
+      "question": "subtle ______",
+      "type": "blank",
+      "answer": "nuance",
+      "explanation": "微妙的，微妙的细微差别。She understood the subtle nuance. 她理解了微妙的细微差别。"
+    },
+    {
+      "question": "_____'_ mantle",
+      "type": "blank",
+      "answer": "earth's",
+      "explanation": "地幔，地球的地幔。The earth's mantle is very hot. 地球的地幔非常热。"
+    },
+    {
+      "question": "___'_ footle",
+      "type": "blank",
+      "answer": "don't",
+      "explanation": "瞎忙，不要瞎忙。Don't footle around, get to work. 不要瞎忙，开始工作。"
+    },
+    {
+      "question": "gristle _____",
+      "type": "blank",
+      "answer": "steak",
+      "explanation": "软骨，有软骨的牛排。The gristle steak was hard to chew. 有软骨的牛排很难咀嚼。"
+    },
+    {
+      "question": "____ mettle",
+      "type": "blank",
+      "answer": "show",
+      "explanation": "勇气，展现勇气。The challenge will show mettle. 挑战将展现勇气。"
+    },
+    {
+      "question": "settle _______",
+      "type": "blank",
+      "answer": "dispute",
+      "explanation": "解决，解决争端。They agreed to settle dispute. 他们同意解决争端。"
+    },
+    {
+      "question": "unsettle ___ _______",
+      "type": "blank",
+      "answer": "the markets",
+      "explanation": "扰乱，扰乱市场。The news would unsettle the markets. 消息会扰乱市场。"
+    },
+    {
+      "question": "belittle _______",
+      "type": "blank",
+      "answer": "efforts",
+      "explanation": "贬低，贬低努力。Don't belittle efforts of others. 不要贬低他人的努力。"
+    },
+    {
+      "question": "guttle ____",
+      "type": "blank",
+      "answer": "food",
+      "explanation": "狼吞虎咽，狼吞虎咽食物。Don't guttle food so quickly. 不要这么快狼吞虎咽食物。"
+    },
+    {
+      "question": "_____ shuttle",
+      "type": "blank",
+      "answer": "space",
+      "explanation": "穿梭机，太空穿梭机。The space shuttle launched successfully. 太空穿梭机成功发射。"
+    },
+    {
+      "question": "_____ molecule",
+      "type": "blank",
+      "answer": "water",
+      "explanation": "分子，水分子。A water molecule has two hydrogen atoms. 水分子有两个氢原子。"
+    },
+    {
+      "question": "_____ granule",
+      "type": "blank",
+      "answer": "sugar",
+      "explanation": "颗粒，糖颗粒。Each sugar granule dissolved quickly. 每个糖颗粒迅速溶解。"
+    }
+  ]
+}
