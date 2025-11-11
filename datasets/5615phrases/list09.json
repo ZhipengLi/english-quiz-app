@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "pulchritude ___ _____",
+      "type": "blank",
+      "answer": "and grace",
+      "explanation": "美丽，美丽和优雅。The dancer performed with pulchritude and grace. 舞者以美丽和优雅表演。"
+    },
+    {
+      "question": "_____ lassitude",
+      "type": "blank",
+      "answer": "utter",
+      "explanation": "倦怠，完全的倦怠。He felt utter lassitude after the long journey. 长途旅行后，他感到完全的倦怠。"
+    },
+    {
+      "question": "____ vicissitude",
+      "type": "blank",
+      "answer": "life",
+      "explanation": "变迁，生活变迁。She endured many life vicissitude over the years. 多年来她经历了许多生活变迁。"
+    },
+    {
+      "question": "______ latitude",
+      "type": "blank",
+      "answer": "travel",
+      "explanation": "纬度，旅行纬度。Ships measure travel latitude for navigation. 船只测量旅行纬度进行导航。"
+    },
+    {
+      "question": "_____ platitude",
+      "type": "blank",
+      "answer": "empty",
+      "explanation": "陈词滥调，空洞的陈词滥调。His speech was full of empty platitude. 他的演讲充满了空洞的陈词滥调。"
+    },
+    {
+      "question": "_______ gratitude",
+      "type": "blank",
+      "answer": "express",
+      "explanation": "感激，表达感激。She wanted to express gratitude for their help. 她想表达感激他们的帮助。"
+    },
+    {
+      "question": "__________ exactitude",
+      "type": "blank",
+      "answer": "scientific",
+      "explanation": "精确，科学精确。The measurements required scientific exactitude. 测量需要科学精确。"
+    },
+    {
+      "question": "_____ rectitude",
+      "type": "blank",
+      "answer": "moral",
+      "explanation": "正直，道德正直。He was known for his moral rectitude. 他以道德正直闻名。"
+    },
+    {
+      "question": "_____ multitude",
+      "type": "blank",
+      "answer": "large",
+      "explanation": "众多，大量众多。A large multitude gathered for the concert. 大量众多的人聚集观看音乐会。"
+    },
+    {
+      "question": "plentitude __ _________",
+      "type": "blank",
+      "answer": "of resources",
+      "explanation": "丰富，资源的丰富。The region had a plentitude of resources. 该地区有资源的丰富。"
+    },
+    {
+      "question": "__________ ineptitude",
+      "type": "blank",
+      "answer": "blundering",
+      "explanation": "无能，笨拙的无能。His blundering ineptitude caused many problems. 他笨拙的无能造成了许多问题。"
+    },
+    {
+      "question": "_____ certitude",
+      "type": "blank",
+      "answer": "moral",
+      "explanation": "确信，道德确信。She spoke with moral certitude. 她以道德确信说话。"
+    },
+    {
+      "question": "_____ __ incertitude",
+      "type": "blank",
+      "answer": "state of",
+      "explanation": "不确定，不确定状态。He lived in a state of incertitude. 他生活在不确定状态中。"
+    },
+    {
+      "question": "_____ fortitude",
+      "type": "blank",
+      "answer": "moral",
+      "explanation": "坚韧，道德坚韧。She faced hardship with moral fortitude. 她以道德坚韧面对困难。"
+    },
+    {
+      "question": "exude __________",
+      "type": "blank",
+      "answer": "confidence",
+      "explanation": "散发，散发信心。The leader would exude confidence. 领导者会散发信心。"
+    },
+    {
+      "question": "_____ perigee",
+      "type": "blank",
+      "answer": "lunar",
+      "explanation": "近地点，月球近地点。The lunar perigee occurs monthly. 月球近地点每月发生。"
+    },
+    {
+      "question": "apogee __ _____",
+      "type": "blank",
+      "answer": "of power",
+      "explanation": "顶点，权力的顶点。The empire reached the apogee of power. 帝国达到了权力的顶点。"
+    },
+    {
+      "question": "___ refugee",
+      "type": "blank",
+      "answer": "war",
+      "explanation": "难民，战争难民。The war refugee sought asylum. 战争难民寻求庇护。"
+    },
+    {
+      "question": "____ toupee",
+      "type": "blank",
+      "answer": "wear",
+      "explanation": "假发，戴假发。He chose to wear toupee to hide baldness. 他选择戴假发来掩盖秃头。"
+    },
+    {
+      "question": "____________ decree",
+      "type": "blank",
+      "answer": "presidential",
+      "explanation": "法令，总统法令。The presidential decree was issued yesterday. 总统法令昨天发布。"
+    },
+    {
+      "question": "____ filigree",
+      "type": "blank",
+      "answer": "gold",
+      "explanation": "金银丝细工，金金银丝细工。The jewelry featured delicate gold filigree. 珠宝以精致的金金银丝细工为特色。"
+    },
+    {
+      "question": "_____ jamboree",
+      "type": "blank",
+      "answer": "music",
+      "explanation": "大型集会，音乐大型集会。The music jamboree attracted thousands. 音乐大型集会吸引了数千人。"
+    },
+    {
+      "question": "entrée ______",
+      "type": "blank",
+      "answer": "course",
+      "explanation": "主菜，主菜菜肴。The entrée course was delicious. 主菜菜肴很美味。"
+    },
+    {
+      "question": "oversee __________",
+      "type": "blank",
+      "answer": "operations",
+      "explanation": "监督，监督运营。The manager would oversee operations daily. 经理每天都会监督运营。"
+    },
+    {
+      "question": "_____-____ guarantee",
+      "type": "blank",
+      "answer": "money-back",
+      "explanation": "保证，退款保证。The product comes with a money-back guarantee. 该产品附带退款保证。"
+    },
+    {
+      "question": "devotee __ ___",
+      "type": "blank",
+      "answer": "of art",
+      "explanation": "爱好者，艺术爱好者。She was a devotee of art and culture. 她是艺术和文化的爱好者。"
+    },
+    {
+      "question": "_____ repartee",
+      "type": "blank",
+      "answer": "smart",
+      "explanation": "机智的应答，机智的应答。They exchanged smart repartee. 他们交换机智的应答。"
+    },
+    {
+      "question": "_____ levee",
+      "type": "blank",
+      "answer": "river",
+      "explanation": "堤坝，河堤坝。The river levee protected the town from flooding. 河堤坝保护城镇免受洪水侵袭。"
+    },
+    {
+      "question": "chafe ____",
+      "type": "blank",
+      "answer": "skin",
+      "explanation": "擦伤，擦伤皮肤。The rough fabric would chafe skin. 粗糙的织物会擦伤皮肤。"
+    },
+    {
+      "question": "_____ carafe",
+      "type": "blank",
+      "answer": "glass",
+      "explanation": "玻璃瓶，玻璃瓶。Water was served in a glass carafe. 水装在玻璃瓶里供应。"
+    },
+    {
+      "question": "fail-safe _________",
+      "type": "blank",
+      "answer": "mechanism",
+      "explanation": "故障保险，故障保险机制。The system had a fail-safe mechanism. 系统有故障保险机制。"
+    },
+    {
+      "question": "__________ gaffe",
+      "type": "blank",
+      "answer": "diplomatic",
+      "explanation": "失礼，外交失礼。The politician made a diplomatic gaffe. 政客犯了外交失礼。"
+    },
+    {
+      "question": "rife ____ ______",
+      "type": "blank",
+      "answer": "with errors",
+      "explanation": "充满，充满错误。The document was rife with errors. 文件充满错误。"
+    },
+    {
+      "question": "___ adage",
+      "type": "blank",
+      "answer": "old",
+      "explanation": "格言，古老的格言。The old adage proved true once again. 古老的格言再次证明是正确的。"
+    },
+    {
+      "question": "____ appendage",
+      "type": "blank",
+      "answer": "limb",
+      "explanation": "附属物，肢体附属物。The limb appendage was injured. 肢体附属物受伤了。"
+    },
+    {
+      "question": "bondage ___ _______",
+      "type": "blank",
+      "answer": "and freedom",
+      "explanation": "束缚，束缚和自由。The book explored themes of bondage and freedom. 这本书探讨了束缚和自由的主题。"
+    },
+    {
+      "question": "_____ lineage",
+      "type": "blank",
+      "answer": "royal",
+      "explanation": "血统，皇家血统。She claimed royal lineage. 她声称有皇家血统。"
+    },
+    {
+      "question": "mortgage ____",
+      "type": "blank",
+      "answer": "loan",
+      "explanation": "抵押贷款，抵押贷款。They applied for a mortgage loan. 他们申请了抵押贷款。"
+    },
+    {
+      "question": "_______ hemorrhage",
+      "type": "blank",
+      "answer": "massive",
+      "explanation": "出血，大出血。The patient suffered a massive hemorrhage. 患者遭受了大出血。"
+    },
+    {
+      "question": "_____ verbiage",
+      "type": "blank",
+      "answer": "empty",
+      "explanation": "冗词，空洞的冗词。The contract was full of empty verbiage. 合同充满了空洞的冗词。"
+    },
+    {
+      "question": "______ foliage",
+      "type": "blank",
+      "answer": "autumn",
+      "explanation": "树叶，秋天树叶。The autumn foliage was spectacular. 秋天树叶非常壮观。"
+    },
+    {
+      "question": "_____ leakage",
+      "type": "blank",
+      "answer": "water",
+      "explanation": "泄漏，水泄漏。The plumber fixed the water leakage. 水管工修好了水泄漏。"
+    },
+    {
+      "question": "________ blockage",
+      "type": "blank",
+      "answer": "arterial",
+      "explanation": "阻塞，动脉阻塞。The arterial blockage required surgery. 动脉阻塞需要手术。"
+    },
+    {
+      "question": "_____ tutelage",
+      "type": "blank",
+      "answer": "under",
+      "explanation": "监护，在监护下。She studied under tutelage of a master. 她在大师的监护下学习。"
+    },
+    {
+      "question": "_____ persiflage",
+      "type": "blank",
+      "answer": "light",
+      "explanation": "戏谑，轻松的戏谑。They engaged in light persiflage. 他们进行轻松的戏谑。"
+    },
+    {
+      "question": "pillage _ ____",
+      "type": "blank",
+      "answer": "a town",
+      "explanation": "掠夺，掠夺城镇。The invaders would pillage a town. 入侵者会掠夺城镇。"
+    },
+    {
+      "question": "_____ collage",
+      "type": "blank",
+      "answer": "photo",
+      "explanation": "拼贴画，照片拼贴画。She created a beautiful photo collage. 她创作了一幅美丽的照片拼贴画。"
+    },
+    {
+      "question": "___ homage",
+      "type": "blank",
+      "answer": "pay",
+      "explanation": "敬意，表示敬意。They came to pay homage to the hero. 他们来表示敬意英雄。"
+    },
+    {
+      "question": "____ drainage",
+      "type": "blank",
+      "answer": "city",
+      "explanation": "排水，城市排水。The city drainage system needed repair. 城市排水系统需要修理。"
+    },
+    {
+      "question": "_____ badinage",
+      "type": "blank",
+      "answer": "light",
+      "explanation": "打趣，轻松的打趣。They exchanged light badinage. 他们交换轻松的打趣。"
+    },
+    {
+      "question": "__________ espionage",
+      "type": "blank",
+      "answer": "industrial",
+      "explanation": "间谍活动，工业间谍活动。The company was accused of industrial espionage. 该公司被指控工业间谍活动。"
+    },
+    {
+      "question": "_________ patronage",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "赞助，政治赞助。The artist relied on political patronage. 艺术家依赖政治赞助。"
+    },
+    {
+      "question": "_________ personage",
+      "type": "blank",
+      "answer": "prominent",
+      "explanation": "名人，杰出的名人。A prominent personage attended the event. 杰出的名人出席了活动。"
+    },
+    {
+      "question": "_____ slippage",
+      "type": "blank",
+      "answer": "price",
+      "explanation": "下滑，价格下滑。The market experienced price slippage. 市场经历了价格下滑。"
+    },
+    {
+      "question": "____ umbrage",
+      "type": "blank",
+      "answer": "take",
+      "explanation": "不快，感到不快。He would take umbrage at the criticism. 他会对批评感到不快。"
+    },
+    {
+      "question": "___ beverage",
+      "type": "blank",
+      "answer": "hot",
+      "explanation": "饮料，热饮料。They served hot beverage to warm the guests. 他们供应热饮料让客人暖和。"
+    },
+    {
+      "question": "_____'_ suffrage",
+      "type": "blank",
+      "answer": "women's",
+      "explanation": "选举权，妇女选举权。The movement fought for women's suffrage. 该运动为妇女选举权而斗争。"
+    },
+    {
+      "question": "______ mirage",
+      "type": "blank",
+      "answer": "desert",
+      "explanation": "海市蜃楼，沙漠海市蜃楼。Travelers saw a desert mirage in the distance. 旅行者在远处看到了沙漠海市蜃楼。"
+    },
+    {
+      "question": "barrage __ _________",
+      "type": "blank",
+      "answer": "of questions",
+      "explanation": "连续，连续的问题。The speaker faced a barrage of questions. 演讲者面临连续的问题。"
+    },
+    {
+      "question": "____________ entourage",
+      "type": "blank",
+      "answer": "presidential",
+      "explanation": "随行人员，总统随行人员。The presidential entourage arrived at the hotel. 总统随行人员抵达了酒店。"
+    },
+    {
+      "question": "____ sage",
+      "type": "blank",
+      "answer": "wise",
+      "explanation": "圣人，智慧的圣人。The wise sage offered advice. 智慧的圣人提供建议。"
+    },
+    {
+      "question": "____ presage",
+      "type": "blank",
+      "answer": "dark",
+      "explanation": "预兆，黑暗的预兆。The dark presage worried everyone. 黑暗的预兆让每个人都担心。"
+    },
+    {
+      "question": "envisage _ ______",
+      "type": "blank",
+      "answer": "a future",
+      "explanation": "设想，设想未来。They tried to envisage a future together. 他们试图设想未来在一起。"
+    },
+    {
+      "question": "vantage _____",
+      "type": "blank",
+      "answer": "point",
+      "explanation": "有利位置，有利位置点。From this vantage point, the view was perfect. 从这个有利位置点，景色完美。"
+    },
+    {
+      "question": "____ montage",
+      "type": "blank",
+      "answer": "film",
+      "explanation": "蒙太奇，电影蒙太奇。The film montage showed time passing. 电影蒙太奇显示时间流逝。"
+    },
+    {
+      "question": "__ ___'_ dotage",
+      "type": "blank",
+      "answer": "in one's",
+      "explanation": "老年昏聩，在老年昏聩中。He was in one's dotage and forgetful. 他在老年昏聩中健忘。"
+    },
+    {
+      "question": "___ reportage",
+      "type": "blank",
+      "answer": "war",
+      "explanation": "报道，战争报道。The journalist's war reportage won awards. 记者的战争报道获奖了。"
+    },
+    {
+      "question": "offstage _______",
+      "type": "blank",
+      "answer": "whisper",
+      "explanation": "幕后，幕后低语。An offstage whisper could be heard. 可以听到幕后低语。"
+    },
+    {
+      "question": "upstage ___ ____",
+      "type": "blank",
+      "answer": "the star",
+      "explanation": "抢镜头，抢明星镜头。The young actor tried to upstage the star. 年轻演员试图抢明星镜头。"
+    },
+    {
+      "question": "assuage _____",
+      "type": "blank",
+      "answer": "fears",
+      "explanation": "缓和，缓和恐惧。The leader tried to assuage fears. 领导者试图缓和恐惧。"
+    },
+    {
+      "question": "_________ cleavage",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "分裂，政治分裂。The political cleavage divided the nation. 政治分裂分裂了国家。"
+    },
+    {
+      "question": "___-____ ravage",
+      "type": "blank",
+      "answer": "war-time",
+      "explanation": "破坏，战时破坏。The war-time ravage left the city in ruins. 战时破坏让城市成为废墟。"
+    },
+    {
+      "question": "savage _____",
+      "type": "blank",
+      "answer": "beast",
+      "explanation": "野蛮的，野蛮的野兽。The savage beast attacked without warning. 野蛮的野兽毫无预警地攻击。"
+    },
+    {
+      "question": "salvage _________",
+      "type": "blank",
+      "answer": "operation",
+      "explanation": "打捞，打捞行动。The salvage operation recovered the cargo. 打捞行动找回了货物。"
+    },
+    {
+      "question": "______ wage",
+      "type": "blank",
+      "answer": "hourly",
+      "explanation": "工资，小时工资。Workers received an hourly wage. 工人按小时工资领取报酬。"
+    },
+    {
+      "question": "hedge ____",
+      "type": "blank",
+      "answer": "risk",
+      "explanation": "对冲，对冲风险。Investors hedge risk with diversification. 投资者通过多样化对冲风险。"
+    },
+    {
+      "question": "pledge __________",
+      "type": "blank",
+      "answer": "allegiance",
+      "explanation": "誓言，宣誓效忠。Citizens pledge allegiance to the flag. 公民向国旗宣誓效忠。"
+    },
+    {
+      "question": "______ foreknowledge",
+      "type": "blank",
+      "answer": "divine",
+      "explanation": "预知，神圣的预知。Some believe in divine foreknowledge. 有些人相信神圣的预知。"
+    },
+    {
+      "question": "________ ridge",
+      "type": "blank",
+      "answer": "mountain",
+      "explanation": "山脊，山脊。Hikers followed the mountain ridge. 徒步旅行者沿着山脊前进。"
+    },
+    {
+      "question": "abridge _ ____",
+      "type": "blank",
+      "answer": "a book",
+      "explanation": "删节，删节书籍。The editor would abridge a book for children. 编辑会为儿童删节书籍。"
+    },
+    {
+      "question": "___ porridge",
+      "type": "blank",
+      "answer": "hot",
+      "explanation": "粥，热粥。She ate hot porridge for breakfast. 她早餐吃热粥。"
+    },
+    {
+      "question": "______ hodgepodge",
+      "type": "blank",
+      "answer": "random",
+      "explanation": "大杂烩，随意的大杂烩。The room was a random hodgepodge of furniture. 房间是家具的随意的大杂烩。"
+    },
+    {
+      "question": "begrudge _______",
+      "type": "blank",
+      "answer": "success",
+      "explanation": "嫉妒，嫉妒成功。Don't begrudge success to others. 不要嫉妒别人的成功。"
+    },
+    {
+      "question": "___ siege",
+      "type": "blank",
+      "answer": "lay",
+      "explanation": "围攻，进行围攻。The army would lay siege to the castle. 军队会对城堡进行围攻。"
+    },
+    {
+      "question": "besiege ____",
+      "type": "blank",
+      "answer": "city",
+      "explanation": "围攻，围攻城市。The enemy would besiege city for months. 敌人会围攻城市数月。"
+    },
+    {
+      "question": "___ __ sacrilege",
+      "type": "blank",
+      "answer": "act of",
+      "explanation": "亵渎，亵渎行为。Destroying the temple was an act of sacrilege. 摧毁寺庙是亵渎行为。"
+    },
+    {
+      "question": "_______ privilege",
+      "type": "blank",
+      "answer": "special",
+      "explanation": "特权，特殊特权。The elite enjoyed special privilege. 精英享有特殊特权。"
+    },
+    {
+      "question": "renege __ _______",
+      "type": "blank",
+      "answer": "on promise",
+      "explanation": "违背，违背承诺。He would renege on promise. 他会违背承诺。"
+    },
+    {
+      "question": "______ prestige",
+      "type": "blank",
+      "answer": "social",
+      "explanation": "威望，社会威望。The position brought social prestige. 该职位带来了社会威望。"
+    },
+    {
+      "question": "indulge _______",
+      "type": "blank",
+      "answer": "oneself",
+      "explanation": "放纵，放纵自己。He would indulge oneself with dessert. 他会放纵自己吃甜点。"
+    },
+    {
+      "question": "____ flange",
+      "type": "blank",
+      "answer": "pipe",
+      "explanation": "法兰，管道法兰。The pipe flange connected two sections. 管道法兰连接两段。"
+    },
+    {
+      "question": "estrange _______",
+      "type": "blank",
+      "answer": "friends",
+      "explanation": "疏远，疏远朋友。The argument would estrange friends. 争吵会疏远朋友。"
+    },
+    {
+      "question": "____ revenge",
+      "type": "blank",
+      "answer": "seek",
+      "explanation": "报复，寻求报复。He swore to seek revenge. 他发誓要寻求报复。"
+    },
+    {
+      "question": "____ hinge",
+      "type": "blank",
+      "answer": "door",
+      "explanation": "铰链，门铰链。The door hinge needed oiling. 门铰链需要上油。"
+    },
+    {
+      "question": "impinge __ ______",
+      "type": "blank",
+      "answer": "on rights",
+      "explanation": "侵犯，侵犯权利。The new law would impinge on rights. 新法律会侵犯权利。"
+    },
+    {
+      "question": "fringe ________",
+      "type": "blank",
+      "answer": "benefits",
+      "explanation": "附加，附加福利。The job offered fringe benefits. 这份工作提供附加福利。"
+    },
+    {
+      "question": "infringe ______",
+      "type": "blank",
+      "answer": "rights",
+      "explanation": "侵犯，侵犯权利。The policy would infringe rights. 该政策会侵犯权利。"
+    },
+    {
+      "question": "constringe _______",
+      "type": "blank",
+      "answer": "vessels",
+      "explanation": "收缩，收缩血管。Cold temperatures constringe vessels. 寒冷的温度会收缩血管。"
+    },
+    {
+      "question": "_______ syringe",
+      "type": "blank",
+      "answer": "insulin",
+      "explanation": "注射器，胰岛素注射器。The diabetic used an insulin syringe. 糖尿病患者使用胰岛素注射器。"
+    },
+    {
+      "question": "plunge ____",
+      "type": "blank",
+      "answer": "into",
+      "explanation": "投入，投入。He would plunge into the cold water. 他会投入冷水中。"
+    }
+  ]
+}
