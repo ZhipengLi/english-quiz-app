@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "_______ obtainable",
+      "type": "blank",
+      "answer": "readily",
+      "explanation": "可获得的，容易可获得的。The information is readily obtainable online. 信息在网上容易可获得的。"
+    },
+    {
+      "question": "finable _______",
+      "type": "blank",
+      "answer": "offense",
+      "explanation": "可罚款的，可罚款的违法行为。Parking violations are finable offense. 违章停车是可罚款的违法行为。"
+    },
+    {
+      "question": "interminable ____",
+      "type": "blank",
+      "answer": "wait",
+      "explanation": "无休止的，无休止的等待。The interminable wait frustrated everyone. 无休止的等待让每个人都感到沮丧。"
+    },
+    {
+      "question": "unconscionable _____",
+      "type": "blank",
+      "answer": "price",
+      "explanation": "不合理的，不合理的价格。They charged an unconscionable price. 他们收取了不合理的价格。"
+    },
+    {
+      "question": "impressionable _____",
+      "type": "blank",
+      "answer": "youth",
+      "explanation": "易受影响的，易受影响的青年。The impressionable youth believed everything. 易受影响的青年相信一切。"
+    },
+    {
+      "question": "exceptionable ______",
+      "type": "blank",
+      "answer": "clause",
+      "explanation": "可反对的，可反对的条款。The contract had an exceptionable clause. 合同有可反对的条款。"
+    },
+    {
+      "question": "unexceptionable _______",
+      "type": "blank",
+      "answer": "conduct",
+      "explanation": "无可指责的，无可指责的行为。His unexceptionable conduct was praised. 他无可指责的行为受到赞扬。"
+    },
+    {
+      "question": "personable ____",
+      "type": "blank",
+      "answer": "host",
+      "explanation": "风度翩翩的，风度翩翩的主人。The personable host made everyone comfortable. 风度翩翩的主人让每个人都感到舒适。"
+    },
+    {
+      "question": "impalpable __________",
+      "type": "blank",
+      "answer": "difference",
+      "explanation": "难以察觉的，难以察觉的差异。There was an impalpable difference in quality. 质量上有难以察觉的差异。"
+    },
+    {
+      "question": "culpable __________",
+      "type": "blank",
+      "answer": "negligence",
+      "explanation": "有罪的，有罪的疏忽。The doctor was guilty of culpable negligence. 医生犯有有罪的疏忽。"
+    },
+    {
+      "question": "unflappable ____",
+      "type": "blank",
+      "answer": "calm",
+      "explanation": "镇定的，镇定的冷静。She maintained unflappable calm under pressure. 她在压力下保持镇定的冷静。"
+    },
+    {
+      "question": "arable ____",
+      "type": "blank",
+      "answer": "land",
+      "explanation": "可耕的，可耕的土地。The region had fertile arable land. 该地区有肥沃的可耕的土地。"
+    },
+    {
+      "question": "_____ parable",
+      "type": "blank",
+      "answer": "moral",
+      "explanation": "寓言，道德寓言。The teacher told a moral parable. 老师讲了一个道德寓言。"
+    },
+    {
+      "question": "reparable ______",
+      "type": "blank",
+      "answer": "damage",
+      "explanation": "可修复的，可修复的损害。Fortunately, the reparable damage was minor. 幸运的是，可修复的损害很小。"
+    },
+    {
+      "question": "execrable _____",
+      "type": "blank",
+      "answer": "taste",
+      "explanation": "极坏的，极坏的品味。His execrable taste in music was well known. 他极坏的品味在音乐方面是众所周知的。"
+    },
+    {
+      "question": "considerable ______",
+      "type": "blank",
+      "answer": "amount",
+      "explanation": "相当大的，相当大的数量。They saved a considerable amount of money. 他们节省了相当大的数量的钱。"
+    },
+    {
+      "question": "ponderable ____",
+      "type": "blank",
+      "answer": "mass",
+      "explanation": "有重量的，有重量的质量。The physicist measured ponderable mass. 物理学家测量了有重量的质量。"
+    },
+    {
+      "question": "imponderable _______",
+      "type": "blank",
+      "answer": "factors",
+      "explanation": "无法估量的，无法估量的因素。Many imponderable factors affected the outcome. 许多无法估量的因素影响了结果。"
+    },
+    {
+      "question": "indecipherable ______",
+      "type": "blank",
+      "answer": "script",
+      "explanation": "难以辨认的，难以辨认的文字。The ancient indecipherable script puzzled scholars. 古代难以辨认的文字困扰着学者。"
+    },
+    {
+      "question": "vulnerable __________",
+      "type": "blank",
+      "answer": "population",
+      "explanation": "脆弱的，脆弱的人口。The vulnerable population needed protection. 脆弱的人口需要保护。"
+    },
+    {
+      "question": "____ invulnerable",
+      "type": "blank",
+      "answer": "seem",
+      "explanation": "不可战胜的，似乎不可战胜。The army would seem invulnerable. 军队似乎不可战胜。"
+    },
+    {
+      "question": "insuperable _______",
+      "type": "blank",
+      "answer": "barrier",
+      "explanation": "不可逾越的，不可逾越的障碍。They faced an insuperable barrier. 他们面临不可逾越的障碍。"
+    },
+    {
+      "question": "desirable _______",
+      "type": "blank",
+      "answer": "outcome",
+      "explanation": "理想的，理想的结果。We achieved the desirable outcome. 我们达到了理想的结果。"
+    },
+    {
+      "question": "undesirable _______",
+      "type": "blank",
+      "answer": "element",
+      "explanation": "不受欢迎的，不受欢迎的因素。The neighborhood had undesirable element. 这个社区有不受欢迎的因素。"
+    },
+    {
+      "question": "factorable __________",
+      "type": "blank",
+      "answer": "polynomial",
+      "explanation": "可因式分解的，可因式分解的多项式。The equation was a factorable polynomial. 这个方程是可因式分解的多项式。"
+    },
+    {
+      "question": "favorable _______",
+      "type": "blank",
+      "answer": "outcome",
+      "explanation": "有利的，有利的结果。The negotiations produced a favorable outcome. 谈判产生了有利的结果。"
+    },
+    {
+      "question": "inexorable ____",
+      "type": "blank",
+      "answer": "rise",
+      "explanation": "无情的，无情的上升。The inexorable rise of technology continued. 技术的无情的上升继续。"
+    },
+    {
+      "question": "impenetrable ______",
+      "type": "blank",
+      "answer": "forest",
+      "explanation": "难以穿透的，难以穿透的森林。The impenetrable forest blocked their path. 难以穿透的森林阻挡了他们的道路。"
+    },
+    {
+      "question": "dispensable ____",
+      "type": "blank",
+      "answer": "item",
+      "explanation": "可有可无的，可有可无的物品。This is a dispensable item in the budget. 这是预算中可有可无的物品。"
+    },
+    {
+      "question": "disposable _______",
+      "type": "blank",
+      "answer": "cutlery",
+      "explanation": "一次性的，一次性的餐具。They used disposable cutlery at the picnic. 他们在野餐时使用一次性的餐具。"
+    },
+    {
+      "question": "unpalatable _____",
+      "type": "blank",
+      "answer": "truth",
+      "explanation": "令人不快的，令人不快的真相。He had to face the unpalatable truth. 他不得不面对令人不快的真相。"
+    },
+    {
+      "question": "redoubtable ________",
+      "type": "blank",
+      "answer": "opponent",
+      "explanation": "令人敬畏的，令人敬畏的对手。She was a redoubtable opponent in debate. 她在辩论中是令人敬畏的对手。"
+    },
+    {
+      "question": "tractable _____",
+      "type": "blank",
+      "answer": "child",
+      "explanation": "温顺的，温顺的孩子。The tractable child obeyed instructions. 温顺的孩子服从指示。"
+    },
+    {
+      "question": "intractable _______",
+      "type": "blank",
+      "answer": "problem",
+      "explanation": "棘手的，棘手的问题。The intractable problem defied solution. 棘手的问题无法解决。"
+    },
+    {
+      "question": "delectable _______",
+      "type": "blank",
+      "answer": "dessert",
+      "explanation": "美味的，美味的甜点。The chef prepared a delectable dessert. 厨师准备了美味的甜点。"
+    },
+    {
+      "question": "ineluctable ____",
+      "type": "blank",
+      "answer": "fate",
+      "explanation": "不可避免的，不可避免的命运。Death is an ineluctable fate. 死亡是不可避免的命运。"
+    },
+    {
+      "question": "habitable ____",
+      "type": "blank",
+      "answer": "zone",
+      "explanation": "适宜居住的，适宜居住的区域。Scientists search for planets in the habitable zone. 科学家在适宜居住的区域寻找行星。"
+    },
+    {
+      "question": "indubitable ____",
+      "type": "blank",
+      "answer": "fact",
+      "explanation": "无可置疑的，无可置疑的事实。It is an indubitable fact. 这是无可置疑的事实。"
+    },
+    {
+      "question": "inimitable _____",
+      "type": "blank",
+      "answer": "style",
+      "explanation": "独特的，独特的风格。The artist had an inimitable style. 艺术家有独特的风格。"
+    },
+    {
+      "question": "hospitable ____",
+      "type": "blank",
+      "answer": "host",
+      "explanation": "好客的，好客的主人。The hospitable host welcomed all visitors. 好客的主人欢迎所有访客。"
+    },
+    {
+      "question": "charitable ________",
+      "type": "blank",
+      "answer": "donation",
+      "explanation": "慈善的，慈善的捐赠。She made a generous charitable donation. 她做了慷慨的慈善的捐赠。"
+    },
+    {
+      "question": "_ notable ______",
+      "type": "blank",
+      "answer": "a figure",
+      "explanation": "著名的，一位著名的人物。He was a notable figure in politics. 他是政治界一位著名的人物。"
+    },
+    {
+      "question": "potable _____",
+      "type": "blank",
+      "answer": "water",
+      "explanation": "可饮用的，可饮用的水。Ensure the potable water supply is safe. 确保可饮用的水供应安全。"
+    },
+    {
+      "question": "______ adaptable",
+      "type": "blank",
+      "answer": "highly",
+      "explanation": "适应性强的，高度适应性强的。The species is highly adaptable. 该物种高度适应性强的。"
+    },
+    {
+      "question": "portable ______",
+      "type": "blank",
+      "answer": "device",
+      "explanation": "便携式的，便携式的设备。The portable device fits in a pocket. 便携式的设备可以放进口袋。"
+    },
+    {
+      "question": "detestable _____",
+      "type": "blank",
+      "answer": "crime",
+      "explanation": "可憎的，可憎的罪行。Murder is a detestable crime. 谋杀是可憎的罪行。"
+    },
+    {
+      "question": "undisputable ____",
+      "type": "blank",
+      "answer": "fact",
+      "explanation": "无可争辩的，无可争辩的事实。This is an undisputable fact. 这是无可争辩的事实。"
+    },
+    {
+      "question": "equable ___________",
+      "type": "blank",
+      "answer": "temperament",
+      "explanation": "平和的，平和的性情。He had an equable temperament. 他有平和的性情。"
+    },
+    {
+      "question": "_____ rabble",
+      "type": "blank",
+      "answer": "angry",
+      "explanation": "乌合之众，愤怒的乌合之众。The angry rabble stormed the gates. 愤怒的乌合之众冲进大门。"
+    },
+    {
+      "question": "gobble ____",
+      "type": "blank",
+      "answer": "food",
+      "explanation": "狼吞虎咽，狼吞虎咽食物。Don't gobble food so quickly. 不要这么快狼吞虎咽食物。"
+    },
+    {
+      "question": "__________ rubble",
+      "type": "blank",
+      "answer": "earthquake",
+      "explanation": "瓦砾，地震瓦砾。The earthquake rubble filled the streets. 地震瓦砾堆满了街道。"
+    },
+    {
+      "question": "enfeeble ____",
+      "type": "blank",
+      "answer": "body",
+      "explanation": "使虚弱，使身体虚弱。Disease would enfeeble body and mind. 疾病会使身体虚弱和心智衰弱。"
+    },
+    {
+      "question": "irreducible ________",
+      "type": "blank",
+      "answer": "fraction",
+      "explanation": "不可约的，不可约的分数。The irreducible fraction cannot be simplified. 不可约的分数无法简化。"
+    },
+    {
+      "question": "credible ________",
+      "type": "blank",
+      "answer": "evidence",
+      "explanation": "可信的，可信的证据。The witness provided credible evidence. 证人提供了可信的证据。"
+    },
+    {
+      "question": "______ audible",
+      "type": "blank",
+      "answer": "barely",
+      "explanation": "听得见的，勉强听得见的。The whisper was barely audible. 耳语勉强听得见的。"
+    },
+    {
+      "question": "illegible ___________",
+      "type": "blank",
+      "answer": "handwriting",
+      "explanation": "难以辨认的，难以辨认的笔迹。His illegible handwriting was impossible to read. 他难以辨认的笔迹无法阅读。"
+    },
+    {
+      "question": "eligible _____",
+      "type": "blank",
+      "answer": "voter",
+      "explanation": "合格的，合格的选民。Every eligible voter should participate. 每个合格的选民都应该参与。"
+    },
+    {
+      "question": "ineligible _________",
+      "type": "blank",
+      "answer": "applicant",
+      "explanation": "不合格的，不合格的申请人。The ineligible applicant was rejected. 不合格的申请人被拒绝了。"
+    },
+    {
+      "question": "intelligible ______",
+      "type": "blank",
+      "answer": "speech",
+      "explanation": "可理解的，可理解的演讲。Her intelligible speech was clear. 她可理解的演讲很清晰。"
+    },
+    {
+      "question": "incorrigible _____",
+      "type": "blank",
+      "answer": "child",
+      "explanation": "不可救药的，不可救药的孩子。The incorrigible child ignored all warnings. 不可救药的孩子无视所有警告。"
+    },
+    {
+      "question": "tangible ________",
+      "type": "blank",
+      "answer": "benefits",
+      "explanation": "有形的，有形的好处。The investment provided tangible benefits. 投资提供了有形的好处。"
+    },
+    {
+      "question": "intangible _____",
+      "type": "blank",
+      "answer": "asset",
+      "explanation": "无形的，无形的资产。Goodwill is an intangible asset. 商誉是无形的资产。"
+    },
+    {
+      "question": "indelible ____",
+      "type": "blank",
+      "answer": "mark",
+      "explanation": "不可磨灭的，不可磨灭的印记。The experience left an indelible mark. 这次经历留下了不可磨灭的印记。"
+    },
+    {
+      "question": "_____ fallible",
+      "type": "blank",
+      "answer": "human",
+      "explanation": "易犯错的，人类易犯错的。We are all human fallible. 我们都是人类易犯错的。"
+    },
+    {
+      "question": "_____ foible",
+      "type": "blank",
+      "answer": "human",
+      "explanation": "小缺点，人类小缺点。Jealousy is a common human foible. 嫉妒是常见的人类小缺点。"
+    },
+    {
+      "question": "feasible ____",
+      "type": "blank",
+      "answer": "plan",
+      "explanation": "可行的，可行的计划。They proposed a feasible plan. 他们提出了可行的计划。"
+    },
+    {
+      "question": "reprehensible ___",
+      "type": "blank",
+      "answer": "act",
+      "explanation": "应受谴责的，应受谴责的行为。Lying is a reprehensible act. 说谎是应受谴责的行为。"
+    },
+    {
+      "question": "______ comprehensible",
+      "type": "blank",
+      "answer": "easily",
+      "explanation": "可理解的，容易可理解的。The instructions were easily comprehensible. 说明容易可理解的。"
+    },
+    {
+      "question": "sensible ______",
+      "type": "blank",
+      "answer": "choice",
+      "explanation": "明智的，明智的选择。That was a sensible choice. 那是明智的选择。"
+    },
+    {
+      "question": "ostensible ______",
+      "type": "blank",
+      "answer": "reason",
+      "explanation": "表面的，表面的理由。The ostensible reason was not the real one. 表面的理由不是真正的理由。"
+    },
+    {
+      "question": "accessible ________",
+      "type": "blank",
+      "answer": "location",
+      "explanation": "可到达的，可到达的地点。Choose an accessible location for the meeting. 为会议选择可到达的地点。"
+    },
+    {
+      "question": "irrepressible ___",
+      "type": "blank",
+      "answer": "joy",
+      "explanation": "抑制不住的，抑制不住的喜悦。She felt irrepressible joy. 她感到抑制不住的喜悦。"
+    },
+    {
+      "question": "plausible ___________",
+      "type": "blank",
+      "answer": "explanation",
+      "explanation": "似乎合理的，似乎合理的解释。He offered a plausible explanation. 他提供了似乎合理的解释。"
+    },
+    {
+      "question": "implausible ______",
+      "type": "blank",
+      "answer": "excuse",
+      "explanation": "难以置信的，难以置信的借口。His implausible excuse was rejected. 他难以置信的借口被拒绝了。"
+    },
+    {
+      "question": "compatible ______",
+      "type": "blank",
+      "answer": "device",
+      "explanation": "兼容的，兼容的设备。Ensure the compatible device works together. 确保兼容的设备一起工作。"
+    },
+    {
+      "question": "incompatible ________",
+      "type": "blank",
+      "answer": "software",
+      "explanation": "不兼容的，不兼容的软件。The incompatible software caused problems. 不兼容的软件造成了问题。"
+    },
+    {
+      "question": "destructible ___",
+      "type": "blank",
+      "answer": "toy",
+      "explanation": "可毁坏的，可毁坏的玩具。The destructible toy broke easily. 可毁坏的玩具容易损坏。"
+    },
+    {
+      "question": "______ susceptible",
+      "type": "blank",
+      "answer": "highly",
+      "explanation": "易受影响的，高度易受影响的。Children are highly susceptible to illness. 儿童高度易受影响的疾病。"
+    },
+    {
+      "question": "contemptible ___",
+      "type": "blank",
+      "answer": "act",
+      "explanation": "可鄙的，可鄙的行为。Betrayal is a contemptible act. 背叛是可鄙的行为。"
+    },
+    {
+      "question": "incorruptible _____",
+      "type": "blank",
+      "answer": "judge",
+      "explanation": "廉洁的，廉洁的法官。The incorruptible judge was respected. 廉洁的法官受到尊敬。"
+    },
+    {
+      "question": "convertible ____",
+      "type": "blank",
+      "answer": "bond",
+      "explanation": "可转换的，可转换的债券。He invested in a convertible bond. 他投资了可转换的债券。"
+    },
+    {
+      "question": "incontrovertible _____",
+      "type": "blank",
+      "answer": "proof",
+      "explanation": "无可辩驳的，无可辩驳的证据。They had incontrovertible proof. 他们有无可辩驳的证据。"
+    },
+    {
+      "question": "_____ comestible",
+      "type": "blank",
+      "answer": "tasty",
+      "explanation": "食物，美味的食物。The market sold tasty comestible. 市场出售美味的食物。"
+    },
+    {
+      "question": "inexhaustible ______",
+      "type": "blank",
+      "answer": "supply",
+      "explanation": "用之不竭的，用之不竭的供应。Solar energy provides an inexhaustible supply. 太阳能提供用之不竭的供应。"
+    },
+    {
+      "question": "combustible ___",
+      "type": "blank",
+      "answer": "gas",
+      "explanation": "易燃的，易燃的气体。Store combustible gas safely. 安全存放易燃的气体。"
+    },
+    {
+      "question": "gamble __",
+      "type": "blank",
+      "answer": "on",
+      "explanation": "赌博，赌博。Don't gamble on uncertain outcomes. 不要赌博不确定的结果。"
+    },
+    {
+      "question": "______ ensemble",
+      "type": "blank",
+      "answer": "string",
+      "explanation": "乐团，弦乐乐团。The string ensemble performed beautifully. 弦乐乐团演奏得很美。"
+    },
+    {
+      "question": "assemble _____",
+      "type": "blank",
+      "answer": "parts",
+      "explanation": "组装，组装零件。Follow instructions to assemble parts. 按照说明组装零件。"
+    },
+    {
+      "question": "dissemble ___ _____",
+      "type": "blank",
+      "answer": "the truth",
+      "explanation": "掩饰，掩饰真相。He tried to dissemble the truth. 他试图掩饰真相。"
+    },
+    {
+      "question": "nimble _______",
+      "type": "blank",
+      "answer": "fingers",
+      "explanation": "灵活的，灵活的手指。The pianist had nimble fingers. 钢琴家有灵活的手指。"
+    },
+    {
+      "question": "bumble _____",
+      "type": "blank",
+      "answer": "along",
+      "explanation": "笨拙地行动，笨拙地行动。He would bumble along through life. 他会笨拙地行动度过一生。"
+    },
+    {
+      "question": "humble _______",
+      "type": "blank",
+      "answer": "apology",
+      "explanation": "谦卑的，谦卑的道歉。He offered a humble apology. 他提出了谦卑的道歉。"
+    },
+    {
+      "question": "ignoble ______",
+      "type": "blank",
+      "answer": "motive",
+      "explanation": "卑鄙的，卑鄙的动机。His ignoble motive was exposed. 他卑鄙的动机被揭露了。"
+    },
+    {
+      "question": "ennoble ___ _____",
+      "type": "blank",
+      "answer": "the cause",
+      "explanation": "使高尚，使事业高尚。Sacrifice would ennoble the cause. 牺牲会使事业高尚。"
+    },
+    {
+      "question": "marble ______",
+      "type": "blank",
+      "answer": "statue",
+      "explanation": "大理石，大理石雕像。The marble statue stood in the plaza. 大理石雕像矗立在广场上。"
+    },
+    {
+      "question": "warble _ ____",
+      "type": "blank",
+      "answer": "a tune",
+      "explanation": "婉转地唱，婉转地唱曲调。The bird would warble a tune. 鸟儿会婉转地唱曲调。"
+    },
+    {
+      "question": "_____ soluble",
+      "type": "blank",
+      "answer": "water",
+      "explanation": "可溶的，水溶性的。The tablet is water soluble. 药片是水溶性的。"
+    },
+    {
+      "question": "insoluble _______",
+      "type": "blank",
+      "answer": "problem",
+      "explanation": "无法解决的，无法解决的问题。The conflict seemed an insoluble problem. 冲突似乎是无法解决的问题。"
+    },
+    {
+      "question": "voluble _______",
+      "type": "blank",
+      "answer": "speaker",
+      "explanation": "健谈的，健谈的演讲者。The voluble speaker talked for hours. 健谈的演讲者讲了几个小时。"
+    },
+    {
+      "question": "______ debacle",
+      "type": "blank",
+      "answer": "market",
+      "explanation": "崩溃，市场崩溃。The market debacle wiped out investments. 市场崩溃抹去了投资。"
+    }
+  ]
+}
