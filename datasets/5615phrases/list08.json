@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "_____ negligence",
+      "type": "blank",
+      "answer": "gross",
+      "explanation": "疏忽，严重的疏忽。The company was sued for gross negligence in safety procedures. 公司因安全程序中的严重的疏忽被起诉。"
+    },
+    {
+      "question": "________ diligence",
+      "type": "blank",
+      "answer": "habitual",
+      "explanation": "勤奋，习惯性的勤奋。Her habitual diligence earned her a promotion. 她习惯性的勤奋为她赢得了晋升。"
+    },
+    {
+      "question": "____ ambience",
+      "type": "blank",
+      "answer": "cozy",
+      "explanation": "氛围，舒适的氛围。The café had a cozy ambience with soft lighting. 咖啡馆有柔和灯光的舒适的氛围。"
+    },
+    {
+      "question": "__________ prescience",
+      "type": "blank",
+      "answer": "remarkable",
+      "explanation": "预知，非凡的预知。Her remarkable prescience about market trends was impressive. 她对市场趋势的非凡的预知令人印象深刻。"
+    },
+    {
+      "question": "_____ conscience",
+      "type": "blank",
+      "answer": "clear",
+      "explanation": "良心，清白的良心。He had a clear conscience about his decision. 他对自己的决定有清白的良心。"
+    },
+    {
+      "question": "_____ ebullience",
+      "type": "blank",
+      "answer": "great",
+      "explanation": "热情洋溢，巨大的热情洋溢。The crowd greeted the team with great ebullience. 人群以巨大的热情洋溢迎接球队。"
+    },
+    {
+      "question": "_____ convenience",
+      "type": "blank",
+      "answer": "every",
+      "explanation": "便利，每一种便利。The apartment had every convenience. 公寓有每一种便利。"
+    },
+    {
+      "question": "_____ transience",
+      "type": "blank",
+      "answer": "human",
+      "explanation": "短暂，人类的短暂。The poet reflected on human transience. 诗人反思人类的短暂。"
+    },
+    {
+      "question": "_________ ambivalence",
+      "type": "blank",
+      "answer": "emotional",
+      "explanation": "矛盾心理，情感上的矛盾心理。She felt emotional ambivalence about leaving. 她对离开感到情感上的矛盾心理。"
+    },
+    {
+      "question": "________ insolence",
+      "type": "blank",
+      "answer": "shocking",
+      "explanation": "无礼，令人震惊的无礼。His shocking insolence to the teacher was punished. 他对老师令人震惊的无礼受到了惩罚。"
+    },
+    {
+      "question": "___ flatulence",
+      "type": "blank",
+      "answer": "gas",
+      "explanation": "胀气，气体胀气。The medication helped reduce gas flatulence. 药物帮助减少气体胀气。"
+    },
+    {
+      "question": "commence __________",
+      "type": "blank",
+      "answer": "operations",
+      "explanation": "开始，开始运营。The factory will commence operations next month. 工厂将于下月开始运营。"
+    },
+    {
+      "question": "________ eminence",
+      "type": "blank",
+      "answer": "mountain",
+      "explanation": "高地，山地高地。They climbed to the mountain eminence for the view. 他们爬到山地高地观看风景。"
+    },
+    {
+      "question": "impertinence __ ______",
+      "type": "blank",
+      "answer": "to elders",
+      "explanation": "无礼，对长辈的无礼。His impertinence to elders was unacceptable. 他对长辈的无礼是不可接受的。"
+    },
+    {
+      "question": "____ deference",
+      "type": "blank",
+      "answer": "show",
+      "explanation": "尊重，表示尊重。The students would show deference to the professor. 学生们会对教授表示尊重。"
+    },
+    {
+      "question": "______ circumference",
+      "type": "blank",
+      "answer": "circle",
+      "explanation": "周长，圆周长。Calculate the circle circumference using the formula. 使用公式计算圆周长。"
+    },
+    {
+      "question": "_____ conference",
+      "type": "blank",
+      "answer": "press",
+      "explanation": "会议，新闻发布会。The president held a press conference. 总统举行了新闻发布会。"
+    },
+    {
+      "question": "_____ interference",
+      "type": "blank",
+      "answer": "radio",
+      "explanation": "干扰，无线电干扰。Radio interference affected the broadcast. 无线电干扰影响了广播。"
+    },
+    {
+      "question": "____ belligerence",
+      "type": "blank",
+      "answer": "open",
+      "explanation": "好战，公开的好战。His open belligerence alarmed the diplomats. 他公开的好战使外交官感到担忧。"
+    },
+    {
+      "question": "quintessence __ ___",
+      "type": "blank",
+      "answer": "of art",
+      "explanation": "精髓，艺术的精髓。This painting represents the quintessence of art from that period. 这幅画代表了那个时期艺术的精髓。"
+    },
+    {
+      "question": "___ competence",
+      "type": "blank",
+      "answer": "job",
+      "explanation": "能力，工作能力。The interview tested her job competence. 面试测试了她的工作能力。"
+    },
+    {
+      "question": "____ pretence",
+      "type": "blank",
+      "answer": "mere",
+      "explanation": "假装，仅仅是假装。His kindness was mere pretence. 他的善良仅仅是假装。"
+    },
+    {
+      "question": "_______ inadvertence",
+      "type": "blank",
+      "answer": "through",
+      "explanation": "疏忽，由于疏忽。The error occurred through inadvertence. 错误是由于疏忽发生的。"
+    },
+    {
+      "question": "subsistence _______",
+      "type": "blank",
+      "answer": "farming",
+      "explanation": "生存，生存农业。Many villagers practiced subsistence farming. 许多村民从事生存农业。"
+    },
+    {
+      "question": "______ persistence",
+      "type": "blank",
+      "answer": "dogged",
+      "explanation": "坚持，顽强的坚持。Her dogged persistence paid off in the end. 她顽强的坚持最终得到了回报。"
+    },
+    {
+      "question": "______ affluence",
+      "type": "blank",
+      "answer": "sudden",
+      "explanation": "富裕，突然的富裕。Sudden affluence changed their lifestyle. 突然的富裕改变了他们的生活方式。"
+    },
+    {
+      "question": "__ consequence",
+      "type": "blank",
+      "answer": "in",
+      "explanation": "结果，结果。In consequence of the storm, the event was cancelled. 由于暴风雨的结果，活动被取消了。"
+    },
+    {
+      "question": "____ __ eloquence",
+      "type": "blank",
+      "answer": "gift of",
+      "explanation": "雄辩，雄辩的天赋。The speaker had a gift of eloquence. 演讲者有雄辩的天赋。"
+    },
+    {
+      "question": "evince ________",
+      "type": "blank",
+      "answer": "interest",
+      "explanation": "表现出，表现出兴趣。She would evince interest in the project. 她会对这个项目表现出兴趣。"
+    },
+    {
+      "question": "ensconce _______",
+      "type": "blank",
+      "answer": "oneself",
+      "explanation": "安置，安置自己。He would ensconce oneself in the comfortable chair. 他会把自己安置在舒适的椅子上。"
+    },
+    {
+      "question": "denounce __________",
+      "type": "blank",
+      "answer": "corruption",
+      "explanation": "谴责，谴责腐败。The activists would denounce corruption publicly. 活动人士会公开谴责腐败。"
+    },
+    {
+      "question": "pierce ___ ____",
+      "type": "blank",
+      "answer": "the veil",
+      "explanation": "刺穿，刺穿面纱。The investigation would pierce the veil of secrecy. 调查会刺穿保密的面纱。"
+    },
+    {
+      "question": "coerce __________",
+      "type": "blank",
+      "answer": "confession",
+      "explanation": "强迫，强迫供认。Police cannot coerce confession from suspects. 警方不能强迫嫌疑人供认。"
+    },
+    {
+      "question": "acquiesce __",
+      "type": "blank",
+      "answer": "in",
+      "explanation": "默许，默许。She decided to acquiesce in their decision. 她决定默许他们的决定。"
+    },
+    {
+      "question": "_____ coalesce",
+      "type": "blank",
+      "answer": "ideas",
+      "explanation": "合并，想法合并。Different ideas coalesce into a unified theory. 不同的想法合并成统一的理论。"
+    },
+    {
+      "question": "convalesce __ ____",
+      "type": "blank",
+      "answer": "at home",
+      "explanation": "康复，在家康复。The patient would convalesce at home after surgery. 患者术后会在家康复。"
+    },
+    {
+      "question": "_________ effervesce",
+      "type": "blank",
+      "answer": "champagne",
+      "explanation": "冒泡，香槟冒泡。Champagne effervesce when opened. 香槟打开时会冒泡。"
+    },
+    {
+      "question": "traduce _ _____",
+      "type": "blank",
+      "answer": "a rival",
+      "explanation": "诽谤，诽谤对手。He would traduce a rival to gain advantage. 他会诽谤对手以获得优势。"
+    },
+    {
+      "question": "adduce ________",
+      "type": "blank",
+      "answer": "evidence",
+      "explanation": "引证，引证证据。The lawyer would adduce evidence to support the claim. 律师会引证证据支持主张。"
+    },
+    {
+      "question": "produce _______",
+      "type": "blank",
+      "answer": "results",
+      "explanation": "产生，产生结果。Hard work will produce results. 努力工作会产生结果。"
+    },
+    {
+      "question": "_______ _ truce",
+      "type": "blank",
+      "answer": "declare a",
+      "explanation": "休战，宣布休战。The warring sides agreed to declare a truce. 交战双方同意宣布休战。"
+    },
+    {
+      "question": "________ facade",
+      "type": "blank",
+      "answer": "building",
+      "explanation": "外墙，建筑外墙。The building facade was beautifully restored. 建筑外墙被精美修复。"
+    },
+    {
+      "question": "_____ cavalcade",
+      "type": "blank",
+      "answer": "royal",
+      "explanation": "骑兵队，皇家骑兵队。The royal cavalcade passed through the streets. 皇家骑兵队穿过街道。"
+    },
+    {
+      "question": "____ brocade",
+      "type": "blank",
+      "answer": "silk",
+      "explanation": "锦缎，丝绸锦缎。The dress was made of luxurious silk brocade. 这件连衣裙由豪华的丝绸锦缎制成。"
+    },
+    {
+      "question": "_________ cascade",
+      "type": "blank",
+      "answer": "waterfall",
+      "explanation": "瀑布，瀑布级联。The waterfall cascade tumbled down the rocks. 瀑布级联从岩石上倾泻而下。"
+    },
+    {
+      "question": "renegade _______",
+      "type": "blank",
+      "answer": "soldier",
+      "explanation": "叛徒，叛徒士兵。The renegade soldier defected to the enemy. 叛徒士兵叛逃到敌方。"
+    },
+    {
+      "question": "_____ blockade",
+      "type": "blank",
+      "answer": "naval",
+      "explanation": "封锁，海上封锁。The naval blockade prevented supplies from arriving. 海上封锁阻止了补给到达。"
+    },
+    {
+      "question": "______ stockade",
+      "type": "blank",
+      "answer": "prison",
+      "explanation": "栅栏，监狱栅栏。The prisoners were held in the prison stockade. 囚犯被关押在监狱栅栏内。"
+    },
+    {
+      "question": "________ glade",
+      "type": "blank",
+      "answer": "woodland",
+      "explanation": "林间空地，林地空地。They rested in a peaceful woodland glade. 他们在宁静的林地空地休息。"
+    },
+    {
+      "question": "_____ fusillade",
+      "type": "blank",
+      "answer": "rifle",
+      "explanation": "连续射击，步枪连续射击。A rifle fusillade echoed through the valley. 步枪连续射击在山谷中回荡。"
+    },
+    {
+      "question": "___ accolades",
+      "type": "blank",
+      "answer": "win",
+      "explanation": "赞誉，赢得赞誉。The film would win accolades at the festival. 这部电影会在电影节上赢得赞誉。"
+    },
+    {
+      "question": "_______ promenade",
+      "type": "blank",
+      "answer": "evening",
+      "explanation": "散步，晚间散步。Couples enjoyed an evening promenade along the beach. 情侣们沿着海滩享受晚间散步。"
+    },
+    {
+      "question": "______ colonnade",
+      "type": "blank",
+      "answer": "marble",
+      "explanation": "柱廊，大理石柱廊。The temple featured a magnificent marble colonnade. 寺庙有壮观的大理石柱廊。"
+    },
+    {
+      "question": "____ charade",
+      "type": "blank",
+      "answer": "play",
+      "explanation": "字谜游戏，玩字谜游戏。The children would play charade at the party. 孩子们会在派对上玩字谜游戏。"
+    },
+    {
+      "question": "abrade ___ _______",
+      "type": "blank",
+      "answer": "the surface",
+      "explanation": "磨损，磨损表面。Rough handling would abrade the surface. 粗暴处理会磨损表面。"
+    },
+    {
+      "question": "______ masquerade",
+      "type": "blank",
+      "answer": "masked",
+      "explanation": "化装舞会，化装舞会。The guests attended the masked masquerade. 客人们参加了化装舞会。"
+    },
+    {
+      "question": "centigrade _____",
+      "type": "blank",
+      "answer": "scale",
+      "explanation": "摄氏度，摄氏度刻度。Temperature is measured on the centigrade scale. 温度用摄氏度刻度测量。"
+    },
+    {
+      "question": "_____ tirade",
+      "type": "blank",
+      "answer": "angry",
+      "explanation": "长篇大论，愤怒的长篇大论。He launched into an angry tirade. 他开始了愤怒的长篇大论。"
+    },
+    {
+      "question": "crusade _______",
+      "type": "blank",
+      "answer": "against",
+      "explanation": "十字军东征，反对的十字军东征。She led a crusade against poverty. 她领导了反对贫困的十字军东征。"
+    },
+    {
+      "question": "wade ______",
+      "type": "blank",
+      "answer": "across",
+      "explanation": "涉水，涉水穿过。They had to wade across the shallow stream. 他们不得不涉水穿过浅溪。"
+    },
+    {
+      "question": "cede _________",
+      "type": "blank",
+      "answer": "territory",
+      "explanation": "割让，割让领土。The defeated nation had to cede territory. 战败国不得不割让领土。"
+    },
+    {
+      "question": "accede __ _______",
+      "type": "blank",
+      "answer": "to demands",
+      "explanation": "同意，同意要求。The government would accede to demands. 政府会同意要求。"
+    },
+    {
+      "question": "secede ____ _____",
+      "type": "blank",
+      "answer": "from union",
+      "explanation": "脱离，脱离联邦。The state threatened to secede from union. 该州威胁要脱离联邦。"
+    },
+    {
+      "question": "intercede ___",
+      "type": "blank",
+      "answer": "for",
+      "explanation": "调解，为...调解。He would intercede for the accused. 他会为被告调解。"
+    },
+    {
+      "question": "supersede _ ____",
+      "type": "blank",
+      "answer": "a rule",
+      "explanation": "取代，取代规则。The new policy would supersede a rule. 新政策会取代规则。"
+    },
+    {
+      "question": "abide __ _____",
+      "type": "blank",
+      "answer": "by rules",
+      "explanation": "遵守，遵守规则。All students must abide by rules. 所有学生必须遵守规则。"
+    },
+    {
+      "question": "_____ herbicide",
+      "type": "blank",
+      "answer": "apply",
+      "explanation": "除草剂，使用除草剂。Farmers apply herbicide to control weeds. 农民使用除草剂控制杂草。"
+    },
+    {
+      "question": "_____ fungicide",
+      "type": "blank",
+      "answer": "spray",
+      "explanation": "杀菌剂，喷洒杀菌剂。Gardeners spray fungicide on infected plants. 园丁在受感染的植物上喷洒杀菌剂。"
+    },
+    {
+      "question": "_________ germicide",
+      "type": "blank",
+      "answer": "household",
+      "explanation": "杀菌剂，家用杀菌剂。Household germicide kills bacteria effectively. 家用杀菌剂有效杀死细菌。"
+    },
+    {
+      "question": "_____ insecticide",
+      "type": "blank",
+      "answer": "spray",
+      "explanation": "杀虫剂，喷洒杀虫剂。The farmer would spray insecticide on crops. 农民会在作物上喷洒杀虫剂。"
+    },
+    {
+      "question": "___ pesticide",
+      "type": "blank",
+      "answer": "use",
+      "explanation": "杀虫剂，使用杀虫剂。Organic farms avoid using pesticide. 有机农场避免使用杀虫剂。"
+    },
+    {
+      "question": "glide ______",
+      "type": "blank",
+      "answer": "across",
+      "explanation": "滑行，滑行穿过。The swan would glide across the pond. 天鹅会滑行穿过池塘。"
+    },
+    {
+      "question": "backslide ____",
+      "type": "blank",
+      "answer": "into",
+      "explanation": "倒退，倒退到。He threatened to backslide into old habits. 他有倒退到旧习惯的危险。"
+    },
+    {
+      "question": "bromide ______",
+      "type": "blank",
+      "answer": "tablet",
+      "explanation": "溴化物，溴化物片。The doctor prescribed a bromide tablet for anxiety. 医生为焦虑开了溴化物片。"
+    },
+    {
+      "question": "deride ________",
+      "type": "blank",
+      "answer": "opponent",
+      "explanation": "嘲笑，嘲笑对手。He would deride opponent in debates. 他会在辩论中嘲笑对手。"
+    },
+    {
+      "question": "reside __",
+      "type": "blank",
+      "answer": "in",
+      "explanation": "居住，居住在。They reside in the city center. 他们居住在市中心。"
+    },
+    {
+      "question": "preside ____ _______",
+      "type": "blank",
+      "answer": "over meeting",
+      "explanation": "主持，主持会议。The chairman would preside over meeting. 主席会主持会议。"
+    },
+    {
+      "question": "ode __ ___",
+      "type": "blank",
+      "answer": "to joy",
+      "explanation": "颂歌，欢乐颂。Beethoven composed the famous ode to joy. 贝多芬创作了著名的欢乐颂。"
+    },
+    {
+      "question": "bode ___",
+      "type": "blank",
+      "answer": "ill",
+      "explanation": "预示，预示不祥。The dark clouds bode ill for the picnic. 乌云预示不祥野餐。"
+    },
+    {
+      "question": "forebode ____",
+      "type": "blank",
+      "answer": "evil",
+      "explanation": "预示，预示邪恶。The ominous signs forebode evil. 不祥的征兆预示邪恶。"
+    },
+    {
+      "question": "____ ___ lode",
+      "type": "blank",
+      "answer": "rich ore",
+      "explanation": "矿脉，富矿脉。Miners discovered a rich ore lode. 矿工发现了富矿脉。"
+    },
+    {
+      "question": "corrode ___ _____",
+      "type": "blank",
+      "answer": "the metal",
+      "explanation": "腐蚀，腐蚀金属。Salt water will corrode the metal. 盐水会腐蚀金属。"
+    },
+    {
+      "question": "avant-garde ___",
+      "type": "blank",
+      "answer": "art",
+      "explanation": "前卫，前卫艺术。The museum displayed avant-garde art. 博物馆展出了前卫艺术。"
+    },
+    {
+      "question": "occlude ___ ______",
+      "type": "blank",
+      "answer": "the artery",
+      "explanation": "堵塞，堵塞动脉。A blood clot can occlude the artery. 血栓会堵塞动脉。"
+    },
+    {
+      "question": "preclude ___________",
+      "type": "blank",
+      "answer": "possibility",
+      "explanation": "排除，排除可能性。The evidence would preclude possibility of innocence. 证据会排除清白的可能性。"
+    },
+    {
+      "question": "exclude ______",
+      "type": "blank",
+      "answer": "option",
+      "explanation": "排除，排除选项。We cannot exclude option completely. 我们不能完全排除选项。"
+    },
+    {
+      "question": "__________ prelude",
+      "type": "blank",
+      "answer": "orchestral",
+      "explanation": "前奏曲，管弦乐前奏曲。The concert began with an orchestral prelude. 音乐会以管弦乐前奏曲开始。"
+    },
+    {
+      "question": "allude __________",
+      "type": "blank",
+      "answer": "indirectly",
+      "explanation": "暗指，间接暗指。He would allude indirectly to the scandal. 他会间接暗指这起丑闻。"
+    },
+    {
+      "question": "_____ interlude",
+      "type": "blank",
+      "answer": "brief",
+      "explanation": "插曲，短暂的插曲。There was a brief interlude before the final act. 最后一幕前有短暂的插曲。"
+    },
+    {
+      "question": "denude ___ ____",
+      "type": "blank",
+      "answer": "the land",
+      "explanation": "剥蚀，剥蚀土地。Deforestation would denude the land. 森林砍伐会剥蚀土地。"
+    },
+    {
+      "question": "prude ________",
+      "type": "blank",
+      "answer": "attitude",
+      "explanation": "拘谨的人，拘谨的人的态度。Her prude attitude shocked no one. 她拘谨的人的态度没有让任何人震惊。"
+    },
+    {
+      "question": "obtrude _______",
+      "type": "blank",
+      "answer": "opinion",
+      "explanation": "强加，强加意见。Don't obtrude opinion on others. 不要强加意见给别人。"
+    },
+    {
+      "question": "extrude _______",
+      "type": "blank",
+      "answer": "plastic",
+      "explanation": "挤压，挤压塑料。The machine would extrude plastic into shapes. 机器会挤压塑料成型。"
+    },
+    {
+      "question": "____ ____ desuetude",
+      "type": "blank",
+      "answer": "fall into",
+      "explanation": "废弃，陷入废弃。The old law fell into desuetude. 旧法律陷入废弃。"
+    },
+    {
+      "question": "solicitude ___",
+      "type": "blank",
+      "answer": "for",
+      "explanation": "关怀，关怀。She showed solicitude for the sick child. 她对生病的孩子表示关怀。"
+    },
+    {
+      "question": "____ solitude",
+      "type": "blank",
+      "answer": "seek",
+      "explanation": "独处，寻求独处。The writer would seek solitude to work. 作家会寻求独处工作。"
+    },
+    {
+      "question": "______ amplitude",
+      "type": "blank",
+      "answer": "signal",
+      "explanation": "振幅，信号振幅。The signal amplitude was too weak. 信号振幅太弱了。"
+    },
+    {
+      "question": "plenitude __ ____",
+      "type": "blank",
+      "answer": "of data",
+      "explanation": "充足，数据的充足。There was a plenitude of data available. 有数据的充足可用。"
+    },
+    {
+      "question": "__________ magnitude",
+      "type": "blank",
+      "answer": "earthquake",
+      "explanation": "震级，地震震级。The earthquake magnitude was 7.5. 地震震级为7.5级。"
+    },
+    {
+      "question": "_____ turpitude",
+      "type": "blank",
+      "answer": "moral",
+      "explanation": "堕落，道德堕落。The scandal revealed his moral turpitude. 丑闻揭露了他的道德堕落。"
+    }
+  ]
+}
