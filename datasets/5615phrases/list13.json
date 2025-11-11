@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "___ axle",
+      "type": "blank",
+      "answer": "car",
+      "explanation": "车轴，汽车车轴。The car axle needed repair. 汽车车轴需要修理。"
+    },
+    {
+      "question": "guzzle ____",
+      "type": "blank",
+      "answer": "beer",
+      "explanation": "狂饮，狂饮啤酒。Don't guzzle beer so quickly. 不要这么快狂饮啤酒。"
+    },
+    {
+      "question": "defame _ _____",
+      "type": "blank",
+      "answer": "a rival",
+      "explanation": "诽谤，诽谤对手。He tried to defame a rival in the campaign. 他试图在竞选中诽谤对手。"
+    },
+    {
+      "question": "enflame ________",
+      "type": "blank",
+      "answer": "passions",
+      "explanation": "激起，激起激情。The speech would enflame passions. 演讲会激起激情。"
+    },
+    {
+      "question": "tame ______",
+      "type": "blank",
+      "answer": "animal",
+      "explanation": "驯服的，驯服的动物。The tame animal obeyed commands. 驯服的动物服从命令。"
+    },
+    {
+      "question": "_____ ___ acme",
+      "type": "blank",
+      "answer": "reach the",
+      "explanation": "顶点，达到顶点。She would reach the acme of her career. 她会达到职业生涯的顶点。"
+    },
+    {
+      "question": "sublime ______",
+      "type": "blank",
+      "answer": "beauty",
+      "explanation": "崇高的，崇高的美。The mountain had sublime beauty. 山有崇高的美。"
+    },
+    {
+      "question": "_____ pantomime",
+      "type": "blank",
+      "answer": "comic",
+      "explanation": "哑剧，喜剧哑剧。The actor performed a comic pantomime. 演员表演了喜剧哑剧。"
+    },
+    {
+      "question": "prime _______",
+      "type": "blank",
+      "answer": "suspect",
+      "explanation": "主要的，主要嫌疑人。He was the prime suspect. 他是主要嫌疑人。"
+    },
+    {
+      "question": "ragtime _____",
+      "type": "blank",
+      "answer": "music",
+      "explanation": "拉格泰姆音乐，拉格泰姆音乐。Ragtime music was popular in the early 1900s. 拉格泰姆音乐在20世纪初很流行。"
+    },
+    {
+      "question": "maritime ___",
+      "type": "blank",
+      "answer": "law",
+      "explanation": "海事的，海事法。Maritime law governs ocean disputes. 海事法管理海洋争端。"
+    },
+    {
+      "question": "domed ____",
+      "type": "blank",
+      "answer": "roof",
+      "explanation": "圆顶，圆顶屋顶。The building had a domed roof. 建筑有圆顶屋顶。"
+    },
+    {
+      "question": "_____ genome",
+      "type": "blank",
+      "answer": "human",
+      "explanation": "基因组，人类基因组。Scientists mapped the human genome. 科学家绘制了人类基因组。"
+    },
+    {
+      "question": "______ gnome",
+      "type": "blank",
+      "answer": "garden",
+      "explanation": "侏儒，花园侏儒。A garden gnome decorated the lawn. 花园侏儒装饰着草坪。"
+    },
+    {
+      "question": "frolicsome _______",
+      "type": "blank",
+      "answer": "puppies",
+      "explanation": "爱嬉戏的，爱嬉戏的小狗。The frolicsome puppies played all day. 爱嬉戏的小狗整天玩耍。"
+    },
+    {
+      "question": "wholesome ____",
+      "type": "blank",
+      "answer": "diet",
+      "explanation": "有益健康的，有益健康的饮食。She maintained a wholesome diet. 她保持有益健康的饮食。"
+    },
+    {
+      "question": "mettlesome _____",
+      "type": "blank",
+      "answer": "horse",
+      "explanation": "精神抖擞的，精神抖擞的马。The mettlesome horse was spirited. 精神抖擞的马很有活力。"
+    },
+    {
+      "question": "noisome ____",
+      "type": "blank",
+      "answer": "odor",
+      "explanation": "恶臭的，恶臭的气味。A noisome odor filled the room. 恶臭的气味充满了房间。"
+    },
+    {
+      "question": "irksome ____",
+      "type": "blank",
+      "answer": "task",
+      "explanation": "令人厌烦的，令人厌烦的任务。Filing paperwork was an irksome task. 归档文件是令人厌烦的任务。"
+    },
+    {
+      "question": "fulsome ______",
+      "type": "blank",
+      "answer": "praise",
+      "explanation": "过分的，过分的赞美。The fulsome praise seemed insincere. 过分的赞美似乎不真诚。"
+    },
+    {
+      "question": "winsome _____",
+      "type": "blank",
+      "answer": "smile",
+      "explanation": "迷人的，迷人的微笑。She had a winsome smile. 她有迷人的微笑。"
+    },
+    {
+      "question": "_____ chromosome",
+      "type": "blank",
+      "answer": "human",
+      "explanation": "染色体，人类染色体。Human chromosome carry genetic information. 人类染色体携带遗传信息。"
+    },
+    {
+      "question": "cumbersome _______",
+      "type": "blank",
+      "answer": "process",
+      "explanation": "笨重的，笨重的过程。The application was a cumbersome process. 申请是笨重的过程。"
+    },
+    {
+      "question": "lissome ______",
+      "type": "blank",
+      "answer": "figure",
+      "explanation": "柔软的，柔软的身材。The gymnast had a lissome figure. 体操运动员有柔软的身材。"
+    },
+    {
+      "question": "___ epitome __",
+      "type": "blank",
+      "answer": "the of",
+      "explanation": "典范，典范。He was the epitome of elegance. 他是优雅的典范。"
+    },
+    {
+      "question": "exhume _______",
+      "type": "blank",
+      "answer": "remains",
+      "explanation": "挖出，挖出遗体。Authorities would exhume remains for investigation. 当局会挖出遗体进行调查。"
+    },
+    {
+      "question": "subsume _____",
+      "type": "blank",
+      "answer": "under",
+      "explanation": "归入，归入之下。We can subsume under this category. 我们可以归入这一类之下。"
+    },
+    {
+      "question": "résumé ______",
+      "type": "blank",
+      "answer": "update",
+      "explanation": "简历，简历更新。She needed to résumé update before applying. 她在申请前需要简历更新。"
+    },
+    {
+      "question": "_________ costume",
+      "type": "blank",
+      "answer": "Halloween",
+      "explanation": "服装，万圣节服装。Children wore Halloween costume. 孩子们穿万圣节服装。"
+    },
+    {
+      "question": "rhyme ______",
+      "type": "blank",
+      "answer": "scheme",
+      "explanation": "韵律，韵律方案。The poem had a complex rhyme scheme. 这首诗有复杂的韵律方案。"
+    },
+    {
+      "question": "_________ enzyme",
+      "type": "blank",
+      "answer": "digestive",
+      "explanation": "酶，消化酶。Digestive enzyme break down food. 消化酶分解食物。"
+    },
+    {
+      "question": "bane __ _________",
+      "type": "blank",
+      "answer": "of existence",
+      "explanation": "祸根，生存的祸根。Traffic was the bane of existence for commuters. 交通是通勤者生存的祸根。"
+    },
+    {
+      "question": "_______ cane",
+      "type": "blank",
+      "answer": "walking",
+      "explanation": "手杖，步行手杖。The elderly man used a walking cane. 老人使用步行手杖。"
+    },
+    {
+      "question": "arcane ____",
+      "type": "blank",
+      "answer": "lore",
+      "explanation": "神秘的，神秘的知识。He studied arcane lore. 他研究神秘的知识。"
+    },
+    {
+      "question": "ultramundane _______",
+      "type": "blank",
+      "answer": "matters",
+      "explanation": "超世俗的，超世俗的事务。They discussed ultramundane matters. 他们讨论超世俗的事务。"
+    },
+    {
+      "question": "profane ________",
+      "type": "blank",
+      "answer": "language",
+      "explanation": "亵渎的，亵渎的语言。Avoid using profane language. 避免使用亵渎的语言。"
+    },
+    {
+      "question": "germane ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "相关的，相关的评论。That's a germane remark. 那是相关的评论。"
+    },
+    {
+      "question": "humane _________",
+      "type": "blank",
+      "answer": "treatment",
+      "explanation": "人道的，人道的待遇。Animals deserve humane treatment. 动物应得人道的待遇。"
+    },
+    {
+      "question": "inhumane _________",
+      "type": "blank",
+      "answer": "treatment",
+      "explanation": "不人道的，不人道的待遇。The prisoners suffered inhumane treatment. 囚犯遭受不人道的待遇。"
+    },
+    {
+      "question": "______ pane",
+      "type": "blank",
+      "answer": "window",
+      "explanation": "窗格，窗户窗格。The window pane was cracked. 窗户窗格裂了。"
+    },
+    {
+      "question": "____ membrane",
+      "type": "blank",
+      "answer": "cell",
+      "explanation": "膜，细胞膜。The cell membrane controls what enters. 细胞膜控制进入的物质。"
+    },
+    {
+      "question": "sane ________",
+      "type": "blank",
+      "answer": "judgment",
+      "explanation": "理智的，理智的判断。He made a sane judgment. 他做出了理智的判断。"
+    },
+    {
+      "question": "____ hygiene",
+      "type": "blank",
+      "answer": "good",
+      "explanation": "卫生，良好的卫生。Maintain good hygiene habits. 保持良好的卫生习惯。"
+    },
+    {
+      "question": "serene ____",
+      "type": "blank",
+      "answer": "lake",
+      "explanation": "宁静的，宁静的湖。The serene lake was peaceful. 宁静的湖很平静。"
+    },
+    {
+      "question": "_____ gangrene",
+      "type": "blank",
+      "answer": "treat",
+      "explanation": "坏疽，治疗坏疽。Doctors must treat gangrene quickly. 医生必须迅速治疗坏疽。"
+    },
+    {
+      "question": "contravene ___ ___",
+      "type": "blank",
+      "answer": "the law",
+      "explanation": "违反，违反法律。His actions would contravene the law. 他的行为会违反法律。"
+    },
+    {
+      "question": "convene _______",
+      "type": "blank",
+      "answer": "meeting",
+      "explanation": "召集，召集会议。The board will convene meeting tomorrow. 董事会明天将召集会议。"
+    },
+    {
+      "question": "intervene ________",
+      "type": "blank",
+      "answer": "directly",
+      "explanation": "干预，直接干预。The government may intervene directly. 政府可能直接干预。"
+    },
+    {
+      "question": "recombine _____",
+      "type": "blank",
+      "answer": "genes",
+      "explanation": "重组，重组基因。Scientists can recombine genes. 科学家可以重组基因。"
+    },
+    {
+      "question": "internecine ___",
+      "type": "blank",
+      "answer": "war",
+      "explanation": "内讧的，内讧的战争。Internecine war destroyed the faction. 内讧的战争摧毁了派系。"
+    },
+    {
+      "question": "porcine ________",
+      "type": "blank",
+      "answer": "features",
+      "explanation": "猪的，猪的特征。He had somewhat porcine features. 他有有点猪的特征。"
+    },
+    {
+      "question": "iodine ________",
+      "type": "blank",
+      "answer": "solution",
+      "explanation": "碘，碘溶液。Apply iodine solution to the wound. 在伤口上涂碘溶液。"
+    },
+    {
+      "question": "____ _ seine",
+      "type": "blank",
+      "answer": "cast a",
+      "explanation": "围网，撒围网。Fishermen would cast a seine. 渔民会撒围网。"
+    },
+    {
+      "question": "outshine ______",
+      "type": "blank",
+      "answer": "rivals",
+      "explanation": "胜过，胜过对手。Her performance would outshine rivals. 她的表现会胜过对手。"
+    },
+    {
+      "question": "decline __ _____",
+      "type": "blank",
+      "answer": "an offer",
+      "explanation": "拒绝，拒绝提议。He chose to decline an offer. 他选择拒绝提议。"
+    },
+    {
+      "question": "recline ____",
+      "type": "blank",
+      "answer": "seat",
+      "explanation": "倾斜，倾斜座椅。The recline seat was comfortable. 倾斜座椅很舒适。"
+    },
+    {
+      "question": "feline _____",
+      "type": "blank",
+      "answer": "grace",
+      "explanation": "猫科的，猫科的优雅。The dancer moved with feline grace. 舞者以猫科的优雅移动。"
+    },
+    {
+      "question": "aquiline ____",
+      "type": "blank",
+      "answer": "nose",
+      "explanation": "鹰钩的，鹰钩鼻。He had an aquiline nose. 他有鹰钩鼻。"
+    },
+    {
+      "question": "____ discipline",
+      "type": "blank",
+      "answer": "self",
+      "explanation": "纪律，自律。Success requires self discipline. 成功需要自律。"
+    },
+    {
+      "question": "outline ______",
+      "type": "blank",
+      "answer": "sketch",
+      "explanation": "轮廓，轮廓草图。He drew an outline sketch. 他画了轮廓草图。"
+    },
+    {
+      "question": "_________ byline",
+      "type": "blank",
+      "answer": "newspaper",
+      "explanation": "署名，报纸署名。The newspaper byline identified the author. 报纸署名标明了作者。"
+    },
+    {
+      "question": "______ famine",
+      "type": "blank",
+      "answer": "severe",
+      "explanation": "饥荒，严重的饥荒。The country suffered a severe famine. 该国遭受了严重的饥荒。"
+    },
+    {
+      "question": "antihistamine ____",
+      "type": "blank",
+      "answer": "drug",
+      "explanation": "抗组胺药，抗组胺药物。Take an antihistamine drug for allergies. 服用抗组胺药物治疗过敏。"
+    },
+    {
+      "question": "undermine _____",
+      "type": "blank",
+      "answer": "trust",
+      "explanation": "破坏，破坏信任。Lies will undermine trust. 谎言会破坏信任。"
+    },
+    {
+      "question": "canine _____",
+      "type": "blank",
+      "answer": "tooth",
+      "explanation": "犬齿，犬齿。The canine tooth is pointed. 犬齿是尖的。"
+    },
+    {
+      "question": "asinine _______",
+      "type": "blank",
+      "answer": "mistake",
+      "explanation": "愚蠢的，愚蠢的错误。That was an asinine mistake. 那是愚蠢的错误。"
+    },
+    {
+      "question": "saturnine ___________",
+      "type": "blank",
+      "answer": "temperament",
+      "explanation": "阴郁的，阴郁的性情。He had a saturnine temperament. 他有阴郁的性情。"
+    },
+    {
+      "question": "pine ___ ____",
+      "type": "blank",
+      "answer": "for home",
+      "explanation": "思念，思念家乡。He would pine for home. 他会思念家乡。"
+    },
+    {
+      "question": "repine __ ____",
+      "type": "blank",
+      "answer": "at fate",
+      "explanation": "抱怨，抱怨命运。Don't repine at fate. 不要抱怨命运。"
+    },
+    {
+      "question": "vulpine _______",
+      "type": "blank",
+      "answer": "cunning",
+      "explanation": "狡猾的，狡猾的狡诈。He showed vulpine cunning. 他表现出狡猾的狡诈。"
+    },
+    {
+      "question": "opine __ ______",
+      "type": "blank",
+      "answer": "on policy",
+      "explanation": "表示意见，对政策表示意见。Experts would opine on policy. 专家会对政策表示意见。"
+    },
+    {
+      "question": "margarine ______",
+      "type": "blank",
+      "answer": "spread",
+      "explanation": "人造黄油，人造黄油涂抹。Use margarine spread on toast. 在吐司上使用人造黄油涂抹。"
+    },
+    {
+      "question": "saccharine _____",
+      "type": "blank",
+      "answer": "smile",
+      "explanation": "矫揉造作的，矫揉造作的微笑。Her saccharine smile seemed fake. 她矫揉造作的微笑似乎是假的。"
+    },
+    {
+      "question": "marine _________",
+      "type": "blank",
+      "answer": "biologist",
+      "explanation": "海洋的，海洋生物学家。The marine biologist studied coral. 海洋生物学家研究珊瑚。"
+    },
+    {
+      "question": "______ shrine",
+      "type": "blank",
+      "answer": "Shinto",
+      "explanation": "神社，神道神社。They visited a Shinto shrine. 他们参观了神道神社。"
+    },
+    {
+      "question": "enshrine __________",
+      "type": "blank",
+      "answer": "principles",
+      "explanation": "铭记，铭记原则。The constitution would enshrine principles. 宪法会铭记原则。"
+    },
+    {
+      "question": "_________ doctrine",
+      "type": "blank",
+      "answer": "religious",
+      "explanation": "教义，宗教教义。They followed religious doctrine. 他们遵循宗教教义。"
+    },
+    {
+      "question": "____ figurine",
+      "type": "blank",
+      "answer": "clay",
+      "explanation": "小雕像，陶土小雕像。She collected clay figurine. 她收集陶土小雕像。"
+    },
+    {
+      "question": "tambourine ______",
+      "type": "blank",
+      "answer": "rhythm",
+      "explanation": "铃鼓，铃鼓节奏。The tambourine rhythm added energy. 铃鼓节奏增添了活力。"
+    },
+    {
+      "question": "______ cuisine",
+      "type": "blank",
+      "answer": "French",
+      "explanation": "烹饪，法国烹饪。French cuisine is world famous. 法国烹饪举世闻名。"
+    },
+    {
+      "question": "ursine ________",
+      "type": "blank",
+      "answer": "strength",
+      "explanation": "熊的，熊的力量。He had ursine strength. 他有熊的力量。"
+    },
+    {
+      "question": "_______ limousine",
+      "type": "blank",
+      "answer": "stretch",
+      "explanation": "豪华轿车，加长豪华轿车。They arrived in a stretch limousine. 他们乘坐加长豪华轿车到达。"
+    },
+    {
+      "question": "elephantine ____",
+      "type": "blank",
+      "answer": "bulk",
+      "explanation": "笨重的，笨重的体积。The elephantine bulk was impressive. 笨重的体积令人印象深刻。"
+    },
+    {
+      "question": "______ quarantine",
+      "type": "blank",
+      "answer": "impose",
+      "explanation": "隔离，实施隔离。Authorities would impose quarantine. 当局会实施隔离。"
+    },
+    {
+      "question": "byzantine ___________",
+      "type": "blank",
+      "answer": "bureaucracy",
+      "explanation": "复杂的，复杂的官僚机构。The byzantine bureaucracy was confusing. 复杂的官僚机构令人困惑。"
+    },
+    {
+      "question": "___ ___ guillotine",
+      "type": "blank",
+      "answer": "use the",
+      "explanation": "断头台，使用断头台。They would use the guillotine for execution. 他们会使用断头台处决。"
+    },
+    {
+      "question": "libertine _________",
+      "type": "blank",
+      "answer": "lifestyle",
+      "explanation": "放荡的，放荡的生活方式。He led a libertine lifestyle. 他过着放荡的生活方式。"
+    },
+    {
+      "question": "predestine ____",
+      "type": "blank",
+      "answer": "fate",
+      "explanation": "预定，预定命运。Some believe fate is predestined. 有些人相信命运是预定的。"
+    },
+    {
+      "question": "clandestine _______",
+      "type": "blank",
+      "answer": "meeting",
+      "explanation": "秘密的，秘密的会议。They held a clandestine meeting. 他们举行了秘密的会议。"
+    },
+    {
+      "question": "_____ intestine",
+      "type": "blank",
+      "answer": "small",
+      "explanation": "肠，小肠。The small intestine absorbs nutrients. 小肠吸收营养。"
+    },
+    {
+      "question": "________ philistine",
+      "type": "blank",
+      "answer": "cultural",
+      "explanation": "庸俗的人，文化庸俗的人。He was a cultural philistine. 他是文化庸俗的人。"
+    },
+    {
+      "question": "pristine _________",
+      "type": "blank",
+      "answer": "condition",
+      "explanation": "原始的，原始的状态。The car was in pristine condition. 汽车处于原始的状态。"
+    },
+    {
+      "question": "sanguine _______",
+      "type": "blank",
+      "answer": "outlook",
+      "explanation": "乐观的，乐观的展望。He maintained a sanguine outlook. 他保持乐观的展望。"
+    },
+    {
+      "question": "genuine _______",
+      "type": "blank",
+      "answer": "leather",
+      "explanation": "真正的，真正的皮革。The bag was made of genuine leather. 包是用真正的皮革制成的。"
+    },
+    {
+      "question": "equine _______",
+      "type": "blank",
+      "answer": "therapy",
+      "explanation": "马的，马疗法。Equine therapy helps with disabilities. 马疗法有助于治疗残疾。"
+    },
+    {
+      "question": "divine ____________",
+      "type": "blank",
+      "answer": "intervention",
+      "explanation": "神圣的，神圣的干预。They prayed for divine intervention. 他们祈求神圣的干预。"
+    },
+    {
+      "question": "bovine _____",
+      "type": "blank",
+      "answer": "serum",
+      "explanation": "牛的，牛血清。Bovine serum is used in research. 牛血清用于研究。"
+    },
+    {
+      "question": "_____ intertwine",
+      "type": "blank",
+      "answer": "vines",
+      "explanation": "缠绕，藤蔓缠绕。The vines intertwine together. 藤蔓缠绕在一起。"
+    },
+    {
+      "question": "_____-__ comedienne",
+      "type": "blank",
+      "answer": "stand-up",
+      "explanation": "女喜剧演员，单口女喜剧演员。The stand-up comedienne was hilarious. 单口女喜剧演员非常搞笑。"
+    },
+    {
+      "question": "_______ cone",
+      "type": "blank",
+      "answer": "traffic",
+      "explanation": "锥体，交通锥体。Place traffic cone around the work zone. 在工作区周围放置交通锥体。"
+    }
+  ]
+}
