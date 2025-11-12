@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "condone __________",
+      "type": "blank",
+      "answer": "corruption",
+      "explanation": "宽恕，宽恕腐败。The committee refused to condone corruption. 委员会拒绝宽恕腐败。"
+    },
+    {
+      "question": "________ cyclone",
+      "type": "blank",
+      "answer": "tropical",
+      "explanation": "飓风，热带飓风。A tropical cyclone approached the coast. 热带飓风接近海岸。"
+    },
+    {
+      "question": "_____ throne",
+      "type": "blank",
+      "answer": "royal",
+      "explanation": "王座，皇家王座。The king sat on the royal throne. 国王坐在皇家王座上。"
+    },
+    {
+      "question": "atone ___ ____",
+      "type": "blank",
+      "answer": "for sins",
+      "explanation": "赎罪，为罪孽赎罪。He sought to atone for sins. 他试图为罪孽赎罪。"
+    },
+    {
+      "question": "_______ monotone",
+      "type": "blank",
+      "answer": "droning",
+      "explanation": "单调，单调的低沉声音。His droning monotone put people to sleep. 他单调的低沉声音让人昏昏欲睡。"
+    },
+    {
+      "question": "______ milestone",
+      "type": "blank",
+      "answer": "career",
+      "explanation": "里程碑，职业里程碑。Getting promoted was a career milestone. 获得晋升是职业里程碑。"
+    },
+    {
+      "question": "limestone ____",
+      "type": "blank",
+      "answer": "cave",
+      "explanation": "石灰石，石灰石洞穴。The limestone cave had stalactites. 石灰石洞穴有钟乳石。"
+    },
+    {
+      "question": "rhinestone ________",
+      "type": "blank",
+      "answer": "necklace",
+      "explanation": "人造钻石，人造钻石项链。She wore a rhinestone necklace. 她戴着人造钻石项链。"
+    },
+    {
+      "question": "____ touchstone",
+      "type": "blank",
+      "answer": "acid",
+      "explanation": "试金石，酸试金石。The acid touchstone tested gold purity. 酸试金石测试黄金纯度。"
+    },
+    {
+      "question": "airborne _________",
+      "type": "blank",
+      "answer": "particles",
+      "explanation": "空气传播的，空气传播的颗粒。Airborne particles can cause allergies. 空气传播的颗粒会引起过敏。"
+    },
+    {
+      "question": "____ dune",
+      "type": "blank",
+      "answer": "sand",
+      "explanation": "沙丘，沙丘。They climbed a tall sand dune. 他们爬上了高沙丘。"
+    },
+    {
+      "question": "jejune _____",
+      "type": "blank",
+      "answer": "ideas",
+      "explanation": "幼稚的，幼稚的想法。His jejune ideas lacked depth. 他幼稚的想法缺乏深度。"
+    },
+    {
+      "question": "_____ commune",
+      "type": "blank",
+      "answer": "rural",
+      "explanation": "公社，农村公社。They lived in a rural commune. 他们住在农村公社。"
+    },
+    {
+      "question": "importune __________",
+      "type": "blank",
+      "answer": "repeatedly",
+      "explanation": "强求，反复强求。Don't importune repeatedly for favors. 不要反复强求恩惠。"
+    },
+    {
+      "question": "opportune ______",
+      "type": "blank",
+      "answer": "moment",
+      "explanation": "适时的，适时的时刻。It was an opportune moment to ask. 这是适时的时刻去询问。"
+    },
+    {
+      "question": "attune __ _____",
+      "type": "blank",
+      "answer": "to needs",
+      "explanation": "使协调，使协调需求。The policy should attune to needs. 政策应使协调需求。"
+    },
+    {
+      "question": "anodyne ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "无害的，无害的评论。He made an anodyne remark. 他发表了无害的评论。"
+    },
+    {
+      "question": "______ hoe",
+      "type": "blank",
+      "answer": "garden",
+      "explanation": "锄头，花园锄头。Use the garden hoe to weed. 使用花园锄头除草。"
+    },
+    {
+      "question": "______ roe",
+      "type": "blank",
+      "answer": "salmon",
+      "explanation": "鱼子，鲑鱼鱼子。Salmon roe is a delicacy. 鲑鱼鱼子是美味佳肴。"
+    },
+    {
+      "question": "Cape ____",
+      "type": "blank",
+      "answer": "Horn",
+      "explanation": "海角，合恩角。Ships rounded Cape Horn. 船只绕过合恩角。"
+    },
+    {
+      "question": "_____ agape",
+      "type": "blank",
+      "answer": "mouth",
+      "explanation": "张大嘴，张大嘴。He stood with mouth agape. 他张大嘴站着。"
+    },
+    {
+      "question": "shipshape _____",
+      "type": "blank",
+      "answer": "cabin",
+      "explanation": "井井有条的，井井有条的船舱。The shipshape cabin was tidy. 井井有条的船舱很整洁。"
+    },
+    {
+      "question": "_____ jape",
+      "type": "blank",
+      "answer": "cruel",
+      "explanation": "戏弄，残忍的戏弄。The cruel jape hurt his feelings. 残忍的戏弄伤害了他的感情。"
+    },
+    {
+      "question": "scrape __",
+      "type": "blank",
+      "answer": "by",
+      "explanation": "勉强度日，勉强度日。They barely scrape by on minimum wage. 他们靠最低工资勉强度日。"
+    },
+    {
+      "question": "________ gripe",
+      "type": "blank",
+      "answer": "constant",
+      "explanation": "抱怨，不断的抱怨。His constant gripe annoyed everyone. 他不断的抱怨惹恼了每个人。"
+    },
+    {
+      "question": "_____ kaleidoscope",
+      "type": "blank",
+      "answer": "color",
+      "explanation": "万花筒，色彩万花筒。The color kaleidoscope created beautiful patterns. 色彩万花筒创造了美丽的图案。"
+    },
+    {
+      "question": "___ stethoscope",
+      "type": "blank",
+      "answer": "use",
+      "explanation": "听诊器，使用听诊器。Doctors use stethoscope to check heartbeat. 医生使用听诊器检查心跳。"
+    },
+    {
+      "question": "________ microscope",
+      "type": "blank",
+      "answer": "electron",
+      "explanation": "显微镜，电子显微镜。Scientists used an electron microscope. 科学家使用了电子显微镜。"
+    },
+    {
+      "question": "lope _____",
+      "type": "blank",
+      "answer": "along",
+      "prediction": "大步慢跑，大步慢跑。The horse would lope along the trail. 马会沿着小径大步慢跑。"
+    },
+    {
+      "question": "interlope __ _____",
+      "type": "blank",
+      "answer": "in trade",
+      "explanation": "干涉，干涉贸易。Don't interlope in trade negotiations. 不要干涉贸易谈判。"
+    },
+    {
+      "question": "______ misanthrope",
+      "type": "blank",
+      "answer": "bitter",
+      "explanation": "厌世者，愤世嫉俗的厌世者。He became a bitter misanthrope. 他成了愤世嫉俗的厌世者。"
+    },
+    {
+      "question": "______ heliotrope",
+      "type": "blank",
+      "answer": "purple",
+      "explanation": "天芥菜，紫色天芥菜。Purple heliotrope flowers bloomed. 紫色天芥菜花开了。"
+    },
+    {
+      "question": "_____ isotope",
+      "type": "blank",
+      "answer": "radio",
+      "explanation": "同位素，放射性同位素。Radio isotope are used in medicine. 放射性同位素用于医学。"
+    },
+    {
+      "question": "dupe _________",
+      "type": "blank",
+      "answer": "consumers",
+      "explanation": "欺骗，欺骗消费者。False ads dupe consumers. 虚假广告欺骗消费者。"
+    },
+    {
+      "question": "______ archetype",
+      "type": "blank",
+      "answer": "mythic",
+      "explanation": "原型，神话原型。The hero is a mythic archetype. 英雄是神话原型。"
+    },
+    {
+      "question": "daguerreotype ________",
+      "type": "blank",
+      "answer": "portrait",
+      "explanation": "银版照相，银版照相肖像。The daguerreotype portrait was from 1850. 银版照相肖像来自1850年。"
+    },
+    {
+      "question": "prototype _____",
+      "type": "blank",
+      "answer": "model",
+      "explanation": "原型，原型模型。They built a prototype model first. 他们首先制作了原型模型。"
+    },
+    {
+      "question": "bare _____",
+      "type": "blank",
+      "answer": "facts",
+      "explanation": "赤裸的，赤裸的事实。Just give me the bare facts. 只给我赤裸的事实。"
+    },
+    {
+      "question": "scare ______",
+      "type": "blank",
+      "answer": "tactic",
+      "explanation": "恐吓，恐吓策略。They used scare tactic to manipulate. 他们使用恐吓策略操纵。"
+    },
+    {
+      "question": "_____ fanfare",
+      "type": "blank",
+      "answer": "brass",
+      "explanation": "号角声，铜管号角声。Brass fanfare announced the arrival. 铜管号角声宣告到来。"
+    },
+    {
+      "question": "mare's ____",
+      "type": "blank",
+      "answer": "nest",
+      "explanation": "母马，母马窝（虚幻之事）。The story was a mare's nest. 这个故事是虚幻之事。"
+    },
+    {
+      "question": "tare ______",
+      "type": "blank",
+      "answer": "weight",
+      "explanation": "皮重，皮重重量。Subtract the tare weight from total. 从总重量中减去皮重重量。"
+    },
+    {
+      "question": "square ____",
+      "type": "blank",
+      "answer": "deal",
+      "explanation": "公平的，公平的交易。He gave them a square deal. 他给了他们公平的交易。"
+    },
+    {
+      "question": "macabre ____",
+      "type": "blank",
+      "answer": "tale",
+      "explanation": "可怕的，可怕的故事。He told a macabre tale. 他讲了一个可怕的故事。"
+    },
+    {
+      "question": "_____ calibre",
+      "type": "blank",
+      "answer": "rifle",
+      "explanation": "口径，步枪口径。Check the rifle calibre. 检查步枪口径。"
+    },
+    {
+      "question": "____ timbre",
+      "type": "blank",
+      "answer": "rich",
+      "explanation": "音色，丰富的音色。Her voice had a rich timbre. 她的声音有丰富的音色。"
+    },
+    {
+      "question": "massacre _______",
+      "type": "blank",
+      "answer": "victims",
+      "explanation": "屠杀，屠杀受害者。The massacre victims were remembered. 屠杀受害者被铭记。"
+    },
+    {
+      "question": "______ lucre",
+      "type": "blank",
+      "answer": "filthy",
+      "explanation": "金钱，不义之财。He was motivated by filthy lucre. 他被不义之财驱使。"
+    },
+    {
+      "question": "adhere __ _____",
+      "type": "blank",
+      "answer": "to rules",
+      "explanation": "遵守，遵守规则。Everyone must adhere to rules. 每个人都必须遵守规则。"
+    },
+    {
+      "question": "________ hemisphere",
+      "type": "blank",
+      "answer": "Northern",
+      "explanation": "半球，北半球。Canada is in the Northern hemisphere. 加拿大位于北半球。"
+    },
+    {
+      "question": "______ biosphere",
+      "type": "blank",
+      "answer": "global",
+      "explanation": "生物圈，全球生物圈。The global biosphere is interconnected. 全球生物圈相互联系。"
+    },
+    {
+      "question": "_____ premiere",
+      "type": "blank",
+      "answer": "world",
+      "explanation": "首映，世界首映。The film had its world premiere. 这部电影举行了世界首映。"
+    },
+    {
+      "question": "sere ______",
+      "type": "blank",
+      "answer": "leaves",
+      "explanation": "枯萎的，枯萎的叶子。Sere leaves covered the ground. 枯萎的叶子覆盖着地面。"
+    },
+    {
+      "question": "revere ___ ________",
+      "type": "blank",
+      "answer": "the ancients",
+      "explanation": "尊敬，尊敬古人。They revere the ancients. 他们尊敬古人。"
+    },
+    {
+      "question": "ire __ ___ _____",
+      "type": "blank",
+      "answer": "of the crowd",
+      "explanation": "愤怒，人群的愤怒。The decision aroused the ire of the crowd. 这个决定引起了人群的愤怒。"
+    },
+    {
+      "question": "doctrinaire ______",
+      "type": "blank",
+      "answer": "stance",
+      "explanation": "教条的，教条的立场。He took a doctrinaire stance. 他采取了教条的立场。"
+    },
+    {
+      "question": "dire ____________",
+      "type": "blank",
+      "answer": "consequences",
+      "explanation": "可怕的，可怕的后果。The decision had dire consequences. 这个决定有可怕的后果。"
+    },
+    {
+      "question": "_____ __ mire",
+      "type": "blank",
+      "answer": "stuck in",
+      "explanation": "泥潭，陷入泥潭。The car was stuck in mire. 汽车陷入泥潭。"
+    },
+    {
+      "question": "____ repertoire",
+      "type": "blank",
+      "answer": "song",
+      "explanation": "保留剧目，歌曲保留剧目。The singer had a varied song repertoire. 歌手有多样化的歌曲保留剧目。"
+    },
+    {
+      "question": "vampire ___",
+      "type": "blank",
+      "answer": "bat",
+      "explanation": "吸血鬼，吸血鬼蝙蝠。The vampire bat fed at night. 吸血鬼蝙蝠在夜间觅食。"
+    },
+    {
+      "question": "_______ umpire",
+      "type": "blank",
+      "answer": "cricket",
+      "explanation": "裁判，板球裁判。The cricket umpire made the call. 板球裁判做出了判决。"
+    },
+    {
+      "question": "______ spire",
+      "type": "blank",
+      "answer": "church",
+      "explanation": "尖顶，教堂尖顶。The church spire reached high. 教堂尖顶高耸入云。"
+    },
+    {
+      "question": "aspire __ _________",
+      "type": "blank",
+      "answer": "to greatness",
+      "explanation": "渴望，渴望伟大。Young athletes aspire to greatness. 年轻运动员渴望伟大。"
+    },
+    {
+      "question": "conspire ________",
+      "type": "blank",
+      "answer": "together",
+      "explanation": "密谋，共同密谋。The plotters would conspire together. 阴谋者会共同密谋。"
+    },
+    {
+      "question": "________ expire",
+      "type": "blank",
+      "answer": "passport",
+      "explanation": "到期，护照到期。Your passport expire next month. 你的护照下个月到期。"
+    },
+    {
+      "question": "______ satire",
+      "type": "blank",
+      "answer": "biting",
+      "explanation": "讽刺，尖刻的讽刺。He wrote biting satire. 他写了尖刻的讽刺。"
+    },
+    {
+      "question": "______ attire",
+      "type": "blank",
+      "answer": "formal",
+      "explanation": "服装，正式服装。Guests wore formal attire. 客人穿着正式服装。"
+    },
+    {
+      "question": "____ ore",
+      "type": "blank",
+      "answer": "iron",
+      "explanation": "矿石，铁矿石。They mined iron ore. 他们开采铁矿石。"
+    },
+    {
+      "question": "bore __ _____",
+      "type": "blank",
+      "answer": "to death",
+      "explanation": "使厌烦，使厌烦至死。The lecture would bore to death. 讲座会使厌烦至死。"
+    },
+    {
+      "question": "_ score __",
+      "type": "blank",
+      "answer": "a of",
+      "explanation": "二十，一群（二十个）。A score of years passed. 二十年过去了。"
+    },
+    {
+      "question": "adore _ ____",
+      "type": "blank",
+      "answer": "a hero",
+      "explanation": "崇拜，崇拜英雄。Children adore a hero. 孩子们崇拜英雄。"
+    },
+    {
+      "question": "_____ chore",
+      "type": "blank",
+      "answer": "daily",
+      "explanation": "家务，日常家务。Cleaning is a daily chore. 清洁是日常家务。"
+    },
+    {
+      "question": "________ lore",
+      "type": "blank",
+      "answer": "folklore",
+      "explanation": "传说，民间传说。They studied folklore lore. 他们研究民间传说。"
+    },
+    {
+      "question": "deplore ________",
+      "type": "blank",
+      "answer": "violence",
+      "explanation": "谴责，谴责暴力。We deplore violence in all forms. 我们谴责一切形式的暴力。"
+    },
+    {
+      "question": "bizarre ________",
+      "type": "blank",
+      "answer": "incident",
+      "explanation": "奇异的，奇异的事件。A bizarre incident occurred. 发生了奇异的事件。"
+    },
+    {
+      "question": "____ sinecure",
+      "type": "blank",
+      "answer": "easy",
+      "explanation": "闲职，轻松的闲职。He had an easy sinecure. 他有轻松的闲职。"
+    },
+    {
+      "question": "secure _______",
+      "type": "blank",
+      "answer": "funding",
+      "explanation": "获得，获得资金。They need to secure funding. 他们需要获得资金。"
+    },
+    {
+      "question": "_______ epicure",
+      "type": "blank",
+      "answer": "refined",
+      "explanation": "美食家，精致的美食家。He was a refined epicure. 他是精致的美食家。"
+    },
+    {
+      "question": "obscure _________",
+      "type": "blank",
+      "answer": "reference",
+      "explanation": "晦涩的，晦涩的引用。The text had an obscure reference. 文本有晦涩的引用。"
+    },
+    {
+      "question": "endure ________",
+      "type": "blank",
+      "answer": "hardship",
+      "explanation": "忍受，忍受困难。They must endure hardship. 他们必须忍受困难。"
+    },
+    {
+      "question": "prefigure ______",
+      "type": "blank",
+      "answer": "events",
+      "explanation": "预示，预示事件。These signs prefigure events to come. 这些迹象预示即将发生的事件。"
+    },
+    {
+      "question": "______ brochure",
+      "type": "blank",
+      "answer": "travel",
+      "explanation": "小册子，旅游小册子。Pick up a travel brochure. 拿一份旅游小册子。"
+    },
+    {
+      "question": "abjure ________",
+      "type": "blank",
+      "answer": "violence",
+      "explanation": "发誓放弃，发誓放弃暴力。He would abjure violence. 他会发誓放弃暴力。"
+    },
+    {
+      "question": "perjure _______",
+      "type": "blank",
+      "answer": "oneself",
+      "explanation": "作伪证，作伪证。Don't perjure oneself in court. 不要在法庭上作伪证。"
+    },
+    {
+      "question": "____ lure",
+      "type": "blank",
+      "answer": "fish",
+      "explanation": "诱饵，鱼诱饵。Use a bright fish lure. 使用明亮的鱼诱饵。"
+    },
+    {
+      "question": "demure _____",
+      "type": "blank",
+      "answer": "smile",
+      "explanation": "端庄的，端庄的微笑。She gave a demure smile. 她露出端庄的微笑。"
+    },
+    {
+      "question": "immure ___ ____",
+      "type": "blank",
+      "answer": "for life",
+      "explanation": "监禁，终身监禁。They would immure for life. 他们会终身监禁。"
+    },
+    {
+      "question": "_______ manure",
+      "type": "blank",
+      "answer": "organic",
+      "explanation": "肥料，有机肥料。Use organic manure for gardens. 花园使用有机肥料。"
+    },
+    {
+      "question": "tenure _____",
+      "type": "blank",
+      "answer": "track",
+      "explanation": "终身职位，终身职位轨道。Professors aim for tenure track. 教授们以终身职位轨道为目标。"
+    },
+    {
+      "question": "____ erasure",
+      "type": "blank",
+      "answer": "data",
+      "explanation": "擦除，数据擦除。Complete data erasure is important. 完全数据擦除很重要。"
+    },
+    {
+      "question": "ensure ______",
+      "type": "blank",
+      "answer": "safety",
+      "explanation": "确保，确保安全。We must ensure safety. 我们必须确保安全。"
+    },
+    {
+      "question": "_______ closure",
+      "type": "blank",
+      "answer": "company",
+      "explanation": "关闭，公司关闭。The company closure was sudden. 公司关闭很突然。"
+    },
+    {
+      "question": "______ enclosure",
+      "type": "blank",
+      "answer": "garden",
+      "explanation": "围场，花园围场。They built a garden enclosure. 他们建造了花园围场。"
+    },
+    {
+      "question": "______ cynosure",
+      "type": "blank",
+      "answer": "social",
+      "explanation": "引人注目的人，社交引人注目的人。She was the social cynosure. 她是社交引人注目的人。"
+    },
+    {
+      "question": "_______ composure",
+      "type": "blank",
+      "answer": "recover",
+      "explanation": "镇定，恢复镇定。She tried to recover composure. 她试图恢复镇定。"
+    },
+    {
+      "question": "___ exposure",
+      "type": "blank",
+      "answer": "sun",
+      "explanation": "暴露，阳光暴露。Limit sun exposure to avoid burns. 限制阳光暴露以避免晒伤。"
+    },
+    {
+      "question": "overexposure ____",
+      "type": "blank",
+      "answer": "risk",
+      "explanation": "过度曝光，过度曝光风险。There's an overexposure risk. 有过度曝光风险。"
+    },
+    {
+      "question": "assure _______",
+      "type": "blank",
+      "answer": "success",
+      "explanation": "保证，保证成功。Hard work will assure success. 努力工作会保证成功。"
+    },
+    {
+      "question": "_________ caricature",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "漫画，政治漫画。The newspaper ran a political caricature. 报纸刊登了政治漫画。"
+    },
+    {
+      "question": "ligature ____",
+      "type": "blank",
+      "answer": "mark",
+      "explanation": "结扎线，结扎线痕迹。The ligature mark was visible. 结扎线痕迹可见。"
+    }
+  ]
+}
