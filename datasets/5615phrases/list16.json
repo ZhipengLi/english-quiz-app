@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "_____ verse",
+      "type": "blank",
+      "answer": "blank",
+      "explanation": "诗句，无韵诗。Shakespeare wrote in blank verse. 莎士比亚用无韵诗写作。"
+    },
+    {
+      "question": "averse __ ____",
+      "type": "blank",
+      "answer": "to risk",
+      "explanation": "反对的，反对风险。Investors are averse to risk. 投资者反对风险。"
+    },
+    {
+      "question": "traverse ___ ______",
+      "type": "blank",
+      "answer": "the desert",
+      "explanation": "穿越，穿越沙漠。They had to traverse the desert. 他们不得不穿越沙漠。"
+    },
+    {
+      "question": "____'_ obverse",
+      "type": "blank",
+      "answer": "coin's",
+      "explanation": "正面，硬币的正面。The coin's obverse shows the president. 硬币的正面显示总统。"
+    },
+    {
+      "question": "adverse ______",
+      "type": "blank",
+      "answer": "effect",
+      "explanation": "不利的，不利的影响。The drug had an adverse effect. 这种药物有不利的影响。"
+    },
+    {
+      "question": "reverse ____",
+      "type": "blank",
+      "answer": "gear",
+      "explanation": "倒退，倒档。Put the car in reverse gear. 把车挂倒档。"
+    },
+    {
+      "question": "diverse ________",
+      "type": "blank",
+      "answer": "audience",
+      "explanation": "多样的，多样的观众。The show attracted a diverse audience. 演出吸引了多样的观众。"
+    },
+    {
+      "question": "inverse ________",
+      "type": "blank",
+      "answer": "function",
+      "explanation": "逆向的，逆向函数。Calculate the inverse function. 计算逆向函数。"
+    },
+    {
+      "question": "______ converse",
+      "type": "blank",
+      "answer": "casual",
+      "explanation": "交谈，随意交谈。They engaged in casual converse. 他们进行随意交谈。"
+    },
+    {
+      "question": "perverse ________",
+      "type": "blank",
+      "answer": "behavior",
+      "explanation": "乖张的，乖张的行为。His perverse behavior was troubling. 他乖张的行为令人不安。"
+    },
+    {
+      "question": "reimburse ________",
+      "type": "blank",
+      "answer": "expenses",
+      "explanation": "报销，报销费用。The company will reimburse expenses. 公司会报销费用。"
+    },
+    {
+      "question": "disburse _____",
+      "type": "blank",
+      "answer": "funds",
+      "explanation": "支付，支付资金。The treasurer would disburse funds. 财务主管会支付资金。"
+    },
+    {
+      "question": "____ recourse",
+      "type": "blank",
+      "answer": "seek",
+      "explanation": "求助，寻求求助。They had to seek recourse to the law. 他们不得不寻求法律的求助。"
+    },
+    {
+      "question": "_______ _ discourse",
+      "type": "blank",
+      "answer": "deliver a",
+      "explanation": "演讲，发表演讲。The professor would deliver a discourse. 教授会发表演讲。"
+    },
+    {
+      "question": "purse ____",
+      "type": "blank",
+      "answer": "lips",
+      "explanation": "噘嘴，噘嘴。She would purse lips in disapproval. 她会不满地噘嘴。"
+    },
+    {
+      "question": "_____ impasse",
+      "type": "blank",
+      "answer": "reach",
+      "explanation": "僵局，陷入僵局。Negotiations would reach impasse. 谈判会陷入僵局。"
+    },
+    {
+      "question": "________ largesse",
+      "type": "blank",
+      "answer": "generous",
+      "explanation": "慷慨施舍，慷慨的施舍。The patron's generous largesse helped. 赞助人慷慨的施舍有所帮助。"
+    },
+    {
+      "question": "____ finesse",
+      "type": "blank",
+      "answer": "show",
+      "explanation": "技巧，展示技巧。The diplomat would show finesse. 外交官会展示技巧。"
+    },
+    {
+      "question": "_________ fosse",
+      "type": "blank",
+      "answer": "defensive",
+      "explanation": "壕沟，防御壕沟。They dug a defensive fosse. 他们挖了防御壕沟。"
+    },
+    {
+      "question": "_______'_ posse",
+      "type": "blank",
+      "answer": "sheriff's",
+      "explanation": "一队人，警长的一队人。The sheriff's posse tracked the outlaws. 警长的一队人追踪歹徒。"
+    },
+    {
+      "question": "________ clause",
+      "type": "blank",
+      "answer": "contract",
+      "explanation": "条款，合同条款。Read the contract clause carefully. 仔细阅读合同条款。"
+    },
+    {
+      "question": "disabuse __ ______",
+      "type": "blank",
+      "answer": "of notion",
+      "explanation": "纠正，纠正观念。I must disabuse of notion. 我必须纠正这个观念。"
+    },
+    {
+      "question": "accuse __ _____",
+      "type": "blank",
+      "answer": "of fraud",
+      "explanation": "指控，指控欺诈。They would accuse of fraud. 他们会指控欺诈。"
+    },
+    {
+      "question": "defuse _______",
+      "type": "blank",
+      "answer": "tension",
+      "explanation": "缓和，缓和紧张。Humor can defuse tension. 幽默可以缓和紧张。"
+    },
+    {
+      "question": "diffuse _____",
+      "type": "blank",
+      "answer": "light",
+      "explanation": "散射，散射光线。The curtain would diffuse light. 窗帘会散射光线。"
+    },
+    {
+      "question": "infuse ______",
+      "type": "blank",
+      "answer": "energy",
+      "explanation": "注入，注入能量。The speech would infuse energy. 演讲会注入能量。"
+    },
+    {
+      "question": "profuse ________",
+      "type": "blank",
+      "answer": "bleeding",
+      "explanation": "大量的，大量出血。The wound caused profuse bleeding. 伤口造成大量出血。"
+    },
+    {
+      "question": "transfuse _____",
+      "type": "blank",
+      "answer": "blood",
+      "explanation": "输血，输血。Doctors had to transfuse blood. 医生不得不输血。"
+    },
+    {
+      "question": "_________ recluse",
+      "type": "blank",
+      "answer": "withdrawn",
+      "explanation": "隐士，孤僻的隐士。He became a withdrawn recluse. 他成了孤僻的隐士。"
+    },
+    {
+      "question": "muse __ ____",
+      "type": "blank",
+      "answer": "on life",
+      "explanation": "沉思，沉思人生。He would muse on life's meaning. 他会沉思人生的意义。"
+    },
+    {
+      "question": "hypotenuse ______",
+      "type": "blank",
+      "answer": "length",
+      "explanation": "斜边，斜边长度。Calculate the hypotenuse length. 计算斜边长度。"
+    },
+    {
+      "question": "_____ warehouse",
+      "type": "blank",
+      "answer": "large",
+      "explanation": "仓库，大型仓库。They stored goods in a large warehouse. 他们在大型仓库储存货物。"
+    },
+    {
+      "question": "espouse _ _____",
+      "type": "blank",
+      "answer": "a cause",
+      "explanation": "支持，支持事业。He would espouse a cause passionately. 他会热情地支持事业。"
+    },
+    {
+      "question": "carouse ___ _____",
+      "type": "blank",
+      "answer": "all night",
+      "explanation": "狂欢，整夜狂欢。They would carouse all night. 他们会整夜狂欢。"
+    },
+    {
+      "question": "grouse ____",
+      "type": "blank",
+      "answer": "hunt",
+      "explanation": "松鸡，松鸡狩猎。They went on a grouse hunt. 他们去松鸡狩猎。"
+    },
+    {
+      "question": "souse _______",
+      "type": "blank",
+      "answer": "herring",
+      "explanation": "腌制，腌制鲱鱼。They would souse herring in brine. 他们会在盐水中腌制鲱鱼。"
+    },
+    {
+      "question": "______ ruse",
+      "type": "blank",
+      "answer": "clever",
+      "explanation": "计谋，巧妙的计谋。It was a clever ruse. 这是巧妙的计谋。"
+    },
+    {
+      "question": "abstruse ______",
+      "type": "blank",
+      "answer": "theory",
+      "explanation": "深奥的，深奥的理论。The abstruse theory confused students. 深奥的理论让学生困惑。"
+    },
+    {
+      "question": "browse ___ ___",
+      "type": "blank",
+      "answer": "the web",
+      "explanation": "浏览，浏览网页。She would browse the web for hours. 她会浏览网页数小时。"
+    },
+    {
+      "question": "debate ____",
+      "type": "blank",
+      "answer": "team",
+      "explanation": "辩论，辩论队。She joined the debate team. 她加入了辩论队。"
+    },
+    {
+      "question": "___ rebate",
+      "type": "blank",
+      "answer": "tax",
+      "explanation": "回扣，税收回扣。They received a tax rebate. 他们收到了税收回扣。"
+    },
+    {
+      "question": "celibate ______",
+      "type": "blank",
+      "answer": "priest",
+      "explanation": "独身的，独身的牧师。The celibate priest took vows. 独身的牧师宣誓。"
+    },
+    {
+      "question": "_____ reprobate",
+      "type": "blank",
+      "answer": "utter",
+      "explanation": "堕落者，彻底的堕落者。He was an utter reprobate. 他是彻底的堕落者。"
+    },
+    {
+      "question": "exacerbate ________",
+      "type": "blank",
+      "answer": "tensions",
+      "explanation": "加剧，加剧紧张。The incident would exacerbate tensions. 这起事件会加剧紧张。"
+    },
+    {
+      "question": "incubate ____",
+      "type": "blank",
+      "answer": "eggs",
+      "explanation": "孵化，孵化蛋。The hen would incubate eggs. 母鸡会孵化蛋。"
+    },
+    {
+      "question": "placate ___ _____",
+      "type": "blank",
+      "answer": "the crowd",
+      "explanation": "安抚，安抚人群。He tried to placate the crowd. 他试图安抚人群。"
+    },
+    {
+      "question": "desiccate _____",
+      "type": "blank",
+      "answer": "fruit",
+      "explanation": "使干燥，使水果干燥。Sun would desiccate fruit. 阳光会使水果干燥。"
+    },
+    {
+      "question": "deprecate ________",
+      "type": "blank",
+      "answer": "violence",
+      "explanation": "反对，反对暴力。We must deprecate violence. 我们必须反对暴力。"
+    },
+    {
+      "question": "eradicate _______",
+      "type": "blank",
+      "answer": "disease",
+      "explanation": "根除，根除疾病。Vaccines help eradicate disease. 疫苗帮助根除疾病。"
+    },
+    {
+      "question": "abdicate ___ ______",
+      "type": "blank",
+      "answer": "the throne",
+      "explanation": "退位，退王位。The king would abdicate the throne. 国王会退王位。"
+    },
+    {
+      "question": "medicate _ _____",
+      "type": "blank",
+      "answer": "a wound",
+      "explanation": "用药，给伤口用药。Clean and medicate a wound. 清洁并给伤口用药。"
+    },
+    {
+      "question": "indicate _ _____",
+      "type": "blank",
+      "answer": "a trend",
+      "explanation": "表明，表明趋势。The data indicate a trend. 数据表明趋势。"
+    },
+    {
+      "question": "vindicate ______",
+      "type": "blank",
+      "answer": "rights",
+      "explanation": "证明正当，证明权利正当。The ruling would vindicate rights. 裁决会证明权利正当。"
+    },
+    {
+      "question": "adjudicate _______",
+      "type": "blank",
+      "answer": "dispute",
+      "explanation": "裁决，裁决争端。The court will adjudicate dispute. 法院将裁决争端。"
+    },
+    {
+      "question": "pontificate _________",
+      "type": "blank",
+      "answer": "pompously",
+      "explanation": "武断地说教，傲慢地武断地说教。He would pontificate pompously. 他会傲慢地武断地说教。"
+    },
+    {
+      "question": "delicate _______",
+      "type": "blank",
+      "answer": "balance",
+      "explanation": "微妙的，微妙的平衡。Maintain a delicate balance. 保持微妙的平衡。"
+    },
+    {
+      "question": "implicate __ _____",
+      "type": "blank",
+      "answer": "in fraud",
+      "explanation": "牵连，牵连欺诈。Evidence would implicate in fraud. 证据会牵连欺诈。"
+    },
+    {
+      "question": "complicate ______",
+      "type": "blank",
+      "answer": "matter",
+      "explanation": "使复杂化，使事情复杂化。Don't complicate matter further. 不要进一步使事情复杂化。"
+    },
+    {
+      "question": "supplicate ___",
+      "type": "blank",
+      "answer": "God",
+      "explanation": "恳求，恳求上帝。They would supplicate God for mercy. 他们会恳求上帝宽恕。"
+    },
+    {
+      "question": "explicate _ ______",
+      "type": "blank",
+      "answer": "a theory",
+      "explanation": "阐明，阐明理论。The professor would explicate a theory. 教授会阐明理论。"
+    },
+    {
+      "question": "communicate _______",
+      "type": "blank",
+      "answer": "clearly",
+      "explanation": "沟通，清楚地沟通。Always communicate clearly. 始终清楚地沟通。"
+    },
+    {
+      "question": "prevaricate __ _____",
+      "type": "blank",
+      "answer": "in reply",
+      "explanation": "支吾其词，在回答中支吾其词。Don't prevaricate in reply. 不要在回答中支吾其词。"
+    },
+    {
+      "question": "lubricate _____",
+      "type": "blank",
+      "answer": "gears",
+      "explanation": "润滑，润滑齿轮。Regularly lubricate gears. 定期润滑齿轮。"
+    },
+    {
+      "question": "intricate _______",
+      "type": "blank",
+      "answer": "pattern",
+      "explanation": "复杂的，复杂的图案。The carpet had an intricate pattern. 地毯有复杂的图案。"
+    },
+    {
+      "question": "masticate ____",
+      "type": "blank",
+      "answer": "food",
+      "explanation": "咀嚼，咀嚼食物。Chew and masticate food thoroughly. 充分咀嚼食物。"
+    },
+    {
+      "question": "domesticate _______",
+      "type": "blank",
+      "answer": "animals",
+      "explanation": "驯养，驯养动物。Humans learned to domesticate animals. 人类学会了驯养动物。"
+    },
+    {
+      "question": "prognosticate ____",
+      "type": "blank",
+      "answer": "doom",
+      "explanation": "预言，预言厄运。Prophets would prognosticate doom. 先知会预言厄运。"
+    },
+    {
+      "question": "intoxicate ____ ____",
+      "type": "blank",
+      "answer": "with wine",
+      "explanation": "使陶醉，用酒使陶醉。Don't intoxicate with wine. 不要用酒使陶醉。"
+    },
+    {
+      "question": "defalcate _____",
+      "type": "blank",
+      "answer": "funds",
+      "explanation": "挪用公款，挪用公款资金。The accountant would defalcate funds. 会计会挪用公款资金。"
+    },
+    {
+      "question": "inculcate ______",
+      "type": "blank",
+      "answer": "values",
+      "explanation": "灌输，灌输价值观。Parents inculcate values in children. 父母给孩子灌输价值观。"
+    },
+    {
+      "question": "dislocate ________",
+      "type": "blank",
+      "answer": "shoulder",
+      "explanation": "使脱臼，使肩膀脱臼。The fall would dislocate shoulder. 跌倒会使肩膀脱臼。"
+    },
+    {
+      "question": "reciprocate ________",
+      "type": "blank",
+      "answer": "kindness",
+      "explanation": "回报，回报善意。She would reciprocate kindness. 她会回报善意。"
+    },
+    {
+      "question": "______ advocate",
+      "type": "blank",
+      "answer": "public",
+      "explanation": "倡导者，公众倡导者。He became a public advocate. 他成为公众倡导者。"
+    },
+    {
+      "question": "equivocate __",
+      "type": "blank",
+      "answer": "on",
+      "explanation": "含糊其辞，对...含糊其辞。Don't equivocate on the issue. 不要对这个问题含糊其辞。"
+    },
+    {
+      "question": "demarcate ________",
+      "type": "blank",
+      "answer": "boundary",
+      "explanation": "划定界限，划定界限边界。The treaty would demarcate boundary. 条约会划定界限边界。"
+    },
+    {
+      "question": "bifurcate ____",
+      "type": "blank",
+      "answer": "into",
+      "explanation": "分叉，分叉成。The road would bifurcate into two paths. 道路会分叉成两条路。"
+    },
+    {
+      "question": "obfuscate ___ _____",
+      "type": "blank",
+      "answer": "the issue",
+      "explanation": "使混淆，使问题混淆。Don't obfuscate the issue. 不要使问题混淆。"
+    },
+    {
+      "question": "coruscate ____ ___",
+      "type": "blank",
+      "answer": "with wit",
+      "explanation": "闪耀，以机智闪耀。His remarks would coruscate with wit. 他的言论会以机智闪耀。"
+    },
+    {
+      "question": "sedate ______",
+      "type": "blank",
+      "answer": "manner",
+      "explanation": "沉着的，沉着的举止。He had a sedate manner. 他有沉着的举止。"
+    },
+    {
+      "question": "antedate ___ _____",
+      "type": "blank",
+      "answer": "the event",
+      "explanation": "早于，早于事件。These ruins antedate the event. 这些遗迹早于事件。"
+    },
+    {
+      "question": "elucidate _______",
+      "type": "blank",
+      "answer": "concept",
+      "explanation": "阐明，阐明概念。Let me elucidate concept further. 让我进一步阐明概念。"
+    },
+    {
+      "question": "_________ candidate",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "候选人，政治候选人。The political candidate campaigned hard. 政治候选人努力竞选。"
+    },
+    {
+      "question": "consolidate _____",
+      "type": "blank",
+      "answer": "power",
+      "explanation": "巩固，巩固权力。The leader would consolidate power. 领导者会巩固权力。"
+    },
+    {
+      "question": "liquidate ______",
+      "type": "blank",
+      "answer": "assets",
+      "explanation": "清算，清算资产。The company had to liquidate assets. 公司不得不清算资产。"
+    },
+    {
+      "question": "__________ mandate",
+      "type": "blank",
+      "answer": "government",
+      "explanation": "授权，政府授权。The government mandate was clear. 政府授权很明确。"
+    },
+    {
+      "question": "inundate ____ ________",
+      "type": "blank",
+      "answer": "with requests",
+      "explanation": "淹没，被请求淹没。They would inundate with requests. 他们会被请求淹没。"
+    },
+    {
+      "question": "accommodate _____",
+      "type": "blank",
+      "answer": "needs",
+      "explanation": "容纳，容纳需求。We can accommodate needs. 我们可以容纳需求。"
+    },
+    {
+      "question": "nucleate _______",
+      "type": "blank",
+      "answer": "boiling",
+      "explanation": "成核，成核沸腾。Nucleate boiling occurs in the pot. 成核沸腾在锅中发生。"
+    },
+    {
+      "question": "permeate ___ ___",
+      "type": "blank",
+      "answer": "the air",
+      "explanation": "渗透，渗透空气。The scent would permeate the air. 香味会渗透空气。"
+    },
+    {
+      "question": "delineate __________",
+      "type": "blank",
+      "answer": "boundaries",
+      "explanation": "描绘，描绘边界。Clearly delineate boundaries. 清楚地描绘边界。"
+    },
+    {
+      "question": "procreate _______",
+      "type": "blank",
+      "answer": "quickly",
+      "explanation": "繁殖，快速繁殖。Some species procreate quickly. 一些物种快速繁殖。"
+    },
+    {
+      "question": "nauseate _______",
+      "type": "blank",
+      "answer": "viewers",
+      "explanation": "使恶心，使观众恶心。The graphic scenes would nauseate viewers. 血腥场景会使观众恶心。"
+    },
+    {
+      "question": "propagate ______",
+      "type": "blank",
+      "answer": "plants",
+      "explanation": "繁殖，繁殖植物。Learn to propagate plants from cuttings. 学习从插条繁殖植物。"
+    },
+    {
+      "question": "divagate ____ _____",
+      "type": "blank",
+      "answer": "from topic",
+      "explanation": "离题，离题。Don't divagate from topic. 不要离题。"
+    },
+    {
+      "question": "____ floodgate",
+      "type": "blank",
+      "answer": "open",
+      "explanation": "水闸，打开水闸。This decision will open floodgate. 这个决定会打开水闸。"
+    },
+    {
+      "question": "variegate ___ ______",
+      "type": "blank",
+      "answer": "the garden",
+      "explanation": "使多样化，使花园多样化。Various flowers variegate the garden. 各种花使花园多样化。"
+    },
+    {
+      "question": "relegate __ _______",
+      "type": "blank",
+      "answer": "to seconds",
+      "explanation": "降级，降级到次要位置。They would relegate to seconds. 他们会降级到次要位置。"
+    },
+    {
+      "question": "negate ________",
+      "type": "blank",
+      "answer": "argument",
+      "explanation": "否定，否定论点。Evidence would negate argument. 证据会否定论点。"
+    },
+    {
+      "question": "abnegate ____",
+      "type": "blank",
+      "answer": "self",
+      "explanation": "放弃，放弃自我。Saints would abnegate self. 圣人会放弃自我。"
+    },
+    {
+      "question": "aggregate ______",
+      "type": "blank",
+      "answer": "demand",
+      "explanation": "总计，总需求。Economists study aggregate demand. 经济学家研究总需求。"
+    }
+  ]
+}
