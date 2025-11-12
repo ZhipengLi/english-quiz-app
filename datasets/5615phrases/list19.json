@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "decorate ____",
+      "type": "blank",
+      "answer": "room",
+      "explanation": "装饰, 装饰房间. They hired an interior designer to decorate room for the wedding reception. 他们雇了一位室内设计师来装饰婚礼接待的房间。"
+    },
+    {
+      "question": "perforate ___ _____",
+      "type": "blank",
+      "answer": "the sheet",
+      "explanation": "打孔, 在纸张上打孔. The machine will perforate the sheet along the dotted line for easy tearing. 机器将沿着虚线在纸张上打孔以便于撕开。"
+    },
+    {
+      "question": "invigorate ___ _______",
+      "type": "blank",
+      "answer": "the economy",
+      "explanation": "激励, 激励经济. The government introduced tax cuts to invigorate the economy. 政府推出减税措施来激励经济。"
+    },
+    {
+      "question": "ameliorate __________",
+      "type": "blank",
+      "answer": "conditions",
+      "explanation": "改善, 改善条件. The new policies aim to ameliorate conditions for low-income families. 新政策旨在改善低收入家庭的条件。"
+    },
+    {
+      "question": "deteriorate _______",
+      "type": "blank",
+      "answer": "rapidly",
+      "explanation": "恶化, 迅速恶化. Without treatment, the patient's health began to deteriorate rapidly. 没有治疗,患者的健康状况开始迅速恶化。"
+    },
+    {
+      "question": "commemorate ___ ____",
+      "type": "blank",
+      "answer": "the dead",
+      "explanation": "纪念, 纪念死者. The memorial was built to commemorate the dead from the war. 建造这座纪念碑是为了纪念战争中的死者。"
+    },
+    {
+      "question": "corporate __________",
+      "type": "blank",
+      "answer": "governance",
+      "explanation": "公司的, 公司治理. Strong corporate governance is essential for investor confidence. 强有力的公司治理对投资者信心至关重要。"
+    },
+    {
+      "question": "incorporate ________",
+      "type": "blank",
+      "answer": "feedback",
+      "explanation": "纳入, 纳入反馈. The team revised the proposal to incorporate feedback from stakeholders. 团队修改了提案以纳入利益相关者的反馈。"
+    },
+    {
+      "question": "___ electorate",
+      "type": "blank",
+      "answer": "the",
+      "explanation": "选民, 选民. The politicians promised reforms to win over the electorate. 政客们承诺改革以赢得选民的支持。"
+    },
+    {
+      "question": "prate __",
+      "type": "blank",
+      "answer": "on",
+      "explanation": "唠叨, 唠叨不停. He would prate on endlessly about his achievements. 他会没完没了地唠叨自己的成就。"
+    },
+    {
+      "question": "underrate ______",
+      "type": "blank",
+      "answer": "talent",
+      "explanation": "低估, 低估才能. Coaches sometimes underrate talent because of initial poor performance. 教练有时会因为最初表现不佳而低估才能。"
+    },
+    {
+      "question": "serrate ____",
+      "type": "blank",
+      "answer": "edge",
+      "explanation": "锯齿状的, 锯齿状边缘. The knife has a serrate edge perfect for cutting bread. 这把刀有锯齿状边缘,非常适合切面包。"
+    },
+    {
+      "question": "arbitrate _______",
+      "type": "blank",
+      "answer": "dispute",
+      "explanation": "仲裁, 仲裁争端. A neutral third party was called in to arbitrate dispute between the unions. 一个中立的第三方被召来仲裁工会之间的争端。"
+    },
+    {
+      "question": "infiltrate ___ _____",
+      "type": "blank",
+      "answer": "the ranks",
+      "explanation": "渗透, 渗透队伍. Undercover agents managed to infiltrate the ranks of the criminal organization. 卧底特工成功渗透了犯罪组织的队伍。"
+    },
+    {
+      "question": "concentrate _________",
+      "type": "blank",
+      "answer": "attention",
+      "explanation": "集中, 集中注意力. Students need to concentrate attention on the most important topics. 学生需要把注意力集中在最重要的主题上。"
+    },
+    {
+      "question": "sequestrate ______",
+      "type": "blank",
+      "answer": "assets",
+      "explanation": "扣押, 扣押资产. The court ordered authorities to sequestrate assets pending the investigation. 法院命令当局在调查期间扣押资产。"
+    },
+    {
+      "question": "demonstrate _____",
+      "type": "blank",
+      "answer": "skill",
+      "explanation": "展示, 展示技能. The applicant had the opportunity to demonstrate skill during the interview. 申请人有机会在面试中展示技能。"
+    },
+    {
+      "question": "remonstrate ________",
+      "type": "blank",
+      "answer": "strongly",
+      "explanation": "抗议, 强烈抗议. The citizens began to remonstrate strongly against the new tax policy. 市民开始强烈抗议新的税收政策。"
+    },
+    {
+      "question": "obdurate _______",
+      "type": "blank",
+      "answer": "refusal",
+      "explanation": "顽固的, 顽固的拒绝. Despite all appeals, he maintained his obdurate refusal to compromise. 尽管有各种呼吁,他仍然保持顽固的拒绝妥协。"
+    },
+    {
+      "question": "indurate ______",
+      "type": "blank",
+      "answer": "hearts",
+      "explanation": "使坚硬, 使心肠变硬. Years of hardship seemed to indurate hearts against compassion. 多年的艰辛似乎使心肠变得对同情麻木不仁。"
+    },
+    {
+      "question": "inaugurate _________",
+      "type": "blank",
+      "answer": "president",
+      "explanation": "就职, 总统就职. Thousands gathered to watch the ceremony inaugurate president. 成千上万的人聚集观看总统就职仪式。"
+    },
+    {
+      "question": "commensurate ___",
+      "type": "blank",
+      "answer": "pay",
+      "explanation": "相称的, 相称的薪酬. Employees expect commensurate pay for their level of experience. 员工期望与他们的经验水平相称的薪酬。"
+    },
+    {
+      "question": "incommensurate ___",
+      "type": "blank",
+      "answer": "pay",
+      "explanation": "不相称的, 不相称的薪酬. Workers complained about incommensurate pay relative to their responsibilities. 工人抱怨相对于他们职责不相称的薪酬。"
+    },
+    {
+      "question": "saturate ___ ______",
+      "type": "blank",
+      "answer": "the market",
+      "explanation": "使饱和, 使市场饱和. The company's aggressive expansion plans could saturate the market. 公司激进的扩张计划可能会使市场饱和。"
+    },
+    {
+      "question": "gyrate ______",
+      "type": "blank",
+      "answer": "wildly",
+      "explanation": "旋转, 剧烈旋转. The dancer began to gyrate wildly to the pulsing music. 舞者开始随着脉动的音乐剧烈旋转。"
+    },
+    {
+      "question": "compensate ___ ____",
+      "type": "blank",
+      "answer": "for loss",
+      "explanation": "补偿, 补偿损失. The insurance company agreed to compensate for loss caused by the flood. 保险公司同意补偿洪水造成的损失。"
+    },
+    {
+      "question": "insensate _______",
+      "type": "blank",
+      "answer": "cruelty",
+      "explanation": "无情的, 无情的残忍. The regime was known for its insensate cruelty toward dissidents. 该政权以对异议人士的无情残忍而闻名。"
+    },
+    {
+      "question": "dictate _____",
+      "type": "blank",
+      "answer": "terms",
+      "explanation": "口述, 口述条款. The victorious nation was able to dictate terms of the peace treaty. 战胜国能够口述和平条约的条款。"
+    },
+    {
+      "question": "vegetate __ ____",
+      "type": "blank",
+      "answer": "at home",
+      "explanation": "无所事事, 在家无所事事. After retiring, he seemed content to vegetate at home watching television. 退休后,他似乎满足于在家看电视无所事事。"
+    },
+    {
+      "question": "felicitate ___ _______",
+      "type": "blank",
+      "answer": "the winners",
+      "explanation": "祝贺, 祝贺获胜者. The mayor came forward to felicitate the winners of the competition. 市长上前祝贺比赛的获胜者。"
+    },
+    {
+      "question": "resuscitate _______",
+      "type": "blank",
+      "answer": "patient",
+      "explanation": "使苏醒, 使病人苏醒. Paramedics worked frantically to resuscitate patient at the scene. 急救人员在现场疯狂地抢救病人使其苏醒。"
+    },
+    {
+      "question": "meditate _____",
+      "type": "blank",
+      "answer": "daily",
+      "explanation": "冥想, 每日冥想. She makes time to meditate daily for stress relief. 她每天抽时间冥想以缓解压力。"
+    },
+    {
+      "question": "premeditate ______",
+      "type": "blank",
+      "answer": "murder",
+      "explanation": "预谋, 预谋谋杀. Evidence suggested the defendant did premeditate murder weeks in advance. 证据表明被告确实提前数周预谋了谋杀。"
+    },
+    {
+      "question": "cogitate ______",
+      "type": "blank",
+      "answer": "deeply",
+      "explanation": "深思, 深思. The philosopher would cogitate deeply on questions of morality. 这位哲学家会深思道德问题。"
+    },
+    {
+      "question": "excogitate _ ____",
+      "type": "blank",
+      "answer": "a plan",
+      "explanation": "想出, 想出计划. The team met to excogitate a plan for the new product launch. 团队开会想出新产品发布的计划。"
+    },
+    {
+      "question": "rehabilitate _________",
+      "type": "blank",
+      "answer": "prisoners",
+      "explanation": "使康复, 使囚犯康复. The program aims to rehabilitate prisoners and prepare them for society. 该项目旨在使囚犯康复并为他们重返社会做准备。"
+    },
+    {
+      "question": "debilitate ___ ____",
+      "type": "blank",
+      "answer": "the body",
+      "explanation": "使虚弱, 使身体虚弱. Chronic illness can severely debilitate the body over time. 慢性疾病会随着时间的推移严重使身体虚弱。"
+    },
+    {
+      "question": "precipitate ______",
+      "type": "blank",
+      "answer": "action",
+      "explanation": "仓促的, 仓促的行动. The crisis forced leaders to take precipitate action without full deliberation. 危机迫使领导人采取仓促的行动而没有充分考虑。"
+    },
+    {
+      "question": "_____ palpitate",
+      "type": "blank",
+      "answer": "heart",
+      "explanation": "心悸, 心脏心悸. Anxiety can cause the heart palpitate irregularly. 焦虑会导致心脏不规则地心悸。"
+    },
+    {
+      "question": "_____ potentate",
+      "type": "blank",
+      "answer": "local",
+      "explanation": "统治者, 地方统治者. The local potentate ruled the region with absolute authority. 地方统治者以绝对权威统治该地区。"
+    },
+    {
+      "question": "annotate _ ____",
+      "type": "blank",
+      "answer": "a text",
+      "explanation": "注释, 注释文本. Students were required to annotate a text with their observations. 学生被要求用他们的观察来注释文本。"
+    },
+    {
+      "question": "gestate __ ____",
+      "type": "blank",
+      "answer": "an idea",
+      "explanation": "孕育, 孕育想法. The author took years to gestate an idea before writing the novel. 作者花了数年时间孕育想法才开始写小说。"
+    },
+    {
+      "question": "___ intestate",
+      "type": "blank",
+      "answer": "die",
+      "explanation": "无遗嘱, 无遗嘱而死. When people die intestate, their assets are distributed according to law. 当人们无遗嘱而死时,他们的资产按照法律分配。"
+    },
+    {
+      "question": "instate _ ______",
+      "type": "blank",
+      "answer": "a policy",
+      "explanation": "设立, 设立政策. The board voted to instate a policy on workplace harassment. 董事会投票决定设立关于工作场所骚扰的政策。"
+    },
+    {
+      "question": "_________ apostate",
+      "type": "blank",
+      "answer": "religious",
+      "explanation": "叛教者, 宗教叛教者. The community shunned him as a religious apostate. 社区将他视为宗教叛教者而排斥他。"
+    },
+    {
+      "question": "understate ______",
+      "type": "blank",
+      "answer": "losses",
+      "explanation": "轻描淡写, 轻描淡写损失. The company was accused of trying to understate losses in its financial reports. 该公司被指控试图在财务报告中轻描淡写损失。"
+    },
+    {
+      "question": "overstate ___ ____",
+      "type": "blank",
+      "answer": "the case",
+      "explanation": "夸大, 夸大情况. The lawyer was careful not to overstate the case before the jury. 律师小心不在陪审团面前夸大情况。"
+    },
+    {
+      "question": "mutate _______",
+      "type": "blank",
+      "answer": "rapidly",
+      "explanation": "变异, 快速变异. Viruses can mutate rapidly, making vaccines less effective. 病毒可以快速变异,使疫苗效果降低。"
+    },
+    {
+      "question": "amputate _ ____",
+      "type": "blank",
+      "answer": "a limb",
+      "explanation": "截肢, 截肢. Doctors had no choice but to amputate a limb to save the patient's life. 医生别无选择,只能截肢以挽救患者的生命。"
+    },
+    {
+      "question": "evacuate _________",
+      "type": "blank",
+      "answer": "residents",
+      "explanation": "疏散, 疏散居民. Authorities ordered emergency services to evacuate residents before the hurricane. 当局命令紧急服务部门在飓风来临前疏散居民。"
+    },
+    {
+      "question": "attenuate ___ ______",
+      "type": "blank",
+      "answer": "the signal",
+      "explanation": "减弱, 减弱信号. Distance and obstacles can attenuate the signal from wireless devices. 距离和障碍物会减弱无线设备的信号。"
+    },
+    {
+      "question": "extenuate ___ _____",
+      "type": "blank",
+      "answer": "the crime",
+      "explanation": "减轻, 减轻罪行. The defense attorney tried to extenuate the crime by citing mitigating circumstances. 辩护律师试图通过引用减轻情节来减轻罪行。"
+    },
+    {
+      "question": "insinuate __________",
+      "type": "blank",
+      "answer": "wrongdoing",
+      "explanation": "暗示, 暗示不当行为. The article seemed to insinuate wrongdoing without providing evidence. 这篇文章似乎在暗示不当行为却没有提供证据。"
+    },
+    {
+      "question": "equate _______ ____ _____",
+      "type": "blank",
+      "answer": "success with money",
+      "explanation": "等同, 将成功等同于金钱. Many people mistakenly equate success with money and material possessions. 许多人错误地将成功等同于金钱和物质财富。"
+    },
+    {
+      "question": "adequate ______",
+      "type": "blank",
+      "answer": "supply",
+      "explanation": "充足的, 充足的供应. The warehouse maintained an adequate supply of emergency materials. 仓库维持了充足的应急物资供应。"
+    },
+    {
+      "question": "__ infatuate ____",
+      "type": "blank",
+      "answer": "be with",
+      "explanation": "迷恋, 迷恋于. The young man seemed to be infatuate with his new coworker. 这个年轻人似乎迷恋于他的新同事。"
+    },
+    {
+      "question": "actuate _ _____",
+      "type": "blank",
+      "answer": "a valve",
+      "explanation": "驱动, 驱动阀门. The control system will automatically actuate a valve when pressure rises. 当压力上升时,控制系统将自动驱动阀门。"
+    },
+    {
+      "question": "______ fluctuate",
+      "type": "blank",
+      "answer": "prices",
+      "explanation": "波动, 价格波动. Oil prices fluctuate based on global supply and demand. 石油价格根据全球供需波动。"
+    },
+    {
+      "question": "perpetuate ____",
+      "type": "blank",
+      "answer": "myth",
+      "explanation": "使永存, 使神话永存. Media coverage can perpetuate myth and misconceptions. 媒体报道可能会使神话和误解永存。"
+    },
+    {
+      "question": "habituate __ _____",
+      "type": "blank",
+      "answer": "to noise",
+      "explanation": "使习惯, 使习惯于噪音. City dwellers gradually habituate to noise from traffic. 城市居民逐渐习惯于交通噪音。"
+    },
+    {
+      "question": "accentuate ___ ________",
+      "type": "blank",
+      "answer": "the positive",
+      "explanation": "强调, 强调积极面. The motivational speaker urged listeners to accentuate the positive. 励志演讲者敦促听众强调积极面。"
+    },
+    {
+      "question": "excavate ____",
+      "type": "blank",
+      "answer": "site",
+      "explanation": "挖掘, 挖掘遗址. Archaeologists began to excavate site where ancient artifacts were found. 考古学家开始挖掘发现古代文物的遗址。"
+    },
+    {
+      "question": "deactivate _______",
+      "type": "blank",
+      "answer": "account",
+      "explanation": "停用, 停用账户. Users can deactivate account temporarily without deleting all their data. 用户可以暂时停用账户而不删除所有数据。"
+    },
+    {
+      "question": "cultivate _____________",
+      "type": "blank",
+      "answer": "relationships",
+      "explanation": "培养, 培养关系. Successful professionals know how to cultivate relationships with clients. 成功的专业人士知道如何与客户培养关系。"
+    },
+    {
+      "question": "captivate ___ ________",
+      "type": "blank",
+      "answer": "the audience",
+      "explanation": "迷住, 迷住观众. The performer's charisma never failed to captivate the audience. 表演者的魅力从未让观众失望。"
+    },
+    {
+      "question": "renovate _ _____",
+      "type": "blank",
+      "answer": "a house",
+      "explanation": "翻新, 翻新房屋. The couple decided to renovate a house in the historic district. 这对夫妇决定翻新历史街区的一栋房屋。"
+    },
+    {
+      "question": "enervate ___ ____",
+      "type": "blank",
+      "answer": "the will",
+      "explanation": "削弱, 削弱意志. Prolonged stress can enervate the will to continue. 长期压力会削弱继续下去的意志。"
+    },
+    {
+      "question": "fixate __ ______",
+      "type": "blank",
+      "answer": "on detail",
+      "explanation": "专注于, 专注于细节. Perfectionists tend to fixate on detail that others might overlook. 完美主义者倾向于专注于其他人可能忽略的细节。"
+    },
+    {
+      "question": "effete _____",
+      "type": "blank",
+      "answer": "elite",
+      "explanation": "衰弱的, 衰弱的精英. Critics described them as an effete elite out of touch with reality. 批评者将他们描述为脱离现实的衰弱精英。"
+    },
+    {
+      "question": "_______ aesthete",
+      "type": "blank",
+      "answer": "refined",
+      "explanation": "审美家, 精致的审美家. The refined aesthete spent hours in art galleries appreciating beauty. 这位精致的审美家在美术馆花费数小时欣赏美。"
+    },
+    {
+      "question": "obsolete __________",
+      "type": "blank",
+      "answer": "technology",
+      "explanation": "过时的, 过时的技术. Rapid innovation makes obsolete technology within just a few years. 快速创新使技术在短短几年内就过时了。"
+    },
+    {
+      "question": "deplete _________",
+      "type": "blank",
+      "answer": "resources",
+      "explanation": "耗尽, 耗尽资源. Unsustainable practices will deplete resources for future generations. 不可持续的做法将耗尽未来几代人的资源。"
+    },
+    {
+      "question": "replete ____ ______",
+      "type": "blank",
+      "answer": "with detail",
+      "explanation": "充满的, 充满细节. The historical novel was replete with detail about Victorian life. 这部历史小说充满了关于维多利亚时代生活的细节。"
+    },
+    {
+      "question": "mete ___ __________",
+      "type": "blank",
+      "answer": "out punishment",
+      "explanation": "给予, 给予惩罚. The judge must mete out punishment that fits the crime. 法官必须给予与罪行相称的惩罚。"
+    },
+    {
+      "question": "________ accrete",
+      "type": "blank",
+      "answer": "sediment",
+      "explanation": "增长, 沉积物增长. Over millennia, layers of sediment accrete to form rock. 数千年来,沉积物层层增长形成岩石。"
+    },
+    {
+      "question": "secrete _______",
+      "type": "blank",
+      "answer": "hormone",
+      "explanation": "分泌, 分泌激素. The glands secrete hormone that regulate various bodily functions. 腺体分泌调节各种身体功能的激素。"
+    },
+    {
+      "question": "concrete _____",
+      "type": "blank",
+      "answer": "proof",
+      "explanation": "具体的, 具体的证据. The prosecutor presented concrete proof linking the suspect to the crime. 检察官提出了将嫌疑人与犯罪联系起来的具体证据。"
+    },
+    {
+      "question": "discrete _____",
+      "type": "blank",
+      "answer": "units",
+      "explanation": "离散的, 离散的单位. The data was organized into discrete units for easier analysis. 数据被组织成离散的单位以便于分析。"
+    },
+    {
+      "question": "excrete _____",
+      "type": "blank",
+      "answer": "waste",
+      "explanation": "排泄, 排泄废物. The kidneys excrete waste products from the bloodstream. 肾脏从血液中排泄废物。"
+    },
+    {
+      "question": "incite ________",
+      "type": "blank",
+      "answer": "violence",
+      "explanation": "煽动, 煽动暴力. Inflammatory speech can incite violence among angry crowds. 煽动性言论可能在愤怒的人群中煽动暴力。"
+    },
+    {
+      "question": "extradite _______",
+      "type": "blank",
+      "answer": "suspect",
+      "explanation": "引渡, 引渡嫌疑人. The country agreed to extradite suspect to face trial abroad. 该国同意引渡嫌疑人到国外接受审判。"
+    },
+    {
+      "question": "indite ____",
+      "type": "blank",
+      "answer": "poem",
+      "explanation": "撰写, 撰写诗歌. The poet would indite poem celebrating nature's beauty. 诗人会撰写歌颂自然之美的诗歌。"
+    },
+    {
+      "question": "recondite ______",
+      "type": "blank",
+      "answer": "theory",
+      "explanation": "深奥的, 深奥的理论. The professor's lecture on recondite theory confused most students. 教授关于深奥理论的讲座使大多数学生感到困惑。"
+    },
+    {
+      "question": "erudite _______",
+      "type": "blank",
+      "answer": "scholar",
+      "explanation": "博学的, 博学的学者. The erudite scholar was fluent in eight languages. 这位博学的学者精通八种语言。"
+    },
+    {
+      "question": "graphite ______",
+      "type": "blank",
+      "answer": "pencil",
+      "explanation": "石墨, 石墨铅笔. Artists prefer graphite pencil for detailed sketching. 艺术家更喜欢用石墨铅笔进行详细素描。"
+    },
+    {
+      "question": "granite ____",
+      "type": "blank",
+      "answer": "rock",
+      "explanation": "花岗岩, 花岗岩石. The monument was carved from solid granite rock. 这座纪念碑是用坚固的花岗岩石雕刻而成的。"
+    },
+    {
+      "question": "ignite _______",
+      "type": "blank",
+      "answer": "passion",
+      "explanation": "点燃, 点燃激情. The speech was designed to ignite passion for the cause. 这篇演讲旨在点燃人们对这项事业的激情。"
+    },
+    {
+      "question": "finite ________",
+      "type": "blank",
+      "answer": "resource",
+      "explanation": "有限的, 有限的资源. Water is a finite resource that must be carefully managed. 水是必须小心管理的有限资源。"
+    },
+    {
+      "question": "definite ______",
+      "type": "blank",
+      "answer": "answer",
+      "explanation": "明确的, 明确的答案. The interviewer requested a definite answer by the end of the week. 面试官要求在周末前给出明确的答案。"
+    },
+    {
+      "question": "___ ___ __ spite",
+      "type": "blank",
+      "answer": "act out of",
+      "explanation": "恶意, 出于恶意行事. He seemed to act out of spite rather than rational judgment. 他似乎是出于恶意行事而不是理性判断。"
+    },
+    {
+      "question": "_________ rite",
+      "type": "blank",
+      "answer": "religious",
+      "explanation": "仪式, 宗教仪式. The community gathered for an ancient religious rite. 社区聚集参加古老的宗教仪式。"
+    },
+    {
+      "question": "____ sybarite",
+      "type": "blank",
+      "answer": "idle",
+      "explanation": "享乐主义者, 懒散的享乐主义者. The idle sybarite spent his inheritance on lavish parties. 这位懒散的享乐主义者把遗产挥霍在奢华派对上。"
+    },
+    {
+      "question": "_____ hypocrite",
+      "type": "blank",
+      "answer": "moral",
+      "explanation": "伪君子, 道德伪君子. The politician was exposed as a moral hypocrite. 这位政客被揭露为道德伪君子。"
+    },
+    {
+      "question": "trite _____é",
+      "type": "blank",
+      "answer": "cliché",
+      "explanation": "陈腐的, 陈腐的陈词滥调. The writer avoided using trite cliché in her prose. 这位作家在散文中避免使用陈腐的陈词滥调。"
+    },
+    {
+      "question": "contrite _______",
+      "type": "blank",
+      "answer": "apology",
+      "explanation": "悔恨的, 悔恨的道歉. He offered a contrite apology for his offensive behavior. 他为自己冒犯的行为表示了悔恨的道歉。"
+    },
+    {
+      "question": "underwrite _____",
+      "type": "blank",
+      "answer": "bonds",
+      "explanation": "承销, 承销债券. Investment banks compete to underwrite bonds for major corporations. 投资银行竞相为大型企业承销债券。"
+    },
+    {
+      "question": "requisite ______",
+      "type": "blank",
+      "answer": "skills",
+      "explanation": "必需的, 必需的技能. Applicants must demonstrate requisite skills for the position. 申请人必须展示该职位所需的必需技能。"
+    },
+    {
+      "question": "_____ prerequisite",
+      "type": "blank",
+      "answer": "basic",
+      "explanation": "先决条件, 基本先决条件. Completing introductory courses is a basic prerequisite for advanced study. 完成入门课程是高级学习的基本先决条件。"
+    },
+    {
+      "question": "___ perquisite",
+      "type": "blank",
+      "answer": "job",
+      "explanation": "额外补贴, 工作额外补贴. A company car is a valuable job perquisite for executives. 公司配车是高管的宝贵工作额外补贴。"
+    },
+    {
+      "question": "exquisite _____",
+      "type": "blank",
+      "answer": "taste",
+      "explanation": "精致的, 精致的品味. The decorator was known for her exquisite taste in furnishings. 这位装饰师以其精致的家具品味而闻名。"
+    }
+  ]
+}
