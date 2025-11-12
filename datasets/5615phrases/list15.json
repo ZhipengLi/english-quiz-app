@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "miniature _____",
+      "type": "blank",
+      "answer": "model",
+      "explanation": "微型的，微型的模型。He built a miniature model of the ship. 他建造了船的微型的模型。"
+    },
+    {
+      "question": "_____ legislature",
+      "type": "blank",
+      "answer": "state",
+      "explanation": "立法机关，州立法机关。The state legislature passed the bill. 州立法机关通过了法案。"
+    },
+    {
+      "question": "premature _____",
+      "type": "blank",
+      "answer": "birth",
+      "explanation": "早产的，早产的出生。The premature birth required special care. 早产的出生需要特殊护理。"
+    },
+    {
+      "question": "_______ signature",
+      "type": "blank",
+      "answer": "digital",
+      "explanation": "签名，数字签名。Use a digital signature for security. 使用数字签名确保安全。"
+    },
+    {
+      "question": "________ stature",
+      "type": "blank",
+      "answer": "towering",
+      "explanation": "身材，高大的身材。He had a towering stature. 他有高大的身材。"
+    },
+    {
+      "question": "____ fracture",
+      "type": "blank",
+      "answer": "bone",
+      "explanation": "骨折，骨骨折。The X-ray showed a bone fracture. X光显示骨骨折。"
+    },
+    {
+      "question": "____ conjecture",
+      "type": "blank",
+      "answer": "mere",
+      "explanation": "推测，仅仅是推测。That's mere conjecture without proof. 那仅仅是推测没有证据。"
+    },
+    {
+      "question": "_____ stricture",
+      "type": "blank",
+      "answer": "harsh",
+      "explanation": "批评，严厉的批评。He issued harsh stricture on the policy. 他对政策发出严厉的批评。"
+    },
+    {
+      "question": "________ juncture",
+      "type": "blank",
+      "answer": "critical",
+      "explanation": "时刻，关键时刻。We are at a critical juncture. 我们处于关键时刻。"
+    },
+    {
+      "question": "______ expenditure",
+      "type": "blank",
+      "answer": "public",
+      "explanation": "支出，公共支出。Public expenditure increased this year. 今年公共支出增加了。"
+    },
+    {
+      "question": "_____ forfeiture",
+      "type": "blank",
+      "answer": "asset",
+      "explanation": "没收，资产没收。Asset forfeiture was ordered by the court. 法院下令资产没收。"
+    },
+    {
+      "question": "______ discomfiture",
+      "type": "blank",
+      "answer": "social",
+      "explanation": "尴尬，社交尴尬。His gaffe caused social discomfiture. 他的失礼造成了社交尴尬。"
+    },
+    {
+      "question": "divestiture ____",
+      "type": "blank",
+      "answer": "plan",
+      "explanation": "剥夺，剥夺计划。The company announced a divestiture plan. 公司宣布了剥夺计划。"
+    },
+    {
+      "question": "_____ investiture",
+      "type": "blank",
+      "answer": "royal",
+      "explanation": "授职，皇家授职。The royal investiture ceremony was grand. 皇家授职仪式很隆重。"
+    },
+    {
+      "question": "horticulture _____",
+      "type": "blank",
+      "answer": "class",
+      "explanation": "园艺，园艺课。She took a horticulture class. 她上了园艺课。"
+    },
+    {
+      "question": "____ denture",
+      "type": "blank",
+      "answer": "full",
+      "explanation": "假牙，全口假牙。He needed a full denture. 他需要全口假牙。"
+    },
+    {
+      "question": "indenture ________",
+      "type": "blank",
+      "answer": "contract",
+      "explanation": "契约，契约合同。The servant signed an indenture contract. 仆人签署了契约合同。"
+    },
+    {
+      "question": "______ cloture",
+      "type": "blank",
+      "answer": "invoke",
+      "explanation": "终止辩论，援引终止辩论。The Senate would invoke cloture. 参议院会援引终止辩论。"
+    },
+    {
+      "question": "____ scripture",
+      "type": "blank",
+      "answer": "holy",
+      "explanation": "经文，神圣的经文。They studied holy scripture. 他们研究神圣的经文。"
+    },
+    {
+      "question": "______ aperture",
+      "type": "blank",
+      "answer": "camera",
+      "explanation": "光圈，相机光圈。Adjust the camera aperture for brightness. 调整相机光圈以调节亮度。"
+    },
+    {
+      "question": "_______ overture",
+      "type": "blank",
+      "answer": "concert",
+      "explanation": "序曲，音乐会序曲。The concert overture was magnificent. 音乐会序曲很壮丽。"
+    },
+    {
+      "question": "________ gesture",
+      "type": "blank",
+      "answer": "friendly",
+      "explanation": "姿态，友好的姿态。She made a friendly gesture. 她做了友好的姿态。"
+    },
+    {
+      "question": "_____ vesture",
+      "type": "blank",
+      "answer": "royal",
+      "explanation": "服装，皇家服装。The king wore royal vesture. 国王穿着皇家服装。"
+    },
+    {
+      "question": "_____ _ posture",
+      "type": "blank",
+      "answer": "adopt a",
+      "explanation": "姿势，采取姿势。She would adopt a posture of confidence. 她会采取自信的姿势。"
+    },
+    {
+      "question": "______ imposture",
+      "type": "blank",
+      "answer": "clever",
+      "explanation": "冒充，巧妙的冒充。It was a clever imposture. 这是巧妙的冒充。"
+    },
+    {
+      "question": "suture ____",
+      "type": "blank",
+      "answer": "line",
+      "explanation": "缝合线，缝合线。The suture line healed well. 缝合线愈合良好。"
+    },
+    {
+      "question": "azure ___",
+      "type": "blank",
+      "answer": "sky",
+      "explanation": "蔚蓝的，蔚蓝的天空。The azure sky was cloudless. 蔚蓝的天空万里无云。"
+    },
+    {
+      "question": "_______ pyre",
+      "type": "blank",
+      "answer": "funeral",
+      "explanation": "火葬柴堆，葬礼火葬柴堆。They lit the funeral pyre. 他们点燃了葬礼火葬柴堆。"
+    },
+    {
+      "question": "base _______",
+      "type": "blank",
+      "answer": "motives",
+      "explanation": "卑鄙的，卑鄙的动机。He acted from base motives. 他出于卑鄙的动机行事。"
+    },
+    {
+      "question": "abase _______",
+      "type": "blank",
+      "answer": "oneself",
+      "explanation": "降低身份，降低自己身份。Don't abase oneself before anyone. 不要在任何人面前降低自己身份。"
+    },
+    {
+      "question": "debase ___ ________",
+      "type": "blank",
+      "answer": "the currency",
+      "explanation": "贬低，贬低货币。Inflation would debase the currency. 通货膨胀会贬低货币。"
+    },
+    {
+      "question": "appease _____",
+      "type": "blank",
+      "answer": "anger",
+      "explanation": "平息，平息愤怒。Nothing could appease anger. 没有什么能平息愤怒。"
+    },
+    {
+      "question": "grease _____",
+      "type": "blank",
+      "answer": "stain",
+      "explanation": "油脂，油脂污渍。The grease stain was hard to remove. 油脂污渍很难去除。"
+    },
+    {
+      "question": "tease _____",
+      "type": "blank",
+      "answer": "apart",
+      "explanation": "分开，分开。Carefully tease apart the fibers. 小心地分开纤维。"
+    },
+    {
+      "question": "____ purchase",
+      "type": "blank",
+      "answer": "firm",
+      "explanation": "购买，稳固的立足点。Get a firm purchase on the rope. 在绳子上获得稳固的立足点。"
+    },
+    {
+      "question": "_____-_____ blasé",
+      "type": "blank",
+      "answer": "world-weary",
+      "explanation": "冷漠的，厌世冷漠的。She had a world-weary blasé attitude. 她有厌世冷漠的态度。"
+    },
+    {
+      "question": "erase ______",
+      "type": "blank",
+      "answer": "memory",
+      "explanation": "抹去，抹去记忆。Time cannot erase memory. 时间无法抹去记忆。"
+    },
+    {
+      "question": "paraphrase ___ ____",
+      "type": "blank",
+      "answer": "the text",
+      "explanation": "改述，改述文本。Please paraphrase the text in your own words. 请用你自己的话改述文本。"
+    },
+    {
+      "question": "obese _______",
+      "type": "blank",
+      "answer": "patient",
+      "explanation": "肥胖的，肥胖的病人。The obese patient needed treatment. 肥胖的病人需要治疗。"
+    },
+    {
+      "question": "_______ malaise",
+      "type": "blank",
+      "answer": "general",
+      "explanation": "不适，普遍不适。He felt a general malaise. 他感到普遍不适。"
+    },
+    {
+      "question": "precise ___________",
+      "type": "blank",
+      "answer": "measurement",
+      "explanation": "精确的，精确的测量。Make a precise measurement. 进行精确的测量。"
+    },
+    {
+      "question": "imprecise ________",
+      "type": "blank",
+      "answer": "estimate",
+      "explanation": "不精确的，不精确的估计。The imprecise estimate was misleading. 不精确的估计具有误导性。"
+    },
+    {
+      "question": "incise _ _______",
+      "type": "blank",
+      "answer": "a pattern",
+      "explanation": "切割，切割图案。The artist would incise a pattern. 艺术家会切割图案。"
+    },
+    {
+      "question": "exorcise ______",
+      "type": "blank",
+      "answer": "demons",
+      "explanation": "驱魔，驱魔。The priest tried to exorcise demons. 牧师试图驱魔。"
+    },
+    {
+      "question": "excise ___",
+      "type": "blank",
+      "answer": "tax",
+      "explanation": "消费税，消费税。Pay the excise tax on tobacco. 缴纳烟草消费税。"
+    },
+    {
+      "question": "disfranchise ______",
+      "type": "blank",
+      "answer": "voters",
+      "explanation": "剥夺选举权，剥夺选民选举权。The law would disfranchise voters. 该法律会剥夺选民选举权。"
+    },
+    {
+      "question": "_____ premise",
+      "type": "blank",
+      "answer": "basic",
+      "explanation": "前提，基本前提。The basic premise is flawed. 基本前提有缺陷。"
+    },
+    {
+      "question": "_____ _ compromise",
+      "type": "blank",
+      "answer": "reach a",
+      "explanation": "妥协，达成妥协。They tried to reach a compromise. 他们试图达成妥协。"
+    },
+    {
+      "question": "_________ counterpoise",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "平衡力量，政治平衡力量。A political counterpoise was needed. 需要政治平衡力量。"
+    },
+    {
+      "question": "turquoise ____",
+      "type": "blank",
+      "answer": "ring",
+      "explanation": "绿松石，绿松石戒指。She wore a turquoise ring. 她戴着绿松石戒指。"
+    },
+    {
+      "question": "_______ reprise",
+      "type": "blank",
+      "answer": "musical",
+      "explanation": "重复，音乐重复。The musical reprise ended the show. 音乐重复结束了演出。"
+    },
+    {
+      "question": "apprise __ _____",
+      "type": "blank",
+      "answer": "of facts",
+      "explanation": "通知，通知事实。Please apprise of facts immediately. 请立即通知事实。"
+    },
+    {
+      "question": "_____________ treatise",
+      "type": "blank",
+      "answer": "philosophical",
+      "explanation": "论文，哲学论文。He wrote a philosophical treatise. 他写了一篇哲学论文。"
+    },
+    {
+      "question": "_________ expertise",
+      "type": "blank",
+      "answer": "technical",
+      "explanation": "专业知识，技术专业知识。She had technical expertise. 她有技术专业知识。"
+    },
+    {
+      "question": "advertise ______",
+      "type": "blank",
+      "answer": "online",
+      "explanation": "做广告，在线做广告。Companies advertise online now. 公司现在在线做广告。"
+    },
+    {
+      "question": "chastise _____",
+      "type": "blank",
+      "answer": "child",
+      "explanation": "惩罚，惩罚孩子。Parents may chastise child for misbehavior. 父母可能会因不当行为惩罚孩子。"
+    },
+    {
+      "question": "_____ ___ guise __",
+      "type": "blank",
+      "answer": "under the of",
+      "explanation": "伪装，以...为幌子。He acted under the guise of friendship. 他以友谊为幌子行事。"
+    },
+    {
+      "question": "revise _____",
+      "type": "blank",
+      "answer": "draft",
+      "explanation": "修改，修改草稿。Please revise draft carefully. 请仔细修改草稿。"
+    },
+    {
+      "question": "improvise _ ____",
+      "type": "blank",
+      "answer": "a tune",
+      "explanation": "即兴创作，即兴创作曲调。The musician would improvise a tune. 音乐家会即兴创作曲调。"
+    },
+    {
+      "question": "_______ supervise",
+      "type": "blank",
+      "answer": "closely",
+      "explanation": "监督，密切监督。The manager would closely supervise. 经理会密切监督。"
+    },
+    {
+      "question": "_____ pulse",
+      "type": "blank",
+      "answer": "heart",
+      "explanation": "脉搏，心跳脉搏。Check the heart pulse regularly. 定期检查心跳脉搏。"
+    },
+    {
+      "question": "repulse ______",
+      "type": "blank",
+      "answer": "attack",
+      "explanation": "击退，击退攻击。The army would repulse attack. 军队会击退攻击。"
+    },
+    {
+      "question": "______ impulse",
+      "type": "blank",
+      "answer": "sudden",
+      "explanation": "冲动，突然冲动。He acted on a sudden impulse. 他出于突然冲动行事。"
+    },
+    {
+      "question": "convulse ____ ________",
+      "type": "blank",
+      "answer": "with laughter",
+      "explanation": "使痉挛，笑得痉挛。The audience would convulse with laughter. 观众会笑得痉挛。"
+    },
+    {
+      "question": "______'_ license",
+      "type": "blank",
+      "answer": "driver's",
+      "explanation": "执照，驾驶执照。Renew your driver's license. 更新你的驾驶执照。"
+    },
+    {
+      "question": "_______ incense",
+      "type": "blank",
+      "answer": "burning",
+      "explanation": "香，燃烧的香。Burning incense filled the temple. 燃烧的香充满了寺庙。"
+    },
+    {
+      "question": "condense _____",
+      "type": "blank",
+      "answer": "steam",
+      "explanation": "凝结，凝结蒸汽。Cool air would condense steam. 冷空气会凝结蒸汽。"
+    },
+    {
+      "question": "immense ________",
+      "type": "blank",
+      "answer": "pressure",
+      "explanation": "巨大的，巨大的压力。He felt immense pressure to succeed. 他感到巨大的压力要成功。"
+    },
+    {
+      "question": "_____ recompense",
+      "type": "blank",
+      "answer": "offer",
+      "explanation": "补偿，提供补偿。They would offer recompense for damages. 他们会为损失提供补偿。"
+    },
+    {
+      "question": "__________ suspense",
+      "type": "blank",
+      "answer": "heightened",
+      "explanation": "悬念，加剧的悬念。The music created heightened suspense. 音乐制造了加剧的悬念。"
+    },
+    {
+      "question": "commonsense ________",
+      "type": "blank",
+      "answer": "solution",
+      "explanation": "常识的，常识的解决方案。That's a commonsense solution. 那是常识的解决方案。"
+    },
+    {
+      "question": "rinse _____",
+      "type": "blank",
+      "answer": "cycle",
+      "explanation": "冲洗，冲洗周期。Select the rinse cycle. 选择冲洗周期。"
+    },
+    {
+      "question": "verbose ______",
+      "type": "blank",
+      "answer": "report",
+      "explanation": "冗长的，冗长的报告。The verbose report was too long. 冗长的报告太长了。"
+    },
+    {
+      "question": "bellicose ________",
+      "type": "blank",
+      "answer": "rhetoric",
+      "explanation": "好战的，好战的言辞。His bellicose rhetoric was alarming. 他好战的言辞令人担忧。"
+    },
+    {
+      "question": "_____ glucose",
+      "type": "blank",
+      "answer": "blood",
+      "explanation": "葡萄糖，血糖。Monitor blood glucose levels. 监测血糖水平。"
+    },
+    {
+      "question": "____ overdose",
+      "type": "blank",
+      "answer": "drug",
+      "explanation": "过量，药物过量。The patient suffered a drug overdose. 患者遭受了药物过量。"
+    },
+    {
+      "question": "metamorphose ____",
+      "type": "blank",
+      "answer": "into",
+      "explanation": "变形，变形成。The caterpillar would metamorphose into a butterfly. 毛毛虫会变形成蝴蝶。"
+    },
+    {
+      "question": "grandiose ______",
+      "type": "blank",
+      "answer": "scheme",
+      "explanation": "浮夸的，浮夸的计划。His grandiose scheme failed. 他浮夸的计划失败了。"
+    },
+    {
+      "question": "otiose ______",
+      "type": "blank",
+      "answer": "effort",
+      "explanation": "无用的，无用的努力。That was an otiose effort. 那是无用的努力。"
+    },
+    {
+      "question": "foreclose _ ________",
+      "type": "blank",
+      "answer": "a mortgage",
+      "explanation": "取消抵押品赎回权，取消抵押贷款赎回权。The bank would foreclose a mortgage. 银行会取消抵押贷款赎回权。"
+    },
+    {
+      "question": "disclose _______",
+      "type": "blank",
+      "answer": "details",
+      "explanation": "披露，披露细节。Please disclose details of the plan. 请披露计划的细节。"
+    },
+    {
+      "question": "lachrymose _____",
+      "type": "blank",
+      "answer": "drama",
+      "explanation": "催人泪下的，催人泪下的戏剧。The lachrymose drama was emotional. 催人泪下的戏剧很感人。"
+    },
+    {
+      "question": "_______ ___ noose",
+      "type": "blank",
+      "answer": "tighten the",
+      "explanation": "套索，收紧套索。They would tighten the noose. 他们会收紧套索。"
+    },
+    {
+      "question": "______ _ pose",
+      "type": "blank",
+      "answer": "strike a",
+      "explanation": "姿势，摆姿势。The model would strike a pose. 模特会摆姿势。"
+    },
+    {
+      "question": "juxtapose _____",
+      "type": "blank",
+      "answer": "ideas",
+      "explanation": "并置，并置想法。The essay would juxtapose ideas. 文章会并置想法。"
+    },
+    {
+      "question": "depose _ _____",
+      "type": "blank",
+      "answer": "a ruler",
+      "explanation": "废黜，废黜统治者。The rebels would depose a ruler. 叛军会废黜统治者。"
+    },
+    {
+      "question": "impose _ ___",
+      "type": "blank",
+      "answer": "a tax",
+      "explanation": "征收，征收税收。The government would impose a tax. 政府会征收税收。"
+    },
+    {
+      "question": "superimpose ______",
+      "type": "blank",
+      "answer": "layers",
+      "explanation": "叠加，叠加层。Superimpose layers in the image. 在图像中叠加层。"
+    },
+    {
+      "question": "compose _______",
+      "type": "blank",
+      "answer": "oneself",
+      "explanation": "使镇定，使自己镇定。Take time to compose oneself. 花时间使自己镇定。"
+    },
+    {
+      "question": "decompose _____",
+      "type": "blank",
+      "answer": "waste",
+      "explanation": "分解，分解废物。Bacteria decompose waste naturally. 细菌自然分解废物。"
+    },
+    {
+      "question": "interpose _ ________",
+      "type": "blank",
+      "answer": "a question",
+      "explanation": "插入，插入问题。He would interpose a question. 他会插入问题。"
+    },
+    {
+      "question": "dispose __ _____",
+      "type": "blank",
+      "answer": "of waste",
+      "explanation": "处理，处理废物。Properly dispose of waste. 妥善处理废物。"
+    },
+    {
+      "question": "transpose ____",
+      "type": "blank",
+      "answer": "keys",
+      "explanation": "移调，移调音调。Transpose keys for the singer. 为歌手移调音调。"
+    },
+    {
+      "question": "prose _____",
+      "type": "blank",
+      "answer": "style",
+      "explanation": "散文，散文风格。He wrote in a clear prose style. 他用清晰的散文风格写作。"
+    },
+    {
+      "question": "comatose _______",
+      "type": "blank",
+      "answer": "patient",
+      "explanation": "昏迷的，昏迷的病人。The comatose patient needed care. 昏迷的病人需要护理。"
+    },
+    {
+      "question": "relapse ____ _______",
+      "type": "blank",
+      "answer": "into illness",
+      "explanation": "复发，复发疾病。He would relapse into illness. 他会复发疾病。"
+    },
+    {
+      "question": "_____ _ glimpse",
+      "type": "blank",
+      "answer": "catch a",
+      "explanation": "瞥见，瞥见。I managed to catch a glimpse. 我设法瞥见了。"
+    },
+    {
+      "question": "rehearse _____",
+      "type": "blank",
+      "answer": "lines",
+      "explanation": "排练，排练台词。Actors rehearse lines before performance. 演员在演出前排练台词。"
+    },
+    {
+      "question": "coarse ________",
+      "type": "blank",
+      "answer": "language",
+      "explanation": "粗俗的，粗俗的语言。Avoid coarse language. 避免粗俗的语言。"
+    },
+    {
+      "question": "terse _____",
+      "type": "blank",
+      "answer": "reply",
+      "explanation": "简洁的，简洁的回复。He gave a terse reply. 他给出了简洁的回复。"
+    }
+  ]
+}
