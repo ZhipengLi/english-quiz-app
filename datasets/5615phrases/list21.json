@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "abrasive _______",
+      "type": "blank",
+      "answer": "cleaner",
+      "explanation": "磨蚀性的, 磨蚀性清洁剂. Use an abrasive cleaner to remove stubborn stains from the sink. 使用磨蚀性清洁剂去除水槽上的顽固污渍。"
+    },
+    {
+      "question": "adhesive ____",
+      "type": "blank",
+      "answer": "tape",
+      "explanation": "粘性的, 胶带. The package was sealed with strong adhesive tape. 包裹用强力胶带密封。"
+    },
+    {
+      "question": "cohesive ____",
+      "type": "blank",
+      "answer": "team",
+      "explanation": "有凝聚力的, 有凝聚力的团队. Success requires building a cohesive team that works well together. 成功需要建立一个协作良好的有凝聚力的团队。"
+    },
+    {
+      "question": "indecisive _____",
+      "type": "blank",
+      "answer": "voter",
+      "explanation": "优柔寡断的, 优柔寡断的选民. Polls show many indecisive voter have yet to make up their minds. 民意调查显示许多优柔寡断的选民尚未下定决心。"
+    },
+    {
+      "question": "impulsive ______",
+      "type": "blank",
+      "answer": "buying",
+      "explanation": "冲动的, 冲动购买. Retailers use strategic placement to encourage impulsive buying. 零售商使用战略性摆放来鼓励冲动购买。"
+    },
+    {
+      "question": "expansive ____",
+      "type": "blank",
+      "answer": "mood",
+      "explanation": "开朗的, 开朗的情绪. After receiving good news, she was in an expansive mood. 收到好消息后,她处于开朗的情绪中。"
+    },
+    {
+      "question": "offensive ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "冒犯的, 冒犯的言论. The executive was fired for making an offensive remark. 这位高管因发表冒犯的言论而被解雇。"
+    },
+    {
+      "question": "comprehensive ____",
+      "type": "blank",
+      "answer": "plan",
+      "explanation": "全面的, 全面的计划. The government unveiled a comprehensive plan to address climate change. 政府公布了应对气候变化的全面计划。"
+    },
+    {
+      "question": "responsive ______",
+      "type": "blank",
+      "answer": "design",
+      "explanation": "响应式的, 响应式设计. Modern websites use responsive design to adapt to different screen sizes. 现代网站使用响应式设计来适应不同的屏幕尺寸。"
+    },
+    {
+      "question": "corrosive ____",
+      "type": "blank",
+      "answer": "acid",
+      "explanation": "腐蚀性的, 腐蚀性酸. Handle corrosive acid with extreme caution and proper protection. 极其谨慎地处理腐蚀性酸并采取适当保护。"
+    },
+    {
+      "question": "cursive ______",
+      "type": "blank",
+      "answer": "script",
+      "explanation": "草书的, 草书. The invitation was written in elegant cursive script. 邀请函用优雅的草书书写。"
+    },
+    {
+      "question": "discursive _____",
+      "type": "blank",
+      "answer": "essay",
+      "explanation": "散漫的, 散漫的文章. The discursive essay wandered through many topics without focus. 这篇散漫的文章漫无目的地讨论了许多主题。"
+    },
+    {
+      "question": "excursive _____",
+      "type": "blank",
+      "answer": "essay",
+      "explanation": "离题的, 离题的文章. His excursive essay contained many interesting but tangential observations. 他离题的文章包含许多有趣但不相关的观察。"
+    },
+    {
+      "question": "recessive ____",
+      "type": "blank",
+      "answer": "gene",
+      "explanation": "隐性的, 隐性基因. Blue eyes are caused by a recessive gene. 蓝眼睛是由隐性基因引起的。"
+    },
+    {
+      "question": "______ missive",
+      "type": "blank",
+      "answer": "urgent",
+      "explanation": "信函, 紧急信函. The diplomat received an urgent missive from headquarters. 外交官收到了总部的紧急信函。"
+    },
+    {
+      "question": "permissive _________",
+      "type": "blank",
+      "answer": "parenting",
+      "explanation": "放任的, 放任的养育. Critics argue that permissive parenting leads to behavioral problems. 批评者认为放任的养育会导致行为问题。"
+    },
+    {
+      "question": "abusive ________",
+      "type": "blank",
+      "answer": "language",
+      "explanation": "辱骂的, 辱骂的语言. The forum banned users who employed abusive language. 论坛禁止使用辱骂语言的用户。"
+    },
+    {
+      "question": "inclusive ______",
+      "type": "blank",
+      "answer": "policy",
+      "explanation": "包容的, 包容性政策. The company adopted an inclusive policy welcoming diverse employees. 公司采用了欢迎多元化员工的包容性政策。"
+    },
+    {
+      "question": "conclusive ________",
+      "type": "blank",
+      "answer": "evidence",
+      "explanation": "确凿的, 确凿的证据. The prosecution presented conclusive evidence of the defendant's guilt. 控方提出了被告有罪的确凿证据。"
+    },
+    {
+      "question": "exclusive ____",
+      "type": "blank",
+      "answer": "club",
+      "explanation": "独家的, 独家俱乐部. Membership in the exclusive club requires substantial wealth. 独家俱乐部的会员资格需要可观的财富。"
+    },
+    {
+      "question": "elusive ______",
+      "type": "blank",
+      "answer": "answer",
+      "explanation": "难以捉摸的, 难以捉摸的答案. Scientists continued searching for the elusive answer to the puzzle. 科学家继续寻找这个难题的难以捉摸的答案。"
+    },
+    {
+      "question": "illusive ____",
+      "type": "blank",
+      "answer": "hope",
+      "explanation": "虚幻的, 虚幻的希望. Their dreams of quick wealth proved to be illusive hope. 他们快速致富的梦想被证明是虚幻的希望。"
+    },
+    {
+      "question": "rebarbative ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "令人反感的, 令人反感的言论. His rebarbative remark alienated potential allies. 他令人反感的言论疏远了潜在盟友。"
+    },
+    {
+      "question": "__ indicative __",
+      "type": "blank",
+      "answer": "be of",
+      "explanation": "表明的, 表明. High fever may be indicative of serious infection. 高烧可能表明严重感染。"
+    },
+    {
+      "question": "evocative _____",
+      "type": "blank",
+      "answer": "image",
+      "explanation": "唤起的, 唤起回忆的图像. The photographer captured an evocative image of rural poverty. 摄影师捕捉到了一张唤起回忆的农村贫困图像。"
+    },
+    {
+      "question": "____ sedative",
+      "type": "blank",
+      "answer": "mild",
+      "explanation": "镇静剂, 温和的镇静剂. The doctor prescribed a mild sedative to help with sleep. 医生开了一种温和的镇静剂来帮助睡眠。"
+    },
+    {
+      "question": "_____ prerogative",
+      "type": "blank",
+      "answer": "royal",
+      "explanation": "特权, 王室特权. The royal prerogative allows the monarch certain exclusive powers. 王室特权赋予君主某些独有权力。"
+    },
+    {
+      "question": "interrogative ________",
+      "type": "blank",
+      "answer": "sentence",
+      "explanation": "疑问的, 疑问句. An interrogative sentence ends with a question mark. 疑问句以问号结束。"
+    },
+    {
+      "question": "purgative ____",
+      "type": "blank",
+      "answer": "herb",
+      "explanation": "泻药, 泻药草药. Traditional medicine uses various purgative herb for cleansing. 传统医学使用各种泻药草药来清洁。"
+    },
+    {
+      "question": "palliative ____",
+      "type": "blank",
+      "answer": "care",
+      "explanation": "缓和的, 缓和治疗. Palliative care focuses on comfort for terminally ill patients. 缓和治疗专注于为晚期患者提供舒适。"
+    },
+    {
+      "question": "___ initiative",
+      "type": "blank",
+      "answer": "new",
+      "explanation": "倡议, 新倡议. The mayor announced a new initiative to combat homelessness. 市长宣布了一项打击无家可归的新倡议。"
+    },
+    {
+      "question": "superlative ______",
+      "type": "blank",
+      "answer": "degree",
+      "explanation": "最高级的, 最高级. The adjective fastest is the superlative degree of fast. 形容词fastest是fast的最高级。"
+    },
+    {
+      "question": "speculative ______",
+      "type": "blank",
+      "answer": "bubble",
+      "explanation": "投机性的, 投机性泡沫. The stock market experienced a dangerous speculative bubble. 股市经历了一个危险的投机性泡沫。"
+    },
+    {
+      "question": "manipulative _______",
+      "type": "blank",
+      "answer": "tactics",
+      "explanation": "操纵的, 操纵的策略. The salesman used manipulative tactics to pressure customers. 推销员使用操纵的策略向顾客施压。"
+    },
+    {
+      "question": "formative _____",
+      "type": "blank",
+      "answer": "years",
+      "explanation": "形成期的, 形成期的岁月. Childhood represents the formative years of personality development. 童年代表个性发展的形成期岁月。"
+    },
+    {
+      "question": "remunerative ___",
+      "type": "blank",
+      "answer": "job",
+      "explanation": "有报酬的, 有报酬的工作. She finally found a remunerative job after months of searching. 经过几个月的寻找,她终于找到了一份有报酬的工作。"
+    },
+    {
+      "question": "_____ imperative",
+      "type": "blank",
+      "answer": "moral",
+      "explanation": "必要的, 道德必要性. Protecting the environment is a moral imperative for society. 保护环境是社会的道德必要性。"
+    },
+    {
+      "question": "operative ____",
+      "type": "blank",
+      "answer": "word",
+      "explanation": "关键的, 关键词. The operative word in the contract is immediately. 合同中的关键词是immediately。"
+    },
+    {
+      "question": "cooperative ______",
+      "type": "blank",
+      "answer": "spirit",
+      "explanation": "合作的, 合作精神. Success depends on maintaining a cooperative spirit among team members. 成功取决于团队成员之间保持合作精神。"
+    },
+    {
+      "question": "uncooperative _______",
+      "type": "blank",
+      "answer": "witness",
+      "explanation": "不合作的, 不合作的证人. The investigation was hindered by an uncooperative witness. 调查因一名不合作的证人而受阻。"
+    },
+    {
+      "question": "vituperative ____",
+      "type": "blank",
+      "answer": "rant",
+      "explanation": "辱骂的, 辱骂性言论. The politician launched into a vituperative rant against opponents. 这位政客对对手发起了辱骂性言论。"
+    },
+    {
+      "question": "pejorative ____",
+      "type": "blank",
+      "answer": "term",
+      "explanation": "贬义的, 贬义词. The speaker apologized for using a pejorative term. 演讲者为使用贬义词道歉。"
+    },
+    {
+      "question": "_____-______ narrative",
+      "type": "blank",
+      "answer": "first-person",
+      "explanation": "叙述, 第一人称叙述. The novel employs a first-person narrative from the protagonist's viewpoint. 小说采用从主人公视角的第一人称叙述。"
+    },
+    {
+      "question": "demonstrative _________",
+      "type": "blank",
+      "answer": "affection",
+      "explanation": "表露感情的, 表露感情的爱. Some cultures value demonstrative affection while others prefer restraint. 有些文化重视表露感情的爱,而其他文化更喜欢克制。"
+    },
+    {
+      "question": "figurative ______",
+      "type": "blank",
+      "answer": "speech",
+      "explanation": "比喻的, 比喻性语言. Poetry often relies on figurative speech to convey meaning. 诗歌经常依赖比喻性语言来传达意义。"
+    },
+    {
+      "question": "meditative _____",
+      "type": "blank",
+      "answer": "state",
+      "explanation": "冥想的, 冥想状态. Yoga helps achieve a deep meditative state. 瑜伽有助于达到深度冥想状态。"
+    },
+    {
+      "question": "imitative ___",
+      "type": "blank",
+      "answer": "art",
+      "explanation": "模仿的, 模仿艺术. Critics dismissed his work as merely imitative art. 批评家将他的作品斥为仅仅是模仿艺术。"
+    },
+    {
+      "question": "hortative ____",
+      "type": "blank",
+      "answer": "tone",
+      "explanation": "劝告的, 劝告的语气. The speech adopted a hortative tone urging citizens to action. 演讲采用了劝告的语气敦促公民采取行动。"
+    },
+    {
+      "question": "putative ______",
+      "type": "blank",
+      "answer": "father",
+      "explanation": "推定的, 推定的父亲. DNA testing confirmed the putative father was indeed the biological parent. DNA测试证实推定的父亲确实是亲生父母。"
+    },
+    {
+      "question": "derivative ____",
+      "type": "blank",
+      "answer": "work",
+      "explanation": "衍生的, 衍生作品. The film was criticized as a derivative work lacking originality. 这部电影被批评为缺乏原创性的衍生作品。"
+    },
+    {
+      "question": "innovative ______",
+      "type": "blank",
+      "answer": "design",
+      "explanation": "创新的, 创新设计. The company won an award for its innovative design. 该公司因其创新设计而获奖。"
+    },
+    {
+      "question": "____ preservative",
+      "type": "blank",
+      "answer": "food",
+      "explanation": "防腐剂, 食品防腐剂. Many consumers prefer products without artificial food preservative. 许多消费者更喜欢不含人工食品防腐剂的产品。"
+    },
+    {
+      "question": "conservative ________",
+      "type": "blank",
+      "answer": "estimate",
+      "explanation": "保守的, 保守的估计. The budget uses a conservative estimate of expected revenue. 预算使用了对预期收入的保守估计。"
+    },
+    {
+      "question": "____ laxative",
+      "type": "blank",
+      "answer": "mild",
+      "explanation": "轻泻剂, 温和的轻泻剂. The doctor recommended a mild laxative for constipation. 医生建议使用温和的轻泻剂治疗便秘。"
+    },
+    {
+      "question": "nonradioactive _____",
+      "type": "blank",
+      "answer": "waste",
+      "explanation": "非放射性的, 非放射性废物. The facility processes only nonradioactive waste. 该设施只处理非放射性废物。"
+    },
+    {
+      "question": "retroactive ___",
+      "type": "blank",
+      "answer": "law",
+      "explanation": "追溯的, 追溯法律. The constitution prohibits retroactive law that criminalizes past actions. 宪法禁止将过去的行为定为犯罪的追溯法律。"
+    },
+    {
+      "question": "objective _____",
+      "type": "blank",
+      "answer": "truth",
+      "explanation": "客观的, 客观真理. Scientists seek to discover objective truth through empirical research. 科学家通过实证研究寻求发现客观真理。"
+    },
+    {
+      "question": "subjective ________",
+      "type": "blank",
+      "answer": "judgment",
+      "explanation": "主观的, 主观判断. Art appreciation often involves subjective judgment. 艺术鉴赏通常涉及主观判断。"
+    },
+    {
+      "question": "introspective ____",
+      "type": "blank",
+      "answer": "mood",
+      "explanation": "内省的, 内省的情绪. The poem reflected the author's introspective mood. 这首诗反映了作者内省的情绪。"
+    },
+    {
+      "question": "_____ perspective",
+      "type": "blank",
+      "answer": "shift",
+      "explanation": "视角, 转换视角. Understanding the issue requires a shift perspective. 理解这个问题需要转换视角。"
+    },
+    {
+      "question": "_______ invective",
+      "type": "blank",
+      "answer": "vicious",
+      "explanation": "谩骂, 恶毒的谩骂. The debate descended into vicious invective between candidates. 辩论演变成候选人之间的恶毒谩骂。"
+    },
+    {
+      "question": "distinctive _____",
+      "type": "blank",
+      "answer": "style",
+      "explanation": "独特的, 独特的风格. The architect developed a distinctive style recognized worldwide. 这位建筑师发展出了世界公认的独特风格。"
+    },
+    {
+      "question": "instinctive ________",
+      "type": "blank",
+      "answer": "response",
+      "explanation": "本能的, 本能的反应. Fear triggers an instinctive response to flee or fight. 恐惧触发逃跑或战斗的本能反应。"
+    },
+    {
+      "question": "disjunctive ______",
+      "type": "blank",
+      "answer": "marker",
+      "explanation": "分离的, 分离标记. The word or serves as a disjunctive marker in logic. 单词or在逻辑中充当分离标记。"
+    },
+    {
+      "question": "deductive _________",
+      "type": "blank",
+      "answer": "reasoning",
+      "explanation": "演绎的, 演绎推理. Sherlock Holmes employed deductive reasoning to solve mysteries. 夏洛克·福尔摩斯运用演绎推理来解决谜团。"
+    },
+    {
+      "question": "unproductive _______",
+      "type": "blank",
+      "answer": "meeting",
+      "explanation": "无成效的, 无成效的会议. The three-hour unproductive meeting frustrated everyone. 三小时的无成效会议让每个人都感到沮丧。"
+    },
+    {
+      "question": "counterproductive ______",
+      "type": "blank",
+      "answer": "policy",
+      "explanation": "适得其反的, 适得其反的政策. Harsh punishment can be a counterproductive policy for minor offenses. 对轻微违法行为的严厉惩罚可能是适得其反的政策。"
+    },
+    {
+      "question": "______ instructive",
+      "type": "blank",
+      "answer": "highly",
+      "explanation": "有教育意义的, 非常有教育意义的. The documentary was highly instructive about climate change. 这部纪录片关于气候变化非常有教育意义。"
+    },
+    {
+      "question": "prohibitive _____",
+      "type": "blank",
+      "answer": "price",
+      "explanation": "过高的, 过高的价格. The prohibitive price prevented many from attending the event. 过高的价格使许多人无法参加活动。"
+    },
+    {
+      "question": "____ additive",
+      "type": "blank",
+      "answer": "food",
+      "explanation": "添加剂, 食品添加剂. Some people are allergic to certain food additive. 有些人对某些食品添加剂过敏。"
+    },
+    {
+      "question": "definitive _____",
+      "type": "blank",
+      "answer": "guide",
+      "explanation": "权威的, 权威指南. This book remains the definitive guide to bird identification. 这本书仍然是鸟类识别的权威指南。"
+    },
+    {
+      "question": "acquisitive _______",
+      "type": "blank",
+      "answer": "culture",
+      "explanation": "贪婪的, 贪婪的文化. Critics denounced the acquisitive culture of materialism. 批评者谴责物质主义的贪婪文化。"
+    },
+    {
+      "question": "inquisitive ____",
+      "type": "blank",
+      "answer": "mind",
+      "explanation": "好奇的, 好奇的头脑. Children possess an inquisitive mind that seeks to understand. 儿童拥有寻求理解的好奇头脑。"
+    },
+    {
+      "question": "sensitive ____",
+      "type": "blank",
+      "answer": "data",
+      "explanation": "敏感的, 敏感数据. The company must protect sensitive data from hackers. 公司必须保护敏感数据免受黑客攻击。"
+    },
+    {
+      "question": "intuitive _____",
+      "type": "blank",
+      "answer": "sense",
+      "explanation": "直觉的, 直觉感觉. She had an intuitive sense that something was wrong. 她有一种直觉感觉,觉得有什么不对劲。"
+    },
+    {
+      "question": "substantive ______",
+      "type": "blank",
+      "answer": "reform",
+      "explanation": "实质性的, 实质性改革. The legislation promised substantive reform of the healthcare system. 该立法承诺对医疗保健系统进行实质性改革。"
+    },
+    {
+      "question": "___ incentive",
+      "type": "blank",
+      "answer": "tax",
+      "explanation": "激励, 税收激励. The government offered tax incentive to attract businesses. 政府提供税收激励来吸引企业。"
+    },
+    {
+      "question": "retentive ______",
+      "type": "blank",
+      "answer": "memory",
+      "explanation": "记忆力强的, 记忆力强的记忆. Her retentive memory allowed her to recall details years later. 她强的记忆力使她能够在多年后回忆起细节。"
+    },
+    {
+      "question": "plaintive ___",
+      "type": "blank",
+      "answer": "cry",
+      "explanation": "哀伤的, 哀伤的哭声. A plaintive cry echoed through the empty hallway. 一声哀伤的哭声在空荡荡的走廊中回响。"
+    },
+    {
+      "question": "_____ locomotive",
+      "type": "blank",
+      "answer": "steam",
+      "explanation": "机车, 蒸汽机车. The museum displays a restored steam locomotive from 1890. 博物馆展示了一台修复的1890年蒸汽机车。"
+    },
+    {
+      "question": "receptive ________",
+      "type": "blank",
+      "answer": "audience",
+      "explanation": "愿意接受的, 愿意接受的观众. The speaker found a receptive audience eager for new ideas. 演讲者发现观众愿意接受并渴望新想法。"
+    },
+    {
+      "question": "redemptive ___",
+      "type": "blank",
+      "answer": "arc",
+      "explanation": "救赎的, 救赎弧线. The character's story follows a classic redemptive arc. 这个角色的故事遵循经典的救赎弧线。"
+    },
+    {
+      "question": "disruptive __________",
+      "type": "blank",
+      "answer": "technology",
+      "explanation": "颠覆性的, 颠覆性技术. Smartphones represented a disruptive technology for telecommunications. 智能手机代表了电信业的颠覆性技术。"
+    },
+    {
+      "question": "assertive _____________",
+      "type": "blank",
+      "answer": "communication",
+      "explanation": "自信的, 自信的沟通. Training programs teach assertive communication skills to employees. 培训项目向员工教授自信的沟通技巧。"
+    },
+    {
+      "question": "abortive _______",
+      "type": "blank",
+      "answer": "attempt",
+      "explanation": "失败的, 失败的尝试. After several abortive attempt, they abandoned the project. 经过几次失败的尝试后,他们放弃了该项目。"
+    },
+    {
+      "question": "festive ____",
+      "type": "blank",
+      "answer": "mood",
+      "explanation": "欢乐的, 欢乐的气氛. The decorations created a festive mood for the celebration. 装饰为庆祝活动营造了欢乐的气氛。"
+    },
+    {
+      "question": "suggestive ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "暗示的, 暗示性言论. His suggestive remark made everyone uncomfortable. 他的暗示性言论让每个人都感到不舒服。"
+    },
+    {
+      "question": "restive _____",
+      "type": "blank",
+      "answer": "crowd",
+      "explanation": "焦躁不安的, 焦躁不安的人群. The restive crowd grew impatient waiting for the delayed concert. 焦躁不安的人群等待延迟的音乐会变得不耐烦。"
+    },
+    {
+      "question": "exhaustive ______",
+      "type": "blank",
+      "answer": "report",
+      "explanation": "详尽的, 详尽的报告. The committee produced an exhaustive report on the scandal. 委员会就丑闻制作了一份详尽的报告。"
+    },
+    {
+      "question": "_______ salve",
+      "type": "blank",
+      "answer": "healing",
+      "explanation": "药膏, 治疗药膏. Apply healing salve to the wound twice daily. 每天两次在伤口上涂抹治疗药膏。"
+    },
+    {
+      "question": "______ valve",
+      "type": "blank",
+      "answer": "relief",
+      "explanation": "阀门, 安全阀. The pressure cooker has a relief valve for safety. 压力锅有一个用于安全的安全阀。"
+    },
+    {
+      "question": "___ helve",
+      "type": "blank",
+      "answer": "axe",
+      "explanation": "斧柄, 斧柄. The woodsman replaced the broken axe helve. 樵夫更换了断裂的斧柄。"
+    },
+    {
+      "question": "absolve ____ _____",
+      "type": "blank",
+      "answer": "from guilt",
+      "explanation": "赦免, 免除罪责. The priest offered to absolve from guilt those who confessed. 神父提出为那些忏悔的人免除罪责。"
+    },
+    {
+      "question": "devolve _____",
+      "type": "blank",
+      "answer": "power",
+      "explanation": "移交, 移交权力. The reform will devolve power to regional authorities. 改革将把权力移交给地区当局。"
+    },
+    {
+      "question": "_______ alcove",
+      "type": "blank",
+      "answer": "bedroom",
+      "explanation": "凹室, 卧室凹室. They created a cozy reading space in the bedroom alcove. 他们在卧室凹室里创造了一个舒适的阅读空间。"
+    },
+    {
+      "question": "__ behoove(s) ___",
+      "type": "blank",
+      "answer": "it you",
+      "explanation": "适宜, 对你适宜. It behoove(s) you to prepare thoroughly for the interview. 对你来说彻底准备面试是适宜的。"
+    },
+    {
+      "question": "groove _____",
+      "type": "blank",
+      "answer": "track",
+      "explanation": "凹槽, 凹槽轨道. The needle follows the groove track on the vinyl record. 唱针沿着黑胶唱片上的凹槽轨道移动。"
+    },
+    {
+      "question": "rove ______",
+      "type": "blank",
+      "answer": "around",
+      "explanation": "漫游, 到处漫游. Wild animals rove around searching for food. 野生动物到处漫游寻找食物。"
+    },
+    {
+      "question": "drove ______",
+      "type": "blank",
+      "answer": "cattle",
+      "explanation": "驱赶, 驱赶牛群. Cowboys drove cattle across the open plains. 牛仔在开阔的平原上驱赶牛群。"
+    },
+    {
+      "question": "_____ grove",
+      "type": "blank",
+      "answer": "olive",
+      "explanation": "小树林, 橄榄树林. The ancient olive grove produced oil for generations. 古老的橄榄树林世世代代生产橄榄油。"
+    }
+  ]
+}
