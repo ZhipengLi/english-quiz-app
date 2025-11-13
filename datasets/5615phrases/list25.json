@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "waggish ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "诙谐的, 诙谐的评论. His waggish remark lightened the mood of the meeting. 他诙谐的评论使会议气氛轻松起来。"
+    },
+    {
+      "question": "rakish _____",
+      "type": "blank",
+      "answer": "charm",
+      "explanation": "放荡的, 放荡的魅力. The pirate captain had a certain rakish charm. 这位海盗船长有一种放荡的魅力。"
+    },
+    {
+      "question": "puckish _____",
+      "type": "blank",
+      "answer": "humor",
+      "explanation": "顽皮的, 顽皮的幽默. His puckish humor delighted audiences. 他顽皮的幽默让观众高兴。"
+    },
+    {
+      "question": "mawkish _________",
+      "type": "blank",
+      "answer": "sentiment",
+      "explanation": "感伤的, 感伤的情绪. The movie was criticized for its mawkish sentiment. 这部电影因其感伤的情绪而受到批评。"
+    },
+    {
+      "question": "ticklish _____",
+      "type": "blank",
+      "answer": "issue",
+      "explanation": "棘手的, 棘手的问题. Negotiations involved several ticklish issue. 谈判涉及几个棘手的问题。"
+    },
+    {
+      "question": "abolish _______",
+      "type": "blank",
+      "answer": "slavery",
+      "explanation": "废除, 废除奴隶制. Lincoln fought to abolish slavery in America. 林肯为在美国废除奴隶制而战。"
+    },
+    {
+      "question": "famish __ _____",
+      "type": "blank",
+      "answer": "to death",
+      "explanation": "使饥饿, 饿死. The prisoners were left to famish to death. 囚犯被留下饿死。"
+    },
+    {
+      "question": "______ skirmish",
+      "type": "blank",
+      "answer": "border",
+      "explanation": "小冲突, 边境小冲突. Soldiers engaged in a brief border skirmish. 士兵参与了一场短暂的边境小冲突。"
+    },
+    {
+      "question": "clannish _______",
+      "type": "blank",
+      "answer": "culture",
+      "explanation": "宗派的, 宗派文化. The village maintained a clannish culture. 村庄保持着宗派文化。"
+    },
+    {
+      "question": "admonish _ _____",
+      "type": "blank",
+      "answer": "a child",
+      "explanation": "告诫, 告诫孩子. The teacher had to admonish a child for misbehavior. 老师不得不因不当行为告诫孩子。"
+    },
+    {
+      "question": "garnish _____",
+      "type": "blank",
+      "answer": "plate",
+      "explanation": "装饰, 装饰盘子. The chef will garnish plate with fresh herbs. 厨师会用新鲜香草装饰盘子。"
+    },
+    {
+      "question": "foppish _______",
+      "type": "blank",
+      "answer": "dresser",
+      "explanation": "过分讲究穿着的, 过分讲究穿着的人. The foppish dresser spent hours on his appearance. 这位过分讲究穿着的人花几个小时打扮自己。"
+    },
+    {
+      "question": "impoverish ___ ____",
+      "type": "blank",
+      "answer": "the soil",
+      "explanation": "使贫瘠, 使土壤贫瘠. Overfarming will impoverish the soil over time. 过度耕作会使土壤随着时间变得贫瘠。"
+    },
+    {
+      "question": "currish ________",
+      "type": "blank",
+      "answer": "behavior",
+      "explanation": "粗鄙的, 粗鄙的行为. His currish behavior disgusted everyone present. 他粗鄙的行为让在场的每个人都感到厌恶。"
+    },
+    {
+      "question": "amateurish _______",
+      "type": "blank",
+      "answer": "attempt",
+      "explanation": "业余的, 业余的尝试. The production was criticized as an amateurish attempt. 该作品被批评为业余的尝试。"
+    },
+    {
+      "question": "nourish ____",
+      "type": "blank",
+      "answer": "hope",
+      "explanation": "滋养, 滋养希望. The community continued to nourish hope for peace. 社区继续滋养对和平的希望。"
+    },
+    {
+      "question": "________ fetish",
+      "type": "blank",
+      "answer": "footwear",
+      "explanation": "恋物, 鞋类恋物. She admitted to having a footwear fetish. 她承认有鞋类恋物癖。"
+    },
+    {
+      "question": "coltish ______",
+      "type": "blank",
+      "answer": "energy",
+      "explanation": "活泼的, 活泼的精力. The young dancer displayed coltish energy on stage. 年轻的舞者在舞台上展现出活泼的精力。"
+    },
+    {
+      "question": "brattish ________",
+      "type": "blank",
+      "answer": "behavior",
+      "explanation": "顽童般的, 顽童般的行为. The spoiled child's brattish behavior annoyed guests. 被宠坏孩子的顽童般行为惹恼了客人。"
+    },
+    {
+      "question": "pettish ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "易怒的, 易怒的评论. Her pettish remark revealed her frustration. 她易怒的评论显露出她的沮丧。"
+    },
+    {
+      "question": "skittish _____",
+      "type": "blank",
+      "answer": "horse",
+      "explanation": "易惊的, 易惊的马. The skittish horse bolted at sudden noises. 易惊的马在突然的噪音下逃跑了。"
+    },
+    {
+      "question": "loutish ________",
+      "type": "blank",
+      "answer": "behavior",
+      "explanation": "粗鲁的, 粗鲁的行为. His loutish behavior embarrassed his friends. 他粗鲁的行为让他的朋友感到尴尬。"
+    },
+    {
+      "question": "languish __ ____",
+      "type": "blank",
+      "answer": "in jail",
+      "explanation": "憔悴, 在监狱中憔悴. The political prisoner continued to languish in jail. 政治犯继续在监狱中憔悴。"
+    },
+    {
+      "question": "extinguish ____",
+      "type": "blank",
+      "answer": "fire",
+      "explanation": "熄灭, 熄灭火. Firefighters worked to extinguish fire quickly. 消防员努力迅速熄灭火。"
+    },
+    {
+      "question": "lavish _____",
+      "type": "blank",
+      "answer": "party",
+      "explanation": "奢华的, 奢华的派对. The millionaire threw a lavish party for guests. 百万富翁为客人举办了一场奢华的派对。"
+    },
+    {
+      "question": "ravish ___ ______",
+      "type": "blank",
+      "answer": "the senses",
+      "explanation": "使陶醉, 使感官陶醉. The beautiful scenery seemed to ravish the senses. 美丽的风景似乎使感官陶醉。"
+    },
+    {
+      "question": "peevish _____",
+      "type": "blank",
+      "answer": "child",
+      "explanation": "易怒的, 易怒的孩子. The tired peevish child complained constantly. 疲惫易怒的孩子不断抱怨。"
+    },
+    {
+      "question": "_______ marsh",
+      "type": "blank",
+      "answer": "coastal",
+      "explanation": "沼泽, 沿海沼泽. The coastal marsh provides habitat for wildlife. 沿海沼泽为野生动物提供栖息地。"
+    },
+    {
+      "question": "___ __ ambush",
+      "type": "blank",
+      "answer": "set an",
+      "explanation": "埋伏, 设置埋伏. Soldiers moved quietly to set an ambush. 士兵悄悄移动设置埋伏。"
+    },
+    {
+      "question": "hush _____",
+      "type": "blank",
+      "answer": "money",
+      "explanation": "封口费, 封口费. The scandal involved allegations of hush money. 丑闻涉及封口费的指控。"
+    },
+    {
+      "question": "lush __________",
+      "type": "blank",
+      "answer": "vegetation",
+      "explanation": "茂盛的, 茂盛的植被. The tropical island had lush vegetation. 热带岛屿有茂盛的植被。"
+    },
+    {
+      "question": "____ flush",
+      "type": "blank",
+      "answer": "face",
+      "explanation": "脸红, 脸红. Her face flush with embarrassment at the compliment. 她因赞美而脸红。"
+    },
+    {
+      "question": "plush ____",
+      "type": "blank",
+      "answer": "sofa",
+      "explanation": "豪华的, 豪华的沙发. They relaxed on the plush sofa in the lounge. 他们在休息室的豪华沙发上放松。"
+    },
+    {
+      "question": "_____ sheath",
+      "type": "blank",
+      "answer": "knife",
+      "explanation": "鞘, 刀鞘. The hunter returned the blade to its knife sheath. 猎人把刀刃放回刀鞘。"
+    },
+    {
+      "question": "___ aftermath",
+      "type": "blank",
+      "answer": "the",
+      "explanation": "后果, 后果. The city struggled with the aftermath of the disaster. 城市在灾难的后果中挣扎。"
+    },
+    {
+      "question": "___________ polymath",
+      "type": "blank",
+      "answer": "Renaissance",
+      "explanation": "博学者, 文艺复兴博学者. Leonardo da Vinci was a true Renaissance polymath. 列奥纳多·达·芬奇是真正的文艺复兴博学者。"
+    },
+    {
+      "question": "loath __ _____",
+      "type": "blank",
+      "answer": "to leave",
+      "explanation": "不愿意, 不愿意离开. She was loath to leave the beautiful countryside. 她不愿意离开美丽的乡村。"
+    },
+    {
+      "question": "___'_ wrath",
+      "type": "blank",
+      "answer": "God's",
+      "explanation": "愤怒, 上帝的愤怒. The preacher warned of God's wrath. 传教士警告上帝的愤怒。"
+    },
+    {
+      "question": "breadth __ _________",
+      "type": "blank",
+      "answer": "of knowledge",
+      "explanation": "广度, 知识的广度. The professor's breadth of knowledge impressed students. 教授的知识广度给学生留下了深刻印象。"
+    },
+    {
+      "question": "_____ shibboleth",
+      "type": "blank",
+      "answer": "group",
+      "explanation": "暗语, 群体暗语. The phrase served as a group shibboleth. 这个短语充当群体暗语。"
+    },
+    {
+      "question": "____ wraith",
+      "type": "blank",
+      "answer": "ring",
+      "explanation": "幽灵, 戒灵. The ring wraith haunted the ancient ruins. 戒灵在古代遗迹中出没。"
+    },
+    {
+      "question": "silversmith ____",
+      "type": "blank",
+      "answer": "shop",
+      "explanation": "银匠, 银匠店. The artisan opened a silversmith shop downtown. 工匠在市中心开了一家银匠店。"
+    },
+    {
+      "question": "_____ ___ zenith",
+      "type": "blank",
+      "answer": "reach the",
+      "explanation": "顶点, 达到顶点. The empire would reach the zenith of its power. 帝国将达到其权力的顶点。"
+    },
+    {
+      "question": "___ pith",
+      "type": "blank",
+      "answer": "the",
+      "explanation": "核心, 核心. Let me get to the pith of the matter. 让我说到问题的核心。"
+    },
+    {
+      "question": "____ ____ stealth",
+      "type": "blank",
+      "answer": "move with",
+      "explanation": "隐秘, 隐秘移动. The cat would move with stealth through the garden. 猫会隐秘地穿过花园。"
+    },
+    {
+      "question": "_______ Commonwealth",
+      "type": "blank",
+      "answer": "British",
+      "explanation": "英联邦, 英联邦. Many nations belong to the British Commonwealth. 许多国家属于英联邦。"
+    },
+    {
+      "question": "filth ___ _______",
+      "type": "blank",
+      "answer": "and squalor",
+      "explanation": "污秽, 污秽和肮脏. The slum was filled with filth and squalor. 贫民窟充满了污秽和肮脏。"
+    },
+    {
+      "question": "____ labyrinth",
+      "type": "blank",
+      "answer": "maze",
+      "explanation": "迷宫, 迷宫. The ancient maze labyrinth confused visitors. 古老的迷宫使访客困惑。"
+    },
+    {
+      "question": "mammoth ____",
+      "type": "blank",
+      "answer": "task",
+      "explanation": "巨大的, 巨大的任务. Organizing the event was a mammoth task. 组织活动是一项巨大的任务。"
+    },
+    {
+      "question": "betroth _ ________",
+      "type": "blank",
+      "answer": "a daughter",
+      "explanation": "订婚, 为女儿订婚. In ancient times, parents would betroth a daughter early. 在古代,父母会早早为女儿订婚。"
+    },
+    {
+      "question": "down-to-earth ______",
+      "type": "blank",
+      "answer": "advice",
+      "explanation": "实际的, 实际的建议. The counselor offered down-to-earth advice. 顾问提供了实际的建议。"
+    },
+    {
+      "question": "_ dearth __ ____",
+      "type": "blank",
+      "answer": "a of data",
+      "explanation": "缺乏, 缺乏数据. The study suffered from a dearth of data. 该研究因缺乏数据而受损。"
+    },
+    {
+      "question": "unearth ________",
+      "type": "blank",
+      "answer": "treasure",
+      "explanation": "发掘, 发掘宝藏. Archaeologists managed to unearth treasure from the tomb. 考古学家成功从墓中发掘宝藏。"
+    },
+    {
+      "question": "_____ girth",
+      "type": "blank",
+      "answer": "waist",
+      "explanation": "周长, 腰围. The doctor measured his waist girth. 医生测量了他的腰围。"
+    },
+    {
+      "question": "uncouth _______",
+      "type": "blank",
+      "answer": "manners",
+      "explanation": "粗鲁的, 粗鲁的举止. His uncouth manners shocked polite society. 他粗鲁的举止震惊了上流社会。"
+    },
+    {
+      "question": "_______ outgrowth",
+      "type": "blank",
+      "answer": "natural",
+      "explanation": "产物, 自然产物. The committee was a natural outgrowth of concerns. 委员会是关注的自然产物。"
+    },
+    {
+      "question": "________ alibi",
+      "type": "blank",
+      "answer": "airtight",
+      "explanation": "不在场证明, 无懈可击的不在场证明. The suspect had an airtight alibi for the crime. 嫌疑人对该犯罪有无懈可击的不在场证明。"
+    },
+    {
+      "question": "______ fungi",
+      "type": "blank",
+      "answer": "edible",
+      "explanation": "真菌, 可食用真菌. The forest contained many species of edible fungi. 森林中有许多可食用真菌物种。"
+    },
+    {
+      "question": "alkali _____",
+      "type": "blank",
+      "answer": "metal",
+      "explanation": "碱, 碱金属. Sodium is a common alkali metal. 钠是一种常见的碱金属。"
+    },
+    {
+      "question": "potpourri __ _____",
+      "type": "blank",
+      "answer": "of songs",
+      "explanation": "混合物, 歌曲混合. The concert featured a potpourri of songs. 音乐会以歌曲混合为特色。"
+    },
+    {
+      "question": "___ illuminati",
+      "type": "blank",
+      "answer": "the",
+      "explanation": "光明会, 光明会. Conspiracy theories mention the illuminati. 阴谋论提到了光明会。"
+    },
+    {
+      "question": "_______ literati",
+      "type": "blank",
+      "answer": "Chinese",
+      "explanation": "文人, 中国文人. The Chinese literati valued classical education. 中国文人重视古典教育。"
+    },
+    {
+      "question": "_____ ennui",
+      "type": "blank",
+      "answer": "sheer",
+      "explanation": "倦怠, 纯粹的倦怠. He suffered from sheer ennui in retirement. 他在退休后遭受纯粹的倦怠。"
+    },
+    {
+      "question": "bespeak _______",
+      "type": "blank",
+      "answer": "quality",
+      "explanation": "表明, 表明质量. The craftsmanship would bespeak quality workmanship. 工艺将表明高质量的做工。"
+    },
+    {
+      "question": "freak ________",
+      "type": "blank",
+      "answer": "accident",
+      "explanation": "反常的, 反常的事故. The injury resulted from a freak accident. 伤害是由反常的事故造成的。"
+    },
+    {
+      "question": "_ streak __ ____",
+      "type": "blank",
+      "answer": "a of luck",
+      "explanation": "连续, 一连串的运气. She enjoyed a streak of luck at the casino. 她在赌场享受了一连串的运气。"
+    },
+    {
+      "question": "____ flak",
+      "type": "blank",
+      "answer": "take",
+      "explanation": "批评, 承受批评. The politician had to take flak for the decision. 政客不得不为这一决定承受批评。"
+    },
+    {
+      "question": "____________ throwback",
+      "type": "blank",
+      "answer": "evolutionary",
+      "explanation": "返祖现象, 进化返祖现象. The feature is an evolutionary throwback. 这个特征是一种进化返祖现象。"
+    },
+    {
+      "question": "____ hack",
+      "type": "blank",
+      "answer": "life",
+      "explanation": "窍门, 生活窍门. She shared a useful life hack on social media. 她在社交媒体上分享了一个有用的生活窍门。"
+    },
+    {
+      "question": "______ shack",
+      "type": "blank",
+      "answer": "wooden",
+      "explanation": "小屋, 木屋. The fisherman lived in a simple wooden shack. 渔夫住在一个简单的木屋里。"
+    },
+    {
+      "question": "_______ lumberjack",
+      "type": "blank",
+      "answer": "veteran",
+      "explanation": "伐木工, 资深伐木工. The veteran lumberjack could fell trees efficiently. 资深伐木工能够有效地砍倒树木。"
+    },
+    {
+      "question": "slack ______",
+      "type": "blank",
+      "answer": "demand",
+      "explanation": "萧条的, 萧条的需求. The industry experienced slack demand during recession. 该行业在衰退期间经历了萧条的需求。"
+    },
+    {
+      "question": "___ pack",
+      "type": "blank",
+      "answer": "six",
+      "explanation": "包, 六包. He bought a six pack of beverages. 他买了一个六包饮料。"
+    },
+    {
+      "question": "crack ____",
+      "type": "blank",
+      "answer": "team",
+      "explanation": "精锐的, 精锐团队. The military sent in a crack team of experts. 军方派遣了一支精锐专家团队。"
+    },
+    {
+      "question": "____ track",
+      "type": "blank",
+      "answer": "race",
+      "explanation": "跑道, 赛道. Horses thundered around the race track. 马匹在赛道上疾驰。"
+    },
+    {
+      "question": "_____ sack",
+      "type": "blank",
+      "answer": "gunny",
+      "explanation": "麻袋, 粗麻袋. Workers loaded grain into a gunny sack. 工人把谷物装进粗麻袋。"
+    },
+    {
+      "question": "quack ______",
+      "type": "blank",
+      "answer": "doctor",
+      "explanation": "江湖医生, 江湖医生. The quack doctor was exposed as a fraud. 江湖医生被揭露是骗子。"
+    },
+    {
+      "question": "_______ bottleneck",
+      "type": "blank",
+      "answer": "traffic",
+      "explanation": "瓶颈, 交通瓶颈. A traffic bottleneck slowed commuters every morning. 交通瓶颈每天早上都让通勤者减速。"
+    },
+    {
+      "question": "peck __ ____",
+      "type": "blank",
+      "answer": "at food",
+      "explanation": "啄食, 啄食. The sick bird would only peck at food. 生病的鸟只会啄食。"
+    },
+    {
+      "question": "slick _________",
+      "type": "blank",
+      "answer": "marketing",
+      "explanation": "圆滑的, 圆滑的营销. The company used slick marketing to sell products. 公司使用圆滑的营销来销售产品。"
+    },
+    {
+      "question": "_________ gimmick",
+      "type": "blank",
+      "answer": "marketing",
+      "explanation": "花招, 营销花招. The promotion was dismissed as a marketing gimmick. 该促销被认为是营销花招。"
+    },
+    {
+      "question": "nick ___ _______",
+      "type": "blank",
+      "answer": "the surface",
+      "explanation": "刻痕, 在表面刻痕. The blade would nick the surface slightly. 刀刃会在表面稍微刻痕。"
+    },
+    {
+      "question": "nitpick _______",
+      "type": "blank",
+      "answer": "details",
+      "explanation": "挑剔, 挑剔细节. The editor would nitpick details in every manuscript. 编辑会挑剔每份稿件中的细节。"
+    },
+    {
+      "question": "goldbrick __ ____",
+      "type": "blank",
+      "answer": "at work",
+      "explanation": "偷懒, 在工作中偷懒. The supervisor caught him trying to goldbrick at work. 主管抓到他试图在工作中偷懒。"
+    },
+    {
+      "question": "_____ limerick",
+      "type": "blank",
+      "answer": "comic",
+      "explanation": "打油诗, 喜剧打油诗. He recited a comic limerick at the party. 他在派对上背诵了一首喜剧打油诗。"
+    },
+    {
+      "question": "maverick _______",
+      "type": "blank",
+      "answer": "thinker",
+      "explanation": "特立独行的, 特立独行的思想家. The maverick thinker challenged conventional wisdom. 特立独行的思想家挑战传统智慧。"
+    },
+    {
+      "question": "dock ______",
+      "type": "blank",
+      "answer": "worker",
+      "explanation": "码头, 码头工人. The dock worker loaded cargo onto ships. 码头工人把货物装上船。"
+    },
+    {
+      "question": "_ flock __ _____",
+      "type": "blank",
+      "answer": "a of birds",
+      "explanation": "一群, 一群鸟. A flock of birds flew overhead at sunset. 一群鸟在日落时从头顶飞过。"
+    },
+    {
+      "question": "____ sock",
+      "type": "blank",
+      "answer": "wool",
+      "explanation": "袜子, 羊毛袜子. She wore warm wool sock in winter. 她在冬天穿温暖的羊毛袜子。"
+    },
+    {
+      "question": "buck ___ _____",
+      "type": "blank",
+      "answer": "the trend",
+      "explanation": "反抗, 反抗潮流. The company decided to buck the trend. 公司决定反抗潮流。"
+    },
+    {
+      "question": "shuck _______",
+      "type": "blank",
+      "answer": "oysters",
+      "explanation": "剥壳, 剥牡蛎壳. The chef demonstrated how to shuck oysters properly. 厨师演示如何正确剥牡蛎壳。"
+    },
+    {
+      "question": "ruck __ _______",
+      "type": "blank",
+      "answer": "of clothes",
+      "explanation": "一堆, 一堆衣服. A ruck of clothes lay on the bedroom floor. 一堆衣服躺在卧室地板上。"
+    },
+    {
+      "question": "meek ___ ____",
+      "type": "blank",
+      "answer": "and mild",
+      "explanation": "温顺的, 温顺而温和的. The meek and mild student rarely spoke up. 温顺而温和的学生很少发言。"
+    },
+    {
+      "question": "reek __ _____",
+      "type": "blank",
+      "answer": "of smoke",
+      "explanation": "散发恶臭, 散发烟味. The room would reek of smoke after parties. 派对后房间会散发烟味。"
+    },
+    {
+      "question": "________ creek",
+      "type": "blank",
+      "answer": "mountain",
+      "explanation": "小溪, 山间小溪. The mountain creek provided fresh water. 山间小溪提供了淡水。"
+    },
+    {
+      "question": "________ trek",
+      "type": "blank",
+      "answer": "mountain",
+      "explanation": "艰苦跋涉, 山地艰苦跋涉. The mountain trek took three days to complete. 山地艰苦跋涉花了三天才完成。"
+    },
+    {
+      "question": "balk __ ___ ____",
+      "type": "blank",
+      "answer": "at the cost",
+      "explanation": "犹豫, 对成本犹豫. Customers may balk at the cost of premium products. 顾客可能会对高端产品的成本犹豫。"
+    },
+    {
+      "question": "stalk ___ ____",
+      "type": "blank",
+      "answer": "the prey",
+      "explanation": "跟踪, 跟踪猎物. The lion would stalk the prey silently. 狮子会悄悄地跟踪猎物。"
+    },
+    {
+      "question": "bilk _________",
+      "type": "blank",
+      "answer": "investors",
+      "explanation": "欺骗, 欺骗投资者. The con artist managed to bilk investors of millions. 骗子成功欺骗投资者数百万美元。"
+    },
+    {
+      "question": "caulk _ ____",
+      "type": "blank",
+      "answer": "a seam",
+      "explanation": "填缝, 填缝. Workers need to caulk a seam to prevent leaks. 工人需要填缝以防止泄漏。"
+    }
+  ]
+}
