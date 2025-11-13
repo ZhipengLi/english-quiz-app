@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "carve _ ______",
+      "type": "blank",
+      "answer": "a statue",
+      "explanation": "雕刻, 雕刻雕像. The sculptor spent months trying to carve a statue from marble. 雕塑家花了数月时间试图从大理石中雕刻一座雕像。"
+    },
+    {
+      "question": "____ ___'_ nerve",
+      "type": "blank",
+      "answer": "lose one's",
+      "explanation": "神经, 失去勇气. The climber began to lose one's nerve halfway up the cliff. 登山者在半山腰开始失去勇气。"
+    },
+    {
+      "question": "____ reserve",
+      "type": "blank",
+      "answer": "cash",
+      "explanation": "储备, 现金储备. The company maintained a healthy cash reserve for emergencies. 公司为紧急情况维持了健康的现金储备。"
+    },
+    {
+      "question": "conserve ______",
+      "type": "blank",
+      "answer": "energy",
+      "explanation": "保存, 节约能源. We must conserve energy to reduce our carbon footprint. 我们必须节约能源以减少碳足迹。"
+    },
+    {
+      "question": "________ verve",
+      "type": "blank",
+      "answer": "artistic",
+      "explanation": "热情, 艺术热情. The painter approached each canvas with artistic verve. 画家以艺术热情对待每一幅画布。"
+    },
+    {
+      "question": "ewe ____",
+      "type": "blank",
+      "answer": "lamb",
+      "explanation": "母羊, 母羊和羔羊. The shepherd watched over the ewe lamb in the meadow. 牧羊人在草地上照看母羊和羔羊。"
+    },
+    {
+      "question": "faze ___",
+      "type": "blank",
+      "answer": "him",
+      "explanation": "使困扰, 使他困扰. The criticism didn't faze him in the slightest. 批评丝毫没有使他困扰。"
+    },
+    {
+      "question": "raze _ ________",
+      "type": "blank",
+      "answer": "a building",
+      "explanation": "夷平, 夷平建筑物. Developers plan to raze a building to make room for new construction. 开发商计划夷平一栋建筑物以腾出空间进行新建设。"
+    },
+    {
+      "question": "squeeze ____",
+      "type": "blank",
+      "answer": "tube",
+      "explanation": "挤压, 挤压管子. She had to squeeze tube to get the last bit of toothpaste. 她不得不挤压管子以获得最后一点牙膏。"
+    },
+    {
+      "question": "_____ frieze",
+      "type": "blank",
+      "answer": "stone",
+      "explanation": "饰带, 石雕饰带. The ancient temple featured an elaborate stone frieze. 古代寺庙有精美的石雕饰带。"
+    },
+    {
+      "question": "______ maize",
+      "type": "blank",
+      "answer": "yellow",
+      "explanation": "玉米, 黄玉米. Farmers harvested fields of golden yellow maize. 农民收获了金黄色的玉米田。"
+    },
+    {
+      "question": "ostracize _ ______",
+      "type": "blank",
+      "answer": "a member",
+      "explanation": "排斥, 排斥成员. The group voted to ostracize a member who violated their rules. 该团体投票决定排斥违反规则的成员。"
+    },
+    {
+      "question": "publicize ___ _____",
+      "type": "blank",
+      "answer": "the event",
+      "explanation": "宣传, 宣传活动. The organizers used social media to publicize the event. 组织者使用社交媒体来宣传活动。"
+    },
+    {
+      "question": "oxidize _______",
+      "type": "blank",
+      "answer": "rapidly",
+      "explanation": "氧化, 快速氧化. Iron will oxidize rapidly when exposed to moisture. 铁暴露在潮湿环境中会快速氧化。"
+    },
+    {
+      "question": "gormandize __",
+      "type": "blank",
+      "answer": "on",
+      "explanation": "狼吞虎咽, 狼吞虎咽地吃. The guests continued to gormandize on the lavish buffet. 客人们继续狼吞虎咽地吃着丰盛的自助餐。"
+    },
+    {
+      "question": "aggrandize _____",
+      "type": "blank",
+      "answer": "power",
+      "explanation": "扩大, 扩大权力. The dictator sought to aggrandize power at every opportunity. 独裁者试图在每一个机会扩大权力。"
+    },
+    {
+      "question": "eulogize ___ ____",
+      "type": "blank",
+      "answer": "the dead",
+      "explanation": "称赞, 称赞逝者. Friends gathered to eulogize the dead at the memorial service. 朋友们聚集在追悼会上称赞逝者。"
+    },
+    {
+      "question": "specialize __",
+      "type": "blank",
+      "answer": "in",
+      "explanation": "专门从事, 专门从事于. The law firm decided to specialize in corporate litigation. 这家律师事务所决定专门从事公司诉讼。"
+    },
+    {
+      "question": "materialize _____",
+      "type": "blank",
+      "answer": "dream",
+      "explanation": "实现, 实现梦想. Hard work helped materialize dream of owning a business. 努力工作帮助实现了拥有企业的梦想。"
+    },
+    {
+      "question": "penalize _ ____",
+      "type": "blank",
+      "answer": "a team",
+      "explanation": "惩罚, 惩罚球队. The referee decided to penalize a team for unsportsmanlike conduct. 裁判决定因不当行为惩罚球队。"
+    },
+    {
+      "question": "externalize _____",
+      "type": "blank",
+      "answer": "costs",
+      "explanation": "外部化, 外部化成本. Companies often try to externalize costs onto society. 公司经常试图将成本外部化给社会。"
+    },
+    {
+      "question": "generalize ____",
+      "type": "blank",
+      "answer": "rule",
+      "explanation": "概括, 概括规则. Scientists attempt to generalize rule from specific observations. 科学家试图从具体观察中概括规则。"
+    },
+    {
+      "question": "demoralize ___ ____",
+      "type": "blank",
+      "answer": "the team",
+      "explanation": "使士气低落, 使团队士气低落. The crushing defeat threatened to demoralize the team. 惨败威胁要使团队士气低落。"
+    },
+    {
+      "question": "decentralize _____",
+      "type": "blank",
+      "answer": "power",
+      "explanation": "分散, 分散权力. The reform aimed to decentralize power from the capital. 改革旨在将权力从首都分散出去。"
+    },
+    {
+      "question": "capitalize __",
+      "type": "blank",
+      "answer": "on",
+      "explanation": "利用, 利用. Smart investors know how to capitalize on market opportunities. 聪明的投资者知道如何利用市场机会。"
+    },
+    {
+      "question": "vitalize ___ _______",
+      "type": "blank",
+      "answer": "the economy",
+      "explanation": "使充满活力, 使经济充满活力. New policies were designed to vitalize the economy. 新政策旨在使经济充满活力。"
+    },
+    {
+      "question": "revitalize ________",
+      "type": "blank",
+      "answer": "downtown",
+      "explanation": "振兴, 振兴市中心. The city invested millions to revitalize downtown. 该市投资数百万美元来振兴市中心。"
+    },
+    {
+      "question": "sterilize _________",
+      "type": "blank",
+      "answer": "equipment",
+      "explanation": "消毒, 消毒设备. Medical staff must sterilize equipment before each surgery. 医务人员必须在每次手术前消毒设备。"
+    },
+    {
+      "question": "fossilize _______",
+      "type": "blank",
+      "answer": "remains",
+      "explanation": "使成化石, 使遗骸成化石. Over millions of years, minerals fossilize remains of ancient creatures. 经过数百万年,矿物质使古代生物的遗骸成为化石。"
+    },
+    {
+      "question": "fertilize ____",
+      "type": "blank",
+      "answer": "soil",
+      "explanation": "施肥, 给土壤施肥. Farmers fertilize soil to improve crop yields. 农民给土壤施肥以提高作物产量。"
+    },
+    {
+      "question": "utilize _________",
+      "type": "blank",
+      "answer": "resources",
+      "explanation": "利用, 利用资源. The company learned to utilize resources more efficiently. 公司学会了更有效地利用资源。"
+    },
+    {
+      "question": "monopolize _________",
+      "type": "blank",
+      "answer": "attention",
+      "explanation": "垄断, 垄断注意力. The speaker tended to monopolize attention at meetings. 演讲者往往在会议上垄断注意力。"
+    },
+    {
+      "question": "victimize ___ ____",
+      "type": "blank",
+      "answer": "the weak",
+      "explanation": "使受害, 使弱者受害. Criminals often victimize the weak and vulnerable. 罪犯经常使弱者和弱势群体受害。"
+    },
+    {
+      "question": "maximize ______",
+      "type": "blank",
+      "answer": "profit",
+      "explanation": "最大化, 最大化利润. Businesses aim to maximize profit while minimizing costs. 企业旨在最大化利润同时最小化成本。"
+    },
+    {
+      "question": "epitomize __________",
+      "type": "blank",
+      "answer": "excellence",
+      "explanation": "体现, 体现卓越. Her performance seemed to epitomize excellence in every way. 她的表现似乎在各方面都体现了卓越。"
+    },
+    {
+      "question": "galvanize _______",
+      "type": "blank",
+      "answer": "support",
+      "explanation": "激励, 激励支持. The crisis helped galvanize support for reform. 危机帮助激励了对改革的支持。"
+    },
+    {
+      "question": "homogenize ____",
+      "type": "blank",
+      "answer": "milk",
+      "explanation": "使均质, 使牛奶均质. Dairies homogenize milk to prevent cream separation. 乳制品厂使牛奶均质以防止奶油分离。"
+    },
+    {
+      "question": "desalinize _____",
+      "type": "blank",
+      "answer": "water",
+      "explanation": "淡化, 淡化水. Coastal cities build plants to desalinize water from the ocean. 沿海城市建造工厂从海洋中淡化水。"
+    },
+    {
+      "question": "scrutinize ____",
+      "type": "blank",
+      "answer": "data",
+      "explanation": "仔细检查, 仔细检查数据. Auditors will scrutinize data for any irregularities. 审计员会仔细检查数据以寻找任何违规行为。"
+    },
+    {
+      "question": "antagonize _________",
+      "type": "blank",
+      "answer": "neighbors",
+      "explanation": "对抗, 对抗邻居. His loud parties continued to antagonize neighbors. 他吵闹的派对继续对抗邻居。"
+    },
+    {
+      "question": "lionize _ ____",
+      "type": "blank",
+      "answer": "a hero",
+      "explanation": "崇拜, 崇拜英雄. The media began to lionize a hero who saved the child. 媒体开始崇拜拯救孩子的英雄。"
+    },
+    {
+      "question": "colonize ____",
+      "type": "blank",
+      "answer": "Mars",
+      "explanation": "殖民, 殖民火星. Space agencies discuss plans to colonize Mars in the future. 航天机构讨论未来殖民火星的计划。"
+    },
+    {
+      "question": "sermonize __ ______",
+      "type": "blank",
+      "answer": "at length",
+      "explanation": "说教, 长篇说教. The politician would sermonize at length about moral values. 这位政客会长篇大论地说教道德价值观。"
+    },
+    {
+      "question": "plagiarize _ _____",
+      "type": "blank",
+      "answer": "a paper",
+      "explanation": "剽窃, 剽窃论文. The student was expelled for attempting to plagiarize a paper. 这名学生因试图剽窃论文而被开除。"
+    },
+    {
+      "question": "polarize _______",
+      "type": "blank",
+      "answer": "opinion",
+      "explanation": "使两极化, 使意见两极化. The controversial issue continued to polarize opinion nationwide. 这个有争议的问题继续使全国意见两极化。"
+    },
+    {
+      "question": "particularize _______",
+      "type": "blank",
+      "answer": "details",
+      "explanation": "详述, 详述细节. The witness was asked to particularize details of what happened. 证人被要求详述发生的细节。"
+    },
+    {
+      "question": "bowdlerize _ ____",
+      "type": "blank",
+      "answer": "a text",
+      "explanation": "删改, 删改文本. Victorian editors would bowdlerize a text to remove offensive content. 维多利亚时代的编辑会删改文本以删除冒犯性内容。"
+    },
+    {
+      "question": "characterize ________",
+      "type": "blank",
+      "answer": "behavior",
+      "explanation": "描述, 描述行为. Psychologists study factors that characterize behavior patterns. 心理学家研究描述行为模式的因素。"
+    },
+    {
+      "question": "cauterize _____",
+      "type": "blank",
+      "answer": "wound",
+      "explanation": "烧灼, 烧灼伤口. Surgeons may cauterize wound to stop bleeding. 外科医生可能烧灼伤口以止血。"
+    },
+    {
+      "question": "pulverize ___ ____",
+      "type": "blank",
+      "answer": "the rock",
+      "explanation": "粉碎, 粉碎岩石. Heavy machinery can pulverize the rock into fine powder. 重型机械可以将岩石粉碎成细粉末。"
+    },
+    {
+      "question": "satirize ________",
+      "type": "blank",
+      "answer": "politics",
+      "explanation": "讽刺, 讽刺政治. The comedian used his show to satirize politics. 喜剧演员利用他的节目来讽刺政治。"
+    },
+    {
+      "question": "vaporize _____",
+      "type": "blank",
+      "answer": "water",
+      "explanation": "使蒸发, 使水蒸发. High temperatures will vaporize water instantly. 高温会使水立即蒸发。"
+    },
+    {
+      "question": "temporize ___ ____",
+      "type": "blank",
+      "answer": "for time",
+      "explanation": "拖延, 拖延时间. The negotiator tried to temporize for time while awaiting instructions. 谈判代表试图拖延时间等待指示。"
+    },
+    {
+      "question": "extemporize _______",
+      "type": "blank",
+      "answer": "remarks",
+      "explanation": "即兴发言, 即兴发言. When his notes were lost, he had to extemporize remarks. 当他的笔记丢失时,他不得不即兴发言。"
+    },
+    {
+      "question": "idolatrize ____",
+      "type": "blank",
+      "answer": "fame",
+      "explanation": "崇拜, 崇拜名望. Society tends to idolatrize fame and celebrity. 社会倾向于崇拜名望和名人。"
+    },
+    {
+      "question": "pasteurize ____",
+      "type": "blank",
+      "answer": "milk",
+      "explanation": "巴氏消毒, 巴氏消毒牛奶. Dairies pasteurize milk to kill harmful bacteria. 乳制品厂对牛奶进行巴氏消毒以杀死有害细菌。"
+    },
+    {
+      "question": "capsize _ ____",
+      "type": "blank",
+      "answer": "a boat",
+      "explanation": "倾覆, 使船倾覆. Strong winds threatened to capsize a boat in rough seas. 强风威胁要在波涛汹涌的海面上使船倾覆。"
+    },
+    {
+      "question": "schematize ____",
+      "type": "blank",
+      "answer": "idea",
+      "explanation": "使系统化, 使想法系统化. The professor tried to schematize idea into a clear framework. 教授试图将想法系统化为一个清晰的框架。"
+    },
+    {
+      "question": "stigmatize _ _____",
+      "type": "blank",
+      "answer": "a group",
+      "explanation": "污名化, 污名化群体. Society should not stigmatize a group based on stereotypes. 社会不应该基于刻板印象污名化群体。"
+    },
+    {
+      "question": "sensitize ___ ______",
+      "type": "blank",
+      "answer": "the public",
+      "explanation": "使敏感, 使公众敏感. The campaign aimed to sensitize the public to environmental issues. 这项运动旨在使公众对环境问题敏感。"
+    },
+    {
+      "question": "amortize _ ____",
+      "type": "blank",
+      "answer": "a loan",
+      "explanation": "分期偿还, 分期偿还贷款. Homeowners typically amortize a loan over thirty years. 房主通常在三十年内分期偿还贷款。"
+    },
+    {
+      "question": "deputize _______",
+      "type": "blank",
+      "answer": "officer",
+      "explanation": "授权, 授权警官. The sheriff had authority to deputize officer in emergencies. 警长有权在紧急情况下授权警官。"
+    },
+    {
+      "question": "proselytize ________",
+      "type": "blank",
+      "answer": "religion",
+      "explanation": "劝人改宗, 劝人改信宗教. Missionaries traveled abroad to proselytize religion. 传教士出国劝人改信宗教。"
+    },
+    {
+      "question": "paralyze ___ ______",
+      "type": "blank",
+      "answer": "the system",
+      "explanation": "使瘫痪, 使系统瘫痪. The cyberattack threatened to paralyze the system completely. 网络攻击威胁要使系统完全瘫痪。"
+    },
+    {
+      "question": "____ chef",
+      "type": "blank",
+      "answer": "head",
+      "explanation": "厨师, 主厨. The head chef supervises all kitchen operations. 主厨监督所有厨房操作。"
+    },
+    {
+      "question": "debrief _______",
+      "type": "blank",
+      "answer": "soldier",
+      "explanation": "询问, 询问士兵. Officers would debrief soldier after each mission. 军官会在每次任务后询问士兵。"
+    },
+    {
+      "question": "____________ grief",
+      "type": "blank",
+      "answer": "overwhelming",
+      "explanation": "悲痛, 压倒性的悲痛. The family experienced overwhelming grief after the loss. 家人在失去亲人后经历了压倒性的悲痛。"
+    },
+    {
+      "question": "________ ___ chaff",
+      "type": "blank",
+      "answer": "separate the",
+      "explanation": "谷壳, 分离谷壳. The winnowing process helps separate the chaff from grain. 簸谷过程有助于将谷壳与谷物分离。"
+    },
+    {
+      "question": "quaff ___",
+      "type": "blank",
+      "answer": "ale",
+      "explanation": "痛饮, 痛饮麦芽酒. Thirsty travelers stopped at the tavern to quaff ale. 口渴的旅行者在小酒馆停下来痛饮麦芽酒。"
+    },
+    {
+      "question": "_______ skiff",
+      "type": "blank",
+      "answer": "fishing",
+      "explanation": "小船, 渔船. The old fisherman rowed his small fishing skiff to shore. 老渔夫划着他的小渔船上岸。"
+    },
+    {
+      "question": "______ sheriff",
+      "type": "blank",
+      "answer": "county",
+      "explanation": "警长, 县警长. The county sheriff was elected to maintain law and order. 县警长被选举来维持法律和秩序。"
+    },
+    {
+      "question": "_____'_ tiff",
+      "type": "blank",
+      "answer": "lover's",
+      "explanation": "争吵, 情侣争吵. They had a minor lover's tiff but reconciled quickly. 他们发生了一场小情侣争吵但很快和解了。"
+    },
+    {
+      "question": "plaintiff ________",
+      "type": "blank",
+      "answer": "attorney",
+      "explanation": "原告, 原告律师. The plaintiff attorney presented compelling evidence to the jury. 原告律师向陪审团提出了令人信服的证据。"
+    },
+    {
+      "question": "stiff _______",
+      "type": "blank",
+      "answer": "penalty",
+      "explanation": "严厉的, 严厉的惩罚. The judge imposed a stiff penalty for the serious offense. 法官对严重罪行施加了严厉的惩罚。"
+    },
+    {
+      "question": "doff ___'_ ___",
+      "type": "blank",
+      "answer": "one's hat",
+      "explanation": "脱下, 脱下帽子. Gentlemen would doff one's hat when greeting a lady. 绅士在问候女士时会脱下帽子。"
+    },
+    {
+      "question": "bluff ____",
+      "type": "blank",
+      "answer": "call",
+      "explanation": "虚张声势, 要求摊牌. The poker player decided to bluff call on a weak hand. 扑克玩家决定用弱牌虚张声势要求摊牌。"
+    },
+    {
+      "question": "______ foodstuff",
+      "type": "blank",
+      "answer": "staple",
+      "explanation": "食品, 主食. Rice is a staple foodstuff in many Asian countries. 大米是许多亚洲国家的主食。"
+    },
+    {
+      "question": "_________ motif",
+      "type": "blank",
+      "answer": "recurring",
+      "explanation": "主题, 反复出现的主题. The novel featured a recurring motif of water and rebirth. 小说以水和重生为反复出现的主题。"
+    },
+    {
+      "question": "___-______ pelf",
+      "type": "blank",
+      "answer": "ill-gotten",
+      "explanation": "不义之财, 不义之财. The corrupt official amassed ill-gotten pelf through bribes. 腐败官员通过贿赂积累了不义之财。"
+    },
+    {
+      "question": "_____ reproof",
+      "type": "blank",
+      "answer": "stern",
+      "explanation": "责备, 严厉的责备. The teacher delivered a stern reproof for the student's behavior. 老师因学生的行为给予了严厉的责备。"
+    },
+    {
+      "question": "_______ disproof",
+      "type": "blank",
+      "answer": "logical",
+      "explanation": "反证, 逻辑反证. The scientist provided logical disproof of the hypothesis. 科学家提供了该假设的逻辑反证。"
+    },
+    {
+      "question": "____ scarf",
+      "type": "blank",
+      "answer": "silk",
+      "explanation": "围巾, 丝绸围巾. She wrapped a luxurious silk scarf around her neck. 她在脖子上围了一条奢华的丝绸围巾。"
+    },
+    {
+      "question": "______ dwarf",
+      "type": "blank",
+      "answer": "garden",
+      "explanation": "矮人, 花园矮人. A colorful garden dwarf stood among the flowers. 一个色彩鲜艳的花园矮人站在花丛中。"
+    },
+    {
+      "question": "____-______ windbag",
+      "type": "blank",
+      "answer": "long-winded",
+      "explanation": "夸夸其谈的人, 长篇大论的夸夸其谈者. The long-winded windbag monopolized the entire meeting. 这个长篇大论的夸夸其谈者垄断了整个会议。"
+    },
+    {
+      "question": "fag ___",
+      "type": "blank",
+      "answer": "end",
+      "explanation": "末端, 末端. They arrived at the fag end of the performance. 他们在演出的末端到达。"
+    },
+    {
+      "question": "___ lag",
+      "type": "blank",
+      "answer": "jet",
+      "explanation": "时差, 时差反应. International travelers often suffer from jet lag. 国际旅行者经常遭受时差反应。"
+    },
+    {
+      "question": "flag ________",
+      "type": "blank",
+      "answer": "interest",
+      "explanation": "减弱, 兴趣减弱. Audience attention began to flag interest halfway through the speech. 观众的注意力在演讲进行到一半时开始兴趣减弱。"
+    },
+    {
+      "question": "________ slag",
+      "type": "blank",
+      "answer": "smelting",
+      "explanation": "熔渣, 冶炼熔渣. Industrial smelting slag must be disposed of properly. 工业冶炼熔渣必须妥善处理。"
+    },
+    {
+      "question": "rag ____",
+      "type": "blank",
+      "answer": "doll",
+      "explanation": "破布, 布娃娃. The child clutched her beloved rag doll. 孩子紧紧抓着她心爱的布娃娃。"
+    },
+    {
+      "question": "brag _____",
+      "type": "blank",
+      "answer": "about",
+      "explanation": "吹嘘, 吹嘘关于. He would constantly brag about his accomplishments. 他会不断吹嘘自己的成就。"
+    },
+    {
+      "question": "_____ crag",
+      "type": "blank",
+      "answer": "rocky",
+      "explanation": "峭壁, 岩石峭壁. Eagles nest on the steep rocky crag. 鹰在陡峭的岩石峭壁上筑巢。"
+    },
+    {
+      "question": "_____ tag",
+      "type": "blank",
+      "answer": "price",
+      "explanation": "标签, 价格标签. The price tag showed the item was on sale. 价格标签显示该商品正在促销。"
+    },
+    {
+      "question": "___ rig",
+      "type": "blank",
+      "answer": "oil",
+      "explanation": "钻井平台, 石油钻井平台. Workers on the offshore oil rig work in shifts. 海上石油钻井平台的工人轮班工作。"
+    },
+    {
+      "question": "____-_________ prig",
+      "type": "blank",
+      "answer": "self-righteous",
+      "explanation": "自命清高的人, 自命清高的人. The self-righteous prig criticized everyone's behavior. 这个自命清高的人批评每个人的行为。"
+    },
+    {
+      "question": "sprig __ ____",
+      "type": "blank",
+      "answer": "of mint",
+      "explanation": "小枝, 薄荷小枝. She garnished the drink with a fresh sprig of mint. 她用一枝新鲜的薄荷装饰饮料。"
+    },
+    {
+      "question": "________ wig",
+      "type": "blank",
+      "answer": "powdered",
+      "explanation": "假发, 扑粉假发. Colonial gentlemen wore elegant powdered wig. 殖民时期的绅士戴着优雅的扑粉假发。"
+    },
+    {
+      "question": "bracing ___",
+      "type": "blank",
+      "answer": "air",
+      "explanation": "令人振奋的, 令人振奋的空气. The bracing air of the mountains invigorated the hikers. 山间令人振奋的空气使徒步旅行者精神焕发。"
+    },
+    {
+      "question": "____ icing",
+      "type": "blank",
+      "answer": "cake",
+      "explanation": "糖霜, 蛋糕糖霜. The baker decorated the cake icing with intricate designs. 面包师用复杂的图案装饰蛋糕糖霜。"
+    },
+    {
+      "question": "entrancing ___________",
+      "type": "blank",
+      "answer": "performance",
+      "explanation": "迷人的, 迷人的表演. The ballet dancer gave an entrancing performance. 芭蕾舞演员呈现了一场迷人的表演。"
+    },
+    {
+      "question": "____ fencing",
+      "type": "blank",
+      "answer": "foil",
+      "explanation": "击剑, 花剑击剑. She competed in foil fencing at the Olympics. 她在奥运会上参加了花剑击剑比赛。"
+    }
+  ]
+}
