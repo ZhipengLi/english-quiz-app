@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "menial ___",
+      "type": "blank",
+      "answer": "job",
+      "explanation": "卑微的, 卑微的工作. He refused to accept menial job despite financial struggles. 尽管经济困难,他拒绝接受卑微的工作。"
+    },
+    {
+      "question": "venial ___",
+      "type": "blank",
+      "answer": "sin",
+      "explanation": "可宽恕的, 可宽恕的罪. The priest distinguished between mortal and venial sin. 神父区分了不可饶恕的罪和可宽恕的罪。"
+    },
+    {
+      "question": "biennial __________",
+      "type": "blank",
+      "answer": "exhibition",
+      "explanation": "两年一次的, 两年一次的展览. The art museum hosts a biennial exhibition. 艺术博物馆举办两年一次的展览。"
+    },
+    {
+      "question": "perennial _____",
+      "type": "blank",
+      "answer": "plant",
+      "explanation": "多年生的, 多年生植物. The garden featured many perennial plant varieties. 花园有许多多年生植物品种。"
+    },
+    {
+      "question": "marsupial _____",
+      "type": "blank",
+      "answer": "pouch",
+      "explanation": "有袋动物, 有袋动物育儿袋. Kangaroos carry their young in a marsupial pouch. 袋鼠在育儿袋中携带幼崽。"
+    },
+    {
+      "question": "actuarial _____",
+      "type": "blank",
+      "answer": "table",
+      "explanation": "精算的, 精算表. Insurance companies use actuarial table to calculate premiums. 保险公司使用精算表来计算保费。"
+    },
+    {
+      "question": "aerial ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "空中的, 空中视角. The drone captured a stunning aerial view of the city. 无人机拍摄了城市令人惊叹的空中视角。"
+    },
+    {
+      "question": "imperial ______",
+      "type": "blank",
+      "answer": "palace",
+      "explanation": "帝国的, 皇宫. The imperial palace displayed magnificent architecture. 皇宫展示了宏伟的建筑。"
+    },
+    {
+      "question": "magisterial ____",
+      "type": "blank",
+      "answer": "tone",
+      "explanation": "威严的, 威严的语气. The professor spoke in a magisterial tone. 教授用威严的语气说话。"
+    },
+    {
+      "question": "___ memorial",
+      "type": "blank",
+      "answer": "war",
+      "explanation": "纪念碑, 战争纪念碑. The war memorial honored fallen soldiers. 战争纪念碑纪念阵亡士兵。"
+    },
+    {
+      "question": "_____ ____ immemorial",
+      "type": "blank",
+      "answer": "since time",
+      "explanation": "远古的, 自古以来. This tradition has existed since time immemorial. 这个传统自古以来就存在。"
+    },
+    {
+      "question": "tonsorial ___",
+      "type": "blank",
+      "answer": "art",
+      "explanation": "理发的, 理发艺术. The barber practiced the tonsorial art with skill. 理发师娴熟地实践理发艺术。"
+    },
+    {
+      "question": "piscatorial _______",
+      "type": "blank",
+      "answer": "village",
+      "explanation": "渔业的, 渔村. The piscatorial village depended on fishing for income. 渔村依靠捕鱼为生。"
+    },
+    {
+      "question": "pictorial ______",
+      "type": "blank",
+      "answer": "record",
+      "explanation": "图画的, 图画记录. The magazine provided a pictorial record of events. 杂志提供了事件的图画记录。"
+    },
+    {
+      "question": "sartorial ________",
+      "type": "blank",
+      "answer": "elegance",
+      "explanation": "服装的, 服装优雅. The gentleman was known for his sartorial elegance. 这位绅士以其服装优雅而闻名。"
+    },
+    {
+      "question": "reportorial _____",
+      "type": "blank",
+      "answer": "style",
+      "explanation": "记者的, 记者风格. The author adopted a reportorial style for the book. 作者为这本书采用了记者风格。"
+    },
+    {
+      "question": "terrestrial _______",
+      "type": "blank",
+      "answer": "habitat",
+      "explanation": "陆地的, 陆地栖息地. Many species thrive in terrestrial habitat. 许多物种在陆地栖息地中茁壮成长。"
+    },
+    {
+      "question": "burial ____",
+      "type": "blank",
+      "answer": "site",
+      "explanation": "埋葬, 墓地. Archaeologists excavated an ancient burial site. 考古学家挖掘了一个古代墓地。"
+    },
+    {
+      "question": "mercurial ___________",
+      "type": "blank",
+      "answer": "temperament",
+      "explanation": "善变的, 善变的性格. The artist had a mercurial temperament. 这位艺术家有善变的性格。"
+    },
+    {
+      "question": "ambrosial _____",
+      "type": "blank",
+      "answer": "aroma",
+      "explanation": "芳香的, 芳香的香味. An ambrosial aroma filled the bakery. 芳香的香味充满了面包店。"
+    },
+    {
+      "question": "palatial _________",
+      "type": "blank",
+      "answer": "residence",
+      "explanation": "宫殿般的, 宫殿般的住所. The billionaire owned a palatial residence. 亿万富翁拥有一座宫殿般的住所。"
+    },
+    {
+      "question": "spatial _________",
+      "type": "blank",
+      "answer": "awareness",
+      "explanation": "空间的, 空间意识. Pilots require excellent spatial awareness. 飞行员需要出色的空间意识。"
+    },
+    {
+      "question": "insubstantial ________",
+      "type": "blank",
+      "answer": "evidence",
+      "explanation": "不充分的, 不充分的证据. The prosecution offered only insubstantial evidence. 检方只提供了不充分的证据。"
+    },
+    {
+      "question": "circumstantial ________",
+      "type": "blank",
+      "answer": "evidence",
+      "explanation": "间接的, 间接证据. The case relied heavily on circumstantial evidence. 该案严重依赖间接证据。"
+    },
+    {
+      "question": "confidential ___________",
+      "type": "blank",
+      "answer": "information",
+      "explanation": "机密的, 机密信息. The document contained confidential information. 该文件包含机密信息。"
+    },
+    {
+      "question": "providential ______",
+      "type": "blank",
+      "answer": "escape",
+      "explanation": "天赐的, 天赐的逃脱. Their providential escape from danger seemed miraculous. 他们天赐的逃脱危险似乎是奇迹。"
+    },
+    {
+      "question": "tangential ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "离题的, 离题的评论. His tangential remark distracted from the main point. 他离题的评论分散了主要观点的注意力。"
+    },
+    {
+      "question": "deferential ____",
+      "type": "blank",
+      "answer": "tone",
+      "explanation": "恭敬的, 恭敬的语气. The assistant spoke in a deferential tone. 助理用恭敬的语气说话。"
+    },
+    {
+      "question": "existential _____",
+      "type": "blank",
+      "answer": "angst",
+      "explanation": "存在的, 存在焦虑. The character experienced existential angst. 这个角色经历了存在焦虑。"
+    },
+    {
+      "question": "sequential _____",
+      "type": "blank",
+      "answer": "order",
+      "explanation": "顺序的, 顺序. The instructions must be followed in sequential order. 必须按顺序遵循指示。"
+    },
+    {
+      "question": "inconsequential ______",
+      "type": "blank",
+      "answer": "detail",
+      "explanation": "不重要的, 不重要的细节. The dispute was over an inconsequential detail. 争论是关于一个不重要的细节。"
+    },
+    {
+      "question": "nuptial ____",
+      "type": "blank",
+      "answer": "vows",
+      "explanation": "婚礼的, 婚礼誓言. The couple exchanged nuptial vows at the ceremony. 这对夫妇在仪式上交换了婚礼誓言。"
+    },
+    {
+      "question": "martial ___",
+      "type": "blank",
+      "answer": "law",
+      "explanation": "军事的, 戒严法. The government declared martial law during the crisis. 政府在危机期间宣布了戒严法。"
+    },
+    {
+      "question": "partial _______",
+      "type": "blank",
+      "answer": "payment",
+      "explanation": "部分的, 部分付款. The buyer made a partial payment on the house. 买家支付了房子的部分款项。"
+    },
+    {
+      "question": "impartial _____",
+      "type": "blank",
+      "answer": "judge",
+      "explanation": "公正的, 公正的法官. An impartial judge must decide the case fairly. 公正的法官必须公平地裁决案件。"
+    },
+    {
+      "question": "bestial ___",
+      "type": "blank",
+      "answer": "act",
+      "explanation": "野兽般的, 野兽般的行为. The crime was a bestial act of violence. 该罪行是野兽般的暴力行为。"
+    },
+    {
+      "question": "celestial ______",
+      "type": "blank",
+      "answer": "sphere",
+      "explanation": "天体的, 天球. Astronomers study objects in the celestial sphere. 天文学家研究天球中的物体。"
+    },
+    {
+      "question": "colloquial ______",
+      "type": "blank",
+      "answer": "speech",
+      "explanation": "口语的, 口语. The novel used colloquial speech to create authenticity. 小说使用口语来创造真实性。"
+    },
+    {
+      "question": "convivial ______",
+      "type": "blank",
+      "answer": "dinner",
+      "explanation": "欢乐的, 欢乐的晚餐. Friends gathered for a convivial dinner. 朋友们聚在一起享用欢乐的晚餐。"
+    },
+    {
+      "question": "fluvial _______",
+      "type": "blank",
+      "answer": "process",
+      "explanation": "河流的, 河流作用. Erosion is a fluvial process that shapes landscapes. 侵蚀是塑造地貌的河流作用。"
+    },
+    {
+      "question": "____-_______ mammal",
+      "type": "blank",
+      "answer": "warm-blooded",
+      "explanation": "哺乳动物, 温血哺乳动物. Humans are warm-blooded mammal that regulate body temperature. 人类是调节体温的温血哺乳动物。"
+    },
+    {
+      "question": "banal ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "陈腐的, 陈腐的评论. His banal remark added nothing to the discussion. 他陈腐的评论对讨论毫无帮助。"
+    },
+    {
+      "question": "bacchanal _______",
+      "type": "blank",
+      "answer": "revelry",
+      "explanation": "狂欢的, 狂欢作乐. The festival descended into bacchanal revelry. 节日沦为狂欢作乐。"
+    },
+    {
+      "question": "_______ arsenal",
+      "type": "blank",
+      "answer": "weapons",
+      "explanation": "军火库, 武器军火库. The military maintained a large weapons arsenal. 军方维持了一个大型武器军火库。"
+    },
+    {
+      "question": "venal ________",
+      "type": "blank",
+      "answer": "official",
+      "explanation": "贪污的, 贪污的官员. The venal official accepted bribes regularly. 贪污的官员经常收受贿赂。"
+    },
+    {
+      "question": "cardinal ____",
+      "type": "blank",
+      "answer": "rule",
+      "explanation": "最重要的, 最重要的规则. Safety is the cardinal rule in the laboratory. 安全是实验室最重要的规则。"
+    },
+    {
+      "question": "original ___",
+      "type": "blank",
+      "answer": "sin",
+      "explanation": "最初的, 原罪. The doctrine of original sin is central to Christianity. 原罪教义是基督教的核心。"
+    },
+    {
+      "question": "aboriginal ___",
+      "type": "blank",
+      "answer": "art",
+      "explanation": "土著的, 土著艺术. The museum displayed aboriginal art from Australia. 博物馆展示了来自澳大利亚的土著艺术。"
+    },
+    {
+      "question": "marginal ____",
+      "type": "blank",
+      "answer": "note",
+      "explanation": "边缘的, 页边注释. The student wrote marginal note in the textbook. 学生在教科书中写了页边注释。"
+    },
+    {
+      "question": "seminal ____",
+      "type": "blank",
+      "answer": "work",
+      "explanation": "开创性的, 开创性作品. Darwin's theory was a seminal work in biology. 达尔文的理论是生物学的开创性作品。"
+    },
+    {
+      "question": "subliminal _______",
+      "type": "blank",
+      "answer": "message",
+      "explanation": "潜意识的, 潜意识信息. Advertisers sometimes use subliminal message. 广告商有时使用潜意识信息。"
+    },
+    {
+      "question": "nominal ___",
+      "type": "blank",
+      "answer": "fee",
+      "explanation": "名义上的, 名义费用. The club charges only a nominal fee for membership. 俱乐部只收取名义会员费。"
+    },
+    {
+      "question": "terminal _______",
+      "type": "blank",
+      "answer": "illness",
+      "explanation": "晚期的, 晚期疾病. The patient was diagnosed with terminal illness. 患者被诊断为晚期疾病。"
+    },
+    {
+      "question": "provisional __________",
+      "type": "blank",
+      "answer": "government",
+      "explanation": "临时的, 临时政府. A provisional government ruled after the revolution. 革命后临时政府统治。"
+    },
+    {
+      "question": "unidimensional ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "单一维度的, 单一维度的观点. Critics called it a unidimensional view of the problem. 批评者称其为对问题的单一维度观点。"
+    },
+    {
+      "question": "rational ______",
+      "type": "blank",
+      "answer": "choice",
+      "explanation": "理性的, 理性选择. Making a rational choice requires careful analysis. 做出理性选择需要仔细分析。"
+    },
+    {
+      "question": "gravitational ____",
+      "type": "blank",
+      "answer": "pull",
+      "explanation": "引力的, 引力. The moon's gravitational pull affects ocean tides. 月球的引力影响海洋潮汐。"
+    },
+    {
+      "question": "fractional _____",
+      "type": "blank",
+      "answer": "share",
+      "explanation": "部分的, 部分股份. Investors can purchase fractional share of stock. 投资者可以购买部分股份。"
+    },
+    {
+      "question": "intentional ___",
+      "type": "blank",
+      "answer": "act",
+      "explanation": "故意的, 故意行为. The damage was caused by an intentional act. 损害是由故意行为造成的。"
+    },
+    {
+      "question": "conventional ______",
+      "type": "blank",
+      "answer": "wisdom",
+      "explanation": "传统的, 传统智慧. The theory challenged conventional wisdom. 该理论挑战了传统智慧。"
+    },
+    {
+      "question": "devotional ____",
+      "type": "blank",
+      "answer": "song",
+      "explanation": "祈祷的, 祈祷歌曲. The choir sang a devotional song. 合唱团唱了一首祈祷歌曲。"
+    },
+    {
+      "question": "exceptional ____",
+      "type": "blank",
+      "answer": "case",
+      "explanation": "例外的, 例外情况. This represents an exceptional case. 这代表了一个例外情况。"
+    },
+    {
+      "question": "unexceptional ___",
+      "type": "blank",
+      "answer": "day",
+      "explanation": "平凡的, 平凡的一天. It was an unexceptional day at the office. 这是办公室平凡的一天。"
+    },
+    {
+      "question": "optional _____",
+      "type": "blank",
+      "answer": "extra",
+      "explanation": "可选的, 可选额外项. The car comes with several optional extra. 这辆车配有几个可选额外项。"
+    },
+    {
+      "question": "constitutional ______",
+      "type": "blank",
+      "answer": "rights",
+      "explanation": "宪法的, 宪法权利. Citizens must defend their constitutional rights. 公民必须捍卫他们的宪法权利。"
+    },
+    {
+      "question": "atonal _____",
+      "type": "blank",
+      "answer": "music",
+      "explanation": "无调性的, 无调性音乐. The composer experimented with atonal music. 作曲家尝试无调性音乐。"
+    },
+    {
+      "question": "maternal ________",
+      "type": "blank",
+      "answer": "instinct",
+      "explanation": "母性的, 母性本能. The mother displayed strong maternal instinct. 母亲表现出强烈的母性本能。"
+    },
+    {
+      "question": "fraternal _____",
+      "type": "blank",
+      "answer": "twins",
+      "explanation": "兄弟的, 异卵双胞胎. Fraternal twins can be different genders. 异卵双胞胎可以是不同性别。"
+    },
+    {
+      "question": "vernal _______",
+      "type": "blank",
+      "answer": "equinox",
+      "explanation": "春天的, 春分. The vernal equinox marks the beginning of spring. 春分标志着春天的开始。"
+    },
+    {
+      "question": "diurnal _____",
+      "type": "blank",
+      "answer": "cycle",
+      "explanation": "昼夜的, 昼夜周期. Many animals follow a diurnal cycle of activity. 许多动物遵循昼夜活动周期。"
+    },
+    {
+      "question": "nocturnal ______",
+      "type": "blank",
+      "answer": "animal",
+      "explanation": "夜间活动的, 夜间活动动物. Owls are nocturnal animal that hunt at night. 猫头鹰是夜间狩猎的夜间活动动物。"
+    },
+    {
+      "question": "_____________ tribunal",
+      "type": "blank",
+      "answer": "international",
+      "explanation": "法庭, 国际法庭. The international tribunal tried war crimes. 国际法庭审判战争罪。"
+    },
+    {
+      "question": "communal ______",
+      "type": "blank",
+      "answer": "living",
+      "explanation": "公共的, 公共生活. The commune practiced communal living. 公社实行公共生活。"
+    },
+    {
+      "question": "____ shoal",
+      "type": "blank",
+      "answer": "sand",
+      "explanation": "浅滩, 沙洲. The ship ran aground on a sand shoal. 船在沙洲上搁浅。"
+    },
+    {
+      "question": "principal ______",
+      "type": "blank",
+      "answer": "amount",
+      "explanation": "主要的, 本金数额. The loan requires repayment of principal amount plus interest. 贷款需要偿还本金数额加利息。"
+    },
+    {
+      "question": "cerebral ______",
+      "type": "blank",
+      "answer": "cortex",
+      "explanation": "大脑的, 大脑皮层. The cerebral cortex controls higher brain functions. 大脑皮层控制较高级的大脑功能。"
+    },
+    {
+      "question": "______ cathedral",
+      "type": "blank",
+      "answer": "Gothic",
+      "explanation": "大教堂, 哥特式大教堂. The Gothic cathedral featured stunning architecture. 哥特式大教堂具有令人惊叹的建筑。"
+    },
+    {
+      "question": "visceral ________",
+      "type": "blank",
+      "answer": "reaction",
+      "explanation": "本能的, 本能反应. The image provoked a visceral reaction. 这张图片引发了本能反应。"
+    },
+    {
+      "question": "feral ___",
+      "type": "blank",
+      "answer": "cat",
+      "explanation": "野生的, 野猫. The feral cat avoided human contact. 野猫避免与人接触。"
+    },
+    {
+      "question": "peripheral ______",
+      "type": "blank",
+      "answer": "device",
+      "explanation": "外围的, 外围设备. The computer has several peripheral device attached. 计算机连接了几个外围设备。"
+    },
+    {
+      "question": "ephemeral ______",
+      "type": "blank",
+      "answer": "beauty",
+      "explanation": "短暂的, 短暂的美丽. Cherry blossoms possess ephemeral beauty. 樱花拥有短暂的美丽。"
+    },
+    {
+      "question": "lateral ________",
+      "type": "blank",
+      "answer": "movement",
+      "explanation": "侧面的, 侧面移动. The crab scuttled with lateral movement. 螃蟹以侧面移动匆匆爬行。"
+    },
+    {
+      "question": "unilateral ______",
+      "type": "blank",
+      "answer": "action",
+      "explanation": "单方面的, 单方面行动. The country took unilateral action without consultation. 该国在没有协商的情况下采取了单方面行动。"
+    },
+    {
+      "question": "____ collateral",
+      "type": "blank",
+      "answer": "loan",
+      "explanation": "抵押品, 贷款抵押品. The bank required loan collateral for the mortgage. 银行要求提供抵押贷款的抵押品。"
+    },
+    {
+      "question": "literal ___________",
+      "type": "blank",
+      "answer": "translation",
+      "explanation": "字面的, 字面翻译. A literal translation may miss nuanced meanings. 字面翻译可能会遗漏细微的含义。"
+    },
+    {
+      "question": "integral ____",
+      "type": "blank",
+      "answer": "part",
+      "explanation": "不可或缺的, 不可或缺的部分. Teamwork is an integral part of success. 团队合作是成功不可或缺的部分。"
+    },
+    {
+      "question": "amoral ______",
+      "type": "blank",
+      "answer": "action",
+      "explanation": "非道德的, 非道德行为. The character's amoral action shocked readers. 这个角色的非道德行为震惊了读者。"
+    },
+    {
+      "question": "temporal ____",
+      "type": "blank",
+      "answer": "lobe",
+      "explanation": "颞部的, 颞叶. The temporal lobe processes auditory information. 颞叶处理听觉信息。"
+    },
+    {
+      "question": "corporal __________",
+      "type": "blank",
+      "answer": "punishment",
+      "explanation": "肉体的, 体罚. Many schools banned corporal punishment. 许多学校禁止体罚。"
+    },
+    {
+      "question": "pastoral _____",
+      "type": "blank",
+      "answer": "scene",
+      "explanation": "田园的, 田园景色. The painting depicted a peaceful pastoral scene. 这幅画描绘了一个宁静的田园景色。"
+    },
+    {
+      "question": "littoral ____",
+      "type": "blank",
+      "answer": "zone",
+      "explanation": "海岸的, 海岸带. Marine biologists study the littoral zone. 海洋生物学家研究海岸带。"
+    },
+    {
+      "question": "______ corral",
+      "type": "blank",
+      "answer": "cattle",
+      "explanation": "畜栏, 牛栏. Cowboys herded cattle into the cattle corral. 牛仔把牛赶进牛栏。"
+    },
+    {
+      "question": "spectral ________",
+      "type": "blank",
+      "answer": "analysis",
+      "explanation": "光谱的, 光谱分析. Chemists use spectral analysis to identify substances. 化学家使用光谱分析来识别物质。"
+    },
+    {
+      "question": "ventral ___",
+      "type": "blank",
+      "answer": "fin",
+      "explanation": "腹部的, 腹鳍. The fish uses its ventral fin for balance. 鱼用腹鳍保持平衡。"
+    },
+    {
+      "question": "_______ mistral",
+      "type": "blank",
+      "answer": "howling",
+      "explanation": "冷风, 呼啸的冷风. The howling mistral swept down from the mountains. 呼啸的冷风从山上吹下来。"
+    },
+    {
+      "question": "inaugural _______",
+      "type": "blank",
+      "answer": "address",
+      "explanation": "就职的, 就职演说. The president delivered his inaugural address. 总统发表了他的就职演说。"
+    },
+    {
+      "question": "mural ________",
+      "type": "blank",
+      "answer": "painting",
+      "explanation": "壁画, 壁画. The artist created a stunning mural painting. 艺术家创作了一幅令人惊叹的壁画。"
+    },
+    {
+      "question": "preternatural ____",
+      "type": "blank",
+      "answer": "calm",
+      "explanation": "超自然的, 超自然的平静. She maintained a preternatural calm during the crisis. 她在危机期间保持了超自然的平静。"
+    },
+    {
+      "question": "nasal _____",
+      "type": "blank",
+      "answer": "voice",
+      "explanation": "鼻音的, 鼻音. The singer had a distinctive nasal voice. 歌手有独特的鼻音。"
+    },
+    {
+      "question": "________ reprisal",
+      "type": "blank",
+      "answer": "military",
+      "explanation": "报复, 军事报复. The attack triggered military reprisal. 这次袭击引发了军事报复。"
+    }
+  ]
+}
