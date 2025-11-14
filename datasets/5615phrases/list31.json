@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "patrician ______",
+      "type": "blank",
+      "answer": "family",
+      "explanation": "贵族的, 贵族家庭. The patrician family owned vast estates. 贵族家庭拥有广阔的地产。"
+    },
+    {
+      "question": "_____ geometrician",
+      "type": "blank",
+      "answer": "noted",
+      "explanation": "几何学家, 著名的几何学家. Euclid was a noted geometrician. 欧几里得是一位著名的几何学家。"
+    },
+    {
+      "question": "quotidian _______",
+      "type": "blank",
+      "answer": "routine",
+      "explanation": "日常的, 日常例行公事. The quotidian routine grew tedious. 日常例行公事变得单调乏味。"
+    },
+    {
+      "question": "plebeian _____",
+      "type": "blank",
+      "answer": "taste",
+      "explanation": "平民的, 平民品味. Critics dismissed it as plebeian taste. 批评家将其视为平民品味而不予理会。"
+    },
+    {
+      "question": "______ ruffian",
+      "type": "blank",
+      "answer": "street",
+      "explanation": "恶棍, 街头恶棍. The street ruffian terrorized local businesses. 街头恶棍恐吓当地商家。"
+    },
+    {
+      "question": "stygian ________",
+      "type": "blank",
+      "answer": "darkness",
+      "explanation": "幽暗的, 幽暗的黑暗. The cave was filled with stygian darkness. 洞穴充满了幽暗的黑暗。"
+    },
+    {
+      "question": "bohemian _________",
+      "type": "blank",
+      "answer": "lifestyle",
+      "explanation": "波希米亚式的, 波希米亚式的生活方式. The artist embraced a bohemian lifestyle. 艺术家接受了波希米亚式的生活方式。"
+    },
+    {
+      "question": "simian ________",
+      "type": "blank",
+      "answer": "features",
+      "explanation": "猿猴的, 猿猴特征. The creature had distinct simian features. 这种生物有明显的猿猴特征。"
+    },
+    {
+      "question": "draconian ________",
+      "type": "blank",
+      "answer": "measures",
+      "explanation": "严厉的, 严厉的措施. The government imposed draconian measures. 政府实施了严厉的措施。"
+    },
+    {
+      "question": "thespian ______",
+      "type": "blank",
+      "answer": "career",
+      "explanation": "戏剧的, 戏剧事业. She pursued a successful thespian career. 她追求成功的戏剧事业。"
+    },
+    {
+      "question": "octogenarian ___",
+      "type": "blank",
+      "answer": "man",
+      "explanation": "八十岁老人, 八十岁老人. The octogenarian man remained remarkably active. 八十岁老人仍然非常活跃。"
+    },
+    {
+      "question": "valetudinarian ______",
+      "type": "blank",
+      "answer": "habits",
+      "explanation": "过分关心健康的人, 过分关心健康的习惯. His valetudinarian habits dominated his life. 他过分关心健康的习惯主导了他的生活。"
+    },
+    {
+      "question": "agrarian ______",
+      "type": "blank",
+      "answer": "reform",
+      "explanation": "土地的, 土地改革. The revolution demanded agrarian reform. 革命要求土地改革。"
+    },
+    {
+      "question": "egalitarian _______",
+      "type": "blank",
+      "answer": "society",
+      "explanation": "平等主义的, 平等主义社会. The nation strived for an egalitarian society. 国家努力建立平等主义社会。"
+    },
+    {
+      "question": "totalitarian ______",
+      "type": "blank",
+      "answer": "regime",
+      "explanation": "极权主义的, 极权主义政权. The totalitarian regime suppressed dissent. 极权主义政权镇压异议。"
+    },
+    {
+      "question": "utilitarian ______",
+      "type": "blank",
+      "answer": "design",
+      "explanation": "实用主义的, 实用主义设计. The building featured stark utilitarian design. 建筑具有简朴的实用主义设计。"
+    },
+    {
+      "question": "authoritarian ____",
+      "type": "blank",
+      "answer": "rule",
+      "explanation": "专制的, 专制统治. Citizens resisted authoritarian rule. 公民抵制专制统治。"
+    },
+    {
+      "question": "stentorian _____",
+      "type": "blank",
+      "answer": "voice",
+      "explanation": "洪亮的, 洪亮的嗓音. The commander's stentorian voice echoed across the field. 指挥官洪亮的嗓音在战场上回响。"
+    },
+    {
+      "question": "pedestrian _____",
+      "type": "blank",
+      "answer": "style",
+      "explanation": "平淡无奇的, 平淡无奇的风格. The writer's pedestrian style bored readers. 作家平淡无奇的风格让读者感到厌烦。"
+    },
+    {
+      "question": "equestrian ______",
+      "type": "blank",
+      "answer": "statue",
+      "explanation": "骑马的, 骑马雕像. An equestrian statue honors the general. 骑马雕像纪念将军。"
+    },
+    {
+      "question": "fustian ________",
+      "type": "blank",
+      "answer": "rhetoric",
+      "explanation": "浮夸的, 浮夸的言辞. The politician's fustian rhetoric fell flat. 政客浮夸的言辞不受欢迎。"
+    },
+    {
+      "question": "antediluvian _______",
+      "type": "blank",
+      "answer": "beliefs",
+      "explanation": "古老的, 古老的信仰. His antediluvian beliefs seemed outdated. 他古老的信仰似乎已经过时。"
+    },
+    {
+      "question": "herdsman ___",
+      "type": "blank",
+      "answer": "job",
+      "explanation": "牧人, 牧人工作. The herdsman job requires patience and skill. 牧人工作需要耐心和技巧。"
+    },
+    {
+      "question": "layman's _____",
+      "type": "blank",
+      "answer": "terms",
+      "explanation": "外行, 外行的术语. Explain it in layman's terms. 用外行的术语解释它。"
+    },
+    {
+      "question": "pan ___ ____",
+      "type": "blank",
+      "answer": "the film",
+      "explanation": "严厉批评, 严厉批评电影. Critics were quick to pan the film. 批评家很快就严厉批评了这部电影。"
+    },
+    {
+      "question": "deadpan _____",
+      "type": "blank",
+      "answer": "humor",
+      "explanation": "面无表情的, 面无表情的幽默. His deadpan humor surprised audiences. 他面无表情的幽默让观众惊讶。"
+    },
+    {
+      "question": "______ span",
+      "type": "blank",
+      "answer": "bridge",
+      "explanation": "跨度, 桥梁跨度. Engineers measured the bridge span. 工程师测量了桥梁跨度。"
+    },
+    {
+      "question": "diocesan ______",
+      "type": "blank",
+      "answer": "bishop",
+      "explanation": "教区的, 教区主教. The diocesan bishop visited parishes. 教区主教访问了教区。"
+    },
+    {
+      "question": "_______ artisan",
+      "type": "blank",
+      "answer": "skilled",
+      "explanation": "工匠, 熟练的工匠. The skilled artisan crafted fine furniture. 熟练的工匠制作精美的家具。"
+    },
+    {
+      "question": "tan _____",
+      "type": "blank",
+      "answer": "color",
+      "explanation": "褐色, 褐色. She preferred the tan color for the sofa. 她更喜欢沙发的褐色。"
+    },
+    {
+      "question": "_____ charlatan",
+      "type": "blank",
+      "answer": "quack",
+      "explanation": "江湖骗子, 江湖骗子医生. The quack charlatan sold fake cures. 江湖骗子医生出售假药。"
+    },
+    {
+      "question": "metropolitan ____",
+      "type": "blank",
+      "answer": "area",
+      "explanation": "大都市的, 大都市地区. The metropolitan area has millions of residents. 大都市地区有数百万居民。"
+    },
+    {
+      "question": "spartan _________",
+      "type": "blank",
+      "answer": "lifestyle",
+      "explanation": "简朴的, 简朴的生活方式. The monk led a spartan lifestyle. 修道士过着简朴的生活方式。"
+    },
+    {
+      "question": "gargantuan ________",
+      "type": "blank",
+      "answer": "appetite",
+      "explanation": "巨大的, 巨大的胃口. The athlete had a gargantuan appetite. 运动员有巨大的胃口。"
+    },
+    {
+      "question": "wan _____",
+      "type": "blank",
+      "answer": "smile",
+      "explanation": "苍白的, 苍白的微笑. She managed only a wan smile. 她只能勉强露出苍白的微笑。"
+    },
+    {
+      "question": "sadden ___ _____",
+      "type": "blank",
+      "answer": "the crowd",
+      "explanation": "使悲伤, 使人群悲伤. The tragic news would sadden the crowd. 悲惨的消息会使人群悲伤。"
+    },
+    {
+      "question": "unbidden _____",
+      "type": "blank",
+      "answer": "tears",
+      "explanation": "未经邀请的, 不由自主的眼泪. Unbidden tears filled her eyes. 不由自主的眼泪充满了她的眼睛。"
+    },
+    {
+      "question": "embolden __________",
+      "type": "blank",
+      "answer": "supporters",
+      "explanation": "使大胆, 使支持者大胆. The victory would embolden supporters. 胜利会使支持者更加大胆。"
+    },
+    {
+      "question": "beholden __",
+      "type": "blank",
+      "answer": "to",
+      "explanation": "感恩的, 感恩于. He felt beholden to his mentor. 他对他的导师感恩。"
+    },
+    {
+      "question": "harden ________",
+      "type": "blank",
+      "answer": "attitude",
+      "explanation": "变硬, 使态度变硬. Experience can harden attitude. 经验会使态度变硬。"
+    },
+    {
+      "question": "______ warden",
+      "type": "blank",
+      "answer": "prison",
+      "explanation": "监狱长, 监狱长. The prison warden enforced strict rules. 监狱长执行严格的规则。"
+    },
+    {
+      "question": "_____ sheen",
+      "type": "blank",
+      "answer": "silky",
+      "explanation": "光泽, 丝般光泽. Her hair had a beautiful silky sheen. 她的头发有美丽的丝般光泽。"
+    },
+    {
+      "question": "pathogen ________",
+      "type": "blank",
+      "answer": "exposure",
+      "explanation": "病原体, 病原体接触. Healthcare workers risk pathogen exposure. 医护人员面临病原体接触风险。"
+    },
+    {
+      "question": "_____ carcinogen",
+      "type": "blank",
+      "answer": "known",
+      "explanation": "致癌物, 已知的致癌物. Asbestos is a known carcinogen. 石棉是一种已知的致癌物。"
+    },
+    {
+      "question": "roughen ___ _______",
+      "type": "blank",
+      "answer": "the surface",
+      "explanation": "使粗糙, 使表面粗糙. Sandpaper will roughen the surface. 砂纸会使表面粗糙。"
+    },
+    {
+      "question": "______ hyphen",
+      "type": "blank",
+      "answer": "insert",
+      "explanation": "连字符, 插入连字符. Insert hyphen between compound words. 在复合词之间插入连字符。"
+    },
+    {
+      "question": "_____ lien",
+      "type": "blank",
+      "answer": "legal",
+      "explanation": "留置权, 法律留置权. The bank placed a legal lien on the property. 银行对财产设置了法律留置权。"
+    },
+    {
+      "question": "_____ mien",
+      "type": "blank",
+      "answer": "noble",
+      "explanation": "风度, 高贵的风度. The ambassador had a noble mien. 大使有高贵的风度。"
+    },
+    {
+      "question": "______ ___'_ ken",
+      "type": "blank",
+      "answer": "beyond one's",
+      "explanation": "知识范围, 超出某人的知识范围. The concept was beyond one's ken. 这个概念超出了某人的知识范围。"
+    },
+    {
+      "question": "liken __ ____",
+      "type": "blank",
+      "answer": "to gold",
+      "explanation": "比作, 比作黄金. Poets liken to gold her flowing hair. 诗人把她飘逸的头发比作黄金。"
+    },
+    {
+      "question": "betoken ______",
+      "type": "blank",
+      "answer": "change",
+      "explanation": "预示, 预示变化. Dark clouds betoken change in weather. 乌云预示天气变化。"
+    },
+    {
+      "question": "hearken __ ______",
+      "type": "blank",
+      "answer": "to advice",
+      "explanation": "倾听, 倾听建议. Wise people hearken to advice. 聪明人倾听建议。"
+    },
+    {
+      "question": "pollen _____",
+      "type": "blank",
+      "answer": "count",
+      "explanation": "花粉, 花粉计数. Allergy sufferers check daily pollen count. 过敏症患者每天检查花粉计数。"
+    },
+    {
+      "question": "___ specimen",
+      "type": "blank",
+      "answer": "lab",
+      "explanation": "样本, 实验室样本. Scientists examined the lab specimen carefully. 科学家仔细检查了实验室样本。"
+    },
+    {
+      "question": "______ cognomen",
+      "type": "blank",
+      "answer": "family",
+      "explanation": "姓氏, 家族姓氏. The family cognomen dated back centuries. 家族姓氏可以追溯到几个世纪前。"
+    },
+    {
+      "question": "________ acumen",
+      "type": "blank",
+      "answer": "business",
+      "explanation": "敏锐, 商业敏锐. Her business acumen impressed investors. 她的商业敏锐给投资者留下了深刻印象。"
+    },
+    {
+      "question": "lumen ______",
+      "type": "blank",
+      "answer": "output",
+      "explanation": "流明, 流明输出. The bulb provides high lumen output. 灯泡提供高流明输出。"
+    },
+    {
+      "question": "linen _____",
+      "type": "blank",
+      "answer": "cloth",
+      "explanation": "亚麻布, 亚麻布. The tablecloth was made of fine linen cloth. 桌布由精细的亚麻布制成。"
+    },
+    {
+      "question": "___ pen",
+      "type": "blank",
+      "answer": "ink",
+      "explanation": "笔, 墨水笔. He signed the document with an ink pen. 他用墨水笔签署了文件。"
+    },
+    {
+      "question": "misshapen _____",
+      "type": "blank",
+      "answer": "fruit",
+      "explanation": "畸形的, 畸形的水果. The farmer discarded misshapen fruit. 农民丢弃了畸形的水果。"
+    },
+    {
+      "question": "ripen _____",
+      "type": "blank",
+      "answer": "fruit",
+      "explanation": "使成熟, 使水果成熟. Leave the bananas to ripen fruit naturally. 让香蕉自然成熟。"
+    },
+    {
+      "question": "aspen _____",
+      "type": "blank",
+      "answer": "grove",
+      "explanation": "白杨, 白杨树林. The aspen grove shimmered in the breeze. 白杨树林在微风中闪烁。"
+    },
+    {
+      "question": "barren ____",
+      "type": "blank",
+      "answer": "land",
+      "explanation": "贫瘠的, 贫瘠的土地. The desert was barren land without water. 沙漠是没有水的贫瘠土地。"
+    },
+    {
+      "question": "loosen ___ _____",
+      "type": "blank",
+      "answer": "the screw",
+      "explanation": "松开, 松开螺丝. Use a screwdriver to loosen the screw. 用螺丝刀松开螺丝。"
+    },
+    {
+      "question": "coarsen ___ _____",
+      "type": "blank",
+      "answer": "the grain",
+      "explanation": "使粗糙, 使纹理粗糙. Grinding will coarsen the grain. 研磨会使纹理粗糙。"
+    },
+    {
+      "question": "enlighten ____",
+      "type": "blank",
+      "answer": "mind",
+      "explanation": "启发, 启发思想. Education should enlighten mind. 教育应该启发思想。"
+    },
+    {
+      "question": "molten ____",
+      "type": "blank",
+      "answer": "lava",
+      "explanation": "熔化的, 熔化的熔岩. Molten lava flowed down the volcano. 熔化的熔岩从火山流下。"
+    },
+    {
+      "question": "____ dishearten",
+      "type": "blank",
+      "answer": "news",
+      "explanation": "使沮丧, 消息使人沮丧. Bad news dishearten the team. 坏消息使团队沮丧。"
+    },
+    {
+      "question": "fasten ________",
+      "type": "blank",
+      "answer": "seatbelt",
+      "explanation": "系紧, 系紧安全带. Please fasten seatbelt during flight. 请在飞行期间系紧安全带。"
+    },
+    {
+      "question": "unfasten ____",
+      "type": "blank",
+      "answer": "belt",
+      "explanation": "解开, 解开腰带. She moved to unfasten belt after the meal. 她在饭后准备解开腰带。"
+    },
+    {
+      "question": "chasten ___ ______",
+      "type": "blank",
+      "answer": "the spirit",
+      "explanation": "惩戒, 惩戒精神. Hardship can chasten the spirit. 困难可以惩戒精神。"
+    },
+    {
+      "question": "fatten ______",
+      "type": "blank",
+      "answer": "cattle",
+      "explanation": "使肥胖, 使牛肥胖. Farmers fatten cattle before market. 农民在上市前使牛肥胖。"
+    },
+    {
+      "question": "hardbitten _______",
+      "type": "blank",
+      "answer": "veteran",
+      "explanation": "坚强的, 坚强的老兵. The hardbitten veteran had seen many battles. 坚强的老兵经历过许多战斗。"
+    },
+    {
+      "question": "rotten _____",
+      "type": "blank",
+      "answer": "fruit",
+      "explanation": "腐烂的, 腐烂的水果. The smell of rotten fruit filled the market. 腐烂水果的气味充满了市场。"
+    },
+    {
+      "question": "leaven ___ _____",
+      "type": "blank",
+      "answer": "the dough",
+      "explanation": "使发酵, 使面团发酵. Yeast will leaven the dough. 酵母会使面团发酵。"
+    },
+    {
+      "question": "____ haven",
+      "type": "blank",
+      "answer": "safe",
+      "explanation": "避难所, 安全避难所. The embassy offered a safe haven. 大使馆提供了安全避难所。"
+    },
+    {
+      "question": "_______ maven",
+      "type": "blank",
+      "answer": "fashion",
+      "explanation": "专家, 时尚专家. She's recognized as a fashion maven. 她被认为是时尚专家。"
+    },
+    {
+      "question": "craven _________",
+      "type": "blank",
+      "answer": "surrender",
+      "explanation": "懦弱的, 懦弱的投降. The general condemned the craven surrender. 将军谴责懦弱的投降。"
+    },
+    {
+      "question": "enliven ___ _____",
+      "type": "blank",
+      "answer": "the party",
+      "explanation": "使活跃, 使聚会活跃. Music helped enliven the party. 音乐帮助使聚会活跃起来。"
+    },
+    {
+      "question": "riven __ ________",
+      "type": "blank",
+      "answer": "by conflict",
+      "explanation": "分裂的, 被冲突分裂. The nation was riven by conflict. 国家被冲突分裂。"
+    },
+    {
+      "question": "_______' coven",
+      "type": "blank",
+      "answer": "witches'",
+      "explanation": "女巫集会, 女巫集会. The story featured a secret witches' coven. 故事以秘密女巫集会为特色。"
+    },
+    {
+      "question": "______ sloven",
+      "type": "blank",
+      "answer": "untidy",
+      "explanation": "邋遢的人, 邋遢的人. The untidy sloven never cleaned his room. 邋遢的人从不打扫他的房间。"
+    },
+    {
+      "question": "________ doyen",
+      "type": "blank",
+      "answer": "industry",
+      "explanation": "资深人士, 行业资深人士. He was the industry doyen of journalism. 他是新闻业的资深人士。"
+    },
+    {
+      "question": "brazen ___",
+      "type": "blank",
+      "answer": "lie",
+      "explanation": "厚颜无耻的, 厚颜无耻的谎言. The politician told a brazen lie. 政客说了一个厚颜无耻的谎言。"
+    },
+    {
+      "question": "bedizen _______",
+      "type": "blank",
+      "answer": "oneself",
+      "explanation": "俗丽地装饰, 俗丽地装饰自己. She would bedizen oneself with gaudy jewelry. 她会用俗丽的珠宝装饰自己。"
+    },
+    {
+      "question": "_____ denizen",
+      "type": "blank",
+      "answer": "urban",
+      "explanation": "居民, 城市居民. Urban denizen adapted to city life. 城市居民适应了城市生活。"
+    },
+    {
+      "question": "wizen ____ ___",
+      "type": "blank",
+      "answer": "with age",
+      "explanation": "枯萎, 随年龄枯萎. His face began to wizen with age. 他的脸随着年龄开始枯萎。"
+    },
+    {
+      "question": "cozen _ ______",
+      "type": "blank",
+      "answer": "a client",
+      "explanation": "欺骗, 欺骗客户. The dishonest lawyer would cozen a client. 不诚实的律师会欺骗客户。"
+    },
+    {
+      "question": "condign __________",
+      "type": "blank",
+      "answer": "punishment",
+      "explanation": "应得的, 应得的惩罚. The judge imposed condign punishment. 法官施加了应得的惩罚。"
+    },
+    {
+      "question": "deign __ _____",
+      "type": "blank",
+      "answer": "to reply",
+      "explanation": "屈尊, 屈尊回复. He wouldn't deign to reply to critics. 他不会屈尊回复批评者。"
+    },
+    {
+      "question": "reign _______",
+      "type": "blank",
+      "answer": "supreme",
+      "explanation": "统治, 至高无上的统治. The champion would reign supreme for years. 冠军将至高无上地统治多年。"
+    },
+    {
+      "question": "sovereign _____",
+      "type": "blank",
+      "answer": "state",
+      "explanation": "主权的, 主权国家. Every sovereign state has independent authority. 每个主权国家都有独立的权威。"
+    },
+    {
+      "question": "_________ realign",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "重新排列, 政治重组. Parties began to political realign after the crisis. 危机后各政党开始政治重组。"
+    },
+    {
+      "question": "malign ______",
+      "type": "blank",
+      "answer": "intent",
+      "explanation": "恶意的, 恶意意图. The accusation revealed malign intent. 指控显示了恶意意图。"
+    },
+    {
+      "question": "benign _____",
+      "type": "blank",
+      "answer": "tumor",
+      "explanation": "良性的, 良性肿瘤. The doctor confirmed it was a benign tumor. 医生证实这是良性肿瘤。"
+    },
+    {
+      "question": "_____ ensign",
+      "type": "blank",
+      "answer": "naval",
+      "explanation": "少尉, 海军少尉. The naval ensign saluted his superior officer. 海军少尉向他的上级军官敬礼。"
+    },
+    {
+      "question": "consign _____",
+      "type": "blank",
+      "answer": "goods",
+      "explanation": "托运, 托运货物. The merchant would consign goods to dealers. 商人会向经销商托运货物。"
+    },
+    {
+      "question": "impugn _______",
+      "type": "blank",
+      "answer": "motives",
+      "explanation": "质疑, 质疑动机. Critics began to impugn motives behind the decision. 批评者开始质疑决定背后的动机。"
+    },
+    {
+      "question": "ordain _ ______",
+      "type": "blank",
+      "answer": "a priest",
+      "explanation": "授予圣职, 授予神父圣职. The bishop will ordain a priest next Sunday. 主教将在下周日授予神父圣职。"
+    },
+    {
+      "question": "____ disdain",
+      "type": "blank",
+      "answer": "show",
+      "explanation": "蔑视, 表现蔑视. He would openly show disdain for rules. 他会公开表现对规则的蔑视。"
+    }
+  ]
+}
