@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "_______ illusion",
+      "type": "blank",
+      "answer": "optical",
+      "explanation": "幻觉, 视错觉. The optical illusion made the lines appear curved. 视错觉使线条看起来是弯曲的。"
+    },
+    {
+      "question": "____ disillusion",
+      "type": "blank",
+      "answer": "grow",
+      "explanation": "幻灭, 逐渐幻灭. Citizens began to grow disillusion with politics. 公民开始对政治逐渐幻灭。"
+    },
+    {
+      "question": "________ approbation",
+      "type": "blank",
+      "answer": "official",
+      "explanation": "认可, 官方认可. The plan received official approbation. 该计划获得了官方认可。"
+    },
+    {
+      "question": "___ incubation",
+      "type": "blank",
+      "answer": "egg",
+      "explanation": "孵化, 卵孵化. Egg incubation takes several weeks. 卵孵化需要几周时间。"
+    },
+    {
+      "question": "dedication ________",
+      "type": "blank",
+      "answer": "ceremony",
+      "explanation": "奉献, 奉献仪式. The dedication ceremony honored volunteers. 奉献仪式向志愿者致敬。"
+    },
+    {
+      "question": "_____ vindication",
+      "type": "blank",
+      "answer": "legal",
+      "explanation": "辩护, 法律辩护. The verdict provided legal vindication. 判决提供了法律辩护。"
+    },
+    {
+      "question": "personification __ _______",
+      "type": "blank",
+      "answer": "of justice",
+      "explanation": "拟人化, 正义的化身. The statue is a personification of justice. 雕像是正义的化身。"
+    },
+    {
+      "question": "________ unification",
+      "type": "blank",
+      "answer": "national",
+      "explanation": "统一, 国家统一. The leader achieved national unification. 领导人实现了国家统一。"
+    },
+    {
+      "question": "____ gasification",
+      "type": "blank",
+      "answer": "coal",
+      "explanation": "气化, 煤气化. Coal gasification produces synthetic gas. 煤气化产生合成气。"
+    },
+    {
+      "question": "______ ratification",
+      "type": "blank",
+      "answer": "treaty",
+      "explanation": "批准, 条约批准. Treaty ratification requires senate approval. 条约批准需要参议院批准。"
+    },
+    {
+      "question": "_______ gratification",
+      "type": "blank",
+      "answer": "instant",
+      "explanation": "满足, 即时满足. Modern society promotes instant gratification. 现代社会提倡即时满足。"
+    },
+    {
+      "question": "____________ certification",
+      "type": "blank",
+      "answer": "professional",
+      "explanation": "认证, 专业认证. Engineers need professional certification. 工程师需要专业认证。"
+    },
+    {
+      "question": "____ mortification",
+      "type": "blank",
+      "answer": "deep",
+      "explanation": "羞辱, 深深的羞辱. He felt deep mortification at the mistake. 他对错误感到深深的羞辱。"
+    },
+    {
+      "question": "_____ justification",
+      "type": "blank",
+      "answer": "moral",
+      "explanation": "正当理由, 道德正当理由. The action lacked moral justification. 该行动缺乏道德正当理由。"
+    },
+    {
+      "question": "_____ implication",
+      "type": "blank",
+      "answer": "legal",
+      "explanation": "影响, 法律影响. The decision has serious legal implication. 该决定具有严重的法律影响。"
+    },
+    {
+      "question": "___ application",
+      "type": "blank",
+      "answer": "job",
+      "explanation": "申请, 工作申请. She submitted her job application online. 她在线提交了工作申请。"
+    },
+    {
+      "question": "______ sophistication",
+      "type": "blank",
+      "answer": "social",
+      "explanation": "老练, 社交老练. His travels gave him social sophistication. 他的旅行使他获得了社交老练。"
+    },
+    {
+      "question": "_________ vocation",
+      "type": "blank",
+      "answer": "religious",
+      "explanation": "职业, 宗教职业. She felt called to a religious vocation. 她感到被召唤从事宗教职业。"
+    },
+    {
+      "question": "_______ avocation",
+      "type": "blank",
+      "answer": "weekend",
+      "explanation": "副业, 周末副业. Painting became his weekend avocation. 绘画成为他的周末副业。"
+    },
+    {
+      "question": "_________ equivocation",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "模棱两可, 政治模棱两可. The speech was full of political equivocation. 演讲充满了政治模棱两可。"
+    },
+    {
+      "question": "___ __ provocation",
+      "type": "blank",
+      "answer": "act of",
+      "explanation": "挑衅, 挑衅行为. The invasion was an act of provocation. 入侵是挑衅行为。"
+    },
+    {
+      "question": "_____ gradation",
+      "type": "blank",
+      "answer": "color",
+      "explanation": "渐变, 颜色渐变. The painting showed subtle color gradation. 这幅画展示了微妙的颜色渐变。"
+    },
+    {
+      "question": "_____________ degradation",
+      "type": "blank",
+      "answer": "environmental",
+      "explanation": "退化, 环境退化. Pollution causes environmental degradation. 污染导致环境退化。"
+    },
+    {
+      "question": "____ __ depredation",
+      "type": "blank",
+      "answer": "acts of",
+      "explanation": "掠夺, 掠夺行为. The army committed acts of depredation. 军队进行了掠夺行为。"
+    },
+    {
+      "question": "_________ consolidation",
+      "type": "blank",
+      "answer": "corporate",
+      "explanation": "合并, 企业合并. Corporate consolidation reduced competition. 企业合并减少了竞争。"
+    },
+    {
+      "question": "_____ dilapidation",
+      "type": "blank",
+      "answer": "urban",
+      "explanation": "破败, 城市破败. The neighborhood showed signs of urban dilapidation. 该社区显示出城市破败的迹象。"
+    },
+    {
+      "question": "_____ propagation",
+      "type": "blank",
+      "answer": "plant",
+      "explanation": "繁殖, 植物繁殖. Gardeners study plant propagation techniques. 园丁研究植物繁殖技术。"
+    },
+    {
+      "question": "______ variegation",
+      "type": "blank",
+      "answer": "flower",
+      "explanation": "杂色, 花朵杂色. The rose displayed beautiful flower variegation. 玫瑰展现了美丽的花朵杂色。"
+    },
+    {
+      "question": "_______ negation",
+      "type": "blank",
+      "answer": "logical",
+      "explanation": "否定, 逻辑否定. The statement is a logical negation. 该陈述是逻辑否定。"
+    },
+    {
+      "question": "____ abnegation",
+      "type": "blank",
+      "answer": "self",
+      "explanation": "克己, 自我克己. The monk practiced self abnegation. 和尚实践自我克己。"
+    },
+    {
+      "question": "_____ obligation",
+      "type": "blank",
+      "answer": "legal",
+      "explanation": "义务, 法律义务. Citizens have a legal obligation to pay taxes. 公民有纳税的法律义务。"
+    },
+    {
+      "question": "_____ litigation",
+      "type": "blank",
+      "answer": "civil",
+      "explanation": "诉讼, 民事诉讼. The dispute resulted in civil litigation. 争议导致了民事诉讼。"
+    },
+    {
+      "question": "______ castigation",
+      "type": "blank",
+      "answer": "severe",
+      "explanation": "严厉批评, 严厉的批评. The report received severe castigation. 该报告受到了严厉的批评。"
+    },
+    {
+      "question": "______ emaciation",
+      "type": "blank",
+      "answer": "severe",
+      "explanation": "消瘦, 严重的消瘦. The patient showed severe emaciation. 患者表现出严重的消瘦。"
+    },
+    {
+      "question": "______ denunciation",
+      "type": "blank",
+      "answer": "strong",
+      "explanation": "谴责, 强烈的谴责. The leader issued a strong denunciation. 领导人发表了强烈的谴责。"
+    },
+    {
+      "question": "______ dissociation",
+      "type": "blank",
+      "answer": "mental",
+      "explanation": "分离, 精神分离. Trauma can cause mental dissociation. 创伤可能导致精神分离。"
+    },
+    {
+      "question": "_____ retaliation",
+      "type": "blank",
+      "answer": "swift",
+      "explanation": "报复, 迅速的报复. The attack prompted swift retaliation. 袭击引发了迅速的报复。"
+    },
+    {
+      "question": "_________ affiliation",
+      "type": "blank",
+      "answer": "corporate",
+      "explanation": "附属, 企业附属. The company has corporate affiliation with partners. 公司与合作伙伴有企业附属关系。"
+    },
+    {
+      "question": "______ expiation",
+      "type": "blank",
+      "answer": "ritual",
+      "explanation": "赎罪, 赎罪仪式. The priest performed ritual expiation. 神父进行了赎罪仪式。"
+    },
+    {
+      "question": "_____ deviation",
+      "type": "blank",
+      "answer": "angle",
+      "explanation": "偏差, 角度偏差. The measurement showed angle deviation. 测量显示了角度偏差。"
+    },
+    {
+      "question": "_____ escalation",
+      "type": "blank",
+      "answer": "rapid",
+      "explanation": "升级, 快速升级. The conflict saw rapid escalation. 冲突出现了快速升级。"
+    },
+    {
+      "question": "____ oblation",
+      "type": "blank",
+      "answer": "make",
+      "explanation": "供品, 献上供品. Worshippers came to make oblation. 信徒前来献上供品。"
+    },
+    {
+      "question": "_________ revelation",
+      "type": "blank",
+      "answer": "startling",
+      "explanation": "揭露, 惊人的揭露. The investigation uncovered a startling revelation. 调查揭露了惊人的事实。"
+    },
+    {
+      "question": "______ appellation",
+      "type": "blank",
+      "answer": "formal",
+      "explanation": "称号, 正式称号. The king used his formal appellation. 国王使用了他的正式称号。"
+    },
+    {
+      "question": "____ tribulation",
+      "type": "blank",
+      "answer": "long",
+      "explanation": "苦难, 长期的苦难. They endured long tribulation. 他们忍受了长期的苦难。"
+    },
+    {
+      "question": "____ reticulation",
+      "type": "blank",
+      "answer": "vein",
+      "explanation": "网状结构, 叶脉网状结构. The leaf showed clear vein reticulation. 叶子显示出清晰的叶脉网状结构。"
+    },
+    {
+      "question": "_____ circulation",
+      "type": "blank",
+      "answer": "blood",
+      "explanation": "循环, 血液循环. Exercise improves blood circulation. 运动改善血液循环。"
+    },
+    {
+      "question": "_____ coagulation",
+      "type": "blank",
+      "answer": "blood",
+      "explanation": "凝结, 血液凝结. Blood coagulation prevents excessive bleeding. 血液凝结防止过度出血。"
+    },
+    {
+      "question": "strangulation ____",
+      "type": "blank",
+      "answer": "mark",
+      "explanation": "勒死, 勒痕. The victim had strangulation mark on the neck. 受害者脖子上有勒痕。"
+    },
+    {
+      "question": "________ stipulation",
+      "type": "blank",
+      "answer": "contract",
+      "explanation": "规定, 合同规定. The contract stipulation was clear. 合同规定很明确。"
+    },
+    {
+      "question": "_____ declamation",
+      "type": "blank",
+      "answer": "fired",
+      "explanation": "慷慨陈词, 激烈的慷慨陈词. The speaker delivered a fired declamation. 演讲者发表了激烈的慷慨陈词。"
+    },
+    {
+      "question": "_____ proclamation",
+      "type": "blank",
+      "answer": "royal",
+      "explanation": "宣告, 皇家宣告. The king issued a royal proclamation. 国王发布了皇家宣告。"
+    },
+    {
+      "question": "_____ inflammation",
+      "type": "blank",
+      "answer": "acute",
+      "explanation": "炎症, 急性炎症. The patient suffered from acute inflammation. 患者患有急性炎症。"
+    },
+    {
+      "question": "_________ summation",
+      "type": "blank",
+      "answer": "executive",
+      "explanation": "总结, 执行摘要. The report began with an executive summation. 报告以执行摘要开始。"
+    },
+    {
+      "question": "________ formation",
+      "type": "blank",
+      "answer": "mountain",
+      "explanation": "形成, 山脉形成. Geologists study mountain formation. 地质学家研究山脉形成。"
+    },
+    {
+      "question": "___ designation",
+      "type": "blank",
+      "answer": "job",
+      "explanation": "职位, 工作职位. Her job designation is senior manager. 她的工作职位是高级经理。"
+    },
+    {
+      "question": "______ __ resignation",
+      "type": "blank",
+      "answer": "letter of",
+      "explanation": "辞职, 辞职信. He submitted a letter of resignation. 他提交了辞职信。"
+    },
+    {
+      "question": "____ ratiocination",
+      "type": "blank",
+      "answer": "cold",
+      "explanation": "推理, 冷静的推理. The detective used cold ratiocination. 侦探使用冷静的推理。"
+    },
+    {
+      "question": "____ hallucination",
+      "type": "blank",
+      "answer": "drug",
+      "explanation": "幻觉, 药物幻觉. The patient experienced drug hallucination. 患者经历了药物幻觉。"
+    },
+    {
+      "question": "_________ machination",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "阴谋, 政治阴谋. The plot involved complex political machination. 该阴谋涉及复杂的政治阴谋。"
+    },
+    {
+      "question": "________ declination",
+      "type": "blank",
+      "answer": "magnetic",
+      "explanation": "偏角, 磁偏角. Navigators must account for magnetic declination. 航海者必须考虑磁偏角。"
+    },
+    {
+      "question": "_____ culmination",
+      "type": "blank",
+      "answer": "grand",
+      "explanation": "顶点, 盛大的顶点. The ceremony was a grand culmination. 仪式是盛大的顶点。"
+    },
+    {
+      "question": "______ domination",
+      "type": "blank",
+      "answer": "global",
+      "explanation": "统治, 全球统治. The empire sought global domination. 帝国寻求全球统治。"
+    },
+    {
+      "question": "_________ denomination",
+      "type": "blank",
+      "answer": "religious",
+      "explanation": "教派, 宗教教派. Various religious denomination coexist peacefully. 各种宗教教派和平共存。"
+    },
+    {
+      "question": "________ termination",
+      "type": "blank",
+      "answer": "contract",
+      "explanation": "终止, 合同终止. Contract termination requires notice. 合同终止需要通知。"
+    },
+    {
+      "question": "____ peregrination",
+      "type": "blank",
+      "answer": "long",
+      "explanation": "游历, 长期游历. The scholar's long peregrination lasted years. 学者的长期游历持续了数年。"
+    },
+    {
+      "question": "_____ coronation",
+      "type": "blank",
+      "answer": "royal",
+      "explanation": "加冕, 皇家加冕. The royal coronation attracted worldwide attention. 皇家加冕吸引了全世界的关注。"
+    },
+    {
+      "question": "__________ detonation",
+      "type": "blank",
+      "answer": "controlled",
+      "explanation": "爆炸, 受控爆炸. Engineers performed a controlled detonation. 工程师进行了受控爆炸。"
+    },
+    {
+      "question": "_______ extirpation",
+      "type": "blank",
+      "answer": "species",
+      "explanation": "根除, 物种根除. Habitat loss causes species extirpation. 栖息地丧失导致物种根除。"
+    },
+    {
+      "question": "___ occupation",
+      "type": "blank",
+      "answer": "job",
+      "explanation": "职业, 工作职业. Her job occupation is software engineer. 她的工作职业是软件工程师。"
+    },
+    {
+      "question": "____ exhilaration",
+      "type": "blank",
+      "answer": "pure",
+      "explanation": "兴奋, 纯粹的兴奋. Winning brought pure exhilaration. 获胜带来了纯粹的兴奋。"
+    },
+    {
+      "question": "___ reparation",
+      "type": "blank",
+      "answer": "war",
+      "explanation": "赔偿, 战争赔偿. The defeated nation paid war reparation. 战败国支付了战争赔偿。"
+    },
+    {
+      "question": "___ __ execration",
+      "type": "blank",
+      "answer": "cry of",
+      "explanation": "咒骂, 咒骂的呼喊. The mob let out a cry of execration. 暴民发出了咒骂的呼喊。"
+    },
+    {
+      "question": "____ laceration",
+      "type": "blank",
+      "answer": "deep",
+      "explanation": "撕裂伤, 深的撕裂伤. The accident caused a deep laceration. 事故造成了深的撕裂伤。"
+    },
+    {
+      "question": "___ generation",
+      "type": "blank",
+      "answer": "new",
+      "explanation": "一代, 新一代. The new generation embraces technology. 新一代拥抱技术。"
+    },
+    {
+      "question": "______ conflagration",
+      "type": "blank",
+      "answer": "raging",
+      "explanation": "大火, 熊熊大火. Firefighters battled the raging conflagration. 消防员与熊熊大火搏斗。"
+    },
+    {
+      "question": "______ aspiration",
+      "type": "blank",
+      "answer": "career",
+      "explanation": "抱负, 职业抱负. Students discussed their career aspiration. 学生讨论了他们的职业抱负。"
+    },
+    {
+      "question": "________ respiration",
+      "type": "blank",
+      "answer": "cellular",
+      "explanation": "呼吸, 细胞呼吸. Mitochondria perform cellular respiration. 线粒体进行细胞呼吸。"
+    },
+    {
+      "question": "expiration ____",
+      "type": "blank",
+      "answer": "date",
+      "explanation": "到期, 到期日期. Check the expiration date on the milk. 检查牛奶的到期日期。"
+    },
+    {
+      "question": "__________ oration",
+      "type": "blank",
+      "answer": "graduation",
+      "explanation": "演讲, 毕业演讲. The valedictorian delivered the graduation oration. 致告别辞者发表了毕业演讲。"
+    },
+    {
+      "question": "______ elaboration",
+      "type": "blank",
+      "answer": "design",
+      "explanation": "详细阐述, 设计详细阐述. The architect provided design elaboration. 建筑师提供了设计详细阐述。"
+    },
+    {
+      "question": "_______ deterioration",
+      "type": "blank",
+      "answer": "gradual",
+      "explanation": "恶化, 逐渐恶化. The patient showed gradual deterioration. 患者表现出逐渐恶化。"
+    },
+    {
+      "question": "coloration _______",
+      "type": "blank",
+      "answer": "pattern",
+      "explanation": "着色, 着色图案. The butterfly has a distinctive coloration pattern. 蝴蝶有独特的着色图案。"
+    },
+    {
+      "question": "______ aberration",
+      "type": "blank",
+      "answer": "mental",
+      "explanation": "偏差, 精神偏差. The crime was a mental aberration. 这一罪行是精神偏差。"
+    },
+    {
+      "question": "______ penetration",
+      "type": "blank",
+      "answer": "market",
+      "explanation": "渗透, 市场渗透. The company achieved high market penetration. 公司实现了高市场渗透率。"
+    },
+    {
+      "question": "______ configuration",
+      "type": "blank",
+      "answer": "system",
+      "explanation": "配置, 系统配置. IT staff adjusted system configuration. IT人员调整了系统配置。"
+    },
+    {
+      "question": "______ pulsation",
+      "type": "blank",
+      "answer": "strong",
+      "explanation": "脉动, 强烈的脉动. The doctor felt a strong pulsation. 医生感到了强烈的脉动。"
+    },
+    {
+      "question": "________ sensation",
+      "type": "blank",
+      "answer": "tingling",
+      "explanation": "感觉, 刺痛感觉. She experienced a tingling sensation. 她经历了刺痛感觉。"
+    },
+    {
+      "question": "cessation __ ___________",
+      "type": "blank",
+      "answer": "of hostilities",
+      "explanation": "停止, 停止敌对行动. Both sides agreed to cessation of hostilities. 双方同意停止敌对行动。"
+    },
+    {
+      "question": "natation ____",
+      "type": "blank",
+      "answer": "race",
+      "explanation": "游泳, 游泳比赛. The athlete excelled in natation race. 运动员在游泳比赛中表现出色。"
+    },
+    {
+      "question": "_____ affectation",
+      "type": "blank",
+      "answer": "false",
+      "explanation": "做作, 虚伪的做作. His accent was a false affectation. 他的口音是虚伪的做作。"
+    },
+    {
+      "question": "___ delectation",
+      "type": "blank",
+      "answer": "for",
+      "explanation": "享受, 供享受. The dessert was prepared for delectation. 甜点是为享受而准备的。"
+    },
+    {
+      "question": "_____ citation",
+      "type": "blank",
+      "answer": "legal",
+      "explanation": "引用, 法律引用. The brief included proper legal citation. 摘要包含了适当的法律引用。"
+    },
+    {
+      "question": "_____ meditation",
+      "type": "blank",
+      "answer": "quiet",
+      "explanation": "冥想, 安静的冥想. Morning quiet meditation calms the mind. 早晨安静的冥想使心灵平静。"
+    },
+    {
+      "question": "_____ imitation",
+      "type": "blank",
+      "answer": "cheap",
+      "explanation": "模仿, 廉价的模仿品. The product was a cheap imitation. 该产品是廉价的模仿品。"
+    },
+    {
+      "question": "capitation ___",
+      "type": "blank",
+      "answer": "tax",
+      "explanation": "人头税, 人头税. The government imposed a capitation tax. 政府征收了人头税。"
+    },
+    {
+      "question": "_____ precipitation",
+      "type": "blank",
+      "answer": "heavy",
+      "explanation": "降水, 大量降水. The storm brought heavy precipitation. 暴风雨带来了大量降水。"
+    },
+    {
+      "question": "____ irritation",
+      "type": "blank",
+      "answer": "skin",
+      "explanation": "刺激, 皮肤刺激. The cream caused skin irritation. 乳霜引起了皮肤刺激。"
+    },
+    {
+      "question": "_______ __ exaltation",
+      "type": "blank",
+      "answer": "feeling of",
+      "explanation": "兴奋, 兴奋的感觉. She experienced a feeling of exaltation. 她经历了兴奋的感觉。"
+    },
+    {
+      "question": "____ recantation",
+      "type": "blank",
+      "answer": "sign",
+      "explanation": "撤回, 签署撤回声明. The prisoner was forced to sign recantation. 囚犯被迫签署撤回声明。"
+    }
+  ]
+}
