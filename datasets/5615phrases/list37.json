@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "_____ pillar",
+      "type": "blank",
+      "answer": "stone",
+      "explanation": "柱子; 支柱, 石柱. The ancient temple was supported by a massive stone pillar. 古老的寺庙由一根巨大的石柱支撑。"
+    },
+    {
+      "question": "caterpillar _____",
+      "type": "blank",
+      "answer": "track",
+      "explanation": "毛毛虫; 履带, 履带. The tank moved slowly on its caterpillar track across rough terrain. 坦克在崎岖的地形上用履带缓慢移动。"
+    },
+    {
+      "question": "_____ collar",
+      "type": "blank",
+      "answer": "white",
+      "explanation": "衣领; 项圈, 白领. She worked in a white collar office environment. 她在白领办公环境中工作。"
+    },
+    {
+      "question": "molar _____",
+      "type": "blank",
+      "answer": "tooth",
+      "explanation": "臼齿, 臼齿. The dentist examined my molar tooth for cavities. 牙医检查我的臼齿是否有蛀牙。"
+    },
+    {
+      "question": "polar ________",
+      "type": "blank",
+      "answer": "opposite",
+      "explanation": "极地的; 截然相反的, 截然相反. Their political views were polar opposite on every issue. 他们的政治观点在每个问题上都截然相反。"
+    },
+    {
+      "question": "______ vernacular",
+      "type": "blank",
+      "answer": "street",
+      "explanation": "方言; 本地话, 街头俚语. The rapper used street vernacular in his lyrics. 说唱歌手在歌词中使用街头俚语。"
+    },
+    {
+      "question": "oracular _____________",
+      "type": "blank",
+      "answer": "pronouncement",
+      "explanation": "神谕的; 晦涩的, 神谕般的声明. The philosopher made an oracular pronouncement about the future. 哲学家对未来作出了神谕般的声明。"
+    },
+    {
+      "question": "spectacular ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "壮观的; 惊人的, 壮观的景色. The mountain summit offered a spectacular view of the valley. 山顶提供了山谷的壮观景色。"
+    },
+    {
+      "question": "secular _________",
+      "type": "blank",
+      "answer": "education",
+      "explanation": "世俗的; 非宗教的, 世俗教育. The country adopted a secular education system. 该国采用了世俗教育体系。"
+    },
+    {
+      "question": "perpendicular ____",
+      "type": "blank",
+      "answer": "line",
+      "explanation": "垂直的, 垂直线. Draw a perpendicular line from the base to the apex. 从底边到顶点画一条垂直线。"
+    },
+    {
+      "question": "auricular _____",
+      "type": "blank",
+      "answer": "nerve",
+      "explanation": "耳的; 听觉的, 耳神经. The doctor examined the damage to the auricular nerve. 医生检查了耳神经的损伤。"
+    },
+    {
+      "question": "particular _______",
+      "type": "blank",
+      "answer": "concern",
+      "explanation": "特别的; 特定的, 特别关注. Safety is a particular concern for parents. 安全是父母特别关注的问题。"
+    },
+    {
+      "question": "avuncular ______",
+      "type": "blank",
+      "answer": "advice",
+      "explanation": "伯父般的; 慈祥的, 伯父般的建议. He offered avuncular advice to the young graduates. 他向年轻的毕业生提供了伯父般的建议。"
+    },
+    {
+      "question": "ocular _______",
+      "type": "blank",
+      "answer": "disease",
+      "explanation": "眼睛的; 视觉的, 眼疾. The patient suffered from a serious ocular disease. 患者患有严重的眼疾。"
+    },
+    {
+      "question": "jocular ____",
+      "type": "blank",
+      "answer": "tone",
+      "explanation": "滑稽的; 诙谐的, 诙谐的语气. He spoke in a jocular tone to lighten the mood. 他用诙谐的语气说话来缓和气氛。"
+    },
+    {
+      "question": "circular ______",
+      "type": "blank",
+      "answer": "motion",
+      "explanation": "圆形的; 循环的, 圆周运动. The planets follow a circular motion around the sun. 行星围绕太阳做圆周运动。"
+    },
+    {
+      "question": "vascular ______",
+      "type": "blank",
+      "answer": "system",
+      "explanation": "血管的, 血管系统. The vascular system carries blood throughout the body. 血管系统将血液输送到全身。"
+    },
+    {
+      "question": "crepuscular _____",
+      "type": "blank",
+      "answer": "light",
+      "explanation": "黄昏的; 朦胧的, 黄昏之光. The photographer captured the crepuscular light at dusk. 摄影师捕捉到了黄昏时的黄昏之光。"
+    },
+    {
+      "question": "angular ____",
+      "type": "blank",
+      "answer": "face",
+      "explanation": "有角的; 棱角分明的, 棱角分明的脸. The model had an angular face with sharp cheekbones. 模特有一张棱角分明的脸,颧骨很高。"
+    },
+    {
+      "question": "insular _________",
+      "type": "blank",
+      "answer": "mentality",
+      "explanation": "岛屿的; 狭隘的, 狭隘心态. The community suffered from an insular mentality. 该社区存在狭隘心态。"
+    },
+    {
+      "question": "titular ____",
+      "type": "blank",
+      "answer": "head",
+      "explanation": "名义上的; 有名无实的, 名义上的领导. He was the titular head of the organization with no real authority. 他是该组织名义上的领导,没有实权。"
+    },
+    {
+      "question": "mar ___ _______",
+      "type": "blank",
+      "answer": "the surface",
+      "explanation": "损坏; 破坏, 损坏表面. Be careful not to mar the surface of the antique table. 小心不要损坏古董桌的表面。"
+    },
+    {
+      "question": "______ oar",
+      "type": "blank",
+      "answer": "wooden",
+      "explanation": "桨; 橹, 木桨. The rowers pulled the wooden oar through the water. 划船者用木桨在水中划动。"
+    },
+    {
+      "question": "_____ nectar",
+      "type": "blank",
+      "answer": "drink",
+      "explanation": "花蜜; 甘露, 饮用花蜜. Bees collect and drink nectar from flowers. 蜜蜂从花朵中采集和饮用花蜜。"
+    },
+    {
+      "question": "___ mortar",
+      "type": "blank",
+      "answer": "mix",
+      "explanation": "灰浆; 研钵, 搅拌灰浆. The mason had to mix mortar for the brickwork. 泥瓦匠必须为砖砌工程搅拌灰浆。"
+    },
+    {
+      "question": "jabber ____",
+      "type": "blank",
+      "answer": "away",
+      "explanation": "快速含糊地说, 喋喋不休. The children would jabber away in the playground. 孩子们会在操场上喋喋不休。"
+    },
+    {
+      "question": "limber ____",
+      "type": "blank",
+      "answer": "body",
+      "explanation": "柔软的; 灵活的, 柔软的身体. Yoga helps maintain a limber body as you age. 瑜伽有助于随着年龄增长保持柔软的身体。"
+    },
+    {
+      "question": "______ timber",
+      "type": "blank",
+      "answer": "lumber",
+      "explanation": "木材; 木料, 木材. The construction crew ordered lumber timber for the new house. 施工队为新房订购了木材。"
+    },
+    {
+      "question": "cumber ____ _____",
+      "type": "blank",
+      "answer": "with rules",
+      "explanation": "妨碍; 使负担, 用规则束缚. Too many regulations cumber with rules the creative process. 太多的规定用规则束缚了创作过程。"
+    },
+    {
+      "question": "encumber ________",
+      "type": "blank",
+      "answer": "progress",
+      "explanation": "妨碍; 阻碍, 阻碍进展. Excessive bureaucracy can encumber progress in any organization. 过度的官僚主义会阻碍任何组织的进展。"
+    },
+    {
+      "question": "lumber ____",
+      "type": "blank",
+      "answer": "yard",
+      "explanation": "木材; 缓慢移动, 木材场. We bought supplies from the local lumber yard. 我们从当地木材场购买了物资。"
+    },
+    {
+      "question": "____ slumber",
+      "type": "blank",
+      "answer": "deep",
+      "explanation": "睡眠; 沉睡, 深度睡眠. The baby fell into a deep slumber after feeding. 婴儿喂食后进入深度睡眠。"
+    },
+    {
+      "question": "sober ________",
+      "type": "blank",
+      "answer": "judgment",
+      "explanation": "清醒的; 冷静的, 冷静的判断. The situation required sober judgment rather than emotion. 这种情况需要冷静的判断而不是情绪化。"
+    },
+    {
+      "question": "______ tuber",
+      "type": "blank",
+      "answer": "potato",
+      "explanation": "块茎, 马铃薯块茎. The farmer harvested the potato tuber from the field. 农民从田里收获马铃薯块茎。"
+    },
+    {
+      "question": "_______ ulcer",
+      "type": "blank",
+      "answer": "stomach",
+      "explanation": "溃疡, 胃溃疡. Stress can contribute to developing a stomach ulcer. 压力会导致胃溃疡的形成。"
+    },
+    {
+      "question": "freelancer ___",
+      "type": "blank",
+      "answer": "gig",
+      "explanation": "自由职业者, 自由职业者工作. She found a new freelancer gig designing websites. 她找到了一份设计网站的新自由职业者工作。"
+    },
+    {
+      "question": "______ fodder",
+      "type": "blank",
+      "answer": "cannon",
+      "explanation": "饲料; 素材, 炮灰. The young soldiers were treated as cannon fodder in the war. 年轻士兵在战争中被当作炮灰。"
+    },
+    {
+      "question": "____ rudder",
+      "type": "blank",
+      "answer": "ship",
+      "explanation": "舵, 船舵. The captain turned the ship rudder to change course. 船长转动船舵改变航向。"
+    },
+    {
+      "question": "bewilder ___ ________",
+      "type": "blank",
+      "answer": "the audience",
+      "explanation": "使困惑; 使迷惑, 使观众困惑. The magician's tricks would bewilder the audience completely. 魔术师的戏法会完全使观众困惑。"
+    },
+    {
+      "question": "____ folder",
+      "type": "blank",
+      "answer": "file",
+      "explanation": "文件夹, 文件夹. Please save the document in the file folder on the desktop. 请将文档保存在桌面上的文件夹中。"
+    },
+    {
+      "question": "___ beholder",
+      "type": "blank",
+      "answer": "the",
+      "explanation": "旁观者; 观看者, 旁观者. Beauty is in the eye of the beholder. 情人眼里出西施。"
+    },
+    {
+      "question": "solder _____",
+      "type": "blank",
+      "answer": "joint",
+      "explanation": "焊接; 焊料, 焊接接头. The technician carefully heated the solder joint. 技术员小心地加热焊接接头。"
+    },
+    {
+      "question": "____ boulder",
+      "type": "blank",
+      "answer": "huge",
+      "explanation": "巨石, 巨大的巨石. A huge boulder blocked the mountain path. 一块巨大的巨石挡住了山路。"
+    },
+    {
+      "question": "shoulder ___ ______",
+      "type": "blank",
+      "answer": "the burden",
+      "explanation": "肩膀; 承担, 承担负担. He had to shoulder the burden of caring for his family alone. 他不得不独自承担照顾家人的负担。"
+    },
+    {
+      "question": "meander _____",
+      "type": "blank",
+      "answer": "river",
+      "explanation": "蜿蜒而行; 漫步, 蜿蜒的河流. The meander river wound slowly through the valley. 蜿蜒的河流缓慢地穿过山谷。"
+    },
+    {
+      "question": "_ gander __",
+      "type": "blank",
+      "answer": "a at",
+      "explanation": "雄鹅; 看一眼, 看一眼. Take a gander at this interesting article. 看一眼这篇有趣的文章。"
+    },
+    {
+      "question": "_______ colander",
+      "type": "blank",
+      "answer": "kitchen",
+      "explanation": "滤器; 漏勺, 厨房滤器. Drain the pasta using a kitchen colander. 用厨房滤器沥干意大利面。"
+    },
+    {
+      "question": "gerrymander ________",
+      "type": "blank",
+      "answer": "district",
+      "explanation": "不公正地划分选区, 不公正划分的选区. Politicians tried to gerrymander district boundaries for electoral advantage. 政客们试图为了选举优势而不公正划分选区边界。"
+    },
+    {
+      "question": "pander __ ______",
+      "type": "blank",
+      "answer": "to tastes",
+      "explanation": "迎合; 拉皮条, 迎合口味. The media tends to pander to tastes of the lowest common denominator. 媒体往往迎合最低共同标准的口味。"
+    },
+    {
+      "question": "squander _____",
+      "type": "blank",
+      "answer": "money",
+      "explanation": "挥霍; 浪费, 挥霍金钱. Don't squander money on things you don't need. 不要在你不需要的东西上挥霍金钱。"
+    },
+    {
+      "question": "___ fender",
+      "type": "blank",
+      "answer": "car",
+      "explanation": "挡泥板, 汽车挡泥板. The accident left a dent in the car fender. 事故在汽车挡泥板上留下了凹痕。"
+    },
+    {
+      "question": "engender _____",
+      "type": "blank",
+      "answer": "trust",
+      "explanation": "产生; 引起, 产生信任. Good communication can engender trust between team members. 良好的沟通可以在团队成员之间产生信任。"
+    },
+    {
+      "question": "render _ _______",
+      "type": "blank",
+      "answer": "a verdict",
+      "explanation": "提供; 宣布, 宣布裁决. The jury will render a verdict after deliberation. 陪审团将在审议后宣布裁决。"
+    },
+    {
+      "question": "________ surrender",
+      "type": "blank",
+      "answer": "military",
+      "explanation": "投降; 放弃, 军事投降. The enemy announced their military surrender at dawn. 敌人在黎明时宣布军事投降。"
+    },
+    {
+      "question": "tender _____",
+      "type": "blank",
+      "answer": "offer",
+      "explanation": "温柔的; 投标, 投标报价. The company submitted a tender offer to buy the competitor. 该公司提交了收购竞争对手的投标报价。"
+    },
+    {
+      "question": "_____ provender",
+      "type": "blank",
+      "answer": "horse",
+      "explanation": "饲料; 食物, 马饲料. The stable keeper prepared horse provender for the evening. 马厩管理员为晚上准备了马饲料。"
+    },
+    {
+      "question": "___ remainder",
+      "type": "blank",
+      "answer": "the",
+      "explanation": "剩余部分, 剩余部分. She spent the remainder of the day reading. 她把一天剩余的时间都用来阅读。"
+    },
+    {
+      "question": "_______ faultfinder",
+      "type": "blank",
+      "answer": "chronic",
+      "explanation": "挑剔的人; 吹毛求疵者, 长期挑剔的人. The chronic faultfinder complained about every minor detail. 这个长期挑剔的人对每个小细节都抱怨。"
+    },
+    {
+      "question": "hinder ________",
+      "type": "blank",
+      "answer": "progress",
+      "explanation": "阻碍; 妨碍, 阻碍进展. Bad weather conditions can hinder progress on construction projects. 恶劣的天气条件会阻碍建筑项目的进展。"
+    },
+    {
+      "question": "______ cylinder",
+      "type": "blank",
+      "answer": "engine",
+      "explanation": "圆柱体; 汽缸, 发动机气缸. The mechanic checked each engine cylinder for damage. 机械师检查每个发动机气缸是否有损坏。"
+    },
+    {
+      "question": "________ reminder",
+      "type": "blank",
+      "answer": "friendly",
+      "explanation": "提醒物; 提示, 友好的提醒. This is just a friendly reminder about tomorrow's meeting. 这只是关于明天会议的友好提醒。"
+    },
+    {
+      "question": "_____ rejoinder",
+      "type": "blank",
+      "answer": "witty",
+      "explanation": "回答; 反驳, 机智的回答. She delivered a witty rejoinder that silenced her critics. 她做出了一个机智的回答,让批评者哑口无言。"
+    },
+    {
+      "question": "tinder ___",
+      "type": "blank",
+      "answer": "box",
+      "explanation": "火绒; 引火物, 火绒盒. The old tinder box contained materials to start a fire. 旧火绒盒里装着生火的材料。"
+    },
+    {
+      "question": "____ larder",
+      "type": "blank",
+      "answer": "food",
+      "explanation": "食品储藏室, 食品储藏室. She stocked the food larder with provisions for winter. 她在食品储藏室里储存了冬天的食物。"
+    },
+    {
+      "question": "_____ girder",
+      "type": "blank",
+      "answer": "steel",
+      "explanation": "大梁; 主梁, 钢梁. The bridge was supported by massive steel girder beams. 这座桥由巨大的钢梁支撑。"
+    },
+    {
+      "question": "sheer _____",
+      "type": "blank",
+      "answer": "cliff",
+      "explanation": "陡峭的; 纯粹的, 陡峭的悬崖. The climbers faced a sheer cliff that rose hundreds of feet. 登山者面对一座高达数百英尺的陡峭悬崖。"
+    },
+    {
+      "question": "_____ veneer",
+      "type": "blank",
+      "answer": "moral",
+      "explanation": "饰面; 虚饰, 道德伪装. His politeness was just a moral veneer hiding his true intentions. 他的礼貌只是掩盖其真实意图的道德伪装。"
+    },
+    {
+      "question": "_____ mutineer",
+      "type": "blank",
+      "answer": "naval",
+      "explanation": "叛变者, 海军叛变者. The naval mutineer was court-martialed for his actions. 这名海军叛变者因其行为被军事法庭审判。"
+    },
+    {
+      "question": "racketeer ____",
+      "type": "blank",
+      "answer": "ring",
+      "explanation": "敲诈者; 诈骗者, 敲诈团伙. The police broke up a dangerous racketeer ring. 警方捣毁了一个危险的敲诈团伙。"
+    },
+    {
+      "question": "___ profiteer",
+      "type": "blank",
+      "answer": "war",
+      "explanation": "奸商; 牟取暴利者, 战争奸商. The war profiteer made millions from selling supplies. 战争奸商通过出售物资赚取了数百万。"
+    },
+    {
+      "question": "steer ___ ____________",
+      "type": "blank",
+      "answer": "the conversation",
+      "explanation": "驾驶; 引导, 引导对话. She tried to steer the conversation away from controversial topics. 她试图引导对话远离有争议的话题。"
+    },
+    {
+      "question": "_____ gazetteer",
+      "type": "blank",
+      "answer": "world",
+      "explanation": "地名词典, 世界地名词典. The world gazetteer listed every major city and landmark. 世界地名词典列出了每个主要城市和地标。"
+    },
+    {
+      "question": "queer ____",
+      "type": "blank",
+      "answer": "idea",
+      "explanation": "奇怪的; 古怪的, 奇怪的想法. That's a queer idea that nobody has considered before. 那是一个以前没人考虑过的奇怪想法。"
+    },
+    {
+      "question": "defer _______",
+      "type": "blank",
+      "answer": "payment",
+      "explanation": "推迟; 延期, 延期付款. The bank allowed us to defer payment for three months. 银行允许我们延期付款三个月。"
+    },
+    {
+      "question": "____ coffer",
+      "type": "blank",
+      "answer": "iron",
+      "explanation": "保险箱; 金库, 铁保险箱. The valuable documents were locked in an iron coffer. 贵重文件被锁在铁保险箱里。"
+    },
+    {
+      "question": "buffer ____",
+      "type": "blank",
+      "answer": "zone",
+      "explanation": "缓冲; 缓冲区, 缓冲区. The UN established a buffer zone between the warring factions. 联合国在交战派系之间建立了一个缓冲区。"
+    },
+    {
+      "question": "_________ conifer",
+      "type": "blank",
+      "answer": "evergreen",
+      "explanation": "针叶树, 常绿针叶树. The forest was filled with tall evergreen conifer trees. 森林里到处都是高大的常绿针叶树。"
+    },
+    {
+      "question": "________ aquifer",
+      "type": "blank",
+      "answer": "confined",
+      "explanation": "含水层, 承压含水层. The city drew water from a deep confined aquifer. 该市从深层承压含水层取水。"
+    },
+    {
+      "question": "infer _______",
+      "type": "blank",
+      "answer": "meaning",
+      "explanation": "推断; 推论, 推断意义. We can infer meaning from the context of the sentence. 我们可以从句子的上下文推断意义。"
+    },
+    {
+      "question": "meager ______",
+      "type": "blank",
+      "answer": "income",
+      "explanation": "贫乏的; 微薄的, 微薄的收入. They struggled to survive on their meager income. 他们努力靠微薄的收入生存。"
+    },
+    {
+      "question": "______ forager",
+      "type": "blank",
+      "answer": "forest",
+      "explanation": "觅食者, 森林觅食者. The forest forager collected mushrooms and berries. 森林觅食者采集蘑菇和浆果。"
+    },
+    {
+      "question": "badger ____ _________",
+      "type": "blank",
+      "answer": "with questions",
+      "explanation": "獾; 纠缠, 用问题纠缠. The reporters would badger with questions every witness at the scene. 记者们会用问题纠缠现场的每个目击者。"
+    },
+    {
+      "question": "_______ ledger",
+      "type": "blank",
+      "answer": "general",
+      "explanation": "分类账; 账簿, 总账. The accountant recorded all transactions in the general ledger. 会计在总账中记录了所有交易。"
+    },
+    {
+      "question": "____ ranger",
+      "type": "blank",
+      "answer": "park",
+      "explanation": "护林员; 巡逻员, 公园护林员. The park ranger guided tourists through the wilderness. 公园护林员带领游客穿越荒野。"
+    },
+    {
+      "question": "harbinger __ ______",
+      "type": "blank",
+      "answer": "of change",
+      "explanation": "先兆; 预兆, 变革的先兆. The election results were seen as a harbinger of change. 选举结果被视为变革的先兆。"
+    },
+    {
+      "question": "ginger ___",
+      "type": "blank",
+      "answer": "tea",
+      "explanation": "姜; 生姜, 姜茶. She drank ginger tea to soothe her upset stomach. 她喝姜茶来缓解胃部不适。"
+    },
+    {
+      "question": "malinger __ ____",
+      "type": "blank",
+      "answer": "at work",
+      "explanation": "装病; 逃避工作, 在工作中装病. Some employees malinger at work to avoid difficult tasks. 一些员工在工作中装病以逃避困难任务。"
+    },
+    {
+      "question": "____ versemonger",
+      "type": "blank",
+      "answer": "hack",
+      "explanation": "蹩脚诗人, 蹩脚诗人. The critic dismissed him as a hack versemonger with no talent. 批评家认为他是一个没有才华的蹩脚诗人。"
+    },
+    {
+      "question": "_______ forger",
+      "type": "blank",
+      "answer": "skilled",
+      "explanation": "伪造者, 技艺高超的伪造者. The skilled forger created convincing fake documents. 技艺高超的伪造者制作了令人信服的假文件。"
+    },
+    {
+      "question": "___ __ auger",
+      "type": "blank",
+      "answer": "use an",
+      "explanation": "螺旋钻, 使用螺旋钻. The carpenter will use an auger to drill holes in the wood. 木匠将使用螺旋钻在木头上钻孔。"
+    },
+    {
+      "question": "archer ____",
+      "type": "blank",
+      "answer": "fish",
+      "explanation": "弓箭手, 射水鱼. The archer fish shoots water at insects above the surface. 射水鱼向水面上的昆虫射水。"
+    },
+    {
+      "question": "pitcher _____",
+      "type": "blank",
+      "answer": "plant",
+      "explanation": "水罐; 投手, 猪笼草. The carnivorous pitcher plant traps insects for nutrition. 食肉的猪笼草捕捉昆虫作为营养。"
+    },
+    {
+      "question": "lexicographer ___",
+      "type": "blank",
+      "answer": "job",
+      "explanation": "词典编纂者, 词典编纂者的工作. The lexicographer job requires extensive knowledge of language. 词典编纂者的工作需要广泛的语言知识。"
+    },
+    {
+      "question": "cartographer's ___",
+      "type": "blank",
+      "answer": "map",
+      "explanation": "地图制作者, 地图制作者的地图. The cartographer's map showed incredible detail of the terrain. 地图制作者的地图显示了地形的惊人细节。"
+    },
+    {
+      "question": "______ cipher",
+      "type": "blank",
+      "answer": "secret",
+      "explanation": "密码; 暗号, 秘密密码. Spies communicated using a secret cipher during the war. 间谍在战争期间使用秘密密码进行通信。"
+    },
+    {
+      "question": "decipher _ ____",
+      "type": "blank",
+      "answer": "a code",
+      "explanation": "破译; 解码, 破译密码. The cryptographer worked to decipher a code from the enemy. 密码学家努力破译敌人的密码。"
+    },
+    {
+      "question": "encipher _ _______",
+      "type": "blank",
+      "answer": "a message",
+      "explanation": "加密, 加密信息. Intelligence officers must encipher a message before transmission. 情报官员必须在传输前加密信息。"
+    },
+    {
+      "question": "___ gusher",
+      "type": "blank",
+      "answer": "oil",
+      "explanation": "喷涌的东西, 油井喷涌. The prospectors struck an oil gusher in the Texas plains. 勘探者在德克萨斯平原上发现了一个喷油井。"
+    },
+    {
+      "question": "______ bather",
+      "type": "blank",
+      "answer": "public",
+      "explanation": "沐浴者, 公共泳者. The public bather enjoyed swimming at the community pool. 公共泳者喜欢在社区游泳池游泳。"
+    },
+    {
+      "question": "bellwether _____",
+      "type": "blank",
+      "answer": "stock",
+      "explanation": "领头羊; 指标, 指标股. Analysts watch the bellwether stock to predict market trends. 分析师关注指标股以预测市场趋势。"
+    }
+  ]
+}
