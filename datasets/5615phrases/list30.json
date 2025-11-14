@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "conform __ _____",
+      "type": "blank",
+      "answer": "to norms",
+      "explanation": "遵守, 遵守规范. Society expects individuals to conform to norms. 社会期望个人遵守规范。"
+    },
+    {
+      "question": "______ norm",
+      "type": "blank",
+      "answer": "social",
+      "explanation": "规范, 社会规范. Breaking social norm can lead to disapproval. 违反社会规范可能会导致不认可。"
+    },
+    {
+      "question": "______ ostracism",
+      "type": "blank",
+      "answer": "social",
+      "explanation": "排斥, 社会排斥. The whistleblower faced social ostracism. 告密者面临社会排斥。"
+    },
+    {
+      "question": "_______ empiricism",
+      "type": "blank",
+      "answer": "medical",
+      "explanation": "经验主义, 医学经验主义. Medical empiricism relies on observation and experience. 医学经验主义依赖观察和经验。"
+    },
+    {
+      "question": "________ eclecticism",
+      "type": "blank",
+      "answer": "literary",
+      "explanation": "折衷主义, 文学折衷主义. The author's style showed literary eclecticism. 作者的风格显示出文学折衷主义。"
+    },
+    {
+      "question": "witticism ______",
+      "type": "blank",
+      "answer": "galore",
+      "explanation": "妙语, 大量妙语. His speech contained witticism galore. 他的演讲包含大量妙语。"
+    },
+    {
+      "question": "_______ absenteeism",
+      "type": "blank",
+      "answer": "chronic",
+      "explanation": "旷工, 长期旷工. The company struggled with chronic absenteeism. 公司与长期旷工作斗争。"
+    },
+    {
+      "question": "atheism ______",
+      "type": "blank",
+      "answer": "debate",
+      "explanation": "无神论, 无神论辩论. The atheism debate continued for hours. 无神论辩论持续了数小时。"
+    },
+    {
+      "question": "____ neologism",
+      "type": "blank",
+      "answer": "tech",
+      "explanation": "新词, 科技新词. Social media created many tech neologism. 社交媒体创造了许多科技新词。"
+    },
+    {
+      "question": "_____ schism",
+      "type": "blank",
+      "answer": "party",
+      "explanation": "分裂, 政党分裂. A party schism divided the organization. 政党分裂分裂了组织。"
+    },
+    {
+      "question": "sophism ____",
+      "type": "blank",
+      "answer": "trap",
+      "explanation": "诡辩, 诡辩陷阱. The argument was a clever sophism trap. 这个论点是一个巧妙的诡辩陷阱。"
+    },
+    {
+      "question": "surrealism ___",
+      "type": "blank",
+      "answer": "art",
+      "explanation": "超现实主义, 超现实主义艺术. Dali was a master of surrealism art. 达利是超现实主义艺术的大师。"
+    },
+    {
+      "question": "___________ parallelism",
+      "type": "blank",
+      "answer": "grammatical",
+      "explanation": "平行, 语法平行. The sentence lacked grammatical parallelism. 这个句子缺乏语法平行。"
+    },
+    {
+      "question": "pugilism _____",
+      "type": "blank",
+      "answer": "match",
+      "explanation": "拳击, 拳击比赛. The championship pugilism match drew crowds. 冠军拳击比赛吸引了人群。"
+    },
+    {
+      "question": "_____________ nihilism",
+      "type": "blank",
+      "answer": "philosophical",
+      "explanation": "虚无主义, 哲学虚无主义. Nietzsche explored philosophical nihilism. 尼采探索了哲学虚无主义。"
+    },
+    {
+      "question": "______ euphemism",
+      "type": "blank",
+      "answer": "polite",
+      "explanation": "委婉语, 礼貌的委婉语. Passed away is a polite euphemism for died. 去世是死亡的礼貌委婉语。"
+    },
+    {
+      "question": "____ pessimism",
+      "type": "blank",
+      "answer": "deep",
+      "explanation": "悲观主义, 深度悲观主义. The crisis generated deep pessimism. 危机产生了深度悲观主义。"
+    },
+    {
+      "question": "_______ optimism",
+      "type": "blank",
+      "answer": "guarded",
+      "explanation": "乐观主义, 谨慎的乐观主义. Officials expressed guarded optimism about recovery. 官员对复苏表示谨慎的乐观。"
+    },
+    {
+      "question": "______ organism",
+      "type": "blank",
+      "answer": "living",
+      "explanation": "有机体, 生物有机体. Every living organism requires water. 每个生物有机体都需要水。"
+    },
+    {
+      "question": "microorganism ______",
+      "type": "blank",
+      "answer": "growth",
+      "explanation": "微生物, 微生物生长. Temperature affects microorganism growth. 温度影响微生物生长。"
+    },
+    {
+      "question": "_______ mechanism",
+      "type": "blank",
+      "answer": "defense",
+      "explanation": "机制, 防御机制. Denial is a common defense mechanism. 否认是一种常见的防御机制。"
+    },
+    {
+      "question": "cosmopolitanism _____",
+      "type": "blank",
+      "answer": "ideal",
+      "explanation": "世界主义, 世界主义理想. The city embodied the cosmopolitanism ideal. 这座城市体现了世界主义理想。"
+    },
+    {
+      "question": "_____ chauvinism",
+      "type": "blank",
+      "answer": "rabid",
+      "explanation": "沙文主义, 狂热的沙文主义. His rabid chauvinism alienated colleagues. 他狂热的沙文主义疏远了同事。"
+    },
+    {
+      "question": "____-_________ hedonism",
+      "type": "blank",
+      "answer": "self-indulgent",
+      "explanation": "享乐主义, 自我放纵的享乐主义. The lifestyle represented self-indulgent hedonism. 这种生活方式代表了自我放纵的享乐主义。"
+    },
+    {
+      "question": "____ antagonism",
+      "type": "blank",
+      "answer": "open",
+      "explanation": "对抗, 公开对抗. There was open antagonism between the rivals. 对手之间存在公开对抗。"
+    },
+    {
+      "question": "_______ egoism",
+      "type": "blank",
+      "answer": "selfish",
+      "explanation": "利己主义, 自私的利己主义. His behavior showed selfish egoism. 他的行为表现出自私的利己主义。"
+    },
+    {
+      "question": "jingoism ________",
+      "type": "blank",
+      "answer": "rhetoric",
+      "explanation": "沙文主义, 沙文主义言辞. Political speeches used jingoism rhetoric. 政治演讲使用了沙文主义言辞。"
+    },
+    {
+      "question": "escapism _______",
+      "type": "blank",
+      "answer": "fantasy",
+      "explanation": "逃避主义, 逃避主义幻想. The novel offered escapism fantasy from reality. 小说提供了逃避现实的逃避主义幻想。"
+    },
+    {
+      "question": "_____ malapropism",
+      "type": "blank",
+      "answer": "comic",
+      "explanation": "词语误用, 滑稽的词语误用. The character's speech was full of comic malapropism. 这个角色的演讲充满了滑稽的词语误用。"
+    },
+    {
+      "question": "plagiarism ____",
+      "type": "blank",
+      "answer": "case",
+      "explanation": "抄袭, 抄袭案件. The university investigated the plagiarism case. 大学调查了抄袭案件。"
+    },
+    {
+      "question": "________ mesmerism",
+      "type": "blank",
+      "answer": "practice",
+      "explanation": "催眠术, 实践催眠术. The doctor would practice mesmerism on patients. 医生会对病人实践催眠术。"
+    },
+    {
+      "question": "_____ aphorism",
+      "type": "blank",
+      "answer": "pithy",
+      "explanation": "格言, 简洁的格言. Franklin was known for pithy aphorism. 富兰克林以简洁的格言而闻名。"
+    },
+    {
+      "question": "_____ dogmatism",
+      "type": "blank",
+      "answer": "rigid",
+      "explanation": "教条主义, 僵化的教条主义. His rigid dogmatism prevented compromise. 他僵化的教条主义阻止了妥协。"
+    },
+    {
+      "question": "patriotism ______",
+      "type": "blank",
+      "answer": "spirit",
+      "explanation": "爱国主义, 爱国主义精神. The holiday celebrates patriotism spirit. 这个节日庆祝爱国主义精神。"
+    },
+    {
+      "question": "_________ nepotism",
+      "type": "blank",
+      "answer": "shameless",
+      "explanation": "裙带关系, 无耻的裙带关系. The leader practiced shameless nepotism. 领导人实行无耻的裙带关系。"
+    },
+    {
+      "question": "___________ despotism",
+      "type": "blank",
+      "answer": "enlightened",
+      "explanation": "专制, 开明专制. The ruler claimed to practice enlightened despotism. 统治者声称实行开明专制。"
+    },
+    {
+      "question": "_____ truism",
+      "type": "blank",
+      "answer": "tired",
+      "explanation": "陈词滥调, 陈腐的陈词滥调. The speech repeated tired truism. 演讲重复了陈腐的陈词滥调。"
+    },
+    {
+      "question": "____ altruism",
+      "type": "blank",
+      "answer": "pure",
+      "explanation": "利他主义, 纯粹的利他主义. Her actions demonstrated pure altruism. 她的行为展示了纯粹的利他主义。"
+    },
+    {
+      "question": "cronyism _______",
+      "type": "blank",
+      "answer": "scandal",
+      "explanation": "任人唯亲, 任人唯亲丑闻. The mayor was embroiled in a cronyism scandal. 市长卷入了任人唯亲丑闻。"
+    },
+    {
+      "question": "______ cataclysm",
+      "type": "blank",
+      "answer": "global",
+      "explanation": "大灾难, 全球大灾难. Climate change could trigger a global cataclysm. 气候变化可能引发全球大灾难。"
+    },
+    {
+      "question": "_ modicum __ _____",
+      "type": "blank",
+      "answer": "a of truth",
+      "explanation": "少量, 少量真相. There was a modicum of truth in the rumor. 谣言中有少量真相。"
+    },
+    {
+      "question": "________ addendum",
+      "type": "blank",
+      "answer": "contract",
+      "explanation": "附录, 合同附录. The lawyer prepared a contract addendum. 律师准备了合同附录。"
+    },
+    {
+      "question": "linoleum _____",
+      "type": "blank",
+      "answer": "floor",
+      "explanation": "油毡, 油毡地板. The kitchen had a linoleum floor. 厨房有油毡地板。"
+    },
+    {
+      "question": "petroleum ________",
+      "type": "blank",
+      "answer": "refinery",
+      "explanation": "石油, 石油炼油厂. The petroleum refinery operated twenty-four hours. 石油炼油厂二十四小时运营。"
+    },
+    {
+      "question": "calcium ______",
+      "type": "blank",
+      "answer": "intake",
+      "explanation": "钙, 钙摄入量. Doctors recommend adequate calcium intake. 医生建议充足的钙摄入量。"
+    },
+    {
+      "question": "medium __ ________",
+      "type": "blank",
+      "answer": "of exchange",
+      "explanation": "媒介, 交换媒介. Money serves as a medium of exchange. 货币作为交换媒介。"
+    },
+    {
+      "question": "____-_______ tedium",
+      "type": "blank",
+      "answer": "mind-numbing",
+      "explanation": "乏味, 令人麻木的乏味. The work involved mind-numbing tedium. 工作涉及令人麻木的乏味。"
+    },
+    {
+      "question": "_______ compendium",
+      "type": "blank",
+      "answer": "concise",
+      "explanation": "纲要, 简明纲要. The book is a concise compendium of facts. 这本书是事实的简明纲要。"
+    },
+    {
+      "question": "______ odium",
+      "type": "blank",
+      "answer": "public",
+      "explanation": "憎恶, 公众憎恶. The scandal brought public odium upon him. 丑闻给他带来了公众憎恶。"
+    },
+    {
+      "question": "_____ podium",
+      "type": "blank",
+      "answer": "award",
+      "explanation": "领奖台, 领奖台. The athlete stood on the award podium. 运动员站在领奖台上。"
+    },
+    {
+      "question": "premium _______",
+      "type": "blank",
+      "answer": "quality",
+      "explanation": "优质的, 优质品质. The company offers premium quality products. 公司提供优质品质产品。"
+    },
+    {
+      "question": "__________ encomium",
+      "type": "blank",
+      "answer": "flattering",
+      "explanation": "赞颂, 奉承的赞颂. The speaker delivered a flattering encomium. 演讲者发表了奉承的赞颂。"
+    },
+    {
+      "question": "_ ___ millennium",
+      "type": "blank",
+      "answer": "a new",
+      "explanation": "千年, 新千年. We celebrate the beginning of a new millennium. 我们庆祝新千年的开始。"
+    },
+    {
+      "question": "_____ pandemonium",
+      "type": "blank",
+      "answer": "total",
+      "explanation": "大混乱, 完全混乱. The announcement caused total pandemonium. 这一公告引起了完全混乱。"
+    },
+    {
+      "question": "___ honorarium",
+      "type": "blank",
+      "answer": "pay",
+      "explanation": "酬金, 支付酬金. The university will pay honorarium to guest speakers. 大学将向客座演讲者支付酬金。"
+    },
+    {
+      "question": "______ equilibrium",
+      "type": "blank",
+      "answer": "market",
+      "explanation": "平衡, 市场平衡. Supply and demand reach market equilibrium. 供求达到市场平衡。"
+    },
+    {
+      "question": "______ bacterium",
+      "type": "blank",
+      "answer": "single",
+      "explanation": "细菌, 单个细菌. A single bacterium can multiply rapidly. 单个细菌可以迅速繁殖。"
+    },
+    {
+      "question": "delirium _______",
+      "type": "blank",
+      "answer": "tremens",
+      "explanation": "谵妄, 震颤性谵妄. Alcohol withdrawal can cause delirium tremens. 酒精戒断会引起震颤性谵妄。"
+    },
+    {
+      "question": "________ sanatorium",
+      "type": "blank",
+      "answer": "mountain",
+      "explanation": "疗养院, 山间疗养院. The patient recovered at a mountain sanatorium. 患者在山间疗养院康复。"
+    },
+    {
+      "question": "____ moratorium",
+      "type": "blank",
+      "answer": "loan",
+      "explanation": "暂停, 贷款暂停. The bank declared a loan moratorium. 银行宣布贷款暂停。"
+    },
+    {
+      "question": "______ auditorium",
+      "type": "blank",
+      "answer": "school",
+      "explanation": "礼堂, 学校礼堂. The concert was held in the school auditorium. 音乐会在学校礼堂举行。"
+    },
+    {
+      "question": "________ symposium",
+      "type": "blank",
+      "answer": "academic",
+      "explanation": "研讨会, 学术研讨会. Scholars presented papers at the academic symposium. 学者在学术研讨会上提交论文。"
+    },
+    {
+      "question": "________ colloquium",
+      "type": "blank",
+      "answer": "academic",
+      "explanation": "学术讨论会, 学术讨论会. The professor hosted an academic colloquium. 教授主持了学术讨论会。"
+    },
+    {
+      "question": "______ curriculum",
+      "type": "blank",
+      "answer": "school",
+      "explanation": "课程, 学校课程. The school curriculum includes math and science. 学校课程包括数学和科学。"
+    },
+    {
+      "question": "________ pendulum",
+      "type": "blank",
+      "answer": "swinging",
+      "explanation": "钟摆, 摆动的钟摆. The swinging pendulum measured time. 摆动的钟摆测量时间。"
+    },
+    {
+      "question": "_________ asylum",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "庇护, 政治庇护. The refugee sought political asylum. 难民寻求政治庇护。"
+    },
+    {
+      "question": "_____ chrysanthemum",
+      "type": "blank",
+      "answer": "white",
+      "explanation": "菊花, 白菊花. The garden featured beautiful white chrysanthemum. 花园里有美丽的白菊花。"
+    },
+    {
+      "question": "optimum _____",
+      "type": "blank",
+      "answer": "level",
+      "explanation": "最佳的, 最佳水平. The machine operates at optimum level. 机器在最佳水平运行。"
+    },
+    {
+      "question": "_____ interregnum",
+      "type": "blank",
+      "answer": "power",
+      "explanation": "空位期, 权力空位期. A power interregnum followed the king's death. 国王去世后出现了权力空位期。"
+    },
+    {
+      "question": "____ ___ fulcrum",
+      "type": "blank",
+      "answer": "find the",
+      "explanation": "支点, 找到支点. Engineers must find the fulcrum for the lever. 工程师必须为杠杆找到支点。"
+    },
+    {
+      "question": "humdrum _______",
+      "type": "blank",
+      "answer": "routine",
+      "explanation": "单调的, 单调的例行公事. Workers tired of the humdrum routine. 工人厌倦了单调的例行公事。"
+    },
+    {
+      "question": "_____ _ conundrum",
+      "type": "blank",
+      "answer": "solve a",
+      "explanation": "难题, 解决难题. The detective tried to solve a conundrum. 侦探试图解决难题。"
+    },
+    {
+      "question": "____ decorum",
+      "type": "blank",
+      "answer": "show",
+      "explanation": "礼仪, 表现礼仪. Guests were expected to show decorum. 客人被期望表现礼仪。"
+    },
+    {
+      "question": "______ forum",
+      "type": "blank",
+      "answer": "online",
+      "explanation": "论坛, 在线论坛. Users discussed issues in the online forum. 用户在在线论坛讨论问题。"
+    },
+    {
+      "question": "_____ spectrum",
+      "type": "blank",
+      "answer": "color",
+      "explanation": "光谱, 色谱. The prism revealed the color spectrum. 棱镜显示了色谱。"
+    },
+    {
+      "question": "_______ nostrum",
+      "type": "blank",
+      "answer": "miracle",
+      "explanation": "秘方, 神奇秘方. The salesman peddled a miracle nostrum. 推销员兜售神奇秘方。"
+    },
+    {
+      "question": "____ ___ rostrum",
+      "type": "blank",
+      "answer": "take the",
+      "explanation": "讲台, 走上讲台. The speaker prepared to take the rostrum. 演讲者准备走上讲台。"
+    },
+    {
+      "question": "___ desideratum",
+      "type": "blank",
+      "answer": "top",
+      "explanation": "迫切需要的东西, 首要需求. Peace is the top desideratum. 和平是首要需求。"
+    },
+    {
+      "question": "____ stratum",
+      "type": "blank",
+      "answer": "rock",
+      "explanation": "地层, 岩层. Geologists studied the ancient rock stratum. 地质学家研究古老的岩层。"
+    },
+    {
+      "question": "________ substratum",
+      "type": "blank",
+      "answer": "cultural",
+      "explanation": "基础, 文化基础. Language reflects the cultural substratum. 语言反映文化基础。"
+    },
+    {
+      "question": "_____ dictum",
+      "type": "blank",
+      "answer": "legal",
+      "explanation": "格言, 法律格言. The judge cited a famous legal dictum. 法官引用了一句著名的法律格言。"
+    },
+    {
+      "question": "____ arboretum",
+      "type": "blank",
+      "answer": "city",
+      "explanation": "植物园, 城市植物园. The city arboretum displays rare trees. 城市植物园展示稀有树木。"
+    },
+    {
+      "question": "______ factotum",
+      "type": "blank",
+      "answer": "office",
+      "explanation": "杂役, 办公室杂役. The office factotum handled various tasks. 办公室杂役处理各种任务。"
+    },
+    {
+      "question": "___ pseudonym",
+      "type": "blank",
+      "answer": "pen",
+      "explanation": "笔名, 笔名. The author wrote under a pen pseudonym. 作者用笔名写作。"
+    },
+    {
+      "question": "______ acronym",
+      "type": "blank",
+      "answer": "famous",
+      "explanation": "首字母缩写, 著名的首字母缩写. NASA is a famous acronym. NASA是一个著名的首字母缩写。"
+    },
+    {
+      "question": "pecan ___",
+      "type": "blank",
+      "answer": "pie",
+      "explanation": "山核桃, 山核桃派. Thanksgiving dinner included pecan pie. 感恩节晚餐包括山核桃派。"
+    },
+    {
+      "question": "_____ harridan",
+      "type": "blank",
+      "answer": "harsh",
+      "explanation": "泼妇, 严厉的泼妇. The harsh harridan scolded everyone. 严厉的泼妇责骂每个人。"
+    },
+    {
+      "question": "__________ paean",
+      "type": "blank",
+      "answer": "triumphant",
+      "explanation": "赞歌, 胜利的赞歌. The poem was a triumphant paean to freedom. 这首诗是对自由的胜利赞歌。"
+    },
+    {
+      "question": "lean ____",
+      "type": "blank",
+      "answer": "meat",
+      "explanation": "瘦的, 瘦肉. The doctor recommended eating lean meat. 医生建议吃瘦肉。"
+    },
+    {
+      "question": "glean ___________",
+      "type": "blank",
+      "answer": "information",
+      "explanation": "搜集, 搜集信息. Researchers glean information from various sources. 研究人员从各种来源搜集信息。"
+    },
+    {
+      "question": "demean _______",
+      "type": "blank",
+      "answer": "oneself",
+      "explanation": "贬低, 贬低自己. Don't demean oneself by begging. 不要通过乞求贬低自己。"
+    },
+    {
+      "question": "subterranean _____",
+      "type": "blank",
+      "answer": "river",
+      "explanation": "地下的, 地下河流. Explorers discovered a subterranean river. 探险者发现了地下河流。"
+    },
+    {
+      "question": "epicurean _____",
+      "type": "blank",
+      "answer": "taste",
+      "explanation": "美食的, 美食品味. The chef catered to epicurean taste. 厨师迎合美食品味。"
+    },
+    {
+      "question": "___ empyrean",
+      "type": "blank",
+      "answer": "the",
+      "explanation": "最高天, 最高天. Angels dwell in the empyrean. 天使居住在最高天。"
+    },
+    {
+      "question": "protean ______",
+      "type": "blank",
+      "answer": "talent",
+      "explanation": "多变的, 多变的才能. The actor possessed protean talent. 演员拥有多变的才能。"
+    },
+    {
+      "question": "procrustean ____",
+      "type": "blank",
+      "answer": "rule",
+      "explanation": "强求一致的, 强求一致的规则. The procrustean rule stifled creativity. 强求一致的规则扼杀了创造力。"
+    },
+    {
+      "question": "wean _____",
+      "type": "blank",
+      "answer": "child",
+      "explanation": "断奶, 给孩子断奶. Mothers gradually wean child from breastfeeding. 母亲逐渐给孩子断奶。"
+    },
+    {
+      "question": "pagan ______",
+      "type": "blank",
+      "answer": "ritual",
+      "explanation": "异教的, 异教仪式. Ancient tribes practiced pagan ritual. 古代部落实行异教仪式。"
+    },
+    {
+      "question": "amphibian _______",
+      "type": "blank",
+      "answer": "species",
+      "explanation": "两栖动物, 两栖动物物种. Frogs are common amphibian species. 青蛙是常见的两栖动物物种。"
+    },
+    {
+      "question": "______ academician",
+      "type": "blank",
+      "answer": "member",
+      "explanation": "院士, 院士成员. She was elected a member academician. 她被选为院士成员。"
+    }
+  ]
+}
