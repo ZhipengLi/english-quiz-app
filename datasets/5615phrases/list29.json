@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "______ stall",
+      "type": "blank",
+      "answer": "market",
+      "explanation": "摊位, 市场摊位. Vendors sold produce from their market stall. 小贩从他们的市场摊位出售农产品。"
+    },
+    {
+      "question": "forestall _ ______",
+      "type": "blank",
+      "answer": "a crisis",
+      "explanation": "预防, 预防危机. Quick action helped forestall a crisis. 迅速行动帮助预防了危机。"
+    },
+    {
+      "question": "install ________",
+      "type": "blank",
+      "answer": "software",
+      "explanation": "安装, 安装软件. The technician will install software on all computers. 技术人员将在所有计算机上安装软件。"
+    },
+    {
+      "question": "______ squall",
+      "type": "blank",
+      "answer": "sudden",
+      "explanation": "暴风, 突然的暴风. A sudden squall caught sailors by surprise. 突然的暴风让水手措手不及。"
+    },
+    {
+      "question": "stonewall ________",
+      "type": "blank",
+      "answer": "question",
+      "explanation": "阻碍, 阻碍质询. The official tried to stonewall question from reporters. 官员试图阻碍记者的质询。"
+    },
+    {
+      "question": "fell _____",
+      "type": "blank",
+      "answer": "swoop",
+      "explanation": "凶猛的, 一举. The army took the city in one fell swoop. 军队一举拿下了这座城市。"
+    },
+    {
+      "question": "pell-mell ____",
+      "type": "blank",
+      "answer": "rush",
+      "explanation": "混乱地, 混乱的冲刺. People made a pell-mell rush for the exits. 人们混乱地冲向出口。"
+    },
+    {
+      "question": "_____ mill",
+      "type": "blank",
+      "answer": "grain",
+      "explanation": "磨坊, 谷物磨坊. The old grain mill still operates today. 古老的谷物磨坊今天仍在运营。"
+    },
+    {
+      "question": "_____ drill",
+      "type": "blank",
+      "answer": "power",
+      "explanation": "钻头, 电钻. The carpenter used a power drill for the job. 木匠用电钻完成工作。"
+    },
+    {
+      "question": "distill _____",
+      "type": "blank",
+      "answer": "water",
+      "explanation": "蒸馏, 蒸馏水. The lab equipment can distill water for experiments. 实验室设备可以为实验蒸馏水。"
+    },
+    {
+      "question": "instill ______",
+      "type": "blank",
+      "answer": "values",
+      "explanation": "灌输, 灌输价值观. Parents work to instill values in their children. 父母努力向孩子灌输价值观。"
+    },
+    {
+      "question": "______ knoll",
+      "type": "blank",
+      "answer": "grassy",
+      "explanation": "小山丘, 长满草的小山丘. They picnicked on a grassy knoll overlooking the valley. 他们在俯瞰山谷的长满草的小山丘上野餐。"
+    },
+    {
+      "question": "____ poll",
+      "type": "blank",
+      "answer": "exit",
+      "explanation": "民意调查, 出口民意调查. The exit poll predicted election results accurately. 出口民意调查准确预测了选举结果。"
+    },
+    {
+      "question": "droll _____",
+      "type": "blank",
+      "answer": "humor",
+      "explanation": "滑稽的, 滑稽的幽默. His droll humor kept everyone entertained. 他滑稽的幽默让每个人都很开心。"
+    },
+    {
+      "question": "stroll ______",
+      "type": "blank",
+      "answer": "around",
+      "explanation": "漫步, 四处漫步. Couples stroll around the park at sunset. 情侣们在日落时分四处漫步于公园。"
+    },
+    {
+      "question": "____ toll",
+      "type": "blank",
+      "answer": "road",
+      "explanation": "通行费, 道路通行费. Drivers must pay road toll to use the highway. 司机必须支付道路通行费才能使用高速公路。"
+    },
+    {
+      "question": "dull ____",
+      "type": "blank",
+      "answer": "ache",
+      "explanation": "钝痛, 钝痛. He felt a dull ache in his shoulder. 他感到肩膀有钝痛。"
+    },
+    {
+      "question": "___ gull",
+      "type": "blank",
+      "answer": "sea",
+      "explanation": "海鸥, 海鸥. A sea gull circled overhead looking for food. 一只海鸥在头顶盘旋寻找食物。"
+    },
+    {
+      "question": "____ hull",
+      "type": "blank",
+      "answer": "ship",
+      "explanation": "船体, 船体. The ship hull was damaged by the rocks. 船体被岩石损坏。"
+    },
+    {
+      "question": "________ idyll",
+      "type": "blank",
+      "answer": "pastoral",
+      "explanation": "田园诗, 田园牧歌. The poem described a pastoral idyll of rural life. 这首诗描述了乡村生活的田园牧歌。"
+    },
+    {
+      "question": "___ idol",
+      "type": "blank",
+      "answer": "pop",
+      "explanation": "偶像, 流行偶像. The teenager's room was covered with pop idol posters. 青少年的房间里贴满了流行偶像海报。"
+    },
+    {
+      "question": "menthol _____",
+      "type": "blank",
+      "answer": "candy",
+      "explanation": "薄荷醇, 薄荷糖. The menthol candy soothed her sore throat. 薄荷糖缓解了她的喉咙痛。"
+    },
+    {
+      "question": "_____ whirlpool",
+      "type": "blank",
+      "answer": "water",
+      "explanation": "漩涡, 水漩涡. The water whirlpool pulled debris under the surface. 水漩涡将碎片拉到水面下。"
+    },
+    {
+      "question": "______ spool",
+      "type": "blank",
+      "answer": "thread",
+      "explanation": "线轴, 线轴. She wound the thread spool for sewing. 她缠绕线轴以备缝纫。"
+    },
+    {
+      "question": "____ carol",
+      "type": "blank",
+      "answer": "sing",
+      "explanation": "颂歌, 唱颂歌. Children gather to sing carol at Christmas. 孩子们聚在一起在圣诞节唱颂歌。"
+    },
+    {
+      "question": "pistol ____",
+      "type": "blank",
+      "answer": "shot",
+      "explanation": "手枪, 手枪射击. The race began with a pistol shot. 比赛以手枪射击开始。"
+    },
+    {
+      "question": "extol ___ _______",
+      "type": "blank",
+      "answer": "the virtues",
+      "explanation": "赞美, 赞美美德. The speaker continued to extol the virtues of hard work. 演讲者继续赞美努力工作的美德。"
+    },
+    {
+      "question": "_____ churl",
+      "type": "blank",
+      "answer": "surly",
+      "explanation": "粗人, 脾气坏的粗人. The surly churl refused to help anyone. 脾气坏的粗人拒绝帮助任何人。"
+    },
+    {
+      "question": "______ overhaul",
+      "type": "blank",
+      "answer": "engine",
+      "explanation": "大修, 发动机大修. The mechanic performed an engine overhaul. 机械师进行了发动机大修。"
+    },
+    {
+      "question": "maul _ ______",
+      "type": "blank",
+      "answer": "a victim",
+      "explanation": "撕咬, 撕咬受害者. The wild animal could maul a victim severely. 野生动物可能会严重撕咬受害者。"
+    },
+    {
+      "question": "resourceful ______",
+      "type": "blank",
+      "answer": "leader",
+      "explanation": "足智多谋的, 足智多谋的领导者. The resourceful leader found solutions to every problem. 足智多谋的领导者为每个问题找到了解决方案。"
+    },
+    {
+      "question": "vengeful ______",
+      "type": "blank",
+      "answer": "spirit",
+      "explanation": "复仇的, 复仇的精神. The legend spoke of a vengeful spirit. 传说讲述了一个复仇的精神。"
+    },
+    {
+      "question": "dutiful ___",
+      "type": "blank",
+      "answer": "son",
+      "explanation": "尽职的, 尽职的儿子. The dutiful son cared for his aging parents. 尽职的儿子照顾年迈的父母。"
+    },
+    {
+      "question": "willful _______",
+      "type": "blank",
+      "answer": "neglect",
+      "explanation": "故意的, 故意的忽视. The charge was willful neglect of duty. 指控是故意忽视职责。"
+    },
+    {
+      "question": "blissful _______",
+      "type": "blank",
+      "answer": "silence",
+      "explanation": "幸福的, 幸福的寂静. They enjoyed blissful silence in the countryside. 他们在乡村享受幸福的寂静。"
+    },
+    {
+      "question": "fitful _____",
+      "type": "blank",
+      "answer": "sleep",
+      "explanation": "断断续续的, 断断续续的睡眠. Anxiety caused fitful sleep throughout the night. 焦虑导致整夜断断续续的睡眠。"
+    },
+    {
+      "question": "________ mogul",
+      "type": "blank",
+      "answer": "business",
+      "explanation": "大亨, 商业大亨. The business mogul owned multiple companies. 商业大亨拥有多家公司。"
+    },
+    {
+      "question": "annul ________",
+      "type": "blank",
+      "answer": "marriage",
+      "explanation": "废除, 废除婚姻. The court decided to annul marriage on legal grounds. 法院决定以法律理由废除婚姻。"
+    },
+    {
+      "question": "foul _____",
+      "type": "blank",
+      "answer": "smell",
+      "explanation": "恶臭的, 恶臭味. A foul smell filled the room. 恶臭味充满了房间。"
+    },
+    {
+      "question": "_______ consul",
+      "type": "blank",
+      "answer": "Italian",
+      "explanation": "领事, 意大利领事. The Italian consul assisted citizens abroad. 意大利领事在海外协助公民。"
+    },
+    {
+      "question": "______ awl",
+      "type": "blank",
+      "answer": "sewing",
+      "explanation": "锥子, 缝纫锥子. The cobbler used a sewing awl for leather work. 鞋匠使用缝纫锥子进行皮革工作。"
+    },
+    {
+      "question": "trawl ___ ____",
+      "type": "blank",
+      "answer": "for data",
+      "explanation": "搜寻, 搜寻数据. Researchers trawl for data in archives. 研究人员在档案中搜寻数据。"
+    },
+    {
+      "question": "_______ sibyl",
+      "type": "blank",
+      "answer": "ancient",
+      "explanation": "女预言家, 古代女预言家. The ancient sibyl prophesied future events. 古代女预言家预言未来事件。"
+    },
+    {
+      "question": "_____ beam",
+      "type": "blank",
+      "answer": "laser",
+      "explanation": "光束, 激光束. The laser beam cut through the metal. 激光束切割金属。"
+    },
+    {
+      "question": "seam _________",
+      "type": "blank",
+      "answer": "allowance",
+      "explanation": "缝, 缝份. The pattern includes seam allowance measurements. 图案包括缝份尺寸。"
+    },
+    {
+      "question": "_____ amalgam",
+      "type": "blank",
+      "answer": "metal",
+      "explanation": "混合物, 金属混合物. Dentists used metal amalgam for fillings. 牙医使用金属混合物进行填充。"
+    },
+    {
+      "question": "_______ logjam",
+      "type": "blank",
+      "answer": "traffic",
+      "explanation": "僵局, 交通僵局. The accident created a traffic logjam on the highway. 事故在高速公路上造成了交通僵局。"
+    },
+    {
+      "question": "____ clam",
+      "type": "blank",
+      "answer": "hard",
+      "explanation": "蛤蜊, 硬壳蛤蜊. Divers collected hard clam from the ocean floor. 潜水员从海底收集硬壳蛤蜊。"
+    },
+    {
+      "question": "_______ loam",
+      "type": "blank",
+      "answer": "fertile",
+      "explanation": "壤土, 肥沃的壤土. The garden had rich fertile loam for planting. 花园有丰富的肥沃壤土用于种植。"
+    },
+    {
+      "question": "ram _______",
+      "type": "blank",
+      "answer": "through",
+      "explanation": "猛推, 强行通过. The government tried to ram through legislation. 政府试图强行通过立法。"
+    },
+    {
+      "question": "___ _____ diagram",
+      "type": "blank",
+      "answer": "bar chart",
+      "explanation": "图表, 条形图. The presentation included a bar chart diagram. 演示文稿包括条形图。"
+    },
+    {
+      "question": "____ anagram",
+      "type": "blank",
+      "answer": "word",
+      "explanation": "字谜, 单词字谜. Solving the word anagram required rearranging letters. 解决单词字谜需要重新排列字母。"
+    },
+    {
+      "question": "_____ epigram",
+      "type": "blank",
+      "answer": "witty",
+      "explanation": "警句, 机智的警句. The author was famous for witty epigram. 作者以机智的警句而闻名。"
+    },
+    {
+      "question": "redeem ______",
+      "type": "blank",
+      "answer": "coupon",
+      "explanation": "兑换, 兑换优惠券. Customers can redeem coupon at checkout. 顾客可以在结账时兑换优惠券。"
+    },
+    {
+      "question": "_______ stratagem",
+      "type": "blank",
+      "answer": "cunning",
+      "explanation": "计谋, 狡猾的计谋. The general devised a cunning stratagem. 将军设计了一个狡猾的计谋。"
+    },
+    {
+      "question": "hem _ _____",
+      "type": "blank",
+      "answer": "a skirt",
+      "explanation": "缝边, 给裙子缝边. The tailor will hem a skirt to the right length. 裁缝会把裙子缝边到合适的长度。"
+    },
+    {
+      "question": "________ anthem",
+      "type": "blank",
+      "answer": "national",
+      "explanation": "国歌, 国歌. The crowd stood for the national anthem. 人群站立聆听国歌。"
+    },
+    {
+      "question": "_____ mayhem",
+      "type": "blank",
+      "answer": "urban",
+      "explanation": "混乱, 城市混乱. The riot caused urban mayhem in the streets. 骚乱在街道上造成了城市混乱。"
+    },
+    {
+      "question": "____ apothegm",
+      "type": "blank",
+      "answer": "wise",
+      "explanation": "格言, 智慧格言. The philosopher shared a wise apothegm. 哲学家分享了一句智慧格言。"
+    },
+    {
+      "question": "________ paradigm",
+      "type": "blank",
+      "answer": "teaching",
+      "explanation": "范例, 教学范例. The school adopted a new teaching paradigm. 学校采用了新的教学范例。"
+    },
+    {
+      "question": "________ acclaim",
+      "type": "blank",
+      "answer": "critical",
+      "explanation": "赞誉, 评论界赞誉. The film received critical acclaim from reviewers. 这部电影获得了评论界的赞誉。"
+    },
+    {
+      "question": "declaim ______",
+      "type": "blank",
+      "answer": "poetry",
+      "explanation": "朗诵, 朗诵诗歌. The actor would declaim poetry dramatically. 演员会戏剧性地朗诵诗歌。"
+    },
+    {
+      "question": "reclaim ____",
+      "type": "blank",
+      "answer": "land",
+      "explanation": "开垦, 开垦土地. Engineers worked to reclaim land from the sea. 工程师努力从海中开垦土地。"
+    },
+    {
+      "question": "disclaim ______________",
+      "type": "blank",
+      "answer": "responsibility",
+      "explanation": "否认, 否认责任. The company tried to disclaim responsibility for damages. 公司试图否认对损害的责任。"
+    },
+    {
+      "question": "____ whim",
+      "type": "blank",
+      "answer": "idle",
+      "explanation": "突发奇想, 无聊的突发奇想. He made decisions on idle whim rather than planning. 他根据无聊的突发奇想而不是计划做决定。"
+    },
+    {
+      "question": "denim ______",
+      "type": "blank",
+      "answer": "jacket",
+      "explanation": "牛仔布, 牛仔布夹克. She wore a classic denim jacket. 她穿着一件经典的牛仔布夹克。"
+    },
+    {
+      "question": "_____ interim",
+      "type": "blank",
+      "answer": "short",
+      "explanation": "过渡期间, 短暂的过渡期间. There was a short interim between leaders. 领导人之间有一个短暂的过渡期间。"
+    },
+    {
+      "question": "_________ pilgrim",
+      "type": "blank",
+      "answer": "religious",
+      "explanation": "朝圣者, 宗教朝圣者. The religious pilgrim traveled to holy sites. 宗教朝圣者前往圣地。"
+    },
+    {
+      "question": "prim _______",
+      "type": "blank",
+      "answer": "manners",
+      "explanation": "拘谨的, 拘谨的举止. The lady maintained prim manners at all times. 这位女士始终保持拘谨的举止。"
+    },
+    {
+      "question": "_____ verbatim",
+      "type": "blank",
+      "answer": "quote",
+      "explanation": "逐字地, 逐字引用. Please quote verbatim from the original text. 请从原文逐字引用。"
+    },
+    {
+      "question": "vim ___ _____",
+      "type": "blank",
+      "answer": "and vigor",
+      "explanation": "精力, 精力和活力. The young athlete played with vim and vigor. 年轻运动员精力充沛地比赛。"
+    },
+    {
+      "question": "_____ maxim",
+      "type": "blank",
+      "answer": "moral",
+      "explanation": "格言, 道德格言. The teacher taught students a moral maxim. 老师向学生教授道德格言。"
+    },
+    {
+      "question": "________ balm",
+      "type": "blank",
+      "answer": "soothing",
+      "explanation": "香膏, 舒缓香膏. The soothing balm relieved her dry skin. 舒缓香膏缓解了她的干燥皮肤。"
+    },
+    {
+      "question": "___ realm __ ___",
+      "type": "blank",
+      "answer": "the of art",
+      "explanation": "领域, 艺术领域. His work explores the realm of art and science. 他的作品探索艺术和科学领域。"
+    },
+    {
+      "question": "____ _ psalm",
+      "type": "blank",
+      "answer": "sing a",
+      "explanation": "赞美诗, 唱赞美诗. The congregation gathered to sing a psalm. 会众聚集唱赞美诗。"
+    },
+    {
+      "question": "_ ______ qualm",
+      "type": "blank",
+      "answer": "a sudden",
+      "explanation": "疑虑, 突然的疑虑. She felt a sudden qualm about the decision. 她对这个决定感到突然的疑虑。"
+    },
+    {
+      "question": "elm ____",
+      "type": "blank",
+      "answer": "tree",
+      "explanation": "榆树, 榆树. The old elm tree stood in the town square. 古老的榆树矗立在城镇广场上。"
+    },
+    {
+      "question": "____ ___ helm",
+      "type": "blank",
+      "answer": "take the",
+      "explanation": "舵, 掌舵. The new CEO will take the helm next month. 新任首席执行官将于下月掌舵。"
+    },
+    {
+      "question": "whelm ____ _____",
+      "type": "blank",
+      "answer": "with grief",
+      "explanation": "淹没, 被悲伤淹没. Sorrow seemed to whelm with grief. 悲伤似乎被悲痛淹没。"
+    },
+    {
+      "question": "overwhelm ___ ______",
+      "type": "blank",
+      "answer": "the senses",
+      "explanation": "压倒, 压倒感官. The spectacular view would overwhelm the senses. 壮观的景色会压倒感官。"
+    },
+    {
+      "question": "boredom _________",
+      "type": "blank",
+      "answer": "threshold",
+      "explanation": "无聊, 无聊阈值. Everyone has a different boredom threshold. 每个人都有不同的无聊阈值。"
+    },
+    {
+      "question": "______ serfdom",
+      "type": "blank",
+      "answer": "feudal",
+      "explanation": "农奴制, 封建农奴制. The country abolished feudal serfdom centuries ago. 该国几个世纪前废除了封建农奴制。"
+    },
+    {
+      "question": "random ______",
+      "type": "blank",
+      "answer": "sample",
+      "explanation": "随机的, 随机样本. Researchers selected a random sample for the study. 研究人员为研究选择了随机样本。"
+    },
+    {
+      "question": "____-_______ axiom",
+      "type": "blank",
+      "answer": "self-evident",
+      "explanation": "公理, 不言而喻的公理. The declaration began with a self-evident axiom. 宣言以一个不言而喻的公理开始。"
+    },
+    {
+      "question": "________ boom",
+      "type": "blank",
+      "answer": "economic",
+      "explanation": "繁荣, 经济繁荣. The region experienced an economic boom. 该地区经历了经济繁荣。"
+    },
+    {
+      "question": "______ heirloom",
+      "type": "blank",
+      "answer": "family",
+      "explanation": "传家宝, 家族传家宝. The ring is a precious family heirloom. 这枚戒指是珍贵的家族传家宝。"
+    },
+    {
+      "question": "_______ groom",
+      "type": "blank",
+      "answer": "wedding",
+      "explanation": "新郎, 婚礼新郎. The wedding groom nervously awaited his bride. 婚礼新郎紧张地等待他的新娘。"
+    },
+    {
+      "question": "_ maelstrom __",
+      "type": "blank",
+      "answer": "a of",
+      "explanation": "大漩涡, 大漩涡. The scandal created a maelstrom of controversy. 丑闻引起了争议的大漩涡。"
+    },
+    {
+      "question": "___ ransom",
+      "type": "blank",
+      "answer": "pay",
+      "explanation": "赎金, 支付赎金. The family refused to pay ransom to kidnappers. 家人拒绝向绑架者支付赎金。"
+    },
+    {
+      "question": "phantom ____",
+      "type": "blank",
+      "answer": "limb",
+      "explanation": "幻影, 幻肢. Amputees sometimes experience phantom limb sensations. 截肢者有时会经历幻肢感觉。"
+    },
+    {
+      "question": "buxom ______",
+      "type": "blank",
+      "answer": "figure",
+      "explanation": "丰满的, 丰满的身材. The painting depicted a woman with a buxom figure. 这幅画描绘了一个身材丰满的女人。"
+    },
+    {
+      "question": "_____ charm",
+      "type": "blank",
+      "answer": "lucky",
+      "explanation": "魅力, 幸运符. She carried a lucky charm for good fortune. 她带着一个幸运符以求好运。"
+    },
+    {
+      "question": "disarm _________",
+      "type": "blank",
+      "answer": "suspicion",
+      "explanation": "消除, 消除怀疑. His honest approach helped disarm suspicion. 他诚实的态度有助于消除怀疑。"
+    },
+    {
+      "question": "lukewarm ________",
+      "type": "blank",
+      "answer": "response",
+      "explanation": "冷淡的, 冷淡的反应. The proposal received only a lukewarm response. 该提议只得到了冷淡的反应。"
+    },
+    {
+      "question": "germ ______",
+      "type": "blank",
+      "answer": "theory",
+      "explanation": "细菌, 细菌理论. Pasteur developed the germ theory of disease. 巴斯德发展了疾病的细菌理论。"
+    },
+    {
+      "question": "affirm ___ _______",
+      "type": "blank",
+      "answer": "the verdict",
+      "explanation": "确认, 确认判决. The appeals court decided to affirm the verdict. 上诉法院决定确认判决。"
+    },
+    {
+      "question": "infirm _______",
+      "type": "blank",
+      "answer": "patient",
+      "explanation": "虚弱的, 虚弱的病人. The nurse cared for the infirm patient. 护士照顾虚弱的病人。"
+    },
+    {
+      "question": "confirm ___________",
+      "type": "blank",
+      "answer": "reservation",
+      "explanation": "确认, 确认预订. Please call to confirm reservation for dinner. 请致电确认晚餐预订。"
+    },
+    {
+      "question": "______ uniform",
+      "type": "blank",
+      "answer": "school",
+      "explanation": "制服, 校服. Students must wear school uniform daily. 学生必须每天穿校服。"
+    },
+    {
+      "question": "misinform ___ ______",
+      "type": "blank",
+      "answer": "the public",
+      "explanation": "误导, 误导公众. False news can misinform the public. 假新闻会误导公众。"
+    }
+  ]
+}
