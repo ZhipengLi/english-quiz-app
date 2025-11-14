@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "cameo __________",
+      "type": "blank",
+      "answer": "appearance",
+      "explanation": "浮雕宝石; 小配角, 客串出演. The director made a cameo appearance in the film's opening scene. 导演在电影的开场戏中客串出演。"
+    },
+    {
+      "question": "_____ archipelago",
+      "type": "blank",
+      "answer": "Greek",
+      "explanation": "群岛, 希腊群岛. We sailed through the Greek archipelago, visiting dozens of beautiful islands. 我们航行穿过希腊群岛,游览了数十个美丽的岛屿。"
+    },
+    {
+      "question": "________ virago",
+      "type": "blank",
+      "answer": "shouting",
+      "explanation": "泼妇; 悍妇, 大喊大叫的泼妇. The shouting virago frightened all the customers in the restaurant. 那个大喊大叫的泼妇吓坏了餐厅里所有的顾客。"
+    },
+    {
+      "question": "___ doggo",
+      "type": "blank",
+      "answer": "lie",
+      "explanation": "一动不动地躲藏, 躲藏着不动. The thief decided to lie doggo until the police left the area. 小偷决定躲藏着不动,直到警察离开该地区。"
+    },
+    {
+      "question": "______ vertigo",
+      "type": "blank",
+      "answer": "motion",
+      "explanation": "眩晕, 动晕症. She experienced motion vertigo during the turbulent flight. 她在颠簸的飞行中感到晕眩。"
+    },
+    {
+      "question": "_____ tango",
+      "type": "blank",
+      "answer": "dance",
+      "explanation": "探戈舞, 跳探戈. They learned to dance tango at the evening class. 他们在晚间课程上学习跳探戈。"
+    },
+    {
+      "question": "cargo ____",
+      "type": "blank",
+      "answer": "ship",
+      "explanation": "货物, 货船. The cargo ship sailed across the Pacific Ocean carrying electronics. 货船载着电子产品横渡太平洋。"
+    },
+    {
+      "question": "____ poncho",
+      "type": "blank",
+      "answer": "rain",
+      "explanation": "雨披; 斗篷, 雨披. He wore a rain poncho to stay dry during the storm. 他穿着雨披在暴风雨中保持干燥。"
+    },
+    {
+      "question": "_____ braggadocio",
+      "type": "blank",
+      "answer": "empty",
+      "explanation": "吹嘘; 自夸, 空洞的自夸. His claims of success were nothing but empty braggadocio. 他声称的成功不过是空洞的自夸。"
+    },
+    {
+      "question": "_________ imbroglio",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "复杂的纠纷; 困境, 政治纠葛. The scandal turned into a political imbroglio that lasted for months. 这起丑闻演变成了一场持续数月的政治纠葛。"
+    },
+    {
+      "question": "__________ portfolio",
+      "type": "blank",
+      "answer": "investment",
+      "explanation": "公文包; 投资组合, 投资组合. She carefully diversified her investment portfolio to reduce risk. 她仔细地分散了投资组合以降低风险。"
+    },
+    {
+      "question": "_____-____ scenario",
+      "type": "blank",
+      "answer": "worst-case",
+      "explanation": "方案; 场景, 最坏情况. The emergency plan covered the worst-case scenario of complete power failure. 应急计划涵盖了完全停电的最坏情况。"
+    },
+    {
+      "question": "_____ impresario",
+      "type": "blank",
+      "answer": "opera",
+      "explanation": "演出经理人; 主办者, 歌剧经理人. The famous opera impresario brought world-class productions to our city. 这位著名的歌剧经理人将世界级的演出带到了我们的城市。"
+    },
+    {
+      "question": "______ oratorio",
+      "type": "blank",
+      "answer": "sacred",
+      "explanation": "清唱剧, 宗教清唱剧. The choir performed a sacred oratorio for the Christmas celebration. 合唱团为圣诞庆典演出了一部宗教清唱剧。"
+    },
+    {
+      "question": "____ cello",
+      "type": "blank",
+      "answer": "solo",
+      "explanation": "大提琴, 大提琴独奏. The concert featured a beautiful solo cello performance. 音乐会上有一段优美的大提琴独奏表演。"
+    },
+    {
+      "question": "_____ peccadillo",
+      "type": "blank",
+      "answer": "minor",
+      "explanation": "小过失; 轻罪, 小过失. His tardiness was just a minor peccadillo compared to more serious offenses. 与更严重的过失相比,他的迟到只是一个小过失。"
+    },
+    {
+      "question": "________ dynamo",
+      "type": "blank",
+      "answer": "electric",
+      "explanation": "发电机; 精力充沛的人, 发电机. The bicycle's electric dynamo powered the headlight. 自行车的发电机为前灯供电。"
+    },
+    {
+      "question": "albino ______",
+      "type": "blank",
+      "answer": "animal",
+      "explanation": "白化病患者; 白化的, 白化动物. The zoo acquired a rare albino animal for its collection. 动物园为其收藏获得了一只罕见的白化动物。"
+    },
+    {
+      "question": "_______ inferno",
+      "type": "blank",
+      "answer": "burning",
+      "explanation": "地狱; 火海, 燃烧的火海. The warehouse became a burning inferno within minutes. 仓库在几分钟内变成了燃烧的火海。"
+    },
+    {
+      "question": "boo ______",
+      "type": "blank",
+      "answer": "loudly",
+      "explanation": "发嘘声, 大声嘘. The audience began to boo loudly when the performance faltered. 当表演出现失误时,观众开始大声嘘。"
+    },
+    {
+      "question": "_________ bugaboo",
+      "type": "blank",
+      "answer": "childhood",
+      "explanation": "恐惧的事物; 困扰, 童年恐惧. Darkness remained a childhood bugaboo that he never quite outgrew. 黑暗仍然是他从未真正克服的童年恐惧。"
+    },
+    {
+      "question": "kangaroo _____",
+      "type": "blank",
+      "answer": "court",
+      "explanation": "袋鼠, 袋鼠法庭(非正式法庭). The prisoners faced a kangaroo court with no real due process. 囚犯面对的是一个没有真正正当程序的袋鼠法庭。"
+    },
+    {
+      "question": "woo _________",
+      "type": "blank",
+      "answer": "investors",
+      "explanation": "追求; 争取, 争取投资者. The startup worked hard to woo investors with their innovative pitch. 这家初创公司努力用他们创新的提案来争取投资者。"
+    },
+    {
+      "question": "____ tempo",
+      "type": "blank",
+      "answer": "fast",
+      "explanation": "节奏; 速度, 快节奏. The orchestra played the piece at a fast tempo. 管弦乐队以快节奏演奏这首曲子。"
+    },
+    {
+      "question": "______ maestro",
+      "type": "blank",
+      "answer": "master",
+      "explanation": "大师; 音乐大师, 大师级指挥. The master maestro conducted the symphony with extraordinary skill. 大师级指挥以非凡的技艺指挥交响乐团。"
+    },
+    {
+      "question": "_ ____ tyro",
+      "type": "blank",
+      "answer": "a mere",
+      "explanation": "新手; 初学者, 仅仅是新手. He was a mere tyro in the field of law. 他在法律领域仅仅是个新手。"
+    },
+    {
+      "question": "_____ virtuoso",
+      "type": "blank",
+      "answer": "piano",
+      "explanation": "艺术大师; 名家, 钢琴大师. The young piano virtuoso amazed audiences with her technical prowess. 这位年轻的钢琴大师以其高超的技艺使观众惊叹不已。"
+    },
+    {
+      "question": "_____ torso",
+      "type": "blank",
+      "answer": "human",
+      "explanation": "躯干, 人体躯干. The sculpture depicted a human torso in marble. 这座雕塑用大理石描绘了人体躯干。"
+    },
+    {
+      "question": "staccato _____",
+      "type": "blank",
+      "answer": "notes",
+      "explanation": "断奏的; 断续的, 断音. The violinist played the staccato notes with precision. 小提琴家精确地演奏断音。"
+    },
+    {
+      "question": "veto _____",
+      "type": "blank",
+      "answer": "power",
+      "explanation": "否决权; 否决, 否决权. The president exercised his veto power to block the legislation. 总统行使否决权来阻止该立法。"
+    },
+    {
+      "question": "mosquito ____",
+      "type": "blank",
+      "answer": "bite",
+      "explanation": "蚊子, 蚊子叮咬. The itchy mosquito bite kept her awake all night. 发痒的蚊子叮咬让她整夜无法入睡。"
+    },
+    {
+      "question": "____ canto",
+      "type": "blank",
+      "answer": "epic",
+      "explanation": "篇章(长诗的), 史诗篇章. The poet recited the epic canto with great passion. 诗人充满激情地朗诵史诗篇章。"
+    },
+    {
+      "question": "________ memento",
+      "type": "blank",
+      "answer": "keepsake",
+      "explanation": "纪念品, 纪念品. She kept the locket as a keepsake memento of her grandmother. 她保留着这个小盒作为祖母的纪念品。"
+    },
+    {
+      "question": "_____ concerto",
+      "type": "blank",
+      "answer": "piano",
+      "explanation": "协奏曲, 钢琴协奏曲. The famous piano concerto was composed by Rachmaninoff. 这首著名的钢琴协奏曲由拉赫玛尼诺夫创作。"
+    },
+    {
+      "question": "_____ manifesto",
+      "type": "blank",
+      "answer": "party",
+      "explanation": "宣言, 政党宣言. The party manifesto outlined their policies for the next term. 政党宣言概述了他们下一任期的政策。"
+    },
+    {
+      "question": "________ gusto",
+      "type": "blank",
+      "answer": "artistic",
+      "explanation": "热情; 兴致, 艺术热情. She painted with artistic gusto, her brushstrokes bold and confident. 她以艺术热情作画,笔触大胆而自信。"
+    },
+    {
+      "question": "_____ libretto",
+      "type": "blank",
+      "answer": "opera",
+      "explanation": "歌剧脚本, 歌剧脚本. The composer collaborated closely with the writer of the opera libretto. 作曲家与歌剧脚本的作者密切合作。"
+    },
+    {
+      "question": "______ motto",
+      "type": "blank",
+      "answer": "family",
+      "explanation": "座右铭; 格言, 家族格言. The family motto had been passed down for generations. 这个家族格言已经传承了好几代。"
+    },
+    {
+      "question": "_____ arroyo",
+      "type": "blank",
+      "answer": "rocky",
+      "explanation": "干涸的河床; 峡谷, 多岩石的干涸河床. We hiked through the rocky arroyo in the desert. 我们徒步穿越沙漠中多岩石的干涸河床。"
+    },
+    {
+      "question": "reap ________",
+      "type": "blank",
+      "answer": "benefits",
+      "explanation": "收获; 获得, 获得好处. Hard work allows you to reap benefits in the long run. 努力工作让你从长远来看获得好处。"
+    },
+    {
+      "question": "lap ____",
+      "type": "blank",
+      "answer": "time",
+      "explanation": "一圈; 大腿部, 单圈时间. The race car driver achieved the fastest lap time of the day. 赛车手创下了当天最快的单圈时间。"
+    },
+    {
+      "question": "overlap ____",
+      "type": "blank",
+      "answer": "area",
+      "explanation": "重叠; 交叉, 重叠区域. There is significant overlap area between the two research fields. 这两个研究领域之间有显著的重叠区域。"
+    },
+    {
+      "question": "scrap _____",
+      "type": "blank",
+      "answer": "metal",
+      "explanation": "废料; 碎片, 废金属. The recycling plant processes tons of scrap metal daily. 回收厂每天处理数吨废金属。"
+    },
+    {
+      "question": "sap ________",
+      "type": "blank",
+      "answer": "strength",
+      "explanation": "树液; 削弱, 削弱力量. The prolonged illness began to sap strength from his body. 长期的疾病开始削弱他身体的力量。"
+    },
+    {
+      "question": "wiretap ____",
+      "type": "blank",
+      "answer": "call",
+      "explanation": "窃听; 窃听装置, 窃听电话. The police obtained a warrant to wiretap call records of the suspect. 警方获得了窃听嫌疑人电话记录的授权。"
+    },
+    {
+      "question": "peep _______",
+      "type": "blank",
+      "answer": "through",
+      "explanation": "偷看; 窥视, 透过...偷看. Children love to peep through the keyhole at night. 孩子们喜欢在晚上透过钥匙孔偷看。"
+    },
+    {
+      "question": "steep _____",
+      "type": "blank",
+      "answer": "price",
+      "explanation": "陡峭的; 过高的, 高昂的价格. The luxury car comes with a steep price tag. 这辆豪华汽车的价格标签很高昂。"
+    },
+    {
+      "question": "______ chip",
+      "type": "blank",
+      "answer": "potato",
+      "explanation": "芯片; 碎片, 薯片. She enjoyed eating a potato chip while watching television. 她喜欢边看电视边吃薯片。"
+    },
+    {
+      "question": "____ draftsmanship",
+      "type": "blank",
+      "answer": "fine",
+      "explanation": "绘图技巧, 精湛的绘图技巧. The architect's fine draftsmanship was evident in every detail. 建筑师精湛的绘图技巧在每个细节中都显而易见。"
+    },
+    {
+      "question": "_____ championship",
+      "type": "blank",
+      "answer": "world",
+      "explanation": "锦标赛; 冠军, 世界锦标赛. The athlete trained for years to compete in the world championship. 这位运动员训练多年以参加世界锦标赛。"
+    },
+    {
+      "question": "flip _ ____",
+      "type": "blank",
+      "answer": "a coin",
+      "explanation": "翻转; 抛, 抛硬币. Let's flip a coin to decide who goes first. 让我们抛硬币来决定谁先开始。"
+    },
+    {
+      "question": "nip __ ___ ___",
+      "type": "blank",
+      "answer": "in the bud",
+      "explanation": "掐; 夹, 把...扼杀在萌芽状态. We must nip in the bud any rumors before they spread. 我们必须在谣言传播之前把它扼杀在萌芽状态。"
+    },
+    {
+      "question": "snip ___",
+      "type": "blank",
+      "answer": "off",
+      "explanation": "剪; 剪断, 剪掉. She used scissors to snip off the loose thread. 她用剪刀剪掉松散的线头。"
+    },
+    {
+      "question": "rip _____",
+      "type": "blank",
+      "answer": "apart",
+      "explanation": "撕裂; 撕开, 撕开. The strong wind threatened to rip apart the tent. 强风威胁要把帐篷撕开。"
+    },
+    {
+      "question": "sip ___",
+      "type": "blank",
+      "answer": "tea",
+      "explanation": "啜饮; 小口喝, 啜饮茶. She sat quietly to sip tea in the garden. 她静静地坐在花园里啜饮茶水。"
+    },
+    {
+      "question": "quip __ ___ ___",
+      "type": "blank",
+      "answer": "of the day",
+      "explanation": "俏皮话; 妙语, 每日妙语. His clever quip of the day made everyone laugh. 他每日妙语让所有人都笑了。"
+    },
+    {
+      "question": "____ whelp",
+      "type": "blank",
+      "answer": "wolf",
+      "explanation": "幼兽; 幼崽, 狼崽. The mother protected her wolf whelp from danger. 母狼保护她的狼崽免受危险。"
+    },
+    {
+      "question": "______ pulp",
+      "type": "blank",
+      "answer": "orange",
+      "explanation": "果肉; 纸浆, 橙子果肉. Fresh juice contains lots of orange pulp and vitamins. 新鲜果汁含有大量橙子果肉和维生素。"
+    },
+    {
+      "question": "decamp __ _____",
+      "type": "blank",
+      "answer": "at night",
+      "explanation": "撤营; 逃走, 夜间撤离. The soldiers decided to decamp at night to avoid detection. 士兵们决定夜间撤离以避免被发现。"
+    },
+    {
+      "question": "damp _____",
+      "type": "blank",
+      "answer": "cloth",
+      "explanation": "潮湿的; 使潮湿, 湿布. Clean the surface with a damp cloth. 用湿布清洁表面。"
+    },
+    {
+      "question": "____ clamp",
+      "type": "blank",
+      "answer": "hose",
+      "explanation": "夹子; 夹紧, 软管夹. Tighten the hose clamp to prevent leaks. 拧紧软管夹以防止泄漏。"
+    },
+    {
+      "question": "________ stamp",
+      "type": "blank",
+      "answer": "passport",
+      "explanation": "邮票; 印章, 护照印章. The immigration officer placed a passport stamp on the document. 移民官员在文件上盖了护照印章。"
+    },
+    {
+      "question": "swamp ____ ____",
+      "type": "blank",
+      "answer": "with work",
+      "explanation": "沼泽; 使应接不暇, 工作繁重. The new orders will swamp with work the entire department. 新订单将使整个部门工作繁重。"
+    },
+    {
+      "question": "temp ______",
+      "type": "blank",
+      "answer": "worker",
+      "explanation": "临时工; 临时的, 临时工. The company hired a temp worker to cover the vacation period. 公司雇用了一名临时工来顶替休假期间的工作。"
+    },
+    {
+      "question": "___________ imp",
+      "type": "blank",
+      "answer": "mischievous",
+      "explanation": "小恶魔; 顽童, 淘气的小恶魔. The mischievous imp played pranks on everyone in the village. 淘气的小恶魔对村里的每个人都恶作剧。"
+    },
+    {
+      "question": "skimp __ _______",
+      "type": "blank",
+      "answer": "on quality",
+      "explanation": "节省; 吝啬, 在质量上吝啬. Never skimp on quality when buying safety equipment. 购买安全设备时绝不要在质量上吝啬。"
+    },
+    {
+      "question": "limp _________",
+      "type": "blank",
+      "answer": "handshake",
+      "explanation": "跛行; 软弱无力的, 软弱无力的握手. His limp handshake gave a poor first impression. 他软弱无力的握手给人留下了糟糕的第一印象。"
+    },
+    {
+      "question": "primp _______",
+      "type": "blank",
+      "answer": "oneself",
+      "explanation": "打扮; 精心装扮, 精心打扮自己. She took an hour to primp oneself before the party. 她花了一个小时精心打扮自己才去参加派对。"
+    },
+    {
+      "question": "_____ bump",
+      "type": "blank",
+      "answer": "speed",
+      "explanation": "碰撞; 肿块, 减速带. Drive slowly over the speed bump to protect your car. 慢速驾驶通过减速带以保护您的汽车。"
+    },
+    {
+      "question": "_ lump ___",
+      "type": "blank",
+      "answer": "a sum",
+      "explanation": "肿块; 一次性付款, 一次性总付. He received a lump sum payment when he retired. 他退休时收到了一次性总付款项。"
+    },
+    {
+      "question": "plump ______",
+      "type": "blank",
+      "answer": "cheeks",
+      "explanation": "丰满的; 使丰满, 丰满的脸颊. The baby had adorable plump cheeks. 婴儿有可爱的丰满脸颊。"
+    },
+    {
+      "question": "____ fop",
+      "type": "blank",
+      "answer": "vain",
+      "explanation": "花花公子; 纨绔子弟, 虚荣的花花公子. The vain fop spent hours admiring himself in the mirror. 这个虚荣的花花公子花几个小时在镜子前欣赏自己。"
+    },
+    {
+      "question": "_______ coop",
+      "type": "blank",
+      "answer": "chicken",
+      "explanation": "笼子; 鸡舍, 鸡舍. The farmer built a new chicken coop for his hens. 农夫为他的母鸡建了一个新鸡舍。"
+    },
+    {
+      "question": "____ scoop",
+      "type": "blank",
+      "answer": "news",
+      "explanation": "勺子; 独家新闻, 独家新闻. The journalist got the news scoop of the year. 这位记者获得了年度独家新闻。"
+    },
+    {
+      "question": "__________ hoop",
+      "type": "blank",
+      "answer": "basketball",
+      "explanation": "箍; 篮圈, 篮球框. The player shot the ball through the basketball hoop. 球员把球投进篮球框。"
+    },
+    {
+      "question": "_____ loop",
+      "type": "blank",
+      "answer": "event",
+      "explanation": "环; 循环, 事件循环. The program runs continuously in an event loop. 程序在事件循环中持续运行。"
+    },
+    {
+      "question": "_____ backdrop",
+      "type": "blank",
+      "answer": "stage",
+      "explanation": "背景; 背景幕布, 舞台背景. The theater crew painted a beautiful stage backdrop for the play. 剧院工作人员为这出戏画了一幅美丽的舞台背景。"
+    },
+    {
+      "question": "_______ prop",
+      "type": "blank",
+      "answer": "support",
+      "explanation": "支柱; 道具, 支撑柱. The miners used a support prop to hold up the tunnel ceiling. 矿工使用支撑柱来支撑隧道顶部。"
+    },
+    {
+      "question": "carp __ _______",
+      "type": "blank",
+      "answer": "at details",
+      "explanation": "鲤鱼; 挑剔, 对细节挑剔. He tends to carp at details instead of seeing the big picture. 他倾向于对细节挑剔,而不是看大局。"
+    },
+    {
+      "question": "_____ scarp",
+      "type": "blank",
+      "answer": "steep",
+      "explanation": "陡坡; 悬崖, 陡峭的悬崖. The climbers carefully ascended the steep scarp. 登山者小心翼翼地攀登陡峭的悬崖。"
+    },
+    {
+      "question": "harp __",
+      "type": "blank",
+      "answer": "on",
+      "explanation": "竖琴; 喋喋不休, 对...喋喋不休. Stop trying to harp on past mistakes. 不要再对过去的错误喋喋不休了。"
+    },
+    {
+      "question": "_____-____ warp",
+      "type": "blank",
+      "answer": "space-time",
+      "explanation": "弯曲; 扭曲, 时空扭曲. Einstein's theory describes the space-time warp caused by massive objects. 爱因斯坦的理论描述了大质量物体造成的时空扭曲。"
+    },
+    {
+      "question": "usurp _____",
+      "type": "blank",
+      "answer": "power",
+      "explanation": "篡夺; 侵占, 篡夺权力. The general attempted to usurp power from the legitimate government. 将军试图从合法政府篡夺权力。"
+    },
+    {
+      "question": "________ coup",
+      "type": "blank",
+      "answer": "military",
+      "explanation": "政变; 妙计, 军事政变. The military coup overthrew the democratically elected president. 军事政变推翻了民选总统。"
+    },
+    {
+      "question": "______ bazaar",
+      "type": "blank",
+      "answer": "street",
+      "explanation": "集市; 市场, 街头集市. The colorful street bazaar sold everything from spices to textiles. 五彩缤纷的街头集市出售从香料到纺织品的各种商品。"
+    },
+    {
+      "question": "debar ____ ______",
+      "type": "blank",
+      "answer": "from office",
+      "explanation": "禁止; 排除, 禁止担任公职. The court decided to debar from office the corrupt official. 法院决定禁止这名腐败官员担任公职。"
+    },
+    {
+      "question": "disbar _ ______",
+      "type": "blank",
+      "answer": "a lawyer",
+      "explanation": "取消律师资格, 取消律师资格. The bar association voted to disbar a lawyer for unethical conduct. 律师协会投票决定因不道德行为而取消一名律师的资格。"
+    },
+    {
+      "question": "_______ flatcar",
+      "type": "blank",
+      "answer": "railway",
+      "explanation": "平板车厢, 铁路平板车. The railway flatcar transported heavy machinery across the country. 铁路平板车将重型机械运输到全国各地。"
+    },
+    {
+      "question": "_______ forebear",
+      "type": "blank",
+      "answer": "honored",
+      "explanation": "祖先, 受尊敬的祖先. We pay tribute to our honored forebear who founded this family. 我们向创立这个家族的受尊敬的祖先致敬。"
+    },
+    {
+      "question": "shear ______",
+      "type": "blank",
+      "answer": "stress",
+      "explanation": "剪; 剪切, 剪切应力. Engineers must calculate shear stress when designing bridges. 工程师在设计桥梁时必须计算剪切应力。"
+    },
+    {
+      "question": "linear _____",
+      "type": "blank",
+      "answer": "model",
+      "explanation": "线性的, 线性模型. The statistician used a linear model to analyze the data. 统计学家使用线性模型来分析数据。"
+    },
+    {
+      "question": "_____ _ spear",
+      "type": "blank",
+      "answer": "throw a",
+      "explanation": "矛; 长矛, 投掷长矛. The athlete prepared to throw a spear in the competition. 运动员准备在比赛中投掷长矛。"
+    },
+    {
+      "question": "tear _____",
+      "type": "blank",
+      "answer": "apart",
+      "explanation": "撕裂; 眼泪, 撕开. The conflict threatened to tear apart the community. 这场冲突威胁要撕裂整个社区。"
+    },
+    {
+      "question": "vulgar ____",
+      "type": "blank",
+      "answer": "joke",
+      "explanation": "粗俗的; 庸俗的, 粗俗的笑话. His vulgar joke offended many people at the dinner party. 他粗俗的笑话冒犯了晚宴上的许多人。"
+    },
+    {
+      "question": "________ hangar",
+      "type": "blank",
+      "answer": "aircraft",
+      "explanation": "飞机库, 飞机库. The military aircraft hangar housed dozens of fighter jets. 军用飞机库容纳了数十架战斗机。"
+    },
+    {
+      "question": "________ cougar",
+      "type": "blank",
+      "answer": "mountain",
+      "explanation": "美洲狮, 山狮. Hikers should be cautious of the mountain cougar in this region. 徒步旅行者在这个地区应该小心山狮。"
+    },
+    {
+      "question": "char _____",
+      "type": "blank",
+      "answer": "grill",
+      "explanation": "烧焦; 炭, 炭烤架. The chef used a char grill to cook the steaks perfectly. 厨师使用炭烤架将牛排烤得恰到好处。"
+    },
+    {
+      "question": "______ verisimilar",
+      "type": "blank",
+      "answer": "highly",
+      "explanation": "似真的; 逼真的, 高度逼真的. The special effects were highly verisimilar and fooled many viewers. 特效高度逼真,欺骗了许多观众。"
+    },
+    {
+      "question": "____ cellar",
+      "type": "blank",
+      "answer": "wine",
+      "explanation": "地窖; 酒窖, 酒窖. The restaurant has an extensive wine cellar with rare vintages. 这家餐厅有一个藏有稀有年份酒的大型酒窖。"
+    },
+    {
+      "question": "stellar ___________",
+      "type": "blank",
+      "answer": "performance",
+      "explanation": "恒星的; 杰出的, 出色的表现. The actor delivered a stellar performance in the leading role. 这位演员在主角中奉献了出色的表现。"
+    }
+  ]
+}
