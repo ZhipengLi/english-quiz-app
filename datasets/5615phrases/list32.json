@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "____ bargain",
+      "type": "blank",
+      "answer": "good",
+      "explanation": "便宜货, 好便宜货. I got a good bargain at the sale. 我在大减价中得到了好便宜货。"
+    },
+    {
+      "question": "____ porcelain",
+      "type": "blank",
+      "answer": "fine",
+      "explanation": "瓷器, 精美瓷器. The museum displayed fine porcelain from China. 博物馆展示了来自中国的精美瓷器。"
+    },
+    {
+      "question": "plain _____",
+      "type": "blank",
+      "answer": "truth",
+      "explanation": "明白的, 明白的真相. He told us the plain truth about the situation. 他告诉我们关于情况的明白真相。"
+    },
+    {
+      "question": "_____________ legerdemain",
+      "type": "blank",
+      "answer": "sophisticated",
+      "explanation": "戏法, 复杂的戏法. The magician performed sophisticated legerdemain. 魔术师表演了复杂的戏法。"
+    },
+    {
+      "question": "refrain ____",
+      "type": "blank",
+      "answer": "from",
+      "explanation": "克制, 克制于. Please refrain from smoking in this area. 请在该区域克制吸烟。"
+    },
+    {
+      "question": "grain ____",
+      "type": "blank",
+      "answer": "silo",
+      "explanation": "谷物, 谷物筒仓. The farmer stored wheat in the grain silo. 农民把小麦存放在谷物筒仓里。"
+    },
+    {
+      "question": "_____ terrain",
+      "type": "blank",
+      "answer": "rocky",
+      "explanation": "地形, 岩石地形. Hikers struggled over the rocky terrain. 徒步旅行者在岩石地形上艰难行进。"
+    },
+    {
+      "question": "detain _ _______",
+      "type": "blank",
+      "answer": "a suspect",
+      "explanation": "拘留, 拘留嫌疑人. Police have authority to detain a suspect. 警察有权拘留嫌疑人。"
+    },
+    {
+      "question": "retain _______",
+      "type": "blank",
+      "answer": "control",
+      "explanation": "保留, 保留控制权. The company struggled to retain control. 公司努力保留控制权。"
+    },
+    {
+      "question": "contain ___ ______",
+      "type": "blank",
+      "answer": "the spread",
+      "explanation": "控制, 控制蔓延. Measures were taken to contain the spread. 采取措施控制蔓延。"
+    },
+    {
+      "question": "stain _______",
+      "type": "blank",
+      "answer": "remover",
+      "explanation": "污渍, 去污剂. Use stain remover for tough marks. 使用去污剂去除顽固污渍。"
+    },
+    {
+      "question": "_____ ____ distain",
+      "type": "blank",
+      "answer": "stain with",
+      "explanation": "玷污, 用污渍玷污. The scandal would stain with distain his reputation. 丑闻会用污渍玷污他的声誉。"
+    },
+    {
+      "question": "sustain ______",
+      "type": "blank",
+      "answer": "growth",
+      "explanation": "维持, 维持增长. The economy must sustain growth. 经济必须维持增长。"
+    },
+    {
+      "question": "attain _ ____",
+      "type": "blank",
+      "answer": "a goal",
+      "explanation": "达到, 达到目标. With hard work, you can attain a goal. 通过努力工作,你可以达到目标。"
+    },
+    {
+      "question": "_____ bin",
+      "type": "blank",
+      "answer": "trash",
+      "explanation": "垃圾箱, 垃圾箱. Please put litter in the trash bin. 请把垃圾放进垃圾箱。"
+    },
+    {
+      "question": "_________ din",
+      "type": "blank",
+      "answer": "deafening",
+      "explanation": "喧闹, 震耳欲聋的喧闹. The construction created a deafening din. 建筑工地制造了震耳欲聋的喧闹。"
+    },
+    {
+      "question": "____ skein",
+      "type": "blank",
+      "answer": "yarn",
+      "explanation": "一绞, 一绞纱线. She bought a yarn skein for knitting. 她买了一绞纱线用于编织。"
+    },
+    {
+      "question": "urchin ___",
+      "type": "blank",
+      "answer": "boy",
+      "explanation": "顽童, 顽童男孩. The urchin boy begged on the streets. 顽童男孩在街上乞讨。"
+    },
+    {
+      "question": "_____ kin",
+      "type": "blank",
+      "answer": "close",
+      "explanation": "亲属, 近亲. She visited her close kin regularly. 她定期拜访她的近亲。"
+    },
+    {
+      "question": "maudlin _________",
+      "type": "blank",
+      "answer": "sentiment",
+      "explanation": "感伤的, 感伤的情绪. The movie was criticized for maudlin sentiment. 这部电影因感伤的情绪而受到批评。"
+    },
+    {
+      "question": "tarpaulin _____",
+      "type": "blank",
+      "answer": "cover",
+      "explanation": "防水布, 防水布罩. Workers placed a tarpaulin cover over the cargo. 工人在货物上放置了防水布罩。"
+    },
+    {
+      "question": "_______ rejoin",
+      "type": "blank",
+      "answer": "wittily",
+      "explanation": "回答, 机智地回答. She would wittily rejoin to criticism. 她会机智地回答批评。"
+    },
+    {
+      "question": "enjoin _______ ____",
+      "type": "blank",
+      "answer": "someone from",
+      "explanation": "禁止, 禁止某人. The court will enjoin someone from further action. 法院将禁止某人采取进一步行动。"
+    },
+    {
+      "question": "conjoin ______",
+      "type": "blank",
+      "answer": "forces",
+      "explanation": "结合, 结合力量. Allies decided to conjoin forces. 盟友决定结合力量。"
+    },
+    {
+      "question": "purloin _ ______",
+      "type": "blank",
+      "answer": "a letter",
+      "explanation": "偷窃, 偷窃信件. The spy managed to purloin a letter. 间谍设法偷窃了信件。"
+    },
+    {
+      "question": "spin ___ _____",
+      "type": "blank",
+      "answer": "the story",
+      "explanation": "编造, 编造故事. Politicians often spin the story to their advantage. 政客经常为自己的利益编造故事。"
+    },
+    {
+      "question": "saccharin _________",
+      "type": "blank",
+      "answer": "sweetness",
+      "explanation": "糖精, 糖精甜味. The drink had an artificial saccharin sweetness. 这种饮料有人工的糖精甜味。"
+    },
+    {
+      "question": "grin _______",
+      "type": "blank",
+      "answer": "broadly",
+      "explanation": "露齿笑, 开心地露齿笑. He began to grin broadly at the joke. 他开始对这个笑话开心地露齿笑。"
+    },
+    {
+      "question": "____ chagrin",
+      "type": "blank",
+      "answer": "feel",
+      "explanation": "懊恼, 感到懊恼. She would feel chagrin at the mistake. 她会对错误感到懊恼。"
+    },
+    {
+      "question": "____ resin",
+      "type": "blank",
+      "answer": "pine",
+      "explanation": "树脂, 松树脂. Pine resin was used to seal boats. 松树脂被用来密封船只。"
+    },
+    {
+      "question": "toxin ________",
+      "type": "blank",
+      "answer": "exposure",
+      "explanation": "毒素, 毒素暴露. Workers feared toxin exposure at the plant. 工人担心在工厂的毒素暴露。"
+    },
+    {
+      "question": "condemn ___ ______",
+      "type": "blank",
+      "answer": "the attack",
+      "explanation": "谴责, 谴责袭击. World leaders united to condemn the attack. 世界领导人团结起来谴责袭击。"
+    },
+    {
+      "question": "solemn ________",
+      "type": "blank",
+      "answer": "ceremony",
+      "explanation": "庄严的, 庄严的仪式. The memorial featured a solemn ceremony. 纪念活动以庄严的仪式为特色。"
+    },
+    {
+      "question": "limn _ ________",
+      "type": "blank",
+      "answer": "a portrait",
+      "explanation": "描绘, 描绘肖像. The artist would limn a portrait in detail. 艺术家会详细描绘肖像。"
+    },
+    {
+      "question": "______ hymn",
+      "type": "blank",
+      "answer": "church",
+      "explanation": "赞美诗, 教堂赞美诗. The congregation sang a church hymn. 会众唱了教堂赞美诗。"
+    },
+    {
+      "question": "beacon _____",
+      "type": "blank",
+      "answer": "light",
+      "explanation": "信标, 信标灯. The beacon light guided ships to shore. 信标灯引导船只靠岸。"
+    },
+    {
+      "question": "___ pantechnicon",
+      "type": "blank",
+      "answer": "old",
+      "explanation": "搬家车, 旧搬家车. An old pantechnicon transported furniture. 一辆旧搬家车运送家具。"
+    },
+    {
+      "question": "_____ lexicon",
+      "type": "blank",
+      "answer": "legal",
+      "explanation": "词汇, 法律词汇. Lawyers must master the legal lexicon. 律师必须掌握法律词汇。"
+    },
+    {
+      "question": "______ curmudgeon",
+      "type": "blank",
+      "answer": "cranky",
+      "explanation": "脾气坏的老头, 脾气暴躁的老头. The cranky curmudgeon complained about everything. 脾气暴躁的老头抱怨一切。"
+    },
+    {
+      "question": "_____ surgeon",
+      "type": "blank",
+      "answer": "heart",
+      "explanation": "外科医生, 心脏外科医生. The heart surgeon performed a bypass. 心脏外科医生进行了搭桥手术。"
+    },
+    {
+      "question": "_____ pantheon",
+      "type": "blank",
+      "answer": "Roman",
+      "explanation": "万神殿, 罗马万神殿. The Roman pantheon is an architectural marvel. 罗马万神殿是建筑奇迹。"
+    },
+    {
+      "question": "_ paragon __ ______",
+      "type": "blank",
+      "answer": "a of virtue",
+      "explanation": "典范, 美德的典范. She was considered a paragon of virtue. 她被认为是美德的典范。"
+    },
+    {
+      "question": "_______ hexagon",
+      "type": "blank",
+      "answer": "regular",
+      "explanation": "六边形, 正六边形. A honeycomb forms a regular hexagon pattern. 蜂巢形成正六边形图案。"
+    },
+    {
+      "question": "_________ jargon",
+      "type": "blank",
+      "answer": "technical",
+      "explanation": "行话, 技术行话. The manual was filled with technical jargon. 手册充满了技术行话。"
+    },
+    {
+      "question": "______ suspicion",
+      "type": "blank",
+      "answer": "arouse",
+      "explanation": "怀疑, 引起怀疑. His behavior began to arouse suspicion. 他的行为开始引起怀疑。"
+    },
+    {
+      "question": "___ coercion",
+      "type": "blank",
+      "answer": "use",
+      "explanation": "强制, 使用强制. The confession was obtained by use coercion. 供词是通过使用强制获得的。"
+    },
+    {
+      "question": "scion __ _ ______",
+      "type": "blank",
+      "answer": "of a family",
+      "explanation": "后裔, 家族后裔. He was the scion of a family dynasty. 他是家族王朝的后裔。"
+    },
+    {
+      "question": "_ legion __ ____",
+      "type": "blank",
+      "answer": "a of fans",
+      "explanation": "大批, 大批粉丝. The singer attracted a legion of fans. 歌手吸引了大批粉丝。"
+    },
+    {
+      "question": "____ battalion",
+      "type": "blank",
+      "answer": "army",
+      "explanation": "营, 陆军营. The army battalion deployed to the border. 陆军营部署到边境。"
+    },
+    {
+      "question": "______ rapscallion",
+      "type": "blank",
+      "answer": "little",
+      "explanation": "流氓, 小流氓. The little rapscallion stole from the market. 小流氓从市场偷东西。"
+    },
+    {
+      "question": "____ bullion",
+      "type": "blank",
+      "answer": "gold",
+      "explanation": "金条, 金条. The vault contained gold bullion bars. 金库里有金条。"
+    },
+    {
+      "question": "______ companion",
+      "type": "blank",
+      "answer": "travel",
+      "explanation": "同伴, 旅行同伴. She found a reliable travel companion. 她找到了一个可靠的旅行同伴。"
+    },
+    {
+      "question": "champion ___ _____",
+      "type": "blank",
+      "answer": "the cause",
+      "explanation": "拥护, 拥护事业. Activists champion the cause of justice. 活动家拥护正义事业。"
+    },
+    {
+      "question": "_________ scorpion",
+      "type": "blank",
+      "answer": "poisonous",
+      "explanation": "蝎子, 有毒的蝎子. The desert harbored poisonous scorpion. 沙漠藏有有毒的蝎子。"
+    },
+    {
+      "question": "clarion ____",
+      "type": "blank",
+      "answer": "call",
+      "explanation": "嘹亮的, 嘹亮的号召. The leader issued a clarion call to action. 领导人发出了嘹亮的行动号召。"
+    },
+    {
+      "question": "__________ criterion",
+      "type": "blank",
+      "answer": "evaluation",
+      "explanation": "标准, 评估标准. Quality is the primary evaluation criterion. 质量是主要的评估标准。"
+    },
+    {
+      "question": "carrion ______",
+      "type": "blank",
+      "answer": "feeder",
+      "explanation": "腐肉, 食腐动物. Vultures are carrion feeder birds. 秃鹫是食腐动物。"
+    },
+    {
+      "question": "_____ centurion",
+      "type": "blank",
+      "answer": "Roman",
+      "explanation": "百夫长, 罗马百夫长. The Roman centurion commanded one hundred soldiers. 罗马百夫长指挥一百名士兵。"
+    },
+    {
+      "question": "____ abrasion",
+      "type": "blank",
+      "answer": "skin",
+      "explanation": "擦伤, 皮肤擦伤. The fall caused a minor skin abrasion. 跌倒造成了轻微的皮肤擦伤。"
+    },
+    {
+      "question": "___ evasion",
+      "type": "blank",
+      "answer": "tax",
+      "explanation": "逃避, 逃税. The businessman was charged with tax evasion. 这位商人被指控逃税。"
+    },
+    {
+      "question": "_____ cohesion",
+      "type": "blank",
+      "answer": "group",
+      "explanation": "凝聚力, 团队凝聚力. Strong leadership promotes group cohesion. 强有力的领导促进团队凝聚力。"
+    },
+    {
+      "question": "____ lesion",
+      "type": "blank",
+      "answer": "skin",
+      "explanation": "损伤, 皮肤损伤. The doctor examined the skin lesion carefully. 医生仔细检查了皮肤损伤。"
+    },
+    {
+      "question": "________ incision",
+      "type": "blank",
+      "answer": "surgical",
+      "explanation": "切口, 手术切口. The surgeon made a precise surgical incision. 外科医生做了精确的手术切口。"
+    },
+    {
+      "question": "____-__ collision",
+      "type": "blank",
+      "answer": "head-on",
+      "explanation": "碰撞, 正面碰撞. The vehicles were involved in a head-on collision. 车辆发生了正面碰撞。"
+    },
+    {
+      "question": "_____ prevision",
+      "type": "blank",
+      "answer": "clear",
+      "explanation": "预见, 清晰的预见. The prophet claimed clear prevision of events. 先知声称对事件有清晰的预见。"
+    },
+    {
+      "question": "envision ___ ______",
+      "type": "blank",
+      "answer": "the future",
+      "explanation": "设想, 设想未来. Leaders must envision the future. 领导者必须设想未来。"
+    },
+    {
+      "question": "____ provision",
+      "type": "blank",
+      "answer": "food",
+      "explanation": "供应, 食物供应. Hikers packed food provision for the trip. 徒步旅行者为旅行准备了食物供应。"
+    },
+    {
+      "question": "______ repulsion",
+      "type": "blank",
+      "answer": "strong",
+      "explanation": "排斥, 强烈的排斥. She felt strong repulsion at the sight. 她对这景象感到强烈的排斥。"
+    },
+    {
+      "question": "____________ compulsion",
+      "type": "blank",
+      "answer": "irresistible",
+      "explanation": "强迫, 不可抗拒的强迫. He felt an irresistible compulsion to confess. 他感到一种不可抗拒的坦白强迫。"
+    },
+    {
+      "question": "______ propulsion",
+      "type": "blank",
+      "answer": "rocket",
+      "explanation": "推进, 火箭推进. The spacecraft uses rocket propulsion. 航天器使用火箭推进。"
+    },
+    {
+      "question": "______ convulsion",
+      "type": "blank",
+      "answer": "muscle",
+      "explanation": "痉挛, 肌肉痉挛. The patient experienced muscle convulsion. 患者经历了肌肉痉挛。"
+    },
+    {
+      "question": "_____ mansion",
+      "type": "blank",
+      "answer": "grand",
+      "explanation": "豪宅, 宏伟的豪宅. The millionaire owned a grand mansion. 百万富翁拥有一座宏伟的豪宅。"
+    },
+    {
+      "question": "_______ dimension",
+      "type": "blank",
+      "answer": "spatial",
+      "explanation": "维度, 空间维度. The problem involves multiple spatial dimension. 这个问题涉及多个空间维度。"
+    },
+    {
+      "question": "pension ____",
+      "type": "blank",
+      "answer": "fund",
+      "explanation": "养老金, 养老金基金. Workers contribute to the pension fund. 工人向养老金基金缴款。"
+    },
+    {
+      "question": "______ pretension",
+      "type": "blank",
+      "answer": "social",
+      "explanation": "自命不凡, 社会自命不凡. Her social pretension annoyed friends. 她的社会自命不凡惹恼了朋友。"
+    },
+    {
+      "question": "hypertension _______",
+      "type": "blank",
+      "answer": "patient",
+      "explanation": "高血压, 高血压患者. The hypertension patient takes daily medication. 高血压患者每天服药。"
+    },
+    {
+      "question": "_________ distension",
+      "type": "blank",
+      "answer": "abdominal",
+      "explanation": "膨胀, 腹部膨胀. The doctor noted abdominal distension. 医生注意到腹部膨胀。"
+    },
+    {
+      "question": "______ aversion",
+      "type": "blank",
+      "answer": "strong",
+      "explanation": "厌恶, 强烈的厌恶. He developed a strong aversion to crowds. 他对人群产生了强烈的厌恶。"
+    },
+    {
+      "question": "_____ reversion",
+      "type": "blank",
+      "answer": "title",
+      "explanation": "恢复, 产权恢复. The contract stipulated title reversion. 合同规定了产权恢复。"
+    },
+    {
+      "question": "_______ excursion",
+      "type": "blank",
+      "answer": "weekend",
+      "explanation": "远足, 周末远足. The family planned a weekend excursion. 家人计划了周末远足。"
+    },
+    {
+      "question": "____ compassion",
+      "type": "blank",
+      "answer": "show",
+      "explanation": "同情, 表现同情. We must show compassion for the suffering. 我们必须对受苦的人表现同情。"
+    },
+    {
+      "question": "____ cession",
+      "type": "blank",
+      "answer": "land",
+      "explanation": "割让, 土地割让. The treaty involved land cession. 条约涉及土地割让。"
+    },
+    {
+      "question": "________ recession",
+      "type": "blank",
+      "answer": "economic",
+      "explanation": "衰退, 经济衰退. The country entered an economic recession. 国家进入了经济衰退。"
+    },
+    {
+      "question": "____ _ concession",
+      "type": "blank",
+      "answer": "make a",
+      "explanation": "让步, 做出让步. Negotiators agreed to make a concession. 谈判者同意做出让步。"
+    },
+    {
+      "question": "_____ digression",
+      "type": "blank",
+      "answer": "brief",
+      "explanation": "离题, 短暂的离题. After a brief digression, we returned to the topic. 经过短暂的离题后,我们回到话题。"
+    },
+    {
+      "question": "_____ transgression",
+      "type": "blank",
+      "answer": "grave",
+      "explanation": "违反, 严重的违反. The offense was a grave transgression. 该罪行是严重的违反。"
+    },
+    {
+      "question": "________ depression",
+      "type": "blank",
+      "answer": "clinical",
+      "explanation": "抑郁症, 临床抑郁症. She was treated for clinical depression. 她接受了临床抑郁症的治疗。"
+    },
+    {
+      "question": "_____ impression",
+      "type": "blank",
+      "answer": "first",
+      "explanation": "印象, 第一印象. First impression is often lasting. 第一印象往往持久。"
+    },
+    {
+      "question": "obsession ____",
+      "type": "blank",
+      "answer": "with",
+      "explanation": "痴迷, 痴迷于. His obsession with details slowed progress. 他对细节的痴迷减缓了进展。"
+    },
+    {
+      "question": "_________ scission",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "分裂, 政治分裂. The party faced political scission. 该党面临政治分裂。"
+    },
+    {
+      "question": "____ abscission",
+      "type": "blank",
+      "answer": "leaf",
+      "explanation": "脱落, 叶子脱落. Autumn triggers leaf abscission. 秋天触发叶子脱落。"
+    },
+    {
+      "question": "rescission ______",
+      "type": "blank",
+      "answer": "notice",
+      "explanation": "撤销, 撤销通知. The company sent a rescission notice. 公司发送了撤销通知。"
+    },
+    {
+      "question": "______ submission",
+      "type": "blank",
+      "answer": "formal",
+      "explanation": "提交, 正式提交. The proposal required formal submission. 该提案需要正式提交。"
+    },
+    {
+      "question": "admission ______",
+      "type": "blank",
+      "answer": "ticket",
+      "explanation": "入场, 入场券. Visitors must present an admission ticket. 访客必须出示入场券。"
+    },
+    {
+      "question": "___ remission",
+      "type": "blank",
+      "answer": "tax",
+      "explanation": "减免, 税收减免. The government granted tax remission. 政府批准了税收减免。"
+    },
+    {
+      "question": "_____ commission",
+      "type": "blank",
+      "answer": "sales",
+      "explanation": "佣金, 销售佣金. Agents earn sales commission on transactions. 代理商在交易中赚取销售佣金。"
+    },
+    {
+      "question": "_____ intermission",
+      "type": "blank",
+      "answer": "movie",
+      "explanation": "中场休息, 电影中场休息. There was no movie intermission during the film. 电影期间没有中场休息。"
+    },
+    {
+      "question": "concussion ________",
+      "type": "blank",
+      "answer": "protocol",
+      "explanation": "脑震荡, 脑震荡协议. Athletes follow strict concussion protocol. 运动员遵循严格的脑震荡协议。"
+    },
+    {
+      "question": "_____ percussion",
+      "type": "blank",
+      "answer": "snare",
+      "explanation": "打击乐, 小军鼓打击乐. The drummer played snare percussion. 鼓手演奏小军鼓打击乐。"
+    },
+    {
+      "question": "_______ fusion",
+      "type": "blank",
+      "answer": "nuclear",
+      "explanation": "聚变, 核聚变. Scientists research nuclear fusion energy. 科学家研究核聚变能源。"
+    }
+  ]
+}
