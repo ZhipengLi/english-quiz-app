@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "____ retention",
+      "type": "blank",
+      "answer": "data",
+      "explanation": "保留, 数据保留. The company has a strict data retention policy. 公司有严格的数据保留政策。"
+    },
+    {
+      "question": "_____ __ contention",
+      "type": "blank",
+      "answer": "point of",
+      "explanation": "争论, 争论点. The budget became a major point of contention. 预算成为主要的争论点。"
+    },
+    {
+      "question": "______ abstention",
+      "type": "blank",
+      "answer": "policy",
+      "explanation": "弃权, 政策弃权. Several members chose policy abstention on the vote. 几名成员在投票中选择了政策弃权。"
+    },
+    {
+      "question": "_________ distention",
+      "type": "blank",
+      "answer": "abdominal",
+      "explanation": "膨胀, 腹部膨胀. The patient complained of abdominal distention. 患者抱怨腹部膨胀。"
+    },
+    {
+      "question": "__________ subvention",
+      "type": "blank",
+      "answer": "government",
+      "explanation": "补助金, 政府补助金. The theater received government subvention. 剧院获得了政府补助金。"
+    },
+    {
+      "question": "______ locomotion",
+      "type": "blank",
+      "answer": "animal",
+      "explanation": "移动, 动物移动. Scientists study animal locomotion patterns. 科学家研究动物移动模式。"
+    },
+    {
+      "question": "_____ caption",
+      "type": "blank",
+      "answer": "image",
+      "explanation": "标题, 图片标题. The image caption explained the photo. 图片标题解释了照片。"
+    },
+    {
+      "question": "deception ____",
+      "type": "blank",
+      "answer": "plan",
+      "explanation": "欺骗, 欺骗计划. The military used a deception plan. 军方使用了欺骗计划。"
+    },
+    {
+      "question": "_______ inception",
+      "type": "blank",
+      "answer": "project",
+      "explanation": "开始, 项目开始. The project inception was in 2020. 项目开始于2020年。"
+    },
+    {
+      "question": "__________ conception",
+      "type": "blank",
+      "answer": "immaculate",
+      "explanation": "受孕, 圣灵感孕. Catholics celebrate the immaculate conception. 天主教徒庆祝圣灵感孕。"
+    },
+    {
+      "question": "______ perception",
+      "type": "blank",
+      "answer": "visual",
+      "explanation": "感知, 视觉感知. Visual perception affects our understanding. 视觉感知影响我们的理解。"
+    },
+    {
+      "question": "______'_ prescription",
+      "type": "blank",
+      "answer": "doctor's",
+      "explanation": "处方, 医生处方. The pharmacy filled the doctor's prescription. 药房配了医生的处方。"
+    },
+    {
+      "question": "____ presumption",
+      "type": "blank",
+      "answer": "bold",
+      "explanation": "假定, 大胆的假定. His bold presumption proved incorrect. 他大胆的假定证明是不正确的。"
+    },
+    {
+      "question": "________ desertion",
+      "type": "blank",
+      "answer": "military",
+      "explanation": "开小差, 军事开小差. The soldier faced charges of military desertion. 士兵面临军事开小差的指控。"
+    },
+    {
+      "question": "_______ self-assertion",
+      "type": "blank",
+      "answer": "healthy",
+      "explanation": "自我主张, 健康的自我主张. Therapy encouraged healthy self-assertion. 治疗鼓励健康的自我主张。"
+    },
+    {
+      "question": "___ digestion",
+      "type": "blank",
+      "answer": "aid",
+      "explanation": "消化, 帮助消化. Walking after meals can aid digestion. 饭后散步可以帮助消化。"
+    },
+    {
+      "question": "____ ingestion",
+      "type": "blank",
+      "answer": "food",
+      "explanation": "摄取, 食物摄取. Food ingestion should be monitored carefully. 食物摄取应该仔细监测。"
+    },
+    {
+      "question": "______ retribution",
+      "type": "blank",
+      "answer": "divine",
+      "explanation": "报应, 神圣的报应. They believed in divine retribution. 他们相信神圣的报应。"
+    },
+    {
+      "question": "________ prosecution",
+      "type": "blank",
+      "answer": "criminal",
+      "explanation": "起诉, 刑事起诉. The case proceeded to criminal prosecution. 案件进入刑事起诉程序。"
+    },
+    {
+      "question": "___ locution",
+      "type": "blank",
+      "answer": "odd",
+      "explanation": "措辞, 奇怪的措辞. His speech contained an odd locution. 他的演讲包含奇怪的措辞。"
+    },
+    {
+      "question": "elocution ______",
+      "type": "blank",
+      "answer": "lesson",
+      "explanation": "演讲技巧, 演讲技巧课. She took elocution lesson to improve speaking. 她上演讲技巧课来提高演讲能力。"
+    },
+    {
+      "question": "_______ circumlocution",
+      "type": "blank",
+      "answer": "endless",
+      "explanation": "迂回说法, 无休止的迂回说法. His endless circumlocution confused listeners. 他无休止的迂回说法使听众困惑。"
+    },
+    {
+      "question": "_______ ablution",
+      "type": "blank",
+      "answer": "morning",
+      "explanation": "沐浴, 晨浴. He performed his morning ablution ritual. 他进行了晨浴仪式。"
+    },
+    {
+      "question": "_______ diminution",
+      "type": "blank",
+      "answer": "gradual",
+      "explanation": "减少, 逐渐减少. There was a gradual diminution in quality. 质量出现了逐渐减少。"
+    },
+    {
+      "question": "_____ destitution",
+      "type": "blank",
+      "answer": "utter",
+      "explanation": "贫困, 完全的贫困. Refugees faced utter destitution. 难民面临完全的贫困。"
+    },
+    {
+      "question": "____ restitution",
+      "type": "blank",
+      "answer": "make",
+      "explanation": "赔偿, 进行赔偿. The thief agreed to make restitution. 小偷同意进行赔偿。"
+    },
+    {
+      "question": "___________ institution",
+      "type": "blank",
+      "answer": "educational",
+      "explanation": "机构, 教育机构. Universities are important educational institution. 大学是重要的教育机构。"
+    },
+    {
+      "question": "_______ constitution",
+      "type": "blank",
+      "answer": "written",
+      "explanation": "宪法, 成文宪法. The country has a written constitution. 该国有成文宪法。"
+    },
+    {
+      "question": "gallon ___",
+      "type": "blank",
+      "answer": "jug",
+      "explanation": "加仑, 加仑罐. She filled a gallon jug with water. 她用水装满了加仑罐。"
+    },
+    {
+      "question": "____ carillon",
+      "type": "blank",
+      "answer": "bell",
+      "explanation": "钟琴, 钟琴. The bell carillon played at noon. 钟琴在中午演奏。"
+    },
+    {
+      "question": "colon ______",
+      "type": "blank",
+      "answer": "cancer",
+      "explanation": "结肠, 结肠癌. Screening helps detect colon cancer early. 筛查有助于早期发现结肠癌。"
+    },
+    {
+      "question": "_____ pylon",
+      "type": "blank",
+      "answer": "power",
+      "explanation": "电线杆, 电力塔. Power pylon lines crossed the countryside. 电力塔线路穿越乡村。"
+    },
+    {
+      "question": "____ salmon",
+      "type": "blank",
+      "answer": "wild",
+      "explanation": "鲑鱼, 野生鲑鱼. Wild salmon swim upstream to spawn. 野生鲑鱼逆流而上产卵。"
+    },
+    {
+      "question": "______ sermon",
+      "type": "blank",
+      "answer": "Sunday",
+      "explanation": "布道, 星期日布道. The pastor delivered his Sunday sermon. 牧师发表了星期日布道。"
+    },
+    {
+      "question": "______ canon",
+      "type": "blank",
+      "answer": "church",
+      "explanation": "教规, 教会教规. Church canon governs religious practices. 教会教规管理宗教活动。"
+    },
+    {
+      "question": "_ boon __",
+      "type": "blank",
+      "answer": "a to",
+      "explanation": "恩惠, 对...的恩惠. The new road is a boon to commerce. 新路对商业是恩惠。"
+    },
+    {
+      "question": "____ cocoon",
+      "type": "blank",
+      "answer": "silk",
+      "explanation": "茧, 丝茧. The caterpillar spins a silk cocoon. 毛虫吐丝茧。"
+    },
+    {
+      "question": "____ ______ tycoon",
+      "type": "blank",
+      "answer": "real estate",
+      "explanation": "大亨, 房地产大亨. The real estate tycoon owned many properties. 房地产大亨拥有许多房产。"
+    },
+    {
+      "question": "_______ lagoon",
+      "type": "blank",
+      "answer": "coastal",
+      "explanation": "泻湖, 沿海泻湖. The coastal lagoon teemed with fish. 沿海泻湖充满了鱼。"
+    },
+    {
+      "question": "_______ typhoon",
+      "type": "blank",
+      "answer": "Pacific",
+      "explanation": "台风, 太平洋台风. A powerful Pacific typhoon approached. 一场强大的太平洋台风正在逼近。"
+    },
+    {
+      "question": "lampoon _ __________",
+      "type": "blank",
+      "answer": "a politician",
+      "explanation": "讽刺, 讽刺政客. The comedian would lampoon a politician. 喜剧演员会讽刺政客。"
+    },
+    {
+      "question": "_____ _ harpoon",
+      "type": "blank",
+      "answer": "throw a",
+      "explanation": "鱼叉, 投掷鱼叉. The whaler prepared to throw a harpoon. 捕鲸人准备投掷鱼叉。"
+    },
+    {
+      "question": "marooned ______",
+      "type": "blank",
+      "answer": "sailor",
+      "explanation": "困住, 被困的水手. The marooned sailor was stranded on an island. 被困的水手被困在岛上。"
+    },
+    {
+      "question": "________ poltroon",
+      "type": "blank",
+      "answer": "cowardly",
+      "explanation": "懦夫, 懦弱的懦夫. The cowardly poltroon fled from battle. 懦弱的懦夫从战场逃跑。"
+    },
+    {
+      "question": "______ monsoon",
+      "type": "blank",
+      "answer": "summer",
+      "explanation": "季风, 夏季季风. The summer monsoon brings heavy rains. 夏季季风带来大雨。"
+    },
+    {
+      "question": "bassoon ____",
+      "type": "blank",
+      "answer": "solo",
+      "explanation": "巴松管, 巴松管独奏. The musician performed a bassoon solo. 音乐家演奏了巴松管独奏。"
+    },
+    {
+      "question": "_____ baron",
+      "type": "blank",
+      "answer": "media",
+      "explanation": "男爵, 媒体大亨. The media baron owned several newspapers. 媒体大亨拥有几家报纸。"
+    },
+    {
+      "question": "____ gridiron",
+      "type": "blank",
+      "answer": "iron",
+      "explanation": "烤架, 铁烤架. They cooked meat on an iron gridiron. 他们在铁烤架上烤肉。"
+    },
+    {
+      "question": "environ ___ ____",
+      "type": "blank",
+      "answer": "the city",
+      "explanation": "围绕, 围绕城市. Mountains environ the city on all sides. 群山从四面环绕城市。"
+    },
+    {
+      "question": "____ neutron",
+      "type": "blank",
+      "answer": "free",
+      "explanation": "中子, 自由中子. Nuclear reactions release free neutron. 核反应释放自由中子。"
+    },
+    {
+      "question": "______ treason",
+      "type": "blank",
+      "answer": "commit",
+      "explanation": "叛国, 犯叛国罪. The spy was accused of commit treason. 间谍被指控犯叛国罪。"
+    },
+    {
+      "question": "_______ mason",
+      "type": "blank",
+      "answer": "skilled",
+      "explanation": "石匠, 熟练的石匠. The skilled mason built beautiful walls. 熟练的石匠建造了美丽的墙。"
+    },
+    {
+      "question": "liaison _______",
+      "type": "blank",
+      "answer": "officer",
+      "explanation": "联络, 联络官. The liaison officer coordinated efforts. 联络官协调工作。"
+    },
+    {
+      "question": "____ benison",
+      "type": "blank",
+      "answer": "give",
+      "explanation": "祝福, 给予祝福. The elder would give benison to travelers. 长者会给旅行者祝福。"
+    },
+    {
+      "question": "____ comparison",
+      "type": "blank",
+      "answer": "make",
+      "explanation": "比较, 进行比较. We should make comparison between options. 我们应该在选项之间进行比较。"
+    },
+    {
+      "question": "jettison _____",
+      "type": "blank",
+      "answer": "cargo",
+      "explanation": "抛弃, 抛弃货物. The ship had to jettison cargo in the storm. 船在风暴中不得不抛弃货物。"
+    },
+    {
+      "question": "______ arson",
+      "type": "blank",
+      "answer": "commit",
+      "explanation": "纵火, 犯纵火罪. The suspect was charged with commit arson. 嫌疑人被指控犯纵火罪。"
+    },
+    {
+      "question": "______ baton",
+      "type": "blank",
+      "answer": "police",
+      "explanation": "警棍, 警察警棍. Officers carried a police baton. 警官携带警察警棍。"
+    },
+    {
+      "question": "_______ simpleton",
+      "type": "blank",
+      "answer": "village",
+      "explanation": "傻瓜, 村里的傻瓜. The village simpleton was often mocked. 村里的傻瓜经常被嘲笑。"
+    },
+    {
+      "question": "______ plankton",
+      "type": "blank",
+      "answer": "marine",
+      "explanation": "浮游生物, 海洋浮游生物. Whales feed on marine plankton. 鲸鱼以海洋浮游生物为食。"
+    },
+    {
+      "question": "wanton ___________",
+      "type": "blank",
+      "answer": "destruction",
+      "explanation": "肆意的, 肆意的破坏. The war caused wanton destruction. 战争造成了肆意的破坏。"
+    },
+    {
+      "question": "mutton ____",
+      "type": "blank",
+      "answer": "stew",
+      "explanation": "羊肉, 羊肉炖菜. The cook prepared mutton stew. 厨师准备了羊肉炖菜。"
+    },
+    {
+      "question": "___ crayon",
+      "type": "blank",
+      "answer": "wax",
+      "explanation": "蜡笔, 蜡笔. Children drew pictures with wax crayon. 孩子们用蜡笔画画。"
+    },
+    {
+      "question": "halcyon ____",
+      "type": "blank",
+      "answer": "days",
+      "explanation": "宁静的, 宁静的日子. She remembered the halcyon days of youth. 她记得青春宁静的日子。"
+    },
+    {
+      "question": "blazon ____",
+      "type": "blank",
+      "answer": "arms",
+      "explanation": "纹章, 纹章. The knight's blazon arms adorned his shield. 骑士的纹章装饰了他的盾牌。"
+    },
+    {
+      "question": "barn ___",
+      "type": "blank",
+      "answer": "owl",
+      "explanation": "谷仓, 仓鸮. A barn owl nested in the rafters. 一只仓鸮在椽子上筑巢。"
+    },
+    {
+      "question": "____ _ yarn",
+      "type": "blank",
+      "answer": "spin a",
+      "explanation": "纱线, 讲故事. The old sailor would spin a yarn. 老水手会讲故事。"
+    },
+    {
+      "question": "discern ___ _______",
+      "type": "blank",
+      "answer": "the pattern",
+      "explanation": "识别, 识别模式. Scientists tried to discern the pattern. 科学家试图识别模式。"
+    },
+    {
+      "question": "fern _____",
+      "type": "blank",
+      "answer": "frond",
+      "explanation": "蕨类, 蕨叶. The fern frond unfurled in spring. 蕨叶在春天展开。"
+    },
+    {
+      "question": "_______ lectern",
+      "type": "blank",
+      "answer": "lecture",
+      "explanation": "讲台, 讲台. The professor stood at the lecture lectern. 教授站在讲台上。"
+    },
+    {
+      "question": "stern _______",
+      "type": "blank",
+      "answer": "warning",
+      "explanation": "严厉的, 严厉的警告. The judge issued a stern warning. 法官发出了严厉的警告。"
+    },
+    {
+      "question": "_____ cistern",
+      "type": "blank",
+      "answer": "water",
+      "explanation": "蓄水池, 蓄水池. The water cistern collected rainwater. 蓄水池收集雨水。"
+    },
+    {
+      "question": "_________ cavern",
+      "type": "blank",
+      "answer": "limestone",
+      "explanation": "洞穴, 石灰岩洞穴. Explorers discovered a limestone cavern. 探险者发现了石灰岩洞穴。"
+    },
+    {
+      "question": "inborn ______",
+      "type": "blank",
+      "answer": "talent",
+      "explanation": "天生的, 天生的才能. She possessed inborn talent for music. 她拥有音乐的天生才能。"
+    },
+    {
+      "question": "suborn _______",
+      "type": "blank",
+      "answer": "perjury",
+      "explanation": "唆使, 唆使伪证. The lawyer tried to suborn perjury. 律师试图唆使伪证。"
+    },
+    {
+      "question": "___ acorn",
+      "type": "blank",
+      "answer": "oak",
+      "explanation": "橡子, 橡树橡子. Squirrels gather oak acorn in autumn. 松鼠在秋天收集橡树橡子。"
+    },
+    {
+      "question": "________ unicorn",
+      "type": "blank",
+      "answer": "mythical",
+      "explanation": "独角兽, 神话独角兽. Stories tell of the mythical unicorn. 故事讲述神话独角兽。"
+    },
+    {
+      "question": "____ ___ horn",
+      "type": "blank",
+      "answer": "blow the",
+      "explanation": "号角, 吹号角. The herald would blow the horn. 传令官会吹号角。"
+    },
+    {
+      "question": "________ greenhorn",
+      "type": "blank",
+      "answer": "business",
+      "explanation": "新手, 商业新手. The business greenhorn made rookie mistakes. 商业新手犯了新手错误。"
+    },
+    {
+      "question": "timeworn _____é",
+      "type": "blank",
+      "answer": "cliché",
+      "explanation": "陈旧的, 陈旧的陈词滥调. The speech used timeworn cliché. 演讲使用了陈旧的陈词滥调。"
+    },
+    {
+      "question": "careworn ____",
+      "type": "blank",
+      "answer": "face",
+      "explanation": "饱经风霜的, 饱经风霜的脸. Her careworn face showed years of struggle. 她饱经风霜的脸显示出多年的挣扎。"
+    },
+    {
+      "question": "shopworn _____",
+      "type": "blank",
+      "answer": "ideas",
+      "explanation": "陈腐的, 陈腐的想法. The proposal contained shopworn ideas. 提案包含陈腐的想法。"
+    },
+    {
+      "question": "adjourn ___ _______",
+      "type": "blank",
+      "answer": "the meeting",
+      "explanation": "休会, 休会. The chairman decided to adjourn the meeting. 主席决定休会。"
+    },
+    {
+      "question": "mourn _____",
+      "type": "blank",
+      "answer": "death",
+      "explanation": "哀悼, 哀悼死亡. The nation gathered to mourn death. 全国聚集哀悼死亡。"
+    },
+    {
+      "question": "spurn __ _____",
+      "type": "blank",
+      "answer": "an offer",
+      "explanation": "拒绝, 拒绝提议. He decided to spurn an offer. 他决定拒绝提议。"
+    },
+    {
+      "question": "shun _________",
+      "type": "blank",
+      "answer": "publicity",
+      "explanation": "避开, 避开公众关注. The recluse chose to shun publicity. 隐士选择避开公众关注。"
+    },
+    {
+      "question": "____ _ pun",
+      "type": "blank",
+      "answer": "make a",
+      "explanation": "双关语, 说双关语. The comedian would make a pun. 喜剧演员会说双关语。"
+    },
+    {
+      "question": "spawn _____",
+      "type": "blank",
+      "answer": "ideas",
+      "explanation": "产生, 产生想法. Brainstorming sessions spawn ideas. 头脑风暴会议产生想法。"
+    },
+    {
+      "question": "full-blown ______",
+      "type": "blank",
+      "answer": "crisis",
+      "explanation": "全面的, 全面的危机. The situation became a full-blown crisis. 情况变成了全面的危机。"
+    },
+    {
+      "question": "_____ clown",
+      "type": "blank",
+      "answer": "class",
+      "explanation": "小丑, 班级小丑. He was known as the class clown. 他被称为班级小丑。"
+    },
+    {
+      "question": "____ crown",
+      "type": "blank",
+      "answer": "gold",
+      "explanation": "王冠, 金王冠. The king wore a gold crown. 国王戴着金王冠。"
+    },
+    {
+      "question": "____ fresco",
+      "type": "blank",
+      "answer": "wall",
+      "explanation": "壁画, 墙壁壁画. Michelangelo painted a famous wall fresco. 米开朗基罗绘制了著名的墙壁壁画。"
+    },
+    {
+      "question": "________ tornado",
+      "type": "blank",
+      "answer": "powerful",
+      "explanation": "龙卷风, 强大的龙卷风. A powerful tornado destroyed homes. 强大的龙卷风摧毁了房屋。"
+    },
+    {
+      "question": "______ desperado",
+      "type": "blank",
+      "answer": "masked",
+      "explanation": "亡命之徒, 蒙面亡命之徒. The masked desperado robbed the bank. 蒙面亡命之徒抢劫了银行。"
+    },
+    {
+      "question": "_____ bravado",
+      "type": "blank",
+      "answer": "cocky",
+      "explanation": "虚张声势, 自大的虚张声势. His cocky bravado hid insecurity. 他自大的虚张声势掩盖了不安全感。"
+    },
+    {
+      "question": "____ _ torpedo",
+      "type": "blank",
+      "answer": "fire a",
+      "explanation": "鱼雷, 发射鱼雷. The submarine prepared to fire a torpedo. 潜艇准备发射鱼雷。"
+    },
+    {
+      "question": "_________ credo",
+      "type": "blank",
+      "answer": "corporate",
+      "explanation": "信条, 公司信条. The corporate credo emphasized integrity. 公司信条强调诚信。"
+    },
+    {
+      "question": "_____ tuxedo",
+      "type": "blank",
+      "answer": "black",
+      "explanation": "礼服, 黑色礼服. The groom wore a black tuxedo. 新郎穿着黑色礼服。"
+    },
+    {
+      "question": "_______ diminuendo",
+      "type": "blank",
+      "answer": "gradual",
+      "explanation": "渐弱, 逐渐渐弱. The music ended in a gradual diminuendo. 音乐在逐渐渐弱中结束。"
+    },
+    {
+      "question": "____ innuendo",
+      "type": "blank",
+      "answer": "dark",
+      "explanation": "影射, 阴暗的影射. The speech contained dark innuendo. 演讲包含阴暗的影射。"
+    }
+  ]
+}
