@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "_____ panther",
+      "type": "blank",
+      "answer": "black",
+      "explanation": "黑豹, 黑豹. The black panther moved silently through the jungle. 黑豹无声地穿过丛林。"
+    },
+    {
+      "question": "cavalier ________",
+      "type": "blank",
+      "answer": "attitude",
+      "explanation": "骑士; 傲慢的, 傲慢的态度. His cavalier attitude toward safety rules worried his colleagues. 他对安全规则的傲慢态度让同事们担心。"
+    },
+    {
+      "question": "_______ chandelier",
+      "type": "blank",
+      "answer": "crystal",
+      "explanation": "枝形吊灯, 水晶吊灯. The crystal chandelier sparkled in the ballroom. 水晶吊灯在舞厅里闪闪发光。"
+    },
+    {
+      "question": "_______ pier",
+      "type": "blank",
+      "answer": "fishing",
+      "explanation": "码头; 桥墩, 钓鱼码头. Locals gathered at the fishing pier every morning. 当地人每天早上都聚集在钓鱼码头。"
+    },
+    {
+      "question": "____________ dossier",
+      "type": "blank",
+      "answer": "intelligence",
+      "explanation": "档案; 卷宗, 情报档案. The spy carried a classified intelligence dossier. 间谍携带了一份机密情报档案。"
+    },
+    {
+      "question": "pucker ____",
+      "type": "blank",
+      "answer": "lips",
+      "explanation": "皱起; 撅起, 撅起嘴唇. She would pucker lips when tasting something sour. 她尝到酸的东西时会撅起嘴唇。"
+    },
+    {
+      "question": "canker ____",
+      "type": "blank",
+      "answer": "sore",
+      "explanation": "溃疡; 腐蚀, 口腔溃疡. The painful canker sore made eating difficult. 疼痛的口腔溃疡使进食困难。"
+    },
+    {
+      "question": "____-______ broker",
+      "type": "blank",
+      "answer": "real-estate",
+      "explanation": "经纪人, 房地产经纪人. The real-estate broker showed us several properties. 房地产经纪人向我们展示了几处房产。"
+    },
+    {
+      "question": "______ hawker",
+      "type": "blank",
+      "answer": "street",
+      "explanation": "小贩, 街头小贩. The street hawker sold fresh fruit from his cart. 街头小贩从他的推车上卖新鲜水果。"
+    },
+    {
+      "question": "______ dabbler",
+      "type": "blank",
+      "answer": "casual",
+      "explanation": "业余爱好者; 涉猎者, 业余涉猎者. He was just a casual dabbler in photography, not a professional. 他只是摄影的业余涉猎者,不是专业人士。"
+    },
+    {
+      "question": "_______ cobbler",
+      "type": "blank",
+      "answer": "village",
+      "explanation": "鞋匠; 水果馅饼, 村里的鞋匠. The village cobbler repaired shoes for the community. 村里的鞋匠为社区修鞋。"
+    },
+    {
+      "question": "____ wrangler",
+      "type": "blank",
+      "answer": "head",
+      "explanation": "牧马人; 争论者, 首席牧马人. The head wrangler supervised all the ranch hands. 首席牧马人监督所有牧场工人。"
+    },
+    {
+      "question": "potboiler _____",
+      "type": "blank",
+      "answer": "novel",
+      "explanation": "粗制滥造的作品, 粗制滥造的小说. The author wrote a potboiler novel to pay the bills. 作者写了一部粗制滥造的小说来支付账单。"
+    },
+    {
+      "question": "tickler ____",
+      "type": "blank",
+      "answer": "file",
+      "explanation": "提醒物; 备忘录, 提醒文件. Keep a tickler file to remember important deadlines. 保留一个提醒文件来记住重要的截止日期。"
+    },
+    {
+      "question": "_ stickler ___ ______",
+      "type": "blank",
+      "answer": "a for detail",
+      "explanation": "坚持细节的人; 固执者, 对细节很坚持的人. She is a stickler for detail in all her work. 她在所有工作中都是一个对细节很坚持的人。"
+    },
+    {
+      "question": "________ propeller",
+      "type": "blank",
+      "answer": "airplane",
+      "explanation": "螺旋桨, 飞机螺旋桨. The airplane propeller spun rapidly before takeoff. 飞机螺旋桨在起飞前快速旋转。"
+    },
+    {
+      "question": "____ painkiller",
+      "type": "blank",
+      "answer": "take",
+      "explanation": "止痛药, 服用止痛药. The doctor advised me to take painkiller for the headache. 医生建议我服用止痛药来治疗头痛。"
+    },
+    {
+      "question": "______ sampler",
+      "type": "blank",
+      "answer": "needle",
+      "explanation": "样品; 刺绣样品, 刺绣样品. The antique needle sampler displayed beautiful stitching. 古董刺绣样品展示了美丽的针法。"
+    },
+    {
+      "question": "______ rustler",
+      "type": "blank",
+      "answer": "cattle",
+      "explanation": "偷牛贼, 偷牛贼. The sheriff arrested the cattle rustler on the open range. 警长在开阔牧场上逮捕了偷牛贼。"
+    },
+    {
+      "question": "howler _______",
+      "type": "blank",
+      "answer": "mistake",
+      "explanation": "咆哮者; 大错误, 严重错误. The typo in the headline was a howler mistake. 标题中的拼写错误是一个严重错误。"
+    },
+    {
+      "question": "______ sizzler",
+      "type": "blank",
+      "answer": "summer",
+      "explanation": "炎热的天气; 热门事物, 炎热的夏天. This summer sizzler brought record-breaking temperatures. 这个炎热的夏天带来了创纪录的高温。"
+    },
+    {
+      "question": "________ disclaimer",
+      "type": "blank",
+      "answer": "warranty",
+      "explanation": "免责声明, 保修免责声明. Read the warranty disclaimer carefully before purchasing. 购买前仔细阅读保修免责声明。"
+    },
+    {
+      "question": "______ hammer",
+      "type": "blank",
+      "answer": "sledge",
+      "explanation": "锤子, 大锤. The worker swung the sledge hammer to break the concrete. 工人挥动大锤打碎混凝土。"
+    },
+    {
+      "question": "___ _ sledgehammer",
+      "type": "blank",
+      "answer": "use a",
+      "explanation": "大锤, 使用大锤. You'll need to use a sledgehammer to demolish that wall. 你需要使用大锤来拆除那堵墙。"
+    },
+    {
+      "question": "______ misnomer",
+      "type": "blank",
+      "answer": "common",
+      "explanation": "用词不当; 误称, 常见的误称. Calling it a jellyfish is a common misnomer since they're not fish. 称其为水母是一个常见的误称,因为它们不是鱼。"
+    },
+    {
+      "question": "______ informer",
+      "type": "blank",
+      "answer": "police",
+      "explanation": "告密者; 线人, 警方线人. The police informer provided crucial information about the gang. 警方线人提供了关于该团伙的关键信息。"
+    },
+    {
+      "question": "_______ designer",
+      "type": "blank",
+      "answer": "fashion",
+      "explanation": "设计师, 时装设计师. The famous fashion designer unveiled her new collection. 著名时装设计师发布了她的新系列。"
+    },
+    {
+      "question": "_____ retainer",
+      "type": "blank",
+      "answer": "legal",
+      "explanation": "聘用金; 固定器, 法律聘用金. The client paid a legal retainer to secure the lawyer's services. 客户支付了法律聘用金以获得律师的服务。"
+    },
+    {
+      "question": "________ mariner",
+      "type": "blank",
+      "answer": "seasoned",
+      "explanation": "水手; 海员, 经验丰富的水手. The seasoned mariner navigated through the storm with skill. 经验丰富的水手熟练地在暴风雨中航行。"
+    },
+    {
+      "question": "forerunner __________",
+      "type": "blank",
+      "answer": "technology",
+      "explanation": "先驱; 前身, 先驱技术. The telegraph was a forerunner technology to modern communications. 电报是现代通信的先驱技术。"
+    },
+    {
+      "question": "_______ practitioner",
+      "type": "blank",
+      "answer": "medical",
+      "explanation": "从业者; 执业者, 医疗从业者. The medical practitioner diagnosed the patient's condition. 医疗从业者诊断了患者的病情。"
+    },
+    {
+      "question": "_____ petitioner",
+      "type": "blank",
+      "answer": "court",
+      "explanation": "请愿者; 上诉人, 法院上诉人. The court petitioner filed documents requesting a hearing. 法院上诉人提交了要求听证的文件。"
+    },
+    {
+      "question": "garner _______",
+      "type": "blank",
+      "answer": "support",
+      "explanation": "获得; 收集, 获得支持. The candidate worked hard to garner support from voters. 候选人努力工作以获得选民的支持。"
+    },
+    {
+      "question": "______ vintner",
+      "type": "blank",
+      "answer": "French",
+      "explanation": "酿酒商, 法国酿酒商. The French vintner produced exceptional wines from his vineyard. 法国酿酒商从他的葡萄园生产出了卓越的葡萄酒。"
+    },
+    {
+      "question": "caper _____",
+      "type": "blank",
+      "answer": "about",
+      "explanation": "雀跃; 恶作剧, 雀跃. The children would caper about in the playground joyfully. 孩子们会在操场上欢快地雀跃。"
+    },
+    {
+      "question": "_____ reaper",
+      "type": "blank",
+      "answer": "grain",
+      "explanation": "收割者; 收割机, 谷物收割机. The farmer used a grain reaper to harvest the wheat. 农民使用谷物收割机收割小麦。"
+    },
+    {
+      "question": "_____ damper",
+      "type": "blank",
+      "answer": "piano",
+      "explanation": "减震器; 制音器, 钢琴制音器. The piano damper stops the strings from vibrating. 钢琴制音器阻止琴弦振动。"
+    },
+    {
+      "question": "_______ hamper",
+      "type": "blank",
+      "answer": "laundry",
+      "explanation": "妨碍; 洗衣篮, 洗衣篮. Put your dirty clothes in the laundry hamper. 把你的脏衣服放进洗衣篮。"
+    },
+    {
+      "question": "temper _______",
+      "type": "blank",
+      "answer": "justice",
+      "explanation": "脾气; 调和, 调和正义. The judge must temper justice with mercy. 法官必须以仁慈调和正义。"
+    },
+    {
+      "question": "_________ interloper",
+      "type": "blank",
+      "answer": "unwelcome",
+      "explanation": "闯入者; 干涉者, 不受欢迎的闯入者. The unwelcome interloper disrupted the private meeting. 不受欢迎的闯入者扰乱了私人会议。"
+    },
+    {
+      "question": "dapper _______",
+      "type": "blank",
+      "answer": "dresser",
+      "explanation": "衣着整洁的; 精神的, 穿着整洁的人. He was known as a dapper dresser with impeccable style. 他以穿着整洁、风格无可挑剔而闻名。"
+    },
+    {
+      "question": "clipper ____",
+      "type": "blank",
+      "answer": "ship",
+      "explanation": "快速帆船; 剪刀, 快速帆船. The clipper ship sailed swiftly across the ocean. 快速帆船迅速驶过大洋。"
+    },
+    {
+      "question": "_ pauper's _____",
+      "type": "blank",
+      "answer": "a grave",
+      "explanation": "贫民; 穷人, 贫民的坟墓. He was buried in a pauper's grave with no marker. 他被埋葬在一个没有标记的贫民的坟墓里。"
+    },
+    {
+      "question": "_____ treasurer",
+      "type": "blank",
+      "answer": "state",
+      "explanation": "财务主管; 司库, 州财务主管. The state treasurer manages public funds. 州财务主管管理公共资金。"
+    },
+    {
+      "question": "miser's _____",
+      "type": "blank",
+      "answer": "hoard",
+      "explanation": "守财奴, 守财奴的储藏. The miser's hoard of gold was discovered after his death. 守财奴的储藏黄金在他死后被发现。"
+    },
+    {
+      "question": "_____ hawser",
+      "type": "blank",
+      "answer": "steel",
+      "explanation": "粗缆绳, 钢缆绳. The ship was secured to the dock with a steel hawser. 船用钢缆绳固定在码头上。"
+    },
+    {
+      "question": "geyser ________",
+      "type": "blank",
+      "answer": "eruption",
+      "explanation": "间歇泉, 间歇泉喷发. Tourists gathered to watch the geyser eruption at Yellowstone. 游客聚集在黄石公园观看间歇泉喷发。"
+    },
+    {
+      "question": "cater _____",
+      "type": "blank",
+      "answer": "event",
+      "explanation": "承办酒席; 迎合, 承办活动. The restaurant will cater event for the wedding reception. 餐厅将为婚宴承办活动。"
+    },
+    {
+      "question": "idolater _______",
+      "type": "blank",
+      "answer": "worship",
+      "explanation": "偶像崇拜者, 偶像崇拜. The idolater worship of celebrities can be excessive. 对名人的偶像崇拜可能过度。"
+    },
+    {
+      "question": "________ crater",
+      "type": "blank",
+      "answer": "volcanic",
+      "explanation": "火山口; 坑, 火山口. The volcanic crater was still steaming from recent activity. 火山口仍在冒着最近活动的蒸汽。"
+    },
+    {
+      "question": "_____ backwater",
+      "type": "blank",
+      "answer": "rural",
+      "explanation": "死水; 落后地区, 农村落后地区. The town was dismissed as a rural backwater by city dwellers. 这个城镇被城市居民认为是农村落后地区。"
+    },
+    {
+      "question": "_______ specter",
+      "type": "blank",
+      "answer": "ghostly",
+      "explanation": "幽灵; 恐怖的景象, 幽灵般的鬼魂. A ghostly specter appeared in the haunted mansion. 幽灵般的鬼魂出现在闹鬼的豪宅中。"
+    },
+    {
+      "question": "deter _____",
+      "type": "blank",
+      "answer": "crime",
+      "explanation": "阻止; 威慑, 威慑犯罪. Strict laws help deter crime in the community. 严格的法律有助于威慑社区的犯罪。"
+    },
+    {
+      "question": "______ diameter",
+      "type": "blank",
+      "answer": "circle",
+      "explanation": "直径, 圆的直径. Measure the circle diameter from edge to edge. 从边缘到边缘测量圆的直径。"
+    },
+    {
+      "question": "_______ parameter",
+      "type": "blank",
+      "answer": "tunable",
+      "explanation": "参数, 可调参数. The model includes a tunable parameter for optimization. 该模型包括一个用于优化的可调参数。"
+    },
+    {
+      "question": "perimeter _____",
+      "type": "blank",
+      "answer": "fence",
+      "explanation": "周长; 周边, 周边围栏. Security guards patrol the perimeter fence regularly. 保安定期巡逻周边围栏。"
+    },
+    {
+      "question": "odometer _______",
+      "type": "blank",
+      "answer": "reading",
+      "explanation": "里程表, 里程表读数. The odometer reading showed the car had traveled 50,000 miles. 里程表读数显示汽车已行驶5万英里。"
+    },
+    {
+      "question": "____ slaughter",
+      "type": "blank",
+      "answer": "mass",
+      "explanation": "屠杀; 大量杀戮, 大屠杀. The battle resulted in a mass slaughter of soldiers. 这场战斗导致了士兵的大屠杀。"
+    },
+    {
+      "question": "_____ arbiter",
+      "type": "blank",
+      "answer": "final",
+      "explanation": "仲裁者; 裁决者, 最终仲裁者. The Supreme Court serves as the final arbiter of the law. 最高法院是法律的最终仲裁者。"
+    },
+    {
+      "question": "loiter ______",
+      "type": "blank",
+      "answer": "around",
+      "explanation": "闲荡; 徘徊, 四处闲荡. Don't loiter around the store entrance. 不要在商店门口四处闲荡。"
+    },
+    {
+      "question": "reconnoiter ____",
+      "type": "blank",
+      "answer": "area",
+      "explanation": "侦察, 侦察区域. The scouts were sent ahead to reconnoiter area before the attack. 侦察兵被派去在进攻前侦察区域。"
+    },
+    {
+      "question": "alter _ _____",
+      "type": "blank",
+      "answer": "a dress",
+      "explanation": "改变; 修改, 修改一件衣服. The tailor will alter a dress to fit you perfectly. 裁缝将修改一件衣服以完美适合你。"
+    },
+    {
+      "question": "palter ____ _____",
+      "type": "blank",
+      "answer": "with truth",
+      "explanation": "含糊其辞; 欺骗, 对真相含糊其辞. Politicians often palter with truth during election campaigns. 政客们在竞选活动中经常对真相含糊其辞。"
+    },
+    {
+      "question": "_ welter __ ____",
+      "type": "blank",
+      "answer": "a of data",
+      "explanation": "混乱; 杂乱, 大量数据的混乱. The researcher faced a welter of data to analyze. 研究人员面临大量数据的混乱需要分析。"
+    },
+    {
+      "question": "_______ banter",
+      "type": "blank",
+      "answer": "playful",
+      "explanation": "玩笑; 戏谑, 有趣的玩笑. The friends exchanged playful banter over dinner. 朋友们在晚餐时交换有趣的玩笑。"
+    },
+    {
+      "question": "_______ carpenter",
+      "type": "blank",
+      "answer": "skilled",
+      "explanation": "木匠, 熟练的木匠. The skilled carpenter crafted beautiful furniture. 熟练的木匠制作了精美的家具。"
+    },
+    {
+      "question": "__ presenter",
+      "type": "blank",
+      "answer": "TV",
+      "explanation": "主持人, 电视主持人. The TV presenter interviewed the celebrity guest. 电视主持人采访了名人嘉宾。"
+    },
+    {
+      "question": "inter ___ ____",
+      "type": "blank",
+      "answer": "the body",
+      "explanation": "埋葬, 埋葬尸体. They decided to inter the body in the family cemetery. 他们决定在家族墓地埋葬尸体。"
+    },
+    {
+      "question": "disinter _______",
+      "type": "blank",
+      "answer": "remains",
+      "explanation": "挖出; 发掘, 挖出遗骸. Archaeologists worked to disinter remains from the ancient site. 考古学家努力从古代遗址挖出遗骸。"
+    },
+    {
+      "question": "saunter _____",
+      "type": "blank",
+      "answer": "along",
+      "explanation": "漫步; 闲逛, 沿着...漫步. They would saunter along the beach at sunset. 他们会在日落时沿着海滩漫步。"
+    },
+    {
+      "question": "______ encounter",
+      "type": "blank",
+      "answer": "chance",
+      "explanation": "遭遇; 邂逅, 偶然相遇. Their chance encounter at the airport led to a friendship. 他们在机场的偶然相遇促成了一段友谊。"
+    },
+    {
+      "question": "________ scooter",
+      "type": "blank",
+      "answer": "electric",
+      "explanation": "踏板车, 电动踏板车. Many commuters now use an electric scooter to get to work. 许多通勤者现在使用电动踏板车上班。"
+    },
+    {
+      "question": "_________ charter",
+      "type": "blank",
+      "answer": "corporate",
+      "explanation": "宪章; 章程, 公司章程. The corporate charter defines the company's purpose and structure. 公司章程规定了公司的宗旨和结构。"
+    },
+    {
+      "question": "____ deserter",
+      "type": "blank",
+      "answer": "army",
+      "explanation": "逃兵; 开小差者, 军队逃兵. The army deserter was caught and court-martialed. 军队逃兵被抓获并受到军事法庭审判。"
+    },
+    {
+      "question": "alabaster ____",
+      "type": "blank",
+      "answer": "skin",
+      "explanation": "雪花石膏; 雪白的, 雪白的皮肤. The actress was admired for her alabaster skin. 这位女演员因其雪白的皮肤而受到赞赏。"
+    },
+    {
+      "question": "plaster ____",
+      "type": "blank",
+      "answer": "wall",
+      "explanation": "石膏; 灰泥, 石膏墙. The contractor repaired the cracked plaster wall. 承包商修复了开裂的石膏墙。"
+    },
+    {
+      "question": "_____ daubster",
+      "type": "blank",
+      "answer": "inept",
+      "explanation": "拙劣的画家, 无能的拙劣画家. The critic dismissed him as an inept daubster with no talent. 评论家认为他是一个没有才华的无能的拙劣画家。"
+    },
+    {
+      "question": "_____ fester",
+      "type": "blank",
+      "answer": "wound",
+      "explanation": "化脓; 溃烂, 伤口化脓. If left untreated, the wound fester and become infected. 如果不治疗,伤口化脓并感染。"
+    },
+    {
+      "question": "pester ____ _____",
+      "type": "blank",
+      "answer": "with calls",
+      "explanation": "纠缠; 烦扰, 用电话纠缠. Telemarketers would pester with calls during dinner time. 电话推销员会在晚餐时间用电话纠缠。"
+    },
+    {
+      "question": "sequester ______",
+      "type": "blank",
+      "answer": "assets",
+      "explanation": "隔离; 扣押, 扣押资产. The court ordered authorities to sequester assets of the defendant. 法院命令当局扣押被告的资产。"
+    },
+    {
+      "question": "sinister ______",
+      "type": "blank",
+      "answer": "motive",
+      "explanation": "邪恶的; 不祥的, 邪恶的动机. The detective suspected a sinister motive behind the crime. 侦探怀疑犯罪背后有邪恶的动机。"
+    },
+    {
+      "question": "_____ cloister",
+      "type": "blank",
+      "answer": "quiet",
+      "explanation": "修道院回廊; 使隐居, 安静的修道院. The monks lived in a quiet cloister away from the world. 僧侣们生活在远离世界的安静修道院中。"
+    },
+    {
+      "question": "roister ___ _____",
+      "type": "blank",
+      "answer": "all night",
+      "explanation": "狂欢; 喧闹, 整夜狂欢. The revelers would roister all night during the festival. 狂欢者会在节日期间整夜狂欢。"
+    },
+    {
+      "question": "_____'_ barrister",
+      "type": "blank",
+      "answer": "Queen's",
+      "explanation": "出庭律师(英国), 王室大律师. The Queen's barrister presented the case in court. 王室大律师在法庭上陈述案件。"
+    },
+    {
+      "question": "______ huckster",
+      "type": "blank",
+      "answer": "street",
+      "explanation": "小贩; 叫卖者, 街头叫卖者. The street huckster sold knockoff merchandise to tourists. 街头叫卖者向游客出售仿冒商品。"
+    },
+    {
+      "question": "pollster ______",
+      "type": "blank",
+      "answer": "survey",
+      "explanation": "民意调查员, 民意调查. The pollster survey revealed changing public opinion. 民意调查显示公众意见正在改变。"
+    },
+    {
+      "question": "bolster __________",
+      "type": "blank",
+      "answer": "confidence",
+      "explanation": "支撑; 鼓励, 增强信心. The coach's words helped bolster confidence in the team. 教练的话帮助增强了团队的信心。"
+    },
+    {
+      "question": "___ holster",
+      "type": "blank",
+      "answer": "gun",
+      "explanation": "枪套, 枪套. The officer drew his weapon from the gun holster. 警官从枪套中拔出武器。"
+    },
+    {
+      "question": "foster ____",
+      "type": "blank",
+      "answer": "care",
+      "explanation": "培养; 收养, 寄养. The child was placed in foster care after the incident. 事件发生后,孩子被安置在寄养家庭。"
+    },
+    {
+      "question": "_____ poster",
+      "type": "blank",
+      "answer": "movie",
+      "explanation": "海报, 电影海报. The vintage movie poster sold for thousands at auction. 这张老式电影海报在拍卖会上以数千美元成交。"
+    },
+    {
+      "question": "four-poster ___",
+      "type": "blank",
+      "answer": "bed",
+      "explanation": "四柱床, 四柱床. The master bedroom featured an antique four-poster bed. 主卧室配有一张古董四柱床。"
+    },
+    {
+      "question": "____ roster",
+      "type": "blank",
+      "answer": "team",
+      "explanation": "名册; 花名册, 团队名册. The coach announced changes to the team roster. 教练宣布了团队名册的变化。"
+    },
+    {
+      "question": "______ _ filibuster",
+      "type": "blank",
+      "answer": "launch a",
+      "explanation": "阻挠议事; 冗长演说, 发起阻挠议事. Senators threatened to launch a filibuster against the bill. 参议员们威胁要对该法案发起阻挠议事。"
+    },
+    {
+      "question": "_____ cluster",
+      "type": "blank",
+      "answer": "grape",
+      "explanation": "串; 群, 葡萄串. She picked a ripe grape cluster from the vine. 她从藤上摘下一串成熟的葡萄。"
+    },
+    {
+      "question": "lackluster ___________",
+      "type": "blank",
+      "answer": "performance",
+      "explanation": "无光泽的; 平淡的, 平淡的表现. The team's lackluster performance disappointed the fans. 球队平淡的表现让球迷失望。"
+    },
+    {
+      "question": "scatter _____",
+      "type": "blank",
+      "answer": "seeds",
+      "explanation": "分散; 撒播, 撒播种子. The farmer would scatter seeds across the field. 农民会在田野里撒播种子。"
+    },
+    {
+      "question": "enfetter ___ ____",
+      "type": "blank",
+      "answer": "the mind",
+      "explanation": "束缚; 加枷锁, 束缚思想. Rigid traditions can enfetter the mind and limit creativity. 僵化的传统会束缚思想并限制创造力。"
+    },
+    {
+      "question": "embitter _________",
+      "type": "blank",
+      "answer": "relations",
+      "explanation": "使痛苦; 使怨恨, 使关系恶化. The dispute would embitter relations between the two nations. 这场争端会使两国关系恶化。"
+    },
+    {
+      "question": "_______ jitter",
+      "type": "blank",
+      "answer": "nervous",
+      "explanation": "紧张不安, 紧张不安. She felt nervous jitter before the important presentation. 她在重要演讲前感到紧张不安。"
+    },
+    {
+      "question": "litter ___ ______",
+      "type": "blank",
+      "answer": "the street",
+      "explanation": "垃圾; 乱扔, 在街上乱扔垃圾. Please don't litter the street with trash. 请不要在街上乱扔垃圾。"
+    }
+  ]
+}
