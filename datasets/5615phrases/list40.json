@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "____ _ detour",
+      "type": "blank",
+      "answer": "take a",
+      "explanation": "绕道; 迂回, 绕道. We had to take a detour because of road construction. 我们不得不绕道,因为道路施工。"
+    },
+    {
+      "question": "devour _ ____",
+      "type": "blank",
+      "answer": "a book",
+      "explanation": "吞食; 狼吞虎咽, 一口气读完一本书. She would devour a book in a single sitting. 她会一口气读完一本书。"
+    },
+    {
+      "question": "spur ______",
+      "type": "blank",
+      "answer": "growth",
+      "explanation": "马刺; 刺激, 刺激增长. Tax incentives can spur growth in the economy. 税收优惠可以刺激经济增长。"
+    },
+    {
+      "question": "______ zephyr",
+      "type": "blank",
+      "answer": "spring",
+      "explanation": "和风; 微风, 春天的微风. A gentle spring zephyr rustled the leaves. 轻柔的春天微风吹动树叶。"
+    },
+    {
+      "question": "_________ martyr",
+      "type": "blank",
+      "answer": "Christian",
+      "explanation": "殉道者; 烈士, 基督教殉道者. The Christian martyr died for his faith. 基督教殉道者为信仰而死。"
+    },
+    {
+      "question": "______ fracas",
+      "type": "blank",
+      "answer": "street",
+      "explanation": "喧闹; 吵闹, 街头喧闹. A street fracas broke out between rival groups. 对立团体之间爆发了街头喧闹。"
+    },
+    {
+      "question": "pancreas ________",
+      "type": "blank",
+      "answer": "function",
+      "explanation": "胰腺, 胰腺功能. Diabetes affects pancreas function significantly. 糖尿病严重影响胰腺功能。"
+    },
+    {
+      "question": "___ specifics",
+      "type": "blank",
+      "answer": "the",
+      "explanation": "具体细节, 具体细节. Let's discuss the specifics of the proposal. 让我们讨论提案的具体细节。"
+    },
+    {
+      "question": "____________ ethics",
+      "type": "blank",
+      "answer": "professional",
+      "explanation": "伦理学; 道德规范, 职业道德. Doctors must adhere to professional ethics standards. 医生必须遵守职业道德标准。"
+    },
+    {
+      "question": "____ ceramics",
+      "type": "blank",
+      "answer": "fine",
+      "explanation": "陶瓷, 精美陶瓷. The museum displays ancient fine ceramics from China. 博物馆展示来自中国的古代精美陶瓷。"
+    },
+    {
+      "question": "_______ mechanics",
+      "type": "blank",
+      "answer": "quantum",
+      "explanation": "力学; 机械学, 量子力学. Physicists study quantum mechanics at the subatomic level. 物理学家研究亚原子层面的量子力学。"
+    },
+    {
+      "question": "_____ mnemonics",
+      "type": "blank",
+      "answer": "study",
+      "explanation": "记忆术, 学习记忆术. Students use study mnemonics to memorize information. 学生使用学习记忆术来记忆信息。"
+    },
+    {
+      "question": "pediatrics ____",
+      "type": "blank",
+      "answer": "ward",
+      "explanation": "儿科学, 儿科病房. The hospital opened a new pediatrics ward last month. 医院上个月开设了新的儿科病房。"
+    },
+    {
+      "question": "_____ metaphysics",
+      "type": "blank",
+      "answer": "study",
+      "explanation": "形而上学, 学习形而上学. Philosophy students study metaphysics in their second year. 哲学系学生在第二年学习形而上学。"
+    },
+    {
+      "question": "_______ athletics",
+      "type": "blank",
+      "answer": "college",
+      "explanation": "田径运动, 大学田径运动. College athletics programs attract talented athletes nationwide. 大学田径运动项目吸引了全国有才华的运动员。"
+    },
+    {
+      "question": "_____ homiletics",
+      "type": "blank",
+      "answer": "learn",
+      "explanation": "讲道学, 学习讲道学. Seminary students learn homiletics as part of their training. 神学院学生在培训中学习讲道学。"
+    },
+    {
+      "question": "_____ genetics",
+      "type": "blank",
+      "answer": "study",
+      "explanation": "遗传学, 学习遗传学. Biologists study genetics to understand heredity. 生物学家学习遗传学以理解遗传。"
+    },
+    {
+      "question": "________ dietetics",
+      "type": "blank",
+      "answer": "clinical",
+      "explanation": "营养学, 临床营养学. She earned a degree in clinical dietetics. 她获得了临床营养学学位。"
+    },
+    {
+      "question": "orthodontics _________",
+      "type": "blank",
+      "answer": "treatment",
+      "explanation": "正畸学, 正畸治疗. The teenager needs orthodontics treatment for crooked teeth. 这个青少年的歪牙需要正畸治疗。"
+    },
+    {
+      "question": "______ logistics",
+      "type": "blank",
+      "answer": "supply",
+      "explanation": "物流; 后勤, 供应物流. The company improved its supply logistics system. 公司改进了其供应物流系统。"
+    },
+    {
+      "question": "_____ linguistics",
+      "type": "blank",
+      "answer": "study",
+      "explanation": "语言学, 学习语言学. Students study linguistics to understand language structure. 学生学习语言学以理解语言结构。"
+    },
+    {
+      "question": "aeronautics",
+      "type": "blank",
+      "answer": "aeronautics",
+      "explanation": "航空学, 航空学. He specialized in aeronautics at the engineering school. 他在工程学院专攻航空学。"
+    },
+    {
+      "question": "scads __ _____",
+      "type": "blank",
+      "answer": "of money",
+      "explanation": "大量, 大量金钱. The lottery winner received scads of money. 彩票中奖者获得了大量金钱。"
+    },
+    {
+      "question": "____ odds",
+      "type": "blank",
+      "answer": "long",
+      "explanation": "可能性; 几率, 很小的可能性. Despite the long odds, they succeeded in their mission. 尽管可能性很小,他们还是完成了任务。"
+    },
+    {
+      "question": "_______ proceeds",
+      "type": "blank",
+      "answer": "auction",
+      "explanation": "收益; 收入, 拍卖收益. The auction proceeds will benefit the charity. 拍卖收益将用于慈善事业。"
+    },
+    {
+      "question": "_____ rapids",
+      "type": "blank",
+      "answer": "river",
+      "explanation": "急流, 河流急流. Kayakers navigated the dangerous river rapids. 皮划艇运动员穿越危险的河流急流。"
+    },
+    {
+      "question": "_________ viands",
+      "type": "blank",
+      "answer": "delicious",
+      "explanation": "食品; 佳肴, 美味佳肴. The banquet table was laden with delicious viands. 宴会桌上摆满了美味佳肴。"
+    },
+    {
+      "question": "______ blinds",
+      "type": "blank",
+      "answer": "window",
+      "explanation": "百叶窗, 窗户百叶窗. Close the window blinds to block out the sunlight. 关上窗户百叶窗遮挡阳光。"
+    },
+    {
+      "question": "_____ auspices",
+      "type": "blank",
+      "answer": "under",
+      "explanation": "赞助; 支持, 在...赞助下. The event was held under auspices of the United Nations. 活动在联合国的赞助下举行。"
+    },
+    {
+      "question": "rabies _______",
+      "type": "blank",
+      "answer": "vaccine",
+      "explanation": "狂犬病, 狂犬病疫苗. The dog received a rabies vaccine at the vet. 狗在兽医那里接种了狂犬病疫苗。"
+    },
+    {
+      "question": "______ facilities",
+      "type": "blank",
+      "answer": "sports",
+      "explanation": "设施, 体育设施. The university built new sports facilities for students. 大学为学生建造了新的体育设施。"
+    },
+    {
+      "question": "_____ securities",
+      "type": "blank",
+      "answer": "trade",
+      "explanation": "证券, 交易证券. Brokers trade securities on the stock exchange. 经纪人在证券交易所交易证券。"
+    },
+    {
+      "question": "__ shambles",
+      "type": "blank",
+      "answer": "in",
+      "explanation": "混乱; 废墟, 一片混乱. After the storm, the town was in shambles. 暴风雨过后,城镇一片混乱。"
+    },
+    {
+      "question": "__ ___ throes __",
+      "type": "blank",
+      "answer": "in the of",
+      "explanation": "阵痛; 痛苦挣扎, 在...痛苦挣扎中. The nation is in the throes of economic crisis. 这个国家正处于经济危机的痛苦挣扎中。"
+    },
+    {
+      "question": "______ mores",
+      "type": "blank",
+      "answer": "social",
+      "explanation": "风俗; 习惯, 社会习俗. Every culture has its own social mores and customs. 每种文化都有自己的社会习俗。"
+    },
+    {
+      "question": "______ tresses",
+      "type": "blank",
+      "answer": "golden",
+      "explanation": "长发; 辫子, 金色长发. The princess was known for her golden tresses. 公主以其金色长发而闻名。"
+    },
+    {
+      "question": "_______ minutes",
+      "type": "blank",
+      "answer": "meeting",
+      "explanation": "会议记录, 会议记录. The secretary took careful meeting minutes. 秘书仔细记录了会议记录。"
+    },
+    {
+      "question": "___ dregs __ _______",
+      "type": "blank",
+      "answer": "the of society",
+      "explanation": "渣滓; 糟粕, 社会渣滓. The criminal was considered the dregs of society. 这个罪犯被认为是社会渣滓。"
+    },
+    {
+      "question": "________ belongings",
+      "type": "blank",
+      "answer": "personal",
+      "explanation": "所有物; 财物, 个人财物. Please collect your personal belongings before leaving. 离开前请收拾您的个人财物。"
+    },
+    {
+      "question": "______ palings",
+      "type": "blank",
+      "answer": "wooden",
+      "explanation": "栅栏; 围栏, 木栅栏. The garden was enclosed by wooden palings. 花园被木栅栏围起来。"
+    },
+    {
+      "question": "_____ filings",
+      "type": "blank",
+      "answer": "metal",
+      "explanation": "锉屑, 金属锉屑. Metal filings scattered across the workshop floor. 金属锉屑散落在车间地板上。"
+    },
+    {
+      "question": "____ shavings",
+      "type": "blank",
+      "answer": "wood",
+      "explanation": "刨花, 木刨花. Wood shavings covered the carpenter's bench. 木刨花覆盖了木匠的工作台。"
+    },
+    {
+      "question": "_______ tongs",
+      "type": "blank",
+      "answer": "kitchen",
+      "explanation": "钳子; 夹子, 厨房夹子. Use the kitchen tongs to handle hot items. 用厨房夹子处理热的物品。"
+    },
+    {
+      "question": "_____ précis",
+      "type": "blank",
+      "answer": "brief",
+      "explanation": "摘要; 概要, 简短摘要. The student wrote a brief précis of the article. 学生写了一篇文章的简短摘要。"
+    },
+    {
+      "question": "________ proboscis",
+      "type": "blank",
+      "answer": "elephant",
+      "explanation": "鼻子; 长鼻, 大象鼻子. The elephant proboscis is a versatile tool. 大象鼻子是一个多功能工具。"
+    },
+    {
+      "question": "_____ ___ aegis",
+      "type": "blank",
+      "answer": "under the",
+      "explanation": "保护; 赞助, 在...保护下. The project operates under the aegis of the government. 该项目在政府的保护下运作。"
+    },
+    {
+      "question": "_____ necropolis",
+      "type": "blank",
+      "answer": "royal",
+      "explanation": "墓地; 公墓, 皇家墓地. Archaeologists excavated the royal necropolis. 考古学家挖掘了皇家墓地。"
+    },
+    {
+      "question": "________ metropolis",
+      "type": "blank",
+      "answer": "bustling",
+      "explanation": "大都市, 繁华的大都市. New York is a bustling metropolis with millions of residents. 纽约是一个拥有数百万居民的繁华大都市。"
+    },
+    {
+      "question": "_____ epidermis",
+      "type": "blank",
+      "answer": "outer",
+      "explanation": "表皮, 外表皮. The outer epidermis protects the body from infection. 外表皮保护身体免受感染。"
+    },
+    {
+      "question": "bourgeois _____",
+      "type": "blank",
+      "answer": "class",
+      "explanation": "资产阶级的; 中产阶级的, 资产阶级. The bourgeois class emerged during the industrial revolution. 资产阶级在工业革命期间兴起。"
+    },
+    {
+      "question": "_____ debris",
+      "type": "blank",
+      "answer": "storm",
+      "explanation": "碎片; 残骸, 暴风雨残骸. Storm debris littered the streets after the hurricane. 飓风过后,暴风雨残骸散落在街道上。"
+    },
+    {
+      "question": "_____ hubris",
+      "type": "blank",
+      "answer": "fatal",
+      "explanation": "傲慢; 狂妄, 致命的傲慢. His fatal hubris led to his downfall. 他致命的傲慢导致了他的垮台。"
+    },
+    {
+      "question": "_____ verdigris",
+      "type": "blank",
+      "answer": "green",
+      "explanation": "铜绿, 绿色铜绿. Green verdigris formed on the old copper statue. 古老的铜像上形成了绿色铜绿。"
+    },
+    {
+      "question": "_________ stasis",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "停滞; 静止, 政治停滞. The country experienced political stasis for years. 该国经历了多年的政治停滞。"
+    },
+    {
+      "question": "________ homeostasis",
+      "type": "blank",
+      "answer": "maintain",
+      "explanation": "体内平衡, 维持体内平衡. The body works to maintain homeostasis constantly. 身体不断努力维持体内平衡。"
+    },
+    {
+      "question": "________ thesis",
+      "type": "blank",
+      "answer": "doctoral",
+      "explanation": "论文, 博士论文. She defended her doctoral thesis successfully. 她成功地为博士论文进行了答辩。"
+    },
+    {
+      "question": "_______ antithesis",
+      "type": "blank",
+      "answer": "perfect",
+      "explanation": "对立; 对立面, 完全对立. His behavior was the perfect antithesis of professionalism. 他的行为与职业精神完全对立。"
+    },
+    {
+      "question": "_______ synthesis",
+      "type": "blank",
+      "answer": "protein",
+      "explanation": "综合; 合成, 蛋白质合成. Cells carry out protein synthesis using ribosomes. 细胞使用核糖体进行蛋白质合成。"
+    },
+    {
+      "question": "_____ photosynthesis",
+      "type": "blank",
+      "answer": "plant",
+      "explanation": "光合作用, 植物光合作用. Plant photosynthesis converts sunlight into energy. 植物光合作用将阳光转化为能量。"
+    },
+    {
+      "question": "__________ hypothesis",
+      "type": "blank",
+      "answer": "scientific",
+      "explanation": "假设; 假说, 科学假设. The researcher tested her scientific hypothesis through experiments. 研究人员通过实验检验了她的科学假设。"
+    },
+    {
+      "question": "Nemesis ______",
+      "type": "blank",
+      "answer": "figure",
+      "explanation": "复仇女神; 宿敌, 宿敌人物. The detective finally confronted his Nemesis figure. 侦探最终面对了他的宿敌人物。"
+    },
+    {
+      "question": "____ __ Genesis",
+      "type": "blank",
+      "answer": "book of",
+      "explanation": "起源; 创世纪, 创世纪. The book of Genesis describes the creation of the world. 创世纪描述了世界的创造。"
+    },
+    {
+      "question": "apotheosis __ ___",
+      "type": "blank",
+      "answer": "of art",
+      "explanation": "神化; 典范, 艺术的典范. The painting represents the apotheosis of art in that era. 这幅画代表了那个时代艺术的典范。"
+    },
+    {
+      "question": "______ symbiosis",
+      "type": "blank",
+      "answer": "mutual",
+      "explanation": "共生, 互惠共生. Bees and flowers have a mutual symbiosis relationship. 蜜蜂和花朵有互惠共生关系。"
+    },
+    {
+      "question": "_______ osmosis",
+      "type": "blank",
+      "answer": "reverse",
+      "explanation": "渗透, 反渗透. The water purification system uses reverse osmosis technology. 净水系统使用反渗透技术。"
+    },
+    {
+      "question": "_______ prognosis",
+      "type": "blank",
+      "answer": "medical",
+      "explanation": "预后; 预测, 医学预后. The doctor gave a positive medical prognosis for recovery. 医生给出了积极的康复医学预后。"
+    },
+    {
+      "question": "_______ neurosis",
+      "type": "blank",
+      "answer": "anxiety",
+      "explanation": "神经症, 焦虑神经症. The patient was diagnosed with anxiety neurosis. 患者被诊断患有焦虑神经症。"
+    },
+    {
+      "question": "___ __ ellipsis",
+      "type": "blank",
+      "answer": "use an",
+      "explanation": "省略号, 使用省略号. Writers use an ellipsis to indicate omitted text. 作家使用省略号来表示省略的文本。"
+    },
+    {
+      "question": "____ synopsis",
+      "type": "blank",
+      "answer": "plot",
+      "explanation": "概要; 梗概, 情节梗概. The publisher requested a plot synopsis of the novel. 出版商要求提供小说的情节梗概。"
+    },
+    {
+      "question": "_________ catharsis",
+      "type": "blank",
+      "answer": "emotional",
+      "explanation": "宣泄; 净化, 情感宣泄. The therapy session provided emotional catharsis for her. 治疗过程为她提供了情感宣泄。"
+    },
+    {
+      "question": "_____ ecdysis",
+      "type": "blank",
+      "answer": "snake",
+      "explanation": "蜕皮, 蛇蜕皮. Snake ecdysis occurs several times per year. 蛇蜕皮每年发生多次。"
+    },
+    {
+      "question": "____ gratis",
+      "type": "blank",
+      "answer": "free",
+      "explanation": "免费的, 免费. The software is available free gratis to students. 该软件免费提供给学生。"
+    },
+    {
+      "question": "_____ nephritis",
+      "type": "blank",
+      "answer": "acute",
+      "explanation": "肾炎, 急性肾炎. The patient was hospitalized with acute nephritis. 患者因急性肾炎住院。"
+    },
+    {
+      "question": "__________ arthritis",
+      "type": "blank",
+      "answer": "rheumatoid",
+      "explanation": "关节炎, 类风湿性关节炎. Rheumatoid arthritis causes joint inflammation and pain. 类风湿性关节炎导致关节炎症和疼痛。"
+    },
+    {
+      "question": "_______ gastritis",
+      "type": "blank",
+      "answer": "chronic",
+      "explanation": "胃炎, 慢性胃炎. Chronic gastritis can damage the stomach lining. 慢性胃炎会损害胃粘膜。"
+    },
+    {
+      "question": "_____ hepatitis",
+      "type": "blank",
+      "answer": "viral",
+      "explanation": "肝炎, 病毒性肝炎. Viral hepatitis can be prevented through vaccination. 病毒性肝炎可以通过疫苗接种预防。"
+    },
+    {
+      "question": "axis __ ________",
+      "type": "blank",
+      "answer": "of rotation",
+      "explanation": "轴; 轴线, 旋转轴. Earth spins on its axis of rotation. 地球绕其旋转轴自转。"
+    },
+    {
+      "question": "__________ annals",
+      "type": "blank",
+      "answer": "historical",
+      "explanation": "编年史; 年鉴, 历史编年史. The event is recorded in the historical annals. 该事件记录在历史编年史中。"
+    },
+    {
+      "question": "____ alms",
+      "type": "blank",
+      "answer": "give",
+      "explanation": "施舍; 救济金, 施舍. The monks would give alms to the poor. 僧侣会向穷人施舍。"
+    },
+    {
+      "question": "____ qualms",
+      "type": "blank",
+      "answer": "have",
+      "explanation": "疑虑; 不安, 有疑虑. I have qualms about accepting such a large gift. 我对接受这么大的礼物有疑虑。"
+    },
+    {
+      "question": "__ ___ doldrums",
+      "type": "blank",
+      "answer": "in the",
+      "explanation": "忧郁; 停滞, 处于停滞状态. The economy has been in the doldrums for months. 经济已经处于停滞状态好几个月了。"
+    },
+    {
+      "question": "_____ remains",
+      "type": "blank",
+      "answer": "human",
+      "explanation": "遗骸; 残余, 人类遗骸. Archaeologists discovered ancient human remains at the site. 考古学家在现场发现了古代人类遗骸。"
+    },
+    {
+      "question": "____ environs",
+      "type": "blank",
+      "answer": "city",
+      "explanation": "周围地区; 郊区, 城市周围地区. They explored the city environs on their day off. 他们在休息日探索了城市周围地区。"
+    },
+    {
+      "question": "___ kudos",
+      "type": "blank",
+      "answer": "win",
+      "explanation": "荣誉; 赞扬, 赢得赞扬. The team will win kudos for their outstanding performance. 团队将因其出色表现赢得赞扬。"
+    },
+    {
+      "question": "________ pathos",
+      "type": "blank",
+      "answer": "touching",
+      "explanation": "悲情; 感染力, 感人的悲情. The speech was filled with touching pathos. 演讲充满了感人的悲情。"
+    },
+    {
+      "question": "_____ ethos",
+      "type": "blank",
+      "answer": "Greek",
+      "explanation": "气质; 精神, 希腊精神. Ancient Greek ethos emphasized virtue and excellence. 古希腊精神强调美德和卓越。"
+    },
+    {
+      "question": "apropos ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "适当的; 恰当的, 恰当的评论. She made an apropos remark about the situation. 她对这种情况发表了恰当的评论。"
+    },
+    {
+      "question": "____ __ pincers",
+      "type": "blank",
+      "answer": "pair of",
+      "explanation": "钳子; 螯, 一把钳子. The crab used its pair of pincers defensively. 螃蟹用它的一对螯进行防御。"
+    },
+    {
+      "question": "_______ bleachers",
+      "type": "blank",
+      "answer": "stadium",
+      "explanation": "看台, 体育场看台. Fans filled the stadium bleachers to watch the game. 球迷挤满了体育场看台观看比赛。"
+    },
+    {
+      "question": "____ __ pliers",
+      "type": "blank",
+      "answer": "pair of",
+      "explanation": "钳子, 一把钳子. Use a pair of pliers to grip the wire tightly. 使用一把钳子紧紧抓住电线。"
+    },
+    {
+      "question": "_______ calipers",
+      "type": "blank",
+      "answer": "Vernier",
+      "explanation": "卡尺, 游标卡尺. The engineer measured with Vernier calipers for precision. 工程师用游标卡尺进行精确测量。"
+    },
+    {
+      "question": "____ nippers",
+      "type": "blank",
+      "answer": "nail",
+      "explanation": "指甲钳; 钳子, 指甲钳. She trimmed her nails with nail nippers. 她用指甲钳修剪指甲。"
+    },
+    {
+      "question": "_____ compass",
+      "type": "blank",
+      "answer": "moral",
+      "explanation": "指南针; 罗盘, 道德指南针. A strong moral compass guides ethical decisions. 强大的道德指南针指导道德决策。"
+    },
+    {
+      "question": "encompass ___",
+      "type": "blank",
+      "answer": "all",
+      "explanation": "包含; 包围, 包含全部. The study aims to encompass all relevant factors. 该研究旨在包含所有相关因素。"
+    },
+    {
+      "question": "surpass ____________",
+      "type": "blank",
+      "answer": "expectations",
+      "explanation": "超过; 胜过, 超过期望. The product's sales will surpass expectations this quarter. 本季度产品销售将超过期望。"
+    },
+    {
+      "question": "harass _ _______",
+      "type": "blank",
+      "answer": "a witness",
+      "explanation": "骚扰; 困扰, 骚扰证人. It is illegal to harass a witness in a legal case. 在法律案件中骚扰证人是非法的。"
+    },
+    {
+      "question": "crass ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "粗鲁的; 愚钝的, 粗鲁的评论. His crass remark offended everyone at dinner. 他粗鲁的评论冒犯了晚餐上的所有人。"
+    },
+    {
+      "question": "____________ morass",
+      "type": "blank",
+      "answer": "bureaucratic",
+      "explanation": "沼泽; 困境, 官僚困境. The project got stuck in a bureaucratic morass. 该项目陷入了官僚困境。"
+    },
+    {
+      "question": "embarrass ___ ____",
+      "type": "blank",
+      "answer": "the host",
+      "explanation": "使尴尬; 使窘迫, 使主人尴尬. Don't embarrass the host with inappropriate questions. 不要用不恰当的问题使主人尴尬。"
+    },
+    {
+      "question": "canvass ______",
+      "type": "blank",
+      "answer": "voters",
+      "explanation": "游说; 拉票, 游说选民. Campaign workers canvass voters door to door. 竞选工作人员挨家挨户游说选民。"
+    }
+  ]
+}
