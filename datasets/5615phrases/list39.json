@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "_______ glitter",
+      "type": "blank",
+      "answer": "diamond",
+      "explanation": "闪光; 闪耀, 钻石闪光. The diamond glitter caught everyone's attention at the gala. 钻石闪光在晚会上吸引了所有人的注意。"
+    },
+    {
+      "question": "___ otter",
+      "type": "blank",
+      "answer": "sea",
+      "explanation": "水獭, 海獭. The sea otter floated on its back eating shellfish. 海獭仰面漂浮着吃贝类。"
+    },
+    {
+      "question": "utter ________",
+      "type": "blank",
+      "answer": "nonsense",
+      "explanation": "完全的; 说出, 完全的胡说. His speech was utter nonsense from beginning to end. 他的演讲从头到尾都是完全的胡说。"
+    },
+    {
+      "question": "scutter ___",
+      "type": "blank",
+      "answer": "off",
+      "explanation": "急忙跑开, 急忙跑开. The mouse would scutter off when it heard footsteps. 老鼠听到脚步声就会急忙跑开。"
+    },
+    {
+      "question": "____ gutter",
+      "type": "blank",
+      "answer": "rain",
+      "explanation": "排水沟; 贫民窟, 雨水排水沟. The rain gutter needs cleaning before the storm season. 雨水排水沟需要在暴风雨季节前清理。"
+    },
+    {
+      "question": "beleaguer ____",
+      "type": "blank",
+      "answer": "city",
+      "explanation": "围困; 困扰, 围困城市. Enemy forces continued to beleaguer city for months. 敌军继续围困城市数月。"
+    },
+    {
+      "question": "________ exchequer",
+      "type": "blank",
+      "answer": "national",
+      "explanation": "国库; 财政部, 国库. The national exchequer faced serious budget deficits. 国库面临严重的预算赤字。"
+    },
+    {
+      "question": "conquer ____",
+      "type": "blank",
+      "answer": "fear",
+      "explanation": "征服; 克服, 克服恐惧. She worked hard to conquer fear of public speaking. 她努力克服对公开演讲的恐惧。"
+    },
+    {
+      "question": "aver ___ _____",
+      "type": "blank",
+      "answer": "the truth",
+      "explanation": "断言; 声明, 断言真相. The witness would aver the truth under oath. 证人会在宣誓下断言真相。"
+    },
+    {
+      "question": "_____ cadaver",
+      "type": "blank",
+      "answer": "human",
+      "explanation": "尸体, 人类尸体. Medical students studied anatomy using a human cadaver. 医学生使用人类尸体学习解剖学。"
+    },
+    {
+      "question": "____ cleaver",
+      "type": "blank",
+      "answer": "meat",
+      "explanation": "切肉刀, 切肉刀. The butcher used a sharp meat cleaver to cut the beef. 屠夫用锋利的切肉刀切牛肉。"
+    },
+    {
+      "question": "____ palaver",
+      "type": "blank",
+      "answer": "long",
+      "explanation": "冗长的谈话; 闲谈, 冗长的谈话. After a long palaver, they finally reached an agreement. 经过冗长的谈话,他们终于达成了协议。"
+    },
+    {
+      "question": "slaver ____",
+      "type": "blank",
+      "answer": "over",
+      "explanation": "流口水; 奴隶贩子, 对...垂涎. The dog would slaver over the delicious treat. 狗会对美味的食物垂涎。"
+    },
+    {
+      "question": "_______ lever",
+      "type": "blank",
+      "answer": "crowbar",
+      "explanation": "杠杆; 撬杠, 撬杠杠杆. He used a crowbar lever to pry open the crate. 他用撬杠杠杆撬开了板条箱。"
+    },
+    {
+      "question": "____-___ diver",
+      "type": "blank",
+      "answer": "deep-sea",
+      "explanation": "潜水员, 深海潜水员. The deep-sea diver explored the ocean floor for treasure. 深海潜水员在海底寻找宝藏。"
+    },
+    {
+      "question": "____ screwdriver",
+      "type": "blank",
+      "answer": "flat",
+      "explanation": "螺丝刀, 平头螺丝刀. Use a flat screwdriver to remove the cover plate. 使用平头螺丝刀拆下盖板。"
+    },
+    {
+      "question": "gloss-over _______",
+      "type": "blank",
+      "answer": "problem",
+      "explanation": "掩饰; 粉饰, 掩饰问题. Don't gloss-over problem just because it's uncomfortable. 不要仅仅因为不舒服就掩饰问题。"
+    },
+    {
+      "question": "____ layover",
+      "type": "blank",
+      "answer": "long",
+      "explanation": "中途停留, 长时间中途停留. We had a long layover in Chicago before our connecting flight. 我们在芝加哥有一个长时间中途停留,然后转机。"
+    },
+    {
+      "question": "________ maneuver",
+      "type": "blank",
+      "answer": "military",
+      "explanation": "演习; 策略, 军事演习. The troops conducted a military maneuver in the desert. 部队在沙漠中进行了军事演习。"
+    },
+    {
+      "question": "outmaneuver __ ________",
+      "type": "blank",
+      "answer": "an opponent",
+      "explanation": "以策略胜过, 智胜对手. The chess player managed to outmaneuver an opponent. 国际象棋选手设法智胜对手。"
+    },
+    {
+      "question": "skewer ___ ________",
+      "type": "blank",
+      "answer": "the argument",
+      "explanation": "串肉扦; 刺穿, 驳斥论点. The debater used facts to skewer the argument completely. 辩论者用事实彻底驳斥了论点。"
+    },
+    {
+      "question": "_____ bower",
+      "type": "blank",
+      "answer": "leafy",
+      "explanation": "凉亭; 树荫处, 绿叶凉亭. They sat in the leafy bower enjoying the shade. 他们坐在绿叶凉亭里享受阴凉。"
+    },
+    {
+      "question": "empower _____",
+      "type": "blank",
+      "answer": "women",
+      "explanation": "授权; 使能够, 赋权妇女. Education programs aim to empower women in developing countries. 教育项目旨在赋权发展中国家的妇女。"
+    },
+    {
+      "question": "bricklayer __________",
+      "type": "blank",
+      "answer": "apprentice",
+      "explanation": "砌砖工, 砌砖工学徒. The bricklayer apprentice learned the trade from a master. 砌砖工学徒向师傅学习这门手艺。"
+    },
+    {
+      "question": "_______ naysayer",
+      "type": "blank",
+      "answer": "chronic",
+      "explanation": "反对者; 否定者, 长期反对者. The chronic naysayer opposed every new proposal. 长期反对者反对每一个新提议。"
+    },
+    {
+      "question": "_____ foyer",
+      "type": "blank",
+      "answer": "hotel",
+      "explanation": "门厅; 休息室, 酒店门厅. Guests gathered in the hotel foyer before dinner. 客人们在晚餐前聚集在酒店门厅。"
+    },
+    {
+      "question": "________ flair",
+      "type": "blank",
+      "answer": "artistic",
+      "explanation": "天赋; 才华, 艺术天赋. She decorated her home with artistic flair and creativity. 她以艺术天赋和创造力装饰了她的家。"
+    },
+    {
+      "question": "debonair _____",
+      "type": "blank",
+      "answer": "charm",
+      "explanation": "温文尔雅的; 潇洒的, 潇洒的魅力. His debonair charm made him popular at social events. 他潇洒的魅力使他在社交活动中很受欢迎。"
+    },
+    {
+      "question": "impair ______",
+      "type": "blank",
+      "answer": "vision",
+      "explanation": "损害; 削弱, 损害视力. Excessive screen time can impair vision over time. 过度使用屏幕会随着时间损害视力。"
+    },
+    {
+      "question": "_____ nadir",
+      "type": "blank",
+      "answer": "reach",
+      "explanation": "最低点; 天底, 达到最低点. The company's fortunes would reach nadir during the recession. 该公司的财富在经济衰退期间达到最低点。"
+    },
+    {
+      "question": "______ souvenir",
+      "type": "blank",
+      "answer": "travel",
+      "explanation": "纪念品, 旅行纪念品. She bought a travel souvenir from every country she visited. 她从访问的每个国家都买了一个旅行纪念品。"
+    },
+    {
+      "question": "______ choir",
+      "type": "blank",
+      "answer": "church",
+      "explanation": "合唱团, 教堂合唱团. The church choir sang beautifully during the service. 教堂合唱团在礼拜期间唱得很美。"
+    },
+    {
+      "question": "memoir ______",
+      "type": "blank",
+      "answer": "writer",
+      "explanation": "回忆录, 回忆录作家. The memoir writer recounted her childhood experiences. 回忆录作家讲述了她的童年经历。"
+    },
+    {
+      "question": "elixir __ ____",
+      "type": "blank",
+      "answer": "of life",
+      "explanation": "灵丹妙药; 长生不老药, 生命之药. Ancient alchemists searched for the elixir of life. 古代炼金术士寻找生命之药。"
+    },
+    {
+      "question": "belabor ___ _____",
+      "type": "blank",
+      "answer": "the point",
+      "explanation": "过分详述; 反复说明, 反复强调要点. Don't belabor the point; we understand your argument. 不要反复强调要点,我们理解你的论点。"
+    },
+    {
+      "question": "harbor _ ______",
+      "type": "blank",
+      "answer": "a grudge",
+      "explanation": "港口; 怀有, 怀恨在心. It's unhealthy to harbor a grudge for years. 多年怀恨在心是不健康的。"
+    },
+    {
+      "question": "_____ succor",
+      "type": "blank",
+      "answer": "offer",
+      "explanation": "救援; 援助, 提供援助. The charity organization would offer succor to disaster victims. 慈善组织会向灾民提供援助。"
+    },
+    {
+      "question": "____ rancor",
+      "type": "blank",
+      "answer": "deep",
+      "explanation": "怨恨; 仇恨, 深仇大恨. Deep rancor divided the two families for generations. 深仇大恨使两个家族分裂了几代人。"
+    },
+    {
+      "question": "____________ matador",
+      "type": "blank",
+      "answer": "bullfighting",
+      "explanation": "斗牛士, 斗牛士. The bullfighting matador entered the arena to cheers. 斗牛士在欢呼声中进入竞技场。"
+    },
+    {
+      "question": "candor ___ _________",
+      "type": "blank",
+      "answer": "and sincerity",
+      "explanation": "坦率; 直率, 坦率和真诚. She spoke with candor and sincerity about her mistakes. 她坦率和真诚地谈论了她的错误。"
+    },
+    {
+      "question": "_____ splendor",
+      "type": "blank",
+      "answer": "royal",
+      "explanation": "壮丽; 辉煌, 皇家辉煌. The palace displayed royal splendor in every detail. 宫殿的每个细节都展现了皇家辉煌。"
+    },
+    {
+      "question": "______ condor",
+      "type": "blank",
+      "answer": "Andean",
+      "explanation": "秃鹰, 安第斯秃鹰. The Andean condor is one of the largest flying birds. 安第斯秃鹰是最大的飞鸟之一。"
+    },
+    {
+      "question": "malodor _______",
+      "type": "blank",
+      "answer": "problem",
+      "explanation": "恶臭, 恶臭问题. The building had a persistent malodor problem. 这栋建筑有持续的恶臭问题。"
+    },
+    {
+      "question": "________ rigor",
+      "type": "blank",
+      "answer": "academic",
+      "explanation": "严格; 严谨, 学术严谨. The program is known for its academic rigor and high standards. 该项目以其学术严谨和高标准而闻名。"
+    },
+    {
+      "question": "abhor ________",
+      "type": "blank",
+      "answer": "violence",
+      "explanation": "憎恶; 厌恶, 憎恶暴力. Most civilized societies abhor violence in all forms. 大多数文明社会憎恶各种形式的暴力。"
+    },
+    {
+      "question": "____ anchor",
+      "type": "blank",
+      "answer": "drop",
+      "explanation": "锚; 主持人, 抛锚. The ship's captain ordered the crew to drop anchor in the bay. 船长命令船员在海湾抛锚。"
+    },
+    {
+      "question": "________ metaphor",
+      "type": "blank",
+      "answer": "extended",
+      "explanation": "隐喻; 比喻, 延伸隐喻. The author used an extended metaphor throughout the novel. 作者在整部小说中使用了延伸隐喻。"
+    },
+    {
+      "question": "inferior _____",
+      "type": "blank",
+      "answer": "goods",
+      "explanation": "低劣的; 次等的, 劣质商品. Consumers complained about receiving inferior goods. 消费者抱怨收到劣质商品。"
+    },
+    {
+      "question": "ulterior ______",
+      "type": "blank",
+      "answer": "motive",
+      "explanation": "隐秘的; 别有用心的, 隐秘动机. She suspected he had an ulterior motive for his generosity. 她怀疑他的慷慨有隐秘动机。"
+    },
+    {
+      "question": "anterior _______",
+      "type": "blank",
+      "answer": "chamber",
+      "explanation": "前面的; 先前的, 前房. The ophthalmologist examined the anterior chamber of the eye. 眼科医生检查了眼睛的前房。"
+    },
+    {
+      "question": "posterior ___________",
+      "type": "blank",
+      "answer": "probability",
+      "explanation": "后面的; 后部的, 后验概率. The statistician calculated the posterior probability given new data. 统计学家根据新数据计算了后验概率。"
+    },
+    {
+      "question": "_____ squalor",
+      "type": "blank",
+      "answer": "urban",
+      "explanation": "肮脏; 贫困, 城市贫民窟. Many families lived in urban squalor in the neglected district. 许多家庭生活在被忽视地区的城市贫民窟中。"
+    },
+    {
+      "question": "___ __ valor",
+      "type": "blank",
+      "answer": "act of",
+      "explanation": "英勇; 勇气, 英勇行为. The soldier received a medal for his act of valor. 士兵因其英勇行为获得了勋章。"
+    },
+    {
+      "question": "__________ chancellor",
+      "type": "blank",
+      "answer": "university",
+      "explanation": "大臣; 校长, 大学校长. The university chancellor welcomed new students at orientation. 大学校长在迎新会上欢迎新生。"
+    },
+    {
+      "question": "tenor _____",
+      "type": "blank",
+      "answer": "voice",
+      "explanation": "男高音; 要旨, 男高音. The opera featured a famous tenor voice in the lead role. 歌剧在主角中以著名的男高音为特色。"
+    },
+    {
+      "question": "____________ boor",
+      "type": "blank",
+      "answer": "insufferable",
+      "explanation": "粗野的人; 粗人, 令人难以忍受的粗人. The insufferable boor offended everyone at the party. 令人难以忍受的粗人冒犯了派对上的所有人。"
+    },
+    {
+      "question": "______ spoor",
+      "type": "blank",
+      "answer": "animal",
+      "explanation": "足迹; 踪迹, 动物足迹. The hunter followed the animal spoor through the forest. 猎人沿着森林中的动物足迹追踪。"
+    },
+    {
+      "question": "incisor _____",
+      "type": "blank",
+      "answer": "tooth",
+      "explanation": "门牙; 切牙, 门牙. The dentist checked each incisor tooth for cavities. 牙医检查每颗门牙是否有蛀牙。"
+    },
+    {
+      "question": "____ censor",
+      "type": "blank",
+      "answer": "film",
+      "explanation": "审查员; 检查, 电影审查员. The film censor removed controversial scenes from the movie. 电影审查员从电影中删除了有争议的场景。"
+    },
+    {
+      "question": "________ precursor",
+      "type": "blank",
+      "answer": "chemical",
+      "explanation": "先驱; 前体, 化学前体. The scientist isolated the chemical precursor to the compound. 科学家分离出该化合物的化学前体。"
+    },
+    {
+      "question": "_________ predecessor",
+      "type": "blank",
+      "answer": "corporate",
+      "explanation": "前任; 前身, 公司前身. The new company acquired its corporate predecessor last year. 新公司去年收购了其公司前身。"
+    },
+    {
+      "question": "_______ intercessor",
+      "type": "blank",
+      "answer": "saintly",
+      "explanation": "调解人; 代祷者, 圣洁的代祷者. The faithful prayed to a saintly intercessor for help. 信徒向圣洁的代祷者祈祷寻求帮助。"
+    },
+    {
+      "question": "________ aggressor",
+      "type": "blank",
+      "answer": "military",
+      "explanation": "侵略者; 挑衅者, 军事侵略者. The nation defended itself against the military aggressor. 国家抵御军事侵略者。"
+    },
+    {
+      "question": "___ incubator",
+      "type": "blank",
+      "answer": "egg",
+      "explanation": "孵化器, 孵蛋器. The farmer placed fertilized eggs in the egg incubator. 农民将受精卵放入孵蛋器中。"
+    },
+    {
+      "question": "____ predator",
+      "type": "blank",
+      "answer": "apex",
+      "explanation": "捕食者, 顶级捕食者. The lion is an apex predator in the African savanna. 狮子是非洲大草原上的顶级捕食者。"
+    },
+    {
+      "question": "______ defoliator",
+      "type": "blank",
+      "answer": "forest",
+      "explanation": "食叶虫; 落叶剂, 森林食叶虫. The forest defoliator destroyed thousands of trees. 森林食叶虫毁坏了数千棵树。"
+    },
+    {
+      "question": "______ generator",
+      "type": "blank",
+      "answer": "backup",
+      "explanation": "发电机; 生成器, 备用发电机. The hospital relies on a backup generator during power outages. 医院在停电期间依靠备用发电机。"
+    },
+    {
+      "question": "______ curator",
+      "type": "blank",
+      "answer": "museum",
+      "explanation": "馆长; 策展人, 博物馆馆长. The museum curator organized a new exhibition. 博物馆馆长组织了一场新展览。"
+    },
+    {
+      "question": "______ spectator",
+      "type": "blank",
+      "answer": "sports",
+      "explanation": "观众; 旁观者, 体育观众. The sports spectator cheered loudly for his favorite team. 体育观众为他最喜欢的球队大声欢呼。"
+    },
+    {
+      "question": "____ testator",
+      "type": "blank",
+      "answer": "will",
+      "explanation": "立遗嘱人, 遗嘱立遗嘱人. The will testator must be of sound mind when signing. 遗嘱立遗嘱人在签署时必须头脑清醒。"
+    },
+    {
+      "question": "_____ ___ equator",
+      "type": "blank",
+      "answer": "cross the",
+      "explanation": "赤道, 穿越赤道. The ship's crew celebrated when they would cross the equator. 当船员将要穿越赤道时,他们庆祝了一番。"
+    },
+    {
+      "question": "_________ malefactor",
+      "type": "blank",
+      "answer": "notorious",
+      "explanation": "罪犯; 作恶者, 臭名昭著的罪犯. The notorious malefactor was finally captured by police. 臭名昭著的罪犯终于被警方抓获。"
+    },
+    {
+      "question": "_________ benefactor",
+      "type": "blank",
+      "answer": "anonymous",
+      "explanation": "捐助者; 恩人, 匿名捐助者. An anonymous benefactor donated millions to the university. 一位匿名捐助者向大学捐赠了数百万。"
+    },
+    {
+      "question": "hector ___ _____",
+      "type": "blank",
+      "answer": "the staff",
+      "explanation": "威吓; 恐吓, 恐吓员工. The manager would hector the staff unnecessarily. 经理会无端地恐吓员工。"
+    },
+    {
+      "question": "_______ projector",
+      "type": "blank",
+      "answer": "digital",
+      "explanation": "投影仪, 数字投影仪. The conference room has a new digital projector. 会议室有一台新的数字投影仪。"
+    },
+    {
+      "question": "____ proctor",
+      "type": "blank",
+      "answer": "exam",
+      "explanation": "监考人, 考试监考人. The exam proctor distributed test papers to students. 考试监考人向学生分发试卷。"
+    },
+    {
+      "question": "______ inhibitor",
+      "type": "blank",
+      "answer": "enzyme",
+      "explanation": "抑制剂, 酶抑制剂. The drug acts as an enzyme inhibitor in the body. 这种药物在体内充当酶抑制剂。"
+    },
+    {
+      "question": "______ progenitor",
+      "type": "blank",
+      "answer": "common",
+      "explanation": "祖先; 始祖, 共同祖先. Scientists traced the species back to a common progenitor. 科学家将该物种追溯到一个共同祖先。"
+    },
+    {
+      "question": "_______ mentor",
+      "type": "blank",
+      "answer": "trusted",
+      "explanation": "导师; 顾问, 值得信赖的导师. Her trusted mentor guided her career decisions. 她值得信赖的导师指导她的职业决定。"
+    },
+    {
+      "question": "______ sculptor",
+      "type": "blank",
+      "answer": "master",
+      "explanation": "雕塑家, 大师级雕塑家. The master sculptor created lifelike marble statues. 大师级雕塑家创作了栩栩如生的大理石雕像。"
+    },
+    {
+      "question": "______ pastor",
+      "type": "blank",
+      "answer": "parish",
+      "explanation": "牧师, 教区牧师. The parish pastor delivered an inspiring sermon. 教区牧师发表了鼓舞人心的布道。"
+    },
+    {
+      "question": "______ impostor",
+      "type": "blank",
+      "answer": "clever",
+      "explanation": "冒名顶替者; 骗子, 狡猾的冒名顶替者. The clever impostor fooled everyone for months. 狡猾的冒名顶替者欺骗了所有人好几个月。"
+    },
+    {
+      "question": "_____-______ interlocutor",
+      "type": "blank",
+      "answer": "quick-witted",
+      "explanation": "对话者; 谈话者, 机智的对话者. The quick-witted interlocutor kept the discussion lively. 机智的对话者使讨论保持活跃。"
+    },
+    {
+      "question": "_______ tutor",
+      "type": "blank",
+      "answer": "private",
+      "explanation": "家庭教师; 导师, 私人家庭教师. They hired a private tutor to help with mathematics. 他们聘请了一位私人家庭教师来辅导数学。"
+    },
+    {
+      "question": "______ languor",
+      "type": "blank",
+      "answer": "summer",
+      "explanation": "倦怠; 慵懒, 夏日慵懒. A feeling of summer languor settled over the town. 夏日慵懒的感觉笼罩着小镇。"
+    },
+    {
+      "question": "_________ fervor",
+      "type": "blank",
+      "answer": "religious",
+      "explanation": "热情; 热诚, 宗教热情. The congregation sang with religious fervor. 会众以宗教热情歌唱。"
+    },
+    {
+      "question": "____ surveyor",
+      "type": "blank",
+      "answer": "land",
+      "explanation": "测量员, 土地测量员. The land surveyor marked the property boundaries. 土地测量员标记了财产边界。"
+    },
+    {
+      "question": "______ centaur",
+      "type": "blank",
+      "answer": "mythic",
+      "explanation": "半人马, 神话中的半人马. Ancient Greeks told stories about the mythic centaur. 古希腊人讲述关于神话中的半人马的故事。"
+    },
+    {
+      "question": "incur _____",
+      "type": "blank",
+      "answer": "costs",
+      "explanation": "招致; 遭受, 招致成本. The company will incur costs from the expansion project. 公司将因扩张项目招致成本。"
+    },
+    {
+      "question": "concur ____",
+      "type": "blank",
+      "answer": "with",
+      "explanation": "同意; 一致, 同意. The committee members concur with the proposed changes. 委员会成员同意提议的变更。"
+    },
+    {
+      "question": "________ grandeur",
+      "type": "blank",
+      "answer": "imperial",
+      "explanation": "壮丽; 宏伟, 帝国的壮丽. The palace displayed imperial grandeur and opulence. 宫殿展现了帝国的壮丽和华丽。"
+    },
+    {
+      "question": "____ entrepreneur",
+      "type": "blank",
+      "answer": "tech",
+      "explanation": "企业家, 科技企业家. The young tech entrepreneur launched a successful startup. 年轻的科技企业家创办了一家成功的初创公司。"
+    },
+    {
+      "question": "_______ poseur",
+      "type": "blank",
+      "answer": "fashion",
+      "explanation": "装腔作势者, 时尚装腔作势者. The fashion poseur wore designer labels to impress others. 时尚装腔作势者穿名牌服装以打动他人。"
+    },
+    {
+      "question": "____ connoisseur",
+      "type": "blank",
+      "answer": "wine",
+      "explanation": "鉴赏家, 葡萄酒鉴赏家. The wine connoisseur could identify vintages by taste. 葡萄酒鉴赏家可以通过品尝识别年份。"
+    },
+    {
+      "question": "_____ raconteur",
+      "type": "blank",
+      "answer": "witty",
+      "explanation": "善于讲故事的人, 机智的故事讲述者. The witty raconteur entertained guests with amusing tales. 机智的故事讲述者用有趣的故事娱乐客人。"
+    },
+    {
+      "question": "_____ saboteur",
+      "type": "blank",
+      "answer": "enemy",
+      "explanation": "破坏者, 敌方破坏者. Security forces captured an enemy saboteur near the facility. 安全部队在设施附近抓获了一名敌方破坏者。"
+    },
+    {
+      "question": "____ hauteur",
+      "type": "blank",
+      "answer": "cold",
+      "explanation": "傲慢; 高傲, 冷酷的傲慢. She treated everyone with cold hauteur and disdain. 她以冷酷的傲慢和轻蔑对待每个人。"
+    },
+    {
+      "question": "augur ____",
+      "type": "blank",
+      "answer": "well",
+      "explanation": "预示; 占卜, 预示良好. The early results augur well for the company's future. 早期结果为公司的未来预示良好。"
+    },
+    {
+      "question": "dour __________",
+      "type": "blank",
+      "answer": "expression",
+      "explanation": "严厉的; 阴郁的, 阴郁的表情. His dour expression revealed his disapproval. 他阴郁的表情显露出他的不满。"
+    },
+    {
+      "question": "_____ downpour",
+      "type": "blank",
+      "answer": "heavy",
+      "explanation": "倾盆大雨, 大暴雨. A heavy downpour forced everyone indoors. 大暴雨迫使所有人待在室内。"
+    }
+  ]
+}
