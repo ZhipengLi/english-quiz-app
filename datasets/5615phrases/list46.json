@@ -1,1 +1,607 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "decrepit ________",
+      "type": "blank",
+      "answer": "building",
+      "explanation": "破旧的; 衰老的, 破旧的建筑. The decrepit building was scheduled for demolition. 这座破旧的建筑计划拆除。"
+    },
+    {
+      "question": "pulpit ______",
+      "type": "blank",
+      "answer": "sermon",
+      "explanation": "讲道坛, 讲道坛布道. The minister delivered a pulpit sermon on forgiveness. 牧师在讲道坛上发表了关于宽恕的布道。"
+    },
+    {
+      "question": "merit ___",
+      "type": "blank",
+      "answer": "pay",
+      "explanation": "功绩; 优点, 绩效工资. Employees receive merit pay based on performance. 员工根据表现获得绩效工资。"
+    },
+    {
+      "question": "_____ _ writ",
+      "type": "blank",
+      "answer": "issue a",
+      "explanation": "令状; 文书, 发出令状. The court will issue a writ of habeas corpus. 法院将发出人身保护令状。"
+    },
+    {
+      "question": "posit _ ______",
+      "type": "blank",
+      "answer": "a theory",
+      "explanation": "假定; 提出, 提出理论. Scientists posit a theory to explain the phenomenon. 科学家提出理论来解释这一现象。"
+    },
+    {
+      "question": "____ deposit",
+      "type": "blank",
+      "answer": "bank",
+      "explanation": "存款; 押金, 银行存款. She made a bank deposit of her paycheck. 她将薪水存入了银行存款。"
+    },
+    {
+      "question": "________ circuit",
+      "type": "blank",
+      "answer": "electric",
+      "explanation": "电路; 巡回, 电路. The electric circuit powers all the lights. 电路为所有灯供电。"
+    },
+    {
+      "question": "_____ conduit",
+      "type": "blank",
+      "answer": "water",
+      "explanation": "管道; 导管, 水管. The water conduit supplies the entire neighborhood. 水管供应整个社区。"
+    },
+    {
+      "question": "bruit _____",
+      "type": "blank",
+      "answer": "about",
+      "explanation": "传播; 散布, 四处传播. Don't bruit about confidential information. 不要四处传播机密信息。"
+    },
+    {
+      "question": "recruit ___ _______",
+      "type": "blank",
+      "answer": "new members",
+      "explanation": "招募; 新兵, 招募新成员. The club aims to recruit new members this year. 俱乐部今年旨在招募新成员。"
+    },
+    {
+      "question": "_____ affidavit",
+      "type": "blank",
+      "answer": "sworn",
+      "explanation": "宣誓书, 宣誓的宣誓书. He signed a sworn affidavit before the notary. 他在公证人面前签署了宣誓书。"
+    },
+    {
+      "question": "_____ wit",
+      "type": "blank",
+      "answer": "sharp",
+      "explanation": "机智; 才智, 敏锐的机智. Her sharp wit made her a popular speaker. 她敏锐的机智使她成为受欢迎的演讲者。"
+    },
+    {
+      "question": "exalt ______",
+      "type": "blank",
+      "answer": "virtue",
+      "explanation": "赞扬; 提升, 赞扬美德. Religious texts often exalt virtue and righteousness. 宗教文本经常赞扬美德和正义。"
+    },
+    {
+      "question": "tilt __ _________",
+      "type": "blank",
+      "answer": "at windmills",
+      "explanation": "倾斜; 攻击, 攻击风车(徒劳的战斗). Don't tilt at windmills like Don Quixote. 不要像堂吉诃德那样攻击风车。"
+    },
+    {
+      "question": "_________ bolt",
+      "type": "blank",
+      "answer": "lightning",
+      "explanation": "螺栓; 闪电, 闪电. A lightning bolt struck the tree during the storm. 暴风雨期间,闪电击中了树。"
+    },
+    {
+      "question": "revolt _______",
+      "type": "blank",
+      "answer": "against",
+      "explanation": "反叛; 起义, 反抗. Citizens began to revolt against the oppressive regime. 公民开始反抗压迫性政权。"
+    },
+    {
+      "question": "fault ____",
+      "type": "blank",
+      "answer": "line",
+      "explanation": "断层; 过错, 断层线. The earthquake occurred along a major fault line. 地震发生在主要断层线上。"
+    },
+    {
+      "question": "____ vault",
+      "type": "blank",
+      "answer": "bank",
+      "explanation": "金库; 跳跃, 银行金库. Valuables are stored in the bank vault. 贵重物品存放在银行金库中。"
+    },
+    {
+      "question": "occult ________",
+      "type": "blank",
+      "answer": "practice",
+      "explanation": "神秘的; 玄学的, 神秘实践. Some people study occult practice and mysticism. 有些人研究神秘实践和神秘主义。"
+    },
+    {
+      "question": "______ catapult",
+      "type": "blank",
+      "answer": "launch",
+      "explanation": "弹射器; 猛然推进, 发射弹射器. Ancient armies would launch catapult projectiles. 古代军队会发射弹射器抛射物。"
+    },
+    {
+      "question": "exult __ _______",
+      "type": "blank",
+      "answer": "in victory",
+      "explanation": "欢欣鼓舞; 狂喜, 为胜利欢欣鼓舞. The team will exult in victory after the championship. 球队将在赢得冠军后为胜利欢欣鼓舞。"
+    },
+    {
+      "question": "_____ cant",
+      "type": "blank",
+      "answer": "pious",
+      "explanation": "伪善的话; 行话, 虚伪的伪善话. His pious cant fooled no one. 他虚伪的伪善话骗不了任何人。"
+    },
+    {
+      "question": "decant ___ ____",
+      "type": "blank",
+      "answer": "the wine",
+      "explanation": "倒酒; 倾析, 倒酒. Let the wine breathe, then decant the wine carefully. 让酒透气,然后小心地倒酒。"
+    },
+    {
+      "question": "recant _________",
+      "type": "blank",
+      "answer": "testimony",
+      "explanation": "撤回; 放弃, 撤回证词. The witness refused to recant testimony under pressure. 证人拒绝在压力下撤回证词。"
+    },
+    {
+      "question": "_______ mendicant",
+      "type": "blank",
+      "answer": "begging",
+      "explanation": "乞丐; 托钵僧, 乞讨的乞丐. The begging mendicant asked for alms on the street. 乞讨的乞丐在街上乞求施舍。"
+    },
+    {
+      "question": "_____________ significant",
+      "type": "blank",
+      "answer": "statistically",
+      "explanation": "重要的; 显著的, 统计上显著的. The results were statistically significant at the 0.05 level. 结果在0.05水平上具有统计显著性。"
+    },
+    {
+      "question": "___ applicant",
+      "type": "blank",
+      "answer": "job",
+      "explanation": "申请人, 求职者. The job applicant submitted an impressive resume. 求职者提交了一份令人印象深刻的简历。"
+    },
+    {
+      "question": "______ supplicant",
+      "type": "blank",
+      "answer": "humble",
+      "explanation": "恳求者; 哀求者, 谦卑的恳求者. The humble supplicant begged for mercy. 谦卑的恳求者乞求怜悯。"
+    },
+    {
+      "question": "______ lubricant",
+      "type": "blank",
+      "answer": "engine",
+      "explanation": "润滑剂, 发动机润滑剂. Regular engine lubricant changes extend vehicle life. 定期更换发动机润滑剂可延长车辆寿命。"
+    },
+    {
+      "question": "scant ________",
+      "type": "blank",
+      "answer": "evidence",
+      "explanation": "不足的; 缺乏的, 缺乏的证据. There was scant evidence to support the claim. 几乎没有证据支持这一说法。"
+    },
+    {
+      "question": "__________ pedant",
+      "type": "blank",
+      "answer": "nitpicking",
+      "explanation": "学究; 书呆子, 吹毛求疵的学究. The nitpicking pedant corrected every minor error. 吹毛求疵的学究纠正每个小错误。"
+    },
+    {
+      "question": "_______ confidant",
+      "type": "blank",
+      "answer": "trusted",
+      "explanation": "密友; 知己, 值得信赖的密友. She shared her secrets with her trusted confidant. 她与她值得信赖的密友分享秘密。"
+    },
+    {
+      "question": "______ descendant",
+      "type": "blank",
+      "answer": "direct",
+      "explanation": "后裔; 后代, 直系后代. He is a direct descendant of the founder. 他是创始人的直系后代。"
+    },
+    {
+      "question": "________ defendant",
+      "type": "blank",
+      "answer": "criminal",
+      "explanation": "被告, 刑事被告. The criminal defendant pleaded not guilty. 刑事被告表示不认罪。"
+    },
+    {
+      "question": "abundant ______",
+      "type": "blank",
+      "answer": "supply",
+      "explanation": "丰富的; 充裕的, 充足的供应. The region has an abundant supply of fresh water. 该地区有充足的淡水供应。"
+    },
+    {
+      "question": "verdant _____",
+      "type": "blank",
+      "answer": "field",
+      "explanation": "翠绿的; 青翠的, 翠绿的田野. Spring rains create verdant field landscapes. 春雨造就了翠绿的田野景观。"
+    },
+    {
+      "question": "mordant ___",
+      "type": "blank",
+      "answer": "wit",
+      "explanation": "尖刻的; 讽刺的, 尖刻的机智. His mordant wit could be quite cutting. 他尖刻的机智可能相当刺耳。"
+    },
+    {
+      "question": "______ pageant",
+      "type": "blank",
+      "answer": "beauty",
+      "explanation": "选美; 盛典, 选美比赛. She competed in the beauty pageant last summer. 她去年夏天参加了选美比赛。"
+    },
+    {
+      "question": "_____ litigant",
+      "type": "blank",
+      "answer": "civil",
+      "explanation": "诉讼当事人, 民事诉讼当事人. The civil litigant filed a lawsuit for damages. 民事诉讼当事人提起损害赔偿诉讼。"
+    },
+    {
+      "question": "enchant ___ _____",
+      "type": "blank",
+      "answer": "the crowd",
+      "explanation": "使着迷; 施魔法, 使人群着迷. The magician's tricks will enchant the crowd. 魔术师的戏法将使人群着迷。"
+    },
+    {
+      "question": "penchant ___ ____",
+      "type": "blank",
+      "answer": "for jazz",
+      "explanation": "嗜好; 倾向, 对爵士乐的嗜好. He has a penchant for jazz music. 他对爵士乐有嗜好。"
+    },
+    {
+      "question": "trenchant ________",
+      "type": "blank",
+      "answer": "critique",
+      "explanation": "尖锐的; 鲜明的, 尖锐的批评. The reviewer wrote a trenchant critique of the film. 评论家对这部电影写了尖锐的批评。"
+    },
+    {
+      "question": "disenchant ___ ______",
+      "type": "blank",
+      "answer": "the public",
+      "explanation": "使幻想破灭, 使公众幻想破灭. The scandal will disenchant the public with politics. 这起丑闻将使公众对政治幻想破灭。"
+    },
+    {
+      "question": "__________ sycophant",
+      "type": "blank",
+      "answer": "obsequious",
+      "explanation": "马屁精; 谄媚者, 谄媚的马屁精. The obsequious sycophant flattered the boss constantly. 谄媚的马屁精不断奉承老板。"
+    },
+    {
+      "question": "insouciant _____",
+      "type": "blank",
+      "answer": "smile",
+      "explanation": "漫不经心的; 无忧无虑的, 漫不经心的微笑. She wore an insouciant smile despite the troubles. 尽管有麻烦,她脸上还是带着漫不经心的微笑。"
+    },
+    {
+      "question": "valiant ______",
+      "type": "blank",
+      "answer": "effort",
+      "explanation": "英勇的; 勇敢的, 英勇的努力. They made a valiant effort to save the company. 他们做出了拯救公司的英勇努力。"
+    },
+    {
+      "question": "____ defoliant",
+      "type": "blank",
+      "answer": "leaf",
+      "explanation": "落叶剂, 落叶剂. Agent Orange was a powerful leaf defoliant used in war. 橙剂是战争中使用的强力落叶剂。"
+    },
+    {
+      "question": "pliant ________",
+      "type": "blank",
+      "answer": "material",
+      "explanation": "柔软的; 易弯曲的, 柔韧的材料. Leather becomes pliant material when properly treated. 皮革经过适当处理后会变成柔韧的材料。"
+    },
+    {
+      "question": "compliant ________",
+      "type": "blank",
+      "answer": "behavior",
+      "explanation": "顺从的; 服从的, 顺从的行为. The regulations require compliant behavior from all staff. 法规要求所有员工有顺从的行为。"
+    },
+    {
+      "question": "________ suppliant",
+      "type": "blank",
+      "answer": "kneeling",
+      "explanation": "恳求的; 哀求者, 跪着的恳求者. The kneeling suppliant begged for forgiveness. 跪着的恳求者乞求宽恕。"
+    },
+    {
+      "question": "luxuriant ______",
+      "type": "blank",
+      "answer": "growth",
+      "explanation": "茂盛的; 丰富的, 茂盛的生长. The tropical rainforest shows luxuriant growth. 热带雨林显示出茂盛的生长。"
+    },
+    {
+      "question": "deviant ________",
+      "type": "blank",
+      "answer": "behavior",
+      "explanation": "偏离的; 异常的, 偏离的行为. Psychologists study deviant behavior patterns. 心理学家研究偏离的行为模式。"
+    },
+    {
+      "question": "nonchalant ________",
+      "type": "blank",
+      "answer": "attitude",
+      "explanation": "冷淡的; 漠不关心的, 冷淡的态度. His nonchalant attitude masked deep concerns. 他冷淡的态度掩盖了深深的担忧。"
+    },
+    {
+      "question": "sibilant ____",
+      "type": "blank",
+      "answer": "hiss",
+      "explanation": "咝咝作响的, 咝咝的嘶嘶声. The snake made a sibilant hiss as a warning. 蛇发出咝咝的嘶嘶声作为警告。"
+    },
+    {
+      "question": "jubilant _____",
+      "type": "blank",
+      "answer": "crowd",
+      "explanation": "欢欣鼓舞的, 欢欣鼓舞的人群. The jubilant crowd celebrated the team's victory. 欢欣鼓舞的人群庆祝球队的胜利。"
+    },
+    {
+      "question": "vigilant _____",
+      "type": "blank",
+      "answer": "watch",
+      "explanation": "警惕的; 警觉的, 警惕的监视. Security maintains a vigilant watch over the premises. 保安对场所保持警惕的监视。"
+    },
+    {
+      "question": "implant ______",
+      "type": "blank",
+      "answer": "device",
+      "explanation": "植入; 灌输, 植入装置. The surgeon inserted an implant device in the patient. 外科医生在患者体内插入了植入装置。"
+    },
+    {
+      "question": "supplant _ ______",
+      "type": "blank",
+      "answer": "a leader",
+      "explanation": "取代; 代替, 取代领导者. The coup attempt sought to supplant a leader. 政变企图试图取代领导者。"
+    },
+    {
+      "question": "_____ coagulant",
+      "type": "blank",
+      "answer": "blood",
+      "explanation": "凝结剂, 血液凝固剂. The blood coagulant helps stop excessive bleeding. 血液凝固剂有助于止血。"
+    },
+    {
+      "question": "petulant _____",
+      "type": "blank",
+      "answer": "child",
+      "explanation": "任性的; 脾气坏的, 任性的孩子. The petulant child threw a tantrum in the store. 任性的孩子在商店里发脾气。"
+    },
+    {
+      "question": "dormant _______",
+      "type": "blank",
+      "answer": "volcano",
+      "explanation": "休眠的; 静止的, 休眠的火山. Scientists monitor the dormant volcano for activity. 科学家监测休眠火山的活动。"
+    },
+    {
+      "question": "_________ tenant",
+      "type": "blank",
+      "answer": "apartment",
+      "explanation": "房客; 承租人, 公寓租户. The apartment tenant pays rent on the first of each month. 公寓租户每月一号支付租金。"
+    },
+    {
+      "question": "_______ covenant",
+      "type": "blank",
+      "answer": "binding",
+      "explanation": "契约; 盟约, 有约束力的契约. They signed a binding covenant to share resources. 他们签署了一项有约束力的资源共享契约。"
+    },
+    {
+      "question": "stagnant ____",
+      "type": "blank",
+      "answer": "pool",
+      "explanation": "停滞的; 不流动的, 停滞的水池. Mosquitoes breed in stagnant pool water. 蚊子在停滞的水池中繁殖。"
+    },
+    {
+      "question": "pregnant _____",
+      "type": "blank",
+      "answer": "pause",
+      "explanation": "怀孕的; 意味深长的, 意味深长的停顿. There was a pregnant pause before she answered. 她回答前有一个意味深长的停顿。"
+    },
+    {
+      "question": "malignant _____",
+      "type": "blank",
+      "answer": "tumor",
+      "explanation": "恶性的; 有害的, 恶性肿瘤. The biopsy revealed a malignant tumor. 活检显示有恶性肿瘤。"
+    },
+    {
+      "question": "poignant _____",
+      "type": "blank",
+      "answer": "scene",
+      "explanation": "辛酸的; 深刻的, 辛酸的场景. The movie's ending featured a poignant scene. 电影的结局有一个辛酸的场景。"
+    },
+    {
+      "question": "repugnant ___",
+      "type": "blank",
+      "answer": "act",
+      "explanation": "令人厌恶的; 可憎的, 令人厌恶的行为. The crime was a repugnant act that shocked everyone. 这起犯罪是令人厌恶的行为,震惊了所有人。"
+    },
+    {
+      "question": "dominant ________",
+      "type": "blank",
+      "answer": "position",
+      "explanation": "占优势的; 支配的, 主导地位. The company holds a dominant position in the market. 该公司在市场上占据主导地位。"
+    },
+    {
+      "question": "predominant ______",
+      "type": "blank",
+      "answer": "factor",
+      "explanation": "主要的; 占优势的, 主要因素. Price was the predominant factor in their decision. 价格是他们决定的主要因素。"
+    },
+    {
+      "question": "___ determinant",
+      "type": "blank",
+      "answer": "key",
+      "explanation": "决定因素, 关键决定因素. Education is a key determinant of success. 教育是成功的关键决定因素。"
+    },
+    {
+      "question": "ruminant ______",
+      "type": "blank",
+      "answer": "animal",
+      "explanation": "反刍动物, 反刍动物. Cows are ruminant animal with multiple stomach chambers. 牛是有多个胃室的反刍动物。"
+    },
+    {
+      "question": "____ pennant",
+      "type": "blank",
+      "answer": "team",
+      "explanation": "锦旗; 三角旗, 球队锦旗. The baseball team pennant hung in the stadium. 棒球队锦旗悬挂在体育场。"
+    },
+    {
+      "question": "resonant _____",
+      "type": "blank",
+      "answer": "voice",
+      "explanation": "共鸣的; 洪亮的, 洪亮的声音. His resonant voice filled the concert hall. 他洪亮的声音充满了音乐厅。"
+    },
+    {
+      "question": "consonant _______",
+      "type": "blank",
+      "answer": "cluster",
+      "explanation": "辅音; 一致的, 辅音群. English has many consonant cluster combinations. 英语有许多辅音群组合。"
+    },
+    {
+      "question": "dissonant _____",
+      "type": "blank",
+      "answer": "chord",
+      "explanation": "不和谐的; 刺耳的, 不和谐的和弦. The composer used a dissonant chord for tension. 作曲家使用不和谐的和弦来制造紧张感。"
+    },
+    {
+      "question": "rampant _____",
+      "type": "blank",
+      "answer": "crime",
+      "explanation": "猖獗的; 蔓延的, 猖獗的犯罪. Rampant crime plagued the neighborhood. 猖獗的犯罪困扰着这个社区。"
+    },
+    {
+      "question": "flippant ______",
+      "type": "blank",
+      "answer": "remark",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "轻率的; 无礼的, 轻率的评论. His flippant remark offended the grieving family. 他轻率的评论冒犯了悲伤的家人。"
+    },
+    {
+      "question": "rant ______",
+      "type": "blank",
+      "answer": "speech",
+      "explanation": "咆哮; 激烈演说, 激烈演说. The politician delivered an angry rant speech. 这位政客发表了愤怒的激烈演说。"
+    },
+    {
+      "question": "vibrant _________",
+      "type": "blank",
+      "answer": "community",
+      "explanation": "充满活力的; 鲜艳的, 充满活力的社区. The city has a vibrant community of artists. 这座城市有一个充满活力的艺术家社区。"
+    },
+    {
+      "question": "______ hydrant",
+      "type": "blank",
+      "answer": "street",
+      "explanation": "消防栓, 街道消防栓. Firefighters connected hoses to the street hydrant. 消防员将水管连接到街道消防栓。"
+    },
+    {
+      "question": "_ preponderant _____",
+      "type": "blank",
+      "answer": "a share",
+      "explanation": "占优势的; 主要的, 主要份额. He inherited a preponderant share of the estate. 他继承了遗产的主要份额。"
+    },
+    {
+      "question": "itinerant ______",
+      "type": "blank",
+      "answer": "worker",
+      "explanation": "巡回的; 流动的, 流动工人. The itinerant worker traveled from farm to farm. 流动工人从一个农场到另一个农场。"
+    },
+    {
+      "question": "__________ grant",
+      "type": "blank",
+      "answer": "government",
+      "explanation": "授予; 拨款, 政府拨款. The research was funded by a government grant. 这项研究由政府拨款资助。"
+    },
+    {
+      "question": "fragrant _______",
+      "type": "blank",
+      "answer": "blossom",
+      "explanation": "芳香的; 香的, 芳香的花朵. Spring brings fragrant blossom to the gardens. 春天给花园带来芳香的花朵。"
+    },
+    {
+      "question": "____________ aspirant",
+      "type": "blank",
+      "answer": "presidential",
+      "explanation": "有抱负者; 候选人, 总统候选人. The presidential aspirant announced his campaign. 总统候选人宣布了他的竞选活动。"
+    },
+    {
+      "question": "______ warrant",
+      "type": "blank",
+      "answer": "search",
+      "explanation": "授权; 搜查令, 搜查令. Police obtained a search warrant for the premises. 警方获得了对该场所的搜查令。"
+    },
+    {
+      "question": "aberrant ________",
+      "type": "blank",
+      "answer": "behavior",
+      "explanation": "异常的; 偏离的, 异常行为. The psychologist studied aberrant behavior patterns. 心理学家研究异常行为模式。"
+    },
+    {
+      "question": "recalcitrant _____",
+      "type": "blank",
+      "answer": "child",
+      "explanation": "顽固的; 不服从的, 顽固的孩子. The recalcitrant child refused all discipline. 顽固的孩子拒绝所有纪律。"
+    },
+    {
+      "question": "_____ tyrant",
+      "type": "blank",
+      "answer": "cruel",
+      "explanation": "暴君; 专制君主, 残酷的暴君. The cruel tyrant oppressed his people for decades. 残酷的暴君压迫他的人民数十年。"
+    },
+    {
+      "question": "______ complaisant",
+      "type": "blank",
+      "answer": "overly",
+      "explanation": "殷勤的; 讨好的, 过分殷勤的. His overly complaisant manner seemed insincere. 他过分殷勤的态度似乎不真诚。"
+    },
+    {
+      "question": "conversant ____",
+      "type": "blank",
+      "answer": "with",
+      "explanation": "熟悉的; 精通的, 熟悉. She is conversant with current technology trends. 她熟悉当前的技术趋势。"
+    },
+    {
+      "question": "incessant _____",
+      "type": "blank",
+      "answer": "noise",
+      "explanation": "不断的; 持续的, 不断的噪音. The incessant noise made it impossible to concentrate. 不断的噪音使人无法集中注意力。"
+    },
+    {
+      "question": "___ depressant",
+      "type": "blank",
+      "answer": "use",
+      "explanation": "抑制剂; 镇静剂, 使用镇静剂. Doctors may use depressant medications carefully. 医生可能会谨慎使用镇静剂药物。"
+    },
+    {
+      "question": "puissant _____",
+      "type": "blank",
+      "answer": "state",
+      "explanation": "强大的; 有力的, 强大的国家. The puissant state dominated regional politics. 强大的国家主导了区域政治。"
+    },
+    {
+      "question": "blatant ___",
+      "type": "blank",
+      "answer": "lie",
+      "explanation": "明目张胆的; 公然的, 明目张胆的谎言. His testimony was a blatant lie. 他的证词是明目张胆的谎言。"
+    },
+    {
+      "question": "________ reactant",
+      "type": "blank",
+      "answer": "chemical",
+      "explanation": "反应物, 化学反应物. The chemical reactant was added to the solution. 化学反应物被加入溶液中。"
+    },
+    {
+      "question": "___ disinfectant",
+      "type": "blank",
+      "answer": "use",
+      "explanation": "消毒剂, 使用消毒剂. Always use disinfectant on contaminated surfaces. 始终在受污染的表面使用消毒剂。"
+    },
+    {
+      "question": "____ inhabitant",
+      "type": "blank",
+      "answer": "city",
+      "explanation": "居民, 城市居民. The city inhabitant enjoys urban amenities. 城市居民享受城市便利设施。"
+    },
+    {
+      "question": "exorbitant _____",
+      "type": "blank",
+      "answer": "price",
+      "explanation": "过高的; 过分的, 过高的价格. The hotel charged an exorbitant price for the room. 酒店对房间收取了过高的价格。"
+    }
+  ]
+}
