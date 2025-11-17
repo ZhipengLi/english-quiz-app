@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "amorphous ____",
+      "type": "blank",
+      "answer": "mass",
+      "explanation": "无定形的; 无组织的, 无定形的物质. The sculpture resembled an amorphous mass of clay. 这座雕塑像一团无定形的黏土。"
+    },
+    {
+      "question": "perspicacious ____",
+      "type": "blank",
+      "answer": "mind",
+      "explanation": "敏锐的; 有洞察力的, 敏锐的头脑. Her perspicacious mind grasped complex concepts quickly. 她敏锐的头脑迅速掌握了复杂的概念。"
+    },
+    {
+      "question": "mendacious _____",
+      "type": "blank",
+      "answer": "claim",
+      "explanation": "虚假的; 说谎的, 虚假的声明. The politician made a mendacious claim about his record. 这位政客对他的记录做出了虚假的声明。"
+    },
+    {
+      "question": "audacious ____",
+      "type": "blank",
+      "answer": "plan",
+      "explanation": "大胆的; 无畏的, 大胆的计划. The entrepreneur unveiled an audacious plan for expansion. 企业家公布了一个大胆的扩张计划。"
+    },
+    {
+      "question": "sagacious ______",
+      "type": "blank",
+      "answer": "leader",
+      "explanation": "睿智的; 精明的, 睿智的领导者. The sagacious leader made wise decisions for the nation. 睿智的领导者为国家做出了明智的决定。"
+    },
+    {
+      "question": "fallacious ________",
+      "type": "blank",
+      "answer": "argument",
+      "explanation": "谬误的; 欺骗性的, 谬误的论点. The debate exposed his fallacious argument. 辩论揭露了他谬误的论点。"
+    },
+    {
+      "question": "contumacious ________",
+      "type": "blank",
+      "answer": "attitude",
+      "explanation": "违抗的; 不服从的, 违抗的态度. His contumacious attitude toward authority caused problems. 他对权威的违抗态度造成了问题。"
+    },
+    {
+      "question": "tenacious ____",
+      "type": "blank",
+      "answer": "grip",
+      "explanation": "顽强的; 坚持不懈的, 顽强的抓握. The climber maintained a tenacious grip on the rock face. 攀岩者对岩壁保持顽强的抓握。"
+    },
+    {
+      "question": "pugnacious ____",
+      "type": "blank",
+      "answer": "tone",
+      "explanation": "好斗的; 好争吵的, 好斗的语气. His pugnacious tone escalated the argument. 他好斗的语气使争论升级。"
+    },
+    {
+      "question": "pertinacious _______",
+      "type": "blank",
+      "answer": "pursuit",
+      "explanation": "执着的; 顽固的, 执着的追求. Her pertinacious pursuit of justice never wavered. 她对正义的执着追求从未动摇。"
+    },
+    {
+      "question": "capacious ___",
+      "type": "blank",
+      "answer": "bag",
+      "explanation": "宽敞的; 容量大的, 容量大的包. She carried a capacious bag filled with books. 她提着一个装满书的容量大的包。"
+    },
+    {
+      "question": "rapacious ________",
+      "type": "blank",
+      "answer": "landlord",
+      "explanation": "贪婪的; 掠夺性的, 贪婪的房东. The rapacious landlord raised rents excessively. 贪婪的房东过度提高租金。"
+    },
+    {
+      "question": "spacious ____",
+      "type": "blank",
+      "answer": "room",
+      "explanation": "宽敞的, 宽敞的房间. The apartment featured a spacious room with high ceilings. 这套公寓有一个天花板很高的宽敞房间。"
+    },
+    {
+      "question": "veracious _______",
+      "type": "blank",
+      "answer": "account",
+      "explanation": "真实的; 诚实的, 真实的叙述. The witness provided a veracious account of events. 证人提供了对事件的真实叙述。"
+    },
+    {
+      "question": "voracious ______",
+      "type": "blank",
+      "answer": "reader",
+      "explanation": "贪婪的; 如饥似渴的, 如饥似渴的读者. As a voracious reader, she finished three books weekly. 作为一个如饥似渴的读者,她每周读完三本书。"
+    },
+    {
+      "question": "sequacious ____",
+      "type": "blank",
+      "answer": "mind",
+      "explanation": "盲从的; 缺乏独创性的, 盲从的思想. Critics said he had a sequacious mind lacking originality. 批评者说他有盲从的思想,缺乏原创性。"
+    },
+    {
+      "question": "loquacious ____",
+      "type": "blank",
+      "answer": "host",
+      "explanation": "健谈的; 多话的, 健谈的主持人. The loquacious host kept the conversation flowing. 健谈的主持人使谈话持续进行。"
+    },
+    {
+      "question": "specious ________",
+      "type": "blank",
+      "answer": "argument",
+      "explanation": "似是而非的; 华而不实的, 似是而非的论点. His specious argument sounded convincing but was flawed. 他似是而非的论点听起来很有说服力,但有缺陷。"
+    },
+    {
+      "question": "judicious ______",
+      "type": "blank",
+      "answer": "choice",
+      "explanation": "明智的; 审慎的, 明智的选择. She made a judicious choice in selecting her advisors. 她在选择顾问时做出了明智的选择。"
+    },
+    {
+      "question": "officious _____",
+      "type": "blank",
+      "answer": "clerk",
+      "explanation": "爱管闲事的; 多管闲事的, 多管闲事的职员. The officious clerk interfered with everyone's work. 多管闲事的职员干涉每个人的工作。"
+    },
+    {
+      "question": "malicious _____",
+      "type": "blank",
+      "answer": "rumor",
+      "explanation": "恶意的; 恶毒的, 恶意的谣言. Someone spread a malicious rumor about her character. 有人散布了关于她品格的恶意谣言。"
+    },
+    {
+      "question": "pernicious _________",
+      "type": "blank",
+      "answer": "influence",
+      "explanation": "有害的; 恶性的, 有害的影响. Smoking has a pernicious influence on health. 吸烟对健康有有害的影响。"
+    },
+    {
+      "question": "auspicious ____",
+      "type": "blank",
+      "answer": "sign",
+      "explanation": "吉利的; 吉祥的, 吉祥的征兆. The sunny weather was an auspicious sign for the wedding. 晴朗的天气是婚礼的吉祥征兆。"
+    },
+    {
+      "question": "suspicious ________",
+      "type": "blank",
+      "answer": "activity",
+      "explanation": "可疑的; 怀疑的, 可疑的活动. Police investigated suspicious activity in the neighborhood. 警方调查了社区里的可疑活动。"
+    },
+    {
+      "question": "avaricious _____",
+      "type": "blank",
+      "answer": "grasp",
+      "explanation": "贪婪的; 贪财的, 贪婪的抓取. His avaricious grasp for wealth knew no bounds. 他对财富的贪婪抓取没有界限。"
+    },
+    {
+      "question": "lubricious ____",
+      "type": "blank",
+      "answer": "film",
+      "explanation": "淫秽的; 好色的, 淫秽的电影. The censors banned the lubricious film. 审查员禁止了这部淫秽的电影。"
+    },
+    {
+      "question": "capricious _______",
+      "type": "blank",
+      "answer": "weather",
+      "explanation": "反复无常的; 善变的, 反复无常的天气. The capricious weather changed from sun to rain suddenly. 反复无常的天气突然从晴天变成雨天。"
+    },
+    {
+      "question": "meretricious _______",
+      "type": "blank",
+      "answer": "glamour",
+      "explanation": "华而不实的; 俗艳的, 华而不实的魅力. The show's meretricious glamour hid its lack of substance. 这个节目华而不实的魅力掩盖了其缺乏实质内容。"
+    },
+    {
+      "question": "vicious _____",
+      "type": "blank",
+      "answer": "cycle",
+      "explanation": "恶性的; 凶残的, 恶性循环. Poverty creates a vicious cycle difficult to escape. 贫困造成了难以摆脱的恶性循环。"
+    },
+    {
+      "question": "atrocious _____",
+      "type": "blank",
+      "answer": "crime",
+      "explanation": "残暴的; 糟糕的, 残暴的罪行. The community was shocked by the atrocious crime. 社区对这起残暴的罪行感到震惊。"
+    },
+    {
+      "question": "unconscious _____",
+      "type": "blank",
+      "answer": "state",
+      "explanation": "无意识的; 失去知觉的, 无意识状态. The patient remained in an unconscious state for hours. 患者在无意识状态下持续了数小时。"
+    },
+    {
+      "question": "luscious _____",
+      "type": "blank",
+      "answer": "fruit",
+      "explanation": "甘美的; 美味的, 甘美的水果. The tropical garden grew luscious fruit year-round. 热带花园全年种植甘美的水果。"
+    },
+    {
+      "question": "perfidious ____",
+      "type": "blank",
+      "answer": "ally",
+      "explanation": "背信弃义的; 不忠的, 背信弃义的盟友. The king was betrayed by a perfidious ally. 国王被一个背信弃义的盟友背叛了。"
+    },
+    {
+      "question": "insidious ______",
+      "type": "blank",
+      "answer": "threat",
+      "explanation": "阴险的; 潜伏的, 阴险的威胁. Climate change poses an insidious threat to humanity. 气候变化对人类构成阴险的威胁。"
+    },
+    {
+      "question": "fastidious _____",
+      "type": "blank",
+      "answer": "eater",
+      "explanation": "挑剔的; 讲究的, 挑剔的食客. The fastidious eater refused anything but organic food. 挑剔的食客只吃有机食品。"
+    },
+    {
+      "question": "invidious __________",
+      "type": "blank",
+      "answer": "comparison",
+      "explanation": "令人反感的; 招人嫉妒的, 令人反感的比较. Making invidious comparison between siblings is harmful. 在兄弟姐妹之间做出令人反感的比较是有害的。"
+    },
+    {
+      "question": "odious _____",
+      "type": "blank",
+      "answer": "crime",
+      "explanation": "可憎的; 令人厌恶的, 可憎的罪行. Murder is an odious crime that society condemns. 谋杀是社会谴责的可憎罪行。"
+    },
+    {
+      "question": "commodious ____",
+      "type": "blank",
+      "answer": "room",
+      "explanation": "宽敞的; 舒适的, 宽敞的房间. The hotel suite offered a commodious room for the family. 酒店套房为家庭提供了宽敞的房间。"
+    },
+    {
+      "question": "contagious _______",
+      "type": "blank",
+      "answer": "disease",
+      "explanation": "传染性的, 传染病. Measles is a highly contagious disease requiring vaccination. 麻疹是一种需要接种疫苗的高度传染病。"
+    },
+    {
+      "question": "sacrilegious ___",
+      "type": "blank",
+      "answer": "act",
+      "explanation": "亵渎的; 渎神的, 亵渎的行为. Destroying the temple was considered a sacrilegious act. 摧毁寺庙被认为是亵渎的行为。"
+    },
+    {
+      "question": "egregious _____",
+      "type": "blank",
+      "answer": "error",
+      "explanation": "极坏的; 惊人的, 极坏的错误. The accountant made an egregious error in the calculations. 会计在计算中犯了极坏的错误。"
+    },
+    {
+      "question": "prodigious ______",
+      "type": "blank",
+      "answer": "talent",
+      "explanation": "巨大的; 惊人的, 惊人的才能. Mozart displayed prodigious talent from a young age. 莫扎特从小就展现了惊人的才能。"
+    },
+    {
+      "question": "prestigious _____",
+      "type": "blank",
+      "answer": "award",
+      "explanation": "有声望的; 受尊敬的, 有声望的奖项. She received a prestigious award for her research. 她因研究获得了有声望的奖项。"
+    },
+    {
+      "question": "bilious ____",
+      "type": "blank",
+      "answer": "mood",
+      "explanation": "暴躁的; 易怒的, 暴躁的情绪. He woke up in a bilious mood after a sleepless night. 经过一个不眠之夜后,他醒来时心情暴躁。"
+    },
+    {
+      "question": "punctilious _______",
+      "type": "blank",
+      "answer": "manners",
+      "explanation": "一丝不苟的; 拘泥于细节的, 一丝不苟的礼仪. Her punctilious manners impressed everyone at the dinner. 她一丝不苟的礼仪给晚宴上的每个人留下了深刻印象。"
+    },
+    {
+      "question": "abstemious ____",
+      "type": "blank",
+      "answer": "diet",
+      "explanation": "节制的; 有节制的, 节制的饮食. He maintained an abstemious diet for health reasons. 出于健康原因,他保持节制的饮食。"
+    },
+    {
+      "question": "ingenious ______",
+      "type": "blank",
+      "answer": "design",
+      "explanation": "巧妙的; 有独创性的, 巧妙的设计. The engineer created an ingenious design to solve the problem. 工程师创造了一个巧妙的设计来解决问题。"
+    },
+    {
+      "question": "ignominious ______",
+      "type": "blank",
+      "answer": "defeat",
+      "explanation": "耻辱的; 可耻的, 耻辱的失败. The army suffered an ignominious defeat in battle. 军队在战斗中遭受了耻辱的失败。"
+    },
+    {
+      "question": "euphonious ____",
+      "type": "blank",
+      "answer": "name",
+      "explanation": "悦耳的; 好听的, 悦耳的名字. The poet chose a euphonious name for his character. 诗人为他的角色选择了一个悦耳的名字。"
+    },
+    {
+      "question": "ceremonious ___",
+      "type": "blank",
+      "answer": "bow",
+      "explanation": "隆重的; 讲究礼仪的, 隆重的鞠躬. He greeted the queen with a ceremonious bow. 他以隆重的鞠躬向女王致意。"
+    },
+    {
+      "question": "acrimonious ______",
+      "type": "blank",
+      "answer": "debate",
+      "explanation": "尖刻的; 激烈的, 尖刻的辩论. The divorce proceedings involved an acrimonious debate. 离婚诉讼涉及尖刻的辩论。"
+    },
+    {
+      "question": "impecunious _______",
+      "type": "blank",
+      "answer": "student",
+      "explanation": "贫困的; 身无分文的, 贫困的学生. The impecunious student worked two jobs to pay tuition. 贫困的学生打两份工来支付学费。"
+    },
+    {
+      "question": "pious ________",
+      "type": "blank",
+      "answer": "believer",
+      "explanation": "虔诚的; 虔敬的, 虔诚的信徒. The pious believer attended church services daily. 虔诚的信徒每天参加教堂礼拜。"
+    },
+    {
+      "question": "copious _____",
+      "type": "blank",
+      "answer": "notes",
+      "explanation": "大量的; 丰富的, 大量的笔记. The student took copious notes during the lecture. 学生在讲座期间做了大量的笔记。"
+    },
+    {
+      "question": "precarious ________",
+      "type": "blank",
+      "answer": "position",
+      "explanation": "不稳定的; 危险的, 不稳定的位置. The company was in a precarious position financially. 公司在财务上处于不稳定的位置。"
+    },
+    {
+      "question": "vicarious ________",
+      "type": "blank",
+      "answer": "pleasure",
+      "explanation": "替代的; 间接感受的, 间接的快乐. Parents often experience vicarious pleasure through their children. 父母经常通过孩子体验间接的快乐。"
+    },
+    {
+      "question": "nefarious ______",
+      "type": "blank",
+      "answer": "scheme",
+      "explanation": "邪恶的; 穷凶极恶的, 邪恶的阴谋. The villain hatched a nefarious scheme to steal the treasure. 恶棍策划了一个盗取宝藏的邪恶阴谋。"
+    },
+    {
+      "question": "multifarious __________",
+      "type": "blank",
+      "answer": "activities",
+      "explanation": "多种多样的; 各式各样的, 多种多样的活动. The club organized multifarious activities for members. 俱乐部为成员组织了多种多样的活动。"
+    },
+    {
+      "question": "gregarious ______",
+      "type": "blank",
+      "answer": "person",
+      "explanation": "爱社交的; 群居的, 爱社交的人. She was a gregarious person who loved meeting new people. 她是一个喜欢结识新朋友的爱社交的人。"
+    },
+    {
+      "question": "hilarious ____",
+      "type": "blank",
+      "answer": "joke",
+      "explanation": "极其滑稽的; 欢闹的, 极其滑稽的笑话. The comedian told a hilarious joke that had everyone laughing. 喜剧演员讲了一个极其滑稽的笑话,让所有人都笑了。"
+    },
+    {
+      "question": "opprobrious ______",
+      "type": "blank",
+      "answer": "insult",
+      "explanation": "辱骂的; 侮辱性的, 辱骂性的侮辱. He hurled an opprobrious insult at his opponent. 他向对手投掷了辱骂性的侮辱。"
+    },
+    {
+      "question": "salubrious _______",
+      "type": "blank",
+      "answer": "climate",
+      "explanation": "有益健康的, 有益健康的气候. The mountain region has a salubrious climate year-round. 山区全年都有有益健康的气候。"
+    },
+    {
+      "question": "imperious _______",
+      "type": "blank",
+      "answer": "command",
+      "explanation": "专横的; 傲慢的, 专横的命令. She issued an imperious command that no one dared question. 她发出了一个没人敢质疑的专横命令。"
+    },
+    {
+      "question": "deleterious ______",
+      "type": "blank",
+      "answer": "effect",
+      "explanation": "有害的; 有毒的, 有害的影响. Pollution has a deleterious effect on the environment. 污染对环境有有害的影响。"
+    },
+    {
+      "question": "delirious ___",
+      "type": "blank",
+      "answer": "joy",
+      "explanation": "精神错乱的; 极度兴奋的, 极度兴奋的快乐. Fans experienced delirious joy when their team won. 当他们的球队获胜时,球迷们体验到极度兴奋的快乐。"
+    },
+    {
+      "question": "meritorious _______",
+      "type": "blank",
+      "answer": "service",
+      "explanation": "值得赞扬的; 有功的, 值得赞扬的服务. The soldier received a medal for meritorious service. 士兵因值得赞扬的服务获得了勋章。"
+    },
+    {
+      "question": "uxorious _______",
+      "type": "blank",
+      "answer": "husband",
+      "explanation": "溺爱妻子的, 溺爱妻子的丈夫. The uxorious husband catered to his wife's every whim. 溺爱妻子的丈夫迎合妻子的每一个心血来潮。"
+    },
+    {
+      "question": "industrious ______",
+      "type": "blank",
+      "answer": "worker",
+      "explanation": "勤劳的; 勤奋的, 勤劳的工人. The industrious worker completed tasks ahead of schedule. 勤劳的工人提前完成了任务。"
+    },
+    {
+      "question": "illustrious ______",
+      "type": "blank",
+      "answer": "career",
+      "explanation": "杰出的; 著名的, 杰出的职业生涯. She had an illustrious career in medicine. 她在医学领域有杰出的职业生涯。"
+    },
+    {
+      "question": "injurious ______",
+      "type": "blank",
+      "answer": "effect",
+      "explanation": "有害的; 伤害的, 有害的影响. Smoking has an injurious effect on lung health. 吸烟对肺部健康有有害的影响。"
+    },
+    {
+      "question": "spurious _____",
+      "type": "blank",
+      "answer": "claim",
+      "explanation": "虚假的; 伪造的, 虚假的声明. The company made spurious claim about their product. 公司对其产品做出了虚假的声明。"
+    },
+    {
+      "question": "fractious _____",
+      "type": "blank",
+      "answer": "child",
+      "explanation": "易怒的; 难控制的, 易怒的孩子. The fractious child refused to follow any instructions. 易怒的孩子拒绝听从任何指示。"
+    },
+    {
+      "question": "rambunctious ____",
+      "type": "blank",
+      "answer": "kids",
+      "explanation": "喧闹的; 难以控制的, 喧闹的孩子. The rambunctious kids ran wild at the birthday party. 喧闹的孩子们在生日派对上疯玩。"
+    },
+    {
+      "question": "facetious ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "滑稽的; 开玩笑的, 滑稽的评论. His facetious remark was inappropriate for the occasion. 他滑稽的评论不适合这个场合。"
+    },
+    {
+      "question": "expeditious ______",
+      "type": "blank",
+      "answer": "manner",
+      "explanation": "迅速的; 敏捷的, 迅速的方式. The team completed the project in an expeditious manner. 团队以迅速的方式完成了项目。"
+    },
+    {
+      "question": "seditious ________",
+      "type": "blank",
+      "answer": "pamphlet",
+      "explanation": "煽动性的; 叛乱的, 煽动性的小册子. Authorities confiscated the seditious pamphlet immediately. 当局立即没收了煽动性的小册子。"
+    },
+    {
+      "question": "propitious ____",
+      "type": "blank",
+      "answer": "sign",
+      "explanation": "吉利的; 有利的, 吉利的征兆. The early success was a propitious sign for the venture. 早期的成功是该企业的吉利征兆。"
+    },
+    {
+      "question": "factitious ________",
+      "type": "blank",
+      "answer": "disorder",
+      "explanation": "人为的; 虚假的, 人为的疾病. The psychiatrist diagnosed a factitious disorder. 精神病医生诊断出人为的疾病。"
+    },
+    {
+      "question": "fictitious ____",
+      "type": "blank",
+      "answer": "name",
+      "explanation": "虚构的; 假的, 虚构的名字. The author wrote under a fictitious name. 作者用虚构的名字写作。"
+    },
+    {
+      "question": "adventitious _____",
+      "type": "blank",
+      "answer": "roots",
+      "explanation": "偶然的; 外来的, 不定根. The plant developed adventitious roots from its stem. 植物从茎上长出了不定根。"
+    },
+    {
+      "question": "surreptitious ______",
+      "type": "blank",
+      "answer": "glance",
+      "explanation": "偷偷摸摸的; 秘密的, 偷偷的一瞥. She cast a surreptitious glance at her watch. 她偷偷地瞥了一眼手表。"
+    },
+    {
+      "question": "licentious ________",
+      "type": "blank",
+      "answer": "behavior",
+      "explanation": "放荡的; 淫乱的, 放荡的行为. The king was known for his licentious behavior. 国王以其放荡的行为而闻名。"
+    },
+    {
+      "question": "tendentious ______",
+      "type": "blank",
+      "answer": "report",
+      "explanation": "有偏见的; 有倾向性的, 有偏见的报告. The journalist wrote a tendentious report favoring one side. 记者写了一篇偏向一方的有偏见的报告。"
+    },
+    {
+      "question": "conscientious ______",
+      "type": "blank",
+      "answer": "worker",
+      "explanation": "认真的; 尽责的, 认真的工人. The conscientious worker always arrived early. 认真的工人总是早到。"
+    },
+    {
+      "question": "pretentious ______",
+      "type": "blank",
+      "answer": "speech",
+      "explanation": "自命不凡的; 做作的, 自命不凡的演讲. His pretentious speech alienated the audience. 他自命不凡的演讲疏远了观众。"
+    },
+    {
+      "question": "unpretentious _____",
+      "type": "blank",
+      "answer": "style",
+      "explanation": "不做作的; 朴实的, 朴实的风格. She preferred an unpretentious style of living. 她喜欢朴实的生活风格。"
+    },
+    {
+      "question": "sententious __________",
+      "type": "blank",
+      "answer": "moralizing",
+      "explanation": "说教的; 简洁的, 说教式的道德说教. His sententious moralizing annoyed his listeners. 他说教式的道德说教惹恼了听众。"
+    },
+    {
+      "question": "contentious _____",
+      "type": "blank",
+      "answer": "issue",
+      "explanation": "有争议的; 好争论的, 有争议的问题. Abortion remains a contentious issue in politics. 堕胎在政治上仍然是一个有争议的问题。"
+    },
+    {
+      "question": "abstentious _____",
+      "type": "blank",
+      "answer": "habit",
+      "explanation": "节制的; 有节制的, 节制的习惯. He maintained abstentious habit throughout his life. 他一生都保持节制的习惯。"
+    },
+    {
+      "question": "captious _________",
+      "type": "blank",
+      "answer": "criticism",
+      "explanation": "吹毛求疵的; 挑剔的, 吹毛求疵的批评. The reviewer's captious criticism focused on minor flaws. 评论家吹毛求疵的批评集中在小瑕疵上。"
+    },
+    {
+      "question": "bumptious ______",
+      "type": "blank",
+      "answer": "manner",
+      "explanation": "自负的; 傲慢的, 自负的态度. His bumptious manner offended many colleagues. 他自负的态度冒犯了许多同事。"
+    },
+    {
+      "question": "scrumptious ____",
+      "type": "blank",
+      "answer": "meal",
+      "explanation": "美味的; 极好的, 美味的一餐. The chef prepared a scrumptious meal for the guests. 厨师为客人准备了美味的一餐。"
+    },
+    {
+      "question": "obsequious ________",
+      "type": "blank",
+      "answer": "flattery",
+      "explanation": "谄媚的; 奉承的, 谄媚的奉承. His obsequious flattery disgusted everyone present. 他谄媚的奉承让在场的每个人都感到厌恶。"
+    },
+    {
+      "question": "_________ obvious",
+      "type": "blank",
+      "answer": "painfully",
+      "explanation": "明显的; 显而易见的, 非常明显的. The mistake was painfully obvious to everyone. 这个错误对每个人来说都是非常明显的。"
+    },
+    {
+      "question": "devious _____",
+      "type": "blank",
+      "answer": "route",
+      "explanation": "迂回的; 不坦率的, 迂回的路线. They took a devious route to avoid traffic. 他们走了一条迂回的路线以避开交通。"
+    },
+    {
+      "question": "previous __________",
+      "type": "blank",
+      "answer": "engagement",
+      "explanation": "先前的; 以前的, 先前的约定. She couldn't attend due to a previous engagement. 由于先前的约定,她无法参加。"
+    },
+    {
+      "question": "pervious ____",
+      "type": "blank",
+      "answer": "rock",
+      "explanation": "可渗透的, 可渗透的岩石. Water flows easily through pervious rock layers. 水很容易流过可渗透的岩石层。"
+    },
+    {
+      "question": "impervious _______",
+      "type": "blank",
+      "answer": "surface",
+      "explanation": "不透水的; 不受影响的, 不透水的表面. The roof has an impervious surface that repels water. 屋顶有一个不透水的表面,可以排水。"
+    },
+    {
+      "question": "noxious _____",
+      "type": "blank",
+      "answer": "fumes",
+      "explanation": "有害的; 有毒的, 有害的烟雾. The factory released noxious fumes into the air. 工厂向空气中排放有害的烟雾。"
+    },
+    {
+      "question": "obnoxious ____",
+      "type": "blank",
+      "answer": "odor",
+      "explanation": "讨厌的; 令人不快的, 讨厌的气味. An obnoxious odor came from the garbage bin. 垃圾箱散发出讨厌的气味。"
+    }
+  ]
+}
