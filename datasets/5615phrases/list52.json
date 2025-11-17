@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "motley ____",
+      "type": "blank",
+      "answer": "crew",
+      "explanation": "杂乱的; 混杂的, 杂乱的团队. The pirate ship had a motley crew. 海盗船有一群杂乱的船员。"
+    },
+    {
+      "question": "_______ prey",
+      "type": "blank",
+      "answer": "natural",
+      "explanation": "猎物; 受害者, 天然猎物. Hawks hunt for their natural prey. 鹰捕猎它们的天然猎物。"
+    },
+    {
+      "question": "convey _ _______",
+      "type": "blank",
+      "answer": "a message",
+      "explanation": "传达; 运送, 传达信息. The letter will convey a message to the recipient. 这封信将向收件人传达信息。"
+    },
+    {
+      "question": "purvey ________",
+      "type": "blank",
+      "answer": "supplies",
+      "explanation": "供应; 提供, 供应物资. The company will purvey supplies to the military. 该公司将向军方供应物资。"
+    },
+    {
+      "question": "____ putrefy",
+      "type": "blank",
+      "answer": "meat",
+      "explanation": "腐烂; 使腐败, 肉腐烂. Without refrigeration, meat putrefy quickly. 没有冷藏,肉很快就会腐烂。"
+    },
+    {
+      "question": "liquefy ______",
+      "type": "blank",
+      "answer": "butter",
+      "explanation": "液化; 使液化, 液化黄油. Heat will liquefy butter in the pan. 加热会使平底锅中的黄油液化。"
+    },
+    {
+      "question": "fluffy ______",
+      "type": "blank",
+      "answer": "pillow",
+      "explanation": "蓬松的; 柔软的, 蓬松的枕头. The bed has a fluffy pillow for comfort. 床上有一个蓬松的枕头以增加舒适度。"
+    },
+    {
+      "question": "stuffy ____",
+      "type": "blank",
+      "answer": "room",
+      "explanation": "闷热的; 古板的, 闷热的房间. Open the window in this stuffy room. 在这个闷热的房间里打开窗户。"
+    },
+    {
+      "question": "pacify ___ _____",
+      "type": "blank",
+      "answer": "the crowd",
+      "explanation": "安抚; 平息, 安抚人群. Police tried to pacify the crowd. 警察试图安抚人群。"
+    },
+    {
+      "question": "edify ___ _____",
+      "type": "blank",
+      "answer": "the young",
+      "explanation": "启发; 教诲, 教诲年轻人. The sermon will edify the young congregation. 布道将教诲年轻的会众。"
+    },
+    {
+      "question": "solidify _______",
+      "type": "blank",
+      "answer": "support",
+      "explanation": "巩固; 凝固, 巩固支持. The victory will solidify support for the leader. 胜利将巩固对领导者的支持。"
+    },
+    {
+      "question": "codify ____",
+      "type": "blank",
+      "answer": "laws",
+      "explanation": "编纂; 整理, 编纂法律. Nations codify laws into legal codes. 国家将法律编纂成法典。"
+    },
+    {
+      "question": "deify _ ______",
+      "type": "blank",
+      "answer": "a leader",
+      "explanation": "神化; 奉为神明, 神化领导者. Ancient Romans would deify a leader after death. 古罗马人会在领导者死后将其神化。"
+    },
+    {
+      "question": "vilify __________",
+      "type": "blank",
+      "answer": "reputation",
+      "explanation": "诽谤; 中伤, 诽谤名誉. Opponents tried to vilify reputation unfairly. 反对者试图不公平地诽谤名誉。"
+    },
+    {
+      "question": "nullify _ ________",
+      "type": "blank",
+      "answer": "a contract",
+      "explanation": "废除; 使无效, 废除合同. The court will nullify a contract due to fraud. 法院将因欺诈而废除合同。"
+    },
+    {
+      "question": "amplify _____",
+      "type": "blank",
+      "answer": "sound",
+      "explanation": "放大; 扩大, 放大声音. Speakers amplify sound at the concert. 扬声器在音乐会上放大声音。"
+    },
+    {
+      "question": "exemplify ___ ____",
+      "type": "blank",
+      "answer": "the rule",
+      "explanation": "举例说明; 例证, 例证规则. This case will exemplify the rule clearly. 这个案例将清楚地例证规则。"
+    },
+    {
+      "question": "ramify ________",
+      "type": "blank",
+      "answer": "branches",
+      "explanation": "分支; 分枝, 分支. The consequences will ramify branches throughout society. 后果将在整个社会分支。"
+    },
+    {
+      "question": "magnify _______",
+      "type": "blank",
+      "answer": "results",
+      "explanation": "放大; 夸大, 放大结果. The microscope will magnify results for viewing. 显微镜将放大结果以供观看。"
+    },
+    {
+      "question": "signify ______",
+      "type": "blank",
+      "answer": "intent",
+      "explanation": "表示; 意味, 表示意图. His actions signify intent to cooperate. 他的行动表示合作的意图。"
+    },
+    {
+      "question": "indemnify ______",
+      "type": "blank",
+      "answer": "losses",
+      "explanation": "赔偿; 保障, 赔偿损失. Insurance will indemnify losses from the accident. 保险将赔偿事故造成的损失。"
+    },
+    {
+      "question": "clarify _____",
+      "type": "blank",
+      "answer": "point",
+      "explanation": "澄清; 阐明, 澄清要点. Let me clarify point I made earlier. 让我澄清我之前提出的要点。"
+    },
+    {
+      "question": "verify _ _____",
+      "type": "blank",
+      "answer": "a claim",
+      "explanation": "核实; 证实, 核实声明. Fact-checkers verify a claim before publication. 事实核查员在发布前核实声明。"
+    },
+    {
+      "question": "glorify ________",
+      "type": "blank",
+      "answer": "violence",
+      "explanation": "美化; 颂扬, 美化暴力. Movies shouldn't glorify violence unnecessarily. 电影不应该不必要地美化暴力。"
+    },
+    {
+      "question": "vitrify ____",
+      "type": "blank",
+      "answer": "clay",
+      "explanation": "使玻璃化, 使粘土玻璃化. High heat will vitrify clay into pottery. 高温会使粘土玻璃化成陶器。"
+    },
+    {
+      "question": "purify _____",
+      "type": "blank",
+      "answer": "water",
+      "explanation": "净化; 提纯, 净化水. Filters purify water for drinking. 过滤器净化饮用水。"
+    },
+    {
+      "question": "falsify _______",
+      "type": "blank",
+      "answer": "records",
+      "explanation": "伪造; 篡改, 伪造记录. It's illegal to falsify records. 伪造记录是非法的。"
+    },
+    {
+      "question": "emulsify _____",
+      "type": "blank",
+      "answer": "sauce",
+      "explanation": "使乳化, 使酱汁乳化. Whisking will emulsify sauce ingredients. 搅拌会使酱汁成分乳化。"
+    },
+    {
+      "question": "intensify _______",
+      "type": "blank",
+      "answer": "efforts",
+      "explanation": "加强; 强化, 加强努力. We must intensify efforts to meet the deadline. 我们必须加强努力以按时完成。"
+    },
+    {
+      "question": "classify ____",
+      "type": "blank",
+      "answer": "data",
+      "explanation": "分类; 归类, 分类数据. Scientists classify data into categories. 科学家将数据分类。"
+    },
+    {
+      "question": "ossify ____ _______",
+      "type": "blank",
+      "answer": "into routine",
+      "explanation": "骨化; 僵化, 僵化成常规. Procedures can ossify into routine over time. 程序随着时间推移会僵化成常规。"
+    },
+    {
+      "question": "ratify _ ______",
+      "type": "blank",
+      "answer": "a treaty",
+      "explanation": "批准; 认可, 批准条约. Congress must ratify a treaty before it takes effect. 国会必须批准条约才能生效。"
+    },
+    {
+      "question": "stratify _______",
+      "type": "blank",
+      "answer": "society",
+      "explanation": "分层; 使分层, 使社会分层. Economic inequality will stratify society. 经济不平等会使社会分层。"
+    },
+    {
+      "question": "rectify _____",
+      "type": "blank",
+      "answer": "error",
+      "explanation": "纠正; 改正, 纠正错误. The company will rectify error immediately. 公司将立即纠正错误。"
+    },
+    {
+      "question": "sanctify ___ _____",
+      "type": "blank",
+      "answer": "the union",
+      "explanation": "使神圣; 批准, 使结合神圣. The ceremony will sanctify the union. 仪式将使结合神圣。"
+    },
+    {
+      "question": "fructify _____",
+      "type": "blank",
+      "answer": "plans",
+      "explanation": "使结果实; 使成功, 使计划成功. Hard work will fructify plans eventually. 努力工作最终会使计划成功。"
+    },
+    {
+      "question": "stultify ______",
+      "type": "blank",
+      "answer": "growth",
+      "explanation": "使显得愚蠢; 阻碍, 阻碍增长. Excessive regulation can stultify growth. 过度监管会阻碍增长。"
+    },
+    {
+      "question": "fortify ________",
+      "type": "blank",
+      "answer": "defenses",
+      "explanation": "加强; 巩固, 加强防御. The army will fortify defenses along the border. 军队将加强边境防御。"
+    },
+    {
+      "question": "mortify _____",
+      "type": "blank",
+      "answer": "pride",
+      "explanation": "使蒙羞; 使屈辱, 使骄傲蒙羞. The defeat will mortify pride of the team. 失败会使球队的骄傲蒙羞。"
+    },
+    {
+      "question": "testify _____ ____",
+      "type": "blank",
+      "answer": "under oath",
+      "explanation": "作证; 证明, 宣誓作证. Witnesses must testify under oath in court. 证人必须在法庭上宣誓作证。"
+    },
+    {
+      "question": "stagy ______",
+      "type": "blank",
+      "answer": "acting",
+      "explanation": "做作的; 夸张的, 做作的表演. The stagy acting ruined the dramatic scene. 做作的表演破坏了戏剧场景。"
+    },
+    {
+      "question": "stodgy ____",
+      "type": "blank",
+      "answer": "food",
+      "explanation": "油腻的; 古板的, 油腻的食物. The restaurant serves heavy, stodgy food. 餐厅提供厚重油腻的食物。"
+    },
+    {
+      "question": "_______ elegy",
+      "type": "blank",
+      "answer": "funeral",
+      "explanation": "挽歌; 哀歌, 葬礼挽歌. The poet wrote a moving funeral elegy. 诗人写了一首感人的葬礼挽歌。"
+    },
+    {
+      "question": "flaggy ________",
+      "type": "blank",
+      "answer": "sediment",
+      "explanation": "板状的; 松弛的, 板状沉积物. The geologist studied flaggy sediment layers. 地质学家研究板状沉积物层。"
+    },
+    {
+      "question": "____ buggy",
+      "type": "blank",
+      "answer": "baby",
+      "explanation": "婴儿车; 小车, 婴儿车. She pushed the baby buggy through the park. 她推着婴儿车穿过公园。"
+    },
+    {
+      "question": "_____ prodigy",
+      "type": "blank",
+      "answer": "child",
+      "explanation": "神童; 奇才, 神童. Mozart was a musical child prodigy. 莫扎特是音乐神童。"
+    },
+    {
+      "question": "effigy _______",
+      "type": "blank",
+      "answer": "burning",
+      "explanation": "肖像; 雕像, 焚烧肖像. Protesters engaged in effigy burning. 抗议者进行焚烧肖像。"
+    },
+    {
+      "question": "mangy ___",
+      "type": "blank",
+      "answer": "dog",
+      "explanation": "生疥癣的; 肮脏的, 生疥癣的狗. A mangy dog wandered the streets. 一只生疥癣的狗在街上游荡。"
+    },
+    {
+      "question": "stingy ______",
+      "type": "blank",
+      "answer": "person",
+      "explanation": "吝啬的; 小气的, 吝啬的人. The stingy person never tipped servers. 吝啬的人从不给服务员小费。"
+    },
+    {
+      "question": "spongy ______",
+      "type": "blank",
+      "answer": "tissue",
+      "explanation": "海绵状的; 柔软的, 海绵状组织. The spongy tissue absorbs moisture. 海绵状组织吸收水分。"
+    },
+    {
+      "question": "______ pedagogy",
+      "type": "blank",
+      "answer": "modern",
+      "explanation": "教育学; 教学法, 现代教育学. Modern pedagogy emphasizes active learning. 现代教育学强调主动学习。"
+    },
+    {
+      "question": "_____ genealogy",
+      "type": "blank",
+      "answer": "trace",
+      "explanation": "家谱学; 宗谱, 追溯家谱. Many people trace genealogy online now. 现在许多人在网上追溯家谱。"
+    },
+    {
+      "question": "____ __ analogy",
+      "type": "blank",
+      "answer": "draw an",
+      "explanation": "类比; 相似, 做类比. Teachers draw an analogy to explain concepts. 教师做类比来解释概念。"
+    },
+    {
+      "question": "_____ pharmacology",
+      "type": "blank",
+      "answer": "study",
+      "explanation": "药理学, 研究药理学. Medical students study pharmacology extensively. 医学生广泛研究药理学。"
+    },
+    {
+      "question": "_____ archaeology",
+      "type": "blank",
+      "answer": "study",
+      "explanation": "考古学, 研究考古学. She decided to study archaeology in college. 她决定在大学研究考古学。"
+    },
+    {
+      "question": "speleology ____",
+      "type": "blank",
+      "answer": "club",
+      "explanation": "洞穴学, 洞穴学俱乐部. The speleology club explores underground caves. 洞穴学俱乐部探索地下洞穴。"
+    },
+    {
+      "question": "______ psychology",
+      "type": "blank",
+      "answer": "social",
+      "explanation": "心理学, 社会心理学. Social psychology examines group behavior. 社会心理学研究群体行为。"
+    },
+    {
+      "question": "________ pathology",
+      "type": "blank",
+      "answer": "clinical",
+      "explanation": "病理学, 临床病理学. Clinical pathology diagnoses diseases through lab tests. 临床病理学通过实验室检查诊断疾病。"
+    },
+    {
+      "question": "_____ ornithology",
+      "type": "blank",
+      "answer": "study",
+      "explanation": "鸟类学, 研究鸟类学. Birdwatchers often study ornithology. 观鸟者经常研究鸟类学。"
+    },
+    {
+      "question": "______ anthology",
+      "type": "blank",
+      "answer": "poetry",
+      "explanation": "选集; 文选, 诗歌选集. The poetry anthology contains classic works. 诗歌选集包含经典作品。"
+    },
+    {
+      "question": "___________ philology",
+      "type": "blank",
+      "answer": "comparative",
+      "explanation": "语言学; 文献学, 比较语言学. Comparative philology studies language relationships. 比较语言学研究语言关系。"
+    },
+    {
+      "question": "_____ etymology",
+      "type": "blank",
+      "answer": "study",
+      "explanation": "词源学, 研究词源学. Linguists study etymology to trace word origins. 语言学家研究词源学来追溯词源。"
+    },
+    {
+      "question": "_____ ethnology",
+      "type": "blank",
+      "answer": "study",
+      "explanation": "民族学, 研究民族学. Anthropologists study ethnology of indigenous peoples. 人类学家研究土著民族的民族学。"
+    },
+    {
+      "question": "_____ terminology",
+      "type": "blank",
+      "answer": "legal",
+      "explanation": "术语; 专门用语, 法律术语. Legal terminology can be confusing. 法律术语可能令人困惑。"
+    },
+    {
+      "question": "_______ numerology",
+      "type": "blank",
+      "answer": "Chinese",
+      "explanation": "数字命理学, 中国数字命理学. Chinese numerology assigns meanings to numbers. 中国数字命理学赋予数字意义。"
+    },
+    {
+      "question": "_____ meteorology",
+      "type": "blank",
+      "answer": "study",
+      "explanation": "气象学, 研究气象学. Weather forecasters study meteorology. 天气预报员研究气象学。"
+    },
+    {
+      "question": "_____ horology",
+      "type": "blank",
+      "answer": "study",
+      "explanation": "钟表学, 研究钟表学. Watchmakers study horology to master their craft. 制表师研究钟表学以掌握技艺。"
+    },
+    {
+      "question": "_______ petrology",
+      "type": "blank",
+      "answer": "igneous",
+      "explanation": "岩石学, 火成岩石学. Igneous petrology studies volcanic rocks. 火成岩石学研究火山岩。"
+    },
+    {
+      "question": "___ astrology",
+      "type": "blank",
+      "answer": "pop",
+      "explanation": "占星术, 流行占星术. Pop astrology appears in many magazines. 流行占星术出现在许多杂志中。"
+    },
+    {
+      "question": "________ neurology",
+      "type": "blank",
+      "answer": "clinical",
+      "explanation": "神经学, 临床神经学. Clinical neurology treats nervous system disorders. 临床神经学治疗神经系统疾病。"
+    },
+    {
+      "question": "_____ paleontology",
+      "type": "blank",
+      "answer": "study",
+      "explanation": "古生物学, 研究古生物学. Scientists study paleontology to learn about dinosaurs. 科学家研究古生物学以了解恐龙。"
+    },
+    {
+      "question": "_____ gerontology",
+      "type": "blank",
+      "answer": "study",
+      "explanation": "老年学, 研究老年学. Doctors study gerontology to treat aging patients. 医生研究老年学以治疗老年患者。"
+    },
+    {
+      "question": "_____ histology",
+      "type": "blank",
+      "answer": "study",
+      "explanation": "组织学, 研究组织学. Medical students study histology under microscopes. 医学生在显微镜下研究组织学。"
+    },
+    {
+      "question": "____ cytology",
+      "type": "blank",
+      "answer": "cell",
+      "explanation": "细胞学, 细胞细胞学. Cell cytology examines cellular structure. 细胞细胞学检查细胞结构。"
+    },
+    {
+      "question": "_______ _ eulogy",
+      "type": "blank",
+      "answer": "deliver a",
+      "explanation": "悼词; 颂词, 致悼词. The son will deliver a eulogy at the funeral. 儿子将在葬礼上致悼词。"
+    },
+    {
+      "question": "______ allergy",
+      "type": "blank",
+      "answer": "peanut",
+      "explanation": "过敏, 花生过敏. She has a severe peanut allergy. 她有严重的花生过敏。"
+    },
+    {
+      "question": "_____ metallurgy",
+      "type": "blank",
+      "answer": "study",
+      "explanation": "冶金学, 研究冶金学. Engineers study metallurgy to understand metals. 工程师研究冶金学以了解金属。"
+    },
+    {
+      "question": "______ oligarchy",
+      "type": "blank",
+      "answer": "ruling",
+      "explanation": "寡头政治, 统治寡头. The ruling oligarchy controlled all wealth. 统治寡头控制了所有财富。"
+    },
+    {
+      "question": "matriarchy _______",
+      "type": "blank",
+      "answer": "society",
+      "explanation": "母系社会, 母系社会. The matriarchy society was led by women. 母系社会由女性领导。"
+    },
+    {
+      "question": "_____ anarchy",
+      "type": "blank",
+      "answer": "total",
+      "explanation": "无政府状态, 完全无政府状态. The revolution led to total anarchy. 革命导致完全无政府状态。"
+    },
+    {
+      "question": "________ monarchy",
+      "type": "blank",
+      "answer": "absolute",
+      "explanation": "君主制, 绝对君主制. France had an absolute monarchy before the revolution. 法国在革命前有绝对君主制。"
+    },
+    {
+      "question": "starchy ____",
+      "type": "blank",
+      "answer": "food",
+      "explanation": "含淀粉的, 含淀粉的食物. Potatoes are starchy food high in carbohydrates. 土豆是碳水化合物含量高的含淀粉食物。"
+    },
+    {
+      "question": "sketchy ____",
+      "type": "blank",
+      "answer": "plan",
+      "explanation": "粗略的; 可疑的, 粗略的计划. The sketchy plan lacked important details. 粗略的计划缺少重要细节。"
+    },
+    {
+      "question": "touchy _______",
+      "type": "blank",
+      "answer": "subject",
+      "explanation": "敏感的; 易怒的, 敏感的话题. Politics is a touchy subject at family dinners. 政治在家庭晚餐上是敏感的话题。"
+    },
+    {
+      "question": "_______ calligraphy",
+      "type": "blank",
+      "answer": "Chinese",
+      "explanation": "书法, 中国书法. Chinese calligraphy is an ancient art form. 中国书法是一种古老的艺术形式。"
+    },
+    {
+      "question": "______ discography",
+      "type": "blank",
+      "answer": "artist",
+      "explanation": "唱片目录, 艺术家唱片目录. The artist discography lists all recordings. 艺术家唱片目录列出所有录音。"
+    },
+    {
+      "question": "______ choreography",
+      "type": "blank",
+      "answer": "ballet",
+      "explanation": "编舞; 舞蹈设计, 芭蕾编舞. The ballet choreography was innovative and beautiful. 芭蕾编舞创新且美丽。"
+    },
+    {
+      "question": "_________ autobiography",
+      "type": "blank",
+      "answer": "celebrity",
+      "explanation": "自传, 名人自传. The celebrity autobiography became a bestseller. 名人自传成为畅销书。"
+    },
+    {
+      "question": "_________ bibliography",
+      "type": "blank",
+      "answer": "annotated",
+      "explanation": "参考书目, 注释参考书目. The annotated bibliography explains each source. 注释参考书目解释每个来源。"
+    },
+    {
+      "question": "_____ demography",
+      "type": "blank",
+      "answer": "study",
+      "explanation": "人口统计学, 研究人口统计学. Sociologists study demography to understand populations. 社会学家研究人口统计学以了解人口。"
+    },
+    {
+      "question": "______ atrophy",
+      "type": "blank",
+      "answer": "muscle",
+      "explanation": "萎缩; 衰退, 肌肉萎缩. Inactivity causes muscle atrophy. 不活动会导致肌肉萎缩。"
+    },
+    {
+      "question": "splashy _________",
+      "type": "blank",
+      "answer": "headlines",
+      "explanation": "引人注目的; 华而不实的, 引人注目的标题. The tabloid used splashy headlines to sell papers. 小报用引人注目的标题来卖报纸。"
+    },
+    {
+      "question": "______ antipathy",
+      "type": "blank",
+      "answer": "strong",
+      "explanation": "反感; 厌恶, 强烈的反感. He felt strong antipathy toward his rival. 他对对手感到强烈的反感。"
+    },
+    {
+      "question": "frothy ______",
+      "type": "blank",
+      "answer": "coffee",
+      "explanation": "起泡的; 轻浮的, 起泡的咖啡. The cappuccino has frothy coffee foam on top. 卡布奇诺上面有起泡的咖啡泡沫。"
+    },
+    {
+      "question": "earthy _____",
+      "type": "blank",
+      "answer": "humor",
+      "explanation": "朴实的; 粗俗的, 朴实的幽默. The comedian's earthy humor appealed to many. 喜剧演员朴实的幽默吸引了许多人。"
+    },
+    {
+      "question": "finicky _____",
+      "type": "blank",
+      "answer": "eater",
+      "explanation": "挑剔的; 过分讲究的, 挑剔的食客. The finicky eater refused most foods. 挑剔的食客拒绝大多数食物。"
+    },
+    {
+      "question": "stocky _____",
+      "type": "blank",
+      "answer": "build",
+      "explanation": "矮壮的; 结实的, 结实的体格. The wrestler had a stocky build. 摔跤手有结实的体格。"
+    },
+    {
+      "question": "balky ______",
+      "type": "blank",
+      "answer": "engine",
+      "explanation": "不听使唤的; 倔强的, 不听使唤的引擎. The balky engine refused to start. 不听使唤的引擎拒绝启动。"
+    },
+    {
+      "question": "perky ________",
+      "type": "blank",
+      "answer": "attitude",
+      "explanation": "活泼的; 神气的, 活泼的态度. She maintained a perky attitude despite setbacks. 尽管遭受挫折,她仍保持活泼的态度。"
+    },
+    {
+      "question": "pesky _______",
+      "type": "blank",
+      "answer": "problem",
+      "explanation": "讨厌的; 麻烦的, 讨厌的问题. The pesky problem kept recurring. 讨厌的问题不断重现。"
+    }
+  ]
+}
