@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "culinary ____",
+      "type": "blank",
+      "answer": "arts",
+      "explanation": "烹饪的, 烹饪艺术. He studied culinary arts at a prestigious school. 他在一所著名学校学习烹饪艺术。"
+    },
+    {
+      "question": "_________ seminary",
+      "type": "blank",
+      "answer": "religious",
+      "explanation": "神学院; 学院, 宗教神学院. He attended a religious seminary to become a priest. 他参加了宗教神学院成为牧师。"
+    },
+    {
+      "question": "preliminary _____",
+      "type": "blank",
+      "answer": "round",
+      "explanation": "初步的; 预备的, 预赛. The team advanced past the preliminary round. 球队通过了预赛。"
+    },
+    {
+      "question": "________ luminary",
+      "type": "blank",
+      "answer": "industry",
+      "explanation": "杰出人物; 名人, 行业名人. An industry luminary gave the keynote speech. 一位行业名人发表了主题演讲。"
+    },
+    {
+      "question": "veterinary ______",
+      "type": "blank",
+      "answer": "clinic",
+      "explanation": "兽医的, 兽医诊所. Take your pet to the veterinary clinic. 把你的宠物带到兽医诊所。"
+    },
+    {
+      "question": "visionary ______",
+      "type": "blank",
+      "answer": "leader",
+      "explanation": "有远见的; 空想家, 有远见的领导者. The visionary leader transformed the company. 有远见的领导者改变了公司。"
+    },
+    {
+      "question": "stationary ____",
+      "type": "blank",
+      "answer": "bike",
+      "explanation": "静止的; 固定的, 固定自行车. She exercises on a stationary bike. 她在固定自行车上锻炼。"
+    },
+    {
+      "question": "reactionary ______",
+      "type": "blank",
+      "answer": "forces",
+      "explanation": "反动的; 保守的, 反动势力. Reactionary forces opposed the reforms. 反动势力反对改革。"
+    },
+    {
+      "question": "_____ functionary",
+      "type": "blank",
+      "answer": "party",
+      "explanation": "公务员; 官员, 党务官员. The party functionary attended all meetings. 党务官员参加了所有会议。"
+    },
+    {
+      "question": "discretionary ________",
+      "type": "blank",
+      "answer": "spending",
+      "explanation": "自由支配的; 任意的, 可自由支配的开支. The budget includes discretionary spending. 预算包括可自由支配的开支。"
+    },
+    {
+      "question": "cautionary ____",
+      "type": "blank",
+      "answer": "tale",
+      "explanation": "警告的; 告诫的, 警世故事. The movie serves as a cautionary tale. 这部电影是一个警世故事。"
+    },
+    {
+      "question": "hoary ______",
+      "type": "blank",
+      "answer": "legend",
+      "explanation": "灰白的; 古老的, 古老的传说. The hoary legend has been told for centuries. 古老的传说已流传了几个世纪。"
+    },
+    {
+      "question": "______ itinerary",
+      "type": "blank",
+      "answer": "travel",
+      "explanation": "旅行计划; 路线, 旅行行程. The travel itinerary includes five countries. 旅行行程包括五个国家。"
+    },
+    {
+      "question": "______ emissary",
+      "type": "blank",
+      "answer": "secret",
+      "explanation": "使者; 密使, 秘密使者. A secret emissary delivered the message. 一位秘密使者传递了信息。"
+    },
+    {
+      "question": "glossary _____",
+      "type": "blank",
+      "answer": "terms",
+      "explanation": "术语表; 词汇表, 术语表术语. The glossary terms are defined at the back. 术语表术语在后面定义。"
+    },
+    {
+      "question": "proprietary ________",
+      "type": "blank",
+      "answer": "software",
+      "explanation": "专有的; 私有的, 专有软件. The company uses proprietary software. 公司使用专有软件。"
+    },
+    {
+      "question": "monetary ______",
+      "type": "blank",
+      "answer": "policy",
+      "explanation": "货币的; 金融的, 货币政策. The central bank sets monetary policy. 中央银行制定货币政策。"
+    },
+    {
+      "question": "hereditary _______",
+      "type": "blank",
+      "answer": "disease",
+      "explanation": "遗传的; 世袭的, 遗传性疾病. Hemophilia is a hereditary disease. 血友病是遗传性疾病。"
+    },
+    {
+      "question": "solitary ___________",
+      "type": "blank",
+      "answer": "confinement",
+      "explanation": "单独的; 孤独的, 单独监禁. The prisoner was placed in solitary confinement. 囚犯被单独监禁。"
+    },
+    {
+      "question": "sanitary __________",
+      "type": "blank",
+      "answer": "conditions",
+      "explanation": "卫生的; 清洁的, 卫生条件. The restaurant maintains sanitary conditions. 餐厅保持卫生条件。"
+    },
+    {
+      "question": "________ dignitary",
+      "type": "blank",
+      "answer": "visiting",
+      "explanation": "显要人物; 高官, 来访显要. The visiting dignitary received a warm welcome. 来访显要受到热烈欢迎。"
+    },
+    {
+      "question": "complementary ______",
+      "type": "blank",
+      "answer": "colors",
+      "explanation": "互补的; 补充的, 互补色. Red and green are complementary colors. 红色和绿色是互补色。"
+    },
+    {
+      "question": "rudimentary ______",
+      "type": "blank",
+      "answer": "skills",
+      "explanation": "基本的; 初步的, 基本技能. He has only rudimentary skills in cooking. 他只有烹饪的基本技能。"
+    },
+    {
+      "question": "alimentary _____",
+      "type": "blank",
+      "answer": "canal",
+      "explanation": "营养的; 消化的, 消化道. The alimentary canal processes food. 消化道处理食物。"
+    },
+    {
+      "question": "______ commentary",
+      "type": "blank",
+      "answer": "sports",
+      "explanation": "评论; 注释, 体育评论. The sports commentary was entertaining. 体育评论很有趣。"
+    },
+    {
+      "question": "involuntary ______",
+      "type": "blank",
+      "answer": "twitch",
+      "explanation": "非自愿的; 无意识的, 非自愿抽搐. He had an involuntary twitch in his eye. 他的眼睛有非自愿抽搐。"
+    },
+    {
+      "question": "votary __ ___",
+      "type": "blank",
+      "answer": "of art",
+      "explanation": "信徒; 热心者, 艺术热心者. She is a devoted votary of art. 她是艺术的忠实热心者。"
+    },
+    {
+      "question": "_____ tributary",
+      "type": "blank",
+      "answer": "river",
+      "explanation": "支流; 进贡国, 河流支流. The river tributary flows into the main stream. 河流支流流入主河道。"
+    },
+    {
+      "question": "salutary ______",
+      "type": "blank",
+      "answer": "lesson",
+      "explanation": "有益的; 有用的, 有益的教训. The failure taught a salutary lesson. 失败教会了有益的教训。"
+    },
+    {
+      "question": "______ statuary",
+      "type": "blank",
+      "answer": "marble",
+      "explanation": "雕像; 雕塑, 大理石雕像. The garden features marble statuary. 花园以大理石雕像为特色。"
+    },
+    {
+      "question": "obituary ______",
+      "type": "blank",
+      "answer": "notice",
+      "explanation": "讣告, 讣告通知. The obituary notice appeared in the newspaper. 讣告通知出现在报纸上。"
+    },
+    {
+      "question": "mortuary _______",
+      "type": "blank",
+      "answer": "science",
+      "explanation": "太平间; 殡仪的, 殡葬科学. He studied mortuary science in college. 他在大学学习殡葬科学。"
+    },
+    {
+      "question": "_____ estuary",
+      "type": "blank",
+      "answer": "river",
+      "explanation": "河口; 三角江, 河口. The river estuary meets the ocean. 河口与海洋汇合。"
+    },
+    {
+      "question": "decry __________",
+      "type": "blank",
+      "answer": "corruption",
+      "explanation": "谴责; 公开反对, 谴责腐败. Politicians decry corruption publicly. 政客公开谴责腐败。"
+    },
+    {
+      "question": "descry _ ____",
+      "type": "blank",
+      "answer": "a sail",
+      "explanation": "看见; 发现, 看见船帆. The lookout could descry a sail on the horizon. 瞭望员能看见地平线上的船帆。"
+    },
+    {
+      "question": "______ husbandry",
+      "type": "blank",
+      "answer": "modern",
+      "explanation": "畜牧业; 农业, 现代畜牧业. Modern husbandry uses advanced technology. 现代畜牧业使用先进技术。"
+    },
+    {
+      "question": "polyandry ________",
+      "type": "blank",
+      "answer": "marriage",
+      "explanation": "一妻多夫制, 一妻多夫制婚姻. Polyandry marriage is rare in most cultures. 一妻多夫制婚姻在大多数文化中很罕见。"
+    },
+    {
+      "question": "sundry _____",
+      "type": "blank",
+      "answer": "items",
+      "explanation": "各种各样的; 杂项的, 杂项. The store sells sundry items. 商店出售杂项。"
+    },
+    {
+      "question": "____ wizardry",
+      "type": "blank",
+      "answer": "high",
+      "explanation": "魔法; 巫术, 高级魔法. The movie features high wizardry effects. 电影以高级魔法效果为特色。"
+    },
+    {
+      "question": "tawdry _______",
+      "type": "blank",
+      "answer": "jewelry",
+      "explanation": "俗丽的; 廉价而花哨的, 俗丽的珠宝. She wore tawdry jewelry that looked fake. 她戴着看起来假的俗丽珠宝。"
+    },
+    {
+      "question": "_____ sorcery",
+      "type": "blank",
+      "answer": "black",
+      "explanation": "巫术; 魔法, 黑魔法. The villain practiced black sorcery. 恶棍修炼黑魔法。"
+    },
+    {
+      "question": "leery __ _________",
+      "type": "blank",
+      "answer": "of strangers",
+      "explanation": "警惕的; 猜疑的, 警惕陌生人. Parents teach children to be leery of strangers. 父母教孩子警惕陌生人。"
+    },
+    {
+      "question": "peery ____",
+      "type": "blank",
+      "answer": "eyes",
+      "explanation": "窥视的; 好奇的, 窥视的眼睛. The detective had sharp peery eyes. 侦探有敏锐的窥视眼睛。"
+    },
+    {
+      "question": "___________ puffery",
+      "type": "blank",
+      "answer": "advertising",
+      "explanation": "吹捧; 夸大宣传, 广告吹捧. The advertising puffery was clearly exaggerated. 广告吹捧明显夸张。"
+    },
+    {
+      "question": "______ drudgery",
+      "type": "blank",
+      "answer": "office",
+      "explanation": "苦工; 单调乏味的工作, 办公室苦工. He hated the office drudgery of paperwork. 他讨厌文书工作的办公室苦工。"
+    },
+    {
+      "question": "_________ skullduggery",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "欺诈; 诡计, 政治诡计. The scandal revealed political skullduggery. 丑闻揭露了政治诡计。"
+    },
+    {
+      "question": "forgery ______",
+      "type": "blank",
+      "answer": "charge",
+      "explanation": "伪造; 伪造罪, 伪造罪. He was arrested on a forgery charge. 他因伪造罪被捕。"
+    },
+    {
+      "question": "____ periphery",
+      "type": "blank",
+      "answer": "city",
+      "explanation": "外围; 边缘, 城市外围. They live on the city periphery. 他们住在城市外围。"
+    },
+    {
+      "question": "________ fishery",
+      "type": "blank",
+      "answer": "offshore",
+      "explanation": "渔场; 渔业, 近海渔场. The offshore fishery provides jobs. 近海渔场提供就业机会。"
+    },
+    {
+      "question": "_________ trickery",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "欺骗; 诡计, 政治诡计. Voters are tired of political trickery. 选民厌倦了政治诡计。"
+    },
+    {
+      "question": "_____ crockery",
+      "type": "blank",
+      "answer": "china",
+      "explanation": "陶器; 瓦器, 中国陶器. The china crockery was beautifully painted. 中国陶器绘制精美。"
+    },
+    {
+      "question": "____-_______ raillery",
+      "type": "blank",
+      "answer": "good-natured",
+      "explanation": "善意的嘲弄; 打趣, 善意的打趣. Friends engaged in good-natured raillery. 朋友们进行善意的打趣。"
+    },
+    {
+      "question": "_____ artillery",
+      "type": "blank",
+      "answer": "heavy",
+      "explanation": "火炮; 炮兵, 重炮. The army deployed heavy artillery. 军队部署了重炮。"
+    },
+    {
+      "question": "___ drollery",
+      "type": "blank",
+      "answer": "dry",
+      "explanation": "滑稽; 诙谐, 冷幽默. His dry drollery amused the audience. 他的冷幽默逗乐了观众。"
+    },
+    {
+      "question": "______ cutlery",
+      "type": "blank",
+      "answer": "silver",
+      "explanation": "餐具, 银餐具. The table was set with silver cutlery. 桌子上摆着银餐具。"
+    },
+    {
+      "question": "_________ chicanery",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "欺骗; 诡辩, 政治欺骗. The investigation uncovered political chicanery. 调查揭露了政治欺骗。"
+    },
+    {
+      "question": "_______ finery",
+      "type": "blank",
+      "answer": "wedding",
+      "explanation": "华丽服饰; 装饰, 婚礼盛装. The bride wore beautiful wedding finery. 新娘穿着美丽的婚礼盛装。"
+    },
+    {
+      "question": "___ refinery",
+      "type": "blank",
+      "answer": "oil",
+      "explanation": "精炼厂, 炼油厂. The oil refinery processes crude oil. 炼油厂加工原油。"
+    },
+    {
+      "question": "_________ trumpery",
+      "type": "blank",
+      "answer": "worthless",
+      "explanation": "华而不实的东西; 废物, 毫无价值的华而不实之物. The shop sold worthless trumpery. 商店出售毫无价值的华而不实之物。"
+    },
+    {
+      "question": "slippery _____",
+      "type": "blank",
+      "answer": "slope",
+      "explanation": "滑的; 狡猾的, 滑坡. This is a slippery slope argument. 这是一个滑坡论证。"
+    },
+    {
+      "question": "____ cemetery",
+      "type": "blank",
+      "answer": "city",
+      "explanation": "墓地; 公墓, 城市公墓. The city cemetery is well maintained. 城市公墓维护良好。"
+    },
+    {
+      "question": "______ effrontery",
+      "type": "blank",
+      "answer": "brazen",
+      "explanation": "厚颜无耻, 厚颜无耻. His brazen effrontery shocked everyone. 他厚颜无耻震惊了所有人。"
+    },
+    {
+      "question": "________ artery",
+      "type": "blank",
+      "answer": "coronary",
+      "explanation": "动脉, 冠状动脉. Blockage in the coronary artery is dangerous. 冠状动脉堵塞很危险。"
+    },
+    {
+      "question": "________ monastery",
+      "type": "blank",
+      "answer": "Buddhist",
+      "explanation": "修道院, 佛教寺院. The Buddhist monastery sits atop the mountain. 佛教寺院坐落在山顶。"
+    },
+    {
+      "question": "________ lottery",
+      "type": "blank",
+      "answer": "national",
+      "explanation": "彩票; 抽签, 国家彩票. She bought a national lottery ticket. 她买了一张国家彩票。"
+    },
+    {
+      "question": "________ pottery",
+      "type": "blank",
+      "answer": "handmade",
+      "explanation": "陶器; 陶艺, 手工陶器. The shop sells handmade pottery. 商店出售手工陶器。"
+    },
+    {
+      "question": "_____ query",
+      "type": "blank",
+      "answer": "field",
+      "explanation": "疑问; 询问, 现场询问. The journalist made a field query. 记者进行了现场询问。"
+    },
+    {
+      "question": "______ __ inquiry",
+      "type": "blank",
+      "answer": "launch an",
+      "explanation": "调查; 询问, 发起调查. Officials will launch an inquiry into the matter. 官员将对此事发起调查。"
+    },
+    {
+      "question": "cavalry ______",
+      "type": "blank",
+      "answer": "charge",
+      "explanation": "骑兵, 骑兵冲锋. The cavalry charge was decisive. 骑兵冲锋是决定性的。"
+    },
+    {
+      "question": "______ rivalry",
+      "type": "blank",
+      "answer": "market",
+      "explanation": "竞争; 对抗, 市场竞争. Market rivalry drives innovation. 市场竞争推动创新。"
+    },
+    {
+      "question": "_____ revelry",
+      "type": "blank",
+      "answer": "noisy",
+      "explanation": "狂欢; 欢闹, 喧闹的狂欢. Noisy revelry continued until dawn. 喧闹的狂欢持续到黎明。"
+    },
+    {
+      "question": "_____ allegory",
+      "type": "blank",
+      "answer": "moral",
+      "explanation": "寓言; 讽喻, 道德寓言. The story is a moral allegory about greed. 这个故事是关于贪婪的道德寓言。"
+    },
+    {
+      "question": "______ pillory",
+      "type": "blank",
+      "answer": "public",
+      "explanation": "颈手枷; 示众, 公开示众. Critics put him in the public pillory. 批评者让他公开示众。"
+    },
+    {
+      "question": "_______ armory",
+      "type": "blank",
+      "answer": "weapons",
+      "explanation": "军械库; 兵工厂, 武器库. The weapons armory stores military equipment. 武器库储存军事装备。"
+    },
+    {
+      "question": "provisory ________",
+      "type": "blank",
+      "answer": "contract",
+      "explanation": "临时的; 暂时的, 临时合同. They signed a provisory contract. 他们签署了临时合同。"
+    },
+    {
+      "question": "compulsory _________",
+      "type": "blank",
+      "answer": "education",
+      "explanation": "强制的; 义务的, 义务教育. Compulsory education is required by law. 法律规定义务教育。"
+    },
+    {
+      "question": "cursory ______",
+      "type": "blank",
+      "answer": "glance",
+      "explanation": "粗略的; 草率的, 粗略的一瞥. He gave the document a cursory glance. 他对文件粗略地看了一眼。"
+    },
+    {
+      "question": "_______ accessory",
+      "type": "blank",
+      "answer": "fashion",
+      "explanation": "附件; 配件, 时尚配件. She bought a fashion accessory to match her dress. 她买了一个时尚配件来搭配她的连衣裙。"
+    },
+    {
+      "question": "illusory ____",
+      "type": "blank",
+      "answer": "hope",
+      "explanation": "虚幻的; 错觉的, 虚幻的希望. The promise proved to be illusory hope. 承诺被证明是虚幻的希望。"
+    },
+    {
+      "question": "mandatory _______",
+      "type": "blank",
+      "answer": "meeting",
+      "explanation": "强制的; 法定的, 强制性会议. Attendance at the mandatory meeting is required. 必须出席强制性会议。"
+    },
+    {
+      "question": "obligatory ____",
+      "type": "blank",
+      "answer": "duty",
+      "explanation": "义务的; 必须的, 义务职责. Military service is an obligatory duty. 服兵役是义务职责。"
+    },
+    {
+      "question": "derogatory ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "贬损的; 轻蔑的, 贬损的评论. He made a derogatory remark about her work. 他对她的工作做出了贬损的评论。"
+    },
+    {
+      "question": "purgatory ____",
+      "type": "blank",
+      "answer": "fire",
+      "explanation": "炼狱, 炼狱之火. Souls suffer in purgatory fire. 灵魂在炼狱之火中受苦。"
+    },
+    {
+      "question": "nugatory _______",
+      "type": "blank",
+      "answer": "expense",
+      "explanation": "无价值的; 无效的, 无价值的开支. The nugatory expense was a waste of money. 无价值的开支是浪费金钱。"
+    },
+    {
+      "question": "conciliatory _______",
+      "type": "blank",
+      "answer": "gesture",
+      "explanation": "安抚的; 和解的, 和解的姿态. He made a conciliatory gesture to end the dispute. 他做出了和解的姿态来结束争端。"
+    },
+    {
+      "question": "dilatory _______",
+      "type": "blank",
+      "answer": "tactics",
+      "explanation": "拖延的; 延误的, 拖延战术. The lawyer used dilatory tactics in court. 律师在法庭上使用拖延战术。"
+    },
+    {
+      "question": "ambulatory _______",
+      "type": "blank",
+      "answer": "patient",
+      "explanation": "能走动的; 流动的, 能走动的病人. The ambulatory patient can walk without assistance. 能走动的病人可以独立行走。"
+    },
+    {
+      "question": "______ signatory",
+      "type": "blank",
+      "answer": "treaty",
+      "explanation": "签署者; 签约国, 条约签署者. All treaty signatory nations must comply. 所有条约签署国必须遵守。"
+    },
+    {
+      "question": "minatory ____",
+      "type": "blank",
+      "answer": "tone",
+      "explanation": "威胁的; 恐吓的, 威胁的语气. He spoke in a minatory tone. 他用威胁的语气说话。"
+    },
+    {
+      "question": "discriminatory ________",
+      "type": "blank",
+      "answer": "practice",
+      "explanation": "歧视性的, 歧视性做法. The discriminatory practice was ruled illegal. 歧视性做法被裁定为非法。"
+    },
+    {
+      "question": "anticipatory ____",
+      "type": "blank",
+      "answer": "bail",
+      "explanation": "预期的; 先发的, 预期保释. The court granted anticipatory bail. 法院批准了预期保释。"
+    },
+    {
+      "question": "migratory _____",
+      "type": "blank",
+      "answer": "birds",
+      "explanation": "迁徙的; 流动的, 候鸟. Migratory birds fly south for winter. 候鸟为过冬飞往南方。"
+    },
+    {
+      "question": "________ oratory",
+      "type": "blank",
+      "answer": "powerful",
+      "explanation": "演讲术; 雄辩, 有力的演讲. His powerful oratory moved the audience. 他有力的演讲打动了观众。"
+    },
+    {
+      "question": "compensatory _______",
+      "type": "blank",
+      "answer": "damages",
+      "explanation": "补偿的; 赔偿的, 赔偿金. The court awarded compensatory damages. 法院裁定赔偿金。"
+    },
+    {
+      "question": "gustatory _________",
+      "type": "blank",
+      "answer": "receptors",
+      "explanation": "味觉的, 味觉感受器. Gustatory receptors detect flavors. 味觉感受器检测味道。"
+    },
+    {
+      "question": "_____ observatory",
+      "type": "blank",
+      "answer": "space",
+      "explanation": "天文台; 观测站, 太空观测站. The space observatory monitors distant galaxies. 太空观测站监测遥远的星系。"
+    },
+    {
+      "question": "_____ conservatory",
+      "type": "blank",
+      "answer": "glass",
+      "explanation": "温室; 音乐学院, 玻璃温室. The glass conservatory houses tropical plants. 玻璃温室容纳热带植物。"
+    },
+    {
+      "question": "olfactory _____",
+      "type": "blank",
+      "answer": "nerve",
+      "explanation": "嗅觉的, 嗅神经. The olfactory nerve detects smells. 嗅神经检测气味。"
+    },
+    {
+      "question": "refractory _____",
+      "type": "blank",
+      "answer": "metal",
+      "explanation": "难熔的; 倔强的, 难熔金属. Refractory metal withstands high temperatures. 难熔金属耐高温。"
+    },
+    {
+      "question": "_______ refectory",
+      "type": "blank",
+      "answer": "college",
+      "explanation": "食堂; 餐厅, 大学食堂. Students eat in the college refectory. 学生在大学食堂吃饭。"
+    }
+  ]
+}
