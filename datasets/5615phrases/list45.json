@@ -1,1 +1,607 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "___ bracket",
+      "type": "blank",
+      "answer": "tax",
+      "explanation": "括号; 等级, 税级. High earners fall into a higher tax bracket. 高收入者属于更高的税级。"
+    },
+    {
+      "question": "_____ trinket",
+      "type": "blank",
+      "answer": "cheap",
+      "explanation": "小饰品; 小玩意, 廉价小饰品. She bought a cheap trinket as a souvenir. 她买了一个廉价小饰品作为纪念品。"
+    },
+    {
+      "question": "_________ musket",
+      "type": "blank",
+      "answer": "flintlock",
+      "explanation": "火枪, 燧发枪. Colonial soldiers carried a flintlock musket into battle. 殖民地士兵带着燧发枪进入战斗。"
+    },
+    {
+      "question": "____ bracelet",
+      "type": "blank",
+      "answer": "gold",
+      "explanation": "手镯, 金手镯. She wore an elegant gold bracelet on her wrist. 她手腕上戴着一只优雅的金手镯。"
+    },
+    {
+      "question": "eaglet __ ____",
+      "type": "blank",
+      "answer": "in nest",
+      "explanation": "小鹰, 巢中的小鹰. The eaglet in nest waited for its parents to return. 巢中的小鹰等待父母归来。"
+    },
+    {
+      "question": "____ fillet",
+      "type": "blank",
+      "answer": "beef",
+      "explanation": "鱼片; 肉片, 牛肉片. The chef prepared a tender beef fillet for dinner. 厨师为晚餐准备了嫩的牛肉片。"
+    },
+    {
+      "question": "____ skillet",
+      "type": "blank",
+      "answer": "iron",
+      "explanation": "平底锅, 铁平底锅. She cooked eggs in a cast iron skillet. 她在铸铁平底锅里煎鸡蛋。"
+    },
+    {
+      "question": "_____ pullet",
+      "type": "blank",
+      "answer": "young",
+      "explanation": "小母鸡, 年轻的小母鸡. The farmer raised a young pullet for egg production. 农民养了一只年轻的小母鸡用于产蛋。"
+    },
+    {
+      "question": "_______ violet",
+      "type": "blank",
+      "answer": "African",
+      "explanation": "紫罗兰, 非洲紫罗兰. The African violet blooms year-round indoors. 非洲紫罗兰在室内全年开花。"
+    },
+    {
+      "question": "_____ droplet",
+      "type": "blank",
+      "answer": "water",
+      "explanation": "小水滴, 水滴. A water droplet clung to the leaf. 一滴水珠附着在叶子上。"
+    },
+    {
+      "question": "_____ outlet",
+      "type": "blank",
+      "answer": "power",
+      "explanation": "出口; 插座, 电源插座. Plug the charger into the power outlet. 把充电器插入电源插座。"
+    },
+    {
+      "question": "________ epaulet",
+      "type": "blank",
+      "answer": "military",
+      "explanation": "肩章, 军用肩章. The general's uniform featured ornate military epaulet. 将军的制服上有华丽的军用肩章。"
+    },
+    {
+      "question": "________ rivulet",
+      "type": "blank",
+      "answer": "mountain",
+      "explanation": "小溪; 细流, 山间小溪. A mountain rivulet flowed down the hillside. 山间小溪从山坡上流下。"
+    },
+    {
+      "question": "gourmet _______",
+      "type": "blank",
+      "answer": "cuisine",
+      "explanation": "美食家; 美食的, 美食. The restaurant specializes in gourmet cuisine. 这家餐厅专门提供美食。"
+    },
+    {
+      "question": "____ tenet",
+      "type": "blank",
+      "answer": "core",
+      "explanation": "原则; 信条, 核心原则. Freedom is a core tenet of democracy. 自由是民主的核心原则。"
+    },
+    {
+      "question": "cygnet ____",
+      "type": "blank",
+      "answer": "swan",
+      "explanation": "小天鹅, 小天鹅. The cygnet swan followed its mother across the lake. 小天鹅跟着母亲游过湖面。"
+    },
+    {
+      "question": "_______ cabinet",
+      "type": "blank",
+      "answer": "kitchen",
+      "explanation": "橱柜; 内阁, 厨房橱柜. Store the dishes in the kitchen cabinet. 把盘子放在厨房橱柜里。"
+    },
+    {
+      "question": "_____________ sonnet",
+      "type": "blank",
+      "answer": "Shakespearean",
+      "explanation": "十四行诗, 莎士比亚式十四行诗. Students analyzed a Shakespearean sonnet in class. 学生们在课堂上分析了一首莎士比亚式十四行诗。"
+    },
+    {
+      "question": "_____ cornet",
+      "type": "blank",
+      "answer": "brass",
+      "explanation": "短号, 铜制短号. The musician played a bright brass cornet. 音乐家演奏了一支明亮的铜制短号。"
+    },
+    {
+      "question": "____ ___ trumpet",
+      "type": "blank",
+      "answer": "blow the",
+      "explanation": "小号; 喇叭, 吹小号. The herald will blow the trumpet to announce the king. 传令官将吹小号宣布国王到来。"
+    },
+    {
+      "question": "______ minaret",
+      "type": "blank",
+      "answer": "mosque",
+      "explanation": "宣礼塔, 清真寺宣礼塔. The mosque minaret towered over the city skyline. 清真寺宣礼塔高耸于城市天际线之上。"
+    },
+    {
+      "question": "_____ garret",
+      "type": "blank",
+      "answer": "attic",
+      "explanation": "阁楼, 阁楼. The artist lived in a small attic garret. 艺术家住在一个小阁楼里。"
+    },
+    {
+      "question": "______ turret",
+      "type": "blank",
+      "answer": "castle",
+      "explanation": "塔楼; 炮塔, 城堡塔楼. Guards watched from the castle turret. 卫兵从城堡塔楼上观察。"
+    },
+    {
+      "question": "beset __ ________",
+      "type": "blank",
+      "answer": "by problems",
+      "explanation": "困扰; 包围, 被问题困扰. The project was beset by problems from the start. 该项目从一开始就被问题困扰。"
+    },
+    {
+      "question": "offset _____",
+      "type": "blank",
+      "answer": "costs",
+      "explanation": "抵消; 补偿, 抵消成本. Increased revenue will offset costs of expansion. 增加的收入将抵消扩张成本。"
+    },
+    {
+      "question": "backset _____",
+      "type": "blank",
+      "answer": "hinge",
+      "explanation": "挫折; 后退, 后嵌式铰链. The carpenter installed a backset hinge on the door. 木匠在门上安装了后嵌式铰链。"
+    },
+    {
+      "question": "onset __ _______",
+      "type": "blank",
+      "answer": "of illness",
+      "explanation": "开始; 发作, 疾病的发作. The onset of illness was sudden and unexpected. 疾病的发作是突然且出乎意料的。"
+    },
+    {
+      "question": "____-__ closet",
+      "type": "blank",
+      "answer": "walk-in",
+      "explanation": "壁橱, 步入式衣橱. The master bedroom has a large walk-in closet. 主卧室有一个大的步入式衣橱。"
+    },
+    {
+      "question": "cosset _ _____",
+      "type": "blank",
+      "answer": "a child",
+      "explanation": "宠爱; 娇养, 宠爱孩子. Parents shouldn't cosset a child too much. 父母不应该过度宠爱孩子。"
+    },
+    {
+      "question": "______ quartet",
+      "type": "blank",
+      "answer": "string",
+      "explanation": "四重奏; 四重唱, 弦乐四重奏. The string quartet performed Beethoven's masterpiece. 弦乐四重奏演奏了贝多芬的杰作。"
+    },
+    {
+      "question": "____ _ duet",
+      "type": "blank",
+      "answer": "sing a",
+      "explanation": "二重唱; 二重奏, 唱二重唱. The two singers will sing a duet at the concert. 两位歌手将在音乐会上唱二重唱。"
+    },
+    {
+      "question": "_____ minuet",
+      "type": "blank",
+      "answer": "court",
+      "explanation": "小步舞曲, 宫廷小步舞. Nobles danced the elegant court minuet. 贵族跳优雅的宫廷小步舞。"
+    },
+    {
+      "question": "_____ tourniquet",
+      "type": "blank",
+      "answer": "apply",
+      "explanation": "止血带, 使用止血带. The medic will apply tourniquet to stop bleeding. 医务人员将使用止血带止血。"
+    },
+    {
+      "question": "_____ banquet",
+      "type": "blank",
+      "answer": "state",
+      "explanation": "宴会, 国宴. The president hosted a state banquet for foreign dignitaries. 总统为外国政要举办了国宴。"
+    },
+    {
+      "question": "___ parquet",
+      "type": "blank",
+      "answer": "oak",
+      "explanation": "镶木地板, 橡木镶木地板. The ballroom features beautiful oak parquet flooring. 舞厅有漂亮的橡木镶木地板。"
+    },
+    {
+      "question": "______ bouquet",
+      "type": "blank",
+      "answer": "bridal",
+      "explanation": "花束, 新娘花束. She carried a beautiful bridal bouquet of roses. 她拿着一束美丽的玫瑰新娘花束。"
+    },
+    {
+      "question": "rivet _________",
+      "type": "blank",
+      "answer": "attention",
+      "explanation": "铆钉; 吸引, 吸引注意力. The speaker's story will rivet attention of the audience. 演讲者的故事将吸引观众的注意力。"
+    },
+    {
+      "question": "covet ______",
+      "type": "blank",
+      "answer": "wealth",
+      "explanation": "垂涎; 觊觎, 觊觎财富. Do not covet wealth that belongs to others. 不要觊觎属于别人的财富。"
+    },
+    {
+      "question": "daft ____",
+      "type": "blank",
+      "answer": "idea",
+      "explanation": "愚蠢的; 疯狂的, 愚蠢的想法. That's a daft idea that will never work. 那是一个永远行不通的愚蠢想法。"
+    },
+    {
+      "question": "______ haft",
+      "type": "blank",
+      "answer": "hammer",
+      "explanation": "柄; 把, 锤柄. The hammer haft was made of sturdy wood. 锤柄由坚固的木头制成。"
+    },
+    {
+      "question": "_____ draft",
+      "type": "blank",
+      "answer": "first",
+      "explanation": "草稿; 汇票, 初稿. The writer completed the first draft of the novel. 作家完成了小说的初稿。"
+    },
+    {
+      "question": "graft _______",
+      "type": "blank",
+      "answer": "scandal",
+      "explanation": "贪污; 移植, 贪污丑闻. The politician was involved in a major graft scandal. 这位政客卷入了一起重大贪污丑闻。"
+    },
+    {
+      "question": "deft _____",
+      "type": "blank",
+      "answer": "touch",
+      "explanation": "灵巧的; 熟练的, 灵巧的手法. The artist worked with a deft touch. 艺术家以灵巧的手法工作。"
+    },
+    {
+      "question": "____ cleft",
+      "type": "blank",
+      "answer": "rock",
+      "explanation": "裂缝; 裂口, 岩石裂缝. Water seeped through the rock cleft. 水从岩石裂缝中渗出。"
+    },
+    {
+      "question": "bereft __ ____",
+      "type": "blank",
+      "answer": "of hope",
+      "explanation": "失去; 丧失, 失去希望. The refugees felt bereft of hope. 难民感到失去了希望。"
+    },
+    {
+      "question": "______ rift",
+      "type": "blank",
+      "answer": "family",
+      "explanation": "裂痕; 分歧, 家庭裂痕. The argument caused a family rift that lasted years. 这场争吵造成了持续多年的家庭裂痕。"
+    },
+    {
+      "question": "snowdrift _______",
+      "type": "blank",
+      "answer": "barrier",
+      "explanation": "雪堆, 雪堆屏障. The snowdrift barrier blocked the mountain road. 雪堆屏障堵住了山路。"
+    },
+    {
+      "question": "spendthrift ______",
+      "type": "blank",
+      "answer": "habits",
+      "explanation": "挥霍者; 浪费的, 挥霍习惯. His spendthrift habits left him deeply in debt. 他的挥霍习惯使他债台高筑。"
+    },
+    {
+      "question": "sift ___ ____",
+      "type": "blank",
+      "answer": "the data",
+      "explanation": "筛; 细查, 筛选数据. Researchers must sift the data carefully for patterns. 研究人员必须仔细筛选数据寻找模式。"
+    },
+    {
+      "question": "loft _________",
+      "type": "blank",
+      "answer": "apartment",
+      "explanation": "阁楼, 阁楼公寓. The artist lives in a spacious loft apartment. 这位艺术家住在一间宽敞的阁楼公寓里。"
+    },
+    {
+      "question": "sleight __ ____",
+      "type": "blank",
+      "answer": "of hand",
+      "explanation": "巧妙手法; 戏法, 手法. The magician performed amazing sleight of hand tricks. 魔术师表演了惊人的手法戏法。"
+    },
+    {
+      "question": "freight _____",
+      "type": "blank",
+      "answer": "train",
+      "explanation": "货运; 货物, 货运火车. The freight train carried goods across the country. 货运火车将货物运往全国各地。"
+    },
+    {
+      "question": "____ blight",
+      "type": "blank",
+      "answer": "crop",
+      "explanation": "枯萎病; 祸患, 作物枯萎病. The crop blight destroyed entire harvests. 作物枯萎病摧毁了整个收成。"
+    },
+    {
+      "question": "______ flight",
+      "type": "blank",
+      "answer": "return",
+      "explanation": "航班; 飞行, 返程航班. Book your return flight in advance. 提前预订您的返程航班。"
+    },
+    {
+      "question": "slight ______",
+      "type": "blank",
+      "answer": "injury",
+      "explanation": "轻微的; 微小的, 轻微的伤害. He suffered only a slight injury in the accident. 他在事故中只受了轻微的伤害。"
+    },
+    {
+      "question": "forthright ______",
+      "type": "blank",
+      "answer": "manner",
+      "explanation": "直率的; 坦诚的, 直率的方式. She spoke in a forthright manner about the issues. 她以直率的方式谈论这些问题。"
+    },
+    {
+      "question": "upright _______",
+      "type": "blank",
+      "answer": "posture",
+      "explanation": "直立的; 正直的, 直立的姿势. Maintain an upright posture while sitting. 坐着时保持直立的姿势。"
+    },
+    {
+      "question": "______ shipwright",
+      "type": "blank",
+      "answer": "master",
+      "explanation": "造船工匠, 大师级造船工匠. The master shipwright built vessels for decades. 大师级造船工匠建造船只数十年。"
+    },
+    {
+      "question": "__________ foresight",
+      "type": "blank",
+      "answer": "remarkable",
+      "explanation": "远见; 先见之明, 非凡的远见. His remarkable foresight predicted market trends. 他非凡的远见预测了市场趋势。"
+    },
+    {
+      "question": "_____ oversight",
+      "type": "blank",
+      "answer": "major",
+      "explanation": "疏忽; 监督, 重大疏忽. The error was a major oversight in planning. 这个错误是规划中的重大疏忽。"
+    },
+    {
+      "question": "airtight ____",
+      "type": "blank",
+      "answer": "seal",
+      "explanation": "密封的, 密封. The container has an airtight seal to preserve freshness. 容器有密封以保持新鲜。"
+    },
+    {
+      "question": "______ onslaught",
+      "type": "blank",
+      "answer": "brutal",
+      "explanation": "猛攻; 冲击, 残酷的猛攻. The army faced a brutal onslaught from the enemy. 军队面临敌人残酷的猛攻。"
+    },
+    {
+      "question": "fraught ____ ____",
+      "type": "blank",
+      "answer": "with risk",
+      "explanation": "充满的; 担忧的, 充满风险. The venture is fraught with risk and uncertainty. 这项冒险充满风险和不确定性。"
+    },
+    {
+      "question": "______ drought",
+      "type": "blank",
+      "answer": "severe",
+      "explanation": "干旱, 严重干旱. The region experienced a severe drought for months. 该地区经历了数月的严重干旱。"
+    },
+    {
+      "question": "____ wrought",
+      "type": "blank",
+      "answer": "hand",
+      "explanation": "锻造的; 精心制作的, 手工锻造的. The gate was made of hand wrought iron. 大门由手工锻造的铁制成。"
+    },
+    {
+      "question": "overwrought ______",
+      "type": "blank",
+      "answer": "nerves",
+      "explanation": "过度紧张的; 过分修饰的, 过度紧张的神经. Her overwrought nerves needed rest. 她过度紧张的神经需要休息。"
+    },
+    {
+      "question": "_______ gait",
+      "type": "blank",
+      "answer": "awkward",
+      "explanation": "步态; 步法, 笨拙的步态. He walked with an awkward gait after the injury. 受伤后他走路的步态很笨拙。"
+    },
+    {
+      "question": "_______ trait",
+      "type": "blank",
+      "answer": "genetic",
+      "explanation": "特征; 特性, 遗传特征. Eye color is determined by genetic trait. 眼睛颜色由遗传特征决定。"
+    },
+    {
+      "question": "distrait ______",
+      "type": "blank",
+      "answer": "manner",
+      "type": "blank",
+      "answer": "manner",
+      "explanation": "心不在焉的, 心不在焉的态度. She answered in a distrait manner, clearly preoccupied. 她以心不在焉的态度回答,显然心事重重。"
+    },
+    {
+      "question": "_ bit ____",
+      "type": "blank",
+      "answer": "a part",
+      "explanation": "一点; 少量, 一个小角色. He played a bit part in the movie. 他在电影中扮演了一个小角色。"
+    },
+    {
+      "question": "inhabit _____",
+      "type": "blank",
+      "answer": "caves",
+      "explanation": "居住; 栖息, 居住在洞穴. Ancient peoples used to inhabit caves. 古代人曾经居住在洞穴中。"
+    },
+    {
+      "question": "cohabit ____",
+      "type": "blank",
+      "answer": "with",
+      "explanation": "同居, 与...同居. The couple chose to cohabit with each other before marriage. 这对夫妇选择在婚前与对方同居。"
+    },
+    {
+      "question": "inhibit ______",
+      "type": "blank",
+      "answer": "growth",
+      "explanation": "抑制; 阻止, 抑制生长. Lack of sunlight will inhibit growth of plants. 缺乏阳光会抑制植物的生长。"
+    },
+    {
+      "question": "tacit _______",
+      "type": "blank",
+      "answer": "consent",
+      "explanation": "心照不宣的; 默许的, 默许. Their tacit consent was understood without words. 他们的默许无需言语就能理解。"
+    },
+    {
+      "question": "______ deficit",
+      "type": "blank",
+      "answer": "budget",
+      "explanation": "赤字; 不足, 预算赤字. The government faces a large budget deficit. 政府面临巨大的预算赤字。"
+    },
+    {
+      "question": "licit _____",
+      "type": "blank",
+      "answer": "trade",
+      "explanation": "合法的, 合法贸易. The business engaged in licit trade activities. 该企业从事合法贸易活动。"
+    },
+    {
+      "question": "elicit ________",
+      "type": "blank",
+      "answer": "response",
+      "explanation": "引出; 诱出, 引出回应. The question will elicit response from the audience. 这个问题将引出观众的回应。"
+    },
+    {
+      "question": "illicit _____",
+      "type": "blank",
+      "answer": "trade",
+      "explanation": "非法的, 非法贸易. Police cracked down on illicit trade networks. 警方打击非法贸易网络。"
+    },
+    {
+      "question": "solicit _________",
+      "type": "blank",
+      "answer": "donations",
+      "explanation": "恳求; 征求, 征求捐款. The charity will solicit donations for disaster relief. 慈善机构将为救灾征求捐款。"
+    },
+    {
+      "question": "implicit ____",
+      "type": "blank",
+      "answer": "bias",
+      "explanation": "含蓄的; 隐含的, 隐含偏见. Everyone has some form of implicit bias. 每个人都有某种形式的隐含偏见。"
+    },
+    {
+      "question": "explicit ____________",
+      "type": "blank",
+      "answer": "instructions",
+      "explanation": "明确的; 清楚的, 明确的指示. Follow the explicit instructions carefully. 仔细遵循明确的指示。"
+    },
+    {
+      "question": "___ plaudit",
+      "type": "blank",
+      "answer": "win",
+      "explanation": "赞扬; 喝彩, 赢得赞扬. The performance will win plaudit from critics. 这场演出将赢得评论家的赞扬。"
+    },
+    {
+      "question": "albeit _____",
+      "type": "blank",
+      "answer": "small",
+      "explanation": "虽然; 尽管, 虽然小. It was a victory, albeit small. 这是一场胜利,虽然很小。"
+    },
+    {
+      "question": "___ __ deceit",
+      "type": "blank",
+      "answer": "act of",
+      "explanation": "欺骗; 诡计, 欺骗行为. The lie was an act of deceit. 这个谎言是欺骗行为。"
+    },
+    {
+      "question": "______ conceit",
+      "type": "blank",
+      "answer": "poetic",
+      "explanation": "自负; 巧妙的比喻, 诗意的比喻. The poem uses an elaborate poetic conceit. 这首诗使用了一个精心设计的诗意比喻。"
+    },
+    {
+      "question": "counterfeit ____",
+      "type": "blank",
+      "answer": "bill",
+      "explanation": "伪造的; 假冒的, 伪钞. Police seized the counterfeit bill during the raid. 警方在突袭中缴获了伪钞。"
+    },
+    {
+      "question": "surfeit __ ____",
+      "type": "blank",
+      "answer": "of food",
+      "explanation": "过量; 过度, 过量食物. The feast provided a surfeit of food. 宴会提供了过量的食物。"
+    },
+    {
+      "question": "discomfit _____",
+      "type": "blank",
+      "answer": "enemy",
+      "explanation": "使困惑; 使挫败, 挫败敌人. The strategy will discomfit enemy forces. 这个策略将挫败敌军。"
+    },
+    {
+      "question": "___ _ whit",
+      "type": "blank",
+      "answer": "not a",
+      "explanation": "一点; 少许, 一点也不. He cared not a whit about the consequences. 他对后果一点也不在乎。"
+    },
+    {
+      "question": "_____ skit",
+      "type": "blank",
+      "answer": "comic",
+      "explanation": "幽默短剧; 滑稽表演, 喜剧小品. The actors performed a comic skit on stage. 演员们在舞台上表演了一个喜剧小品。"
+    },
+    {
+      "question": "split _____",
+      "type": "blank",
+      "answer": "hairs",
+      "explanation": "分裂; 劈开, 吹毛求疵. Don't split hairs over minor details. 不要在小细节上吹毛求疵。"
+    },
+    {
+      "question": "remit _______",
+      "type": "blank",
+      "answer": "payment",
+      "explanation": "汇款; 宽恕, 汇款. Please remit payment within 30 days. 请在30天内汇款。"
+    },
+    {
+      "question": "delimit ___ _____",
+      "type": "blank",
+      "answer": "the scope",
+      "explanation": "划定界限, 界定范围. We need to delimit the scope of the project. 我们需要界定项目的范围。"
+    },
+    {
+      "question": "________ hermit",
+      "type": "blank",
+      "answer": "mountain",
+      "explanation": "隐士, 山中隐士. The mountain hermit lived alone for decades. 山中隐士独自生活了几十年。"
+    },
+    {
+      "question": "transmit ____",
+      "type": "blank",
+      "answer": "data",
+      "explanation": "传输; 传播, 传输数据. The satellite will transmit data back to Earth. 卫星将把数据传输回地球。"
+    },
+    {
+      "question": "manumit ______",
+      "type": "blank",
+      "answer": "slaves",
+      "explanation": "解放(奴隶), 解放奴隶. The owner decided to manumit slaves before the law required it. 主人决定在法律要求之前解放奴隶。"
+    },
+    {
+      "question": "knit _ _______",
+      "type": "blank",
+      "answer": "a sweater",
+      "explanation": "编织, 编织毛衣. She learned to knit a sweater for her grandson. 她学会了为孙子编织毛衣。"
+    },
+    {
+      "question": "exploit ___________",
+      "type": "blank",
+      "answer": "opportunity",
+      "explanation": "开发; 利用, 利用机会. Smart businesses exploit opportunity when it arises. 聪明的企业会在机会出现时加以利用。"
+    },
+    {
+      "question": "adroit __________",
+      "type": "blank",
+      "answer": "negotiator",
+      "explanation": "灵巧的; 机敏的, 机敏的谈判者. The adroit negotiator secured favorable terms. 机敏的谈判者获得了有利的条款。"
+    },
+    {
+      "question": "maladroit ________",
+      "type": "blank",
+      "answer": "handling",
+      "explanation": "笨拙的; 不灵巧的, 笨拙的处理. His maladroit handling of the situation made things worse. 他对局势的笨拙处理使情况变得更糟。"
+    }
+  ]
+}
