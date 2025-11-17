@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "anomalous ______",
+      "type": "blank",
+      "answer": "result",
+      "explanation": "异常的; 反常的, 异常的结果. The scientist investigated the anomalous result in the experiment. 科学家调查了实验中的异常结果。"
+    },
+    {
+      "question": "libelous _________",
+      "type": "blank",
+      "answer": "statement",
+      "explanation": "诽谤的, 诽谤性声明. The newspaper retracted the libelous statement about the mayor. 报纸撤回了关于市长的诽谤性声明。"
+    },
+    {
+      "question": "perilous _______",
+      "type": "blank",
+      "answer": "journey",
+      "explanation": "危险的; 冒险的, 危险的旅程. The explorers embarked on a perilous journey across the desert. 探险家开始了穿越沙漠的危险旅程。"
+    },
+    {
+      "question": "scurrilous ______",
+      "type": "blank",
+      "answer": "attack",
+      "explanation": "恶意诽谤的; 下流的, 恶意诽谤的攻击. The politician faced a scurrilous attack from opponents. 这位政客面临来自对手的恶意诽谤攻击。"
+    },
+    {
+      "question": "callous _________",
+      "type": "blank",
+      "answer": "disregard",
+      "explanation": "冷酷的; 无情的, 冷酷的漠视. His callous disregard for others' feelings hurt many people. 他对他人感受的冷酷漠视伤害了许多人。"
+    },
+    {
+      "question": "parlous _____",
+      "type": "blank",
+      "answer": "state",
+      "explanation": "危险的; 糟糕的, 危险的状态. The economy was in a parlous state after the crisis. 危机后经济处于危险的状态。"
+    },
+    {
+      "question": "fabulous ______",
+      "type": "blank",
+      "answer": "wealth",
+      "explanation": "巨大的; 极好的, 巨额财富. The entrepreneur accumulated fabulous wealth through investments. 企业家通过投资积累了巨额财富。"
+    },
+    {
+      "question": "nebulous ____",
+      "type": "blank",
+      "answer": "idea",
+      "explanation": "模糊的; 朦胧的, 模糊的想法. His plan was just a nebulous idea without clear details. 他的计划只是一个没有明确细节的模糊想法。"
+    },
+    {
+      "question": "bibulous _____",
+      "type": "blank",
+      "answer": "crowd",
+      "explanation": "嗜酒的, 嗜酒的人群. The bibulous crowd filled the tavern every night. 嗜酒的人群每晚都挤满了酒馆。"
+    },
+    {
+      "question": "miraculous ________",
+      "type": "blank",
+      "answer": "recovery",
+      "explanation": "奇迹般的, 奇迹般的康复. The patient made a miraculous recovery from the illness. 患者从疾病中奇迹般地康复。"
+    },
+    {
+      "question": "meticulous ________",
+      "type": "blank",
+      "answer": "planning",
+      "explanation": "一丝不苟的; 细致的, 一丝不苟的规划. The project required meticulous planning and attention to detail. 该项目需要一丝不苟的规划和对细节的关注。"
+    },
+    {
+      "question": "credulous ______",
+      "type": "blank",
+      "answer": "public",
+      "explanation": "轻信的; 易受骗的, 轻信的公众. The scammer exploited the credulous public with false promises. 骗子用虚假承诺利用轻信的公众。"
+    },
+    {
+      "question": "sedulous _____",
+      "type": "blank",
+      "answer": "study",
+      "explanation": "勤勉的; 孜孜不倦的, 勤勉的学习. Through sedulous study, she mastered three languages. 通过勤勉的学习,她掌握了三种语言。"
+    },
+    {
+      "question": "populous ____",
+      "type": "blank",
+      "answer": "city",
+      "explanation": "人口稠密的, 人口稠密的城市. Tokyo is one of the world's most populous city centers. 东京是世界上人口最稠密的城市中心之一。"
+    },
+    {
+      "question": "unscrupulous _______",
+      "type": "blank",
+      "answer": "tactics",
+      "explanation": "无道德原则的; 不择手段的, 不择手段的策略. The company used unscrupulous tactics to eliminate competitors. 公司使用不择手段的策略来消灭竞争对手。"
+    },
+    {
+      "question": "querulous ____",
+      "type": "blank",
+      "answer": "tone",
+      "explanation": "抱怨的; 爱发牢骚的, 抱怨的语气. She answered in a querulous tone that annoyed everyone. 她用抱怨的语气回答,让每个人都很恼火。"
+    },
+    {
+      "question": "garrulous ________",
+      "type": "blank",
+      "answer": "neighbor",
+      "explanation": "唠叨的; 喋喋不休的, 唠叨的邻居. The garrulous neighbor talked for hours without pause. 唠叨的邻居不停地说了几个小时。"
+    },
+    {
+      "question": "pusillanimous ________",
+      "type": "blank",
+      "answer": "response",
+      "explanation": "胆小的; 懦弱的, 懦弱的回应. His pusillanimous response disappointed his supporters. 他懦弱的回应让支持者失望。"
+    },
+    {
+      "question": "magnanimous _______",
+      "type": "blank",
+      "answer": "gesture",
+      "explanation": "宽宏大量的; 慷慨的, 宽宏大量的姿态. The victor made a magnanimous gesture toward the defeated. 胜利者向失败者做出了宽宏大量的姿态。"
+    },
+    {
+      "question": "unanimous ____",
+      "type": "blank",
+      "answer": "vote",
+      "explanation": "一致的; 全体同意的, 一致投票. The committee reached a unanimous vote on the proposal. 委员会对该提案达成了一致投票。"
+    },
+    {
+      "question": "autonomous ______",
+      "type": "blank",
+      "answer": "region",
+      "explanation": "自治的; 自主的, 自治区. The autonomous region has its own local government. 自治区有自己的地方政府。"
+    },
+    {
+      "question": "anonymous _____",
+      "type": "blank",
+      "answer": "donor",
+      "explanation": "匿名的; 无名的, 匿名捐赠者. An anonymous donor contributed millions to the charity. 一位匿名捐赠者向慈善机构捐赠了数百万。"
+    },
+    {
+      "question": "diaphanous ______",
+      "type": "blank",
+      "answer": "fabric",
+      "explanation": "透明的; 轻薄的, 透明的织物. She wore a dress made of diaphanous fabric. 她穿着一件由透明织物制成的连衣裙。"
+    },
+    {
+      "question": "indigenous _______",
+      "type": "blank",
+      "answer": "peoples",
+      "explanation": "本土的; 土著的, 土著民族. Indigenous peoples have lived here for thousands of years. 土著民族在这里生活了数千年。"
+    },
+    {
+      "question": "ravenous ________",
+      "type": "blank",
+      "answer": "appetite",
+      "explanation": "贪婪的; 饥饿的, 贪婪的食欲. After hiking all day, he had a ravenous appetite. 徒步一整天后,他有贪婪的食欲。"
+    },
+    {
+      "question": "villainous ____",
+      "type": "blank",
+      "answer": "deed",
+      "explanation": "恶棍的; 邪恶的, 邪恶的行为. The criminal committed a villainous deed that shocked everyone. 罪犯犯下了震惊所有人的邪恶行为。"
+    },
+    {
+      "question": "mountainous _______",
+      "type": "blank",
+      "answer": "terrain",
+      "explanation": "多山的, 多山的地形. The rescue team navigated the mountainous terrain carefully. 救援队小心地穿越多山的地形。"
+    },
+    {
+      "question": "tendinous ______",
+      "type": "blank",
+      "answer": "injury",
+      "explanation": "腱的, 肌腱损伤. The athlete suffered a tendinous injury during training. 运动员在训练中遭受了肌腱损伤。"
+    },
+    {
+      "question": "vicissitudinous ____",
+      "type": "blank",
+      "answer": "life",
+      "explanation": "变化无常的; 多灾多难的, 变化无常的生活. He led a vicissitudinous life full of ups and downs. 他过着充满起起落落的变化无常的生活。"
+    },
+    {
+      "question": "heinous _____",
+      "type": "blank",
+      "answer": "crime",
+      "explanation": "极恶的; 令人发指的, 令人发指的罪行. The judge sentenced the perpetrator of the heinous crime. 法官对令人发指的罪行的犯罪者进行了判决。"
+    },
+    {
+      "question": "coterminous _______",
+      "type": "blank",
+      "answer": "borders",
+      "explanation": "毗连的; 同时发生的, 毗连的边界. The two countries share coterminous borders. 这两个国家有毗连的边界。"
+    },
+    {
+      "question": "voluminous _____",
+      "type": "blank",
+      "answer": "notes",
+      "explanation": "大量的; 卷帙浩繁的, 大量的笔记. The historian left behind voluminous notes on the period. 历史学家留下了关于那个时期的大量笔记。"
+    },
+    {
+      "question": "numinous ________",
+      "type": "blank",
+      "answer": "presence",
+      "explanation": "神圣的; 超自然的, 神圣的存在. The ancient temple had a numinous presence. 古老的寺庙有一种神圣的存在感。"
+    },
+    {
+      "question": "cacophonous _____",
+      "type": "blank",
+      "answer": "crowd",
+      "explanation": "刺耳的; 不和谐的, 嘈杂的人群. The cacophonous crowd made it impossible to hear. 嘈杂的人群使人无法听清。"
+    },
+    {
+      "question": "synchronous ______",
+      "type": "blank",
+      "answer": "clocks",
+      "explanation": "同步的; 同时发生的, 同步时钟. The synchronous clocks displayed the same time exactly. 同步时钟准确显示相同的时间。"
+    },
+    {
+      "question": "monotonous ____",
+      "type": "blank",
+      "answer": "tone",
+      "explanation": "单调的; 乏味的, 单调的语气. His monotonous tone put the audience to sleep. 他单调的语气让观众昏昏欲睡。"
+    },
+    {
+      "question": "gluttonous _____",
+      "type": "blank",
+      "answer": "eater",
+      "explanation": "暴食的; 贪吃的, 暴食的食客. The gluttonous eater consumed an enormous amount. 暴食的食客吃了大量食物。"
+    },
+    {
+      "question": "pompous ______",
+      "type": "blank",
+      "answer": "speech",
+      "explanation": "自大的; 浮夸的, 浮夸的演讲. His pompous speech failed to impress the audience. 他浮夸的演讲未能打动观众。"
+    },
+    {
+      "question": "acarpous _____",
+      "type": "blank",
+      "answer": "plant",
+      "explanation": "不结果实的, 不结果实的植物. The acarpous plant produces only flowers, no fruit. 不结果实的植物只开花不结果。"
+    },
+    {
+      "question": "barbarous ___",
+      "type": "blank",
+      "answer": "act",
+      "explanation": "野蛮的; 残暴的, 野蛮的行为. The soldiers committed barbarous act during the war. 士兵在战争期间犯下了野蛮的行为。"
+    },
+    {
+      "question": "scabrous _______",
+      "type": "blank",
+      "answer": "surface",
+      "explanation": "粗糙的; 猥亵的, 粗糙的表面. The old wood had a scabrous surface covered in splinters. 旧木头有一个布满碎片的粗糙表面。"
+    },
+    {
+      "question": "anhydrous ____",
+      "type": "blank",
+      "answer": "salt",
+      "explanation": "无水的, 无水盐. The chemist used anhydrous salt in the experiment. 化学家在实验中使用了无水盐。"
+    },
+    {
+      "question": "slanderous _____",
+      "type": "blank",
+      "answer": "rumor",
+      "explanation": "诽谤的; 中伤的, 诽谤性谣言. The victim sued over the slanderous rumor spread online. 受害者因网上传播的诽谤性谣言提起诉讼。"
+    },
+    {
+      "question": "ponderous _____",
+      "type": "blank",
+      "answer": "prose",
+      "explanation": "笨重的; 沉闷的, 沉闷的散文. The author's ponderous prose made reading difficult. 作者沉闷的散文使阅读变得困难。"
+    },
+    {
+      "question": "saliferous _______",
+      "type": "blank",
+      "answer": "deposit",
+      "explanation": "含盐的, 含盐矿床. Miners discovered a large saliferous deposit underground. 矿工在地下发现了一个大型含盐矿床。"
+    },
+    {
+      "question": "odoriferous ____",
+      "type": "blank",
+      "answer": "herb",
+      "explanation": "有气味的; 芳香的, 芳香的草药. The garden grew various odoriferous herb species. 花园种植了各种芳香的草药。"
+    },
+    {
+      "question": "cantankerous ___ ___",
+      "type": "blank",
+      "answer": "old man",
+      "explanation": "脾气坏的; 爱争吵的, 脾气坏的老人. The cantankerous old man complained about everything. 脾气坏的老人对每件事都抱怨。"
+    },
+    {
+      "question": "numerous ________",
+      "type": "blank",
+      "answer": "examples",
+      "explanation": "许多的; 大量的, 许多例子. The textbook provides numerous examples of the concept. 教科书提供了该概念的许多例子。"
+    },
+    {
+      "question": "prosperous ___",
+      "type": "blank",
+      "answer": "era",
+      "explanation": "繁荣的; 兴旺的, 繁荣时代. The country enjoyed a prosperous era of growth. 该国享受了一个繁荣的增长时代。"
+    },
+    {
+      "question": "preposterous ____",
+      "type": "blank",
+      "answer": "idea",
+      "explanation": "荒谬的; 可笑的, 荒谬的想法. His plan was a preposterous idea that no one supported. 他的计划是一个没人支持的荒谬想法。"
+    },
+    {
+      "question": "dexterous _____",
+      "type": "blank",
+      "answer": "hands",
+      "explanation": "灵巧的; 熟练的, 灵巧的双手. The surgeon's dexterous hands performed the delicate operation. 外科医生灵巧的双手进行了精细的手术。"
+    },
+    {
+      "question": "desirous __",
+      "type": "blank",
+      "answer": "of",
+      "explanation": "渴望的; 想要的, 渴望. She was desirous of achieving success in her career. 她渴望在事业上取得成功。"
+    },
+    {
+      "question": "chivalrous ______",
+      "type": "blank",
+      "answer": "knight",
+      "explanation": "侠义的; 有骑士风度的, 侠义的骑士. The chivalrous knight protected the innocent. 侠义的骑士保护无辜者。"
+    },
+    {
+      "question": "vigorous ______",
+      "type": "blank",
+      "answer": "debate",
+      "explanation": "有力的; 精力充沛的, 激烈的辩论. The candidates engaged in vigorous debate on stage. 候选人在台上进行了激烈的辩论。"
+    },
+    {
+      "question": "valorous ____",
+      "type": "blank",
+      "answer": "deed",
+      "explanation": "英勇的; 勇敢的, 英勇的行为. The soldier performed a valorous deed in battle. 士兵在战斗中做出了英勇的行为。"
+    },
+    {
+      "question": "dolorous ____",
+      "type": "blank",
+      "answer": "news",
+      "explanation": "悲伤的; 令人痛苦的, 悲伤的消息. The family received dolorous news about their father. 家人收到了关于父亲的悲伤消息。"
+    },
+    {
+      "question": "glamorous ____",
+      "type": "blank",
+      "answer": "life",
+      "explanation": "迷人的; 富有魅力的, 迷人的生活. The actress lived a glamorous life in Hollywood. 这位女演员在好莱坞过着迷人的生活。"
+    },
+    {
+      "question": "timorous ______",
+      "type": "blank",
+      "answer": "glance",
+      "explanation": "胆怯的; 胆小的, 胆怯的一瞥. She cast a timorous glance at the intimidating figure. 她向那个令人生畏的人物投去胆怯的一瞥。"
+    },
+    {
+      "question": "sonorous _____",
+      "type": "blank",
+      "answer": "voice",
+      "explanation": "洪亮的; 响亮的, 洪亮的声音. The speaker's sonorous voice filled the auditorium. 演讲者洪亮的声音充满了礼堂。"
+    },
+    {
+      "question": "porous ____",
+      "type": "blank",
+      "answer": "rock",
+      "explanation": "多孔的; 能渗透的, 多孔岩石. Water easily flows through porous rock formations. 水很容易流过多孔岩石层。"
+    },
+    {
+      "question": "vaporous ____",
+      "type": "blank",
+      "answer": "idea",
+      "explanation": "模糊的; 空洞的, 模糊的想法. His plan was just a vaporous idea with no substance. 他的计划只是一个没有实质内容的模糊想法。"
+    },
+    {
+      "question": "nonporous _______",
+      "type": "blank",
+      "answer": "surface",
+      "explanation": "无孔的; 不透水的, 无孔表面. The countertop has a nonporous surface that resists stains. 台面有一个抗污渍的无孔表面。"
+    },
+    {
+      "question": "herbivorous ____",
+      "type": "blank",
+      "answer": "diet",
+      "explanation": "食草的, 食草性饮食. The elephant follows a herbivorous diet of plants. 大象遵循植物的食草性饮食。"
+    },
+    {
+      "question": "omnivorous ____",
+      "type": "blank",
+      "answer": "diet",
+      "explanation": "杂食的, 杂食性饮食. Bears maintain an omnivorous diet of plants and meat. 熊保持植物和肉类的杂食性饮食。"
+    },
+    {
+      "question": "carnivorous _____",
+      "type": "blank",
+      "answer": "plant",
+      "explanation": "食肉的, 食肉植物. The Venus flytrap is a carnivorous plant that eats insects. 捕蝇草是一种吃昆虫的食肉植物。"
+    },
+    {
+      "question": "ferrous _____",
+      "type": "blank",
+      "answer": "metal",
+      "explanation": "含铁的, 含铁金属. Steel is a ferrous metal alloy containing iron. 钢是一种含铁的金属合金。"
+    },
+    {
+      "question": "lustrous ____",
+      "type": "blank",
+      "answer": "hair",
+      "explanation": "有光泽的; 光亮的, 有光泽的头发. She maintained lustrous hair through careful grooming. 她通过精心打理保持头发有光泽。"
+    },
+    {
+      "question": "ambidextrous _____",
+      "type": "blank",
+      "answer": "skill",
+      "explanation": "双手都灵巧的, 双手灵巧的技能. His ambidextrous skill allowed him to write with either hand. 他双手灵巧的技能使他可以用任何一只手写字。"
+    },
+    {
+      "question": "felicitous ______",
+      "type": "blank",
+      "answer": "phrase",
+      "explanation": "恰当的; 得体的, 恰当的措辞. The writer chose a felicitous phrase to express the idea. 作家选择了一个恰当的措辞来表达这个想法。"
+    },
+    {
+      "question": "infelicitous ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "不恰当的; 不得体的, 不恰当的评论. His infelicitous remark offended several guests. 他不恰当的评论冒犯了几位客人。"
+    },
+    {
+      "question": "solicitous ____",
+      "type": "blank",
+      "answer": "care",
+      "explanation": "关心的; 体贴的, 体贴的照顾. The nurse provided solicitous care to all patients. 护士为所有病人提供了体贴的照顾。"
+    },
+    {
+      "question": "duplicitous _______",
+      "type": "blank",
+      "answer": "conduct",
+      "explanation": "欺骗的; 两面派的, 欺骗的行为. His duplicitous conduct betrayed his friends' trust. 他欺骗的行为背叛了朋友的信任。"
+    },
+    {
+      "question": "necessitous ______",
+      "type": "blank",
+      "answer": "family",
+      "explanation": "贫困的; 贫穷的, 贫困的家庭. The charity helps necessitous family in need. 慈善机构帮助需要帮助的贫困家庭。"
+    },
+    {
+      "question": "circuitous _____",
+      "type": "blank",
+      "answer": "route",
+      "explanation": "迂回的; 绕道的, 迂回的路线. They took a circuitous route to avoid the traffic jam. 他们走了一条迂回的路线以避开交通堵塞。"
+    },
+    {
+      "question": "iniquitous ______",
+      "type": "blank",
+      "answer": "policy",
+      "explanation": "不公正的; 邪恶的, 不公正的政策. The government abolished the iniquitous policy. 政府废除了不公正的政策。"
+    },
+    {
+      "question": "gratuitous ______",
+      "type": "blank",
+      "answer": "insult",
+      "explanation": "无端的; 无理由的, 无端的侮辱. His gratuitous insult was completely uncalled for. 他无端的侮辱完全是无缘无故的。"
+    },
+    {
+      "question": "fortuitous _________",
+      "type": "blank",
+      "answer": "encounter",
+      "explanation": "偶然的; 意外的, 偶然的相遇. Their fortuitous encounter led to a lasting friendship. 他们偶然的相遇导致了持久的友谊。"
+    },
+    {
+      "question": "momentous ________",
+      "type": "blank",
+      "answer": "decision",
+      "explanation": "重大的; 重要的, 重大的决定. The board made a momentous decision to merge. 董事会做出了合并的重大决定。"
+    },
+    {
+      "question": "portentous ____",
+      "type": "blank",
+      "answer": "sign",
+      "explanation": "预兆的; 不祥的, 不祥的征兆. Dark clouds were a portentous sign of the coming storm. 乌云是即将来临的暴风雨的不祥征兆。"
+    },
+    {
+      "question": "riotous _____",
+      "type": "blank",
+      "answer": "crowd",
+      "explanation": "骚乱的; 喧闹的, 骚乱的人群. Police dispersed the riotous crowd with tear gas. 警察用催泪瓦斯驱散了骚乱的人群。"
+    },
+    {
+      "question": "vacuous ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "空洞的; 无意义的, 空洞的评论. His vacuous remark added nothing to the discussion. 他空洞的评论对讨论毫无帮助。"
+    },
+    {
+      "question": "conspicuous _______",
+      "type": "blank",
+      "answer": "success",
+      "explanation": "显眼的; 显著的, 显著的成功. The project was a conspicuous success for the team. 该项目对团队来说是显著的成功。"
+    },
+    {
+      "question": "perspicuous _____",
+      "type": "blank",
+      "answer": "style",
+      "explanation": "明晰的; 清楚的, 明晰的风格. The author wrote in a perspicuous style easy to understand. 作者以易于理解的明晰风格写作。"
+    },
+    {
+      "question": "innocuous ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "无害的; 无伤大雅的, 无伤大雅的评论. His innocuous remark was misinterpreted as criticism. 他无伤大雅的评论被误解为批评。"
+    },
+    {
+      "question": "deciduous ____",
+      "type": "blank",
+      "answer": "tree",
+      "explanation": "落叶的, 落叶树. The deciduous tree loses its leaves every autumn. 落叶树每年秋天都会落叶。"
+    },
+    {
+      "question": "assiduous _____",
+      "type": "blank",
+      "answer": "study",
+      "explanation": "勤勉的; 刻苦的, 勤勉的学习. Through assiduous study, he achieved excellent grades. 通过勤勉的学习,他取得了优异的成绩。"
+    },
+    {
+      "question": "ambiguous _________",
+      "type": "blank",
+      "answer": "statement",
+      "explanation": "含糊的; 模棱两可的, 含糊的陈述. The politician's ambiguous statement confused voters. 政客含糊的陈述让选民感到困惑。"
+    },
+    {
+      "question": "contiguous ______",
+      "type": "blank",
+      "answer": "states",
+      "explanation": "毗连的; 接壤的, 接壤的州. The forty-eight contiguous states form the mainland USA. 四十八个接壤的州构成了美国大陆。"
+    },
+    {
+      "question": "exiguous _________",
+      "type": "blank",
+      "answer": "resources",
+      "explanation": "稀少的; 贫乏的, 稀少的资源. The expedition survived on exiguous resources. 探险队靠稀少的资源生存。"
+    },
+    {
+      "question": "mellifluous _____",
+      "type": "blank",
+      "answer": "voice",
+      "explanation": "甜美的; 悦耳的, 甜美的声音. The singer's mellifluous voice captivated the audience. 歌手甜美的声音吸引了观众。"
+    },
+    {
+      "question": "superfluous _______",
+      "type": "blank",
+      "answer": "details",
+      "explanation": "多余的; 过剩的, 多余的细节. The editor removed superfluous details from the manuscript. 编辑从稿件中删除了多余的细节。"
+    },
+    {
+      "question": "ingenuous _____",
+      "type": "blank",
+      "answer": "smile",
+      "explanation": "天真的; 坦率的, 天真的微笑. Her ingenuous smile revealed her honest nature. 她天真的微笑显示了她诚实的本性。"
+    },
+    {
+      "question": "tenuous ____",
+      "type": "blank",
+      "answer": "link",
+      "explanation": "脆弱的; 微弱的, 微弱的联系. The evidence showed only a tenuous link between the suspects. 证据只显示嫌疑人之间有微弱的联系。"
+    },
+    {
+      "question": "sinuous ____",
+      "type": "blank",
+      "answer": "path",
+      "explanation": "蜿蜒的; 曲折的, 蜿蜒的小路. The sinuous path wound through the forest. 蜿蜒的小路穿过森林。"
+    },
+    {
+      "question": "congruous _____",
+      "type": "blank",
+      "answer": "style",
+      "explanation": "一致的; 适合的, 一致的风格. The furniture was congruous style with the room's design. 家具与房间的设计风格一致。"
+    },
+    {
+      "question": "fatuous ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "愚蠢的; 愚昧的, 愚蠢的评论. His fatuous remark showed complete ignorance of the subject. 他愚蠢的评论显示了对该主题的完全无知。"
+    },
+    {
+      "question": "impetuous ________",
+      "type": "blank",
+      "answer": "decision",
+      "explanation": "冲动的; 鲁莽的, 冲动的决定. Her impetuous decision led to regrettable consequences. 她冲动的决定导致了令人遗憾的后果。"
+    },
+    {
+      "question": "voluptuous ______",
+      "type": "blank",
+      "answer": "figure",
+      "explanation": "性感的; 丰满的, 性感的身材. The model was known for her voluptuous figure. 这位模特以其性感的身材而闻名。"
+    },
+    {
+      "question": "virtuous ______",
+      "type": "blank",
+      "answer": "circle",
+      "explanation": "有道德的; 良性的, 良性循环. Education creates a virtuous circle of opportunity. 教育创造了一个良性循环的机会。"
+    },
+    {
+      "question": "tortuous ____",
+      "type": "blank",
+      "answer": "path",
+      "explanation": "曲折的; 复杂的, 曲折的道路. They followed a tortuous path up the mountain. 他们沿着曲折的道路爬上山。"
+    }
+  ]
+}
