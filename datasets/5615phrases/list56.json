@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "_____ fallibility",
+      "type": "blank",
+      "answer": "human",
+      "explanation": "易犯错性; 易错性, 人类易错性. Human fallibility means we all make mistakes. 人类易错性意味着我们都会犯错。"
+    },
+    {
+      "question": "susceptibility __ _______",
+      "type": "blank",
+      "answer": "to disease",
+      "explanation": "易感性; 敏感性, 对疾病的易感性. Genetics affects susceptibility to disease. 遗传影响对疾病的易感性。"
+    },
+    {
+      "question": "____ humility",
+      "type": "blank",
+      "answer": "show",
+      "explanation": "谦逊; 谦虚, 表现谦逊. Great leaders show humility. 伟大的领导者表现谦逊。"
+    },
+    {
+      "question": "_________ virility",
+      "type": "blank",
+      "answer": "masculine",
+      "explanation": "男子气概; 生殖力, 男性的男子气概. Sports celebrate masculine virility. 体育运动颂扬男性的男子气概。"
+    },
+    {
+      "question": "____ motility",
+      "type": "blank",
+      "answer": "cell",
+      "explanation": "运动性; 活动力, 细胞运动性. Biologists study cell motility under microscopes. 生物学家在显微镜下研究细胞运动性。"
+    },
+    {
+      "question": "_____ __ futility",
+      "type": "blank",
+      "answer": "sense of",
+      "explanation": "徒劳; 无用, 徒劳感. He felt a sense of futility about the project. 他对这个项目感到徒劳。"
+    },
+    {
+      "question": "_____ tranquility",
+      "type": "blank",
+      "answer": "rural",
+      "explanation": "宁静; 平静, 乡村宁静. They enjoyed the rural tranquility. 他们享受乡村宁静。"
+    },
+    {
+      "question": "civility ___ ________",
+      "type": "blank",
+      "answer": "and courtesy",
+      "explanation": "礼貌; 谦恭, 礼貌和礼节. Treat everyone with civility and courtesy. 以礼貌和礼节对待每个人。"
+    },
+    {
+      "question": "_____ incredulity",
+      "type": "blank",
+      "answer": "voice",
+      "explanation": "怀疑; 不轻信, 表达怀疑. She began to voice incredulity at the claims. 她开始对这些说法表达怀疑。"
+    },
+    {
+      "question": "______ sedulity",
+      "type": "blank",
+      "answer": "dogged",
+      "explanation": "勤勉; 勤奋, 顽强的勤勉. His dogged sedulity led to success. 他顽强的勤勉导致了成功。"
+    },
+    {
+      "question": "_______ garrulity",
+      "type": "blank",
+      "answer": "endless",
+      "explanation": "多嘴; 唠叨, 无休止的唠叨. His endless garrulity bored everyone. 他无休止的唠叨让每个人都感到厌烦。"
+    },
+    {
+      "question": "_____________ amity",
+      "type": "blank",
+      "answer": "international",
+      "explanation": "友好; 和睦, 国际友好. Nations strive for international amity. 各国努力争取国际友好。"
+    },
+    {
+      "question": "_______ calamity",
+      "type": "blank",
+      "answer": "natural",
+      "explanation": "灾难; 灾祸, 自然灾害. The earthquake was a natural calamity. 地震是一场自然灾害。"
+    },
+    {
+      "question": "____ magnanimity",
+      "type": "blank",
+      "answer": "show",
+      "explanation": "宽宏大量, 表现宽宏大量. Winners should show magnanimity. 获胜者应该表现宽宏大量。"
+    },
+    {
+      "question": "________ equanimity",
+      "type": "blank",
+      "answer": "maintain",
+      "explanation": "镇定; 沉着, 保持镇定. She managed to maintain equanimity under pressure. 她在压力下设法保持镇定。"
+    },
+    {
+      "question": "______ __ comity",
+      "type": "blank",
+      "answer": "spirit of",
+      "explanation": "礼让; 友好, 友好精神. Diplomats work in a spirit of comity. 外交官以友好精神工作。"
+    },
+    {
+      "question": "________ conformity",
+      "type": "blank",
+      "answer": "cultural",
+      "explanation": "一致; 遵从, 文化一致性. Social pressure enforces cultural conformity. 社会压力强制执行文化一致性。"
+    },
+    {
+      "question": "___ enormity __ ___ ____",
+      "type": "blank",
+      "answer": "the of the task",
+      "explanation": "巨大; 严重性, 任务的巨大性. They realized the enormity of the task. 他们意识到任务的巨大性。"
+    },
+    {
+      "question": "_______ anonymity",
+      "type": "blank",
+      "answer": "protect",
+      "explanation": "匿名; 无名, 保护匿名. Journalists protect anonymity of sources. 记者保护消息来源的匿名。"
+    },
+    {
+      "question": "sanity _____",
+      "type": "blank",
+      "answer": "check",
+      "explanation": "神智正常; 明智, 理智检查. Do a sanity check on your work. 对你的工作做理智检查。"
+    },
+    {
+      "question": "________ insanity",
+      "type": "blank",
+      "answer": "criminal",
+      "explanation": "精神错乱; 疯狂, 刑事精神错乱. The defense claimed criminal insanity. 辩方声称刑事精神错乱。"
+    },
+    {
+      "question": "_____ vanity",
+      "type": "blank",
+      "answer": "sheer",
+      "explanation": "虚荣; 自负, 纯粹的虚荣. His actions were driven by sheer vanity. 他的行为完全由虚荣驱动。"
+    },
+    {
+      "question": "______ amenity",
+      "type": "blank",
+      "answer": "modern",
+      "explanation": "便利设施; 舒适设备, 现代便利设施. The hotel offers modern amenity. 酒店提供现代便利设施。"
+    },
+    {
+      "question": "_____ dignity",
+      "type": "blank",
+      "answer": "human",
+      "explanation": "尊严; 庄严, 人的尊严. Human dignity must be respected. 人的尊严必须受到尊重。"
+    },
+    {
+      "question": "__ ___ vicinity",
+      "type": "blank",
+      "answer": "in the",
+      "explanation": "附近; 邻近, 在附近. The store is in the vicinity. 商店就在附近。"
+    },
+    {
+      "question": "affinity ___",
+      "type": "blank",
+      "answer": "for",
+      "explanation": "亲和力; 喜好, 对...的喜好. She has an affinity for mathematics. 她对数学有喜好。"
+    },
+    {
+      "question": "__ infinity ___ ______",
+      "type": "blank",
+      "answer": "to and beyond",
+      "explanation": "无限; 无穷, 直到无限以及更远. To infinity and beyond! 直到无限以及更远!"
+    },
+    {
+      "question": "____ indemnity",
+      "type": "blank",
+      "answer": "seek",
+      "explanation": "赔偿; 保障, 寻求赔偿. Victims may seek indemnity for damages. 受害者可以为损害寻求赔偿。"
+    },
+    {
+      "question": "______ solemnity",
+      "type": "blank",
+      "answer": "ritual",
+      "explanation": "庄严; 严肃, 仪式的庄严. The ritual solemnity impressed everyone. 仪式的庄严给每个人留下了深刻印象。"
+    },
+    {
+      "question": "_______ fraternity",
+      "type": "blank",
+      "answer": "college",
+      "explanation": "兄弟会; 团体, 大学兄弟会. He joined a college fraternity. 他加入了大学兄弟会。"
+    },
+    {
+      "question": "__________ immunity",
+      "type": "blank",
+      "answer": "diplomatic",
+      "explanation": "豁免; 免疫力, 外交豁免权. Ambassadors have diplomatic immunity. 大使享有外交豁免权。"
+    },
+    {
+      "question": "___ ____ impunity",
+      "type": "blank",
+      "answer": "act with",
+      "explanation": "免罚; 不受惩罚, 不受惩罚地行事. Criminals cannot act with impunity. 罪犯不能不受惩罚地行事。"
+    },
+    {
+      "question": "_____ serendipity",
+      "type": "blank",
+      "answer": "happy",
+      "explanation": "意外发现; 机缘巧合, 幸运的机缘巧合. Their meeting was a happy serendipity. 他们的相遇是幸运的机缘巧合。"
+    },
+    {
+      "question": "______ solidarity",
+      "type": "blank",
+      "answer": "worker",
+      "explanation": "团结; 一致, 工人团结. Worker solidarity strengthened the union. 工人团结加强了工会。"
+    },
+    {
+      "question": "charity __________",
+      "type": "blank",
+      "answer": "fundraiser",
+      "explanation": "慈善; 施舍, 慈善募捐活动. The charity fundraiser raised thousands. 慈善募捐活动筹集了数千美元。"
+    },
+    {
+      "question": "_____ familiarity",
+      "type": "blank",
+      "answer": "close",
+      "explanation": "熟悉; 亲密, 密切的熟悉. Close familiarity breeds contempt. 密切的熟悉滋生轻蔑。"
+    },
+    {
+      "question": "_____–_____ polarity",
+      "type": "blank",
+      "answer": "north–south",
+      "explanation": "极性; 两极分化, 南北极性. Magnets have north–south polarity. 磁铁有南北极性。"
+    },
+    {
+      "question": "_____________ singularity",
+      "type": "blank",
+      "answer": "technological",
+      "explanation": "奇点; 独特性, 技术奇点. Some predict a technological singularity. 有些人预测技术奇点。"
+    },
+    {
+      "question": "________ insularity",
+      "type": "blank",
+      "answer": "cultural",
+      "explanation": "孤立; 狭隘, 文化孤立. Cultural insularity limits perspectives. 文化孤立限制了视角。"
+    },
+    {
+      "question": "_____ parity",
+      "type": "blank",
+      "answer": "price",
+      "explanation": "平价; 相等, 价格平价. Price parity ensures fair competition. 价格平价确保公平竞争。"
+    },
+    {
+      "question": "______ disparity",
+      "type": "blank",
+      "answer": "income",
+      "explanation": "差异; 不平等, 收入差距. Income disparity is growing. 收入差距正在扩大。"
+    },
+    {
+      "question": "_________ celebrity",
+      "type": "blank",
+      "answer": "Hollywood",
+      "explanation": "名人; 名声, 好莱坞名人. The Hollywood celebrity attended the premiere. 好莱坞名人参加了首映式。"
+    },
+    {
+      "question": "____ alacrity",
+      "type": "blank",
+      "answer": "show",
+      "explanation": "敏捷; 乐意, 表现乐意. He accepted with alacrity. 他乐意地接受了。"
+    },
+    {
+      "question": "________ mediocrity",
+      "type": "blank",
+      "answer": "cultural",
+      "explanation": "平庸; 平凡, 文化平庸. Critics decry cultural mediocrity. 批评家谴责文化平庸。"
+    },
+    {
+      "question": "_______ insincerity",
+      "type": "blank",
+      "answer": "blatant",
+      "explanation": "不真诚; 虚伪, 明显的不真诚. His blatant insincerity was obvious. 他明显的不真诚是显而易见的。"
+    },
+    {
+      "question": "__________ celerity",
+      "type": "blank",
+      "answer": "remarkable",
+      "explanation": "迅速; 敏捷, 非凡的迅速. They moved with remarkable celerity. 他们以非凡的迅速行动。"
+    },
+    {
+      "question": "________ temerity",
+      "type": "blank",
+      "answer": "reckless",
+      "explanation": "鲁莽; 冒失, 鲁莽的冒失. His reckless temerity caused problems. 他鲁莽的冒失造成了问题。"
+    },
+    {
+      "question": "________ prosperity",
+      "type": "blank",
+      "answer": "economic",
+      "explanation": "繁荣; 兴旺, 经济繁荣. Economic prosperity benefits all. 经济繁荣使所有人受益。"
+    },
+    {
+      "question": "_______ austerity",
+      "type": "blank",
+      "answer": "postwar",
+      "explanation": "紧缩; 朴素, 战后紧缩. Postwar austerity was difficult. 战后紧缩很困难。"
+    },
+    {
+      "question": "______ dexterity",
+      "type": "blank",
+      "answer": "manual",
+      "explanation": "灵巧; 敏捷, 手工灵巧. Surgeons need manual dexterity. 外科医生需要手工灵巧。"
+    },
+    {
+      "question": "_____ integrity",
+      "type": "blank",
+      "answer": "moral",
+      "explanation": "正直; 诚实, 道德正直. Politicians should have moral integrity. 政客应该有道德正直。"
+    },
+    {
+      "question": "___ __ superiority",
+      "type": "blank",
+      "answer": "air of",
+      "explanation": "优越; 优势, 优越感. He spoke with an air of superiority. 他带着优越感说话。"
+    },
+    {
+      "question": "___ priority",
+      "type": "blank",
+      "answer": "top",
+      "explanation": "优先; 优先权, 最优先. Safety is our top priority. 安全是我们的最优先事项。"
+    },
+    {
+      "question": "_____ obscurity",
+      "type": "blank",
+      "answer": "total",
+      "explanation": "默默无闻; 晦涩, 完全默默无闻. The artist died in total obscurity. 艺术家在完全默默无闻中去世。"
+    },
+    {
+      "question": "_____ purity",
+      "type": "blank",
+      "answer": "moral",
+      "explanation": "纯洁; 纯净, 道德纯洁. They valued moral purity. 他们重视道德纯洁。"
+    },
+    {
+      "question": "____ maturity",
+      "type": "blank",
+      "answer": "loan",
+      "explanation": "成熟; 到期, 贷款到期. The loan maturity date is next year. 贷款到期日是明年。"
+    },
+    {
+      "question": "_______ propensity",
+      "type": "blank",
+      "answer": "natural",
+      "explanation": "倾向; 习性, 天生的倾向. Humans have a natural propensity to learn. 人类有学习的天生倾向。"
+    },
+    {
+      "question": "______ animosity",
+      "type": "blank",
+      "answer": "mutual",
+      "explanation": "仇恨; 敌意, 相互敌意. There was mutual animosity between them. 他们之间有相互敌意。"
+    },
+    {
+      "question": "____ pomposity",
+      "type": "blank",
+      "answer": "show",
+      "explanation": "自负; 浮夸, 表现自负. He would often show pomposity. 他经常表现自负。"
+    },
+    {
+      "question": "___ __ generosity",
+      "type": "blank",
+      "answer": "act of",
+      "explanation": "慷慨; 大方, 慷慨的行为. Her donation was an act of generosity. 她的捐赠是慷慨的行为。"
+    },
+    {
+      "question": "__________ virtuosity",
+      "type": "blank",
+      "answer": "remarkable",
+      "explanation": "精湛技艺; 艺术鉴赏力, 非凡的精湛技艺. The pianist displayed remarkable virtuosity. 钢琴家展示了非凡的精湛技艺。"
+    },
+    {
+      "question": "_____ entity",
+      "type": "blank",
+      "answer": "legal",
+      "explanation": "实体; 存在, 法律实体. The corporation is a legal entity. 公司是法律实体。"
+    },
+    {
+      "question": "______ acuity",
+      "type": "blank",
+      "answer": "visual",
+      "explanation": "敏锐; 尖锐, 视觉敏锐度. Visual acuity declines with age. 视觉敏锐度随年龄下降。"
+    },
+    {
+      "question": "perspicuity __ ______",
+      "type": "blank",
+      "answer": "of speech",
+      "explanation": "明晰; 清楚, 言语的明晰. The perspicuity of speech impressed listeners. 言语的明晰给听众留下了深刻印象。"
+    },
+    {
+      "question": "___________ ingenuity",
+      "type": "blank",
+      "answer": "engineering",
+      "explanation": "独创性; 聪明才智, 工程独创性. Engineering ingenuity solved the problem. 工程独创性解决了问题。"
+    },
+    {
+      "question": "____ equity",
+      "type": "blank",
+      "answer": "home",
+      "explanation": "公平; 资产净值, 房屋净值. Home equity can be used for loans. 房屋净值可以用于贷款。"
+    },
+    {
+      "question": "______ inequity",
+      "type": "blank",
+      "answer": "social",
+      "explanation": "不公平; 不平等, 社会不公平. Social inequity must be addressed. 社会不公平必须得到解决。"
+    },
+    {
+      "question": "_____ iniquity",
+      "type": "blank",
+      "answer": "grave",
+      "explanation": "邪恶; 不公正, 严重的邪恶. Slavery was a grave iniquity. 奴隶制是严重的邪恶。"
+    },
+    {
+      "question": "_________ antiquity",
+      "type": "blank",
+      "answer": "classical",
+      "explanation": "古代; 古物, 古典古代. Classical antiquity influenced Western culture. 古典古代影响了西方文化。"
+    },
+    {
+      "question": "_____ incongruity",
+      "type": "blank",
+      "answer": "comic",
+      "explanation": "不协调; 不一致, 滑稽的不协调. The comic incongruity made people laugh. 滑稽的不协调让人发笑。"
+    },
+    {
+      "question": "_____ fatuity",
+      "type": "blank",
+      "answer": "utter",
+      "explanation": "愚蠢; 昏庸, 彻底的愚蠢. The plan showed utter fatuity. 这个计划显示了彻底的愚蠢。"
+    },
+    {
+      "question": "_______ gratuity",
+      "type": "blank",
+      "answer": "service",
+      "explanation": "小费; 赏金, 服务小费. A service gratuity is added to the bill. 账单中加入了服务小费。"
+    },
+    {
+      "question": "______ cavity",
+      "type": "blank",
+      "answer": "dental",
+      "explanation": "腔; 蛀洞, 牙洞. The dentist filled the dental cavity. 牙医填补了牙洞。"
+    },
+    {
+      "question": "_____ depravity",
+      "type": "blank",
+      "answer": "moral",
+      "explanation": "堕落; 腐化, 道德堕落. The crime showed moral depravity. 这起犯罪显示了道德堕落。"
+    },
+    {
+      "question": "_______ levity",
+      "type": "blank",
+      "answer": "nervous",
+      "explanation": "轻浮; 轻率, 紧张的轻浮. Nervous levity masked his fear. 紧张的轻浮掩盖了他的恐惧。"
+    },
+    {
+      "question": "hyperactivity ________",
+      "type": "blank",
+      "answer": "disorder",
+      "explanation": "过度活跃, 过度活跃障碍. ADHD stands for hyperactivity disorder. 多动症代表过度活跃障碍。"
+    },
+    {
+      "question": "_____ productivity",
+      "type": "blank",
+      "answer": "labor",
+      "explanation": "生产力; 生产率, 劳动生产率. Labor productivity affects economic growth. 劳动生产率影响经济增长。"
+    },
+    {
+      "question": "____ sensitivity",
+      "type": "blank",
+      "answer": "skin",
+      "explanation": "敏感性; 灵敏度, 皮肤敏感性. Some people have skin sensitivity to sunlight. 有些人对阳光有皮肤敏感性。"
+    },
+    {
+      "question": "prolixity __ _____",
+      "type": "blank",
+      "answer": "of style",
+      "explanation": "冗长; 啰嗦, 文体的冗长. The prolixity of style bored readers. 文体的冗长让读者感到厌烦。"
+    },
+    {
+      "question": "____ __ fealty",
+      "type": "blank",
+      "answer": "oath of",
+      "explanation": "忠诚; 效忠, 效忠誓言. Knights swore an oath of fealty. 骑士宣誓效忠。"
+    },
+    {
+      "question": "___ casualty",
+      "type": "blank",
+      "answer": "war",
+      "explanation": "伤亡; 受害者, 战争伤亡. He was a war casualty. 他是战争伤亡者。"
+    },
+    {
+      "question": "____ royalty",
+      "type": "blank",
+      "answer": "book",
+      "explanation": "版税; 皇室, 书籍版税. Authors earn book royalty from sales. 作者从销售中赚取书籍版税。"
+    },
+    {
+      "question": "novelty ____",
+      "type": "blank",
+      "answer": "item",
+      "explanation": "新奇; 新颖, 新奇物品. The store sells novelty item. 商店出售新奇物品。"
+    },
+    {
+      "question": "_____ guilty",
+      "type": "blank",
+      "answer": "plead",
+      "explanation": "有罪的, 认罪. The defendant will plead guilty. 被告将认罪。"
+    },
+    {
+      "question": "shanty ____",
+      "type": "blank",
+      "answer": "town",
+      "explanation": "棚屋; 简陋小屋, 棚户区. Many live in the shanty town. 许多人住在棚户区。"
+    },
+    {
+      "question": "________ warranty",
+      "type": "blank",
+      "answer": "lifetime",
+      "explanation": "保证; 保修, 终身保修. The product has a lifetime warranty. 产品有终身保修。"
+    },
+    {
+      "question": "________ sovereignty",
+      "type": "blank",
+      "answer": "national",
+      "explanation": "主权; 统治权, 国家主权. Countries protect their national sovereignty. 国家保护其国家主权。"
+    },
+    {
+      "question": "dainty _______",
+      "type": "blank",
+      "answer": "fingers",
+      "explanation": "精致的; 娇小的, 纤细的手指. She had dainty fingers. 她有纤细的手指。"
+    },
+    {
+      "question": "_____ certainty",
+      "type": "blank",
+      "answer": "moral",
+      "explanation": "确定; 必然, 道德确信. He spoke with moral certainty. 他以道德确信说话。"
+    },
+    {
+      "question": "flaunty _____",
+      "type": "blank",
+      "answer": "dress",
+      "explanation": "炫耀的; 招摇的, 炫耀的连衣裙. She wore a flaunty dress to the party. 她穿着炫耀的连衣裙去参加聚会。"
+    },
+    {
+      "question": "tasty _____",
+      "type": "blank",
+      "answer": "snack",
+      "explanation": "美味的, 美味的小吃. This is a tasty snack. 这是美味的小吃。"
+    },
+    {
+      "question": "_____ amnesty",
+      "type": "blank",
+      "answer": "grant",
+      "explanation": "特赦; 大赦, 给予特赦. The president will grant amnesty. 总统将给予特赦。"
+    },
+    {
+      "question": "zesty _____",
+      "type": "blank",
+      "answer": "sauce",
+      "explanation": "风味浓的; 有活力的, 风味浓的酱汁. The zesty sauce adds flavor. 风味浓的酱汁增添了味道。"
+    },
+    {
+      "question": "feisty ______",
+      "type": "blank",
+      "answer": "debate",
+      "explanation": "精力充沛的; 活跃的, 激烈的辩论. The candidates had a feisty debate. 候选人进行了激烈的辩论。"
+    },
+    {
+      "question": "fusty _____",
+      "type": "blank",
+      "answer": "attic",
+      "explanation": "霉臭的; 陈腐的, 霉臭的阁楼. The fusty attic needed cleaning. 霉臭的阁楼需要清理。"
+    },
+    {
+      "question": "lusty _____",
+      "type": "blank",
+      "answer": "cheer",
+      "explanation": "精力充沛的; 健壮的, 热情的欢呼. The crowd gave a lusty cheer. 人群发出热情的欢呼。"
+    },
+    {
+      "question": "musty _____",
+      "type": "blank",
+      "answer": "smell",
+      "explanation": "发霉的; 陈腐的, 霉味. The old books had a musty smell. 旧书有霉味。"
+    },
+    {
+      "question": "natty _______",
+      "type": "blank",
+      "answer": "dresser",
+      "explanation": "整洁的; 时髦的, 衣着整洁的人. He's always been a natty dresser. 他一直是衣着整洁的人。"
+    },
+    {
+      "question": "tatty _______",
+      "type": "blank",
+      "answer": "clothes",
+      "explanation": "破旧的; 褴褛的, 破旧的衣服. He wore tatty clothes. 他穿着破旧的衣服。"
+    },
+    {
+      "question": "petty _____",
+      "type": "blank",
+      "answer": "crime",
+      "explanation": "琐碎的; 小的, 轻微犯罪. Shoplifting is a petty crime. 入店行窃是轻微犯罪。"
+    }
+  ]
+}
