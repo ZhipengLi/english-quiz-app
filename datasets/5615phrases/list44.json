@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "tempestuous ______",
+      "type": "blank",
+      "answer": "affair",
+      "explanation": "暴风雨般的; 激烈的, 激烈的恋情. Their tempestuous affair ended in heartbreak. 他们激烈的恋情以心碎告终。"
+    },
+    {
+      "question": "mischievous _____",
+      "type": "blank",
+      "answer": "prank",
+      "explanation": "淘气的; 恶作剧的, 淘气的恶作剧. The children played a mischievous prank on their teacher. 孩子们对老师玩了一个淘气的恶作剧。"
+    },
+    {
+      "question": "______ rendezvous",
+      "type": "blank",
+      "answer": "secret",
+      "explanation": "约会; 会面, 秘密约会. The spies arranged a secret rendezvous at midnight. 间谍安排了午夜的秘密约会。"
+    },
+    {
+      "question": "opus ______",
+      "type": "blank",
+      "answer": "magnum",
+      "explanation": "作品, 巨著. The novel was considered the author's opus magnum. 这部小说被认为是作者的巨著。"
+    },
+    {
+      "question": "_____ corpus",
+      "type": "blank",
+      "answer": "human",
+      "explanation": "文集; 全集, 人体. Medical students study the human corpus in anatomy class. 医学生在解剖课上研究人体。"
+    },
+    {
+      "question": "walrus ____",
+      "type": "blank",
+      "answer": "tusk",
+      "explanation": "海象, 海象牙. The walrus tusk can grow up to three feet long. 海象牙可以长到三英尺长。"
+    },
+    {
+      "question": "_______ chorus",
+      "type": "blank",
+      "answer": "singing",
+      "explanation": "合唱; 合唱团, 歌唱合唱. The singing chorus performed a beautiful rendition. 歌唱合唱演唱了一首优美的曲目。"
+    },
+    {
+      "question": "papyrus ______",
+      "type": "blank",
+      "answer": "scroll",
+      "explanation": "纸莎草纸, 纸莎草纸卷. Ancient Egyptians wrote on papyrus scroll documents. 古埃及人在纸莎草纸卷文件上书写。"
+    },
+    {
+      "question": "________ census",
+      "type": "blank",
+      "answer": "national",
+      "explanation": "人口普查, 全国人口普查. The government conducts a national census every ten years. 政府每十年进行一次全国人口普查。"
+    },
+    {
+      "question": "_____ consensus",
+      "type": "blank",
+      "answer": "broad",
+      "explanation": "共识; 一致意见, 广泛共识. The committee reached a broad consensus on the issue. 委员会就该问题达成了广泛共识。"
+    },
+    {
+      "question": "________ colossus",
+      "type": "blank",
+      "answer": "towering",
+      "explanation": "巨人; 巨像, 高耸的巨像. The ancient statue was a towering colossus overlooking the harbor. 这座古老的雕像是俯瞰港口的高耸巨像。"
+    },
+    {
+      "question": "_____ hiatus",
+      "type": "blank",
+      "answer": "brief",
+      "explanation": "间断; 空隙, 短暂的间断. After a brief hiatus, the band resumed touring. 经过短暂的间断后,乐队恢复了巡演。"
+    },
+    {
+      "question": "__________ apparatus",
+      "type": "blank",
+      "answer": "scientific",
+      "explanation": "装置; 器械, 科学仪器. The laboratory is equipped with advanced scientific apparatus. 实验室配备了先进的科学仪器。"
+    },
+    {
+      "question": "______ status",
+      "type": "blank",
+      "answer": "social",
+      "explanation": "地位; 状态, 社会地位. Wealth often correlates with social status. 财富常常与社会地位相关。"
+    },
+    {
+      "question": "______ cactus",
+      "type": "blank",
+      "answer": "desert",
+      "explanation": "仙人掌, 沙漠仙人掌. The desert cactus can survive extreme drought conditions. 沙漠仙人掌可以在极端干旱条件下生存。"
+    },
+    {
+      "question": "_____ conspectus",
+      "type": "blank",
+      "answer": "brief",
+      "explanation": "概要; 纲要, 简短的概要. The professor provided a brief conspectus of the course. 教授提供了课程的简短概要。"
+    },
+    {
+      "question": "_____ fetus",
+      "type": "blank",
+      "answer": "human",
+      "explanation": "胎儿, 人类胎儿. The ultrasound showed a healthy human fetus. 超声波显示了一个健康的人类胎儿。"
+    },
+    {
+      "question": "_____ impetus",
+      "type": "blank",
+      "answer": "fresh",
+      "explanation": "推动力; 动力, 新的动力. The discovery gave fresh impetus to the research. 这一发现为研究提供了新的动力。"
+    },
+    {
+      "question": "eucalyptus ___",
+      "type": "blank",
+      "answer": "oil",
+      "explanation": "桉树, 桉树油. Eucalyptus oil is used in many medicinal products. 桉树油用于许多药用产品。"
+    },
+    {
+      "question": "______ nexus",
+      "type": "blank",
+      "answer": "social",
+      "explanation": "联系; 连接, 社会联系. The city serves as a social nexus for the region. 这座城市是该地区的社会联系枢纽。"
+    },
+    {
+      "question": "gallows _____",
+      "type": "blank",
+      "answer": "humor",
+      "explanation": "绞刑架, 黑色幽默. His gallows humor helped cope with difficult situations. 他的黑色幽默帮助应对困难的情况。"
+    },
+    {
+      "question": "______ acrobat",
+      "type": "blank",
+      "answer": "circus",
+      "explanation": "杂技演员, 马戏团杂技演员. The circus acrobat performed amazing aerial stunts. 马戏团杂技演员表演了惊人的空中特技。"
+    },
+    {
+      "question": "offbeat _____",
+      "type": "blank",
+      "answer": "humor",
+      "explanation": "不寻常的; 非传统的, 不寻常的幽默. His offbeat humor appeals to a niche audience. 他不寻常的幽默吸引了小众观众。"
+    },
+    {
+      "question": "browbeat _______",
+      "type": "blank",
+      "answer": "witness",
+      "explanation": "威吓; 恐吓, 威吓证人. The lawyer tried to browbeat witness during cross-examination. 律师在盘问时试图威吓证人。"
+    },
+    {
+      "question": "__________ feat",
+      "type": "blank",
+      "answer": "remarkable",
+      "explanation": "功绩; 壮举, 非凡的壮举. Climbing Mount Everest is a remarkable feat. 攀登珠穆朗玛峰是一个非凡的壮举。"
+    },
+    {
+      "question": "_______ threat",
+      "type": "blank",
+      "answer": "serious",
+      "explanation": "威胁; 恐吓, 严重的威胁. Climate change poses a serious threat to humanity. 气候变化对人类构成严重的威胁。"
+    },
+    {
+      "question": "_________ retreat",
+      "type": "blank",
+      "answer": "strategic",
+      "explanation": "撤退; 退却, 战略性撤退. The general ordered a strategic retreat from the battlefield. 将军命令从战场进行战略性撤退。"
+    },
+    {
+      "question": "entreat _____",
+      "type": "blank",
+      "answer": "favor",
+      "explanation": "恳求; 乞求, 恳求恩惠. She would entreat favor from the king. 她会向国王恳求恩惠。"
+    },
+    {
+      "question": "_____ caveat",
+      "type": "blank",
+      "answer": "legal",
+      "explanation": "警告; 告诫, 法律警告. The contract included an important legal caveat. 合同包含了一项重要的法律警告。"
+    },
+    {
+      "question": "__ _________ fiat",
+      "type": "blank",
+      "answer": "by executive",
+      "explanation": "命令; 法令, 通过行政命令. The president ruled by executive fiat. 总统通过行政命令统治。"
+    },
+    {
+      "question": "____ gnat",
+      "type": "blank",
+      "answer": "tiny",
+      "explanation": "小昆虫; 蚊蚋, 微小的蚊蚋. A tiny gnat buzzed around the picnic food. 一只微小的蚊蚋在野餐食物周围嗡嗡作响。"
+    },
+    {
+      "question": "_________ turncoat",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "叛徒; 变节者, 政治叛徒. The political turncoat switched parties for personal gain. 政治叛徒为了个人利益转换了政党。"
+    },
+    {
+      "question": "______ moat",
+      "type": "blank",
+      "answer": "castle",
+      "explanation": "护城河, 城堡护城河. The castle moat protected the fortress from invaders. 城堡护城河保护堡垒免受入侵者侵害。"
+    },
+    {
+      "question": "_____'_ spat",
+      "type": "blank",
+      "answer": "lover's",
+      "explanation": "小争吵; 口角, 情侣的小争吵. They had a minor lover's spat but reconciled quickly. 他们有一次小的情侣争吵,但很快和解了。"
+    },
+    {
+      "question": "___ carat",
+      "type": "blank",
+      "answer": "one",
+      "explanation": "克拉, 一克拉. The diamond ring weighed one carat. 这枚钻石戒指重一克拉。"
+    },
+    {
+      "question": "__ technocrat",
+      "type": "blank",
+      "answer": "IT",
+      "explanation": "技术官僚, IT技术官僚. The IT technocrat led the company's digital transformation. IT技术官僚领导了公司的数字化转型。"
+    },
+    {
+      "question": "______ aristocrat",
+      "type": "blank",
+      "answer": "French",
+      "explanation": "贵族, 法国贵族. The French aristocrat owned vast estates. 法国贵族拥有大片庄园。"
+    },
+    {
+      "question": "________ autocrat",
+      "type": "blank",
+      "answer": "absolute",
+      "explanation": "独裁者, 绝对独裁者. The absolute autocrat ruled with unlimited power. 绝对独裁者以无限权力统治。"
+    },
+    {
+      "question": "_______ habitat",
+      "type": "blank",
+      "answer": "natural",
+      "explanation": "栖息地, 自然栖息地. Deforestation destroys the natural habitat of many species. 森林砍伐破坏了许多物种的自然栖息地。"
+    },
+    {
+      "question": "________ hemostat",
+      "type": "blank",
+      "answer": "surgical",
+      "explanation": "止血钳, 外科止血钳. The surgeon used a surgical hemostat to control bleeding. 外科医生使用外科止血钳来控制出血。"
+    },
+    {
+      "question": "____ cravat",
+      "type": "blank",
+      "answer": "silk",
+      "explanation": "领巾; 领带, 丝质领巾. The gentleman wore an elegant silk cravat. 这位绅士戴着一条优雅的丝质领巾。"
+    },
+    {
+      "question": "enact _______",
+      "type": "blank",
+      "answer": "reforms",
+      "explanation": "制定; 颁布, 颁布改革. The government will enact reforms to improve education. 政府将颁布改革以改善教育。"
+    },
+    {
+      "question": "____ _ pact",
+      "type": "blank",
+      "answer": "sign a",
+      "explanation": "协议; 条约, 签署协议. The nations agreed to sign a pact for mutual defense. 各国同意签署互防协议。"
+    },
+    {
+      "question": "compact ___",
+      "type": "blank",
+      "answer": "car",
+      "explanation": "紧凑的; 小型的, 小型汽车. She drives a fuel-efficient compact car. 她开一辆节能的小型汽车。"
+    },
+    {
+      "question": "counteract _______",
+      "type": "blank",
+      "answer": "effects",
+      "explanation": "抵消; 对抗, 抵消影响. The medication will counteract effects of the poison. 这种药物将抵消毒药的影响。"
+    },
+    {
+      "question": "tract __ ____",
+      "type": "blank",
+      "answer": "of land",
+      "explanation": "大片土地; 小册子, 大片土地. The farmer owned a large tract of land. 农民拥有一大片土地。"
+    },
+    {
+      "question": "detract ____",
+      "type": "blank",
+      "answer": "from",
+      "explanation": "减损; 贬低, 减损. The minor flaws don't detract from the overall quality. 小瑕疵不会减损整体质量。"
+    },
+    {
+      "question": "retract _________",
+      "type": "blank",
+      "answer": "statement",
+      "explanation": "撤回; 收回, 撤回声明. The politician was forced to retract statement. 政客被迫撤回声明。"
+    },
+    {
+      "question": "protract _______",
+      "type": "blank",
+      "answer": "dispute",
+      "explanation": "延长; 拖延, 延长争端. Legal complications will protract dispute for years. 法律复杂性将使争端延长数年。"
+    },
+    {
+      "question": "extract ____",
+      "type": "blank",
+      "answer": "data",
+      "explanation": "提取; 摘录, 提取数据. Scientists can extract data from the experiment results. 科学家可以从实验结果中提取数据。"
+    },
+    {
+      "question": "______ tact",
+      "type": "blank",
+      "answer": "social",
+      "explanation": "机智; 圆滑, 社交机智. Diplomats require excellent social tact. 外交官需要出色的社交机智。"
+    },
+    {
+      "question": "contact ____",
+      "type": "blank",
+      "answer": "lens",
+      "explanation": "接触; 联系, 隐形眼镜. She wears contact lens instead of glasses. 她戴隐形眼镜而不是眼镜。"
+    },
+    {
+      "question": "exact _______",
+      "type": "blank",
+      "answer": "figures",
+      "explanation": "精确的; 确切的, 精确的数字. The report requires exact figures for all expenses. 报告需要所有费用的精确数字。"
+    },
+    {
+      "question": "_____________ defect",
+      "type": "blank",
+      "answer": "manufacturing",
+      "explanation": "缺陷; 缺点, 制造缺陷. The recall was due to a manufacturing defect. 召回是由于制造缺陷。"
+    },
+    {
+      "question": "disaffect ___ ____",
+      "type": "blank",
+      "answer": "the base",
+      "explanation": "使不满; 使疏远, 使基层不满. The policy changes will disaffect the base supporters. 政策变化将使基层支持者不满。"
+    },
+    {
+      "question": "disinfect ________",
+      "type": "blank",
+      "answer": "surfaces",
+      "explanation": "消毒, 消毒表面. Clean and disinfect surfaces regularly to prevent disease. 定期清洁和消毒表面以预防疾病。"
+    },
+    {
+      "question": "________ dialect",
+      "type": "blank",
+      "answer": "regional",
+      "explanation": "方言, 地区方言. Each area has its own distinct regional dialect. 每个地区都有自己独特的地区方言。"
+    },
+    {
+      "question": "reflect __",
+      "type": "blank",
+      "answer": "on",
+      "explanation": "反射; 反思, 反思. Take time to reflect on your decisions. 花时间反思你的决定。"
+    },
+    {
+      "question": "genuflect ______ _____",
+      "type": "blank",
+      "answer": "before altar",
+      "explanation": "屈膝; 跪拜, 在祭坛前跪拜. Worshippers genuflect before altar as a sign of respect. 崇拜者在祭坛前跪拜以示尊敬。"
+    },
+    {
+      "question": "____ intellect",
+      "type": "blank",
+      "answer": "keen",
+      "explanation": "智力; 才智, 敏锐的智力. She possesses a keen intellect and analytical mind. 她拥有敏锐的智力和分析性思维。"
+    },
+    {
+      "question": "______ aspect",
+      "type": "blank",
+      "answer": "facial",
+      "explanation": "方面; 面貌, 面部特征. The doctor noted unusual facial aspect in the patient. 医生注意到病人不寻常的面部特征。"
+    },
+    {
+      "question": "______ prospect",
+      "type": "blank",
+      "answer": "career",
+      "explanation": "前景; 展望, 职业前景. The job offers excellent career prospect for growth. 这份工作为成长提供了极好的职业前景。"
+    },
+    {
+      "question": "suspect ______",
+      "type": "blank",
+      "answer": "motive",
+      "explanation": "怀疑; 嫌疑犯, 可疑的动机. Police questioned him about his suspect motive. 警方询问他关于可疑动机的问题。"
+    },
+    {
+      "question": "resurrect _ _____",
+      "type": "blank",
+      "answer": "a brand",
+      "explanation": "复活; 使复兴, 复兴一个品牌. The company plans to resurrect a brand from the 1980s. 公司计划复兴一个1980年代的品牌。"
+    },
+    {
+      "question": "_________ sect",
+      "type": "blank",
+      "answer": "religious",
+      "explanation": "教派; 宗派, 宗教派别. The religious sect has unique beliefs and practices. 该宗教派别有独特的信仰和实践。"
+    },
+    {
+      "question": "_____ intersect",
+      "type": "blank",
+      "answer": "roads",
+      "explanation": "相交; 交叉, 道路相交. The two roads intersect at the traffic light. 这两条道路在红绿灯处相交。"
+    },
+    {
+      "question": "dissect ____",
+      "type": "blank",
+      "answer": "frog",
+      "explanation": "解剖; 剖析, 解剖青蛙. Biology students learn to dissect frog in laboratory. 生物学学生在实验室学习解剖青蛙。"
+    },
+    {
+      "question": "________ edict",
+      "type": "blank",
+      "answer": "imperial",
+      "explanation": "法令; 敕令, 皇家敕令. The emperor issued an imperial edict throughout the kingdom. 皇帝在全国颁布了皇家敕令。"
+    },
+    {
+      "question": "indict __ _______",
+      "type": "blank",
+      "answer": "on charges",
+      "explanation": "起诉; 控告, 以罪名起诉. The grand jury will indict on charges of fraud. 大陪审团将以欺诈罪名起诉。"
+    },
+    {
+      "question": "_____ __ interdict",
+      "type": "blank",
+      "answer": "issue an",
+      "explanation": "禁令; 阻止, 发布禁令. The court will issue an interdict against the company. 法院将对该公司发布禁令。"
+    },
+    {
+      "question": "____ verdict",
+      "type": "blank",
+      "answer": "jury",
+      "explanation": "裁决; 判决, 陪审团裁决. The jury verdict found the defendant guilty. 陪审团裁决被告有罪。"
+    },
+    {
+      "question": "afflict ____ ____",
+      "type": "blank",
+      "answer": "with pain",
+      "explanation": "折磨; 使痛苦, 使遭受痛苦. Arthritis can afflict with pain for years. 关节炎可以使人遭受多年痛苦。"
+    },
+    {
+      "question": "depict _ _____",
+      "type": "blank",
+      "answer": "a scene",
+      "explanation": "描绘; 描述, 描绘场景. The painting accurately depict a scene from history. 这幅画准确地描绘了历史场景。"
+    },
+    {
+      "question": "evict ______",
+      "type": "blank",
+      "answer": "tenant",
+      "explanation": "驱逐; 逐出, 驱逐租户. The landlord tried to evict tenant for nonpayment. 房东试图因不付款而驱逐租户。"
+    },
+    {
+      "question": "convict _ _____",
+      "type": "blank",
+      "answer": "a thief",
+      "explanation": "定罪; 证明有罪, 给小偷定罪. The jury will convict a thief based on the evidence. 陪审团将根据证据给小偷定罪。"
+    },
+    {
+      "question": "mulct _ ______",
+      "type": "blank",
+      "answer": "a victim",
+      "explanation": "罚款; 诈取, 诈骗受害者. The scammer tried to mulct a victim of their savings. 骗子试图诈骗受害者的积蓄。"
+    },
+    {
+      "question": "distinct _________",
+      "type": "blank",
+      "answer": "advantage",
+      "explanation": "明显的; 清楚的, 明显的优势. Experience gives her a distinct advantage in hiring. 经验给她在招聘中带来了明显的优势。"
+    },
+    {
+      "question": "defunct _______",
+      "type": "blank",
+      "answer": "company",
+      "explanation": "不再存在的; 倒闭的, 倒闭的公司. The defunct company closed operations last year. 这家倒闭的公司去年停止了运营。"
+    },
+    {
+      "question": "___ duct",
+      "type": "blank",
+      "answer": "air",
+      "explanation": "管道, 空气管道. The air duct system circulates fresh air throughout the building. 空气管道系统在整栋建筑中循环新鲜空气。"
+    },
+    {
+      "question": "abduct _____",
+      "type": "blank",
+      "answer": "child",
+      "explanation": "绑架; 诱拐, 绑架儿童. Criminals attempted to abduct child from the playground. 罪犯试图从操场上绑架儿童。"
+    },
+    {
+      "question": "deduct ___",
+      "type": "blank",
+      "answer": "tax",
+      "explanation": "扣除; 减去, 扣除税款. The company will deduct tax from your paycheck. 公司将从你的薪水中扣除税款。"
+    },
+    {
+      "question": "_____ aqueduct",
+      "type": "blank",
+      "answer": "Roman",
+      "explanation": "渡槽; 输水道, 罗马渡槽. The ancient Roman aqueduct still stands today. 古老的罗马渡槽至今仍然屹立。"
+    },
+    {
+      "question": "____ conduct",
+      "type": "blank",
+      "answer": "heat",
+      "explanation": "传导; 进行, 传导热量. Metals conduct heat efficiently through their structure. 金属通过其结构有效地传导热量。"
+    },
+    {
+      "question": "construct _ ______",
+      "type": "blank",
+      "answer": "a bridge",
+      "explanation": "建造; 构造, 建造一座桥. Engineers will construct a bridge across the river. 工程师将在河上建造一座桥。"
+    },
+    {
+      "question": "facet __ ____",
+      "type": "blank",
+      "answer": "of life",
+      "explanation": "方面; 侧面, 生活的方面. Education affects every facet of life. 教育影响生活的各个方面。"
+    },
+    {
+      "question": "dulcet _____",
+      "type": "blank",
+      "answer": "tones",
+      "explanation": "悦耳的; 甜美的, 悦耳的音调. The singer's dulcet tones captivated the audience. 歌手悦耳的音调迷住了观众。"
+    },
+    {
+      "question": "________ lancet",
+      "type": "blank",
+      "answer": "surgical",
+      "explanation": "柳叶刀; 刺血针, 外科刺血针. The doctor used a surgical lancet for the procedure. 医生用外科刺血针进行手术。"
+    },
+    {
+      "question": "faucet ______",
+      "type": "blank",
+      "answer": "handle",
+      "explanation": "水龙头, 水龙头把手. Turn the faucet handle clockwise to stop the flow. 顺时针转动水龙头把手以停止流水。"
+    },
+    {
+      "question": "_____ cadet",
+      "type": "blank",
+      "answer": "naval",
+      "explanation": "学员; 军校学员, 海军学员. The naval cadet trained at the military academy. 海军学员在军事学院接受训练。"
+    },
+    {
+      "question": "fleet __ _____",
+      "type": "blank",
+      "answer": "of ships",
+      "explanation": "舰队; 车队, 船队. The navy deployed a fleet of ships to the region. 海军向该地区部署了一支船队。"
+    },
+    {
+      "question": "__ discreet",
+      "type": "blank",
+      "answer": "be",
+      "explanation": "谨慎的; 小心的, 保持谨慎. Please be discreet about this confidential matter. 请对这件机密事务保持谨慎。"
+    },
+    {
+      "question": "_____ gadget",
+      "type": "blank",
+      "answer": "handy",
+      "explanation": "小装置; 小器具, 方便的小器具. This handy gadget makes cooking much easier. 这个方便的小器具使烹饪变得容易得多。"
+    },
+    {
+      "question": "midget ___",
+      "type": "blank",
+      "answer": "car",
+      "explanation": "侏儒; 微型的, 微型汽车. He raced a midget car at the local track. 他在当地赛道上驾驶微型汽车比赛。"
+    },
+    {
+      "question": "budget _______",
+      "type": "blank",
+      "answer": "deficit",
+      "explanation": "预算, 预算赤字. The government faces a large budget deficit this year. 政府今年面临巨大的预算赤字。"
+    },
+    {
+      "question": "beget _______",
+      "type": "blank",
+      "answer": "results",
+      "explanation": "产生; 引起, 产生结果. Hard work will beget results in the long run. 从长远来看,努力工作将产生结果。"
+    },
+    {
+      "question": "_____ cachet",
+      "type": "blank",
+      "answer": "brand",
+      "explanation": "威望; 声誉, 品牌声誉. The designer label has significant brand cachet. 这个设计师品牌有显著的品牌声誉。"
+    },
+    {
+      "question": "crochet ____",
+      "type": "blank",
+      "answer": "hook",
+      "explanation": "钩针编织, 钩针编织钩. She used a crochet hook to make a blanket. 她用钩针编织钩制作了一条毯子。"
+    },
+    {
+      "question": "________ prophet",
+      "type": "blank",
+      "answer": "biblical",
+      "explanation": "先知; 预言家, 圣经先知. The biblical prophet warned of coming disasters. 圣经先知警告即将到来的灾难。"
+    },
+    {
+      "question": "______ epithet",
+      "type": "blank",
+      "answer": "racial",
+      "explanation": "绰号; 称号, 种族侮辱语. Using a racial epithet is never acceptable. 使用种族侮辱语是永远不能接受的。"
+    },
+    {
+      "question": "whet ___ ________",
+      "type": "blank",
+      "answer": "the appetite",
+      "explanation": "磨快; 刺激, 刺激食欲. The appetizer will whet the appetite for the main course. 开胃菜将刺激人们对主菜的食欲。"
+    }
+  ]
+}
