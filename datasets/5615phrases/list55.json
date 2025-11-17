@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "______ trajectory",
+      "type": "blank",
+      "answer": "flight",
+      "explanation": "轨迹; 弹道, 飞行轨迹. The flight trajectory was carefully calculated. 飞行轨迹被仔细计算。"
+    },
+    {
+      "question": "contradictory _________",
+      "type": "blank",
+      "answer": "statement",
+      "explanation": "矛盾的; 对立的, 矛盾的陈述. The witness made a contradictory statement. 证人做出了矛盾的陈述。"
+    },
+    {
+      "question": "valedictory _______",
+      "type": "blank",
+      "answer": "address",
+      "explanation": "告别的; 告别演说, 告别演说. The senior gave the valedictory address. 高年级学生发表了告别演说。"
+    },
+    {
+      "question": "perfunctory ___",
+      "type": "blank",
+      "answer": "nod",
+      "explanation": "敷衍的; 例行公事的, 敷衍的点头. He gave a perfunctory nod and left. 他敷衍地点了点头就离开了。"
+    },
+    {
+      "question": "transitory ___",
+      "type": "blank",
+      "answer": "joy",
+      "explanation": "短暂的; 转瞬即逝的, 短暂的快乐. Fame brings only transitory joy. 名声只带来短暂的快乐。"
+    },
+    {
+      "question": "____ repository",
+      "type": "blank",
+      "answer": "data",
+      "explanation": "仓库; 贮藏室, 数据存储库. The data repository stores all records. 数据存储库存储所有记录。"
+    },
+    {
+      "question": "expository _______",
+      "type": "blank",
+      "answer": "writing",
+      "explanation": "说明的; 解释的, 说明文写作. Students practice expository writing in class. 学生在课堂上练习说明文写作。"
+    },
+    {
+      "question": "desultory ____________",
+      "type": "blank",
+      "answer": "conversation",
+      "explanation": "散漫的; 不连贯的, 散漫的对话. They engaged in desultory conversation. 他们进行了散漫的对话。"
+    },
+    {
+      "question": "inventory ____",
+      "type": "blank",
+      "answer": "list",
+      "explanation": "清单; 存货, 库存清单. Check the inventory list for supplies. 检查物资库存清单。"
+    },
+    {
+      "question": "peremptory _____",
+      "type": "blank",
+      "answer": "order",
+      "explanation": "专横的; 断然的, 专横的命令. He issued a peremptory order. 他发出了专横的命令。"
+    },
+    {
+      "question": "circumlocutory ______",
+      "type": "blank",
+      "answer": "answer",
+      "explanation": "迂回的; 婉转的, 迂回的回答. His circumlocutory answer avoided the question. 他迂回的回答回避了问题。"
+    },
+    {
+      "question": "statutory ____",
+      "type": "blank",
+      "answer": "duty",
+      "explanation": "法定的; 依法的, 法定职责. It is their statutory duty to report crimes. 报告犯罪是他们的法定职责。"
+    },
+    {
+      "question": "harry ___ _____",
+      "type": "blank",
+      "answer": "the enemy",
+      "explanation": "骚扰; 掠夺, 骚扰敌人. The troops will harry the enemy constantly. 军队将不断骚扰敌人。"
+    },
+    {
+      "question": "parry _ ____",
+      "type": "blank",
+      "answer": "a blow",
+      "explanation": "挡开; 回避, 挡开一击. The boxer managed to parry a blow. 拳击手设法挡开了一击。"
+    },
+    {
+      "question": "_____ quarry",
+      "type": "blank",
+      "answer": "stone",
+      "explanation": "采石场; 猎物, 采石场. Workers extract marble from the stone quarry. 工人从采石场开采大理石。"
+    },
+    {
+      "question": "_____ ferry",
+      "type": "blank",
+      "answer": "river",
+      "explanation": "渡船, 河渡船. The river ferry crosses every hour. 河渡船每小时过河一次。"
+    },
+    {
+      "question": "paltry ___",
+      "type": "blank",
+      "answer": "sum",
+      "explanation": "微不足道的; 可怜的, 微不足道的金额. They offered a paltry sum for the work. 他们为这项工作提供了微不足道的金额。"
+    },
+    {
+      "question": "_____ infantry",
+      "type": "blank",
+      "answer": "light",
+      "explanation": "步兵, 轻步兵. The light infantry advanced quickly. 轻步兵快速前进。"
+    },
+    {
+      "question": "entry ___",
+      "type": "blank",
+      "answer": "fee",
+      "explanation": "入口; 进入, 入场费. Pay the entry fee at the gate. 在门口支付入场费。"
+    },
+    {
+      "question": "___ gentry",
+      "type": "blank",
+      "answer": "the",
+      "explanation": "绅士阶层, 绅士阶层. The gentry owned most of the land. 绅士阶层拥有大部分土地。"
+    },
+    {
+      "question": "carpentry ______",
+      "type": "blank",
+      "answer": "skills",
+      "explanation": "木工; 木工活, 木工技能. He learned carpentry skills from his father. 他从父亲那里学会了木工技能。"
+    },
+    {
+      "question": "_________ zealotry",
+      "type": "blank",
+      "answer": "religious",
+      "explanation": "狂热; 盲信, 宗教狂热. Religious zealotry can be dangerous. 宗教狂热可能很危险。"
+    },
+    {
+      "question": "_____ pastry",
+      "type": "blank",
+      "answer": "fruit",
+      "explanation": "糕点; 面点, 水果糕点. She baked a delicious fruit pastry. 她烤了美味的水果糕点。"
+    },
+    {
+      "question": "_____ ancestry",
+      "type": "blank",
+      "answer": "trace",
+      "explanation": "祖先; 血统, 追溯祖先. DNA tests can trace ancestry. DNA测试可以追溯祖先。"
+    },
+    {
+      "question": "____ tapestry",
+      "type": "blank",
+      "answer": "rich",
+      "explanation": "挂毯; 织锦, 丰富的织锦. The wall displayed a rich tapestry. 墙上展示着丰富的织锦。"
+    },
+    {
+      "question": "______ forestry",
+      "type": "blank",
+      "answer": "forest",
+      "explanation": "林业, 森林林业. Forest forestry manages woodland resources. 森林林业管理林地资源。"
+    },
+    {
+      "question": "____ sophistry",
+      "type": "blank",
+      "answer": "mere",
+      "explanation": "诡辩; 诡辩术, 纯粹的诡辩. His argument was mere sophistry. 他的论点纯粹是诡辩。"
+    },
+    {
+      "question": "________ artistry",
+      "type": "blank",
+      "answer": "artistic",
+      "explanation": "艺术技巧; 艺术性, 艺术技巧. The painting shows remarkable artistic artistry. 这幅画展示了非凡的艺术技巧。"
+    },
+    {
+      "question": "fury __ _____",
+      "type": "blank",
+      "answer": "of storm",
+      "explanation": "狂怒; 狂暴, 风暴的狂怒. The fury of storm destroyed homes. 风暴的狂怒摧毁了房屋。"
+    },
+    {
+      "question": "____ augury",
+      "type": "blank",
+      "answer": "good",
+      "explanation": "预兆; 占卜, 好兆头. The clear skies were a good augury. 晴朗的天空是好兆头。"
+    },
+    {
+      "question": "______ perjury",
+      "type": "blank",
+      "answer": "commit",
+      "explanation": "伪证罪, 犯伪证罪. It's illegal to commit perjury in court. 在法庭上犯伪证罪是非法的。"
+    },
+    {
+      "question": "____ __ penury",
+      "type": "blank",
+      "answer": "live in",
+      "explanation": "贫困; 赤贫, 生活在贫困中. Many families live in penury. 许多家庭生活在贫困中。"
+    },
+    {
+      "question": "______ usury",
+      "type": "blank",
+      "answer": "charge",
+      "explanation": "高利贷, 收取高利贷. It's illegal to charge usury rates. 收取高利贷利率是非法的。"
+    },
+    {
+      "question": "_______ dowry",
+      "type": "blank",
+      "answer": "wedding",
+      "explanation": "嫁妆, 婚礼嫁妆. The bride brought a wedding dowry. 新娘带来了婚礼嫁妆。"
+    },
+    {
+      "question": "______ ____ fantasy",
+      "type": "blank",
+      "answer": "escape into",
+      "explanation": "幻想; 空想, 逃入幻想. She would escape into fantasy through books. 她会通过书籍逃入幻想。"
+    },
+    {
+      "question": "_________ apostasy",
+      "type": "blank",
+      "answer": "religious",
+      "explanation": "背教; 变节, 宗教背教. Religious apostasy was severely punished. 宗教背教受到严厉惩罚。"
+    },
+    {
+      "question": "_________ heresy",
+      "type": "blank",
+      "answer": "religious",
+      "explanation": "异端; 异教, 宗教异端. He was accused of religious heresy. 他被指控犯有宗教异端。"
+    },
+    {
+      "question": "________ whimsy",
+      "type": "blank",
+      "answer": "childish",
+      "explanation": "奇想; 怪念头, 孩子气的奇想. The story is full of childish whimsy. 故事充满了孩子气的奇想。"
+    },
+    {
+      "question": "rosy _______",
+      "type": "blank",
+      "answer": "outlook",
+      "explanation": "玫瑰色的; 乐观的, 乐观的前景. She maintains a rosy outlook on life. 她对生活保持乐观的前景。"
+    },
+    {
+      "question": "brassy ____",
+      "type": "blank",
+      "answer": "tone",
+      "explanation": "黄铜色的; 厚颜的, 刺耳的音调. The trumpet had a brassy tone. 小号有刺耳的音调。"
+    },
+    {
+      "question": "prissy _______",
+      "type": "blank",
+      "answer": "manners",
+      "explanation": "一本正经的; 拘谨的, 拘谨的举止. Her prissy manners annoyed everyone. 她拘谨的举止惹恼了所有人。"
+    },
+    {
+      "question": "glossy ________",
+      "type": "blank",
+      "answer": "magazine",
+      "explanation": "有光泽的; 精美的, 精美杂志. She read a glossy magazine. 她读了一本精美杂志。"
+    },
+    {
+      "question": "_____ treaty",
+      "type": "blank",
+      "answer": "peace",
+      "explanation": "条约, 和平条约. Nations signed a peace treaty. 各国签署了和平条约。"
+    },
+    {
+      "question": "_______ entreaty",
+      "type": "blank",
+      "answer": "earnest",
+      "explanation": "恳求; 哀求, 恳切的恳求. She made an earnest entreaty for help. 她恳切地恳求帮助。"
+    },
+    {
+      "question": "crotchety ___ ___",
+      "type": "blank",
+      "answer": "old man",
+      "explanation": "脾气暴躁的; 古怪的, 脾气暴躁的老人. The crotchety old man complained constantly. 脾气暴躁的老人不断抱怨。"
+    },
+    {
+      "question": "_______ gaiety",
+      "type": "blank",
+      "answer": "holiday",
+      "explanation": "欢乐; 快活, 节日欢乐. The holiday gaiety filled the streets. 节日欢乐充满街道。"
+    },
+    {
+      "question": "________ sobriety",
+      "type": "blank",
+      "answer": "maintain",
+      "explanation": "清醒; 节制, 保持清醒. Drivers must maintain sobriety. 司机必须保持清醒。"
+    },
+    {
+      "question": "_______ propriety",
+      "type": "blank",
+      "answer": "observe",
+      "explanation": "得体; 礼节, 遵守礼节. Always observe propriety in formal settings. 在正式场合总要遵守礼节。"
+    },
+    {
+      "question": "persnickety _______",
+      "type": "blank",
+      "answer": "details",
+      "explanation": "过分讲究的; 挑剔的, 挑剔的细节. She worried about persnickety details. 她担心挑剔的细节。"
+    },
+    {
+      "question": "__ ___ entirety",
+      "type": "blank",
+      "answer": "in its",
+      "explanation": "全部; 整体, 全部. Read the contract in its entirety. 完整地阅读合同。"
+    },
+    {
+      "question": "crafty ____",
+      "type": "blank",
+      "answer": "plan",
+      "explanation": "狡猾的; 诡计多端的, 狡猾的计划. They devised a crafty plan. 他们设计了一个狡猾的计划。"
+    },
+    {
+      "question": "thrifty _______",
+      "type": "blank",
+      "answer": "shopper",
+      "explanation": "节俭的; 节约的, 节俭的购物者. The thrifty shopper looks for bargains. 节俭的购物者寻找便宜货。"
+    },
+    {
+      "question": "lofty _____",
+      "type": "blank",
+      "answer": "ideal",
+      "explanation": "崇高的; 高尚的, 崇高的理想. He pursued a lofty ideal. 他追求崇高的理想。"
+    },
+    {
+      "question": "mighty ______",
+      "type": "blank",
+      "answer": "empire",
+      "explanation": "强大的; 巨大的, 强大的帝国. Rome was a mighty empire. 罗马是一个强大的帝国。"
+    },
+    {
+      "question": "haughty ______",
+      "type": "blank",
+      "answer": "glance",
+      "explanation": "傲慢的; 高傲的, 傲慢的一瞥. She gave him a haughty glance. 她傲慢地瞥了他一眼。"
+    },
+    {
+      "question": "___ laity",
+      "type": "blank",
+      "answer": "the",
+      "explanation": "俗人; 外行, 俗人. The laity attended the church service. 俗人参加了教堂礼拜。"
+    },
+    {
+      "question": "________ probity",
+      "type": "blank",
+      "answer": "personal",
+      "explanation": "正直; 诚实, 个人正直. His personal probity was never questioned. 他的个人正直从未受到质疑。"
+    },
+    {
+      "question": "____ __ acerbity",
+      "type": "blank",
+      "answer": "note of",
+      "explanation": "尖刻; 辛辣, 尖刻的语气. Her voice had a note of acerbity. 她的声音带有尖刻的语气。"
+    },
+    {
+      "question": "_____ mendacity",
+      "type": "blank",
+      "answer": "plain",
+      "explanation": "虚假; 谎言, 明显的虚假. His testimony was plain mendacity. 他的证词是明显的虚假。"
+    },
+    {
+      "question": "__________ tenacity",
+      "type": "blank",
+      "answer": "remarkable",
+      "explanation": "坚韧; 顽强, 非凡的坚韧. She showed remarkable tenacity. 她表现出非凡的坚韧。"
+    },
+    {
+      "question": "______ opacity",
+      "type": "blank",
+      "answer": "screen",
+      "explanation": "不透明性, 屏幕不透明度. Adjust the screen opacity settings. 调整屏幕不透明度设置。"
+    },
+    {
+      "question": "veracity __ ____",
+      "type": "blank",
+      "answer": "of data",
+      "explanation": "真实性; 诚实, 数据的真实性. Question the veracity of data sources. 质疑数据来源的真实性。"
+    },
+    {
+      "question": "_______ voracity",
+      "type": "blank",
+      "answer": "wolfish",
+      "explanation": "贪食; 贪婪, 贪婪的贪食. He ate with wolfish voracity. 他贪婪地吃东西。"
+    },
+    {
+      "question": "______ infelicity",
+      "type": "blank",
+      "answer": "social",
+      "explanation": "不幸; 不当, 社交不当. His social infelicity caused embarrassment. 他的社交不当造成了尴尬。"
+    },
+    {
+      "question": "_ multiplicity __",
+      "type": "blank",
+      "answer": "a of",
+      "explanation": "多样性; 多重性, 多样性. There is a multiplicity of options. 有多种选择。"
+    },
+    {
+      "question": "________ complicity",
+      "type": "blank",
+      "answer": "criminal",
+      "explanation": "共谋; 串通, 犯罪共谋. He was charged with criminal complicity. 他被指控犯罪共谋。"
+    },
+    {
+      "question": "_________ duplicity",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "欺骗; 两面派, 政治欺骗. The scandal revealed political duplicity. 丑闻揭露了政治欺骗。"
+    },
+    {
+      "question": "______ authenticity",
+      "type": "blank",
+      "answer": "verify",
+      "explanation": "真实性; 可靠性, 验证真实性. Experts verify authenticity of artwork. 专家验证艺术品的真实性。"
+    },
+    {
+      "question": "_____ inelasticity",
+      "type": "blank",
+      "answer": "price",
+      "explanation": "无弹性, 价格无弹性. Price inelasticity means demand stays constant. 价格无弹性意味着需求保持不变。"
+    },
+    {
+      "question": "________ velocity",
+      "type": "blank",
+      "answer": "terminal",
+      "explanation": "速度, 终端速度. Objects reach terminal velocity in freefall. 物体在自由落体时达到终端速度。"
+    },
+    {
+      "question": "___ atrocity",
+      "type": "blank",
+      "answer": "war",
+      "explanation": "暴行; 残暴, 战争暴行. War atrocity shocked the world. 战争暴行震惊了世界。"
+    },
+    {
+      "question": "_____ scarcity",
+      "type": "blank",
+      "answer": "water",
+      "explanation": "稀缺; 不足, 水资源稀缺. Water scarcity affects millions. 水资源稀缺影响数百万人。"
+    },
+    {
+      "question": "_ paucity __ ____",
+      "type": "blank",
+      "answer": "a of data",
+      "explanation": "缺乏; 少量, 缺乏数据. There is a paucity of data on this topic. 关于这个话题缺乏数据。"
+    },
+    {
+      "question": "_________ frigidity",
+      "type": "blank",
+      "answer": "emotional",
+      "explanation": "寒冷; 冷淡, 情感冷淡. His emotional frigidity hurt relationships. 他的情感冷淡伤害了关系。"
+    },
+    {
+      "question": "timidity _______",
+      "type": "blank",
+      "answer": "problem",
+      "explanation": "胆怯; 羞怯, 胆怯问题. Shyness is a timidity problem. 害羞是一个胆怯问题。"
+    },
+    {
+      "question": "____ fecundity",
+      "type": "blank",
+      "answer": "soil",
+      "explanation": "多产; 肥沃, 土壤肥沃. Soil fecundity determines crop yields. 土壤肥沃决定作物产量。"
+    },
+    {
+      "question": "______ commodity",
+      "type": "blank",
+      "answer": "global",
+      "explanation": "商品, 全球商品. Oil is a valuable global commodity. 石油是有价值的全球商品。"
+    },
+    {
+      "question": "______ crudity",
+      "type": "blank",
+      "answer": "social",
+      "explanation": "粗鲁; 粗糙, 社交粗鲁. His social crudity offended guests. 他的社交粗鲁冒犯了客人。"
+    },
+    {
+      "question": "_______ spontaneity",
+      "type": "blank",
+      "answer": "genuine",
+      "explanation": "自发性; 自然, 真诚的自发性. Her genuine spontaneity was refreshing. 她真诚的自发性令人耳目一新。"
+    },
+    {
+      "question": "________ homogeneity",
+      "type": "blank",
+      "answer": "cultural",
+      "explanation": "同质性; 均匀性, 文化同质性. Cultural homogeneity characterizes the region. 文化同质性是该地区的特点。"
+    },
+    {
+      "question": "_____ superficiality",
+      "type": "blank",
+      "answer": "sheer",
+      "explanation": "肤浅; 浅薄, 纯粹的肤浅. The analysis showed sheer superficiality. 分析显示了纯粹的肤浅。"
+    },
+    {
+      "question": "________ partiality",
+      "type": "blank",
+      "answer": "judicial",
+      "explanation": "偏心; 偏袒, 司法偏袒. Judicial partiality undermines justice. 司法偏袒破坏了公正。"
+    },
+    {
+      "question": "____ conviviality",
+      "type": "blank",
+      "answer": "warm",
+      "explanation": "欢乐; 欢宴, 温暖的欢乐. Warm conviviality filled the celebration. 温暖的欢乐充满了庆祝活动。"
+    },
+    {
+      "question": "____ formality",
+      "type": "blank",
+      "answer": "mere",
+      "explanation": "正式; 仪式, 纯粹的形式. The interview was a mere formality. 面试纯粹是形式。"
+    },
+    {
+      "question": "originality ______",
+      "type": "blank",
+      "answer": "shines",
+      "explanation": "创意; 独创性, 独创性闪耀. His originality shines through the work. 他的独创性在作品中闪耀。"
+    },
+    {
+      "question": "municipality ____",
+      "type": "blank",
+      "answer": "rule",
+      "explanation": "市政当局, 市政当局规则. The municipality rule governs local affairs. 市政当局规则管理地方事务。"
+    },
+    {
+      "question": "________ liberality",
+      "type": "blank",
+      "answer": "habitual",
+      "explanation": "慷慨; 自由主义, 习惯性慷慨. His habitual liberality helped many. 他习惯性的慷慨帮助了许多人。"
+    },
+    {
+      "question": "_____ generality",
+      "type": "blank",
+      "answer": "broad",
+      "explanation": "概括; 泛论, 广泛的概括. Avoid broad generality in arguments. 在论证中避免广泛的概括。"
+    },
+    {
+      "question": "_____ mortality",
+      "type": "blank",
+      "answer": "human",
+      "explanation": "死亡率; 必死性, 人类必死性. Philosophy explores human mortality. 哲学探讨人类必死性。"
+    },
+    {
+      "question": "impermeability ____",
+      "type": "blank",
+      "answer": "test",
+      "explanation": "不渗透性, 不渗透性测试. The impermeability test checks waterproofing. 不渗透性测试检查防水性。"
+    },
+    {
+      "question": "_____ liability",
+      "type": "blank",
+      "answer": "legal",
+      "explanation": "责任; 债务, 法律责任. The company faces legal liability. 公司面临法律责任。"
+    },
+    {
+      "question": "________ viability",
+      "type": "blank",
+      "answer": "business",
+      "explanation": "生存能力; 可行性, 商业可行性. Assess business viability before investing. 投资前评估商业可行性。"
+    },
+    {
+      "question": "indispensability __ _____",
+      "type": "blank",
+      "answer": "of water",
+      "explanation": "不可缺少, 水的不可缺少. The indispensability of water is obvious. 水的不可缺少是显而易见的。"
+    },
+    {
+      "question": "____ tractability",
+      "type": "blank",
+      "answer": "high",
+      "explanation": "易处理性; 温顺, 高度易处理性. The material has high tractability. 该材料具有高度易处理性。"
+    },
+    {
+      "question": "_________ excitability",
+      "type": "blank",
+      "answer": "emotional",
+      "explanation": "易激动性, 情绪易激动性. His emotional excitability caused problems. 他的情绪易激动性造成了问题。"
+    },
+    {
+      "question": "______ accountability",
+      "type": "blank",
+      "answer": "public",
+      "explanation": "责任; 问责制, 公共问责制. Public accountability is essential in government. 公共问责制在政府中至关重要。"
+    },
+    {
+      "question": "______ notability",
+      "type": "blank",
+      "answer": "public",
+      "explanation": "显著; 著名, 公众知名度. His public notability grew quickly. 他的公众知名度迅速增长。"
+    },
+    {
+      "question": "________ debility",
+      "type": "blank",
+      "answer": "physical",
+      "explanation": "虚弱; 衰弱, 身体虚弱. Age brought physical debility. 年龄带来了身体虚弱。"
+    },
+    {
+      "question": "incorrigibility ______",
+      "type": "blank",
+      "answer": "record",
+      "explanation": "不可救药, 不可救药的记录. His incorrigibility record was extensive. 他不可救药的记录很广泛。"
+    },
+    {
+      "question": "___ intangibility __ ______",
+      "type": "blank",
+      "answer": "the of rights",
+      "explanation": "无形性, 权利的无形性. The intangibility of rights makes enforcement difficult. 权利的无形性使执行变得困难。"
+    }
+  ]
+}
