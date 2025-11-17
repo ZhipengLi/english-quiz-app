@@ -1,1 +1,607 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "phoenix ______",
+      "type": "blank",
+      "answer": "rising",
+      "explanation": "凤凰; 不死鸟, 凤凰涅槃. The company was like a phoenix rising from bankruptcy. 公司就像从破产中凤凰涅槃。"
+    },
+    {
+      "question": "_______ paradox",
+      "type": "blank",
+      "answer": "logical",
+      "explanation": "悖论; 矛盾, 逻辑悖论. The statement presents a logical paradox. 这个陈述提出了一个逻辑悖论。"
+    },
+    {
+      "question": "orthodox ______",
+      "type": "blank",
+      "answer": "belief",
+      "explanation": "正统的; 传统的, 正统信仰. He follows orthodox belief in his religion. 他遵循宗教中的正统信仰。"
+    },
+    {
+      "question": "heterodox _____",
+      "type": "blank",
+      "answer": "views",
+      "explanation": "异端的; 非正统的, 异端观点. The philosopher held heterodox views on theology. 哲学家对神学持有异端观点。"
+    },
+    {
+      "question": "outfox _ _____",
+      "type": "blank",
+      "answer": "a rival",
+      "explanation": "以智取胜; 智胜, 智胜对手. The clever lawyer managed to outfox a rival. 聪明的律师设法智胜对手。"
+    },
+    {
+      "question": "________ flux",
+      "type": "blank",
+      "answer": "constant",
+      "explanation": "流动; 变化, 不断的变化. The market is in constant flux. 市场处于不断的变化中。"
+    },
+    {
+      "question": "__ influx __ ________",
+      "type": "blank",
+      "answer": "an of tourists",
+      "explanation": "涌入; 流入, 游客涌入. The city experienced an influx of tourists. 这座城市经历了游客涌入。"
+    },
+    {
+      "question": "___ crux __ ______",
+      "type": "blank",
+      "answer": "the of matter",
+      "explanation": "关键; 症结, 问题的关键. That's the crux of matter we're discussing. 那是我们正在讨论的问题的关键。"
+    },
+    {
+      "question": "__ ___ heyday",
+      "type": "blank",
+      "answer": "in its",
+      "explanation": "全盛时期, 在其全盛时期. The empire was in its heyday during that century. 帝国在那个世纪处于其全盛时期。"
+    },
+    {
+      "question": "________ clay",
+      "type": "blank",
+      "answer": "modeling",
+      "explanation": "粘土; 泥土, 造型粘土. Children enjoy playing with modeling clay. 孩子们喜欢玩造型粘土。"
+    },
+    {
+      "question": "allay _____",
+      "type": "blank",
+      "answer": "fears",
+      "explanation": "减轻; 缓和, 减轻恐惧. The doctor tried to allay fears about the procedure. 医生试图减轻对手术的恐惧。"
+    },
+    {
+      "question": "downplay ____",
+      "type": "blank",
+      "answer": "risk",
+      "explanation": "轻描淡写; 低估, 低估风险. Officials tend to downplay risk to the public. 官员倾向于对公众低估风险。"
+    },
+    {
+      "question": "underplay ____",
+      "type": "blank",
+      "answer": "risk",
+      "explanation": "低估; 轻描淡写, 低估风险. Don't underplay risk in your analysis. 不要在你的分析中低估风险。"
+    },
+    {
+      "question": "______ interplay",
+      "type": "blank",
+      "answer": "subtle",
+      "explanation": "相互作用; 相互影响, 微妙的相互作用. There is a subtle interplay between the characters. 角色之间有微妙的相互作用。"
+    },
+    {
+      "question": "waylay _ ________",
+      "type": "blank",
+      "answer": "a traveler",
+      "explanation": "伏击; 拦路抢劫, 伏击旅行者. Bandits would waylay a traveler on the road. 强盗会在路上伏击旅行者。"
+    },
+    {
+      "question": "defray _____",
+      "type": "blank",
+      "answer": "costs",
+      "explanation": "支付; 负担费用, 支付费用. Sponsors will defray costs of the event. 赞助商将支付活动费用。"
+    },
+    {
+      "question": "__ array __",
+      "type": "blank",
+      "answer": "an of",
+      "explanation": "一系列; 排列, 一系列. The buffet offers an array of dishes. 自助餐提供一系列菜肴。"
+    },
+    {
+      "question": "betray _ ______",
+      "type": "blank",
+      "answer": "a secret",
+      "explanation": "背叛; 泄露, 泄露秘密. Don't betray a secret that was told in confidence. 不要泄露私下告诉你的秘密。"
+    },
+    {
+      "question": "portray _ ____",
+      "type": "blank",
+      "answer": "a hero",
+      "explanation": "描绘; 扮演, 扮演英雄. The actor will portray a hero in the film. 演员将在电影中扮演英雄。"
+    },
+    {
+      "question": "stray ___",
+      "type": "blank",
+      "answer": "dog",
+      "explanation": "走失的; 流浪的, 流浪狗. They rescued a stray dog from the street. 他们从街上救了一只流浪狗。"
+    },
+    {
+      "question": "______ gainsay",
+      "type": "blank",
+      "answer": "flatly",
+      "explanation": "否认; 反驳, 断然否认. He will flatly gainsay all accusations. 他将断然否认所有指控。"
+    },
+    {
+      "question": "____ hearsay",
+      "type": "blank",
+      "answer": "mere",
+      "explanation": "传闻; 道听途说, 仅仅是传闻. The evidence is mere hearsay and inadmissible. 证据仅仅是传闻,不可采纳。"
+    },
+    {
+      "question": "___ __ assay",
+      "type": "blank",
+      "answer": "run an",
+      "explanation": "化验; 分析, 进行化验. The lab will run an assay on the sample. 实验室将对样本进行化验。"
+    },
+    {
+      "question": "naysay ________",
+      "type": "blank",
+      "answer": "proposal",
+      "explanation": "反对; 否定, 反对提案. Critics will naysay proposal without consideration. 批评者会不加考虑地反对提案。"
+    },
+    {
+      "question": "_____ quay",
+      "type": "blank",
+      "answer": "stone",
+      "explanation": "码头, 石码头. Ships dock at the stone quay. 船只停靠在石码头。"
+    },
+    {
+      "question": "____ stowaway",
+      "type": "blank",
+      "answer": "ship",
+      "explanation": "偷渡者, 船上偷渡者. Security found a ship stowaway hidden below deck. 安全人员发现一名藏在甲板下的船上偷渡者。"
+    },
+    {
+      "question": "____ leeway",
+      "type": "blank",
+      "answer": "give",
+      "explanation": "余地; 自由, 给予余地. The manager will give leeway for creativity. 经理会给予创造性的余地。"
+    },
+    {
+      "question": "_______ breezeway",
+      "type": "blank",
+      "answer": "covered",
+      "explanation": "有顶过道, 有顶过道. A covered breezeway connects the buildings. 有顶过道连接这些建筑。"
+    },
+    {
+      "question": "________ gangway",
+      "type": "blank",
+      "answer": "aircraft",
+      "explanation": "舷梯; 通道, 飞机舷梯. Passengers board via the aircraft gangway. 乘客通过飞机舷梯登机。"
+    },
+    {
+      "question": "____ efficacy",
+      "type": "blank",
+      "answer": "drug",
+      "explanation": "功效; 效力, 药物功效. Clinical trials test drug efficacy. 临床试验测试药物功效。"
+    },
+    {
+      "question": "delicacy ____",
+      "type": "blank",
+      "answer": "tray",
+      "explanation": "美味; 精致, 美味拼盘. The delicacy tray featured exotic foods. 美味拼盘以异国食物为特色。"
+    },
+    {
+      "question": "______ intricacy",
+      "type": "blank",
+      "answer": "design",
+      "explanation": "复杂性; 错综复杂, 设计的复杂性. The design intricacy required skilled craftsmen. 设计的复杂性需要熟练的工匠。"
+    },
+    {
+      "question": "___-_______ advocacy",
+      "type": "blank",
+      "answer": "gun-control",
+      "explanation": "拥护; 提倡, 枪支管制倡导. Gun-control advocacy groups lobbied legislators. 枪支管制倡导团体游说立法者。"
+    },
+    {
+      "question": "____________ candidacy",
+      "type": "blank",
+      "answer": "presidential",
+      "explanation": "候选资格, 总统候选资格. She announced her presidential candidacy yesterday. 她昨天宣布了她的总统候选资格。"
+    },
+    {
+      "question": "_______ fallacy",
+      "type": "blank",
+      "answer": "logical",
+      "explanation": "谬误; 谬论, 逻辑谬误. The argument contains a logical fallacy. 这个论点包含逻辑谬误。"
+    },
+    {
+      "question": "______ supremacy",
+      "type": "blank",
+      "answer": "global",
+      "explanation": "至高无上; 霸权, 全球霸权. Nations compete for global supremacy. 国家竞争全球霸权。"
+    },
+    {
+      "question": "_________ contumacy",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "抗命; 不服从, 政治抗命. The dissident showed political contumacy. 异见者表现出政治抗命。"
+    },
+    {
+      "question": "_____ obstinacy",
+      "type": "blank",
+      "answer": "sheer",
+      "explanation": "固执; 顽固, 纯粹的固执. His sheer obstinacy prevented compromise. 他纯粹的固执阻止了妥协。"
+    },
+    {
+      "question": "racy _____",
+      "type": "blank",
+      "answer": "humor",
+      "explanation": "活泼的; 猥亵的, 猥亵的幽默. The comedian's racy humor offended some. 喜剧演员猥亵的幽默冒犯了一些人。"
+    },
+    {
+      "question": "gynaecocracy ____",
+      "type": "blank",
+      "answer": "rule",
+      "explanation": "女性统治, 女性统治. Gynaecocracy rule was rare in ancient times. 女性统治在古代很罕见。"
+    },
+    {
+      "question": "_________ theocracy",
+      "type": "blank",
+      "answer": "religious",
+      "explanation": "神权政治, 宗教神权政治. The religious theocracy controlled all aspects of life. 宗教神权政治控制了生活的方方面面。"
+    },
+    {
+      "question": "gerontocracy ____",
+      "type": "blank",
+      "answer": "rule",
+      "explanation": "老人统治, 老人统治. Gerontocracy rule dominated the society. 老人统治主导了社会。"
+    },
+    {
+      "question": "______ aristocracy",
+      "type": "blank",
+      "answer": "French",
+      "explanation": "贵族政治; 贵族阶层, 法国贵族. The French aristocracy was overthrown in revolution. 法国贵族在革命中被推翻。"
+    },
+    {
+      "question": "________ autocracy",
+      "type": "blank",
+      "answer": "absolute",
+      "explanation": "专制; 独裁, 绝对专制. The absolute autocracy suppressed all dissent. 绝对专制压制了所有异议。"
+    },
+    {
+      "question": "_________ plutocracy",
+      "type": "blank",
+      "answer": "corporate",
+      "explanation": "富豪统治, 企业富豪统治. Critics fear a corporate plutocracy rules the nation. 批评者担心企业富豪统治统治着国家。"
+    },
+    {
+      "question": "_______ bureaucracy",
+      "type": "blank",
+      "answer": "bloated",
+      "explanation": "官僚主义; 官僚机构, 臃肿的官僚机构. The bloated bureaucracy slows decision-making. 臃肿的官僚机构减慢了决策。"
+    },
+    {
+      "question": "________ confederacy",
+      "type": "blank",
+      "answer": "southern",
+      "explanation": "邦联; 同盟, 南方邦联. The southern confederacy fought in the Civil War. 南方邦联在内战中作战。"
+    },
+    {
+      "question": "________ conspiracy",
+      "type": "blank",
+      "answer": "criminal",
+      "explanation": "阴谋; 共谋, 犯罪阴谋. The court uncovered a criminal conspiracy. 法院揭露了一起犯罪阴谋。"
+    },
+    {
+      "question": "________ accuracy",
+      "type": "blank",
+      "answer": "pinpoint",
+      "explanation": "准确性; 精确, 精确的准确性. The GPS provides pinpoint accuracy. GPS提供精确的准确性。"
+    },
+    {
+      "question": "_______ prophecy",
+      "type": "blank",
+      "answer": "fulfill",
+      "explanation": "预言, 实现预言. Events seemed to fulfill prophecy exactly. 事件似乎完全实现了预言。"
+    },
+    {
+      "question": "_________ ascendancy",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "优势; 支配地位, 政治优势. The party gained political ascendancy. 该党获得了政治优势。"
+    },
+    {
+      "question": "_____ redundancy",
+      "type": "blank",
+      "answer": "staff",
+      "explanation": "裁员; 冗余, 员工裁员. The company announced staff redundancy. 公司宣布了员工裁员。"
+    },
+    {
+      "question": "______ dormancy",
+      "type": "blank",
+      "answer": "winter",
+      "explanation": "休眠; 静止, 冬季休眠. Plants enter winter dormancy to survive cold. 植物进入冬季休眠以度过寒冷。"
+    },
+    {
+      "question": "____ discrepancy",
+      "type": "blank",
+      "answer": "data",
+      "explanation": "差异; 不符, 数据差异. Researchers found a data discrepancy in results. 研究人员在结果中发现了数据差异。"
+    },
+    {
+      "question": "_____ vibrancy",
+      "type": "blank",
+      "answer": "urban",
+      "explanation": "活力; 生气, 城市活力. The neighborhood is known for its urban vibrancy. 该社区以其城市活力而闻名。"
+    },
+    {
+      "question": "vagrancy ___",
+      "type": "blank",
+      "answer": "law",
+      "explanation": "流浪; 游荡, 流浪法. The vagrancy law was challenged in court. 流浪法在法庭上受到质疑。"
+    },
+    {
+      "question": "_________ inconstancy",
+      "type": "blank",
+      "answer": "emotional",
+      "explanation": "不稳定; 易变, 情绪不稳定. His emotional inconstancy made relationships difficult. 他的情绪不稳定使关系变得困难。"
+    },
+    {
+      "question": "truancy _______",
+      "type": "blank",
+      "answer": "problem",
+      "explanation": "逃学, 逃学问题. Schools struggle with the truancy problem. 学校在逃学问题上挣扎。"
+    },
+    {
+      "question": "_________ complacency",
+      "type": "blank",
+      "answer": "dangerous",
+      "explanation": "自满; 满足, 危险的自满. Success can breed dangerous complacency. 成功会滋生危险的自满。"
+    },
+    {
+      "question": "______ decency",
+      "type": "blank",
+      "answer": "common",
+      "explanation": "正派; 体面, 普通礼节. Common decency requires basic courtesy. 普通礼节需要基本礼貌。"
+    },
+    {
+      "question": "emergency ____",
+      "type": "blank",
+      "answer": "exit",
+      "explanation": "紧急情况, 紧急出口. The emergency exit must remain clear. 紧急出口必须保持畅通。"
+    },
+    {
+      "question": "____ deficiency",
+      "type": "blank",
+      "answer": "iron",
+      "explanation": "缺乏; 不足, 铁缺乏症. Iron deficiency causes anemia. 铁缺乏症导致贫血。"
+    },
+    {
+      "question": "_________ expediency",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "权宜之计, 政治权宜之计. The decision was based on political expediency. 该决定基于政治权宜之计。"
+    },
+    {
+      "question": "________ leniency",
+      "type": "blank",
+      "answer": "judicial",
+      "explanation": "宽大; 仁慈, 司法宽大. The defendant requested judicial leniency. 被告请求司法宽大。"
+    },
+    {
+      "question": "_____ clemency",
+      "type": "blank",
+      "answer": "grant",
+      "explanation": "宽恕; 仁慈, 给予宽恕. The governor will grant clemency to the prisoner. 州长将给予囚犯宽恕。"
+    },
+    {
+      "question": "_______ consistency",
+      "type": "blank",
+      "answer": "logical",
+      "explanation": "一致性; 连贯性, 逻辑一致性. The theory lacks logical consistency. 该理论缺乏逻辑一致性。"
+    },
+    {
+      "question": "________ delinquency",
+      "type": "blank",
+      "answer": "juvenile",
+      "explanation": "违法; 拖欠, 青少年违法. The program aims to reduce juvenile delinquency. 该项目旨在减少青少年违法。"
+    },
+    {
+      "question": "_________ insolvency",
+      "type": "blank",
+      "answer": "corporate",
+      "explanation": "无力偿还; 破产, 企业破产. Corporate insolvency rose during the recession. 企业破产在经济衰退期间上升。"
+    },
+    {
+      "question": "ready ____",
+      "type": "blank",
+      "answer": "cash",
+      "explanation": "准备好的; 现成的, 现金. The business needs ready cash for operations. 企业需要现金进行运营。"
+    },
+    {
+      "question": "toady __ _____",
+      "type": "blank",
+      "answer": "to power",
+      "explanation": "谄媚; 拍马屁, 向权力谄媚. He would toady to power to advance his career. 他会向权力谄媚以推进他的职业生涯。"
+    },
+    {
+      "question": "_____ eddy",
+      "type": "blank",
+      "answer": "water",
+      "explanation": "漩涡, 水漩涡. The water eddy swirled near the rocks. 水漩涡在岩石附近旋转。"
+    },
+    {
+      "question": "muddy _____",
+      "type": "blank",
+      "answer": "water",
+      "explanation": "泥泞的; 混浊的, 混浊的水. The river ran with muddy water after the rain. 雨后河水变得混浊。"
+    },
+    {
+      "question": "needy ______",
+      "type": "blank",
+      "answer": "family",
+      "explanation": "贫困的; 需要帮助的, 贫困家庭. The charity helps needy family in the community. 慈善机构帮助社区中的贫困家庭。"
+    },
+    {
+      "question": "reedy _____",
+      "type": "blank",
+      "answer": "voice",
+      "explanation": "芦苇般的; 尖细的, 尖细的声音. The old man spoke in a reedy voice. 老人用尖细的声音说话。"
+    },
+    {
+      "question": "_____ tragedy",
+      "type": "blank",
+      "answer": "Greek",
+      "explanation": "悲剧, 希腊悲剧. Greek tragedy explored human fate and suffering. 希腊悲剧探讨人类命运和苦难。"
+    },
+    {
+      "question": "___ __ perfidy",
+      "type": "blank",
+      "answer": "act of",
+      "explanation": "背信弃义; 不忠, 背信弃义的行为. His betrayal was an act of perfidy. 他的背叛是背信弃义的行为。"
+    },
+    {
+      "question": "_____ subsidy",
+      "type": "blank",
+      "answer": "state",
+      "explanation": "补贴; 津贴, 国家补贴. Farmers receive a state subsidy for crops. 农民获得农作物的国家补贴。"
+    },
+    {
+      "question": "unwieldy _______",
+      "type": "blank",
+      "answer": "package",
+      "explanation": "笨重的; 难以处理的, 笨重的包裹. The unwieldy package was difficult to carry. 笨重的包裹很难搬运。"
+    },
+    {
+      "question": "dandy ______",
+      "type": "blank",
+      "answer": "fellow",
+      "explanation": "花花公子; 极好的, 花花公子. The dandy fellow dressed impeccably. 花花公子穿着无可挑剔。"
+    },
+    {
+      "question": "windy ______",
+      "type": "blank",
+      "answer": "speech",
+      "explanation": "多风的; 冗长空洞的, 冗长空洞的演讲. The politician gave a windy speech full of platitudes. 政客发表了充满陈词滥调的冗长空洞演讲。"
+    },
+    {
+      "question": "antibody ____",
+      "type": "blank",
+      "answer": "test",
+      "explanation": "抗体, 抗体测试. The antibody test detects immunity. 抗体测试检测免疫力。"
+    },
+    {
+      "question": "embody ______",
+      "type": "blank",
+      "answer": "ideals",
+      "explanation": "体现; 包含, 体现理想. Heroes embody ideals we admire. 英雄体现了我们钦佩的理想。"
+    },
+    {
+      "question": "moody ________",
+      "type": "blank",
+      "answer": "teenager",
+      "explanation": "喜怒无常的, 喜怒无常的青少年. The moody teenager refused to talk. 喜怒无常的青少年拒绝说话。"
+    },
+    {
+      "question": "__ _ parody",
+      "type": "blank",
+      "answer": "do a",
+      "explanation": "模仿作品; 滑稽模仿, 做滑稽模仿. The comedian will do a parody of the president. 喜剧演员将对总统做滑稽模仿。"
+    },
+    {
+      "question": "_______ rhapsody",
+      "type": "blank",
+      "answer": "rapture",
+      "explanation": "狂想曲; 狂喜, 狂喜的狂想曲. The music put listeners in rapture rhapsody. 音乐使听众陷入狂喜的狂想曲。"
+    },
+    {
+      "question": "______ custody",
+      "type": "blank",
+      "answer": "police",
+      "explanation": "监护; 拘留, 警方拘留. The suspect is in police custody. 嫌疑人被警方拘留。"
+    },
+    {
+      "question": "hardy _____",
+      "type": "blank",
+      "answer": "plant",
+      "explanation": "耐寒的; 强壮的, 耐寒植物. This hardy plant survives harsh winters. 这种耐寒植物能在严冬中生存。"
+    },
+    {
+      "question": "__ jeopardy",
+      "type": "blank",
+      "answer": "in",
+      "explanation": "危险, 处于危险中. The project is in jeopardy of cancellation. 该项目处于被取消的危险中。"
+    },
+    {
+      "question": "tardy _____",
+      "type": "blank",
+      "answer": "reply",
+      "explanation": "迟到的; 缓慢的, 迟来的回复. His tardy reply arrived too late. 他迟来的回复来得太晚了。"
+    },
+    {
+      "question": "sturdy _____",
+      "type": "blank",
+      "answer": "frame",
+      "explanation": "结实的; 坚固的, 坚固的框架. The chair has a sturdy frame. 椅子有坚固的框架。"
+    },
+    {
+      "question": "_____ understudy",
+      "type": "blank",
+      "answer": "stage",
+      "explanation": "替角; 替补演员, 舞台替补演员. The stage understudy learned all the lines. 舞台替补演员学会了所有台词。"
+    },
+    {
+      "question": "bawdy ____",
+      "type": "blank",
+      "answer": "joke",
+      "explanation": "粗俗的; 下流的, 粗俗的笑话. He told a bawdy joke that embarrassed everyone. 他讲了一个粗俗的笑话,让每个人都感到尴尬。"
+    },
+    {
+      "question": "dowdy _____",
+      "type": "blank",
+      "answer": "dress",
+      "explanation": "过时的; 寒酸的, 寒酸的衣服. She wore a dowdy dress to the party. 她穿着寒酸的衣服去参加聚会。"
+    },
+    {
+      "question": "off-key ____",
+      "type": "blank",
+      "answer": "note",
+      "type": "blank",
+      "answer": "note",
+      "explanation": "走调的; 不合适的, 走调的音符. The singer hit an off-key note. 歌手唱了一个走调的音符。"
+    },
+    {
+      "question": "_______ lackey",
+      "type": "blank",
+      "answer": "servile",
+      "explanation": "仆从; 走狗, 奴性的走狗. The servile lackey obeyed every command. 奴性的走狗服从每一个命令。"
+    },
+    {
+      "question": "jockey ___ ________",
+      "type": "blank",
+      "answer": "for position",
+      "explanation": "骑师; 争取, 争取位置. Politicians jockey for position before elections. 政客在选举前争取位置。"
+    },
+    {
+      "question": "_ medley __ _____",
+      "type": "blank",
+      "answer": "a of tunes",
+      "explanation": "混合曲; 杂录, 混合曲调. The band played a medley of tunes. 乐队演奏了混合曲调。"
+    },
+    {
+      "question": "galley _______",
+      "type": "blank",
+      "answer": "kitchen",
+      "explanation": "船上厨房; 单层甲板大帆船, 船上厨房. The boat has a compact galley kitchen. 船上有一个紧凑的厨房。"
+    },
+    {
+      "question": "____ pulley",
+      "type": "blank",
+      "answer": "rope",
+      "explanation": "滑轮, 绳索滑轮. The rope pulley lifts heavy loads easily. 绳索滑轮轻松提升重物。"
+    },
+    {
+      "question": "____ parley",
+      "type": "blank",
+      "answer": "hold",
+      "explanation": "会谈; 谈判, 举行会谈. The leaders will hold parley to discuss peace. 领导人将举行会谈讨论和平。"
+    }
+  ]
+}
