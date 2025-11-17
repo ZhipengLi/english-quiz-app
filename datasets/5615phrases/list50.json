@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "_____ philatelist",
+      "type": "blank",
+      "answer": "stamp",
+      "explanation": "集邮家, 邮票集邮家. The stamp philatelist collected rare postage items. 邮票集邮家收集稀有邮政物品。"
+    },
+    {
+      "question": "pugilist ________",
+      "type": "blank",
+      "answer": "champion",
+      "explanation": "拳击手, 拳击冠军. The pugilist champion defended his title successfully. 拳击冠军成功卫冕。"
+    },
+    {
+      "question": "enlist _______",
+      "type": "blank",
+      "answer": "support",
+      "explanation": "征募; 争取, 争取支持. The campaign will enlist support from local businesses. 该活动将争取当地企业的支持。"
+    },
+    {
+      "question": "_______ extremist",
+      "type": "blank",
+      "answer": "violent",
+      "explanation": "极端主义者, 暴力极端主义者. The violent extremist was arrested by authorities. 暴力极端主义者被当局逮捕。"
+    },
+    {
+      "question": "____ optimist",
+      "type": "blank",
+      "answer": "born",
+      "explanation": "乐观主义者, 天生的乐观主义者. She is a born optimist who sees the bright side. 她是一个天生的乐观主义者,总看到光明的一面。"
+    },
+    {
+      "question": "_____ taxonomist",
+      "type": "blank",
+      "answer": "plant",
+      "explanation": "分类学家, 植物分类学家. The plant taxonomist identified new species. 植物分类学家鉴定了新物种。"
+    },
+    {
+      "question": "______ conformist",
+      "type": "blank",
+      "answer": "social",
+      "explanation": "墨守成规者, 社会墨守成规者. The social conformist follows all societal norms. 社会墨守成规者遵循所有社会规范。"
+    },
+    {
+      "question": "______ nonconformist",
+      "type": "blank",
+      "answer": "social",
+      "explanation": "不墨守成规者, 社会不墨守成规者. The social nonconformist rejected traditional values. 社会不墨守成规者拒绝传统价值观。"
+    },
+    {
+      "question": "hedonist _________",
+      "type": "blank",
+      "answer": "lifestyle",
+      "explanation": "享乐主义者, 享乐主义生活方式. He pursued a hedonist lifestyle focused on pleasure. 他追求以快乐为中心的享乐主义生活方式。"
+    },
+    {
+      "question": "_____ protagonist",
+      "type": "blank",
+      "answer": "story",
+      "explanation": "主角; 主要人物, 故事主角. The story protagonist overcomes many obstacles. 故事主角克服了许多障碍。"
+    },
+    {
+      "question": "____ percussionist",
+      "type": "blank",
+      "answer": "jazz",
+      "explanation": "打击乐器演奏者, 爵士打击乐器演奏者. The jazz percussionist kept perfect rhythm. 爵士打击乐器演奏者保持完美的节奏。"
+    },
+    {
+      "question": "podiatrist ______",
+      "type": "blank",
+      "answer": "clinic",
+      "explanation": "足病医生, 足病医生诊所. The podiatrist clinic treats foot problems. 足病医生诊所治疗足部问题。"
+    },
+    {
+      "question": "wrist _____",
+      "type": "blank",
+      "answer": "watch",
+      "explanation": "手腕, 腕表. He wore an expensive wrist watch. 他戴着昂贵的腕表。"
+    },
+    {
+      "question": "subsist __ ____",
+      "type": "blank",
+      "answer": "on rice",
+      "explanation": "生存; 维持生活, 靠大米生存. Poor farmers subsist on rice and vegetables. 贫困农民靠大米和蔬菜生存。"
+    },
+    {
+      "question": "____-________ narcissist",
+      "type": "blank",
+      "answer": "self-absorbed",
+      "explanation": "自恋者, 自我陶醉的自恋者. The self-absorbed narcissist only cared about himself. 自我陶醉的自恋者只关心自己。"
+    },
+    {
+      "question": "defeatist ________",
+      "type": "blank",
+      "answer": "attitude",
+      "explanation": "失败主义的; 失败主义者, 失败主义态度. His defeatist attitude prevented him from trying. 他的失败主义态度阻止了他尝试。"
+    },
+    {
+      "question": "____ numismatist",
+      "type": "blank",
+      "answer": "keen",
+      "explanation": "钱币收藏家, 热心的钱币收藏家. The keen numismatist collected ancient coins. 热心的钱币收藏家收集古钱币。"
+    },
+    {
+      "question": "____-________ egotist",
+      "type": "blank",
+      "answer": "self-centered",
+      "explanation": "自我中心者, 自我中心的自我中心者. The self-centered egotist talked only about himself. 自我中心的自我中心者只谈论自己。"
+    },
+    {
+      "question": "accost _ ________",
+      "type": "blank",
+      "answer": "a passerby",
+      "explanation": "搭讪; 勾引, 搭讪路人. A stranger tried to accost a passerby on the street. 一个陌生人试图在街上搭讪路人。"
+    },
+    {
+      "question": "nethermost _______",
+      "type": "blank",
+      "answer": "regions",
+      "explanation": "最低的; 最深的, 最深的区域. They explored the nethermost regions of the cave. 他们探索了洞穴最深的区域。"
+    },
+    {
+      "question": "compost ____",
+      "type": "blank",
+      "answer": "heap",
+      "explanation": "堆肥, 堆肥堆. The garden has a compost heap for organic waste. 花园有一个堆肥堆用于有机废物。"
+    },
+    {
+      "question": "______ cloudburst",
+      "type": "blank",
+      "answer": "sudden",
+      "explanation": "暴雨; 突然大雨, 突然暴雨. A sudden cloudburst flooded the streets. 突然暴雨淹没了街道。"
+    },
+    {
+      "question": "_______ holocaust",
+      "type": "blank",
+      "answer": "nuclear",
+      "explanation": "大屠杀; 浩劫, 核浩劫. Scientists warned of a nuclear holocaust. 科学家警告核浩劫。"
+    },
+    {
+      "question": "exhaust _________",
+      "type": "blank",
+      "answer": "resources",
+      "explanation": "耗尽; 使疲惫, 耗尽资源. Don't exhaust resources through wasteful practices. 不要通过浪费行为耗尽资源。"
+    },
+    {
+      "question": "__ bust",
+      "type": "blank",
+      "answer": "go",
+      "explanation": "破产; 半身像, 破产. The company will go bust without new funding. 没有新资金,公司将破产。"
+    },
+    {
+      "question": "locust _____",
+      "type": "blank",
+      "answer": "swarm",
+      "explanation": "蝗虫, 蝗虫群. A locust swarm destroyed the crops. 蝗虫群摧毁了庄稼。"
+    },
+    {
+      "question": "sawdust _____",
+      "type": "blank",
+      "answer": "floor",
+      "explanation": "锯末, 锯末地板. The workshop had a sawdust floor. 车间有锯末地板。"
+    },
+    {
+      "question": "gust __ ____",
+      "type": "blank",
+      "answer": "of wind",
+      "explanation": "阵风, 一阵风. A strong gust of wind blew the door open. 一阵强风吹开了门。"
+    },
+    {
+      "question": "____ disgust",
+      "type": "blank",
+      "answer": "feel",
+      "explanation": "厌恶; 反感, 感到厌恶. The cruel behavior made people feel disgust. 残忍的行为使人们感到厌恶。"
+    },
+    {
+      "question": "august ________",
+      "type": "blank",
+      "answer": "presence",
+      "explanation": "威严的; 令人敬畏的, 威严的存在. The king had an august presence. 国王有威严的存在。"
+    },
+    {
+      "question": "adjust ________",
+      "type": "blank",
+      "answer": "settings",
+      "explanation": "调整; 适应, 调整设置. Please adjust settings to your preferences. 请根据您的偏好调整设置。"
+    },
+    {
+      "question": "lust ___ _____",
+      "type": "blank",
+      "answer": "for power",
+      "explanation": "渴望; 色欲, 对权力的渴望. His lust for power corrupted him completely. 他对权力的渴望完全腐蚀了他。"
+    },
+    {
+      "question": "wanderlust ______",
+      "type": "blank",
+      "answer": "spirit",
+      "explanation": "旅行癖; 漫游癖, 漫游精神. She possessed a wanderlust spirit and traveled widely. 她拥有漫游精神,广泛旅行。"
+    },
+    {
+      "question": "oust ____ ______",
+      "type": "blank",
+      "answer": "from office",
+      "explanation": "驱逐; 罢免, 从职位上罢免. The board voted to oust from office the CEO. 董事会投票将首席执行官从职位上罢免。"
+    },
+    {
+      "question": "_____'_ crust",
+      "type": "blank",
+      "answer": "earth's",
+      "explanation": "外壳; 地壳, 地壳. The earth's crust is relatively thin. 地壳相对较薄。"
+    },
+    {
+      "question": "thrust _______",
+      "type": "blank",
+      "answer": "forward",
+      "explanation": "推; 刺, 向前推进. The army will thrust forward into enemy territory. 军队将向前推进到敌方领土。"
+    },
+    {
+      "question": "amethyst ________",
+      "type": "blank",
+      "answer": "necklace",
+      "explanation": "紫水晶, 紫水晶项链. She wore a beautiful amethyst necklace. 她戴着一条美丽的紫水晶项链。"
+    },
+    {
+      "question": "___ ___ butt",
+      "type": "blank",
+      "answer": "hit the",
+      "explanation": "臀部; 烟蒂, 击中靶心. The archer will hit the butt with precision. 弓箭手将精确地击中靶心。"
+    },
+    {
+      "question": "_________ juggernaut",
+      "type": "blank",
+      "answer": "corporate",
+      "explanation": "不可阻挡的力量, 企业巨头. The corporate juggernaut dominates the market. 企业巨头主导市场。"
+    },
+    {
+      "question": "abut ___ _____",
+      "type": "blank",
+      "answer": "the river",
+      "explanation": "邻接; 毗连, 毗邻河流. Their property will abut the river on one side. 他们的财产一侧将毗邻河流。"
+    },
+    {
+      "question": "_____ debut",
+      "type": "blank",
+      "answer": "stage",
+      "explanation": "初次登台; 首次亮相, 舞台首演. The actress made her stage debut at age 20. 女演员在20岁时首次登台演出。"
+    },
+    {
+      "question": "woodcut _____",
+      "type": "blank",
+      "answer": "print",
+      "explanation": "木刻; 木版画, 木刻版画. The museum displays ancient woodcut print. 博物馆展示古代木刻版画。"
+    },
+    {
+      "question": "undercut ___ _____",
+      "type": "blank",
+      "answer": "the price",
+      "explanation": "削价竞争; 削弱, 削价. Competitors will undercut the price to win customers. 竞争对手会削价以赢得客户。"
+    },
+    {
+      "question": "________ hut",
+      "type": "blank",
+      "answer": "mountain",
+      "explanation": "小屋; 棚屋, 山间小屋. Hikers rested in the mountain hut overnight. 徒步旅行者在山间小屋过夜休息。"
+    },
+    {
+      "question": "____ glut",
+      "type": "blank",
+      "answer": "food",
+      "explanation": "过剩; 供过于求, 食物过剩. The harvest created a food glut in the market. 丰收在市场上造成了食物过剩。"
+    },
+    {
+      "question": "____ gamut",
+      "type": "blank",
+      "answer": "full",
+      "explanation": "全部; 整个范围, 全部范围. The exhibition runs the full gamut of modern art. 展览涵盖了现代艺术的全部范围。"
+    },
+    {
+      "question": "______ bout",
+      "type": "blank",
+      "answer": "boxing",
+      "explanation": "回合; 一场, 拳击比赛. The boxing bout lasted twelve rounds. 拳击比赛持续了十二回合。"
+    },
+    {
+      "question": "roundabout _____",
+      "type": "blank",
+      "answer": "route",
+      "explanation": "环形交叉路; 迂回的, 迂回路线. We took a roundabout route to avoid traffic. 我们走迂回路线以避免交通拥堵。"
+    },
+    {
+      "question": "_______ lout",
+      "type": "blank",
+      "answer": "boorish",
+      "explanation": "粗人; 笨蛋, 粗鲁的粗人. The boorish lout offended everyone at the party. 粗鲁的粗人冒犯了聚会上的每个人。"
+    },
+    {
+      "question": "pout ____",
+      "type": "blank",
+      "answer": "lips",
+      "explanation": "撅嘴; 生气, 撅起嘴唇. Children often pout lips when disappointed. 孩子们失望时常常撅起嘴唇。"
+    },
+    {
+      "question": "_ rout",
+      "type": "blank",
+      "answer": "a",
+      "explanation": "溃败; 彻底击败, 一场溃败. The battle ended in a rout of the enemy. 战斗以敌人的溃败告终。"
+    },
+    {
+      "question": "tout _ _______",
+      "type": "blank",
+      "answer": "a product",
+      "explanation": "兜售; 吹捧, 兜售产品. Advertisers tout a product as revolutionary. 广告商兜售产品称其具有革命性。"
+    },
+    {
+      "question": "stout _____",
+      "type": "blank",
+      "answer": "build",
+      "explanation": "粗壮的; 结实的, 结实的体格. The wrestler had a stout build. 摔跤手有结实的体格。"
+    },
+    {
+      "question": "devout ________",
+      "type": "blank",
+      "answer": "believer",
+      "explanation": "虔诚的, 虔诚的信徒. She is a devout believer who prays daily. 她是一位每天祈祷的虔诚信徒。"
+    },
+    {
+      "question": "____ plateau",
+      "type": "blank",
+      "answer": "high",
+      "explanation": "高原; 平稳期, 高原. The high plateau stretches for miles. 高原绵延数英里。"
+    },
+    {
+      "question": "_____ purlieu",
+      "type": "blank",
+      "answer": "rural",
+      "explanation": "范围; 郊区, 乡村地区. They lived in the rural purlieu outside the city. 他们住在城市外的乡村地区。"
+    },
+    {
+      "question": "____ guru",
+      "type": "blank",
+      "answer": "tech",
+      "explanation": "大师; 权威, 技术大师. The tech guru founded several startups. 技术大师创立了几家初创公司。"
+    },
+    {
+      "question": "impromptu ______",
+      "type": "blank",
+      "answer": "speech",
+      "explanation": "即兴的, 即兴演讲. She delivered an impromptu speech at the event. 她在活动中发表了即兴演讲。"
+    },
+    {
+      "question": "______ thaw",
+      "type": "blank",
+      "answer": "spring",
+      "explanation": "解冻; 融化, 春季解冻. The spring thaw melts the snow. 春季解冻融化了雪。"
+    },
+    {
+      "question": "_____ flaw",
+      "type": "blank",
+      "answer": "fatal",
+      "explanation": "缺陷; 瑕疵, 致命缺陷. The plan had a fatal flaw that doomed it. 该计划有一个注定失败的致命缺陷。"
+    },
+    {
+      "question": "withdraw ____",
+      "type": "blank",
+      "answer": "cash",
+      "explanation": "取出; 撤回, 取现金. You can withdraw cash from the ATM. 你可以从自动取款机取现金。"
+    },
+    {
+      "question": "jigsaw ______",
+      "type": "blank",
+      "answer": "puzzle",
+      "explanation": "拼图, 拼图游戏. Children enjoy solving jigsaw puzzle. 孩子们喜欢解拼图游戏。"
+    },
+    {
+      "question": "yaw _____",
+      "type": "blank",
+      "answer": "error",
+      "explanation": "偏航, 偏航误差. The pilot corrected the yaw error. 飞行员纠正了偏航误差。"
+    },
+    {
+      "question": "____ curfew",
+      "type": "blank",
+      "answer": "city",
+      "explanation": "宵禁, 城市宵禁. The city curfew begins at midnight. 城市宵禁从午夜开始。"
+    },
+    {
+      "question": "eschew ________",
+      "type": "blank",
+      "answer": "violence",
+      "explanation": "避免; 戒绝, 避免暴力. Peaceful protesters eschew violence completely. 和平抗议者完全避免暴力。"
+    },
+    {
+      "question": "skew ____",
+      "type": "blank",
+      "answer": "data",
+      "explanation": "歪斜; 扭曲, 扭曲数据. Bias can skew data in research studies. 偏见会扭曲研究中的数据。"
+    },
+    {
+      "question": "_ slew __ ______",
+      "type": "blank",
+      "answer": "a of orders",
+      "explanation": "大量; 许多, 大量订单. The company received a slew of orders. 公司收到了大量订单。"
+    },
+    {
+      "question": "______ sinew",
+      "type": "blank",
+      "answer": "muscle",
+      "explanation": "肌腱; 力量, 肌肉肌腱. The athlete's muscle sinew was well developed. 运动员的肌肉肌腱发育良好。"
+    },
+    {
+      "question": "_______ ___ screw",
+      "type": "blank",
+      "answer": "tighten the",
+      "explanation": "螺丝, 拧紧螺丝. Use a screwdriver to tighten the screw. 用螺丝刀拧紧螺丝。"
+    },
+    {
+      "question": "elbow ____",
+      "type": "blank",
+      "answer": "room",
+      "explanation": "肘部, 活动空间. The small office provides little elbow room. 小办公室几乎没有活动空间。"
+    },
+    {
+      "question": "cow ____ _______",
+      "type": "blank",
+      "answer": "into silence",
+      "explanation": "威吓; 恐吓, 威吓使沉默. Threats cannot cow into silence brave journalists. 威胁无法威吓勇敢的记者使其沉默。"
+    },
+    {
+      "question": "foreshadow ______",
+      "type": "blank",
+      "answer": "events",
+      "explanation": "预示; 预兆, 预示事件. Dark clouds foreshadow events of the storm. 乌云预示风暴事件。"
+    },
+    {
+      "question": "overshadow ____________",
+      "type": "blank",
+      "answer": "achievements",
+      "explanation": "使黯然失色; 遮蔽, 使成就黯然失色. Don't let failure overshadow achievements. 不要让失败使成就黯然失色。"
+    },
+    {
+      "question": "endow ____",
+      "type": "blank",
+      "answer": "fund",
+      "explanation": "捐赠; 赋予, 捐赠基金. The philanthropist will endow fund for scholarships. 慈善家将为奖学金捐赠基金。"
+    },
+    {
+      "question": "_________ know-how",
+      "type": "blank",
+      "answer": "technical",
+      "explanation": "专门技术; 实践知识, 技术诀窍. Engineers possess technical know-how. 工程师拥有技术诀窍。"
+    },
+    {
+      "question": "________ sideshow",
+      "type": "blank",
+      "answer": "carnival",
+      "explanation": "杂耍; 附属活动, 嘉年华杂耍. The carnival sideshow attracted curious crowds. 嘉年华杂耍吸引了好奇的人群。"
+    },
+    {
+      "question": "overflow ____",
+      "type": "blank",
+      "answer": "tank",
+      "explanation": "溢出; 泛滥, 溢流罐. The overflow tank collects excess water. 溢流罐收集多余的水。"
+    },
+    {
+      "question": "____ glow",
+      "type": "blank",
+      "answer": "soft",
+      "explanation": "发光; 光辉, 柔和的光辉. Candles cast a soft glow in the room. 蜡烛在房间里投射出柔和的光辉。"
+    },
+    {
+      "question": "callow _____",
+      "type": "blank",
+      "answer": "youth",
+      "explanation": "未成熟的; 无经验的, 未成熟的青年. The callow youth lacked worldly experience. 未成熟的青年缺乏世俗经验。"
+    },
+    {
+      "question": "fallow _____",
+      "type": "blank",
+      "answer": "field",
+      "explanation": "休耕的; 荒芜的, 休耕田地. The farmer left the fallow field to recover. 农民让休耕田地恢复。"
+    },
+    {
+      "question": "hallow ___ ______",
+      "type": "blank",
+      "answer": "the ground",
+      "explanation": "使神圣; 尊崇, 使土地神圣. They will hallow the ground with a ceremony. 他们将用仪式使土地神圣。"
+    },
+    {
+      "question": "minnow ____",
+      "type": "blank",
+      "answer": "pond",
+      "explanation": "小鱼; 小人物, 小鱼池塘. The minnow pond teems with tiny fish. 小鱼池塘里到处都是小鱼。"
+    },
+    {
+      "question": "winnow ____",
+      "type": "blank",
+      "answer": "data",
+      "explanation": "筛选; 扬谷, 筛选数据. Researchers must winnow data to find patterns. 研究人员必须筛选数据以找到模式。"
+    },
+    {
+      "question": "highbrow _______",
+      "type": "blank",
+      "answer": "culture",
+      "explanation": "知识分子的; 高雅的, 高雅文化. The magazine covers highbrow culture and arts. 该杂志涵盖高雅文化和艺术。"
+    },
+    {
+      "question": "overthrow _ ______",
+      "type": "blank",
+      "answer": "a regime",
+      "explanation": "推翻; 打倒, 推翻政权. Rebels attempted to overthrow a regime. 叛军试图推翻政权。"
+    },
+    {
+      "question": "farrow _ ______",
+      "type": "blank",
+      "answer": "a litter",
+      "explanation": "产仔, 产一窝仔. The sow will farrow a litter in spring. 母猪将在春天产一窝仔。"
+    },
+    {
+      "question": "harrow ___ _____",
+      "type": "blank",
+      "answer": "the field",
+      "explanation": "耙地; 折磨, 耙地. Farmers harrow the field before planting. 农民在种植前耙地。"
+    },
+    {
+      "question": "____ marrow",
+      "type": "blank",
+      "answer": "bone",
+      "explanation": "骨髓; 精髓, 骨髓. Bone marrow produces blood cells. 骨髓产生血细胞。"
+    },
+    {
+      "question": "sow _____",
+      "type": "blank",
+      "answer": "seeds",
+      "explanation": "播种, 播种种子. Spring is the time to sow seeds. 春天是播种种子的时候。"
+    },
+    {
+      "question": "bestow _____",
+      "type": "blank",
+      "answer": "honor",
+      "explanation": "授予; 给予, 授予荣誉. The university will bestow honor on the graduate. 大学将授予毕业生荣誉。"
+    },
+    {
+      "question": "avow _____",
+      "type": "blank",
+      "answer": "guilt",
+      "explanation": "承认; 公开宣称, 承认罪责. The defendant chose to avow guilt. 被告选择承认罪责。"
+    },
+    {
+      "question": "disavow _________",
+      "type": "blank",
+      "answer": "knowledge",
+      "explanation": "否认; 拒绝承认, 否认知情. The official will disavow knowledge of the scandal. 官员将否认知情这起丑闻。"
+    },
+    {
+      "question": "flax _____",
+      "type": "blank",
+      "answer": "fiber",
+      "explanation": "亚麻, 亚麻纤维. Linen is made from flax fiber. 亚麻布由亚麻纤维制成。"
+    },
+    {
+      "question": "_____ _ climax",
+      "type": "blank",
+      "answer": "reach a",
+      "explanation": "高潮; 顶点, 达到高潮. The tension will reach a climax in the final act. 紧张气氛将在最后一幕达到高潮。"
+    },
+    {
+      "question": "____ anticlimax",
+      "type": "blank",
+      "answer": "plot",
+      "explanation": "反高潮; 虎头蛇尾, 情节反高潮. The ending was a disappointing plot anticlimax. 结局是令人失望的情节反高潮。"
+    },
+    {
+      "question": "________ apex",
+      "type": "blank",
+      "answer": "mountain",
+      "explanation": "顶点; 最高点, 山顶. Climbers reached the mountain apex at noon. 登山者在中午到达山顶。"
+    },
+    {
+      "question": "________ vertex",
+      "type": "blank",
+      "answer": "triangle",
+      "explanation": "顶点; 角的顶点, 三角形顶点. The triangle vertex is labeled point A. 三角形顶点标记为A点。"
+    },
+    {
+      "question": "vex ___ ______",
+      "type": "blank",
+      "answer": "the public",
+      "explanation": "使烦恼; 使恼怒, 使公众烦恼. The controversy will vex the public for months. 这场争议将使公众烦恼数月。"
+    },
+    {
+      "question": "convex ______",
+      "type": "blank",
+      "answer": "mirror",
+      "explanation": "凸的; 凸面的, 凸面镜. The convex mirror provides a wide view. 凸面镜提供广阔的视野。"
+    },
+    {
+      "question": "prolix ______",
+      "type": "blank",
+      "answer": "speech",
+      "explanation": "冗长的; 啰嗦的, 冗长的演讲. His prolix speech bored the audience. 他冗长的演讲使观众感到厌烦。"
+    }
+  ]
+}
