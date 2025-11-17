@@ -1,1 +1,605 @@
-{}
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "frisky _____",
+      "type": "blank",
+      "answer": "puppy",
+      "explanation": "活泼的; 爱闹着玩的, 活泼的小狗. The frisky puppy bounced around the yard. 活泼的小狗在院子里蹦蹦跳跳。"
+    },
+    {
+      "question": "husky _____",
+      "type": "blank",
+      "answer": "voice",
+      "explanation": "沙哑的; 强壮的, 沙哑的声音. She spoke in a husky voice. 她用沙哑的声音说话。"
+    },
+    {
+      "question": "___________ anomaly",
+      "type": "blank",
+      "answer": "statistical",
+      "explanation": "异常; 反常现象, 统计异常. The data showed a statistical anomaly. 数据显示了统计异常。"
+    },
+    {
+      "question": "unworldly ____",
+      "type": "blank",
+      "answer": "monk",
+      "explanation": "不谙世事的; 超凡脱俗的, 不谙世事的僧侣. The unworldly monk devoted himself to prayer. 不谙世事的僧侣致力于祈祷。"
+    },
+    {
+      "question": "timely ________",
+      "type": "blank",
+      "answer": "reminder",
+      "explanation": "及时的; 适时的, 及时的提醒. The timely reminder helped me meet the deadline. 及时的提醒帮助我按时完成。"
+    },
+    {
+      "question": "untimely _____",
+      "type": "blank",
+      "answer": "death",
+      "explanation": "不合时宜的; 过早的, 过早的死亡. His untimely death shocked everyone. 他过早的死亡震惊了所有人。"
+    },
+    {
+      "question": "comely ____",
+      "type": "blank",
+      "answer": "face",
+      "explanation": "清秀的; 标致的, 清秀的脸. She had a comely face and kind eyes. 她有一张清秀的脸和善良的眼睛。"
+    },
+    {
+      "question": "homely ______",
+      "type": "blank",
+      "answer": "wisdom",
+      "explanation": "朴实的; 平凡的, 朴实的智慧. The grandmother shared homely wisdom. 祖母分享了朴实的智慧。"
+    },
+    {
+      "question": "____ contumely",
+      "type": "blank",
+      "answer": "hurl",
+      "explanation": "侮辱; 轻蔑, 抛出侮辱. Angry critics hurl contumely at the politician. 愤怒的批评者对政客抛出侮辱。"
+    },
+    {
+      "question": "_____ __ philately",
+      "type": "blank",
+      "answer": "hobby of",
+      "explanation": "集邮, 集邮爱好. His hobby of philately began in childhood. 他的集邮爱好始于童年。"
+    },
+    {
+      "question": "_________ gadfly",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "牛虻; 挑衅者, 政治挑衅者. The political gadfly criticized every policy. 政治挑衅者批评每一项政策。"
+    },
+    {
+      "question": "earthly _________",
+      "type": "blank",
+      "answer": "pleasures",
+      "explanation": "尘世的; 世俗的, 尘世的快乐. He renounced earthly pleasures. 他放弃了尘世的快乐。"
+    },
+    {
+      "question": "unearthly _______",
+      "type": "blank",
+      "answer": "silence",
+      "explanation": "怪异的; 可怕的, 怪异的寂静. An unearthly silence filled the room. 怪异的寂静充满了房间。"
+    },
+    {
+      "question": "readily _________",
+      "type": "blank",
+      "answer": "available",
+      "explanation": "容易地; 乐意地, 容易获得的. Information is readily available online. 信息在网上容易获得。"
+    },
+    {
+      "question": "_____ homily",
+      "type": "blank",
+      "answer": "moral",
+      "explanation": "说教; 训诫, 道德说教. The priest delivered a moral homily. 牧师发表了道德说教。"
+    },
+    {
+      "question": "____ perfunctorily",
+      "type": "blank",
+      "answer": "done",
+      "explanation": "敷衍地; 例行公事地, 敷衍地完成. The task was done perfunctorily without care. 任务被敷衍地完成,毫不用心。"
+    },
+    {
+      "question": "wily ___",
+      "type": "blank",
+      "answer": "fox",
+      "explanation": "狡猾的; 诡计多端的, 狡猾的狐狸. The wily fox escaped the hunters. 狡猾的狐狸逃脱了猎人。"
+    },
+    {
+      "question": "dally ____",
+      "type": "blank",
+      "answer": "with",
+      "explanation": "闲荡; 玩弄, 玩弄. Don't dally with important decisions. 不要玩弄重要的决定。"
+    },
+    {
+      "question": "proverbially ________",
+      "type": "blank",
+      "answer": "cautious",
+      "explanation": "众所周知地, 众所周知地谨慎. He is proverbially cautious in business. 他在商业上众所周知地谨慎。"
+    },
+    {
+      "question": "____ exponentially",
+      "type": "blank",
+      "answer": "grow",
+      "explanation": "指数地; 迅速地, 指数增长. The company continues to grow exponentially. 公司继续指数增长。"
+    },
+    {
+      "question": "rally ___ ______",
+      "type": "blank",
+      "answer": "the troops",
+      "explanation": "集结; 重整, 集结军队. The general will rally the troops for battle. 将军会为战斗集结军队。"
+    },
+    {
+      "question": "tally ___ _____",
+      "type": "blank",
+      "answer": "the votes",
+      "explanation": "计数; 记录, 计票. Officials will tally the votes tonight. 官员今晚将计票。"
+    },
+    {
+      "question": "________ filly",
+      "type": "blank",
+      "answer": "spirited",
+      "explanation": "小母马, 活泼的小母马. The spirited filly won the race. 活泼的小母马赢得了比赛。"
+    },
+    {
+      "question": "___ __ folly",
+      "type": "blank",
+      "answer": "act of",
+      "explanation": "愚蠢; 荒唐事, 愚蠢的行为. That was an act of folly. 那是愚蠢的行为。"
+    },
+    {
+      "question": "jolly ____",
+      "type": "blank",
+      "answer": "good",
+      "explanation": "快乐的; 愉快的, 非常好. That's a jolly good idea! 那是个非常好的主意!"
+    },
+    {
+      "question": "sully __________",
+      "type": "blank",
+      "answer": "reputation",
+      "explanation": "玷污; 损害, 玷污声誉. The scandal will sully reputation. 丑闻会玷污声誉。"
+    },
+    {
+      "question": "unseemly ________",
+      "type": "blank",
+      "answer": "behavior",
+      "explanation": "不得体的; 不适当的, 不得体的行为. His unseemly behavior shocked the guests. 他不得体的行为震惊了客人。"
+    },
+    {
+      "question": "melancholy ____",
+      "type": "blank",
+      "answer": "mood",
+      "explanation": "忧郁; 悲伤, 忧郁的心情. She fell into a melancholy mood. 她陷入了忧郁的心情。"
+    },
+    {
+      "question": "comply ____",
+      "type": "blank",
+      "answer": "with",
+      "explanation": "遵守; 服从, 遵守. Companies must comply with regulations. 公司必须遵守法规。"
+    },
+    {
+      "question": "____ gingerly",
+      "type": "blank",
+      "answer": "move",
+      "explanation": "小心翼翼地, 小心翼翼地移动. Move gingerly on the icy steps. 在结冰的台阶上小心翼翼地移动。"
+    },
+    {
+      "question": "miserly ______",
+      "type": "blank",
+      "answer": "habits",
+      "explanation": "吝啬的; 小气的, 吝啬的习惯. His miserly habits made him unpopular. 他吝啬的习惯使他不受欢迎。"
+    },
+    {
+      "question": "measly ______",
+      "type": "blank",
+      "answer": "amount",
+      "explanation": "微不足道的; 少得可怜的, 微不足道的数量. They offered a measly amount for the work. 他们为这项工作提供了微不足道的数量。"
+    },
+    {
+      "question": "expressly ______",
+      "type": "blank",
+      "answer": "forbid",
+      "explanation": "明确地; 特意地, 明确禁止. The rules expressly forbid smoking. 规则明确禁止吸烟。"
+    },
+    {
+      "question": "sprightly _____",
+      "type": "blank",
+      "answer": "dance",
+      "explanation": "活泼的; 轻快的, 轻快的舞蹈. The children performed a sprightly dance. 孩子们表演了轻快的舞蹈。"
+    },
+    {
+      "question": "unjustly _______",
+      "type": "blank",
+      "answer": "accused",
+      "explanation": "不公正地, 不公正地指控. He was unjustly accused of theft. 他被不公正地指控盗窃。"
+    },
+    {
+      "question": "drizzly ___",
+      "type": "blank",
+      "answer": "day",
+      "explanation": "毛毛雨的; 下毛毛雨的, 毛毛雨天. It was a cold, drizzly day. 那是一个寒冷的毛毛雨天。"
+    },
+    {
+      "question": "seamy ____",
+      "type": "blank",
+      "answer": "side",
+      "explanation": "肮脏的; 丑恶的, 丑恶的一面. The novel exposed the seamy side of politics. 小说揭露了政治的丑恶一面。"
+    },
+    {
+      "question": "________ monogamy",
+      "type": "blank",
+      "answer": "practice",
+      "explanation": "一夫一妻制, 实行一夫一妻制. Most societies practice monogamy. 大多数社会实行一夫一妻制。"
+    },
+    {
+      "question": "misogamy ______",
+      "type": "blank",
+      "answer": "stance",
+      "explanation": "厌婚; 反对婚姻, 厌婚立场. His misogamy stance surprised his family. 他的厌婚立场让家人感到惊讶。"
+    },
+    {
+      "question": "______ blasphemy",
+      "type": "blank",
+      "answer": "commit",
+      "explanation": "亵渎; 渎神, 犯亵渎罪. To say such things is to commit blasphemy. 说这样的话就是犯亵渎罪。"
+    },
+    {
+      "question": "_______ pygmy",
+      "type": "blank",
+      "answer": "African",
+      "explanation": "侏儒; 矮人, 非洲侏儒. African pygmy tribes live in rainforests. 非洲侏儒部落生活在雨林中。"
+    },
+    {
+      "question": "palmy ____",
+      "type": "blank",
+      "answer": "days",
+      "explanation": "繁荣的; 兴旺的, 繁荣时期. He remembered the palmy days of his youth. 他记得青年时期的繁荣时光。"
+    },
+    {
+      "question": "_____ agronomy",
+      "type": "blank",
+      "answer": "study",
+      "explanation": "农学, 研究农学. Agricultural students study agronomy. 农业学生研究农学。"
+    },
+    {
+      "question": "_________ gastronomy",
+      "type": "blank",
+      "answer": "molecular",
+      "explanation": "烹饪学; 美食法, 分子烹饪学. Molecular gastronomy transforms food chemistry. 分子烹饪学改变了食物化学。"
+    },
+    {
+      "question": "_________ autonomy",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "自治; 自主权, 政治自治. The region gained political autonomy. 该地区获得了政治自治。"
+    },
+    {
+      "question": "smarmy ______",
+      "type": "blank",
+      "answer": "praise",
+      "explanation": "虚情假意的; 谄媚的, 虚情假意的赞美. His smarmy praise made everyone uncomfortable. 他虚情假意的赞美让每个人都感到不舒服。"
+    },
+    {
+      "question": "_ miscellany __ ______",
+      "type": "blank",
+      "answer": "a of essays",
+      "explanation": "杂集; 混合物, 散文杂集. The book is a miscellany of essays. 这本书是散文杂集。"
+    },
+    {
+      "question": "accompany _ ______",
+      "type": "blank",
+      "answer": "a friend",
+      "explanation": "陪伴; 伴随, 陪伴朋友. I'll accompany a friend to the concert. 我会陪伴朋友去音乐会。"
+    },
+    {
+      "question": "_____ botany",
+      "type": "blank",
+      "answer": "study",
+      "explanation": "植物学, 研究植物学. Biologists study botany extensively. 生物学家广泛研究植物学。"
+    },
+    {
+      "question": "_____ progeny",
+      "type": "blank",
+      "answer": "royal",
+      "explanation": "后代; 子孙, 皇室后裔. The royal progeny inherited the throne. 皇室后裔继承了王位。"
+    },
+    {
+      "question": "_____ ignominy",
+      "type": "blank",
+      "answer": "utter",
+      "explanation": "耻辱; 不名誉, 彻底的耻辱. The defeat brought utter ignominy. 失败带来了彻底的耻辱。"
+    },
+    {
+      "question": "satiny ______",
+      "type": "blank",
+      "answer": "finish",
+      "explanation": "缎子般的; 光滑的, 缎子般的表面. The paint has a satiny finish. 油漆有缎子般的表面。"
+    },
+    {
+      "question": "_______ calumny",
+      "type": "blank",
+      "answer": "vicious",
+      "explanation": "诽谤; 中伤, 恶毒的诽谤. He suffered vicious calumny from his enemies. 他遭受了敌人恶毒的诽谤。"
+    },
+    {
+      "question": "canny ________",
+      "type": "blank",
+      "answer": "investor",
+      "explanation": "精明的; 机敏的, 精明的投资者. The canny investor made wise choices. 精明的投资者做出了明智的选择。"
+    },
+    {
+      "question": "uncanny ___________",
+      "type": "blank",
+      "answer": "resemblance",
+      "explanation": "离奇的; 不可思议的, 不可思议的相似. There's an uncanny resemblance between them. 他们之间有不可思议的相似。"
+    },
+    {
+      "question": "_____ cacophony",
+      "type": "blank",
+      "answer": "urban",
+      "explanation": "刺耳的声音; 不和谐音, 城市喧嚣. The urban cacophony never stops. 城市喧嚣从不停止。"
+    },
+    {
+      "question": "___ colony",
+      "type": "blank",
+      "answer": "ant",
+      "explanation": "殖民地; 群体, 蚁群. The ant colony worked together efficiently. 蚁群高效地协同工作。"
+    },
+    {
+      "question": "________ hegemony",
+      "type": "blank",
+      "answer": "cultural",
+      "explanation": "霸权; 领导权, 文化霸权. Cultural hegemony shapes social values. 文化霸权塑造社会价值观。"
+    },
+    {
+      "question": "_____ ceremony",
+      "type": "blank",
+      "answer": "state",
+      "explanation": "典礼; 仪式, 国家典礼. The state ceremony was attended by dignitaries. 国家典礼有政要出席。"
+    },
+    {
+      "question": "________ acrimony",
+      "type": "blank",
+      "answer": "venomous",
+      "explanation": "尖刻; 辛辣, 恶毒的尖刻. The debate was marked by venomous acrimony. 辩论以恶毒的尖刻为特征。"
+    },
+    {
+      "question": "______ patrimony",
+      "type": "blank",
+      "answer": "family",
+      "explanation": "遗产; 世袭财产, 家族遗产. The estate was part of the family patrimony. 这处房产是家族遗产的一部分。"
+    },
+    {
+      "question": "____-_______ monotony",
+      "type": "blank",
+      "answer": "mind-numbing",
+      "explanation": "单调; 乏味, 令人麻木的单调. The mind-numbing monotony of the job was exhausting. 工作令人麻木的单调令人筋疲力尽。"
+    },
+    {
+      "question": "corny ____",
+      "type": "blank",
+      "answer": "line",
+      "explanation": "陈腐的; 老套的, 老套的台词. He used a corny line to flirt. 他用老套的台词调情。"
+    },
+    {
+      "question": "thorny _____",
+      "type": "blank",
+      "answer": "issue",
+      "explanation": "棘手的; 多刺的, 棘手的问题. Immigration is a thorny issue in politics. 移民是政治中的棘手问题。"
+    },
+    {
+      "question": "puny ______",
+      "type": "blank",
+      "answer": "effort",
+      "explanation": "微小的; 微弱的, 微弱的努力. His puny effort was insufficient. 他微弱的努力是不够的。"
+    },
+    {
+      "question": "brawny ____",
+      "type": "blank",
+      "answer": "arms",
+      "explanation": "肌肉发达的; 强壮的, 强壮的手臂. The laborer had brawny arms from hard work. 劳工因辛勤工作而有强壮的手臂。"
+    },
+    {
+      "question": "coy _____",
+      "type": "blank",
+      "answer": "smile",
+      "explanation": "害羞的; 忸怩作态的, 害羞的微笑. She gave a coy smile and looked away. 她露出害羞的微笑,看向别处。"
+    },
+    {
+      "question": "___ __ decoy",
+      "type": "blank",
+      "answer": "use as",
+      "explanation": "诱饵; 圈套, 用作诱饵. Hunters use as decoy to attract ducks. 猎人用作诱饵来吸引鸭子。"
+    },
+    {
+      "question": "_____ killjoy",
+      "type": "blank",
+      "answer": "party",
+      "explanation": "扫兴的人, 派对扫兴者. Don't be a party killjoy! 不要做派对扫兴者!"
+    },
+    {
+      "question": "cloy ____ _____",
+      "type": "blank",
+      "answer": "with sugar",
+      "explanation": "使厌腻; 使倒胃口, 使糖倒胃口. Too much sweetness will cloy with sugar. 太多的甜味会使糖倒胃口。"
+    },
+    {
+      "question": "______ ploy",
+      "type": "blank",
+      "answer": "clever",
+      "explanation": "策略; 手段, 聪明的策略. It was a clever ploy to win votes. 这是赢得选票的聪明策略。"
+    },
+    {
+      "question": "annoy ___ _________",
+      "type": "blank",
+      "answer": "the neighbors",
+      "explanation": "使恼怒; 打扰, 惹恼邻居. Loud music will annoy the neighbors. 大声音乐会惹恼邻居。"
+    },
+    {
+      "question": "grumpy ___ ___",
+      "type": "blank",
+      "answer": "old man",
+      "explanation": "脾气暴躁的, 脾气暴躁的老人. The grumpy old man yelled at kids. 脾气暴躁的老人对孩子们大喊大叫。"
+    },
+    {
+      "question": "snappy ________",
+      "type": "blank",
+      "answer": "comeback",
+      "explanation": "敏捷的; 时髦的, 敏捷的反击. She had a snappy comeback ready. 她准备了敏捷的反击。"
+    },
+    {
+      "question": "scrappy _____",
+      "type": "blank",
+      "answer": "notes",
+      "explanation": "杂乱的; 好斗的, 杂乱的笔记. His scrappy notes were hard to read. 他杂乱的笔记很难读。"
+    },
+    {
+      "question": "floppy ____",
+      "type": "blank",
+      "answer": "disk",
+      "explanation": "松软的; 软盘, 软盘. Old computers used floppy disk for storage. 旧电脑使用软盘存储。"
+    },
+    {
+      "question": "raspy _____",
+      "type": "blank",
+      "answer": "voice",
+      "explanation": "刺耳的; 粗糙的, 刺耳的声音. The singer had a raspy voice from smoking. 歌手因吸烟而有刺耳的声音。"
+    },
+    {
+      "question": "espy _ ______",
+      "type": "blank",
+      "answer": "a figure",
+      "explanation": "看到; 发现, 看到人影. I could espy a figure in the distance. 我能看到远处的人影。"
+    },
+    {
+      "question": "lapidary ___________",
+      "type": "blank",
+      "answer": "inscription",
+      "explanation": "宝石的; 简洁优美的, 碑文. The monument bore a lapidary inscription. 纪念碑上刻有简洁优美的碑文。"
+    },
+    {
+      "question": "__ _ quandary",
+      "type": "blank",
+      "answer": "in a",
+      "explanation": "困境; 进退两难, 处于困境. She found herself in a quandary. 她发现自己处于困境。"
+    },
+    {
+      "question": "dreary _______",
+      "type": "blank",
+      "answer": "weather",
+      "explanation": "沉闷的; 令人沮丧的, 沉闷的天气. The dreary weather lasted all week. 沉闷的天气持续了整整一周。"
+    },
+    {
+      "question": "weary ________",
+      "type": "blank",
+      "answer": "traveler",
+      "explanation": "疲倦的; 厌倦的, 疲惫的旅行者. The weary traveler finally reached home. 疲惫的旅行者终于到家了。"
+    },
+    {
+      "question": "___ vagary",
+      "type": "blank",
+      "answer": "odd",
+      "explanation": "奇想; 反复无常, 奇怪的反复无常. The odd vagary of fate surprised everyone. 奇怪的命运反复无常让所有人惊讶。"
+    },
+    {
+      "question": "chary __ _____",
+      "type": "blank",
+      "answer": "of risks",
+      "explanation": "谨慎的; 小心的, 谨慎对待风险. Investors should be chary of risks. 投资者应该谨慎对待风险。"
+    },
+    {
+      "question": "_________ intermediary",
+      "type": "blank",
+      "answer": "financial",
+      "explanation": "中间人; 调解人, 金融中介. The financial intermediary arranged the deal. 金融中介安排了这笔交易。"
+    },
+    {
+      "question": "subsidiary _______",
+      "type": "blank",
+      "answer": "company",
+      "explanation": "子公司; 附属的, 子公司. The subsidiary company operates independently. 子公司独立运营。"
+    },
+    {
+      "question": "incendiary ______",
+      "type": "blank",
+      "answer": "device",
+      "explanation": "纵火的; 煽动性的, 燃烧装置. Police found an incendiary device. 警方发现了一个燃烧装置。"
+    },
+    {
+      "question": "auxiliary _____",
+      "type": "blank",
+      "answer": "power",
+      "explanation": "辅助的; 备用的, 辅助电源. The building has auxiliary power backup. 大楼有辅助电源备份。"
+    },
+    {
+      "question": "pecuniary ________",
+      "type": "blank",
+      "answer": "interest",
+      "explanation": "金钱的; 财务的, 金钱利益. He had no pecuniary interest in the project. 他对该项目没有金钱利益。"
+    },
+    {
+      "question": "___ apiary",
+      "type": "blank",
+      "answer": "bee",
+      "explanation": "蜂房; 养蜂场, 蜂房. The bee apiary produces honey. 蜂房生产蜂蜜。"
+    },
+    {
+      "question": "____ aviary",
+      "type": "blank",
+      "answer": "bird",
+      "explanation": "鸟舍; 大鸟笼, 鸟舍. The bird aviary housed exotic species. 鸟舍饲养了异国物种。"
+    },
+    {
+      "question": "ancillary _____",
+      "type": "blank",
+      "answer": "staff",
+      "explanation": "辅助的; 附属的, 辅助人员. Ancillary staff support the main team. 辅助人员支持主要团队。"
+    },
+    {
+      "question": "capillary ______",
+      "type": "blank",
+      "answer": "action",
+      "explanation": "毛细管的, 毛细管作用. Capillary action draws water upward. 毛细管作用向上吸水。"
+    },
+    {
+      "question": "exemplary _______",
+      "type": "blank",
+      "answer": "conduct",
+      "explanation": "模范的; 典型的, 模范行为. Her exemplary conduct earned praise. 她的模范行为赢得了赞扬。"
+    },
+    {
+      "question": "customary ________",
+      "type": "blank",
+      "answer": "practice",
+      "explanation": "习惯的; 惯例的, 习惯做法. It's customary practice to shake hands. 握手是习惯做法。"
+    },
+    {
+      "question": "canary ______",
+      "type": "blank",
+      "answer": "yellow",
+      "explanation": "金丝雀; 淡黄色, 金丝雀黄. She wore a bright canary yellow dress. 她穿着明亮的金丝雀黄连衣裙。"
+    },
+    {
+      "question": "_____ granary",
+      "type": "blank",
+      "answer": "grain",
+      "explanation": "粮仓; 谷仓, 粮仓. The grain granary stores the harvest. 粮仓储存收获的粮食。"
+    },
+    {
+      "question": "mercenary _______",
+      "type": "blank",
+      "answer": "soldier",
+      "explanation": "雇佣兵; 唯利是图的, 雇佣兵. The mercenary soldier fought for money. 雇佣兵为钱而战。"
+    },
+    {
+      "question": "plenary _______",
+      "type": "blank",
+      "answer": "session",
+      "explanation": "全体的; 全体会议, 全体会议. The plenary session included all members. 全体会议包括所有成员。"
+    },
+    {
+      "question": "interdisciplinary ________",
+      "type": "blank",
+      "answer": "research",
+      "explanation": "跨学科的, 跨学科研究. Interdisciplinary research combines multiple fields. 跨学科研究结合了多个领域。"
+    }
+  ]
+}
