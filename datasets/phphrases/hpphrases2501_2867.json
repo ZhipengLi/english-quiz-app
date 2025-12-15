@@ -374,10 +374,10 @@
       "explanation": "凄凉地，凄凉地看。He would look bleakly at the barren landscape before him. 他会凄凉地看着眼前荒芜的景色。"
     },
     {
-      "question": "_____ prickly",
+      "question": "prickly ____",
       "type": "blank",
-      "answer": "speak",
-      "explanation": "易怒地，易怒地说话。When hungry, he would speak prickly to anyone who bothered him. 饿的时候，他会对任何打扰他的人易怒地说话。"
+      "answer": "tone",
+      "explanation": "易怒地，带刺的语气。He answered in a prickly tone. 他用带刺的语气回答。"
     },
     {
       "question": "_____ sleekly",
@@ -600,8 +600,9 @@
       "type": "blank",
       "answer": "spare",
       "explanation": "仁慈地，仁慈地饶恕。The king would mercifully spare the prisoner's life. 国王会仁慈地饶恕囚犯的生命。"
-    }，
- {
+    }
+  ],
+{
       "question": "____ mournfully",
       "type": "blank",
       "answer": "weep",
@@ -1200,8 +1201,9 @@
       "type": "blank",
       "answer": "bathroom",
       "explanation": "充满蒸汽的，充满蒸汽的浴室。After the hot shower, the steamy bathroom mirror was foggy. 洗完热水澡后，充满蒸汽的浴室镜子变得模糊了。"
-    }，
- {
+    }
+,
+{
       "question": "foamy _____",
       "type": "blank",
       "answer": "waves",
@@ -1307,7 +1309,7 @@
       "question": "loony ___",
       "type": "blank",
       "answer": "bin",
-      "explanation": "疯人院，疯人院。The expression loony bin is an outdated term for a psychiatric hospital. "疯人院"这个表达是精神病院的过时术语。"
+      "explanation": "疯人院，疯人院。The expression loony bin is an outdated term for a psychiatric hospital. '疯人院'这个表达是精神病院的过时术语。"
     },
     {
       "question": "___ crony",
@@ -1800,8 +1802,9 @@
       "type": "blank",
       "answer": "chair",
       "explanation": "摇摇晃晃的，摇摇晃晃的椅子。The rickety chair wobbled dangerously when he sat down. 当他坐下时，摇摇晃晃的椅子危险地摇晃。"
-    }，
- {
+    }
+,
+{
       "question": "velvety _____",
       "type": "blank",
       "answer": "voice",
@@ -2203,5 +2206,5 @@
       "answer": "peach",
       "explanation": "绒毛，桃子绒毛。The soft peach fuzz covered the fruit's skin. 柔软的桃子绒毛覆盖着水果的皮。"
     }
-  ]
+]
 }
