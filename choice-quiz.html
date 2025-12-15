@@ -458,6 +458,14 @@
                 </label>
             </div>
 
+            <!-- New Checkbox for Reverse Questions -->
+            <div style="margin-bottom: 25px;">
+                 <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: var(--font-color);">
+                    <input type="checkbox" id="reverse-check"> 
+                    Generate reverse questions for 'blank' types (Two-way learning)
+                </label>
+            </div>
+
             <div class="controls">
                 <button id="start-btn" class="btn">Start Quiz</button>
             </div>
@@ -530,6 +538,12 @@
             let incorrectlyAnsweredQuestions = [];
             let currentQuestionIndex = 0;
             let score = 0;
+            
+            // New State for Two-way Learning
+            let isReverseEnabled = false;
+            let isReversedStep = false;
+            let part1Correct = false;
+            let part2Correct = false;
 
             // --- DOM ELEMENTS ---
             const views = {
@@ -543,8 +557,8 @@
             const errorMessage = document.getElementById('error-message');
             const progressBar = document.getElementById('progress-bar');
             const progressText = document.getElementById('progress-text');
-            const questionTextElement = document.getElementById('question-text'); // Changed from questionContainer
-            const speakBtn = document.getElementById('speak-btn'); // New Speak Button
+            const questionTextElement = document.getElementById('question-text'); 
+            const speakBtn = document.getElementById('speak-btn');
             const optionsContainer = document.getElementById('options-container');
             const feedbackContainer = document.getElementById('feedback-container');
             const feedbackResult = document.getElementById('feedback-result');
@@ -661,25 +675,21 @@
                     return;
                 }
 
-                // If currently speaking, stop it (toggle behavior)
                 if (window.speechSynthesis.speaking) {
                     cancelSpeech();
                     return;
                 }
 
-                // Get current question text
                 let textToSpeak = questionTextElement.textContent;
-
-                // Remove underscores (blanks) before speaking
+                // Remove underscores for speech
                 textToSpeak = textToSpeak.replace(/_+/g, '').trim();
 
                 if (!textToSpeak) return;
 
                 const utterance = new SpeechSynthesisUtterance(textToSpeak);
-                utterance.lang = 'en-US'; // You could make this configurable or detect from text
+                utterance.lang = 'en-US'; 
                 utterance.rate = 1.0;
 
-                // Visual feedback
                 speakBtn.classList.add('speaking');
                 
                 utterance.onend = () => {
@@ -696,6 +706,7 @@
             // --- CORE LOGIC ---
             const startQuiz = async () => {
                 const inputText = jsonInput.value.trim();
+                isReverseEnabled = document.getElementById('reverse-check').checked;
                 let parsedJson;
                 let finalJsonText;
 
@@ -742,11 +753,18 @@
                     }
 
                     setCookie('quizJson', finalJsonText, 7);
+                    
+                    // We now just use the original quiz data directly.
+                    // We handle reversals dynamically during the quiz flow.
                     quizData = parsedJson.quiz;
                     referenceText = parsedJson.text;
+                    
                     currentQuestionIndex = 0;
                     score = 0;
                     incorrectlyAnsweredQuestions = [];
+                    isReversedStep = false;
+                    part1Correct = false;
+                    part2Correct = false;
                     
                     questionOrder = [...Array(quizData.length).keys()];
                     const selectedOrder = document.querySelector('input[name="order"]:checked').value;
@@ -778,16 +796,44 @@
                 nextBtn.style.display = 'none';
 
                 const questionIdx = questionOrder[currentQuestionIndex];
-                const question = quizData[questionIdx];
-                const type = question.type || 'choice';
+                const originalQuestion = quizData[questionIdx];
+                let questionToDisplay = originalQuestion;
 
+                // Handle Reverse Question Generation Logic
+                if (isReversedStep) {
+                    const originalPrompt = originalQuestion.question.replace(/_+/g, '').trim();
+                    const underscores = '_'.repeat(originalPrompt.length);
+                    let newQuestionText;
+                    
+                    if (originalQuestion.question.trim().startsWith('_')) {
+                        // Original: "_ rugae" (Ans: gastric) -> Reverse: "gastric _" (Ans: rugae)
+                        newQuestionText = `${originalQuestion.answer} ${underscores}`;
+                    } else {
+                         // Original: "hydrangea _" (Ans: bush) -> Reverse: "_ bush" (Ans: hydrangea)
+                        newQuestionText = `${underscores} ${originalQuestion.answer}`;
+                    }
+                    
+                    questionToDisplay = {
+                        ...originalQuestion,
+                        question: newQuestionText,
+                        answer: originalPrompt,
+                        explanation: originalQuestion.explanation ? `(Reverse) ${originalQuestion.explanation}` : "(Reverse Question)"
+                    };
+                }
+
+                const type = questionToDisplay.type || 'choice';
+
+                // Update Progress Bar
+                // We show X / Total based on original questions count.
+                // Using currentQuestionIndex + 1 is correct because index doesn't advance on reverse step.
                 updateProgressBar();
-                questionTextElement.textContent = question.question;
+                
+                questionTextElement.textContent = questionToDisplay.question;
 
                 if (type === 'choice') {
                     optionsContainer.classList.add('choice-options');
-                    const correctAnswerText = question.answer;
-                    let shuffledOptions = shuffleArray(question.options);
+                    const correctAnswerText = questionToDisplay.answer;
+                    let shuffledOptions = shuffleArray(questionToDisplay.options);
 
                     shuffledOptions.forEach((optionText) => {
                         const button = document.createElement('button');
@@ -813,11 +859,11 @@
                     optionsContainer.appendChild(input);
                     optionsContainer.appendChild(submitBtn);
 
-                    submitBtn.addEventListener('click', handleBlankSubmit);
+                    submitBtn.addEventListener('click', () => handleBlankSubmit(questionToDisplay));
                     input.addEventListener('keydown', (e) => {
                         if (e.key === 'Enter') {
                             e.preventDefault();
-                            handleBlankSubmit();
+                            handleBlankSubmit(questionToDisplay);
                         }
                     });
 
@@ -834,10 +880,11 @@
                 });
 
                 if (isCorrect) {
-                    score++;
                     selectedButton.classList.add('correct');
                     feedbackResult.textContent = "Correct! 🎉";
                     feedbackContainer.classList.add('correct');
+                    // For Choice questions (currently not reversible in this app's logic), score immediately
+                    score++;
                 } else {
                     selectedButton.classList.add('incorrect');
                     const correctButton = optionsContainer.querySelector('[data-is-correct="true"]');
@@ -852,30 +899,23 @@
                 feedbackExplanation.textContent = quizData[questionIdx].explanation || "";
                 feedbackContainer.style.display = 'block';
 
-                if (currentQuestionIndex < questionOrder.length - 1) {
-                    nextBtn.textContent = 'Next Question';
-                } else {
-                    nextBtn.textContent = 'Finish Quiz';
-                }
-                nextBtn.style.display = 'block';
-                nextBtn.focus();
+                showNextButton();
             };
 
-            const handleBlankSubmit = () => {
+            const handleBlankSubmit = (currentQuestion) => {
                 const input = document.getElementById('blank-input');
                 const submitBtn = document.getElementById('submit-blank-btn');
                 if (!input || !submitBtn || submitBtn.disabled) return;
 
                 const userAnswer = input.value.trim();
-                const questionIdx = questionOrder[currentQuestionIndex];
-                const question = quizData[questionIdx];
-                const correctAnswer = question.answer;
+                const correctAnswer = currentQuestion.answer;
 
                 input.disabled = true;
                 submitBtn.disabled = true;
+                
+                const isCorrect = userAnswer.toLowerCase() === correctAnswer.toLowerCase();
 
-                if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
-                    score++;
+                if (isCorrect) {
                     feedbackResult.textContent = "Correct! 🎉";
                     input.style.borderColor = 'var(--correct-color)';
                     feedbackContainer.classList.add('correct');
@@ -883,22 +923,76 @@
                     feedbackResult.innerHTML = `Incorrect! 😔 <br><small>Correct answer: <strong>${correctAnswer}</strong></small>`;
                     input.style.borderColor = 'var(--incorrect-color)';
                     feedbackContainer.classList.add('incorrect');
-                    incorrectlyAnsweredQuestions.push(questionIdx);
+                }
+                
+                // Logic for "Two-way learning" Scoring
+                // If Reverse is enabled for this quiz, we DO NOT score immediately.
+                // We just record the result of this part.
+                if (isReverseEnabled) {
+                     if (!isReversedStep) {
+                         part1Correct = isCorrect;
+                     } else {
+                         part2Correct = isCorrect;
+                     }
+                } else {
+                    // Standard behavior
+                    if (isCorrect) {
+                        score++;
+                    } else {
+                        incorrectlyAnsweredQuestions.push(questionOrder[currentQuestionIndex]);
+                    }
                 }
 
-                feedbackExplanation.textContent = question.explanation || "";
+                feedbackExplanation.textContent = currentQuestion.explanation || "";
                 feedbackContainer.style.display = 'block';
 
-                if (currentQuestionIndex < questionOrder.length - 1) {
-                    nextBtn.textContent = 'Next Question';
-                } else {
-                    nextBtn.textContent = 'Finish Quiz';
+                showNextButton();
+            };
+            
+            const showNextButton = () => {
+                 if (currentQuestionIndex < questionOrder.length) {
+                    // If we are in "Two-way" mode and just finished Part 1, button is "Next Part"
+                    if (isReverseEnabled && !isReversedStep && quizData[questionOrder[currentQuestionIndex]].type === 'blank') {
+                        nextBtn.textContent = 'Next Part (Reverse)';
+                    } else if (currentQuestionIndex < questionOrder.length - 1) {
+                        nextBtn.textContent = 'Next Question';
+                    } else {
+                        nextBtn.textContent = 'Finish Quiz';
+                    }
                 }
                 nextBtn.style.display = 'block';
                 nextBtn.focus();
             };
 
             const nextQuestion = () => {
+                const questionIdx = questionOrder[currentQuestionIndex];
+                const currentQuestion = quizData[questionIdx];
+                const type = currentQuestion.type || 'choice';
+
+                // Check if we need to show the reverse question
+                if (isReverseEnabled && type === 'blank') {
+                    if (!isReversedStep) {
+                        // Move to Reverse Step
+                        isReversedStep = true;
+                        displayQuestion();
+                        return; // Exit here, do not increment index
+                    } else {
+                        // We just finished the Reverse Step. Now we commit the score.
+                        // Rule: Must pass BOTH to pass.
+                        if (part1Correct && part2Correct) {
+                            score++;
+                        } else {
+                            incorrectlyAnsweredQuestions.push(questionIdx);
+                        }
+                        
+                        // Reset flags for next question
+                        isReversedStep = false;
+                        part1Correct = false;
+                        part2Correct = false;
+                    }
+                }
+
+                // Move to next question index
                 currentQuestionIndex++;
                 if (currentQuestionIndex < questionOrder.length) {
                     displayQuestion();
@@ -930,6 +1024,9 @@
                 incorrectlyAnsweredQuestions = [];
                 currentQuestionIndex = 0;
                 score = 0;
+                isReversedStep = false;
+                part1Correct = false;
+                part2Correct = false;
                 switchView('quiz');
                 displayQuestion();
             };
