@@ -458,11 +458,16 @@
                 </label>
             </div>
 
-            <!-- New Checkbox for Reverse Questions -->
+            <!-- New Checkboxes for Reverse Questions -->
             <div style="margin-bottom: 25px;">
                  <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: var(--font-color);">
                     <input type="checkbox" id="reverse-check"> 
                     Generate reverse questions for 'blank' types (Two-way learning)
+                </label>
+                <!-- New Conditional Checkbox -->
+                <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: var(--font-color); margin-left: 28px; margin-top: 10px; font-size: 0.9em;">
+                    <input type="checkbox" id="conditional-reverse-check" disabled> 
+                    Only show reverse question if answer was incorrect
                 </label>
             </div>
 
@@ -541,6 +546,7 @@
             
             // New State for Two-way Learning
             let isReverseEnabled = false;
+            let isConditionalReverse = false; // New flag
             let isReversedStep = false;
             let part1Correct = false;
             let part2Correct = false;
@@ -573,6 +579,15 @@
             const textModal = document.getElementById('text-modal');
             const closeBtn = document.querySelector('.close-btn');
             const referenceTextContent = document.getElementById('reference-text-content');
+
+            // Checkbox logic
+            const reverseCheck = document.getElementById('reverse-check');
+            const conditionalCheck = document.getElementById('conditional-reverse-check');
+
+            reverseCheck.addEventListener('change', () => {
+                conditionalCheck.disabled = !reverseCheck.checked;
+                if (!reverseCheck.checked) conditionalCheck.checked = false;
+            });
 
             const defaultQuizObject = {
               "text": "This is a sample text for the quiz. You can replace it with your own content.",
@@ -706,7 +721,8 @@
             // --- CORE LOGIC ---
             const startQuiz = async () => {
                 const inputText = jsonInput.value.trim();
-                isReverseEnabled = document.getElementById('reverse-check').checked;
+                isReverseEnabled = reverseCheck.checked;
+                isConditionalReverse = conditionalCheck.checked;
                 let parsedJson;
                 let finalJsonText;
 
@@ -754,8 +770,6 @@
 
                     setCookie('quizJson', finalJsonText, 7);
                     
-                    // We now just use the original quiz data directly.
-                    // We handle reversals dynamically during the quiz flow.
                     quizData = parsedJson.quiz;
                     referenceText = parsedJson.text;
                     
@@ -823,9 +837,6 @@
 
                 const type = questionToDisplay.type || 'choice';
 
-                // Update Progress Bar
-                // We show X / Total based on original questions count.
-                // Using currentQuestionIndex + 1 is correct because index doesn't advance on reverse step.
                 updateProgressBar();
                 
                 questionTextElement.textContent = questionToDisplay.question;
@@ -883,7 +894,6 @@
                     selectedButton.classList.add('correct');
                     feedbackResult.textContent = "Correct! 🎉";
                     feedbackContainer.classList.add('correct');
-                    // For Choice questions (currently not reversible in this app's logic), score immediately
                     score++;
                 } else {
                     selectedButton.classList.add('incorrect');
@@ -925,9 +935,6 @@
                     feedbackContainer.classList.add('incorrect');
                 }
                 
-                // Logic for "Two-way learning" Scoring
-                // If Reverse is enabled for this quiz, we DO NOT score immediately.
-                // We just record the result of this part.
                 if (isReverseEnabled) {
                      if (!isReversedStep) {
                          part1Correct = isCorrect;
@@ -935,7 +942,6 @@
                          part2Correct = isCorrect;
                      }
                 } else {
-                    // Standard behavior
                     if (isCorrect) {
                         score++;
                     } else {
@@ -951,14 +957,26 @@
             
             const showNextButton = () => {
                  if (currentQuestionIndex < questionOrder.length) {
-                    // If we are in "Two-way" mode and just finished Part 1, button is "Next Part"
+                    let nextText = 'Next Question';
+                    const isLastQuestion = currentQuestionIndex === questionOrder.length - 1;
+                    
                     if (isReverseEnabled && !isReversedStep && quizData[questionOrder[currentQuestionIndex]].type === 'blank') {
-                        nextBtn.textContent = 'Next Part (Reverse)';
-                    } else if (currentQuestionIndex < questionOrder.length - 1) {
-                        nextBtn.textContent = 'Next Question';
-                    } else {
-                        nextBtn.textContent = 'Finish Quiz';
+                        // Decide if we are going to show the reverse question
+                        let willShowReverse = true;
+                        if (isConditionalReverse && part1Correct) {
+                            willShowReverse = false;
+                        }
+
+                        if (willShowReverse) {
+                            nextText = 'Next Part (Reverse)';
+                        } else if (isLastQuestion) {
+                            nextText = 'Finish Quiz';
+                        }
+                    } else if (isLastQuestion) {
+                        nextText = 'Finish Quiz';
                     }
+
+                    nextBtn.textContent = nextText;
                 }
                 nextBtn.style.display = 'block';
                 nextBtn.focus();
@@ -972,20 +990,37 @@
                 // Check if we need to show the reverse question
                 if (isReverseEnabled && type === 'blank') {
                     if (!isReversedStep) {
-                        // Move to Reverse Step
-                        isReversedStep = true;
-                        displayQuestion();
-                        return; // Exit here, do not increment index
-                    } else {
-                        // We just finished the Reverse Step. Now we commit the score.
-                        // Rule: Must pass BOTH to pass.
-                        if (part1Correct && part2Correct) {
-                            score++;
+                        // Check condition: Only reverse if Part 1 was WRONG (if Conditional Mode is ON)
+                        const skipReverse = isConditionalReverse && part1Correct;
+
+                        if (!skipReverse) {
+                            // Move to Reverse Step
+                            isReversedStep = true;
+                            displayQuestion();
+                            return; // Exit here
                         } else {
+                            // Skipped reverse step because Part 1 was correct (and Conditional Mode ON)
+                            score++;
+                            isReversedStep = false;
+                            part1Correct = false;
+                            part2Correct = false;
+                        }
+                    } else {
+                        // We just finished the Reverse Step.
+                        if (isConditionalReverse) {
+                            // If we are here in conditional mode, it means Part 1 was wrong.
+                            // So the unit is counted as incorrect regardless of Part 2.
                             incorrectlyAnsweredQuestions.push(questionIdx);
+                        } else {
+                            // Standard: Need both correct
+                            if (part1Correct && part2Correct) {
+                                score++;
+                            } else {
+                                incorrectlyAnsweredQuestions.push(questionIdx);
+                            }
                         }
                         
-                        // Reset flags for next question
+                        // Reset flags
                         isReversedStep = false;
                         part1Correct = false;
                         part2Correct = false;
@@ -1088,7 +1123,6 @@
             showTextBtn.addEventListener('click', showModal);
             closeBtn.addEventListener('click', hideModal);
             
-            // New Listener for Speak Button
             speakBtn.addEventListener('click', handleSpeak);
 
             textModal.addEventListener('click', (event) => {
