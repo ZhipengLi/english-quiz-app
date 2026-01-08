@@ -1,0 +1,305 @@
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "餌 _ _ _ _",
+      "type": "blank",
+      "answer": "を与える",
+      "explanation": "餌(えさ): food/bait, 餌(えさ)を与(あた)える: give food. 犬(いぬ)に餌(えさ)を与(あた)えた。I gave food to the dog."
+    },
+    {
+      "question": "枝 _ _ _",
+      "type": "blank",
+      "answer": "を折る",
+      "explanation": "枝(えだ): branch, 枝(えだ)を折(お)る: break a branch. 木(き)から枝(えだ)を折(お)った。I broke a branch from the tree."
+    },
+    {
+      "question": "エネルギー _ _ _",
+      "type": "blank",
+      "answer": "を使う",
+      "explanation": "エネルギー: energy, エネルギーを使(つか)う: use energy. 運動(うんどう)でエネルギーを使(つか)った。I used energy through exercise."
+    },
+    {
+      "question": "蝦 _ _ _ _",
+      "type": "blank",
+      "answer": "を食べる",
+      "explanation": "蝦(えび): shrimp, 蝦(えび)を食(た)べる: eat shrimp. レストランで蝦(えび)を食(た)べた。I ate shrimp at the restaurant."
+    },
+    {
+      "question": "エピソード _ _ _",
+      "type": "blank",
+      "answer": "を話す",
+      "explanation": "エピソード: episode, エピソードを話(はな)す: tell an episode. 面白(おもしろ)いエピソードを話(はな)した。I told an interesting episode."
+    },
+    {
+      "question": "エラー _ _ _",
+      "type": "blank",
+      "answer": "を直す",
+      "explanation": "エラー: error, エラーを直(なお)す: fix an error. プログラムのエラーを直(なお)した。I fixed the program error."
+    },
+    {
+      "question": "偉い _",
+      "type": "blank",
+      "answer": "人",
+      "explanation": "偉(えら)い: great/important, 偉(えら)い人(ひと): important person. 偉(えら)い人(ひと)が来(き)た。An important person came."
+    },
+    {
+      "question": "_ _ _ 選び直す",
+      "type": "blank",
+      "answer": "候補を",
+      "explanation": "選(えら)び直(なお)す: choose again, 候補(こうほ)を選(えら)び直(なお)す: choose candidates again. 選挙(せんきょ)の候補(こうほ)を選(えら)び直(なお)した。I chose the election candidates again."
+    },
+    {
+      "question": "_ _ _ 得る",
+      "type": "blank",
+      "answer": "情報を",
+      "explanation": "得(え)る: obtain, 情報(じょうほう)を得(え)る: obtain information. インターネットで情報(じょうほう)を得(え)た。I obtained information on the internet."
+    },
+    {
+      "question": "エレベーター _ _ _",
+      "type": "blank",
+      "answer": "に乗る",
+      "explanation": "エレベーター: elevator, エレベーターに乗(の)る: take the elevator. 3階(かい)までエレベーターに乗(の)った。I took the elevator to the 3rd floor."
+    },
+    {
+      "question": "縁起 _ _ _ _",
+      "type": "blank",
+      "answer": "の悪い日",
+      "explanation": "縁起(えんぎ): omen, 縁起(えんぎ)の悪(わる)い日(ひ): unlucky day. 今日(きょう)は縁起(えんぎ)の悪(わる)い日(ひ)だと言(い)われている。Today is said to be an unlucky day."
+    },
+    {
+      "question": "援助 _ _ _ _",
+      "type": "blank",
+      "answer": "を求める",
+      "explanation": "援助(えんじょ): assistance, 援助(えんじょ)を求(もと)める: seek assistance. 困(こま)っている人(ひと)が援助(えんじょ)を求(もと)めた。The person in trouble sought assistance."
+    },
+    {
+      "question": "_ _ 演じる",
+      "type": "blank",
+      "answer": "役を",
+      "explanation": "演(えん)じる: play/perform, 役(やく)を演(えん)じる: play a role. 映画(えいが)で主役(しゅやく)を演(えん)じた。I played the leading role in the movie."
+    },
+    {
+      "question": "エンジン _ _ _ _",
+      "type": "blank",
+      "answer": "をかける",
+      "explanation": "エンジン: engine, エンジンをかける: start the engine. 車(くるま)のエンジンをかけた。I started the car engine."
+    },
+    {
+      "question": "遠慮 _ _ _",
+      "type": "blank",
+      "answer": "の言葉",
+      "explanation": "遠慮(えんりょ): reserve/hesitation, 遠慮(えんりょ)の言葉(ことば): words of reserve. 遠慮(えんりょ)の言葉(ことば)を述(の)べた。I expressed words of reserve."
+    },
+    {
+      "question": "甥 _ _ _ _",
+      "type": "blank",
+      "answer": "の誕生日",
+      "explanation": "甥(おい): nephew, 甥(おい)の誕生日(たんじょうび): nephew's birthday. 今日(きょう)は甥(おい)の誕生日(たんじょうび)だ。Today is my nephew's birthday."
+    },
+    {
+      "question": "_ _ 追いかける",
+      "type": "blank",
+      "answer": "敵を",
+      "explanation": "追(お)いかける: chase, 敵(てき)を追(お)いかける: chase the enemy. 警察(けいさつ)が犯人(はんにん)の敵(てき)を追(お)いかけた。The police chased the criminal."
+    },
+    {
+      "question": "_ _ _ 追う",
+      "type": "blank",
+      "answer": "目標を",
+      "explanation": "追(お)う: chase/pursue, 目標(もくひょう)を追(お)う: pursue a goal. 夢(ゆめ)の目標(もくひょう)を追(お)っている。I'm pursuing my dream goal."
+    },
+    {
+      "question": "応援 _ _",
+      "type": "blank",
+      "answer": "する",
+      "explanation": "応援(おうえん): support, チームを応援(おうえん)する: support a team. 地元(じもと)のチームを応援(おうえん)した。I supported the local team."
+    },
+    {
+      "question": "往復 _ _ _",
+      "type": "blank",
+      "answer": "の切符",
+      "explanation": "往復(おうふく): round trip, 往復(おうふく)の切符(きっぷ): round-trip ticket. 東京(とうきょう)までの往復(おうふく)の切符(きっぷ)を買(か)った。I bought a round-trip ticket to Tokyo."
+    },
+    {
+      "question": "大いに _ _",
+      "type": "blank",
+      "answer": "語る",
+      "explanation": "大(おお)いに: greatly/very much, 大(おお)いに語(かた)る: talk greatly. 友達(ともだち)と大(おお)いに語(かた)った。I talked greatly with my friends."
+    },
+    {
+      "question": "おおげさ _ _ _",
+      "type": "blank",
+      "answer": "な表現",
+      "explanation": "おおげさ: exaggerated, おおげさな表現(ひょうげん): exaggerated expression. 彼(かれ)はおおげさな表現(ひょうげん)を使(つか)う。He uses exaggerated expressions."
+    },
+    {
+      "question": "おおざっぱ _ _ _",
+      "type": "blank",
+      "answer": "な説明",
+      "explanation": "おおざっぱ: rough/approximate, おおざっぱな説明(せつめい): rough explanation. おおざっぱな説明(せつめい)だけ聞(き)いた。I only heard a rough explanation."
+    },
+    {
+      "question": "大騒ぎ _ _ _",
+      "type": "blank",
+      "answer": "の会場",
+      "explanation": "大騒(おおさわ)ぎ: big fuss/commotion, 大騒(おおさわ)ぎの会場(かいじょう): venue with commotion. コンサートは大騒(おおさわ)ぎの会場(かいじょう)だった。The concert venue was in commotion."
+    },
+    {
+      "question": "オーストラリア _ _ _",
+      "type": "blank",
+      "answer": "に行く",
+      "explanation": "オーストラリア: Australia, オーストラリアに行(い)く: go to Australia. 来年(らいねん)オーストラリアに行(い)きたい。I want to go to Australia next year."
+    },
+    {
+      "question": "大勢 _ _ _ _",
+      "type": "blank",
+      "answer": "が集まる",
+      "explanation": "大勢(おおぜい): many people, 大勢(おおぜい)が集(あつ)まる: many people gather. イベントに大勢(おおぜい)が集(あつ)まった。Many people gathered at the event."
+    },
+    {
+      "question": "大手 _ _ _",
+      "type": "blank",
+      "answer": "の会社",
+      "explanation": "大手(おおて): major/large, 大手(おおて)の会社(かいしゃ): major company. 大手(おおて)の会社(かいしゃ)に就職(しゅうしょく)した。I got a job at a major company."
+    },
+    {
+      "question": "大晦日 _ _ _ _",
+      "type": "blank",
+      "answer": "を過ごす",
+      "explanation": "大晦日(おおみそか): New Year's Eve, 大晦日(おおみそか)を過(す)ごす: spend New Year's Eve. 家族(かぞく)と大晦日(おおみそか)を過(す)ごした。I spent New Year's Eve with my family."
+    },
+    {
+      "question": "可笑しい _",
+      "type": "blank",
+      "answer": "話",
+      "explanation": "可笑(おか)しい: funny/strange, 可笑(おか)しい話(はなし): funny story. 可笑(おか)しい話(はなし)を聞(き)いて笑(わら)った。I laughed hearing a funny story."
+    },
+    {
+      "question": "_ _ _ 置き忘れる",
+      "type": "blank",
+      "answer": "財布を",
+      "explanation": "置(お)き忘(わす)れる: leave behind, 財布(さいふ)を置(お)き忘(わす)れる: leave wallet behind. 電車(でんしゃ)で財布(さいふ)を置(お)き忘(わす)れた。I left my wallet on the train."
+    },
+    {
+      "question": "奥 _ _ _",
+      "type": "blank",
+      "answer": "の部屋",
+      "explanation": "奥(おく): back/inner part, 奥(おく)の部屋(へや): back room. 奥(おく)の部屋(へや)で勉強(べんきょう)している。I'm studying in the back room."
+    },
+    {
+      "question": "屋外 _ _ _",
+      "type": "blank",
+      "answer": "で遊ぶ",
+      "explanation": "屋外(おくがい): outdoors, 屋外(おくがい)で遊(あそ)ぶ: play outdoors. 子(こ)どもたちは屋外(おくがい)で遊(あそ)んでいる。The children are playing outdoors."
+    },
+    {
+      "question": "奥さん _ _ _",
+      "type": "blank",
+      "answer": "の実家",
+      "explanation": "奥(おく)さん: wife (polite), 奥(おく)さんの実家(じっか): wife's parents' home. 奥(おく)さんの実家(じっか)を訪(たず)ねた。I visited my wife's parents' home."
+    },
+    {
+      "question": "臆病 _ _ _",
+      "type": "blank",
+      "answer": "な性格",
+      "explanation": "臆病(おくびょう): cowardly/timid, 臆病(おくびょう)な性格(せいかく): timid personality. 彼(かれ)は臆病(おくびょう)な性格(せいかく)だ。He has a timid personality."
+    },
+    {
+      "question": "贈り物 _ _ _",
+      "type": "blank",
+      "answer": "を渡す",
+      "explanation": "贈(おく)り物(もの): gift, 贈(おく)り物(もの)を渡(わた)す: give a gift. 誕生日(たんじょうび)に贈(おく)り物(もの)を渡(わた)した。I gave a gift for the birthday."
+    },
+    {
+      "question": "_ _ _ 送る",
+      "type": "blank",
+      "answer": "荷物を",
+      "explanation": "送(おく)る: send, 荷物(にもつ)を送(おく)る: send luggage. 実家(じっか)に荷物(にもつ)を送(おく)った。I sent luggage to my parents' home."
+    },
+    {
+      "question": "_ _ _ 起こす",
+      "type": "blank",
+      "answer": "火事を",
+      "explanation": "起(お)こす: cause/start, 火事(かじ)を起(お)こす: cause a fire. タバコの不始末(ふしまつ)で火事(かじ)を起(お)こした。A fire was caused by carelessness with cigarettes."
+    },
+    {
+      "question": "_ _ _ 行う",
+      "type": "blank",
+      "answer": "実験を",
+      "explanation": "行(おこな)う: conduct/perform, 実験(じっけん)を行(おこな)う: conduct an experiment. 研究室(けんきゅうしつ)で実験(じっけん)を行(おこな)った。I conducted an experiment in the laboratory."
+    },
+    {
+      "question": "_ _ _ 起こる",
+      "type": "blank",
+      "answer": "事件が",
+      "explanation": "起(お)こる: occur/happen, 事件(じけん)が起(お)こる: incident occurs. 昨日(きのう)大(おお)きな事件(じけん)が起(お)こった。A major incident occurred yesterday."
+    },
+    {
+      "question": "_ _ 抑える",
+      "type": "blank",
+      "answer": "声を",
+      "explanation": "抑(おさ)える: suppress/lower, 声(こえ)を抑(おさ)える: lower one's voice. 図書館(としょかん)で声(こえ)を抑(おさ)えた。I lowered my voice in the library."
+    },
+    {
+      "question": "幼馴染 _ _ _",
+      "type": "blank",
+      "answer": "と話す",
+      "explanation": "幼馴染(おさななじみ): childhood friend, 幼馴染(おさななじみ)と話(はな)す: talk with childhood friend. 久(ひさ)しぶりに幼馴染(おさななじみ)と話(はな)した。I talked with my childhood friend after a long time."
+    },
+    {
+      "question": "_ _ _ 収める",
+      "type": "blank",
+      "answer": "税金を",
+      "explanation": "収(おさ)める: pay/store, 税金(ぜいきん)を収(おさ)める: pay taxes. 毎年(まいとし)税金(ぜいきん)を収(おさ)めている。I pay taxes every year."
+    },
+    {
+      "question": "伯父 _ _",
+      "type": "blank",
+      "answer": "の家",
+      "explanation": "伯父(おじ): uncle, 伯父(おじ)の家(いえ): uncle's house. 夏休(なつやす)みに伯父(おじ)の家(いえ)に行(い)った。I went to my uncle's house during summer vacation."
+    },
+    {
+      "question": "惜しい _ _",
+      "type": "blank",
+      "answer": "結果",
+      "explanation": "惜(お)しい: regrettable/close, 惜(お)しい結果(けっか): close result. 試合(しあい)は惜(お)しい結果(けっか)だった。The match was a close result."
+    },
+    {
+      "question": "お洒落 _ _",
+      "type": "blank",
+      "answer": "な服",
+      "explanation": "お洒落(しゃれ): stylish/fashionable, お洒落(しゃれ)な服(ふく): stylish clothes. お洒落(しゃれ)な服(ふく)を買(か)った。I bought stylish clothes."
+    },
+    {
+      "question": "お辞儀 _ _ _",
+      "type": "blank",
+      "answer": "の角度",
+      "explanation": "お辞儀(じぎ): bow, お辞儀(じぎ)の角度(かくど): angle of bow. 丁寧(ていねい)なお辞儀(じぎ)の角度(かくど)を学(まな)んだ。I learned the angle of a polite bow."
+    },
+    {
+      "question": "_ _ _ _ 押す",
+      "type": "blank",
+      "answer": "ボタンを",
+      "explanation": "押(お)す: push/press, ボタンを押(お)す: press a button. エレベーターのボタンを押(お)した。I pressed the elevator button."
+    },
+    {
+      "question": "御節料理 _ _ _",
+      "type": "blank",
+      "answer": "を作る",
+      "explanation": "御節料理(おせちりょうり): New Year's dishes, 御節料理(おせちりょうり)を作(つく)る: make New Year's dishes. 母(はは)が御節料理(おせちりょうり)を作(つく)った。My mother made New Year's dishes."
+    },
+    {
+      "question": "汚染 _ _ _",
+      "type": "blank",
+      "answer": "を防ぐ",
+      "explanation": "汚染(おせん): pollution, 汚染(おせん)を防(ふせ)ぐ: prevent pollution. 環境(かんきょう)の汚染(おせん)を防(ふせ)ぐ必要(ひつよう)がある。We need to prevent environmental pollution."
+    },
+    {
+      "question": "_ _ _ 怖れる",
+      "type": "blank",
+      "answer": "失敗を",
+      "explanation": "怖(おそ)れる: fear, 失敗(しっぱい)を怖(おそ)れる: fear failure. 失敗(しっぱい)を怖(おそ)れずに挑戦(ちょうせん)した。I challenged without fearing failure."
+    }
+  ]
+}
