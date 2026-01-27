@@ -1,0 +1,1706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Quiz App</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --background-color: #ecf0f1;
+            --card-bg-color: #ffffff;
+            --correct-color: #27ae60;
+            --incorrect-color: #e74c3c;
+            --font-color: #34495e;
+            --border-radius: 12px;
+            --box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--font-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: var(--card-bg-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            width: 100%;
+            max-width: 700px;
+            overflow: hidden;
+        }
+
+        .view {
+            padding: 30px 40px;
+            display: none; /* Hidden by default */
+        }
+
+        .view.active {
+            display: block;
+        }
+
+        /* --- Setup View --- */
+        #setup-view h1 {
+            text-align: center;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        #setup-view p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        #json-input {
+            width: 100%;
+            height: 150px;
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+            resize: vertical;
+        }
+
+        .order-options {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+            align-items: center;
+        }
+
+        .order-options label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        /* --- Quiz View --- */
+        .quiz-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        #progress-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-grow: 1;
+        }
+
+        #progress-bar-container {
+            flex-grow: 1;
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+
+        #progress-bar {
+            height: 100%;
+            width: 0%;
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            transition: width 0.3s ease-in-out;
+        }
+
+        #progress-text {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            white-space: nowrap;
+        }
+
+        /* Updated Question Section for TTS */
+        .question-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        #question-text {
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        .speak-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--primary-color);
+            padding: 8px;
+            border-radius: 50%;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .speak-btn:hover {
+            background-color: rgba(52, 152, 219, 0.1);
+            transform: scale(1.1);
+        }
+
+        .speak-btn:active {
+            transform: scale(0.95);
+        }
+        
+        .speak-btn.speaking {
+            color: var(--correct-color);
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(39, 174, 96, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(39, 174, 96, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(39, 174, 96, 0); }
+        }
+
+        #options-container {
+            display: grid;
+            gap: 15px;
+        }
+
+        .option-btn {
+            background-color: var(--card-bg-color);
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            padding: 15px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+
+        .option-btn:hover:not(:disabled) {
+            background-color: #f1f2f6;
+            border-color: var(--primary-color);
+        }
+
+        .option-btn:disabled {
+            cursor: not-allowed;
+        }
+
+        .option-btn.correct {
+            background-color: var(--correct-color);
+            color: white;
+            border-color: var(--correct-color);
+        }
+
+        .option-btn.incorrect {
+            background-color: var(--incorrect-color);
+            color: white;
+            border-color: var(--incorrect-color);
+        }
+
+        /* Styles for "blank" question type */
+        #options-container.blank-form {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        #blank-input {
+            flex-grow: 1;
+            padding: 15px;
+            font-size: 1rem;
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.2s ease;
+        }
+
+        #blank-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        #feedback-container {
+            margin-top: 25px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            border-left: 5px solid var(--primary-color);
+            display: none; /* Hidden until an answer is selected */
+        }
+
+        #feedback-container.correct {
+            border-left-color: var(--correct-color);
+        }
+
+        #feedback-container.incorrect {
+            border-left-color: var(--incorrect-color);
+        }
+
+        #feedback-container p {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        /* --- Summary View --- */
+        #summary-view h2 {
+            text-align: center;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        #score-container {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        #score-container span {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+        }
+
+        #summary-message {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .summary-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .summary-controls .btn {
+            width: 100%;
+            max-width: 320px;
+        }
+
+        /* --- General Controls --- */
+        .controls {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .btn:hover:not(:disabled) {
+            background-color: #2980b9;
+        }
+
+        .btn:active:not(:disabled) {
+            transform: scale(0.98);
+        }
+
+        .btn:disabled {
+            background-color: #bdc3c7;
+            cursor: not-allowed;
+        }
+
+        .btn-secondary {
+            background-color: #7f8c8d;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+
+        .btn-secondary:hover {
+            background-color: #95a5a6;
+        }
+
+        #next-btn {
+            display: none; /* Hidden until an answer is selected */
+        }
+
+        #error-message {
+            color: var(--incorrect-color);
+            margin-top: 15px;
+            text-align: center;
+            font-weight: 600;
+            display: none;
+        }
+
+        /* --- Text Modal --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.visible {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.visible .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-content h2 {
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+            padding-right: 40px; /* Space for close button */
+        }
+
+        .modal-content .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #95a5a6;
+            line-height: 1;
+        }
+
+        .modal-content .close-btn:hover {
+            color: var(--secondary-color);
+        }
+
+        #reference-text-content {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow-y: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            flex-grow: 1;
+        }
+
+        /* --- Responsive adjustments --- */
+        @media (max-width: 480px) {
+            .view {
+                padding: 20px;
+            }
+            #options-container.blank-form {
+                flex-direction: column;
+                align-items: stretch; /* Make items fill width */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- View 1: Setup Screen -->
+        <div id="setup-view" class="view active">
+            <h1>Quiz Setup</h1>
+            <p>Paste your quiz JSON data or URL into the text box below.</p>
+            <textarea id="json-input" placeholder="Paste quiz JSON or URL here..."></textarea>
+            
+            <p>Choose the question order:</p>
+            <div class="order-options">
+                <label>
+                    <input type="radio" name="order" value="sequence" checked> Sequential
+                </label>
+                <label>
+                    <input type="radio" name="order" value="random"> Random
+                </label>
+            </div>
+
+            <!-- New Checkboxes for Reverse Questions -->
+            <div style="margin-bottom: 25px;">
+                 <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: var(--font-color);">
+                    <input type="checkbox" id="reverse-check"> 
+                    Generate reverse questions for 'blank' types (Two-way learning)
+                </label>
+                <!-- New Conditional Checkbox -->
+                <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: var(--font-color); margin-left: 28px; margin-top: 10px; font-size: 0.9em;">
+                    <input type="checkbox" id="conditional-reverse-check" disabled> 
+                    Only show reverse question if answer was incorrect
+                </label>
+            </div>
+
+            <div class="controls">
+                <button id="start-btn" class="btn">Start Quiz</button>
+            </div>
+            <p id="error-message"></p>
+        </div>
+
+        <!-- View 2: Quiz Screen -->
+        <div id="quiz-view" class="view">
+            <div class="quiz-header">
+                 <div id="progress-wrapper">
+                    <div id="progress-bar-container">
+                        <div id="progress-bar"></div>
+                    </div>
+                    <span id="progress-text"></span>
+                 </div>
+                <button id="show-text-btn" class="btn btn-secondary">Show Text</button>
+            </div>
+
+            <!-- Modified Question Container for TTS -->
+            <div class="question-wrapper">
+                <div id="question-text"></div>
+                <button id="speak-btn" class="speak-btn" title="Read Question Aloud" aria-label="Read Question Aloud">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="options-container"></div>
+
+            <div id="feedback-container">
+                <p id="feedback-result"></p>
+                <span id="feedback-explanation"></span>
+            </div>
+
+            <div class="controls">
+                <button id="next-btn" class="btn">Next Question</button>
+            </div>
+        </div>
+
+        <!-- View 3: Summary Screen -->
+        <div id="summary-view" class="view">
+            <h2 id="summary-title">Quiz Complete!</h2>
+            <p id="summary-message"></p>
+            <div id="score-container"></div>
+            
+            <div class="controls summary-controls">
+                <button id="retake-btn" class="btn"></button>
+                <button id="restart-btn" class="btn">Start a New Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for displaying reference text -->
+    <div id="text-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn">&times;</button>
+            <h2>Reference Text</h2>
+            <pre id="reference-text-content"></pre>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- STATE MANAGEMENT ---
+            let quizData = [];
+            let referenceText = '';
+            let questionOrder = [];
+            let incorrectlyAnsweredQuestions = [];
+            let currentQuestionIndex = 0;
+            let score = 0;
+            
+            // New State for Two-way Learning
+            let isReverseEnabled = false;
+            let isConditionalReverse = false; // New flag
+            let isReversedStep = false;
+            let part1Correct = false;
+            let part2Correct = false;
+
+            // --- DOM ELEMENTS ---
+            const views = {
+                setup: document.getElementById('setup-view'),
+                quiz: document.getElementById('quiz-view'),
+                summary: document.getElementById('summary-view'),
+            };
+
+            const jsonInput = document.getElementById('json-input');
+            const startBtn = document.getElementById('start-btn');
+            const errorMessage = document.getElementById('error-message');
+            const progressBar = document.getElementById('progress-bar');
+            const progressText = document.getElementById('progress-text');
+            const questionTextElement = document.getElementById('question-text'); 
+            const speakBtn = document.getElementById('speak-btn');
+            const optionsContainer = document.getElementById('options-container');
+            const feedbackContainer = document.getElementById('feedback-container');
+            const feedbackResult = document.getElementById('feedback-result');
+            const feedbackExplanation = document.getElementById('feedback-explanation');
+            const nextBtn = document.getElementById('next-btn');
+            const summaryTitle = document.getElementById('summary-title');
+            const summaryMessage = document.getElementById('summary-message');
+            const scoreContainer = document.getElementById('score-container');
+            const restartBtn = document.getElementById('restart-btn');
+            const retakeBtn = document.getElementById('retake-btn');
+            const showTextBtn = document.getElementById('show-text-btn');
+            const textModal = document.getElementById('text-modal');
+            const closeBtn = document.querySelector('.close-btn');
+            const referenceTextContent = document.getElementById('reference-text-content');
+
+            // Checkbox logic
+            const reverseCheck = document.getElementById('reverse-check');
+            const conditionalCheck = document.getElementById('conditional-reverse-check');
+
+            reverseCheck.addEventListener('change', () => {
+                conditionalCheck.disabled = !reverseCheck.checked;
+                if (!reverseCheck.checked) conditionalCheck.checked = false;
+            });
+
+            const defaultQuizObject = {
+  "text": "",
+  "quiz": [
+    {
+      "question": "_____ negligence",
+      "type": "blank",
+      "answer": "gross",
+      "explanation": "疏忽，严重的疏忽。The company was sued for gross negligence in safety procedures. 公司因安全程序中的严重的疏忽被起诉。"
+    },
+    {
+      "question": "________ diligence",
+      "type": "blank",
+      "answer": "habitual",
+      "explanation": "勤奋，习惯性的勤奋。Her habitual diligence earned her a promotion. 她习惯性的勤奋为她赢得了晋升。"
+    },
+    {
+      "question": "____ ambience",
+      "type": "blank",
+      "answer": "cozy",
+      "explanation": "氛围，舒适的氛围。The café had a cozy ambience with soft lighting. 咖啡馆有柔和灯光的舒适的氛围。"
+    },
+    {
+      "question": "__________ prescience",
+      "type": "blank",
+      "answer": "remarkable",
+      "explanation": "预知，非凡的预知。Her remarkable prescience about market trends was impressive. 她对市场趋势的非凡的预知令人印象深刻。"
+    },
+    {
+      "question": "_____ conscience",
+      "type": "blank",
+      "answer": "clear",
+      "explanation": "良心，清白的良心。He had a clear conscience about his decision. 他对自己的决定有清白的良心。"
+    },
+    {
+      "question": "_____ ebullience",
+      "type": "blank",
+      "answer": "great",
+      "explanation": "热情洋溢，巨大的热情洋溢。The crowd greeted the team with great ebullience. 人群以巨大的热情洋溢迎接球队。"
+    },
+    {
+      "question": "_____ convenience",
+      "type": "blank",
+      "answer": "every",
+      "explanation": "便利，每一种便利。The apartment had every convenience. 公寓有每一种便利。"
+    },
+    {
+      "question": "_____ transience",
+      "type": "blank",
+      "answer": "human",
+      "explanation": "短暂，人类的短暂。The poet reflected on human transience. 诗人反思人类的短暂。"
+    },
+    {
+      "question": "_________ ambivalence",
+      "type": "blank",
+      "answer": "emotional",
+      "explanation": "矛盾心理，情感上的矛盾心理。She felt emotional ambivalence about leaving. 她对离开感到情感上的矛盾心理。"
+    },
+    {
+      "question": "________ insolence",
+      "type": "blank",
+      "answer": "shocking",
+      "explanation": "无礼，令人震惊的无礼。His shocking insolence to the teacher was punished. 他对老师令人震惊的无礼受到了惩罚。"
+    },
+    {
+      "question": "___ flatulence",
+      "type": "blank",
+      "answer": "gas",
+      "explanation": "胀气，气体胀气。The medication helped reduce gas flatulence. 药物帮助减少气体胀气。"
+    },
+    {
+      "question": "commence __________",
+      "type": "blank",
+      "answer": "operations",
+      "explanation": "开始，开始运营。The factory will commence operations next month. 工厂将于下月开始运营。"
+    },
+    {
+      "question": "________ eminence",
+      "type": "blank",
+      "answer": "mountain",
+      "explanation": "高地，山地高地。They climbed to the mountain eminence for the view. 他们爬到山地高地观看风景。"
+    },
+    {
+      "question": "impertinence __ ______",
+      "type": "blank",
+      "answer": "to elders",
+      "explanation": "无礼，对长辈的无礼。His impertinence to elders was unacceptable. 他对长辈的无礼是不可接受的。"
+    },
+    {
+      "question": "____ deference",
+      "type": "blank",
+      "answer": "show",
+      "explanation": "尊重，表示尊重。The students would show deference to the professor. 学生们会对教授表示尊重。"
+    },
+    {
+      "question": "______ circumference",
+      "type": "blank",
+      "answer": "circle",
+      "explanation": "周长，圆周长。Calculate the circle circumference using the formula. 使用公式计算圆周长。"
+    },
+    {
+      "question": "_____ conference",
+      "type": "blank",
+      "answer": "press",
+      "explanation": "会议，新闻发布会。The president held a press conference. 总统举行了新闻发布会。"
+    },
+    {
+      "question": "_____ interference",
+      "type": "blank",
+      "answer": "radio",
+      "explanation": "干扰，无线电干扰。Radio interference affected the broadcast. 无线电干扰影响了广播。"
+    },
+    {
+      "question": "____ belligerence",
+      "type": "blank",
+      "answer": "open",
+      "explanation": "好战，公开的好战。His open belligerence alarmed the diplomats. 他公开的好战使外交官感到担忧。"
+    },
+    {
+      "question": "quintessence __ ___",
+      "type": "blank",
+      "answer": "of art",
+      "explanation": "精髓，艺术的精髓。This painting represents the quintessence of art from that period. 这幅画代表了那个时期艺术的精髓。"
+    },
+    {
+      "question": "___ competence",
+      "type": "blank",
+      "answer": "job",
+      "explanation": "能力，工作能力。The interview tested her job competence. 面试测试了她的工作能力。"
+    },
+    {
+      "question": "____ pretence",
+      "type": "blank",
+      "answer": "mere",
+      "explanation": "假装，仅仅是假装。His kindness was mere pretence. 他的善良仅仅是假装。"
+    },
+    {
+      "question": "_______ inadvertence",
+      "type": "blank",
+      "answer": "through",
+      "explanation": "疏忽，由于疏忽。The error occurred through inadvertence. 错误是由于疏忽发生的。"
+    },
+    {
+      "question": "subsistence _______",
+      "type": "blank",
+      "answer": "farming",
+      "explanation": "生存，生存农业。Many villagers practiced subsistence farming. 许多村民从事生存农业。"
+    },
+    {
+      "question": "______ persistence",
+      "type": "blank",
+      "answer": "dogged",
+      "explanation": "坚持，顽强的坚持。Her dogged persistence paid off in the end. 她顽强的坚持最终得到了回报。"
+    },
+    {
+      "question": "______ affluence",
+      "type": "blank",
+      "answer": "sudden",
+      "explanation": "富裕，突然的富裕。Sudden affluence changed their lifestyle. 突然的富裕改变了他们的生活方式。"
+    },
+    {
+      "question": "__ consequence",
+      "type": "blank",
+      "answer": "in",
+      "explanation": "结果，结果。In consequence of the storm, the event was cancelled. 由于暴风雨的结果，活动被取消了。"
+    },
+    {
+      "question": "____ __ eloquence",
+      "type": "blank",
+      "answer": "gift of",
+      "explanation": "雄辩，雄辩的天赋。The speaker had a gift of eloquence. 演讲者有雄辩的天赋。"
+    },
+    {
+      "question": "evince ________",
+      "type": "blank",
+      "answer": "interest",
+      "explanation": "表现出，表现出兴趣。She would evince interest in the project. 她会对这个项目表现出兴趣。"
+    },
+    {
+      "question": "ensconce _______",
+      "type": "blank",
+      "answer": "oneself",
+      "explanation": "安置，安置自己。He would ensconce oneself in the comfortable chair. 他会把自己安置在舒适的椅子上。"
+    },
+    {
+      "question": "denounce __________",
+      "type": "blank",
+      "answer": "corruption",
+      "explanation": "谴责，谴责腐败。The activists would denounce corruption publicly. 活动人士会公开谴责腐败。"
+    },
+    {
+      "question": "pierce ___ ____",
+      "type": "blank",
+      "answer": "the veil",
+      "explanation": "刺穿，刺穿面纱。The investigation would pierce the veil of secrecy. 调查会刺穿保密的面纱。"
+    },
+    {
+      "question": "coerce __________",
+      "type": "blank",
+      "answer": "confession",
+      "explanation": "强迫，强迫供认。Police cannot coerce confession from suspects. 警方不能强迫嫌疑人供认。"
+    },
+    {
+      "question": "acquiesce __",
+      "type": "blank",
+      "answer": "in",
+      "explanation": "默许，默许。She decided to acquiesce in their decision. 她决定默许他们的决定。"
+    },
+    {
+      "question": "_____ coalesce",
+      "type": "blank",
+      "answer": "ideas",
+      "explanation": "合并，想法合并。Different ideas coalesce into a unified theory. 不同的想法合并成统一的理论。"
+    },
+    {
+      "question": "convalesce __ ____",
+      "type": "blank",
+      "answer": "at home",
+      "explanation": "康复，在家康复。The patient would convalesce at home after surgery. 患者术后会在家康复。"
+    },
+    {
+      "question": "_________ effervesce",
+      "type": "blank",
+      "answer": "champagne",
+      "explanation": "冒泡，香槟冒泡。Champagne effervesce when opened. 香槟打开时会冒泡。"
+    },
+    {
+      "question": "traduce _ _____",
+      "type": "blank",
+      "answer": "a rival",
+      "explanation": "诽谤，诽谤对手。He would traduce a rival to gain advantage. 他会诽谤对手以获得优势。"
+    },
+    {
+      "question": "adduce ________",
+      "type": "blank",
+      "answer": "evidence",
+      "explanation": "引证，引证证据。The lawyer would adduce evidence to support the claim. 律师会引证证据支持主张。"
+    },
+    {
+      "question": "produce _______",
+      "type": "blank",
+      "answer": "results",
+      "explanation": "产生，产生结果。Hard work will produce results. 努力工作会产生结果。"
+    },
+    {
+      "question": "_______ _ truce",
+      "type": "blank",
+      "answer": "declare a",
+      "explanation": "休战，宣布休战。The warring sides agreed to declare a truce. 交战双方同意宣布休战。"
+    },
+    {
+      "question": "________ facade",
+      "type": "blank",
+      "answer": "building",
+      "explanation": "外墙，建筑外墙。The building facade was beautifully restored. 建筑外墙被精美修复。"
+    },
+    {
+      "question": "_____ cavalcade",
+      "type": "blank",
+      "answer": "royal",
+      "explanation": "骑兵队，皇家骑兵队。The royal cavalcade passed through the streets. 皇家骑兵队穿过街道。"
+    },
+    {
+      "question": "____ brocade",
+      "type": "blank",
+      "answer": "silk",
+      "explanation": "锦缎，丝绸锦缎。The dress was made of luxurious silk brocade. 这件连衣裙由豪华的丝绸锦缎制成。"
+    },
+    {
+      "question": "_________ cascade",
+      "type": "blank",
+      "answer": "waterfall",
+      "explanation": "瀑布，瀑布级联。The waterfall cascade tumbled down the rocks. 瀑布级联从岩石上倾泻而下。"
+    },
+    {
+      "question": "renegade _______",
+      "type": "blank",
+      "answer": "soldier",
+      "explanation": "叛徒，叛徒士兵。The renegade soldier defected to the enemy. 叛徒士兵叛逃到敌方。"
+    },
+    {
+      "question": "_____ blockade",
+      "type": "blank",
+      "answer": "naval",
+      "explanation": "封锁，海上封锁。The naval blockade prevented supplies from arriving. 海上封锁阻止了补给到达。"
+    },
+    {
+      "question": "______ stockade",
+      "type": "blank",
+      "answer": "prison",
+      "explanation": "栅栏，监狱栅栏。The prisoners were held in the prison stockade. 囚犯被关押在监狱栅栏内。"
+    },
+    {
+      "question": "________ glade",
+      "type": "blank",
+      "answer": "woodland",
+      "explanation": "林间空地，林地空地。They rested in a peaceful woodland glade. 他们在宁静的林地空地休息。"
+    },
+    {
+      "question": "_____ fusillade",
+      "type": "blank",
+      "answer": "rifle",
+      "explanation": "连续射击，步枪连续射击。A rifle fusillade echoed through the valley. 步枪连续射击在山谷中回荡。"
+    },
+    {
+      "question": "___ accolades",
+      "type": "blank",
+      "answer": "win",
+      "explanation": "赞誉，赢得赞誉。The film would win accolades at the festival. 这部电影会在电影节上赢得赞誉。"
+    },
+    {
+      "question": "_______ promenade",
+      "type": "blank",
+      "answer": "evening",
+      "explanation": "散步，晚间散步。Couples enjoyed an evening promenade along the beach. 情侣们沿着海滩享受晚间散步。"
+    },
+    {
+      "question": "______ colonnade",
+      "type": "blank",
+      "answer": "marble",
+      "explanation": "柱廊，大理石柱廊。The temple featured a magnificent marble colonnade. 寺庙有壮观的大理石柱廊。"
+    },
+    {
+      "question": "____ charade",
+      "type": "blank",
+      "answer": "play",
+      "explanation": "字谜游戏，玩字谜游戏。The children would play charade at the party. 孩子们会在派对上玩字谜游戏。"
+    },
+    {
+      "question": "abrade ___ _______",
+      "type": "blank",
+      "answer": "the surface",
+      "explanation": "磨损，磨损表面。Rough handling would abrade the surface. 粗暴处理会磨损表面。"
+    },
+    {
+      "question": "______ masquerade",
+      "type": "blank",
+      "answer": "masked",
+      "explanation": "化装舞会，化装舞会。The guests attended the masked masquerade. 客人们参加了化装舞会。"
+    },
+    {
+      "question": "centigrade _____",
+      "type": "blank",
+      "answer": "scale",
+      "explanation": "摄氏度，摄氏度刻度。Temperature is measured on the centigrade scale. 温度用摄氏度刻度测量。"
+    },
+    {
+      "question": "_____ tirade",
+      "type": "blank",
+      "answer": "angry",
+      "explanation": "长篇大论，愤怒的长篇大论。He launched into an angry tirade. 他开始了愤怒的长篇大论。"
+    },
+    {
+      "question": "crusade _______",
+      "type": "blank",
+      "answer": "against",
+      "explanation": "十字军东征，反对的十字军东征。She led a crusade against poverty. 她领导了反对贫困的十字军东征。"
+    },
+    {
+      "question": "wade ______",
+      "type": "blank",
+      "answer": "across",
+      "explanation": "涉水，涉水穿过。They had to wade across the shallow stream. 他们不得不涉水穿过浅溪。"
+    },
+    {
+      "question": "cede _________",
+      "type": "blank",
+      "answer": "territory",
+      "explanation": "割让，割让领土。The defeated nation had to cede territory. 战败国不得不割让领土。"
+    },
+    {
+      "question": "accede __ _______",
+      "type": "blank",
+      "answer": "to demands",
+      "explanation": "同意，同意要求。The government would accede to demands. 政府会同意要求。"
+    },
+    {
+      "question": "secede ____ _____",
+      "type": "blank",
+      "answer": "from union",
+      "explanation": "脱离，脱离联邦。The state threatened to secede from union. 该州威胁要脱离联邦。"
+    },
+    {
+      "question": "intercede ___",
+      "type": "blank",
+      "answer": "for",
+      "explanation": "调解，为...调解。He would intercede for the accused. 他会为被告调解。"
+    },
+    {
+      "question": "supersede _ ____",
+      "type": "blank",
+      "answer": "a rule",
+      "explanation": "取代，取代规则。The new policy would supersede a rule. 新政策会取代规则。"
+    },
+    {
+      "question": "abide __ _____",
+      "type": "blank",
+      "answer": "by rules",
+      "explanation": "遵守，遵守规则。All students must abide by rules. 所有学生必须遵守规则。"
+    },
+    {
+      "question": "_____ herbicide",
+      "type": "blank",
+      "answer": "apply",
+      "explanation": "除草剂，使用除草剂。Farmers apply herbicide to control weeds. 农民使用除草剂控制杂草。"
+    },
+    {
+      "question": "_____ fungicide",
+      "type": "blank",
+      "answer": "spray",
+      "explanation": "杀菌剂，喷洒杀菌剂。Gardeners spray fungicide on infected plants. 园丁在受感染的植物上喷洒杀菌剂。"
+    },
+    {
+      "question": "_________ germicide",
+      "type": "blank",
+      "answer": "household",
+      "explanation": "杀菌剂，家用杀菌剂。Household germicide kills bacteria effectively. 家用杀菌剂有效杀死细菌。"
+    },
+    {
+      "question": "_____ insecticide",
+      "type": "blank",
+      "answer": "spray",
+      "explanation": "杀虫剂，喷洒杀虫剂。The farmer would spray insecticide on crops. 农民会在作物上喷洒杀虫剂。"
+    },
+    {
+      "question": "___ pesticide",
+      "type": "blank",
+      "answer": "use",
+      "explanation": "杀虫剂，使用杀虫剂。Organic farms avoid using pesticide. 有机农场避免使用杀虫剂。"
+    },
+    {
+      "question": "glide ______",
+      "type": "blank",
+      "answer": "across",
+      "explanation": "滑行，滑行穿过。The swan would glide across the pond. 天鹅会滑行穿过池塘。"
+    },
+    {
+      "question": "backslide ____",
+      "type": "blank",
+      "answer": "into",
+      "explanation": "倒退，倒退到。He threatened to backslide into old habits. 他有倒退到旧习惯的危险。"
+    },
+    {
+      "question": "bromide ______",
+      "type": "blank",
+      "answer": "tablet",
+      "explanation": "溴化物，溴化物片。The doctor prescribed a bromide tablet for anxiety. 医生为焦虑开了溴化物片。"
+    },
+    {
+      "question": "deride ________",
+      "type": "blank",
+      "answer": "opponent",
+      "explanation": "嘲笑，嘲笑对手。He would deride opponent in debates. 他会在辩论中嘲笑对手。"
+    },
+    {
+      "question": "reside __",
+      "type": "blank",
+      "answer": "in",
+      "explanation": "居住，居住在。They reside in the city center. 他们居住在市中心。"
+    },
+    {
+      "question": "preside ____ _______",
+      "type": "blank",
+      "answer": "over meeting",
+      "explanation": "主持，主持会议。The chairman would preside over meeting. 主席会主持会议。"
+    },
+    {
+      "question": "ode __ ___",
+      "type": "blank",
+      "answer": "to joy",
+      "explanation": "颂歌，欢乐颂。Beethoven composed the famous ode to joy. 贝多芬创作了著名的欢乐颂。"
+    },
+    {
+      "question": "bode ___",
+      "type": "blank",
+      "answer": "ill",
+      "explanation": "预示，预示不祥。The dark clouds bode ill for the picnic. 乌云预示不祥野餐。"
+    },
+    {
+      "question": "forebode ____",
+      "type": "blank",
+      "answer": "evil",
+      "explanation": "预示，预示邪恶。The ominous signs forebode evil. 不祥的征兆预示邪恶。"
+    },
+    {
+      "question": "____ ___ lode",
+      "type": "blank",
+      "answer": "rich ore",
+      "explanation": "矿脉，富矿脉。Miners discovered a rich ore lode. 矿工发现了富矿脉。"
+    },
+    {
+      "question": "corrode ___ _____",
+      "type": "blank",
+      "answer": "the metal",
+      "explanation": "腐蚀，腐蚀金属。Salt water will corrode the metal. 盐水会腐蚀金属。"
+    },
+    {
+      "question": "avant-garde ___",
+      "type": "blank",
+      "answer": "art",
+      "explanation": "前卫，前卫艺术。The museum displayed avant-garde art. 博物馆展出了前卫艺术。"
+    },
+    {
+      "question": "occlude ___ ______",
+      "type": "blank",
+      "answer": "the artery",
+      "explanation": "堵塞，堵塞动脉。A blood clot can occlude the artery. 血栓会堵塞动脉。"
+    },
+    {
+      "question": "preclude ___________",
+      "type": "blank",
+      "answer": "possibility",
+      "explanation": "排除，排除可能性。The evidence would preclude possibility of innocence. 证据会排除清白的可能性。"
+    },
+    {
+      "question": "exclude ______",
+      "type": "blank",
+      "answer": "option",
+      "explanation": "排除，排除选项。We cannot exclude option completely. 我们不能完全排除选项。"
+    },
+    {
+      "question": "__________ prelude",
+      "type": "blank",
+      "answer": "orchestral",
+      "explanation": "前奏曲，管弦乐前奏曲。The concert began with an orchestral prelude. 音乐会以管弦乐前奏曲开始。"
+    },
+    {
+      "question": "allude __________",
+      "type": "blank",
+      "answer": "indirectly",
+      "explanation": "暗指，间接暗指。He would allude indirectly to the scandal. 他会间接暗指这起丑闻。"
+    },
+    {
+      "question": "_____ interlude",
+      "type": "blank",
+      "answer": "brief",
+      "explanation": "插曲，短暂的插曲。There was a brief interlude before the final act. 最后一幕前有短暂的插曲。"
+    },
+    {
+      "question": "denude ___ ____",
+      "type": "blank",
+      "answer": "the land",
+      "explanation": "剥蚀，剥蚀土地。Deforestation would denude the land. 森林砍伐会剥蚀土地。"
+    },
+    {
+      "question": "prude ________",
+      "type": "blank",
+      "answer": "attitude",
+      "explanation": "拘谨的人，拘谨的人的态度。Her prude attitude shocked no one. 她拘谨的人的态度没有让任何人震惊。"
+    },
+    {
+      "question": "obtrude _______",
+      "type": "blank",
+      "answer": "opinion",
+      "explanation": "强加，强加意见。Don't obtrude opinion on others. 不要强加意见给别人。"
+    },
+    {
+      "question": "extrude _______",
+      "type": "blank",
+      "answer": "plastic",
+      "explanation": "挤压，挤压塑料。The machine would extrude plastic into shapes. 机器会挤压塑料成型。"
+    },
+    {
+      "question": "____ ____ desuetude",
+      "type": "blank",
+      "answer": "fall into",
+      "explanation": "废弃，陷入废弃。The old law fell into desuetude. 旧法律陷入废弃。"
+    },
+    {
+      "question": "solicitude ___",
+      "type": "blank",
+      "answer": "for",
+      "explanation": "关怀，关怀。She showed solicitude for the sick child. 她对生病的孩子表示关怀。"
+    },
+    {
+      "question": "____ solitude",
+      "type": "blank",
+      "answer": "seek",
+      "explanation": "独处，寻求独处。The writer would seek solitude to work. 作家会寻求独处工作。"
+    },
+    {
+      "question": "______ amplitude",
+      "type": "blank",
+      "answer": "signal",
+      "explanation": "振幅，信号振幅。The signal amplitude was too weak. 信号振幅太弱了。"
+    },
+    {
+      "question": "plenitude __ ____",
+      "type": "blank",
+      "answer": "of data",
+      "explanation": "充足，数据的充足。There was a plenitude of data available. 有数据的充足可用。"
+    },
+    {
+      "question": "__________ magnitude",
+      "type": "blank",
+      "answer": "earthquake",
+      "explanation": "震级，地震震级。The earthquake magnitude was 7.5. 地震震级为7.5级。"
+    },
+    {
+      "question": "_____ turpitude",
+      "type": "blank",
+      "answer": "moral",
+      "explanation": "堕落，道德堕落。The scandal revealed his moral turpitude. 丑闻揭露了他的道德堕落。"
+    }
+  ]
+};
+            const DEFAULT_QUIZ_JSON = JSON.stringify(defaultQuizObject, null, 2);
+
+            // --- COOKIE FUNCTIONS ---
+            const setCookie = (name, value, days) => {
+                let expires = "";
+                if (days) {
+                    const date = new Date();
+                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "") + expires + "; path=/; SameSite=Lax";
+            };
+
+            const getCookie = (name) => {
+                const nameEQ = name + "=";
+                const ca = document.cookie.split(';');
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            };
+
+            const loadFromCookie = () => {
+                const savedJson = getCookie('quizJson');
+                if (savedJson) {
+                    jsonInput.value = savedJson;
+                } else {
+                    jsonInput.value = DEFAULT_QUIZ_JSON;
+                }
+            };
+
+            // --- UTILITY FUNCTIONS ---
+            const switchView = (viewName) => {
+                Object.values(views).forEach(view => view.classList.remove('active'));
+                if (views[viewName]) {
+                    views[viewName].classList.add('active');
+                }
+                // Stop speaking when switching views
+                cancelSpeech();
+            };
+
+            const shuffleArray = (array) => {
+                const newArray = [...array];
+                for (let i = newArray.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+                }
+                return newArray;
+            };
+
+            // --- TTS FUNCTIONALITY ---
+            const cancelSpeech = () => {
+                if ('speechSynthesis' in window) {
+                    window.speechSynthesis.cancel();
+                    speakBtn.classList.remove('speaking');
+                }
+            };
+
+            const handleSpeak = () => {
+                if (!('speechSynthesis' in window)) {
+                    alert('Text-to-speech is not supported in your browser.');
+                    return;
+                }
+
+                if (window.speechSynthesis.speaking) {
+                    cancelSpeech();
+                    return;
+                }
+
+                let textToSpeak = questionTextElement.textContent;
+                // Remove underscores for speech
+                textToSpeak = textToSpeak.replace(/_+/g, '').trim();
+
+                if (!textToSpeak) return;
+
+                const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                utterance.lang = 'en-US'; 
+                utterance.rate = 1.0;
+
+                speakBtn.classList.add('speaking');
+                
+                utterance.onend = () => {
+                    speakBtn.classList.remove('speaking');
+                };
+
+                utterance.onerror = () => {
+                     speakBtn.classList.remove('speaking');
+                };
+
+                window.speechSynthesis.speak(utterance);
+            };
+
+            // --- CORE LOGIC ---
+            const startQuiz = async () => {
+                const inputText = jsonInput.value.trim();
+                isReverseEnabled = reverseCheck.checked;
+                isConditionalReverse = conditionalCheck.checked;
+                let parsedJson;
+                let finalJsonText;
+
+                startBtn.disabled = true;
+                startBtn.textContent = 'Loading...';
+                errorMessage.style.display = 'none';
+
+                try {
+                    if (inputText.startsWith('http://') || inputText.startsWith('https://')) {
+                        const response = await fetch(inputText);
+                        if (!response.ok) {
+                            throw new Error(`Failed to fetch from URL (Status: ${response.status})`);
+                        }
+                        parsedJson = await response.json();
+                        finalJsonText = JSON.stringify(parsedJson, null, 2);
+                        jsonInput.value = finalJsonText;
+                    } else {
+                        parsedJson = JSON.parse(inputText);
+                        finalJsonText = inputText;
+                    }
+
+                    if (!parsedJson.quiz || !Array.isArray(parsedJson.quiz) || parsedJson.quiz.length === 0) {
+                        throw new Error("JSON must have a non-empty 'quiz' array.");
+                    }
+                    if (typeof parsedJson.text !== 'string') {
+                         throw new Error("JSON must have a 'text' property of type string.");
+                    }
+
+                    for (const [index, question] of parsedJson.quiz.entries()) {
+                        const type = question.type || 'choice';
+                        const qIdentifier = `Question ${index + 1} ("${question.question.substring(0,20)}...")`;
+
+                        if (typeof question.answer !== 'string' || question.answer.trim() === '') {
+                             throw new Error(`${qIdentifier} must have a non-empty 'answer' of type string.`);
+                        }
+
+                        if (type === 'choice') {
+                             if (!question.options || !Array.isArray(question.options) || !question.options.includes(question.answer)) {
+                                 throw new Error(`The answer for ${qIdentifier} was not found in its 'options' array.`);
+                            }
+                        } else if (type !== 'blank') {
+                            throw new Error(`${qIdentifier} has an invalid type: '${type}'. Must be 'choice' or 'blank'.`);
+                        }
+                    }
+
+                    setCookie('quizJson', finalJsonText, 7);
+                    
+                    quizData = parsedJson.quiz;
+                    referenceText = parsedJson.text;
+                    
+                    currentQuestionIndex = 0;
+                    score = 0;
+                    incorrectlyAnsweredQuestions = [];
+                    isReversedStep = false;
+                    part1Correct = false;
+                    part2Correct = false;
+                    
+                    questionOrder = [...Array(quizData.length).keys()];
+                    const selectedOrder = document.querySelector('input[name="order"]:checked').value;
+                    if (selectedOrder === 'random') {
+                        questionOrder = shuffleArray(questionOrder);
+                    }
+
+                    referenceTextContent.textContent = referenceText;
+                    switchView('quiz');
+                    displayQuestion();
+
+                } catch (error) {
+                    errorMessage.textContent = `Error: ${error.message}`;
+                    errorMessage.style.display = 'block';
+                } finally {
+                    startBtn.disabled = false;
+                    startBtn.textContent = 'Start Quiz';
+                }
+            };
+
+            const displayQuestion = () => {
+                // Stop any previous speech
+                cancelSpeech();
+
+                optionsContainer.innerHTML = '';
+                optionsContainer.className = '';
+                feedbackContainer.style.display = 'none';
+                feedbackContainer.classList.remove('correct', 'incorrect');
+                nextBtn.style.display = 'none';
+
+                const questionIdx = questionOrder[currentQuestionIndex];
+                const originalQuestion = quizData[questionIdx];
+                let questionToDisplay = originalQuestion;
+
+                // Handle Reverse Question Generation Logic
+                if (isReversedStep) {
+                    const originalPrompt = originalQuestion.question.replace(/_+/g, '').trim();
+                    const underscores = '_'.repeat(originalPrompt.length);
+                    let newQuestionText;
+                    
+                    if (originalQuestion.question.trim().startsWith('_')) {
+                        // Original: "_ rugae" (Ans: gastric) -> Reverse: "gastric _" (Ans: rugae)
+                        newQuestionText = `${originalQuestion.answer} ${underscores}`;
+                    } else {
+                         // Original: "hydrangea _" (Ans: bush) -> Reverse: "_ bush" (Ans: hydrangea)
+                        newQuestionText = `${underscores} ${originalQuestion.answer}`;
+                    }
+                    
+                    questionToDisplay = {
+                        ...originalQuestion,
+                        question: newQuestionText,
+                        answer: originalPrompt,
+                        explanation: originalQuestion.explanation ? `(Reverse) ${originalQuestion.explanation}` : "(Reverse Question)"
+                    };
+                }
+
+                const type = questionToDisplay.type || 'choice';
+
+                updateProgressBar();
+                
+                questionTextElement.textContent = questionToDisplay.question;
+
+                if (type === 'choice') {
+                    optionsContainer.classList.add('choice-options');
+                    const correctAnswerText = questionToDisplay.answer;
+                    let shuffledOptions = shuffleArray(questionToDisplay.options);
+
+                    shuffledOptions.forEach((optionText) => {
+                        const button = document.createElement('button');
+                        button.classList.add('option-btn');
+                        button.textContent = optionText;
+                        button.dataset.isCorrect = (optionText === correctAnswerText);
+                        button.addEventListener('click', handleOptionClick);
+                        optionsContainer.appendChild(button);
+                    });
+                } else if (type === 'blank') {
+                    optionsContainer.classList.add('blank-form');
+                    const input = document.createElement('input');
+                    input.type = 'text';
+                    input.id = 'blank-input';
+                    input.placeholder = 'Type your answer...';
+                    input.autocomplete = 'off';
+                    
+                    const submitBtn = document.createElement('button');
+                    submitBtn.id = 'submit-blank-btn';
+                    submitBtn.textContent = 'Submit';
+                    submitBtn.classList.add('btn');
+
+                    optionsContainer.appendChild(input);
+                    optionsContainer.appendChild(submitBtn);
+
+                    submitBtn.addEventListener('click', () => handleBlankSubmit(questionToDisplay));
+                    input.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter') {
+                            e.preventDefault();
+                            handleBlankSubmit(questionToDisplay);
+                        }
+                    });
+
+                    setTimeout(() => input.focus(), 100);
+                }
+            };
+
+            const handleOptionClick = (event) => {
+                const selectedButton = event.target;
+                const isCorrect = selectedButton.dataset.isCorrect === 'true';
+
+                Array.from(optionsContainer.children).forEach(btn => {
+                    btn.disabled = true;
+                });
+
+                if (isCorrect) {
+                    selectedButton.classList.add('correct');
+                    feedbackResult.textContent = "Correct! 🎉";
+                    feedbackContainer.classList.add('correct');
+                    score++;
+                } else {
+                    selectedButton.classList.add('incorrect');
+                    const correctButton = optionsContainer.querySelector('[data-is-correct="true"]');
+                    if (correctButton) correctButton.classList.add('correct');
+                    
+                    feedbackResult.textContent = "Incorrect! 😔";
+                    feedbackContainer.classList.add('incorrect');
+                    incorrectlyAnsweredQuestions.push(questionOrder[currentQuestionIndex]);
+                }
+
+                const questionIdx = questionOrder[currentQuestionIndex];
+                feedbackExplanation.textContent = quizData[questionIdx].explanation || "";
+                feedbackContainer.style.display = 'block';
+
+                showNextButton();
+            };
+
+            const handleBlankSubmit = (currentQuestion) => {
+                const input = document.getElementById('blank-input');
+                const submitBtn = document.getElementById('submit-blank-btn');
+                if (!input || !submitBtn || submitBtn.disabled) return;
+
+                const userAnswer = input.value.trim();
+                const correctAnswer = currentQuestion.answer;
+
+                input.disabled = true;
+                submitBtn.disabled = true;
+                
+                const isCorrect = userAnswer.toLowerCase() === correctAnswer.toLowerCase();
+
+                if (isCorrect) {
+                    feedbackResult.textContent = "Correct! 🎉";
+                    input.style.borderColor = 'var(--correct-color)';
+                    feedbackContainer.classList.add('correct');
+                } else {
+                    feedbackResult.innerHTML = `Incorrect! 😔 <br><small>Correct answer: <strong>${correctAnswer}</strong></small>`;
+                    input.style.borderColor = 'var(--incorrect-color)';
+                    feedbackContainer.classList.add('incorrect');
+                }
+                
+                if (isReverseEnabled) {
+                     if (!isReversedStep) {
+                         part1Correct = isCorrect;
+                     } else {
+                         part2Correct = isCorrect;
+                     }
+                } else {
+                    if (isCorrect) {
+                        score++;
+                    } else {
+                        incorrectlyAnsweredQuestions.push(questionOrder[currentQuestionIndex]);
+                    }
+                }
+
+                feedbackExplanation.textContent = currentQuestion.explanation || "";
+                feedbackContainer.style.display = 'block';
+
+                showNextButton();
+            };
+            
+            const showNextButton = () => {
+                 if (currentQuestionIndex < questionOrder.length) {
+                    let nextText = 'Next Question';
+                    const isLastQuestion = currentQuestionIndex === questionOrder.length - 1;
+                    
+                    if (isReverseEnabled && !isReversedStep && quizData[questionOrder[currentQuestionIndex]].type === 'blank') {
+                        // Decide if we are going to show the reverse question
+                        let willShowReverse = true;
+                        if (isConditionalReverse && part1Correct) {
+                            willShowReverse = false;
+                        }
+
+                        if (willShowReverse) {
+                            nextText = 'Next Part (Reverse)';
+                        } else if (isLastQuestion) {
+                            nextText = 'Finish Quiz';
+                        }
+                    } else if (isLastQuestion) {
+                        nextText = 'Finish Quiz';
+                    }
+
+                    nextBtn.textContent = nextText;
+                }
+                nextBtn.style.display = 'block';
+                nextBtn.focus();
+            };
+
+            const nextQuestion = () => {
+                const questionIdx = questionOrder[currentQuestionIndex];
+                const currentQuestion = quizData[questionIdx];
+                const type = currentQuestion.type || 'choice';
+
+                // Check if we need to show the reverse question
+                if (isReverseEnabled && type === 'blank') {
+                    if (!isReversedStep) {
+                        // Check condition: Only reverse if Part 1 was WRONG (if Conditional Mode is ON)
+                        const skipReverse = isConditionalReverse && part1Correct;
+
+                        if (!skipReverse) {
+                            // Move to Reverse Step
+                            isReversedStep = true;
+                            displayQuestion();
+                            return; // Exit here
+                        } else {
+                            // Skipped reverse step because Part 1 was correct (and Conditional Mode ON)
+                            score++;
+                            isReversedStep = false;
+                            part1Correct = false;
+                            part2Correct = false;
+                        }
+                    } else {
+                        // We just finished the Reverse Step.
+                        if (isConditionalReverse) {
+                            // If we are here in conditional mode, it means Part 1 was wrong.
+                            // So the unit is counted as incorrect regardless of Part 2.
+                            incorrectlyAnsweredQuestions.push(questionIdx);
+                        } else {
+                            // Standard: Need both correct
+                            if (part1Correct && part2Correct) {
+                                score++;
+                            } else {
+                                incorrectlyAnsweredQuestions.push(questionIdx);
+                            }
+                        }
+                        
+                        // Reset flags
+                        isReversedStep = false;
+                        part1Correct = false;
+                        part2Correct = false;
+                    }
+                }
+
+                // Move to next question index
+                currentQuestionIndex++;
+                if (currentQuestionIndex < questionOrder.length) {
+                    displayQuestion();
+                } else {
+                    showSummary();
+                }
+            };
+
+            const showSummary = () => {
+                const questionsInRound = questionOrder.length;
+                scoreContainer.innerHTML = `You scored <span>${score}</span> out of ${questionsInRound}.`;
+
+                if (incorrectlyAnsweredQuestions.length > 0) {
+                    summaryTitle.textContent = 'Round Complete!';
+                    summaryMessage.textContent = 'You have a few incorrect answers. Ready for another round?';
+                    retakeBtn.textContent = `Retake ${incorrectlyAnsweredQuestions.length} Incorrect Questions`;
+                    retakeBtn.style.display = 'block';
+                } else {
+                    summaryTitle.textContent = 'Quiz Mastered!';
+                    summaryMessage.textContent = 'Congratulations! You answered all questions correctly.';
+                    retakeBtn.style.display = 'none';
+                }
+
+                switchView('summary');
+            };
+
+            const retakeIncorrectQuiz = () => {
+                questionOrder = shuffleArray(incorrectlyAnsweredQuestions);
+                incorrectlyAnsweredQuestions = [];
+                currentQuestionIndex = 0;
+                score = 0;
+                isReversedStep = false;
+                part1Correct = false;
+                part2Correct = false;
+                switchView('quiz');
+                displayQuestion();
+            };
+
+            const restartQuiz = () => {
+                switchView('setup');
+            };
+
+            const updateProgressBar = () => {
+                const progress = ((currentQuestionIndex) / questionOrder.length) * 100;
+                progressBar.style.width = `${progress}%`;
+                progressText.textContent = `${currentQuestionIndex + 1} / ${questionOrder.length}`;
+            };
+
+            // --- MODAL LOGIC ---
+            const showModal = () => textModal.classList.add('visible');
+            const hideModal = () => textModal.classList.remove('visible');
+
+            // --- INITIALIZATION ---
+            const initialize = async () => {
+                const urlParams = new URLSearchParams(window.location.search);
+                const url = urlParams.get('url');
+
+                if (url) {
+                    jsonInput.placeholder = 'Loading quiz from URL parameter...';
+                    jsonInput.disabled = true;
+                    startBtn.disabled = true;
+
+                    try {
+                        const response = await fetch(url);
+                        if (!response.ok) {
+                            throw new Error(`Failed to fetch from URL (Status: ${response.status})`);
+                        }
+                        const data = await response.json();
+                        const finalJsonText = JSON.stringify(data, null, 2);
+                        jsonInput.value = finalJsonText;
+                    } catch (error) {
+                        console.error("Failed to load from URL parameter:", error);
+                        errorMessage.textContent = `Error loading from URL: ${error.message}`;
+                        errorMessage.style.display = 'block';
+                        loadFromCookie();
+                    } finally {
+                        jsonInput.placeholder = 'Paste quiz JSON or URL here...';
+                        jsonInput.disabled = false;
+                        startBtn.disabled = false;
+                    }
+                } else {
+                    loadFromCookie();
+                }
+            };
+
+            initialize();
+
+            // --- EVENT LISTENERS ---
+            startBtn.addEventListener('click', startQuiz);
+            nextBtn.addEventListener('click', nextQuestion);
+            restartBtn.addEventListener('click', restartQuiz);
+            retakeBtn.addEventListener('click', retakeIncorrectQuiz);
+            showTextBtn.addEventListener('click', showModal);
+            closeBtn.addEventListener('click', hideModal);
+            
+            speakBtn.addEventListener('click', handleSpeak);
+
+            textModal.addEventListener('click', (event) => {
+                if (event.target === textModal) {
+                    hideModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

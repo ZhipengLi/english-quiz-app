@@ -1,0 +1,4108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Quiz App</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --background-color: #ecf0f1;
+            --card-bg-color: #ffffff;
+            --correct-color: #27ae60;
+            --incorrect-color: #e74c3c;
+            --font-color: #34495e;
+            --border-radius: 12px;
+            --box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--font-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: var(--card-bg-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            width: 100%;
+            max-width: 700px;
+            overflow: hidden;
+        }
+
+        .view {
+            padding: 30px 40px;
+            display: none; /* Hidden by default */
+        }
+
+        .view.active {
+            display: block;
+        }
+
+        /* --- Setup View --- */
+        #setup-view h1 {
+            text-align: center;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        #setup-view p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        #json-input {
+            width: 100%;
+            height: 150px;
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+            resize: vertical;
+        }
+
+        .order-options {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+            align-items: center;
+        }
+
+        .order-options label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        /* --- Quiz View --- */
+        .quiz-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        #progress-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-grow: 1;
+        }
+
+        #progress-bar-container {
+            flex-grow: 1;
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+
+        #progress-bar {
+            height: 100%;
+            width: 0%;
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            transition: width 0.3s ease-in-out;
+        }
+
+        #progress-text {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            white-space: nowrap;
+        }
+
+        /* Updated Question Section for TTS */
+        .question-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        #question-text {
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        .speak-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--primary-color);
+            padding: 8px;
+            border-radius: 50%;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .speak-btn:hover {
+            background-color: rgba(52, 152, 219, 0.1);
+            transform: scale(1.1);
+        }
+
+        .speak-btn:active {
+            transform: scale(0.95);
+        }
+        
+        .speak-btn.speaking {
+            color: var(--correct-color);
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(39, 174, 96, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(39, 174, 96, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(39, 174, 96, 0); }
+        }
+
+        #options-container {
+            display: grid;
+            gap: 15px;
+        }
+
+        .option-btn {
+            background-color: var(--card-bg-color);
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            padding: 15px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+
+        .option-btn:hover:not(:disabled) {
+            background-color: #f1f2f6;
+            border-color: var(--primary-color);
+        }
+
+        .option-btn:disabled {
+            cursor: not-allowed;
+        }
+
+        .option-btn.correct {
+            background-color: var(--correct-color);
+            color: white;
+            border-color: var(--correct-color);
+        }
+
+        .option-btn.incorrect {
+            background-color: var(--incorrect-color);
+            color: white;
+            border-color: var(--incorrect-color);
+        }
+
+        /* Styles for "blank" question type */
+        #options-container.blank-form {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        #blank-input {
+            flex-grow: 1;
+            padding: 15px;
+            font-size: 1rem;
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.2s ease;
+        }
+
+        #blank-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        #feedback-container {
+            margin-top: 25px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            border-left: 5px solid var(--primary-color);
+            display: none; /* Hidden until an answer is selected */
+        }
+
+        #feedback-container.correct {
+            border-left-color: var(--correct-color);
+        }
+
+        #feedback-container.incorrect {
+            border-left-color: var(--incorrect-color);
+        }
+
+        #feedback-container p {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        /* --- Summary View --- */
+        #summary-view h2 {
+            text-align: center;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        #score-container {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        #score-container span {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+        }
+
+        #summary-message {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .summary-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .summary-controls .btn {
+            width: 100%;
+            max-width: 320px;
+        }
+
+        /* --- General Controls --- */
+        .controls {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .btn:hover:not(:disabled) {
+            background-color: #2980b9;
+        }
+
+        .btn:active:not(:disabled) {
+            transform: scale(0.98);
+        }
+
+        .btn:disabled {
+            background-color: #bdc3c7;
+            cursor: not-allowed;
+        }
+
+        .btn-secondary {
+            background-color: #7f8c8d;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+
+        .btn-secondary:hover {
+            background-color: #95a5a6;
+        }
+
+        #next-btn {
+            display: none; /* Hidden until an answer is selected */
+        }
+
+        #error-message {
+            color: var(--incorrect-color);
+            margin-top: 15px;
+            text-align: center;
+            font-weight: 600;
+            display: none;
+        }
+
+        /* --- Text Modal --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.visible {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.visible .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-content h2 {
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+            padding-right: 40px; /* Space for close button */
+        }
+
+        .modal-content .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #95a5a6;
+            line-height: 1;
+        }
+
+        .modal-content .close-btn:hover {
+            color: var(--secondary-color);
+        }
+
+        #reference-text-content {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow-y: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            flex-grow: 1;
+        }
+
+        /* --- Responsive adjustments --- */
+        @media (max-width: 480px) {
+            .view {
+                padding: 20px;
+            }
+            #options-container.blank-form {
+                flex-direction: column;
+                align-items: stretch; /* Make items fill width */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- View 1: Setup Screen -->
+        <div id="setup-view" class="view active">
+            <h1>Quiz Setup</h1>
+            <p>Paste your quiz JSON data or URL into the text box below.</p>
+            <textarea id="json-input" placeholder="Paste quiz JSON or URL here..."></textarea>
+            
+            <p>Choose the question order:</p>
+            <div class="order-options">
+                <label>
+                    <input type="radio" name="order" value="sequence" checked> Sequential
+                </label>
+                <label>
+                    <input type="radio" name="order" value="random"> Random
+                </label>
+            </div>
+
+            <!-- New Checkboxes for Reverse Questions -->
+            <div style="margin-bottom: 25px;">
+                 <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: var(--font-color);">
+                    <input type="checkbox" id="reverse-check"> 
+                    Generate reverse questions for 'blank' types (Two-way learning)
+                </label>
+                <!-- New Conditional Checkbox -->
+                <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: var(--font-color); margin-left: 28px; margin-top: 10px; font-size: 0.9em;">
+                    <input type="checkbox" id="conditional-reverse-check" disabled> 
+                    Only show reverse question if answer was incorrect
+                </label>
+            </div>
+
+            <div class="controls">
+                <button id="start-btn" class="btn">Start Quiz</button>
+            </div>
+            <p id="error-message"></p>
+        </div>
+
+        <!-- View 2: Quiz Screen -->
+        <div id="quiz-view" class="view">
+            <div class="quiz-header">
+                 <div id="progress-wrapper">
+                    <div id="progress-bar-container">
+                        <div id="progress-bar"></div>
+                    </div>
+                    <span id="progress-text"></span>
+                 </div>
+                <button id="show-text-btn" class="btn btn-secondary">Show Text</button>
+            </div>
+
+            <!-- Modified Question Container for TTS -->
+            <div class="question-wrapper">
+                <div id="question-text"></div>
+                <button id="speak-btn" class="speak-btn" title="Read Question Aloud" aria-label="Read Question Aloud">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="options-container"></div>
+
+            <div id="feedback-container">
+                <p id="feedback-result"></p>
+                <span id="feedback-explanation"></span>
+            </div>
+
+            <div class="controls">
+                <button id="next-btn" class="btn">Next Question</button>
+            </div>
+        </div>
+
+        <!-- View 3: Summary Screen -->
+        <div id="summary-view" class="view">
+            <h2 id="summary-title">Quiz Complete!</h2>
+            <p id="summary-message"></p>
+            <div id="score-container"></div>
+            
+            <div class="controls summary-controls">
+                <button id="retake-btn" class="btn"></button>
+                <button id="restart-btn" class="btn">Start a New Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for displaying reference text -->
+    <div id="text-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn">&times;</button>
+            <h2>Reference Text</h2>
+            <pre id="reference-text-content"></pre>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- STATE MANAGEMENT ---
+            let quizData = [];
+            let referenceText = '';
+            let questionOrder = [];
+            let incorrectlyAnsweredQuestions = [];
+            let currentQuestionIndex = 0;
+            let score = 0;
+            
+            // New State for Two-way Learning
+            let isReverseEnabled = false;
+            let isConditionalReverse = false; // New flag
+            let isReversedStep = false;
+            let part1Correct = false;
+            let part2Correct = false;
+
+            // --- DOM ELEMENTS ---
+            const views = {
+                setup: document.getElementById('setup-view'),
+                quiz: document.getElementById('quiz-view'),
+                summary: document.getElementById('summary-view'),
+            };
+
+            const jsonInput = document.getElementById('json-input');
+            const startBtn = document.getElementById('start-btn');
+            const errorMessage = document.getElementById('error-message');
+            const progressBar = document.getElementById('progress-bar');
+            const progressText = document.getElementById('progress-text');
+            const questionTextElement = document.getElementById('question-text'); 
+            const speakBtn = document.getElementById('speak-btn');
+            const optionsContainer = document.getElementById('options-container');
+            const feedbackContainer = document.getElementById('feedback-container');
+            const feedbackResult = document.getElementById('feedback-result');
+            const feedbackExplanation = document.getElementById('feedback-explanation');
+            const nextBtn = document.getElementById('next-btn');
+            const summaryTitle = document.getElementById('summary-title');
+            const summaryMessage = document.getElementById('summary-message');
+            const scoreContainer = document.getElementById('score-container');
+            const restartBtn = document.getElementById('restart-btn');
+            const retakeBtn = document.getElementById('retake-btn');
+            const showTextBtn = document.getElementById('show-text-btn');
+            const textModal = document.getElementById('text-modal');
+            const closeBtn = document.querySelector('.close-btn');
+            const referenceTextContent = document.getElementById('reference-text-content');
+
+            // Checkbox logic
+            const reverseCheck = document.getElementById('reverse-check');
+            const conditionalCheck = document.getElementById('conditional-reverse-check');
+
+            reverseCheck.addEventListener('change', () => {
+                conditionalCheck.disabled = !reverseCheck.checked;
+                if (!reverseCheck.checked) conditionalCheck.checked = false;
+            });
+
+            const defaultQuizObject = {
+  "text": "",
+  "quiz": [
+{
+      "question": "_____ replica",
+      "type": "blank",
+      "answer": "exact",
+      "explanation": "复制品，精确的复制品。The museum displayed an exact replica of the ancient artifact. 博物馆展出了古代文物的精确的复制品。"
+    },
+    {
+      "question": "_______ armada",
+      "type": "blank",
+      "answer": "Spanish",
+      "explanation": "舰队，西班牙舰队。The Spanish armada sailed against England in 1588. 西班牙舰队在1588年向英格兰进发。"
+    },
+    {
+      "question": "_______ agenda",
+      "type": "blank",
+      "answer": "meeting",
+      "explanation": "议程，会议议程。The secretary prepared the meeting agenda for discussion. 秘书准备了讨论的会议议程。"
+    },
+    {
+      "question": "_____ coda",
+      "type": "blank",
+      "answer": "music",
+      "explanation": "尾声，音乐尾声。The symphony ended with a beautiful music coda. 交响乐以美妙的音乐尾声结束。"
+    },
+    {
+      "question": "_________ panacea",
+      "type": "blank",
+      "answer": "universal",
+      "explanation": "万能药，万能的万能药。There is no universal panacea for all of life's problems. 没有万能的万能药能解决生活中的所有问题。"
+    },
+    {
+      "question": "______ saga",
+      "type": "blank",
+      "answer": "family",
+      "explanation": "传奇故事，家族传奇故事。The novel told a long family saga spanning generations. 这部小说讲述了一个跨越几代人的漫长家族传奇故事。"
+    },
+    {
+      "question": "________ apocrypha",
+      "type": "blank",
+      "answer": "biblical",
+      "explanation": "伪经，圣经伪经。Scholars debate the authenticity of biblical apocrypha. 学者们争论圣经伪经的真实性。"
+    },
+    {
+      "question": "______ phobia",
+      "type": "blank",
+      "answer": "social",
+      "explanation": "恐惧症，社交恐惧症。She struggled with social phobia in crowded places. 她在拥挤的地方与社交恐惧症作斗争。"
+    },
+    {
+      "question": "____ acrophobia",
+      "type": "blank",
+      "answer": "have",
+      "explanation": "恐高症，患有恐高症。People who have acrophobia fear heights intensely. 患有恐高症的人非常害怕高度。"
+    },
+    {
+      "question": "fascia _____",
+      "type": "blank",
+      "answer": "board",
+      "explanation": "筋膜板，筋膜板。The carpenter installed the fascia board under the roof edge. 木匠在屋顶边缘下安装了筋膜板。"
+    },
+    {
+      "question": "______ encyclopedia",
+      "type": "blank",
+      "answer": "pocket",
+      "explanation": "百科全书，袖珍百科全书。She carried a pocket encyclopedia for quick reference. 她随身携带袖珍百科全书以便快速查阅。"
+    },
+    {
+      "question": "_____ nostalgia",
+      "type": "blank",
+      "answer": "sweet",
+      "explanation": "怀旧，甜蜜的怀旧。He felt sweet nostalgia when visiting his childhood home. 他访问童年住所时感到甜蜜的怀旧。"
+    },
+    {
+      "question": "hemophilia _______",
+      "type": "blank",
+      "answer": "carrier",
+      "explanation": "血友病，血友病携带者。She was a hemophilia carrier but showed no symptoms. 她是血友病携带者，但没有表现出症状。"
+    },
+    {
+      "question": "____-__________ anemia",
+      "type": "blank",
+      "answer": "iron-deficiency",
+      "explanation": "贫血，缺铁性贫血。The doctor diagnosed iron-deficiency anemia and prescribed supplements. 医生诊断为缺铁性贫血并开了补充剂。"
+    },
+    {
+      "question": "________ mania",
+      "type": "blank",
+      "answer": "football",
+      "explanation": "狂热，足球狂热。During the World Cup, football mania swept the nation. 世界杯期间，足球狂热席卷全国。"
+    },
+    {
+      "question": "_________ megalomania",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "自大狂，政治自大狂。The dictator's political megalomania knew no bounds. 独裁者的政治自大狂没有界限。"
+    },
+    {
+      "question": "monomania ___ _____",
+      "type": "blank",
+      "answer": "for order",
+      "explanation": "偏执狂，对秩序的偏执狂。His monomania for order made him organize everything obsessively. 他对秩序的偏执狂让他强迫性地整理一切。"
+    },
+    {
+      "question": "pyromania ____",
+      "type": "blank",
+      "answer": "case",
+      "explanation": "纵火狂，纵火狂案例。The psychiatrist studied the pyromania case carefully. 精神病医生仔细研究了纵火狂案例。"
+    },
+    {
+      "question": "_______ dipsomania",
+      "type": "blank",
+      "answer": "alcohol",
+      "explanation": "酗酒狂，酒精酗酒狂。His alcohol dipsomania required professional treatment. 他的酒精酗酒狂需要专业治疗。"
+    },
+    {
+      "question": "gardenia _______",
+      "type": "blank",
+      "answer": "blossom",
+      "explanation": "栀子花，栀子花花朵。The fragrant gardenia blossom filled the garden with perfume. 芳香的栀子花花朵让花园充满香气。"
+    },
+    {
+      "question": "________ insignia",
+      "type": "blank",
+      "answer": "military",
+      "explanation": "徽章，军事徽章。The officer wore military insignia on his uniform. 军官在制服上佩戴军事徽章。"
+    },
+    {
+      "question": "______ insomnia",
+      "type": "blank",
+      "answer": "suffer",
+      "explanation": "失眠，遭受失眠。Many people suffer insomnia due to stress. 许多人因压力而遭受失眠。"
+    },
+    {
+      "question": "paranoia ________",
+      "type": "blank",
+      "answer": "disorder",
+      "explanation": "偏执症，偏执症障碍。The patient was diagnosed with paranoia disorder. 患者被诊断患有偏执症障碍。"
+    },
+    {
+      "question": "cornucopia __ _______",
+      "type": "blank",
+      "answer": "of options",
+      "explanation": "丰饶，选择的丰饶。The buffet offered a cornucopia of options for diners. 自助餐为食客提供了选择的丰饶。"
+    },
+    {
+      "question": "_____ utopia",
+      "type": "blank",
+      "answer": "ideal",
+      "explanation": "乌托邦，理想的乌托邦。The philosopher described his vision of an ideal utopia. 哲学家描述了他对理想的乌托邦的愿景。"
+    },
+    {
+      "question": "_________ myopia",
+      "type": "blank",
+      "answer": "marketing",
+      "explanation": "短视，营销短视。The company suffered from marketing myopia and lost customers. 公司遭受营销短视并失去了客户。"
+    },
+    {
+      "question": "_____ aria",
+      "type": "blank",
+      "answer": "opera",
+      "explanation": "咏叹调，歌剧咏叹调。The soprano sang a beautiful opera aria. 女高音唱了一首美妙的歌剧咏叹调。"
+    },
+    {
+      "question": "_______ bacteria",
+      "type": "blank",
+      "answer": "harmful",
+      "explanation": "细菌，有害的细菌。Washing hands removes harmful bacteria. 洗手可以去除有害的细菌。"
+    },
+    {
+      "question": "____ __ euphoria",
+      "type": "blank",
+      "answer": "wave of",
+      "explanation": "欣快感，欣快感的浪潮。The victory brought a wave of euphoria to the fans. 胜利给球迷带来了欣快感的浪潮。"
+    },
+    {
+      "question": "__________ fantasia",
+      "type": "blank",
+      "answer": "orchestral",
+      "explanation": "幻想曲，管弦乐幻想曲。The composer wrote an elaborate orchestral fantasia. 作曲家创作了一首精心制作的管弦乐幻想曲。"
+    },
+    {
+      "question": "_____ analgesia",
+      "type": "blank",
+      "answer": "local",
+      "explanation": "镇痛，局部镇痛。The dentist applied local analgesia before the procedure. 牙医在手术前进行了局部镇痛。"
+    },
+    {
+      "question": "_________ amnesia",
+      "type": "blank",
+      "answer": "temporary",
+      "explanation": "失忆症，暂时性失忆症。After the accident, he suffered temporary amnesia. 事故后，他患上了暂时性失忆症。"
+    },
+    {
+      "question": "_____ militia",
+      "type": "blank",
+      "answer": "local",
+      "explanation": "民兵，地方民兵。The local militia defended the village. 地方民兵保卫了村庄。"
+    },
+    {
+      "question": "_________ inertia",
+      "type": "blank",
+      "answer": "Newtonian",
+      "explanation": "惯性，牛顿惯性。Physics students study Newtonian inertia. 物理学生学习牛顿惯性。"
+    },
+    {
+      "question": "_______ minutia",
+      "type": "blank",
+      "answer": "trivial",
+      "explanation": "细节，琐碎的细节。Don't get lost in trivial minutia; focus on the big picture. 不要迷失在琐碎的细节中；关注大局。"
+    },
+    {
+      "question": "_______ trivia",
+      "type": "blank",
+      "answer": "useless",
+      "explanation": "琐事，无用的琐事。His head was full of useless trivia. 他的脑子里充满了无用的琐事。"
+    },
+    {
+      "question": "dyslexia _________",
+      "type": "blank",
+      "answer": "diagnosis",
+      "explanation": "阅读障碍，阅读障碍诊断。Early dyslexia diagnosis can help with treatment. 早期阅读障碍诊断可以帮助治疗。"
+    },
+    {
+      "question": "anorexia _______",
+      "type": "blank",
+      "answer": "nervosa",
+      "explanation": "厌食症，神经性厌食症。She received treatment for anorexia nervosa. 她接受了神经性厌食症的治疗。"
+    },
+    {
+      "question": "asphyxia _____",
+      "type": "blank",
+      "answer": "death",
+      "explanation": "窒息，窒息死亡。The autopsy revealed asphyxia death as the cause. 尸检显示窒息死亡是死因。"
+    },
+    {
+      "question": "___-_____ parka",
+      "type": "blank",
+      "answer": "fur-lined",
+      "explanation": "派克大衣，毛皮内衬派克大衣。She wore a warm fur-lined parka in the Arctic. 她在北极穿着温暖的毛皮内衬派克大衣。"
+    },
+    {
+      "question": "_______ sequela",
+      "type": "blank",
+      "answer": "disease",
+      "explanation": "后遗症，疾病后遗症。The disease sequela affected him for years. 疾病后遗症影响了他多年。"
+    },
+    {
+      "question": "________ gorilla",
+      "type": "blank",
+      "answer": "mountain",
+      "explanation": "大猩猩，山地大猩猩。The mountain gorilla is an endangered species. 山地大猩猩是濒危物种。"
+    },
+    {
+      "question": "parabola _____",
+      "type": "blank",
+      "answer": "curve",
+      "explanation": "抛物线，抛物线曲线。The mathematics teacher explained the parabola curve. 数学老师解释了抛物线曲线。"
+    },
+    {
+      "question": "________ formula",
+      "type": "blank",
+      "answer": "chemical",
+      "explanation": "公式，化学公式。The chemist wrote the chemical formula on the board. 化学家在黑板上写下化学公式。"
+    },
+    {
+      "question": "_______ peninsula",
+      "type": "blank",
+      "answer": "Iberian",
+      "explanation": "半岛，伊比利亚半岛。Spain and Portugal are located on the Iberian peninsula. 西班牙和葡萄牙位于伊比利亚半岛上。"
+    },
+    {
+      "question": "_______ spatula",
+      "type": "blank",
+      "answer": "kitchen",
+      "explanation": "铲子，厨房铲子。She used a kitchen spatula to flip the pancakes. 她用厨房铲子翻煎饼。"
+    },
+    {
+      "question": "______ melodrama",
+      "type": "blank",
+      "answer": "family",
+      "explanation": "情节剧，家庭情节剧。The TV show was a typical family melodrama. 这个电视节目是典型的家庭情节剧。"
+    },
+    {
+      "question": "________ panorama",
+      "type": "blank",
+      "answer": "mountain",
+      "explanation": "全景，山景全景。The lookout offered a breathtaking mountain panorama. 瞭望台提供了令人惊叹的山景全景。"
+    },
+    {
+      "question": "_____ anathema",
+      "type": "blank",
+      "answer": "utter",
+      "explanation": "诅咒，彻底的诅咒。Such behavior was utter anathema to their beliefs. 这种行为对他们的信仰来说是彻底的诅咒。"
+    },
+    {
+      "question": "_________ dogma",
+      "type": "blank",
+      "answer": "religious",
+      "explanation": "教条，宗教教条。The sect followed strict religious dogma. 这个教派遵循严格的宗教教条。"
+    },
+    {
+      "question": "asthma ______",
+      "type": "blank",
+      "answer": "attack",
+      "explanation": "哮喘，哮喘发作。She carried an inhaler in case of an asthma attack. 她随身携带吸入器以防哮喘发作。"
+    },
+    {
+      "question": "_____ dilemma",
+      "type": "blank",
+      "answer": "moral",
+      "explanation": "困境，道德困境。The doctor faced a difficult moral dilemma. 医生面临着困难的道德困境。"
+    },
+    {
+      "question": "______ comma",
+      "type": "blank",
+      "answer": "Oxford",
+      "explanation": "逗号，牛津逗号。Writers debate whether to use the Oxford comma. 作家们争论是否使用牛津逗号。"
+    },
+    {
+      "question": "____ ____ coma",
+      "type": "blank",
+      "answer": "fall into",
+      "explanation": "昏迷，陷入昏迷。The patient would fall into coma after the accident. 患者会在事故后陷入昏迷。"
+    },
+    {
+      "question": "____ aroma",
+      "type": "blank",
+      "answer": "rich",
+      "explanation": "香味，浓郁的香味。The coffee had a rich aroma that filled the room. 咖啡有浓郁的香味弥漫整个房间。"
+    },
+    {
+      "question": "_____ miasma",
+      "type": "blank",
+      "answer": "toxic",
+      "explanation": "瘴气，有毒的瘴气。A toxic miasma rose from the swamp. 有毒的瘴气从沼泽升起。"
+    },
+    {
+      "question": "________ charisma",
+      "type": "blank",
+      "answer": "magnetic",
+      "explanation": "魅力，磁性的魅力。The leader had magnetic charisma that attracted followers. 领导者有磁性的魅力吸引追随者。"
+    },
+    {
+      "question": "_______ phenomena",
+      "type": "blank",
+      "answer": "natural",
+      "explanation": "现象，自然现象。Scientists study natural phenomena to understand the world. 科学家研究自然现象以了解世界。"
+    },
+    {
+      "question": "_____ _ subpoena",
+      "type": "blank",
+      "answer": "serve a",
+      "explanation": "传票，送达传票。The court officer would serve a subpoena to the witness. 法庭官员会向证人送达传票。"
+    },
+    {
+      "question": "______ ballerina",
+      "type": "blank",
+      "answer": "ballet",
+      "explanation": "芭蕾舞女演员，芭蕾舞女演员。The graceful ballet ballerina performed beautifully. 优雅的芭蕾舞女演员表演得很美。"
+    },
+    {
+      "question": "_____ patina",
+      "type": "blank",
+      "answer": "green",
+      "explanation": "铜绿，绿色铜绿。The old bronze statue had a green patina. 旧青铜雕像有绿色铜绿。"
+    },
+    {
+      "question": "__ antenna",
+      "type": "blank",
+      "answer": "TV",
+      "explanation": "天线，电视天线。They adjusted the TV antenna to improve reception. 他们调整电视天线以改善接收。"
+    },
+    {
+      "question": "penumbra __ _____",
+      "type": "blank",
+      "answer": "of doubt",
+      "explanation": "半影，疑云的半影。A penumbra of doubt surrounded the decision. 疑云的半影笼罩着这个决定。"
+    },
+    {
+      "question": "______ tundra",
+      "type": "blank",
+      "answer": "frozen",
+      "explanation": "苔原，冰冻的苔原。The Arctic frozen tundra is a harsh environment. 北极冰冻的苔原是严酷的环境。"
+    },
+    {
+      "question": "____ chimera",
+      "type": "blank",
+      "answer": "wild",
+      "explanation": "幻想，狂野的幻想。His plan was just a wild chimera with no basis in reality. 他的计划只是没有现实基础的狂野的幻想。"
+    },
+    {
+      "question": "_ plethora __",
+      "type": "blank",
+      "answer": "a of",
+      "explanation": "过剩，过剩的。The store offered a plethora of choices. 商店提供了过剩的选择。"
+    },
+    {
+      "question": "______ flora",
+      "type": "blank",
+      "answer": "alpine",
+      "explanation": "植物群，高山植物群。Botanists study the unique alpine flora. 植物学家研究独特的高山植物群。"
+    },
+    {
+      "question": "________ orchestra",
+      "type": "blank",
+      "answer": "symphony",
+      "explanation": "管弦乐队，交响乐团。The symphony orchestra performed Beethoven. 交响乐团演奏了贝多芬的作品。"
+    },
+    {
+      "question": "bravura ___________",
+      "type": "blank",
+      "answer": "performance",
+      "explanation": "华丽的技巧，华丽的技巧表演。The pianist gave a bravura performance. 钢琴家进行了华丽的技巧表演。"
+    },
+    {
+      "question": "______ mesa",
+      "type": "blank",
+      "answer": "desert",
+      "explanation": "平顶山，沙漠平顶山。The desert mesa rose dramatically from the plain. 沙漠平顶山从平原上戏剧性地升起。"
+    },
+    {
+      "question": "_____ sonata",
+      "type": "blank",
+      "answer": "piano",
+      "explanation": "奏鸣曲，钢琴奏鸣曲。She practiced the piano sonata for hours. 她练习钢琴奏鸣曲好几个小时。"
+    },
+    {
+      "question": "____ cantata",
+      "type": "blank",
+      "answer": "Bach",
+      "explanation": "康塔塔，巴赫康塔塔。The choir performed a Bach cantata at the church. 合唱团在教堂演唱了巴赫康塔塔。"
+    },
+    {
+      "question": "_____ delta",
+      "type": "blank",
+      "answer": "river",
+      "explanation": "三角洲，河流三角洲。The Nile river delta is extremely fertile. 尼罗河河流三角洲极其肥沃。"
+    },
+    {
+      "question": "magenta _____",
+      "type": "blank",
+      "answer": "dress",
+      "explanation": "品红色，品红色连衣裙。She wore a bright magenta dress to the party. 她穿着鲜艳的品红色连衣裙去参加派对。"
+    },
+    {
+      "question": "___ __ iota",
+      "type": "blank",
+      "answer": "not an",
+      "explanation": "一点点，一点都没有。There is not an iota of truth in his story. 他的故事中一点都没有真实性。"
+    },
+    {
+      "question": "_____ quota",
+      "type": "blank",
+      "answer": "sales",
+      "explanation": "配额，销售配额。The salesman exceeded his sales quota this month. 销售员这个月超额完成了销售配额。"
+    },
+    {
+      "question": "aorta ________",
+      "type": "blank",
+      "answer": "aneurysm",
+      "explanation": "主动脉，主动脉动脉瘤。The surgeon repaired the dangerous aorta aneurysm. 外科医生修复了危险的主动脉动脉瘤。"
+    },
+    {
+      "question": "vista _____",
+      "type": "blank",
+      "answer": "point",
+      "explanation": "远景，远景点。The hiking trail offered a beautiful vista point. 徒步小径提供了美丽的远景点。"
+    },
+    {
+      "question": "_____ operetta",
+      "type": "blank",
+      "answer": "comic",
+      "explanation": "轻歌剧，喜剧轻歌剧。The theater staged a delightful comic operetta. 剧院上演了令人愉快的喜剧轻歌剧。"
+    },
+    {
+      "question": "______ lava",
+      "type": "blank",
+      "answer": "molten",
+      "explanation": "熔岩，熔融的熔岩。Molten lava flowed down the volcano's sides. 熔融的熔岩从火山的侧面流下。"
+    },
+    {
+      "question": "_______ nova",
+      "type": "blank",
+      "answer": "stellar",
+      "explanation": "新星，恒星新星。Astronomers observed a bright stellar nova. 天文学家观察到一颗明亮的恒星新星。"
+    },
+    {
+      "question": "_______ supernova",
+      "type": "blank",
+      "answer": "stellar",
+      "explanation": "超新星，恒星超新星。The stellar supernova was visible from Earth. 恒星超新星从地球上可见。"
+    },
+    {
+      "question": "________ larva",
+      "type": "blank",
+      "answer": "mosquito",
+      "explanation": "幼虫，蚊子幼虫。The mosquito larva develops in standing water. 蚊子幼虫在死水中发育。"
+    },
+    {
+      "question": "____ stanza",
+      "type": "blank",
+      "answer": "poem",
+      "explanation": "诗节，诗歌诗节。The poem stanza contained four lines. 诗歌诗节包含四行。"
+    },
+    {
+      "question": "_____ piazza",
+      "type": "blank",
+      "answer": "sunny",
+      "explanation": "广场，阳光明媚的广场。Tourists gathered in the sunny piazza. 游客们聚集在阳光明媚的广场上。"
+    },
+    {
+      "question": "scab _____",
+      "type": "blank",
+      "answer": "wound",
+      "explanation": "痂，伤口痂。Don't pick at the scab wound or it will scar. 不要抠伤口痂，否则会留疤。"
+    },
+    {
+      "question": "_____ slab",
+      "type": "blank",
+      "answer": "stone",
+      "explanation": "厚板，石头厚板。The workers lifted the heavy stone slab. 工人们抬起沉重的石头厚板。"
+    },
+    {
+      "question": "drab _____",
+      "type": "blank",
+      "answer": "color",
+      "explanation": "单调的，单调的颜色。The room was painted in drab color. 房间涂着单调的颜色。"
+    },
+    {
+      "question": "stab _____",
+      "type": "blank",
+      "answer": "wound",
+      "explanation": "刺伤，刺伤伤口。The victim suffered a stab wound to the chest. 受害者胸部遭受刺伤伤口。"
+    },
+    {
+      "question": "adlib ______",
+      "type": "blank",
+      "answer": "speech",
+      "explanation": "即兴，即兴演讲。The speaker gave an impressive adlib speech. 演讲者进行了令人印象深刻的即兴演讲。"
+    },
+    {
+      "question": "glib ______",
+      "type": "blank",
+      "answer": "answer",
+      "explanation": "油嘴滑舌的，油嘴滑舌的回答。His glib answer didn't convince anyone. 他油嘴滑舌的回答没有说服任何人。"
+    },
+    {
+      "question": "___ nib",
+      "type": "blank",
+      "answer": "pen",
+      "explanation": "笔尖，钢笔笔尖。The fountain pen nib needed to be replaced. 钢笔笔尖需要更换。"
+    },
+    {
+      "question": "____ jamb",
+      "type": "blank",
+      "answer": "door",
+      "explanation": "门框，门框。The carpenter measured the door jamb carefully. 木匠仔细测量了门框。"
+    },
+    {
+      "question": "_____ limb",
+      "type": "blank",
+      "answer": "upper",
+      "explanation": "肢体，上肢。The physical therapist examined the upper limb. 物理治疗师检查了上肢。"
+    },
+    {
+      "question": "____ aplomb",
+      "type": "blank",
+      "answer": "cool",
+      "explanation": "沉着，冷静的沉着。She handled the crisis with cool aplomb. 她以冷静的沉着处理了危机。"
+    },
+    {
+      "question": "succumb __ _______",
+      "type": "blank",
+      "answer": "to illness",
+      "explanation": "屈服，屈服于疾病。The elderly man would succumb to illness after a long battle. 老人在长期斗争后会屈服于疾病。"
+    },
+    {
+      "question": "numb _______",
+      "type": "blank",
+      "answer": "fingers",
+      "explanation": "麻木的，麻木的手指。The cold made her numb fingers unable to move. 寒冷让她麻木的手指无法移动。"
+    },
+    {
+      "question": "____ cob",
+      "type": "blank",
+      "answer": "corn",
+      "explanation": "玉米棒，玉米棒。They roasted corn cob over the fire. 他们在火上烤玉米棒。"
+    },
+    {
+      "question": "snob ______",
+      "type": "blank",
+      "answer": "appeal",
+      "explanation": "势利，势利吸引力。The luxury brand has snob appeal. 这个奢侈品牌有势利吸引力。"
+    },
+    {
+      "question": "barb __ _______",
+      "type": "blank",
+      "answer": "of sarcasm",
+      "explanation": "倒钩，讽刺的倒钩。His comment had a sharp barb of sarcasm. 他的评论有尖锐的讽刺的倒钩。"
+    },
+{
+      "question": "superb ___________",
+      "type": "blank",
+      "answer": "performance",
+      "explanation": "极好的，极好的表演。The orchestra gave a superb performance of Beethoven's symphony. 管弦乐队对贝多芬交响曲进行了极好的表演。"
+    },
+    {
+      "question": "curb _________",
+      "type": "blank",
+      "answer": "inflation",
+      "explanation": "抑制，抑制通货膨胀。The government introduced measures to curb inflation. 政府采取措施抑制通货膨胀。"
+    },
+    {
+      "question": "____ blurb",
+      "type": "blank",
+      "answer": "book",
+      "explanation": "简介，书籍简介。The book blurb on the back cover was intriguing. 封底的书籍简介很吸引人。"
+    },
+    {
+      "question": "____ cub",
+      "type": "blank",
+      "answer": "lion",
+      "explanation": "幼兽，狮子幼兽。The lion cub played with its mother. 狮子幼兽和妈妈玩耍。"
+    },
+    {
+      "question": "snub _______",
+      "type": "blank",
+      "answer": "attempt",
+      "explanation": "冷落，冷落尝试。His snub attempt to ignore her was obvious. 他冷落尝试忽视她是显而易见的。"
+    },
+    {
+      "question": "pharisaic _________",
+      "type": "blank",
+      "answer": "hypocrisy",
+      "explanation": "伪善的，伪善的虚伪。The politician's pharisaic hypocrisy was exposed. 政客伪善的虚伪被揭露了。"
+    },
+    {
+      "question": "mosaic _______",
+      "type": "blank",
+      "answer": "pattern",
+      "explanation": "马赛克，马赛克图案。The ancient mosaic pattern adorned the temple floor. 古老的马赛克图案装饰着寺庙地板。"
+    },
+    {
+      "question": "prosaic _____",
+      "type": "blank",
+      "answer": "style",
+      "explanation": "平淡的，平淡的风格。His prosaic style of writing lacked creativity. 他平淡的风格缺乏创造力。"
+    },
+    {
+      "question": "anaerobic _________",
+      "type": "blank",
+      "answer": "digestion",
+      "explanation": "厌氧的，厌氧的消化。The bacteria perform anaerobic digestion. 细菌进行厌氧的消化。"
+    },
+    {
+      "question": "acerbic _______",
+      "type": "blank",
+      "answer": "comment",
+      "explanation": "尖刻的，尖刻的评论。Her acerbic comment silenced the room. 她尖刻的评论让房间安静下来。"
+    },
+    {
+      "question": "cherubic ______",
+      "type": "blank",
+      "answer": "cheeks",
+      "explanation": "天使般的，天使般的脸颊。The baby had adorable cherubic cheeks. 婴儿有可爱的天使般的脸颊。"
+    },
+    {
+      "question": "nomadic _____",
+      "type": "blank",
+      "answer": "tribe",
+      "explanation": "游牧的，游牧的部落。The nomadic tribe moved with the seasons. 游牧的部落随季节迁徙。"
+    },
+    {
+      "question": "sporadic _____",
+      "type": "blank",
+      "answer": "cases",
+      "explanation": "零星的，零星的病例。There were sporadic cases of the disease reported. 报告了零星的病例。"
+    },
+    {
+      "question": "encyclopedic _________",
+      "type": "blank",
+      "answer": "knowledge",
+      "explanation": "百科全书式的，百科全书式的知识。He possessed encyclopedic knowledge of history. 他拥有历史的百科全书式的知识。"
+    },
+    {
+      "question": "spasmodic _____",
+      "type": "blank",
+      "answer": "cough",
+      "explanation": "痉挛性的，痉挛性的咳嗽。The patient had a spasmodic cough. 患者有痉挛性的咳嗽。"
+    },
+    {
+      "question": "episodic ______",
+      "type": "blank",
+      "answer": "memory",
+      "explanation": "情节性的，情节性的记忆。Episodic memory stores personal experiences. 情节性的记忆储存个人经历。"
+    },
+    {
+      "question": "prolific ______",
+      "type": "blank",
+      "answer": "writer",
+      "explanation": "多产的，多产的作家。She was a prolific writer who published dozens of books. 她是一位多产的作家，出版了几十本书。"
+    },
+    {
+      "question": "horrific _____",
+      "type": "blank",
+      "answer": "scene",
+      "explanation": "可怕的，可怕的场景。The accident left a horrific scene. 事故留下了可怕的场景。"
+    },
+    {
+      "question": "beatific _____",
+      "type": "blank",
+      "answer": "smile",
+      "explanation": "幸福的，幸福的微笑。She had a beatific smile of pure joy. 她有纯粹喜悦的幸福的微笑。"
+    },
+    {
+      "question": "synergic ______",
+      "type": "blank",
+      "answer": "effect",
+      "explanation": "协同的，协同的效果。The drugs had a synergic effect when combined. 这些药物结合时有协同的效果。"
+    },
+    {
+      "question": "chic ______",
+      "type": "blank",
+      "answer": "outfit",
+      "explanation": "时髦的，时髦的装束。She wore a chic outfit to the gala. 她穿着时髦的装束参加晚会。"
+    },
+    {
+      "question": "seraphic _____",
+      "type": "blank",
+      "answer": "smile",
+      "explanation": "天使般的，天使般的微笑。The child's seraphic smile melted hearts. 孩子天使般的微笑融化了人们的心。"
+    },
+    {
+      "question": "graphic ________",
+      "type": "blank",
+      "answer": "designer",
+      "explanation": "图形的，平面设计师。The graphic designer created the company logo. 平面设计师创作了公司标志。"
+    },
+    {
+      "question": "hieroglyphic ______",
+      "type": "blank",
+      "answer": "script",
+      "explanation": "象形文字的，象形文字的文字。Scholars decoded the ancient hieroglyphic script. 学者们破译了古老的象形文字的文字。"
+    },
+    {
+      "question": "paleolithic ___",
+      "type": "blank",
+      "answer": "era",
+      "explanation": "旧石器时代的，旧石器时代的时代。Cave paintings date from the paleolithic era. 洞穴壁画可追溯到旧石器时代的时代。"
+    },
+    {
+      "question": "neolithic ____",
+      "type": "blank",
+      "answer": "tool",
+      "explanation": "新石器时代的，新石器时代的工具。Archaeologists found a neolithic tool at the site. 考古学家在遗址发现了新石器时代的工具。"
+    },
+    {
+      "question": "cephalic _____",
+      "type": "blank",
+      "answer": "index",
+      "explanation": "头部的，头部指数。Anthropologists measure the cephalic index of skulls. 人类学家测量头骨的头部指数。"
+    },
+    {
+      "question": "diabolic ______",
+      "type": "blank",
+      "answer": "scheme",
+      "explanation": "恶魔般的，恶魔般的阴谋。The villain hatched a diabolic scheme. 恶棍策划了恶魔般的阴谋。"
+    },
+    {
+      "question": "bucolic _________",
+      "type": "blank",
+      "answer": "landscape",
+      "explanation": "田园的，田园的风景。The painting depicted a peaceful bucolic landscape. 这幅画描绘了宁静的田园的风景。"
+    },
+    {
+      "question": "catholic ______",
+      "type": "blank",
+      "answer": "tastes",
+      "explanation": "广泛的，广泛的品味。He had catholic tastes in music. 他在音乐方面有广泛的品味。"
+    },
+    {
+      "question": "vitriolic ______",
+      "type": "blank",
+      "answer": "attack",
+      "explanation": "刻薄的，刻薄的攻击。The critic launched a vitriolic attack on the film. 评论家对这部电影发起了刻薄的攻击。"
+    },
+    {
+      "question": "ceramic ____",
+      "type": "blank",
+      "answer": "tile",
+      "explanation": "陶瓷的，陶瓷的瓷砖。The bathroom floor was covered with ceramic tile. 浴室地板铺着陶瓷的瓷砖。"
+    },
+    {
+      "question": "panoramic ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "全景的，全景的视野。The tower offered a panoramic view of the city. 塔楼提供了城市的全景的视野。"
+    },
+    {
+      "question": "___ epidemic",
+      "type": "blank",
+      "answer": "flu",
+      "explanation": "流行病，流感流行病。The flu epidemic affected thousands of people. 流感流行病影响了成千上万的人。"
+    },
+    {
+      "question": "______ pandemic",
+      "type": "blank",
+      "answer": "global",
+      "explanation": "大流行病，全球大流行病。The global pandemic changed the world. 全球大流行病改变了世界。"
+    },
+    {
+      "question": "endemic _______",
+      "type": "blank",
+      "answer": "disease",
+      "explanation": "地方性的，地方性的疾病。Malaria is an endemic disease in tropical regions. 疟疾是热带地区地方性的疾病。"
+    },
+    {
+      "question": "______ polemic",
+      "type": "blank",
+      "answer": "heated",
+      "explanation": "论战，激烈的论战。The debate turned into a heated polemic. 辩论变成了激烈的论战。"
+    },
+    {
+      "question": "anemic _______",
+      "type": "blank",
+      "answer": "economy",
+      "explanation": "贫血的，贫血的经济。The country suffered from an anemic economy. 这个国家遭受贫血的经济。"
+    },
+    {
+      "question": "arrhythmic _________",
+      "type": "blank",
+      "answer": "heartbeat",
+      "explanation": "心律不齐的，心律不齐的心跳。The patient had an arrhythmic heartbeat. 患者有心律不齐的心跳。"
+    },
+    {
+      "question": "comic _____",
+      "type": "blank",
+      "answer": "strip",
+      "explanation": "喜剧的，连环漫画。She enjoyed reading the Sunday comic strip. 她喜欢阅读周日的连环漫画。"
+    },
+    {
+      "question": "gnomic ______",
+      "type": "blank",
+      "answer": "saying",
+      "explanation": "格言式的，格言式的格言。The philosopher offered a gnomic saying. 哲学家提供了格言式的格言。"
+    },
+    {
+      "question": "hypodermic ______",
+      "type": "blank",
+      "answer": "needle",
+      "explanation": "皮下注射的，皮下注射的针头。The nurse prepared the hypodermic needle. 护士准备了皮下注射的针头。"
+    },
+    {
+      "question": "seismic ________",
+      "type": "blank",
+      "answer": "activity",
+      "explanation": "地震的，地震的活动。Scientists monitor seismic activity near volcanoes. 科学家监测火山附近的地震的活动。"
+    },
+    {
+      "question": "cosmic ____",
+      "type": "blank",
+      "answer": "rays",
+      "explanation": "宇宙的，宇宙的射线。Cosmic rays bombard the Earth constantly. 宇宙的射线不断轰击地球。"
+    },
+    {
+      "question": "satanic ____",
+      "type": "blank",
+      "answer": "cult",
+      "explanation": "撒旦的，撒旦的邪教。The police investigated the satanic cult. 警方调查了撒旦的邪教。"
+    },
+    {
+      "question": "titanic ________",
+      "type": "blank",
+      "answer": "struggle",
+      "explanation": "巨大的，巨大的斗争。It was a titanic struggle between good and evil. 这是善与恶之间巨大的斗争。"
+    },
+    {
+      "question": "cryogenic _______",
+      "type": "blank",
+      "answer": "storage",
+      "explanation": "低温的，低温的储存。The lab used cryogenic storage for samples. 实验室使用低温的储存保存样本。"
+    },
+    {
+      "question": "eugenic ______",
+      "type": "blank",
+      "answer": "policy",
+      "explanation": "优生的，优生的政策。The eugenic policy was controversial. 优生的政策有争议。"
+    },
+    {
+      "question": "ethnic ________",
+      "type": "blank",
+      "answer": "minority",
+      "explanation": "民族的，少数民族。The ethnic minority preserved their traditions. 少数民族保留了他们的传统。"
+    },
+    {
+      "question": "laconic _____",
+      "type": "blank",
+      "answer": "reply",
+      "explanation": "简洁的，简洁的回答。His laconic reply was just one word. 他简洁的回答只有一个字。"
+    },
+    {
+      "question": "hedonic ________",
+      "type": "blank",
+      "answer": "pleasure",
+      "explanation": "享乐的，享乐的快乐。The philosophy focused on hedonic pleasure. 这种哲学专注于享乐的快乐。"
+    },
+    {
+      "question": "histrionic _______",
+      "type": "blank",
+      "answer": "display",
+      "explanation": "做作的，做作的表演。Her histrionic display was embarrassing. 她做作的表演令人尴尬。"
+    },
+    {
+      "question": "chronic _______",
+      "type": "blank",
+      "answer": "disease",
+      "explanation": "慢性的，慢性的疾病。Diabetes is a chronic disease requiring management. 糖尿病是需要管理的慢性的疾病。"
+    },
+    {
+      "question": "platonic ____",
+      "type": "blank",
+      "answer": "love",
+      "explanation": "柏拉图式的，柏拉图式的爱。They maintained a platonic love relationship. 他们保持着柏拉图式的爱情关系。"
+    },
+    {
+      "question": "embryonic _____",
+      "type": "blank",
+      "answer": "stage",
+      "explanation": "胚胎的，胚胎的阶段。The project was still in its embryonic stage. 该项目仍处于胚胎的阶段。"
+    },
+    {
+      "question": "runic ___________",
+      "type": "blank",
+      "answer": "inscription",
+      "explanation": "符文的，符文的铭文。The stone bore an ancient runic inscription. 石头上有古老的符文的铭文。"
+    },
+    {
+      "question": "cynic's ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "愤世嫉俗者的，愤世嫉俗者的观点。The cynic's view was pessimistic. 愤世嫉俗者的观点是悲观的。"
+    },
+    {
+      "question": "kaleidoscopic ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "万花筒般的，万花筒般的视野。The city offered a kaleidoscopic view of cultures. 这座城市提供了文化的万花筒般的视野。"
+    },
+    {
+      "question": "microscopic ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "微观的，微观的视野。The microscope provided a microscopic view of cells. 显微镜提供了细胞的微观的视野。"
+    },
+    {
+      "question": "philanthropic ____",
+      "type": "blank",
+      "answer": "work",
+      "explanation": "慈善的，慈善的工作。She devoted her life to philanthropic work. 她一生致力于慈善的工作。"
+    },
+    {
+      "question": "myopic ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "短视的，短视的观点。His myopic view ignored long-term consequences. 他短视的观点忽略了长期后果。"
+    },
+    {
+      "question": "choleric ______",
+      "type": "blank",
+      "answer": "temper",
+      "explanation": "易怒的，易怒的脾气。The boss had a choleric temper. 老板有易怒的脾气。"
+    },
+    {
+      "question": "generic _____",
+      "type": "blank",
+      "answer": "brand",
+      "explanation": "通用的，通用的品牌。The generic brand was much cheaper. 通用的品牌便宜得多。"
+    },
+    {
+      "question": "esoteric _________",
+      "type": "blank",
+      "answer": "knowledge",
+      "explanation": "深奥的，深奥的知识。Only experts understood the esoteric knowledge. 只有专家理解深奥的知识。"
+    },
+    {
+      "question": "meteoric ____",
+      "type": "blank",
+      "answer": "rise",
+      "explanation": "流星般的，流星般的崛起。The young star had a meteoric rise to fame. 年轻明星流星般的崛起成名。"
+    },
+    {
+      "question": "_____ rhetoric",
+      "type": "blank",
+      "answer": "empty",
+      "explanation": "修辞，空洞的修辞。The politician's speech was full of empty rhetoric. 政客的演讲充满了空洞的修辞。"
+    },
+    {
+      "question": "prehistoric ____",
+      "type": "blank",
+      "answer": "cave",
+      "explanation": "史前的，史前的洞穴。Artifacts were found in the prehistoric cave. 在史前的洞穴中发现了文物。"
+    },
+    {
+      "question": "asymmetric ______",
+      "type": "blank",
+      "answer": "design",
+      "explanation": "不对称的，不对称的设计。The building had an asymmetric design. 这座建筑有不对称的设计。"
+    },
+    {
+      "question": "concentric _______",
+      "type": "blank",
+      "answer": "circles",
+      "explanation": "同心的，同心的圆圈。The target had concentric circles. 目标有同心的圆圈。"
+    },
+    {
+      "question": "egocentric ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "自我中心的，自我中心的观点。His egocentric view ignored others' needs. 他自我中心的观点忽视了他人的需求。"
+    },
+    {
+      "question": "gastric _____",
+      "type": "blank",
+      "answer": "ulcer",
+      "explanation": "胃的，胃溃疡。The patient was treated for a gastric ulcer. 患者接受了胃溃疡的治疗。"
+    },
+    {
+      "question": "_____ panegyric",
+      "type": "blank",
+      "answer": "lofty",
+      "explanation": "颂词，崇高的颂词。The speaker delivered a lofty panegyric. 演讲者发表了崇高的颂词。"
+    },
+    {
+      "question": "____ analgesic",
+      "type": "blank",
+      "answer": "oral",
+      "explanation": "止痛的，口服止痛药。The doctor prescribed an oral analgesic. 医生开了口服止痛药。"
+    },
+    {
+      "question": "forensic ________",
+      "type": "blank",
+      "answer": "evidence",
+      "explanation": "法医的，法医的证据。The forensic evidence proved his innocence. 法医的证据证明了他的清白。"
+    },
+    {
+      "question": "extrinsic ______",
+      "type": "blank",
+      "answer": "factor",
+      "explanation": "外在的，外在的因素。An extrinsic factor influenced the outcome. 外在的因素影响了结果。"
+    },
+    {
+      "question": "emphatic ______",
+      "type": "blank",
+      "answer": "denial",
+      "explanation": "强调的，强调的否认。He issued an emphatic denial of the charges. 他发表了对指控的强调的否认。"
+    },
+    {
+      "question": "schematic _______",
+      "type": "blank",
+      "answer": "diagram",
+      "explanation": "示意的，示意的图表。The engineer drew a schematic diagram. 工程师绘制了示意的图表。"
+    },
+    {
+      "question": "thematic _____",
+      "type": "blank",
+      "answer": "focus",
+      "explanation": "主题的，主题的焦点。The essay lacked a clear thematic focus. 这篇文章缺乏明确的主题的焦点。"
+    },
+    {
+      "question": "emblematic _______",
+      "type": "blank",
+      "answer": "gesture",
+      "explanation": "象征性的，象征性的姿态。The handshake was an emblematic gesture of peace. 握手是和平的象征性的姿态。"
+    },
+    {
+      "question": "pragmatic ________",
+      "type": "blank",
+      "answer": "approach",
+      "explanation": "实用的，实用的方法。She took a pragmatic approach to problem-solving. 她采取了实用的方法解决问题。"
+    },
+    {
+      "question": "phlegmatic ___________",
+      "type": "blank",
+      "answer": "temperament",
+      "explanation": "冷静的，冷静的气质。His phlegmatic temperament kept him calm. 他冷静的气质让他保持冷静。"
+    },
+    {
+      "question": "astigmatic ____",
+      "type": "blank",
+      "answer": "lens",
+      "explanation": "散光的，散光的镜片。The optician prescribed an astigmatic lens. 验光师开了散光的镜片。"
+    },
+    {
+      "question": "diplomatic _________",
+      "type": "blank",
+      "answer": "relations",
+      "explanation": "外交的，外交的关系。The countries maintained diplomatic relations. 这些国家保持着外交的关系。"
+    },
+    {
+      "question": "aromatic _____",
+      "type": "blank",
+      "answer": "herbs",
+      "explanation": "芳香的，芳香的草药。The chef used aromatic herbs in the dish. 厨师在菜肴中使用了芳香的草药。"
+    },
+    {
+      "question": "chromatic _____",
+      "type": "blank",
+      "answer": "scale",
+      "explanation": "半音阶的，半音阶。The musician practiced the chromatic scale. 音乐家练习半音阶。"
+    },
+    {
+      "question": "achromatic ____",
+      "type": "blank",
+      "answer": "lens",
+      "explanation": "消色差的，消色差的镜片。The telescope used an achromatic lens. 望远镜使用了消色差的镜片。"
+    },
+    {
+      "question": "monochromatic _____",
+      "type": "blank",
+      "answer": "light",
+      "explanation": "单色的，单色的光。The laser produced monochromatic light. 激光产生单色的光。"
+    },
+    {
+      "question": "somatic _____",
+      "type": "blank",
+      "answer": "cells",
+      "explanation": "体细胞的，体细胞的细胞。Somatic cells contain all the organism's DNA. 体细胞的细胞包含生物体的所有DNA。"
+    },
+    {
+      "question": "numismatic __________",
+      "type": "blank",
+      "answer": "collection",
+      "explanation": "钱币的，钱币的收藏。The museum displayed a numismatic collection. 博物馆展出了钱币的收藏。"
+    },
+    {
+      "question": "_________ fanatic",
+      "type": "blank",
+      "answer": "religious",
+      "explanation": "狂热者，宗教狂热者。The religious fanatic preached on the street. 宗教狂热者在街上布道。"
+    },
+    {
+      "question": "static ___________",
+      "type": "blank",
+      "answer": "electricity",
+      "explanation": "静电的，静电。Static electricity caused the clothes to cling. 静电让衣服粘在一起。"
+    },
+    {
+      "question": "aquatic ______",
+      "type": "blank",
+      "answer": "plants",
+      "explanation": "水生的，水生的植物。Aquatic plants grow in the pond. 水生的植物在池塘里生长。"
+    },
+    {
+      "question": "didactic ____",
+      "type": "blank",
+      "answer": "tale",
+      "explanation": "说教的，说教的故事。The didactic tale taught a moral lesson. 说教的故事传授了道德教训。"
+    },
+    {
+      "question": "lactic ____",
+      "type": "blank",
+      "answer": "acid",
+      "explanation": "乳酸的，乳酸。Lactic acid builds up in muscles during exercise. 运动时乳酸在肌肉中积累。"
+    },
+    {
+      "question": "_______ tactic",
+      "type": "blank",
+      "answer": "winning",
+      "explanation": "策略，获胜的策略。They devised a winning tactic for the game. 他们为比赛设计了获胜的策略。"
+    },
+    {
+      "question": "hectic ________",
+      "type": "blank",
+      "answer": "schedule",
+      "explanation": "忙碌的，忙碌的日程。She managed a hectic schedule. 她应付着忙碌的日程。"
+    },
+    {
+      "question": "eclectic _____",
+      "type": "blank",
+      "answer": "style",
+      "explanation": "折衷的，折衷的风格。The artist had an eclectic style. 这位艺术家有折衷的风格。"
+    },
+    {
+      "question": "arctic _______",
+      "type": "blank",
+      "answer": "climate",
+      "explanation": "北极的，北极的气候。The arctic climate is harsh and cold. 北极的气候严酷而寒冷。"
+    },
+    {
+      "question": "antarctic ___",
+      "type": "blank",
+      "answer": "ice",
+      "explanation": "南极的，南极的冰。The antarctic ice sheet is melting. 南极的冰盖正在融化。"
+    },
+    {
+      "question": "ascetic _________",
+      "type": "blank",
+      "answer": "lifestyle",
+      "explanation": "禁欲的，禁欲的生活方式。The monk lived an ascetic lifestyle. 僧侣过着禁欲的生活方式。"
+    },
+{
+      "question": "bathetic ______",
+      "type": "blank",
+      "answer": "ending",
+      "explanation": "平淡的，平淡的结局。The grand epic had a disappointing bathetic ending that left audiences unsatisfied. 宏大的史诗有一个令人失望的平淡的结局，让观众不满意。"
+    },
+    {
+      "question": "pathetic _____",
+      "type": "blank",
+      "answer": "sight",
+      "explanation": "可怜的，可怜的景象。The abandoned dog was a pathetic sight shivering in the rain. 被遗弃的狗在雨中颤抖是一个可怜的景象。"
+    },
+    {
+      "question": "aesthetic _____",
+      "type": "blank",
+      "answer": "taste",
+      "explanation": "美学的，美学的品味。The interior designer had impeccable aesthetic taste. 室内设计师有无可挑剔的美学的品味。"
+    },
+    {
+      "question": "_____ anesthetic",
+      "type": "blank",
+      "answer": "local",
+      "explanation": "麻醉剂，局部麻醉剂。The dentist administered a local anesthetic before the procedure. 牙医在手术前施用了局部麻醉剂。"
+    },
+    {
+      "question": "hermetic ____",
+      "type": "blank",
+      "answer": "seal",
+      "explanation": "密封的，密封的封条。The jar had a hermetic seal to preserve freshness. 罐子有密封的封条以保持新鲜。"
+    },
+    {
+      "question": "genetic ______",
+      "type": "blank",
+      "answer": "marker",
+      "explanation": "遗传的，遗传的标记。Scientists identified a genetic marker for the disease. 科学家发现了该疾病的遗传的标记。"
+    },
+    {
+      "question": "frenetic ____",
+      "type": "blank",
+      "answer": "pace",
+      "explanation": "狂热的，狂热的节奏。The city moved at a frenetic pace. 这座城市以狂热的节奏运转。"
+    },
+    {
+      "question": "kinetic ______",
+      "type": "blank",
+      "answer": "energy",
+      "explanation": "动能的，动能。The moving car possessed kinetic energy. 行驶的汽车具有动能。"
+    },
+    {
+      "question": "phonetic ______",
+      "type": "blank",
+      "answer": "symbol",
+      "explanation": "语音的，语音的符号。Linguists use phonetic symbol to represent sounds. 语言学家使用语音的符号来表示声音。"
+    },
+    {
+      "question": "_________ heretic",
+      "type": "blank",
+      "answer": "religious",
+      "explanation": "异教徒，宗教异教徒。The religious heretic was excommunicated from the church. 宗教异教徒被逐出教会。"
+    },
+    {
+      "question": "peripatetic _______",
+      "type": "blank",
+      "answer": "teacher",
+      "explanation": "巡回的，巡回的教师。The peripatetic teacher traveled between schools. 巡回的教师在学校之间奔波。"
+    },
+    {
+      "question": "impolitic ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "不明智的，不明智的评论。His impolitic remark offended many voters. 他不明智的评论冒犯了许多选民。"
+    },
+    {
+      "question": "sybaritic _________",
+      "type": "blank",
+      "answer": "lifestyle",
+      "explanation": "奢华享乐的，奢华享乐的生活方式。The millionaire lived a sybaritic lifestyle. 百万富翁过着奢华享乐的生活方式。"
+    },
+    {
+      "question": "____ critic",
+      "type": "blank",
+      "answer": "film",
+      "explanation": "评论家，电影评论家。The film critic gave the movie a poor review. 电影评论家给这部电影差评。"
+    },
+    {
+      "question": "authentic ________",
+      "type": "blank",
+      "answer": "document",
+      "explanation": "真实的，真实的文件。The historian verified the authentic document. 历史学家核实了真实的文件。"
+    },
+    {
+      "question": "narcotic ____",
+      "type": "blank",
+      "answer": "drug",
+      "explanation": "麻醉的，麻醉药物。The patient was prescribed a narcotic drug for pain. 患者被开了麻醉药物止痛。"
+    },
+    {
+      "question": "demotic ______",
+      "type": "blank",
+      "answer": "script",
+      "explanation": "通俗的，通俗的文字。Ancient Egyptians used demotic script for everyday writing. 古埃及人使用通俗的文字进行日常书写。"
+    },
+    {
+      "question": "hypnotic ______",
+      "type": "blank",
+      "answer": "rhythm",
+      "explanation": "催眠的，催眠的节奏。The music had a hypnotic rhythm that mesmerized listeners. 音乐有催眠的节奏让听众着迷。"
+    },
+    {
+      "question": "despotic _____",
+      "type": "blank",
+      "answer": "ruler",
+      "explanation": "专制的，专制的统治者。The despotic ruler suppressed all dissent. 专制的统治者镇压了所有异议。"
+    },
+    {
+      "question": "exotic ______",
+      "type": "blank",
+      "answer": "flower",
+      "explanation": "异国的，异国的花朵。The garden featured rare exotic flower from the tropics. 花园里有来自热带的稀有异国的花朵。"
+    },
+    {
+      "question": "quixotic ______",
+      "type": "blank",
+      "answer": "scheme",
+      "explanation": "不切实际的，不切实际的计划。His quixotic scheme to save the world was admirable but impractical. 他拯救世界的不切实际的计划令人钦佩但不实际。"
+    },
+    {
+      "question": "peptic _____",
+      "type": "blank",
+      "answer": "ulcer",
+      "explanation": "消化性的，消化性溃疡。Stress can contribute to peptic ulcer formation. 压力会导致消化性溃疡形成。"
+    },
+    {
+      "question": "dyspeptic _________",
+      "type": "blank",
+      "answer": "complaint",
+      "explanation": "消化不良的，消化不良的抱怨。The patient visited the doctor with a dyspeptic complaint. 患者带着消化不良的抱怨去看医生。"
+    },
+    {
+      "question": "septic ____",
+      "type": "blank",
+      "answer": "tank",
+      "explanation": "化粪池的，化粪池。The rural property had a septic tank for waste disposal. 农村房产有一个化粪池用于废物处理。"
+    },
+    {
+      "question": "aseptic _________",
+      "type": "blank",
+      "answer": "technique",
+      "explanation": "无菌的，无菌的技术。Surgeons use aseptic technique to prevent infection. 外科医生使用无菌的技术预防感染。"
+    },
+    {
+      "question": "antiseptic ____",
+      "type": "blank",
+      "answer": "wipe",
+      "explanation": "消毒的，消毒的湿巾。The nurse cleaned the wound with an antiseptic wipe. 护士用消毒的湿巾清洁伤口。"
+    },
+    {
+      "question": "synoptic _____",
+      "type": "blank",
+      "answer": "chart",
+      "explanation": "概要的，概要的图表。Meteorologists study the synoptic chart for weather patterns. 气象学家研究天气模式的概要的图表。"
+    },
+    {
+      "question": "apocalyptic ______",
+      "type": "blank",
+      "answer": "vision",
+      "explanation": "启示录的，启示录的景象。The prophet described an apocalyptic vision of the end times. 先知描述了末日的启示录的景象。"
+    },
+    {
+      "question": "cryptic _______",
+      "type": "blank",
+      "answer": "message",
+      "explanation": "神秘的，神秘的信息。The spy left a cryptic message that needed decoding. 间谍留下了需要解码的神秘的信息。"
+    },
+    {
+      "question": "bombastic ______",
+      "type": "blank",
+      "answer": "speech",
+      "explanation": "夸大的，夸大的演讲。The politician's bombastic speech was full of empty promises. 政客夸大的演讲充满了空洞的承诺。"
+    },
+    {
+      "question": "sarcastic ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "讽刺的，讽刺的评论。His sarcastic remark hurt her feelings. 他讽刺的评论伤害了她的感情。"
+    },
+    {
+      "question": "iconoclastic _______",
+      "type": "blank",
+      "answer": "thinker",
+      "explanation": "打破传统的，打破传统的思想家。The iconoclastic thinker challenged conventional wisdom. 打破传统的思想家挑战传统智慧。"
+    },
+    {
+      "question": "pleonastic ______",
+      "type": "blank",
+      "answer": "phrase",
+      "explanation": "冗余的，冗余的短语。'Free gift' is a pleonastic phrase. '免费礼物'是一个冗余的短语。"
+    },
+    {
+      "question": "periphrastic _____",
+      "type": "blank",
+      "answer": "style",
+      "explanation": "迂回的，迂回的风格。The writer's periphrastic style was difficult to follow. 作家迂回的风格难以理解。"
+    },
+    {
+      "question": "majestic _________",
+      "type": "blank",
+      "answer": "mountains",
+      "explanation": "雄伟的，雄伟的山脉。The majestic mountains towered over the valley. 雄伟的山脉矗立在山谷之上。"
+    },
+    {
+      "question": "sadistic ______",
+      "type": "blank",
+      "answer": "streak",
+      "explanation": "虐待狂的，虐待狂的倾向。The villain had a cruel sadistic streak. 恶棍有残忍的虐待狂的倾向。"
+    },
+    {
+      "question": "eulogistic ______",
+      "type": "blank",
+      "answer": "speech",
+      "explanation": "颂扬的，颂扬的演讲。The funeral featured a eulogistic speech about the deceased. 葬礼上有关于逝者的颂扬的演讲。"
+    },
+    {
+      "question": "moralistic ____",
+      "type": "blank",
+      "answer": "tone",
+      "explanation": "说教的，说教的语气。The article had an annoying moralistic tone. 这篇文章有令人讨厌的说教的语气。"
+    },
+    {
+      "question": "chauvinistic ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "沙文主义的，沙文主义的观点。His chauvinistic view offended many colleagues. 他沙文主义的观点冒犯了许多同事。"
+    },
+    {
+      "question": "anachronistic ___",
+      "type": "blank",
+      "answer": "law",
+      "explanation": "过时的，过时的法律。The anachronistic law needed to be updated. 过时的法律需要更新。"
+    },
+    {
+      "question": "characteristic _______",
+      "type": "blank",
+      "answer": "feature",
+      "explanation": "特征性的，特征性的特点。Blue eyes are a characteristic feature of the breed. 蓝眼睛是该品种特征性的特点。"
+    },
+    {
+      "question": "linguistic _______",
+      "type": "blank",
+      "answer": "feature",
+      "explanation": "语言的，语言的特征。Tone is an important linguistic feature in Chinese. 声调是中文中重要的语言的特征。"
+    },
+    {
+      "question": "altruistic ___",
+      "type": "blank",
+      "answer": "act",
+      "explanation": "无私的，无私的行为。Donating to charity is an altruistic act. 向慈善机构捐款是无私的行为。"
+    },
+    {
+      "question": "agnostic ______",
+      "type": "blank",
+      "answer": "stance",
+      "explanation": "不可知论的，不可知论的立场。He maintained an agnostic stance on religious matters. 他在宗教问题上保持不可知论的立场。"
+    },
+    {
+      "question": "caustic _______",
+      "type": "blank",
+      "answer": "remarks",
+      "explanation": "刻薄的，刻薄的评论。Her caustic remarks wounded his pride. 她刻薄的评论伤害了他的自尊。"
+    },
+    {
+      "question": "acoustic ______",
+      "type": "blank",
+      "answer": "guitar",
+      "explanation": "原声的，原声吉他。The musician played an acoustic guitar at the concert. 音乐家在音乐会上演奏了原声吉他。"
+    },
+    {
+      "question": "rustic _____",
+      "type": "blank",
+      "answer": "charm",
+      "explanation": "乡村的，乡村的魅力。The cottage had rustic charm with its wooden beams. 小屋有木梁的乡村的魅力。"
+    },
+    {
+      "question": "mystic ______",
+      "type": "blank",
+      "answer": "vision",
+      "explanation": "神秘的，神秘的幻象。The holy man experienced a mystic vision. 圣人经历了神秘的幻象。"
+    },
+    {
+      "question": "attic ____",
+      "type": "blank",
+      "answer": "room",
+      "explanation": "阁楼，阁楼房间。Old furniture was stored in the attic room. 旧家具存放在阁楼房间里。"
+    },
+    {
+      "question": "therapeutic ______",
+      "type": "blank",
+      "answer": "effect",
+      "explanation": "治疗的，治疗的效果。The massage had a therapeutic effect on sore muscles. 按摩对酸痛的肌肉有治疗的效果。"
+    },
+    {
+      "question": "_____ havoc",
+      "type": "blank",
+      "answer": "cause",
+      "explanation": "浩劫，造成浩劫。The storm would cause havoc in the coastal town. 风暴会在沿海城镇造成浩劫。"
+    },
+    {
+      "question": "scad __ _______",
+      "type": "blank",
+      "answer": "of options",
+      "explanation": "大量，大量选择。The restaurant offered a scad of options on the menu. 餐厅菜单上提供了大量选择。"
+    },
+    {
+      "question": "_____ figurehead",
+      "type": "blank",
+      "answer": "royal",
+      "explanation": "傀儡，皇家傀儡。The king was merely a royal figurehead with no real power. 国王只是没有实权的皇家傀儡。"
+    },
+    {
+      "question": "proofread _ _____",
+      "type": "blank",
+      "answer": "a draft",
+      "explanation": "校对，校对草稿。The editor would proofread a draft before publication. 编辑会在出版前校对草稿。"
+    },
+    {
+      "question": "_______ fad",
+      "type": "blank",
+      "answer": "fashion",
+      "explanation": "时尚，时尚潮流。The fashion fad came and went quickly. 时尚潮流来去匆匆。"
+    },
+    {
+      "question": "_ myriad __ _____",
+      "type": "blank",
+      "answer": "a of stars",
+      "explanation": "无数的，无数的星星。The night sky showed a myriad of stars. 夜空中呈现无数的星星。"
+    },
+    {
+      "question": "ironclad ____",
+      "type": "blank",
+      "answer": "rule",
+      "explanation": "铁定的，铁定的规则。The school had an ironclad rule against cheating. 学校有反对作弊的铁定的规则。"
+    },
+    {
+      "question": "____ ballad",
+      "type": "blank",
+      "answer": "folk",
+      "explanation": "民谣，民间民谣。The musician sang a traditional folk ballad. 音乐家唱了一首传统的民间民谣。"
+    },
+    {
+      "question": "nomad _____",
+      "type": "blank",
+      "answer": "tribe",
+      "explanation": "游牧民，游牧民部落。The nomad tribe traveled across the desert. 游牧民部落穿越沙漠。"
+    },
+    {
+      "question": "____ inroads",
+      "type": "blank",
+      "answer": "make",
+      "explanation": "进展，取得进展。The company began to make inroads into the Asian market. 公司开始在亚洲市场取得进展。"
+    },
+    {
+      "question": "crabbed ___________",
+      "type": "blank",
+      "answer": "handwriting",
+      "explanation": "难辨认的，难辨认的笔迹。The old letter had crabbed handwriting. 旧信上有难辨认的笔迹。"
+    },
+    {
+      "question": "self-absorbed ________",
+      "type": "blank",
+      "answer": "teenager",
+      "explanation": "自我陶醉的，自我陶醉的青少年。The self-absorbed teenager rarely thought of others. 自我陶醉的青少年很少考虑别人。"
+    },
+    {
+      "question": "barefaced ___",
+      "type": "blank",
+      "answer": "lie",
+      "explanation": "厚颜无耻的，厚颜无耻的谎言。He told a barefaced lie without any shame. 他厚颜无耻地说了厚颜无耻的谎言。"
+    },
+    {
+      "question": "jaundiced ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "有偏见的，有偏见的观点。His past experiences gave him a jaundiced view of politicians. 他过去的经历让他对政客有有偏见的观点。"
+    },
+    {
+      "question": "__ unnoticed",
+      "type": "blank",
+      "answer": "go",
+      "explanation": "未被注意的，未被注意。His good deeds often would go unnoticed. 他的善行经常未被注意。"
+    },
+    {
+      "question": "pronounced ______",
+      "type": "blank",
+      "answer": "effect",
+      "explanation": "明显的，明显的效果。The medicine had a pronounced effect on her symptoms. 药物对她的症状有明显的效果。"
+    },
+    {
+      "question": "hardheaded _______",
+      "type": "blank",
+      "answer": "realist",
+      "explanation": "务实的，务实的现实主义者。He was a hardheaded realist who dealt with facts. 他是一个处理事实的务实的现实主义者。"
+    },
+    {
+      "question": "levelheaded ________",
+      "type": "blank",
+      "answer": "approach",
+      "explanation": "冷静的，冷静的方法。She took a levelheaded approach to the crisis. 她对危机采取了冷静的方法。"
+    },
+    {
+      "question": "jaded ______",
+      "type": "blank",
+      "answer": "palate",
+      "explanation": "厌倦的，厌倦的味觉。The food critic had a jaded palate from tasting too many dishes. 美食评论家因品尝太多菜肴而有厌倦的味觉。"
+    },
+    {
+      "question": "lopsided _____",
+      "type": "blank",
+      "answer": "score",
+      "explanation": "一边倒的，一边倒的比分。The game ended with a lopsided score of 50 to 10. 比赛以50比10的一边倒的比分结束。"
+    },
+    {
+      "question": "backhanded __________",
+      "type": "blank",
+      "answer": "compliment",
+      "explanation": "挖苦的，挖苦的恭维。His backhanded compliment was actually an insult. 他挖苦的恭维实际上是侮辱。"
+    },
+    {
+      "question": "evenhanded _________",
+      "type": "blank",
+      "answer": "treatment",
+      "explanation": "公正的，公正的对待。The judge provided evenhanded treatment to all parties. 法官对所有当事人提供公正的对待。"
+    },
+    {
+      "question": "underhanded _______",
+      "type": "blank",
+      "answer": "tactics",
+      "explanation": "卑鄙的，卑鄙的手段。The competitor used underhanded tactics to win. 竞争对手使用卑鄙的手段获胜。"
+    },
+    {
+      "question": "closed-minded ________",
+      "type": "blank",
+      "answer": "attitude",
+      "explanation": "固执己见的，固执己见的态度。His closed-minded attitude prevented him from learning. 他固执己见的态度阻止了他学习。"
+    },
+    {
+      "question": "long-winded ______",
+      "type": "blank",
+      "answer": "speech",
+      "explanation": "冗长的，冗长的演讲。The politician's long-winded speech bored the audience. 政客冗长的演讲让观众感到无聊。"
+    },
+    {
+      "question": "unfounded _____",
+      "type": "blank",
+      "answer": "rumor",
+      "explanation": "没有根据的，没有根据的谣言。The unfounded rumor spread quickly through the town. 没有根据的谣言在镇上迅速传播。"
+    },
+    {
+      "question": "____ grounded",
+      "type": "blank",
+      "answer": "well",
+      "explanation": "有根据的，有充分根据的。Her theory was well grounded in scientific evidence. 她的理论有充分根据在科学证据上。"
+    },
+    {
+      "question": "outmoded ________",
+      "type": "blank",
+      "answer": "practice",
+      "explanation": "过时的，过时的做法。The company abandoned its outmoded practice. 公司放弃了过时的做法。"
+    },
+    {
+      "question": "unguarded ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "不谨慎的，不谨慎的评论。His unguarded remark caused controversy. 他不谨慎的评论引起了争议。"
+    },
+    {
+      "question": "________ deed",
+      "type": "blank",
+      "answer": "property",
+      "explanation": "契约，财产契约。The lawyer reviewed the property deed. 律师审查了财产契约。"
+    },
+    {
+      "question": "reed ___",
+      "type": "blank",
+      "answer": "bed",
+      "explanation": "芦苇，芦苇床。Birds nested in the reed bed by the river. 鸟儿在河边的芦苇床筑巢。"
+    },
+    {
+      "question": "____ screed",
+      "type": "blank",
+      "answer": "long",
+      "explanation": "冗长的文章，冗长的文章。The critic wrote a long screed attacking the film. 评论家写了一篇攻击这部电影的冗长的文章。"
+    },
+    {
+      "question": "engaged ______",
+      "type": "blank",
+      "answer": "couple",
+      "explanation": "订婚的，订婚的情侣。The engaged couple planned their wedding. 订婚的情侣计划他们的婚礼。"
+    },
+    {
+      "question": "full-fledged ______",
+      "type": "blank",
+      "answer": "member",
+      "explanation": "完全成熟的，完全成熟的成员。She became a full-fledged member of the organization. 她成为该组织的完全成熟的成员。"
+    },
+    {
+      "question": "jagged ____",
+      "type": "blank",
+      "answer": "edge",
+      "explanation": "锯齿状的，锯齿状的边缘。The broken glass had a dangerous jagged edge. 破碎的玻璃有危险的锯齿状的边缘。"
+    },
+    {
+      "question": "ragged _______",
+      "type": "blank",
+      "answer": "clothes",
+      "explanation": "破烂的，破烂的衣服。The homeless man wore ragged clothes. 无家可归的人穿着破烂的衣服。"
+    },
+    {
+      "question": "dogged _____________",
+      "type": "blank",
+      "answer": "determination",
+      "explanation": "顽强的，顽强的决心。Her dogged determination helped her succeed. 她顽强的决心帮助她成功。"
+    },
+    {
+      "question": "deranged ______",
+      "type": "blank",
+      "answer": "killer",
+      "explanation": "精神错乱的，精神错乱的杀手。The police searched for the deranged killer. 警方搜寻精神错乱的杀手。"
+    },
+    {
+      "question": "estranged ______",
+      "type": "blank",
+      "answer": "couple",
+      "explanation": "疏远的，疏远的夫妇。The estranged couple filed for divorce. 疏远的夫妇申请离婚。"
+    },
+    {
+      "question": "detached _____",
+      "type": "blank",
+      "answer": "house",
+      "explanation": "独立的，独立的房子。They bought a detached house with a garden. 他们买了一座带花园的独立的房子。"
+    },
+    {
+      "question": "drenched _______",
+      "type": "blank",
+      "answer": "clothes",
+      "explanation": "湿透的，湿透的衣服。Her drenched clothes needed to be changed. 她湿透的衣服需要更换。"
+    },
+    {
+      "question": "wretched ____",
+      "type": "blank",
+      "answer": "life",
+      "explanation": "悲惨的，悲惨的生活。The poor family lived a wretched life. 贫困的家庭过着悲惨的生活。"
+    },
+    {
+      "question": "shed _____",
+      "type": "blank",
+      "answer": "tears",
+      "explanation": "流下，流下眼泪。She would shed tears at the sad movie. 她会在悲伤的电影中流下眼泪。"
+    },
+    {
+      "question": "accomplished ________",
+      "type": "blank",
+      "answer": "musician",
+      "explanation": "有造诣的，有造诣的音乐家。The accomplished musician performed at Carnegie Hall. 有造诣的音乐家在卡内基音乐厅演出。"
+    },
+    {
+      "question": "distinguished ______",
+      "type": "blank",
+      "answer": "career",
+      "explanation": "杰出的，杰出的职业生涯。He retired after a distinguished career in medicine. 他在杰出的职业生涯后退休了。"
+    },
+    {
+      "question": "______ watershed",
+      "type": "blank",
+      "answer": "policy",
+      "explanation": "分水岭，政策分水岭。The new law marked a policy watershed. 新法律标志着政策分水岭。"
+    },
+    {
+      "question": "full-bodied ____",
+      "type": "blank",
+      "answer": "wine",
+      "explanation": "醇厚的，醇厚的葡萄酒。The sommelier recommended a full-bodied wine. 侍酒师推荐了醇厚的葡萄酒。"
+    },
+    {
+      "question": "disembodied _____",
+      "type": "blank",
+      "answer": "voice",
+      "explanation": "无形的，无形的声音。A mysterious disembodied voice echoed in the hall. 神秘的无形的声音在大厅里回荡。"
+    },
+    {
+      "question": "studied ___________",
+      "type": "blank",
+      "answer": "nonchalance",
+      "explanation": "故意装出的，故意装出的漠不关心。His studied nonchalance didn't fool anyone. 他故意装出的漠不关心没有骗过任何人。"
+    },
+    {
+      "question": "unqualified _______",
+      "type": "blank",
+      "answer": "success",
+      "explanation": "完全的，完全的成功。The performance was an unqualified success. 演出是完全的成功。"
+    },
+{
+      "question": "verified _______",
+      "type": "blank",
+      "answer": "account",
+      "explanation": "经过验证的，经过验证的账户。Her social media verified account had a blue checkmark. 她的社交媒体经过验证的账户有蓝色标记。"
+    },
+    {
+      "question": "unjustified _____",
+      "type": "blank",
+      "answer": "claim",
+      "explanation": "不合理的，不合理的声明。The lawsuit was based on an unjustified claim. 这起诉讼基于不合理的声明。"
+    },
+    {
+      "question": "pied _______",
+      "type": "blank",
+      "answer": "wagtail",
+      "explanation": "斑驳的，斑驳的鹡鸰。The pied wagtail is a common British bird. 斑驳的鹡鸰是常见的英国鸟类。"
+    },
+    {
+      "question": "serried _____",
+      "type": "blank",
+      "answer": "ranks",
+      "explanation": "密集的，密集的队列。The soldiers stood in serried ranks. 士兵们站成密集的队列。"
+    },
+    {
+      "question": "packed _______",
+      "type": "blank",
+      "answer": "stadium",
+      "explanation": "拥挤的，拥挤的体育场。The packed stadium roared with excitement. 拥挤的体育场充满兴奋的欢呼。"
+    },
+    {
+      "question": "henpecked _______",
+      "type": "blank",
+      "answer": "husband",
+      "explanation": "怕老婆的，怕老婆的丈夫。The henpecked husband never made decisions alone. 怕老婆的丈夫从不独自做决定。"
+    },
+    {
+      "question": "wicked ____",
+      "type": "blank",
+      "answer": "deed",
+      "explanation": "邪恶的，邪恶的行为。The villain committed a wicked deed. 恶棍犯下了邪恶的行为。"
+    },
+    {
+      "question": "landlocked _______",
+      "type": "blank",
+      "answer": "country",
+      "explanation": "内陆的，内陆的国家。Switzerland is a landlocked country with no coastline. 瑞士是没有海岸线的内陆的国家。"
+    },
+    {
+      "question": "marked ___________",
+      "type": "blank",
+      "answer": "improvement",
+      "explanation": "显著的，显著的改进。There was a marked improvement in his grades. 他的成绩有显著的改进。"
+    },
+    {
+      "question": "garbled _______",
+      "type": "blank",
+      "answer": "message",
+      "explanation": "混乱的，混乱的信息。The garbled message was impossible to understand. 混乱的信息无法理解。"
+    },
+    {
+      "question": "unbridled _______",
+      "type": "blank",
+      "answer": "passion",
+      "explanation": "不受约束的，不受约束的激情。His unbridled passion for music was evident. 他对音乐不受约束的激情是显而易见的。"
+    },
+    {
+      "question": "brindled ____",
+      "type": "blank",
+      "answer": "coat",
+      "explanation": "有斑纹的，有斑纹的皮毛。The dog had a distinctive brindled coat. 这只狗有独特的有斑纹的皮毛。"
+    },
+    {
+      "question": "disheveled ____",
+      "type": "blank",
+      "answer": "hair",
+      "explanation": "凌乱的，凌乱的头发。She woke up with disheveled hair. 她醒来时头发凌乱的头发。"
+    },
+    {
+      "question": "muffled _____",
+      "type": "blank",
+      "answer": "sound",
+      "explanation": "低沉的，低沉的声音。A muffled sound came from behind the door. 门后传来低沉的声音。"
+    },
+    {
+      "question": "unspoiled ______",
+      "type": "blank",
+      "answer": "nature",
+      "explanation": "未受破坏的，未受破坏的自然。The island had beautiful unspoiled nature. 该岛有美丽的未受破坏的自然。"
+    },
+    {
+      "question": "unprincipled _____",
+      "type": "blank",
+      "answer": "rogue",
+      "explanation": "无原则的，无原则的恶棍。The unprincipled rogue would do anything for money. 无原则的恶棍会为钱做任何事。"
+    },
+    {
+      "question": "dappled ________",
+      "type": "blank",
+      "answer": "sunlight",
+      "explanation": "斑驳的，斑驳的阳光。Dappled sunlight filtered through the trees. 斑驳的阳光透过树木。"
+    },
+    {
+      "question": "gnarled ____",
+      "type": "blank",
+      "answer": "tree",
+      "explanation": "扭曲的，扭曲的树。The ancient gnarled tree stood in the park. 古老的扭曲的树矗立在公园里。"
+    },
+    {
+      "question": "settled _____",
+      "type": "blank",
+      "answer": "habit",
+      "explanation": "固定的，固定的习惯。Reading before bed became a settled habit. 睡前阅读成为固定的习惯。"
+    },
+    {
+      "question": "inflamed ______",
+      "type": "blank",
+      "answer": "tissue",
+      "explanation": "发炎的，发炎的组织。The doctor treated the inflamed tissue. 医生治疗了发炎的组织。"
+    },
+    {
+      "question": "mistimed ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "不合时宜的，不合时宜的评论。His mistimed remark embarrassed everyone. 他不合时宜的评论让每个人都很尴尬。"
+    },
+    {
+      "question": "well-groomed __________",
+      "type": "blank",
+      "answer": "appearance",
+      "explanation": "仪表整洁的，仪表整洁的外表。The executive maintained a well-groomed appearance. 这位高管保持着仪表整洁的外表。"
+    },
+    {
+      "question": "____ informed",
+      "type": "blank",
+      "answer": "well",
+      "explanation": "消息灵通的，消息灵通的。She was well informed about current events. 她对时事消息灵通的。"
+    },
+    {
+      "question": "unenlightened ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "愚昧的，愚昧的观点。His unenlightened view was outdated. 他愚昧的观点过时了。"
+    },
+    {
+      "question": "wizened ____",
+      "type": "blank",
+      "answer": "face",
+      "explanation": "干瘪的，干瘪的脸。The old woman had a wizened face. 老妇人有一张干瘪的脸。"
+    },
+    {
+      "question": "feigned _______",
+      "type": "blank",
+      "answer": "illness",
+      "explanation": "假装的，假装的疾病。His feigned illness didn't fool the doctor. 他假装的疾病没有骗过医生。"
+    },
+    {
+      "question": "unfeigned _______",
+      "type": "blank",
+      "answer": "delight",
+      "explanation": "真诚的，真诚的喜悦。She expressed unfeigned delight at the news. 她对这个消息表达了真诚的喜悦。"
+    },
+    {
+      "question": "resigned __________",
+      "type": "blank",
+      "answer": "acceptance",
+      "explanation": "顺从的，顺从的接受。He showed resigned acceptance of his fate. 他表现出对命运的顺从的接受。"
+    },
+    {
+      "question": "ingrained _____",
+      "type": "blank",
+      "answer": "habit",
+      "explanation": "根深蒂固的，根深蒂固的习惯。Smoking was an ingrained habit he couldn't break. 吸烟是他无法打破的根深蒂固的习惯。"
+    },
+    {
+      "question": "constrained _____",
+      "type": "blank",
+      "answer": "smile",
+      "explanation": "勉强的，勉强的微笑。She gave a constrained smile at the bad joke. 她对这个糟糕的笑话露出勉强的微笑。"
+    },
+    {
+      "question": "sustained ______",
+      "type": "blank",
+      "answer": "effort",
+      "explanation": "持续的，持续的努力。Success requires sustained effort over time. 成功需要长期持续的努力。"
+    },
+    {
+      "question": "____ defined",
+      "type": "blank",
+      "answer": "well",
+      "explanation": "明确的，明确定义的。The project had well defined objectives. 该项目有明确定义的目标。"
+    },
+    {
+      "question": "___ tined ____",
+      "type": "blank",
+      "answer": "two fork",
+      "explanation": "叉齿的，两叉齿的叉子。The salad was served with a two tined fork. 沙拉配有两叉齿的叉子。"
+    },
+    {
+      "question": "impassioned ____",
+      "type": "blank",
+      "answer": "plea",
+      "explanation": "激昂的，激昂的恳求。The lawyer made an impassioned plea for mercy. 律师发表了激昂的恳求请求宽恕。"
+    },
+    {
+      "question": "unimpassioned ________",
+      "type": "blank",
+      "answer": "analysis",
+      "explanation": "冷静的，冷静的分析。The scientist provided an unimpassioned analysis of the data. 科学家提供了数据的冷静的分析。"
+    },
+    {
+      "question": "seasoned _______",
+      "type": "blank",
+      "answer": "veteran",
+      "explanation": "经验丰富的，经验丰富的老手。The seasoned veteran knew how to handle pressure. 经验丰富的老手知道如何应对压力。"
+    },
+    {
+      "question": "biped ____",
+      "type": "blank",
+      "answer": "gait",
+      "explanation": "两足动物的，两足动物的步态。Humans walk with a distinctive biped gait. 人类以独特的两足动物的步态行走。"
+    },
+    {
+      "question": "damped ___________",
+      "type": "blank",
+      "answer": "oscillation",
+      "explanation": "阻尼的，阻尼的振荡。The engineer designed a damped oscillation system. 工程师设计了阻尼的振荡系统。"
+    },
+    {
+      "question": "untapped _________",
+      "type": "blank",
+      "answer": "potential",
+      "explanation": "未开发的，未开发的潜力。The region has vast untapped potential. 该地区有巨大的未开发的潜力。"
+    },
+    {
+      "question": "____-______ quadruped",
+      "type": "blank",
+      "answer": "four-legged",
+      "explanation": "四足动物，四条腿的四足动物。Dogs are four-legged quadruped mammals. 狗是四条腿的四足动物哺乳动物。"
+    },
+    {
+      "question": "vinegared _____",
+      "type": "blank",
+      "answer": "taste",
+      "explanation": "醋味的，醋味的味道。The salad had a vinegared taste. 沙拉有醋味的味道。"
+    },
+    {
+      "question": "lowbred ______",
+      "type": "blank",
+      "answer": "fellow",
+      "explanation": "粗俗的，粗俗的家伙。The lowbred fellow lacked manners. 粗俗的家伙缺乏礼貌。"
+    },
+    {
+      "question": "sacred ___",
+      "type": "blank",
+      "answer": "vow",
+      "explanation": "神圣的，神圣的誓言。The monks took a sacred vow of silence. 僧侣们立下了神圣的誓言保持沉默。"
+    },
+    {
+      "question": "kindred _______",
+      "type": "blank",
+      "answer": "spirits",
+      "explanation": "志同道合的，志同道合的灵魂。They were kindred spirits who shared the same values. 他们是志同道合的灵魂，有着相同的价值观。"
+    },
+    {
+      "question": "checkered ____",
+      "type": "blank",
+      "answer": "past",
+      "explanation": "有污点的，有污点的过去。The politician had a checkered past. 这位政客有有污点的过去。"
+    },
+    {
+      "question": "mannered _____",
+      "type": "blank",
+      "answer": "style",
+      "explanation": "矫揉造作的，矫揉造作的风格。The writer's mannered style was criticized. 这位作家矫揉造作的风格受到批评。"
+    },
+    {
+      "question": "even-tempered ______",
+      "type": "blank",
+      "answer": "leader",
+      "explanation": "性情平和的，性情平和的领导者。The even-tempered leader remained calm in crises. 性情平和的领导者在危机中保持冷静。"
+    },
+    {
+      "question": "____ flustered",
+      "type": "blank",
+      "answer": "feel",
+      "explanation": "慌乱的，感到慌乱。The unexpected question made her feel flustered. 意外的问题让她感到慌乱。"
+    },
+    {
+      "question": "shattered _____",
+      "type": "blank",
+      "answer": "glass",
+      "explanation": "破碎的，破碎的玻璃。Shattered glass covered the floor. 破碎的玻璃覆盖了地板。"
+    },
+    {
+      "question": "acquired _____",
+      "type": "blank",
+      "answer": "taste",
+      "explanation": "后天养成的，后天养成的品味。Caviar is an acquired taste. 鱼子酱是后天养成的品味。"
+    },
+    {
+      "question": "labored _________",
+      "type": "blank",
+      "answer": "breathing",
+      "explanation": "费力的，费力的呼吸。The patient had labored breathing. 患者有费力的呼吸。"
+    },
+    {
+      "question": "enamored __",
+      "type": "blank",
+      "answer": "of",
+      "explanation": "迷恋的，迷恋。She was enamored of the handsome stranger. 她迷恋那个英俊的陌生人。"
+    },
+    {
+      "question": "_____ restored",
+      "type": "blank",
+      "answer": "fully",
+      "explanation": "修复的，完全修复的。The antique car was fully restored. 古董车被完全修复的。"
+    },
+    {
+      "question": "untutored ___",
+      "type": "blank",
+      "answer": "ear",
+      "explanation": "未受训练的，未受训练的耳朵。To the untutored ear, the music sounded similar. 对未受训练的耳朵来说，音乐听起来相似。"
+    },
+    {
+      "question": "marred __________",
+      "type": "blank",
+      "answer": "reputation",
+      "explanation": "损坏的，损坏的声誉。The scandal marred reputation of the company. 丑闻损坏的声誉了公司的。"
+    },
+    {
+      "question": "inured __ ____",
+      "type": "blank",
+      "answer": "to pain",
+      "explanation": "习惯于，习惯于痛苦。The boxer was inured to pain from years of training. 拳击手经过多年训练习惯于痛苦。"
+    },
+    {
+      "question": "measured ________",
+      "type": "blank",
+      "answer": "response",
+      "explanation": "慎重的，慎重的回应。The diplomat gave a measured response. 外交官给出了慎重的回应。"
+    },
+    {
+      "question": "assured _______",
+      "type": "blank",
+      "answer": "victory",
+      "explanation": "确定的，确定的胜利。The team's assured victory seemed certain. 球队确定的胜利似乎是肯定的。"
+    },
+    {
+      "question": "improvised ______",
+      "type": "blank",
+      "answer": "speech",
+      "explanation": "即兴的，即兴的演讲。The mayor gave an impressive improvised speech. 市长发表了令人印象深刻的即兴的演讲。"
+    },
+    {
+      "question": "______ composed",
+      "type": "blank",
+      "answer": "remain",
+      "explanation": "镇定的，保持镇定。She managed to remain composed during the interview. 她在面试期间设法保持镇定。"
+    },
+    {
+      "question": "__ disposed",
+      "type": "blank",
+      "answer": "so",
+      "explanation": "有意向的，有此意向。If you are so disposed, please join us. 如果你有此意向，请加入我们。"
+    },
+    {
+      "question": "depressed ______",
+      "type": "blank",
+      "answer": "market",
+      "explanation": "萧条的，萧条的市场。The depressed market showed no signs of recovery. 萧条的市场没有复苏的迹象。"
+    },
+    {
+      "question": "repressed ______",
+      "type": "blank",
+      "answer": "memory",
+      "explanation": "压抑的，压抑的记忆。The therapist helped unlock repressed memory. 治疗师帮助解锁压抑的记忆。"
+    },
+    {
+      "question": "______ impressed",
+      "type": "blank",
+      "answer": "deeply",
+      "explanation": "印象深刻的，深深印象深刻。I was deeply impressed by her presentation. 我对她的演讲深深印象深刻。"
+    },
+    {
+      "question": "possessed __ ____",
+      "type": "blank",
+      "answer": "by fear",
+      "explanation": "被控制的，被恐惧控制。He was possessed by fear and couldn't move. 他被恐惧控制，无法移动。"
+    },
+    {
+      "question": "star-crossed ______",
+      "type": "blank",
+      "answer": "lovers",
+      "explanation": "命运多舛的，命运多舛的恋人。Romeo and Juliet were star-crossed lovers. 罗密欧和朱丽叶是命运多舛的恋人。"
+    },
+    {
+      "question": "sophisticated ________",
+      "type": "blank",
+      "answer": "analysis",
+      "explanation": "复杂的，复杂的分析。The researcher provided a sophisticated analysis. 研究人员提供了复杂的分析。"
+    },
+    {
+      "question": "dilapidated _____",
+      "type": "blank",
+      "answer": "house",
+      "explanation": "破旧的，破旧的房子。The dilapidated house needed extensive repairs. 破旧的房子需要大量维修。"
+    },
+    {
+      "question": "unmitigated ________",
+      "type": "blank",
+      "answer": "disaster",
+      "explanation": "完全的，完全的灾难。The project was an unmitigated disaster. 该项目是完全的灾难。"
+    },
+    {
+      "question": "striated ______",
+      "type": "blank",
+      "answer": "muscle",
+      "explanation": "有条纹的，有条纹的肌肉。Striated muscle tissue contracts voluntarily. 有条纹的肌肉组织自主收缩。"
+    },
+    {
+      "question": "satiated ________",
+      "type": "blank",
+      "answer": "appetite",
+      "explanation": "满足的，满足的食欲。The large meal satiated appetite. 大餐满足的食欲。"
+    },
+    {
+      "question": "___ uninitiated",
+      "type": "blank",
+      "answer": "the",
+      "explanation": "外行的，外行人。The technical jargon confused the uninitiated. 专业术语让外行人感到困惑。"
+    },
+    {
+      "question": "unsubstantiated _____",
+      "type": "blank",
+      "answer": "claim",
+      "explanation": "未经证实的，未经证实的声明。The unsubstantiated claim was dismissed. 未经证实的声明被驳回。"
+    },
+    {
+      "question": "belated _______",
+      "type": "blank",
+      "answer": "apology",
+      "explanation": "迟来的，迟来的道歉。He offered a belated apology for his mistake. 他为自己的错误提供了迟来的道歉。"
+    },
+    {
+      "question": "deflated ___",
+      "type": "blank",
+      "answer": "ego",
+      "explanation": "受挫的，受挫的自我。His failure left him with a deflated ego. 他的失败让他有受挫的自我。"
+    },
+    {
+      "question": "____ discombobulated",
+      "type": "blank",
+      "answer": "feel",
+      "explanation": "混乱的，感到混乱。The complicated instructions made him feel discombobulated. 复杂的说明让他感到混乱。"
+    },
+    {
+      "question": "maculated ____",
+      "type": "blank",
+      "answer": "leaf",
+      "explanation": "有斑点的，有斑点的叶子。The disease caused maculated leaf. 疾病导致有斑点的叶子。"
+    },
+    {
+      "question": "calculated ____",
+      "type": "blank",
+      "answer": "move",
+      "explanation": "精心策划的，精心策划的举动。It was a calculated move to gain advantage. 这是精心策划的举动以获得优势。"
+    },
+    {
+      "question": "unregulated ______",
+      "type": "blank",
+      "answer": "market",
+      "explanation": "不受监管的，不受监管的市场。The unregulated market led to chaos. 不受监管的市场导致混乱。"
+    },
+    {
+      "question": "animated ____",
+      "type": "blank",
+      "answer": "film",
+      "explanation": "动画的，动画电影。The children watched an animated film. 孩子们观看了动画电影。"
+    },
+    {
+      "question": "_______ underestimated",
+      "type": "blank",
+      "answer": "grossly",
+      "explanation": "被低估的，被严重低估。The cost was grossly underestimated. 成本被严重低估。"
+    },
+    {
+      "question": "opinionated ______",
+      "type": "blank",
+      "answer": "stance",
+      "explanation": "固执己见的，固执己见的立场。He took an opinionated stance on the issue. 他对这个问题采取了固执己见的立场。"
+    },
+    {
+      "question": "bloated ___________",
+      "type": "blank",
+      "answer": "bureaucracy",
+      "explanation": "臃肿的，臃肿的官僚机构。The bloated bureaucracy needed reform. 臃肿的官僚机构需要改革。"
+    },
+    {
+      "question": "celebrated ______",
+      "type": "blank",
+      "answer": "artist",
+      "explanation": "著名的，著名的艺术家。The celebrated artist displayed her work. 著名的艺术家展示了她的作品。"
+    },
+    {
+      "question": "serrated _____",
+      "type": "blank",
+      "answer": "knife",
+      "explanation": "锯齿状的，锯齿状的刀。Use a serrated knife to cut the bread. 用锯齿状的刀切面包。"
+    },
+    {
+      "question": "saturated ___",
+      "type": "blank",
+      "answer": "fat",
+      "explanation": "饱和的，饱和脂肪。Saturated fat should be limited in diet. 饮食中应限制饱和脂肪。"
+    },
+    {
+      "question": "sated ________",
+      "type": "blank",
+      "answer": "appetite",
+      "explanation": "满足的，满足的食欲。After the feast, everyone had a sated appetite. 盛宴后，每个人都有满足的食欲。"
+    },
+    {
+      "question": "premeditated ______",
+      "type": "blank",
+      "answer": "murder",
+      "explanation": "预谋的，预谋的谋杀。The crime was premeditated murder. 这起犯罪是预谋的谋杀。"
+    },
+    {
+      "question": "unpremeditated ___",
+      "type": "blank",
+      "answer": "act",
+      "explanation": "非预谋的，非预谋的行为。It was an unpremeditated act of passion. 这是激情的非预谋的行为。"
+    },
+    {
+      "question": "agitated _____",
+      "type": "blank",
+      "answer": "crowd",
+      "explanation": "激动的，激动的人群。The agitated crowd demanded answers. 激动的人群要求答案。"
+    },
+    {
+      "question": "understated ________",
+      "type": "blank",
+      "answer": "elegance",
+      "explanation": "低调的，低调的优雅。The room had understated elegance. 房间有低调的优雅。"
+    },
+    {
+      "question": "graduated ___",
+      "type": "blank",
+      "answer": "tax",
+      "explanation": "累进的，累进税。The country has a graduated tax system. 该国有累进税制度。"
+    },
+    {
+      "question": "superannuated _________",
+      "type": "blank",
+      "answer": "equipment",
+      "explanation": "过时的，过时的设备。The factory used superannuated equipment. 工厂使用过时的设备。"
+    },
+    {
+      "question": "antiquated ______",
+      "type": "blank",
+      "answer": "system",
+      "explanation": "陈旧的，陈旧的系统。The antiquated system needed updating. 陈旧的系统需要更新。"
+    },
+    {
+      "question": "infatuated ___",
+      "type": "blank",
+      "answer": "fan",
+      "explanation": "迷恋的，迷恋的粉丝。The infatuated fan followed the celebrity everywhere. 迷恋的粉丝到处跟着这位名人。"
+    },
+    {
+      "question": "cultivated _____",
+      "type": "blank",
+      "answer": "taste",
+      "explanation": "有修养的，有修养的品味。He had cultivated taste in art. 他在艺术方面有有修养的品味。"
+    },
+    {
+      "question": "______ indebted",
+      "type": "blank",
+      "answer": "deeply",
+      "explanation": "负债的，深深负债。The company was deeply indebted. 公司深深负债。"
+    },
+    {
+      "question": "distracted _______",
+      "type": "blank",
+      "answer": "driving",
+      "explanation": "分心的，分心的驾驶。Distracted driving causes many accidents. 分心的驾驶导致许多事故。"
+    },
+    {
+      "question": "dejected ____",
+      "type": "blank",
+      "answer": "look",
+      "type": "blank",
+      "answer": "look",
+      "explanation": "沮丧的，沮丧的表情。He had a dejected look after losing the game. 输掉比赛后，他有沮丧的表情。"
+    },
+    {
+      "question": "______ collected",
+      "type": "blank",
+      "answer": "remain",
+      "explanation": "镇定的，保持镇定。Despite the chaos, she managed to remain collected. 尽管一片混乱，她还是设法保持镇定。"
+    },
+{
+      "question": "other-directed ___________",
+      "type": "blank",
+      "answer": "personality",
+      "explanation": "他人导向的，他人导向的人格。People with an other-directed personality are influenced by external social pressures. 拥有他人导向的人格的人受外部社会压力的影响。"
+    },
+    {
+      "question": "undirected _____",
+      "type": "blank",
+      "answer": "graph",
+      "explanation": "无向的，无向图。An undirected graph has edges with no direction. 无向图的边没有方向。"
+    },
+    {
+      "question": "blighted _____",
+      "type": "blank",
+      "answer": "hopes",
+      "explanation": "破灭的，破灭的希望。The economic crisis led to blighted hopes for many families. 经济危机导致许多家庭破灭的希望。"
+    },
+    {
+      "question": "____ discomfited",
+      "type": "blank",
+      "answer": "look",
+      "explanation": "尴尬的，看起来尴尬。She would look discomfited when caught in a lie. 当谎言被揭穿时，她会看起来尴尬。"
+    },
+    {
+      "question": "merited ______",
+      "type": "blank",
+      "answer": "praise",
+      "explanation": "应得的，应得的赞扬。His hard work received merited praise from the manager. 他的辛勤工作得到了经理应得的赞扬。"
+    },
+    {
+      "question": "unrequited ____",
+      "type": "blank",
+      "answer": "love",
+      "explanation": "单恋的，单恋的爱。He suffered from unrequited love for years. 他遭受了多年的单恋的爱。"
+    },
+    {
+      "question": "stilted _____",
+      "type": "blank",
+      "answer": "prose",
+      "explanation": "生硬的，生硬的散文。The novelist's stilted prose was difficult to read. 小说家生硬的散文难以阅读。"
+    },
+    {
+      "question": "warranted ______",
+      "type": "blank",
+      "answer": "action",
+      "explanation": "有正当理由的，有正当理由的行动。The emergency situation called for warranted action. 紧急情况需要有正当理由的行动。"
+    },
+    {
+      "question": "unwarranted _____",
+      "type": "blank",
+      "answer": "claim",
+      "explanation": "无根据的，无根据的声明。The lawsuit was based on an unwarranted claim. 诉讼基于无根据的声明。"
+    },
+    {
+      "question": "unscented ______",
+      "type": "blank",
+      "answer": "lotion",
+      "explanation": "无香味的，无香味的乳液。She preferred unscented lotion for sensitive skin. 她更喜欢敏感皮肤用的无香味的乳液。"
+    },
+    {
+      "question": "unprecedented ____",
+      "type": "blank",
+      "answer": "move",
+      "explanation": "史无前例的，史无前例的举动。The company made an unprecedented move to cut prices. 公司做出了史无前例的举动降低价格。"
+    },
+    {
+      "question": "demented ____",
+      "type": "blank",
+      "answer": "rant",
+      "explanation": "疯狂的，疯狂的咆哮。His demented rant scared everyone in the room. 他疯狂的咆哮吓坏了房间里的每个人。"
+    },
+    {
+      "question": "____ contented",
+      "type": "blank",
+      "answer": "feel",
+      "explanation": "满足的，感到满足。After the meal, everyone would feel contented. 用餐后，每个人都会感到满足。"
+    },
+    {
+      "question": "__ acquainted ____",
+      "type": "blank",
+      "answer": "be with",
+      "explanation": "熟悉的，熟悉。I need to be acquainted with the new procedures. 我需要熟悉新程序。"
+    },
+    {
+      "question": "unwonted ________",
+      "type": "blank",
+      "answer": "kindness",
+      "explanation": "不寻常的，不寻常的善意。His unwonted kindness surprised everyone. 他不寻常的善意让每个人都感到惊讶。"
+    },
+    {
+      "question": "devoted ___",
+      "type": "blank",
+      "answer": "fan",
+      "explanation": "忠诚的，忠诚的粉丝。She was a devoted fan of the band. 她是乐队的忠诚的粉丝。"
+    },
+    {
+      "question": "halfhearted _______",
+      "type": "blank",
+      "answer": "attempt",
+      "explanation": "三心二意的，三心二意的尝试。His halfhearted attempt failed predictably. 他三心二意的尝试可预见地失败了。"
+    },
+    {
+      "question": "fainthearted ________",
+      "type": "blank",
+      "answer": "approach",
+      "explanation": "胆怯的，胆怯的方法。The fainthearted approach would not succeed. 胆怯的方法不会成功。"
+    },
+    {
+      "question": "stouthearted ____",
+      "type": "blank",
+      "answer": "hero",
+      "explanation": "勇敢的，勇敢的英雄。The stouthearted hero rescued the child from the fire. 勇敢的英雄从火中救出了孩子。"
+    },
+    {
+      "question": "deserted ______",
+      "type": "blank",
+      "answer": "island",
+      "explanation": "荒芜的，荒芜的岛屿。They were stranded on a deserted island. 他们被困在荒芜的岛屿上。"
+    },
+    {
+      "question": "purported ________",
+      "type": "blank",
+      "answer": "evidence",
+      "explanation": "声称的，声称的证据。The purported evidence was never verified. 声称的证据从未得到验证。"
+    },
+    {
+      "question": "assorted ______",
+      "type": "blank",
+      "answer": "snacks",
+      "explanation": "各种各样的，各种各样的零食。The party had assorted snacks for guests. 派对为客人准备了各种各样的零食。"
+    },
+    {
+      "question": "disinterested ______",
+      "type": "blank",
+      "answer": "advice",
+      "explanation": "公正的，公正的建议。The mediator provided disinterested advice. 调解员提供了公正的建议。"
+    },
+    {
+      "question": "tightfisted _____",
+      "type": "blank",
+      "answer": "miser",
+      "explanation": "吝啬的，吝啬的守财奴。The tightfisted miser never spent money. 吝啬的守财奴从不花钱。"
+    },
+    {
+      "question": "committed ____",
+      "type": "blank",
+      "answer": "team",
+      "explanation": "尽心尽力的，尽心尽力的团队。The committed team worked overtime to finish. 尽心尽力的团队加班完成工作。"
+    },
+    {
+      "question": "______ uncommitted",
+      "type": "blank",
+      "answer": "remain",
+      "explanation": "未承诺的，保持未承诺。The voters chose to remain uncommitted. 选民选择保持未承诺。"
+    },
+    {
+      "question": "unspotted ______",
+      "type": "blank",
+      "answer": "record",
+      "explanation": "清白的，清白的记录。He maintained an unspotted record throughout his career. 他在整个职业生涯中保持了清白的记录。"
+    },
+    {
+      "question": "convoluted ____",
+      "type": "blank",
+      "answer": "plot",
+      "explanation": "复杂的，复杂的情节。The movie had a convoluted plot that was hard to follow. 这部电影有复杂的情节难以理解。"
+    },
+    {
+      "question": "muted _____",
+      "type": "blank",
+      "answer": "color",
+      "explanation": "柔和的，柔和的颜色。The room was decorated in muted color. 房间用柔和的颜色装饰。"
+    },
+    {
+      "question": "subdued ____",
+      "type": "blank",
+      "answer": "tone",
+      "explanation": "低沉的，低沉的语气。She spoke in a subdued tone. 她用低沉的语气说话。"
+    },
+    {
+      "question": "depraved ___",
+      "type": "blank",
+      "answer": "act",
+      "explanation": "堕落的，堕落的行为。The criminal committed a depraved act. 罪犯犯下了堕落的行为。"
+    },
+    {
+      "question": "____ relieved",
+      "type": "blank",
+      "answer": "feel",
+      "explanation": "放心的，感到放心。She would feel relieved when the exam was over. 当考试结束时，她会感到放心。"
+    },
+    {
+      "question": "contrived ____",
+      "type": "blank",
+      "answer": "plot",
+      "explanation": "牵强的，牵强的情节。The novel's contrived plot lacked authenticity. 小说牵强的情节缺乏真实性。"
+    },
+    {
+      "question": "______ unmoved",
+      "type": "blank",
+      "answer": "remain",
+      "explanation": "无动于衷的，保持无动于衷。He would remain unmoved by her tears. 他会对她的眼泪保持无动于衷。"
+    },
+    {
+      "question": "undeserved ______",
+      "type": "blank",
+      "answer": "praise",
+      "explanation": "不应得的，不应得的赞扬。The politician received undeserved praise. 政客得到了不应得的赞扬。"
+    },
+    {
+      "question": "unreserved _______",
+      "type": "blank",
+      "answer": "support",
+      "explanation": "无保留的，无保留的支持。The team gave unreserved support to their captain. 球队给予队长无保留的支持。"
+    },
+    {
+      "question": "hallowed ______",
+      "type": "blank",
+      "answer": "ground",
+      "explanation": "神圣的，神圣的土地。The cemetery was hallowed ground. 墓地是神圣的土地。"
+    },
+    {
+      "question": "hackneyed ______",
+      "type": "blank",
+      "answer": "phrase",
+      "explanation": "陈腐的，陈腐的短语。The speaker used a hackneyed phrase. 演讲者使用了陈腐的短语。"
+    },
+    {
+      "question": "specialized ________",
+      "type": "blank",
+      "answer": "training",
+      "explanation": "专业的，专业的培训。The job requires specialized training. 这份工作需要专业的培训。"
+    },
+    {
+      "question": "institutionalized ______",
+      "type": "blank",
+      "answer": "racism",
+      "explanation": "制度化的，制度化的种族主义。The country struggled with institutionalized racism. 该国与制度化的种族主义作斗争。"
+    },
+    {
+      "question": "underutilized ______",
+      "type": "blank",
+      "answer": "assets",
+      "explanation": "未充分利用的，未充分利用的资产。The company had underutilized assets. 公司有未充分利用的资产。"
+    },
+    {
+      "question": "______ mermaid",
+      "type": "blank",
+      "answer": "little",
+      "explanation": "美人鱼，小美人鱼。The fairy tale was about a little mermaid. 这个童话讲述了一个小美人鱼。"
+    },
+    {
+      "question": "______ raid",
+      "type": "blank",
+      "answer": "police",
+      "explanation": "突袭，警察突袭。The police raid uncovered illegal weapons. 警察突袭发现了非法武器。"
+    },
+    {
+      "question": "upbraid ________",
+      "type": "blank",
+      "answer": "severely",
+      "explanation": "责备，严厉责备。The teacher would upbraid severely the misbehaving student. 老师会严厉责备行为不端的学生。"
+    },
+    {
+      "question": "staid _________",
+      "type": "blank",
+      "answer": "character",
+      "explanation": "稳重的，稳重的性格。He had a staid character that never changed. 他有从不改变的稳重的性格。"
+    },
+    {
+      "question": "rabid ___",
+      "type": "blank",
+      "answer": "fan",
+      "explanation": "狂热的，狂热的粉丝。He was a rabid fan of the sports team. 他是体育队的狂热的粉丝。"
+    },
+    {
+      "question": "underbid _ _____",
+      "type": "blank",
+      "answer": "a rival",
+      "explanation": "出价低于，出价低于对手。The company tried to underbid a rival for the contract. 公司试图在合同上出价低于对手。"
+    },
+    {
+      "question": "forbid _____",
+      "type": "blank",
+      "answer": "entry",
+      "explanation": "禁止，禁止进入。The sign would forbid entry to unauthorized personnel. 标志会禁止进入未经授权的人员。"
+    },
+    {
+      "question": "morbid _________",
+      "type": "blank",
+      "answer": "curiosity",
+      "explanation": "病态的，病态的好奇心。She had a morbid curiosity about death. 她对死亡有病态的好奇心。"
+    },
+    {
+      "question": "placid ____",
+      "type": "blank",
+      "answer": "lake",
+      "explanation": "平静的，平静的湖。The placid lake reflected the mountains perfectly. 平静的湖完美地倒映着山脉。"
+    },
+    {
+      "question": "viscid ______",
+      "type": "blank",
+      "answer": "liquid",
+      "explanation": "粘稠的，粘稠的液体。The viscid liquid was difficult to pour. 粘稠的液体难以倾倒。"
+    },
+    {
+      "question": "pellucid _____",
+      "type": "blank",
+      "answer": "water",
+      "explanation": "清澈的，清澈的水。The mountain stream had pellucid water. 山溪有清澈的水。"
+    },
+    {
+      "question": "candid _____",
+      "type": "blank",
+      "answer": "photo",
+      "explanation": "自然的，自然的照片。The photographer took candid photo at the wedding. 摄影师在婚礼上拍摄了自然的照片。"
+    },
+    {
+      "question": "sordid ______",
+      "type": "blank",
+      "answer": "affair",
+      "explanation": "肮脏的，肮脏的事件。The scandal revealed a sordid affair. 丑闻揭露了肮脏的事件。"
+    },
+    {
+      "question": "rigid _____",
+      "type": "blank",
+      "answer": "rules",
+      "explanation": "严格的，严格的规则。The school had rigid rules about uniforms. 学校有关于制服的严格的规则。"
+    },
+    {
+      "question": "frigid _______",
+      "type": "blank",
+      "answer": "climate",
+      "explanation": "寒冷的，寒冷的气候。Antarctica has a frigid climate year-round. 南极洲全年都有寒冷的气候。"
+    },
+    {
+      "question": "turgid _____",
+      "type": "blank",
+      "answer": "prose",
+      "explanation": "浮夸的，浮夸的散文。The writer's turgid prose was hard to read. 作家浮夸的散文难以阅读。"
+    },
+    {
+      "question": "orchid ______",
+      "type": "blank",
+      "answer": "garden",
+      "explanation": "兰花，兰花园。The botanical orchid garden displayed rare species. 植物兰花园展示了稀有物种。"
+    },
+    {
+      "question": "squalid __________",
+      "type": "blank",
+      "answer": "conditions",
+      "explanation": "肮脏的，肮脏的环境。The refugees lived in squalid conditions. 难民生活在肮脏的环境中。"
+    },
+    {
+      "question": "stolid __________",
+      "type": "blank",
+      "answer": "expression",
+      "explanation": "木然的，木然的表情。He maintained a stolid expression during the trial. 他在审判期间保持木然的表情。"
+    },
+    {
+      "question": "humid _______",
+      "type": "blank",
+      "answer": "climate",
+      "explanation": "潮湿的，潮湿的气候。The tropical region has a humid climate. 热带地区有潮湿的气候。"
+    },
+    {
+      "question": "tumid _____",
+      "type": "blank",
+      "answer": "river",
+      "explanation": "肿胀的，肿胀的河流。Heavy rains caused the tumid river to overflow. 大雨导致肿胀的河流溢出。"
+    },
+    {
+      "question": "_____-______ arachnid",
+      "type": "blank",
+      "answer": "eight-legged",
+      "explanation": "蛛形纲动物，八条腿的蛛形纲动物。Spiders are eight-legged arachnid creatures. 蜘蛛是八条腿的蛛形纲动物生物。"
+    },
+    {
+      "question": "anthropoid ___",
+      "type": "blank",
+      "answer": "ape",
+      "explanation": "类人的，类人猿。Gorillas are anthropoid ape species. 大猩猩是类人猿物种。"
+    },
+    {
+      "question": "asteroid ____",
+      "type": "blank",
+      "answer": "belt",
+      "explanation": "小行星，小行星带。The asteroid belt lies between Mars and Jupiter. 小行星带位于火星和木星之间。"
+    },
+    {
+      "question": "_______ sangfroid",
+      "type": "blank",
+      "answer": "display",
+      "explanation": "沉着，展现沉着。The pilot would display sangfroid during the emergency. 飞行员会在紧急情况下展现沉着。"
+    },
+    {
+      "question": "intrepid ________",
+      "type": "blank",
+      "answer": "explorer",
+      "explanation": "无畏的，无畏的探险家。The intrepid explorer ventured into unknown territory. 无畏的探险家冒险进入未知领域。"
+    },
+    {
+      "question": "tepid ________",
+      "type": "blank",
+      "answer": "response",
+      "explanation": "冷淡的，冷淡的反应。The proposal received a tepid response. 该提案得到了冷淡的反应。"
+    },
+    {
+      "question": "insipid ____",
+      "type": "blank",
+      "answer": "soup",
+      "explanation": "乏味的，乏味的汤。The insipid soup lacked flavor. 乏味的汤缺乏味道。"
+    },
+    {
+      "question": "limpid ______",
+      "type": "blank",
+      "answer": "stream",
+      "explanation": "清澈的，清澈的溪流。The limpid stream flowed through the meadow. 清澈的溪流流过草地。"
+    },
+    {
+      "question": "arid ______",
+      "type": "blank",
+      "answer": "desert",
+      "explanation": "干旱的，干旱的沙漠。The arid desert received little rainfall. 干旱的沙漠很少降雨。"
+    },
+    {
+      "question": "hybrid _______",
+      "type": "blank",
+      "answer": "vehicle",
+      "explanation": "混合动力的，混合动力的车辆。The hybrid vehicle uses both gas and electricity. 混合动力的车辆同时使用汽油和电力。"
+    },
+    {
+      "question": "florid _____",
+      "type": "blank",
+      "answer": "prose",
+      "explanation": "华丽的，华丽的散文。The author's florid prose was overly decorative. 作者华丽的散文过于华丽。"
+    },
+    {
+      "question": "torrid _______",
+      "type": "blank",
+      "answer": "romance",
+      "explanation": "炽热的，炽热的恋情。They had a torrid romance that summer. 那年夏天他们有炽热的恋情。"
+    },
+    {
+      "question": "fetid ____",
+      "type": "blank",
+      "answer": "odor",
+      "explanation": "恶臭的，恶臭的气味。A fetid odor came from the garbage. 垃圾发出恶臭的气味。"
+    },
+    {
+      "question": "languid _________",
+      "type": "blank",
+      "answer": "afternoon",
+      "explanation": "慵懒的，慵懒的午后。They spent a languid afternoon by the pool. 他们在泳池边度过了慵懒的午后。"
+    },
+    {
+      "question": "liquid ______",
+      "type": "blank",
+      "answer": "assets",
+      "explanation": "流动的，流动资产。The company had plenty of liquid assets. 公司有充足的流动资产。"
+    },
+    {
+      "question": "fervid ______",
+      "type": "blank",
+      "answer": "debate",
+      "explanation": "热烈的，热烈的辩论。The politicians engaged in fervid debate. 政客们进行了热烈的辩论。"
+    },
+    {
+      "question": "perfervid ____",
+      "type": "blank",
+      "answer": "zeal",
+      "explanation": "极度热情的，极度热情的热忱。His perfervid zeal for the cause was inspiring. 他对事业的极度热情的热忱令人鼓舞。"
+    },
+    {
+      "question": "piebald ____",
+      "type": "blank",
+      "answer": "pony",
+      "explanation": "花斑的，花斑的小马。The children loved the piebald pony. 孩子们喜欢花斑的小马。"
+    },
+    {
+      "question": "ribald ____",
+      "type": "blank",
+      "answer": "joke",
+      "explanation": "粗俗的，粗俗的笑话。He told a ribald joke that embarrassed everyone. 他讲了一个粗俗的笑话让每个人都很尴尬。"
+    },
+    {
+      "question": "_____ shield",
+      "type": "blank",
+      "answer": "blast",
+      "explanation": "盾牌，防爆盾牌。The soldiers used a blast shield for protection. 士兵们使用防爆盾牌保护。"
+    },
+    {
+      "question": "wield _____",
+      "type": "blank",
+      "answer": "power",
+      "explanation": "行使，行使权力。The king would wield power over his subjects. 国王会对臣民行使权力。"
+    },
+    {
+      "question": "meld ________",
+      "type": "blank",
+      "answer": "together",
+      "explanation": "融合，融合在一起。The cultures would meld together over time. 文化会随着时间融合在一起。"
+    },
+    {
+      "question": "weld ____",
+      "type": "blank",
+      "answer": "seam",
+      "explanation": "焊接，焊接接缝。The worker would weld seam on the metal pipe. 工人会焊接金属管上的接缝。"
+    },
+    {
+      "question": "fold ___ _______",
+      "type": "blank",
+      "answer": "the clothes",
+      "explanation": "折叠，折叠衣服。Please fold the clothes after they dry. 衣服干了之后请折叠衣服。"
+    },
+    {
+      "question": "scaffold ________",
+      "type": "blank",
+      "answer": "platform",
+      "explanation": "脚手架，脚手架平台。Workers stood on the scaffold platform. 工人们站在脚手架平台上。"
+    },
+    {
+      "question": "manifold ________",
+      "type": "blank",
+      "answer": "benefits",
+      "explanation": "多种多样的，多种多样的好处。Exercise has manifold benefits for health. 运动对健康有多种多样的好处。"
+    },
+    {
+      "question": "behold ___ ____",
+      "type": "blank",
+      "answer": "the view",
+      "explanation": "看见，看见风景。Climb the tower to behold the view. 爬上塔楼看见风景。"
+    },
+    {
+      "question": "withhold _______",
+      "type": "blank",
+      "answer": "payment",
+      "explanation": "扣留，扣留付款。The client decided to withhold payment until completion. 客户决定在完成之前扣留付款。"
+    },
+    {
+      "question": "____ _ foothold",
+      "type": "blank",
+      "answer": "gain a",
+      "explanation": "立足点，获得立足点。The company tried to gain a foothold in the market. 公司试图在市场上获得立足点。"
+    },
+    {
+      "question": "mold ______",
+      "type": "blank",
+      "answer": "growth",
+      "explanation": "霉菌，霉菌生长。Damp conditions caused mold growth on the walls. 潮湿的条件导致墙上霉菌生长。"
+    },
+    {
+      "question": "contraband _____",
+      "type": "blank",
+      "answer": "goods",
+      "explanation": "违禁品，违禁品货物。Customs officials seized contraband goods. 海关官员查获了违禁品货物。"
+    },
+    {
+      "question": "disband _ _____",
+      "type": "blank",
+      "answer": "a group",
+      "explanation": "解散，解散团体。The organization decided to disband a group. 该组织决定解散团体。"
+    },
+    {
+      "question": "bland ____",
+      "type": "blank",
+      "answer": "diet",
+      "explanation": "清淡的，清淡的饮食。The doctor recommended a bland diet after surgery. 医生建议手术后清淡的饮食。"
+    },
+    {
+      "question": "______ garland",
+      "type": "blank",
+      "answer": "flower",
+      "explanation": "花环，花环。The bride wore a beautiful flower garland. 新娘戴着美丽的花环。"
+    },
+    {
+      "question": "______ hinterland",
+      "type": "blank",
+      "answer": "remote",
+      "explanation": "内陆，偏远的内陆。They explored the remote hinterland. 他们探索了偏远的内陆。"
+    },
+    {
+      "question": "____ demand",
+      "type": "blank",
+      "answer": "meet",
+      "explanation": "需求，满足需求。The factory struggled to meet demand. 工厂努力满足需求。"
+    },
+    {
+      "question": "_____ reprimand",
+      "type": "blank",
+      "answer": "stern",
+      "explanation": "训斥，严厉的训斥。The manager issued a stern reprimand. 经理发出了严厉的训斥。"
+    },
+    {
+      "question": "countermand _____",
+      "type": "blank",
+      "answer": "order",
+      "explanation": "撤销，撤销命令。The general decided to countermand order. 将军决定撤销命令。"
+    }
+  ]
+};
+            const DEFAULT_QUIZ_JSON = JSON.stringify(defaultQuizObject, null, 2);
+
+            // --- COOKIE FUNCTIONS ---
+            const setCookie = (name, value, days) => {
+                let expires = "";
+                if (days) {
+                    const date = new Date();
+                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "") + expires + "; path=/; SameSite=Lax";
+            };
+
+            const getCookie = (name) => {
+                const nameEQ = name + "=";
+                const ca = document.cookie.split(';');
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            };
+
+            const loadFromCookie = () => {
+                const savedJson = getCookie('quizJson');
+                if (savedJson) {
+                    jsonInput.value = savedJson;
+                } else {
+                    jsonInput.value = DEFAULT_QUIZ_JSON;
+                }
+            };
+
+            // --- UTILITY FUNCTIONS ---
+            const switchView = (viewName) => {
+                Object.values(views).forEach(view => view.classList.remove('active'));
+                if (views[viewName]) {
+                    views[viewName].classList.add('active');
+                }
+                // Stop speaking when switching views
+                cancelSpeech();
+            };
+
+            const shuffleArray = (array) => {
+                const newArray = [...array];
+                for (let i = newArray.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+                }
+                return newArray;
+            };
+
+            // --- TTS FUNCTIONALITY ---
+            const cancelSpeech = () => {
+                if ('speechSynthesis' in window) {
+                    window.speechSynthesis.cancel();
+                    speakBtn.classList.remove('speaking');
+                }
+            };
+
+            const handleSpeak = () => {
+                if (!('speechSynthesis' in window)) {
+                    alert('Text-to-speech is not supported in your browser.');
+                    return;
+                }
+
+                if (window.speechSynthesis.speaking) {
+                    cancelSpeech();
+                    return;
+                }
+
+                let textToSpeak = questionTextElement.textContent;
+                // Remove underscores for speech
+                textToSpeak = textToSpeak.replace(/_+/g, '').trim();
+
+                if (!textToSpeak) return;
+
+                const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                utterance.lang = 'en-US'; 
+                utterance.rate = 1.0;
+
+                speakBtn.classList.add('speaking');
+                
+                utterance.onend = () => {
+                    speakBtn.classList.remove('speaking');
+                };
+
+                utterance.onerror = () => {
+                     speakBtn.classList.remove('speaking');
+                };
+
+                window.speechSynthesis.speak(utterance);
+            };
+
+            // --- CORE LOGIC ---
+            const startQuiz = async () => {
+                const inputText = jsonInput.value.trim();
+                isReverseEnabled = reverseCheck.checked;
+                isConditionalReverse = conditionalCheck.checked;
+                let parsedJson;
+                let finalJsonText;
+
+                startBtn.disabled = true;
+                startBtn.textContent = 'Loading...';
+                errorMessage.style.display = 'none';
+
+                try {
+                    if (inputText.startsWith('http://') || inputText.startsWith('https://')) {
+                        const response = await fetch(inputText);
+                        if (!response.ok) {
+                            throw new Error(`Failed to fetch from URL (Status: ${response.status})`);
+                        }
+                        parsedJson = await response.json();
+                        finalJsonText = JSON.stringify(parsedJson, null, 2);
+                        jsonInput.value = finalJsonText;
+                    } else {
+                        parsedJson = JSON.parse(inputText);
+                        finalJsonText = inputText;
+                    }
+
+                    if (!parsedJson.quiz || !Array.isArray(parsedJson.quiz) || parsedJson.quiz.length === 0) {
+                        throw new Error("JSON must have a non-empty 'quiz' array.");
+                    }
+                    if (typeof parsedJson.text !== 'string') {
+                         throw new Error("JSON must have a 'text' property of type string.");
+                    }
+
+                    for (const [index, question] of parsedJson.quiz.entries()) {
+                        const type = question.type || 'choice';
+                        const qIdentifier = `Question ${index + 1} ("${question.question.substring(0,20)}...")`;
+
+                        if (typeof question.answer !== 'string' || question.answer.trim() === '') {
+                             throw new Error(`${qIdentifier} must have a non-empty 'answer' of type string.`);
+                        }
+
+                        if (type === 'choice') {
+                             if (!question.options || !Array.isArray(question.options) || !question.options.includes(question.answer)) {
+                                 throw new Error(`The answer for ${qIdentifier} was not found in its 'options' array.`);
+                            }
+                        } else if (type !== 'blank') {
+                            throw new Error(`${qIdentifier} has an invalid type: '${type}'. Must be 'choice' or 'blank'.`);
+                        }
+                    }
+
+                    setCookie('quizJson', finalJsonText, 7);
+                    
+                    quizData = parsedJson.quiz;
+                    referenceText = parsedJson.text;
+                    
+                    currentQuestionIndex = 0;
+                    score = 0;
+                    incorrectlyAnsweredQuestions = [];
+                    isReversedStep = false;
+                    part1Correct = false;
+                    part2Correct = false;
+                    
+                    questionOrder = [...Array(quizData.length).keys()];
+                    const selectedOrder = document.querySelector('input[name="order"]:checked').value;
+                    if (selectedOrder === 'random') {
+                        questionOrder = shuffleArray(questionOrder);
+                    }
+
+                    referenceTextContent.textContent = referenceText;
+                    switchView('quiz');
+                    displayQuestion();
+
+                } catch (error) {
+                    errorMessage.textContent = `Error: ${error.message}`;
+                    errorMessage.style.display = 'block';
+                } finally {
+                    startBtn.disabled = false;
+                    startBtn.textContent = 'Start Quiz';
+                }
+            };
+
+            const displayQuestion = () => {
+                // Stop any previous speech
+                cancelSpeech();
+
+                optionsContainer.innerHTML = '';
+                optionsContainer.className = '';
+                feedbackContainer.style.display = 'none';
+                feedbackContainer.classList.remove('correct', 'incorrect');
+                nextBtn.style.display = 'none';
+
+                const questionIdx = questionOrder[currentQuestionIndex];
+                const originalQuestion = quizData[questionIdx];
+                let questionToDisplay = originalQuestion;
+
+                // Handle Reverse Question Generation Logic
+                if (isReversedStep) {
+                    const originalPrompt = originalQuestion.question.replace(/_+/g, '').trim();
+                    const underscores = '_'.repeat(originalPrompt.length);
+                    let newQuestionText;
+                    
+                    if (originalQuestion.question.trim().startsWith('_')) {
+                        // Original: "_ rugae" (Ans: gastric) -> Reverse: "gastric _" (Ans: rugae)
+                        newQuestionText = `${originalQuestion.answer} ${underscores}`;
+                    } else {
+                         // Original: "hydrangea _" (Ans: bush) -> Reverse: "_ bush" (Ans: hydrangea)
+                        newQuestionText = `${underscores} ${originalQuestion.answer}`;
+                    }
+                    
+                    questionToDisplay = {
+                        ...originalQuestion,
+                        question: newQuestionText,
+                        answer: originalPrompt,
+                        explanation: originalQuestion.explanation ? `(Reverse) ${originalQuestion.explanation}` : "(Reverse Question)"
+                    };
+                }
+
+                const type = questionToDisplay.type || 'choice';
+
+                updateProgressBar();
+                
+                questionTextElement.textContent = questionToDisplay.question;
+
+                if (type === 'choice') {
+                    optionsContainer.classList.add('choice-options');
+                    const correctAnswerText = questionToDisplay.answer;
+                    let shuffledOptions = shuffleArray(questionToDisplay.options);
+
+                    shuffledOptions.forEach((optionText) => {
+                        const button = document.createElement('button');
+                        button.classList.add('option-btn');
+                        button.textContent = optionText;
+                        button.dataset.isCorrect = (optionText === correctAnswerText);
+                        button.addEventListener('click', handleOptionClick);
+                        optionsContainer.appendChild(button);
+                    });
+                } else if (type === 'blank') {
+                    optionsContainer.classList.add('blank-form');
+                    const input = document.createElement('input');
+                    input.type = 'text';
+                    input.id = 'blank-input';
+                    input.placeholder = 'Type your answer...';
+                    input.autocomplete = 'off';
+                    
+                    const submitBtn = document.createElement('button');
+                    submitBtn.id = 'submit-blank-btn';
+                    submitBtn.textContent = 'Submit';
+                    submitBtn.classList.add('btn');
+
+                    optionsContainer.appendChild(input);
+                    optionsContainer.appendChild(submitBtn);
+
+                    submitBtn.addEventListener('click', () => handleBlankSubmit(questionToDisplay));
+                    input.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter') {
+                            e.preventDefault();
+                            handleBlankSubmit(questionToDisplay);
+                        }
+                    });
+
+                    setTimeout(() => input.focus(), 100);
+                }
+            };
+
+            const handleOptionClick = (event) => {
+                const selectedButton = event.target;
+                const isCorrect = selectedButton.dataset.isCorrect === 'true';
+
+                Array.from(optionsContainer.children).forEach(btn => {
+                    btn.disabled = true;
+                });
+
+                if (isCorrect) {
+                    selectedButton.classList.add('correct');
+                    feedbackResult.textContent = "Correct! 🎉";
+                    feedbackContainer.classList.add('correct');
+                    score++;
+                } else {
+                    selectedButton.classList.add('incorrect');
+                    const correctButton = optionsContainer.querySelector('[data-is-correct="true"]');
+                    if (correctButton) correctButton.classList.add('correct');
+                    
+                    feedbackResult.textContent = "Incorrect! 😔";
+                    feedbackContainer.classList.add('incorrect');
+                    incorrectlyAnsweredQuestions.push(questionOrder[currentQuestionIndex]);
+                }
+
+                const questionIdx = questionOrder[currentQuestionIndex];
+                feedbackExplanation.textContent = quizData[questionIdx].explanation || "";
+                feedbackContainer.style.display = 'block';
+
+                showNextButton();
+            };
+
+            const handleBlankSubmit = (currentQuestion) => {
+                const input = document.getElementById('blank-input');
+                const submitBtn = document.getElementById('submit-blank-btn');
+                if (!input || !submitBtn || submitBtn.disabled) return;
+
+                const userAnswer = input.value.trim();
+                const correctAnswer = currentQuestion.answer;
+
+                input.disabled = true;
+                submitBtn.disabled = true;
+                
+                const isCorrect = userAnswer.toLowerCase() === correctAnswer.toLowerCase();
+
+                if (isCorrect) {
+                    feedbackResult.textContent = "Correct! 🎉";
+                    input.style.borderColor = 'var(--correct-color)';
+                    feedbackContainer.classList.add('correct');
+                } else {
+                    feedbackResult.innerHTML = `Incorrect! 😔 <br><small>Correct answer: <strong>${correctAnswer}</strong></small>`;
+                    input.style.borderColor = 'var(--incorrect-color)';
+                    feedbackContainer.classList.add('incorrect');
+                }
+                
+                if (isReverseEnabled) {
+                     if (!isReversedStep) {
+                         part1Correct = isCorrect;
+                     } else {
+                         part2Correct = isCorrect;
+                     }
+                } else {
+                    if (isCorrect) {
+                        score++;
+                    } else {
+                        incorrectlyAnsweredQuestions.push(questionOrder[currentQuestionIndex]);
+                    }
+                }
+
+                feedbackExplanation.textContent = currentQuestion.explanation || "";
+                feedbackContainer.style.display = 'block';
+
+                showNextButton();
+            };
+            
+            const showNextButton = () => {
+                 if (currentQuestionIndex < questionOrder.length) {
+                    let nextText = 'Next Question';
+                    const isLastQuestion = currentQuestionIndex === questionOrder.length - 1;
+                    
+                    if (isReverseEnabled && !isReversedStep && quizData[questionOrder[currentQuestionIndex]].type === 'blank') {
+                        // Decide if we are going to show the reverse question
+                        let willShowReverse = true;
+                        if (isConditionalReverse && part1Correct) {
+                            willShowReverse = false;
+                        }
+
+                        if (willShowReverse) {
+                            nextText = 'Next Part (Reverse)';
+                        } else if (isLastQuestion) {
+                            nextText = 'Finish Quiz';
+                        }
+                    } else if (isLastQuestion) {
+                        nextText = 'Finish Quiz';
+                    }
+
+                    nextBtn.textContent = nextText;
+                }
+                nextBtn.style.display = 'block';
+                nextBtn.focus();
+            };
+
+            const nextQuestion = () => {
+                const questionIdx = questionOrder[currentQuestionIndex];
+                const currentQuestion = quizData[questionIdx];
+                const type = currentQuestion.type || 'choice';
+
+                // Check if we need to show the reverse question
+                if (isReverseEnabled && type === 'blank') {
+                    if (!isReversedStep) {
+                        // Check condition: Only reverse if Part 1 was WRONG (if Conditional Mode is ON)
+                        const skipReverse = isConditionalReverse && part1Correct;
+
+                        if (!skipReverse) {
+                            // Move to Reverse Step
+                            isReversedStep = true;
+                            displayQuestion();
+                            return; // Exit here
+                        } else {
+                            // Skipped reverse step because Part 1 was correct (and Conditional Mode ON)
+                            score++;
+                            isReversedStep = false;
+                            part1Correct = false;
+                            part2Correct = false;
+                        }
+                    } else {
+                        // We just finished the Reverse Step.
+                        if (isConditionalReverse) {
+                            // If we are here in conditional mode, it means Part 1 was wrong.
+                            // So the unit is counted as incorrect regardless of Part 2.
+                            incorrectlyAnsweredQuestions.push(questionIdx);
+                        } else {
+                            // Standard: Need both correct
+                            if (part1Correct && part2Correct) {
+                                score++;
+                            } else {
+                                incorrectlyAnsweredQuestions.push(questionIdx);
+                            }
+                        }
+                        
+                        // Reset flags
+                        isReversedStep = false;
+                        part1Correct = false;
+                        part2Correct = false;
+                    }
+                }
+
+                // Move to next question index
+                currentQuestionIndex++;
+                if (currentQuestionIndex < questionOrder.length) {
+                    displayQuestion();
+                } else {
+                    showSummary();
+                }
+            };
+
+            const showSummary = () => {
+                const questionsInRound = questionOrder.length;
+                scoreContainer.innerHTML = `You scored <span>${score}</span> out of ${questionsInRound}.`;
+
+                if (incorrectlyAnsweredQuestions.length > 0) {
+                    summaryTitle.textContent = 'Round Complete!';
+                    summaryMessage.textContent = 'You have a few incorrect answers. Ready for another round?';
+                    retakeBtn.textContent = `Retake ${incorrectlyAnsweredQuestions.length} Incorrect Questions`;
+                    retakeBtn.style.display = 'block';
+                } else {
+                    summaryTitle.textContent = 'Quiz Mastered!';
+                    summaryMessage.textContent = 'Congratulations! You answered all questions correctly.';
+                    retakeBtn.style.display = 'none';
+                }
+
+                switchView('summary');
+            };
+
+            const retakeIncorrectQuiz = () => {
+                questionOrder = shuffleArray(incorrectlyAnsweredQuestions);
+                incorrectlyAnsweredQuestions = [];
+                currentQuestionIndex = 0;
+                score = 0;
+                isReversedStep = false;
+                part1Correct = false;
+                part2Correct = false;
+                switchView('quiz');
+                displayQuestion();
+            };
+
+            const restartQuiz = () => {
+                switchView('setup');
+            };
+
+            const updateProgressBar = () => {
+                const progress = ((currentQuestionIndex) / questionOrder.length) * 100;
+                progressBar.style.width = `${progress}%`;
+                progressText.textContent = `${currentQuestionIndex + 1} / ${questionOrder.length}`;
+            };
+
+            // --- MODAL LOGIC ---
+            const showModal = () => textModal.classList.add('visible');
+            const hideModal = () => textModal.classList.remove('visible');
+
+            // --- INITIALIZATION ---
+            const initialize = async () => {
+                const urlParams = new URLSearchParams(window.location.search);
+                const url = urlParams.get('url');
+
+                if (url) {
+                    jsonInput.placeholder = 'Loading quiz from URL parameter...';
+                    jsonInput.disabled = true;
+                    startBtn.disabled = true;
+
+                    try {
+                        const response = await fetch(url);
+                        if (!response.ok) {
+                            throw new Error(`Failed to fetch from URL (Status: ${response.status})`);
+                        }
+                        const data = await response.json();
+                        const finalJsonText = JSON.stringify(data, null, 2);
+                        jsonInput.value = finalJsonText;
+                    } catch (error) {
+                        console.error("Failed to load from URL parameter:", error);
+                        errorMessage.textContent = `Error loading from URL: ${error.message}`;
+                        errorMessage.style.display = 'block';
+                        loadFromCookie();
+                    } finally {
+                        jsonInput.placeholder = 'Paste quiz JSON or URL here...';
+                        jsonInput.disabled = false;
+                        startBtn.disabled = false;
+                    }
+                } else {
+                    loadFromCookie();
+                }
+            };
+
+            initialize();
+
+            // --- EVENT LISTENERS ---
+            startBtn.addEventListener('click', startQuiz);
+            nextBtn.addEventListener('click', nextQuestion);
+            restartBtn.addEventListener('click', restartQuiz);
+            retakeBtn.addEventListener('click', retakeIncorrectQuiz);
+            showTextBtn.addEventListener('click', showModal);
+            closeBtn.addEventListener('click', hideModal);
+            
+            speakBtn.addEventListener('click', handleSpeak);
+
+            textModal.addEventListener('click', (event) => {
+                if (event.target === textModal) {
+                    hideModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
