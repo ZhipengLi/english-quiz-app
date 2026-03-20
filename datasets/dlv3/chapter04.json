@@ -1,0 +1,323 @@
+{
+  "text": "Deep Learning with Python - Chapter 4: Classification Fundamentals",
+  "quiz": [
+    {
+      "question": "One data point that goes into your model is called a __________.",
+      "type": "blank",
+      "answer": "Sample",
+      "explanation": "A single data point or example from your dataset. In the IMDB example, each sample is one movie review. The terms 'sample,' 'example,' 'instance,' and 'data point' are used interchangeably. The number of samples in your dataset is one of the most important factors for model performance — too few samples and the model can't learn general patterns; too many and training takes longer but usually yields better results."
+    },
+    {
+      "question": "One data point that goes into your model is also called an __________.",
+      "type": "blank",
+      "answer": "Input",
+      "explanation": "A synonym for sample — the data that enters the model. 'Input' emphasizes the directional relationship (data flows into the model), while 'sample' emphasizes that it's one element drawn from a larger dataset. In practice, models process inputs in batches rather than one at a time, so a single forward pass typically handles many inputs simultaneously."
+    },
+    {
+      "question": "What comes out of your model is called a __________.",
+      "type": "blank",
+      "answer": "Prediction",
+      "explanation": "The model's output for a given input. For a binary classifier with sigmoid output, the prediction is a probability between 0 and 1. For a multiclass classifier with softmax, it's a probability distribution over all classes. Predictions are compared against targets during training to compute loss, and during inference they represent the model's best guess on new data. The quality of predictions on unseen data (generalization) is what ultimately matters."
+    },
+    {
+      "question": "What comes out of your model is also called an __________.",
+      "type": "blank",
+      "answer": "Output",
+      "explanation": "A synonym for prediction — the result produced by the model. 'Output' is the more general term (it applies to any function), while 'prediction' carries the semantic meaning that the model is guessing something about the input. The shape and interpretation of the output depends on the task: a single number for binary classification, a vector for multiclass, a continuous value for regression, or even a full sequence for tasks like translation."
+    },
+    {
+      "question": "The truth your model should ideally have predicted, according to an external source of data, is called a __________.",
+      "type": "blank",
+      "answer": "Target",
+      "explanation": "The correct answer that the model is trying to learn to produce. Targets come from human annotation (for supervised learning) or are generated from the data itself (for self-supervised learning). The gap between predictions and targets is what the loss function measures. Target quality matters enormously — noisy or incorrect labels (label noise) can significantly degrade model performance, which is why data cleaning and annotation quality control are critical."
+    },
+    {
+      "question": "A measure of the distance between your model's prediction and the target is called a __________ __________.",
+      "type": "blank",
+      "answer": "Prediction Error",
+      "explanation": "How far off the model's output is from the correct answer. Prediction error is a general concept; the specific way it's quantified depends on the loss function — binary crossentropy for binary classification, categorical crossentropy for multiclass, mean squared error for regression. Reducing prediction error is the fundamental goal of training. The distinction between training error (on data the model has seen) and test error (on new data) is central to understanding overfitting."
+    },
+    {
+      "question": "A measure of the distance between your model's prediction and the target is also called a __________ __________.",
+      "type": "blank",
+      "answer": "Loss Value",
+      "explanation": "The numerical output of the loss function for a given prediction-target pair — a single number that summarizes how wrong the model is. During training, the optimizer works to minimize this value. Loss values are typically averaged across all samples in a batch, and the average loss per epoch is tracked to monitor training progress. A decreasing training loss that plateaus while validation loss increases is the classic signature of overfitting."
+    },
+    {
+      "question": "The set of possible labels in a classification problem is called the __________.",
+      "type": "blank",
+      "answer": "Classes",
+      "explanation": "The predefined categories that a classification model can assign to inputs. In IMDB sentiment analysis, there are 2 classes (positive and negative). In MNIST digit recognition, there are 10 classes (0–9). The number of classes directly affects the model's output layer — a 10-class problem needs 10 output units with softmax. Some problems have a fixed set of classes, while others (like open-vocabulary language modeling) effectively have an enormous class set."
+    },
+    {
+      "question": "A specific instance of a class annotation for one sample is called a __________.",
+      "type": "blank",
+      "answer": "Label",
+      "explanation": "The particular class assigned to a specific sample. While 'class' refers to the category itself (e.g., 'positive'), 'label' refers to the assignment of that class to a particular example (e.g., 'this review is labeled positive'). Labels can be represented as integers (0 or 1), one-hot vectors ([1, 0] or [0, 1]), or strings. The process of assigning labels to data — annotation — is often the most expensive and time-consuming part of building a supervised learning system."
+    },
+    {
+      "question": "All targets for a dataset, typically collected by humans, are called the __________ __________.",
+      "type": "blank",
+      "answer": "Ground Truth",
+      "explanation": "The complete set of correct answers for a dataset, treated as the definitive truth the model should learn to reproduce. 'Ground truth' implies human verification, but it's important to remember that human labels aren't always perfect — annotators disagree, make mistakes, and bring biases. Inter-annotator agreement (how often different humans agree on the same label) is a useful measure of label quality. The model's theoretical performance ceiling is limited by the quality of the ground truth."
+    },
+    {
+      "question": "All targets for a dataset, typically collected by humans, are also called __________.",
+      "type": "blank",
+      "answer": "Annotations",
+      "explanation": "A synonym for ground truth, emphasizing the human process of labeling data. Annotation can range from simple (binary sentiment labels) to extremely complex (pixel-level segmentation masks, bounding boxes with class labels, or multi-turn dialogue quality ratings). The annotation pipeline — including guidelines, annotator training, quality checks, and disagreement resolution — is a critical but often underappreciated part of machine learning projects."
+    },
+    {
+      "question": "A classification task where each input sample is assigned to one of two exclusive categories is called __________ __________.",
+      "type": "blank",
+      "answer": "Binary Classification",
+      "explanation": "The simplest form of classification — sorting inputs into exactly two categories (positive/negative, spam/not spam, fraud/legitimate). The model typically outputs a single probability via sigmoid activation: values above 0.5 are assigned to one class, below 0.5 to the other (though this threshold can be adjusted). Binary crossentropy is the standard loss function. Binary classification is distinct from multiclass classification (more than two categories) and multilabel classification (multiple labels per sample)."
+    },
+    {
+      "question": "A classification task where each input sample is assigned to one of more than two categories is called __________ __________.",
+      "type": "blank",
+      "answer": "Categorical Classification",
+      "explanation": "Classification with more than two mutually exclusive categories — each input belongs to exactly one class. MNIST (10 digit classes) and ImageNet (1,000 object classes) are classic examples. The model's output layer uses softmax activation with one unit per class, and the standard loss function is categorical crossentropy. 'Categorical classification' and 'multiclass classification' are synonyms. When the number of classes is very large (thousands or millions), special techniques like hierarchical softmax or sampled softmax are needed for efficiency."
+    },
+    {
+      "question": "A classification task where each input sample is assigned to one of more than two categories is also called __________ __________.",
+      "type": "blank",
+      "answer": "Multiclass Classification",
+      "explanation": "A synonym for categorical classification — the key property is that classes are mutually exclusive (each sample belongs to exactly one class). This contrasts with multilabel classification, where a sample can belong to multiple classes simultaneously. The distinction matters for model architecture: multiclass uses softmax (probabilities sum to 1, enforcing exclusivity), while multilabel uses independent sigmoids (each class has its own probability). Confusing the two is a common beginner mistake."
+    },
+    {
+      "question": "A classification task where each input sample can be assigned multiple labels is called __________ __________.",
+      "type": "blank",
+      "answer": "Multilabel Classification",
+      "explanation": "A task where each sample can belong to zero, one, or many classes simultaneously. For example, a news article might be tagged with both 'politics' and 'economics,' or a movie might be labeled as both 'comedy' and 'romance.' The model uses independent sigmoid activations (not softmax) for each class, and binary crossentropy is applied per-label. Multilabel classification is common in real-world applications like content tagging, medical diagnosis (a patient can have multiple conditions), and image annotation."
+    },
+    {
+      "question": "A task where the target is a continuous scalar value is called __________ __________.",
+      "type": "blank",
+      "answer": "Scalar Regression",
+      "explanation": "Predicting a single continuous number — like house price, temperature, or age. The model's output layer has one unit with no activation function (or linear activation), allowing it to output any real number. Mean squared error (MSE) or mean absolute error (MAE) are the standard loss functions. Scalar regression is distinct from classification (discrete categories) and from vector regression (predicting multiple continuous values). Common evaluation metrics include MSE, MAE, and R² score."
+    },
+    {
+      "question": "A task where the target is a set of continuous values is called __________ __________.",
+      "type": "blank",
+      "answer": "Vector Regression",
+      "explanation": "Predicting multiple continuous numbers simultaneously — like (x, y) coordinates, RGB color values, or a full price trajectory. The model's output layer has multiple units with linear activation. Each output dimension can be treated independently (with its own contribution to the loss), or they can be modeled jointly to capture correlations between outputs. Bounding box prediction in object detection is a practical example — the model predicts four continuous values (x, y, width, height) for each detected object."
+    },
+    {
+      "question": "A small set of samples processed simultaneously by the model, typically used for one gradient descent update, is called a __________-__________.",
+      "type": "blank",
+      "answer": "Mini Batch",
+      "explanation": "A small random subset of the training data (typically 32–512 samples) used for a single forward-backward pass and parameter update. Mini-batches strike a balance: they're large enough for stable gradient estimates and efficient GPU utilization, but small enough to allow frequent updates and some beneficial noise. The entire training set is processed in many mini-batches per epoch. Mini-batch size is a hyperparameter that affects training speed, memory usage, and sometimes even final model quality."
+    },
+    {
+      "question": "A small set of samples processed simultaneously by the model is also called a __________.",
+      "type": "blank",
+      "answer": "Batch",
+      "explanation": "In common usage, 'batch' and 'mini-batch' are interchangeable — both refer to the small group of samples processed together. Strictly speaking, 'batch' in 'batch gradient descent' means the entire dataset, but almost nobody uses true batch gradient descent anymore. When someone says 'batch size of 64,' they mean 64 samples per mini-batch. The first dimension of tensors in deep learning is almost always the batch dimension."
+    },
+    {
+      "question": "A dataset of 50,000 highly polarized movie reviews used for binary classification is called the __________ __________.",
+      "type": "blank",
+      "answer": "IMDB Dataset",
+      "explanation": "A widely used benchmark for binary sentiment classification, containing 25,000 training and 25,000 test movie reviews, each labeled as positive or negative. 'Highly polarized' means only strongly positive and strongly negative reviews are included — neutral reviews were excluded to make the task cleaner. The IMDB dataset is to NLP what MNIST is to computer vision: a simple, well-understood starting point. It was introduced by Andrew Maas et al. in 2011 and remains a standard benchmark for text classification methods."
+    },
+    {
+      "question": "A text sample classified as positive or negative in the binary classification example is called a __________ __________.",
+      "type": "blank",
+      "answer": "Movie Review",
+      "explanation": "The raw data unit in the IMDB dataset — a piece of text expressing an opinion about a movie. Each review is variable-length (some are a few sentences, others are paragraphs), which creates a challenge: neural networks expect fixed-size inputs. The chapter addresses this by converting reviews into fixed-length vectors through multi-hot encoding. Modern approaches (transformers) handle variable-length inputs natively through attention mechanisms and tokenization."
+    },
+    {
+      "question": "A dictionary mapping words to integer indices is called a __________ __________.",
+      "type": "blank",
+      "answer": "Word Index",
+      "explanation": "A lookup table that assigns each unique word in the vocabulary a unique integer. For example, 'the' might map to 1, 'movie' to 15, 'great' to 87. This is necessary because neural networks operate on numbers, not strings. The word index is typically ordered by frequency — the most common words get the lowest indices. The vocabulary size is a design choice: using only the top 10,000 words (as in the chapter example) keeps the model manageable while covering most of the text."
+    },
+    {
+      "question": "A dictionary mapping integer indices back to words is called a __________ __________ __________.",
+      "type": "blank",
+      "answer": "Reverse Word Index",
+      "explanation": "The inverse of the word index — it maps integers back to their corresponding words. This is essential for debugging and interpretability: when you see the model processing the sequence [1, 14, 22, 87], the reverse word index lets you decode it back to readable text like 'the movie was great.' Without this reverse mapping, you'd have no way to understand what the model is actually seeing. Building both a word index and its reverse is standard practice in NLP preprocessing."
+    },
+    {
+      "question": "A reserved token prefixed to each review sequence is called a __________ __________.",
+      "type": "blank",
+      "answer": "Start Token",
+      "explanation": "A special token (often mapped to index 1) added at the beginning of each sequence to mark where the text starts. Start tokens help the model learn that the first real word follows a consistent marker. In language models and sequence-to-sequence models, the start token plays an even more important role — it serves as the initial input that triggers the generation process. Similarly, end tokens (EOS) mark sequence boundaries. These special tokens are part of the vocabulary but don't correspond to real words."
+    },
+    {
+      "question": "A reserved index used when sequences are padded to the same length is called __________.",
+      "type": "blank",
+      "answer": "Padding",
+      "explanation": "A technique for making variable-length sequences the same length by filling shorter sequences with a special value (typically 0). Since neural networks require fixed-size inputs (especially in batched computation), padding is essential for processing sequences of different lengths together. The model must learn to ignore padding positions — this is often handled by masking layers or attention masks that tell the model which positions contain real data versus padding. The padding index (usually 0) is excluded from loss computation."
+    },
+    {
+      "question": "A reserved index used for words not in the vocabulary is called __________.",
+      "type": "blank",
+      "answer": "Unknown",
+      "explanation": "A special token (often mapped to index 2 and written as <UNK>) that replaces any word not found in the vocabulary. If your vocabulary contains only the top 10,000 words, the 10,001st most common word and beyond are all mapped to the unknown token. A high proportion of unknown tokens can hurt performance because the model loses information. Strategies for handling this include using larger vocabularies, subword tokenization (like BPE or WordPiece, which break rare words into known subunits), or character-level models."
+    },
+    {
+      "question": "A list of integer word indices representing a review is called a __________.",
+      "type": "blank",
+      "answer": "Sequence",
+      "explanation": "The numerical representation of a text — each word replaced by its integer index from the word index. For example, 'the movie was great' might become [1, 14, 22, 87]. Order matters in sequences, which distinguishes them from bags of words. The chapter's multi-hot encoding approach loses sequence order, treating 'the movie was great' and 'great was the movie' identically. Modern approaches (RNNs, transformers) preserve order, which is critical for understanding meaning."
+    },
+    {
+      "question": "A tensor of integers that can represent padded word sequences is called an __________ __________.",
+      "type": "blank",
+      "answer": "Integer Tensor",
+      "explanation": "A tensor with an integer dtype (like int32 or int64) used to store sequences of word indices. Integer tensors can't be directly processed by most neural network layers (which expect float inputs), so they must be converted — either through multi-hot encoding, embedding layers, or other vectorization methods. Integer tensors are memory-efficient for storing sparse categorical data like word indices, token IDs, or class labels."
+    },
+    {
+      "question": "A layer capable of handling integer tensors representing sequences is called an __________ __________.",
+      "type": "blank",
+      "answer": "Embedding Layer",
+      "explanation": "A layer that converts integer indices into dense vectors — each index looks up a row in a learnable weight matrix. For a vocabulary of 10,000 words with 128-dimensional embeddings, the embedding layer has a (10,000 × 128) weight matrix. Embedding layers are far more powerful than multi-hot encoding because they learn meaningful representations: words with similar meanings end up close together in embedding space. Word2Vec and GloVe are pre-trained embeddings; modern models learn embeddings end-to-end during training."
+    },
+    {
+      "question": "A way to convert a sequence into a vector of zeros and ones indicating word presence or absence is called __________-__________ __________.",
+      "type": "blank",
+      "answer": "Multi Hot Encode",
+      "explanation": "A simple vectorization method: create a vector as long as the vocabulary (e.g., 10,000 elements), and set positions to 1 for every word that appears in the text, 0 otherwise. Multi-hot encoding is a bag-of-words approach — it captures which words are present but loses all information about word order, frequency (beyond presence), and context. Despite its simplicity, it works surprisingly well for tasks like sentiment analysis where individual word presence (e.g., 'terrible,' 'amazing') is highly informative."
+    },
+    {
+      "question": "To convert raw input data into vectors that can be fed into a neural network is called to __________.",
+      "type": "blank",
+      "answer": "Vectorize",
+      "explanation": "The process of transforming raw data (text, images, audio, categorical features) into numerical vectors suitable for neural network input. Vectorization is a critical preprocessing step — the choice of vectorization method significantly affects what information the model can access. For text, options include multi-hot encoding, TF-IDF, word embeddings, and subword tokenization. For images, vectorization is simpler (pixel values are already numbers) but may include normalization, resizing, and data augmentation."
+    },
+    {
+      "question": "The data used to fit the model is called __________ __________.",
+      "type": "blank",
+      "answer": "Training Data",
+      "explanation": "The portion of your dataset that the model actually learns from — it sees these examples, computes loss against their labels, and adjusts its weights accordingly. Training data quality (correctness, diversity, representativeness) directly determines what the model learns. A model trained on biased data will learn biased patterns. The standard practice is to split your data into training (60–80%), validation (10–20%), and test (10–20%) sets, ensuring the model is evaluated on data it hasn't trained on."
+    },
+    {
+      "question": "The data used to evaluate the model on unseen examples is called __________ __________.",
+      "type": "blank",
+      "answer": "Test Data",
+      "explanation": "A held-out portion of data used exclusively for final evaluation — the model never sees it during training or hyperparameter tuning. Test data answers the question: 'How well will this model perform in the real world?' If you peek at test data during development (even indirectly, by tuning hyperparameters based on test results), you contaminate it and can no longer trust the evaluation. This is why a separate validation set is used during development, with the test set reserved for one final evaluation."
+    },
+    {
+      "question": "A fully connected layer used in the binary classification example is called a __________ __________.",
+      "type": "blank",
+      "answer": "Dense Layer",
+      "explanation": "A layer where every input is connected to every output through a weight matrix plus a bias vector: output = activation(dot(input, W) + b). Dense layers are the most general-purpose layer type — they can learn any mapping but don't exploit spatial or sequential structure. In the IMDB example, two Dense layers with relu activation extract features, followed by a Dense layer with sigmoid for the final binary prediction. For image data, convolutional layers are usually preferred because they're more parameter-efficient."
+    },
+    {
+      "question": "An activation function that zeroes out negative values is called __________.",
+      "type": "blank",
+      "answer": "Relu",
+      "explanation": "Rectified Linear Unit — defined as relu(x) = max(0, x). Relu is the default activation for hidden layers because it's simple, computationally cheap, and avoids the vanishing gradient problem that plagued sigmoid and tanh (where gradients become tiny for large or small inputs, stalling learning in deep networks). Relu's main limitation is 'dying neurons' — if a neuron's output becomes permanently negative, its gradient is always zero and it stops learning. Leaky ReLU and GELU address this by allowing small negative values."
+    },
+    {
+      "question": "A nonlinearity applied after a layer transformation to allow the model to learn richer functions is called an __________ __________.",
+      "type": "blank",
+      "answer": "Activation Function",
+      "explanation": "A function applied element-wise to a layer's output to introduce nonlinearity. Without activation functions, stacking multiple Dense layers would be equivalent to a single linear transformation (because the composition of linear functions is linear). Common activations include relu (for hidden layers), sigmoid (for binary output), softmax (for multiclass output), and tanh (historically popular, now less common). The choice of activation function affects both what the model can learn and how easily gradients flow during backpropagation."
+    },
+    {
+      "question": "The dimensionality of the representation space of a Dense layer is called its __________.",
+      "type": "blank",
+      "answer": "Units",
+      "explanation": "The number of output neurons in a Dense layer — equivalently, the number of columns in the weight matrix. A Dense layer with 16 units projects the input into a 16-dimensional representation space. More units give the layer more capacity to represent complex patterns but also more parameters (increasing computation and overfitting risk). Choosing the number of units is a key architecture decision — too few and the model can't capture the task's complexity; too many and it may overfit or be wasteful."
+    },
+    {
+      "question": "The internal space onto which a layer projects input data is called the __________ __________.",
+      "type": "blank",
+      "answer": "Representation Space",
+      "explanation": "The vector space defined by a layer's output — each input is transformed into a point in this space. A Dense layer with 16 units creates a 16-dimensional representation space. The model learns to arrange data in this space so that relevant patterns become easy to detect by subsequent layers. For classification, a well-trained model's representation space will have different classes occupying distinct, well-separated regions — this is essentially what 'learning good representations' means."
+    },
+    {
+      "question": "The matrix used in the dot product inside a Dense layer transformation is called the __________ __________.",
+      "type": "blank",
+      "answer": "Weight Matrix",
+      "explanation": "The main learnable component of a Dense layer — a 2D tensor of shape (input_features, units) that transforms input vectors into output vectors through matrix multiplication. Each column of the weight matrix defines one output neuron's 'template' — the dot product between the input and a column measures how much the input matches that template. Training adjusts these weights to make the templates useful for the task. The weight matrix accounts for the vast majority of parameters in dense layers."
+    },
+    {
+      "question": "The vector added after the dot product in a Dense layer is called the __________ __________.",
+      "type": "blank",
+      "answer": "Bias Vector",
+      "explanation": "A learnable vector of shape (units,) added to the matrix multiplication result: output = dot(input, W) + b. The bias allows each neuron to shift its activation threshold — without it, the neuron's decision boundary must pass through the origin, which is unnecessarily restrictive. The bias is a small addition in parameter count (e.g., 16 parameters for 16 units) compared to the weight matrix (e.g., 784 × 16 = 12,544 parameters), but it's essential for the model's expressiveness."
+    },
+    {
+      "question": "An activation function that squashes values into the 0-to-1 interval and can be interpreted as a probability is called __________.",
+      "type": "blank",
+      "answer": "Sigmoid",
+      "explanation": "An activation function defined as sigmoid(x) = 1 / (1 + exp(-x)) that maps any real number to a value between 0 and 1. It's the standard output activation for binary classification because its output can be directly interpreted as P(class = 1). Sigmoid was also historically used in hidden layers but has been largely replaced by relu because sigmoid suffers from vanishing gradients — for very large or very small inputs, the gradient is near zero, making learning extremely slow in deep networks."
+    },
+    {
+      "question": "A score between 0 and 1 indicating how likely an input belongs to a class is called a __________.",
+      "type": "blank",
+      "answer": "Probability",
+      "explanation": "The output of a sigmoid (binary) or softmax (multiclass) activation, interpreted as the model's confidence that the input belongs to a particular class. A probability of 0.95 means the model is 95% confident. However, neural network probabilities are often poorly calibrated — a model that outputs 0.95 might actually be correct only 80% of the time. Calibration techniques (like temperature scaling) can improve probability reliability, which matters for applications where the confidence score drives downstream decisions."
+    },
+    {
+      "question": "Another name for an activation function that allows neural networks to learn more than linear transformations is called a __________-__________.",
+      "type": "blank",
+      "answer": "Non Linearity",
+      "explanation": "A term emphasizing why activation functions matter: they break linearity. A neural network with only linear layers computes one big linear function regardless of depth — adding nonlinearities between layers lets the network represent curved, complex decision boundaries. The universal approximation theorem states that a neural network with at least one hidden layer and a nonlinear activation function can approximate any continuous function to arbitrary precision (given enough neurons). Nonlinearity is what gives deep learning its power."
+    },
+    {
+      "question": "A transformation a Dense layer would learn if it had no activation function is called a __________ __________.",
+      "type": "blank",
+      "answer": "Linear Transformation",
+      "explanation": "A function of the form output = dot(input, W) — a pure matrix multiplication with no nonlinearity. Linear transformations can only model linear relationships: straight lines in 2D, flat hyperplanes in higher dimensions. Stacking multiple linear transformations still produces a linear transformation (because matrix multiplication is associative). This is why activation functions are essential — without them, a 100-layer network would be no more powerful than a single layer."
+    },
+    {
+      "question": "A linear transformation plus an addition term is called an __________ __________.",
+      "type": "blank",
+      "answer": "Affine Transformation",
+      "explanation": "A function of the form output = dot(input, W) + b — a linear transformation followed by a translation (shift). The Dense layer without an activation function computes exactly this. The distinction matters geometrically: a linear transformation maps the origin to the origin, while an affine transformation can shift the origin. The bias vector b provides this shift, allowing the layer to model patterns that don't center on zero. In practice, 'linear transformation' is often used loosely to include affine transformations."
+    },
+    {
+      "question": "The set of transformations a model can learn is called the __________ __________.",
+      "type": "blank",
+      "answer": "Hypothesis Space",
+      "explanation": "The set of all possible functions the model could represent given its architecture. A linear model's hypothesis space is all linear functions; a deep network with relu activations has a much richer hypothesis space of piecewise linear functions. The architecture defines the hypothesis space, and training searches within it for the function that best fits the data. If the true underlying pattern isn't in the hypothesis space (e.g., trying to fit a curve with a linear model), no amount of training will find it. Choosing the right architecture means choosing a hypothesis space large enough to contain the solution."
+    },
+    {
+      "question": "A loss function typically used for binary classification when the model outputs probabilities is called __________ __________.",
+      "type": "blank",
+      "answer": "Binary Crossentropy",
+      "explanation": "The standard loss function for binary classification with sigmoid output. It measures how different the predicted probability distribution is from the true label distribution. The formula penalizes confident wrong predictions heavily: predicting 0.01 when the label is 1 yields a much larger loss than predicting 0.4. Binary crossentropy is always used with sigmoid output, just as categorical crossentropy is used with softmax. Using the wrong loss-activation combination (e.g., MSE with sigmoid) can cause training instability and poor convergence."
+    },
+    {
+      "question": "An alternative loss function mentioned for binary classification that measures average squared differences is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Mean Squared Error",
+      "explanation": "A loss function that computes the average of squared differences between predictions and targets. While MSE is the standard loss for regression, it can technically be used for classification — but it's suboptimal because its gradient signal is weaker than crossentropy when predictions are confident but wrong. With sigmoid output, MSE gradients can be very small near 0 and 1 (where sigmoid's gradient is already small), leading to slow learning. This is why crossentropy is strongly preferred for classification tasks."
+    },
+    {
+      "question": "A quantity from information theory that measures the distance between probability distributions is called __________.",
+      "type": "blank",
+      "answer": "Crossentropy",
+      "explanation": "A measure of how different two probability distributions are — specifically, the expected number of bits needed to encode samples from distribution P using a code optimized for distribution Q. In deep learning, P is the true label distribution and Q is the model's predicted distribution. Lower crossentropy means the predictions are closer to the truth. Crossentropy is always non-negative and equals zero only when the two distributions are identical. It's closely related to KL divergence: crossentropy = entropy + KL divergence."
+    },
+    {
+      "question": "The field from which crossentropy originates is called __________ __________.",
+      "type": "blank",
+      "answer": "Information Theory",
+      "explanation": "A branch of mathematics founded by Claude Shannon in 1948 that studies the quantification, storage, and communication of information. Key concepts like entropy (measuring uncertainty), mutual information (measuring shared information), and crossentropy (measuring distribution difference) have become fundamental tools in machine learning. Information theory provides the theoretical foundation for why crossentropy is the right loss function for classification — it directly optimizes the model's ability to encode the true data distribution."
+    },
+    {
+      "question": "An optimizer presented as a good default choice for many problems is called __________.",
+      "type": "blank",
+      "answer": "Adam",
+      "explanation": "Adaptive Moment Estimation — an optimizer that combines momentum (tracking the running average of gradients) with adaptive learning rates (tracking the running average of squared gradients, like RMSprop). Adam adjusts the learning rate per-parameter, taking larger steps for infrequent features and smaller steps for frequent ones. It's the most popular default optimizer because it works well 'out of the box' with its default settings (learning rate 1e-3, beta1=0.9, beta2=0.999). AdamW, a variant that handles weight decay more correctly, is now often preferred for training large models."
+    },
+    {
+      "question": "A metric monitored during training that measures the fraction of correct predictions is called __________.",
+      "type": "blank",
+      "answer": "Accuracy",
+      "explanation": "The simplest classification metric: correct predictions divided by total predictions. In the IMDB example, accuracy is tracked alongside loss during training. While accuracy is intuitive, it doesn't tell the whole story — a model achieving 90% accuracy on an imbalanced dataset (where 90% of samples are one class) might simply be predicting the majority class every time. For production systems, precision (of predicted positives, how many are correct), recall (of actual positives, how many were found), and F1-score (their harmonic mean) give a more nuanced picture."
+    },
+    {
+      "question": "The process of checking how well an approach works beyond the training data is called __________.",
+      "type": "blank",
+      "answer": "Validation",
+      "explanation": "Evaluating model performance on data it wasn't trained on, typically using a held-out validation set. Validation serves two purposes: detecting overfitting (when training performance is much better than validation performance) and guiding hyperparameter tuning (choosing the model configuration that performs best on validation data). Common strategies include a simple train/validation split, k-fold cross-validation (rotating which portion is held out), and stratified splitting (ensuring class proportions are preserved). The validation set is distinct from the test set, which is reserved for final evaluation only."
+    }
+  ]
+}
