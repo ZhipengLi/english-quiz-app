@@ -1,0 +1,335 @@
+{
+  "text": "Deep Learning with Python - Chapter 3: Deep Learning Frameworks and Keras",
+  "quiz": [
+    {
+      "question": "A software framework that packages the core tools needed to build and train modern deep learning models, including automatic differentiation, tensor computation, and distributed execution, is called a __________ __________ __________.",
+      "type": "blank",
+      "answer": "Deep Learning Framework",
+      "explanation": "The foundational software platform for modern AI development. A deep learning framework handles the three hardest parts of neural network engineering: computing gradients automatically (so you don't derive them by hand), running tensor math on GPUs (so training doesn't take forever), and distributing work across multiple machines (so you can scale). The three dominant frameworks today — TensorFlow, PyTorch, and JAX — all provide these capabilities but with different design philosophies and tradeoffs."
+    },
+    {
+      "question": "A way to compute gradients for arbitrary differentiable functions automatically is called __________ __________.",
+      "type": "blank",
+      "answer": "Automatic Differentiation",
+      "explanation": "The technique that makes modern deep learning practical — you write the forward pass, and the framework computes all the gradients for you. There are two modes: forward-mode (efficient when there are few inputs) and reverse-mode (efficient when there are few outputs). Since neural network training has one scalar output (the loss) and millions of parameters, reverse-mode autodiff (i.e., backpropagation) is universally used. Before autodiff was built into frameworks, researchers had to derive and implement gradients by hand for every new architecture."
+    },
+    {
+      "question": "Numerical computation on tensors that can run on CPUs, GPUs, and other specialized hardware is called __________ __________.",
+      "type": "blank",
+      "answer": "Tensor Computation",
+      "explanation": "The core computational substrate of deep learning — performing mathematical operations on multidimensional arrays. What makes framework-level tensor computation special (compared to, say, NumPy) is hardware abstraction: the same code can run on CPUs, GPUs, or TPUs with minimal changes. Frameworks also optimize tensor operations through operator fusion, memory planning, and kernel selection, making them far faster than naive implementations."
+    },
+    {
+      "question": "Running computation across multiple devices or multiple computers, such as many GPUs working together, is called __________ __________.",
+      "type": "blank",
+      "answer": "Distributed Computation",
+      "explanation": "Spreading training or inference workloads across multiple processors or machines. There are two main strategies: data parallelism (each device processes a different batch of data with a copy of the model, then gradients are averaged) and model parallelism (different parts of the model live on different devices). Training the largest modern models — like GPT-4 or Gemini — requires thousands of GPUs coordinated through distributed computation, making this capability essential for frontier AI research."
+    },
+    {
+      "question": "An early framework that enabled both autodifferentiation and GPU computation for deep learning, described as the conceptual ancestor of modern tools, is called __________.",
+      "type": "blank",
+      "answer": "Theano",
+      "explanation": "A pioneering Python library developed at the University of Montreal (Yoshua Bengio's lab) starting around 2007. Theano was the first tool to combine symbolic math expressions with automatic differentiation and GPU compilation in a Python-friendly package. It directly inspired TensorFlow's original design (static computation graphs compiled before execution). Theano was officially discontinued in 2017, but its ideas live on in every modern framework."
+    },
+    {
+      "question": "NVIDIA technology that made it practical to run neural network computation on consumer GPUs is called __________.",
+      "type": "blank",
+      "answer": "CUDA",
+      "explanation": "Compute Unified Device Architecture — NVIDIA's parallel computing platform that lets developers write general-purpose code for GPUs. Before CUDA (released 2007), GPUs could only run graphics shaders. CUDA opened them up for scientific computing, and deep learning turned out to be a perfect fit because neural network training is dominated by matrix multiplications — exactly what GPUs excel at. CUDA's ecosystem (cuDNN, cuBLAS, NCCL) is a major reason NVIDIA dominates the AI hardware market, and why AMD and Intel have struggled to compete despite having capable hardware."
+    },
+    {
+      "question": "An older Lua-based deep learning library that gained popularity in computer vision before PyTorch is called __________ __.",
+      "type": "blank",
+      "answer": "Torch 7",
+      "explanation": "A scientific computing framework written in Lua that was popular in the deep learning research community, especially for computer vision, in the early-to-mid 2010s. Facebook AI Research (FAIR) used Torch 7 extensively. When the team decided to build a Python-native successor, the result was PyTorch — which inherited Torch 7's emphasis on flexibility and research-friendliness while gaining Python's enormous ecosystem. The '7' in Torch 7 is simply the version number."
+    },
+    {
+      "question": "An older C++-based deep learning library that became popular in the computer vision world is called __________.",
+      "type": "blank",
+      "answer": "Caffe",
+      "explanation": "A deep learning framework developed at UC Berkeley, known for its speed and its use of configuration files (prototxt) instead of code to define models. Caffe was the go-to framework for image classification in the mid-2010s, especially after winning the ImageNet competition. Its successors include Caffe2 (which was eventually merged into PyTorch) and ONNX (an open model interchange format). Caffe's decline illustrates how Python-native frameworks with better flexibility won out over faster but less flexible C++ tools."
+    },
+    {
+      "question": "A Python-based open-source machine learning framework developed primarily by Google, widely used in production, is called __________.",
+      "type": "blank",
+      "answer": "TensorFlow",
+      "explanation": "Google's flagship deep learning framework, released in 2015. TensorFlow's greatest strength is its production ecosystem — TF Serving for deployment, TFLite for mobile, TFX for ML pipelines, and TensorFlow.js for the browser. TensorFlow 1.x used static computation graphs (define-then-run), which was powerful for optimization but painful for debugging. TensorFlow 2.0 switched to eager execution by default (like PyTorch) and adopted Keras as its official high-level API, greatly improving usability."
+    },
+    {
+      "question": "A Python-based open-source machine learning framework developed primarily by Meta, used extensively in the research community, is called __________.",
+      "type": "blank",
+      "answer": "PyTorch",
+      "explanation": "Meta's deep learning framework, released in 2016, which has become the dominant choice in academic research. PyTorch's key design decision was dynamic computation graphs (define-by-run) — the graph is built on-the-fly during execution, making debugging natural (you can use print statements and Python debuggers). This made it beloved by researchers who constantly experiment with new architectures. PyTorch has also grown its production story with TorchServe and torch.compile for deployment optimization."
+    },
+    {
+      "question": "An open-source library for differentiable computation, developed primarily by Google, known for high scalability and strong TPU support, is called __________.",
+      "type": "blank",
+      "answer": "JAX",
+      "explanation": "Google's research-oriented framework that takes a radically different approach: instead of building an object-oriented neural network API, JAX provides composable function transformations. You write pure functions, then apply transforms like grad (automatic differentiation), jit (compilation), vmap (automatic batching), and pmap (parallelization across devices). This functional style enables powerful optimizations and scales exceptionally well on TPU pods. JAX is not a full framework — higher-level libraries like Flax, Haiku, and Equinox build neural network APIs on top of it."
+    },
+    {
+      "question": "A high-level deep learning API for Python that provides a convenient way to define and train many kinds of deep learning models is called __________.",
+      "type": "blank",
+      "answer": "Keras",
+      "explanation": "A high-level API created by François Chollet that emphasizes developer experience — models can be defined in a few lines of readable code. Keras was originally a standalone library that could run on top of Theano or TensorFlow. It was later integrated directly into TensorFlow as tf.keras. Keras 3 (released 2023) returned to being backend-agnostic, supporting TensorFlow, PyTorch, and JAX as interchangeable backends. This lets you write code once and run it on whichever framework best suits your deployment needs."
+    },
+    {
+      "question": "A framework that provides streamlined abstractions for building and training neural networks is called a __________-__________ __________.",
+      "type": "blank",
+      "answer": "High Level Framework",
+      "explanation": "A framework that hides low-level details (tensor operations, gradient computation, device management) behind clean abstractions like 'layers,' 'models,' and 'fit.' Keras is the prime example. High-level frameworks dramatically reduce the amount of code needed — a working image classifier might take 10 lines in Keras versus 100 in raw TensorFlow. The tradeoff is less control over the details, which is why researchers sometimes drop down to the low-level framework for custom training loops or novel architectures."
+    },
+    {
+      "question": "A framework focused on tensor operations, gradients, and lower-level numerical building blocks is called a __________-__________ __________.",
+      "type": "blank",
+      "answer": "Low Level Framework",
+      "explanation": "A framework that exposes the fundamental primitives of deep learning — tensor creation, mathematical operations, gradient computation, and device placement — without prescribing how to compose them into models. TensorFlow, PyTorch, and JAX are low-level frameworks in this sense. They give you full control but require more code and deeper understanding. Most practitioners use a high-level API (Keras, PyTorch Lightning, Hugging Face) for standard tasks and drop to the low level only when they need custom behavior."
+    },
+    {
+      "question": "A lower-level tensor computing platform that Keras runs on top of is called a __________ __________.",
+      "type": "blank",
+      "answer": "Backend Framework",
+      "explanation": "The engine that actually executes tensor operations and gradient computations when you use Keras. Keras itself defines the API (what you write) while the backend framework handles the execution (what actually runs). This separation of concerns means Keras code is portable — the same model definition can run on TensorFlow (for production deployment), PyTorch (for research flexibility), or JAX (for TPU scalability) by simply changing the backend setting."
+    },
+    {
+      "question": "The ability in Keras to switch backend frameworks without rewriting the overall model logic is called a __________ __________.",
+      "type": "blank",
+      "answer": "Pluggable Backend",
+      "explanation": "A design pattern where the high-level API is decoupled from the execution engine, allowing you to swap one backend for another. In Keras 3, you can switch between TensorFlow, PyTorch, and JAX by changing an environment variable or config file — your model code stays the same. This is powerful for teams that want to train on JAX TPUs but deploy with TensorFlow Serving, or researchers who want to compare framework performance without rewriting their codebase."
+    },
+    {
+      "question": "A tensor object used to store modifiable state in TensorFlow is called a __________.",
+      "type": "blank",
+      "answer": "Variable",
+      "explanation": "TensorFlow's mechanism for holding mutable state — primarily model weights that change during training. A tf.Variable wraps a tensor and tracks it for automatic differentiation. When you create a Keras layer, its weights are stored as tf.Variables under the hood. Variables persist across multiple forward passes (unlike regular tensors, which are ephemeral). In TensorFlow's original static graph design, Variables were the only way to maintain state between graph executions."
+    },
+    {
+      "question": "In PyTorch, a tensor object that stores trainable state in a model is called a __________.",
+      "type": "blank",
+      "answer": "Parameter",
+      "explanation": "PyTorch's equivalent of TensorFlow's Variable — a special tensor wrapper (torch.nn.Parameter) that signals to the framework that this tensor should be treated as a learnable model weight. When you register a Parameter inside a Module, it automatically appears in model.parameters(), which is what the optimizer iterates over during weight updates. Regular tensors in PyTorch can also track gradients (via requires_grad=True), but Parameter adds the semantic meaning of 'this belongs to the model.'"
+    },
+    {
+      "question": "The fundamental numerical object used across TensorFlow, PyTorch, and related frameworks for machine learning computation is called a __________.",
+      "type": "blank",
+      "answer": "Tensor",
+      "explanation": "The universal data structure of deep learning — a multidimensional array of numbers. While conceptually similar to NumPy arrays, framework tensors add two critical capabilities: they can live on GPUs (for fast computation) and they can track operations for automatic differentiation (for computing gradients). TensorFlow tensors, PyTorch tensors, and JAX arrays each have slightly different APIs but represent the same mathematical object. All data — images, text tokens, audio waveforms — must be converted into tensors before a model can process them."
+    },
+    {
+      "question": "A tensor created from a fixed initial value, such as all ones, all zeros, or explicit numerical values, is called a __________ __________.",
+      "type": "blank",
+      "answer": "Constant Tensor",
+      "explanation": "A tensor initialized with predetermined values that don't change. Common factory functions include tf.ones(), tf.zeros(), and tf.constant() in TensorFlow, or torch.ones(), torch.zeros(), and torch.tensor() in PyTorch. Constant tensors are useful for initialization, masking (creating binary masks to ignore certain elements), and creating fixed lookup tables. They contrast with random tensors (initialized from a distribution) and variables/parameters (which change during training)."
+    },
+    {
+      "question": "A tensor whose values are sampled from a distribution such as a normal or uniform distribution is called a __________ __________.",
+      "type": "blank",
+      "answer": "Random Tensor",
+      "explanation": "A tensor initialized with values drawn from a probability distribution. Random initialization of model weights is critical — if all weights start at the same value, all neurons learn the same thing (the symmetry problem). Common initialization strategies include Glorot/Xavier (uniform or normal, scaled by layer size) and He initialization (scaled for relu activations). Random tensors are also used for dropout masks, data augmentation, and stochastic sampling in generative models like VAEs."
+    },
+    {
+      "question": "A TensorFlow tool used to record operations so that gradients can later be computed automatically is called __________.",
+      "type": "blank",
+      "answer": "GradientTape",
+      "explanation": "TensorFlow's context manager for reverse-mode automatic differentiation in eager mode. You wrap forward-pass code inside tf.GradientTape(), and TensorFlow records every operation on watched tensors. Calling tape.gradient(loss, variables) then replays the tape backward to compute gradients. By default, a tape can only be used once (for memory efficiency); set persistent=True for multiple gradient computations. PyTorch handles this differently — it records operations automatically on any tensor with requires_grad=True, without needing an explicit context manager."
+    },
+    {
+      "question": "The PyTorch mechanism used to compute gradients is called the __________ __________.",
+      "type": "blank",
+      "answer": "Backward Method",
+      "explanation": "PyTorch's way of triggering backpropagation — you call loss.backward() and PyTorch computes gradients for all tensors in the computation graph that have requires_grad=True. The gradients accumulate in each tensor's .grad attribute. A key detail: gradients accumulate by default (they're added, not replaced), so you must call optimizer.zero_grad() before each backward pass to clear old gradients. This accumulation behavior is actually useful for simulating larger batch sizes by accumulating gradients across multiple mini-batches."
+    },
+    {
+      "question": "The PyTorch class used to package computation into reusable model components is called the __________ __________.",
+      "type": "blank",
+      "answer": "Module Class",
+      "explanation": "The base class (torch.nn.Module) for all neural network components in PyTorch. You define layers, sub-models, and entire networks by subclassing Module and implementing the forward() method. Module automatically tracks all Parameters and sub-Modules, making it easy to move the entire model to GPU (model.to('cuda')), save/load checkpoints, and iterate over all learnable parameters. This composability — Modules containing other Modules — is how complex architectures like transformers are built from simple pieces."
+    },
+    {
+      "question": "The basic numerical object used in JAX, available through the jax.numpy API, is called the __________ __________.",
+      "type": "blank",
+      "answer": "Array Class",
+      "explanation": "JAX's equivalent of a tensor — a multidimensional array that supports GPU/TPU acceleration and automatic differentiation. JAX arrays are created through the jax.numpy API, which mirrors NumPy's interface almost exactly. A key difference from TensorFlow and PyTorch: JAX arrays are immutable — you can't modify them in place. This immutability is central to JAX's functional programming model and enables powerful compiler optimizations like automatic parallelization."
+    },
+    {
+      "question": "The JAX namespace that implements the NumPy API for array and numerical computation is called __________ __________.",
+      "type": "blank",
+      "answer": "JAX Numpy",
+      "explanation": "JAX's reimplementation of the NumPy API (accessed as jax.numpy or jnp) that adds GPU/TPU support and automatic differentiation to familiar NumPy operations. If you know NumPy, you can use JAX with minimal changes — jnp.array, jnp.dot, jnp.reshape all work the same way. The key benefit is that code written with jax.numpy can be differentiated with jax.grad, compiled with jax.jit, and run on accelerators — none of which plain NumPy can do."
+    },
+    {
+      "question": "A JAX function used to compute gradients automatically is called __________ __________.",
+      "type": "blank",
+      "answer": "JAX Grad",
+      "explanation": "JAX's approach to automatic differentiation — jax.grad is a function that takes a function and returns a new function that computes its gradient. For example, grad_fn = jax.grad(loss_fn) creates a function that, given inputs, returns the gradient of loss_fn with respect to its first argument. This functional style (transforming functions into gradient functions) is very different from TensorFlow's GradientTape or PyTorch's .backward() — it treats differentiation as a composable transformation rather than a side effect."
+    },
+    {
+      "question": "A JAX function used to compute both a value and its gradient together is called __________ __________ __________ __________.",
+      "type": "blank",
+      "answer": "JAX Value And Grad",
+      "explanation": "A convenience function (jax.value_and_grad) that returns both the function's output and its gradient in a single call. This is more efficient than calling the function and jax.grad separately, because both the value and gradient are computed in one forward-backward pass. In a training loop, you typically need both the loss value (for logging) and the gradients (for parameter updates), making value_and_grad the standard choice for JAX training code."
+    },
+    {
+      "question": "A compilation technique used by TensorFlow, PyTorch, and JAX to make functions run faster is called __________ __ __________ __________.",
+      "type": "blank",
+      "answer": "Just In Time Compilation",
+      "explanation": "A technique where code is compiled into optimized machine code at runtime rather than ahead of time. In JAX, jax.jit traces a function and compiles it via XLA (Accelerated Linear Algebra) for much faster execution. TensorFlow uses tf.function for similar compilation, and PyTorch introduced torch.compile in PyTorch 2.0. JIT compilation enables optimizations like operator fusion (combining multiple operations into one kernel), constant folding, and memory layout optimization that are impossible with purely interpreted execution."
+    },
+    {
+      "question": "The process of transforming code into a more optimized executable form for better performance is called __________.",
+      "type": "blank",
+      "answer": "Compilation",
+      "explanation": "Converting higher-level code into lower-level, more efficient instructions. In deep learning, compilation typically means transforming a computation graph into optimized GPU/TPU kernels. This can happen ahead of time (AOT, as in TensorFlow 1.x's static graphs) or just in time (JIT, as in JAX's jax.jit). Compilation enables significant speedups — often 2–5x — but introduces constraints: compiled functions may not support dynamic control flow or Python side effects, requiring code to be written in a 'compiler-friendly' style."
+    },
+    {
+      "question": "The end-to-end example implemented in TensorFlow and PyTorch to demonstrate framework basics is called __________ __________.",
+      "type": "blank",
+      "answer": "Linear Regression",
+      "explanation": "The simplest possible machine learning model — fitting a line (y = wx + b) to data by learning the weight w and bias b. Linear regression is the traditional 'hello world' of machine learning frameworks because it demonstrates all the essential components (defining parameters, computing predictions, calculating loss, computing gradients, updating weights) without the complexity of neural network architectures. Despite its simplicity, linear regression remains widely used in practice for interpretable modeling and as a baseline."
+    },
+    {
+      "question": "The JAX approach where functions do not maintain persistent state between calls is called __________ __________.",
+      "type": "blank",
+      "answer": "Stateless Computation",
+      "explanation": "JAX's core design principle: functions are pure — they take inputs and return outputs without modifying any external state. Model weights are passed as explicit function arguments rather than stored inside objects. This is a deliberate contrast with TensorFlow (Variables) and PyTorch (Modules with internal state). Statelessness makes functions easier to reason about, test, and transform (jit, grad, vmap all work seamlessly on pure functions). The tradeoff is more verbose code — you must explicitly thread state through every function call."
+    },
+    {
+      "question": "A benefit of JAX's stateless functions that allows them to be executed independently and efficiently at scale is called __________ __________.",
+      "type": "blank",
+      "answer": "Automatic Parallelization",
+      "explanation": "Because JAX functions are pure (no side effects, no hidden state), the compiler can safely run them in parallel across devices without worrying about race conditions or ordering dependencies. JAX's pmap transform automatically distributes a function across multiple GPUs or TPU cores. This is much harder in stateful frameworks where the compiler must carefully track which operations depend on which mutable variables. Automatic parallelization is a major reason JAX is favored for large-scale training on TPU pods."
+    },
+    {
+      "question": "The ability of a framework to handle very large-scale machine learning workloads efficiently is called __________.",
+      "type": "blank",
+      "answer": "Scalability",
+      "explanation": "How well a framework performs as you increase model size, data volume, and hardware resources. JAX is particularly noted for scalability due to its functional design and tight integration with XLA and TPU pods. TensorFlow also scales well in production settings through its distribution strategies. Scalability involves not just raw speed but also efficient memory management, communication between devices, and the ability to overlap computation with data transfer. Training frontier models requires near-linear scaling across thousands of accelerators."
+    },
+    {
+      "question": "Google's specialized hardware for machine learning, highlighted as an important platform for TensorFlow and JAX workloads, is called a __________.",
+      "type": "blank",
+      "answer": "TPU",
+      "explanation": "Tensor Processing Unit — Google's custom ASIC (application-specific integrated circuit) designed specifically for neural network computation. TPUs are optimized for large matrix multiplications and are connected in 'pods' of thousands of chips for distributed training. They are available through Google Cloud and are the primary hardware for training Google's own models (Gemini, PaLM). JAX has the best TPU support among frameworks, which is a major reason Google DeepMind uses JAX extensively. TPUs compete with NVIDIA GPUs but are only available through Google's ecosystem."
+    },
+    {
+      "question": "A general-purpose processor that can run tensor computations in deep learning frameworks is called a __________.",
+      "type": "blank",
+      "answer": "CPU",
+      "explanation": "Central Processing Unit — the standard processor in every computer. CPUs can run all deep learning operations but are much slower than GPUs or TPUs for training because they have fewer parallel cores. CPUs are still commonly used for inference (especially for smaller models), data preprocessing, and prototyping. They're also the fallback when GPU memory is insufficient — some operations are automatically offloaded to CPU. For very small models or non-batched inference, CPUs can actually be faster than GPUs due to lower overhead."
+    },
+    {
+      "question": "A processor type heavily used for tensor computation and deep learning acceleration is called a __________.",
+      "type": "blank",
+      "answer": "GPU",
+      "explanation": "Graphics Processing Unit — hardware with thousands of cores designed for parallel computation. GPUs became the workhorse of deep learning because neural network training is dominated by matrix multiplications, which map perfectly to GPU architecture. NVIDIA dominates the AI GPU market through its CUDA ecosystem, with chips like the A100 and H100 becoming the standard unit of AI compute. A single modern GPU can be 10–100x faster than a CPU for training, and large training runs use thousands of GPUs."
+    },
+    {
+      "question": "A TensorFlow ecosystem component for production-grade machine learning workflow management is called __________.",
+      "type": "blank",
+      "answer": "TFX",
+      "explanation": "TensorFlow Extended — an end-to-end platform for deploying production ML pipelines. TFX provides components for data validation, preprocessing, training, model analysis, and serving — the full lifecycle beyond just model development. It enforces best practices like schema checking (catching data drift), model validation (ensuring new models are better before deploying), and artifact tracking. TFX represents one of TensorFlow's key advantages over PyTorch: a mature, integrated production ecosystem."
+    },
+    {
+      "question": "A TensorFlow ecosystem component used for production deployment of trained models is called __________ __________.",
+      "type": "blank",
+      "answer": "TF Serving",
+      "explanation": "TensorFlow Serving — a high-performance serving system for deploying trained models as API endpoints. It handles model versioning (seamlessly swapping in new model versions), batching (grouping incoming requests for efficient GPU utilization), and monitoring. TF Serving is widely used in industry for real-time inference at scale. PyTorch's equivalent, TorchServe, has improved significantly but TF Serving was available much earlier, contributing to TensorFlow's dominance in production environments."
+    },
+    {
+      "question": "A TensorFlow ecosystem component used for techniques such as model quantization and pruning is called the __________ __________ __________.",
+      "type": "blank",
+      "answer": "TF Optimization Toolkit",
+      "explanation": "A TensorFlow toolkit for making models smaller and faster for deployment. Quantization reduces precision (e.g., from float32 to int8), cutting model size and speeding up inference with minimal accuracy loss. Pruning removes unnecessary weights, creating sparse models. These techniques are essential for deploying models on resource-constrained devices like phones and edge hardware. Together with TFLite, the optimization toolkit forms TensorFlow's strategy for efficient deployment beyond the data center."
+    },
+    {
+      "question": "A TensorFlow ecosystem tool for deploying models on mobile applications is called __________.",
+      "type": "blank",
+      "answer": "TFLite",
+      "explanation": "TensorFlow Lite — a lightweight runtime for running inference on mobile phones, embedded devices, and microcontrollers. TFLite converts standard TensorFlow models into a compact format optimized for on-device execution with low latency and small binary size. It supports hardware acceleration through delegates (GPU, NNAPI on Android, Core ML on iOS). On-device inference has privacy and latency advantages — data never leaves the device, and predictions are instant without a network round-trip."
+    },
+    {
+      "question": "A TensorFlow ecosystem-related tool mentioned for mobile deployment workflows is called __________.",
+      "type": "blank",
+      "answer": "MediaPipe",
+      "explanation": "A Google framework for building multimodal ML pipelines, especially for real-time perception tasks on mobile and edge devices. MediaPipe provides pre-built solutions for face detection, hand tracking, pose estimation, and object detection that run efficiently on phones and browsers. While it originated alongside TensorFlow, MediaPipe is increasingly framework-agnostic. It represents the trend toward packaging ML models into ready-to-use, domain-specific solutions rather than requiring users to build everything from scratch."
+    },
+    {
+      "question": "A PyTorch ecosystem package associated with vision-related workflows is called __________.",
+      "type": "blank",
+      "answer": "Torchvision",
+      "explanation": "PyTorch's companion library for computer vision, providing datasets (ImageNet, CIFAR, COCO), pretrained models (ResNet, EfficientNet, Vision Transformer), image transformation utilities, and data loading tools. Torchvision makes it easy to start a vision project — you can load a pretrained ResNet and fine-tune it on your data in a few lines. It's one of several domain-specific PyTorch libraries alongside torchaudio (audio), torchtext (NLP), and torchdata (data loading)."
+    },
+    {
+      "question": "A PyTorch ecosystem package associated with audio-related workflows is called __________.",
+      "type": "blank",
+      "answer": "Torchaudio",
+      "explanation": "PyTorch's companion library for audio processing, providing I/O utilities, audio transformations (spectrograms, mel-frequency cepstral coefficients), and pretrained models for tasks like speech recognition and audio classification. Torchaudio mirrors torchvision's design philosophy — providing datasets, transforms, and models in a consistent PyTorch-native API. Audio deep learning has grown significantly, with models like Whisper (speech recognition) and AudioLM (audio generation) pushing the field forward."
+    },
+    {
+      "question": "A popular model-sharing platform mentioned in connection with the PyTorch ecosystem is called __________ __________.",
+      "type": "blank",
+      "answer": "Hugging Face",
+      "explanation": "A company and open-source platform that has become the central hub for sharing pretrained models, datasets, and ML demos. Hugging Face's Transformers library provides a unified API for thousands of pretrained models (BERT, GPT, Llama, Stable Diffusion) with just a few lines of code. While Hugging Face started as PyTorch-centric, it now supports TensorFlow and JAX as well. The Hugging Face Hub hosts over 500,000 models, making it the 'GitHub of machine learning.'"
+    },
+    {
+      "question": "The environment setting used to choose which backend framework Keras runs on is called __________  __________.",
+      "type": "blank",
+      "answer": "KERAS BACKEND",
+      "explanation": "An environment variable (KERAS_BACKEND) that tells Keras which low-level framework to use for execution. Setting it to 'tensorflow', 'torch', or 'jax' switches the entire execution engine without changing your model code. This is typically set before importing Keras, either through the environment variable or the Keras configuration file. The ability to switch backends is one of Keras 3's defining features, giving practitioners flexibility to choose the best tool for each stage of their workflow."
+    },
+    {
+      "question": "The local JSON configuration file where Keras settings such as backend can be specified is called the __________ __________ __________.",
+      "type": "blank",
+      "answer": "Keras Configuration File",
+      "explanation": "A JSON file (typically located at ~/.keras/keras.json) that stores Keras settings like the default backend, image data format (channels_first vs. channels_last), and default float type. This provides a persistent alternative to setting environment variables — once you configure it, Keras uses those settings every time. It's especially useful in team environments where everyone can share the same configuration, or on servers where you want a consistent default without modifying every script."
+    },
+    {
+      "question": "A Keras execution option that can run model predictions but cannot support training because it doesn't provide gradients is called the __________ __________.",
+      "type": "blank",
+      "answer": "NumPy Backend",
+      "explanation": "A lightweight Keras backend that uses plain NumPy for computation. Since NumPy doesn't support automatic differentiation or GPU acceleration, this backend can only run inference (model prediction), not training. It's useful for deploying simple models in environments where you don't want the overhead of installing TensorFlow, PyTorch, or JAX — for example, a lightweight prediction server or an embedded system. It also demonstrates Keras's clean separation between model definition and execution engine."
+    },
+    {
+      "question": "High-level building blocks in Keras that are combined into a model are called __________.",
+      "type": "blank",
+      "answer": "Layers",
+      "explanation": "The fundamental abstraction in Keras — reusable components that encapsulate a tensor transformation along with its learnable weights. Keras provides dozens of built-in layers (Dense, Conv2D, LSTM, Attention, BatchNormalization, Dropout) and makes it easy to create custom ones. Layers are composable — you stack them, branch them, and merge them to build arbitrarily complex architectures. Each layer knows its input shape, output shape, and parameters, enabling automatic shape inference and model summary."
+    },
+    {
+      "question": "A neural network structure built from layers in Keras is called a __________.",
+      "type": "blank",
+      "answer": "Model",
+      "explanation": "The top-level Keras object that connects layers into a trainable network. Keras offers three ways to build models: the Sequential API (a simple stack of layers), the Functional API (arbitrary graph topologies with shared layers and multiple inputs/outputs), and model subclassing (full Python control, similar to PyTorch's Module). A Keras Model provides methods like fit() for training, evaluate() for testing, predict() for inference, and save() for serialization — a complete lifecycle in one object."
+    },
+    {
+      "question": "The high-level component in Keras that defines the feedback signal used for learning is called a __________ __________.",
+      "type": "blank",
+      "answer": "Loss Function",
+      "explanation": "The function that tells the model how wrong its predictions are, serving as the primary signal for training. In Keras, you specify the loss when calling model.compile() — common choices include 'categorical_crossentropy' for multiclass classification, 'binary_crossentropy' for binary classification, and 'mse' for regression. The loss function shapes what the model optimizes for: choosing the wrong loss means the model learns the wrong thing, even if the architecture is perfect. Keras also supports custom loss functions for specialized tasks."
+    },
+    {
+      "question": "The high-level component in Keras that determines how learning proceeds is called an __________.",
+      "type": "blank",
+      "answer": "Optimizer",
+      "explanation": "The algorithm that updates model weights to reduce the loss, specified during model.compile(). Keras provides built-in optimizers like SGD, Adam, RMSprop, and AdamW. The optimizer and learning rate together control the training dynamics — Adam with a learning rate of 1e-3 is a common default starting point. Keras also supports learning rate schedules (reducing the rate over training) and gradient clipping (capping gradient magnitudes to prevent instability), which are configured through the optimizer."
+    },
+    {
+      "question": "Quantities such as accuracy used to evaluate model performance are called __________.",
+      "type": "blank",
+      "answer": "Metrics",
+      "explanation": "Measurements of model performance that are tracked during training and evaluation but (unlike loss) are not used to drive gradient updates. You specify metrics in model.compile() — common choices include accuracy, precision, recall, and AUC. Metrics are reported per-epoch during training, helping you monitor progress. The key distinction from loss: the loss must be differentiable (for backpropagation), but metrics can be any useful measurement, even ones that aren't differentiable, like exact-match accuracy or BLEU score for translation."
+    },
+    {
+      "question": "The procedure that performs mini-batch stochastic gradient descent during model training is called the __________ __________.",
+      "type": "blank",
+      "answer": "Training Loop",
+      "explanation": "The iterative cycle that drives learning: sample a batch, compute predictions, calculate the loss, compute gradients via backpropagation, and update weights via the optimizer. In Keras, the training loop is abstracted away inside model.fit() — you provide data, specify epochs, and Keras handles everything. For custom behavior (like GANs, which have two competing networks), Keras lets you override the train_step() method or write a fully custom training loop. Besides the training loop, a validation loop typically runs at the end of each epoch to monitor overfitting."
+    },
+    {
+      "question": "A training procedure that updates model parameters using small batches of data is called __________-__________ __________ __________ __________.",
+      "type": "blank",
+      "answer": "Mini Batch Stochastic Gradient Descent",
+      "explanation": "The standard optimization method in deep learning: instead of computing gradients over the entire dataset (too slow) or a single example (too noisy), you compute them over small random batches (typically 32–512 samples). Each batch gives an approximate gradient that is good enough to make progress, and processing many batches per epoch provides both speed and stability. When people say 'SGD' in the context of deep learning training, they almost always mean this mini-batch variant. Modern optimizers like Adam are still mini-batch methods — they just compute smarter updates from each batch's gradients."
+    }
+  ]
+}
