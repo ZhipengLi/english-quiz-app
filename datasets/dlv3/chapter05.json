@@ -1,0 +1,353 @@
+{
+  "text": "Deep Learning with Python - Chapter 5: Generalization and Overfitting",
+  "quiz": [
+    {
+      "question": "How well a trained model performs on data it has never seen before is called __________.",
+      "type": "blank",
+      "answer": "Generalization",
+      "explanation": "The ultimate goal of machine learning — a model that works well not just on training data but on new, unseen data. Generalization is what separates useful models from memorized lookup tables. The gap between training performance and test performance is called the generalization gap; a large gap indicates overfitting. Improving generalization involves better data (more, cleaner, more representative), better architecture (inductive biases that match the task), and regularization (constraining the model to prefer simpler solutions)."
+    },
+    {
+      "question": "The process of adjusting a model to get the best possible performance on the training data is called __________.",
+      "type": "blank",
+      "answer": "Optimization",
+      "explanation": "Minimizing the loss function on training data by adjusting model parameters. Optimization and generalization are fundamentally in tension — perfect optimization (memorizing every training example) typically hurts generalization. This is the bias-variance tradeoff: a model that fits training data perfectly (low bias) often performs poorly on new data (high variance). The art of machine learning is finding the sweet spot where the model has learned the real patterns but hasn't memorized the noise."
+    },
+    {
+      "question": "When a model learns patterns specific to the training data that do not generalize to new data, it is called __________.",
+      "type": "blank",
+      "answer": "Overfitting",
+      "explanation": "The most common failure mode in machine learning — the model memorizes training-specific noise instead of learning general patterns. Classic signs include training loss decreasing while validation loss increases, or training accuracy being much higher than validation accuracy. Overfitting is more likely with small datasets, large models, and long training times. Remedies include more data, simpler models, regularization (dropout, weight decay), early stopping, and data augmentation. Every practitioner fights overfitting constantly."
+    },
+    {
+      "question": "When a model has not yet captured all relevant patterns in the training data and still has room to improve, it is called __________.",
+      "type": "blank",
+      "answer": "Underfitting",
+      "explanation": "The opposite of overfitting — the model is too simple or hasn't trained long enough to capture the patterns in the data. Signs include both training and validation loss being high, or performance being no better than a naive baseline. Underfitting is solved by using a larger model (more layers, more units), training longer, using better features, or reducing regularization. The typical training trajectory goes: underfitting → good fit → overfitting, and the goal is to stop at the sweet spot in the middle."
+    },
+    {
+      "question": "The data used to fit the model during learning is called __________ __________.",
+      "type": "blank",
+      "answer": "Training Data",
+      "explanation": "The examples the model actually learns from — it sees their inputs, computes predictions, and adjusts weights based on the error. Training data should be representative of the real-world distribution the model will encounter. If training data is biased (e.g., only containing reviews from one demographic), the model will learn those biases. The quantity and quality of training data are often more important than model architecture — the saying 'there's no data like more data' captures this truth."
+    },
+    {
+      "question": "Held-out data used to monitor model performance during development and detect overfitting is called __________ __________.",
+      "type": "blank",
+      "answer": "Validation Data",
+      "explanation": "A separate portion of data used during development to evaluate how well the model generalizes and to guide decisions like when to stop training, which hyperparameters to use, and which architecture to choose. Crucially, validation data must never be used for training — the model should never see validation labels during weight updates. However, because you make design decisions based on validation performance, information from the validation set can leak into the model indirectly, which is why a separate test set is needed for final evaluation."
+    },
+    {
+      "question": "Data used to evaluate the final performance of a trained model on unseen examples is called __________ __________.",
+      "type": "blank",
+      "answer": "Test Data",
+      "explanation": "The final held-out dataset, used once at the very end to get an unbiased estimate of real-world performance. The test set should never influence any training or design decisions — if you adjust anything based on test results and retrain, the test set is contaminated. In practice, many Kaggle competitions and benchmarks have been 'overfit to the test set' through years of community optimization against the same leaderboard, which is why performance on established benchmarks doesn't always reflect real-world utility."
+    },
+    {
+      "question": "Training data that contains invalid inputs, mislabeled examples, or other distortions is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Noisy Training Data",
+      "explanation": "Data with errors — wrong labels, corrupted inputs, duplicate entries, or systematic biases. Noise in training data is inevitable in real-world datasets; the question is how much and what kind. Neural networks are surprisingly robust to small amounts of random label noise (perhaps 5–10%), but systematic errors (like consistently mislabeling one class as another) are much more damaging. Data cleaning — identifying and correcting noisy samples — often yields bigger performance gains than architecture changes."
+    },
+    {
+      "question": "An unusual data point that can mislead the model if it is fit too closely is called an __________.",
+      "type": "blank",
+      "answer": "Outlier",
+      "explanation": "A data point that is far from the typical distribution — either because it's genuinely rare, mislabeled, or corrupted. If the model fits outliers too closely, it warps its learned function to accommodate them, hurting generalization on normal data. Robust loss functions (like Huber loss instead of MSE) reduce outlier influence. In some cases, outliers are actually the most interesting data points (fraud detection, anomaly detection), and the goal is specifically to identify them."
+    },
+    {
+      "question": "A training example whose assigned label is incorrect is called a __________ __________.",
+      "type": "blank",
+      "answer": "Mislabeled Sample",
+      "explanation": "A sample with the wrong ground truth — for example, a positive review labeled negative, or a cat image labeled as a dog. Mislabeled samples directly mislead the model during training: the model tries to learn a pattern that doesn't exist. Large-scale datasets inevitably contain mislabeled samples because human annotation isn't perfect. Techniques for detecting them include training a model and examining examples with the highest loss (which are often mislabeled), or using multiple annotators and flagging disagreements."
+    },
+    {
+      "question": "Features or regions of feature space where different labels may plausibly apply are called __________ __________.",
+      "type": "blank",
+      "answer": "Ambiguous Features",
+      "explanation": "Regions in input space where the mapping from features to labels is genuinely uncertain — not because of data errors, but because the available features don't fully determine the answer. For example, a short movie review saying 'not bad' could plausibly be positive or negative. Ambiguity sets a ceiling on achievable accuracy: even a perfect model can't correctly classify inherently ambiguous samples. Reducing ambiguity requires richer features (more context, additional input modalities) or accepting that some uncertainty is irreducible."
+    },
+    {
+      "question": "The space formed by all possible values of the input features is called the __________ __________.",
+      "type": "blank",
+      "answer": "Feature Space",
+      "explanation": "The full mathematical space defined by the input dimensions — for MNIST, a 784-dimensional space where each axis represents one pixel. Every possible input corresponds to a point in feature space. The model learns a function that maps regions of feature space to outputs. Most of feature space is empty (random 784-dimensional vectors don't look like digits), which is why the manifold hypothesis — that real data occupies only a tiny subregion — is so important for understanding generalization."
+    },
+    {
+      "question": "Feature values that appear infrequently in the training data and can easily lead to overfitting are called __________ __________.",
+      "type": "blank",
+      "answer": "Rare Features",
+      "explanation": "Features or feature combinations that appear in very few training samples. The model has little evidence to learn their true relationship to the target, so it may latch onto coincidental correlations. For example, if the word 'phantasmagoric' appears in only two training reviews, both positive, the model might learn that this word strongly predicts positive sentiment — but that's unreliable given only two examples. Setting minimum frequency thresholds, using regularization, or grouping rare features are common mitigations."
+    },
+    {
+      "question": "Apparent relationships in the training data that are accidental and do not hold generally are called __________ __________.",
+      "type": "blank",
+      "answer": "Spurious Correlations",
+      "explanation": "Coincidental patterns in training data that the model learns as if they were real signals. A famous example: a model trained to distinguish wolves from huskies learned to detect snow in the background (wolves were photographed in snow, huskies on grass). The correlation was real in the training data but irrelevant to the actual task. Spurious correlations are more dangerous when datasets are small or biased. Techniques like data augmentation, causal reasoning, and testing on diverse distributions help detect and mitigate them."
+    },
+    {
+      "question": "Artificially added meaningless input dimensions that increase overfitting by introducing distracting correlations are called __________ __________.",
+      "type": "blank",
+      "answer": "Noise Channels",
+      "explanation": "Extra input features containing random or irrelevant values — they carry no useful information but provide spurious correlations the model can latch onto. Adding noise channels to a dataset is a useful thought experiment: it demonstrates that more features aren't always better, and that the model will exploit any pattern it finds, real or not. This motivates feature selection (keeping only informative features) and regularization (penalizing the model for using too many features)."
+    },
+    {
+      "question": "The process of keeping informative features and removing irrelevant ones before training is called __________ __________.",
+      "type": "blank",
+      "answer": "Feature Selection",
+      "explanation": "Choosing which input features to include in the model. Irrelevant or noisy features waste model capacity and increase overfitting risk. Methods range from simple (removing features with low variance or low correlation with the target) to sophisticated (using mutual information, recursive feature elimination, or L1 regularization which drives irrelevant feature weights to zero). Deep learning reduces the need for manual feature selection compared to classical ML, but it's still valuable — especially for tabular data where not all columns are useful."
+    },
+    {
+      "question": "A score that measures how informative a feature is with respect to the labels is called __________ __________.",
+      "type": "blank",
+      "answer": "Mutual Information",
+      "explanation": "An information-theoretic measure of the statistical dependence between two variables — specifically, how much knowing the value of a feature reduces uncertainty about the label. High mutual information means the feature is highly predictive; zero mutual information means the feature and label are independent. Unlike simple correlation, mutual information captures nonlinear relationships. It's widely used for feature selection and feature ranking, especially in classical machine learning pipelines."
+    },
+    {
+      "question": "The ability of a model to fit complex patterns or even memorize arbitrary mappings if it has enough capacity is called __________ __________.",
+      "type": "blank",
+      "answer": "Representational Power",
+      "explanation": "A model's raw ability to express complex functions. A sufficiently large neural network can theoretically represent any function (this is the universal approximation theorem). The chapter demonstrates this dramatically: a large enough model can perfectly memorize completely random labels, achieving zero training loss on data with no real pattern. This proves that low training loss alone says nothing about whether the model has learned anything meaningful — generalization to new data is what matters."
+    },
+    {
+      "question": "Labels that have been shuffled or assigned arbitrarily so that no true relationship remains between inputs and targets are called __________ __________.",
+      "type": "blank",
+      "answer": "Random Labels",
+      "explanation": "A powerful thought experiment and diagnostic tool: if you randomly shuffle the labels in your dataset, any pattern the model learns is pure memorization. The famous 'Rethinking Generalization' paper (Zhang et al., 2017) showed that deep networks can achieve zero training error on random labels — proving that their capacity for memorization vastly exceeds what's needed for real tasks. This result challenges simple explanations of why deep learning generalizes well and motivates studying regularization and implicit biases."
+    },
+    {
+      "question": "Fitting specific training inputs and targets without learning patterns that generalize is called __________.",
+      "type": "blank",
+      "answer": "Memorization",
+      "explanation": "When the model stores individual training examples rather than extracting general rules. Memorization is the extreme form of overfitting — the model becomes a lookup table. Signs include perfect training accuracy but poor validation accuracy, and the model being confident even on random or adversarial inputs. Some degree of memorization is inevitable and even necessary (the model must remember what it's seen), but the goal is for the model to also abstract beyond specific examples."
+    },
+    {
+      "question": "The idea that natural data lies on a low-dimensional manifold within a much larger high-dimensional input space is called the __________ __________.",
+      "type": "blank",
+      "answer": "Manifold Hypothesis",
+      "explanation": "One of the most important concepts in deep learning theory: although images are represented as points in a very high-dimensional space (e.g., 784 dimensions for MNIST), the actual images that look like real digits occupy only a tiny, structured subregion of that space. Random points in 784-dimensional space don't look like digits — they look like static. This means the model doesn't need to learn a function over the entire input space, just over the low-dimensional manifold where real data lives. The manifold hypothesis explains why deep learning can generalize from relatively few examples."
+    },
+    {
+      "question": "A lower-dimensional structured subspace inside a higher-dimensional parent space that is locally similar to a linear space is called a __________.",
+      "type": "blank",
+      "answer": "Manifold",
+      "explanation": "A mathematical concept: a space that looks curved globally but looks flat (like Euclidean space) when you zoom in on any small region. The surface of the Earth is a 2D manifold embedded in 3D space — locally it feels flat, but globally it's curved. Similarly, the space of realistic face images forms a manifold in pixel space: nearby points on the manifold are faces with small variations (slightly different expression, lighting), and smooth paths along the manifold produce smooth transitions between faces."
+    },
+    {
+      "question": "The full high-dimensional space of all possible encoded inputs is called the __________ __________.",
+      "type": "blank",
+      "answer": "Parent Space",
+      "explanation": "The ambient space in which the data manifold is embedded. For 28×28 grayscale images, the parent space is 784-dimensional — every possible 28×28 pixel grid is a point in this space. The vast majority of points in the parent space are meaningless noise. The data manifold — where real, meaningful data lives — is a tiny, low-dimensional subset. Understanding this distinction is key to understanding why models don't need exponentially many training examples to cover the input space."
+    },
+    {
+      "question": "A much smaller structured region inside a high-dimensional space where valid natural data tends to lie is called a __________-__________ __________.",
+      "type": "blank",
+      "answer": "Low Dimensional Subspace",
+      "explanation": "The compact region where real data actually exists, despite the input space being enormous. For example, the space of all possible 256×256 RGB images is astronomically large, but photographs of cats occupy a tiny, structured subspace. A well-trained generative model can parameterize this subspace with perhaps a few hundred latent dimensions — vastly fewer than the millions of pixel values. This compression is possible precisely because natural data has structure (spatial coherence, physical plausibility, semantic consistency)."
+    },
+    {
+      "question": "A region where small changes to an input tend to preserve its identity or meaning is called a __________ __________.",
+      "type": "blank",
+      "answer": "Continuous Subspace",
+      "explanation": "A property of data manifolds: if you make a tiny change to a valid input (e.g., shifting a digit image by one pixel), the result is still a valid input with the same meaning. This continuity is what makes interpolation possible — you can move smoothly between data points along the manifold. Continuity also enables gradient-based optimization: small parameter changes produce small output changes, allowing the model to gradually improve. Adversarial examples exploit cases where this continuity assumption breaks down."
+    },
+    {
+      "question": "A continuous sequence of nearby points connecting samples within a manifold is called a __________ __________.",
+      "type": "blank",
+      "answer": "Smooth Path",
+      "explanation": "A path along the data manifold where each step is small and the data remains valid and meaningful throughout. For images, a smooth path might gradually transform one face into another, with every intermediate point being a realistic face. This is exactly what latent space interpolation in generative models (like VAEs and GANs) produces. The existence of smooth paths between training examples is what allows models to generalize to unseen points by interpolation."
+    },
+    {
+      "question": "A standard linear geometric space used to describe the local structure of a manifold is called __________ __________.",
+      "type": "blank",
+      "answer": "Euclidean Space",
+      "explanation": "The familiar flat geometry of everyday experience — straight lines, right angles, the Pythagorean theorem. The defining property of a manifold is that it looks like Euclidean space locally, even if it's curved globally. When deep learning layers compute linear transformations, they're working in Euclidean geometry. The tension between local linearity (each layer's computation) and global nonlinearity (the full network's behavior) is what gives deep networks their power."
+    },
+    {
+      "question": "A local linear approximation to a manifold at a given point is called a __________.",
+      "type": "blank",
+      "answer": "Tangent",
+      "explanation": "The flat plane that best approximates a curved surface at a specific point — like a piece of paper touching a globe at one spot. In the context of data manifolds, the tangent space at a data point describes the local directions you can move while staying on (or near) the manifold. Gradients live in this tangent space. Understanding tangent spaces helps explain why local interpolation works (nearby points share a roughly flat neighborhood) and why distant interpolation can fail (the manifold may curve away)."
+    },
+    {
+      "question": "The relatively simple low-dimensional structured subspaces that machine learning models need to fit within the full input space are called __________ __________.",
+      "type": "blank",
+      "answer": "Latent Manifolds",
+      "explanation": "The hidden structure that models learn to discover and exploit. 'Latent' means not directly observed — the manifold exists in the data but must be inferred. A well-trained autoencoder or generative model learns to map from a simple low-dimensional latent space to the complex data manifold. The dimensionality of the latent manifold reflects the true degrees of freedom in the data — for faces, this might include pose, expression, lighting, and identity, perhaps a few hundred dimensions total."
+    },
+    {
+      "question": "The ability to make sense of unseen data points by relating them to nearby points on the same latent manifold is called __________.",
+      "type": "blank",
+      "answer": "Interpolation",
+      "explanation": "The fundamental mechanism by which deep learning generalizes: given enough training examples densely covering the data manifold, the model can handle new points by treating them as lying between known examples. This works because the manifold is continuous — nearby points have similar meanings. Interpolation is powerful but limited: the model can only handle data near its training distribution. Points far from any training example (out-of-distribution data) may produce unreliable predictions, which is a major challenge for deploying models in the real world."
+    },
+    {
+      "question": "Averaging directly in the parent input space, which often does not stay on the valid data manifold, is called __________ __________.",
+      "type": "blank",
+      "answer": "Linear Interpolation",
+      "explanation": "Taking a weighted average of two data points in raw pixel (or feature) space. For images, linearly interpolating between two faces produces a ghostly double-exposure, not a realistic intermediate face, because the straight-line path through pixel space leaves the face manifold. This is why interpolation must happen in the learned latent space, where straight lines do correspond to meaningful transitions. The difference between linear interpolation in pixel space (bad) versus latent space (good) is a compelling demonstration of why learned representations matter."
+    },
+    {
+      "question": "The limited kind of generalization achieved by interpolation near examples the model has already seen is called __________ __________.",
+      "type": "blank",
+      "answer": "Local Generalization",
+      "explanation": "The ability to handle new inputs that are close to training examples — essentially filling in small gaps on the data manifold. Deep learning is remarkably good at local generalization, which is sufficient for many practical tasks (classifying new photos, transcribing new audio). However, local generalization fails when the test distribution differs significantly from training (distribution shift) or when the task requires reasoning about truly novel situations. This limitation motivates research into out-of-distribution detection, domain adaptation, and more abstract forms of reasoning."
+    },
+    {
+      "question": "A human cognitive mechanism for extreme generalization that goes beyond interpolation is called __________.",
+      "type": "blank",
+      "answer": "Abstraction",
+      "explanation": "The ability to extract general concepts from specific instances — like understanding 'fairness' from a few examples and applying it to completely novel situations. Humans abstract effortlessly: a child who learns to count apples can count anything. Current deep learning models don't truly abstract — they interpolate within their training distribution, which can mimic abstraction when the training data is rich enough. Achieving genuine abstraction (sometimes called 'systematic generalization') remains one of the biggest open problems in AI research."
+    },
+    {
+      "question": "A non-interpolative cognitive mechanism humans use to handle novelty beyond pattern matching is called __________.",
+      "type": "blank",
+      "answer": "Reasoning",
+      "explanation": "The ability to derive new conclusions from known facts through logical steps — like solving a math problem you've never seen by applying learned rules. Reasoning is fundamentally different from pattern matching: it's compositional (combining known pieces in new ways), systematic (following logical rules), and can handle situations with zero training examples. Large language models show impressive reasoning-like behavior, but whether they truly reason or cleverly interpolate remains hotly debated. Augmenting neural networks with explicit reasoning capabilities (chain-of-thought prompting, tool use, symbolic modules) is an active research direction."
+    },
+    {
+      "question": "Prior knowledge about the world that helps humans generalize far beyond local interpolation is called __________ __________.",
+      "type": "blank",
+      "answer": "Common Sense",
+      "explanation": "The vast background knowledge humans have about how the physical and social world works — objects fall, people have intentions, fire is hot, promises should be kept. Common sense lets humans make reasonable predictions in situations they've never encountered. AI systems notoriously lack common sense: a language model might generate a sentence about a person 'drinking a chair' without recognizing the absurdity. Encoding common sense into AI — through knowledge bases, world models, or grounded experience — is one of the field's oldest and most difficult challenges."
+    },
+    {
+      "question": "Structural assumptions built into a model architecture that help it match the shape of the data are called __________ __________.",
+      "type": "blank",
+      "answer": "Architecture Priors",
+      "explanation": "Inductive biases encoded in the model's structure rather than learned from data. Convolutional layers encode translation invariance (a cat is a cat regardless of position). Recurrent layers encode sequential dependence (each step depends on previous steps). Transformers encode the ability to attend to any position. These architectural choices constrain the hypothesis space to functions that are more likely to be useful for the data type. Choosing the right architecture prior is one of the most impactful design decisions — it's why CNNs work better than dense layers for images, even with the same number of parameters."
+    },
+    {
+      "question": "Learned representations organized in layers, reflecting the hierarchical structure of natural data, are called __________ __________.",
+      "type": "blank",
+      "answer": "Hierarchical Representations",
+      "explanation": "Representations that build from simple to complex across layers — edges → textures → parts → objects in vision, or phonemes → words → phrases → meaning in language. This mirrors how natural data is structured: objects are made of parts, which are made of edges. Hierarchical representations are an architecture prior of deep networks — by stacking layers, the model is biased toward discovering compositional structure. This is a key reason why depth helps: each layer can focus on one level of abstraction."
+    },
+    {
+      "question": "Learned representations organized into parts or modules, which helps match the structure of real-world information, are called __________ __________.",
+      "type": "blank",
+      "answer": "Modular Representations",
+      "explanation": "Representations where different units or groups of units specialize in different aspects of the input — some neurons might encode color, others shape, others texture. Modularity is another way models match the structure of reality: the world is composed of relatively independent modules (objects, properties, relations), and a model that mirrors this structure can recombine learned modules in new ways. Mixture-of-experts models and capsule networks are explicit attempts to build modularity into architecture."
+    },
+    {
+      "question": "The process of improving training data quality so the model can generalize better is called __________ __________.",
+      "type": "blank",
+      "answer": "Data Curation",
+      "explanation": "Actively improving your dataset — removing mislabeled samples, balancing class distributions, adding underrepresented examples, eliminating duplicates, and ensuring diversity. Data curation is often more impactful than model tuning: a clean, well-curated dataset with a simple model frequently outperforms a noisy dataset with a sophisticated model. The rise of foundation models has made data curation even more critical, since these models are trained on internet-scale data with varying quality. Projects like The Pile, RedPajama, and FineWeb invest heavily in data curation."
+    },
+    {
+      "question": "Training data coverage that densely spans the data manifold so interpolation becomes reliable is called __________ __________.",
+      "type": "blank",
+      "answer": "Dense Sampling",
+      "explanation": "Having enough training examples that every region of the data manifold (especially near decision boundaries) has nearby training points. Dense sampling is what makes interpolation-based generalization work: if the training data covers the manifold densely, any new point is close to known examples. In practice, achieving dense sampling near complex decision boundaries requires many more examples than covering simple regions. Data augmentation (creating synthetic training examples by transforming real ones) is a powerful way to increase density without collecting new data."
+    },
+    {
+      "question": "The region in input space where the model switches from predicting one class to another is called the __________ __________.",
+      "type": "blank",
+      "answer": "Decision Boundary",
+      "explanation": "The surface in feature space where the model's prediction changes — for binary classification, where the output crosses 0.5. The shape and position of the decision boundary determine the model's behavior. A good decision boundary separates classes cleanly and matches the true underlying data distribution. Overfitting manifests as an overly complex, wiggly decision boundary that curves around individual training points. Regularization encourages smoother decision boundaries that are more likely to generalize."
+    },
+    {
+      "question": "Techniques that limit how much information a model can store or constrain the smoothness of its learned mapping to reduce overfitting are called __________.",
+      "type": "blank",
+      "answer": "Regularization",
+      "explanation": "Any technique that restricts the model's freedom to reduce overfitting, based on the principle that simpler models generalize better (Occam's razor). Major regularization methods include: weight regularization (L1/L2 penalties on parameter values), dropout (randomly disabling neurons during training), early stopping (halting before overfitting), data augmentation (creating synthetic training examples), and batch normalization (stabilizing layer inputs). Regularization doesn't improve training performance — it intentionally sacrifices some training accuracy to improve validation accuracy."
+    },
+    {
+      "question": "The three-way data split used to train models, tune them during development, and evaluate them on untouched data is called __________, __________, __________ __________ __________.",
+      "type": "blank",
+      "answer": "Training Validation And Test Sets",
+      "explanation": "The standard protocol for honest model evaluation: training data for learning, validation data for development decisions (architecture, hyperparameters, when to stop), and test data for final evaluation. The training set is seen by the model, the validation set is seen by the developer, and the test set is seen by nobody until the very end. Violating this separation — for example, tuning on the test set — produces optimistically biased performance estimates. The more times you evaluate on validation data and adjust, the more information leaks into your decisions, which is why the test set exists as an untouched final check."
+    },
+    {
+      "question": "Configuration choices such as layer count or layer size that are tuned during model development rather than learned from data are called __________.",
+      "type": "blank",
+      "answer": "Hyperparameters",
+      "explanation": "Settings that define the model's structure and training procedure but aren't adjusted by the optimizer — things like number of layers, units per layer, learning rate, batch size, dropout rate, and regularization strength. Hyperparameters are tuned by the developer based on validation performance. Common tuning methods range from manual experimentation to grid search (trying all combinations), random search (sampling randomly, often more efficient), and Bayesian optimization (building a model of which settings work best). The distinction from parameters is fundamental: parameters are learned from data; hyperparameters are chosen by humans."
+    },
+    {
+      "question": "The unintended flow of information from validation data into the model through repeated tuning decisions is called __________ __________.",
+      "type": "blank",
+      "answer": "Information Leaks",
+      "explanation": "Every time you evaluate on validation data and make a decision based on the result (change the architecture, adjust a hyperparameter, add regularization), a small amount of information about the validation set influences the model. Over many iterations, this accumulates — the model becomes indirectly optimized for the validation set, making validation scores overly optimistic. This is why the test set must remain completely untouched until final evaluation. In practice, information leaks are unavoidable (you must use validation data for development), but being aware of them prevents false confidence."
+    },
+    {
+      "question": "An evaluation method that splits off part of the data for validation and test while training on the rest is called __________ __________-__________ __________.",
+      "type": "blank",
+      "answer": "Simple Hold Out Validation",
+      "explanation": "The simplest evaluation strategy: divide your data into training, validation, and test portions (e.g., 60/20/20) and use them as-is. This works well when you have plenty of data. The drawback is that your evaluation depends on which specific samples ended up in each split — with a small dataset, you might get lucky or unlucky. If you have enough data (tens of thousands or more), hold-out validation is usually fine. For smaller datasets, k-fold cross-validation provides more reliable estimates."
+    },
+    {
+      "question": "An evaluation method that splits data into K equal parts and rotates which part is used for validation, averaging the scores, is called __-__________ __________.",
+      "type": "blank",
+      "answer": "K Fold Validation",
+      "explanation": "A more robust evaluation method: divide the data into K equal folds (commonly K=5 or K=10), train K separate models each using a different fold as validation and the remaining K−1 folds for training, then average the K validation scores. This gives a more reliable performance estimate because every sample serves as both training and validation data. The tradeoff is K times more computation. K-fold is especially valuable for small datasets where a single train/validation split would be too noisy."
+    },
+    {
+      "question": "A more precise but expensive evaluation method that repeats K-fold validation multiple times with reshuffling is called __________ __-__________ __________ __________ __________.",
+      "type": "blank",
+      "answer": "Iterated K Fold Validation With Shuffling",
+      "explanation": "The most thorough evaluation method: run K-fold cross-validation multiple times (e.g., 10 repetitions), reshuffling the data into new folds each time, and average all the scores. This reduces both the variance from the random fold assignment and the variance from random weight initialization. It's computationally expensive (K × number of repetitions training runs), so it's typically reserved for final evaluation on small datasets where you need high confidence in your performance estimate."
+    },
+    {
+      "question": "A simple reference solution used to verify that a machine learning model is actually learning something useful is called a __________ __________ __________.",
+      "type": "blank",
+      "answer": "Common Sense Baseline",
+      "explanation": "A naive or trivial solution that any model should beat if it's actually learning. For classification, this might be always predicting the majority class; for regression, always predicting the mean; for time series, predicting the last value. If your sophisticated neural network can't beat the common sense baseline, something is wrong (buggy code, bad data, wrong task formulation). Establishing a baseline before building complex models is a fundamental best practice — it tells you the minimum bar your model must clear."
+    },
+    {
+      "question": "How well a model captures patterns in the training data is called __________ __________.",
+      "type": "blank",
+      "answer": "Model Fit",
+      "explanation": "A general term for how closely the model's predictions match the training data. A model can be underfit (not capturing the patterns), well-fit (capturing the real patterns without memorizing noise), or overfit (capturing both patterns and noise). Monitoring model fit involves tracking training loss, validation loss, and their gap over time. The typical progression is: rapid improvement on both (learning real patterns), followed by training loss continuing to drop while validation loss plateaus or rises (starting to memorize)."
+    },
+    {
+      "question": "The size of the parameter update step during optimization, where poor choices can prevent training from working, is called the __________ __________.",
+      "type": "blank",
+      "answer": "Learning Rate",
+      "explanation": "Perhaps the single most important hyperparameter. Too high: the model overshoots good solutions, loss oscillates wildly or explodes to infinity. Too low: training crawls, takes forever, and may get stuck in poor local minima. Common strategies include starting with a moderate learning rate (e.g., 1e-3 for Adam) and reducing it over time (learning rate scheduling), or using a warmup period (starting very small and increasing). Learning rate finder tools can help identify the optimal range by plotting loss versus learning rate."
+    },
+    {
+      "question": "A very simple classification model used as a baseline on MNIST is called __________ __________.",
+      "type": "blank",
+      "answer": "Logistic Regression",
+      "explanation": "The simplest classification model: a single linear transformation followed by sigmoid (for binary) or softmax (for multiclass). Logistic regression has no hidden layers and can only learn linear decision boundaries. On MNIST, it achieves roughly 92% accuracy — decent but far below the 99%+ achieved by deep networks. It serves as an important baseline: if a complex model can't beat logistic regression, the added complexity isn't justified. Logistic regression is also fully interpretable, since each weight directly represents a feature's contribution to each class."
+    },
+    {
+      "question": "The amount of complexity or information a model can represent, affecting both fitting ability and overfitting risk, is called __________ __________.",
+      "type": "blank",
+      "answer": "Model Capacity",
+      "explanation": "A model's ability to express complex functions — roughly determined by the number and size of its layers. Higher capacity means the model can fit more complex patterns (good) but also memorize noise (bad). The relationship between capacity and generalization is nuanced: very low capacity underfits, very high capacity can overfit, but recent research shows that extremely high capacity models (heavily overparameterized) can actually generalize well when trained properly — a phenomenon called 'double descent' that challenges the classical bias-variance tradeoff."
+    },
+    {
+      "question": "A lower-capacity model that may generalize better when a larger model is overfitting is called a __________ __________.",
+      "type": "blank",
+      "answer": "Smaller Model",
+      "explanation": "A model with fewer layers, fewer units, or fewer parameters. When you observe overfitting (training loss much lower than validation loss), reducing model size is one of the simplest remedies. A smaller model has a more constrained hypothesis space, making it harder to memorize noise. The chapter demonstrates this empirically: a smaller network achieves lower validation loss than a larger one despite higher training loss. However, going too small causes underfitting — the goal is to match model capacity to task complexity."
+    },
+    {
+      "question": "A higher-capacity model that can fit more complex patterns but may overfit more easily is called a __________ __________.",
+      "type": "blank",
+      "answer": "Larger Model",
+      "explanation": "A model with more layers, more units, or more parameters. Larger models have greater representational power and can capture more complex patterns, but they also have more freedom to memorize training data. The chapter shows that a larger model overfits faster and more severely. However, the modern paradigm of foundation models shows that extremely large models, when properly regularized and trained on massive datasets, can generalize remarkably well — the key is having enough data to fill the model's capacity with real patterns rather than noise."
+    },
+    {
+      "question": "A regularization method that randomly drops parts of the model during training to improve generalization is called __________.",
+      "type": "blank",
+      "answer": "Dropout",
+      "explanation": "A technique where random neurons are temporarily set to zero during each training step (typically with probability 0.2–0.5). This prevents neurons from co-adapting — learning to rely on specific other neurons — and forces each neuron to be independently useful. During inference, all neurons are active but their outputs are scaled to compensate. Dropout can be interpreted as training an ensemble of many different sub-networks and averaging their predictions. It was introduced by Hinton et al. in 2014 and remains one of the most widely used regularization techniques."
+    },
+    {
+      "question": "A regularization method that constrains parameter values to improve generalization is called __________ __________.",
+      "type": "blank",
+      "answer": "Weight Regularization",
+      "explanation": "Adding a penalty term to the loss that discourages large parameter values, based on the principle that simpler functions (with smaller weights) generalize better. L2 regularization (weight decay) adds the sum of squared weights to the loss, encouraging weights to be small but not zero. L1 regularization adds the sum of absolute weights, encouraging weights to be exactly zero (producing sparse models). L2 is more common in deep learning. AdamW implements weight decay correctly by decoupling it from the gradient update, and is now the standard optimizer for training large models."
+    },
+    {
+      "question": "A regularization method that stops training before overfitting becomes too severe is called __________ __________.",
+      "type": "blank",
+      "answer": "Early Stopping",
+      "explanation": "Monitoring validation loss during training and stopping when it begins to increase (even though training loss continues to decrease). This catches the moment when the model transitions from learning general patterns to memorizing training-specific noise. In practice, you don't stop at the exact minimum — you use 'patience' (waiting for a certain number of epochs without improvement to confirm the trend). The model's weights from the best validation epoch are restored. Early stopping is simple, effective, and almost always used in practice, often in combination with other regularization techniques."
+    }
+  ]
+}
