@@ -1,0 +1,467 @@
+{
+  "text": "Deep Learning with Python - Chapter 2: Neural Network Fundamentals",
+  "quiz": [
+    {
+      "question": "A model made of layers that learn to transform data into more useful representations for a task is called a __________ __________.",
+      "type": "blank",
+      "answer": "Neural Network",
+      "explanation": "A model composed of stacked layers, each transforming data through learned parameters. Despite the name, modern neural networks are only loosely inspired by biological neurons. They come in many architectures — feedforward networks, convolutional networks (CNNs) for images, recurrent networks (RNNs) for sequences, and transformers, which power most current large language models."
+    },
+    {
+      "question": "A high-level machine learning library used to build and train neural networks, especially for tasks like digit classification, is called __________.",
+      "type": "blank",
+      "answer": "Keras",
+      "explanation": "A high-level deep learning API that emphasizes simplicity and readability. Keras was originally a standalone library but is now tightly integrated into TensorFlow as tf.keras. It abstracts away low-level details like tensor operations and gradient computation, letting you define models in just a few lines. Alternatives at a similar abstraction level include PyTorch Lightning and Hugging Face's Transformers library."
+    },
+    {
+      "question": "A classic dataset of handwritten digit images commonly used as an introductory deep learning example is called __________.",
+      "type": "blank",
+      "answer": "MNIST",
+      "explanation": "A dataset of 70,000 grayscale images of handwritten digits (0–9), each 28×28 pixels. MNIST is often called the 'hello world' of deep learning because it's small enough to train quickly but complex enough to demonstrate real concepts. It was created by Yann LeCun in the 1990s. While it's now considered too easy for serious benchmarking, harder successors like Fashion-MNIST and CIFAR-10 serve as more challenging introductory datasets."
+    },
+    {
+      "question": "In machine learning, a category in a classification problem is called a __________.",
+      "type": "blank",
+      "answer": "Class",
+      "explanation": "A category that a model can assign to an input in a classification task. For MNIST, there are 10 classes (digits 0–9). The number of classes affects the model's output layer — a 10-class problem needs an output layer with 10 units. In binary classification there are only 2 classes, while tasks with many classes (like ImageNet's 1,000 categories) are called large-scale multiclass classification."
+    },
+    {
+      "question": "A single data point in a dataset is called a __________.",
+      "type": "blank",
+      "answer": "Sample",
+      "explanation": "An individual data point or example in a dataset. In MNIST, each sample is one 28×28 image of a handwritten digit. The terms 'sample,' 'example,' 'instance,' and 'data point' are used interchangeably across the literature. The total number of samples in a dataset is a key factor in how well a model can learn — more samples generally lead to better generalization."
+    },
+    {
+      "question": "The class associated with a specific sample is called a __________.",
+      "type": "blank",
+      "answer": "Label",
+      "explanation": "The correct class or category assigned to a particular sample, used during supervised learning. In MNIST, each image has a label from 0 to 9. Labels are what make supervised learning 'supervised' — without them, the model has no ground truth to learn from. Creating labels (annotation) is often the most expensive part of building a dataset, which is why self-supervised learning has become so popular."
+    },
+    {
+      "question": "The data the model learns from during training is called the __________ __________.",
+      "type": "blank",
+      "answer": "Training Set",
+      "explanation": "The portion of a dataset used to actually train the model — the model sees these examples and adjusts its parameters based on them. It's critical that the training set is separate from the test set; otherwise, you can't measure whether the model has truly learned generalizable patterns or just memorized the training data. A common split is 80% training and 20% testing, sometimes with a validation set carved out of the training data."
+    },
+    {
+      "question": "The data used to evaluate the model after training is called the __________ __________.",
+      "type": "blank",
+      "answer": "Test Set",
+      "explanation": "A held-out portion of data that the model never sees during training, used exclusively for final evaluation. The test set answers the question: 'How well does this model perform on truly new data?' If you tune your model based on test set results and retrain, the test set becomes contaminated and no longer provides an unbiased estimate — this is why a separate validation set is used during development."
+    },
+    {
+      "question": "A multidimensional numerical array used to store data such as images and labels is called a __________ __________.",
+      "type": "blank",
+      "answer": "Numpy Array",
+      "explanation": "The core data structure of the NumPy library — a highly efficient multidimensional array for numerical computation in Python. NumPy arrays are the standard way to represent data before feeding it into deep learning frameworks. Unlike Python lists, NumPy arrays store data in contiguous memory blocks with a fixed data type, enabling fast vectorized operations. Deep learning tensors (in TensorFlow, PyTorch) are conceptually similar but add GPU support and automatic differentiation."
+    },
+    {
+      "question": "The core building block of a neural network that acts like a filter transforming data into a more useful representation is called a __________.",
+      "type": "blank",
+      "answer": "Layer",
+      "explanation": "The fundamental unit of computation in a neural network. Each layer takes input data, applies a transformation (defined by its weights), and produces output. Layers can be thought of as data-processing modules that progressively distill the input into representations useful for the task. Different layer types serve different purposes — dense layers for general connections, convolutional layers for spatial patterns, attention layers for relationships between elements."
+    },
+    {
+      "question": "A fully connected neural layer where every input is connected to every output is called a __________ __________.",
+      "type": "blank",
+      "answer": "Dense Layer",
+      "explanation": "A layer in which every input neuron is connected to every output neuron, also called a fully connected layer. Dense layers are the simplest and most general-purpose layer type. In the MNIST example, the network uses two dense layers. While dense layers are powerful, they don't exploit spatial structure — for image data, convolutional layers are usually more effective because they recognize local patterns regardless of position."
+    },
+    {
+      "question": "A classification layer that returns probability scores for each possible class, with the scores summing to 1, is called __________.",
+      "type": "blank",
+      "answer": "Softmax",
+      "explanation": "An activation function typically used in the final layer of a classification network. Softmax converts raw output scores (logits) into a probability distribution — each output is between 0 and 1, and all outputs sum to 1. For binary classification, sigmoid is used instead. The class with the highest softmax probability becomes the model's predicted class. Softmax is paired with categorical cross-entropy loss during training."
+    },
+    {
+      "question": "The function the model uses to measure how wrong its predictions are on the training data is called a __________ __________.",
+      "type": "blank",
+      "answer": "Loss Function",
+      "explanation": "A function that quantifies how far the model's predictions are from the correct answers. The choice of loss function depends on the task — categorical cross-entropy for multiclass classification, binary cross-entropy for binary classification, and mean squared error for regression. The loss function is what the optimizer actually minimizes; if you choose the wrong loss function, the model optimizes for the wrong thing, even if the architecture is perfect."
+    },
+    {
+      "question": "The mechanism through which the model updates itself based on training data to improve performance is called an __________.",
+      "type": "blank",
+      "answer": "Optimizer",
+      "explanation": "The algorithm that determines how model parameters are updated to reduce loss. Common choices include SGD (stochastic gradient descent), Adam, and RMSprop. Each optimizer has a different strategy for navigating the loss landscape — Adam adapts learning rates per parameter, SGD with momentum builds up velocity in consistent directions. The optimizer, learning rate, and loss function together define the training dynamics of the model."
+    },
+    {
+      "question": "The fraction of examples that were classified correctly is called __________.",
+      "type": "blank",
+      "answer": "Accuracy",
+      "explanation": "The simplest and most intuitive classification metric: the number of correct predictions divided by the total number of predictions. While easy to understand, accuracy can be misleading for imbalanced datasets — a model that always predicts the majority class can achieve high accuracy while being useless. In such cases, metrics like precision, recall, F1-score, or AUC provide a more honest picture of performance."
+    },
+    {
+      "question": "Changing the shape of data to match the format a model expects is called __________.",
+      "type": "blank",
+      "answer": "Reshaping",
+      "explanation": "Changing the dimensions of a tensor without altering its underlying data. In the MNIST example, 28×28 images are reshaped into flat vectors of 784 values before being fed into a dense layer. Reshaping is a common preprocessing step — convolutional layers expect 4D tensors (batch, height, width, channels), while dense layers expect 2D tensors (batch, features). The total number of elements must remain the same after reshaping."
+    },
+    {
+      "question": "The output produced by a trained model, such as class probabilities for new images, is called a __________.",
+      "type": "blank",
+      "answer": "Prediction",
+      "explanation": "The output a model produces for a given input. For a classification model with softmax, the prediction is a probability distribution over all classes. The predicted class is typically the one with the highest probability (argmax). During training, predictions are compared to labels to compute loss; during inference, predictions are the model's final answers on new data."
+    },
+    {
+      "question": "The tendency of a model to perform better on its training data than on new unseen data is called __________.",
+      "type": "blank",
+      "answer": "Overfitting",
+      "explanation": "When a model memorizes the training data rather than learning general patterns, causing it to perform well on training data but poorly on new data. Overfitting is one of the central challenges in machine learning. Common remedies include using more training data, adding regularization (dropout, weight decay), early stopping (halting training when validation performance stops improving), and data augmentation. The gap between training accuracy and validation accuracy is a key indicator of overfitting."
+    },
+    {
+      "question": "The basic data structure used in modern machine learning systems, serving as a container for numerical data, is called a __________.",
+      "type": "blank",
+      "answer": "Tensor",
+      "explanation": "A generalization of matrices to any number of dimensions. A scalar is a rank-0 tensor, a vector is rank-1, a matrix is rank-2, and so on. Tensors are the lingua franca of deep learning — all data (images, text, audio) is converted into tensors before processing. Deep learning frameworks like TensorFlow and PyTorch are essentially libraries for efficient tensor manipulation with GPU acceleration and automatic differentiation."
+    },
+    {
+      "question": "One direction or axis along which a tensor extends is called a __________.",
+      "type": "blank",
+      "answer": "Dimension",
+      "explanation": "One direction or axis along which a tensor extends. A 3D tensor (like a batch of grayscale images) has three dimensions: batch, height, and width. Note that 'dimension' in the tensor context means 'axis,' which is different from the everyday use of 'dimension' to mean the size along an axis. This ambiguity can cause confusion — some authors use 'axis' exclusively to avoid it."
+    },
+    {
+      "question": "Another name for a dimension of a tensor is an __________.",
+      "type": "blank",
+      "answer": "Axis",
+      "explanation": "A synonym for dimension in the context of tensors. NumPy and TensorFlow use axis numbers starting from 0 — for a 3D tensor with shape (batch, height, width), axis 0 is batch, axis 1 is height, and axis 2 is width. Many tensor operations (like sum, mean, or max) accept an axis argument that specifies which direction to operate along."
+    },
+    {
+      "question": "The number of axes in a tensor is called its __________.",
+      "type": "blank",
+      "answer": "Rank",
+      "explanation": "The number of axes (dimensions) a tensor has. A scalar has rank 0, a vector has rank 1, a matrix has rank 2, and a color image in a batch has rank 4 (batch, height, width, channels). Note that 'rank' in the tensor/deep learning context means the number of axes, which is different from 'rank' in linear algebra, where it refers to the number of linearly independent rows or columns."
+    },
+    {
+      "question": "A tensor that contains only one number, also called a rank-0 tensor, is called a __________.",
+      "type": "blank",
+      "answer": "Scalar",
+      "explanation": "A single number — a tensor with no axes and rank 0. In NumPy, a scalar tensor has shape () (empty tuple). Scalars appear naturally in deep learning as loss values (a single number summarizing model error), learning rates, and individual pixel values. Despite containing just one number, scalars are still considered tensors — they're simply the simplest case."
+    },
+    {
+      "question": "An array of numbers with exactly one axis, also called a rank-1 tensor, is called a __________.",
+      "type": "blank",
+      "answer": "Vector",
+      "explanation": "A one-dimensional array of numbers — a tensor with exactly one axis. Examples include a list of features for a single data point, or the bias terms in a dense layer. An important distinction: a vector has shape (n,), while a column matrix has shape (n, 1) — they look similar but behave differently in certain operations. Word embeddings, which represent words as dense vectors, are one of the most important applications of vectors in NLP."
+    },
+    {
+      "question": "A rank-2 tensor, described as a generalization concept that extends to higher dimensions, is called a __________.",
+      "type": "blank",
+      "answer": "Matrix",
+      "explanation": "A two-dimensional array of numbers — a tensor with two axes (rows and columns). Matrices are the workhorses of linear algebra and neural networks. A dense layer performs a matrix-vector multiplication (or matrix-matrix multiplication for batches). The weight matrix of a dense layer with 784 inputs and 512 outputs has shape (784, 512). Tensors generalize the concept of matrices to any number of dimensions."
+    },
+    {
+      "question": "A tensor with no axes that contains a single number is called a __________ __ __________.",
+      "type": "blank",
+      "answer": "Rank 0 Tensor",
+      "explanation": "The formal name for a scalar in tensor terminology — a tensor with zero axes holding just one number. The rank-based naming (rank 0, rank 1, rank 2, ...) provides a unified way to describe all tensors. This naming system makes it clear that scalars, vectors, and matrices are all just special cases of the same general structure."
+    },
+    {
+      "question": "A tensor with one axis is called a __________ __ __________.",
+      "type": "blank",
+      "answer": "Rank 1 Tensor",
+      "explanation": "The formal name for a vector in tensor terminology — a one-dimensional array. In deep learning, rank-1 tensors appear as bias vectors, one-hot encoded labels, and feature vectors. The shape of a rank-1 tensor is a single number in parentheses, like (784,) for a flattened MNIST image."
+    },
+    {
+      "question": "A tensor with two axes, also known as a matrix, is called a __________ __ __________.",
+      "type": "blank",
+      "answer": "Rank 2 Tensor",
+      "explanation": "The formal name for a matrix — a 2D grid of numbers. A batch of flattened MNIST images forms a rank-2 tensor with shape (batch_size, 784). Weight matrices in dense layers are also rank-2 tensors. Most tabular datasets (rows of samples, columns of features) are naturally represented as rank-2 tensors."
+    },
+    {
+      "question": "A tensor with three axes is called a __________ __ __________.",
+      "type": "blank",
+      "answer": "Rank 3 Tensor",
+      "explanation": "A three-dimensional array of numbers. Common examples include a batch of grayscale images with shape (batch, height, width), or a batch of text sequences with shape (batch, sequence_length, embedding_dim). Time-series data also naturally forms rank-3 tensors with shape (batch, timesteps, features). Adding a color channel dimension to images creates rank-4 tensors."
+    },
+    {
+      "question": "The data type of the values stored in a tensor, such as float32 or uint8, is called __________.",
+      "type": "blank",
+      "answer": "Dtype",
+      "explanation": "Short for 'data type' — it specifies the kind and precision of numbers stored in a tensor. Common dtypes include float32 (standard for training), float16 (used in mixed-precision training to save memory and speed up computation), int32 (for indices and labels), and uint8 (for raw image pixel values 0–255). Choosing the right dtype matters: using float16 can cut memory usage in half with minimal accuracy loss, while accidentally using int types for weights would break gradient computation."
+    },
+    {
+      "question": "The full size description of a tensor across all its axes is called its __________.",
+      "type": "blank",
+      "answer": "Shape",
+      "explanation": "A tuple describing the size of a tensor along each axis. For example, a batch of 64 MNIST images reshaped for a dense layer has shape (64, 784). Shape is one of the most important properties to track when building neural networks — many bugs come from shape mismatches between layers. Understanding how each operation transforms shapes (e.g., a dense layer maps (batch, 784) to (batch, 512)) is essential for debugging."
+    },
+    {
+      "question": "Selecting part of a tensor by indexing into its data is called __________ __________.",
+      "type": "blank",
+      "answer": "Tensor Slicing",
+      "explanation": "The operation of extracting a subset of a tensor using index ranges along one or more axes. In NumPy, this uses bracket notation like tensor[10:20] or tensor[:, :14, :14]. Tensor slicing is fundamental for data manipulation — selecting specific samples from a batch, cropping regions of an image, or extracting specific time steps from a sequence. Slicing typically returns a view of the original data (not a copy), making it memory-efficient."
+    },
+    {
+      "question": "A small number of samples processed together at one time is called a __________.",
+      "type": "blank",
+      "answer": "Batch",
+      "explanation": "A small group of training samples processed together in a single forward and backward pass. Batch size is an important hyperparameter — typical values range from 32 to 512. Smaller batches introduce more noise into gradient estimates (which can help generalization) but are slower per epoch; larger batches give smoother gradients and better GPU utilization but may generalize worse. The first axis of most tensors in deep learning is the batch axis."
+    },
+    {
+      "question": "The axis that indexes individual samples within a batch is called the __________ __________.",
+      "type": "blank",
+      "answer": "Batch Axis",
+      "explanation": "The first axis (axis 0) of a data tensor, which indexes individual samples within a batch. For a batch of 64 MNIST images with shape (64, 28, 28), the batch axis has size 64. Deep learning frameworks are designed to process entire batches in parallel, which is why data is always organized with the batch axis first. Operations like loss computation typically aggregate across this axis (e.g., averaging the loss over all samples in the batch)."
+    },
+    {
+      "question": "An axis corresponding to individual data examples is called the __________ __________.",
+      "type": "blank",
+      "answer": "Sample Axis",
+      "explanation": "Another name for the batch axis — the axis along which individual data examples are stacked. In a dataset tensor with shape (60000, 28, 28) for MNIST, the sample axis is axis 0 with size 60,000. When the full dataset is split into batches during training, each batch is a slice along this axis."
+    },
+    {
+      "question": "An axis corresponding to features or attributes of the data is called the __________ __________.",
+      "type": "blank",
+      "answer": "Feature Axis",
+      "explanation": "The axis (or axes) that represent the attributes, dimensions, or channels of each data point. For a flattened MNIST image with shape (batch, 784), the feature axis is axis 1 with 784 features. For a color image with shape (batch, height, width, 3), the last axis with size 3 is the channel/feature axis representing RGB values. Understanding which axis is which helps you apply the right operations — for example, normalizing along the feature axis versus the batch axis produces very different results."
+    },
+    {
+      "question": "Rearranging the axes of a tensor is called __________.",
+      "type": "blank",
+      "answer": "Transposition",
+      "explanation": "Swapping or reordering the axes of a tensor. For a 2D matrix, transposition flips rows and columns — a (3, 5) matrix becomes (5, 3). For higher-rank tensors, you can permute axes in any order. Transposition is essential when connecting layers that expect data in different axis orderings — for example, converting between 'channels first' format (batch, channels, height, width) used by PyTorch and 'channels last' format (batch, height, width, channels) used by TensorFlow."
+    },
+    {
+      "question": "A mathematical operation applied to tensors, forming the building blocks of neural network layers, is called a __________ __________.",
+      "type": "blank",
+      "answer": "Tensor Operation",
+      "explanation": "Any mathematical operation that takes one or more tensors as input and produces a tensor as output. Neural networks are built entirely from tensor operations — addition, multiplication, dot products, reshaping, slicing, and more. Every forward pass through a network is a sequence of tensor operations, and every backward pass computes gradients through those same operations. Modern frameworks record these operations in a computation graph for automatic differentiation."
+    },
+    {
+      "question": "An operation applied independently to each element of a tensor is called an __________-__________ __________.",
+      "type": "blank",
+      "answer": "Element Wise Operation",
+      "explanation": "An operation that processes each element of a tensor independently, without considering other elements. Examples include adding a constant to every element, applying relu (replacing negatives with zero), or multiplying two tensors of the same shape element by element. Element-wise operations are highly parallelizable, making them fast on GPUs. They contrast with operations like matrix multiplication, where each output element depends on an entire row and column."
+    },
+    {
+      "question": "A commonly used element-wise activation function in neural networks that replaces negative values with zero is called __________.",
+      "type": "blank",
+      "answer": "Relu",
+      "explanation": "Rectified Linear Unit — an activation function defined as relu(x) = max(0, x). It's the default activation for hidden layers in most modern neural networks because it's simple, fast, and avoids the vanishing gradient problem that plagued older activations like sigmoid and tanh. Variants include Leaky ReLU (allows small negative values), ELU, and GELU (used in transformers). Without nonlinear activation functions like relu, stacking multiple layers would be equivalent to a single linear transformation."
+    },
+    {
+      "question": "A basic tensor operation that can be applied element by element to combine two tensors is called __________.",
+      "type": "blank",
+      "answer": "Addition",
+      "explanation": "The simplest element-wise tensor operation — adding corresponding elements of two tensors. Addition appears everywhere in neural networks: adding bias vectors to layer outputs, residual connections (adding a layer's input to its output, as in ResNets), and combining embeddings. When the two tensors have different shapes, broadcasting rules determine whether and how the addition is performed."
+    },
+    {
+      "question": "A tensor operation that can be applied element by element, as used in relu-style computations, is called __________.",
+      "type": "blank",
+      "answer": "Maximum",
+      "explanation": "An element-wise operation that returns the larger value between corresponding elements of two tensors, or between each element and a constant. The relu activation function is implemented as maximum(x, 0). Maximum is also used in max pooling layers (though that operates over spatial windows, not element-wise across tensors) and in various loss functions and attention mechanisms."
+    },
+    {
+      "question": "A way to combine tensors of different shapes by automatically expanding one to match the other is called __________.",
+      "type": "blank",
+      "answer": "Broadcasting",
+      "explanation": "A set of rules that allow operations between tensors of different shapes by virtually expanding the smaller tensor to match the larger one. For example, adding a vector of shape (512,) to a matrix of shape (64, 512) automatically repeats the vector across all 64 rows. Broadcasting avoids creating explicit copies, saving memory. The rules are: axes are compared from right to left, and dimensions must either match or one of them must be 1 (or missing). Understanding broadcasting is essential for writing correct and efficient tensor code."
+    },
+    {
+      "question": "A central operation in neural networks that combines tensors through multiplication and summation patterns is called a __________ __________.",
+      "type": "blank",
+      "answer": "Tensor Product",
+      "explanation": "An operation that combines two tensors by multiplying and summing elements along shared dimensions. The tensor product generalizes several specific operations — dot products, matrix-vector products, and matrix-matrix products are all special cases. In neural networks, tensor products are the primary mechanism for mixing and combining information across features. They account for the vast majority of computational cost in training and inference."
+    },
+    {
+      "question": "A specific tensor product used heavily in neural network computations, involving multiplication and summation of two arrays, is called a __________ __________.",
+      "type": "blank",
+      "answer": "Dot Product",
+      "explanation": "The operation of multiplying corresponding elements of two vectors and summing the results, producing a scalar. The dot product measures similarity between two vectors — identical directions give a large positive value, opposite directions give a large negative value, and perpendicular vectors give zero. This property makes dot products central to attention mechanisms in transformers, where they compute how much each token should 'attend to' every other token."
+    },
+    {
+      "question": "The product of a matrix and a vector is called a __________-__________ __________.",
+      "type": "blank",
+      "answer": "Matrix Vector Product",
+      "explanation": "The operation of multiplying a matrix by a vector, producing a new vector. Each element of the output is the dot product of one row of the matrix with the input vector. This is exactly what a dense layer computes (before adding the bias): output = Wx, where W is the weight matrix and x is the input vector. For a weight matrix of shape (512, 784) and an input of shape (784,), the output has shape (512,)."
+    },
+    {
+      "question": "The product of two matrices is called a __________ __________.",
+      "type": "blank",
+      "answer": "Matrix Product",
+      "explanation": "The operation of multiplying two matrices, where each output element is the dot product of a row from the first matrix and a column from the second. For matrices A (m×n) and B (n×p), the result has shape (m×p) — the inner dimensions must match. Matrix products are the computational bottleneck of neural networks, and GPUs are specifically optimized for them. When processing batches, the matrix-vector product becomes a matrix-matrix product."
+    },
+    {
+      "question": "The requirement that tensor shapes must align properly for certain operations to be valid is called __________ __________.",
+      "type": "blank",
+      "answer": "Shape Compatibility",
+      "explanation": "The rules governing which tensor shapes can participate in a given operation. For matrix multiplication, the last axis of the first tensor must match the first axis of the second. For element-wise operations, shapes must either match exactly or satisfy broadcasting rules. Shape incompatibility errors are among the most common bugs in deep learning code — they typically appear as runtime errors like 'shapes (64, 784) and (256, 512) not aligned.'"
+    },
+    {
+      "question": "A function whose values change without jumps is called a __________ __________.",
+      "type": "blank",
+      "answer": "Continuous Function",
+      "explanation": "A function with no sudden jumps or breaks — small changes in input produce small changes in output. Continuity is a prerequisite for differentiability, which in turn is required for gradient-based optimization. The loss function in a neural network must be continuous (or at least piecewise continuous) for backpropagation to work. Relu is technically not differentiable at exactly x=0, but this rarely matters in practice since hitting exactly zero is vanishingly unlikely with floating-point numbers."
+    },
+    {
+      "question": "A continuous function that can be differentiated, making it suitable for gradient-based optimization, is called a __________ __________.",
+      "type": "blank",
+      "answer": "Smooth Function",
+      "explanation": "A function that is not only continuous but also differentiable — meaning it has a well-defined slope at every point, with no sharp corners. Smoothness is what makes gradient-based optimization possible: if you can compute the derivative everywhere, you can always determine which direction to move to reduce the loss. In practice, deep learning uses functions that are 'smooth enough' — relu has a sharp corner at zero but works perfectly fine because the gradient is well-defined everywhere else."
+    },
+    {
+      "question": "A quantity that captures how a function changes when its input changes is called a __________.",
+      "type": "blank",
+      "answer": "Derivative",
+      "explanation": "The rate of change of a function with respect to its input — how much the output changes when the input changes by a tiny amount. For a function f(x), the derivative f'(x) tells you the slope at point x. If the derivative is positive, increasing x increases f(x); if negative, increasing x decreases f(x). In deep learning, we compute derivatives of the loss with respect to each parameter to know which way to adjust them. The multidimensional version of a derivative is a gradient."
+    },
+    {
+      "question": "The steepness of a function at a given point is called the __________.",
+      "type": "blank",
+      "answer": "Slope",
+      "explanation": "An intuitive way to describe the derivative — how steep a function is at a particular point. A large positive slope means the function is rising quickly; a large negative slope means it's falling quickly; a slope near zero means the function is relatively flat. In optimization, we want to find points where the slope of the loss function is zero (or close to it), which correspond to minima. The slope of the loss curve tells the optimizer how aggressively to update each parameter."
+    },
+    {
+      "question": "The multidimensional generalization of a derivative, indicating how a function changes with respect to its parameters, is called a __________.",
+      "type": "blank",
+      "answer": "Gradient",
+      "explanation": "A vector of partial derivatives — one for each parameter — that points in the direction of steepest increase of a function. In deep learning, the gradient of the loss with respect to all model parameters tells you exactly how to change each parameter to increase the loss the most. Optimization then moves in the opposite direction (negative gradient) to decrease the loss. Computing gradients efficiently through backpropagation is what makes training deep networks feasible."
+    },
+    {
+      "question": "A curve showing how loss changes as a single parameter changes is called a __________ __________.",
+      "type": "blank",
+      "answer": "Loss Curve",
+      "explanation": "A visualization of how the loss function varies as one parameter is changed while all others are held fixed. The slope of this curve at any point is the partial derivative of the loss with respect to that parameter. Loss curves help build intuition about optimization — you can see minima (low points), maxima (high points), and the general shape of the optimization landscape. In practice, real loss landscapes have millions of dimensions, making them impossible to visualize directly."
+    },
+    {
+      "question": "A higher-dimensional version of a loss curve describing loss values across many parameter combinations is called a __________ __________.",
+      "type": "blank",
+      "answer": "Loss Surface",
+      "explanation": "A visualization (usually 2D or 3D) of how the loss varies across two or more parameters simultaneously. Real neural network loss surfaces have millions of dimensions and are extremely complex — they contain many local minima, saddle points, and flat regions. Research has shown that in high-dimensional spaces, saddle points (where the gradient is zero but the point is not a minimum) are more common than true local minima, which helps explain why gradient descent still works well despite the complex landscape."
+    },
+    {
+      "question": "A parameter in a model whose value is adjusted during training is called a __________ __________.",
+      "type": "blank",
+      "answer": "Learnable Parameter",
+      "explanation": "Any parameter in a model that is updated by the optimizer during training — primarily weights and biases. These are distinct from hyperparameters (like learning rate, batch size, number of layers), which are set by the practitioner and remain fixed during training. The total count of learnable parameters is often used as a rough measure of model size — for example, GPT-3 has 175 billion learnable parameters."
+    },
+    {
+      "question": "The size of the step taken when updating parameters during optimization is called the __________ __________.",
+      "type": "blank",
+      "answer": "Learning Rate",
+      "explanation": "A hyperparameter that controls how much parameters change with each update step. If the learning rate is too high, the model overshoots good solutions and may diverge; if too low, training is painfully slow and may get stuck in poor local minima. Finding the right learning rate is one of the most important tuning decisions. Techniques like learning rate schedules (reducing it over time), warmup (starting small and increasing), and adaptive optimizers (like Adam, which adjusts rates per parameter) help manage this tradeoff."
+    },
+    {
+      "question": "A family of optimization methods that use gradients to update parameters and reduce loss is called __________-__________ __________.",
+      "type": "blank",
+      "answer": "Gradient Based Optimization",
+      "explanation": "The broad category of optimization methods that compute gradients (derivatives of the loss with respect to parameters) and use them to iteratively update parameters in the direction that reduces loss. Nearly all modern deep learning training uses gradient-based optimization. Alternatives exist — evolutionary algorithms, random search — but they scale poorly to the millions or billions of parameters in modern networks. The combination of backpropagation (for computing gradients) and gradient-based optimizers is what makes training deep networks practical."
+    },
+    {
+      "question": "An optimization method that updates parameters by moving them in the direction that reduces loss is called __________ __________.",
+      "type": "blank",
+      "answer": "Gradient Descent",
+      "explanation": "The foundational optimization algorithm: compute the gradient of the loss, then move each parameter a small step in the direction opposite to its gradient (since the gradient points uphill, and we want to go downhill). In its pure form, gradient descent computes the gradient using the entire dataset, which is called batch gradient descent. In practice, this is too slow for large datasets, so stochastic or mini-batch variants are used instead."
+    },
+    {
+      "question": "A version of gradient descent that estimates updates from small batches of data rather than the full dataset is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Stochastic Gradient Descent",
+      "explanation": "A variant of gradient descent that computes gradient estimates from small random subsets of data rather than the entire dataset. 'Stochastic' means random — each update is based on a randomly sampled batch, so the gradient is noisy but computed much faster. Despite the noise (or perhaps because of it), SGD often finds good solutions and generalizes well. SGD with momentum and learning rate scheduling remains competitive with more sophisticated optimizers like Adam for many tasks."
+    },
+    {
+      "question": "The practical training method that computes gradient updates from small batches of samples is called __________-__________ __________ __________ __________.",
+      "type": "blank",
+      "answer": "Mini Batch Stochastic Gradient Descent",
+      "explanation": "The standard training method in deep learning: computing gradient updates from small random batches (typically 32–512 samples) rather than single examples or the full dataset. It strikes a balance between the efficiency of batch gradient descent (stable gradients) and the speed of pure stochastic gradient descent (one example at a time). When people say 'SGD' in practice, they almost always mean this mini-batch variant."
+    },
+    {
+      "question": "Gradient descent performed using the entire dataset for each update step is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Batch Gradient Descent",
+      "explanation": "The original form of gradient descent where the gradient is computed over the entire training set before making a single parameter update. This gives the most accurate gradient estimate but is impractical for large datasets — computing one update on a million-sample dataset requires processing all million samples. Mini-batch SGD replaced it as the standard because it makes frequent, approximate updates that collectively converge much faster."
+    },
+    {
+      "question": "A point where the loss is lower than nearby points but not necessarily the lowest possible overall is called a __________ __________.",
+      "type": "blank",
+      "answer": "Local Minimum",
+      "explanation": "A point in the loss landscape where the loss is lower than all immediately surrounding points, but not necessarily the global minimum. In low-dimensional optimization, getting trapped in local minima is a major concern. However, research has shown that in the very high-dimensional parameter spaces of neural networks, most critical points are saddle points rather than true local minima, and the local minima that do exist tend to have loss values close to the global minimum."
+    },
+    {
+      "question": "An optimization technique that helps parameter updates move more efficiently across the loss surface is called __________.",
+      "type": "blank",
+      "answer": "Momentum",
+      "explanation": "A technique that accelerates gradient descent by accumulating a velocity vector that builds up speed in directions of consistent gradient. Think of it like a ball rolling downhill — it gathers momentum in the dominant direction and dampens oscillations in noisy directions. Momentum helps overcome two common problems: slow progress through flat regions and oscillation in narrow valleys. A typical momentum coefficient is 0.9, meaning 90% of the previous velocity is retained."
+    },
+    {
+      "question": "An optimization method that adapts the learning rate for different parameters is called __________.",
+      "type": "blank",
+      "answer": "Adagrad",
+      "explanation": "An optimizer that adapts the learning rate individually for each parameter based on its historical gradient magnitudes. Parameters that have received large gradients get smaller learning rates, and vice versa. This is especially useful for sparse data (like text), where some features appear rarely and need larger updates when they do. Adagrad's main weakness is that learning rates can shrink too aggressively over time and effectively stop learning — RMSprop and Adam were developed to fix this problem."
+    },
+    {
+      "question": "An optimization method that adapts learning rates using a moving average of squared gradients is called __________.",
+      "type": "blank",
+      "answer": "RMSprop",
+      "explanation": "An optimizer that fixes Adagrad's aggressively shrinking learning rates by using an exponentially decaying moving average of squared gradients instead of accumulating all past gradients. This means the learning rate adapts based on recent gradient history rather than all-time history. RMSprop was proposed by Geoffrey Hinton in a Coursera lecture (never formally published). Adam, the most popular modern optimizer, combines RMSprop's adaptive learning rates with momentum."
+    },
+    {
+      "question": "The method neural networks use to compute how each parameter contributed to the loss so parameters can be updated is called __________.",
+      "type": "blank",
+      "answer": "Backpropagation",
+      "explanation": "The algorithm that computes the gradient of the loss with respect to every learnable parameter in the network by applying the chain rule backwards through the computation graph. Backpropagation itself doesn't update parameters — it only computes gradients. The optimizer then uses those gradients to perform the actual update. Backpropagation was popularized for neural networks by Rumelhart, Hinton, and Williams in 1986, and remains the foundation of all neural network training today."
+    },
+    {
+      "question": "The calculus rule used in backpropagation to compute gradients through a sequence of operations is called the __________ __________.",
+      "type": "blank",
+      "answer": "Chain Rule",
+      "explanation": "A fundamental rule of calculus: if a function is composed of nested functions (f(g(x))), the derivative of the whole is the product of the derivatives of each part. Since a neural network is a long chain of composed functions (layer after layer), the chain rule lets us compute how the final loss depends on parameters deep inside the network by multiplying gradients along the path. This chaining is why it's called 'backpropagation' — gradients propagate backward through the chain."
+    },
+    {
+      "question": "A technique used by modern frameworks to compute gradients automatically from code is called __________ __________.",
+      "type": "blank",
+      "answer": "Automatic Differentiation",
+      "explanation": "A technique where a framework records the mathematical operations performed on tensors and then automatically computes gradients by applying the chain rule through the recorded operations. This eliminates the need to derive and code gradients by hand — you just write the forward pass, and the framework handles the backward pass. There are two modes: forward-mode (efficient for few inputs, many outputs) and reverse-mode (efficient for many inputs, few outputs). Backpropagation is reverse-mode automatic differentiation."
+    },
+    {
+      "question": "A graph of operations representing how outputs are computed from inputs, enabling gradient calculation, is called a __________ __________.",
+      "type": "blank",
+      "answer": "Computation Graph",
+      "explanation": "A directed graph where nodes represent operations (add, multiply, relu) or values (tensors), and edges represent data flow. When you run a forward pass, the framework builds this graph. During backpropagation, gradients flow backward through the graph. TensorFlow originally used static computation graphs (built once, run many times), while PyTorch uses dynamic graphs (rebuilt each forward pass), which is more flexible for variable-length inputs and debugging. Modern TensorFlow supports both."
+    },
+    {
+      "question": "The graph structure underlying computation graphs, where connections have direction and no cycles, is called a __________ __________ __________.",
+      "type": "blank",
+      "answer": "Directed Acyclic Graph",
+      "explanation": "A graph where edges have direction (from input to output) and there are no cycles (no path leads back to where it started). Computation graphs must be DAGs because each operation must have all its inputs available before it can execute — cycles would create circular dependencies. The 'directed' property defines the flow of computation (forward) and gradient (backward). DAGs also appear in other CS contexts like version control (Git), task scheduling, and data pipelines."
+    },
+    {
+      "question": "A deep learning framework named after tensors, used to demonstrate automatic differentiation, is called __________.",
+      "type": "blank",
+      "answer": "TensorFlow",
+      "explanation": "Google's open-source deep learning framework, named because neural networks are flows of tensor operations. TensorFlow was released in 2015 and became the dominant framework for several years. It provides automatic differentiation, GPU acceleration, and deployment tools. TensorFlow 2.0 adopted eager execution (like PyTorch) and integrated Keras as its high-level API. While PyTorch has become more popular in research, TensorFlow remains widely used in production, especially through TensorFlow Serving and TensorFlow Lite."
+    },
+    {
+      "question": "A modern framework mentioned alongside others for automatic differentiation and tensor computation is called __________.",
+      "type": "blank",
+      "answer": "JAX",
+      "explanation": "Google's research-oriented framework that combines NumPy-like syntax with automatic differentiation, GPU/TPU acceleration, and functional transformations like jit (just-in-time compilation) and vmap (automatic batching). JAX is not a full deep learning framework like TensorFlow or PyTorch — it's a lower-level tool that libraries like Flax and Haiku build on. JAX is popular in cutting-edge research because of its composable function transformations and excellent TPU support."
+    },
+    {
+      "question": "A deep learning framework mentioned alongside TensorFlow and JAX is called __________.",
+      "type": "blank",
+      "answer": "PyTorch",
+      "explanation": "Meta's (Facebook's) open-source deep learning framework, known for its intuitive Pythonic design and dynamic computation graphs. PyTorch has become the dominant framework in academic research due to its ease of debugging and natural integration with Python. Its eager execution model means code runs line by line like normal Python, making it easy to inspect intermediate values. The PyTorch ecosystem includes Hugging Face Transformers, torchvision, and torchaudio."
+    },
+    {
+      "question": "A TensorFlow tool used to record operations so gradients can be computed automatically is called __________.",
+      "type": "blank",
+      "answer": "GradientTape",
+      "explanation": "TensorFlow's mechanism for automatic differentiation in eager mode. You wrap forward-pass code inside a tf.GradientTape() context manager, and TensorFlow records all operations on watched tensors. You then call tape.gradient(loss, variables) to compute gradients. PyTorch's equivalent is autograd, which records operations automatically on tensors with requires_grad=True. GradientTape gives explicit control over which operations are recorded, which can be useful for advanced training patterns like GANs."
+    },
+    {
+      "question": "The step where model parameters are adjusted using gradients and the learning rate to reduce loss is called a __________ __________.",
+      "type": "blank",
+      "answer": "Weight Update",
+      "explanation": "The final step in each training iteration: parameters are adjusted in the direction that reduces loss, scaled by the learning rate. In its simplest form: new_weight = old_weight - learning_rate × gradient. More sophisticated optimizers (Adam, RMSprop) compute more complex updates using momentum and adaptive learning rates, but the core idea is the same — use the gradient to determine the direction, and the learning rate to determine the step size."
+    },
+    {
+      "question": "Low-level numerical libraries that NumPy can rely on for efficient tensor and matrix operations are called __________.",
+      "type": "blank",
+      "answer": "BLAS",
+      "explanation": "Basic Linear Algebra Subprograms — highly optimized low-level routines for vector and matrix operations like dot products, matrix multiplication, and vector addition. When you call NumPy operations, they often delegate to BLAS implementations (like OpenBLAS or Intel MKL) written in C or Fortran that exploit CPU-specific optimizations like SIMD instructions and cache-aware memory access. This is why NumPy matrix operations are orders of magnitude faster than equivalent Python loops. GPU libraries like cuBLAS provide similar optimizations for GPU computation."
+    }
+  ]
+}
