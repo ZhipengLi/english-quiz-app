@@ -1,0 +1,341 @@
+{
+  "text": "Artificial Intelligence and Deep Learning Fundamentals",
+  "quiz": [
+    {
+      "question": "The broad field focused on building systems that perform tasks normally requiring human intelligence is called __________ __________.",
+      "type": "blank",
+      "answer": "Artificial Intelligence",
+      "explanation": "The broad field focused on automating intellectual tasks normally done by humans. It includes machine learning and deep learning, but also older non-learning approaches such as rule-based systems. AI is often divided into 'narrow AI,' which handles specific tasks like chess or image recognition, and 'general AI,' which would match human-level reasoning across all domains — something that remains theoretical."
+    },
+    {
+      "question": "An older AI approach based on explicit human-written rules and structured knowledge is called __________ __________.",
+      "type": "blank",
+      "answer": "Symbolic AI",
+      "explanation": "An early AI approach that relies on hand-coded explicit rules and structured knowledge representations, rather than learning from data. Symbolic AI dominated the field from the 1950s through the 1980s. Its key limitation is brittleness — the rules break down when encountering situations the programmer didn't anticipate. Modern AI has largely shifted toward data-driven approaches like machine learning, though some hybrid systems still combine symbolic reasoning with neural networks."
+    },
+    {
+      "question": "Rule-based AI systems popular in the 1980s that tried to encode expert knowledge are called __________ __________.",
+      "type": "blank",
+      "answer": "Expert Systems",
+      "explanation": "Rule-based AI systems from the 1980s that attempted to encode domain expert knowledge as a series of if-then rules to solve specialized problems. They were among the first commercially successful AI applications, used in fields like medical diagnosis and mineral exploration. However, they were expensive to maintain and couldn't learn or adapt — every new edge case required a human to write another rule. Their decline helped motivate the shift toward machine learning."
+    },
+    {
+      "question": "A subfield of AI where systems learn patterns from data instead of being manually programmed with rules is called __________ __________.",
+      "type": "blank",
+      "answer": "Machine Learning",
+      "explanation": "A subfield of AI in which systems automatically discover patterns and rules by being exposed to data, rather than being explicitly programmed by humans. Machine learning encompasses a wide range of techniques — from classical methods like decision trees, SVMs, and random forests, to modern deep learning with neural networks. The key insight is that for many complex tasks, it's easier to show the computer examples than to write explicit rules."
+    },
+    {
+      "question": "The process of improving a model by exposing it to data and adjusting it based on performance is called __________.",
+      "type": "blank",
+      "answer": "Training",
+      "explanation": "The iterative process of feeding data to a model and repeatedly adjusting its parameters based on how well it performs. Training is distinct from inference, which is when the trained model is used to make predictions on new data. A model typically goes through training once (which can take hours to weeks), and then performs inference many times in production. Overfitting — where the model memorizes training data instead of learning general patterns — is one of the central challenges of training."
+    },
+    {
+      "question": "The examples given to a model, such as images, text, or audio, are called __________ __________.",
+      "type": "blank",
+      "answer": "Input Data",
+      "explanation": "The samples provided to a model, which can take many forms such as images, text, audio, or numerical values. The quality and quantity of input data are often more important than the model architecture itself — the saying 'garbage in, garbage out' applies strongly here. Input data typically needs preprocessing (cleaning, normalization, tokenization) before being fed to a model."
+    },
+    {
+      "question": "The correct answer associated with an input during training is called a __________.",
+      "type": "blank",
+      "answer": "Target",
+      "explanation": "The correct answer paired with each input during training. The model learns by comparing its output against the target. Together, an input and its target form a 'training example' or 'labeled example.' In supervised learning, targets are provided by human annotators. In self-supervised learning, targets are generated automatically from the data itself — for example, masking a word in a sentence and asking the model to predict it."
+    },
+    {
+      "question": "Information that tells the model how well it is doing is called a __________ __________.",
+      "type": "blank",
+      "answer": "Feedback Signal",
+      "explanation": "Information indicating how well or poorly the model is currently performing, used to guide the direction of parameter adjustments. In supervised learning, the feedback signal comes from the loss function comparing predictions to targets. In reinforcement learning, it comes as a reward signal from the environment. The nature and quality of the feedback signal fundamentally shapes what the model can learn."
+    },
+    {
+      "question": "A way of expressing or encoding data is called a __________.",
+      "type": "blank",
+      "answer": "Representation",
+      "explanation": "A way of expressing or encoding data. Different representations can make different tasks easier or harder to solve. For example, the same color can be represented as RGB (good for screens) or HSV (good for color-based image filtering). A core idea in deep learning is that the right representation can turn a seemingly complex problem into a simple one — the model's job is to find that representation automatically."
+    },
+    {
+      "question": "Learning useful representations of data automatically instead of hand-designing them is called __________ __________.",
+      "type": "blank",
+      "answer": "Representation Learning",
+      "explanation": "Letting a model automatically discover useful ways to encode data, rather than relying on manually designed features. This is one of the key advantages of deep learning over classical machine learning. Before representation learning, practitioners spent most of their time on feature engineering — hand-crafting input features. Models like autoencoders and word embeddings (e.g., Word2Vec) are classic examples of representation learning."
+    },
+    {
+      "question": "Converting data from one form into another to make patterns easier to learn is called __________ __________.",
+      "type": "blank",
+      "answer": "Data Transformation",
+      "explanation": "Converting data from one form into another so that hidden patterns become easier to discover and learn. At its core, this is what every layer in a neural network does — each layer applies a transformation that makes the data slightly more useful for the task. Simple examples include normalizing pixel values to a 0–1 range, or converting text into numerical token IDs."
+    },
+    {
+      "question": "A color representation based on red, green, and blue channels is called __________.",
+      "type": "blank",
+      "answer": "RGB",
+      "explanation": "A color representation using three channels — red, green, and blue — widely used in digital displays. RGB is the default format for most image data in deep learning. However, it's not always the most useful representation — for tasks like object detection under varying lighting, converting to HSV or LAB color space can make the model's job easier, since those spaces separate color from brightness."
+    },
+    {
+      "question": "A color representation based on hue, saturation, and value is called __________.",
+      "type": "blank",
+      "answer": "HSV",
+      "explanation": "A color representation based on hue, saturation, and value, which is more intuitive to human color perception than RGB. HSV separates chromatic information (hue) from intensity (value), making it useful for tasks like color-based segmentation. The contrast between RGB and HSV is a textbook example of how choosing a different representation of the same data can make a problem significantly easier."
+    },
+    {
+      "question": "Predicting which category an input belongs to is called __________.",
+      "type": "blank",
+      "answer": "Classification",
+      "explanation": "The task of predicting which predefined category an input belongs to, such as determining whether an email is spam or not. Classification is one of the most common supervised learning tasks. When there are only two categories, it's called binary classification; when there are more, it's multiclass classification. A related but different task is regression, where the output is a continuous number rather than a category."
+    },
+    {
+      "question": "Transforming data into a different coordinate system to make a problem easier is called a __________ __________.",
+      "type": "blank",
+      "answer": "Coordinate Change",
+      "explanation": "Transforming data into a different coordinate system so that a previously complex problem becomes simpler to solve. This is a powerful geometric intuition behind what neural networks do — they learn coordinate changes that 'untangle' data. For example, two classes of data points that are intertwined in the original space may become linearly separable after the right coordinate change."
+    },
+    {
+      "question": "A dataset used to compare or validate candidate solutions during model development is called a __________ __________.",
+      "type": "blank",
+      "answer": "Development Dataset",
+      "explanation": "A dataset used during model development to evaluate and compare different candidate solutions, helping select the best model. It is also commonly called a validation set. Critically, the development dataset must be separate from both the training set (used to learn) and the test set (used for final evaluation). This three-way split — train, dev, test — prevents the model from being evaluated on data it has already seen."
+    },
+    {
+      "question": "The set of all possible solutions or transformations a learning algorithm can search through is called the __________ __________.",
+      "type": "blank",
+      "answer": "Hypothesis Space",
+      "explanation": "The set of all possible solutions or transformations that a learning algorithm can explore. Its size and structure determine the model's expressive power. A small hypothesis space (like a linear model) is easy to search but may be too simple. A large one (like a deep neural network) can represent complex functions but is harder to optimize and more prone to overfitting. Choosing the right hypothesis space is a fundamental design decision."
+    },
+    {
+      "question": "A form of machine learning that learns multiple layers of representations is called __________ __________.",
+      "type": "blank",
+      "answer": "Deep Learning",
+      "explanation": "A branch of machine learning that extracts increasingly abstract features by learning multiple layers of data representations. 'Deep' refers to the number of layers, not to any deeper understanding. Deep learning's power comes from composing many simple transformations into a complex one. It has driven most recent AI breakthroughs — from image recognition and machine translation to large language models like GPT and Claude."
+    },
+    {
+      "question": "The number of layers used in a model is called its __________.",
+      "type": "blank",
+      "answer": "Depth",
+      "explanation": "The number of layers in a model. Deeper models can generally capture more complex patterns, but they also become harder to train — problems like vanishing gradients made very deep networks impractical until techniques like residual connections (ResNets) and better optimizers were developed. Modern large language models can have over a hundred layers."
+    },
+    {
+      "question": "Learning approaches with only one or a few representation layers are called __________ __________.",
+      "type": "blank",
+      "answer": "Shallow Learning",
+      "explanation": "Learning methods that use only one or a few representation layers, in contrast to deep learning. Classical algorithms like logistic regression, SVMs, and random forests are considered shallow because they don't learn layered hierarchical representations. They can still be very effective for problems with well-engineered features or smaller datasets, and are often faster to train and easier to interpret than deep models."
+    },
+    {
+      "question": "Layered representations where higher layers capture more abstract patterns are called __________ __________.",
+      "type": "blank",
+      "answer": "Hierarchical Representations",
+      "explanation": "Layered representation structures where lower layers capture simple features like edges and textures, and higher layers capture more abstract patterns like shapes and objects. This mirrors how the human visual cortex processes information — early areas detect edges, later areas detect faces. This compositionality is a key reason deep networks generalize well: they build complex concepts from simpler reusable parts."
+    },
+    {
+      "question": "A model made of stacked layers that transform data through learned parameters is called a __________ __________.",
+      "type": "blank",
+      "answer": "Neural Network",
+      "explanation": "A model composed of multiple stacked layers, each transforming the data through learned parameters. Despite the name, modern neural networks are only loosely inspired by biological neurons. They come in many architectures — feedforward networks, convolutional networks (CNNs) for images, recurrent networks (RNNs) for sequences, and transformers, which power most current large language models."
+    },
+    {
+      "question": "The numerical values inside a neural network that determine how inputs are transformed are called __________.",
+      "type": "blank",
+      "answer": "Weights",
+      "explanation": "The numerical values inside a neural network that determine how input data is transformed. Training is essentially the process of finding the right weights. Each connection between neurons has a weight; the weighted sum of inputs, passed through an activation function, produces the neuron's output. Weights are distinct from biases, which are additional parameters that shift the activation threshold."
+    },
+    {
+      "question": "The adjustable numbers in a model, usually including weights, are called __________.",
+      "type": "blank",
+      "answer": "Parameters",
+      "explanation": "All the adjustable numerical values in a model, typically including weights and biases. Large models can have billions of parameters — GPT-3 has 175 billion. Parameters are distinct from hyperparameters, which are settings chosen by the practitioner before training (like learning rate or number of layers) and are not learned from data."
+    },
+    {
+      "question": "A function that measures how far a prediction is from the correct answer is called a __________ __________.",
+      "type": "blank",
+      "answer": "Loss Function",
+      "explanation": "A function that measures the gap between a model's prediction and the correct answer, serving as the core metric during training. Different tasks use different loss functions — cross-entropy loss is standard for classification, while mean squared error is common for regression. The choice of loss function shapes what the model optimizes for, and a poorly chosen loss can lead the model to learn the wrong thing."
+    },
+    {
+      "question": "Another name for the function the model tries to optimize, often the same as the loss function, is the __________ __________.",
+      "type": "blank",
+      "answer": "Objective Function",
+      "explanation": "The function a model tries to optimize (usually minimize), often the same as or closely related to the loss function. In some cases, the objective function includes additional terms beyond raw loss — for instance, a regularization term that penalizes overly complex models. The objective function defines the formal goal of training; everything the optimizer does is in service of this function."
+    },
+    {
+      "question": "Another common name for the loss function or objective function is the __________ __________.",
+      "type": "blank",
+      "answer": "Cost Function",
+      "explanation": "Another commonly used name for the loss function or objective function, used interchangeably across different textbooks. Some authors draw subtle distinctions — for example, using 'loss' for a single example and 'cost' for the average over a batch — but in practice these terms are largely synonymous."
+    },
+    {
+      "question": "The output produced by the model for a given input is called a __________.",
+      "type": "blank",
+      "answer": "Prediction",
+      "explanation": "The output a model produces for a given input. During training, predictions are compared against targets to compute loss. During inference, predictions are the model's final answers on new, unseen data. A prediction can be a single class label, a probability distribution over classes, a generated sentence, or any other structured output depending on the task."
+    },
+    {
+      "question": "The method used to update model parameters to reduce loss is called an __________.",
+      "type": "blank",
+      "answer": "Optimizer",
+      "explanation": "The method used to update model parameters based on gradients of the loss function. Common optimizers include SGD (stochastic gradient descent), Adam, and RMSprop. Each optimizer has a different strategy for navigating the loss landscape — Adam, for instance, adapts the learning rate per parameter, which often leads to faster convergence. Choosing the right optimizer and tuning its hyperparameters (especially learning rate) is a critical part of training."
+    },
+    {
+      "question": "The main algorithm used to compute how each parameter should change is called __________.",
+      "type": "blank",
+      "answer": "Backpropagation",
+      "explanation": "The core algorithm in deep learning for computing how much each parameter contributes to the loss (its gradient), calculated layer by layer from output back to input. It applies the chain rule of calculus repeatedly through the network. Backpropagation itself only computes gradients — the actual parameter update is handled by the optimizer. Without backpropagation, training deep networks would be computationally infeasible."
+    },
+    {
+      "question": "The repeated cycle of prediction, loss calculation, and parameter updates is called the __________ __________.",
+      "type": "blank",
+      "answer": "Training Loop",
+      "explanation": "The repeated cycle in model training: make a prediction, compute the loss, update the parameters — repeated until the model converges. Besides the training loop, there is typically a validation loop that runs periodically on the development dataset to monitor for overfitting. The training loop operates on batches within epochs — one epoch means the model has seen the entire training dataset once."
+    },
+    {
+      "question": "Manually designing useful input features for a machine learning model is called __________ __________.",
+      "type": "blank",
+      "answer": "Feature Engineering",
+      "explanation": "The manual process of designing and selecting useful input features for a machine learning model. Before deep learning, feature engineering was often the most time-consuming and impactful part of building a model — for example, designing edge detectors for image recognition or n-gram features for text classification. Deep learning largely automates this through representation learning, but feature engineering remains valuable for tabular data and domain-specific problems."
+    },
+    {
+      "question": "A model that learns directly from raw input to final output in one system is called an __________ __ __________ __________.",
+      "type": "blank",
+      "answer": "End to End Model",
+      "explanation": "A model that learns directly from raw input to final output within a single unified system, eliminating intermediate manual processing steps. For example, an end-to-end speech recognition model takes raw audio and outputs text directly, whereas traditional systems had separate stages for acoustic modeling, language modeling, and decoding. End-to-end models are simpler to build and often outperform multi-stage pipelines, but they typically require more training data."
+    },
+    {
+      "question": "The ability of a method to improve as more data or compute is added is called __________.",
+      "type": "blank",
+      "answer": "Scalability",
+      "explanation": "The ability of a method to continue improving its performance as more data or computational resources are added. Scalability is one of deep learning's greatest strengths — unlike many classical methods that plateau, deep learning models tend to keep getting better with more data and bigger architectures. This property is captured by 'scaling laws,' which show predictable power-law improvements in performance as model size, data, and compute increase."
+    },
+    {
+      "question": "Running computations at the same time across hardware resources is called __________.",
+      "type": "blank",
+      "answer": "Parallelization",
+      "explanation": "Running computational tasks simultaneously across multiple hardware resources to dramatically speed up the training process. Deep learning benefits enormously from parallelization because operations like matrix multiplication can be split across thousands of GPU cores. There are two main types: data parallelism (splitting batches across devices) and model parallelism (splitting the model itself across devices), both essential for training today's largest models."
+    },
+    {
+      "question": "Hardware originally designed for graphics that became crucial for deep learning computation is called a __________.",
+      "type": "blank",
+      "answer": "GPU",
+      "explanation": "Graphics Processing Unit — hardware originally designed for rendering graphics that became a key accelerator for deep learning due to its powerful parallel computing capabilities. GPUs can perform thousands of matrix operations simultaneously, which is exactly what neural network training requires. NVIDIA's CUDA platform made GPUs programmable for general computation, enabling the deep learning revolution. More recently, specialized chips like TPUs (Tensor Processing Units) have been developed specifically for AI workloads."
+    },
+    {
+      "question": "The historical trend of rapidly increasing computing power over time is known as __________ __________.",
+      "type": "blank",
+      "answer": "Moores Law",
+      "explanation": "The historical observation that computing power increases rapidly over time, with the number of transistors on a chip roughly doubling every two years. While the original trend has slowed for general CPUs, the spirit of Moore's Law lives on through specialized hardware like GPUs and TPUs. The exponential growth in available compute is one of the three key drivers of the deep learning revolution, alongside big data and algorithmic improvements."
+    },
+    {
+      "question": "A small group of training examples processed together is called a __________.",
+      "type": "blank",
+      "answer": "Batch",
+      "explanation": "A small group of training examples processed together. Using batches is more efficient than processing one example at a time and uses less memory than processing all data at once. The batch size is an important hyperparameter — smaller batches introduce more noise into gradient estimates (which can help escape local minima), while larger batches provide more stable gradients but require more memory. Common batch sizes range from 32 to 512."
+    },
+    {
+      "question": "The ability of deep learning methods to handle many different types of tasks is called __________.",
+      "type": "blank",
+      "answer": "Versatility",
+      "explanation": "The ability of deep learning methods to handle many different types of tasks, including text, images, audio, and more. The same fundamental building blocks — layers, backpropagation, gradient descent — apply across all these domains. This is unlike classical machine learning, where each domain often required completely different algorithms and feature engineering approaches. The transformer architecture in particular has proven remarkably versatile, succeeding in NLP, vision, audio, and even protein folding."
+    },
+    {
+      "question": "The ability to reuse trained models or learned representations across tasks is called __________.",
+      "type": "blank",
+      "answer": "Reusability",
+      "explanation": "The ability to apply previously trained models or learned representations to new tasks, saving the time and resources of training from scratch. This is most commonly achieved through transfer learning — taking a model pretrained on a large dataset and fine-tuning it on a smaller, task-specific dataset. For example, a vision model pretrained on ImageNet can be fine-tuned for medical imaging with relatively few labeled examples."
+    },
+    {
+      "question": "Large pretrained models that can be adapted to many downstream tasks are called __________ __________.",
+      "type": "blank",
+      "answer": "Foundation Models",
+      "explanation": "Large models pretrained on massive datasets that can be fine-tuned or adapted to many different downstream tasks. The term was popularized by Stanford's Center for Research on Foundation Models (CRFM). Examples include GPT, BERT, and CLIP. Foundation models represent a paradigm shift — instead of training a new model for each task, you start with one powerful base model and adapt it. This raises both opportunities (efficiency, accessibility) and concerns (centralization, inherited biases)."
+    },
+    {
+      "question": "AI systems that generate new content such as text or images are called __________ __________.",
+      "type": "blank",
+      "answer": "Generative AI",
+      "explanation": "AI systems capable of generating new content — such as text, images, or music — based on statistical patterns learned from data. Generative AI is distinct from discriminative AI, which classifies or predicts labels for existing data. Major generative approaches include large language models (for text), diffusion models (for images), and GANs (generative adversarial networks). The explosion of generative AI starting around 2022 has been one of the most culturally impactful developments in AI history."
+    },
+    {
+      "question": "Conversational AI systems that respond to prompts in natural language are called __________ __________.",
+      "type": "blank",
+      "answer": "Chatbot Assistants",
+      "explanation": "Conversational AI systems that respond to user prompts in natural language, such as ChatGPT and Claude. Modern chatbot assistants are powered by large language models fine-tuned with techniques like RLHF (Reinforcement Learning from Human Feedback) to be helpful, harmless, and honest. They represent a major interface shift — instead of learning complex software, users can express intent in plain language."
+    },
+    {
+      "question": "Generating images using learned statistical patterns from data is called __________ __________.",
+      "type": "blank",
+      "answer": "Image Generation",
+      "explanation": "The technique of creating new images using statistical patterns learned from large amounts of image data. Early approaches used GANs (generative adversarial networks), but diffusion models like Stable Diffusion and DALL·E have become dominant. These models can generate photorealistic images from text descriptions, raising both creative possibilities and ethical concerns around deepfakes and copyright."
+    },
+    {
+      "question": "Giving instructions or input text to guide a generative model is called __________.",
+      "type": "blank",
+      "answer": "Prompting",
+      "explanation": "Providing instructions or input text to a generative model to guide it toward the desired output. Prompting has become a key skill in working with large language models. Techniques range from simple zero-shot prompting (just asking) to few-shot prompting (providing examples) to chain-of-thought prompting (asking the model to reason step by step). The field of 'prompt engineering' studies how to craft prompts that reliably elicit high-quality responses."
+    },
+    {
+      "question": "Learning from data where targets are created from the data itself rather than hand-labeling is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Self Supervised Learning",
+      "explanation": "A learning approach that automatically generates training targets from the data itself, without requiring human annotation. For example, a language model might mask random words in a sentence and train itself to predict them (masked language modeling), or predict the next word given previous ones (autoregressive modeling). Self-supervised learning is the key technique behind modern foundation models — it unlocks the ability to learn from the vast amounts of unlabeled data available on the internet."
+    },
+    {
+      "question": "Data without human-provided labels is called __________ __________.",
+      "type": "blank",
+      "answer": "Unlabeled Data",
+      "explanation": "Data that has no human-provided labels. The internet contains enormous amounts of unlabeled data, which self-supervised learning can effectively leverage. Labeled data is expensive and slow to produce (requiring human annotators), while unlabeled data is virtually unlimited. This asymmetry is why self-supervised and unsupervised methods have become so important — they turn cheap, abundant unlabeled data into useful training signal."
+    },
+    {
+      "question": "The area focused on understanding and generating human language is called __________.",
+      "type": "blank",
+      "answer": "NLP",
+      "explanation": "Natural Language Processing — the research field focused on enabling computers to understand and generate human language. NLP has been transformed by deep learning, especially the transformer architecture. Classical NLP relied heavily on linguistic rules and hand-crafted features; modern NLP is dominated by pretrained language models that learn language patterns from massive text corpora. Key NLP tasks include sentiment analysis, named entity recognition, question answering, summarization, and translation."
+    },
+    {
+      "question": "Automatically translating text from one language to another is called __________ __________.",
+      "type": "blank",
+      "answer": "Machine Translation",
+      "explanation": "The technology of automatically translating text from one language to another. Machine translation has evolved through three major eras: rule-based (1950s–1980s), statistical (1990s–2010s), and neural (2014–present). The transformer architecture, originally introduced in the paper 'Attention Is All You Need,' was specifically designed for machine translation and has since become the backbone of most modern NLP systems."
+    },
+    {
+      "question": "Converting spoken audio into text is called __________ __________.",
+      "type": "blank",
+      "answer": "Speech Transcription",
+      "explanation": "The technology of converting spoken audio into written text, now widely used in smartphones, meeting transcription, and accessibility tools. Also called speech recognition or speech-to-text. Modern systems like OpenAI's Whisper use end-to-end deep learning to directly map audio spectrograms to text, bypassing the complex multi-stage pipelines of earlier systems. The reverse task — converting text to speech — is called speech synthesis or TTS."
+    },
+    {
+      "question": "Assigning one or more labels to an image is called __________ __________.",
+      "type": "blank",
+      "answer": "Image Classification",
+      "explanation": "The task of assigning one or more labels to an image, one of the most fundamental tasks in computer vision. The ImageNet Large Scale Visual Recognition Challenge (ILSVRC), which ran from 2010 to 2017, was a key driver of deep learning progress — AlexNet's win in 2012 is widely considered the moment deep learning went mainstream. Beyond classification, computer vision includes tasks like object detection (where are things?), segmentation (pixel-level labeling), and image generation."
+    },
+    {
+      "question": "Systems that suggest content or products to users are called __________ __________.",
+      "type": "blank",
+      "answer": "Recommender Systems",
+      "explanation": "Systems that suggest content or products to users based on their preferences and behavior, widely used on platforms like Netflix, YouTube, and Amazon. There are two main approaches: collaborative filtering (finding users with similar tastes) and content-based filtering (matching item features to user preferences). Modern recommender systems use deep learning to combine both approaches and handle massive-scale data, and they are responsible for a significant portion of user engagement on major platforms."
+    },
+    {
+      "question": "Systems that enable vehicles to perform driving tasks automatically are called __________ __________.",
+      "type": "blank",
+      "answer": "Autonomous Driving",
+      "explanation": "Systems that enable vehicles to perform driving tasks automatically, relying on sensors, cameras, and deep learning models. Autonomous driving is graded on a scale from Level 0 (no automation) to Level 5 (full automation in all conditions). Most current commercial systems operate at Level 2–3, requiring human oversight. The field combines multiple AI tasks — perception (detecting objects), prediction (anticipating movement), and planning (choosing actions) — making it one of the most complex real-world AI applications."
+    },
+    {
+      "question": "AI systems that help generate or explain code are called __________ __________.",
+      "type": "blank",
+      "answer": "Programming Assistants",
+      "explanation": "AI systems that help programmers generate, debug, or explain code, such as GitHub Copilot and Claude. They are typically powered by large language models trained on code repositories. Programming assistants represent one of the most immediately productive applications of generative AI — they can autocomplete functions, translate between languages, write tests, and explain unfamiliar codebases. They don't replace programmers but significantly accelerate development workflows."
+    },
+    {
+      "question": "Performance comparable to that of humans on a given task is called __________-__________ __________.",
+      "type": "blank",
+      "answer": "Human Level Performance",
+      "explanation": "A level of performance on a specific task that matches what humans can achieve, commonly used as a benchmark for evaluating AI capability. It's important to note that 'human-level' is task-specific — a model can surpass humans at chess while failing at basic common-sense reasoning. Also, human performance itself varies widely across individuals and conditions, so the benchmark is often defined by expert-level or average human performance depending on the context."
+    },
+    {
+      "question": "Performance exceeding that of humans on a given task is called __________ __________.",
+      "type": "blank",
+      "answer": "Superhuman Performance",
+      "explanation": "A level of performance on a specific task that surpasses what humans can achieve. Notable examples include DeepMind's AlphaGo defeating the world champion in Go, and AI systems outperforming radiologists at detecting certain cancers in medical images. However, superhuman performance in narrow tasks doesn't imply general superiority — these systems are often brittle outside their specific domain and lack the flexible, generalizable intelligence that humans possess."
+    }
+  ]
+}
