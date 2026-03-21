@@ -1,0 +1,395 @@
+{
+  "text": "Deep Learning with Python - Chapter 7: Working with Keras",
+  "quiz": [
+    {
+      "question": "The Keras design principle that makes simple workflows easy to start with while still allowing advanced workflows as needed is called __________ __________ __ __________.",
+      "type": "blank",
+      "answer": "Progressive Disclosure Of Complexity",
+      "explanation": "A core Keras philosophy: beginners can build and train a model in a few lines, while experts can customize every detail without switching frameworks. This is achieved by layering abstractions — model.fit() hides the training loop, but you can write your own if needed. The same principle appears in good API design across software: sensible defaults for the common case, full control for edge cases. It's why Keras remains popular despite competition — it meets you where you are."
+    },
+    {
+      "question": "The range of Keras usage styles, from very simple high-level workflows to highly flexible low-level ones, is called the __________ __ __________.",
+      "type": "blank",
+      "answer": "Spectrum Of Workflows",
+      "explanation": "Keras supports three main model-building APIs (Sequential, Functional, subclassing) and two training approaches (built-in fit loop, custom training loop), forming a spectrum from simple to complex. You pick the point on the spectrum that matches your needs: Sequential + fit() for quick prototyping, Functional API for production architectures, subclassing + custom loops for research. The key insight is that you can move along this spectrum gradually — you don't have to learn everything upfront."
+    },
+    {
+      "question": "The simplest Keras model-building API, best suited for plain stacks of layers with a single input and single output, is called a __________ __________.",
+      "type": "blank",
+      "answer": "Sequential Model",
+      "explanation": "A model where layers are stacked one after another in a straight line — the output of each layer feeds into the next. It's the fastest way to build a model: just list the layers in order. Sequential models cover a surprising number of use cases (basic classification, regression, simple NLP), but they can't handle multiple inputs, multiple outputs, shared layers, or branching architectures. When you outgrow Sequential, the Functional API is the natural next step."
+    },
+    {
+      "question": "The Sequential model method used to build a model incrementally by appending layers one at a time is called the __________ __________.",
+      "type": "blank",
+      "answer": "Add Method",
+      "explanation": "An alternative to listing all layers in the Sequential constructor — you create an empty Sequential model and call model.add() for each layer. This is useful when you want to conditionally add layers (e.g., adding dropout only if a flag is set) or build the model programmatically in a loop. Both approaches (constructor list vs. add) produce identical models; it's purely a matter of code organization preference."
+    },
+    {
+      "question": "A method that creates model weights once the expected input shape is known is called the __________ __________.",
+      "type": "blank",
+      "answer": "Build Method",
+      "explanation": "Keras uses lazy weight creation — layer weights aren't allocated until the layer knows its input shape. The build() method triggers this allocation. It's called automatically the first time you pass data to the model, but you can call it manually by providing input_shape. This lazy approach enables flexibility (layers adapt to whatever input shape they receive) but means you can't inspect weights or print a summary until the model is built."
+    },
+    {
+      "question": "The shape specification that tells Keras what each sample looks like so layers and weights can be built correctly is called the __________ __________.",
+      "type": "blank",
+      "answer": "Input Shape",
+      "explanation": "A tuple describing the shape of a single input sample (excluding the batch dimension). For flattened MNIST images, input_shape=(784,); for 28×28 grayscale images, input_shape=(28, 28, 1). Getting the input shape right is essential — a mismatch between the declared shape and the actual data shape is one of the most common errors in Keras. The input shape only needs to be specified for the first layer; subsequent layers infer their input shape from the previous layer's output."
+    },
+    {
+      "question": "The trainable variables of a layer or model, created only after the model has been built or called on data, are called __________.",
+      "type": "blank",
+      "answer": "Weights",
+      "explanation": "The learnable parameters (weight matrices and bias vectors) inside layers. Weights are the 'knowledge' the model acquires during training — they're what get saved when you export a model and what get updated during backpropagation. Keras's lazy initialization means weights don't exist until the model is built, which can surprise beginners who try to inspect weights immediately after model creation. You can access them via layer.weights or model.trainable_weights."
+    },
+    {
+      "question": "A Keras utility that displays model layers, output shapes, and parameter counts is called the __________ __________.",
+      "type": "blank",
+      "answer": "Summary Method",
+      "explanation": "model.summary() prints a table showing each layer's name, type, output shape, and number of parameters — an essential debugging tool. It lets you verify that the architecture is correct before training: are the shapes what you expect? Is the total parameter count reasonable? A model with unexpectedly many parameters might overfit; one with too few might underfit. Summary only works after the model is built (shapes must be known). For Functional models, it also shows the connectivity between layers."
+    },
+    {
+      "question": "The Keras argument used to assign custom names to models, layers, and inputs is called the __________ __________.",
+      "type": "blank",
+      "answer": "Name Argument",
+      "explanation": "An optional string passed to layers, models, and inputs (e.g., Dense(64, name='feature_extractor')). Custom names make model summaries, visualizations, and error messages much more readable — 'feature_extractor' is more informative than 'dense_3'. Names are also used when saving and loading models (to match layers across saves) and when accessing specific layers by name (model.get_layer('feature_extractor')). In production code, meaningful layer names are a best practice."
+    },
+    {
+      "question": "The Keras object used to declare model inputs and specify the shape and dtype of incoming data is called __________.",
+      "type": "blank",
+      "answer": "Input",
+      "explanation": "A symbolic tensor placeholder that defines where data enters a Functional API model — keras.Input(shape=(784,)) declares an input of 784 features. Inputs are the starting points of the computation graph; they don't hold actual data but specify what the model expects. You can have multiple Input objects for multi-input models. The Input object also enables Keras to infer shapes throughout the entire model graph before any data is passed, which is why Functional models can display complete shape information in summary()."
+    },
+    {
+      "question": "The Keras model-building API designed for graph-like architectures, including multiple inputs, outputs, and nonlinear topologies, is called the __________ __________.",
+      "type": "blank",
+      "answer": "Functional API",
+      "explanation": "Keras's most versatile model-building approach: you create Input objects, pass them through layers (calling layers like functions), and then specify which tensors are inputs and outputs of the final Model. This allows any directed acyclic graph topology — shared layers, skip connections, multi-input/multi-output architectures, and more. The Functional API is Keras's recommended approach for most real-world models because it combines the clarity of explicit graph definition with full inspectability (shapes, connectivity, visualization)."
+    },
+    {
+      "question": "A model structure that is not just a simple stack of layers and may include branching, merging, or multiple inputs/outputs is called a __________-__________ __________ __________.",
+      "type": "blank",
+      "answer": "Graph Like Model Architecture",
+      "explanation": "Any architecture more complex than a straight sequence of layers. Real-world models are often graph-like: ResNets have skip connections (branching and merging), inception modules have parallel branches, multi-task models have shared trunks with separate heads, and multi-modal models combine different input types. The Functional API was designed specifically for these architectures. Sequential models are a special case — a graph with no branches."
+    },
+    {
+      "question": "A model design where different input sources are fed into the same model is called __________ __________.",
+      "type": "blank",
+      "answer": "Multiple Inputs",
+      "explanation": "A model that accepts more than one input tensor — for example, combining text and metadata, or image and tabular features. Each input can be processed by different layer types (CNN for image, embedding for text, dense for numerical) before being merged (concatenated, added, or combined through attention). Multi-input models are common in production because real-world predictions often benefit from combining diverse information sources. The Functional API handles this naturally with multiple Input objects."
+    },
+    {
+      "question": "A model design where one model produces more than one prediction target at the same time is called __________ __________.",
+      "type": "blank",
+      "answer": "Multiple Outputs",
+      "explanation": "A model with several output heads — for example, predicting both the topic and sentiment of a text, or both the class and bounding box of an object. Each output can have its own loss function and metric, and the total loss is typically a weighted sum. Multi-output models are efficient because they share computation in the lower layers (shared representations), and training on multiple related tasks often improves performance on each individual task (multi-task learning)."
+    },
+    {
+      "question": "A model structure where layers are connected in a graph rather than one straight sequence is called a __________ __________.",
+      "type": "blank",
+      "answer": "Nonlinear Topology",
+      "explanation": "Any layer connectivity pattern that isn't a simple chain — skip connections, parallel branches, merge points, or shared layers. ResNets (residual connections that skip over layers), Inception networks (parallel convolutions at different scales), and U-Nets (encoder-decoder with skip connections) are all nonlinear topologies. These designs are motivated by specific technical needs: skip connections help gradients flow through very deep networks, parallel branches capture patterns at different scales."
+    },
+    {
+      "question": "The object created in the Functional API by specifying input and output tensors is called a __________ __________.",
+      "type": "blank",
+      "answer": "Keras Model",
+      "explanation": "The Model object — created by keras.Model(inputs=..., outputs=...) — encapsulates the entire computation graph from inputs to outputs. Once created, it behaves like any other Keras model: you can call compile(), fit(), evaluate(), predict(), save(), and summary(). The Functional Model 'knows' its entire graph structure, which enables features unavailable to subclassed models: shape inference, graph visualization, and intermediate layer access."
+    },
+    {
+      "question": "A Functional API model that accepts several input tensors and returns several outputs is called a __________-__________ __________-__________ __________.",
+      "type": "blank",
+      "answer": "Multi Input Multi Output Model",
+      "explanation": "The most flexible standard Keras architecture pattern — multiple data streams enter, get processed through shared and separate layers, and produce multiple predictions. For example, a customer churn model might take in usage data and support ticket text (two inputs), share a representation layer, then predict both churn probability and expected lifetime value (two outputs). The Functional API makes this straightforward: list multiple Input objects and multiple output tensors when creating the Model."
+    },
+    {
+      "question": "The explicit graph structure in a Functional model that makes it possible to inspect how layers are connected is called __________ __________.",
+      "type": "blank",
+      "answer": "Layer Connectivity",
+      "explanation": "Because Functional models are built by explicitly calling layers on tensors, Keras records exactly how each layer is connected to every other layer. This connectivity information powers features like model.summary() (showing the flow from input to output), plot_model() (drawing the architecture as a graph), and feature extraction (accessing any intermediate layer's output). Subclassed models don't have this information because their connectivity is defined in Python code that Keras can't introspect."
+    },
+    {
+      "question": "Using the graph information from a Functional model to visually display its topology is called __________ __________.",
+      "type": "blank",
+      "answer": "Model Visualization",
+      "explanation": "Generating a visual diagram of the model's architecture — which layers connect to which, what shapes flow through each connection. This is invaluable for debugging complex architectures and for communicating model design to colleagues. The Functional API's explicit graph makes this possible automatically. For subclassed models, visualization requires additional tools or manual diagramming. Clear model visualization is especially important for multi-input, multi-output, and deeply branching architectures where text summaries are hard to follow."
+    },
+    {
+      "question": "Reusing intermediate layer outputs from a Functional model to inspect or build new models from internal representations is called __________ __________.",
+      "type": "blank",
+      "answer": "Feature Extraction",
+      "explanation": "Accessing the output of any layer inside a trained model — not just the final output. This is powerful for transfer learning (using a pretrained model's intermediate representations as features for a new task), debugging (inspecting what each layer has learned), and building new models (creating a model that outputs an intermediate representation). In Keras, you create a new Model with the same input but a different intermediate layer as the output. This is a major advantage of the Functional API over subclassing."
+    },
+    {
+      "question": "A Keras utility that plots a Functional model as a graph is called __________ __________.",
+      "type": "blank",
+      "answer": "Plot Model",
+      "explanation": "keras.utils.plot_model() generates a visual diagram of the model architecture, saved as an image file. It shows layers as boxes and connections as arrows, making the model's topology immediately clear. Options like show_shapes and show_layer_names add detail. This is especially useful for complex architectures where a text summary is hard to parse. The plot uses Graphviz under the hood, so you need that library installed. For presentations and documentation, plot_model output is often the clearest way to communicate an architecture."
+    },
+    {
+      "question": "A plot_model option that adds input and output shape information to the diagram is called __________ __________.",
+      "type": "blank",
+      "answer": "Show Shapes",
+      "explanation": "When show_shapes=True is passed to plot_model(), each layer in the diagram displays the shapes of its input and output tensors. This makes it easy to visually trace how data dimensions change through the network — for example, seeing a (None, 784) input become (None, 128) after a Dense layer, then (None, 10) at the output. 'None' represents the batch dimension (variable size). Shape information is critical for verifying that the architecture is correct before spending time on training."
+    },
+    {
+      "question": "A plot_model option that adds layer names to the diagram is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Show Layer Names",
+      "explanation": "When show_layer_names=True is passed to plot_model(), each layer's name appears in the diagram alongside its type. Combined with meaningful custom names (set via the name argument), this produces self-documenting architecture diagrams. Instead of seeing 'dense_0 → dense_1 → dense_2,' you see 'feature_extractor → hidden_layer → classifier,' making the model's purpose clear at a glance."
+    },
+    {
+      "question": "The kind of layer graph that the Functional API can represent is called a __________ __________ __________.",
+      "type": "blank",
+      "answer": "Directed Acyclic Graph",
+      "explanation": "A graph where connections have direction (data flows from input to output) and no cycles exist (no layer's output feeds back into itself). The DAG constraint means Functional API models are feedforward — they process each input in a single pass with no loops. This is sufficient for the vast majority of architectures (CNNs, transformers, multi-task models). Recurrent connections (where output feeds back as input) require either RNN layers (which handle recurrence internally) or custom training loops."
+    },
+    {
+      "question": "The most advanced Keras model-building pattern, where you define everything yourself by subclassing Model, is called __________ __________.",
+      "type": "blank",
+      "answer": "Model Subclassing",
+      "explanation": "Creating a model by inheriting from keras.Model and implementing __init__() (to define layers) and call() (to define the forward pass). This gives complete Python control over the computation — you can use if statements, loops, and any Python logic in the forward pass. It's the most flexible approach but sacrifices the Functional API's inspectability: Keras can't automatically determine shapes, connectivity, or generate visualizations. Subclassing is recommended only when the Functional API genuinely can't express your architecture."
+    },
+    {
+      "question": "In a subclassed Keras model, the method where you define the layers the model will use is called the __________ __________.",
+      "type": "blank",
+      "answer": "Init Method",
+      "explanation": "The __init__() method of a subclassed Model, where you create and store all the layers as attributes (e.g., self.dense1 = Dense(64)). This is similar to PyTorch's Module.__init__(). Layers must be defined here (not in call()) so that Keras can discover and track their weights. Any layer created as a model attribute is automatically registered, meaning its weights will appear in model.trainable_weights and be saved/loaded correctly."
+    },
+    {
+      "question": "In a subclassed Keras model, the method where you define the forward pass using the layers created earlier is called the __________ __________.",
+      "type": "blank",
+      "answer": "Call Method",
+      "explanation": "The call() method defines what happens when data passes through the model — you take the input tensor, pass it through the layers defined in __init__(), and return the output. This is where you have full Python flexibility: conditional logic, dynamic architectures, or custom operations. The call() method is invoked when you do model(data) or during model.fit(). Unlike the Functional API (which is traced once), call() executes fresh each time, which enables dynamic behavior but prevents static graph optimizations."
+    },
+    {
+      "question": "The standard Keras workflows centered around compile, fit, evaluate, and predict are called __________ __________ __________ __________ __________.",
+      "type": "blank",
+      "answer": "Built In Training And Evaluation Loops",
+      "explanation": "Keras's high-level training API: compile() configures the model, fit() trains it, evaluate() tests it, and predict() generates outputs. These four methods cover the vast majority of supervised learning use cases. The built-in loops handle batching, shuffling, gradient computation, metric tracking, callbacks, and validation automatically. They represent the 'easy' end of Keras's spectrum of workflows. When they're sufficient, there's no reason to write a custom training loop."
+    },
+    {
+      "question": "The Keras method used to configure a model by specifying its optimizer, loss function, and metrics is called __________.",
+      "type": "blank",
+      "answer": "Compile",
+      "explanation": "model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy']) prepares the model for training. It connects the model to the optimization machinery — which optimizer to use, what loss to minimize, and what metrics to track. Compile doesn't change the model's architecture or weights; it configures the training process. You can recompile with different settings (e.g., a lower learning rate for fine-tuning) without losing the model's learned weights."
+    },
+    {
+      "question": "The Keras method used to train a model on data, optionally with validation and callbacks, is called __________.",
+      "type": "blank",
+      "answer": "Fit",
+      "explanation": "model.fit(x, y, epochs=10, validation_split=0.2, callbacks=[...]) runs the full training loop: iterating over epochs, splitting data into batches, computing forward passes, backpropagating gradients, updating weights, and tracking metrics. It returns a History object containing per-epoch loss and metric values for plotting training curves. Key arguments include batch_size, epochs, validation_data (or validation_split), callbacks, and class_weight (for handling class imbalance). Fit is where all the actual learning happens."
+    },
+    {
+      "question": "The Keras method used to compute loss and metrics on new data after training is called __________.",
+      "type": "blank",
+      "answer": "Evaluate",
+      "explanation": "model.evaluate(x_test, y_test) runs the model on test data and returns the loss and any metrics configured during compile. Unlike fit(), evaluate() doesn't update weights — it's a read-only assessment. This is used for the final test set evaluation. The result tells you how well the model generalizes to truly unseen data. If the evaluate() score is significantly worse than the validation score from fit(), it may indicate overfitting to the validation set through repeated tuning."
+    },
+    {
+      "question": "The Keras method used to generate model outputs on new input data is called __________.",
+      "type": "blank",
+      "answer": "Predict",
+      "explanation": "model.predict(new_data) runs the forward pass and returns the model's output — class probabilities, regression values, or whatever the final layer produces. Unlike evaluate(), predict() doesn't need targets (it's pure inference). This is what you use in production to get predictions for new, unlabeled data. Predict handles batching automatically and is optimized for throughput. For a single example, you can also call the model directly: model(single_input)."
+    },
+    {
+      "question": "Quantities used to measure model performance during training and evaluation are called __________.",
+      "type": "blank",
+      "answer": "Metrics",
+      "explanation": "Measurements tracked during training to monitor progress — accuracy, precision, recall, AUC, etc. Metrics are specified in compile() and reported per-epoch during fit() and after evaluate(). Unlike the loss function (which must be differentiable for backpropagation), metrics can be any useful measurement. The loss and metrics often measure related but different things: the loss drives optimization, while metrics tell you whether that optimization is improving what you actually care about."
+    },
+    {
+      "question": "User-defined metrics implemented by subclassing keras.metrics.Metric when built-in metrics are insufficient are called __________ __________.",
+      "type": "blank",
+      "answer": "Custom Metrics",
+      "explanation": "Metrics that Keras doesn't provide out of the box — for example, F-beta score with a specific beta, or a domain-specific quality measure. You create them by subclassing keras.metrics.Metric and implementing three methods: __init__() (create state variables), update_state() (update with each batch), and result() (compute the final value). Custom metrics integrate seamlessly with compile/fit/evaluate, appearing alongside built-in metrics in training logs and callbacks."
+    },
+    {
+      "question": "The base class for defining custom metrics in Keras is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Keras Metrics Metric",
+      "explanation": "The keras.metrics.Metric class that custom metrics inherit from. It provides the framework for stateful metric computation: maintaining running totals across batches (via self.add_weight()), resetting at epoch boundaries, and integrating with the training loop. The three methods to implement are update_state() (called per batch), result() (called per epoch), and optionally reset_state() (called between epochs). This stateful design is necessary because many metrics (like accuracy) can't be computed from a single batch alone."
+    },
+    {
+      "question": "Metric variables stored inside a custom metric object, updated manually rather than through backpropagation, are called __________ __________.",
+      "type": "blank",
+      "answer": "Internal State",
+      "explanation": "Variables inside a metric object that accumulate information across batches — for example, a running count of correct predictions and total predictions. These are not trainable weights (they're not updated by the optimizer) but persistent state that carries across batches within an epoch. They're created with self.add_weight() and reset at the start of each epoch. This accumulation pattern is necessary because metrics like accuracy require seeing many batches before a meaningful value can be computed."
+    },
+    {
+      "question": "The custom metric method that updates the metric's internal state using the current batch's targets and predictions is called __________ __________.",
+      "type": "blank",
+      "answer": "Update State",
+      "explanation": "The method called once per batch during training and evaluation. It receives the batch's true labels and model predictions, then updates the metric's internal counters. For accuracy, it would add the number of correct predictions to a running total. The logic here should be efficient because it runs on every batch. The separation of update_state() (per batch) and result() (per epoch) enables metrics that need aggregation across the full dataset, like macro-averaged F1 score."
+    },
+    {
+      "question": "The example custom metric shown in the chapter is called __________ __________ __________ __________.",
+      "type": "blank",
+      "answer": "Root Mean Squared Error",
+      "explanation": "RMSE — the square root of the mean squared error, which gives an error measure in the same units as the target. RMSE penalizes large errors more heavily than MAE (mean absolute error) because of the squaring. The chapter uses RMSE as an example of implementing a custom metric in Keras, demonstrating the update_state/result pattern. While RMSE is actually available as a built-in Keras metric, implementing it manually is a useful exercise for understanding the custom metric framework."
+    },
+    {
+      "question": "Objects passed to fit() that trigger actions at specific points during training are called __________.",
+      "type": "blank",
+      "answer": "Callbacks",
+      "explanation": "Hooks that let you inject custom behavior at various stages of training — at the start/end of training, at the start/end of each epoch, or at the start/end of each batch. Callbacks are passed as a list to model.fit(callbacks=[...]). Keras provides powerful built-in callbacks (EarlyStopping, ModelCheckpoint, TensorBoard) and lets you create custom ones. Callbacks enable behaviors like dynamic learning rate adjustment, custom logging, early stopping, and model saving without modifying the training loop itself."
+    },
+    {
+      "question": "A callback that interrupts training when a monitored metric stops improving is called __________.",
+      "type": "blank",
+      "answer": "EarlyStopping",
+      "explanation": "One of the most important regularization techniques in practice. EarlyStopping monitors a metric (usually validation loss) and stops training when it hasn't improved for a specified number of epochs (the 'patience' parameter). This prevents the model from continuing to train past the point of optimal generalization into overfitting territory. Setting restore_best_weights=True ensures the final model uses the weights from the best epoch, not the last. EarlyStopping is almost universally used and is one of the first callbacks beginners should learn."
+    },
+    {
+      "question": "A callback that saves model weights or the full model during training, often keeping only the best version, is called __________.",
+      "type": "blank",
+      "answer": "ModelCheckpoint",
+      "explanation": "Saves the model at regular intervals (every epoch, or only when a monitored metric improves). With save_best_only=True, it keeps only the weights from the best epoch — insurance against both overfitting (later epochs are worse) and crashes (training interrupted before completion). ModelCheckpoint is typically used alongside EarlyStopping: checkpoint saves the best model, early stopping halts when improvement stalls, and the result is the best model found during training. This pattern is standard in production training pipelines."
+    },
+    {
+      "question": "Extra data passed to fit() so the model can monitor performance on unseen examples during training is called __________ __________.",
+      "type": "blank",
+      "answer": "Validation Data",
+      "explanation": "A held-out dataset passed to fit() via validation_data=(x_val, y_val) or validation_split=0.2. After each epoch, the model evaluates on this data without updating weights, providing an unbiased estimate of generalization performance. Validation metrics are what callbacks like EarlyStopping and ModelCheckpoint monitor. Watching training loss decrease while validation loss increases is the classic overfitting signal. Validation data is essential for honest model development — training metrics alone can't tell you if the model is generalizing."
+    },
+    {
+      "question": "The model method used to manually save a trained Keras model is called the __________ __________.",
+      "type": "blank",
+      "answer": "Save Method",
+      "explanation": "model.save('my_model.keras') serializes the entire model — architecture, weights, optimizer state, and compilation configuration — to a file. The saved model can be reloaded exactly as it was, including the ability to resume training. Keras supports the .keras format (recommended), SavedModel format (for TensorFlow deployment), and legacy H5 format. Saving models is essential for deployment, sharing, and checkpointing. The save/load cycle should be tested early to avoid discovering serialization issues after a long training run."
+    },
+    {
+      "question": "The Keras function used to reload a saved model from disk is called __________ __________.",
+      "type": "blank",
+      "answer": "Load Model",
+      "explanation": "keras.models.load_model('my_model.keras') reconstructs the model exactly as it was saved — same architecture, same weights, same compilation. This is used for deployment (loading a trained model for inference), resuming training (continuing from a checkpoint), and sharing (distributing a trained model to colleagues). For Functional and Sequential models, load_model works seamlessly. For subclassed models, you may need to provide the custom class definition because Keras can't reconstruct arbitrary Python code from a saved file."
+    },
+    {
+      "question": "A user-defined callback created by subclassing keras.callbacks.Callback is called a __________ __________.",
+      "type": "blank",
+      "answer": "Custom Callback",
+      "explanation": "A callback you write yourself for behavior not covered by built-in callbacks — custom logging, dynamic hyperparameter adjustment, sending notifications, generating samples mid-training, or integrating with external tools. You subclass keras.callbacks.Callback and override the methods you need (on_epoch_end, on_batch_end, etc.). Custom callbacks are the recommended way to add behavior to the training loop without rewriting it entirely — they keep your custom logic modular and reusable."
+    },
+    {
+      "question": "The base class used to implement custom callback behavior in Keras is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Keras Callbacks Callback",
+      "explanation": "The keras.callbacks.Callback class that all callbacks inherit from. It defines hook methods for every stage of training: on_train_begin/end, on_epoch_begin/end, on_batch_begin/end, and their test/predict counterparts. You override only the methods you need. The callback has access to self.model (the model being trained) and receives a logs dictionary with current metric values. This design makes it easy to write callbacks that interact with the model, adjust training, or record information."
+    },
+    {
+      "question": "The dictionary passed to callback methods containing training and validation information is called the __________ __________.",
+      "type": "blank",
+      "answer": "Logs Argument",
+      "explanation": "A dictionary provided to callback methods like on_epoch_end(epoch, logs) containing the current training state — typically loss, metrics, and their validation counterparts (val_loss, val_accuracy). This is how callbacks access training progress. For example, EarlyStopping reads logs['val_loss'] to decide whether to stop. Custom callbacks can use this data for logging, visualization, or decision-making. The logs dictionary is Keras's way of passing training state without tight coupling between the training loop and callbacks."
+    },
+    {
+      "question": "A callback method called at the start of training is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "On Train Begin",
+      "explanation": "The on_train_begin(logs) method, called once before any training epochs begin. It's useful for initialization — setting up logging files, recording start times, initializing custom tracking variables, or printing configuration information. This method has access to self.model, so you can inspect or modify the model before training starts. Most callbacks don't need to override this method unless they require one-time setup."
+    },
+    {
+      "question": "A callback method called after each batch is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "On Batch End",
+      "explanation": "The on_batch_end(batch, logs) method, called after every training batch. It receives the batch index and current batch metrics. Use this for fine-grained monitoring — but be cautious about adding expensive operations here because it runs potentially thousands of times per epoch. Common uses include batch-level logging, progress bars, or gradient monitoring. Most callbacks use on_epoch_end instead because epoch-level granularity is usually sufficient and much less overhead."
+    },
+    {
+      "question": "A callback method called after each training epoch is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "On Epoch End",
+      "explanation": "The on_epoch_end(epoch, logs) method — the most commonly overridden callback method. It's called once per epoch with the full epoch's training and validation metrics. EarlyStopping checks for improvement here, ModelCheckpoint saves here, and most custom logging happens here. The epoch-level granularity strikes the right balance between frequency (enough to track trends) and overhead (not slowing down training). This is where you'll put most custom callback logic."
+    },
+    {
+      "question": "A browser-based application for monitoring training progress and visualizing model behavior is called __________.",
+      "type": "blank",
+      "answer": "TensorBoard",
+      "explanation": "A powerful visualization tool originally built for TensorFlow but now usable with any framework. TensorBoard displays training curves (loss and metrics over time), model architecture graphs, weight and gradient histograms, embedding visualizations, and more. It runs as a local web server, making it accessible from any browser. TensorBoard is invaluable for understanding training dynamics — you can spot overfitting, compare experiments, and diagnose problems like vanishing gradients or exploding weights visually."
+    },
+    {
+      "question": "The callback that writes logs for TensorBoard during fit() is called the __________ __________.",
+      "type": "blank",
+      "answer": "TensorBoard Callback",
+      "explanation": "keras.callbacks.TensorBoard(log_dir='./logs') records training information to a directory that TensorBoard reads. You add it to the callbacks list in fit(), and it automatically logs loss, metrics, and optionally histograms and graphs. Different training runs can be logged to separate subdirectories for side-by-side comparison. The callback handles all the serialization — you just point TensorBoard at the log directory and browse the results. It's one of the most useful tools for iterative model development."
+    },
+    {
+      "question": "Quantities tracked during training to understand how the model is learning over time are called __________ __________.",
+      "type": "blank",
+      "answer": "Training Metrics",
+      "explanation": "The loss and metrics computed on training data at each epoch (and optionally each batch). Training metrics show whether the model is learning — they should generally improve over time. Comparing training metrics to validation metrics reveals overfitting (training improves while validation plateaus or worsens). Common training metrics include loss, accuracy, and learning rate. Training curves (training metrics plotted over epochs) are the primary diagnostic tool for understanding training dynamics."
+    },
+    {
+      "question": "A TensorBoard capability that lets you inspect the structure of your model is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Model Architecture Visualization",
+      "explanation": "TensorBoard's graph view displays the model's computation graph — layers, operations, and data flow. This is useful for verifying complex architectures, especially when using the Functional API or subclassed models. You can drill into sub-graphs (like individual layers) and see how data flows through the network. While Keras's plot_model() provides a simpler static diagram, TensorBoard's interactive graph view allows exploration and is better for very complex models."
+    },
+    {
+      "question": "A TensorBoard visualization of activation value distributions is called an __________ __________.",
+      "type": "blank",
+      "answer": "Activations Histogram",
+      "explanation": "A histogram showing the distribution of values output by each layer over training. Healthy activations should have a reasonable spread — not all zeros (dead neurons, possibly from aggressive relu), not all the same value (saturation), and not exploding to extreme values. Watching activations over time can diagnose problems: if activations collapse to zero in deeper layers, the model might have vanishing activations; if they grow, the model might be unstable. Batch normalization was specifically designed to keep activations well-behaved."
+    },
+    {
+      "question": "A TensorBoard visualization of gradient value distributions is called a __________ __________.",
+      "type": "blank",
+      "answer": "Gradients Histogram",
+      "explanation": "A histogram showing the distribution of gradient values flowing through each layer during backpropagation. Gradients should be neither too small (vanishing gradients — learning stops in early layers) nor too large (exploding gradients — training becomes unstable). Gradient histograms are a powerful diagnostic tool: if gradients in early layers are orders of magnitude smaller than in later layers, skip connections or different activation functions might help. Gradient clipping is a common remedy for exploding gradients."
+    },
+    {
+      "question": "Learned vector representations that TensorBoard can help visualize in 3D are called __________.",
+      "type": "blank",
+      "answer": "Embeddings",
+      "explanation": "Dense vector representations of discrete items — words, products, users, or any categorical entity. TensorBoard's embedding projector reduces high-dimensional embeddings to 2D or 3D using techniques like t-SNE or PCA, letting you visually explore which items are similar (nearby) and which are different (far apart). This is invaluable for understanding what the model has learned: are similar words clustered together? Are different product categories separated? Embedding visualization often reveals surprising patterns and errors."
+    },
+    {
+      "question": "A low-level training workflow written manually when fit() is not flexible enough is called a __________ __________ __________.",
+      "type": "blank",
+      "answer": "Custom Training Loop",
+      "explanation": "Writing the training loop yourself: iterating over batches, computing the forward pass with GradientTape (TensorFlow) or autograd (PyTorch), computing gradients, and applying weight updates manually. This gives complete control over every aspect of training — necessary for GANs (two competing networks), meta-learning, custom gradient manipulation, or non-standard training procedures. The tradeoff is more code, more opportunities for bugs, and loss of built-in features like callbacks and progress bars. Only use a custom loop when fit() genuinely can't do what you need."
+    },
+    {
+      "question": "The setup assumed by fit() where targets are known and loss is computed from targets and predictions is called __________ __________.",
+      "type": "blank",
+      "answer": "Supervised Learning",
+      "explanation": "The default paradigm for Keras's built-in training loop: you provide input-target pairs, the model predicts, loss is computed against the targets, and weights are updated. This covers classification, regression, and structured prediction. Keras's compile/fit API is designed around supervised learning's clean input→prediction→loss→update cycle. Other learning paradigms (self-supervised, generative, reinforcement) don't fit this pattern as naturally, which is one reason custom training loops exist."
+    },
+    {
+      "question": "A setup where targets are derived from the inputs rather than given directly is called __________-__________ __________.",
+      "type": "blank",
+      "answer": "Self Supervised Learning",
+      "explanation": "A training paradigm where the model creates its own targets from the input data — for example, masking words in a sentence and predicting them (BERT), or predicting the next token given previous ones (GPT). Self-supervised learning doesn't need human-labeled data, which is its enormous advantage: you can train on virtually unlimited text, images, or audio from the internet. It's the foundation of modern foundation models and the reason large language models can be trained at scale. Implementing it in Keras typically requires a custom training loop or a custom train_step()."
+    },
+    {
+      "question": "A setup where learning focuses on generating data rather than just predicting labels is called __________ __________.",
+      "type": "blank",
+      "answer": "Generative Learning",
+      "explanation": "Training models to produce new data that resembles the training distribution — images (GANs, diffusion models), text (language models), audio (WaveNet), or molecules (drug discovery). Generative learning requires different training procedures than supervised learning: GANs train two competing networks, VAEs optimize a reconstruction-plus-regularization objective, and diffusion models learn to denoise progressively. These non-standard procedures are why generative models often require custom training loops rather than a simple fit() call."
+    },
+    {
+      "question": "A setup where learning is driven by occasional rewards from an environment is called __________ __________.",
+      "type": "blank",
+      "answer": "Reinforcement Learning",
+      "explanation": "An agent interacts with an environment, taking actions and receiving rewards, learning to maximize long-term reward. RL differs fundamentally from supervised learning: there are no correct labels, rewards may be delayed (an action's consequence appears much later), and the training data distribution changes as the agent's behavior changes (non-stationarity). Keras's fit() loop isn't designed for RL's interactive, non-stationary nature, which is why RL typically uses custom training loops or specialized libraries like Stable Baselines or RLlib."
+    },
+    {
+      "question": "The step in a training loop where the model computes outputs and loss for the current batch is called the __________ __________.",
+      "type": "blank",
+      "answer": "Forward Pass",
+      "explanation": "Running input data through the model from input layer to output layer, producing predictions. The forward pass is the 'prediction' part of each training step — data flows forward through the network, with each layer transforming it. During training, the forward pass also computes the loss by comparing predictions to targets. In a custom training loop, the forward pass happens inside a GradientTape context (TensorFlow) or with gradients enabled (PyTorch) so that operations are recorded for backpropagation."
+    },
+    {
+      "question": "The derivatives of the loss with respect to the model weights, used to guide updates, are called __________.",
+      "type": "blank",
+      "answer": "Gradients",
+      "explanation": "Vectors indicating how much and in which direction each weight should change to reduce the loss. Gradients are computed via backpropagation after the forward pass. Each weight gets its own gradient value — a large gradient means that weight has a big effect on the loss; a small gradient means it has little effect. The optimizer uses gradients to update weights: in the simplest case, new_weight = old_weight - learning_rate × gradient. Without gradients, there would be no way to systematically improve the model."
+    },
+    {
+      "question": "The training step where model weights are adjusted to reduce the loss on the current batch is called a __________ __________.",
+      "type": "blank",
+      "answer": "Weights Update",
+      "explanation": "The final step of each training iteration: using the computed gradients and the optimizer to adjust every learnable parameter. In the simplest form (SGD): weight -= learning_rate × gradient. More sophisticated optimizers (Adam, RMSprop) compute smarter updates using momentum and adaptive learning rates. In Keras's fit(), weight updates happen automatically. In a custom training loop, you explicitly call optimizer.apply_gradients(). Each weight update nudges the model slightly toward better predictions on the current batch."
+    }
+  ]
+}
