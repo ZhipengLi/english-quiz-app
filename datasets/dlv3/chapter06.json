@@ -1,0 +1,509 @@
+{
+  "text": "Deep Learning with Python - Chapter 6: The Universal Workflow of Machine Learning",
+  "quiz": [
+    {
+      "question": "The overall step-by-step blueprint for approaching and solving a machine learning problem is called the __________ __________ __ __________ __________.",
+      "type": "blank",
+      "answer": "Universal Workflow Of Machine Learning",
+      "explanation": "A structured framework that applies to virtually any ML project, regardless of domain. It proceeds through three major phases: define the task, develop a model, and deploy the model. Having a repeatable workflow prevents common mistakes like jumping straight to modeling without understanding the problem, or skipping proper evaluation. Experienced practitioners internalize this workflow — they may move quickly through familiar steps, but they never skip them."
+    },
+    {
+      "question": "The first phase of the workflow, where you understand the problem domain, business logic, data, and success criteria, is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Define The Task",
+      "explanation": "The most important and most often neglected phase. Before writing any code, you need to understand: What problem are we solving? What data do we have? What does success look like? What are the constraints? Many ML projects fail not because of bad models but because the wrong problem was defined. A perfectly accurate model that answers the wrong question, takes too long to run, or can't be integrated into the product is useless. Time spent here saves enormous effort later."
+    },
+    {
+      "question": "The phase where you prepare data, choose an evaluation protocol, train a first model, and tune for generalization is called __________ __ __________.",
+      "type": "blank",
+      "answer": "Develop A Model",
+      "explanation": "The hands-on modeling phase that most people think of as 'doing machine learning.' It includes data preprocessing, establishing a baseline, building a model with statistical power (beating the baseline), then scaling up and regularizing to maximize generalization. A key insight from this chapter: don't start with the fanciest model — start with the simplest thing that could work, verify it's learning, then iterate. This avoids debugging complex systems when the problem might be in the data or task definition."
+    },
+    {
+      "question": "The phase where you ship the model into a real application, monitor it, and collect data for the next iteration is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Deploy The Model",
+      "explanation": "Getting the model into production and keeping it working. Deployment is where most ML projects stall — the gap between a working notebook and a reliable production system is enormous. This phase involves model export, serving infrastructure, monitoring, and maintenance. A deployed model isn't finished — it needs ongoing monitoring because real-world data changes over time (concept drift), and the model must be periodically retrained. The deployment phase also feeds back into the next iteration by collecting new data and usage patterns."
+    },
+    {
+      "question": "The process of mapping a real business problem into a machine learning task with defined inputs, targets, and success criteria is called __________ __________.",
+      "type": "blank",
+      "answer": "Problem Framing",
+      "explanation": "Translating a vague business need ('improve customer satisfaction') into a concrete ML task ('predict which support tickets will escalate, using ticket text as input and escalation status as target'). Good framing requires choosing the right task type (classification vs. regression vs. ranking), defining what the model's input and output are, and establishing how success will be measured. Reframing the same business problem as a different ML task can dramatically change the project's feasibility and impact."
+    },
+    {
+      "question": "The people involved in or affected by the project, whose needs and constraints help shape the ML problem, are called __________.",
+      "type": "blank",
+      "answer": "Stakeholders",
+      "explanation": "Everyone who has a stake in the project's outcome — product managers, engineers, domain experts, end users, and sometimes regulators. Different stakeholders have different priorities: the product manager cares about business metrics, the engineer cares about latency and reliability, the domain expert cares about correctness, and end users care about experience. Understanding all stakeholders' needs during task definition prevents building a technically impressive model that nobody wants or can use."
+    },
+    {
+      "question": "The data the model will receive in order to make predictions is called __________ __________.",
+      "type": "blank",
+      "answer": "Input Data",
+      "explanation": "Whatever information the model has access to at prediction time — images, text, numerical features, audio, or combinations thereof. A critical constraint: the input data available in production must match what was used during training. If your training data includes features that won't be available at inference time (like future information or manually computed features), the model won't work in production. Defining exactly what input data is available is one of the first and most important decisions."
+    },
+    {
+      "question": "The values or labels the model is supposed to predict are called __________.",
+      "type": "blank",
+      "answer": "Targets",
+      "explanation": "What you want the model to output — class labels for classification, continuous values for regression, structured outputs for segmentation, etc. Targets must be obtainable for training (you need labeled data) and meaningful for the business goal. Sometimes the ideal target isn't directly available, and you must use a proxy — for example, using click-through rate as a proxy for user satisfaction. The quality and relevance of your targets fundamentally limit what the model can learn."
+    },
+    {
+      "question": "A machine learning task with exactly two possible classes is called __________ __________.",
+      "type": "blank",
+      "answer": "Binary Classification",
+      "explanation": "The simplest classification setup — yes/no, spam/not-spam, positive/negative. The model outputs a single probability via sigmoid activation. Many real-world problems are naturally binary (fraud detection, medical diagnosis, churn prediction). Even complex problems can sometimes be decomposed into binary sub-problems. The threshold for converting probability to a class label (default 0.5) can be adjusted based on the relative cost of false positives versus false negatives."
+    },
+    {
+      "question": "A classification task with more than two possible classes is called __________ __________.",
+      "type": "blank",
+      "answer": "Multiclass Classification",
+      "explanation": "Each input is assigned to exactly one of several categories — digit recognition (10 classes), language identification (hundreds of classes), or species classification. The model uses softmax output (probabilities summing to 1) with categorical crossentropy loss. As the number of classes grows, the task gets harder and may require more data per class. Very large-scale classification (millions of classes, like face recognition) requires specialized techniques like sampled softmax or metric learning."
+    },
+    {
+      "question": "A classification task where each sample may belong to multiple classes simultaneously is called __________ __________.",
+      "type": "blank",
+      "answer": "Multilabel Classification",
+      "explanation": "Each input can have zero, one, or many labels — a movie can be both 'comedy' and 'romance,' a medical image might show multiple conditions. The model uses independent sigmoid activations (not softmax) for each class, with binary crossentropy per label. Multilabel problems are common in real-world applications: content tagging, medical diagnosis, product categorization. They're harder to evaluate than single-label problems — metrics like F1-score must be computed per-label and then averaged."
+    },
+    {
+      "question": "A task where the target is a single continuous numerical value is called __________ __________.",
+      "type": "blank",
+      "answer": "Scalar Regression",
+      "explanation": "Predicting one number — house price, temperature, age, revenue. The model outputs a single unit with linear activation, and the loss is typically MSE or MAE. Scalar regression is simpler than classification in some ways (no class boundaries to learn) but harder in others (the model must predict the exact magnitude, not just the category). Common pitfalls include not normalizing the target, using the wrong loss function, and failing to check whether the relationship is actually predictable from the available features."
+    },
+    {
+      "question": "A task where the target is a set of continuous numerical values is called __________ __________.",
+      "type": "blank",
+      "answer": "Vector Regression",
+      "explanation": "Predicting multiple continuous values simultaneously — like 3D coordinates, bounding box parameters, or a time series of future prices. The model has multiple output units with linear activation. Each output dimension contributes to the total loss, which can be a sum or weighted combination of per-dimension losses. If the output dimensions have very different scales, normalizing each dimension independently can help training stability."
+    },
+    {
+      "question": "A task where the model predicts structured regions or classes within an image is called __________ __________.",
+      "type": "blank",
+      "answer": "Image Segmentation",
+      "explanation": "Assigning a class label to every pixel in an image — for example, labeling each pixel as 'road,' 'car,' 'pedestrian,' or 'sky' in a driving scene. This is much more detailed than image classification (one label per image) or object detection (bounding boxes). Segmentation models like U-Net use encoder-decoder architectures that maintain spatial resolution. Medical imaging (tumor segmentation), autonomous driving, and satellite imagery analysis are major application areas."
+    },
+    {
+      "question": "A task where outputs are ordered by relevance or similarity rather than assigned a class is called __________.",
+      "type": "blank",
+      "answer": "Ranking",
+      "explanation": "Producing an ordered list — search results ranked by relevance, products ranked by purchase likelihood, or candidates ranked by fit. Ranking is different from classification because the absolute score matters less than the relative order. Specialized loss functions like pairwise losses (comparing pairs of items) and listwise losses (optimizing the entire ranking) are used. Search engines, recommendation systems, and ad placement systems all fundamentally solve ranking problems."
+    },
+    {
+      "question": "A machine learning approach that groups similar data points without labeled targets is called __________.",
+      "type": "blank",
+      "answer": "Clustering",
+      "explanation": "An unsupervised learning technique that discovers natural groupings in data without human-provided labels. Classic algorithms include k-means (partitioning into k groups), hierarchical clustering (building a tree of nested groups), and DBSCAN (density-based grouping). Clustering is useful for customer segmentation, data exploration, anomaly detection, and as a preprocessing step. Deep learning approaches to clustering (like deep embedded clustering) use learned representations to find more meaningful groups than raw feature distances would reveal."
+    },
+    {
+      "question": "A machine learning task focused on producing new data such as text or images is called __________.",
+      "type": "blank",
+      "answer": "Generation",
+      "explanation": "Creating new content that resembles the training data — text (GPT, Claude), images (Stable Diffusion, DALL·E), audio (WaveNet), or code (Copilot). Generative models learn the underlying distribution of the training data and can sample from it. This is fundamentally different from discriminative tasks (classification, regression) which map inputs to labels. The generative AI explosion of 2022–2024 has made this one of the most commercially impactful ML task types."
+    },
+    {
+      "question": "A type of learning where an agent learns through interaction and feedback from an environment is called __________ __________.",
+      "type": "blank",
+      "answer": "Reinforcement Learning",
+      "explanation": "An agent takes actions in an environment, receives rewards or penalties, and learns to maximize cumulative reward over time. Unlike supervised learning (fixed correct answers), RL discovers good strategies through trial and error. Landmark achievements include AlphaGo (Go), OpenAI Five (Dota 2), and RLHF (fine-tuning language models from human preferences). RL is powerful but notoriously difficult — it requires careful reward design, massive amounts of interaction, and is unstable to train compared to supervised learning."
+    },
+    {
+      "question": "A recommendation approach mentioned as sometimes being a better fit than deep learning is called __________ __________.",
+      "type": "blank",
+      "answer": "Matrix Factorization",
+      "explanation": "A technique that decomposes a large user-item interaction matrix into lower-dimensional user and item embeddings. It's the foundation of many recommendation systems and was famously used in the Netflix Prize competition. Matrix factorization is simpler, faster, and often more effective than deep learning for pure collaborative filtering with sparse interaction data. Deep learning becomes advantageous when you need to incorporate rich side information (images, text descriptions, user profiles) or handle sequential patterns."
+    },
+    {
+      "question": "A recommendation method that uses patterns across users and items is called __________ __________.",
+      "type": "blank",
+      "answer": "Collaborative Filtering",
+      "explanation": "Recommending items based on the behavior of similar users — 'users who liked X also liked Y.' Collaborative filtering doesn't need to understand the content of items; it just needs interaction data (ratings, clicks, purchases). Its main limitation is the cold-start problem: it can't recommend new items that nobody has interacted with yet, or personalize for new users with no history. Content-based filtering (using item features) complements it by handling these cases."
+    },
+    {
+      "question": "A model type used to locate and identify objects in images is called __________ __________.",
+      "type": "blank",
+      "answer": "Object Detection",
+      "explanation": "Predicting both the class and location (bounding box) of every object in an image. This is harder than classification (which just labels the whole image) because the model must handle multiple objects of different sizes at different positions. Major architectures include YOLO (You Only Look Once, fast single-pass detection), Faster R-CNN (two-stage, high accuracy), and DETR (transformer-based). Object detection is essential for autonomous driving, surveillance, robotics, and visual inspection systems."
+    },
+    {
+      "question": "A task that retrieves images most similar to known examples is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Image Similarity Ranking",
+      "explanation": "Finding and ranking images by their visual similarity to a query image. Instead of classifying images into fixed categories, the model learns an embedding space where similar images are close together. Techniques include siamese networks (learning to compare pairs), triplet loss (learning that anchor is closer to positive than negative), and contrastive learning. Applications include visual search (find similar products), duplicate detection, and the cookie inspection example in the chapter where defective cookies are identified by similarity to known defects."
+    },
+    {
+      "question": "The systems or human processes already being used to solve the problem before introducing ML are called __________ __________.",
+      "type": "blank",
+      "answer": "Existing Solutions",
+      "explanation": "Whatever is currently in place — manual review, rule-based systems, simple heuristics, or nothing at all. Understanding existing solutions is critical: they set the performance bar your model must beat, they reveal what works and what doesn't, and they often contain valuable domain knowledge that can inform feature engineering. If the existing solution is a human expert, their accuracy becomes your practical upper bound. If it's a rule-based system, its rules might suggest useful features."
+    },
+    {
+      "question": "Real-world limits such as latency, device requirements, privacy, or deployment environment that affect model design are called __________.",
+      "type": "blank",
+      "answer": "Constraints",
+      "explanation": "Practical requirements that limit what kind of model you can deploy. A model that takes 10 seconds per prediction is useless for real-time applications. A 10GB model can't run on a phone. A model that sends user data to a cloud server may violate privacy regulations. Constraints should be identified early because they eliminate entire categories of solutions. Sometimes constraints are the most important factor — the best model that fits within your constraints beats a theoretically superior model that can't be deployed."
+    },
+    {
+      "question": "Requirements that predictions must be produced within a limited amount of time are called __________ __________.",
+      "type": "blank",
+      "answer": "Latency Constraints",
+      "explanation": "How fast the model must respond — autocomplete needs milliseconds, a medical diagnosis might tolerate seconds, a batch report can take hours. Latency constraints directly affect model choice: larger models are more accurate but slower. Techniques for meeting latency requirements include model distillation (training a smaller model to mimic a larger one), quantization (using lower-precision math), pruning (removing unnecessary weights), and caching (storing frequent predictions). Sometimes the constraint is so tight that a simple model or lookup table is the only option."
+    },
+    {
+      "question": "A hardware environment where a model may need to run locally rather than on a remote server is called an __________ __________.",
+      "type": "blank",
+      "answer": "Embedded Device",
+      "explanation": "A resource-constrained device like a smartphone, IoT sensor, drone, or microcontroller. Running models on embedded devices (edge inference) has advantages: low latency (no network round-trip), privacy (data stays on device), and reliability (works offline). But the constraints are severe — limited memory, limited compute, no GPU, and often battery-powered. Frameworks like TFLite and ONNX Runtime are specifically designed for edge deployment. Model compression (quantization, pruning, distillation) is essential for making models small enough to fit."
+    },
+    {
+      "question": "An assumption made early in a project, such as whether the targets are predictable from the inputs, is called a __________.",
+      "type": "blank",
+      "answer": "Hypothesis",
+      "explanation": "An explicit statement of what you believe to be true but haven't proven yet. The most fundamental hypothesis in any ML project is: 'the outputs can be predicted from the inputs.' This isn't always true — if you're trying to predict stock prices from yesterday's weather, no model will help. Other hypotheses include: the data is representative, the labels are correct, and the features are informative. Making hypotheses explicit forces you to test them early, saving time on doomed projects."
+    },
+    {
+      "question": "The moral dimension of technical choices in machine learning, especially regarding harmful biases, is called __________.",
+      "type": "blank",
+      "answer": "Ethics",
+      "explanation": "The responsibility to consider the real-world impact of ML systems on people. Models can encode and amplify biases present in training data — a hiring model trained on biased historical decisions will perpetuate discrimination; a criminal risk model can reinforce racial disparities. Ethical considerations include fairness (does the model treat all groups equitably?), transparency (can decisions be explained?), privacy (is user data protected?), and consent (do users know an ML system is making decisions about them?). Ethics isn't optional — it's as much a part of the workflow as evaluation."
+    },
+    {
+      "question": "The process of gathering the inputs and targets needed to train a model is called __________ __________.",
+      "type": "blank",
+      "answer": "Dataset Collection",
+      "explanation": "Assembling the data that the model will learn from. This can range from downloading an existing public dataset (MNIST, ImageNet) to building a custom data pipeline from scratch (scraping, sensors, APIs, databases). Dataset collection is often the most time-consuming part of an ML project. Key considerations include data volume (do you have enough?), quality (is it clean and correctly labeled?), representativeness (does it reflect the real-world distribution?), and legality (do you have the right to use it?)."
+    },
+    {
+      "question": "Labels or target information attached to data so supervised learning can be performed are called __________.",
+      "type": "blank",
+      "answer": "Annotations",
+      "explanation": "The human-provided labels that make supervised learning possible — class labels, bounding boxes, segmentation masks, transcriptions, ratings, etc. Annotation quality is directly proportional to model quality: noisy labels produce noisy models. Good annotation requires clear guidelines (what counts as 'positive'?), trained annotators, quality control (multiple annotators, disagreement resolution), and sometimes domain expertise. The cost and difficulty of annotation is a major reason self-supervised learning (which doesn't need labels) has become so important."
+    },
+    {
+      "question": "The software, workflow, and process used to label data efficiently and consistently is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Data Annotation Infrastructure",
+      "explanation": "The tooling and processes that support data labeling at scale. This includes annotation software (Label Studio, Labelbox, Prodigy), quality control workflows (inter-annotator agreement checks, review pipelines), task distribution systems, and integration with ML training pipelines. Investing in annotation infrastructure pays off enormously for teams that need ongoing data labeling — it's the difference between a reproducible, scalable process and ad-hoc labeling that produces inconsistent results."
+    },
+    {
+      "question": "A service that can be used to collect labels from many people is called a __________ __________.",
+      "type": "blank",
+      "answer": "Crowdsourcing Platform",
+      "explanation": "Online platforms that distribute small labeling tasks to a large pool of workers. They're useful for tasks that require human judgment but not deep expertise — image classification, sentiment labeling, content moderation. The main challenges are quality control (workers may rush or misunderstand instructions) and consistency (different workers may apply different standards). Aggregating labels from multiple workers and filtering unreliable annotators are standard practices when using crowdsourcing."
+    },
+    {
+      "question": "A specific crowdsourcing platform mentioned as one option for obtaining annotations is called __________ __________.",
+      "type": "blank",
+      "answer": "Mechanical Turk",
+      "explanation": "Amazon's crowdsourcing marketplace where requesters post small tasks ('HITs') that workers complete for payment. It's been widely used in ML research for data labeling. The name references an 18th-century chess-playing automaton that was actually operated by a hidden human — fitting, since the platform uses human intelligence to perform tasks that computers can't easily do. Alternatives include Scale AI, Surge AI, and Toloka, which offer more quality control and specialized labeling services."
+    },
+    {
+      "question": "A specialized external service that can provide annotation work for ML datasets is called a __________ __________ __________.",
+      "type": "blank",
+      "answer": "Data Labeling Company",
+      "explanation": "Companies that specialize in providing high-quality annotations at scale — like Scale AI, Labelbox, or Appen. They offer trained annotators, quality assurance processes, specialized tools, and domain expertise. Using a labeling company is more expensive than crowdsourcing but typically produces higher-quality labels, especially for complex tasks. Many large AI companies outsource annotation work to these services, making data labeling a significant industry in its own right."
+    },
+    {
+      "question": "People with specialized knowledge who may be needed to produce accurate labels for complex tasks are called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Subject Matter Experts",
+      "explanation": "Domain specialists whose knowledge is necessary for correct labeling — radiologists for medical imaging, lawyers for legal document classification, geologists for mineral identification. When the task requires expertise, crowdsourcing doesn't work because general workers can't provide accurate labels. Expert annotation is expensive and slow, which limits dataset size. Strategies include using experts to label a small set and training a model to pre-label the rest (active learning), or having experts review model predictions rather than label from scratch."
+    },
+    {
+      "question": "Training data that does not match the kind of data the model will encounter in production is called __________ __________.",
+      "type": "blank",
+      "answer": "Nonrepresentative Data",
+      "explanation": "A dataset that doesn't reflect the real-world distribution — for example, training a global product classifier using only data from one country, or training a medical model only on data from one hospital. The model will perform well on data similar to its training distribution but fail on underrepresented cases. Distribution mismatch between training and production is one of the most common and damaging problems in deployed ML systems. Ensuring data representativeness requires careful thought about who and what the training data covers."
+    },
+    {
+      "question": "The real-world data the model sees after deployment is called __________ __________.",
+      "type": "blank",
+      "answer": "Production Data",
+      "explanation": "The actual data the model encounters when serving predictions in a live system. Production data often differs from training data in subtle but important ways — different distributions, new categories, evolving user behavior, or degraded input quality (blurry photos, typos). The gap between training data and production data is a constant concern. Monitoring production data statistics and comparing them to training data helps detect drift before it causes visible performance degradation."
+    },
+    {
+      "question": "The change over time in the properties of production data, which can gradually reduce model performance, is called __________ __________.",
+      "type": "blank",
+      "answer": "Concept Drift",
+      "explanation": "When the real-world patterns change after the model is deployed — customer preferences shift, language evolves, new product categories appear, or economic conditions change. A model trained on last year's data may make poor predictions on this year's data because the underlying relationships have changed. Concept drift is inevitable in most production systems, which is why models need periodic retraining. Monitoring for drift (comparing prediction distributions over time) is essential for maintaining model reliability."
+    },
+    {
+      "question": "A form of nonrepresentative data where the collection process interacts with what is being predicted, producing biased measurements, is called __________ __________.",
+      "type": "blank",
+      "answer": "Sampling Bias",
+      "explanation": "When the process of collecting data systematically skews the dataset. A classic example: surveying people by phone only reaches people who answer phones, missing those who don't. In ML, sampling bias appears when training data is collected from a system that's already making decisions — for example, a loan default model trained only on approved loans can't learn about people who were denied, creating a biased view. Sampling bias is particularly insidious because it's invisible in the data itself; you only notice it by thinking carefully about how the data was generated."
+    },
+    {
+      "question": "The practice of exploring and visualizing a dataset instead of treating it as a black box is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Understanding Your Data",
+      "explanation": "Spending time examining your data before modeling — looking at distributions, checking for missing values, visualizing examples, computing basic statistics, and checking for anomalies. This exploratory data analysis (EDA) phase is often rushed by practitioners eager to start modeling, but it consistently prevents costly mistakes. You might discover that 30% of labels are wrong, that one feature is a direct copy of the target (target leaking), or that the data has a distribution very different from what you expected."
+    },
+    {
+      "question": "The process of developing or selecting useful input features based on knowledge of the data and task is called __________ __________.",
+      "type": "blank",
+      "answer": "Feature Engineering",
+      "explanation": "Creating, transforming, or selecting input features to make the model's job easier. Examples include extracting day-of-week from timestamps, computing ratios between features, or encoding categorical variables. While deep learning reduces the need for feature engineering compared to classical ML (especially for images and text), it remains valuable for tabular data and domain-specific problems. Good feature engineering encodes domain knowledge — telling the model what patterns to look for rather than making it discover them from scratch."
+    },
+    {
+      "question": "Features that are absent for some samples and must be handled during preprocessing are called __________ __________.",
+      "type": "blank",
+      "answer": "Missing Values",
+      "explanation": "Data entries where a feature value is absent — marked as NaN, null, or simply empty. Missing values are extremely common in real-world data (patients skip survey questions, sensors malfunction, records are incomplete). Common strategies include: imputation (filling with the mean, median, or a predicted value), using a special indicator (adding a binary 'was this value missing?' feature), or using models that handle missing values natively (like tree-based methods). Simply dropping samples with missing values wastes data and can introduce bias."
+    },
+    {
+      "question": "A situation where some classes have many more samples than others is called __________ __________.",
+      "type": "blank",
+      "answer": "Class Imbalance",
+      "explanation": "When the dataset has far more examples of some classes than others — fraud detection datasets might have 99.9% legitimate transactions and 0.1% fraud. A naive model can achieve 99.9% accuracy by always predicting 'legitimate,' which is useless. Strategies include: oversampling the minority class (SMOTE), undersampling the majority class, using class weights in the loss function (penalizing minority class errors more heavily), using appropriate metrics (precision, recall, F1 instead of accuracy), and threshold adjustment."
+    },
+    {
+      "question": "The presence of features that reveal target information in a way unavailable in production is called __________ __________.",
+      "type": "blank",
+      "answer": "Target Leaking",
+      "explanation": "When the training data accidentally contains information that directly or indirectly reveals the target — making the model appear to perform brilliantly during training but fail completely in production. For example, including a 'treatment outcome' feature when predicting whether a patient needs treatment, or including timestamps that correlate with labels due to how data was collected. Target leaking produces misleadingly high validation scores. The only defense is carefully examining every feature and asking: 'Would this information be available at prediction time?'"
+    },
+    {
+      "question": "The set of transformations that make raw data easier for neural networks to use is called __________ __________.",
+      "type": "blank",
+      "answer": "Data Preprocessing",
+      "explanation": "All the transformations applied to raw data before feeding it to the model — vectorization, normalization, handling missing values, encoding categorical variables, resizing images, tokenizing text. Preprocessing choices can significantly affect model performance. A common pipeline for images: resize → normalize pixel values to [0,1] → data augmentation. For text: tokenize → convert to indices → pad to fixed length. The preprocessing pipeline must be identical at training and inference time — any mismatch will silently degrade performance."
+    },
+    {
+      "question": "Turning raw inputs such as text, images, or sound into tensors that a model can process is called __________.",
+      "type": "blank",
+      "answer": "Vectorization",
+      "explanation": "The fundamental step of converting non-numerical data into numerical tensors. Text must be tokenized and converted to integer sequences or embeddings. Categorical features must be one-hot encoded or embedded. Images are already numerical (pixel values) but may need reshaping or format conversion. The vectorization method determines what information the model can access — multi-hot encoding loses word order; tokenization preserves it. Choosing the right vectorization is a critical design decision."
+    },
+    {
+      "question": "Rescaling input values into smaller or more uniform ranges to help training work better is called __________ __________.",
+      "type": "blank",
+      "answer": "Value Normalization",
+      "explanation": "Transforming input features to have similar scales — typically by subtracting the mean and dividing by the standard deviation (standardization) or scaling to [0, 1] (min-max normalization). Without normalization, features with large values dominate the gradient, making optimization inefficient and unstable. Neural networks converge faster and more reliably when inputs are small, centered, and similarly scaled. Importantly, normalization statistics (mean, standard deviation) must be computed only from training data and applied identically to validation and test data."
+    },
+    {
+      "question": "An evaluation protocol that keeps aside a validation set, suitable when plenty of data is available, is called __________-__________ __________.",
+      "type": "blank",
+      "answer": "Hold Out Validation",
+      "explanation": "The simplest evaluation strategy: split the data once into training, validation, and test sets (e.g., 70/15/15). It's fast (only one model to train) and straightforward, making it the default choice when data is plentiful (tens of thousands of samples or more). The drawback is that the performance estimate depends on the specific random split — you might get lucky or unlucky with which samples land in validation. For small datasets, this variance makes the estimate unreliable, and cross-validation is preferred."
+    },
+    {
+      "question": "An evaluation protocol that rotates validation across K data splits, useful when data is limited, is called __-__________ __________ __________.",
+      "type": "blank",
+      "answer": "K Fold Cross Validation",
+      "explanation": "Dividing data into K equal folds and training K separate models, each using a different fold for validation. The final score is the average across all K folds. This gives a more reliable estimate than a single hold-out split because every sample serves as both training and validation data. K=5 and K=10 are common choices. The cost is K times the computation of a single model. K-fold is especially valuable when you have hundreds or a few thousand samples — small enough that a single split is noisy but large enough that K models are feasible."
+    },
+    {
+      "question": "A more precise but more expensive protocol that repeats K-fold validation multiple times is called __________ __-__________ __________.",
+      "type": "blank",
+      "answer": "Iterated K Fold Validation",
+      "explanation": "Running K-fold cross-validation multiple times with different random shuffles and averaging all scores. This reduces variance from both the random fold assignment and random weight initialization. It's the gold standard for small-dataset evaluation — when every decimal of accuracy matters and you need high confidence in your estimate. The computational cost is K × repetitions models (e.g., 5 folds × 10 repetitions = 50 models), which is acceptable for small models and datasets but impractical for large-scale deep learning."
+    },
+    {
+      "question": "A simple reference solution that a first machine learning model should be able to beat is called a __________.",
+      "type": "blank",
+      "answer": "Baseline",
+      "explanation": "A trivial or naive solution that establishes the minimum acceptable performance. For classification, predicting the most frequent class; for regression, predicting the mean; for time series, predicting the previous value. If your model can't beat the baseline, something is fundamentally wrong — bad data, wrong task formulation, or a buggy implementation. Establishing a baseline first is essential: it tells you whether your model is actually learning and provides context for interpreting its performance numbers. A model with 85% accuracy sounds good until you learn the baseline is 84%."
+    },
+    {
+      "question": "The stage where a model is capable of beating a simple baseline, showing it is learning useful signal, is called __________ __________.",
+      "type": "blank",
+      "answer": "Statistical Power",
+      "explanation": "The point where your model demonstrates that it's extracting real signal from the data, not just making random guesses. Achieving statistical power is the first milestone in model development — before worrying about architecture, tuning, or regularization, you need to verify that learning is happening at all. If a simple model can't beat the baseline, a complex one probably won't either. The problem is more likely in the data, features, or task definition than in the model architecture."
+    },
+    {
+      "question": "Structural assumptions built into the model architecture to match the nature of the task and data are called __________ __________.",
+      "type": "blank",
+      "answer": "Architecture Priors",
+      "explanation": "Inductive biases encoded in the network structure — convolutions encode spatial locality and translation invariance, recurrence encodes sequential dependence, attention encodes the ability to dynamically focus on relevant parts. Choosing the right architecture prior for your data type is one of the highest-impact decisions: CNNs for images, transformers for text, graph neural networks for relational data. Using the wrong prior (e.g., dense layers for images) wastes capacity and requires much more data to compensate for the missing structural knowledge."
+    },
+    {
+      "question": "Choices such as loss function, batch size, and learning rate that define how training is run are called __________ __________.",
+      "type": "blank",
+      "answer": "Training Configuration",
+      "explanation": "The collection of settings that control the training process but aren't part of the model architecture — optimizer choice, learning rate, batch size, number of epochs, and loss function. These are distinct from architecture hyperparameters (number of layers, units per layer). Training configuration can have dramatic effects: the wrong learning rate can prevent convergence entirely, the wrong loss function can optimize for the wrong objective. Standard starting points exist (Adam optimizer, learning rate 1e-3, batch size 32–128) but should be tuned per problem."
+    },
+    {
+      "question": "The differentiable objective used to train the model, which may differ from the final success metric, is called the __________ __________.",
+      "type": "blank",
+      "answer": "Loss Function",
+      "explanation": "The function the optimizer minimizes during training. It must be differentiable (for backpropagation) and should correlate with the actual success metric. These two requirements can conflict: the business metric might be 'number of satisfied customers' (not differentiable), while the loss is crossentropy (differentiable, and hopefully correlated). Common losses include categorical crossentropy (classification), MSE (regression), and binary crossentropy (binary tasks). Choosing a loss that doesn't align with the real objective is a subtle but common mistake."
+    },
+    {
+      "question": "The quantity used to measure task success, which may not be directly optimized during training, is called a __________.",
+      "type": "blank",
+      "answer": "Metric",
+      "explanation": "What you actually care about — accuracy, F1-score, BLEU, revenue impact, user satisfaction. Metrics don't need to be differentiable because they're not used for gradient computation. The gap between the loss (what the model optimizes) and the metric (what you measure success by) is important to understand: optimizing crossentropy usually improves accuracy, but not always perfectly. Sometimes custom metrics are needed — for example, 'percentage of recommendations that lead to a purchase' — which requires careful thought about how to connect to a trainable loss."
+    },
+    {
+      "question": "A small batch of data used to compute a training loss and gradient update is called a __________-__________.",
+      "type": "blank",
+      "answer": "Mini Batch",
+      "explanation": "The standard unit of training computation: a small subset of training data (typically 32–512 samples) processed in one forward-backward pass. Mini-batch SGD is the foundation of modern deep learning training. The batch size affects training dynamics: smaller batches introduce more noise (which can improve generalization and help escape local minima) but are computationally less efficient; larger batches give smoother gradients and better GPU utilization but may generalize worse and require learning rate adjustment."
+    },
+    {
+      "question": "The training method that requires the loss function to be differentiable so gradients can be computed is called __________.",
+      "type": "blank",
+      "answer": "Backpropagation",
+      "explanation": "The algorithm that computes how each parameter contributed to the loss by applying the chain rule backward through the network. This is why the loss function must be differentiable — backpropagation needs a smooth gradient signal at every point. Non-differentiable operations (like argmax or discrete sampling) break the gradient chain and require workarounds like straight-through estimators or policy gradient methods. Backpropagation is the reason deep learning training is possible — without it, there would be no efficient way to update millions of parameters."
+    },
+    {
+      "question": "Techniques used to improve generalization after the model can already overfit are called __________.",
+      "type": "blank",
+      "answer": "Regularization",
+      "explanation": "Methods that constrain the model to reduce overfitting, applied once you've verified the model has enough capacity to overfit (if a model can't overfit, it needs more capacity, not regularization). Major techniques include dropout (random neuron deactivation), weight regularization (L1/L2 penalties), early stopping (halt before overfitting), data augmentation (synthetic training examples), and batch normalization. The key insight: you first build a model that overfits, then apply regularization to pull back toward good generalization — not the other way around."
+    },
+    {
+      "question": "A regularization technique that randomly drops neurons during training is called __________.",
+      "type": "blank",
+      "answer": "Dropout",
+      "explanation": "Setting random neurons to zero during each training step, typically with rate 0.2–0.5. Dropout prevents co-adaptation (neurons learning to rely on specific other neurons) and can be interpreted as training an ensemble of many different sub-networks. At inference time, all neurons are active. Dropout is one of the most widely used regularization methods because it's simple, effective, and requires only one hyperparameter (the dropout rate). It's usually applied to dense layers but can also be used with convolutional and recurrent layers."
+    },
+    {
+      "question": "A regularization method that adds penalties on weight values to the loss is called __________ __________.",
+      "type": "blank",
+      "answer": "L1 Regularization",
+      "explanation": "Adding the sum of absolute weight values to the loss function: total_loss = task_loss + lambda × sum(|w|). L1 regularization drives many weights to exactly zero, producing sparse models where irrelevant features are effectively removed. This makes L1 useful for feature selection and interpretability — you can see which features the model considers important by which weights are non-zero. L1 is less commonly used in deep learning than L2 (weight decay) because sparsity is less important in large networks."
+    },
+    {
+      "question": "A regularization method that penalizes large weight values using squared magnitudes is called __________ __________.",
+      "type": "blank",
+      "answer": "L2 Regularization",
+      "explanation": "Adding the sum of squared weight values to the loss: total_loss = task_loss + lambda × sum(w²). L2 regularization (also called weight decay) encourages weights to be small but not zero — it smoothly penalizes large values rather than forcing sparsity. L2 is the most common form of weight regularization in deep learning. The AdamW optimizer implements weight decay correctly by decoupling it from the adaptive learning rate, and has become the standard for training large models."
+    },
+    {
+      "question": "Settings such as units per layer or learning rate that are tuned during development are called __________.",
+      "type": "blank",
+      "answer": "Hyperparameters",
+      "explanation": "Configuration choices that define the model and training procedure but aren't learned from data. They're set by the developer and tuned by evaluating on validation data. Key hyperparameters include number of layers, units per layer, learning rate, dropout rate, regularization strength, and batch size. Systematic tuning methods include grid search, random search (often more efficient due to some hyperparameters mattering much more than others), and Bayesian optimization. The distinction from learnable parameters is fundamental: parameters are optimized by the optimizer; hyperparameters are optimized by the developer."
+    },
+    {
+      "question": "A tool mentioned for automated hyperparameter tuning is called __________.",
+      "type": "blank",
+      "answer": "KerasTuner",
+      "explanation": "A Keras library for automated hyperparameter search. You define a search space (ranges for each hyperparameter) and KerasTuner systematically tries combinations, tracking which perform best on validation data. It supports random search, Bayesian optimization, and Hyperband (an efficient early-stopping-based strategy). Automated tuning saves time over manual experimentation and often finds better configurations by exploring the space more systematically. Similar tools include Optuna, Ray Tune, and Weights & Biases Sweeps."
+    },
+    {
+      "question": "The problem of leaking information from repeated validation feedback into model tuning is called __________ __________.",
+      "type": "blank",
+      "answer": "Validation Leakage",
+      "explanation": "Every time you evaluate on validation data and make a decision (change architecture, adjust hyperparameters), information about the validation set indirectly influences the model. After many rounds of tuning, the model becomes partially optimized for the validation set, making validation scores overly optimistic. This is especially problematic with small validation sets and many tuning iterations. The test set exists precisely to provide an unbiased estimate after all tuning is complete. Being aware of validation leakage is important for honest performance reporting."
+    },
+    {
+      "question": "The final model trained on all available training and validation data before test evaluation is called the __________ __________ __________.",
+      "type": "blank",
+      "answer": "Final Production Model",
+      "explanation": "Once hyperparameters and architecture are finalized using validation data, the final model is retrained on the combined training and validation data to maximize the amount of data it learns from. This model is evaluated once on the test set for a final performance estimate, then deployed. Using the validation data for final training is safe because the validation set has already served its purpose (guiding development decisions), and including it increases the effective training set size."
+    },
+    {
+      "question": "The untouched data used for the final evaluation of the finished model is called the __________ __________.",
+      "type": "blank",
+      "answer": "Test Set",
+      "explanation": "The last line of defense against self-deception — data that was never used for any development decision. The test set provides the most honest estimate of how the model will perform on truly new data. If the test score is significantly lower than the validation score, it means validation leakage occurred (you over-tuned to the validation set). The test set should ideally be used exactly once. In practice, some teams evaluate on the test set a few times, but each evaluation slightly reduces its integrity as an unbiased estimator."
+    },
+    {
+      "question": "Saving a trained model into a portable artifact for inference in another environment is called __________ __________.",
+      "type": "blank",
+      "answer": "Model Export",
+      "explanation": "Converting a trained model from its training framework format into a deployment-ready format. This separates training infrastructure (GPUs, Python environment, full framework) from inference infrastructure (which may be a server, phone, or browser). Common export formats include TensorFlow SavedModel, ONNX (Open Neural Network Exchange, framework-agnostic), and TorchScript. Export often involves additional optimization: freezing weights, removing training-only operations (dropout, batch norm updates), and optionally quantizing or pruning."
+    },
+    {
+      "question": "A TensorFlow export format for serving models is called __________ __________.",
+      "type": "blank",
+      "answer": "TensorFlow SavedModel",
+      "explanation": "TensorFlow's standard format for saving and loading complete models — including architecture, weights, optimizer state, and serving signatures. SavedModel files can be loaded for continued training, inference, or deployment via TF Serving. The format is self-contained and versioned, making it suitable for production model management. It integrates with TensorFlow's broader ecosystem (TF Serving, TFLite, TensorFlow.js) for deployment across servers, mobile devices, and browsers."
+    },
+    {
+      "question": "An export format mentioned as another deployment path for trained models is called __________.",
+      "type": "blank",
+      "answer": "ONNX",
+      "explanation": "Open Neural Network Exchange — a framework-agnostic model format that enables interoperability between different ML frameworks. You can train a model in PyTorch and deploy it using the ONNX Runtime (optimized for inference) or convert it to TensorFlow. ONNX supports most common operations and is backed by Microsoft, Meta, and others. It's particularly useful for teams that want to train in one framework (e.g., PyTorch for research flexibility) and deploy in another (e.g., optimized inference runtimes for production speed)."
+    },
+    {
+      "question": "A deployment setup where predictions are served from a remote server over the internet is called a __________ __________.",
+      "type": "blank",
+      "answer": "Remote API",
+      "explanation": "The most common deployment pattern: the model runs on a server and clients send requests over HTTP/gRPC, receiving predictions as responses. This centralizes the model (easy to update, monitor, and scale), leverages powerful server hardware (GPUs), and keeps the model code private. The drawbacks are latency (network round-trip), cost (server compute), and reliability (requires internet connectivity). REST APIs and gRPC are the standard protocols, often behind a load balancer for scaling."
+    },
+    {
+      "question": "A requirement for applications that depend on remote model serving is called __________ __________.",
+      "type": "blank",
+      "answer": "Internet Access",
+      "explanation": "The most basic requirement for remote API deployment — the client must be able to reach the server. This seems obvious but is a real constraint for applications in remote areas, underground facilities, aircraft, or developing regions with unreliable connectivity. If internet access can't be guaranteed, the model must run on-device (edge deployment). Some applications use a hybrid approach: run a lightweight model on-device for immediate responses, and use the remote API when connectivity is available for higher-quality predictions."
+    },
+    {
+      "question": "A setting where remote model serving may fail because internet access is unreliable is called a __________-__________ __________.",
+      "type": "blank",
+      "answer": "Low Connectivity Environment",
+      "explanation": "Environments where network access is intermittent, slow, or unavailable — rural areas, developing regions, underground, in-flight, or during natural disasters. Applications serving these environments must either run entirely on-device or gracefully degrade when the connection drops. This constraint is often overlooked by developers working in well-connected urban offices but affects billions of potential users worldwide. Edge AI and on-device inference are partly motivated by the need to serve low-connectivity environments."
+    },
+    {
+      "question": "The total delay from sending a request to receiving a prediction response from a remote server is called __________-__________ __________.",
+      "type": "blank",
+      "answer": "Round Trip Latency",
+      "explanation": "The time from when the client sends a prediction request to when it receives the response — including network transit time (both directions), server processing time, and any queuing delays. For real-time applications (autocomplete, live translation, game AI), round-trip latency must be tens of milliseconds. For less time-sensitive applications (email classification, batch processing), seconds or minutes may be acceptable. Latency can be reduced through geographic server placement (CDNs), model optimization, request batching, and caching."
+    },
+    {
+      "question": "Input data that may be unsuitable for remote serving because the server must access it in decrypted form is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Sensitive Input Data",
+      "explanation": "Data that raises privacy, legal, or security concerns if sent to a remote server — medical records, financial information, biometric data, private communications, or classified material. Even with encryption in transit, the server must decrypt the data to run the model, meaning the server operator has access. This is a strong argument for on-device inference in privacy-sensitive applications. Emerging techniques like federated learning (training on distributed data without collecting it) and homomorphic encryption (computing on encrypted data) aim to address this, though they're still maturing."
+    },
+    {
+      "question": "Encryption recommended for protecting HTTP requests and responses during remote inference is called __________ __________.",
+      "type": "blank",
+      "answer": "SSL Encryption",
+      "explanation": "Secure Sockets Layer (now technically TLS — Transport Layer Security) encryption for data in transit between client and server. SSL/TLS ensures that prediction requests and responses can't be intercepted and read by third parties. It's the absolute minimum security requirement for any production API handling user data — no ML API should ever run over plain HTTP. However, SSL only protects data in transit; the server still sees the decrypted data, which is why on-device inference is needed for truly sensitive applications."
+    },
+    {
+      "question": "A compression technique that removes less important model coefficients to reduce size and compute cost is called __________ __________.",
+      "type": "blank",
+      "answer": "Weight Pruning",
+      "explanation": "Removing weights (setting them to zero) that contribute least to the model's predictions, producing a sparser, smaller, faster model. Pruning can be unstructured (removing individual weights) or structured (removing entire filters or attention heads). Research has shown that large neural networks contain highly sparse subnetworks (the 'lottery ticket hypothesis') that perform nearly as well as the full model. Pruning typically follows a train → prune → fine-tune cycle, and can reduce model size by 50–90% with minimal accuracy loss."
+    },
+    {
+      "question": "A compression technique that converts float32 weights to smaller numerical formats such as int8 is called __________ __________.",
+      "type": "blank",
+      "answer": "Weight Quantization",
+      "explanation": "Reducing the numerical precision of model weights from float32 (32 bits per weight) to lower-precision formats like float16 (16 bits), int8 (8 bits), or even int4 (4 bits). This directly reduces model size (4x smaller with int8 vs float32) and speeds up inference on hardware that supports low-precision arithmetic. Post-training quantization is the simplest approach; quantization-aware training (simulating quantization during training) produces better results. Quantization has become essential for deploying large language models on consumer hardware."
+    },
+    {
+      "question": "The ongoing process of tracking model behavior, application interaction, and business impact after deployment is called __________ __________ __________ __ __________ __________.",
+      "type": "blank",
+      "answer": "Monitoring Your Model In The Wild",
+      "explanation": "Continuously watching a deployed model's performance in the real world. Models degrade over time due to concept drift, data quality changes, and evolving user behavior. Without monitoring, you won't know the model is failing until users complain or business metrics drop. Effective monitoring includes tracking prediction distributions (are outputs shifting?), input data statistics (has the data changed?), latency and error rates (is the system healthy?), and business metrics (is the model achieving its goal?). Monitoring closes the loop — it tells you when to retrain."
+    },
+    {
+      "question": "Tests written to verify that the deployed model system behaves as expected are called __________ __________.",
+      "type": "blank",
+      "answer": "Unit Tests",
+      "explanation": "Automated tests that verify individual components of the ML system work correctly — model loading, preprocessing, postprocessing, API endpoints, and edge cases. Unit tests for ML systems should check that the model produces outputs of the expected shape and type, that preprocessing handles edge cases (empty input, very long input, missing features), and that the API returns valid responses. Unlike model accuracy (which requires evaluation data), unit tests verify system correctness and are fast enough to run on every code change."
+    },
+    {
+      "question": "Recording information about model behavior and system operation in production is called __________.",
+      "type": "blank",
+      "answer": "Logging",
+      "explanation": "Systematically recording predictions, inputs, latencies, errors, and other operational data from the production system. Good logging enables debugging (what went wrong?), monitoring (is performance degrading?), and retraining (using logged predictions and user feedback as new training data). Logging should capture enough information to reproduce and diagnose problems but must be balanced against storage costs and privacy requirements — logging sensitive input data may require special handling or anonymization."
+    },
+    {
+      "question": "Tracking the health and functioning of the deployed model system is called __________ __________.",
+      "type": "blank",
+      "answer": "Status Monitoring",
+      "explanation": "Watching system-level health indicators: is the server running? Are response times within acceptable limits? Are error rates normal? Is memory and CPU usage stable? Status monitoring catches infrastructure problems (server crashes, memory leaks, disk full) that are distinct from model performance problems (degrading accuracy). Tools like Prometheus, Grafana, and Datadog are commonly used. Alerts should be configured for anomalies so the team can respond before users are affected."
+    },
+    {
+      "question": "Real-world outcome measures used to judge whether the deployed model is helping the business are called __________ __________.",
+      "type": "blank",
+      "answer": "Business Metrics",
+      "explanation": "The ultimate measures of success — revenue, user engagement, customer satisfaction, cost savings, or whatever the business cares about. Business metrics are what justify the ML project's existence. A model can have excellent accuracy but no business impact (if it doesn't change any decisions), or modest accuracy but huge impact (if it automates an expensive manual process). Connecting model performance to business metrics requires careful experiment design and is often the hardest part of demonstrating ML value."
+    },
+    {
+      "question": "A deployment evaluation method where one group uses the new model and a control group keeps the old process is called __________ __ __ __________.",
+      "type": "blank",
+      "answer": "Randomized A B Testing",
+      "explanation": "The gold standard for evaluating whether a new model actually improves outcomes in production. Users are randomly assigned to either the treatment group (using the new model) or the control group (using the existing system), and business metrics are compared. Random assignment ensures that observed differences are caused by the model, not confounding factors. A/B tests require sufficient sample size and duration to detect meaningful differences, and must account for novelty effects (users initially reacting differently simply because something changed)."
+    }
+  ]
+}
