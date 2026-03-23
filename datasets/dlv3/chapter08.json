@@ -1,0 +1,425 @@
+{
+  "text": "Deep Learning with Python - Chapter 8: Introduction to Deep Learning for Computer Vision",
+  "quiz": [
+    {
+      "question": "The task of assigning an image to one or more categories using a model trained on labeled images is called __________ __________.",
+      "type": "blank",
+      "answer": "Image Classification",
+      "explanation": "Image classification is the 'hello world' of computer vision — given an image, output a label. It sounds simple, but it underpins everything from medical diagnosis to content moderation. The pipeline is: raw pixels → learned features → class probabilities. What makes deep learning revolutionary here is that the feature extraction is learned, not hand-crafted. Before CNNs, engineers spent years designing features like SIFT or HOG; now the network figures out what matters."
+    },
+    {
+      "question": "The field of building systems that can understand and process images and visual data is called __________ __________.",
+      "type": "blank",
+      "answer": "Computer Vision",
+      "explanation": "Computer vision goes far beyond classification — it includes object detection, segmentation, pose estimation, depth prediction, and more. The field existed long before deep learning, rooted in signal processing and geometry, but CNNs transformed it from a niche academic pursuit into a practical engineering discipline. Today's CV systems power self-driving cars, augmented reality, and satellite imagery analysis. The core challenge remains: bridging the gap between raw pixel values and semantic understanding."
+    },
+    {
+      "question": "A deep learning model designed for images that learns local visual patterns and spatial hierarchies is called a __________ __________ __________.",
+      "type": "blank",
+      "answer": "Convolutional Neural Network",
+      "explanation": "The CNN's key insight is locality — visual patterns are spatially local. A horizontal edge is a horizontal edge whether it's in the top-left or bottom-right corner. By using small sliding filters instead of fully connected weights, CNNs achieve two things: massive parameter reduction (a 3×3 filter has 9 weights regardless of image size) and built-in translation invariance. This architectural prior about images is why CNNs dominate vision tasks — they bake in knowledge about how visual information is structured."
+    },
+    {
+      "question": "A shorter name for a convolutional neural network is __________.",
+      "type": "blank",
+      "answer": "ConvNet",
+      "explanation": "You'll see ConvNet and CNN used interchangeably in the literature. Chollet prefers ConvNet in his writing. The terminology doesn't matter much, but being comfortable with both saves confusion when reading papers. The original ConvNet architecture dates back to Yann LeCun's LeNet in the late 1980s, designed for handwritten digit recognition — the same fundamental ideas (convolutions, pooling, stacking) still power modern architectures decades later."
+    },
+    {
+      "question": "Another common abbreviation for convolutional neural network is __________.",
+      "type": "blank",
+      "answer": "CNN",
+      "explanation": "CNN is the most widely used abbreviation in academic papers and industry. Context usually makes it clear you mean convolutional neural network rather than the news network. When you see phrases like 'CNN-based approach' or 'CNN features' in a paper, it always refers to the neural network. The abbreviation is so dominant that even non-vision architectures borrowing convolution operations get called CNNs — like 1D CNNs for text or time-series data."
+    },
+    {
+      "question": "A limited image dataset where overfitting is a major concern and special techniques become especially important is called a __________ __________ __________.",
+      "type": "blank",
+      "answer": "Small Training Dataset",
+      "explanation": "In practice, most real-world vision tasks involve small datasets — you rarely have millions of labeled examples. This is exactly why techniques like data augmentation, dropout, and pretrained models matter so much. The chapter's cats-vs-dogs example with a few thousand images is realistic. The fundamental tension: a CNN has enormous capacity to memorize patterns, but with limited data, it memorizes noise instead of learning generalizable features. Every technique in this chapter addresses that tension."
+    },
+    {
+      "question": "A Keras layer that applies learned 2D convolution filters to image-like inputs is called __________.",
+      "type": "blank",
+      "answer": "Conv2D",
+      "explanation": "Conv2D is the workhorse layer of any ConvNet. Its key parameters are the number of filters (output depth), kernel size (usually 3×3), padding, and strides. Under the hood, it slides a small window across the input, computing a dot product at each position. The 'learned' part is crucial — the filter weights are initialized randomly and updated by backpropagation, so the network discovers which patterns matter for the task. Stacking Conv2D layers builds increasingly abstract representations."
+    },
+    {
+      "question": "A pooling layer that reduces the spatial size of feature maps while keeping strong local responses is called __________.",
+      "type": "blank",
+      "answer": "MaxPooling2D",
+      "explanation": "MaxPooling2D typically uses a 2×2 window with stride 2, halving both height and width in one shot. By taking the maximum, it keeps the strongest activation in each local region — if a feature was detected anywhere in that 2×2 patch, the signal survives. This aggressive downsampling serves two purposes: it reduces computation for subsequent layers, and it gives later layers a larger effective receptive field. The alternative, average pooling, tends to blur signals and is less common in intermediate layers."
+    },
+    {
+      "question": "A layer that averages each feature map into a single value so a 3D feature tensor becomes a vector is called __________.",
+      "type": "blank",
+      "answer": "GlobalAveragePooling2D",
+      "explanation": "GlobalAveragePooling2D collapses the entire spatial grid into one number per channel — if your feature map is 7×7×256, you get a vector of length 256. It's a cleaner alternative to Flatten followed by Dense, because it introduces no extra parameters and acts as a structural regularizer. The idea: if channel k detects cats, then the average activation of channel k across the whole image is a good summary of 'how much cat is in this image.' This layer is standard in modern architectures."
+    },
+    {
+      "question": "The vertical size dimension of an image tensor is called __________ __________.",
+      "type": "blank",
+      "answer": "Image Height",
+      "explanation": "In a typical image tensor shaped (batch, height, width, channels), height is the number of pixel rows. It's easy to confuse height and width because conventions vary — NumPy and most frameworks use (height, width), which matches matrix notation (rows, columns), but it's the opposite of the (x, y) convention in graphics. Getting this wrong leads to subtle bugs like stretched or rotated images. Always check your framework's convention and be explicit about dimension ordering."
+    },
+    {
+      "question": "The horizontal size dimension of an image tensor is called __________ __________.",
+      "type": "blank",
+      "answer": "Image Width",
+      "explanation": "Width is the number of pixel columns, the second spatial dimension in (height, width) ordering. When resizing images for a model, both height and width usually need to match the model's expected input — common sizes are 150×150, 224×224, or 299×299. Choosing a size involves a tradeoff: larger inputs preserve more detail but increase memory and compute quadratically. For transfer learning, you typically use whatever size the pretrained model was trained on."
+    },
+    {
+      "question": "The channel dimension of an image tensor, such as one channel for grayscale or three for RGB, is called __________ __________.",
+      "type": "blank",
+      "answer": "Image Channels",
+      "explanation": "RGB images have 3 channels (red, green, blue), grayscale has 1, and some domains use more — satellite imagery might have dozens of spectral bands, medical imaging can have various modalities. Channels are what convolution filters operate across: a 3×3 filter on an RGB image actually has shape (3, 3, 3) — it jointly processes all three color channels. After the first Conv2D layer, 'channels' no longer correspond to colors but to learned feature detectors."
+    },
+    {
+      "question": "An image tensor format where channels come before height and width is called __________ __________.",
+      "type": "blank",
+      "answer": "Channels First",
+      "explanation": "Channels-first means shape (batch, channels, height, width) — used by PyTorch and older Theano. Channels-last means (batch, height, width, channels) — TensorFlow/Keras default. The distinction matters for performance on different hardware and for interoperability between frameworks. If you ever get a mysterious dimension mismatch error when loading pretrained weights, check the channel ordering first. Keras lets you set this globally, but channels-last is almost always what you want with TensorFlow."
+    },
+    {
+      "question": "A rank-3 tensor produced by a convolution layer with height, width, and channels is called a __________ __________.",
+      "type": "blank",
+      "answer": "Feature Map",
+      "explanation": "A feature map is the output of a Conv2D layer — shaped (height, width, num_filters). Each 'channel' in this output represents one filter's response pattern across the spatial grid. Visualizing feature maps is a powerful debugging and interpretation tool: early layers show edge and texture detectors, while deeper layers show increasingly abstract patterns. The term 'map' emphasizes that each channel is a 2D spatial map indicating where a particular feature was detected."
+    },
+    {
+      "question": "The depth dimension of an image or feature map tensor is called the __________ __________.",
+      "type": "blank",
+      "answer": "Channels Axis",
+      "explanation": "The channels axis is axis -1 in channels-last format (TensorFlow default) or axis 1 in channels-first format (PyTorch). Many operations — BatchNormalization, concatenation, certain activations — need to know which axis is channels. Getting this wrong is a common source of bugs that can silently produce garbage outputs without raising errors. When writing framework-agnostic code, it's good practice to parameterize the channel axis rather than hardcoding it."
+    },
+    {
+      "question": "The classifier part at the end of a ConvNet that operates on vectors rather than spatial feature maps is called a __________ __________ __________.",
+      "type": "blank",
+      "answer": "Densely Connected Classifier",
+      "explanation": "After the convolutional base extracts spatial features, you need to collapse them into class predictions. The densely connected classifier — typically GlobalAveragePooling2D or Flatten followed by one or more Dense layers — does exactly that. It operates on a 1D vector, losing all spatial information but combining features across the entire image. In transfer learning, this is the part you replace: the pretrained base extracts features, and your custom classifier maps those features to your specific classes."
+    },
+    {
+      "question": "The loss function used for multiclass classification when class labels are integers is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Sparse Categorical Crossentropy",
+      "explanation": "Sparse categorical crossentropy is identical to categorical crossentropy mathematically — the only difference is input format. With sparse, your labels are integers (0, 1, 2, ...); with non-sparse, they're one-hot vectors ([1,0,0], [0,1,0], ...). Sparse is more memory-efficient for many classes and is the natural choice when loading labels from directory names. The 'crossentropy' part measures the divergence between the predicted probability distribution and the true label. Lower is better; zero means perfect confidence on the correct class."
+    },
+    {
+      "question": "Small visual structures such as edges or textures learned by convolution layers from local image regions are called __________ __________.",
+      "type": "blank",
+      "answer": "Local Patterns",
+      "explanation": "Local patterns are what make CNNs fundamentally different from dense networks for vision. A 3×3 convolution filter can only 'see' a 3×3 patch at a time, so it necessarily learns local structures — edges, corners, color gradients, small textures. This is a powerful inductive bias because visual information genuinely is local: an edge is defined by neighboring pixels, not by pixels on opposite sides of the image. Dense layers, by contrast, connect every input to every output and have no notion of locality."
+    },
+    {
+      "question": "Patterns involving the entire input feature space, which dense layers tend to learn, are called __________ __________.",
+      "type": "blank",
+      "answer": "Global Patterns",
+      "explanation": "Dense layers learn global patterns because every input node connects to every output node — there's no spatial structure. For images, this means a dense layer would need to independently learn that a cat face can appear at every possible location, which is wildly inefficient. That's why we don't use dense layers directly on raw pixels for images. However, global patterns are exactly what you want at the end of a ConvNet, after pooling has collapsed spatial dimensions — at that point, you want to combine all features holistically to make a classification decision."
+    },
+    {
+      "question": "The ConvNet property that lets a learned pattern be recognized even when it appears in a different image location is called __________ __________.",
+      "type": "blank",
+      "answer": "Translation Invariant",
+      "explanation": "Translation invariance is arguably the most important property of convolutions for vision. Because the same filter weights slide across every position, a pattern learned in one location is automatically recognized everywhere. A cat-ear detector trained on ears in the upper-left works just as well in the bottom-right. This is something dense networks cannot do — they'd need separate weights for each position. Combined with pooling, which adds tolerance to small shifts, CNNs achieve robust position-independent recognition."
+    },
+    {
+      "question": "The layered organization of visual structure where simple local features combine into larger and more abstract ones is called __________ __________.",
+      "type": "blank",
+      "answer": "Spatial Hierarchies",
+      "explanation": "Spatial hierarchies are how the visual world is actually organized: pixels form edges, edges form textures and corners, corners form object parts, parts form objects. CNNs mirror this structure by stacking layers — early layers detect edges, middle layers detect parts, deep layers detect whole objects. Each layer's receptive field is larger than the last, so deeper layers integrate information from wider regions. This hierarchical decomposition is why CNNs generalize well: the building blocks are shared across objects."
+    },
+    {
+      "question": "Another name for the channels axis of a feature map is the __________ __________.",
+      "type": "blank",
+      "answer": "Depth Axis",
+      "explanation": "Depth axis, channels axis, and feature axis all refer to the same dimension — the one that indexes different filters or feature detectors. The term 'depth' comes from visualizing a feature map as a 3D block: height and width are spatial, and depth stacks the different filter responses. Don't confuse 'depth' here (number of channels) with 'depth' of the network (number of layers). Context usually makes it clear, but the overloaded terminology trips up beginners regularly."
+    },
+    {
+      "question": "Learned pattern detectors in a convolution layer that each produce one channel in the output feature map are called __________.",
+      "type": "blank",
+      "answer": "Filters",
+      "explanation": "Each filter in a Conv2D layer is a small tensor (e.g., 3×3×input_channels) that detects one specific pattern. If a layer has 64 filters, the output has 64 channels — each channel is one filter's response map across the spatial grid. During training, filters self-organize: some become edge detectors, others detect colors or textures. The number of filters is a key architecture decision — more filters means more capacity but also more parameters. Typical progressions are 32 → 64 → 128 as you go deeper."
+    },
+    {
+      "question": "A 2D map showing how strongly one filter responds at different input locations is called a __________ __________.",
+      "type": "blank",
+      "answer": "Response Map",
+      "explanation": "Each channel in a feature map is a response map — a 2D grid where high values mean 'this filter's pattern was detected strongly here.' If filter k is an edge detector, its response map will light up along edges in the image. This is the fundamental mechanism of convolutions: slide a pattern template across the image and record how well it matches at each position. Visualizing response maps is one of the best ways to understand what a trained ConvNet has actually learned."
+    },
+    {
+      "question": "The size of the local window extracted by a convolution operation, such as 3×3 or 5×5, is called __________ __________.",
+      "type": "blank",
+      "answer": "Patch Size",
+      "explanation": "Patch size (or kernel size) determines the local receptive field of each convolution operation. 3×3 is the dominant choice in modern architectures — VGGNet showed that stacking two 3×3 convolutions gives the same receptive field as one 5×5 but with fewer parameters and more nonlinearity. 1×1 convolutions are also common for channel mixing without spatial interaction. Larger patches like 7×7 sometimes appear in the very first layer to capture low-level features at a broader scale."
+    },
+    {
+      "question": "The number of filters produced by a convolution layer, which determines the depth of the output feature map, is called __________ __________.",
+      "type": "blank",
+      "answer": "Output Depth",
+      "explanation": "Output depth is set by the first argument to Conv2D — Conv2D(64, 3) produces 64 output channels. This is one of the most important hyperparameters in a ConvNet. Too few filters and the network can't represent enough patterns; too many and you waste compute and risk overfitting. A common heuristic: double the filter count each time you halve the spatial dimensions, keeping total compute roughly constant per layer. So you might see 32 → 64 → 128 as spatial size goes from 150 → 75 → 37."
+    },
+    {
+      "question": "Information loss near image edges caused by convolutions shrinking the spatial dimensions is called __________ __________.",
+      "type": "blank",
+      "answer": "Border Effects",
+      "explanation": "A 3×3 convolution on a 5×5 input can only produce a 3×3 output without padding — the filter can't be centered on border pixels because it would extend outside the image. Each convolution layer loses one pixel on each side (for 3×3), and this compounds across many layers. For a deep network with 10 convolution layers, you'd lose 20 pixels of spatial extent. This is why padding exists: it preserves spatial dimensions so information near borders isn't progressively eroded."
+    },
+    {
+      "question": "Adding pixels around the border of an input so convolutions preserve more spatial information is called __________.",
+      "type": "blank",
+      "answer": "Padding",
+      "explanation": "Padding surrounds the input with extra values (usually zeros) so the convolution filter can be applied at border positions. Without padding, each 3×3 convolution shrinks the feature map by 2 pixels in each dimension. With 'same' padding, the output size equals the input size. Padding is almost always used in practice — it's rare to intentionally let spatial dimensions shrink at every layer. The zero values are harmless because the filter learns to work with them during training."
+    },
+    {
+      "question": "A convolution setting with no padding, so output spatial dimensions shrink, is called __________ __________.",
+      "type": "blank",
+      "answer": "Valid Padding",
+      "explanation": "Valid padding means 'only use valid positions' — the filter never hangs off the edge. For a k×k filter on an n×n input, the output is (n-k+1)×(n-k+1). It's called 'valid' because every output value is computed from a complete, fully overlapping patch. This is the default in some frameworks. While it causes spatial shrinkage, it avoids introducing artificial zero-padding artifacts. In practice, most modern architectures use 'same' padding in convolution layers and rely on pooling for intentional downsampling."
+    },
+    {
+      "question": "A convolution setting that pads the input so the output keeps the same height and width is called __________ __________.",
+      "type": "blank",
+      "answer": "Same Padding",
+      "explanation": "Same padding adds just enough zeros around the border so the output spatial dimensions match the input. For a 3×3 filter, that's 1 pixel of padding on each side. This is the standard choice in modern ConvNets because it decouples the filter size from the spatial dimension change — you can choose your filter size for pattern detection without worrying about shrinkage. Downsampling is then handled explicitly by pooling or strided convolutions, giving you clearer architectural control."
+    },
+    {
+      "question": "The step size with which a convolution window moves across the input is called __________.",
+      "type": "blank",
+      "answer": "Strides",
+      "explanation": "Stride determines how many pixels the filter jumps between positions. Stride 1 (the default) means the filter moves one pixel at a time, producing the densest output. Stride 2 means it skips every other position, halving the output dimensions — effectively downsampling. Higher strides reduce computation but lose spatial resolution. The choice between max pooling and stride-2 convolutions for downsampling is an active design decision: pooling is parameter-free, while strided convolutions learn what to keep."
+    },
+    {
+      "question": "Reducing the spatial resolution of feature maps while preserving useful information is called __________.",
+      "type": "blank",
+      "answer": "Downsampling",
+      "explanation": "Downsampling is essential in ConvNets for three reasons: it increases the effective receptive field of deeper layers, it reduces computational cost, and it provides a form of local translation invariance. Without downsampling, deeper layers would still only see tiny local patches. The two main approaches — max pooling and strided convolutions — have different tradeoffs. Modern architectures often use strided convolutions, but max pooling remains popular and effective. Typically, spatial dimensions are halved 4-5 times from input to final feature map."
+    },
+    {
+      "question": "A downsampling operation that takes the maximum value in each local window is called __________ __________.",
+      "type": "blank",
+      "answer": "Max Pooling",
+      "explanation": "Max pooling with a 2×2 window and stride 2 is the classic downsampling operation. It selects the strongest activation in each 2×2 region, discarding the rest. This works well because in feature maps, the presence of a feature matters more than its exact position. Max pooling has no learnable parameters — it's a fixed operation — which makes it a structural choice rather than something that can overfit. The alternative, average pooling, tends to dilute strong signals and is less commonly used between layers."
+    },
+    {
+      "question": "A convolution with stride 2 that can also perform downsampling is called a __________ __ __________.",
+      "type": "blank",
+      "answer": "Stride 2 Convolution",
+      "explanation": "Stride-2 convolutions combine feature extraction and downsampling in a single operation — the filter both detects patterns and reduces spatial dimensions. Unlike max pooling, the downsampling is learned, so the network can optimize what information to preserve. ResNets and many modern architectures prefer strided convolutions over pooling. The tradeoff: strided convolutions add parameters, while max pooling is parameter-free. In practice, the performance difference is often small, and architecture choice matters more."
+    },
+    {
+      "question": "The gradual progression from simple features in early layers to complex concepts in deeper layers is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Feature Learning Hierarchy",
+      "explanation": "This hierarchy is what makes deep learning deep — it's not just about having many layers, but about each layer building on the previous one's abstractions. Layer 1 detects edges, layer 2 combines edges into textures and corners, layer 3 combines those into object parts, and so on. This compositional structure mirrors how humans describe visual concepts and is why CNNs are so effective: complex patterns are built from simpler ones, making the learning problem tractable at each level."
+    },
+    {
+      "question": "The small image classification dataset used in the chapter to demonstrate training on limited data is called the __________ __________ __________ __________.",
+      "type": "blank",
+      "answer": "Cats Versus Dogs Dataset",
+      "explanation": "The cats-vs-dogs dataset is a classic binary classification benchmark with images of varying sizes, poses, and backgrounds. The chapter uses a small subset (a few thousand images per class) to simulate a realistic small-data scenario. It's a great teaching dataset because the task is intuitive, the images are diverse enough to be challenging, and it demonstrates exactly why techniques like augmentation and transfer learning matter. The full dataset originated from a Kaggle competition and contains 25,000 images."
+    },
+    {
+      "question": "A Keras utility pattern for loading labeled images from folder structures is called __________ __________ __________ __________.",
+      "type": "blank",
+      "answer": "Image Dataset From Directory",
+      "explanation": "image_dataset_from_directory reads a folder where each subfolder is a class (e.g., cats/, dogs/) and creates a tf.data.Dataset that yields (image, label) batches. It handles resizing, batching, and label encoding automatically. This convention — one folder per class — is the de facto standard for organizing image datasets. The function also supports train/validation splits and various image formats. It returns a dataset object that can be chained with augmentation, prefetching, and other pipeline operations."
+    },
+    {
+      "question": "The portion of the dataset used to fit the model parameters is called the __________ __________.",
+      "type": "blank",
+      "answer": "Training Dataset",
+      "explanation": "The training set is what the model actually learns from — gradients are computed on training batches, and weights are updated accordingly. Its size directly impacts what the model can learn: too small and it overfits, too large and training is slow. The key rule: the model should never be evaluated on training data for decision-making. Training loss going down only means the model is fitting the data it sees; validation loss tells you whether it's actually learning generalizable patterns."
+    },
+    {
+      "question": "The held-out portion used to monitor generalization during training is called the __________ __________.",
+      "type": "blank",
+      "answer": "Validation Dataset",
+      "explanation": "The validation set is your feedback signal during development — you use it to tune hyperparameters, decide when to stop training, and compare architectures. It must never be used for gradient updates. A subtle trap: if you tune too many hyperparameters based on validation performance, you effectively 'overfit' to the validation set. That's why you also need a test set. Typical split ratios are 80/10/10 or 70/15/15 for train/val/test, but with very small datasets, you might use a larger training fraction."
+    },
+    {
+      "question": "The untouched data used for final evaluation is called the __________ __________.",
+      "type": "blank",
+      "answer": "Test Dataset",
+      "explanation": "The test set is your honest estimate of real-world performance — you only look at it once, after all development is done. If you look at test results and then go back and change your model, the test set is compromised and your estimate is optimistically biased. In practice, this discipline is hard to maintain, especially in Kaggle competitions where the leaderboard essentially functions as a test set that people optimize against. In production, the real test set is tomorrow's data."
+    },
+    {
+      "question": "A preprocessing step that normalizes image pixel values before training is called __________.",
+      "type": "blank",
+      "answer": "Rescaling",
+      "explanation": "Raw pixel values range from 0 to 255 (8-bit integers), but neural networks work best with small floating-point values. Rescaling by 1/255 maps pixels to [0, 1]. Some pretrained models expect different normalization — for example, ImageNet-pretrained models often use per-channel mean subtraction. Getting this wrong is a common bug: the model will still train, but performance will be noticeably worse because the input distribution doesn't match what the layers expect. Always match the preprocessing to the model's expectations."
+    },
+    {
+      "question": "The input processing workflow that loads, transforms, and feeds data to the model is called the __________ __________.",
+      "type": "blank",
+      "answer": "Data Pipeline",
+      "explanation": "A well-designed data pipeline — load images from disk, decode, resize, augment, batch, prefetch — can make the difference between GPU-bound training (good) and I/O-bound training (wasteful). tf.data provides the building blocks: map for transformations, batch for grouping, shuffle for randomization, prefetch for overlapping I/O with compute. The pipeline is lazy — it doesn't load everything into memory at once — which is essential for datasets that don't fit in RAM."
+    },
+    {
+      "question": "Preparing future batches ahead of time to improve training performance is called __________.",
+      "type": "blank",
+      "answer": "Prefetching",
+      "explanation": "Prefetching overlaps data loading with model execution: while the GPU processes batch N, the CPU prepares batch N+1. Without prefetching, the GPU sits idle during data loading — a pure waste. With tf.data, you add .prefetch(tf.data.AUTOTUNE) at the end of your pipeline. The AUTOTUNE setting lets TensorFlow dynamically decide how many batches to prepare ahead. This one line can dramatically speed up training, especially when augmentation or decoding is expensive."
+    },
+    {
+      "question": "A TensorFlow setting used to automatically tune performance for input pipeline operations such as prefetching is called __________.",
+      "type": "blank",
+      "answer": "AUTOTUNE",
+      "explanation": "tf.data.AUTOTUNE tells TensorFlow to dynamically adjust buffer sizes, parallelism, and prefetch counts based on runtime conditions. Instead of manually tuning how many threads to use for data loading or how many batches to prefetch, you let the framework figure it out. This is especially useful because optimal settings depend on hardware, dataset characteristics, and the rest of the pipeline. It's a good example of a reasonable default that handles most cases well."
+    },
+    {
+      "question": "The tendency of a model trained on few images to perform well on training data but poorly on new images is called __________.",
+      "type": "blank",
+      "answer": "Overfitting",
+      "explanation": "Overfitting is the central enemy when working with small datasets. A ConvNet with millions of parameters can easily memorize a few thousand images — training accuracy reaches 100% while validation accuracy plateaus or drops. The gap between training and validation performance is the overfitting diagnostic. Every technique in the second half of this chapter — augmentation, dropout, weight decay, pretrained models — attacks overfitting from a different angle. Recognizing and combating overfitting is arguably the most important practical skill in deep learning."
+    },
+    {
+      "question": "A regularization technique that creates varied training examples by applying random believable transformations to existing images is called __________ __________.",
+      "type": "blank",
+      "answer": "Data Augmentation",
+      "explanation": "Data augmentation is one of the most effective techniques for small datasets because it's essentially free data. Random flips, rotations, zooms, and crops create new training examples that are semantically identical but pixel-wise different. The network can't just memorize pixel patterns — it must learn features that are invariant to these transformations. Augmentation works because the transformations preserve the label: a horizontally flipped cat is still a cat. Choosing augmentations that make semantic sense is important — you wouldn't vertically flip text images."
+    },
+    {
+      "question": "Keras layers that perform random image transformations for augmentation are called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Data Augmentation Layers",
+      "explanation": "Keras provides layers like RandomFlip, RandomRotation, RandomZoom, and RandomContrast that can be added directly to your model. During training, they apply random transformations; during inference, they're automatically disabled. This is convenient because augmentation stays tied to the model — you can't accidentally forget it. These layers are differentiable (even though gradients don't flow through the randomness) and can run on the GPU, making them fast."
+    },
+    {
+      "question": "Stochastic image changes used during training to improve robustness and reduce overfitting are called __________ __________.",
+      "type": "blank",
+      "answer": "Random Transformations",
+      "explanation": "The key word is 'random' — every time the model sees the same image during training, it looks slightly different. This randomness forces the network to learn invariant features rather than memorizing specific pixel configurations. Common transformations include random horizontal flips, small rotations (±15°), slight zooms, brightness and contrast jitter, and random crops. The transformations should be plausible — they should produce images that could realistically occur. Too aggressive augmentation can hurt if transformed images no longer look like valid examples."
+    },
+    {
+      "question": "A data augmentation setup where augmentation layers are placed directly in the model and run on the GPU is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Inside The Model",
+      "explanation": "Placing augmentation layers inside the model means they become part of the computation graph and run on the GPU alongside convolution layers. The advantage: GPU-accelerated transformations can be very fast. The layers are automatically active during training and inactive during inference. The downside: augmentation now competes with model computation for GPU memory and cycles. For simple augmentations this is usually fine; for heavy augmentation pipelines, the CPU-based approach might be better."
+    },
+    {
+      "question": "A data augmentation setup where augmentation is applied in the dataset pipeline and usually runs on the CPU is called __________ __________ __________ __________.",
+      "type": "blank",
+      "answer": "Inside The Data Pipeline",
+      "explanation": "CPU-based augmentation in the tf.data pipeline runs in parallel with GPU model training — while the GPU trains on batch N, the CPU augments batch N+1. This is advantageous when augmentation is the bottleneck or when you want to fully utilize the GPU for model computation. The downside: the augmented data must be transferred to the GPU, and you need to manage the pipeline separately from the model. With prefetching, the data transfer overhead is usually hidden."
+    },
+    {
+      "question": "The hardware that can run model computation and sometimes in-model augmentation efficiently is called a __________.",
+      "type": "blank",
+      "answer": "GPU",
+      "explanation": "GPUs excel at the massively parallel matrix operations that dominate neural network training — convolutions, matrix multiplications, batch operations. A modern GPU can be 10-100x faster than a CPU for training. When augmentation layers are inside the model, they run on the GPU too, which is fast but consumes GPU memory. The GPU is almost always the bottleneck for model computation, which is why pipeline optimizations (prefetching, parallel data loading) focus on keeping the GPU fed and busy."
+    },
+    {
+      "question": "The hardware that often runs data pipeline augmentation in parallel is called a __________.",
+      "type": "blank",
+      "answer": "CPU",
+      "explanation": "CPUs handle the data pipeline: reading files from disk, decoding images, applying augmentation transforms, and batching. Modern CPUs with many cores can run these operations in parallel using tf.data's num_parallel_calls parameter. The CPU pipeline runs asynchronously from GPU model training, so the two overlap. If your CPU pipeline is slower than your GPU training step, training becomes I/O-bound — you'll see low GPU utilization. Adding more workers, simpler augmentation, or faster storage helps."
+    },
+    {
+      "question": "A regularization layer added before the classifier to further reduce overfitting on small image datasets is called __________.",
+      "type": "blank",
+      "answer": "Dropout",
+      "explanation": "Dropout randomly sets a fraction of activations to zero during training, forcing the network to not rely on any single feature. It's applied between the convolutional base and the dense classifier — typically with a rate of 0.5, meaning half the activations are dropped each forward pass. This is a powerful regularizer because it creates an implicit ensemble: each training step uses a different random subnetwork. During inference, all activations are used but scaled down, approximating the ensemble average."
+    },
+    {
+      "question": "A model previously trained on a large dataset whose learned visual features can be reused for a new task is called a __________ __________.",
+      "type": "blank",
+      "answer": "Pretrained Model",
+      "explanation": "Pretrained models are the single most important tool for small-dataset computer vision. A model trained on ImageNet (1.4 million images, 1000 classes) has already learned rich, general-purpose visual features — edges, textures, shapes, object parts. These features transfer remarkably well to new tasks, even very different ones. You don't need to learn what an edge looks like from your 2000 cat photos — you just reuse the edge detectors someone already trained. This is why transfer learning dominates practical CV."
+    },
+    {
+      "question": "Using the representations learned by a pretrained model to generate features for new samples and training only a new classifier on top is called __________ __________.",
+      "type": "blank",
+      "answer": "Feature Extraction",
+      "explanation": "Feature extraction treats the pretrained ConvNet as a fixed feature generator: pass your images through it, collect the output vectors, and train a simple classifier (like logistic regression or a small dense network) on those vectors. The convolutional base doesn't change at all. This is fast, requires minimal compute, and works surprisingly well because ImageNet features are very general. It's the go-to first approach for any small-dataset vision problem."
+    },
+    {
+      "question": "Reusing a pretrained model by unfreezing part of it and training it jointly with a newly added classifier on the new task is called __________ __________.",
+      "type": "blank",
+      "answer": "Fine Tuning",
+      "explanation": "Fine tuning goes beyond feature extraction by updating some of the pretrained weights to better fit your specific task. The recipe: first do feature extraction (frozen base, train classifier), then unfreeze the top layers of the base and continue training with a low learning rate. This two-stage approach is important — if you unfreeze too early, the randomly initialized classifier sends chaotic gradients into the base, destroying the pretrained features. Fine tuning typically yields a few percentage points improvement over pure feature extraction."
+    },
+    {
+      "question": "The convolution and pooling part of a pretrained ConvNet that serves as a reusable feature extractor is called the __________ __________.",
+      "type": "blank",
+      "answer": "Convolutional Base",
+      "explanation": "The convolutional base is everything except the final classifier — all the Conv2D and pooling layers that transform raw pixels into a rich feature representation. When doing transfer learning, you take this base from a pretrained model and discard its classifier (which was specific to ImageNet's 1000 classes). The base's output is a feature map or vector that encodes high-level visual information about the input image. This separation of base and classifier is a fundamental design pattern in modern CV."
+    },
+    {
+      "question": "Another name for the convolutional base of a pretrained vision model is the __________.",
+      "type": "blank",
+      "answer": "Backbone",
+      "explanation": "The term 'backbone' is ubiquitous in modern CV papers — you'll see phrases like 'ResNet-50 backbone' or 'EfficientNet backbone.' It emphasizes the role of the convolutional base as the structural foundation that everything else builds on. In object detection, the backbone extracts features, a neck combines multi-scale features, and a head produces predictions. The backbone choice is often the single most impactful architecture decision, which is why so much research focuses on better backbones."
+    },
+    {
+      "question": "The pretrained ConvNet architecture used in the chapter for feature extraction and fine tuning is called __________.",
+      "type": "blank",
+      "answer": "Xception",
+      "explanation": "Xception (Extreme Inception) was designed by Chollet himself, which is why it features prominently in his book. It replaces standard convolutions with depthwise separable convolutions — processing spatial and channel information separately — which is far more parameter-efficient. Xception achieves strong accuracy on ImageNet while being leaner than alternatives. For transfer learning, it provides an excellent balance of powerful features and reasonable model size. Its architecture influenced later designs like MobileNet and EfficientNet."
+    },
+    {
+      "question": "A popular pretrained vision architecture mentioned alongside Xception is __________.",
+      "type": "blank",
+      "answer": "ResNet",
+      "explanation": "ResNet (Residual Network) introduced skip connections that let gradients flow directly through the network, enabling training of extremely deep architectures (50, 101, even 152 layers). The key insight: it's easier to learn a residual (the difference from the input) than a complete mapping. ResNet won ImageNet 2015 and remains one of the most widely used backbones. Its variants (ResNet-50, ResNet-101) are standard baselines in virtually every CV paper. The skip connection idea has influenced nearly every architecture since."
+    },
+    {
+      "question": "Another widely used pretrained vision architecture mentioned in the chapter is __________.",
+      "type": "blank",
+      "answer": "EfficientNet",
+      "explanation": "EfficientNet uses neural architecture search to find an optimal baseline architecture, then scales it up systematically across width, depth, and resolution. This compound scaling approach is more principled than ad hoc scaling. EfficientNet models achieve excellent accuracy-efficiency tradeoffs: EfficientNet-B0 is compact and fast, while EfficientNet-B7 is massive and highly accurate. The family demonstrates that architecture design can be treated as an optimization problem, not just human intuition."
+    },
+    {
+      "question": "A pretrained base whose weights are kept fixed while a new classifier is trained on top is called a __________ __________ __________.",
+      "type": "blank",
+      "answer": "Frozen Model Base",
+      "explanation": "Freezing means setting trainable=False on the base model, so its weights don't update during training. This is essential for the feature extraction stage: you want the pretrained features to stay intact while the new classifier learns to use them. If you train both simultaneously from the start, the randomly initialized classifier generates noisy gradients that corrupt the pretrained weights. Freezing also speeds up training dramatically since you only backpropagate through the small classifier."
+    },
+    {
+      "question": "Changing a previously frozen pretrained base so its weights become trainable again for fine tuning is called __________.",
+      "type": "blank",
+      "answer": "Unfreezing",
+      "explanation": "Unfreezing is the second stage of the transfer learning recipe: after the classifier has converged on the frozen features, you unfreeze some or all of the base layers and resume training with a much smaller learning rate. The timing matters — unfreeze too early and you destroy pretrained features, too late and you waste time on a suboptimal frozen representation. In Keras, you set layer.trainable = True for the layers you want to unfreeze, then recompile the model (important — compilation locks in trainability)."
+    },
+    {
+      "question": "The newly added dense part trained on top of a pretrained convolutional base is called a __________ __________.",
+      "type": "blank",
+      "answer": "Custom Classifier",
+      "explanation": "The custom classifier replaces the original ImageNet classifier (which output 1000 classes) with one suited to your task — maybe just a single sigmoid output for binary classification, or a softmax over your 10 classes. It's typically small: GlobalAveragePooling2D, maybe one Dense layer, then the output layer. Keeping it simple is important because this part trains from scratch on your small dataset — a large classifier would overfit. The pretrained base does the heavy lifting of feature extraction."
+    },
+    {
+      "question": "A layer type that the chapter says should not be unfrozen during fine tuning is __________.",
+      "type": "blank",
+      "answer": "BatchNormalization",
+      "explanation": "BatchNormalization layers maintain running statistics (mean and variance) of their inputs, computed during training. When you unfreeze them during fine tuning, they start updating these statistics based on your small dataset, which can badly destabilize the pretrained features. The batch statistics from your 2000 images are noisy and very different from ImageNet statistics. Chollet's advice: always keep BatchNormalization layers frozen. In Keras, you need to explicitly set them to non-trainable even after unfreezing the parent model."
+    },
+    {
+      "question": "Fine tuning only the more specialized higher layers of the pretrained base rather than all layers is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Partial Fine Tuning",
+      "explanation": "Partial fine tuning is the standard approach — you unfreeze the top N layers of the base and keep the rest frozen. The rationale: lower layers learn generic features (edges, textures) that transfer universally, while higher layers learn task-specific features that may not match your new task. By only fine tuning the higher layers, you adapt the task-specific representations while preserving the universal foundation. How many layers to unfreeze is a hyperparameter — start with the last block and experiment."
+    },
+    {
+      "question": "Lower-level reusable visual features learned in early convolution layers are called __________ __________.",
+      "type": "blank",
+      "answer": "Generic Features",
+      "explanation": "Generic features — edges, corners, textures, color blobs — are the visual alphabet shared across nearly all image tasks. They transfer universally because edges are edges whether you're classifying cats, detecting tumors, or reading license plates. These features are learned in the first few layers of any ConvNet trained on a large dataset. This universality is why transfer learning works so well: the generic features from ImageNet are useful for almost any visual task, even ones with very different image types."
+    },
+    {
+      "question": "Higher-level task-specific features learned in later layers of a pretrained model are called __________ __________.",
+      "type": "blank",
+      "answer": "Specialized Features",
+      "explanation": "Specialized features are combinations of generic features that represent concepts relevant to the specific training task — for an ImageNet model, these might include 'dog face,' 'car wheel,' or 'text on sign.' These higher-level features may or may not be useful for your new task. If your task is related (e.g., classifying dog breeds), they transfer well. If your task is very different (e.g., classifying satellite imagery), the specialized layers are less useful and fine tuning becomes more important."
+    },
+    {
+      "question": "A small update size used during fine tuning to avoid damaging useful pretrained representations is called a __________ __________ __________.",
+      "type": "blank",
+      "answer": "Low Learning Rate",
+      "explanation": "During fine tuning, you typically use a learning rate 10-100x smaller than initial training — something like 1e-5 instead of 1e-3. The pretrained weights are in a good region of parameter space; you want to gently nudge them toward your task, not catapult them into a random region. Large learning rates during fine tuning cause catastrophic forgetting — the network rapidly loses its pretrained knowledge. Some practitioners use even more sophisticated approaches like discriminative learning rates (smaller rates for lower layers)."
+    },
+    {
+      "question": "The broader practice of adapting a previously trained model to a new task through feature extraction or fine tuning is called __________ __________.",
+      "type": "blank",
+      "answer": "Model Reuse",
+      "explanation": "Model reuse is the umbrella concept covering all forms of transfer learning in vision: feature extraction, fine tuning, and variations like knowledge distillation. It's the dominant paradigm in practical computer vision — training a ConvNet from scratch on a small dataset is almost never the right approach when pretrained models exist. The success of model reuse demonstrates that visual features are largely universal, and the real challenge is adapting general knowledge to specific domains. This insight has reshaped how the field approaches new vision problems."
+    }
+  ]
+}
