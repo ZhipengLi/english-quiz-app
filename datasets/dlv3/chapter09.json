@@ -1,0 +1,275 @@
+{
+  "text": "Deep Learning with Python - Chapter 9: Advanced Deep Learning for Computer Vision",
+  "quiz": [
+    {
+      "question": "The full set of choices that define how a model is built, including which layers are used, how they are configured, and how they are connected, is called __________ __________.",
+      "type": "blank",
+      "answer": "Model Architecture",
+      "explanation": "Architecture is the blueprint — it determines what the model can possibly learn before any data is seen. Choosing between a three-layer ConvNet and a fifty-layer ResNet isn't just a size decision; it fundamentally changes the hypothesis space. Architecture choices include layer types, their ordering, how many filters at each stage, what connections exist between layers, and what normalization or regularization is applied. In practice, architecture design has shifted from hand-crafting (VGG, ResNet) toward search-based methods (NAS, EfficientNet), but understanding the design principles remains essential for interpreting and debugging models."
+    },
+    {
+      "question": "The space of possible functions that gradient descent can search over, as determined by the model architecture and its weights, is called __________ __________.",
+      "type": "blank",
+      "answer": "Hypothesis Space",
+      "explanation": "The hypothesis space is perhaps the most important concept in understanding why architecture matters. A model can only learn functions that live in its hypothesis space — if your architecture can't represent the true input-output mapping, no amount of training data or optimization will help. A linear model's hypothesis space is all linear functions; a deep ConvNet's hypothesis space is vastly richer. Architecture design is really about shaping this space: making it large enough to contain the solution but structured enough that gradient descent can find it efficiently."
+    },
+    {
+      "question": "A property assumed by convolution layers, meaning relevant image patterns can appear in different locations and still matter in the same way, is called __________ __________.",
+      "type": "blank",
+      "answer": "Translation Invariant",
+      "explanation": "Translation invariance is the architectural prior that makes convolutions so powerful for vision. By sharing weights across all spatial positions, a convolution layer encodes the assumption that 'what matters is what pattern appears, not where it appears.' This is mostly correct for natural images — a cat ear is a cat ear regardless of position. But it's not always true: in medical imaging, the location of an anomaly matters; in document analysis, text position carries meaning. When the assumption breaks down, architectures that can reason about position (like Vision Transformers with positional encodings) may have an advantage."
+    },
+    {
+      "question": "A general architecture formula for complex systems in which modules are organized into a hierarchy and reused in multiple places is called __________ __________ __________ __________.",
+      "type": "blank",
+      "answer": "Modularity Hierarchy And Reuse",
+      "explanation": "This principle extends far beyond deep learning — it's how all complex engineered systems are built. Software uses functions, classes, and packages; hardware uses components, boards, and subsystems; ConvNets use layers, blocks, and stages. The key insight: by reusing the same module in multiple places, you get two benefits simultaneously — you reduce the total number of unique components to design, and you introduce structural priors that constrain the search space. In ConvNets, a residual block reused ten times is both simpler to specify and easier to train than ten unique layer configurations."
+    },
+    {
+      "question": "The modules used in deep learning to structure the search space for gradient descent are called __________.",
+      "type": "blank",
+      "answer": "Layers",
+      "explanation": "Layers are the atomic building blocks of neural networks — each one is a differentiable function with learnable parameters. Conv2D, Dense, BatchNormalization, Dropout — these are all layers. The layer abstraction is powerful because it standardizes the interface: every layer takes a tensor in and produces a tensor out, and every layer can compute gradients. This composability is what lets you stack layers into arbitrarily complex architectures. In modern practice, individual layers are rarely the unit of architectural thinking — blocks of layers are."
+    },
+    {
+      "question": "Repeated groups of layers used as higher-level modules inside ConvNet architectures are called __________.",
+      "type": "blank",
+      "answer": "Blocks",
+      "explanation": "Blocks are the real unit of modern architecture design. A ResNet block might be Conv2D → BatchNorm → ReLU → Conv2D → BatchNorm → Add → ReLU. This entire block is repeated dozens of times with varying filter counts. Thinking in blocks rather than individual layers is what makes deep architectures manageable — you design one block, then specify how many times it repeats and how it scales. Most architecture papers are really about block design: the residual block, the inception block, the inverted bottleneck block, the transformer block."
+    },
+    {
+      "question": "Reusable groups of operations or layers that help structure a model are called __________.",
+      "type": "blank",
+      "answer": "Modules",
+      "explanation": "Modules is the general term encompassing layers, blocks, and any reusable computational unit. In PyTorch, everything inherits from nn.Module — layers, blocks, even entire models. The concept emphasizes encapsulation: a module has a defined interface (input shape → output shape), internal state (weights), and behavior (forward pass). You can compose modules into larger modules without knowing their internals. This mirrors good software engineering — the module boundary is where complexity is managed."
+    },
+    {
+      "question": "Pyramid-like structures in ConvNets where feature maps become smaller spatially and deeper in channels as layers go deeper are called __________ __________.",
+      "type": "blank",
+      "answer": "Feature Hierarchies",
+      "explanation": "Feature hierarchies are the signature structure of ConvNets: spatial dimensions shrink (150→75→37→18→9) while channel dimensions grow (32→64→128→256→512). This pyramid shape reflects what's happening representationally — early layers encode many simple features at high spatial resolution, while deep layers encode fewer but more complex features at low resolution. The total information bandwidth stays roughly constant across layers. Object detection architectures like FPN explicitly exploit this hierarchy by making predictions at multiple scales."
+    },
+    {
+      "question": "The reuse of learned features across deeper layers, which encourages abstraction, is called __________ __________.",
+      "type": "blank",
+      "answer": "Feature Reuse",
+      "explanation": "Feature reuse means that higher layers build on top of features learned by lower layers rather than learning everything from scratch. An edge detector in layer 1 is reused by the texture detector in layer 2, which is reused by the object-part detector in layer 3. This cascading reuse is what makes deep networks more efficient than shallow ones — they factor complex patterns into composable parts. DenseNet takes this idea to its extreme by connecting every layer to every subsequent layer, maximizing feature reuse. Residual connections also facilitate feature reuse by giving deeper layers direct access to earlier representations."
+    },
+    {
+      "question": "Reuse at a higher level, where repeated structure helps the model learn more general patterns, is called __________.",
+      "type": "blank",
+      "answer": "Abstraction",
+      "explanation": "Abstraction in neural networks mirrors abstraction in mathematics and software: it's about identifying common structure and factoring it out. When a ConvNet reuses the same edge detectors to build texture detectors, and the same texture detectors to build object-part detectors, it's performing abstraction — finding the reusable primitives that compose into higher-level concepts. This is why deep networks generalize better than shallow ones with the same parameter count: they learn a hierarchy of reusable abstractions rather than monolithic input-to-output mappings."
+    },
+    {
+      "question": "Systematic experiments where parts of a system are removed or simplified to determine which components actually matter for performance are called __________ __________.",
+      "type": "blank",
+      "answer": "Ablation Studies",
+      "explanation": "Ablation studies are the scientific method applied to architecture design. You start with a full system, remove one component at a time, and measure the impact. If removing residual connections drops accuracy by 5%, they matter. If removing a particular augmentation has no effect, you can simplify. Good papers always include ablation tables. The term comes from neuroscience, where researchers lesioned brain regions to understand function. In practice, ablation studies prevent 'kitchen sink' architectures where unnecessary components accumulate because nobody tested whether they help."
+    },
+    {
+      "question": "Connections that add the input of a layer block back to its output, creating an information shortcut that helps gradients propagate through deep networks, are called __________ __________.",
+      "type": "blank",
+      "answer": "Residual Connections",
+      "explanation": "Residual connections are arguably the single most important architectural innovation in deep learning after the basic ConvNet itself. The idea is deceptively simple: output = F(x) + x, where F is a block of layers. Instead of learning the full mapping, F only needs to learn the residual — the difference between the desired output and the input. If the optimal transformation is close to identity (common in deep networks), F just needs to learn a small perturbation. This makes optimization dramatically easier and enables networks with hundreds of layers. The idea appears in virtually every modern architecture."
+    },
+    {
+      "question": "The problem in very deep networks where gradient information becomes overwhelmed as it passes through many layers, making training fail, is called __________ __________.",
+      "type": "blank",
+      "answer": "Vanishing Gradients",
+      "explanation": "Vanishing gradients plagued deep networks for decades — gradients shrink exponentially as they backpropagate through many layers, so early layers barely update. Before residual connections, networks deeper than about 20 layers were nearly impossible to train. The gradient signal from the loss had to pass through every layer sequentially, and each layer's backward pass could attenuate it. Residual connections solve this by providing a direct path for gradients: even if the gradient through the block's layers vanishes, it flows freely through the skip connection. BatchNormalization also helps by keeping activations in a well-scaled range."
+    },
+    {
+      "question": "The path created by a residual connection that lets information and gradients bypass noisy or destructive layers is called an __________ __________.",
+      "type": "blank",
+      "answer": "Information Shortcut",
+      "explanation": "The shortcut metaphor is useful: think of a deep network as a long highway with many toll booths (layers). Each toll booth can distort or block information. A residual connection is like a parallel express lane — information can bypass problematic layers entirely. During training, if a block of layers is producing noisy or harmful updates, the shortcut ensures the input signal survives. During backpropagation, gradients have a clean path back to early layers. This is why residual networks can be hundreds of layers deep — the shortcuts guarantee that information can always flow."
+    },
+    {
+      "question": "A family of models introduced in 2015 that popularized residual connections is called __________.",
+      "type": "blank",
+      "answer": "ResNet",
+      "explanation": "ResNet (Residual Network) by He et al. won the 2015 ImageNet competition and fundamentally changed how deep networks are built. The original paper showed that a 152-layer ResNet outperformed shallower networks, which was previously impossible due to vanishing gradients. ResNet variants (ResNet-18, 34, 50, 101, 152) remain among the most widely used backbones. The paper is one of the most cited in all of deep learning. Beyond the specific architecture, ResNet's lasting contribution is the residual connection itself — it's now a default component in nearly every deep architecture, including transformers."
+    },
+    {
+      "question": "The use of a 1×1 convolution to change the residual branch so its shape matches the main branch output is called a __________ __________.",
+      "type": "blank",
+      "answer": "Residual Projection",
+      "explanation": "When a block changes the number of channels or spatial dimensions, the input x can't simply be added to the output F(x) because their shapes differ. A 1×1 convolution (sometimes with stride 2 for spatial downsampling) projects x to match the output shape. This is called a projection shortcut. It adds a few parameters, but only at the blocks where dimensions change — most blocks use identity shortcuts (no projection needed). The projection ensures that the fundamental residual principle — output = F(x) + project(x) — works regardless of dimension changes."
+    },
+    {
+      "question": "A convolution layer used to linearly project a residual tensor to the right number of channels or the right spatial scale is called a __ __ __ __________.",
+      "type": "blank",
+      "answer": "1 By 1 Conv2D",
+      "explanation": "A 1×1 convolution has no spatial extent — it operates on each pixel position independently, mixing information only across channels. It's essentially a per-pixel Dense layer. This makes it perfect for three uses: changing the number of channels (projection), combining channel information without spatial mixing, and adding nonlinearity cheaply (when followed by an activation). In residual blocks, 1×1 convolutions serve as the projection in bottleneck designs: 1×1 to reduce channels, 3×3 to process spatially, 1×1 to expand channels back. Despite the small kernel, 1×1 convolutions can be computationally significant because they operate on every spatial position."
+    },
+    {
+      "question": "A convolution or pooling setting used to avoid shrinking spatial dimensions because of padding effects is called __________ __________.",
+      "type": "blank",
+      "answer": "Padding Same",
+      "explanation": "padding='same' ensures output spatial dimensions match the input by adding zero-padding around the borders. This is critical in residual networks — if convolutions shrink spatial dimensions unpredictably, the skip connection shapes won't match and addition fails. By using 'same' padding in all convolution layers within a block, you keep spatial dimensions stable. Downsampling is then done explicitly and intentionally, usually at block boundaries with stride-2 convolutions. This separation of concerns — padding for dimension stability, strides for intentional downsampling — makes architectures cleaner and easier to reason about."
+    },
+    {
+      "question": "A pooling operation applied after convolution blocks to reduce each feature map to a single value is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Global Average Pooling",
+      "explanation": "Global average pooling collapses a (H, W, C) feature map into a (C,) vector by averaging over all spatial positions in each channel. It replaces the Flatten + Dense approach that older architectures used, with several advantages: no extra parameters, built-in spatial invariance, and it acts as a regularizer. The intuition is that if channel k represents 'cat-ness,' then the spatial average of channel k summarizes 'how much cat is in the image overall.' This layer is now standard as the bridge between the convolutional base and the classifier in virtually all modern architectures."
+    },
+    {
+      "question": "A layer that adaptively normalizes activations during training using batch statistics and during inference using moving averages learned during training is called __________ __________.",
+      "type": "blank",
+      "answer": "Batch Normalization",
+      "explanation": "Batch normalization normalizes each channel's activations to zero mean and unit variance within each training batch, then applies a learned scale and shift. This has several effects: it stabilizes the distribution of inputs to each layer, it smooths the loss landscape (making optimization easier), and it acts as a mild regularizer (because batch statistics are noisy). The training/inference asymmetry is important — during training it uses batch statistics, during inference it uses exponential moving averages accumulated during training. This dual behavior is why frozen BatchNorm matters for fine tuning."
+    },
+    {
+      "question": "The Keras layer that implements batch normalization is called __________.",
+      "type": "blank",
+      "answer": "BatchNormalization",
+      "explanation": "In Keras, BatchNormalization() is the standard call. Key parameters include axis (which dimension to normalize — usually the channel axis), momentum (how fast the moving averages update, default 0.99), and epsilon (small constant for numerical stability). The layer has four internal variables: gamma and beta (learned scale and shift), and moving_mean and moving_variance (running statistics). When you set trainable=False for fine tuning, gamma and beta stop updating, but crucially, the moving statistics also stop updating — which is exactly what you want to preserve pretrained behavior."
+    },
+    {
+      "question": "The original explanation proposed for why batch normalization helps, though the chapter notes this is not actually well understood, is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Internal Covariate Shift",
+      "explanation": "Internal covariate shift was the story told in the original 2015 BatchNorm paper: each layer's input distribution shifts as preceding layers' weights change, and normalization fixes this. It's a compelling narrative, but subsequent research has shown it's probably not the real explanation. A 2018 paper by Santurkar et al. showed that BatchNorm works primarily by smoothing the loss landscape, making gradients more predictive and optimization steps more reliable. The lesson: in deep learning, techniques often work for different reasons than initially proposed. Empirical effectiveness matters more than theoretical justification."
+    },
+    {
+      "question": "The flow of gradient information backward through a network, which batch normalization helps improve, is called __________ __________.",
+      "type": "blank",
+      "answer": "Gradient Propagation",
+      "explanation": "Healthy gradient propagation is the fundamental requirement for training deep networks. Gradients need to flow from the loss back through every layer to update weights — if they vanish, explode, or become pathologically noisy, training fails. Batch normalization helps by keeping activations in a well-conditioned range, preventing the extreme values that cause gradient problems. Residual connections help by providing alternative gradient paths. Together, these two techniques are what make networks with 50-150+ layers trainable. Understanding gradient flow is essential for diagnosing training failures."
+    },
+    {
+      "question": "A learned additive term in Dense or Conv2D layers that can often be omitted when batch normalization is used is called a __________ __________.",
+      "type": "blank",
+      "answer": "Bias Vector",
+      "explanation": "Every Dense and Conv2D layer has an optional bias vector — a learnable constant added to each output unit. When batch normalization follows a layer, the normalization step subtracts the mean, which eliminates any constant offset the bias would have added. So the bias is redundant: it gets absorbed into the normalization. Removing it with use_bias=False saves a small number of parameters and avoids a meaningless degree of freedom. It's a minor optimization, but it reflects good understanding of how the components interact."
+    },
+    {
+      "question": "A layer setting used when batch normalization follows a layer, since the normalization step makes the bias less necessary, is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Use Bias False",
+      "explanation": "Setting use_bias=False in Conv2D or Dense when followed by BatchNormalization is a common best practice. The parameter saving is small — for a Conv2D with 128 filters, you save 128 parameters — but it demonstrates understanding of the mathematics. BatchNormalization first normalizes (subtract mean, divide by std), then applies its own learned shift (beta parameter), which serves exactly the same role as the bias. Having both is redundant. You'll see this pattern consistently in well-written model code and official implementations."
+    },
+    {
+      "question": "The recommended ordering where normalization is applied before the activation such as ReLU is called __________ __________ __________ __________.",
+      "type": "blank",
+      "answer": "Activation After Batch Normalization",
+      "explanation": "The standard pattern is Conv2D → BatchNormalization → ReLU. Normalizing before the activation ensures the input to ReLU is centered around zero with unit variance, which means roughly half the values are positive (passed through) and half are negative (zeroed out). If you put ReLU first, all values are already non-negative, and normalization operates on a skewed distribution. There's been debate about this ordering — some papers explore pre-activation residual blocks where BN and ReLU come before the convolution — but Conv→BN→ReLU remains the most common pattern in practice."
+    },
+    {
+      "question": "The process of adapting a pretrained model, where the chapter recommends keeping BatchNormalization layers frozen, is called __________ __________.",
+      "type": "blank",
+      "answer": "Fine Tuning",
+      "explanation": "Fine tuning means unfreezing some pretrained layers and continuing training with a low learning rate on your new data. The critical detail for BatchNormalization: even when you unfreeze other layers, keep BN layers frozen. If BN layers are unfrozen, they start computing new running statistics from your small dataset, which are noisy and misaligned with the pretrained weights. This can destabilize the entire network. In Keras, after unfreezing the base model, you must explicitly loop through layers and set BN layers' trainable attribute to False before recompiling."
+    },
+    {
+      "question": "The practice of setting BatchNormalization layers as not trainable during fine tuning so their running statistics do not drift is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Frozen Batch Normalization",
+      "explanation": "Frozen BN means trainable=False on all BatchNormalization layers. This freezes both the learned parameters (gamma, beta) and the running statistics (moving mean, moving variance). The running statistics are the critical part — they encode the distribution of activations the pretrained model expects. If these drift to match your small dataset's statistics, the pretrained convolution weights that were calibrated to the original statistics produce mismatched outputs. This is one of the most common and subtle mistakes in transfer learning — the model trains but performance is unexpectedly poor."
+    },
+    {
+      "question": "A convolution pattern that separates spatial feature learning from channel-wise feature learning and is implemented in Keras as SeparableConv2D is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Depthwise Separable Convolutions",
+      "explanation": "Depthwise separable convolutions factorize a standard convolution into two steps: first learn spatial patterns within each channel independently (depthwise), then learn how to combine channels (pointwise 1×1). This factorization dramatically reduces parameters and computation — for a 3×3 convolution with 256 input and 256 output channels, the reduction is roughly 9x. The insight is that spatial correlations and cross-channel correlations can be learned separately without losing much representational power. Xception, MobileNet, and EfficientNet all rely on this idea."
+    },
+    {
+      "question": "The Keras depthwise separable convolution layer that can often replace Conv2D with fewer parameters and computations is called __________.",
+      "type": "blank",
+      "answer": "SeparableConv2D",
+      "explanation": "SeparableConv2D is nearly a drop-in replacement for Conv2D — same interface, same padding and stride options, but factored internally into depthwise and pointwise steps. In practice, you can often swap Conv2D for SeparableConv2D throughout a model and get comparable or better accuracy with significantly fewer parameters. This is especially valuable for small datasets where parameter efficiency directly translates to less overfitting. The layer is particularly effective in mid-to-deep layers where channel counts are high — that's where the parameter savings are largest."
+    },
+    {
+      "question": "The first part of a depthwise separable convolution, which learns spatial patterns independently within each channel, is called a __________ __________.",
+      "type": "blank",
+      "answer": "Depthwise Convolution",
+      "explanation": "A depthwise convolution applies a separate spatial filter to each input channel — if you have 256 channels, you have 256 independent 3×3 filters, each operating on one channel. This learns spatial patterns (edges, textures) within each feature channel but doesn't mix information between channels at all. The parameter count is just kernel_size × kernel_size × num_channels, compared to kernel_size × kernel_size × input_channels × output_channels for a standard convolution. The spatial-only constraint is what makes it efficient — cross-channel mixing is deferred to the pointwise step."
+    },
+    {
+      "question": "The second part of a depthwise separable convolution, which learns how to combine information across channels, is called a __________ __________.",
+      "type": "blank",
+      "answer": "Pointwise Convolution",
+      "explanation": "A pointwise convolution is simply a 1×1 convolution — it operates on each spatial position independently, combining information across all input channels to produce output channels. After the depthwise step has extracted spatial features independently per channel, the pointwise step learns which combinations of channels are meaningful. Together, the depthwise and pointwise steps approximate what a standard convolution does in a single operation, but with far fewer parameters. The two-step factorization is analogous to low-rank matrix factorization — it exploits structure in the weight tensor."
+    },
+    {
+      "question": "Features that describe interactions across channels rather than across nearby spatial positions are called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Channel Wise Features",
+      "explanation": "Channel-wise features capture relationships like 'when the edge detector in channel 5 fires at the same location as the texture detector in channel 12, that indicates fur.' Standard convolutions learn spatial and channel interactions simultaneously. Depthwise separable convolutions separate them: the depthwise step handles spatial patterns, and the pointwise step handles channel interactions. This separation works because spatial patterns and channel correlations are somewhat independent — knowing that an edge exists (spatial) is partially separable from knowing which other features co-occur with it (channel)."
+    },
+    {
+      "question": "The ability of a layer or model to represent useful functions, which the chapter says remains comparable for depthwise separable convolutions versus regular convolutions, is called __________ __________.",
+      "type": "blank",
+      "answer": "Representational Power",
+      "explanation": "Representational power asks: what functions can this model express? A key claim in the chapter is that depthwise separable convolutions have representational power comparable to regular convolutions despite having far fewer parameters. This seems paradoxical, but it follows from the factorization argument — most of the parameters in a standard convolution are redundant because spatial and channel patterns are approximately separable. Removing redundant capacity doesn't reduce what the model can represent; it just removes duplicate ways of representing the same thing. In practice, the similar representational power is confirmed by comparable accuracy."
+    },
+    {
+      "question": "A training advantage of depthwise separable convolutions noted in the chapter is __________ __________.",
+      "type": "blank",
+      "answer": "Faster Convergence",
+      "explanation": "Depthwise separable convolutions often converge faster than standard convolutions — they reach good accuracy in fewer training steps. This is because the factored parameter space is more efficiently structured: instead of searching a large, redundant parameter space, optimization navigates a compact, well-conditioned one. Fewer parameters also mean each parameter update is based on more signal relative to noise. The convergence advantage is separate from the wall-clock speed advantage — even if each step takes the same time, you need fewer steps total."
+    },
+    {
+      "question": "The tendency of depthwise separable convolutions to reduce overfitting risk because they use fewer parameters is called __________ __________.",
+      "type": "blank",
+      "answer": "Overfitting Resistance",
+      "explanation": "Fewer parameters means lower model capacity, which directly reduces the risk of memorizing training data. For small datasets, this is a major practical benefit — swapping Conv2D for SeparableConv2D can be more effective than adding dropout or weight decay. The parameter reduction is substantial: a 3×3 Conv2D with 256→256 channels has ~590K parameters; the equivalent SeparableConv2D has ~68K. That's an 8-9x reduction, which meaningfully limits the model's ability to overfit. Combined with faster convergence, you get better generalization with less training."
+    },
+    {
+      "question": "A high-performing ConvNet architecture based on depthwise separable convolutions and included with Keras is called __________.",
+      "type": "blank",
+      "answer": "Xception",
+      "explanation": "Xception (Extreme Inception) was designed by François Chollet and pushes the depthwise separable idea to its logical extreme: replace all standard convolutions with depthwise separable convolutions. The name references the Inception architecture, which used multiple parallel convolution branches to capture patterns at different scales. Xception showed that separating spatial and channel processing entirely works as well or better than the complex multi-branch Inception design, while being simpler and more parameter-efficient. It remains a strong backbone for transfer learning, especially in Keras where it's a one-liner to load."
+    },
+    {
+      "question": "The computational work required by a layer, which depthwise separable convolutions reduce substantially relative to regular convolutions, is measured in __________ __________ __________.",
+      "type": "blank",
+      "answer": "Floating Point Operations",
+      "explanation": "Floating point operations (FLOPs) count the number of multiplications and additions needed for a forward pass. A standard 3×3 Conv2D with C_in input and C_out output channels requires roughly H×W×3×3×C_in×C_out FLOPs. A depthwise separable convolution requires H×W×(3×3×C_in + C_in×C_out) — the first term for depthwise, the second for pointwise. The savings factor is approximately C_out/(9 + C_out), which for 256 channels is about 97%. FLOPs don't perfectly predict wall-clock time (memory access patterns and hardware optimizations matter), but they're the standard measure of computational cost."
+    },
+    {
+      "question": "A low-level GPU programming platform mentioned when discussing how convolution implementations could in principle be optimized is called __________.",
+      "type": "blank",
+      "answer": "CUDA",
+      "explanation": "CUDA (Compute Unified Device Architecture) is NVIDIA's platform for writing programs that run on GPUs. It gives developers direct control over GPU threads, memory hierarchies, and execution. In deep learning, CUDA is the foundation layer — TensorFlow, PyTorch, and other frameworks ultimately call CUDA kernels for their GPU computations. You rarely write CUDA directly, but understanding that it exists explains performance characteristics: operations that map well to CUDA's parallel architecture (large matrix multiplications, standard convolutions) run very fast, while operations that don't (irregular memory access, small batches) may be surprisingly slow."
+    },
+    {
+      "question": "The highly optimized NVIDIA library used in practice for many GPU convolution operations is called __________.",
+      "type": "blank",
+      "answer": "cuDNN",
+      "explanation": "cuDNN (CUDA Deep Neural Network library) provides hand-optimized implementations of common deep learning operations — convolutions, pooling, normalization, activations. Standard 3×3 convolutions in cuDNN are extremely fast because NVIDIA has invested years of engineering into them, using algorithms like Winograd transforms and FFT-based convolutions. This extreme optimization is why depthwise separable convolutions don't always deliver their theoretical speedup on GPUs — the standard convolution they replace is running on heavily optimized code, while depthwise convolutions may not have equally optimized implementations."
+    },
+    {
+      "question": "Hardware on which depthwise separable convolutions can show meaningful speedups in some implementations is a __________.",
+      "type": "blank",
+      "answer": "CPU",
+      "explanation": "On CPUs, depthwise separable convolutions often deliver speedups closer to their theoretical advantage because CPU convolution implementations are less aggressively optimized than GPU implementations. CPUs also benefit more from reduced memory bandwidth requirements — moving fewer parameters through the memory hierarchy matters more when bandwidth is limited. This is practically important for edge deployment: mobile phones, IoT devices, and embedded systems often run inference on CPUs, where the efficiency of depthwise separable convolutions directly translates to faster predictions and lower power consumption."
+    },
+    {
+      "question": "Hardware typically used for deep learning, where extreme optimization of standard convolutions can reduce the practical speed advantage of depthwise separable convolutions, is a __________.",
+      "type": "blank",
+      "answer": "GPU",
+      "explanation": "GPUs dominate deep learning because their thousands of parallel cores map perfectly to the matrix operations that underpin neural networks. The catch for depthwise separable convolutions: standard 3×3 convolutions on GPUs are so heavily optimized (via cuDNN) that the theoretical 9x FLOPs reduction may translate to only a 2-3x wall-clock speedup, or even less. GPU utilization also matters — depthwise convolutions have low arithmetic intensity (few operations per memory access), which can leave GPU compute units underutilized. The theoretical vs. practical speedup gap is a recurring theme in hardware-aware model design."
+    },
+    {
+      "question": "A compact ConvNet pattern in the chapter that combines residual connections, batch normalization, and depthwise separable convolutions is called a __________ __________ __________ __________.",
+      "type": "blank",
+      "answer": "Mini Xception Like Model",
+      "explanation": "The mini Xception-like model in the chapter is a teaching example that combines the three key techniques from the chapter into one architecture: SeparableConv2D for efficient feature extraction, BatchNormalization for training stability, and residual connections for gradient flow. It's not meant to be state-of-the-art but to demonstrate how these components compose into a practical, well-designed ConvNet. The pattern — blocks of separable convolutions with residual shortcuts and batch normalization — is representative of how modern lightweight ConvNets are actually built."
+    },
+    {
+      "question": "An alternative computer vision architecture that has recently competed with ConvNets, though the chapter says ConvNets remain the better choice in most cases for now, is called __________ __________.",
+      "type": "blank",
+      "answer": "Vision Transformers",
+      "explanation": "Vision Transformers (ViT) apply the transformer architecture — originally designed for text — to images by splitting them into patches and treating each patch as a token. ViTs lack the built-in translation invariance and local pattern priors of ConvNets, so they need more data to train from scratch. However, with large-scale pretraining, they match or exceed ConvNet performance. The chapter's cautious stance reflects 2021-era consensus; since then, ViTs and hybrid architectures have become increasingly competitive. For practitioners with limited data, ConvNets with transfer learning remain the pragmatic choice."
+    },
+    {
+      "question": "A short name for Vision Transformers is __________.",
+      "type": "blank",
+      "answer": "ViTs",
+      "explanation": "ViT was introduced in the 2020 paper 'An Image Is Worth 16x16 Words' by Dosovitskiy et al. from Google Brain. The abbreviation is now standard in the literature. ViTs have spawned many variants: DeiT (data-efficient training), Swin Transformer (hierarchical windows), BEiT (BERT-style pretraining for images), and more. The key tension in CV today is between ConvNets' strong inductive biases (locality, translation invariance) and ViTs' flexibility (global attention, fewer architectural assumptions). Hybrid approaches that combine both are increasingly popular."
+    }
+  ]
+}
