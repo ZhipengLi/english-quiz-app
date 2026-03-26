@@ -1,0 +1,269 @@
+{
+  "text": "Deep Learning with Python - Chapter 10: interpreting-what-convnets-learn",
+  "quiz": [
+    {
+      "question": "The ability to understand why a ConvNet made a particular classification decision, especially important in applications such as medical imaging, is called __________.",
+      "type": "blank",
+      "answer": "Interpretability",
+      "explanation": "Interpretability answers the question 'why did the model predict this?' — which matters enormously when the stakes are high. A doctor won't trust a model that says 'malignant' without some explanation of what it saw. For ConvNets, interpretability is more tractable than for many other models because the intermediate representations are spatial and visual — you can literally look at what the network is responding to. The techniques in this chapter (activation visualization, filter visualization, Grad-CAM) form a practical toolkit for opening up the model's reasoning."
+    },
+    {
+      "question": "A common description of deep learning models when their internal representations are hard to present in human-readable form is __________  __________.",
+      "type": "blank",
+      "answer": "Black Box",
+      "explanation": "The 'black box' label is often applied to deep learning as a criticism — the model works, but nobody knows why. Chollet pushes back on this for ConvNets specifically: because they process visual data and produce visual feature maps, their internals are more inspectable than, say, a language model's hidden states. You can visualize what filters detect, which regions matter for a prediction, and how representations evolve across layers. The model isn't transparent, but it's not opaque either — it's more like frosted glass. The visualization techniques in this chapter are the tools for seeing through it."
+    },
+    {
+      "question": "A convolutional neural network whose learned representations are especially amenable to visualization because they correspond to visual concepts is called a __________.",
+      "type": "blank",
+      "answer": "ConvNet",
+      "explanation": "ConvNets have a unique advantage for interpretability: their intermediate outputs are spatial feature maps that can be displayed as images. Each channel in a feature map represents the spatial response pattern of one learned filter, and these patterns often correspond to recognizable visual concepts — edges, textures, object parts. This visual correspondence is not accidental; it's a direct consequence of the architecture's inductive biases (locality, translation invariance). Other architectures like transformers also produce spatial attention maps, but ConvNet feature maps remain the most naturally interpretable."
+    },
+    {
+      "question": "The outputs returned by convolution and pooling layers for a given input image, which help show how successive layers transform the input, are called __________ __________.",
+      "type": "blank",
+      "answer": "Intermediate Activations",
+      "explanation": "Intermediate activations are what the network 'sees' at each stage of processing. For a cat image, the first layer's activations might highlight edges and color boundaries; middle layers might respond to fur textures and eye shapes; deep layers might activate on full face structures. By visualizing these layer by layer, you see the progressive transformation from raw pixels to abstract class-relevant features. This is one of the most intuitive ways to understand a ConvNet — it turns the abstract concept of 'learned representations' into something you can directly inspect."
+    },
+    {
+      "question": "A technique that displays intermediate ConvNet outputs to understand layer-by-layer transformation and get an initial sense of what individual filters respond to is called __________ __________.",
+      "type": "blank",
+      "answer": "Activation Visualization",
+      "explanation": "Activation visualization is the simplest interpretability technique: feed an image through the network and display the feature maps at each layer. Each channel in each layer produces a 2D grayscale image showing where that filter activated. Bright regions mean the filter's pattern was strongly detected there. This technique requires no special setup — just extract the intermediate outputs and plot them. Its main limitation is that it's input-specific: you see what the network detected in one particular image, not what a filter responds to in general. That's where filter visualization comes in."
+    },
+    {
+      "question": "A three-dimensional activation tensor with width, height, and depth that represents what a layer detected in the input is called a __________ __________.",
+      "type": "blank",
+      "answer": "Feature Map",
+      "explanation": "A feature map has shape (height, width, channels) — the spatial dimensions correspond to input locations, and each channel represents one filter's response. At early layers, feature maps are large spatially (close to input resolution) with few channels; at deep layers, they're small spatially but have many channels. The 3D structure is meaningful: the height-width plane tells you where something was detected, and the channel index tells you what was detected. Understanding feature maps as spatial-semantic tensors is key to interpreting all visualization techniques in this chapter."
+    },
+    {
+      "question": "One slice of a feature map that typically encodes a relatively independent visual feature is called a __________.",
+      "type": "blank",
+      "answer": "Channel",
+      "explanation": "Each channel in a feature map is the output of one filter — a 2D map showing the spatial response pattern for one learned feature detector. Channels in early layers tend to encode simple, interpretable features like edges at specific orientations or color contrasts. Channels in deeper layers encode increasingly abstract combinations. The key word is 'relatively independent' — the depthwise separable convolution idea exploits this, processing channels separately before mixing them. When visualizing activations, you display individual channels because each tells a different story about what the network detected."
+    },
+    {
+      "question": "A Keras model built to return the activations of multiple internal layers for a given input image is called an __________ __________.",
+      "type": "blank",
+      "answer": "Activation Model",
+      "explanation": "An activation model is a diagnostic tool: you take your original model, identify the layers you want to inspect, and create a new Model object with the same input but outputs pointing to those internal layers. When you call predict on this model, you get back the feature maps at each selected layer — no need to modify the original model or write custom forward passes. In Keras, this is a one-liner using the Functional API: Model(inputs=model.input, outputs=[layer.output for layer in selected_layers]). It's the standard pattern for all activation-based visualization techniques."
+    },
+    {
+      "question": "A model with one input and several outputs, used here to retrieve one activation tensor per selected layer, is called a __________ __________ __________.",
+      "type": "blank",
+      "answer": "Multi Output Model",
+      "explanation": "Multi-output models are a general Keras capability — you can define a model that produces any number of outputs from any internal layers. For visualization, each output corresponds to one layer's activations. For other applications, multiple outputs enable multi-task learning (e.g., predicting both object class and bounding box). The key implementation detail: when you call predict on a multi-output model, you get back a list of arrays, one per output. The ordering matches how you specified the outputs when constructing the model."
+    },
+    {
+      "question": "A kind of visual pattern often learned by early convolution layers, such as diagonal or directional edges, is called an __________ __________.",
+      "type": "blank",
+      "answer": "Edge Detector",
+      "explanation": "Edge detectors emerge reliably in the first convolution layer of any ConvNet trained on natural images — this is one of the most robust findings in deep learning interpretability. The network independently rediscovers patterns that classical computer vision spent decades engineering (Sobel, Canny, Gabor filters). These learned edge detectors are slightly different from hand-crafted ones — they're adapted to the training data's statistics and the downstream task — but they're recognizably similar. This convergence suggests that edge detection is genuinely fundamental to visual understanding, not just an artifact of one approach."
+    },
+    {
+      "question": "Higher-level concepts such as parts of objects that appear in deeper layers and are less directly interpretable than early layer outputs are called __________ __________.",
+      "type": "blank",
+      "answer": "Abstract Features",
+      "explanation": "Abstract features in deep layers represent complex visual concepts — 'cat face,' 'wheel,' 'feathered wing' — that emerge from compositions of simpler features. They're harder to interpret because they don't map cleanly to simple visual primitives that humans can name. A deep channel might respond to a specific combination of texture, shape, and spatial arrangement that encodes 'golden retriever ear seen from above' — meaningful to the network but not easily labeled by a person. Filter visualization (gradient ascent) is the main technique for understanding what abstract features encode."
+    },
+    {
+      "question": "The tendency for more channels to become blank in deeper layers because fewer learned patterns are present in a given input is called __________ __________.",
+      "type": "blank",
+      "answer": "Activation Sparsity",
+      "explanation": "Activation sparsity increases with depth: a cat image might activate most edge detectors in layer 1 (edges are everywhere), many texture detectors in middle layers, but only a handful of object-part detectors in deep layers (the image contains specific parts, not all possible parts). Blank channels mean 'the pattern this filter detects is not present in this image.' This sparsity is actually a feature, not a bug — it means the network is being selective, responding only to relevant patterns. High sparsity in deep layers is a sign that the network has learned discriminative, specialized features."
+    },
+    {
+      "question": "The idea that a deep network progressively filters out irrelevant visual details while magnifying information useful for the target class is called the __________ __________ __________.",
+      "type": "blank",
+      "answer": "Information Distillation Pipeline",
+      "explanation": "The information distillation metaphor captures what ConvNets actually do: each layer keeps what's relevant and discards what's not, like successive rounds of filtering a crude mixture. Early layers retain most spatial detail but add feature channels; deep layers have lost most spatial detail but their remaining channels encode precisely the information needed for classification. This is why you can't reconstruct the input from deep activations — too much information has been deliberately discarded. The distillation is guided by the training signal, so the 'useful information' is defined by whatever the task requires."
+    },
+    {
+      "question": "A technique that displays the visual pattern a specific ConvNet filter is most responsive to is called __________ __________.",
+      "type": "blank",
+      "answer": "Filter Visualization",
+      "explanation": "Filter visualization answers a different question than activation visualization: instead of 'what did this filter detect in this specific image,' it asks 'what does this filter detect in general?' The technique generates a synthetic image that maximally activates a chosen filter by optimizing pixel values through gradient ascent. The resulting patterns reveal what the filter is tuned to — edges, textures, object parts, or more abstract structures. It's model-centric rather than input-centric, making it useful for understanding the filter's role in the network's overall feature vocabulary."
+    },
+    {
+      "question": "The process of modifying an input image so as to maximize the response of a chosen filter, producing a pattern that strongly activates that filter, is called __________ __________ __ __________ __________.",
+      "type": "blank",
+      "answer": "Gradient Ascent In Input Space",
+      "explanation": "Gradient ascent in input space inverts the usual training procedure: instead of updating weights to minimize a loss, you update the input pixels to maximize a filter's activation. The weights are frozen; the image is the variable. At each step, you compute the gradient of the filter's mean activation with respect to the input pixels, then nudge the pixels in the direction that increases activation. After many iterations, the initially random image converges to a pattern that the filter maximally responds to. This is a powerful technique that reveals the 'ideal stimulus' for any neuron in the network."
+    },
+    {
+      "question": "The starting image used for filter visualization before it is iteratively adjusted to maximize filter response is called a __________ __________ __________.",
+      "type": "blank",
+      "answer": "Blank Input Image",
+      "explanation": "The initial image is typically random noise or a gray blank — something with no meaningful visual content. Starting from noise ensures the optimization doesn't inherit patterns from a real image, so the resulting pattern reflects only what the filter is tuned to. Different random initializations can produce slightly different results, revealing multiple modes of what activates a filter. Some implementations start from gray rather than random noise to reduce high-frequency artifacts. The choice of initialization matters less for early layers (simple patterns converge reliably) and more for deep layers (complex patterns can have multiple optima)."
+    },
+    {
+      "question": "The pretrained ConvNet used in the chapter for filter visualization and class activation heatmaps is called __________.",
+      "type": "blank",
+      "answer": "Xception",
+      "explanation": "Xception is used throughout the chapter as the demonstration model because it's a strong, well-understood architecture included with Keras. For visualization purposes, any pretrained ImageNet model would work — the interpretability techniques are architecture-agnostic. Xception's depthwise separable convolutions produce feature maps that are somewhat different from standard convolutions (spatial and channel features are learned separately), but the visualization patterns — edges in early layers, textures in middle layers, object parts in deep layers — follow the same general progression seen in all ConvNets."
+    },
+    {
+      "question": "The large-scale labeled image dataset on which the Xception classifier used in the chapter was trained is called __________.",
+      "type": "blank",
+      "answer": "ImageNet",
+      "explanation": "ImageNet contains roughly 1.4 million images across 1000 classes, ranging from animals and vehicles to household objects and food. Models trained on ImageNet learn a rich, general-purpose visual vocabulary that transfers remarkably well to other tasks. For visualization, ImageNet-trained models are ideal because their 1000 classes span diverse visual concepts — the filters learn a comprehensive set of features from edges to complex object parts. The interpretability insights from ImageNet models generalize to other ConvNets: the hierarchical progression from simple to abstract features is a universal property of ConvNets, not specific to one dataset."
+    },
+    {
+      "question": "A model created from the original network that returns the output of one chosen internal layer is called a __________ __________ __________.",
+      "type": "blank",
+      "answer": "Feature Extractor Model",
+      "explanation": "A feature extractor model is a subset of the activation model concept — instead of returning outputs from multiple layers, it returns the output of just one. You pick a specific layer, build a Model(inputs=original.input, outputs=chosen_layer.output), and use it to extract features. For filter visualization, you extract the output of the layer containing the filter you want to visualize. For Grad-CAM, you extract the last convolutional layer's output. The same pattern is used in transfer learning: the convolutional base is effectively a feature extractor model whose output feeds into a new classifier."
+    },
+    {
+      "question": "The model-specific image conversion step that scales input images into the range expected by the pretrained network is called a __________.",
+      "type": "blank",
+      "answer": "Preprocessor",
+      "explanation": "Different pretrained models expect different input formats. Some expect pixels in [0, 1], some in [-1, 1], some use per-channel mean subtraction with specific ImageNet statistics. Using the wrong preprocessing is one of the most common bugs in transfer learning and visualization — the model will still run, but its outputs will be meaningless because the input distribution is wrong. Keras provides model-specific preprocessing functions (like keras.applications.xception.preprocess_input) that handle this automatically. Always match preprocessing to the model, not to a generic normalization scheme."
+    },
+    {
+      "question": "In filter visualization, a scalar objective that measures how strongly an input image activates a chosen filter and is then maximized is called a __________ __________.",
+      "type": "blank",
+      "answer": "Loss Function",
+      "explanation": "Here 'loss' is used loosely — it's really an objective to maximize, not minimize. The loss is typically the mean activation of the target filter's output feature map: average across all spatial positions in that channel. Maximizing this mean activation means creating an image where the filter responds strongly everywhere. You could also use the maximum activation (strongest single response) or the activation at a specific position. The choice affects what kind of pattern you get: mean activation produces tile-like repeating patterns, while point activations produce localized structures."
+    },
+    {
+      "question": "The trick of dividing the gradient tensor by its L2 norm so update magnitudes stay in a stable range during gradient ascent is called __________ __________.",
+      "type": "blank",
+      "answer": "Gradient Normalization",
+      "explanation": "Gradient normalization is crucial for stable filter visualization. Raw gradients can vary enormously in magnitude across pixels and across iterations — some updates would be huge, others negligible. By dividing by the L2 norm (plus a small epsilon for numerical stability), every update step has roughly the same magnitude regardless of the gradient scale. This is similar in spirit to techniques like Adam or gradient clipping used in training, but simpler: you just normalize direction and use a fixed step size. Without this, the optimization often diverges or produces low-quality patterns."
+    },
+    {
+      "question": "The TensorFlow tool used in the chapter to compute gradients needed for gradient ascent is called __________.",
+      "type": "blank",
+      "answer": "GradientTape",
+      "explanation": "tf.GradientTape records operations on tensors so you can compute gradients afterward. In filter visualization, you wrap the forward pass in a GradientTape context, compute the loss (filter activation), then call tape.gradient(loss, input_image) to get the gradient of the activation with respect to input pixels. This is the reverse of normal training where you compute gradients with respect to weights. GradientTape is TensorFlow's eager-mode automatic differentiation tool — it lets you compute arbitrary gradients, not just the standard loss-to-weights gradient used in training."
+    },
+    {
+      "question": "The PyTorch method used in the chapter to compute gradients of the filter visualization loss with respect to the input image is called __________.",
+      "type": "blank",
+      "answer": "Backward",
+      "explanation": "In PyTorch, you compute gradients by calling .backward() on a scalar tensor — it populates the .grad attribute of all tensors that have requires_grad=True. For filter visualization, you set requires_grad=True on the input image tensor, run the forward pass to get the filter activation loss, call loss.backward(), and then read input_image.grad. This gives you the gradient of the activation with respect to each pixel — the direction to nudge pixels to increase activation. PyTorch's autograd system tracks the computation graph automatically, so no explicit tape recording is needed."
+    },
+    {
+      "question": "The JAX function used to obtain gradients for the filter visualization process is called __________ __________.",
+      "type": "blank",
+      "answer": "jax grad",
+      "explanation": "JAX takes a functional approach to differentiation: jax.grad(f) returns a new function that computes the gradient of f. For filter visualization, you define a function that takes an image and returns the scalar activation, then jax.grad gives you a function that maps image → gradient. This is elegant and composable — you can take gradients of gradients, jit-compile the gradient function for speed, and vmap it across batches. JAX's approach makes the mathematical structure explicit: gradient ascent is literally 'apply the gradient function repeatedly.'"
+    },
+    {
+      "question": "The image pattern produced by optimization that a chosen filter responds to most strongly is called a __________ __________ __________.",
+      "type": "blank",
+      "answer": "Filter Response Pattern",
+      "explanation": "Filter response patterns are the main output of filter visualization — synthetic images showing what each filter is 'looking for.' Early-layer patterns are simple and interpretable: oriented edges, color gradients, simple textures. Middle-layer patterns show more complex textures and repetitive motifs. Deep-layer patterns can be strikingly complex, sometimes resembling parts of objects (eyes, feathers, wheels) in a hallucinatory, repetitive way. These patterns collectively form the visual vocabulary the network uses to understand images. Comparing patterns across architectures reveals that different networks learn surprisingly similar vocabularies."
+    },
+    {
+      "question": "The collection of filters learned by a ConvNet layer, which together form a basis for expressing useful visual structure, is called a __________ __________.",
+      "type": "blank",
+      "answer": "Filter Bank",
+      "explanation": "A filter bank is the complete set of filters in one layer — if a Conv2D has 128 filters, that's a bank of 128 pattern detectors. The term 'basis' is key: just as a set of basis vectors can express any point in a vector space, a layer's filter bank can express any pattern in its representation space as a combination of filter responses. The bank should be diverse — you want filters covering different orientations, scales, textures, and colors. Redundant filters waste capacity. Filter visualization lets you inspect the bank and check whether it covers the visual vocabulary needed for your task."
+    },
+    {
+      "question": "Simple visual patterns often encoded by filters in the first layers of a ConvNet are called __________ __________.",
+      "type": "blank",
+      "answer": "Directional Edges",
+      "explanation": "Directional edges — horizontal, vertical, diagonal at various angles — are the most fundamental visual features and the most reliably learned patterns in layer 1 of any ConvNet. A 3×3 filter is just the right size to detect a local edge at a specific orientation. These filters resemble Gabor filters from classical vision science, which were discovered by studying biological visual systems. The convergence between learned ConvNet filters and neuroscience findings is remarkable — it suggests that edge detection at multiple orientations is an optimal first processing step for visual information, regardless of whether the system is biological or artificial."
+    },
+    {
+      "question": "More complex combinations of edges and colors that appear in filters from middle and later layers are called __________.",
+      "type": "blank",
+      "answer": "Textures",
+      "explanation": "Textures emerge in layers 2-4 as the network combines edge detectors into richer patterns: cross-hatching, polka dots, stripes, wood grain, fur-like patterns. Texture recognition is crucial for many vision tasks — the difference between a cat and a dog is partly texture (fur type), and the difference between grass and water is almost entirely texture. The progression from edges to textures illustrates the spatial hierarchy: layer 1 features combine locally in layer 2 to form small texture patches, which combine further in layer 3 into larger texture regions. Filter visualization makes this progression visually obvious."
+    },
+    {
+      "question": "A general visualization technique that produces heatmaps showing how important each image location is for a specific class is called a __________ __________ __________.",
+      "type": "blank",
+      "answer": "Class Activation Map",
+      "explanation": "Class activation maps answer the most practical interpretability question: 'where in the image is the model looking to make its prediction?' Unlike activation or filter visualization, which reveal what features the network has learned, class activation maps are about a specific prediction on a specific image. They highlight the spatial regions most relevant to a chosen class — for a 'cat' prediction, the heatmap should highlight the cat, not the background. This technique has direct practical applications: verifying that a medical imaging model focuses on the lesion, not an artifact; checking that a wildlife classifier looks at the animal, not the habitat."
+    },
+    {
+      "question": "Another name for class activation map visualization, which shows which parts of an image support a particular class, is __________ __________.",
+      "type": "blank",
+      "answer": "CAM Visualization",
+      "explanation": "CAM (Class Activation Mapping) was originally introduced by Zhou et al. in 2016 and required a specific architecture (global average pooling before the classification layer). Grad-CAM generalized this to work with any CNN architecture by using gradients instead of requiring architectural constraints. The term 'CAM visualization' is often used loosely to refer to any technique in this family. The key output is always the same: a heatmap over the input image indicating which regions contributed most to the classification decision."
+    },
+    {
+      "question": "A two-dimensional grid of scores over an input image indicating how important each location is for the class under consideration is called a __________ __________ __________.",
+      "type": "blank",
+      "answer": "Class Activation Heatmap",
+      "explanation": "The heatmap is a 2D array, usually at the spatial resolution of the last convolutional layer (e.g., 7×7 or 10×10), that's then upsampled to input image resolution for visualization. Each cell in the grid scores how much that spatial region contributed to the target class prediction. High values mean 'this region strongly supports the predicted class'; low values mean 'this region is irrelevant or contradictory.' The heatmap is class-specific — the same image produces different heatmaps for different target classes, revealing which regions support each possible classification."
+    },
+    {
+      "question": "A specific class activation method that weights each channel in a convolutional feature map by the gradient of the target class with respect to that channel is called __________ __________.",
+      "type": "blank",
+      "answer": "Grad CAM",
+      "explanation": "Grad-CAM (Gradient-weighted Class Activation Mapping) by Selvaraju et al. (2017) is the most widely used CAM technique. The algorithm: (1) compute the gradient of the target class score with respect to the last convolutional layer's output, (2) global-average-pool these gradients to get one importance weight per channel, (3) compute a weighted sum of the feature map channels, (4) apply ReLU to keep only positive contributions. The result highlights regions that both activated and positively contributed to the target class. Grad-CAM works with any differentiable CNN — no architectural modifications needed."
+    },
+    {
+      "question": "The feature map from the last convolutional layer, used by Grad-CAM as the spatial basis for the heatmap, is called the __________ __________ __________ __________.",
+      "type": "blank",
+      "answer": "Last Conv Layer Output",
+      "explanation": "Grad-CAM uses the last convolutional layer because it offers the best tradeoff between semantic richness and spatial resolution. Earlier layers have higher spatial resolution but detect simple features; later fully-connected layers have rich semantics but no spatial information. The last conv layer contains the most abstract spatial features before the classifier collapses everything into a vector. Its feature map is typically small (7×7 for many architectures), so the resulting heatmap is coarse but semantically meaningful. You can apply Grad-CAM to earlier layers for finer resolution, but the heatmaps become less class-discriminative."
+    },
+    {
+      "question": "The step in Grad-CAM that averages gradients across spatial dimensions to estimate the importance of each channel is called __________ __________.",
+      "type": "blank",
+      "answer": "Gradient Pooling",
+      "explanation": "Gradient pooling is the key step that converts a 3D gradient tensor (H × W × C) into a 1D importance vector of length C. By averaging the gradient across all spatial positions, you get one number per channel representing how much increasing that channel's activation (on average) would increase the target class score. This is a global summary — it says 'channel k matters this much overall' without specifying where. The spatial 'where' information comes from the feature map itself; the gradient pooling only determines the channel weights. This separation of 'what matters' (channels) and 'where it matters' (spatial positions) is what makes Grad-CAM elegant."
+    },
+    {
+      "question": "The Grad-CAM step where each channel in the last convolutional feature map is multiplied by its pooled importance score is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Channel Importance Weighting",
+      "explanation": "After gradient pooling gives you a weight per channel, you multiply each channel's spatial feature map by its weight. Channels with high positive weights (strongly contributing to the target class) get amplified; channels with low or negative weights get suppressed. This weighted combination is the core of Grad-CAM — it produces a spatial map where important features are emphasized and irrelevant features are attenuated. The multiplication is element-wise along the channel axis: each 2D channel map is scaled by its scalar importance weight before being combined."
+    },
+    {
+      "question": "The averaging across channels that produces the final class activation heatmap after weighting is called the __________ __________ __________.",
+      "type": "blank",
+      "answer": "Channel Wise Mean",
+      "explanation": "After weighting each channel by its importance, you average (or sum) across all channels to collapse the 3D weighted feature map into a 2D heatmap. Each spatial position in the heatmap aggregates the weighted contributions from all channels — a position with high values means many important features were detected there. ReLU is typically applied afterward to zero out negative values, keeping only regions that positively contribute to the target class. The result is a compact 2D summary: 'here is where the evidence for this class is located in the image.'"
+    },
+    {
+      "question": "The post-processing step that rescales the heatmap into the range from 0 to 1 for visualization is called __________ __________.",
+      "type": "blank",
+      "answer": "Heatmap Normalization",
+      "explanation": "Raw Grad-CAM heatmap values are in arbitrary units — they depend on the magnitude of activations and gradients, which vary across models and inputs. Normalizing to [0, 1] by subtracting the minimum and dividing by the range makes the heatmap interpretable as relative importance: 1.0 means 'most important region,' 0.0 means 'least important.' This normalization is purely for visualization — it doesn't change the spatial pattern. Some implementations use different normalizations (percentile clipping, softmax) to handle outliers or make the heatmap more contrasty."
+    },
+    {
+      "question": "A visualization made by overlaying the class activation heatmap on the original image so the important regions are easy to inspect is called a __________ __________.",
+      "type": "blank",
+      "answer": "Superimposed Heatmap",
+      "explanation": "The superimposed heatmap is the final, human-readable visualization: the original image with a semi-transparent colored overlay (typically using a colormap like 'jet' where red means high importance and blue means low). This makes it immediately obvious which regions the model focused on. Creating it involves resizing the small heatmap (e.g., 7×7) to match the input image dimensions, applying a colormap, and alpha-blending with the original image. The result is the image people usually think of when they hear 'Grad-CAM' — a practical tool for model debugging, explanation, and trust-building."
+    },
+    {
+      "question": "Using visualization methods such as class activation heatmaps to understand and diagnose classification mistakes is called __________ __________.",
+      "type": "blank",
+      "answer": "Model Debugging",
+      "explanation": "Model debugging with visualization answers questions like: 'why did the model classify this X-ray as normal when there's clearly a fracture?' The heatmap might reveal the model was looking at an annotation artifact in the corner, not at the bone. This kind of debugging is invaluable in practice — it catches systematic errors that accuracy metrics alone can't reveal. Common findings include models using spurious correlations (watermarks, backgrounds, hospital equipment labels), attending to wrong image regions, or relying on dataset-specific artifacts. Visualization turns opaque failures into actionable insights."
+    },
+    {
+      "question": "Identifying where the evidence for a class is located in an image, which class activation heatmaps can help reveal, is called __________ __________.",
+      "type": "blank",
+      "answer": "Object Localization",
+      "explanation": "Class activation heatmaps provide a weak form of object localization — they highlight the approximate region of the classified object without explicit bounding box supervision. This is called weakly-supervised localization: the model was only trained with image-level labels ('cat'), yet it learns where the cat is as a byproduct of learning to classify. The localization is coarse (limited by the last conv layer's resolution) but surprisingly useful. Some papers have used CAM-based localization to generate pseudo-labels for training object detectors, bootstrapping spatial annotations from classification-only data."
+    },
+    {
+      "question": "The high-level task API used in the chapter to load the full pretrained Xception classifier including its classification head is called __________ __________.",
+      "type": "blank",
+      "answer": "KerasHub ImageClassifier",
+      "explanation": "KerasHub's ImageClassifier provides a one-stop API for loading pretrained classification models complete with their classification heads, preprocessing, and class label mappings. This is important for Grad-CAM because you need the full model — backbone plus classifier — to compute gradients of a class prediction with respect to convolutional features. Loading just the backbone (as you would for transfer learning) wouldn't work because there's no class output to differentiate against. The high-level API handles all the setup so you can focus on the visualization logic."
+    },
+    {
+      "question": "The final prediction part of the full Xception model needed for Grad-CAM, beyond the feature extraction backbone alone, is called the __________ __________.",
+      "type": "blank",
+      "answer": "Classification Head",
+      "explanation": "The classification head sits on top of the backbone and maps pooled features to class probabilities — typically GlobalAveragePooling followed by a Dense layer with softmax. For Grad-CAM, the head is essential because you need a class-specific output to compute gradients against. The gradient of 'probability of class K' with respect to the last conv layer's output is what determines channel importance weights. Without the head, you have features but no class-specific signal. In transfer learning you replace the head; for Grad-CAM you need the head intact."
+    },
+    {
+      "question": "The final activation used in the chapter's classifier setup so outputs are class probabilities is called __________.",
+      "type": "blank",
+      "answer": "Softmax",
+      "explanation": "Softmax converts a vector of raw scores (logits) into a probability distribution — each value becomes positive and all values sum to 1. For Grad-CAM, whether you use the pre-softmax logit or the post-softmax probability as the target for gradient computation affects the heatmap slightly. Using the logit for the target class is often preferred because softmax compresses large differences (a logit of 10 vs 15 matters more than softmax of 0.99 vs 0.999). The original Grad-CAM paper uses the pre-softmax score, but many implementations use post-softmax with acceptable results."
+    }
+  ]
+}
