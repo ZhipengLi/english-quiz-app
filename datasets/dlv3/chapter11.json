@@ -1,0 +1,383 @@
+{
+  "text": "Deep Learning with Python - Chapter 11: Image Segmentation",
+  "quiz": [
+    {
+      "question": "The task of assigning a class to each pixel in an image so the image is partitioned into meaningful regions is called __________ __________.",
+      "type": "blank",
+      "answer": "Image Segmentation",
+      "explanation": "Image segmentation is classification at pixel granularity — instead of one label per image, you produce one label per pixel. This is dramatically harder than image classification because the output is spatially structured: you need to simultaneously understand what's in the image and exactly where each thing is. Applications range from medical imaging (segmenting tumors from healthy tissue) to autonomous driving (segmenting road, sidewalk, vehicles, pedestrians) to photo editing (separating foreground from background). The output is a segmentation mask — an image-shaped tensor of class labels."
+    },
+    {
+      "question": "The chapter presents image classification, image segmentation, and object detection as the three essential __________  __________ __________.",
+      "type": "blank",
+      "answer": "Computer Vision Tasks",
+      "explanation": "These three tasks form the foundation of applied computer vision. Classification asks 'what is in the image?' — one label for the whole image. Detection asks 'what is where?' — bounding boxes with labels. Segmentation asks 'what is each pixel?' — pixel-level labels. Most other vision tasks can be framed as variants or combinations of these three. Understanding the tradeoffs between them — classification is easiest but least informative, segmentation is most informative but hardest — helps you pick the right formulation for your problem."
+    },
+    {
+      "question": "A vision task where an image goes in and one or more labels come out is called __________ __________.",
+      "type": "blank",
+      "answer": "Image Classification",
+      "explanation": "Image classification is the simplest vision task structurally: fixed-size input image → class label(s). Single-label classification assigns exactly one class; multi-label classification allows multiple tags (e.g., 'outdoor,' 'sunny,' 'dog'). Despite being 'simple,' classification requires the model to understand the entire image content. It's the most mature vision task, with well-established architectures and pretrained models. Many real-world applications — content moderation, medical screening, quality inspection — are fundamentally classification problems."
+    },
+    {
+      "question": "A vision task where the model draws bounding boxes around objects and assigns each box a class is called __________ __________.",
+      "type": "blank",
+      "answer": "Object Detection",
+      "explanation": "Object detection combines localization and classification: for each object in an image, the model must predict both what it is and where it is (as a rectangular bounding box). This is harder than classification because the number of objects varies per image, and each object needs its own box and label. Modern detectors like YOLO and Faster R-CNN handle this elegantly, but the task introduces challenges classification doesn't have — overlapping objects, varying object sizes, and the need to suppress duplicate detections. Detection is the backbone of applications like autonomous driving, surveillance, and robotics."
+    },
+    {
+      "question": "Rectangles drawn around objects of interest in an image for object detection are called __________ __________.",
+      "type": "blank",
+      "answer": "Bounding Boxes",
+      "explanation": "A bounding box is typically represented as four numbers: (x_min, y_min, x_max, y_max) or (center_x, center_y, width, height). Boxes are an approximation — they capture object location but not shape, so they include background pixels and can overlap for nearby objects. Despite this imprecision, boxes are practical because they're simple to annotate, predict, and evaluate. The IoU metric measures box quality by comparing predicted and ground-truth box overlap. For applications needing precise object boundaries, segmentation is the better choice."
+    },
+    {
+      "question": "A vision task that estimates how visually similar two images are is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Image Similarity Scoring",
+      "explanation": "Image similarity scoring takes two images and outputs a score indicating how similar they are. This powers reverse image search, duplicate detection, and visual recommendation systems. The typical approach: pass both images through a ConvNet to get feature vectors, then compute a distance metric (cosine similarity, Euclidean distance) between the vectors. Models trained with contrastive or triplet losses learn feature spaces where similar images are close and dissimilar images are far apart. The challenge is defining 'similar' — visually identical, same object from different angles, same category, or same style?"
+    },
+    {
+      "question": "A vision task that pinpoints attributes of interest in an image, such as facial features, is called __________ __________.",
+      "type": "blank",
+      "answer": "Keypoint Detection",
+      "explanation": "Keypoint detection locates specific semantic points in an image — for faces, these might be eye corners, nose tip, mouth corners, and jawline points. The model outputs (x, y) coordinates for each predefined keypoint. This is the foundation of face alignment, expression recognition, gesture recognition, and augmented reality filters. Unlike detection (which finds boxes) or segmentation (which labels pixels), keypoint detection finds sparse but semantically meaningful points. The output structure is fixed — the same set of keypoints is predicted for every input."
+    },
+    {
+      "question": "A computer vision task focused on estimating pose-related structure from images is called __________ __________.",
+      "type": "blank",
+      "answer": "Pose Estimation",
+      "explanation": "Pose estimation determines the position and orientation of a person's body parts — typically outputting a skeleton of connected keypoints (head, shoulders, elbows, wrists, hips, knees, ankles). It's a specialized form of keypoint detection focused on articulated body structure. Applications include motion capture, sports analytics, physical therapy assessment, and human-computer interaction. Multi-person pose estimation is especially challenging because the model must both detect multiple people and associate keypoints with the correct person."
+    },
+    {
+      "question": "A computer vision task focused on estimating 3D mesh structure from images is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "3D Mesh Estimation",
+      "explanation": "3D mesh estimation reconstructs a three-dimensional surface model from one or more 2D images — going from flat pixels to vertices and faces that describe a 3D shape. This is an inherently ill-posed problem from a single image (many 3D shapes project to the same 2D image), so models rely on learned priors about object shapes. Applications include virtual try-on (clothing, glasses), 3D asset creation, and augmented reality. The task sits at the intersection of computer vision and computer graphics, requiring the model to understand both appearance and geometry."
+    },
+    {
+      "question": "A computer vision task focused on estimating scene depth from images is called __________ __________.",
+      "type": "blank",
+      "answer": "Depth Estimation",
+      "explanation": "Depth estimation predicts how far each pixel is from the camera, producing a depth map — an image where pixel values represent distance rather than color. Monocular depth estimation (from a single image) uses learned cues like perspective, occlusion, object size, and texture gradients. Stereo depth estimation uses two images from slightly different viewpoints, mimicking human binocular vision. Depth maps are crucial for autonomous driving (knowing how far away obstacles are), robotics (grasping objects), and AR (placing virtual objects at correct distances)."
+    },
+    {
+      "question": "A segmentation method where each pixel is classified into a semantic category, without distinguishing different instances of the same class, is called __________ __________.",
+      "type": "blank",
+      "answer": "Semantic Segmentation",
+      "explanation": "Semantic segmentation labels every pixel as 'road,' 'car,' 'person,' 'sky,' etc., but doesn't distinguish between individual instances — all cars get the same label. If two cars are adjacent, their pixels are both labeled 'car' with no boundary between them. This is sufficient for many applications: autonomous driving needs to know where the road is, not how many road segments exist. For scenes with non-overlapping object categories (road, building, vegetation), semantic segmentation provides all the information you need. It's simpler to train and evaluate than instance segmentation."
+    },
+    {
+      "question": "A segmentation method that distinguishes different object instances, such as cat 1 and cat 2, instead of grouping them into one category, is called __________ __________.",
+      "type": "blank",
+      "answer": "Instance Segmentation",
+      "explanation": "Instance segmentation combines the precision of semantic segmentation with the object-awareness of detection: each pixel is labeled not just with a class but with a specific instance ID. Two overlapping cats become 'cat-1' and 'cat-2' at the pixel level. This is harder than semantic segmentation because the model must both classify pixels and group them into coherent object instances. Mask R-CNN is the classic architecture — it extends Faster R-CNN by adding a mask prediction branch. Applications needing to count objects, track individuals, or handle overlapping instances require instance segmentation."
+    },
+    {
+      "question": "A segmentation method that combines semantic labels and instance labels for every pixel in the image is called __________ __________.",
+      "type": "blank",
+      "answer": "Panoptic Segmentation",
+      "explanation": "Panoptic segmentation is the unification of semantic and instance segmentation: every pixel gets both a semantic class label and, for 'thing' classes (countable objects like cars and people), an instance ID. 'Stuff' classes (uncountable regions like sky, road, grass) get semantic labels only. This provides the most complete scene understanding possible at the pixel level. The term was introduced by Kirillov et al. in 2019. Panoptic models are the most complex segmentation systems, but they give you everything: what's in the scene, where it is, and which instance it belongs to."
+    },
+    {
+      "question": "The fine-grained property of segmentation models that make predictions at the level of individual pixels is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Pixel Level Precision",
+      "explanation": "Pixel-level precision is what distinguishes segmentation from detection — instead of a bounding box that roughly indicates an object's location, you get an exact silhouette. Every single pixel receives a class label, producing a prediction with the same spatial resolution as the input image. This precision is critical for applications like medical imaging (tumor boundaries matter), autonomous driving (the exact edge of the road matters), and photo editing (clean foreground extraction requires precise boundaries). The tradeoff: pixel-level predictions are much more expensive to annotate, train, and evaluate than image-level labels."
+    },
+    {
+      "question": "The image segmentation equivalent of a label, stored as an image with integer values indicating the class of each pixel, is called a __________ __________.",
+      "type": "blank",
+      "answer": "Segmentation Mask",
+      "explanation": "A segmentation mask is an image where each pixel value is a class index rather than a color — pixel value 0 might mean 'background,' 1 might mean 'foreground,' 2 might mean 'contour.' The mask has the same height and width as the input image but only one channel (or three channels with redundant values). During training, the model's output is compared pixel-by-pixel against this mask using a loss function like sparse categorical crossentropy. Creating mask annotations is labor-intensive — a human must carefully trace object boundaries — which is why large segmentation datasets are scarce and pretrained models are valuable."
+    },
+    {
+      "question": "One of the segmentation mask classes in the Oxford-IIIT Pets example is __________.",
+      "type": "blank",
+      "answer": "Foreground",
+      "explanation": "In the Oxford-IIIT Pets dataset, 'foreground' labels pixels belonging to the pet (cat or dog). Foreground/background segmentation is the simplest form of segmentation — just two classes (plus contour in this dataset). Despite being simple, it's practically useful: portrait mode on smartphones, video conferencing background blur, and photo editing all rely on foreground segmentation. The model learns to distinguish the animal's pixels from everything else, handling complex shapes like fur edges, tails, and ears that bounding boxes can't capture."
+    },
+    {
+      "question": "Another of the segmentation mask classes in the Oxford-IIIT Pets example is __________.",
+      "type": "blank",
+      "answer": "Background",
+      "explanation": "Background pixels are everything that isn't the pet or its contour — floors, walls, furniture, grass, sky. In many segmentation tasks, 'background' is a catch-all category for everything not of interest. The background class is typically the majority class (most pixels are background), which creates a class imbalance problem. The model could achieve high pixel accuracy by predicting 'background' everywhere. That's why metrics like IoU are more informative than raw accuracy — they measure per-class performance and aren't dominated by the background class."
+    },
+    {
+      "question": "A third segmentation mask class in the Oxford-IIIT Pets example is __________.",
+      "type": "blank",
+      "answer": "Contour",
+      "explanation": "The contour class labels pixels at the boundary between the pet and the background. Including a contour class is a design choice that helps the model learn precise edges — boundary pixels are the hardest to classify because they're ambiguous (partly foreground, partly background). By giving them their own class, you signal to the model that these transition pixels are distinct from both foreground and background interiors. In practice, contour prediction can improve the sharpness of segmentation boundaries, though many segmentation tasks use only foreground and background without an explicit contour class."
+    },
+    {
+      "question": "A dataset of cat and dog pictures paired with foreground-background segmentation masks, used in the chapter for training a segmentation model, is called the __________ __________ __________ __________.",
+      "type": "blank",
+      "answer": "Oxford IIIT Pets Dataset",
+      "explanation": "The Oxford-IIIT Pets dataset contains about 7,400 images of 37 cat and dog breeds, each with a pixel-level segmentation mask (foreground, background, contour) and a bounding box. It's a good teaching dataset because it's small enough to train on quickly, the task is intuitive, and the masks have enough variety (different poses, backgrounds, fur colors) to be challenging. The dataset demonstrates that segmentation masks are much more informative than classification labels — instead of just knowing 'this is a cat,' you know exactly which pixels are the cat."
+    },
+    {
+      "question": "The original image fed into the segmentation model is called the __________ __________.",
+      "type": "blank",
+      "answer": "Input Image",
+      "explanation": "In segmentation, the input image is a standard RGB image — same as classification. The difference is entirely in what the model produces: instead of a single class label, it produces a mask with the same spatial dimensions as the input. This means the model must preserve spatial resolution information through its architecture, which is why encoder-decoder architectures are used. The input image and target mask form a training pair — the model learns to map pixel colors and patterns to pixel-level class assignments."
+    },
+    {
+      "question": "The ground truth segmentation mask paired with an input image is called the __________ __________.",
+      "type": "blank",
+      "answer": "Target Mask",
+      "explanation": "The target mask is the 'correct answer' for each pixel — the label the model should predict. During training, the loss function compares the model's predicted mask against the target mask pixel by pixel. Target masks must be spatially aligned with input images — every pixel in the mask corresponds to the same spatial position in the image. Creating accurate target masks requires careful human annotation, often using polygon tools or brush-based interfaces. Annotation errors at object boundaries are common and can limit model performance."
+    },
+    {
+      "question": "The portion of the data used to fit the segmentation model is called the __________ __________.",
+      "type": "blank",
+      "answer": "Training Set",
+      "explanation": "The training set for segmentation consists of (image, mask) pairs — the model sees both the input and the correct pixel labels. Because segmentation masks are expensive to annotate, training sets tend to be smaller than classification datasets. This makes data augmentation and pretrained encoders especially important. Augmentation for segmentation requires applying the same spatial transformations (flips, rotations, crops) to both the image and the mask simultaneously — if you flip the image but not the mask, the labels are misaligned."
+    },
+    {
+      "question": "The held-out portion of the data used to monitor model performance during training is called the __________ __________.",
+      "type": "blank",
+      "answer": "Validation Set",
+      "explanation": "The validation set serves the same purpose as in classification — monitoring generalization and tuning hyperparameters — but evaluation metrics differ. Pixel accuracy is misleading for segmentation (predicting all background gives high accuracy), so IoU is the standard metric. The validation set should be representative of real-world conditions: varied backgrounds, lighting, object sizes, and poses. For the Pets dataset, a random split works fine; for medical imaging, you'd want to split by patient to avoid data leakage from correlated scans."
+    },
+    {
+      "question": "The preprocessing step that rescales input images into the 0 to 1 range before training is called __________.",
+      "type": "blank",
+      "answer": "Rescaling",
+      "explanation": "Rescaling divides pixel values by 255 to map the [0, 255] integer range to [0, 1] floating point. For segmentation, only the input image is rescaled — the target mask keeps its integer class labels (0, 1, 2) because those are fed directly to the loss function. This is a common mistake: accidentally rescaling the mask too, turning class labels into tiny floats that the loss function can't interpret correctly. Always double-check that your preprocessing treats images and masks differently."
+    },
+    {
+      "question": "A convolution layer used in the encoding part of the segmentation model to extract and compress image features is called __________.",
+      "type": "blank",
+      "answer": "Conv2D",
+      "explanation": "In the encoder, Conv2D layers serve the same role as in a classification ConvNet — they extract increasingly abstract features through learned spatial filters. The difference in segmentation is that the features must eventually be mapped back to full resolution, so the encoder's job isn't just to compress information but to create representations that the decoder can use to reconstruct spatial detail. Conv2D layers in the encoder are typically paired with downsampling operations (strided convolutions or pooling) to create the feature hierarchy."
+    },
+    {
+      "question": "A transposed convolution layer used in the decoding part of the model to expand feature maps back to the original image resolution is called __________.",
+      "type": "blank",
+      "answer": "Conv2DTranspose",
+      "explanation": "Conv2DTranspose is the learnable upsampling operation — it increases spatial dimensions while learning how to fill in detail. Unlike simple bilinear upsampling (which interpolates), transposed convolutions have learnable weights that can reconstruct sharp boundaries and fine detail. The name 'transposed' comes from the mathematical relationship to regular convolutions: the weight matrix is transposed, swapping the roles of input and output dimensions. In the decoder, Conv2DTranspose layers progressively double the spatial resolution until the output matches the input image size."
+    },
+    {
+      "question": "The first half of the segmentation model that compresses the input image into smaller feature maps is called the __________.",
+      "type": "blank",
+      "answer": "Encoder",
+      "explanation": "The encoder in a segmentation model is structurally identical to a classification ConvNet's feature extraction backbone — stacked convolutions and downsampling that reduce spatial dimensions while increasing channel depth. The difference is philosophical: in classification, the encoder's job is done once it produces a compact feature vector. In segmentation, the encoder is only half the model — its output must be expanded back to full resolution by the decoder. Pretrained classification backbones (ResNet, Xception) are commonly used as segmentation encoders, since their learned features transfer directly."
+    },
+    {
+      "question": "The second half of the segmentation model that expands compressed feature maps into a full-size segmentation mask is called the __________.",
+      "type": "blank",
+      "answer": "Decoder",
+      "explanation": "The decoder mirrors the encoder: where the encoder downsamples and adds channels, the decoder upsamples and reduces channels, ultimately producing an output with the same spatial dimensions as the input image. The decoder's challenge is reconstructing spatial detail that was lost during encoding — exact object boundaries, thin structures, and fine textures. Skip connections from encoder to decoder (as in U-Net) help by providing high-resolution features directly to the decoder, bypassing the information bottleneck. Without skip connections, the decoder struggles to produce sharp boundaries."
+    },
+    {
+      "question": "A smaller spatial representation produced by the encoder, where each location contains information about a larger region of the original image, is called a __________ __________.",
+      "type": "blank",
+      "answer": "Feature Map",
+      "explanation": "In the segmentation context, feature maps are the intermediate representations at each encoder stage. A feature map at 1/8 resolution means each spatial position summarizes an 8×8 region of the original image. Deeper feature maps have larger receptive fields and more semantic content but less spatial precision. The segmentation challenge is that you need both — semantic understanding (what) and spatial precision (where). The encoder-decoder architecture addresses this by creating a bottleneck of rich semantic features, then using the decoder to restore spatial detail."
+    },
+    {
+      "question": "The encoding process that reduces image resolution while preserving useful information in feature maps is called __________.",
+      "type": "blank",
+      "answer": "Compression",
+      "explanation": "Compression in the encoder is lossy by design — not all information survives. The training signal determines what's preserved: features relevant to the segmentation task survive, while irrelevant details (exact color, minor texture variations) are discarded. This is the same information distillation pipeline from classification, but with a twist: segmentation needs to preserve spatial information that classification happily throws away. Too aggressive compression (too small a bottleneck) loses spatial detail the decoder can't recover; too little compression fails to build abstract features."
+    },
+    {
+      "question": "The process of reducing spatial resolution in feature maps during encoding is called __________.",
+      "type": "blank",
+      "answer": "Downsampling",
+      "explanation": "Downsampling in the segmentation encoder serves the same purposes as in classification — increasing receptive fields, reducing computation, and building abstract features — but with an important caveat: everything that's downsampled must eventually be upsampled back. Each downsampling step makes the decoder's job harder because spatial detail is lost. Common downsampling factors are 2× at each stage, with 4-5 stages producing a bottleneck at 1/16 or 1/32 of the original resolution. The chapter notes that the choice of downsampling method matters more for segmentation than classification because spatial information is critical."
+    },
+    {
+      "question": "A convolution with strides greater than 1, used here for downsampling while preserving more location information than max pooling, is called a __________ __________.",
+      "type": "blank",
+      "answer": "Strided Convolution",
+      "explanation": "Strided convolutions are preferred over max pooling for segmentation because they learn what information to keep during downsampling rather than applying a fixed rule (take the max). Max pooling discards 75% of values in a 2×2 window based on magnitude alone, which loses spatial relationships. A stride-2 convolution also reduces dimensions by 2× but uses learned weights, so it can preserve more nuanced spatial information. The tradeoff: strided convolutions add parameters, while max pooling is parameter-free. For segmentation, where spatial detail matters most, the extra parameters are worth it."
+    },
+    {
+      "question": "Information about where features appear in the image, which is especially important for segmentation, is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Spatial Location Information",
+      "explanation": "Spatial location information is what segmentation models must preserve and what classification models can safely discard. In classification, a cat ear in the top-left is equivalent to a cat ear in the bottom-right. In segmentation, the model must know exactly where the ear is to label those specific pixels. This requirement drives the key architectural difference: classification uses global average pooling to collapse spatial dimensions; segmentation uses a decoder to reconstruct them. Skip connections, strided convolutions (instead of max pooling), and transposed convolutions all serve to preserve and restore spatial location information."
+    },
+    {
+      "question": "A downsampling method that works well for classification but can destroy too much location information for segmentation tasks is called __________ __________.",
+      "type": "blank",
+      "answer": "Max Pooling",
+      "explanation": "Max pooling selects the largest value in each local window, discarding spatial position within that window. For classification, this is fine — you only care that a feature was detected somewhere in the region. For segmentation, losing within-window position means the decoder can't precisely reconstruct where features were. Imagine a 2×2 max pooling over boundary pixels: the maximum tells you an edge was nearby, but not which of the four pixels it was at. This position ambiguity accumulates across multiple pooling layers, making precise boundary reconstruction impossible. That's why modern segmentation architectures prefer strided convolutions."
+    },
+    {
+      "question": "The final softmax output that classifies every output pixel into one of the segmentation classes is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Per Pixel Softmax",
+      "explanation": "The model's final layer outputs a tensor shaped (height, width, num_classes) — at each spatial position, there's a vector of class probabilities just like a regular classification output. Softmax is applied independently at each pixel: the three values (foreground, background, contour) at each position sum to 1.0. The predicted class is the argmax at each position. This per-pixel formulation elegantly reduces segmentation to many independent classification problems, one per pixel, with shared features. The loss function sums (or averages) the crossentropy losses across all pixels."
+    },
+    {
+      "question": "The loss function used to train the segmentation model with integer class labels for each pixel is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Sparse Categorical Crossentropy",
+      "explanation": "Sparse categorical crossentropy works identically to classification — the only difference is that it's applied at every pixel independently. The target mask has integer class labels (0, 1, 2) at each pixel, and the model outputs softmax probabilities over classes at each pixel. The loss averages across all pixels and all images in the batch. A subtle consideration: class imbalance (most pixels are background) means the loss is dominated by background pixels. Techniques like weighted crossentropy or focal loss can rebalance attention toward minority classes like contours."
+    },
+    {
+      "question": "A metric that measures the match between predicted masks and ground truth masks by dividing overlap by combined area is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Intersection Over Union",
+      "explanation": "IoU is the standard segmentation metric because it's intuitive and handles class imbalance well. For each class, IoU = (pixels correctly predicted as this class) / (pixels that are this class in truth OR prediction). Perfect prediction gives IoU = 1.0; no overlap gives IoU = 0.0. IoU penalizes both false positives and false negatives equally. Mean IoU (mIoU) averages across all classes, giving equal weight to each class regardless of how many pixels it covers. This prevents the background class from dominating the metric, unlike pixel accuracy."
+    },
+    {
+      "question": "The short name for Intersection Over Union is __________.",
+      "type": "blank",
+      "answer": "IoU",
+      "explanation": "IoU (also called Jaccard Index) is used everywhere in computer vision — not just segmentation but also object detection (where it measures bounding box overlap). An IoU threshold defines what counts as a 'correct' detection: IoU > 0.5 is a common threshold, meaning the predicted box must overlap at least 50% with the ground truth. In segmentation, IoU is computed per-class and then averaged. The metric ranges from 0 (no overlap) to 1 (perfect overlap), making it easy to interpret. IoU above 0.5 is generally considered reasonable; above 0.8 is very good."
+    },
+    {
+      "question": "In IoU, the area where the predicted mask and the ground truth mask overlap is called the __________.",
+      "type": "blank",
+      "answer": "Intersection",
+      "explanation": "The intersection counts pixels that are classified as class K in both the prediction and the ground truth — the true positives for class K. A larger intersection means better agreement between model and ground truth. The intersection alone isn't a sufficient metric because a model that labels everything as class K would have perfect intersection (all true K pixels are captured) but terrible precision. That's why you divide by the union — it penalizes over-prediction as well as under-prediction."
+    },
+    {
+      "question": "In IoU, the total area covered by the predicted mask and the ground truth mask together is called the __________.",
+      "type": "blank",
+      "answer": "Union",
+      "explanation": "The union counts all pixels that are class K in either the prediction or the ground truth (or both). Union = intersection + false positives + false negatives. By dividing intersection by union, IoU produces a score that's low whenever the model either misses true pixels (false negatives inflate union without adding to intersection) or predicts extra pixels (false positives inflate union without adding to intersection). This symmetric penalization of both error types is why IoU is preferred over metrics like precision or recall alone."
+    },
+    {
+      "question": "The class-specific IoU metric used in the chapter to evaluate foreground segmentation quality is called __________ __________.",
+      "type": "blank",
+      "answer": "Foreground IoU",
+      "explanation": "Foreground IoU measures how well the model segments the pet specifically — ignoring background and contour performance. This is often the metric you care about most: you want to know how accurately the model delineates the object of interest. Reporting per-class IoU alongside mean IoU gives a more complete picture — a model might have high mean IoU but poor performance on a specific important class. In medical imaging, the IoU for the tumor class matters far more than background IoU, so class-specific metrics are essential."
+    },
+    {
+      "question": "A Keras callback used in the example to save the best segmentation model during training is called __________.",
+      "type": "blank",
+      "answer": "ModelCheckpoint",
+      "explanation": "ModelCheckpoint saves the model weights whenever a monitored metric improves — typically validation loss or validation IoU. This is essential because segmentation models can overfit: the best model during training isn't necessarily the last one. By saving the best checkpoint and restoring it after training, you get the model with the best generalization performance. The callback supports saving only weights or the full model, saving every epoch or only on improvement, and monitoring any metric. For segmentation, monitoring validation foreground IoU is usually more informative than monitoring loss."
+    },
+    {
+      "question": "The segmentation mask output generated by the model for an input image is called a __________ __________.",
+      "type": "blank",
+      "answer": "Predicted Mask",
+      "explanation": "The predicted mask is the model's output after argmax is applied at each pixel — a 2D array of class indices with the same spatial dimensions as the input image. Before argmax, the raw output is a (H, W, num_classes) tensor of softmax probabilities. The predicted mask can be compared visually with the target mask and the input image to qualitatively assess model performance. Common failure modes visible in predicted masks include noisy boundaries, missing thin structures (tails, legs), and confusion between classes in ambiguous regions."
+    },
+    {
+      "question": "A segmentation model trained beforehand on large-scale data and reused for new segmentation tasks is called a __________ __________ __________.",
+      "type": "blank",
+      "answer": "Pretrained Segmentation Model",
+      "explanation": "Just as pretrained classification models revolutionized image classification with limited data, pretrained segmentation models bring the same benefit to segmentation tasks. Models trained on large datasets like COCO, ADE20K, or SA-1B learn rich spatial feature representations that transfer to new segmentation tasks. Transfer learning for segmentation typically means using a pretrained encoder (backbone) and training a new decoder, or fine-tuning the entire encoder-decoder network. The Segment Anything Model represents the frontier of pretrained segmentation — a foundation model that generalizes to nearly any segmentation task with minimal adaptation."
+    },
+    {
+      "question": "A pretrained segmentation model from Meta AI that can segment many kinds of objects using prompts is called the __________ __________ __________.",
+      "type": "blank",
+      "answer": "Segment Anything Model",
+      "explanation": "SAM is a foundation model for segmentation — trained on over 1 billion masks, it can segment virtually any object in any image when given a prompt (point, box, or text). This is a paradigm shift from traditional segmentation models that only segment predefined classes. SAM's architecture separates image encoding (expensive, done once per image) from prompt encoding and mask decoding (cheap, done per prompt), enabling interactive segmentation where a user clicks to indicate objects. SAM demonstrates that with enough data and the right architecture, segmentation can become a general-purpose capability rather than a task-specific skill."
+    },
+    {
+      "question": "The short name for the Segment Anything Model is __________.",
+      "type": "blank",
+      "answer": "SAM",
+      "explanation": "SAM has become a standard tool in the computer vision toolkit since its release in 2023. Its key innovation isn't the architecture alone but the combination of scale (1B masks), promptability (point, box, text inputs), and generalization (works on images the model has never been trained on). SAM has been adapted for medical imaging, satellite imagery, video segmentation, and 3D reconstruction. Variants like SAM 2 extend the approach to video. The model's public release accelerated research across many domains by providing a universal segmentation backbone."
+    },
+    {
+      "question": "The organization that developed the Segment Anything Model is __________  __________.",
+      "type": "blank",
+      "answer": "Meta AI",
+      "explanation": "Meta AI (formerly Facebook AI Research / FAIR) has been one of the most prolific contributors to open-source computer vision research. Beyond SAM, they've released Detectron2 (object detection), DINOv2 (self-supervised vision features), and numerous foundational papers. Their approach of training at massive scale and releasing models publicly has significantly advanced the field. SAM and its SA-1B dataset represent one of the largest annotation efforts in computer vision history — the dataset alone contains more segmentation masks than all previous datasets combined."
+    },
+    {
+      "question": "The package used in the chapter to load the pretrained Segment Anything Model is called __________.",
+      "type": "blank",
+      "answer": "KerasHub",
+      "explanation": "KerasHub provides a unified interface for loading pretrained models across different tasks — classification, segmentation, text generation, and more. For SAM, KerasHub handles the model architecture setup, weight loading, and preprocessing, so you can start using the model with just a few lines of code. This abstraction is valuable because SAM's architecture is complex (separate image encoder, prompt encoder, and mask decoder), and setting it up manually requires careful attention to preprocessing, prompt formatting, and output interpretation."
+    },
+    {
+      "question": "The KerasHub task wrapper used for pretrained image segmentation models is called __________.",
+      "type": "blank",
+      "answer": "ImageSegmenter",
+      "explanation": "ImageSegmenter is KerasHub's task-specific API for segmentation — it wraps the model with appropriate preprocessing and postprocessing, exposes a clean predict interface, and handles prompt encoding for models like SAM. Task wrappers are KerasHub's design pattern: ImageClassifier for classification, ImageSegmenter for segmentation, each providing a task-appropriate interface around the underlying model. This abstraction lets you swap backbones (SAM, DeepLab, SegFormer) while keeping the same high-level API."
+    },
+    {
+      "question": "The specific pretrained SAM preset used in the chapter is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "sam huge sa1b",
+      "explanation": "SAM comes in three sizes — huge, large, and base — with the huge variant offering the best segmentation quality at the cost of more computation. The 'sa1b' suffix indicates the model was trained on the SA-1B dataset. The huge model uses a ViT-H (Vision Transformer Huge) as its image encoder, which has about 636 million parameters. For interactive applications where latency matters, the base or large variants may be better choices. For maximum quality in batch processing, the huge variant is preferred."
+    },
+    {
+      "question": "The large-scale dataset released with SAM, containing about 1 billion annotated masks, is called the __________ __________ __________.",
+      "type": "blank",
+      "answer": "SA 1B Dataset",
+      "explanation": "SA-1B (Segment Anything 1 Billion) contains approximately 1.1 billion segmentation masks across 11 million images. This is orders of magnitude larger than previous segmentation datasets — COCO has about 2.5 million masks. The dataset was created through a semi-automated pipeline: early model versions generated mask proposals, human annotators corrected and extended them, and the improved data was used to train better models. This data flywheel is a recurring pattern in modern AI: use the model to help create its own training data, iteratively improving both."
+    },
+    {
+      "question": "The broader prompting capability of SAM for guiding segmentation is called __________ __________.",
+      "type": "blank",
+      "answer": "Image Prompting",
+      "explanation": "Image prompting in SAM refers to providing spatial hints within the image to guide which object should be segmented. Unlike text prompts that describe what to segment semantically, image prompts indicate where to segment spatially. This includes clicking a point inside an object, drawing a box around it, or providing an initial mask to refine. The prompting paradigm makes SAM interactive — instead of getting all segmentation results at once, you iteratively query the model by pointing at objects of interest. This is fundamentally different from traditional segmentation models that process the entire image in one pass."
+    },
+    {
+      "question": "A prompting mode supported by Segment Anything according to the chapter summary is __________  __________.",
+      "type": "blank",
+      "answer": "Text Prompting",
+      "explanation": "Text prompting lets you describe what to segment in natural language — 'segment the dog' or 'find all trees.' This connects segmentation to language understanding, enabling more intuitive human-model interaction. Text prompting requires the model to understand both visual content and linguistic descriptions, bridging the gap between vision and language. While the original SAM paper focuses on point and box prompts, the broader SAM ecosystem and extensions support text-based prompting through integration with models like CLIP. This multimodal capability is part of the trend toward foundation models that bridge multiple modalities."
+    },
+    {
+      "question": "A prompting mode where a point inside the target object is used to indicate what should be segmented is called __________ __________.",
+      "type": "blank",
+      "answer": "Point Prompting",
+      "explanation": "Point prompting is the simplest way to interact with SAM: click anywhere inside the object you want segmented. SAM interprets the point as 'segment the object containing this location.' The model handles ambiguity — if a point falls on an object at multiple scales (e.g., a button on a shirt on a person), SAM can return multiple masks at different granularities. Point prompting is fast and intuitive, making it ideal for interactive annotation tools. Multiple positive points (inside the object) and negative points (outside it) can be combined to refine the segmentation."
+    },
+    {
+      "question": "A prompting mode where a box around the target object is used to indicate what should be segmented is called __________ __________.",
+      "type": "blank",
+      "answer": "Box Prompting",
+      "explanation": "Box prompting gives SAM a bounding box and asks it to segment the main object within that box. This is more informative than a single point — it constrains both the object's location and approximate scale. Box prompts are particularly useful for integrating SAM with object detectors: run a detector to get bounding boxes, then use SAM to produce pixel-precise masks for each detected object. This combination gives you instance segmentation without training a dedicated instance segmentation model. Box prompts also reduce ambiguity compared to point prompts because the box defines the expected object scale."
+    },
+    {
+      "question": "An additional model input that tells SAM which object to segment, such as a point or a box, is called a __________.",
+      "type": "blank",
+      "answer": "Prompt",
+      "explanation": "The prompt concept is what makes SAM a foundation model rather than a task-specific model. Traditional segmentation models have a fixed set of output classes; SAM segments whatever the prompt indicates. This mirrors the prompt paradigm in language models (GPT, Claude): the model has general capability, and the prompt steers it toward the specific output you want. The prompt is encoded into an embedding vector that interacts with the image embedding in the mask decoder. This architecture separates 'understanding the image' (expensive, done once) from 'understanding the query' (cheap, done per prompt)."
+    },
+    {
+      "question": "The SAM component that converts the input image into a smaller image embedding is called the __________ __________.",
+      "type": "blank",
+      "answer": "Image Encoder",
+      "explanation": "SAM's image encoder is a heavy Vision Transformer (ViT) that processes the full input image into a dense feature representation — the image embedding. This is the most computationally expensive component, but it only runs once per image. The embedding captures everything the model knows about the image's visual content at every spatial position. For interactive use, you encode the image once and then run the lightweight prompt encoder and mask decoder multiple times as the user clicks different objects. This amortized computation is what makes SAM fast enough for interactive annotation."
+    },
+    {
+      "question": "The compressed representation produced by the SAM image encoder is called the __________ __________.",
+      "type": "blank",
+      "answer": "Image Embedding",
+      "explanation": "The image embedding is a spatial feature tensor — typically 64×64 with 256 channels — that represents the image's visual content in a form the mask decoder can process. Unlike classification feature vectors that collapse spatial information, the image embedding preserves spatial structure because segmentation needs to know where things are. The embedding is dense: every spatial position contains a feature vector summarizing visual content at that location and its surrounding context. This single embedding supports all possible prompts — it's a general-purpose representation of the image's content."
+    },
+    {
+      "question": "The SAM component that converts prompts into embedded vectors is called the __________ __________.",
+      "type": "blank",
+      "answer": "Prompt Encoder",
+      "explanation": "The prompt encoder translates various prompt types (points, boxes, masks, text) into a common embedding space that the mask decoder can work with. Points are encoded using positional embeddings plus a learned token indicating positive or negative. Boxes are encoded as two corner points. The prompt encoder is lightweight — much cheaper than the image encoder — enabling rapid re-prompting. This modular design means new prompt types can potentially be added without retraining the image encoder, just by extending the prompt encoder."
+    },
+    {
+      "question": "The SAM component that takes the image embedding and prompt embedding and outputs possible predicted masks is called the __________ __________.",
+      "type": "blank",
+      "answer": "Mask Decoder",
+      "explanation": "The mask decoder is a lightweight transformer that cross-attends between prompt tokens and the image embedding to produce segmentation masks. It outputs multiple candidate masks (typically 3) at different granularities to handle ambiguity — when you click on a shirt button, do you want the button, the shirt, or the person? Each mask comes with a confidence score. The decoder is small and fast, enabling real-time interactive segmentation. Its design is key to SAM's practical usability: the expensive image encoding happens once, and the cheap mask decoding happens per interaction."
+    },
+    {
+      "question": "The training triples used for SAM, consisting of an image, a prompt, and a ground truth mask, are called __________ __________ __________ __________.",
+      "type": "blank",
+      "answer": "Image Prompt Mask Triples",
+      "explanation": "SAM's training data consists of (image, prompt, mask) triples — for each training example, the model receives an image and a prompt, and must produce the corresponding mask. During training, prompts are simulated: random points inside ground truth masks, bounding boxes around masks, or combinations. This prompt simulation is crucial — the model must learn to respond correctly to any prompt type at any location. The triple structure means SAM learns a conditional distribution: 'given this image and this prompt, produce this mask.' This conditioning is what makes SAM promptable rather than producing fixed outputs."
+    },
+    {
+      "question": "The true segmentation mask used as the target during SAM training is called the __________ __________ __________.",
+      "type": "blank",
+      "answer": "Ground Truth Mask",
+      "explanation": "Ground truth masks in SAM's training are binary — each mask isolates one object. This differs from semantic segmentation where masks have multiple class labels. SAM doesn't know or care about class names; it just learns 'given a prompt pointing at something, segment that thing.' The ground truth masks in SA-1B were created through a combination of human annotation and model-assisted labeling, with quality varying across the dataset. The sheer scale (1 billion masks) compensates for individual mask noise, as the model learns robust segmentation patterns from the aggregate."
+    },
+    {
+      "question": "The data collection stage where early model predictions were corrected and extended by humans to build the SA-1B dataset is called __________ __________ __________.",
+      "type": "blank",
+      "answer": "Semiautomated Data Collection",
+      "explanation": "SAM's data collection was a three-phase process: (1) assisted-manual — annotators used an early SAM model to accelerate mask drawing, (2) semi-automatic — the model proposed masks that annotators corrected, and (3) fully automatic — the model generated masks without human intervention, with quality filters applied. This bootstrap approach is powerful: use a weak model to accelerate annotation, use the improved annotations to train a better model, and repeat. Each iteration produces more data and a better model. The strategy addresses the fundamental challenge of segmentation data: pixel-level annotation is extremely expensive at scale."
+    }
+  ]
+}
