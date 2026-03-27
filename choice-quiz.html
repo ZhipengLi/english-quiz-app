@@ -130,12 +130,12 @@
             white-space: nowrap;
         }
 
-        /* Updated Question Section for TTS */
+        /* Updated Question Section for TTS and Explain */
         .question-wrapper {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            gap: 15px;
+            gap: 10px;
             margin-bottom: 25px;
         }
 
@@ -146,7 +146,13 @@
             flex-grow: 1;
         }
 
-        .speak-btn {
+        .action-btns {
+            display: flex;
+            gap: 5px;
+            flex-shrink: 0;
+        }
+
+        .speak-btn, .explain-btn {
             background: none;
             border: none;
             cursor: pointer;
@@ -154,18 +160,17 @@
             padding: 8px;
             border-radius: 50%;
             transition: all 0.2s ease;
-            flex-shrink: 0;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .speak-btn:hover {
+        .speak-btn:hover, .explain-btn:hover {
             background-color: rgba(52, 152, 219, 0.1);
             transform: scale(1.1);
         }
 
-        .speak-btn:active {
+        .speak-btn:active, .explain-btn:active {
             transform: scale(0.95);
         }
         
@@ -442,7 +447,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- View 1: Setup Screen -->
         <div id="setup-view" class="view active">
             <h1>Quiz Setup</h1>
             <p>Paste your quiz JSON data or URL into the text box below.</p>
@@ -458,13 +462,11 @@
                 </label>
             </div>
 
-            <!-- New Checkboxes for Reverse Questions -->
             <div style="margin-bottom: 25px;">
                  <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: var(--font-color);">
                     <input type="checkbox" id="reverse-check"> 
                     Generate reverse questions for 'blank' types (Two-way learning)
                 </label>
-                <!-- New Conditional Checkbox -->
                 <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: var(--font-color); margin-left: 28px; margin-top: 10px; font-size: 0.9em;">
                     <input type="checkbox" id="conditional-reverse-check" disabled> 
                     Only show reverse question if answer was incorrect
@@ -477,7 +479,6 @@
             <p id="error-message"></p>
         </div>
 
-        <!-- View 2: Quiz Screen -->
         <div id="quiz-view" class="view">
             <div class="quiz-header">
                  <div id="progress-wrapper">
@@ -489,15 +490,23 @@
                 <button id="show-text-btn" class="btn btn-secondary">Show Text</button>
             </div>
 
-            <!-- Modified Question Container for TTS -->
             <div class="question-wrapper">
                 <div id="question-text"></div>
-                <button id="speak-btn" class="speak-btn" title="Read Question Aloud" aria-label="Read Question Aloud">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-                    </svg>
-                </button>
+                <div class="action-btns">
+                    <button id="speak-btn" class="speak-btn" title="Read Question Aloud" aria-label="Read Question Aloud">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                        </svg>
+                    </button>
+                    <button id="explain-btn" class="explain-btn" title="Explain with Gemini" aria-label="Explain with Gemini">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                    </button>
+                </div>
             </div>
 
             <div id="options-container"></div>
@@ -512,7 +521,6 @@
             </div>
         </div>
 
-        <!-- View 3: Summary Screen -->
         <div id="summary-view" class="view">
             <h2 id="summary-title">Quiz Complete!</h2>
             <p id="summary-message"></p>
@@ -525,7 +533,6 @@
         </div>
     </div>
 
-    <!-- Modal for displaying reference text -->
     <div id="text-modal" class="modal-overlay">
         <div class="modal-content">
             <button class="close-btn">&times;</button>
@@ -565,6 +572,7 @@
             const progressText = document.getElementById('progress-text');
             const questionTextElement = document.getElementById('question-text'); 
             const speakBtn = document.getElementById('speak-btn');
+            const explainBtn = document.getElementById('explain-btn'); // New
             const optionsContainer = document.getElementById('options-container');
             const feedbackContainer = document.getElementById('feedback-container');
             const feedbackResult = document.getElementById('feedback-result');
@@ -676,12 +684,18 @@
                 return newArray;
             };
 
-            // --- TTS FUNCTIONALITY ---
+            // --- TTS & EXPLAIN FUNCTIONALITY ---
             const cancelSpeech = () => {
                 if ('speechSynthesis' in window) {
                     window.speechSynthesis.cancel();
                     speakBtn.classList.remove('speaking');
                 }
+            };
+
+            const getCleanText = () => {
+                let text = questionTextElement.textContent;
+                // Remove underscores for both speech and explain
+                return text.replace(/_+/g, '').trim();
             };
 
             const handleSpeak = () => {
@@ -695,10 +709,7 @@
                     return;
                 }
 
-                let textToSpeak = questionTextElement.textContent;
-                // Remove underscores for speech
-                textToSpeak = textToSpeak.replace(/_+/g, '').trim();
-
+                let textToSpeak = getCleanText();
                 if (!textToSpeak) return;
 
                 const utterance = new SpeechSynthesisUtterance(textToSpeak);
@@ -716,6 +727,17 @@
                 };
 
                 window.speechSynthesis.speak(utterance);
+            };
+
+            const handleExplain = () => {
+                const word = getCleanText();
+                if (!word) return;
+                
+                // Encode the word to handle special characters in URL
+                const encodedWord = encodeURIComponent(word);
+                const url = `https://gemini.google.com/app?prompt=如何理解记忆这个词?${encodedWord}`;
+                
+                window.open(url, '_blank');
             };
 
             // --- CORE LOGIC ---
@@ -1124,6 +1146,7 @@
             closeBtn.addEventListener('click', hideModal);
             
             speakBtn.addEventListener('click', handleSpeak);
+            explainBtn.addEventListener('click', handleExplain); // New
 
             textModal.addEventListener('click', (event) => {
                 if (event.target === textModal) {
