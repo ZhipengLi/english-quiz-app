@@ -692,10 +692,12 @@
                 }
             };
 
-            const getCleanText = () => {
-                let text = questionTextElement.textContent;
-                // Remove underscores for both speech and explain
-                return text.replace(/_+/g, '').trim();
+            // MODIFIED: Fetch original question from data source instead of screen text
+            const getOriginalWord = () => {
+                const currentQuestion = quizData[questionOrder[currentQuestionIndex]];
+                if (!currentQuestion) return "";
+                // Return the original question text, stripped of any underscores
+                return currentQuestion.question.replace(/_+/g, '').trim();
             };
 
             const handleSpeak = () => {
@@ -709,7 +711,7 @@
                     return;
                 }
 
-                let textToSpeak = getCleanText();
+                let textToSpeak = getOriginalWord();
                 if (!textToSpeak) return;
 
                 const utterance = new SpeechSynthesisUtterance(textToSpeak);
@@ -730,12 +732,12 @@
             };
 
             const handleExplain = () => {
-                const word = getCleanText();
+                const word = getOriginalWord();
                 if (!word) return;
                 
                 // Encode the word to handle special characters in URL
                 const encodedWord = encodeURIComponent(word);
-                const url = `https://gemini.google.com/app?prompt=如何理解记忆${encodedWord}这个英语单词?`;
+                const url = `https://gemini.google.com/app?prompt=如何理解记忆这个词?${encodedWord}`;
                 
                 window.open(url, '_blank');
             };
