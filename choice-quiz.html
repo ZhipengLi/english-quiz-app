@@ -737,7 +737,7 @@
                 
                 // Encode the word to handle special characters in URL
                 const encodedWord = encodeURIComponent(word);
-                const url = `https://gemini.google.com/app?prompt=如何理解记忆这个词?${encodedWord}`;
+                const url = `https://gemini.google.com/app?prompt=如何理解记忆${encodedWord}这个英语单词?`;
                 
                 window.open(url, '_blank');
             };
