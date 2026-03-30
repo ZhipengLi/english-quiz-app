@@ -47,7 +47,7 @@
 
         .view {
             padding: 30px 40px;
-            display: none; /* Hidden by default */
+            display: none;
         }
 
         .view.active {
@@ -93,12 +93,66 @@
         }
 
         /* --- Quiz View --- */
+        #quiz-view {
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(circle at center, #ffffff 0%, #eef4ff 55%, #dde9ff 100%);
+        }
+
+        #quiz-bg-canvas {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        #quiz-view > *:not(#quiz-bg-canvas) {
+            position: relative;
+            z-index: 1;
+        }
+
         .quiz-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 20px;
             margin-bottom: 20px;
+        }
+
+        #quiz-view .quiz-header,
+        #quiz-view .question-wrapper,
+        #quiz-view #options-container,
+        #quiz-view #feedback-container,
+        #quiz-view .controls {
+            position: relative;
+            z-index: 1;
+        }
+
+        #quiz-view .question-wrapper,
+        #quiz-view #feedback-container,
+        #quiz-view .controls {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 16px;
+        }
+
+        #quiz-view .question-wrapper {
+            padding: 18px 20px;
+            box-shadow: 0 10px 30px rgba(100, 116, 139, 0.10);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+        }
+
+        #quiz-view #feedback-container {
+            background: rgba(255, 255, 255, 0.72);
+        }
+
+        #quiz-view .controls {
+            padding: 16px;
+            margin-top: 24px;
         }
 
         #progress-wrapper {
@@ -130,7 +184,6 @@
             white-space: nowrap;
         }
 
-        /* Updated Question Section for TTS and Explain */
         .question-wrapper {
             display: flex;
             justify-content: space-between;
@@ -203,9 +256,20 @@
             width: 100%;
         }
 
+        #quiz-view .option-btn,
+        #quiz-view #blank-input {
+            background: rgba(255, 255, 255, 0.78);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+        }
+
         .option-btn:hover:not(:disabled) {
             background-color: #f1f2f6;
             border-color: var(--primary-color);
+        }
+
+        #quiz-view .option-btn:hover:not(:disabled) {
+            background-color: rgba(241, 246, 255, 0.95);
         }
 
         .option-btn:disabled {
@@ -252,7 +316,7 @@
             border-radius: 8px;
             background-color: #f8f9fa;
             border-left: 5px solid var(--primary-color);
-            display: none; /* Hidden until an answer is selected */
+            display: none;
         }
 
         #feedback-container.correct {
@@ -348,7 +412,7 @@
         }
 
         #next-btn {
-            display: none; /* Hidden until an answer is selected */
+            display: none;
         }
 
         #error-message {
@@ -401,7 +465,7 @@
         .modal-content h2 {
             margin-bottom: 20px;
             color: var(--secondary-color);
-            padding-right: 40px; /* Space for close button */
+            padding-right: 40px;
         }
 
         .modal-content .close-btn {
@@ -440,7 +504,7 @@
             }
             #options-container.blank-form {
                 flex-direction: column;
-                align-items: stretch; /* Make items fill width */
+                align-items: stretch;
             }
         }
     </style>
@@ -480,6 +544,8 @@
         </div>
 
         <div id="quiz-view" class="view">
+            <canvas id="quiz-bg-canvas"></canvas>
+
             <div class="quiz-header">
                  <div id="progress-wrapper">
                     <div id="progress-bar-container">
@@ -553,7 +619,7 @@
             
             // New State for Two-way Learning
             let isReverseEnabled = false;
-            let isConditionalReverse = false; // New flag
+            let isConditionalReverse = false;
             let isReversedStep = false;
             let part1Correct = false;
             let part2Correct = false;
@@ -572,7 +638,7 @@
             const progressText = document.getElementById('progress-text');
             const questionTextElement = document.getElementById('question-text'); 
             const speakBtn = document.getElementById('speak-btn');
-            const explainBtn = document.getElementById('explain-btn'); // New
+            const explainBtn = document.getElementById('explain-btn');
             const optionsContainer = document.getElementById('options-container');
             const feedbackContainer = document.getElementById('feedback-container');
             const feedbackResult = document.getElementById('feedback-result');
@@ -587,6 +653,8 @@
             const textModal = document.getElementById('text-modal');
             const closeBtn = document.querySelector('.close-btn');
             const referenceTextContent = document.getElementById('reference-text-content');
+            const quizView = document.getElementById('quiz-view');
+            const quizBgCanvas = document.getElementById('quiz-bg-canvas');
 
             // Checkbox logic
             const reverseCheck = document.getElementById('reverse-check');
@@ -634,6 +702,117 @@
             };
             const DEFAULT_QUIZ_JSON = JSON.stringify(defaultQuizObject, null, 2);
 
+            // --- QUIZ BACKGROUND ANIMATION ---
+            let quizBgCtx = null;
+            let quizBgParticles = [];
+            let quizBgAnimationId = null;
+            let quizBgMouse = { x: -9999, y: -9999 };
+
+            const initQuizBackground = () => {
+                if (!quizBgCanvas) return;
+                quizBgCtx = quizBgCanvas.getContext('2d');
+                resizeQuizBackground();
+                createQuizParticles();
+
+                if (!quizBgAnimationId) {
+                    animateQuizBackground();
+                }
+            };
+
+            const resizeQuizBackground = () => {
+                if (!quizBgCanvas || !quizView) return;
+                quizBgCanvas.width = quizView.clientWidth;
+                quizBgCanvas.height = quizView.clientHeight;
+            };
+
+            const createQuizParticles = () => {
+                if (!quizBgCanvas) return;
+                const count = Math.max(50, Math.floor((quizBgCanvas.width * quizBgCanvas.height) / 9000));
+                quizBgParticles = [];
+
+                for (let i = 0; i < count; i++) {
+                    quizBgParticles.push({
+                        x: Math.random() * quizBgCanvas.width,
+                        y: Math.random() * quizBgCanvas.height,
+                        vx: (Math.random() - 0.5) * 0.9,
+                        vy: (Math.random() - 0.5) * 0.9,
+                        r: Math.random() * 2.2 + 1.2
+                    });
+                }
+            };
+
+            const animateQuizBackground = () => {
+                if (!quizBgCtx || !quizBgCanvas) return;
+
+                quizBgCtx.clearRect(0, 0, quizBgCanvas.width, quizBgCanvas.height);
+
+                for (const p of quizBgParticles) {
+                    p.x += p.vx;
+                    p.y += p.vy;
+
+                    if (p.x < 0 || p.x > quizBgCanvas.width) p.vx *= -1;
+                    if (p.y < 0 || p.y > quizBgCanvas.height) p.vy *= -1;
+
+                    const dx = p.x - quizBgMouse.x;
+                    const dy = p.y - quizBgMouse.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < 120) {
+                        p.x += dx * 0.015;
+                        p.y += dy * 0.015;
+                    }
+
+                    quizBgCtx.beginPath();
+                    quizBgCtx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    quizBgCtx.fillStyle = "rgba(59, 130, 246, 0.45)";
+                    quizBgCtx.fill();
+
+                    quizBgCtx.beginPath();
+                    quizBgCtx.arc(p.x, p.y, p.r * 4, 0, Math.PI * 2);
+                    quizBgCtx.fillStyle = "rgba(96, 165, 250, 0.05)";
+                    quizBgCtx.fill();
+                }
+
+                for (let i = 0; i < quizBgParticles.length; i++) {
+                    for (let j = i + 1; j < quizBgParticles.length; j++) {
+                        const dx = quizBgParticles[i].x - quizBgParticles[j].x;
+                        const dy = quizBgParticles[i].y - quizBgParticles[j].y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+
+                        if (dist < 120) {
+                            quizBgCtx.beginPath();
+                            quizBgCtx.moveTo(quizBgParticles[i].x, quizBgParticles[i].y);
+                            quizBgCtx.lineTo(quizBgParticles[j].x, quizBgParticles[j].y);
+                            quizBgCtx.strokeStyle = `rgba(59, 130, 246, ${0.10 * (1 - dist / 120)})`;
+                            quizBgCtx.lineWidth = 1;
+                            quizBgCtx.stroke();
+                        }
+                    }
+                }
+
+                quizBgAnimationId = requestAnimationFrame(animateQuizBackground);
+            };
+
+            const bindQuizBackgroundEvents = () => {
+                if (!quizView) return;
+
+                window.addEventListener('resize', () => {
+                    resizeQuizBackground();
+                    createQuizParticles();
+                });
+
+                quizView.addEventListener('mousemove', (e) => {
+                    const rect = quizView.getBoundingClientRect();
+                    quizBgMouse.x = e.clientX - rect.left;
+                    quizBgMouse.y = e.clientY - rect.top;
+                });
+
+                quizView.addEventListener('mouseleave', () => {
+                    quizBgMouse.x = -9999;
+                    quizBgMouse.y = -9999;
+                });
+            };
+
             // --- COOKIE FUNCTIONS ---
             const setCookie = (name, value, days) => {
                 let expires = "";
@@ -671,8 +850,14 @@
                 if (views[viewName]) {
                     views[viewName].classList.add('active');
                 }
-                // Stop speaking when switching views
                 cancelSpeech();
+
+                if (viewName === 'quiz') {
+                    setTimeout(() => {
+                        resizeQuizBackground();
+                        createQuizParticles();
+                    }, 50);
+                }
             };
 
             const shuffleArray = (array) => {
@@ -692,11 +877,9 @@
                 }
             };
 
-            // MODIFIED: Fetch original question from data source instead of screen text
             const getOriginalWord = () => {
                 const currentQuestion = quizData[questionOrder[currentQuestionIndex]];
                 if (!currentQuestion) return "";
-                // Return the original question text, stripped of any underscores
                 return currentQuestion.question.replace(/_+/g, '').trim();
             };
 
@@ -715,7 +898,7 @@
                 if (!textToSpeak) return;
 
                 const utterance = new SpeechSynthesisUtterance(textToSpeak);
-                utterance.lang = 'en-US'; 
+                utterance.lang = 'en-US';
                 utterance.rate = 1.0;
 
                 speakBtn.classList.add('speaking');
@@ -735,7 +918,6 @@
                 const word = getOriginalWord();
                 if (!word) return;
                 
-                // Encode the word to handle special characters in URL
                 const encodedWord = encodeURIComponent(word);
                 const url = `https://gemini.google.com/app?prompt=如何理解记忆${encodedWord}这个英语单词?`;
                 
@@ -824,7 +1006,6 @@
             };
 
             const displayQuestion = () => {
-                // Stop any previous speech
                 cancelSpeech();
 
                 optionsContainer.innerHTML = '';
@@ -837,17 +1018,14 @@
                 const originalQuestion = quizData[questionIdx];
                 let questionToDisplay = originalQuestion;
 
-                // Handle Reverse Question Generation Logic
                 if (isReversedStep) {
                     const originalPrompt = originalQuestion.question.replace(/_+/g, '').trim();
                     const underscores = '_'.repeat(originalPrompt.length);
                     let newQuestionText;
                     
                     if (originalQuestion.question.trim().startsWith('_')) {
-                        // Original: "_ rugae" (Ans: gastric) -> Reverse: "gastric _" (Ans: rugae)
                         newQuestionText = `${originalQuestion.answer} ${underscores}`;
                     } else {
-                         // Original: "hydrangea _" (Ans: bush) -> Reverse: "_ bush" (Ans: hydrangea)
                         newQuestionText = `${underscores} ${originalQuestion.answer}`;
                     }
                     
@@ -904,6 +1082,10 @@
 
                     setTimeout(() => input.focus(), 100);
                 }
+
+                setTimeout(() => {
+                    resizeQuizBackground();
+                }, 0);
             };
 
             const handleOptionClick = (event) => {
@@ -934,6 +1116,7 @@
                 feedbackContainer.style.display = 'block';
 
                 showNextButton();
+                setTimeout(() => resizeQuizBackground(), 0);
             };
 
             const handleBlankSubmit = (currentQuestion) => {
@@ -977,6 +1160,7 @@
                 feedbackContainer.style.display = 'block';
 
                 showNextButton();
+                setTimeout(() => resizeQuizBackground(), 0);
             };
             
             const showNextButton = () => {
@@ -985,7 +1169,6 @@
                     const isLastQuestion = currentQuestionIndex === questionOrder.length - 1;
                     
                     if (isReverseEnabled && !isReversedStep && quizData[questionOrder[currentQuestionIndex]].type === 'blank') {
-                        // Decide if we are going to show the reverse question
                         let willShowReverse = true;
                         if (isConditionalReverse && part1Correct) {
                             willShowReverse = false;
@@ -1004,6 +1187,7 @@
                 }
                 nextBtn.style.display = 'block';
                 nextBtn.focus();
+                setTimeout(() => resizeQuizBackground(), 0);
             };
 
             const nextQuestion = () => {
@@ -1011,32 +1195,24 @@
                 const currentQuestion = quizData[questionIdx];
                 const type = currentQuestion.type || 'choice';
 
-                // Check if we need to show the reverse question
                 if (isReverseEnabled && type === 'blank') {
                     if (!isReversedStep) {
-                        // Check condition: Only reverse if Part 1 was WRONG (if Conditional Mode is ON)
                         const skipReverse = isConditionalReverse && part1Correct;
 
                         if (!skipReverse) {
-                            // Move to Reverse Step
                             isReversedStep = true;
                             displayQuestion();
-                            return; // Exit here
+                            return;
                         } else {
-                            // Skipped reverse step because Part 1 was correct (and Conditional Mode ON)
                             score++;
                             isReversedStep = false;
                             part1Correct = false;
                             part2Correct = false;
                         }
                     } else {
-                        // We just finished the Reverse Step.
                         if (isConditionalReverse) {
-                            // If we are here in conditional mode, it means Part 1 was wrong.
-                            // So the unit is counted as incorrect regardless of Part 2.
                             incorrectlyAnsweredQuestions.push(questionIdx);
                         } else {
-                            // Standard: Need both correct
                             if (part1Correct && part2Correct) {
                                 score++;
                             } else {
@@ -1044,14 +1220,12 @@
                             }
                         }
                         
-                        // Reset flags
                         isReversedStep = false;
                         part1Correct = false;
                         part2Correct = false;
                     }
                 }
 
-                // Move to next question index
                 currentQuestionIndex++;
                 if (currentQuestionIndex < questionOrder.length) {
                     displayQuestion();
@@ -1138,6 +1312,8 @@
             };
 
             initialize();
+            bindQuizBackgroundEvents();
+            initQuizBackground();
 
             // --- EVENT LISTENERS ---
             startBtn.addEventListener('click', startQuiz);
@@ -1148,7 +1324,7 @@
             closeBtn.addEventListener('click', hideModal);
             
             speakBtn.addEventListener('click', handleSpeak);
-            explainBtn.addEventListener('click', handleExplain); // New
+            explainBtn.addEventListener('click', handleExplain);
 
             textModal.addEventListener('click', (event) => {
                 if (event.target === textModal) {
