@@ -25,24 +25,46 @@
             padding: 0;
         }
 
+        html, body {
+            width: 100%;
+            min-height: 100%;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: var(--background-color);
+            background: radial-gradient(circle at center, #ffffff 0%, #eef4ff 55%, #dde9ff 100%);
             color: var(--font-color);
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Animated page background */
+        #page-bg-canvas {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            z-index: 0;
+            pointer-events: none;
         }
 
         .container {
-            background-color: var(--card-bg-color);
+            position: relative;
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0.92);
             border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
+            box-shadow: 0 18px 40px rgba(30, 41, 59, 0.12);
             width: 100%;
             max-width: 700px;
             overflow: hidden;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
         }
 
         .view {
@@ -76,6 +98,7 @@
             font-size: 0.85rem;
             margin-bottom: 20px;
             resize: vertical;
+            background: rgba(255,255,255,0.95);
         }
 
         .order-options {
@@ -93,66 +116,12 @@
         }
 
         /* --- Quiz View --- */
-        #quiz-view {
-            position: relative;
-            overflow: hidden;
-            background: radial-gradient(circle at center, #ffffff 0%, #eef4ff 55%, #dde9ff 100%);
-        }
-
-        #quiz-bg-canvas {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            display: block;
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        #quiz-view > *:not(#quiz-bg-canvas) {
-            position: relative;
-            z-index: 1;
-        }
-
         .quiz-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 20px;
             margin-bottom: 20px;
-        }
-
-        #quiz-view .quiz-header,
-        #quiz-view .question-wrapper,
-        #quiz-view #options-container,
-        #quiz-view #feedback-container,
-        #quiz-view .controls {
-            position: relative;
-            z-index: 1;
-        }
-
-        #quiz-view .question-wrapper,
-        #quiz-view #feedback-container,
-        #quiz-view .controls {
-            background: rgba(255, 255, 255, 0.45);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-radius: 16px;
-        }
-
-        #quiz-view .question-wrapper {
-            padding: 18px 20px;
-            box-shadow: 0 10px 30px rgba(100, 116, 139, 0.10);
-            border: 1px solid rgba(255, 255, 255, 0.7);
-        }
-
-        #quiz-view #feedback-container {
-            background: rgba(255, 255, 255, 0.72);
-        }
-
-        #quiz-view .controls {
-            padding: 16px;
-            margin-top: 24px;
         }
 
         #progress-wrapper {
@@ -256,20 +225,9 @@
             width: 100%;
         }
 
-        #quiz-view .option-btn,
-        #quiz-view #blank-input {
-            background: rgba(255, 255, 255, 0.78);
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
-        }
-
         .option-btn:hover:not(:disabled) {
             background-color: #f1f2f6;
             border-color: var(--primary-color);
-        }
-
-        #quiz-view .option-btn:hover:not(:disabled) {
-            background-color: rgba(241, 246, 255, 0.95);
         }
 
         .option-btn:disabled {
@@ -497,7 +455,6 @@
             flex-grow: 1;
         }
 
-        /* --- Responsive adjustments --- */
         @media (max-width: 480px) {
             .view {
                 padding: 20px;
@@ -510,6 +467,8 @@
     </style>
 </head>
 <body>
+    <canvas id="page-bg-canvas"></canvas>
+
     <div class="container">
         <div id="setup-view" class="view active">
             <h1>Quiz Setup</h1>
@@ -544,8 +503,6 @@
         </div>
 
         <div id="quiz-view" class="view">
-            <canvas id="quiz-bg-canvas"></canvas>
-
             <div class="quiz-header">
                  <div id="progress-wrapper">
                     <div id="progress-bar-container">
@@ -617,7 +574,6 @@
             let currentQuestionIndex = 0;
             let score = 0;
             
-            // New State for Two-way Learning
             let isReverseEnabled = false;
             let isConditionalReverse = false;
             let isReversedStep = false;
@@ -653,8 +609,12 @@
             const textModal = document.getElementById('text-modal');
             const closeBtn = document.querySelector('.close-btn');
             const referenceTextContent = document.getElementById('reference-text-content');
-            const quizView = document.getElementById('quiz-view');
-            const quizBgCanvas = document.getElementById('quiz-bg-canvas');
+
+            // Background canvas
+            const pageBgCanvas = document.getElementById('page-bg-canvas');
+            const pageBgCtx = pageBgCanvas.getContext('2d');
+            let bgParticles = [];
+            let bgMouse = { x: -9999, y: -9999 };
 
             // Checkbox logic
             const reverseCheck = document.getElementById('reverse-check');
@@ -702,116 +662,91 @@
             };
             const DEFAULT_QUIZ_JSON = JSON.stringify(defaultQuizObject, null, 2);
 
-            // --- QUIZ BACKGROUND ANIMATION ---
-            let quizBgCtx = null;
-            let quizBgParticles = [];
-            let quizBgAnimationId = null;
-            let quizBgMouse = { x: -9999, y: -9999 };
+            // --- BACKGROUND ANIMATION ---
+            function resizeBackground() {
+                pageBgCanvas.width = window.innerWidth;
+                pageBgCanvas.height = window.innerHeight;
+            }
 
-            const initQuizBackground = () => {
-                if (!quizBgCanvas) return;
-                quizBgCtx = quizBgCanvas.getContext('2d');
-                resizeQuizBackground();
-                createQuizParticles();
-
-                if (!quizBgAnimationId) {
-                    animateQuizBackground();
-                }
-            };
-
-            const resizeQuizBackground = () => {
-                if (!quizBgCanvas || !quizView) return;
-                quizBgCanvas.width = quizView.clientWidth;
-                quizBgCanvas.height = quizView.clientHeight;
-            };
-
-            const createQuizParticles = () => {
-                if (!quizBgCanvas) return;
-                const count = Math.max(50, Math.floor((quizBgCanvas.width * quizBgCanvas.height) / 9000));
-                quizBgParticles = [];
+            function createBackgroundParticles() {
+                const count = Math.max(90, Math.floor((window.innerWidth * window.innerHeight) / 14000));
+                bgParticles = [];
 
                 for (let i = 0; i < count; i++) {
-                    quizBgParticles.push({
-                        x: Math.random() * quizBgCanvas.width,
-                        y: Math.random() * quizBgCanvas.height,
-                        vx: (Math.random() - 0.5) * 0.9,
-                        vy: (Math.random() - 0.5) * 0.9,
-                        r: Math.random() * 2.2 + 1.2
+                    bgParticles.push({
+                        x: Math.random() * pageBgCanvas.width,
+                        y: Math.random() * pageBgCanvas.height,
+                        vx: (Math.random() - 0.5) * 0.8,
+                        vy: (Math.random() - 0.5) * 0.8,
+                        r: Math.random() * 2.4 + 1.2
                     });
                 }
-            };
+            }
 
-            const animateQuizBackground = () => {
-                if (!quizBgCtx || !quizBgCanvas) return;
+            function animateBackground() {
+                pageBgCtx.clearRect(0, 0, pageBgCanvas.width, pageBgCanvas.height);
 
-                quizBgCtx.clearRect(0, 0, quizBgCanvas.width, quizBgCanvas.height);
-
-                for (const p of quizBgParticles) {
+                for (const p of bgParticles) {
                     p.x += p.vx;
                     p.y += p.vy;
 
-                    if (p.x < 0 || p.x > quizBgCanvas.width) p.vx *= -1;
-                    if (p.y < 0 || p.y > quizBgCanvas.height) p.vy *= -1;
+                    if (p.x < 0 || p.x > pageBgCanvas.width) p.vx *= -1;
+                    if (p.y < 0 || p.y > pageBgCanvas.height) p.vy *= -1;
 
-                    const dx = p.x - quizBgMouse.x;
-                    const dy = p.y - quizBgMouse.y;
+                    const dx = p.x - bgMouse.x;
+                    const dy = p.y - bgMouse.y;
                     const dist = Math.sqrt(dx * dx + dy * dy);
 
-                    if (dist < 120) {
-                        p.x += dx * 0.015;
-                        p.y += dy * 0.015;
+                    if (dist < 140) {
+                        p.x += dx * 0.012;
+                        p.y += dy * 0.012;
                     }
 
-                    quizBgCtx.beginPath();
-                    quizBgCtx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-                    quizBgCtx.fillStyle = "rgba(59, 130, 246, 0.45)";
-                    quizBgCtx.fill();
+                    pageBgCtx.beginPath();
+                    pageBgCtx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    pageBgCtx.fillStyle = "rgba(59, 130, 246, 0.50)";
+                    pageBgCtx.fill();
 
-                    quizBgCtx.beginPath();
-                    quizBgCtx.arc(p.x, p.y, p.r * 4, 0, Math.PI * 2);
-                    quizBgCtx.fillStyle = "rgba(96, 165, 250, 0.05)";
-                    quizBgCtx.fill();
+                    pageBgCtx.beginPath();
+                    pageBgCtx.arc(p.x, p.y, p.r * 4, 0, Math.PI * 2);
+                    pageBgCtx.fillStyle = "rgba(96, 165, 250, 0.06)";
+                    pageBgCtx.fill();
                 }
 
-                for (let i = 0; i < quizBgParticles.length; i++) {
-                    for (let j = i + 1; j < quizBgParticles.length; j++) {
-                        const dx = quizBgParticles[i].x - quizBgParticles[j].x;
-                        const dy = quizBgParticles[i].y - quizBgParticles[j].y;
+                for (let i = 0; i < bgParticles.length; i++) {
+                    for (let j = i + 1; j < bgParticles.length; j++) {
+                        const dx = bgParticles[i].x - bgParticles[j].x;
+                        const dy = bgParticles[i].y - bgParticles[j].y;
                         const dist = Math.sqrt(dx * dx + dy * dy);
 
-                        if (dist < 120) {
-                            quizBgCtx.beginPath();
-                            quizBgCtx.moveTo(quizBgParticles[i].x, quizBgParticles[i].y);
-                            quizBgCtx.lineTo(quizBgParticles[j].x, quizBgParticles[j].y);
-                            quizBgCtx.strokeStyle = `rgba(59, 130, 246, ${0.10 * (1 - dist / 120)})`;
-                            quizBgCtx.lineWidth = 1;
-                            quizBgCtx.stroke();
+                        if (dist < 130) {
+                            pageBgCtx.beginPath();
+                            pageBgCtx.moveTo(bgParticles[i].x, bgParticles[i].y);
+                            pageBgCtx.lineTo(bgParticles[j].x, bgParticles[j].y);
+                            pageBgCtx.strokeStyle = `rgba(59, 130, 246, ${0.12 * (1 - dist / 130)})`;
+                            pageBgCtx.lineWidth = 1;
+                            pageBgCtx.stroke();
                         }
                     }
                 }
 
-                quizBgAnimationId = requestAnimationFrame(animateQuizBackground);
-            };
+                requestAnimationFrame(animateBackground);
+            }
 
-            const bindQuizBackgroundEvents = () => {
-                if (!quizView) return;
+            window.addEventListener('resize', () => {
+                resizeBackground();
+                createBackgroundParticles();
+            });
 
-                window.addEventListener('resize', () => {
-                    resizeQuizBackground();
-                    createQuizParticles();
-                });
+            window.addEventListener('mousemove', (e) => {
+                bgMouse.x = e.clientX;
+                bgMouse.y = e.clientY;
+            });
 
-                quizView.addEventListener('mousemove', (e) => {
-                    const rect = quizView.getBoundingClientRect();
-                    quizBgMouse.x = e.clientX - rect.left;
-                    quizBgMouse.y = e.clientY - rect.top;
-                });
-
-                quizView.addEventListener('mouseleave', () => {
-                    quizBgMouse.x = -9999;
-                    quizBgMouse.y = -9999;
-                });
-            };
+            window.addEventListener('mouseleave', () => {
+                bgMouse.x = -9999;
+                bgMouse.y = -9999;
+            });
 
             // --- COOKIE FUNCTIONS ---
             const setCookie = (name, value, days) => {
@@ -851,13 +786,6 @@
                     views[viewName].classList.add('active');
                 }
                 cancelSpeech();
-
-                if (viewName === 'quiz') {
-                    setTimeout(() => {
-                        resizeQuizBackground();
-                        createQuizParticles();
-                    }, 50);
-                }
             };
 
             const shuffleArray = (array) => {
@@ -898,7 +826,7 @@
                 if (!textToSpeak) return;
 
                 const utterance = new SpeechSynthesisUtterance(textToSpeak);
-                utterance.lang = 'en-US';
+                utterance.lang = 'en-US'; 
                 utterance.rate = 1.0;
 
                 speakBtn.classList.add('speaking');
@@ -1082,10 +1010,6 @@
 
                     setTimeout(() => input.focus(), 100);
                 }
-
-                setTimeout(() => {
-                    resizeQuizBackground();
-                }, 0);
             };
 
             const handleOptionClick = (event) => {
@@ -1116,7 +1040,6 @@
                 feedbackContainer.style.display = 'block';
 
                 showNextButton();
-                setTimeout(() => resizeQuizBackground(), 0);
             };
 
             const handleBlankSubmit = (currentQuestion) => {
@@ -1160,7 +1083,6 @@
                 feedbackContainer.style.display = 'block';
 
                 showNextButton();
-                setTimeout(() => resizeQuizBackground(), 0);
             };
             
             const showNextButton = () => {
@@ -1187,7 +1109,6 @@
                 }
                 nextBtn.style.display = 'block';
                 nextBtn.focus();
-                setTimeout(() => resizeQuizBackground(), 0);
             };
 
             const nextQuestion = () => {
@@ -1311,9 +1232,10 @@
                 }
             };
 
+            resizeBackground();
+            createBackgroundParticles();
+            animateBackground();
             initialize();
-            bindQuizBackgroundEvents();
-            initQuizBackground();
 
             // --- EVENT LISTENERS ---
             startBtn.addEventListener('click', startQuiz);
