@@ -1,0 +1,805 @@
+{
+  "text": "choice01",
+  "quiz": [
+    {
+      "word": "replica",
+      "question": "The museum displayed a replica of the Rosetta Stone. A scholar needs to study the actual ancient carvings. Should she examine the museum exhibit?",
+      "type": "choice",
+      "options": ["Yes, a replica is identical to the original", "No, she needs the genuine original", "Only if the replica is very old", "It depends on the museum's rating"],
+      "answer": "No, she needs the genuine original",
+      "explanation": "A replica is an exact copy — not the original itself.\n• replica = a reproduction or copy of something\n• A replica looks identical but lacks the authenticity of the source\n• For scholarly work on actual ancient carvings, only the original will do"
+    },
+    {
+      "word": "armada",
+      "question": "Spain launched an armada against England in 1588. What did England have to defend against?",
+      "type": "choice",
+      "options": ["A single powerful warship", "A large fleet of warships", "A land-based army", "A team of spies"],
+      "answer": "A large fleet of warships",
+      "explanation": "An armada is a large fleet of warships.\n• armada = a large naval force\n• The Spanish Armada comprised around 130 ships\n• From Spanish: 'armed force'"
+    },
+    {
+      "word": "agenda",
+      "question": "Item 4 on the meeting agenda was 'HR updates.' Which topic came fourth in the meeting?",
+      "type": "choice",
+      "options": ["The most urgent topic raised by attendees", "HR updates", "Whatever the chair decided on the day", "The topic with the most votes"],
+      "answer": "HR updates",
+      "explanation": "An agenda is a pre-set list of topics to be covered in order at a meeting.\n• agenda = an ordered list of planned discussion items\n• Item 4 means it is addressed fourth, not earlier or later\n• 'Hidden agenda' = a secret, undisclosed motive"
+    },
+    {
+      "word": "coda",
+      "question": "The conductor announced a coda at the end of the symphony. At what point in the performance did the audience hear it?",
+      "type": "choice",
+      "options": ["At the very start", "Halfway through", "Just before the main theme", "Right at the end"],
+      "answer": "Right at the end",
+      "explanation": "A coda is a concluding musical (or literary) passage — it always comes last.\n• coda = a final, closing section\n• From Italian: 'tail'\n• In writing/film, a coda is an epilogue-like closing"
+    },
+    {
+      "word": "panacea",
+      "question": "The health guru claimed that drinking lemon water every morning was a panacea. What was he claiming it could do?",
+      "type": "choice",
+      "options": ["Cure one specific vitamin deficiency", "Fix all health problems", "Replace surgery", "Boost energy only"],
+      "answer": "Fix all health problems",
+      "explanation": "A panacea is a supposed cure-all — something claimed to solve every problem.\n• panacea = a universal remedy or fix-all\n• Usually used skeptically — the claim sounds too good to be true\n• From Greek: 'pan' (all) + 'akos' (remedy)"
+    },
+    {
+      "word": "saga",
+      "question": "The journalist called the corruption trial 'a saga that had gripped the nation for three years.' What does this tell us about the trial?",
+      "type": "choice",
+      "options": ["It was a quick, simple case", "It was a long and complex unfolding story", "It involved only two people", "It ended without a verdict"],
+      "answer": "It was a long and complex unfolding story",
+      "explanation": "A saga is a long, drawn-out series of events, often dramatic or difficult.\n• saga = a lengthy, complex narrative or sequence of events\n• Originally Old Norse epic tales of heroes\n• Modern use: 'the whole visa saga took months'"
+    },
+    {
+      "word": "apocrypha",
+      "question": "A historian described the diary as apocrypha — interesting, but not usable as a primary source. Why can't she use it as solid evidence?",
+      "type": "choice",
+      "options": ["It is too recent", "Its authenticity and authorship are doubtful", "It is written in a foreign language", "It is too short"],
+      "answer": "Its authenticity and authorship are doubtful",
+      "explanation": "Apocrypha refers to writings of uncertain or disputed authenticity.\n• apocrypha = texts whose origin or authorship cannot be verified\n• Adjective: apocryphal ('an apocryphal story' = probably not true)\n• From Greek: 'hidden, obscure'"
+    },
+    {
+      "word": "phobia",
+      "question": "Leo has a phobia of spiders. He sees a tiny, harmless house spider on the wall. How is he most likely to react?",
+      "type": "choice",
+      "options": ["He calmly removes it", "He feels intense fear, despite knowing it is harmless", "He is mildly annoyed", "He ignores it completely"],
+      "answer": "He feels intense fear, despite knowing it is harmless",
+      "explanation": "A phobia is an extreme, irrational fear that persists regardless of actual danger.\n• phobia = an intense, disproportionate, irrational fear\n• The key is irrational — the fear is not proportional to real threat\n• From Greek: 'phobos' (fear)"
+    },
+    {
+      "word": "acrophobia",
+      "question": "Anna has acrophobia. Which of these activities would most directly trigger her condition?",
+      "type": "choice",
+      "options": ["Swimming in the ocean", "Standing on the roof of a skyscraper", "Entering a dark tunnel", "Being in a crowded elevator"],
+      "answer": "Standing on the roof of a skyscraper",
+      "explanation": "Acrophobia is specifically the fear of heights.\n• acrophobia = fear of heights ('acro-' = topmost point)\n• A skyscraper rooftop is a direct height trigger\n• Related: acrobat, acropolis — all involve high places"
+    },
+    {
+      "word": "fascia",
+      "question": "The landlord asked his tenant to repaint the fascia of the shop. The tenant painted the interior walls instead. Did he follow instructions?",
+      "type": "choice",
+      "options": ["Yes, the fascia is the interior wall", "No, the fascia is the flat board on the outside front of the building", "Yes, fascia means all paintable surfaces", "No, the fascia is the roof"],
+      "answer": "No, the fascia is the flat board on the outside front of the building",
+      "explanation": "A fascia is the flat horizontal board on the exterior front of a building, above the shopfront.\n• fascia = the signboard panel on the outside of a shopfront\n• Also: a connective tissue layer in anatomy; a dashboard panel in cars\n• From Latin: 'band, strip'"
+    },
+    {
+      "word": "encyclopedia",
+      "question": "A student wants a brief but reliable overview of the French Revolution. Which source best fits the purpose of an encyclopedia?",
+      "type": "choice",
+      "options": ["A novel set during the French Revolution", "A concise factual summary covering key events, dates, and figures", "A personal memoir by a historian", "A satirical cartoon from the era"],
+      "answer": "A concise factual summary covering key events, dates, and figures",
+      "explanation": "An encyclopedia is a reference work providing comprehensive summaries of knowledge across many subjects.\n• encyclopedia = a reference book (or website) with informational summaries\n• Designed for breadth and accessibility, not deep original argument\n• From Greek: 'enkyklios paideia' — 'circular/general education'"
+    },
+    {
+      "word": "nostalgia",
+      "question": "Hearing her old school song filled Maria with nostalgia. What emotion was she most likely experiencing?",
+      "type": "choice",
+      "options": ["Excitement about the future", "A bittersweet longing for the past", "Anger at old memories", "Boredom"],
+      "answer": "A bittersweet longing for the past",
+      "explanation": "Nostalgia is a sentimental, often bittersweet longing for the past.\n• nostalgia = fond, wistful longing for earlier times\n• From Greek: 'nostos' (homecoming) + 'algos' (pain)\n• Originally meant homesickness; now means longing for any past experience"
+    },
+    {
+      "word": "hemophilia",
+      "question": "A young boy with hemophilia cuts his finger. Why does this require immediate medical attention, even though the cut is small?",
+      "type": "choice",
+      "options": ["He is likely to feel no pain", "His blood does not clot properly, so bleeding is hard to stop", "The cut may become infected immediately", "He has unusually thin skin"],
+      "answer": "His blood does not clot properly, so bleeding is hard to stop",
+      "explanation": "Hemophilia is a genetic disorder in which blood lacks the ability to clot normally.\n• hemophilia = inability of blood to clot, causing prolonged bleeding\n• Even minor wounds can become life-threatening\n• From Greek: 'haima' (blood) + 'philia' (tendency toward)"
+    },
+    {
+      "word": "anemia",
+      "question": "The doctor told Tom he had anemia and that his fatigue was a direct result of it. What is most likely causing his tiredness?",
+      "type": "choice",
+      "options": ["Too much iron in the blood", "His blood is not carrying enough oxygen around his body", "He has a high fever", "He is dehydrated"],
+      "answer": "His blood is not carrying enough oxygen around his body",
+      "explanation": "Anemia is a condition in which red blood cells or hemoglobin are insufficient, reducing oxygen delivery.\n• anemia = deficiency of red blood cells or hemoglobin\n• Less oxygen to tissues → fatigue, weakness, paleness\n• From Greek: 'an-' (without) + 'haima' (blood)"
+    },
+    {
+      "word": "mania",
+      "question": "After winning the championship, football mania swept the country. What does this describe?",
+      "type": "choice",
+      "options": ["A mild interest in football", "A widespread, intense obsession with football", "A single fan's excitement", "A government sports program"],
+      "answer": "A widespread, intense obsession with football",
+      "explanation": "Mania describes an extreme enthusiasm, obsession, or craze — often widespread.\n• mania = an intense, uncontrolled enthusiasm or obsession\n• In psychology: a state of abnormally elevated mood/energy\n• Common suffix: Beatlemania, tulip mania"
+    },
+    {
+      "word": "megalomania",
+      "question": "The dictator, convinced he was destined to rule the entire world, exhibited classic megalomania. What does this suggest about him?",
+      "type": "choice",
+      "options": ["He had modest, realistic goals", "He had an obsessive, delusional craving for power and greatness", "He was afraid of responsibility", "He was focused on economic reform"],
+      "answer": "He had an obsessive, delusional craving for power and greatness",
+      "explanation": "Megalomania is an obsession with grandiose schemes or one's own power and importance.\n• megalomania = delusional belief in one's own greatness or power\n• From Greek: 'megas' (great) + 'mania' (obsession)\n• A megalomaniac overestimates their importance and seeks unlimited control"
+    },
+    {
+      "word": "monomania",
+      "question": "Captain Ahab in Moby-Dick was consumed by monomania. What does this tell us about his mental state?",
+      "type": "choice",
+      "options": ["He had many competing obsessions", "He was obsessively fixated on one single thing — the white whale", "He had no strong feelings about anything", "He was rational and focused"],
+      "answer": "He was obsessively fixated on one single thing — the white whale",
+      "explanation": "Monomania is an obsessive preoccupation with one single idea or subject.\n• monomania = extreme focus on a single thought, goal, or grievance\n• 'mono-' = one; the narrowness is the defining feature\n• Ahab's pursuit of the whale to the exclusion of all else is the textbook example"
+    },
+    {
+      "word": "pyromania",
+      "question": "The suspect was diagnosed with pyromania. What behavior would investigators most expect to find in his history?",
+      "type": "choice",
+      "options": ["An obsession with explosives", "A compulsive urge to set fires", "A fear of fire", "A hobby of cooking over open flames"],
+      "answer": "A compulsive urge to set fires",
+      "explanation": "Pyromania is a compulsive urge to deliberately start fires.\n• pyromania = an impulse-control disorder involving fire-setting\n• From Greek: 'pyr' (fire) + 'mania' (obsession)\n• Distinct from arson for profit — the motivation is psychological compulsion"
+    },
+    {
+      "word": "dipsomania",
+      "question": "A Victorian doctor described his patient as suffering from dipsomania. What was the patient's problem?",
+      "type": "choice",
+      "options": ["An addiction to gambling", "An uncontrollable craving for alcohol", "An obsessive fear of water", "A compulsion to steal"],
+      "answer": "An uncontrollable craving for alcohol",
+      "explanation": "Dipsomania is an uncontrollable craving for alcohol — an older medical term for alcoholism.\n• dipsomania = compulsive, uncontrollable urge to drink alcohol\n• From Greek: 'dipsa' (thirst) + 'mania'\n• Now largely replaced clinically by 'alcohol use disorder'"
+    },
+    {
+      "word": "gardenia",
+      "question": "The florist recommended gardenias for the wedding centerpiece, warning that they bruise easily and need careful handling. What kind of item are gardenias?",
+      "type": "choice",
+      "options": ["A type of decorative vase", "A fragrant flower", "A tropical fruit", "A climbing vine"],
+      "answer": "A fragrant flower",
+      "explanation": "A gardenia is a fragrant flowering plant with white or yellow blossoms.\n• gardenia = a tropical/subtropical shrub known for its highly fragrant white flowers\n• Named after Scottish botanist Alexander Garden\n• Widely used in perfumery and ornamental arrangements"
+    },
+    {
+      "word": "insignia",
+      "question": "The soldier's uniform bore the insignia of a general. What did this tell observers about him?",
+      "type": "choice",
+      "options": ["His personal fashion choices", "His rank and branch of service", "His years of service only", "The country he was born in"],
+      "answer": "His rank and branch of service",
+      "explanation": "Insignia are badges, emblems, or symbols that indicate rank, office, or membership.\n• insignia = distinguishing emblems or badges of authority/rank\n• From Latin: 'insignia' = marks, signs\n• Examples: military rank badges, school crests, national emblems"
+    },
+    {
+      "word": "insomnia",
+      "question": "After weeks of insomnia, David finally saw a doctor. What was his main complaint?",
+      "type": "choice",
+      "options": ["He was sleeping too much", "He could not fall or stay asleep", "He had vivid nightmares every night", "He sleepwalked frequently"],
+      "answer": "He could not fall or stay asleep",
+      "explanation": "Insomnia is the inability to fall asleep or stay asleep regularly.\n• insomnia = chronic difficulty sleeping\n• From Latin: 'in-' (not) + 'somnus' (sleep)\n• Distinct from nightmares or sleepwalking — the problem is getting sleep at all"
+    },
+    {
+      "word": "paranoia",
+      "question": "Despite no evidence whatsoever, Gary was convinced his colleagues were plotting to get him fired. His therapist said this was paranoia. What does that mean?",
+      "type": "choice",
+      "options": ["He had valid concerns worth investigating", "He suffered from irrational, unfounded suspicion and distrust of others", "He was too trusting of his colleagues", "He had a realistic assessment of workplace politics"],
+      "answer": "He suffered from irrational, unfounded suspicion and distrust of others",
+      "explanation": "Paranoia is an irrational and persistent belief that others are conspiring against you.\n• paranoia = unfounded distrust, suspicion, or belief in persecution\n• From Greek: 'para' (beside, beyond) + 'noos' (mind)\n• Key word: irrational — it exists without real evidence"
+    },
+    {
+      "word": "cornucopia",
+      "question": "The autumn festival table was described as a cornucopia of seasonal produce. What does this suggest about the table?",
+      "type": "choice",
+      "options": ["There was a shortage of food", "There was an overflowing abundance of food", "The food was arranged in a horn-shaped bowl only", "Only one type of food was served"],
+      "answer": "There was an overflowing abundance of food",
+      "explanation": "A cornucopia means an overflowing, abundant supply of good things.\n• cornucopia = an abundance; a great variety of something\n• From Latin: 'cornu copiae' — 'horn of plenty'\n• Symbol: a curved horn overflowing with fruit and vegetables"
+    },
+    {
+      "word": "utopia",
+      "question": "The philosopher described his ideal society — where there was no poverty, no crime, and everyone was equal — as a utopia. What is implied about such a place?",
+      "type": "choice",
+      "options": ["It already exists somewhere", "It is an ideal but imaginary perfect society", "It is a flawed but improving society", "It is a historical civilization"],
+      "answer": "It is an ideal but imaginary perfect society",
+      "explanation": "A utopia is an imagined perfect society — ideal in every way but not real.\n• utopia = an ideally perfect but unrealistic place or system\n• Coined by Thomas More (1516): from Greek 'ou-topos' = 'no place'\n• Opposite: dystopia — an imagined nightmarish society"
+    },
+    {
+      "word": "myopia",
+      "question": "The optometrist diagnosed Tom with myopia. Which activity would Tom struggle with most without his glasses?",
+      "type": "choice",
+      "options": ["Reading a book held in his hands", "Reading a whiteboard across the room", "Seeing objects close up", "Distinguishing colors"],
+      "answer": "Reading a whiteboard across the room",
+      "explanation": "Myopia is nearsightedness — difficulty seeing things far away.\n• myopia = nearsightedness; clear vision up close, blurry at a distance\n• From Greek: 'myein' (to close/squint) + 'ops' (eye)\n• Figuratively: 'myopic thinking' = short-sighted, lacking foresight"
+    },
+    {
+      "word": "aria",
+      "question": "The soprano sang a famous aria from the opera. What exactly did she perform?",
+      "type": "choice",
+      "options": ["A spoken dialogue scene", "An elaborate solo vocal piece", "A duet with the tenor", "A choral piece for the full ensemble"],
+      "answer": "An elaborate solo vocal piece",
+      "explanation": "An aria is a long, elaborate solo vocal composition in an opera or oratorio.\n• aria = a solo song in opera, typically expressive and melodically complex\n• From Italian: 'air, song'\n• Distinct from recitative (speech-like singing) or chorus (group singing)"
+    },
+    {
+      "word": "bacteria",
+      "question": "The scientist said the infection was caused by bacteria, not a virus. What does this mean for treatment?",
+      "type": "choice",
+      "options": ["Antiviral medication will work", "Antibiotics may be effective, as bacteria respond to them", "No treatment exists", "Vaccination will immediately cure it"],
+      "answer": "Antibiotics may be effective, as bacteria respond to them",
+      "explanation": "Bacteria are single-celled microorganisms — unlike viruses, they can be targeted by antibiotics.\n• bacteria = microscopic single-celled organisms (singular: bacterium)\n• Antibiotics kill or inhibit bacteria; they do NOT work on viruses\n• From Greek: 'bakterion' — 'small staff' (rod-like shape)"
+    },
+    {
+      "word": "euphoria",
+      "question": "After crossing the finish line first, the marathon runner was overcome with euphoria. How was she feeling?",
+      "type": "choice",
+      "options": ["Exhausted and indifferent", "An intense feeling of happiness and elation", "Mild relief", "Sad that the race was over"],
+      "answer": "An intense feeling of happiness and elation",
+      "explanation": "Euphoria is an intense feeling of happiness, excitement, or well-being — often beyond normal joy.\n• euphoria = an extreme sense of elation and well-being\n• From Greek: 'eu-' (well) + 'pherein' (to bear/carry)\n• Can be triggered by achievement, love, or substances"
+    },
+    {
+      "word": "fantasia",
+      "question": "The composer wrote a fantasia for piano. What should a listener expect?",
+      "type": "choice",
+      "options": ["A strictly structured sonata form", "A free-form, imaginative musical improvisation", "A piece for full orchestra only", "A song with lyrics"],
+      "answer": "A free-form, imaginative musical improvisation",
+      "explanation": "A fantasia is a musical composition with an improvisatory, free structure driven by imagination.\n• fantasia = a free-form musical piece following fantasy rather than strict structure\n• From Italian: 'fantasy, imagination'\n• Also used broadly: any imaginative, fantastical creation"
+    },
+    {
+      "word": "analgesia",
+      "question": "The dentist administered analgesia before the procedure. What was the patient's experience during the treatment?",
+      "type": "choice",
+      "options": ["He felt everything clearly", "He felt no pain", "He fell completely unconscious", "He felt only cold sensations"],
+      "answer": "He felt no pain",
+      "explanation": "Analgesia is the inability to feel pain while remaining conscious.\n• analgesia = pain relief without loss of consciousness\n• From Greek: 'an-' (without) + 'algesis' (pain)\n• Distinct from anesthesia (full loss of sensation/consciousness)"
+    },
+    {
+      "word": "amnesia",
+      "question": "After the accident, James had amnesia. He looked at his wife and asked, 'Who are you?' What does this tell us?",
+      "type": "choice",
+      "options": ["He was pretending not to know her", "He had lost some or all of his memories", "He had lost his ability to speak", "He was suffering from hallucinations"],
+      "answer": "He had lost some or all of his memories",
+      "explanation": "Amnesia is a loss of memory — partial or complete.\n• amnesia = inability to recall past memories, typically due to brain injury or trauma\n• From Greek: 'a-' (without) + 'mneme' (memory)\n• Two types: retrograde (forgetting the past) and anterograde (unable to form new memories)"
+    },
+    {
+      "word": "militia",
+      "question": "When the regular army could not respond in time, the government called on the local militia. Who showed up?",
+      "type": "choice",
+      "options": ["Professional career soldiers from another country", "A group of trained civilian volunteers organized for military service", "The national police force", "International peacekeepers"],
+      "answer": "A group of trained civilian volunteers organized for military service",
+      "explanation": "A militia is a military force composed of civilians, called up in emergencies rather than serving as full-time soldiers.\n• militia = a non-professional citizen military force\n• From Latin: 'militia' — military service\n• Distinct from a standing army — militia members are not full-time soldiers"
+    },
+    {
+      "word": "inertia",
+      "question": "Despite everyone knowing the company's old system was broken, nobody changed it — they just kept doing things the old way. A consultant called this 'organizational inertia.' What did she mean?",
+      "type": "choice",
+      "options": ["The company was too innovative", "The organization resisted change and kept its existing state", "Employees were actively sabotaging reform", "The company was growing too fast"],
+      "answer": "The organization resisted change and kept its existing state",
+      "explanation": "Inertia is the tendency of things (or organizations) to remain in their current state and resist change.\n• inertia = resistance to change; tendency to stay as one is\n• From physics: an object at rest stays at rest unless acted upon\n• From Latin: 'inertia' — idleness, inactivity"
+    },
+    {
+      "word": "minutia",
+      "question": "The editor told the writer to stop obsessing over minutia and focus on the overall argument. What was the writer wasting time on?",
+      "type": "choice",
+      "options": ["The central thesis", "Very small, trivial details", "The word count", "The formatting of the cover page only"],
+      "answer": "Very small, trivial details",
+      "explanation": "Minutia (plural: minutiae) refers to small, precise, or trivial details.\n• minutia = a tiny or trivial detail, often one of many\n• From Latin: 'minutia' — smallness\n• Often used in the plural: 'the minutiae of daily life'"
+    },
+    {
+      "word": "trivia",
+      "question": "At the pub quiz, the host asked a round of trivia questions. What kind of questions were they?",
+      "type": "choice",
+      "options": ["Serious political and academic questions", "Fun questions about minor, miscellaneous facts", "Only questions about local history", "Questions requiring expert scientific knowledge"],
+      "answer": "Fun questions about minor, miscellaneous facts",
+      "explanation": "Trivia refers to unimportant, minor, or miscellaneous facts and details.\n• trivia = bits of minor, often entertaining, factual knowledge\n• From Latin: 'trivium' — a crossroads, a public place (common, ordinary knowledge)\n• 'Trivial' = of little importance"
+    },
+    {
+      "word": "dyslexia",
+      "question": "A child with dyslexia sits down to read a passage. What difficulty is he most likely to experience?",
+      "type": "choice",
+      "options": ["He cannot see the page due to poor eyesight", "He has trouble processing written letters and words despite normal intelligence", "He refuses to try reading", "He can read but cannot understand spoken language"],
+      "answer": "He has trouble processing written letters and words despite normal intelligence",
+      "explanation": "Dyslexia is a learning difficulty that impairs the ability to read and process written language.\n• dyslexia = difficulty reading, spelling, and decoding text; unrelated to intelligence\n• From Greek: 'dys-' (difficulty) + 'lexis' (word/speech)\n• Dyslexics often see letters reversed or jumbled"
+    },
+    {
+      "word": "anorexia",
+      "question": "The doctor was concerned about a patient with anorexia who had lost dangerous amounts of weight. What is the central feature of this condition?",
+      "type": "choice",
+      "options": ["An inability to absorb nutrients due to a digestive disorder", "A severe restriction of food intake driven by a distorted body image", "An allergy to many types of food", "A loss of the ability to taste food"],
+      "answer": "A severe restriction of food intake driven by a distorted body image",
+      "explanation": "Anorexia (nervosa) is an eating disorder characterized by extreme food restriction and a distorted perception of one's own body.\n• anorexia = an eating disorder involving self-starvation and intense fear of weight gain\n• From Greek: 'an-' (without) + 'orexis' (appetite)\n• A serious and potentially life-threatening mental health condition"
+    },
+    {
+      "word": "asphyxia",
+      "question": "The forensic report listed asphyxia as the cause of death. What does this indicate?",
+      "type": "choice",
+      "options": ["The victim died from blood loss", "The victim died from deprivation of oxygen", "The victim suffered a heart attack", "The victim was poisoned"],
+      "answer": "The victim died from deprivation of oxygen",
+      "explanation": "Asphyxia is a condition of severely deficient oxygen supply to the body, leading to unconsciousness or death.\n• asphyxia = suffocation; oxygen deprivation causing death or loss of consciousness\n• From Greek: 'a-' (without) + 'sphyzein' (to throb — no pulse)\n• Can be caused by choking, drowning, or strangulation"
+    },
+    {
+      "word": "parka",
+      "question": "Before leaving for the Arctic expedition, the team leader told everyone to pack a parka. What were they being asked to bring?",
+      "type": "choice",
+      "options": ["A lightweight summer jacket", "A heavy, hooded waterproof coat for extreme cold", "Thermal underwear", "A tent for cold weather"],
+      "answer": "A heavy, hooded waterproof coat for extreme cold",
+      "explanation": "A parka is a large, warm, hooded jacket — originally designed for Arctic conditions.\n• parka = a thick, hooded coat designed for cold weather\n• Originally from the Nenets people of Siberia\n• Adopted into modern fashion; synonymous with a heavy hooded coat"
+    },
+    {
+      "word": "sequela",
+      "question": "The patient recovered from meningitis but suffered a sequela: permanent hearing loss. What is a sequela?",
+      "type": "choice",
+      "options": ["A symptom of the original illness", "A complication or condition that follows as a result of a prior disease", "The treatment given after recovery", "A relapse of the same illness"],
+      "answer": "A complication or condition that follows as a result of a prior disease",
+      "explanation": "A sequela (plural: sequelae) is a condition that is a consequence of a previous illness or injury.\n• sequela = an aftereffect or complication resulting from a disease or injury\n• From Latin: 'sequela' — a sequel, a following\n• Common in medical reports: 'sequelae of COVID-19'"
+    },
+    {
+      "word": "gorilla",
+      "question": "The documentary described the gorilla as the largest living primate. What kind of animal is it?",
+      "type": "choice",
+      "options": ["A large Old World monkey", "The biggest great ape, found in African forests", "A bear-like mammal", "A large carnivorous predator"],
+      "answer": "The biggest great ape, found in African forests",
+      "explanation": "A gorilla is the largest of the great apes, native to the forests of central Africa.\n• gorilla = a large, powerful herbivorous great ape\n• From Ancient Greek via a Phoenician word meaning 'wild/hairy people'\n• Close relative of humans — shares ~98.3% of DNA"
+    },
+    {
+      "word": "parabola",
+      "question": "The basketball player's shot traced a perfect parabola through the air. What shape did the ball's path make?",
+      "type": "choice",
+      "options": ["A straight line", "A symmetrical curve that rises and falls", "A spiral", "A zigzag"],
+      "answer": "A symmetrical curve that rises and falls",
+      "explanation": "A parabola is a symmetrical open curve — the shape traced by a projectile in motion.\n• parabola = a U-shaped curve; the path of any thrown or launched object\n• From Greek: 'para-' (beside) + 'bolē' (throw)\n• Key property: every point is equidistant from a fixed focus and a straight line (directrix)"
+    },
+    {
+      "word": "formula",
+      "question": "The scientist said the formula for water is H₂O. What does this tell us?",
+      "type": "choice",
+      "options": ["The taste and color of water", "The exact chemical composition of water — two hydrogen atoms bonded to one oxygen", "The process used to purify water", "The temperature at which water boils"],
+      "answer": "The exact chemical composition of water — two hydrogen atoms bonded to one oxygen",
+      "explanation": "A formula is a symbolic expression of the constituents of a compound or a rule expressed in symbols.\n• formula = a fixed rule, expression, or chemical representation\n• H₂O specifies exactly what atoms make up one water molecule\n• From Latin: 'formula' — a small form or rule"
+    },
+    {
+      "word": "peninsula",
+      "question": "Korea is often described as a peninsula. What does this tell us about its geography?",
+      "type": "choice",
+      "options": ["It is an island completely surrounded by water", "It is a piece of land almost entirely surrounded by water, connected to a mainland", "It is a landlocked region", "It is a mountain range"],
+      "answer": "It is a piece of land almost entirely surrounded by water, connected to a mainland",
+      "explanation": "A peninsula is a piece of land projecting into a body of water, connected to the mainland on one side.\n• peninsula = land surrounded by water on three sides\n• From Latin: 'paene' (almost) + 'insula' (island) — 'almost an island'\n• Examples: the Korean Peninsula, the Iberian Peninsula (Spain & Portugal)"
+    },
+    {
+      "word": "spatula",
+      "question": "The chef used a spatula to flip the pancakes in the pan. What is a spatula?",
+      "type": "choice",
+      "options": ["A sharp knife for cutting", "A flat, broad utensil for lifting and flipping food", "A ladle for serving soups", "A grater for cheese"],
+      "answer": "A flat, broad utensil for lifting and flipping food",
+      "explanation": "A spatula is a flat-bladed kitchen tool used for mixing, spreading, or flipping food.\n• spatula = a flat, flexible tool for cooking or spreading\n• From Latin: 'spatula' — a flat piece of wood or metal\n• Also used in surgery and laboratory settings"
+    },
+    {
+      "word": "melodrama",
+      "question": "The critic dismissed the film as pure melodrama. What was she saying about it?",
+      "type": "choice",
+      "options": ["It had excellent musical scoring", "It was overly dramatic and emotionally exaggerated", "It was too subtle for most audiences", "It was a documentary"],
+      "answer": "It was overly dramatic and emotionally exaggerated",
+      "explanation": "Melodrama refers to sensational, exaggerated drama that appeals to emotions.\n• melodrama = drama with exaggerated emotions and simplistic moral conflicts\n• Originally: a play with background music ('melos' = song)\n• Now used critically: 'Don't be so melodramatic' = stop overreacting"
+    },
+    {
+      "word": "panorama",
+      "question": "From the mountaintop, the hikers had a panorama of the valley below. What could they see?",
+      "type": "choice",
+      "options": ["A narrow, restricted view through the trees", "A complete, wide, unobstructed view in every direction", "Only the path they had come up", "A view of one specific landmark"],
+      "answer": "A complete, wide, unobstructed view in every direction",
+      "explanation": "A panorama is a wide, unobstructed view of an extensive area.\n• panorama = a sweeping, all-encompassing view\n• From Greek: 'pan' (all) + 'horama' (view)\n• Also used figuratively: 'a panorama of 20th-century history'"
+    },
+    {
+      "word": "anathema",
+      "question": "The idea of compromising on human rights was anathema to her. What does this tell us about her attitude?",
+      "type": "choice",
+      "options": ["She found it difficult but acceptable", "She found it absolutely repugnant and utterly unacceptable", "She was neutral on the topic", "She was considering it carefully"],
+      "answer": "She found it absolutely repugnant and utterly unacceptable",
+      "explanation": "Anathema means something or someone strongly detested or loathed — utterly unacceptable.\n• anathema = something vehemently disliked or rejected\n• Originally: a formal church curse/excommunication\n• From Greek: 'anathema' — something set apart (for destruction)"
+    },
+    {
+      "word": "dogma",
+      "question": "The young priest questioned the church's dogma on the afterlife. What exactly was he questioning?",
+      "type": "choice",
+      "options": ["A recently introduced church policy", "An established principle or set of beliefs held as absolute truth by the institution", "His own personal faith", "A hymn in the service"],
+      "answer": "An established principle or set of beliefs held as absolute truth by the institution",
+      "explanation": "Dogma refers to a fixed set of principles or beliefs laid down by an authority as incontrovertibly true.\n• dogma = an authoritative doctrine that is not to be doubted or disputed\n• From Greek: 'dogma' — opinion, decree\n• 'Dogmatic' = refusing to question one's own principles"
+    },
+    {
+      "word": "asthma",
+      "question": "During the run, Rachel's asthma flared up. What symptom would you most expect her to experience?",
+      "type": "choice",
+      "options": ["Severe chest pain from her heart", "Wheezing and difficulty breathing due to narrowed airways", "Muscle cramps in her legs", "A sudden nosebleed"],
+      "answer": "Wheezing and difficulty breathing due to narrowed airways",
+      "explanation": "Asthma is a chronic respiratory condition in which airways narrow and swell, making breathing difficult.\n• asthma = a condition causing wheezing, breathlessness, and chest tightness\n• Triggers: exercise, allergens, cold air, stress\n• From Greek: 'asthma' — panting"
+    },
+    {
+      "word": "dilemma",
+      "question": "The lawyer faced a dilemma: tell the truth and lose the case, or stay silent and betray her ethics. What is her situation?",
+      "type": "choice",
+      "options": ["She has a clear and obvious right choice", "She is stuck between two equally difficult or undesirable options", "She has too many good options to choose from", "She has no options at all"],
+      "answer": "She is stuck between two equally difficult or undesirable options",
+      "explanation": "A dilemma is a situation requiring a choice between two undesirable alternatives.\n• dilemma = a difficult choice between two problematic options\n• From Greek: 'di-' (two) + 'lemma' (premise)\n• Common misuse: 'dilemma' is not just any problem — it specifically involves two difficult sides"
+    },
+    {
+      "word": "comma",
+      "question": "The teacher told the student, 'You've used a comma where a full stop is needed.' What punctuation error did the student make?",
+      "type": "choice",
+      "options": ["They used a question mark incorrectly", "They used a small pause mark (,) where the sentence should have ended completely (.)", "They forgot to use quotation marks", "They used too many exclamation points"],
+      "answer": "They used a small pause mark (,) where the sentence should have ended completely (.)",
+      "explanation": "A comma (,) is a punctuation mark indicating a pause within a sentence — not a full stop.\n• comma = a punctuation mark used to separate clauses or items in a list\n• A full stop ends the sentence; a comma only pauses it\n• Using a comma where a full stop belongs is called a 'comma splice'"
+    },
+    {
+      "word": "coma",
+      "question": "The patient was in a coma after the accident. What does this mean about his condition?",
+      "type": "choice",
+      "options": ["He was sleeping normally and could be woken up", "He was in a state of deep unconsciousness and could not be roused", "He was paralyzed but fully conscious", "He had temporary amnesia"],
+      "answer": "He was in a state of deep unconsciousness and could not be roused",
+      "explanation": "A coma is a state of prolonged deep unconsciousness from which a person cannot be woken.\n• coma = a deep, prolonged state of unconsciousness\n• From Greek: 'koma' — deep sleep\n• Distinct from sleep: a person in a coma cannot be roused by normal stimuli"
+    },
+    {
+      "word": "aroma",
+      "question": "The baker said the aroma of fresh bread was part of the customer experience. What was she referring to?",
+      "type": "choice",
+      "options": ["The visual appearance of the bread", "The pleasant smell of the bread", "The texture of the crust", "The price of the loaves"],
+      "answer": "The pleasant smell of the bread",
+      "explanation": "Aroma refers to a distinctive, typically pleasant smell.\n• aroma = a distinctive, agreeable scent\n• From Greek: 'aroma' — spice\n• Aroma implies pleasantness — contrast with 'odor' or 'stench'"
+    },
+    {
+      "word": "miasma",
+      "question": "Victorian doctors once believed that disease was spread by miasma from swamps and rotting material. What did they think was the cause of illness?",
+      "type": "choice",
+      "options": ["Contaminated water sources", "Noxious, polluted air or vapors", "Contact with infected people", "Bad food"],
+      "answer": "Noxious, polluted air or vapors",
+      "explanation": "Miasma is a highly unpleasant or unhealthy smell, historically believed to carry disease.\n• miasma = foul-smelling air once thought to cause illness\n• From Greek: 'miasma' — pollution, stain\n• Miasma theory was replaced by germ theory in the 19th century\n• Figuratively: 'a miasma of corruption' = a pervasive atmosphere of wrongdoing"
+    },
+    {
+      "word": "charisma",
+      "question": "The new CEO had tremendous charisma and quickly won over even her most skeptical employees. What quality made her so persuasive?",
+      "type": "choice",
+      "options": ["Her technical expertise in the field", "A compelling personal charm that naturally attracted people to her", "Her strict management style", "Her high salary"],
+      "answer": "A compelling personal charm that naturally attracted people to her",
+      "explanation": "Charisma is a compelling personal charm and magnetism that inspires devotion or enthusiasm in others.\n• charisma = a natural personal magnetism and charm\n• From Greek: 'kharisma' — divine gift\n• A charismatic person draws people in effortlessly"
+    },
+    {
+      "word": "phenomena",
+      "question": "The scientist said the northern lights are among the most spectacular natural phenomena on Earth. What are phenomena?",
+      "type": "choice",
+      "options": ["Scientific theories", "Observable facts or events in the natural world", "Unexplained supernatural events only", "Laboratory experiments"],
+      "answer": "Observable facts or events in the natural world",
+      "explanation": "Phenomena are observable events or facts — things that can be perceived by the senses.\n• phenomena = plural of 'phenomenon'; observable occurrences\n• From Greek: 'phainomenon' — that which appears\n• Note: 'phenomena' is plural; 'phenomenon' is the singular form"
+    },
+    {
+      "word": "subpoena",
+      "question": "The lawyer received a subpoena to appear in court. What must she do?",
+      "type": "choice",
+      "options": ["She may choose whether or not to attend", "She is legally required to appear in court", "She must submit a written statement only", "She must pay a court fee"],
+      "answer": "She is legally required to appear in court",
+      "explanation": "A subpoena is a legal document ordering someone to appear in court or produce evidence.\n• subpoena = a court order compelling attendance or production of evidence\n• From Latin: 'sub poena' — 'under penalty' (failure to comply is illegal)\n• Can also require producing documents (subpoena duces tecum)"
+    },
+    {
+      "word": "ballerina",
+      "question": "The program listed 'Principal Ballerina' as the lead performer. What kind of performer is she?",
+      "type": "choice",
+      "options": ["A lead female classical ballet dancer", "A singer in the opera", "A classical musician in the orchestra", "A choreographer who directs others"],
+      "answer": "A lead female classical ballet dancer",
+      "explanation": "A ballerina is a female ballet dancer, especially a principal dancer in a ballet company.\n• ballerina = a trained female ballet dancer\n• From Italian: 'ballerina' — female dancer\n• 'Principal ballerina' = the top-ranked female dancer in the company"
+    },
+    {
+      "word": "patina",
+      "question": "The antique dealer praised the old copper bowl for its beautiful patina. What was she admiring?",
+      "type": "choice",
+      "options": ["The bowl's original factory shine", "A surface sheen or coloring developed through age and use", "The engraving on the bottom", "Its unusually heavy weight"],
+      "answer": "A surface sheen or coloring developed through age and use",
+      "explanation": "Patina is a sheen or coloring on a surface that develops naturally through age, use, or chemical change.\n• patina = the surface appearance (often greenish or matte) acquired through aging\n• From Italian/Latin: 'patina' — a shallow dish (the coating seen on old dishes)\n• Figuratively: 'a patina of respectability' = an acquired, possibly superficial appearance"
+    },
+    {
+      "word": "antenna",
+      "question": "The technician climbed onto the roof to reposition the antenna. What was she adjusting and why?",
+      "type": "choice",
+      "options": ["A solar panel, to generate more electricity", "A rod or wire device used for sending or receiving radio/TV signals", "A weather sensor for measuring temperature", "A camera for security footage"],
+      "answer": "A rod or wire device used for sending or receiving radio/TV signals",
+      "explanation": "An antenna is a device for transmitting or receiving electromagnetic signals such as radio or TV broadcasts.\n• antenna = a metal rod or dish used to receive or transmit signals\n• From Latin: 'antenna' — sail yard (the crossbar on a ship's mast)\n• In biology: antennae are sensory organs on insects"
+    },
+    {
+      "word": "penumbra",
+      "question": "During the solar eclipse, people in the penumbra saw only a partial eclipse. What does this tell us about where they were standing?",
+      "type": "choice",
+      "options": ["They were in the zone of total darkness", "They were in the partially shaded outer region where the eclipse was incomplete", "They were too far away to see any eclipse", "They were directly under the moon's shadow"],
+      "answer": "They were in the partially shaded outer region where the eclipse was incomplete",
+      "explanation": "The penumbra is the partially shaded outer region of a shadow — where some light still reaches.\n• penumbra = partial shadow; the region between full shadow and full light\n• From Latin: 'paene' (almost) + 'umbra' (shadow)\n• Contrast: the umbra is the zone of total shadow (full eclipse)"
+    },
+    {
+      "word": "tundra",
+      "question": "The documentary showed caribou migrating across the tundra. What kind of landscape were they crossing?",
+      "type": "choice",
+      "options": ["A dense tropical rainforest", "A vast, flat, treeless Arctic plain with frozen ground", "A hot, sandy desert", "A deep river valley"],
+      "answer": "A vast, flat, treeless Arctic plain with frozen ground",
+      "explanation": "The tundra is a vast, flat, treeless Arctic or alpine region with permanently frozen subsoil.\n• tundra = cold, treeless plain in Arctic or high-altitude regions\n• From Russian: 'tundra' — from a Sami word for 'uplands'\n• Characterized by permafrost, low vegetation, and extreme cold"
+    },
+    {
+      "word": "chimera",
+      "question": "The scientist dismissed cold fusion as a chimera that researchers have chased for decades. What was he saying about cold fusion?",
+      "type": "choice",
+      "options": ["It is a well-established scientific process", "It is an unrealistic illusion or impossible dream", "It is a recent breakthrough", "It is a dangerous experiment"],
+      "answer": "It is an unrealistic illusion or impossible dream",
+      "explanation": "A chimera is an unrealistic dream, illusion, or impossible goal.\n• chimera = a hope or dream that is impossible to achieve\n• From Greek mythology: a fire-breathing monster with a lion's head, goat's body, and serpent's tail\n• Scientific use: a chimera is also an organism with genetically distinct cells from different origins"
+    },
+    {
+      "word": "plethora",
+      "question": "The restaurant menu offered a plethora of options. What does this tell us about the menu?",
+      "type": "choice",
+      "options": ["There were very few choices", "There was an overwhelming, excessive number of choices", "The choices were carefully curated and limited", "Choices changed daily"],
+      "answer": "There was an overwhelming, excessive number of choices",
+      "explanation": "A plethora means an excess or superabundance of something.\n• plethora = an overabundance; more than enough, often overwhelmingly so\n• From Greek: 'plethora' — fullness\n• Implies the quantity may be excessive, not just generous"
+    },
+    {
+      "word": "flora",
+      "question": "The ecologist published a study of the flora of the Amazon basin. What was the study about?",
+      "type": "choice",
+      "options": ["The animal species in the Amazon", "The plant life of the Amazon", "The river systems of the Amazon", "The indigenous peoples of the Amazon"],
+      "answer": "The plant life of the Amazon",
+      "explanation": "Flora refers to the plant life of a particular region or time period.\n• flora = the plants of a given area, period, or environment\n• Named after Flora, the Roman goddess of flowers\n• Opposite: fauna = the animal life of a region"
+    },
+    {
+      "word": "orchestra",
+      "question": "The concert hall was full, but the orchestra pit was below the stage. Where were the musicians sitting?",
+      "type": "choice",
+      "options": ["On the stage in front of the audience", "In the sunken area at the front of the stage", "In the balcony above the audience", "Behind the stage in a separate room"],
+      "answer": "In the sunken area at the front of the stage",
+      "explanation": "An orchestra is a large ensemble of musicians; the orchestra pit is the sunken space in front of the stage where they perform.\n• orchestra = a large group of instrumentalists\n• From Greek: 'orchestra' — the dancing place in a theatre\n• An orchestra typically includes strings, woodwinds, brass, and percussion"
+    },
+    {
+      "word": "bravura",
+      "question": "The violinist's bravura performance earned a standing ovation. What kind of performance did she give?",
+      "type": "choice",
+      "options": ["A slow, mournful recital", "A technically brilliant, dazzlingly skillful display", "A simple, understated piece", "A collaborative duet"],
+      "answer": "A technically brilliant, dazzlingly skillful display",
+      "explanation": "Bravura describes a performance displaying brilliant technique and daring skill.\n• bravura = a brilliant, bold, technically impressive display of skill\n• From Italian: 'bravery, skill'\n• Often used for music but extends to any bold, skillful performance"
+    },
+    {
+      "word": "mesa",
+      "question": "The geologist pointed to a mesa rising above the desert floor. What were they looking at?",
+      "type": "choice",
+      "options": ["A deep canyon carved by a river", "An isolated flat-topped hill with steep sides", "A sand dune", "A volcanic crater"],
+      "answer": "An isolated flat-topped hill with steep sides",
+      "explanation": "A mesa is an isolated flat-topped hill with steep sides, found in arid regions.\n• mesa = a flat-topped elevation with cliff-like sides\n• From Spanish: 'mesa' — table\n• Common in the American Southwest; similar but smaller than a plateau"
+    },
+    {
+      "word": "sonata",
+      "question": "The program listed 'Beethoven's Piano Sonata No. 14.' What kind of piece were the audience about to hear?",
+      "type": "choice",
+      "options": ["A piece for full orchestra", "A formal instrumental composition, typically in several movements", "A vocal aria with piano accompaniment", "An improvised solo performance"],
+      "answer": "A formal instrumental composition, typically in several movements",
+      "explanation": "A sonata is a composition for one or two instruments, typically in three or four movements.\n• sonata = a multi-movement instrumental composition\n• From Italian: 'sonata' — something played (vs. cantata = something sung)\n• Beethoven's 'Moonlight' Sonata is Sonata No. 14"
+    },
+    {
+      "word": "cantata",
+      "question": "Bach's cantata for the Sunday service required a choir, soloists, and orchestra. How is a cantata performed?",
+      "type": "choice",
+      "options": ["It is played on instruments alone, with no singers", "It is a vocal work sung by soloists and/or choir, usually with instrumental accompaniment", "It is spoken as a dramatic monologue", "It is a dance piece with no music"],
+      "answer": "It is a vocal work sung by soloists and/or choir, usually with instrumental accompaniment",
+      "explanation": "A cantata is a musical composition for voices and instruments in several movements.\n• cantata = a vocal composition for singers and instruments\n• From Italian: 'cantata' — something sung (from 'cantare' = to sing)\n• Contrast with sonata (played), opera (staged), and aria (single solo song)"
+    },
+    {
+      "word": "delta",
+      "question": "The city of New Orleans was built on the Mississippi River delta. What does this tell us about the geography of the area?",
+      "type": "choice",
+      "options": ["It is on a high cliff above the river", "It is on a low, triangular deposit of sediment where the river meets the sea", "It is at the river's source in the mountains", "It is on an island in the middle of the river"],
+      "answer": "It is on a low, triangular deposit of sediment where the river meets the sea",
+      "explanation": "A river delta is the triangular area of sediment deposited where a river meets a larger body of water.\n• delta = a triangular alluvial deposit at a river's mouth\n• Named after the Greek letter Δ (delta), which is triangular\n• Deltas are among the most fertile and densely populated areas on Earth"
+    },
+    {
+      "word": "magenta",
+      "question": "The graphic designer changed the brand color from red to magenta. What did the logo now look like?",
+      "type": "choice",
+      "options": ["A deeper, darker red", "A purplish-red or pinkish-red color", "A bright orange", "A pale pink"],
+      "answer": "A purplish-red or pinkish-red color",
+      "explanation": "Magenta is a vivid purplish-red or reddish-purple color.\n• magenta = a bright pinkish-purple color between red and purple\n• Named after the Battle of Magenta (1859) in Italy\n• One of the four CMYK printing colors (Cyan, Magenta, Yellow, Key/Black)"
+    },
+    {
+      "word": "iota",
+      "question": "The judge said there was not one iota of evidence to support the claim. What was she saying about the evidence?",
+      "type": "choice",
+      "options": ["The evidence was compelling but flawed", "There was not the tiniest, smallest amount of evidence", "There was only one piece of evidence", "The evidence was circumstantial"],
+      "answer": "There was not the tiniest, smallest amount of evidence",
+      "explanation": "An iota means an extremely small amount — the very least possible.\n• iota = a tiny amount; the smallest degree\n• Iota (ι) is the smallest letter in the Greek alphabet\n• 'Not one iota' = absolutely nothing whatsoever"
+    },
+    {
+      "word": "quota",
+      "question": "The sales manager told her team they had to hit their monthly quota of 50 units. What happens if they sell only 45?",
+      "type": "choice",
+      "options": ["They have exceeded expectations", "They have fallen short of the required target", "They are exactly on track", "The quota resets immediately"],
+      "answer": "They have fallen short of the required target",
+      "explanation": "A quota is a fixed, required share or target amount that must be reached.\n• quota = a minimum required quantity or allocated share\n• From Latin: 'quota (pars)' — 'how large a part'\n• Failing to meet a quota means falling below the set requirement"
+    },
+    {
+      "word": "aorta",
+      "question": "The surgeon said the aorta had been damaged in the accident. Why was this immediately life-threatening?",
+      "type": "choice",
+      "options": ["The aorta filters toxins from the blood", "The aorta is the main artery carrying blood from the heart — damage causes massive blood loss", "The aorta controls breathing", "The aorta connects the brain to the spine"],
+      "answer": "The aorta is the main artery carrying blood from the heart — damage causes massive blood loss",
+      "explanation": "The aorta is the largest artery in the body, carrying oxygenated blood from the heart to the rest of the body.\n• aorta = the main artery leaving the left ventricle of the heart\n• Damage to the aorta is rapidly fatal due to catastrophic blood loss\n• From Greek: 'aortē' — from 'aeirein' (to lift, to carry)"
+    },
+    {
+      "word": "vista",
+      "question": "From the terrace of her villa, Maria enjoyed a stunning vista of the Tuscan hills. What was she looking at?",
+      "type": "choice",
+      "options": ["A detailed painting of the hills", "A sweeping, pleasing view of the landscape", "A map of the surrounding area", "A narrow path leading down to the valley"],
+      "answer": "A sweeping, pleasing view of the landscape",
+      "explanation": "A vista is a pleasing view, especially one seen through a long, narrow opening.\n• vista = a scenic view, often framed or extending into the distance\n• From Italian: 'vista' — sight, view\n• Also used figuratively: 'a vista of new possibilities'"
+    },
+    {
+      "word": "operetta",
+      "question": "The theater company performed an operetta rather than a full opera. What should the audience expect?",
+      "type": "choice",
+      "options": ["A very serious, tragic three-hour opera", "A lighter, shorter musical work with spoken dialogue and comedy", "A purely instrumental concert", "A ballet with no singing"],
+      "answer": "A lighter, shorter musical work with spoken dialogue and comedy",
+      "explanation": "An operetta is a short, light opera with spoken dialogue and comic elements.\n• operetta = a light, short opera, often comic in tone\n• From Italian: 'little opera' (diminutive of 'opera')\n• Examples: Gilbert and Sullivan's works; Die Fledermaus"
+    },
+    {
+      "word": "lava",
+      "question": "Geologists warned that lava from the erupting volcano was flowing toward the town. What were residents facing?",
+      "type": "choice",
+      "options": ["A cloud of volcanic ash in the air", "Molten rock flowing down the mountainside", "A flood caused by melting snow", "A mudslide from heavy rains"],
+      "answer": "Molten rock flowing down the mountainside",
+      "explanation": "Lava is molten rock expelled from a volcano during an eruption.\n• lava = magma that has reached the surface; liquid rock flowing from a volcano\n• From Italian dialect: 'lava' — torrential stream\n• Lava destroys everything in its path and hardens into igneous rock"
+    },
+    {
+      "word": "nova",
+      "question": "Astronomers observed a nova in a distant galaxy — briefly, it outshone everything else in that galaxy. What happened?",
+      "type": "choice",
+      "options": ["A new planet formed", "A star underwent a sudden, dramatic explosion in brightness", "A black hole was created", "A galaxy merged with another"],
+      "answer": "A star underwent a sudden, dramatic explosion in brightness",
+      "explanation": "A nova is a star that suddenly increases greatly in brightness and then gradually fades.\n• nova = a temporary dramatic brightening of a star due to thermonuclear explosion\n• From Latin: 'nova (stella)' — new star\n• Distinct from a supernova, which is far more energetic and destroys the star"
+    },
+    {
+      "word": "supernova",
+      "question": "Scientists calculated that when the massive star dies, it will become a supernova. What will happen to the star?",
+      "type": "choice",
+      "options": ["It will gradually cool and dim over thousands of years", "It will explode catastrophically, briefly outshining entire galaxies, then collapse", "It will split into two smaller stars", "It will be absorbed by a nearby black hole"],
+      "answer": "It will explode catastrophically, briefly outshining entire galaxies, then collapse",
+      "explanation": "A supernova is a massive stellar explosion — one of the most energetic events in the universe.\n• supernova = a catastrophic explosion of a massive star at the end of its life\n• Far more powerful than a nova; can outshine an entire galaxy for weeks\n• The remnant may become a neutron star or black hole"
+    },
+    {
+      "word": "larva",
+      "question": "The butterfly was still in its larva stage. What did it look like at this point?",
+      "type": "choice",
+      "options": ["A winged, fully developed butterfly", "A small, worm-like caterpillar", "A hard-shelled pupa", "A tiny egg"],
+      "answer": "A small, worm-like caterpillar",
+      "explanation": "A larva is the active, immature form of an insect before it undergoes metamorphosis.\n• larva = the juvenile, worm-like stage of an insect's life cycle\n• From Latin: 'larva' — ghost, mask (it 'masks' the adult form)\n• A butterfly larva = a caterpillar; a fly larva = a maggot"
+    },
+    {
+      "word": "stanza",
+      "question": "The poem had four stanzas of six lines each. How was the poem arranged?",
+      "type": "choice",
+      "options": ["As one continuous block of 24 lines", "As four separate groups of six lines", "As six groups of four lines", "As a single long sentence broken into parts"],
+      "answer": "As four separate groups of six lines",
+      "explanation": "A stanza is a group of lines forming a unit in a poem, like a paragraph in prose.\n• stanza = a grouped set of lines in a poem\n• From Italian: 'stanza' — room, stopping place\n• Types: couplet (2 lines), quatrain (4), sestet (6), octet (8)"
+    },
+    {
+      "word": "piazza",
+      "question": "Tourists gathered in the piazza in front of the cathedral. Where exactly were they?",
+      "type": "choice",
+      "options": ["Inside the cathedral's main hall", "In an open public square in front of the cathedral", "In a rooftop café above the square", "In a covered market nearby"],
+      "answer": "In an open public square in front of the cathedral",
+      "explanation": "A piazza is a public square or marketplace, especially in an Italian town.\n• piazza = an open public square, especially in Italy\n• From Italian, related to the French 'place' and English 'place'\n• Examples: Piazza San Marco in Venice, Piazza Navona in Rome"
+    },
+    {
+      "word": "scab",
+      "question": "The nurse told the child not to pick the scab on his knee. What was she protecting?",
+      "type": "choice",
+      "options": ["A bandage she had applied", "The dry, hardened crust of dried blood forming over the healing wound", "New stitches in the cut", "A skin graft"],
+      "answer": "The dry, hardened crust of dried blood forming over the healing wound",
+      "explanation": "A scab is the hard, dry crust that forms over a wound as it heals.\n• scab = a protective crust of dried blood and serum over a healing wound\n• Picking it off delays healing and can cause scarring\n• Also used figuratively for a strike-breaker (informal, derogatory)"
+    },
+    {
+      "word": "slab",
+      "question": "The mason laid a slab of granite on the kitchen counter. What did he put down?",
+      "type": "choice",
+      "options": ["A thin sheet of paper-like material", "A thick, flat, broad piece of stone", "A bag of loose gravel", "A metal frame"],
+      "answer": "A thick, flat, broad piece of stone",
+      "explanation": "A slab is a large, thick, flat piece of a hard material such as stone, concrete, or wood.\n• slab = a broad, flat, thick piece of material\n• Also: a slab of chocolate, a slab of concrete\n• Implies weight and solidity"
+    },
+    {
+      "word": "drab",
+      "question": "The interior designer said the office was drab and needed a makeover. What was wrong with the office?",
+      "type": "choice",
+      "options": ["It was cluttered with too much furniture", "It was dull, colorless, and lacking in any visual interest", "It was too brightly lit", "It was too small for the staff"],
+      "answer": "It was dull, colorless, and lacking in any visual interest",
+      "explanation": "Drab describes something that is dull, lacking brightness or interest — monotonously gray or colorless.\n• drab = lacking color, excitement, or visual appeal\n• Often implies a depressing or spirit-sapping quality\n• Antonyms: vivid, vibrant, colorful"
+    },
+    {
+      "word": "stab",
+      "question": "She felt a stab of guilt when she heard the news. What did she experience?",
+      "type": "choice",
+      "options": ["A physical injury to her body", "A sudden, sharp feeling of guilt", "A prolonged sense of shame that lasted for weeks", "A mild, vague feeling of regret"],
+      "answer": "A sudden, sharp feeling of guilt",
+      "explanation": "A stab (as a feeling) means a sudden, sharp pang of emotion.\n• stab = a sudden, piercing sensation (physical or emotional)\n• The metaphor compares the sharp onset of guilt to the sharp entry of a blade\n• 'A stab of pain, jealousy, regret' — always sudden and intense"
+    },
+    {
+      "word": "adlib",
+      "question": "The actor forgot his lines and had to adlib the rest of the scene. What did he do?",
+      "type": "choice",
+      "options": ["He stopped the performance and asked for the script", "He improvised dialogue spontaneously, without a script", "He repeated his last memorized line several times", "He stayed silent until prompted by another actor"],
+      "answer": "He improvised dialogue spontaneously, without a script",
+      "explanation": "To adlib means to improvise speech or actions without preparation or a script.\n• adlib = to improvise; to speak or perform without prepared material\n• From Latin: 'ad libitum' — 'at one's pleasure, freely'\n• Used as a verb, noun, and adjective: 'an adlib remark'"
+    },
+    {
+      "word": "glib",
+      "question": "The politician gave a glib answer to the journalist's difficult question about poverty. What was wrong with his answer?",
+      "type": "choice",
+      "options": ["It was too long and detailed", "It was fluent and confident but superficial and insincere", "It was too technical for most people", "It was emotionally moving and deeply felt"],
+      "answer": "It was fluent and confident but superficial and insincere",
+      "explanation": "Glib describes something said fluently and confidently but without depth or genuine concern.\n• glib = slick and smooth in speech, lacking sincerity or substance\n• Often implies the speaker is not taking the issue seriously\n• 'A glib response' sidesteps the real difficulty"
+    },
+    {
+      "word": "nib",
+      "question": "The calligrapher replaced the nib on her pen before continuing her work. What did she replace?",
+      "type": "choice",
+      "options": ["The ink cartridge inside the pen", "The metal tip of the pen that touches the paper and controls ink flow", "The barrel (body) of the pen", "The cap of the pen"],
+      "answer": "The metal tip of the pen that touches the paper and controls ink flow",
+      "explanation": "A nib is the metal writing tip of a fountain pen or dip pen.\n• nib = the pointed metal tip of a pen through which ink flows\n• Different nib widths produce different line thicknesses\n• From Old English: 'nib' — beak, tip"
+    },
+    {
+      "word": "jamb",
+      "question": "The carpenter said the door jamb was warped and needed replacing. What part of the door was damaged?",
+      "type": "choice",
+      "options": ["The door itself", "The vertical side posts of the door frame", "The door handle and lock", "The hinge at the top of the door"],
+      "answer": "The vertical side posts of the door frame",
+      "explanation": "A jamb is the vertical side post or surface of a door or window frame.\n• jamb = the side post forming part of a door or window frame\n• From Old French: 'jambe' — leg\n• Both sides of a door opening are called jambs; the top is the lintel"
+    },
+    {
+      "word": "limb",
+      "question": "The surgeon said the patient was lucky to keep the limb after the accident. What part of the body were they discussing?",
+      "type": "choice",
+      "options": ["An internal organ", "An arm or leg", "The spine", "The skull"],
+      "answer": "An arm or leg",
+      "explanation": "A limb is an arm, leg, or wing — a projecting appendage of the body.\n• limb = an arm or leg (in humans); also a branch of a tree\n• 'Going out on a limb' = taking a risk (from a tree branch that might snap)\n• From Old English: 'lim'"
+    },
+    {
+      "word": "aplomb",
+      "question": "Despite the fire alarm going off mid-presentation, the speaker continued with perfect aplomb. How did he handle the situation?",
+      "type": "choice",
+      "options": ["He panicked and ran out of the room", "He handled it with calm self-confidence and composure", "He stopped and refused to continue", "He made several errors due to nervousness"],
+      "answer": "He handled it with calm self-confidence and composure",
+      "explanation": "Aplomb means self-confident composure and poise, especially in a difficult situation.\n• aplomb = calm, assured composure under pressure\n• From French: 'aplomb' — perpendicularity (the idea of being perfectly upright/balanced)\n• 'With aplomb' = smoothly, confidently, without being thrown off"
+    },
+    {
+      "word": "succumb",
+      "question": "Despite months of fighting the illness, the elderly patient finally succumbed. What happened?",
+      "type": "choice",
+      "options": ["He recovered completely", "He died after being unable to resist the illness any longer", "He was discharged from hospital", "He began a new treatment"],
+      "answer": "He died after being unable to resist the illness any longer",
+      "explanation": "To succumb means to fail to resist a force or pressure — often meaning death in medical contexts.\n• succumb = to give way to something overwhelming; to yield or die\n• From Latin: 'succumbere' — to lie under, yield\n• 'Succumb to temptation' (yield) or 'succumb to an illness' (die)"
+    },
+    {
+      "word": "numb",
+      "question": "After sitting on the hard bench for two hours, Tom's legs felt numb. What did this mean?",
+      "type": "choice",
+      "options": ["His legs felt painfully cramped", "His legs had lost feeling and sensation", "His legs felt unusually warm", "His legs were shaking uncontrollably"],
+      "answer": "His legs had lost feeling and sensation",
+      "explanation": "Numb means deprived of feeling or sensation — physically or emotionally.\n• numb = having lost the ability to feel; without sensation\n• Physically: caused by cold, pressure, or nerve damage\n• Emotionally: 'numb with grief' = too shocked to feel anything\n• From Old English: 'niman' — to take (sensation is 'taken away')"
+    },
+    {
+      "word": "cob",
+      "question": "The child ate corn on the cob at the barbecue. What exactly did she eat?",
+      "type": "choice",
+      "options": ["Corn kernels served in a bowl", "Whole ears of corn still on the central stalk, eaten directly", "Cornbread baked in a cob shape", "Canned sweet corn"],
+      "answer": "Whole ears of corn still on the central stalk, eaten directly",
+      "explanation": "A cob is the central cylindrical core of an ear of corn — eating 'on the cob' means eating the kernels directly off this core.\n• cob = the hard inner core of an ear of maize/corn\n• 'Corn on the cob' = corn eaten directly from the cob, not cut off\n• Also: a type of sturdy horse; a rounded lump of coal"
+    },
+    {
+      "word": "snob",
+      "question": "At the wine tasting, Gerald refused to try any wine under £50 and wrinkled his nose at anything from outside France. His friend called him a snob. What does this mean?",
+      "type": "choice",
+      "options": ["He was an expert sommelier", "He had an arrogant belief that only expensive or prestigious things were worth his attention", "He was very knowledgeable about wine regions", "He was simply being careful with his health"],
+      "answer": "He had an arrogant belief that only expensive or prestigious things were worth his attention",
+      "explanation": "A snob is someone who believes they have superior taste and looks down on those they consider inferior.\n• snob = a person who is condescending about others' social status, taste, or background\n• Origin uncertain; possibly from cobbler's apprentice (someone of low rank mimicking high society)\n• 'Wine snob', 'intellectual snob', 'food snob' — dismissive of anything 'below' their standards"
+    },
+    {
+      "word": "barb",
+      "question": "In his speech, the senator directed a sharp barb at his opponent's financial record. What did he do?",
+      "type": "choice",
+      "options": ["He praised his opponent's transparency", "He made a pointed, cutting remark intended to sting", "He asked a genuine question about policy", "He withdrew a previous criticism"],
+      "answer": "He made a pointed, cutting remark intended to sting",
+      "explanation": "A barb is a sharp, hurtful remark — like the backward-pointing spike on a fishhook or wire.\n• barb = a deliberately hurtful or cutting comment\n• From the literal barb: the backward-pointing spike that makes a hook hard to remove\n• 'His words contained a barb' = they were designed to wound and stick"
+    }
+  ]
+}
