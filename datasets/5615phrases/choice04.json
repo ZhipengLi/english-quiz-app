@@ -1,0 +1,1305 @@
+{
+  "text": "quiz05",
+  "quiz": [
+    {
+      "word": "verified",
+      "question": "The journalist said the information had been verified before publication. What does this mean?",
+      "type": "choice",
+      "options": [
+        "It had been approved by a senior editor",
+        "It had been checked and confirmed as accurate",
+        "It had been protected against legal challenge",
+        "It had been read by the subject of the article"
+      ],
+      "answer": "It had been checked and confirmed as accurate",
+      "explanation": "Verified means checked and confirmed to be true or accurate.\n• verified = confirmed as correct through evidence or investigation\n• From Latin: 'verus' (true) + 'facere' (to make)\n• 'Verified account' = confirmed as genuine; 'verified facts' = checked against evidence"
+    },
+    {
+      "word": "unjustified",
+      "question": "The manager's unjustified criticism upset the whole team. What was wrong with the criticism?",
+      "type": "choice",
+      "options": [
+        "It was delivered in an unnecessarily harsh tone, as the evidence showed",
+        "It was not supported by any valid reason or evidence",
+        "It was directed at the wrong person entirely",
+        "It was far too vague to be acted upon"
+      ],
+      "answer": "It was not supported by any valid reason or evidence",
+      "explanation": "Unjustified means having no valid grounds — not supported by adequate reason.\n• unjustified = without sufficient justification; unwarranted\n• 'Un-' (not) + 'justified' (shown to be right)\n• 'Unjustified criticism' attacks without cause; 'unjustified confidence' is not earned"
+    },
+    {
+      "word": "pied",
+      "question": "The pied horse stood out in the field. What did it look like?",
+      "type": "choice",
+      "options": [
+        "Entirely black with a glossy coat",
+        "Having patches of two or more colors",
+        "Pure white from nose to tail",
+        "A deep chestnut brown with no markings"
+      ],
+      "answer": "Having patches of two or more colors",
+      "explanation": "Pied means having patches of two or more colors — especially black and white.\n• pied = irregularly colored in patches\n• From 'magpie' — a black-and-white bird\n• 'The Pied Piper' wore a coat of many colors; 'piebald' is a related term"
+    },
+    {
+      "word": "serried",
+      "question": "The general surveyed the serried ranks of soldiers before the battle. How were the soldiers arranged?",
+      "type": "choice",
+      "options": [
+        "Scattered across the hillside in small groups",
+        "Pressed close together in tight, orderly rows",
+        "Advancing in a long, spread-out single line",
+        "Waiting in reserve, hidden behind the ridge"
+      ],
+      "answer": "Pressed close together in tight, orderly rows",
+      "explanation": "Serried means pressed close together — packed in tight, regular rows.\n• serried = (of rows) pressed close together; densely packed\n• From French: 'serrer' — to press, to close\n• 'Serried ranks' is almost always military — lines of soldiers shoulder to shoulder"
+    },
+    {
+      "word": "packed",
+      "question": "The stadium was packed for the final. What does this tell us about the attendance?",
+      "type": "choice",
+      "options": [
+        "Only the most expensive seats had been sold",
+        "It was completely full with no room to spare",
+        "The crowd was enthusiastic and very loud",
+        "Attendance was higher than the previous year's final"
+      ],
+      "answer": "It was completely full with no room to spare",
+      "explanation": "Packed means filled to capacity — completely full.\n• packed = crammed full; containing as many as possible\n• 'Packed stadium', 'packed schedule' — no space left\n• Implies density, not just quantity: things are pressed together"
+    },
+    {
+      "word": "henpecked",
+      "question": "His friends called him henpecked because his wife made every decision in the household. What does 'henpecked' describe?",
+      "type": "choice",
+      "options": [
+        "A man who dominates his household quietly",
+        "A man constantly nagged and dominated by his partner",
+        "A man who avoids conflict by staying away from home",
+        "A man who defers to his partner on minor matters only"
+      ],
+      "answer": "A man constantly nagged and dominated by his partner",
+      "explanation": "Henpecked describes a man who is bossed about and nagged by his wife or partner.\n• henpecked = (of a man) browbeaten and dominated by a nagging partner\n• From a hen pecking at something relentlessly\n• A dated but still-used term for domestic dominance by a partner"
+    },
+    {
+      "word": "wicked",
+      "question": "The judge described the crime as wicked and handed down the maximum sentence. What does 'wicked' mean here?",
+      "type": "choice",
+      "options": [
+        "Carefully planned and carried out over a long period",
+        "Evil and morally deeply wrong",
+        "Committed against an unusually vulnerable victim",
+        "Difficult to prosecute due to lack of evidence"
+      ],
+      "answer": "Evil and morally deeply wrong",
+      "explanation": "Wicked means evil, morally wrong, and deeply bad.\n• wicked = deliberately cruel and morally depraved\n• From Old English: 'wicca' — related to witchcraft; harmful, evil\n• Informal modern use: 'wicked' can also mean 'excellent' (slang) — context is everything"
+    },
+    {
+      "word": "landlocked",
+      "question": "Bolivia is a landlocked country. What does this tell us about its geography?",
+      "type": "choice",
+      "options": [
+        "It has a very long and difficult-to-defend coastline",
+        "It has no access to the sea — entirely surrounded by other countries",
+        "Most of its territory consists of flat, low-lying land",
+        "It shares borders with more than five neighboring nations, as the evidence showed"
+      ],
+      "answer": "It has no access to the sea — entirely surrounded by other countries",
+      "explanation": "Landlocked means enclosed by land on all sides — with no coastline.\n• landlocked = entirely surrounded by land; having no access to the sea\n• Bolivia and Switzerland are classic examples\n• Being landlocked has major trade and geopolitical implications"
+    },
+    {
+      "word": "marked",
+      "question": "There was a marked improvement in the student's work after extra tutoring. What does 'marked' mean here?",
+      "type": "choice",
+      "options": [
+        "The improvement had been officially noted by the teacher",
+        "The improvement was clearly noticeable and significant",
+        "The improvement was consistent across all subjects",
+        "The improvement was documented with written feedback"
+      ],
+      "answer": "The improvement was clearly noticeable and significant",
+      "explanation": "Marked (as an adjective) means clearly noticeable — conspicuous and obvious.\n• marked = clearly evident; standing out as significant\n• 'A marked difference', 'a marked improvement' — hard to miss\n• Distinct from the verb 'marked' (corrected or graded)"
+    },
+    {
+      "word": "garbled",
+      "question": "The message came through garbled on the radio — nothing could be understood. What does 'garbled' mean?",
+      "type": "choice",
+      "options": [
+        "Very faint and barely audible",
+        "Confused and distorted beyond understanding",
+        "Transmitted in the wrong frequency band",
+        "Cut short before the message was finished, as the evidence showed"
+      ],
+      "answer": "Confused and distorted beyond understanding",
+      "explanation": "Garbled means confused, distorted, and unintelligible.\n• garbled = (of a message) distorted and difficult or impossible to understand\n• From Arabic: 'gharbala' — to sift (implies things have been mixed up)\n• 'A garbled account' = confused and inaccurate; 'garbled signal' = distorted transmission"
+    },
+    {
+      "word": "unbridled",
+      "question": "The coach warned against unbridled enthusiasm — it needed to be channeled, not wasted. What does 'unbridled' mean?",
+      "type": "choice",
+      "options": [
+        "Infectious and inspiring to others around you, as the evidence showed",
+        "Unrestrained and not kept in check by anything",
+        "Short-lived and likely to fade quickly",
+        "Genuine rather than performed for appearances"
+      ],
+      "answer": "Unrestrained and not kept in check by anything",
+      "explanation": "Unbridled means not controlled or restrained — like a horse without a bridle.\n• unbridled = uncontrolled; unchecked\n• From 'bridle' — the headgear used to steer and control a horse\n• 'Unbridled passion', 'unbridled fury' — free from all constraint"
+    },
+    {
+      "word": "brindled",
+      "question": "The rescue centre described the dog as brindled. What did the dog look like?",
+      "type": "choice",
+      "options": [
+        "Entirely black with a short, smooth coat, as the evidence showed",
+        "Having a tawny coat streaked with darker color",
+        "White with scattered brown spots",
+        "Golden yellow with a fluffy double coat"
+      ],
+      "answer": "Having a tawny coat streaked with darker color",
+      "explanation": "Brindled means having a tawny or brownish coat with streaks of darker color.\n• brindled = (of animals) brownish with darker streaks or patches\n• Related to 'branded' — the streaks resemble marks\n• Commonly used of dogs, cattle, and horses"
+    },
+    {
+      "word": "disheveled",
+      "question": "After running to catch the bus in the rain, she arrived at the meeting looking disheveled. How did she look?",
+      "type": "choice",
+      "options": [
+        "Wet but otherwise neatly dressed",
+        "Untidy and with hair and clothes in disarray",
+        "Out of breath but composed in appearance, as the evidence showed",
+        "Visibly flustered and too warm"
+      ],
+      "answer": "Untidy and with hair and clothes in disarray",
+      "explanation": "Disheveled means (of a person or appearance) untidy — hair and clothes in disorder.\n• disheveled = having hair and clothes in a messy, disordered state\n• From Old French: 'descheveler' — to disarrange the hair\n• 'Disheveled appearance' suggests haste or disruption, not poverty"
+    },
+    {
+      "word": "muffled",
+      "question": "She heard muffled voices from behind the closed door. What were the voices like?",
+      "type": "choice",
+      "options": [
+        "Loud and animated, clearly arguing",
+        "Quiet and indistinct, dulled as if wrapped in something",
+        "Whispering, barely making a sound at all",
+        "Speaking in a foreign language she did not know, as the evidence showed"
+      ],
+      "answer": "Quiet and indistinct, dulled as if wrapped in something",
+      "explanation": "Muffled means quieted and made indistinct — sound that is deadened or wrapped.\n• muffled = (of sound) dulled and made unclear by some barrier\n• From 'muffle' — to wrap or pad so as to deaden sound\n• 'Muffled drum', 'muffled cry' — the sound is there but dampened and unclear"
+    },
+    {
+      "word": "unspoiled",
+      "question": "The travel writer praised the unspoiled coastline — no hotels, no roads. What does 'unspoiled' mean?",
+      "type": "choice",
+      "options": [
+        "Largely unknown and not yet on tourist maps",
+        "Undamaged and still in its natural, original state",
+        "Protected by law from future development",
+        "Difficult to reach and therefore rarely visited, as the evidence showed"
+      ],
+      "answer": "Undamaged and still in its natural, original state",
+      "explanation": "Unspoiled means not damaged or made worse — remaining in its original state.\n• unspoiled = untouched; not damaged or corrupted by modern development\n• 'Unspoiled landscape' = still natural; 'unspoiled child' = not made demanding by indulgence\n• Implies something has been preserved from deterioration"
+    },
+    {
+      "word": "unprincipled",
+      "question": "The unprincipled businessman lied to his clients and bribed officials whenever it suited him. What does 'unprincipled' mean?",
+      "type": "choice",
+      "options": [
+        "He had no formal professional qualifications",
+        "He had no moral principles — willing to do anything for gain",
+        "He operated without a clear business strategy",
+        "He was legally prohibited from running a company, as the evidence showed"
+      ],
+      "answer": "He had no moral principles — willing to do anything for gain",
+      "explanation": "Unprincipled means having no moral principles — unscrupulous.\n• unprincipled = not guided by moral principles; dishonest and unscrupulous\n• 'Un-' (not) + 'principled' (guided by moral standards)\n• An unprincipled person does whatever serves them, regardless of ethics"
+    },
+    {
+      "word": "dappled",
+      "question": "The dappled light filtered through the forest canopy onto the path below. What did the light look like?",
+      "type": "choice",
+      "options": [
+        "A single bright shaft cutting through the darkness",
+        "Patches of light and shadow creating a broken, spotted pattern",
+        "A uniform soft glow with no sharp contrasts",
+        "Flickering light caused by wind moving the branches, as the evidence showed"
+      ],
+      "answer": "Patches of light and shadow creating a broken, spotted pattern",
+      "explanation": "Dappled means marked with spots or patches of light and shade.\n• dappled = marked with rounded patches of color or light\n• From Norse/Dutch: related to 'dapple-grey' — a horse with grey spots\n• 'Dappled sunlight', 'dappled horse' — always spotted or patchy"
+    },
+    {
+      "word": "gnarled",
+      "question": "The gnarled old oak tree had stood in the field for three centuries. What did it look like?",
+      "type": "choice",
+      "options": [
+        "Unusually tall and straight despite its age",
+        "Twisted, knotted, and rough from years of growth",
+        "Spreading and leafy with smooth, pale bark",
+        "Hollow inside but still producing leaves each spring"
+      ],
+      "answer": "Twisted, knotted, and rough from years of growth",
+      "explanation": "Gnarled means knobbly and twisted — especially with age.\n• gnarled = having a rough, twisted, knotted surface\n• From 'knurl' — a ridge or bead; knotted wood grain\n• 'Gnarled hands', 'gnarled tree' — always suggests age and distortion"
+    },
+    {
+      "word": "settled",
+      "question": "The lawyer said the case had been settled out of court. What happened to the case?",
+      "type": "choice",
+      "options": [
+        "The judge had dismissed it due to lack of evidence",
+        "The two parties reached an agreement without a trial",
+        "The defendant had been found guilty on all counts",
+        "The case was postponed and scheduled for a later date"
+      ],
+      "answer": "The two parties reached an agreement without a trial",
+      "explanation": "Settled (in a legal context) means resolved by mutual agreement outside a formal trial.\n• settled = resolved; brought to a conclusion by agreement\n• 'Settle out of court' = both sides agree to a resolution without a judge's verdict\n• Also: 'a settled lifestyle' = stable and fixed; 'settled weather' = stable conditions"
+    },
+    {
+      "word": "inflamed",
+      "question": "The doctor said the knee was inflamed after the injury. What does this mean?",
+      "type": "choice",
+      "options": [
+        "The knee had been severely bruised but not structurally damaged, as the evidence showed",
+        "The tissue was red, swollen, and painful due to the body's response",
+        "The knee had a stress fracture that needed immediate treatment",
+        "The knee required surgical intervention to restore movement"
+      ],
+      "answer": "The tissue was red, swollen, and painful due to the body's response",
+      "explanation": "Inflamed means hot, red, swollen, and painful — the body's response to injury or infection.\n• inflamed = showing signs of inflammation: heat, redness, swelling, pain\n• From Latin: 'inflammare' — to set on fire\n• Also figurative: 'inflamed passions' = provoked and heated emotions"
+    },
+    {
+      "word": "mistimed",
+      "question": "The comedian's punch line was mistimed — he delivered it before the setup was finished. What went wrong?",
+      "type": "choice",
+      "options": [
+        "The joke was too long and lost the audience's attention, as the evidence showed",
+        "The key moment arrived at the wrong time, ruining the effect",
+        "The audience had already heard the joke before",
+        "The punch line was too subtle for most of the audience"
+      ],
+      "answer": "The key moment arrived at the wrong time, ruining the effect",
+      "explanation": "Mistimed means done at the wrong moment — the timing was off.\n• mistimed = poorly timed; occurring too early or too late\n• 'Mis-' (wrongly) + 'timed'\n• Timing is crucial in comedy, sport, and music — a mistimed action misses the moment"
+    },
+    {
+      "word": "well-groomed",
+      "question": "The candidate arrived well-groomed for the interview. What does this tell us about his appearance?",
+      "type": "choice",
+      "options": [
+        "He was wearing an expensive designer suit",
+        "His appearance was neat, clean, and carefully maintained",
+        "He had prepared thoroughly for every likely question",
+        "He was confident and relaxed from the moment he entered, as the evidence showed"
+      ],
+      "answer": "His appearance was neat, clean, and carefully maintained",
+      "explanation": "Well-groomed means neat and tidy in appearance — carefully maintained.\n• well-groomed = having a neat, clean, carefully tended appearance\n• 'Groom' = to clean and maintain (originally of horses)\n• 'Well-groomed' says nothing about clothing quality — only about tidiness and care"
+    },
+    {
+      "word": "informed",
+      "question": "The doctor said the patient gave informed consent before the procedure. What does 'informed' mean here?",
+      "type": "choice",
+      "options": [
+        "The patient had signed the consent form without being rushed, as the evidence showed",
+        "The patient understood the risks and alternatives before agreeing",
+        "The consent had been witnessed by a third party",
+        "The patient had consulted a second doctor beforehand"
+      ],
+      "answer": "The patient understood the risks and alternatives before agreeing",
+      "explanation": "Informed (in this context) means having been given the necessary information to make a decision.\n• informed consent = agreement given with full knowledge of what is involved\n• 'An informed decision' = made on the basis of relevant knowledge\n• Distinct from just 'knowing' — informed implies adequate, relevant knowledge"
+    },
+    {
+      "word": "unenlightened",
+      "question": "The committee's unenlightened attitude to mental health set progress back by years. What does 'unenlightened' mean here?",
+      "type": "choice",
+      "options": [
+        "Deliberately hostile to any reform proposals, as the evidence showed",
+        "Based on ignorance and outdated, uninformed thinking",
+        "Cautious and unwilling to move too quickly",
+        "Technically informed but lacking compassion"
+      ],
+      "answer": "Based on ignorance and outdated, uninformed thinking",
+      "explanation": "Unenlightened means ignorant and not informed by modern knowledge or understanding.\n• unenlightened = lacking knowledge, insight, or progressive thinking\n• From the Enlightenment — the era of reason, knowledge, and progress\n• 'Unenlightened views' = backward, uninformed, stuck in outdated thinking"
+    },
+    {
+      "word": "wizened",
+      "question": "The wizened old shopkeeper peered at the customer over his glasses. What did he look like?",
+      "type": "choice",
+      "options": [
+        "Tall and stiffly formal in bearing",
+        "Small and shrunken, with a dry, wrinkled face",
+        "Bushy-bearded and ruddy-cheeked from outdoor work",
+        "Thin but upright, with sharp, alert eyes"
+      ],
+      "answer": "Small and shrunken, with a dry, wrinkled face",
+      "explanation": "Wizened means small and shrunken with age — dried and wrinkled.\n• wizened = shriveled and wrinkled with age\n• From Old English: 'wisnian' — to wither, dry up\n• 'A wizened face', 'wizened hands' — always implies age-related shrinkage and dryness"
+    },
+    {
+      "word": "feigned",
+      "question": "Her feigned surprise when she received the award fooled no one — she had clearly known in advance. What does 'feigned' mean?",
+      "type": "choice",
+      "options": [
+        "Her surprise was genuine but quickly controlled",
+        "Her surprise was pretended and not real",
+        "Her surprise was exaggerated for the audience's benefit",
+        "Her surprise masked considerable nervousness"
+      ],
+      "answer": "Her surprise was pretended and not real",
+      "explanation": "Feigned means simulated or pretended — not genuine.\n• feigned = not real; put on to deceive\n• From French: 'feindre' — to pretend, simulate\n• 'Feigned illness', 'feigned ignorance' — a deliberate performance"
+    },
+    {
+      "word": "unfeigned",
+      "question": "The audience's unfeigned delight at the magic show was obvious. What does 'unfeigned' tell us?",
+      "type": "choice",
+      "options": [
+        "Their delight was polite but not entirely sincere",
+        "Their delight was completely genuine and unperformed",
+        "Their delight was stronger than the performers expected",
+        "Their delight was exuberant and slightly out of proportion"
+      ],
+      "answer": "Their delight was completely genuine and unperformed",
+      "explanation": "Unfeigned means genuine and sincere — not pretended.\n• unfeigned = real; not simulated or put on\n• Direct opposite of 'feigned'\n• 'Unfeigned emotion' = felt and expressed honestly, without acting"
+    },
+    {
+      "word": "resigned",
+      "question": "She accepted the delays with a resigned shrug — there was nothing she could do. What does 'resigned' describe here?",
+      "type": "choice",
+      "options": [
+        "She was angry but chose not to show it openly",
+        "She had accepted an unpleasant situation without complaint",
+        "She had formally given up her position in the company, as the evidence showed",
+        "She was too tired to care what happened next"
+      ],
+      "answer": "She had accepted an unpleasant situation without complaint",
+      "explanation": "Resigned (as an adjective) means having accepted something unpleasant with calm submission.\n• resigned = calmly accepting of something bad; making peace with what cannot be changed\n• 'A resigned smile', 'resigned to one's fate' — passive acceptance\n• Distinct from the verb 'resigned' (left a job)"
+    },
+    {
+      "word": "ingrained",
+      "question": "His ingrained habit of arriving early made it impossible for him to be on time for a party. What does 'ingrained' mean?",
+      "type": "choice",
+      "options": [
+        "The habit had formed recently but very rapidly",
+        "The habit was so deeply fixed it was almost impossible to change",
+        "The habit annoyed everyone around him without his realizing, as the evidence showed",
+        "The habit was something he had inherited from his parents"
+      ],
+      "answer": "The habit was so deeply fixed it was almost impossible to change",
+      "explanation": "Ingrained means deeply fixed — embedded so thoroughly that it cannot easily be removed.\n• ingrained = firmly established; deeply rooted\n• From 'in the grain' — worked into the grain of the wood, impossible to wash out\n• 'Ingrained prejudice', 'ingrained habit' — deeply embedded over time"
+    },
+    {
+      "word": "constrained",
+      "question": "The architect said the design was constrained by the size of the plot. What does 'constrained' mean?",
+      "type": "choice",
+      "options": [
+        "The design was inspired and shaped by the plot's character, as the evidence showed",
+        "The design was limited and restricted by conditions beyond her control",
+        "The design had been rejected and needed to be reconsidered",
+        "The design was completed on a very tight budget"
+      ],
+      "answer": "The design was limited and restricted by conditions beyond her control",
+      "explanation": "Constrained means restricted and limited — held back by external conditions.\n• constrained = restricted; forced to operate within limitations\n• From Latin: 'constringere' — to bind tightly\n• Also: 'a constrained manner' = stiff and unnatural, as if holding something back"
+    },
+    {
+      "word": "sustained",
+      "question": "The campaign required sustained effort over three years. What does 'sustained' tell us about the effort required?",
+      "type": "choice",
+      "options": [
+        "It needed to be intense but could be done quickly",
+        "It needed to be maintained continuously over a long period",
+        "It required large resources to be deployed all at once, as the evidence showed",
+        "It could only be effective if done by a large team"
+      ],
+      "answer": "It needed to be maintained continuously over a long period",
+      "explanation": "Sustained means maintained at length without faltering — kept up continuously.\n• sustained = kept going over time without interruption or reduction\n• From Latin: 'sustinere' — to hold up, support\n• 'Sustained effort', 'sustained applause' — continuous, not brief or sporadic"
+    },
+    {
+      "word": "defined",
+      "question": "The athlete's training had given her sharply defined muscles. What does 'defined' mean here?",
+      "type": "choice",
+      "options": [
+        "Her muscles were unusually large and powerful",
+        "Her muscles were clearly visible with distinct edges and contours",
+        "Her muscles were flexible and resistant to injury",
+        "Her muscles were strong but hidden beneath a layer of fat, as the evidence showed"
+      ],
+      "answer": "Her muscles were clearly visible with distinct edges and contours",
+      "explanation": "Defined (in this context) means clearly delineated — with sharp, visible outlines.\n• defined = clearly outlined; having sharp, distinct edges\n• 'Well-defined muscles' = visibly distinct, with clear contours\n• Also: 'a defined role' = clearly described and delimited"
+    },
+    {
+      "word": "tined",
+      "question": "The chef reached for a two-tined fork to spear the meat. What is a tine?",
+      "type": "choice",
+      "options": [
+        "A type of curved blade",
+        "A prong or pointed spike of a fork or antler",
+        "A weighted handle for better grip",
+        "A decorative groove cut into silverware, as the evidence showed"
+      ],
+      "answer": "A prong or pointed spike of a fork or antler",
+      "explanation": "A tine is a prong or pointed spike of a fork, comb, or antler.\n• tined = having tines; provided with prongs\n• From Old English: 'tind' — a prong, spike\n• A fork's 'teeth' are correctly called tines; deer antlers are also described by their tines"
+    },
+    {
+      "word": "impassioned",
+      "question": "The defense lawyer gave an impassioned closing speech. What does 'impassioned' describe?",
+      "type": "choice",
+      "options": [
+        "Carefully prepared and structured with great precision",
+        "Filled with intense emotion and passionate conviction",
+        "Unusually long and covering every aspect of the case",
+        "Calm and measured to contrast with the prosecution"
+      ],
+      "answer": "Filled with intense emotion and passionate conviction",
+      "explanation": "Impassioned means filled with or showing great passion and emotion.\n• impassioned = expressing powerful feeling; deeply emotional\n• From Italian: 'impassionato' — moved by passion\n• 'An impassioned plea', 'impassioned speech' — emotion felt and shown intensely"
+    },
+    {
+      "word": "unimpassioned",
+      "question": "The professor delivered an unimpassioned lecture — facts, dates, nothing more. What was the lecture like?",
+      "type": "choice",
+      "options": [
+        "Thorough and detailed but hard to follow",
+        "Calm and factual with no emotional engagement",
+        "Interesting in content but poorly organized",
+        "Too advanced for most of the students present, as the evidence showed"
+      ],
+      "answer": "Calm and factual with no emotional engagement",
+      "explanation": "Unimpassioned means without passion — emotionally detached and matter-of-fact.\n• unimpassioned = not emotional; delivered without feeling or enthusiasm\n• Direct opposite of impassioned\n• 'Unimpassioned delivery' may be professional or simply dull, depending on context"
+    },
+    {
+      "word": "seasoned",
+      "question": "The editor sent a seasoned reporter to cover the war zone. What does 'seasoned' mean here?",
+      "type": "choice",
+      "options": [
+        "A reporter who had worked through every season of the year",
+        "A reporter experienced and hardened by years of difficult work",
+        "A reporter who specialized in military and conflict reporting, as the evidence showed",
+        "A reporter who had recently won a major journalism award"
+      ],
+      "answer": "A reporter experienced and hardened by years of difficult work",
+      "explanation": "Seasoned means experienced and made capable by long practice — like wood seasoned by time.\n• seasoned = made more capable through extended experience\n• From 'seasoning' wood — dried over time until stable and hardened\n• 'A seasoned professional', 'a seasoned traveler' — tested and toughened"
+    },
+    {
+      "word": "biped",
+      "question": "Humans are bipeds. What does this tell us about how we move?",
+      "type": "choice",
+      "options": [
+        "We are capable of moving on land and in water",
+        "We habitually walk on two legs",
+        "We have evolved from four-legged ancestors",
+        "We are among the fastest moving primates"
+      ],
+      "answer": "We habitually walk on two legs",
+      "explanation": "A biped is a creature that walks on two legs.\n• biped = an animal that uses two legs for walking\n• From Latin: 'bi-' (two) + 'pes/pedis' (foot)\n• Humans and birds are bipeds; dogs and horses are quadrupeds"
+    },
+    {
+      "word": "damped",
+      "question": "The engineer said the bridge's vibrations needed to be damped. What did she mean?",
+      "type": "choice",
+      "options": [
+        "The bridge needed to be made more rigid",
+        "The vibrations needed to be reduced and absorbed",
+        "The bridge needed a waterproof coating applied",
+        "The vibrations needed to be measured more accurately"
+      ],
+      "answer": "The vibrations needed to be reduced and absorbed",
+      "explanation": "Damped means reduced in amplitude — having energy absorbed to reduce oscillation.\n• damped = (of vibration or oscillation) reduced by a force that absorbs energy\n• From 'damp' — moisture that deadens and absorbs\n• In physics and engineering, damping prevents destructive resonance"
+    },
+    {
+      "word": "untapped",
+      "question": "The consultant said the company had vast untapped potential. What does 'untapped' mean?",
+      "type": "choice",
+      "options": [
+        "Hidden and not visible to outside observers",
+        "Available but not yet made use of",
+        "Officially recognized but legally restricted",
+        "Recently discovered and still being assessed"
+      ],
+      "answer": "Available but not yet made use of",
+      "explanation": "Untapped means not yet exploited or made use of — available but still unrealized.\n• untapped = not yet utilized; available but unused\n• From 'tap' — to pierce a container and draw out what is inside\n• 'Untapped resources', 'untapped market' — the potential is there but no one has accessed it"
+    },
+    {
+      "word": "quadruped",
+      "question": "Dogs and horses are quadrupeds. What does this mean?",
+      "type": "choice",
+      "options": [
+        "They are animals that can survive in four different climates",
+        "They are animals that walk on four legs",
+        "They are animals with four distinct life stages",
+        "They are animals that can run at four different speeds"
+      ],
+      "answer": "They are animals that walk on four legs",
+      "explanation": "A quadruped is an animal that walks on four legs.\n• quadruped = a four-footed animal\n• From Latin: 'quadru-' (four) + 'pes/pedis' (foot)\n• Most mammals are quadrupeds; contrast with biped (two-legged)"
+    },
+    {
+      "word": "vinegared",
+      "question": "The vinegared cucumbers were served alongside the cheese board. What had been done to the cucumbers?",
+      "type": "choice",
+      "options": [
+        "They had been cooked in a sauce with vinegar as one ingredient",
+        "They had been soaked in or treated with vinegar",
+        "They had been fermented using a bacterial culture",
+        "They had been cured in salt before being rinsed"
+      ],
+      "answer": "They had been soaked in or treated with vinegar",
+      "explanation": "Vinegared means soaked in, seasoned with, or treated with vinegar.\n• vinegared = preserved or flavored with vinegar\n• From 'vinegar' — sour wine (Old French: 'vinaigre')\n• Vinegared vegetables are pickled or marinated in acetic acid solution"
+    },
+    {
+      "word": "lowbred",
+      "question": "The aristocrat dismissed his neighbor as lowbred and refused to invite him to dinner. What did he mean?",
+      "type": "choice",
+      "options": [
+        "The neighbor was unusually short in stature",
+        "He considered the neighbor to be of low social origins and poor manners",
+        "The neighbor had recently committed a criminal offense, as the evidence showed",
+        "He found the neighbor dull and lacking in conversation"
+      ],
+      "answer": "He considered the neighbor to be of low social origins and poor manners",
+      "explanation": "Lowbred means of low social origin and having coarse or vulgar manners.\n• lowbred = vulgar; characteristic of lower social breeding\n• A snobbish, archaic insult relating to social class\n• Contrast: 'well-bred' = having good manners from good upbringing"
+    },
+    {
+      "word": "sacred",
+      "question": "The temple was sacred ground — no weapons were allowed within its walls. What does 'sacred' mean here?",
+      "type": "choice",
+      "options": [
+        "It was politically neutral and recognized internationally, as the evidence showed",
+        "It was regarded with religious reverence and set apart from ordinary use",
+        "It was historically significant and legally protected",
+        "It was the oldest building in the region"
+      ],
+      "answer": "It was regarded with religious reverence and set apart from ordinary use",
+      "explanation": "Sacred means connected to God or religion — regarded with reverence and set apart.\n• sacred = dedicated to a deity; holy; treated with deep respect\n• From Latin: 'sacrare' — to consecrate\n• 'Sacred ground', 'sacred text' — not to be treated carelessly or profaned"
+    },
+    {
+      "word": "kindred",
+      "question": "She felt an immediate sense of kindred spirit when she met the other writer. What does 'kindred' mean here?",
+      "type": "choice",
+      "options": [
+        "Professional admiration for another's published work",
+        "A shared similarity of nature, outlook, or feeling",
+        "A connection through shared family history",
+        "A mutual sense of rivalry and healthy competition"
+      ],
+      "answer": "A shared similarity of nature, outlook, or feeling",
+      "explanation": "Kindred means having similar character, nature, or outlook — a close affinity.\n• kindred = similar in nature; related in spirit if not in blood\n• From Old English: 'cynren' — family, kin\n• 'Kindred spirits' = people who share the same outlook and sensibility"
+    },
+    {
+      "word": "checkered",
+      "question": "The politician had a checkered past — brilliant achievements alongside serious scandals. What does 'checkered' suggest?",
+      "type": "choice",
+      "options": [
+        "A past that was uniformly successful with rare setbacks",
+        "A past marked by alternating successes and failures",
+        "A past that was largely hidden from public scrutiny",
+        "A past that became more controversial as time went on"
+      ],
+      "answer": "A past marked by alternating successes and failures",
+      "explanation": "Checkered means marked by varied events — both good and bad alternating like squares on a chessboard.\n• checkered = having a history of both success and failure\n• From a chessboard: alternating black and white squares\n• 'A checkered career' = brilliant highs and embarrassing lows"
+    },
+    {
+      "word": "mannered",
+      "question": "Critics called the actor's performance mannered and artificial. What does 'mannered' mean here?",
+      "type": "choice",
+      "options": [
+        "It was polite and well-suited to the genteel subject matter",
+        "It was full of affected, artificial stylistic habits",
+        "It was technically precise but emotionally cold",
+        "It was based too closely on the original stage performance"
+      ],
+      "answer": "It was full of affected, artificial stylistic habits",
+      "explanation": "Mannered means having distinctive and often artificially exaggerated stylistic habits.\n• mannered = overly stylized; characterized by affectation\n• 'A mannered style' draws attention to itself rather than to the subject\n• Contrasts with 'natural' or 'understated' — it is performance rather than truth"
+    },
+    {
+      "word": "even-tempered",
+      "question": "Despite the chaos around her, the surgeon remained even-tempered throughout the operation. What does 'even-tempered' describe?",
+      "type": "choice",
+      "options": [
+        "She was entirely focused and free from distraction",
+        "She was calm and not prone to mood swings or irritability",
+        "She was methodical and never took unnecessary risks",
+        "She was experienced enough not to be surprised by setbacks"
+      ],
+      "answer": "She was calm and not prone to mood swings or irritability",
+      "explanation": "Even-tempered means having a calm, stable temperament — not easily angered or upset.\n• even-tempered = consistently calm; not subject to extreme moods\n• 'Even' = balanced, smooth; 'tempered' = the nature of one's emotional makeup\n• An even-tempered person is reliable and stable regardless of circumstances"
+    },
+    {
+      "word": "flustered",
+      "question": "The waiter became flustered when three large tables were seated at the same time. What happened to him?",
+      "type": "choice",
+      "options": [
+        "He became angry at the poor timing",
+        "He became confused and agitated, losing his composure",
+        "He asked another waiter to take over his tables, as the evidence showed",
+        "He slowed down to avoid making mistakes"
+      ],
+      "answer": "He became confused and agitated, losing his composure",
+      "explanation": "Flustered means agitated, confused, and flushed — having lost one's composure.\n• flustered = nervous and confused; thrown into a state of agitation\n• From Scandinavian: 'fluster' — to bustle about in confusion\n• 'Don't get flustered' = stay calm and don't let things overwhelm you"
+    },
+    {
+      "word": "shattered",
+      "question": "When told she had not made the national team, she was absolutely shattered. What does 'shattered' mean here?",
+      "type": "choice",
+      "options": [
+        "She was furious and immediately lodged an official appeal",
+        "She was devastated — deeply upset and broken by the news",
+        "She was too exhausted from training to feel anything at all",
+        "She was shocked but quickly recovered and accepted it"
+      ],
+      "answer": "She was devastated — deeply upset and broken by the news",
+      "explanation": "Shattered (figuratively) means utterly devastated — emotionally broken.\n• shattered = deeply distressed; having one's hopes or emotions broken apart\n• Mirrors the literal sense: something shattered breaks into many pieces\n• Also British informal: 'I'm shattered' = I am exhausted"
+    },
+    {
+      "word": "acquired",
+      "question": "The gallery announced it had acquired a rare Rembrandt. What had it done?",
+      "type": "choice",
+      "options": [
+        "It had been offered the painting as a temporary loan",
+        "It had obtained the painting and made it its property",
+        "It had authenticated the painting as a genuine Rembrandt",
+        "It had insured the painting for its full market value"
+      ],
+      "answer": "It had obtained the painting and made it its property",
+      "explanation": "Acquired means obtained and made one's own through effort, purchase, or other means.\n• acquired = gained possession of; obtained\n• From Latin: 'acquirere' — to seek in addition to\n• 'An acquired taste' = something that takes time to appreciate"
+    },
+    {
+      "word": "labored",
+      "question": "The patient's labored breathing alarmed the doctors. What were they hearing?",
+      "type": "choice",
+      "options": [
+        "Breathing that was unusually fast and shallow",
+        "Breathing that was slow, difficult, and requiring great effort",
+        "Breathing that was regular but unusually loud",
+        "Breathing that stopped briefly and then restarted, as the evidence showed"
+      ],
+      "answer": "Breathing that was slow, difficult, and requiring great effort",
+      "explanation": "Labored means requiring obvious effort — slow, difficult, and strained.\n• labored = showing signs of strain; done with difficulty\n• 'Labored breathing' = visibly effortful; 'a labored joke' = heavy and lacking ease\n• From 'labor' — work; labored = as if it costs great work to do"
+    },
+    {
+      "word": "enamored",
+      "question": "She was enamored of the Italian countryside and returned every summer. What does 'enamored' mean?",
+      "type": "choice",
+      "options": [
+        "She was very familiar with it after many years of visiting",
+        "She was deeply charmed and captivated by it",
+        "She considered it the most beautiful place she had seen",
+        "She was planning to buy property there eventually"
+      ],
+      "answer": "She was deeply charmed and captivated by it",
+      "explanation": "Enamored means deeply charmed by or in love with something.\n• enamored = filled with love or admiration; captivated\n• From Old French: 'enamourer' — to inflame with love\n• 'Enamored of' = in love with or deeply fond of something"
+    },
+    {
+      "word": "restored",
+      "question": "The painting had been carefully restored before going on display. What had been done to it?",
+      "type": "choice",
+      "options": [
+        "It had been cleaned, repaired, and returned to its original condition",
+        "It had been reframed and mounted for exhibition",
+        "It had been authenticated and insured for the first time",
+        "It had been photographed in high resolution for the catalogue, as the evidence showed"
+      ],
+      "answer": "It had been cleaned, repaired, and returned to its original condition",
+      "explanation": "Restored means returned to its original condition after damage or decay.\n• restored = brought back to its original state through repair or conservation\n• From Latin: 'restaurare' — to rebuild\n• 'Restore' a painting, 'restore' a building, 'restore' democracy — always a return to an original state"
+    },
+    {
+      "word": "untutored",
+      "question": "Despite being untutored, her painting showed remarkable natural talent. What does 'untutored' mean?",
+      "type": "choice",
+      "options": [
+        "She had taught herself by copying from masters",
+        "She had received no formal training or instruction",
+        "She had abandoned her studies before completing them",
+        "She had resisted all advice from professional teachers"
+      ],
+      "answer": "She had received no formal training or instruction",
+      "explanation": "Untutored means not formally taught — without professional training.\n• untutored = lacking formal instruction; self-developed\n• 'Un-' (not) + 'tutored' (taught by a tutor)\n• 'Untutored talent' = natural and raw, not shaped by training"
+    },
+    {
+      "word": "marred",
+      "question": "The wedding was marred by a sudden argument between the families. What did the argument do to the wedding?",
+      "type": "choice",
+      "options": [
+        "It cut the celebration short before it had properly begun",
+        "It damaged and spoiled what should have been a perfect occasion",
+        "It drew attention away from the couple and onto the families, as the evidence showed",
+        "It caused several guests to leave before the reception ended"
+      ],
+      "answer": "It damaged and spoiled what should have been a perfect occasion",
+      "explanation": "Marred means damaged or spoiled — made less good by something negative.\n• marred = impaired; having its quality or enjoyment ruined by something\n• From Old English: 'merran' — to hinder, waste, destroy\n• 'Marred by controversy', 'marred by poor weather' — something good, damaged"
+    },
+    {
+      "word": "inured",
+      "question": "After years of night shifts, he had become inured to sleep deprivation. What does 'inured' mean?",
+      "type": "choice",
+      "options": [
+        "He had learned to manage his sleep more efficiently",
+        "He had grown accustomed and hardened to its effects",
+        "He had developed medical symptoms from lack of sleep",
+        "He no longer noticed when he was tired"
+      ],
+      "answer": "He had grown accustomed and hardened to its effects",
+      "explanation": "Inured means accustomed to something unpleasant through long exposure — hardened to it.\n• inured = made tough by repeated exposure; habituated to hardship\n• From 'in use' — worked into normal use by habit\n• 'Inured to pain', 'inured to criticism' — no longer affected by what once stung"
+    },
+    {
+      "word": "measured",
+      "question": "The CEO gave a measured response to the crisis, neither panicking nor dismissing the concerns. What does 'measured' describe here?",
+      "type": "choice",
+      "options": [
+        "The response had been planned well in advance",
+        "The response was carefully considered and controlled",
+        "The response addressed every concern raised by journalists",
+        "The response was longer than people expected"
+      ],
+      "answer": "The response was carefully considered and controlled",
+      "explanation": "Measured means carefully considered and restrained — neither too much nor too little.\n• measured = deliberate and restrained; not impulsive\n• 'Measured response', 'measured tone' — controlled and calibrated\n• Implies thought and judgment, as opposed to a knee-jerk reaction"
+    },
+    {
+      "word": "assured",
+      "question": "The young conductor handled the difficult symphony with an assured performance. What does 'assured' describe?",
+      "type": "choice",
+      "options": [
+        "A performance that was faithful to the composer's intentions, as the evidence showed",
+        "A performance given with confident competence and no trace of doubt",
+        "A performance that had been very thoroughly rehearsed",
+        "A performance widely praised by the critics in attendance"
+      ],
+      "answer": "A performance given with confident competence and no trace of doubt",
+      "explanation": "Assured means confident, competent, and settled — free from doubt or hesitation.\n• assured = confident; having or showing certainty in one's abilities\n• From Latin: 'assecurare' — to make safe, certain\n• 'An assured performance' = calm authority; 'assured of success' = certain of it"
+    },
+    {
+      "word": "improvised",
+      "question": "When the equipment failed, the surgeon improvised using whatever was available. What did she do?",
+      "type": "choice",
+      "options": [
+        "She waited until the correct equipment could be found",
+        "She made do by creating solutions on the spot without preparation",
+        "She abandoned the procedure and rescheduled for the following day, as the evidence showed",
+        "She requested emergency support from another department"
+      ],
+      "answer": "She made do by creating solutions on the spot without preparation",
+      "explanation": "Improvised means made or done without preparation — invented on the spot.\n• improvised = created without prior preparation; made up as you go\n• From Latin: 'improvisus' — unforeseen\n• 'Improvised solution', 'improvised music' — spontaneous, unplanned"
+    },
+    {
+      "word": "composed",
+      "question": "Despite the shocking news, she remained perfectly composed. What does 'composed' describe here?",
+      "type": "choice",
+      "options": [
+        "She had prepared herself mentally for the news beforehand",
+        "She was calm, controlled, and not visibly disturbed",
+        "She chose not to react until she was alone",
+        "She was numb and not yet processing what had happened"
+      ],
+      "answer": "She was calm, controlled, and not visibly disturbed",
+      "explanation": "Composed means calm and in control of one's emotions — unruffled.\n• composed = having one's emotions in order; serene and controlled\n• 'Composure' is the noun — 'keeping one's composure' = staying calm\n• Distinct from 'unfeeling' — a composed person feels but does not lose control"
+    },
+    {
+      "word": "disposed",
+      "question": "After the difficult meeting, he was not disposed to hear any more complaints. What does 'disposed' mean here?",
+      "type": "choice",
+      "options": [
+        "He was physically unable to stay in the room any longer",
+        "He was not inclined or willing to do that thing",
+        "He had already made a formal decision on the matter",
+        "He was in a hurry to leave for another appointment"
+      ],
+      "answer": "He was not inclined or willing to do that thing",
+      "explanation": "Disposed (in this context) means inclined — tending toward a particular attitude or action.\n• disposed = having a tendency or inclination (to do something)\n• 'Well-disposed toward' = favorably inclined; 'not disposed to' = unwilling\n• From Latin: 'disponere' — to arrange; one's mind is 'arranged' toward something"
+    },
+    {
+      "word": "depressed",
+      "question": "Sales figures were depressed throughout the winter quarter. What does 'depressed' mean here?",
+      "type": "choice",
+      "options": [
+        "The figures had been incorrectly recorded due to a system error, as the evidence showed",
+        "The figures were lower than normal, pushed down by poor conditions",
+        "The figures showed a sudden and dramatic one-off drop",
+        "The figures were being investigated for possible fraud"
+      ],
+      "answer": "The figures were lower than normal, pushed down by poor conditions",
+      "explanation": "Depressed (in this context) means reduced below normal — suppressed or pushed down.\n• depressed = reduced; lower than it should be\n• From Latin: 'deprimere' — to press down\n• 'A depressed economy', 'depressed wages' — pushed to a lower level"
+    },
+    {
+      "word": "repressed",
+      "question": "The psychologist said the patient's anger had been repressed for decades. What does 'repressed' mean?",
+      "type": "choice",
+      "options": [
+        "The anger had been expressed in unhealthy ways over the years, as the evidence showed",
+        "The anger had been suppressed and kept from conscious awareness",
+        "The anger had faded naturally as the patient aged",
+        "The anger had been directed inward, causing self-harm"
+      ],
+      "answer": "The anger had been suppressed and kept from conscious awareness",
+      "explanation": "Repressed means held down and excluded from conscious thought — forced into the unconscious.\n• repressed = (of feelings) suppressed; kept from conscious expression by psychological defense\n• From Latin: 'reprimere' — to press back\n• A key concept in Freudian psychology: repressed emotions resurface in other ways"
+    },
+    {
+      "word": "impressed",
+      "question": "The interviewer was clearly impressed by the candidate's preparation. What does 'impressed' mean here?",
+      "type": "choice",
+      "options": [
+        "She had noted the candidate's preparation in writing",
+        "She had formed a strongly favorable opinion of the candidate",
+        "She had decided to offer the candidate the position",
+        "She was surprised the candidate had prepared so thoroughly, as the evidence showed"
+      ],
+      "answer": "She had formed a strongly favorable opinion of the candidate",
+      "explanation": "Impressed means having had a strong, favorable effect on someone's opinion.\n• impressed = affected with admiration; struck favorably\n• From Latin: 'imprimere' — to press into (a positive mark has been made)\n• 'I was impressed' = something made a strong, positive stamp on my judgment"
+    },
+    {
+      "word": "possessed",
+      "question": "The musician played as if possessed — wild-eyed, completely lost in the music. What does 'possessed' suggest here?",
+      "type": "choice",
+      "options": [
+        "She was technically playing far beyond her normal ability",
+        "She appeared to be driven by a force beyond her normal self",
+        "She was so tired she was no longer thinking about the notes, as the evidence showed",
+        "She was playing from memory without looking at the score"
+      ],
+      "answer": "She appeared to be driven by a force beyond her normal self",
+      "explanation": "Possessed (figuratively) means appearing to be under the control of a powerful external force.\n• possessed = driven as if by an external power; acting with abnormal intensity\n• From Latin: 'possidere' — to occupy, take hold of\n• 'Like a man possessed' = with frenzied, uncontrollable energy"
+    },
+    {
+      "word": "star-crossed",
+      "question": "Romeo and Juliet are the most famous star-crossed lovers in literature. What does 'star-crossed' mean?",
+      "type": "choice",
+      "options": [
+        "They were famous and celebrated across the world",
+        "Their fate was thwarted by bad luck and opposing forces",
+        "They loved each other passionately but unpredictably, as the evidence showed",
+        "Their story ended ambiguously, without resolution"
+      ],
+      "answer": "Their fate was thwarted by bad luck and opposing forces",
+      "explanation": "Star-crossed means thwarted by fate — doomed to fail by opposing forces.\n• star-crossed = destined to failure; ill-fated\n• From astrology: the stars are 'crossed' against the couple, opposing their love\n• Shakespeare coined the term in the prologue to Romeo and Juliet"
+    },
+    {
+      "word": "sophisticated",
+      "question": "The investor used a sophisticated strategy involving derivatives and hedging. What does 'sophisticated' mean here?",
+      "type": "choice",
+      "options": [
+        "The strategy was expensive and required a large capital base",
+        "The strategy was complex and required advanced knowledge",
+        "The strategy had been proven successful over many decades",
+        "The strategy was innovative and untested in real markets"
+      ],
+      "answer": "The strategy was complex and required advanced knowledge",
+      "explanation": "Sophisticated means having a complex, subtle understanding — developed beyond the basic.\n• sophisticated = highly developed; showing refined and complex knowledge\n• From Greek: 'sophistes' — expert\n• 'Sophisticated argument', 'sophisticated technology' — complex and refined"
+    },
+    {
+      "word": "dilapidated",
+      "question": "The dilapidated farmhouse had not been lived in for thirty years. What did it look like?",
+      "type": "choice",
+      "options": [
+        "Old but structurally sound and recently cleaned",
+        "In a state of disrepair and falling apart from neglect",
+        "Abandoned but preserved by the dry climate",
+        "Crumbling in places but still habitable with renovation"
+      ],
+      "answer": "In a state of disrepair and falling apart from neglect",
+      "explanation": "Dilapidated means in a state of decay and disrepair through neglect.\n• dilapidated = ruined; fallen into disrepair\n• From Latin: 'dilapidare' — to scatter like stones (to-de-stone, dismantle)\n• 'Dilapidated building' = crumbling, neglected, far gone in decay"
+    },
+    {
+      "word": "unmitigated",
+      "question": "The project was an unmitigated disaster. What does 'unmitigated' mean here?",
+      "type": "choice",
+      "options": [
+        "The disaster could have been much worse than it was",
+        "The disaster was complete — without any redeeming aspect",
+        "The disaster was caused by a single avoidable decision",
+        "The disaster resulted in financial but not reputational damage"
+      ],
+      "answer": "The disaster was complete — without any redeeming aspect",
+      "explanation": "Unmitigated means absolute — not lessened or moderated in any way.\n• unmitigated = not reduced or made less severe; complete and utter\n• From Latin: 'mitigare' — to soften\n• 'An unmitigated disaster' = 100% bad, with nothing to soften it"
+    },
+    {
+      "word": "striated",
+      "question": "The geologist examined the striated rock surface left by the retreating glacier. What did she see?",
+      "type": "choice",
+      "options": [
+        "A smooth, polished surface shaped by water erosion",
+        "A surface marked with parallel grooves and scratches",
+        "A rough, pitted surface from freeze-thaw weathering, as the evidence showed",
+        "A fractured surface from tectonic pressure"
+      ],
+      "answer": "A surface marked with parallel grooves and scratches",
+      "explanation": "Striated means marked with striae — parallel grooves or lines.\n• striated = having stripes or narrow grooves running in parallel\n• From Latin: 'stria' — a groove or furrow\n• Glacial striations are scratches carved into bedrock by moving ice"
+    },
+    {
+      "word": "satiated",
+      "question": "After the enormous feast, the guests felt satiated. What does 'satiated' mean?",
+      "type": "choice",
+      "options": [
+        "Tired from eating too much and needing to rest",
+        "Fully satisfied — having had more than enough",
+        "Slightly uncomfortable but glad they had indulged",
+        "Grateful to the host for such generous portions"
+      ],
+      "answer": "Fully satisfied — having had more than enough",
+      "explanation": "Satiated means having one's appetite fully satisfied — to the point of excess.\n• satiated = having had one's fill completely\n• From Latin: 'satiare' — to fill to the full\n• Stronger than 'satisfied' — satiated implies almost too much"
+    },
+    {
+      "word": "uninitiated",
+      "question": "To the uninitiated, the chess board looked like a random arrangement of pieces. What does 'uninitiated' mean?",
+      "type": "choice",
+      "options": [
+        "Extremely young or inexperienced in life generally",
+        "Unfamiliar with the rules or practices of a particular activity",
+        "Not yet officially recognized as a member of the group, as the evidence showed",
+        "Too intimidated to ask for an explanation"
+      ],
+      "answer": "Unfamiliar with the rules or practices of a particular activity",
+      "explanation": "The uninitiated are people with no knowledge or experience of a particular skill or practice.\n• uninitiated = having no knowledge of a specialized subject or activity\n• From Latin: 'initiare' — to begin, admit (as into a secret or practice)\n• 'To the uninitiated' = for those who haven't learned the ropes yet"
+    },
+    {
+      "word": "unsubstantiated",
+      "question": "The newspaper printed unsubstantiated claims about the celebrity and later issued an apology. What does 'unsubstantiated' mean?",
+      "type": "choice",
+      "options": [
+        "The claims had been denied by the celebrity's lawyers",
+        "The claims were not backed by sufficient evidence",
+        "The claims were technically true but presented misleadingly",
+        "The claims were so serious they required legal verification"
+      ],
+      "answer": "The claims were not backed by sufficient evidence",
+      "explanation": "Unsubstantiated means not supported by enough evidence — not proven.\n• unsubstantiated = lacking proof or supporting evidence\n• 'Un-' (not) + 'substantiated' (proven with substance/evidence)\n• 'Unsubstantiated rumor', 'unsubstantiated allegation' — asserted without proof"
+    },
+    {
+      "word": "belated",
+      "question": "He sent a belated birthday card a week after her birthday. What does 'belated' mean?",
+      "type": "choice",
+      "options": [
+        "It was hand-delivered rather than posted",
+        "It arrived or was done later than it should have been",
+        "It was more elaborate than a standard birthday card, as the evidence showed",
+        "It came with an apology for missing the celebration"
+      ],
+      "answer": "It arrived or was done later than it should have been",
+      "explanation": "Belated means coming later than expected — overdue.\n• belated = delayed beyond the proper or expected time\n• From 'be-' + 'lated' (from 'late')\n• 'Belated apology', 'belated recognition' — better late than never, but late nonetheless"
+    },
+    {
+      "word": "deflated",
+      "question": "When the prize was given to someone else, he looked completely deflated. What does 'deflated' mean here?",
+      "type": "choice",
+      "options": [
+        "He was angry and refused to congratulate the winner, as the evidence showed",
+        "He lost all confidence and enthusiasm, as if the air had gone out of him",
+        "He was embarrassed to have expected to win",
+        "He was too tired from the competition to respond"
+      ],
+      "answer": "He lost all confidence and enthusiasm, as if the air had gone out of him",
+      "explanation": "Deflated (figuratively) means suddenly losing confidence, pride, or enthusiasm.\n• deflated = reduced in self-confidence or spirit; let down\n• Mirrors the literal sense: a balloon deflates when the air goes out\n• 'Feeling deflated' = flat, dispirited, enthusiasm gone"
+    },
+    {
+      "word": "discombobulated",
+      "question": "The sudden change of plan left the tourists completely discombobulated. What does 'discombobulated' mean?",
+      "type": "choice",
+      "options": [
+        "Angry at the lack of communication from the tour operator",
+        "Confused and disoriented, not sure what to do",
+        "Disappointed but resigned to the new arrangements",
+        "Exhausted after the previous day's activities"
+      ],
+      "answer": "Confused and disoriented, not sure what to do",
+      "explanation": "Discombobulated means confused and disconcerted — thrown off balance.\n• discombobulated = flustered; in a state of disoriented confusion\n• A humorous American coinage, possibly from 'discompose' + 'bamboozle'\n• 'Discombobulated' sounds as scrambled as it feels"
+    },
+    {
+      "word": "maculated",
+      "question": "The museum catalogue described the ancient manuscript as maculated from centuries of exposure. What did it mean?",
+      "type": "choice",
+      "options": [
+        "The manuscript had been repaired with pieces from another document",
+        "The manuscript was spotted and stained with marks of age",
+        "The manuscript was missing several pages from its original binding",
+        "The manuscript had been damaged by insects eating the parchment"
+      ],
+      "answer": "The manuscript was spotted and stained with marks of age",
+      "explanation": "Maculated means spotted or stained — marked with spots or blemishes.\n• maculated = marked with spots, blotches, or stains\n• From Latin: 'macula' — spot, blemish\n• Related: 'immaculate' = spotless (without a single macula)"
+    },
+    {
+      "word": "calculated",
+      "question": "His calculated insult — delivered with a smile — was far more hurtful than an outburst would have been. What does 'calculated' mean here?",
+      "type": "choice",
+      "options": [
+        "The insult was so extreme it caused a physical reaction",
+        "The insult was deliberately planned to achieve a specific effect",
+        "The insult was disguised so cleverly that few noticed it",
+        "The insult reflected genuine feelings he normally suppressed, as the evidence showed"
+      ],
+      "answer": "The insult was deliberately planned to achieve a specific effect",
+      "explanation": "Calculated means deliberately planned or intended — done with cold forethought.\n• calculated = done with full awareness of the likely effect; coldly deliberate\n• From 'calculate' — to compute; everything has been worked out in advance\n• 'Calculated risk', 'calculated insult' — not accidental or impulsive"
+    },
+    {
+      "word": "unregulated",
+      "question": "The report warned that the unregulated market was open to exploitation and fraud. What does 'unregulated' mean?",
+      "type": "choice",
+      "options": [
+        "The market was too small to attract official scrutiny",
+        "The market operated without official rules or oversight",
+        "The market was illegal but tolerated by the authorities",
+        "The market was new and regulation had not yet been proposed"
+      ],
+      "answer": "The market operated without official rules or oversight",
+      "explanation": "Unregulated means not controlled by rules or official oversight.\n• unregulated = not subject to regulation; free from legal controls\n• 'Un-' (not) + 'regulated' (controlled by rules)\n• 'Unregulated industry' = operating without checks or accountability"
+    },
+    {
+      "word": "animated",
+      "question": "The dinner table fell silent when she left, but had been animated before her departure. What does 'animated' mean here?",
+      "type": "choice",
+      "options": [
+        "Everyone had been polite and formally well-behaved",
+        "The conversation had been lively and full of energy",
+        "People had been arguing loudly and interrupting each other",
+        "The evening had been carefully planned to be entertaining"
+      ],
+      "answer": "The conversation had been lively and full of energy",
+      "explanation": "Animated means lively and energetic — full of spirit and movement.\n• animated = full of life and energy; vivid and enthusiastic\n• From Latin: 'animare' — to fill with breath or life\n• 'Animated discussion', 'animated expression' — alive with energy"
+    },
+    {
+      "word": "underestimated",
+      "question": "The opposition team had badly underestimated their rivals. What had they done wrong?",
+      "type": "choice",
+      "options": [
+        "They had not scouted the rivals' recent matches",
+        "They had judged the rivals to be less capable than they actually were",
+        "They had underinvested in their own preparation",
+        "They had relied on outdated statistics for their analysis, as the evidence showed"
+      ],
+      "answer": "They had judged the rivals to be less capable than they actually were",
+      "explanation": "Underestimated means assessed as less capable, large, or significant than is actually the case.\n• underestimated = rated too low; not given sufficient credit\n• 'Under-' (too low) + 'estimated' (judged)\n• 'Never underestimate your opponent' — failure to do so is a tactical error"
+    },
+    {
+      "word": "opinionated",
+      "question": "The opinionated guest dominated the talk show, refusing to let others speak. What does 'opinionated' mean?",
+      "type": "choice",
+      "options": [
+        "Highly knowledgeable and well-qualified to comment",
+        "Stubbornly assertive of one's own views, with little time for others",
+        "Passionate and persuasive in how they argue their case",
+        "Provocative and deliberately saying things to cause controversy, as the evidence showed"
+      ],
+      "answer": "Stubbornly assertive of one's own views, with little time for others",
+      "explanation": "Opinionated means strongly and stubbornly holding one's own opinions — dogmatically assertive.\n• opinionated = conceitedly assertive; expressing strong views and dismissing others\n• 'Opinionated' carries a negative tone — beyond confidence into stubbornness\n• Distinct from 'principled' — opinionated implies inflexibility, not integrity"
+    },
+    {
+      "word": "bloated",
+      "question": "The report described the company's bloated bureaucracy. What was the problem?",
+      "type": "choice",
+      "options": [
+        "The bureaucracy was secretive and hard to hold to account",
+        "The bureaucracy was excessively large and inefficient",
+        "The bureaucracy was resistant to any kind of change",
+        "The bureaucracy was too slow due to outdated technology"
+      ],
+      "answer": "The bureaucracy was excessively large and inefficient",
+      "explanation": "Bloated means swollen beyond healthy or appropriate size — inflated and inefficient.\n• bloated = excessively enlarged; swollen and distended\n• Literally: a bloated stomach; figuratively: a bloated organization, budget\n• Implies unhealthy excess — too much, all in the wrong places"
+    },
+    {
+      "word": "celebrated",
+      "question": "The celebrated author was awarded an honorary degree. What does 'celebrated' tell us about her?",
+      "type": "choice",
+      "options": [
+        "She had recently published her most successful book",
+        "She was famous and widely praised in her field",
+        "She was a favorite among literary prize committees",
+        "She had received other honorary degrees previously"
+      ],
+      "answer": "She was famous and widely praised in her field",
+      "explanation": "Celebrated means famous and praised by many — widely admired.\n• celebrated = renowned; widely known and admired\n• From Latin: 'celebrare' — to frequent, honor\n• 'A celebrated writer' = both famous and praised, not merely well-known"
+    },
+    {
+      "word": "serrated",
+      "question": "She used a serrated knife to cut the bread. What was distinctive about the blade?",
+      "type": "choice",
+      "options": [
+        "It was unusually long and narrow for precision cutting",
+        "It had a jagged edge with regular tooth-like notches",
+        "It was very thin and flexible for slicing delicate foods",
+        "It was weighted at the tip for better downward pressure"
+      ],
+      "answer": "It had a jagged edge with regular tooth-like notches",
+      "explanation": "Serrated means having a jagged edge like the teeth of a saw.\n• serrated = having saw-like notches along the edge\n• From Latin: 'serra' — a saw\n• 'Serrated blade', 'serrated leaves' — the edge is not smooth but notched"
+    },
+    {
+      "word": "saturated",
+      "question": "The soil was saturated after three days of rain. What does 'saturated' mean?",
+      "type": "choice",
+      "options": [
+        "The soil was too compact to absorb any further water",
+        "The soil was completely soaked and could hold no more water",
+        "The soil had been eroded by the force of the rainfall, as the evidence showed",
+        "The soil had become too acidic for most crops"
+      ],
+      "answer": "The soil was completely soaked and could hold no more water",
+      "explanation": "Saturated means holding the maximum amount of something — unable to absorb any more.\n• saturated = soaked to capacity; holding as much as possible\n• From Latin: 'saturare' — to fill to capacity\n• Also chemistry: 'a saturated solution' can dissolve no more of the substance"
+    },
+    {
+      "word": "sated",
+      "question": "She was sated after just one slice of the rich chocolate cake. What does 'sated' mean?",
+      "type": "choice",
+      "options": [
+        "She had been surprised by how sweet the cake was",
+        "She had eaten or experienced enough to be fully satisfied",
+        "She found the cake too heavy after the large main course, as the evidence showed",
+        "She wanted more but knew she should not have it"
+      ],
+      "answer": "She had eaten or experienced enough to be fully satisfied",
+      "explanation": "Sated means having had enough — fully satisfied, even to excess.\n• sated = fully satisfied; having had one's fill completely\n• From Latin: 'satis' — enough\n• Slightly stronger than satisfied — sated implies the appetite is completely fulfilled"
+    },
+    {
+      "word": "premeditated",
+      "question": "The prosecutor argued the crime was premeditated. Why does this matter legally?",
+      "type": "choice",
+      "options": [
+        "It meant the criminal had a history of similar offenses",
+        "It meant the crime was planned in advance, not committed impulsively",
+        "It meant the criminal had acted alone without any outside help, as the evidence showed",
+        "It meant the crime was motivated by financial gain"
+      ],
+      "answer": "It meant the crime was planned in advance, not committed impulsively",
+      "explanation": "Premeditated means planned before it is carried out — deliberate and thought through in advance.\n• premeditated = planned beforehand; not spontaneous\n• From Latin: 'prae-' (before) + 'meditare' (to think over)\n• 'Premeditated murder' carries a heavier charge than a crime of passion"
+    },
+    {
+      "word": "unpremeditated",
+      "question": "The defense argued the attack was unpremeditated. What was the lawyer claiming?",
+      "type": "choice",
+      "options": [
+        "The client had no prior criminal record",
+        "The client acted without prior planning — on impulse",
+        "The client had not intended to cause serious injury",
+        "The client was under the influence of medication at the time"
+      ],
+      "answer": "The client acted without prior planning — on impulse",
+      "explanation": "Unpremeditated means not planned in advance — done on the spur of the moment.\n• unpremeditated = spontaneous; not thought out beforehand\n• Key legal distinction: unpremeditated crimes are treated as less culpable\n• Direct opposite of premeditated"
+    },
+    {
+      "word": "agitated",
+      "question": "The witness was visibly agitated as she gave her account. What does 'agitated' describe?",
+      "type": "choice",
+      "options": [
+        "She was speaking too quickly for the court stenographer",
+        "She was restless, anxious, and unable to remain calm",
+        "She was holding back important details from her testimony",
+        "She was upset at being questioned so directly"
+      ],
+      "answer": "She was restless, anxious, and unable to remain calm",
+      "explanation": "Agitated means in a state of anxiety and restlessness — disturbed and unsettled.\n• agitated = troubled and nervous; unable to settle or be at ease\n• From Latin: 'agitare' — to drive, stir up\n• 'Agitated' implies visible physical signs: trembling, fidgeting, rapid speech"
+    },
+    {
+      "word": "understated",
+      "question": "The designer's understated approach used simple lines and a muted palette. What does 'understated' describe?",
+      "type": "choice",
+      "options": [
+        "A style that was deliberately retro and nostalgic",
+        "A restrained style that avoids drawing attention to itself",
+        "A minimal style that sacrificed comfort for appearance",
+        "A neutral style intended to appeal to the widest possible audience"
+      ],
+      "answer": "A restrained style that avoids drawing attention to itself",
+      "explanation": "Understated means subtle and restrained — deliberately not showy or exaggerated.\n• understated = not drawing attention to itself; expressing less than the full force\n• 'Understated elegance' = refined, quiet, confident\n• Opposite of bombastic or ostentatious — the power lies in restraint"
+    },
+    {
+      "word": "graduated",
+      "question": "The pain relief was administered in graduated doses over twelve hours. What does 'graduated' mean here?",
+      "type": "choice",
+      "options": [
+        "The doses had been tested and approved through clinical trials",
+        "The doses increased in small, measured increments",
+        "The doses were varied depending on the patient's weight",
+        "The doses were given at irregular intervals as needed"
+      ],
+      "answer": "The doses increased in small, measured increments",
+      "explanation": "Graduated means arranged in a series of regular, graded steps.\n• graduated = marked by gradual steps or degrees; increasing incrementally\n• From Latin: 'gradus' — a step\n• 'Graduated scale', 'graduated response' — moving step by step"
+    },
+    {
+      "word": "superannuated",
+      "question": "The technology department was running on superannuated equipment that struggled to keep up with demand. What does 'superannuated' mean?",
+      "type": "choice",
+      "options": [
+        "Expensive equipment that was difficult to justify on the budget",
+        "Out-of-date equipment that was too old to function effectively",
+        "Borrowed equipment that needed to be returned to its owner",
+        "Upgraded equipment that had not been properly tested"
+      ],
+      "answer": "Out-of-date equipment that was too old to function effectively",
+      "explanation": "Superannuated means obsolete or too old for current use — retired through age.\n• superannuated = rendered obsolete by age; outdated\n• From Latin: 'super annum' — beyond the year (i.e., past its prime)\n• Also: a superannuated employee is one retired on a pension"
+    },
+    {
+      "word": "antiquated",
+      "question": "The company's antiquated filing system relied entirely on paper records. What does 'antiquated' mean?",
+      "type": "choice",
+      "options": [
+        "The system was complex and required specialist knowledge",
+        "The system was old-fashioned and unsuited to modern needs",
+        "The system was secure because it was not connected to the internet",
+        "The system had been inherited from a previous owner of the business"
+      ],
+      "answer": "The system was old-fashioned and unsuited to modern needs",
+      "explanation": "Antiquated means so old as to be out of date and no longer suitable.\n• antiquated = old-fashioned and obsolete; no longer fit for purpose\n• From Latin: 'antiquare' — to make old\n• Stronger than 'old' — antiquated implies it is out of step with modern requirements"
+    },
+    {
+      "word": "infatuated",
+      "question": "He was infatuated with his new neighbor — he rearranged his entire schedule just to walk past her house. What does 'infatuated' mean?",
+      "type": "choice",
+      "options": [
+        "He was deeply and maturely in love with her",
+        "He was struck by an intense but irrational attraction or obsession",
+        "He was too shy to approach her directly",
+        "He admired her from a distance without any real feelings, as the evidence showed"
+      ],
+      "answer": "He was struck by an intense but irrational attraction or obsession",
+      "explanation": "Infatuated means possessed by an intense but foolish and irrational attraction.\n• infatuated = overwhelmed by foolish passion; besotted\n• From Latin: 'infatuare' — to make foolish\n• Stronger than a 'crush' — infatuation clouds judgment and may be all-consuming"
+    },
+    {
+      "word": "cultivated",
+      "question": "She had a cultivated taste in music, preferring Baroque counterpoint to popular chart songs. What does 'cultivated' mean here?",
+      "type": "choice",
+      "options": [
+        "Her taste in music was unusual and hard to explain",
+        "Her taste was refined through education and deliberate exposure",
+        "Her taste was expensive and difficult to indulge on a budget",
+        "Her taste was influenced by her upbringing and family background"
+      ],
+      "answer": "Her taste was refined through education and deliberate exposure",
+      "explanation": "Cultivated means refined and well-developed through education and care — like a cultivated garden.\n• cultivated = developed through education and deliberate effort; refined\n• From Latin: 'cultivare' — to till, tend, improve\n• 'A cultivated person' has worked to develop taste, knowledge, and manner"
+    },
+    {
+      "word": "indebted",
+      "question": "She said she was forever indebted to the mentor who had helped her career. What does 'indebted' mean here?",
+      "type": "choice",
+      "options": [
+        "She owed him money she had not yet repaid",
+        "She felt a deep gratitude and sense of obligation toward him",
+        "She had agreed to help him with his work in return",
+        "She credited him publicly in all her professional work, as the evidence showed"
+      ],
+      "answer": "She felt a deep gratitude and sense of obligation toward him",
+      "explanation": "Indebted means owing gratitude or a sense of obligation — not necessarily financially.\n• indebted = feeling grateful and obliged to someone for help given\n• From 'in debt' — but the debt is moral or emotional, not necessarily monetary\n• 'I am indebted to you' = I owe you a great deal; thank you deeply"
+    },
+    {
+      "word": "distracted",
+      "question": "The student was too distracted to study — his phone kept buzzing. What does 'distracted' mean?",
+      "type": "choice",
+      "options": [
+        "He was bored and could not find motivation to begin",
+        "His attention was pulled away from what he should have been doing",
+        "He was tired and kept losing the thread of what he was reading",
+        "He was worried about an upcoming exam and could not concentrate, as the evidence showed"
+      ],
+      "answer": "His attention was pulled away from what he should have been doing",
+      "explanation": "Distracted means having one's attention drawn away — unable to focus.\n• distracted = having concentration broken by competing demands\n• From Latin: 'distrahere' — to pull apart, pull in different directions\n• 'Distracted driving', 'distracted student' — attention is elsewhere"
+    },
+    {
+      "word": "dejected",
+      "question": "After losing the match, the team sat dejected in the changing room. What does 'dejected' mean?",
+      "type": "choice",
+      "options": [
+        "Exhausted after the physical demands of the game",
+        "Downcast and dispirited — low in mood and confidence",
+        "Angry at the referee's decisions during the match",
+        "Embarrassed by their performance in front of the home crowd"
+      ],
+      "answer": "Downcast and dispirited — low in mood and confidence",
+      "explanation": "Dejected means low in spirits — sad and discouraged.\n• dejected = downhearted; feeling low after disappointment\n• From Latin: 'deicere' — to cast down\n• 'A dejected look', 'dejected silence' — slumped, quiet, without hope"
+    },
+    {
+      "word": "collected",
+      "question": "Despite the emergency, the nurse remained collected throughout. What does 'collected' describe here?",
+      "type": "choice",
+      "options": [
+        "She had gathered all the necessary equipment in advance",
+        "She was calm, composed, and in full control of herself",
+        "She was experienced enough to work without any assistance",
+        "She remained professional even when colleagues around her panicked"
+      ],
+      "answer": "She was calm, composed, and in full control of herself",
+      "explanation": "Collected means calm and in command of one's emotions — self-possessed.\n• collected = composed; having gathered one's thoughts and emotions together\n• 'Collected' implies the pieces of oneself have been brought together — no part is scattered\n• 'Cool, calm, and collected' — the classic triad of composure under pressure"
+    }
+  ]
+}
