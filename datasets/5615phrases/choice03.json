@@ -1,0 +1,1305 @@
+{
+  "text": "quiz04",
+  "quiz": [
+    {
+      "word": "bathetic",
+      "question": "The war film's final scene was meant to be moving, but critics called it bathetic — the hero's death was accompanied by a comedic tuba sound effect. What went wrong?",
+      "type": "choice",
+      "options": [
+        "The scene was too emotionally overwhelming for most viewers, making it immediately recognizable",
+        "A sudden, jarring drop from the serious to the absurdly trivial ruined the effect",
+        "The music was too quiet to be heard clearly in cinemas",
+        "The scene was cut too short to have any emotional impact"
+      ],
+      "answer": "A sudden, jarring drop from the serious to the absurdly trivial ruined the effect",
+      "explanation": "Bathetic means producing an effect of bathos — an abrupt, jarring drop from the elevated to the ridiculous.\n• bathetic = characterized by bathos; an anticlimactic lurch into the trivial\n• From Greek: 'bathos' — depth (ironic — it plunges downward in tone)\n• Distinct from 'pathetic': bathetic is about tonal collapse, not sadness"
+    },
+    {
+      "word": "pathetic",
+      "question": "The bully called the child's tiny sandcastle pathetic. What did the bully mean?",
+      "type": "choice",
+      "options": [
+        "It was technically impressive for a beginner",
+        "It was pitifully weak and inadequate",
+        "It was emotionally moving and stirring",
+        "It was dangerous and structurally unstable"
+      ],
+      "answer": "It was pitifully weak and inadequate",
+      "explanation": "Pathetic means arousing contemptuous pity — miserably inadequate.\n• pathetic = deserving of contempt for being feeble or inadequate\n• From Greek: 'pathetikos' — sensitive, emotional\n• Originally meant 'evoking emotion'; now commonly means 'pitifully poor'"
+    },
+    {
+      "word": "aesthetic",
+      "question": "The architect said the building's aesthetic was inspired by Japanese minimalism. What aspect of the building was she describing?",
+      "type": "choice",
+      "options": [
+        "Its structural engineering and load-bearing methods",
+        "Its visual style and the principles guiding its appearance",
+        "Its energy efficiency and environmental certifications, making it immediately recognizable",
+        "Its construction timeline and budget management"
+      ],
+      "answer": "Its visual style and the principles guiding its appearance",
+      "explanation": "Aesthetic refers to the principles governing beauty, appearance, and artistic taste.\n• aesthetic = concerned with beauty; the overall look and feel of something\n• From Greek: 'aisthetikos' — perceptible by the senses\n• 'The aesthetic of the film' = its visual and sensory style"
+    },
+    {
+      "word": "anesthetic",
+      "question": "The surgeon administered a general anesthetic before the operation. What happened to the patient?",
+      "type": "choice",
+      "options": [
+        "She felt no pain but remained fully conscious throughout",
+        "She lost consciousness completely and felt nothing",
+        "She was given medication to reduce her anxiety only",
+        "She was numbed only in the area being operated on"
+      ],
+      "answer": "She lost consciousness completely and felt nothing",
+      "explanation": "A general anesthetic induces complete loss of consciousness and sensation.\n• anesthetic = a substance causing loss of sensation or consciousness\n• From Greek: 'an-' (without) + 'aisthesis' (sensation)\n• General anesthetic = full unconsciousness; local anesthetic = numbs only one area"
+    },
+    {
+      "word": "hermetic",
+      "question": "The laboratory required hermetic sealing of all sample containers. What does this demand?",
+      "type": "choice",
+      "options": [
+        "Containers must be clearly labelled with hazard warnings",
+        "Containers must be completely airtight, with no gas exchange possible",
+        "Containers must be stored in a refrigerated environment at all times, making it immediately recognizable",
+        "Containers must be made from non-reactive materials only"
+      ],
+      "answer": "Containers must be completely airtight, with no gas exchange possible",
+      "explanation": "Hermetic means perfectly airtight — sealed so that no air or gas can enter or escape.\n• hermetic = completely sealed; airtight\n• From Hermes Trismegistus — the mythical alchemist said to have invented airtight seals\n• 'Hermetically sealed' = shut off from outside influence (literally or figuratively)"
+    },
+    {
+      "word": "genetic",
+      "question": "The doctor said the patient's condition was genetic. What does this tell us about its cause?",
+      "type": "choice",
+      "options": [
+        "It was caused by a bacterial infection contracted at birth",
+        "It was passed down through inherited DNA from her parents",
+        "It developed due to poor diet and environmental factors",
+        "It was triggered by a viral illness during childhood"
+      ],
+      "answer": "It was passed down through inherited DNA from her parents",
+      "explanation": "Genetic means relating to genes or heredity — passed through biological inheritance.\n• genetic = of or relating to genes and inherited biological traits\n• From Greek: 'genesis' — origin, birth\n• A genetic condition is encoded in DNA, not acquired through lifestyle or infection"
+    },
+    {
+      "word": "frenetic",
+      "question": "The stock market floor was described as frenetic during the crash. What was the atmosphere like?",
+      "type": "choice",
+      "options": [
+        "Eerily quiet as traders waited for news",
+        "Gloomy and subdued as losses mounted",
+        "Wildly hectic and frenzied, with chaotic energy",
+        "Tense but orderly as traders followed protocol, making it immediately recognizable"
+      ],
+      "answer": "Wildly hectic and frenzied, with chaotic energy",
+      "explanation": "Frenetic means fast-moving, frenzied, and wildly energetic — barely controlled chaos.\n• frenetic = excessively agitated and frenzied in activity\n• From Greek: 'phrenitis' — inflammation of the brain; madness\n• Stronger than 'hectic': frenetic implies near-out-of-control energy"
+    },
+    {
+      "word": "kinetic",
+      "question": "The sculpture was kinetic — it moved continuously in the gallery breeze. What defines a kinetic artwork?",
+      "type": "choice",
+      "options": [
+        "It is made exclusively from recycled industrial materials, making it immediately recognizable",
+        "It is interactive and responds to touch from visitors",
+        "It incorporates actual physical movement as part of the work",
+        "It uses light and color to create an illusion of motion"
+      ],
+      "answer": "It incorporates actual physical movement as part of the work",
+      "explanation": "Kinetic means relating to or produced by motion — actual physical movement.\n• kinetic = of, relating to, or resulting from motion\n• From Greek: 'kinetikos' — moving\n• Kinetic energy = energy of motion; kinetic art = art that physically moves"
+    },
+    {
+      "word": "phonetic",
+      "question": "The language textbook included a phonetic transcription of every new word. What did the transcription show?",
+      "type": "choice",
+      "options": [
+        "The word's grammatical function and part of speech, making it immediately recognizable",
+        "The etymology and historical origin of the word",
+        "How the word is actually pronounced, using symbols for sounds",
+        "The word's synonyms and antonyms listed together"
+      ],
+      "answer": "How the word is actually pronounced, using symbols for sounds",
+      "explanation": "Phonetic means relating to the sounds of speech — representing pronunciation.\n• phonetic = relating to speech sounds; representing pronunciation\n• From Greek: 'phone' — voice, sound\n• Phonetic transcription (e.g. IPA) uses symbols to show exact pronunciation"
+    },
+    {
+      "word": "heretic",
+      "question": "The medieval church condemned Galileo as a heretic for claiming the Earth moved around the Sun. Why was this considered heresy?",
+      "type": "choice",
+      "options": [
+        "His theory was scientifically unproven at the time",
+        "His views directly contradicted the Church's official teachings",
+        "He had published his findings without Church permission",
+        "He refused to appear before the authorities when summoned, making it immediately recognizable"
+      ],
+      "answer": "His views directly contradicted the Church's official teachings",
+      "explanation": "A heretic is someone who holds beliefs that contradict the official doctrine of their religion or institution.\n• heretic = a person whose beliefs oppose established orthodoxy\n• From Greek: 'hairetikos' — able to choose (implying a deviant choice)\n• Heresy = the belief; heretic = the person holding it"
+    },
+    {
+      "word": "peripatetic",
+      "question": "The peripatetic music teacher covered twelve schools across the county each week. What does 'peripatetic' tell us about her work?",
+      "type": "choice",
+      "options": [
+        "She specialized in an unusual and obscure instrument",
+        "She traveled constantly between different locations to teach",
+        "She taught exclusively very advanced and gifted students, making it immediately recognizable",
+        "She combined music teaching with another subject"
+      ],
+      "answer": "She traveled constantly between different locations to teach",
+      "explanation": "Peripatetic means traveling from place to place — especially to work in multiple locations.\n• peripatetic = traveling around; itinerant\n• From Greek: 'peripatein' — to walk around (also the name for Aristotle's school, where he taught while walking)\n• A peripatetic teacher has no single fixed school"
+    },
+    {
+      "word": "impolitic",
+      "question": "Insulting the host country's food at the trade dinner was an impolitic move by the diplomat. What made it impolitic?",
+      "type": "choice",
+      "options": [
+        "It violated the official protocol of diplomatic dinners, making it immediately recognizable",
+        "It was unwise and likely to damage relations unnecessarily",
+        "It was technically illegal under the trade agreement",
+        "It embarrassed his home country's foreign minister"
+      ],
+      "answer": "It was unwise and likely to damage relations unnecessarily",
+      "explanation": "Impolitic means unwise, especially in a political or social context — not prudent.\n• impolitic = failing to consider consequences; tactless and inadvisable\n• From Latin: 'im-' (not) + 'politicus' (prudent in affairs)\n• Note: impolitic ≠ impolite; it specifically means unstrategic and foolish"
+    },
+    {
+      "word": "sybaritic",
+      "question": "The billionaire's sybaritic lifestyle — private jets, twelve-course dinners, marble spas — drew public criticism. What does 'sybaritic' mean?",
+      "type": "choice",
+      "options": [
+        "Excessively devoted to luxury, pleasure, and sensual indulgence",
+        "Aggressively competitive and driven by status",
+        "Ostentatious but secretly hiding financial difficulties, making it immediately recognizable",
+        "Deliberately designed to provoke envy in others"
+      ],
+      "answer": "Excessively devoted to luxury, pleasure, and sensual indulgence",
+      "explanation": "Sybaritic means excessively fond of luxury and sensual pleasure.\n• sybaritic = self-indulgently devoted to comfort and pleasure\n• From Sybaris — an ancient Greek city in southern Italy notorious for its inhabitants' love of luxury\n• A sybarite is a person who lives this way"
+    },
+    {
+      "word": "critic",
+      "question": "The film critic gave the new release one star out of five. What is a critic's primary role?",
+      "type": "choice",
+      "options": [
+        "To promote and sell tickets to the films they cover",
+        "To analyze and make judgments about the quality of creative works",
+        "To report on the box office performance of new releases, making it immediately recognizable",
+        "To interview directors and actors for press coverage"
+      ],
+      "answer": "To analyze and make judgments about the quality of creative works",
+      "explanation": "A critic is someone who evaluates and judges the quality of artistic or literary works.\n• critic = a professional who analyzes and assesses creative works\n• From Greek: 'kritikos' — able to judge\n• A critic's job is evaluation — not promotion, reporting, or interviewing"
+    },
+    {
+      "word": "authentic",
+      "question": "The auction house confirmed the painting was authentic before the sale. What had they verified?",
+      "type": "choice",
+      "options": [
+        "It was in excellent condition with no restoration needed",
+        "It was a genuine original, not a forgery or reproduction",
+        "It was legally owned by the seller and properly documented",
+        "It had been previously displayed in a major institution"
+      ],
+      "answer": "It was a genuine original, not a forgery or reproduction",
+      "explanation": "Authentic means genuine — not a copy, fake, or imitation.\n• authentic = of undisputed origin; genuinely what it claims to be\n• From Greek: 'authentikos' — acting independently, original\n• 'Authentic' in modern use also means 'true to oneself' — but in this context it means genuinely original"
+    },
+    {
+      "word": "narcotic",
+      "question": "The customs officer confiscated a narcotic substance at the border. What kind of substance was it?",
+      "type": "choice",
+      "options": [
+        "An industrial chemical used in manufacturing processes, making it immediately recognizable",
+        "A drug that induces drowsiness, stupor, or insensibility",
+        "A stimulant that produces heightened alertness",
+        "A poison used to incapacitate animals"
+      ],
+      "answer": "A drug that induces drowsiness, stupor, or insensibility",
+      "explanation": "A narcotic is a drug that induces drowsiness, sleep, or insensibility — and is often addictive.\n• narcotic = a stupor-inducing drug; a controlled substance\n• From Greek: 'narkotikos' — numbing (from 'narke' — numbness)\n• Narcotics include opioids like morphine and heroin"
+    },
+    {
+      "word": "demotic",
+      "question": "The poet was praised for writing in a demotic style that ordinary people could enjoy. What does 'demotic' mean here?",
+      "type": "choice",
+      "options": [
+        "Using highly formal and elevated literary language",
+        "Written in the everyday language of ordinary people",
+        "Drawing heavily on classical Greek and Latin references",
+        "Deliberately ambiguous and open to multiple interpretations"
+      ],
+      "answer": "Written in the everyday language of ordinary people",
+      "explanation": "Demotic means relating to or using the everyday language of ordinary people.\n• demotic = colloquial; of the common people\n• From Greek: 'demotikos' — popular, of the people ('demos' = the people)\n• Also: Demotic script = a simplified ancient Egyptian script for everyday use"
+    },
+    {
+      "word": "hypnotic",
+      "question": "The dancer's hypnotic performance left the audience unable to look away. What quality did the performance have?",
+      "type": "choice",
+      "options": [
+        "It was technically perfect but emotionally cold",
+        "It was so mesmerizing it held the audience in a trance-like state",
+        "It was shockingly provocative and disturbing to watch, making it immediately recognizable",
+        "It was so energetic that the audience felt exhausted"
+      ],
+      "answer": "It was so mesmerizing it held the audience in a trance-like state",
+      "explanation": "Hypnotic means producing a trance-like state of fascination — mesmerizing.\n• hypnotic = exerting a compelling, trance-inducing fascination\n• From Greek: 'hypnos' — sleep\n• Also literally: of or relating to hypnosis"
+    },
+    {
+      "word": "despotic",
+      "question": "The country suffered under a despotic ruler for thirty years. What characterized his rule?",
+      "type": "choice",
+      "options": [
+        "He shared power with a council of elected representatives",
+        "He exercised absolute, cruel, and tyrannical power with no checks",
+        "He was popular with the people but opposed by the military, making it immediately recognizable",
+        "He was an ineffectual ruler easily manipulated by advisers"
+      ],
+      "answer": "He exercised absolute, cruel, and tyrannical power with no checks",
+      "explanation": "Despotic means having or showing absolute power in a cruel and oppressive way.\n• despotic = tyrannical; ruling with absolute and oppressive authority\n• From Greek: 'despotes' — master, lord\n• A despot rules without accountability; despotism = absolute, oppressive rule"
+    },
+    {
+      "word": "exotic",
+      "question": "The menu featured exotic ingredients sourced from Southeast Asia. What made them exotic?",
+      "type": "choice",
+      "options": [
+        "They were expensive and therefore exclusive",
+        "They were rare and especially nutritious",
+        "They were strikingly unfamiliar and from a distant foreign place",
+        "They were difficult to prepare and required specialist skill, making it immediately recognizable"
+      ],
+      "answer": "They were strikingly unfamiliar and from a distant foreign place",
+      "explanation": "Exotic means attractively or intriguingly unusual, from a distant or unfamiliar place.\n• exotic = strikingly foreign and unfamiliar; attractively different\n• From Greek: 'exotikos' — foreign\n• 'Exotic' is always relative to the observer's own culture and location"
+    },
+    {
+      "word": "quixotic",
+      "question": "The young engineer's quixotic plan to solve global hunger with a single device was admired but dismissed. What does 'quixotic' imply about the plan?",
+      "type": "choice",
+      "options": [
+        "It was well-researched but underfunded",
+        "It was idealistic and impractical — romantically noble but unrealistic",
+        "It was plagiarized from an earlier inventor's work",
+        "It was technically brilliant but morally questionable, making it immediately recognizable"
+      ],
+      "answer": "It was idealistic and impractical — romantically noble but unrealistic",
+      "explanation": "Quixotic means idealistic and unrealistic — pursuing lofty goals without regard for practicalities.\n• quixotic = impractically idealistic; caught up in romantic, unreachable goals\n• From Don Quixote — Cervantes' hero who tilted at windmills he believed to be giants\n• Admirable in spirit but destined to fail"
+    },
+    {
+      "word": "peptic",
+      "question": "The doctor diagnosed a peptic ulcer. Which part of the body was affected?",
+      "type": "choice",
+      "options": [
+        "The lining of the mouth or throat",
+        "The stomach lining or upper digestive tract",
+        "The outer surface of the large intestine, making it immediately recognizable",
+        "The bile duct or gallbladder"
+      ],
+      "answer": "The stomach lining or upper digestive tract",
+      "explanation": "Peptic relates to digestion and specifically the stomach and upper gastrointestinal tract.\n• peptic = relating to digestion or the stomach's digestive acid\n• From Greek: 'peptikos' — promoting digestion\n• A peptic ulcer is an erosion in the stomach lining or duodenum caused by digestive acid"
+    },
+    {
+      "word": "dyspeptic",
+      "question": "The reviewer's dyspeptic column attacked everything from the font choice to the author's biography. What does 'dyspeptic' describe here?",
+      "type": "choice",
+      "options": [
+        "A rigorous and fair critical assessment",
+        "An irritable, bad-tempered, and indigestion-soured outlook",
+        "A confused and poorly argued position",
+        "An overly enthusiastic and uncritical response, making it immediately recognizable"
+      ],
+      "answer": "An irritable, bad-tempered, and indigestion-soured outlook",
+      "explanation": "Dyspeptic means irritable and bad-tempered — as if suffering from chronic indigestion.\n• dyspeptic = grumpily ill-tempered; suffering from or resembling indigestion\n• From Greek: 'dys-' (bad) + 'pepsis' (digestion)\n• Literally: having dyspepsia (chronic indigestion); figuratively: permanently grumpy"
+    },
+    {
+      "word": "septic",
+      "question": "The nurse warned that the wound had become septic. What did she mean?",
+      "type": "choice",
+      "options": [
+        "It had failed to heal and needed surgical closure",
+        "It had become infected with harmful bacteria",
+        "It had caused an allergic reaction in surrounding tissue",
+        "It had scarred over before fully healing"
+      ],
+      "answer": "It had become infected with harmful bacteria",
+      "explanation": "Septic means infected with bacteria causing putrefaction or blood poisoning.\n• septic = infected; relating to or caused by bacteria\n• From Greek: 'septikos' — putrefying\n• 'Septic' wound = infected; 'septicemia' = bacteria in the bloodstream; opposite: aseptic"
+    },
+    {
+      "word": "aseptic",
+      "question": "The surgeon insisted on aseptic conditions in the operating theatre. What does this require?",
+      "type": "choice",
+      "options": [
+        "Bright lighting and precise temperature control",
+        "Complete freedom from bacteria and contamination",
+        "Only fully qualified staff in the room at all times",
+        "All equipment to be replaced rather than reused"
+      ],
+      "answer": "Complete freedom from bacteria and contamination",
+      "explanation": "Aseptic means free from contamination caused by bacteria — sterile.\n• aseptic = free from infection; sterile\n• From Greek: 'a-' (without) + 'sepsis' (putrefaction)\n• Aseptic technique = methods used to prevent microbial contamination"
+    },
+    {
+      "word": "antiseptic",
+      "question": "The nurse applied an antiseptic to the wound before bandaging it. What did the antiseptic do?",
+      "type": "choice",
+      "options": [
+        "It numbed the pain in the wound area",
+        "It killed or inhibited bacteria to prevent infection",
+        "It sealed the wound to stop further bleeding",
+        "It reduced swelling and inflammation around the injury"
+      ],
+      "answer": "It killed or inhibited bacteria to prevent infection",
+      "explanation": "An antiseptic is a substance that prevents the growth of bacteria on living tissue.\n• antiseptic = a substance that destroys or inhibits microorganisms to prevent infection\n• From Greek: 'anti-' (against) + 'sepsis' (putrefaction)\n• Antiseptics are applied to skin or wounds; disinfectants are used on surfaces"
+    },
+    {
+      "word": "synoptic",
+      "question": "The report gave a synoptic overview of the year's research. What kind of overview was it?",
+      "type": "choice",
+      "options": [
+        "A deep, exhaustive analysis of one specific finding",
+        "A brief summary giving a general view of the whole",
+        "A critical challenge to the previous year's conclusions",
+        "A list of recommended next steps for future research"
+      ],
+      "answer": "A brief summary giving a general view of the whole",
+      "explanation": "Synoptic means giving a summary or general view of the whole — a bird's-eye overview.\n• synoptic = presenting a comprehensive summary; giving a general overview\n• From Greek: 'synoptikos' — seeing the whole together\n• The Synoptic Gospels (Matthew, Mark, Luke) present similar parallel overviews of Jesus's life"
+    },
+    {
+      "word": "apocalyptic",
+      "question": "The climate scientist's apocalyptic predictions described mass extinction and civilizational collapse. What tone do 'apocalyptic' predictions carry?",
+      "type": "choice",
+      "options": [
+        "Cautiously optimistic about humanity's ability to adapt",
+        "Prophesying total, catastrophic, end-of-the-world-scale destruction",
+        "Technically precise but deliberately unemotional",
+        "Critical of present policy while suggesting achievable solutions, making it immediately recognizable"
+      ],
+      "answer": "Prophesying total, catastrophic, end-of-the-world-scale destruction",
+      "explanation": "Apocalyptic means foretelling or resembling total catastrophic destruction — the end of the world.\n• apocalyptic = of or resembling the end of the world; catastrophically destructive\n• From Greek: 'apokalyptein' — to uncover, reveal (the Apocalypse = the Book of Revelation)\n• 'Apocalyptic' implies the very worst imaginable catastrophe"
+    },
+    {
+      "word": "cryptic",
+      "question": "The detective's cryptic note — 'Look where the shadow falls at noon' — baffled his assistant. What made the note cryptic?",
+      "type": "choice",
+      "options": [
+        "It was written in very small, difficult-to-read handwriting, making it immediately recognizable",
+        "It was mysterious and hard to understand, with a hidden meaning",
+        "It referred to events that had not yet taken place",
+        "It was written in a foreign language neither of them spoke"
+      ],
+      "answer": "It was mysterious and hard to understand, with a hidden meaning",
+      "explanation": "Cryptic means having a hidden or obscure meaning — mysterious and difficult to interpret.\n• cryptic = mysterious; having a meaning that is hidden or hard to decipher\n• From Greek: 'kryptos' — hidden\n• 'A cryptic remark', 'a cryptic crossword clue' — always implies concealment of meaning"
+    },
+    {
+      "word": "bombastic",
+      "question": "The politician's bombastic speech was full of grand promises and dramatic declarations. What does 'bombastic' mean?",
+      "type": "choice",
+      "options": [
+        "Calm, measured, and carefully reasoned",
+        "High-sounding and inflated but lacking real substance",
+        "Aggressive and designed to provoke a strong reaction, making it immediately recognizable",
+        "Precise, data-driven, and technically rigorous"
+      ],
+      "answer": "High-sounding and inflated but lacking real substance",
+      "explanation": "Bombastic means high-sounding language with little real content — inflated and pompous.\n• bombastic = using inflated, pompous language; more style than substance\n• From 'bombast' — cotton padding used to stuff garments (all puff, no content)\n• A bombastic speech impresses with its volume but says very little"
+    },
+    {
+      "word": "sarcastic",
+      "question": "When the student arrived an hour late, the teacher said, 'How kind of you to join us.' Was she being sincere?",
+      "type": "choice",
+      "options": [
+        "Yes, she was genuinely pleased he had come at all",
+        "No, she meant the opposite — her words dripped with scornful mockery",
+        "She was being neutral and simply noting his arrival",
+        "She was being polite to avoid embarrassing him in front of the class, making it immediately recognizable"
+      ],
+      "answer": "No, she meant the opposite — her words dripped with scornful mockery",
+      "explanation": "Sarcastic means using irony to mock or convey contempt — saying the opposite of what is meant.\n• sarcastic = making cutting, mocking remarks; using irony to wound\n• From Greek: 'sarkazein' — to tear flesh, bite the lip in rage\n• Sarcasm differs from irony in its intent to sting"
+    },
+    {
+      "word": "iconoclastic",
+      "question": "The young artist's iconoclastic work challenged every tradition of the gallery world. What does 'iconoclastic' mean here?",
+      "type": "choice",
+      "options": [
+        "Visually striking and immediately recognizable in style",
+        "Attacking or rejecting established conventions and beliefs",
+        "Drawing on religious imagery in a reverent way",
+        "Technically accomplished and rooted in classical training, making it immediately recognizable"
+      ],
+      "answer": "Attacking or rejecting established conventions and beliefs",
+      "explanation": "Iconoclastic means challenging or attacking cherished beliefs and established institutions.\n• iconoclastic = questioning and challenging traditional values or institutions\n• From Greek: 'eikon' (icon, image) + 'klaein' (to break)\n• Originally: those who destroyed religious images; now: anyone who challenges orthodoxy"
+    },
+    {
+      "word": "pleonastic",
+      "question": "The editor deleted 'free gift' from the advertisement, calling it pleonastic. Why?",
+      "type": "choice",
+      "options": [
+        "The phrase was offensive to some readers",
+        "The phrase said the same thing twice — a gift is always free by definition",
+        "The word 'free' was misleading under advertising rules",
+        "The phrase was grammatically incorrect in standard English, making it immediately recognizable"
+      ],
+      "answer": "The phrase said the same thing twice — a gift is always free by definition",
+      "explanation": "Pleonastic means using more words than necessary to express an idea — redundant by repetition.\n• pleonastic = characterized by pleonasm; needlessly repetitive\n• From Greek: 'pleon' — more\n• Examples: 'PIN number', 'ATM machine', 'end result', 'advance warning' — all say the same thing twice"
+    },
+    {
+      "word": "periphrastic",
+      "question": "Instead of saying 'I left,' the witness gave the periphrastic account: 'I proceeded to make my way toward the exit and subsequently departed the premises.' What does 'periphrastic' mean?",
+      "type": "choice",
+      "options": [
+        "Factually inaccurate or deliberately misleading",
+        "Expressing something in far more words than necessary",
+        "Using technical legal language inappropriately",
+        "Speaking too quietly for others to follow clearly, making it immediately recognizable"
+      ],
+      "answer": "Expressing something in far more words than necessary",
+      "explanation": "Periphrastic means expressing in a roundabout way using many words where few would do.\n• periphrastic = using circumlocution; wordy and indirect\n• From Greek: 'peri-' (around) + 'phrazein' (to speak)\n• A periphrastic style talks around the point rather than stating it directly"
+    },
+    {
+      "word": "majestic",
+      "question": "The hikers paused to admire the majestic mountain range before them. What impression did it make?",
+      "type": "choice",
+      "options": [
+        "It looked threatening and unsafe to approach",
+        "It seemed familiar and unremarkable to seasoned hikers, making it immediately recognizable",
+        "It inspired awe through its impressive grandeur and scale",
+        "It appeared deceptively climbable despite its height"
+      ],
+      "answer": "It inspired awe through its impressive grandeur and scale",
+      "explanation": "Majestic means impressively great in scale or beauty — inspiring awe and wonder.\n• majestic = having imposing dignity or grandeur\n• From Latin: 'majestas' — greatness, dignity\n• 'Majestic' implies scale, nobility, and the feeling of being in the presence of something greater than oneself"
+    },
+    {
+      "word": "sadistic",
+      "question": "The prison guard took sadistic pleasure in making inmates suffer pointlessly. What does 'sadistic' mean?",
+      "type": "choice",
+      "options": [
+        "Taking pleasure in one's own suffering",
+        "Deriving pleasure from inflicting pain or humiliation on others",
+        "Feeling indifferent to the suffering of others",
+        "Taking excessive pride in one's position of authority, making it immediately recognizable"
+      ],
+      "answer": "Deriving pleasure from inflicting pain or humiliation on others",
+      "explanation": "Sadistic means deriving pleasure from causing pain or distress to others.\n• sadistic = taking pleasure in cruelty toward others\n• From the Marquis de Sade — 18th-century French writer whose works depicted cruelty for pleasure\n• Sadism = the condition; sadist = the person; sadistic = the adjective"
+    },
+    {
+      "word": "eulogistic",
+      "question": "The obituary was entirely eulogistic, mentioning none of the subject's controversies. What does 'eulogistic' mean?",
+      "type": "choice",
+      "options": [
+        "Balanced and objective in its assessment",
+        "Full of praise and commendation",
+        "Deliberately brief and unemotional",
+        "Critical of the subject's public reputation"
+      ],
+      "answer": "Full of praise and commendation",
+      "explanation": "Eulogistic means expressing high praise and admiration.\n• eulogistic = full of eulogy; highly complimentary\n• From Greek: 'eu-' (good, well) + 'logos' (word, speech)\n• A eulogy = a speech of praise; eulogistic = the tone of such a speech"
+    },
+    {
+      "word": "moralistic",
+      "question": "Viewers found the documentary moralistic — it spent more time judging than explaining. What does 'moralistic' mean here?",
+      "type": "choice",
+      "options": [
+        "Ethically rigorous and philosophically sound",
+        "Showing excessive concern with preaching moral lessons",
+        "Balanced and unwilling to take any ethical position, making it immediately recognizable",
+        "Based on a clearly defined moral framework"
+      ],
+      "answer": "Showing excessive concern with preaching moral lessons",
+      "explanation": "Moralistic means excessively concerned with morality in a preachy, self-righteous way.\n• moralistic = prone to moralizing; lecturing others about right and wrong\n• The key word is 'excessive' — it goes beyond having values to imposing them tediously\n• A moralistic film doesn't show you the truth; it tells you what to think about it"
+    },
+    {
+      "word": "chauvinistic",
+      "question": "His chauvinistic attitude led him to assume that women were not suited to leadership roles. What does 'chauvinistic' describe?",
+      "type": "choice",
+      "options": [
+        "A belief in strict meritocracy regardless of background",
+        "An excessive and prejudiced belief in the superiority of one's own group",
+        "An aggressive defense of one's own country against foreign criticism, making it immediately recognizable",
+        "A conservative preference for traditional social hierarchies"
+      ],
+      "answer": "An excessive and prejudiced belief in the superiority of one's own group",
+      "explanation": "Chauvinistic means excessively and blindly devoted to one's own group — believing it superior.\n• chauvinistic = aggressively and unreasonably prejudiced in favor of one's own group\n• From Nicolas Chauvin — a French soldier of extreme patriotism, possibly fictional\n• 'Male chauvinist' = someone who believes men are superior to women"
+    },
+    {
+      "word": "anachronistic",
+      "question": "The historical drama was criticized for being anachronistic — characters used smartphones in a 1920s story. What does 'anachronistic' mean?",
+      "type": "choice",
+      "options": [
+        "Historically accurate in every small detail",
+        "Placing something in a time period where it does not belong",
+        "Deliberately exaggerating events for dramatic effect",
+        "Retelling a historical story from a modern perspective, making it immediately recognizable"
+      ],
+      "answer": "Placing something in a time period where it does not belong",
+      "explanation": "Anachronistic means belonging to a period other than the one being depicted — out of its proper time.\n• anachronistic = chronologically out of place; from the wrong era\n• From Greek: 'ana-' (back, against) + 'chronos' (time)\n• An anachronism disrupts historical authenticity"
+    },
+    {
+      "word": "characteristic",
+      "question": "The detective said the writing style was characteristic of a left-handed person. What did she mean?",
+      "type": "choice",
+      "options": [
+        "Only left-handed people write that way",
+        "It was typical of and consistent with what you'd expect from left-handed writers",
+        "It was unusual even for left-handed writers, according to all available evidence, in every case",
+        "It suggested the writer was ambidextrous"
+      ],
+      "answer": "It was typical of and consistent with what you'd expect from left-handed writers",
+      "explanation": "Characteristic means typical of a particular person, place, or thing — a distinguishing feature.\n• characteristic = typical; serving to identify or distinguish\n• From Greek: 'kharaktēr' — engraved mark, distinctive quality\n• 'It is characteristic of him to...' = it is what you'd typically expect from him"
+    },
+    {
+      "word": "linguistic",
+      "question": "The researcher published a linguistic analysis of political speeches. What did she analyze?",
+      "type": "choice",
+      "options": [
+        "The rhetorical delivery and performance style of the speakers",
+        "The language structures, word choices, and patterns in the speeches",
+        "The political content and policy positions in the speeches",
+        "The audience reactions and emotional responses to the speeches, making it immediately recognizable"
+      ],
+      "answer": "The language structures, word choices, and patterns in the speeches",
+      "explanation": "Linguistic means relating to language or linguistics — the scientific study of language.\n• linguistic = of or relating to language\n• From Latin: 'lingua' — tongue, language\n• A linguistic analysis examines grammar, vocabulary, syntax, and patterns — not just content"
+    },
+    {
+      "word": "altruistic",
+      "question": "She donated her kidney to a stranger anonymously and refused any reward. What does this altruistic act show?",
+      "type": "choice",
+      "options": [
+        "She expected the stranger to repay her kindness eventually",
+        "She was motivated purely by concern for another's welfare, with no personal gain",
+        "She was following religious instructions that required charitable acts, making it immediately recognizable",
+        "She had been told the kidney was medically unsuitable for her own use"
+      ],
+      "answer": "She was motivated purely by concern for another's welfare, with no personal gain",
+      "explanation": "Altruistic means selflessly concerned with the welfare of others — no expectation of return.\n• altruistic = selflessly devoted to others' well-being\n• From French: 'altruisme' — from Latin 'alter' (other)\n• True altruism requires no personal benefit — the moment there's a reward, it becomes less altruistic"
+    },
+    {
+      "word": "agnostic",
+      "question": "When asked if God exists, the philosopher said she was agnostic. What is she claiming?",
+      "type": "choice",
+      "options": [
+        "She believes in God but doubts organized religion",
+        "She firmly believes God does not exist",
+        "She holds that the existence of God is unknown and possibly unknowable",
+        "She believes in a higher power but not a personal God, making it immediately recognizable"
+      ],
+      "answer": "She holds that the existence of God is unknown and possibly unknowable",
+      "explanation": "Agnostic means holding that the existence of God is unknown and cannot be proven either way.\n• agnostic = uncertain; neither believing nor disbelieving — suspending judgment\n• From Greek: 'a-' (without) + 'gnosis' (knowledge)\n• Distinct from atheist (believes no God exists) and theist (believes God exists)"
+    },
+    {
+      "word": "caustic",
+      "question": "The caustic chemical burned through the metal container. What does 'caustic' mean in this context?",
+      "type": "choice",
+      "options": [
+        "Extremely cold and capable of freezing on contact, making it immediately recognizable",
+        "Highly corrosive — capable of burning or destroying by chemical action",
+        "Electrically charged and able to conduct current",
+        "Highly flammable and prone to ignition"
+      ],
+      "answer": "Highly corrosive — capable of burning or destroying by chemical action",
+      "explanation": "Caustic means capable of burning or corroding by chemical action.\n• caustic = burning; corrosive (literally of chemicals; figuratively of speech)\n• From Greek: 'kaustikos' — burning\n• 'Caustic wit' = biting, burning humor; both senses share the idea of corrosive destruction"
+    },
+    {
+      "word": "acoustic",
+      "question": "The musician performed an acoustic set — no amplification, no electric instruments. What does 'acoustic' mean here?",
+      "type": "choice",
+      "options": [
+        "The music was recorded in a professional studio",
+        "The music was played using natural, unamplified sound only",
+        "The music was composed using digital software",
+        "The performance was held in a concert hall with excellent sound design"
+      ],
+      "answer": "The music was played using natural, unamplified sound only",
+      "explanation": "Acoustic means relating to sound — specifically sound that is not electrically amplified.\n• acoustic = relating to sound or hearing; unamplified\n• From Greek: 'akoustikos' — relating to hearing\n• 'Acoustic guitar' = not plugged in; 'acoustic properties' = how a space transmits sound"
+    },
+    {
+      "word": "rustic",
+      "question": "The couple chose a rustic wedding venue — a converted barn with wooden beams and stone floors. What does 'rustic' describe?",
+      "type": "choice",
+      "options": [
+        "An elegant, polished, and formally decorated space",
+        "A simple, roughly made, charmingly rural style",
+        "An outdoor space with no shelter or fixed structures",
+        "A historically significant building protected by law"
+      ],
+      "answer": "A simple, roughly made, charmingly rural style",
+      "explanation": "Rustic means relating to the country — simple, rough, and charming in a rural way.\n• rustic = having the simplicity or rough quality of rural life\n• From Latin: 'rusticus' — of the country\n• 'Rustic charm' = an appealing, unpolished, countryside quality"
+    },
+    {
+      "word": "mystic",
+      "question": "The ancient text described a mystic who claimed direct experience of the divine through meditation. What defines a mystic?",
+      "type": "choice",
+      "options": [
+        "Someone who studies and debates theological doctrine academically, making it immediately recognizable",
+        "A person who seeks direct, personal experience of the divine or ultimate reality",
+        "A priest or religious leader with institutional authority",
+        "A person who rejects all organized religion entirely"
+      ],
+      "answer": "A person who seeks direct, personal experience of the divine or ultimate reality",
+      "explanation": "A mystic is someone who seeks direct spiritual experience of God or ultimate reality, beyond rational understanding.\n• mystic = one who pursues spiritual union with the divine through experience\n• From Greek: 'mystikos' — of secret rites\n• Mysticism bypasses doctrine and ritual — it seeks direct, unmediated experience"
+    },
+    {
+      "word": "attic",
+      "question": "She stored the old furniture in the attic rather than throwing it away. Where is the attic?",
+      "type": "choice",
+      "options": [
+        "Below the ground floor, under the house",
+        "The top floor, just below the roof",
+        "A locked storage room at the back of the house",
+        "A detached outbuilding in the garden"
+      ],
+      "answer": "The top floor, just below the roof",
+      "explanation": "An attic is the space or room directly below the roof of a building.\n• attic = the top storey of a house, under the roof\n• From 'Attic' style in architecture — a low wall above a building's main cornice\n• Also called a 'loft' — used for storage, and increasingly converted for living"
+    },
+    {
+      "word": "therapeutic",
+      "question": "The doctor recommended therapeutic exercise for the patient's recovery. What role did the exercise play?",
+      "type": "choice",
+      "options": [
+        "It was intended purely for fitness and weight loss",
+        "It was prescribed as part of treatment to restore health and function",
+        "It was designed to prevent future injury rather than treat existing ones",
+        "It was a social activity intended to improve the patient's mood"
+      ],
+      "answer": "It was prescribed as part of treatment to restore health and function",
+      "explanation": "Therapeutic means relating to the healing of disease — having a curative or beneficial effect.\n• therapeutic = of or relating to treatment of a condition; healing\n• From Greek: 'therapeutikos' — attending to the sick\n• 'Therapeutic' implies a medical purpose — not just being nice or enjoyable"
+    },
+    {
+      "word": "havoc",
+      "question": "The sudden storm wreaked havoc on the outdoor festival. What did the storm cause?",
+      "type": "choice",
+      "options": [
+        "Minor inconvenience and a brief delay to proceedings",
+        "Widespread chaos, damage, and disruption",
+        "A complete and permanent cancellation of the event",
+        "A dramatic but ultimately harmless light show"
+      ],
+      "answer": "Widespread chaos, damage, and disruption",
+      "explanation": "Havoc means widespread destruction and chaos.\n• havoc = great destruction and disorder\n• From Old French: 'havot' — plunder\n• 'Wreak havoc' = to cause chaos and damage; Shakespeare: 'Cry havoc and let slip the dogs of war'"
+    },
+    {
+      "word": "scad",
+      "question": "There were scads of opportunities at the careers fair, but she couldn't decide which to pursue. How many opportunities were there?",
+      "type": "choice",
+      "options": [
+        "Very few, making the choice straightforward",
+        "A large number — an abundance",
+        "Exactly the right amount for her needs",
+        "An uncertain and hard-to-estimate quantity"
+      ],
+      "answer": "A large number — an abundance",
+      "explanation": "A scad (or scads) means a large number or amount — used informally.\n• scad = a large quantity; lots (usually plural: 'scads of')\n• Origin uncertain; possibly from the fish 'scad', which travel in large schools\n• 'Scads of time', 'scads of money' — always informal and implies plenty"
+    },
+    {
+      "word": "figurehead",
+      "question": "The president was described as a mere figurehead — all real decisions were made by the prime minister. What does 'figurehead' mean here?",
+      "type": "choice",
+      "options": [
+        "A powerful behind-the-scenes operator",
+        "A symbolic leader with no real power or authority",
+        "An elected official with popular but not legal power",
+        "A leader whose authority is unchallenged and absolute"
+      ],
+      "answer": "A symbolic leader with no real power or authority",
+      "explanation": "A figurehead is a person who appears to lead but has no real power.\n• figurehead = a nominal leader; someone with a title but no actual authority\n• From the carved figure on the prow of a sailing ship — decorative, not functional\n• 'Just a figurehead' = the power lies elsewhere"
+    },
+    {
+      "word": "proofread",
+      "question": "The publisher asked the author to proofread the manuscript before final printing. What did she need to do?",
+      "type": "choice",
+      "options": [
+        "Rewrite sections that needed improving",
+        "Check carefully for errors in spelling, grammar, and punctuation",
+        "Confirm that the facts and references were accurate, making it immediately recognizable",
+        "Reduce the manuscript to meet the word count limit"
+      ],
+      "answer": "Check carefully for errors in spelling, grammar, and punctuation",
+      "explanation": "To proofread means to read a text carefully and mark any errors in spelling, grammar, or punctuation.\n• proofread = to check a written text for surface errors before publication\n• From 'proof' — the printed test copy read before final printing\n• Proofreading focuses on mechanical errors, not content or style"
+    },
+    {
+      "word": "fad",
+      "question": "The diet that everyone followed obsessively in January turned out to be just a fad. What does this suggest?",
+      "type": "choice",
+      "options": [
+        "It was medically proven to be ineffective",
+        "It was a brief craze that quickly lost popularity",
+        "It was deliberately marketed using false claims, making it immediately recognizable",
+        "It was too expensive for most people to sustain"
+      ],
+      "answer": "It was a brief craze that quickly lost popularity",
+      "explanation": "A fad is an intense but short-lived fashion or craze.\n• fad = a brief, widely popular trend that quickly fades\n• Origin uncertain; possibly from 'fiddle-faddle' (trifling)\n• Key quality: its brevity — a fad by definition does not last"
+    },
+    {
+      "word": "myriad",
+      "question": "The night sky was filled with a myriad of stars. What does 'myriad' tell us about the number of stars?",
+      "type": "choice",
+      "options": [
+        "There were exactly ten thousand stars visible",
+        "There was a vast, countless multitude of them",
+        "There were more stars than on any previous night",
+        "The stars were unusually bright and close together"
+      ],
+      "answer": "There was a vast, countless multitude of them",
+      "explanation": "Myriad means an extremely large, indefinitely numerous quantity.\n• myriad = innumerable; a vast number\n• From Greek: 'myrias' — ten thousand; the largest unit in Greek counting\n• Now used loosely: 'myriad possibilities' = countless possibilities"
+    },
+    {
+      "word": "ironclad",
+      "question": "The lawyer said the contract was ironclad. What was she telling her client?",
+      "type": "choice",
+      "options": [
+        "The contract was written in unusually formal legal language, making it immediately recognizable",
+        "The contract was extremely strong and impossible to break or challenge",
+        "The contract had been signed by all necessary parties",
+        "The contract had been reviewed and approved by a judge"
+      ],
+      "answer": "The contract was extremely strong and impossible to break or challenge",
+      "explanation": "Ironclad means impossible to weaken or refute — absolutely solid and binding.\n• ironclad = completely firm and unbreakable\n• From 'ironclad' warships — wooden ships covered in iron armor plating\n• 'An ironclad alibi', 'an ironclad guarantee' — impenetrable to challenge"
+    },
+    {
+      "word": "ballad",
+      "question": "The folk singer performed a ballad about a soldier who never returned from war. What is a ballad?",
+      "type": "choice",
+      "options": [
+        "A fast, rhythmic dance tune with no words",
+        "A slow, narrative song or poem telling a story",
+        "A formal hymn sung in a religious ceremony",
+        "An improvised vocal piece without set structure"
+      ],
+      "answer": "A slow, narrative song or poem telling a story",
+      "explanation": "A ballad is a slow, sentimental song or poem that tells a story — often about love or loss.\n• ballad = a narrative song or poem; often slow and emotionally evocative\n• From Old French: 'ballade' — a dancing song\n• Literary ballads tell dramatic stories; pop ballads are slow, romantic songs"
+    },
+    {
+      "word": "nomad",
+      "question": "He had been a nomad for years, never staying in any city for more than a few months. What is a nomad?",
+      "type": "choice",
+      "options": [
+        "A traveler who visits many places as a tourist",
+        "A person with no fixed home who roams from place to place",
+        "Someone who works in many different fields over a career, making it immediately recognizable",
+        "A person forced to relocate due to conflict"
+      ],
+      "answer": "A person with no fixed home who roams from place to place",
+      "explanation": "A nomad is a person who has no fixed home and moves from place to place.\n• nomad = a member of a people who have no permanent home; a wanderer\n• From Greek: 'nomas' — roaming for pasture\n• Modern use: 'digital nomad' = someone who works remotely while traveling"
+    },
+    {
+      "word": "inroad",
+      "question": "The new brand was making inroads into the market previously dominated by its rival. What does 'making inroads' mean?",
+      "type": "choice",
+      "options": [
+        "Building new distribution channels from scratch",
+        "Gradually gaining ground and advancing into new territory",
+        "Undercutting competitors on price across all product lines",
+        "Forming a strategic alliance with a rival company"
+      ],
+      "answer": "Gradually gaining ground and advancing into new territory",
+      "explanation": "To make inroads means to make progress by gradually penetrating or taking over an area.\n• inroad = an encroachment; progress made into an area previously held by another\n• From 'in' + 'road' in the sense of 'raid' (a hostile advance)\n• 'Making inroads' suggests gradual, steady encroachment on territory"
+    },
+    {
+      "word": "crabbed",
+      "question": "The manuscript was written in a crabbed hand that took hours to decipher. What was the handwriting like?",
+      "type": "choice",
+      "options": [
+        "Bold, large, and easy to read from a distance",
+        "Cramped, hard to read, and irregularly formed",
+        "Neat and precise, like a professional scribe's work",
+        "Written in an elaborate, ornate calligraphic style"
+      ],
+      "answer": "Cramped, hard to read, and irregularly formed",
+      "explanation": "Crabbed means cramped and illegible — like the sideways movement of a crab.\n• crabbed = (of handwriting) cramped and hard to decipher; also: irritable and bad-tempered\n• From the sideways, awkward movement of a crab\n• 'Crabbed writing' resembles crab-claws — cramped, scratchy, irregular"
+    },
+    {
+      "word": "self-absorbed",
+      "question": "He was so self-absorbed that he spent the entire dinner talking about himself without asking her a single question. What does 'self-absorbed' mean?",
+      "type": "choice",
+      "options": [
+        "Deeply introverted and uncomfortable in social situations, making it immediately recognizable",
+        "Excessively preoccupied with oneself, with no interest in others",
+        "Quietly confident and unaffected by others' opinions",
+        "Prone to deep reflection and philosophical thinking"
+      ],
+      "answer": "Excessively preoccupied with oneself, with no interest in others",
+      "explanation": "Self-absorbed means wrapped up entirely in one's own thoughts and feelings, ignoring others.\n• self-absorbed = preoccupied with oneself; showing little interest in others\n• Stronger than 'introverted' — implies social obliviousness, not just shyness\n• 'Absorbed' suggests being so filled with self that nothing else can get in"
+    },
+    {
+      "word": "barefaced",
+      "question": "It was a barefaced lie — he had been caught on camera, yet still denied everything. What does 'barefaced' tell us about the lie?",
+      "type": "choice",
+      "options": [
+        "It was cleverly constructed to be almost believable",
+        "It was told with shameless, undisguised boldness",
+        "It was an unintentional error rather than a deliberate falsehood",
+        "It was a small and relatively harmless untruth"
+      ],
+      "answer": "It was told with shameless, undisguised boldness",
+      "explanation": "Barefaced means shameless and undisguised — showing no attempt to conceal.\n• barefaced = blatant; impudently without disguise or shame\n• From 'bare face' — not covered, nothing hidden, brazenly open\n• 'A barefaced lie' is not just a lie — it is told with complete, brazen shamelessness"
+    },
+    {
+      "word": "jaundiced",
+      "question": "After years of disappointment, he had a jaundiced view of politics. What does 'jaundiced' mean here?",
+      "type": "choice",
+      "options": [
+        "He had a well-informed and carefully reasoned view, making it immediately recognizable",
+        "He had a bitter, cynical outlook distorted by past experience",
+        "He had lost interest in politics altogether",
+        "He held strong views but was open to persuasion"
+      ],
+      "answer": "He had a bitter, cynical outlook distorted by past experience",
+      "explanation": "Jaundiced means affected by resentment, bitterness, or envy — a warped, cynical view.\n• jaundiced = bitter and suspicious; viewing things through a lens of disillusionment\n• From jaundice — the yellowing of skin from liver disease, which affects perception\n• 'A jaundiced eye' = a perspective distorted by disappointment or jealousy"
+    },
+    {
+      "word": "unnoticed",
+      "question": "The spy slipped out of the building unnoticed. What does this tell us?",
+      "type": "choice",
+      "options": [
+        "Several people saw her but chose not to report it",
+        "Nobody observed or was aware of her departure",
+        "She left quickly but was recorded by security cameras",
+        "She left in disguise, confusing those who saw her"
+      ],
+      "answer": "Nobody observed or was aware of her departure",
+      "explanation": "Unnoticed means not observed or perceived — passing without anyone's attention.\n• unnoticed = not seen; escaping observation\n• 'Un-' (not) + 'noticed' — the absence of observation, not its concealment\n• 'Go unnoticed' = pass without detection or remark"
+    },
+    {
+      "word": "pronounced",
+      "question": "There was a pronounced improvement in the patient's condition after treatment. What does 'pronounced' mean here?",
+      "type": "choice",
+      "options": [
+        "The improvement had been officially confirmed by the doctor",
+        "The improvement was clearly noticeable and marked",
+        "The improvement was slow but steady over several months",
+        "The improvement was unexpected given the diagnosis"
+      ],
+      "answer": "The improvement was clearly noticeable and marked",
+      "explanation": "Pronounced (as an adjective) means very noticeable — clearly marked and easily perceived.\n• pronounced = strongly marked; conspicuous\n• 'A pronounced limp', 'a pronounced accent' — clear, unmistakable, hard to miss\n• Distinct from the verb 'pronounced' (declared or said aloud)"
+    },
+    {
+      "word": "hardheaded",
+      "question": "The hardheaded negotiator refused every appeal to sentiment and focused only on the numbers. What does 'hardheaded' describe?",
+      "type": "choice",
+      "options": [
+        "Stubbornly unreasonable and impossible to work with",
+        "Practical, unsentimental, and tough-minded in judgment",
+        "Aggressively confrontational and eager to argue",
+        "Deeply experienced but unwilling to learn new approaches"
+      ],
+      "answer": "Practical, unsentimental, and tough-minded in judgment",
+      "explanation": "Hardheaded means unsentimental and practical — not swayed by emotion or wishful thinking.\n• hardheaded = realistic, practical, and shrewd; not easily moved by feelings\n• Often a positive quality in business contexts: a hardheaded decision = a clear-eyed one\n• Distinct from 'hard-hearted' (cruel) — hardheaded is about the head, not the heart"
+    },
+    {
+      "word": "levelheaded",
+      "question": "Despite the emergency, the levelheaded nurse kept everyone calm and followed the protocol. What does 'levelheaded' describe?",
+      "type": "choice",
+      "options": [
+        "Someone with a highly specialized and expert skill set, making it immediately recognizable",
+        "Calm, sensible, and able to think clearly under pressure",
+        "Someone who avoids taking risks at all costs",
+        "Overly cautious and slow to act in a crisis"
+      ],
+      "answer": "Calm, sensible, and able to think clearly under pressure",
+      "explanation": "Levelheaded means calm, rational, and sensible — especially under stress.\n• levelheaded = having good judgment; not easily flustered\n• 'Level' here means balanced and even — not tilted by panic or emotion\n• A levelheaded person acts well in a crisis; a hardheaded person makes tough business calls"
+    },
+    {
+      "word": "jaded",
+      "question": "After ten years reviewing restaurants, the critic had become jaded — nothing excited her anymore. What does 'jaded' mean?",
+      "type": "choice",
+      "options": [
+        "Highly experienced and therefore supremely skilled",
+        "Worn out and no longer able to feel enthusiasm or pleasure",
+        "Bored of the work and considering a career change",
+        "Overly critical because of excessively high standards, making it immediately recognizable"
+      ],
+      "answer": "Worn out and no longer able to feel enthusiasm or pleasure",
+      "explanation": "Jaded means tired out and bored from too much of something — dull to further stimulation.\n• jaded = dulled by overexposure; no longer able to appreciate something\n• From 'jade' — an overworked, broken-down horse\n• 'Jaded palate', 'jaded traveler' — so much experience that everything has lost its appeal"
+    },
+    {
+      "word": "lopsided",
+      "question": "The competition was lopsided — one team won by sixty points. What does 'lopsided' describe?",
+      "type": "choice",
+      "options": [
+        "A result decided by a single lucky moment, making it immediately recognizable",
+        "A contest that was heavily unequal and one-sided",
+        "A match that was close until the very end",
+        "A game played under unfair conditions"
+      ],
+      "answer": "A contest that was heavily unequal and one-sided",
+      "explanation": "Lopsided means with one side much heavier, larger, or more prominent than the other — uneven and unbalanced.\n• lopsided = unequal on two sides; heavily skewed to one side\n• From 'lop' (a drooping branch) + 'sided'\n• 'A lopsided victory', 'a lopsided smile' — always implies imbalance"
+    },
+    {
+      "word": "backhanded",
+      "question": "She received a backhanded compliment: 'You look so much better than you did last year.' What made it backhanded?",
+      "type": "choice",
+      "options": [
+        "It was insincere praise from someone she didn't trust, making it immediately recognizable",
+        "It appeared to be a compliment but contained an implicit criticism",
+        "It was delivered in a cold and unfriendly tone",
+        "It was meant as a compliment but came across as rude"
+      ],
+      "answer": "It appeared to be a compliment but contained an implicit criticism",
+      "explanation": "Backhanded means appearing to be favorable but containing a hidden criticism — an indirect insult dressed as a compliment.\n• backhanded = seemingly positive but carrying a negative implication\n• From a backhand tennis stroke — it goes the 'other way' from the expected\n• A backhanded compliment has two edges: praise on the surface, sting underneath"
+    },
+    {
+      "word": "evenhanded",
+      "question": "The judge was praised for her evenhanded treatment of both parties in the dispute. What does 'evenhanded' describe?",
+      "type": "choice",
+      "options": [
+        "She favored the stronger party on practical grounds",
+        "She gave fair and impartial treatment to everyone equally",
+        "She avoided making any final ruling to keep the peace",
+        "She treated all parties with formal courtesy but no warmth"
+      ],
+      "answer": "She gave fair and impartial treatment to everyone equally",
+      "explanation": "Evenhanded means fair and impartial — treating all sides equally.\n• evenhanded = just; not favoring one side over another\n• 'Even' = equal and balanced; not tipped to one side\n• Contrast: backhanded (has a hidden sting); one-sided (unfair)"
+    },
+    {
+      "word": "underhanded",
+      "question": "He won the contract through underhanded means — bribing officials and forging documents. What does 'underhanded' mean?",
+      "type": "choice",
+      "options": [
+        "He used unconventional but perfectly legal methods",
+        "He acted in a secret, dishonest, and deceitful way",
+        "He relied on connections rather than merit",
+        "He outcompeted rivals by lowering his prices aggressively"
+      ],
+      "answer": "He acted in a secret, dishonest, and deceitful way",
+      "explanation": "Underhanded means acting in a secret, deceptive, and dishonest way — not openly.\n• underhanded = crafty, deceitful, and not straightforward\n• From a concealed throw 'below the hand' — something hidden\n• 'Underhanded tactics' = dirty tricks carried out in secret"
+    },
+    {
+      "word": "closed-minded",
+      "question": "The professor was closed-minded — he dismissed any research that challenged his theory without reading it. What does 'closed-minded' mean?",
+      "type": "choice",
+      "options": [
+        "He was highly focused on one narrow research area",
+        "He was unwilling to consider new ideas or different perspectives",
+        "He was secretive about his methods and findings",
+        "He was overly cautious about accepting unverified claims, making it immediately recognizable"
+      ],
+      "answer": "He was unwilling to consider new ideas or different perspectives",
+      "explanation": "Closed-minded means unwilling to consider new or different ideas — the mind is 'shut' to alternatives.\n• closed-minded = intolerant of new ideas; unable to accept views other than one's own\n• Opposite: open-minded\n• A closed-minded person does not engage — they dismiss without consideration"
+    },
+    {
+      "word": "long-winded",
+      "question": "The speaker's long-winded explanation took fifteen minutes to say what could have been said in two. What does 'long-winded' describe?",
+      "type": "choice",
+      "options": [
+        "Speaking at a slow, careful, and deliberate pace",
+        "Tediously wordy and taking far longer than necessary to make a point",
+        "Using overly technical language that confused the audience, making it immediately recognizable",
+        "Speaking in a monotonous tone with no variation in pitch"
+      ],
+      "answer": "Tediously wordy and taking far longer than necessary to make a point",
+      "explanation": "Long-winded means using far more words than needed — tediously verbose.\n• long-winded = using too many words; boringly drawn out\n• Suggests someone who runs out of 'wind' (breath) before reaching the point\n• Distinct from detailed — long-winded adds length without adding value"
+    },
+    {
+      "word": "unfounded",
+      "question": "The newspaper retracted its story, admitting the allegations were unfounded. What does 'unfounded' mean?",
+      "type": "choice",
+      "options": [
+        "The allegations were true but could not be legally proven",
+        "The allegations had no factual basis or supporting evidence",
+        "The allegations had been exaggerated beyond the known facts",
+        "The allegations referred to events that had since been resolved"
+      ],
+      "answer": "The allegations had no factual basis or supporting evidence",
+      "explanation": "Unfounded means not based on fact or evidence — having no foundation.\n• unfounded = groundless; without evidence or justification\n• 'Un-' (not) + 'founded' (established on a basis)\n• 'Unfounded rumor', 'unfounded accusation' — stated without factual support"
+    },
+    {
+      "word": "grounded",
+      "question": "Despite her sudden fame and wealth, the young actress remained remarkably grounded. What does 'grounded' mean here?",
+      "type": "choice",
+      "options": [
+        "She stayed loyal to the people who knew her before she was famous",
+        "She remained sensible, stable, and connected to reality",
+        "She was cautious about taking new roles and opportunities",
+        "She kept her private life entirely separate from her career"
+      ],
+      "answer": "She remained sensible, stable, and connected to reality",
+      "explanation": "Grounded means well-balanced, sensible, and emotionally stable — not swept away by circumstances.\n• grounded = secure in one's sense of self; not easily destabilized\n• Like a tree with deep roots — hard to topple, connected to the earth\n• Also literally: a plane is 'grounded' when kept on the ground"
+    },
+    {
+      "word": "outmoded",
+      "question": "The professor's teaching methods were outmoded — still using chalk and rote memorization. What does 'outmoded' mean?",
+      "type": "choice",
+      "options": [
+        "The methods were too advanced for most students",
+        "The methods were old-fashioned and no longer suitable for current needs",
+        "The methods had been officially banned by the institution, making it immediately recognizable",
+        "The methods produced worse results than expected"
+      ],
+      "answer": "The methods were old-fashioned and no longer suitable for current needs",
+      "explanation": "Outmoded means no longer fashionable or useful — superseded by something more current.\n• outmoded = out of date; obsolete\n• 'Out-' + 'mode' (fashion) — having gone beyond the current mode\n• 'Outmoded technology', 'outmoded thinking' — passed by time and progress"
+    },
+    {
+      "word": "unguarded",
+      "question": "In an unguarded moment, the politician admitted she had doubts about her own party's policy. What does 'unguarded' mean here?",
+      "type": "choice",
+      "options": [
+        "She was caught without her security detail present",
+        "She spoke without the usual caution — her true feelings slipped out",
+        "She was under pressure and unable to give a considered reply, making it immediately recognizable",
+        "She was speaking off the record to a trusted journalist"
+      ],
+      "answer": "She spoke without the usual caution — her true feelings slipped out",
+      "explanation": "Unguarded means not being careful — showing one's true feelings or thoughts without the usual caution.\n• unguarded = not protected by caution; revealing more than intended\n• 'An unguarded remark' = something said without thinking of the consequences\n• Implies a lapse in the self-protection most public figures maintain"
+    },
+    {
+      "word": "deed",
+      "question": "The lawyer produced the deed to the property as proof of ownership. What is a deed in this context?",
+      "type": "choice",
+      "options": [
+        "A verbal agreement confirmed by witnesses",
+        "A legal document establishing ownership or rights",
+        "A receipt from the original property purchase",
+        "A certificate from the local council approving the building"
+      ],
+      "answer": "A legal document establishing ownership or rights",
+      "explanation": "A deed is a legal document that conveys ownership or establishes legal rights.\n• deed = a signed legal document, especially conveying property ownership\n• From Old English: 'dæd' — an act; what is done legally\n• Also the broader sense: 'a brave deed' = a notable act or action"
+    },
+    {
+      "word": "reed",
+      "question": "The musician replaced the reed in her clarinet before the concert. What is a reed in this context?",
+      "type": "choice",
+      "options": [
+        "The metal keys on the clarinet's body",
+        "A thin piece of plant material that vibrates to produce sound",
+        "The wooden body of the instrument itself",
+        "The mouthpiece through which the player breathes, making it immediately recognizable"
+      ],
+      "answer": "A thin piece of plant material that vibrates to produce sound",
+      "explanation": "A reed is a thin strip of cane or metal that vibrates to produce sound in wind instruments.\n• reed = a thin strip of material in a wind instrument's mouthpiece that vibrates when blown\n• From the plant 'reed' — hollow-stemmed marsh grass used to make these strips\n• Reed instruments include clarinet, oboe, saxophone, and bassoon"
+    },
+    {
+      "word": "screed",
+      "question": "The editor received a ten-page screed from an angry reader attacking every aspect of the newspaper. What is a screed?",
+      "type": "choice",
+      "options": [
+        "A formal letter of complaint following legal guidelines",
+        "A long, tedious harangue or a tirade of criticism",
+        "A well-argued editorial piece making a persuasive case",
+        "A brief, cutting satirical response to another article"
+      ],
+      "answer": "A long, tedious harangue or a tirade of criticism",
+      "explanation": "A screed is a long, tedious, angry speech or piece of writing — a rant.\n• screed = a lengthy and tedious tirade or harangue\n• From Old English: 'screade' — a strip (originally a long strip of text)\n• 'He launched into a screed' = an exhausting, angry, lengthy outburst"
+    },
+    {
+      "word": "engaged",
+      "question": "The couple announced they were engaged at Christmas. What had they decided?",
+      "type": "choice",
+      "options": [
+        "They had decided to move in together",
+        "They had formally agreed to get married",
+        "They had committed to a long-distance relationship",
+        "They had resolved their differences after an argument"
+      ],
+      "answer": "They had formally agreed to get married",
+      "explanation": "Engaged (in this context) means having made a formal agreement to marry.\n• engaged = formally committed to marry; betrothed\n• From French: 'engager' — to commit, bind\n• Also: 'engaged' = occupied or busy; 'engagement' can be an appointment or battle"
+    },
+    {
+      "word": "full-fledged",
+      "question": "After years of training, she was finally a full-fledged doctor. What does 'full-fledged' mean?",
+      "type": "choice",
+      "options": [
+        "She was the most senior doctor in the department",
+        "She was fully qualified and completely developed in her role",
+        "She had received the highest possible marks in her exams",
+        "She had been officially recognized by a professional body, making it immediately recognizable"
+      ],
+      "answer": "She was fully qualified and completely developed in her role",
+      "explanation": "Full-fledged means fully developed and having all the required qualifications — completely formed.\n• full-fledged = fully developed; having all necessary features or qualifications\n• From a 'fledged' bird — one that has grown all its feathers and can fly\n• 'A full-fledged member', 'a full-fledged professional' — completely formed, not partial"
+    },
+    {
+      "word": "jagged",
+      "question": "The hiker cut her hand on the jagged edge of the broken glass. What was the edge like?",
+      "type": "choice",
+      "options": [
+        "Perfectly smooth and polished from long use",
+        "Uneven, with sharp, irregular points and notches",
+        "Rounded and blunt from weathering over time",
+        "Thin and blade-like, straight and cleanly cut, making it immediately recognizable"
+      ],
+      "answer": "Uneven, with sharp, irregular points and notches",
+      "explanation": "Jagged means having a rough, uneven edge with sharp, irregular points.\n• jagged = having sharp, ragged, irregular edges\n• From 'jag' — a sharp projection or notch\n• 'Jagged rocks', 'jagged wound' — implies a rough, tearing quality"
+    },
+    {
+      "word": "ragged",
+      "question": "The survivor emerged from the forest in ragged clothes. What did her clothes look like?",
+      "type": "choice",
+      "options": [
+        "Brightly colored and easy to spot from a distance",
+        "Torn, worn, and falling apart in shreds",
+        "Dirty but otherwise structurally intact",
+        "Ill-fitting but still in reasonable condition"
+      ],
+      "answer": "Torn, worn, and falling apart in shreds",
+      "explanation": "Ragged means tattered, worn-out, and torn into shreds.\n• ragged = wearing torn, shabby clothes; having a rough, frayed appearance\n• From 'rag' — a torn scrap of cloth\n• Also: 'ragged edge', 'ragged breathing' — implies fraying or unevenness"
+    },
+    {
+      "word": "dogged",
+      "question": "The detective's dogged pursuit of the truth lasted fifteen years. What does 'dogged' describe?",
+      "type": "choice",
+      "options": [
+        "Reckless and driven by personal obsession",
+        "Steady, persistent, and refusing to give up",
+        "Methodical but increasingly frustrated over time",
+        "Collaborative and dependent on support from others"
+      ],
+      "answer": "Steady, persistent, and refusing to give up",
+      "explanation": "Dogged means stubbornly persistent — with the tenacity of a dog that won't let go.\n• dogged = determinedly persistent; tenacious\n• From a dog's grip — a dog that clamps its jaws does not release\n• 'Dogged determination', 'dogged pursuit' — always implies gritty, unwavering effort"
+    },
+    {
+      "word": "deranged",
+      "question": "The psychologist said the attack had been carried out by a deranged individual. What does 'deranged' mean?",
+      "type": "choice",
+      "options": [
+        "Someone acting under extreme provocation",
+        "Someone with a severely disturbed and disordered mental state",
+        "Someone who had been radicalized by an extremist group, making it immediately recognizable",
+        "Someone acting purely for financial motives"
+      ],
+      "answer": "Someone with a severely disturbed and disordered mental state",
+      "explanation": "Deranged means having a severely disturbed or disordered mental state.\n• deranged = mentally disordered; driven to irrational and dangerous behavior\n• From French: 'déranger' — to disorder, disturb the order of\n• 'Deranged' is stronger than 'disturbed' — it implies disorder severe enough to affect all judgment"
+    },
+    {
+      "word": "estranged",
+      "question": "He was estranged from his family — they had not spoken in over a decade. What does 'estranged' mean?",
+      "type": "choice",
+      "options": [
+        "He lived far away from his family geographically",
+        "He had become a stranger to them through a breakdown in relations",
+        "He had deliberately hidden his whereabouts from them",
+        "He was the black sheep of the family, always in trouble, making it immediately recognizable"
+      ],
+      "answer": "He had become a stranger to them through a breakdown in relations",
+      "explanation": "Estranged means alienated from someone with whom one was once close — now made a stranger.\n• estranged = no longer in contact with someone due to a breakdown in the relationship\n• From Latin: 'extraneus' — stranger\n• 'Estranged husband', 'estranged family' — closeness has turned to distance through rupture"
+    },
+    {
+      "word": "detached",
+      "question": "The doctor maintained a detached manner when delivering the difficult diagnosis. What does 'detached' describe here?",
+      "type": "choice",
+      "options": [
+        "She was sympathetic but too emotional to communicate clearly",
+        "She was calmly objective, not personally affected by the situation",
+        "She was distracted by other concerns and not fully present",
+        "She was deliberately withholding some of the relevant information, making it immediately recognizable"
+      ],
+      "answer": "She was calmly objective, not personally affected by the situation",
+      "explanation": "Detached means not emotionally involved — maintaining objective distance.\n• detached = aloof; not emotionally or personally committed\n• From French: 'détacher' — to unfasten\n• 'A detached manner' can be professional calm or cold indifference, depending on context"
+    },
+    {
+      "word": "drenched",
+      "question": "The hikers returned from the mountain completely drenched. What had happened to them?",
+      "type": "choice",
+      "options": [
+        "They were extremely tired after the long climb",
+        "They were soaked through with water",
+        "They were covered in mud from a fall",
+        "They were sunburned from hours of exposure"
+      ],
+      "answer": "They were soaked through with water",
+      "explanation": "Drenched means thoroughly soaked — wet through and through.\n• drenched = soaked to the skin; saturated with water\n• From Old English: 'drencan' — to give to drink; to soak\n• 'Drenched in rain', 'drenched in sweat' — complete saturation"
+    },
+    {
+      "word": "wretched",
+      "question": "The refugees lived in wretched conditions — overcrowded, cold, and with little food. What does 'wretched' describe?",
+      "type": "choice",
+      "options": [
+        "Dangerous and posing an immediate threat to life",
+        "Miserable and of very poor quality",
+        "Disorganized and lacking proper management",
+        "Temporary but intended to be improved quickly"
+      ],
+      "answer": "Miserable and of very poor quality",
+      "explanation": "Wretched means in a very unhappy or unfortunate state — miserable and deplorable.\n• wretched = deeply unhappy; of very poor or pitiful quality\n• From Old English: 'wrecca' — outcast, exile\n• 'Wretched conditions', 'wretched excuse' — always implies pitiable misery or poor quality"
+    },
+    {
+      "word": "shed",
+      "question": "The snake shed its skin as it grew. What does 'shed' mean here?",
+      "type": "choice",
+      "options": [
+        "It temporarily stored its old skin inside a burrow",
+        "It cast off and lost its old outer layer naturally",
+        "It replaced its skin by growing a second layer beneath the first",
+        "It rubbed its skin off against rough surfaces for protection"
+      ],
+      "answer": "It cast off and lost its old outer layer naturally",
+      "explanation": "To shed means to drop off or lose naturally — to cast aside.\n• shed = to lose or cast off naturally (skin, leaves, hair, tears)\n• From Old English: 'scēadan' — to separate, divide\n• 'Shed light on', 'shed tears', 'shed skin' — all involve releasing or losing something"
+    },
+    {
+      "word": "accomplished",
+      "question": "She was an accomplished pianist who had performed at Carnegie Hall. What does 'accomplished' tell us about her?",
+      "type": "choice",
+      "options": [
+        "She had completed her formal piano training recently",
+        "She was highly skilled and proficient through years of practice",
+        "She was a professional musician earning a living from piano, making it immediately recognizable",
+        "She was considered a prodigy at an unusually young age"
+      ],
+      "answer": "She was highly skilled and proficient through years of practice",
+      "explanation": "Accomplished means highly skilled — having achieved a high level of expertise.\n• accomplished = skilled and proficient; having reached a high level of achievement\n• From Latin: 'ad-' + 'complere' — to complete fully\n• 'An accomplished musician' has completed the journey to mastery"
+    },
+    {
+      "word": "distinguished",
+      "question": "The award was presented by a distinguished professor of history. What does 'distinguished' tell us about him?",
+      "type": "choice",
+      "options": [
+        "He was the longest-serving professor in the department",
+        "He was eminent and commanding great respect in his field",
+        "He was unusually tall and visually striking in appearance",
+        "He had been recently recognized by a professional association"
+      ],
+      "answer": "He was eminent and commanding great respect in his field",
+      "explanation": "Distinguished means commanding respect through excellence or eminent achievements.\n• distinguished = eminent; noted and respected for achievement\n• From Latin: 'distinguere' — to mark off, separate (as exceptional from others)\n• 'Distinguished career', 'distinguished guest' — always implies earned prestige"
+    },
+    {
+      "word": "watershed",
+      "question": "The journalist called the 1969 moon landing a watershed moment in human history. What does 'watershed' mean here?",
+      "type": "choice",
+      "options": [
+        "A moment that was closely followed by a period of crisis",
+        "A turning point that marked a decisive change in direction",
+        "An event whose full significance was only understood later, making it immediately recognizable",
+        "A triumph that was almost immediately overshadowed"
+      ],
+      "answer": "A turning point that marked a decisive change in direction",
+      "explanation": "A watershed moment is a turning point — an event after which nothing is the same.\n• watershed = a critical turning point; a dividing line in history\n• From geography: the ridge dividing two river basins — water flows a different way on each side\n• After a watershed moment, the direction of events changes permanently"
+    },
+    {
+      "word": "full-bodied",
+      "question": "The sommelier described the red wine as full-bodied. What does this tell you about the wine?",
+      "type": "choice",
+      "options": [
+        "It was very sweet with a low alcohol content",
+        "It had a rich, heavy flavor with a strong, complex presence on the palate",
+        "It was light and refreshing with a clean finish",
+        "It was aged for a longer period than most comparable wines, making it immediately recognizable"
+      ],
+      "answer": "It had a rich, heavy flavor with a strong, complex presence on the palate",
+      "explanation": "Full-bodied means having a rich, heavy, substantial quality — used of wine, flavor, or sound.\n• full-bodied = rich and satisfying; with plenty of weight and complexity\n• In wine: high tannins, alcohol, and flavor depth\n• Also: 'a full-bodied sound' = rich, resonant, not thin"
+    },
+    {
+      "word": "disembodied",
+      "question": "A disembodied voice announced the flight delays over the airport intercom. What was strange about the voice?",
+      "type": "choice",
+      "options": [
+        "It was too quiet for most passengers to hear clearly",
+        "It had no visible or physical source — it came from nowhere you could see",
+        "It spoke in a language none of the passengers understood",
+        "It gave incorrect information that caused widespread confusion, making it immediately recognizable"
+      ],
+      "answer": "It had no visible or physical source — it came from nowhere you could see",
+      "explanation": "Disembodied means separated from a body — present as sound or presence without a visible source.\n• disembodied = existing apart from a physical body; without a visible source\n• 'Dis-' (removed from) + 'embodied'\n• 'A disembodied voice' = heard but not connected to anyone visible"
+    },
+    {
+      "word": "studied",
+      "question": "Her studied indifference to his arrival made it clear she had noticed him. What does 'studied' mean here?",
+      "type": "choice",
+      "options": [
+        "Her reaction was completely spontaneous and uncontrolled",
+        "Her behavior was carefully and deliberately performed — not natural",
+        "Her indifference was based on a thorough understanding of the situation",
+        "She had prepared herself mentally before the encounter"
+      ],
+      "answer": "Her behavior was carefully and deliberately performed — not natural",
+      "explanation": "Studied (as an adjective) means carefully rehearsed and deliberate — not natural or spontaneous.\n• studied = done with studied care; deliberately cultivated\n• 'Studied calm', 'studied indifference' — the behavior is an act, not a genuine reaction\n• The irony: studied indifference often reveals the opposite of what it claims"
+    },
+    {
+      "word": "unqualified",
+      "question": "The review gave the restaurant unqualified praise — not a single reservation. What does 'unqualified' mean here?",
+      "type": "choice",
+      "options": [
+        "The praise came from someone without professional credentials, making it immediately recognizable",
+        "The praise was absolute and unreserved, with no conditions or limitations",
+        "The praise was brief and contained little specific detail",
+        "The praise was unexpected given the restaurant's reputation"
+      ],
+      "answer": "The praise was absolute and unreserved, with no conditions or limitations",
+      "explanation": "Unqualified means not limited or restricted in any way — absolute and complete.\n• unqualified = not modified or limited; total and unconditional\n• 'Unqualified success' = a total success with no reservations\n• Also the literal sense: 'unqualified for the job' = lacking the required credentials"
+    }
+  ]
+}
