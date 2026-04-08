@@ -1,0 +1,1305 @@
+{
+  "text": "quiz03",
+  "quiz": [
+    {
+      "word": "superb",
+      "question": "The food critic gave the restaurant a superb rating in her review. What does this tell us about the meal?",
+      "type": "choice",
+      "options": [
+        "It was average and unremarkable",
+        "It was below expectations",
+        "It was outstanding and excellent",
+        "It was too expensive for what it offered"
+      ],
+      "answer": "It was outstanding and excellent",
+      "explanation": "Superb means of the highest quality — excellent, magnificent.\n• superb = impressively excellent\n• From Latin: 'superbus' — proud, magnificent\n• A superb performance, a superb view — always the highest praise"
+    },
+    {
+      "word": "curb",
+      "question": "The government introduced new laws to curb excessive spending. What were the laws designed to do?",
+      "type": "choice",
+      "options": [
+        "Encourage more spending",
+        "Measure and track spending levels",
+        "Restrain and limit spending",
+        "Redistribute spending to other areas"
+      ],
+      "answer": "Restrain and limit spending",
+      "explanation": "To curb means to restrain or keep under control.\n• curb = to keep in check; to limit or restrain\n• As a noun: the edge of a pavement/sidewalk — both senses involve 'containing'\n• 'Curb your enthusiasm' = hold it back"
+    },
+    {
+      "word": "blurb",
+      "question": "Before buying the novel, she read the blurb on the back cover. What was she reading?",
+      "type": "choice",
+      "options": [
+        "The first chapter of the book",
+        "A short promotional description of the book's content",
+        "A list of the author's other works, prizes, and biographical details",
+        "A collection of reviews from professional critics and academics"
+      ],
+      "answer": "A short promotional description of the book's content",
+      "explanation": "A blurb is a short promotional piece of writing, typically on the back of a book.\n• blurb = a brief, enthusiastic description designed to attract buyers\n• Coined by American humorist Gelett Burgess in 1907\n• Also used for any short publicity write-up"
+    },
+    {
+      "word": "cub",
+      "question": "The wildlife photographer captured images of a lion cub in the savanna. What was in her photographs?",
+      "type": "choice",
+      "options": [
+        "A fully grown male lion",
+        "A young, juvenile lion",
+        "A female lion on a hunt",
+        "An elderly, weakened lion"
+      ],
+      "answer": "A young, juvenile lion",
+      "explanation": "A cub is a young animal, especially of bears, lions, wolves, or foxes.\n• cub = the young offspring of certain wild animals\n• Also: a 'Cub Scout' (a young scout) — the youth connotation is consistent\n• From Old Norse: 'kobbi' — young seal"
+    },
+    {
+      "word": "snub",
+      "question": "At the gala, the celebrity walked past her former co-star without a word or glance — a deliberate snub. What did she do?",
+      "type": "choice",
+      "options": [
+        "She greeted him warmly but briefly before moving on to greet others",
+        "She intentionally ignored and showed contempt for him",
+        "She genuinely failed to recognize him because of the crowd and low lighting",
+        "She introduced him to other guests at the event"
+      ],
+      "answer": "She intentionally ignored and showed contempt for him",
+      "explanation": "To snub means to rebuff or ignore someone in a deliberately contemptuous way.\n• snub = a deliberate cold shoulder; an intentional slight\n• From Old Norse: 'snubba' — to scold, rebuke\n• The key is intent — accidentally missing someone is not a snub"
+    },
+    {
+      "word": "pharisaic",
+      "question": "The preacher was accused of being pharisaic — lecturing others about charity while giving nothing himself. What was being criticized?",
+      "type": "choice",
+      "options": [
+        "His lack of biblical knowledge and poor sermon preparation",
+        "His hypocrisy in appearing pious while not practicing what he preached",
+        "His strict and devout religious practice, which alienated younger members",
+        "His overly simple sermons that lacked theological depth"
+      ],
+      "answer": "His hypocrisy in appearing pious while not practicing what he preached",
+      "explanation": "Pharisaic means self-righteously pious and hypocritical — observing the form of religion without its spirit.\n• pharisaic = sanctimonious and hypocritical in religious matters\n• From the Pharisees — a Jewish sect criticized in the Gospels for rigid rule-following\n• 'Pharisaic piety' = outward show of holiness masking inner selfishness"
+    },
+    {
+      "word": "mosaic",
+      "question": "The artist created a mosaic portrait of the city's founder for the town hall. How was the portrait made?",
+      "type": "choice",
+      "options": [
+        "By oil painting on a large canvas stretched over a wooden frame",
+        "From tiny pieces of colored glass, stone, or tile fitted together",
+        "By printing a high-resolution photograph directly onto a ceramic surface",
+        "Through a digital design printed on the wall using industrial printers"
+      ],
+      "answer": "From tiny pieces of colored glass, stone, or tile fitted together",
+      "explanation": "A mosaic is a picture or pattern made from small pieces of colored glass, stone, or tile.\n• mosaic = an artwork composed of many small, fitted pieces\n• From Latin/Greek: via 'Musa' — of the Muses (art)\n• Also figurative: 'a mosaic of cultures' = many distinct elements forming a whole"
+    },
+    {
+      "word": "prosaic",
+      "question": "The travel writer complained that the new resort was prosaic compared to the wild landscape it had replaced. What was wrong with it?",
+      "type": "choice",
+      "options": [
+        "It was dangerous and had been built to unsafe standards throughout",
+        "It was dull, ordinary, and lacking any imagination or beauty",
+        "It was overpriced for what guests actually received during their stay",
+        "It was too remote and inaccessible for the majority of tourists to reach"
+      ],
+      "answer": "It was dull, ordinary, and lacking any imagination or beauty",
+      "explanation": "Prosaic means lacking imagination or excitement; dull and ordinary.\n• prosaic = commonplace, unromantic, matter-of-fact\n• From Latin: 'prosa' — prose (as opposed to the elevated language of poetry)\n• 'A prosaic explanation' = a flat, unimaginative one"
+    },
+    {
+      "word": "anaerobic",
+      "question": "Sprinting 100 meters is an anaerobic exercise. What does this tell us about how the body powers the sprint?",
+      "type": "choice",
+      "options": [
+        "The muscles rely heavily on breathing in oxygen during the effort",
+        "The muscles produce energy without using oxygen",
+        "The exercise is specifically good for lung capacity",
+        "The body uses fat as its primary fuel source"
+      ],
+      "answer": "The muscles produce energy without using oxygen",
+      "explanation": "Anaerobic means occurring without oxygen — the opposite of aerobic.\n• anaerobic = not requiring oxygen for energy production\n• From Greek: 'an-' (without) + 'aer' (air) + 'bios' (life)\n• Short, intense bursts (sprints, weight lifting) are anaerobic; sustained effort (jogging) is aerobic"
+    },
+    {
+      "word": "acerbic",
+      "question": "The editor was known for her acerbic feedback — writers left her office shaken. What was her feedback like?",
+      "type": "choice",
+      "options": [
+        "Encouraging, constructive, and full of specific praise for good sections",
+        "Sharp, harsh, and bitingly critical",
+        "Vague, non-committal, and ultimately very unhelpful to the writers",
+        "Gentle, diplomatic, and always careful not to hurt anyone's feelings"
+      ],
+      "answer": "Sharp, harsh, and bitingly critical",
+      "explanation": "Acerbic means sharp and forthright in a harsh or bitter way.\n• acerbic = sharply and bitingly critical; caustic in tone\n• From Latin: 'acerbus' — harsh, bitter (originally of taste)\n• 'Acerbic wit' = humor that stings; not gentle or affectionate"
+    },
+    {
+      "word": "cherubic",
+      "question": "The painter depicted the baby with a cherubic face. How did the baby appear in the painting?",
+      "type": "choice",
+      "options": [
+        "Wise and serious beyond its years, with an alert, knowing expression",
+        "Chubby-cheeked, innocent, and adorably sweet",
+        "Mischievous and wild-eyed, suggesting a difficult and energetic temperament",
+        "Pale, sickly, and fragile-looking, as though unwell"
+      ],
+      "answer": "Chubby-cheeked, innocent, and adorably sweet",
+      "explanation": "Cherubic describes someone having a round, innocent, angelic face — like a cherub.\n• cherubic = resembling a cherub; innocently sweet and rosy-faced\n• Cherubs in art are depicted as chubby, rosy, angelic children\n• From Hebrew: 'kerub' — a type of angel"
+    },
+    {
+      "word": "nomadic",
+      "question": "The Mongolian herders lived a nomadic lifestyle. What does this tell us about where they lived?",
+      "type": "choice",
+      "options": [
+        "They lived in a large permanent city with established trade routes",
+        "They moved from place to place with no fixed home",
+        "They lived on boats and traveled along the river systems throughout the year",
+        "They had settled in one village for many generations and rarely left"
+      ],
+      "answer": "They moved from place to place with no fixed home",
+      "explanation": "Nomadic describes a way of life involving constant movement rather than settling in one place.\n• nomadic = roaming from place to place, without a permanent home\n• From Greek: 'nomas' — roaming for pasture\n• Modern use: 'a nomadic lifestyle' — traveling constantly, often for work"
+    },
+    {
+      "word": "sporadic",
+      "question": "The patient reported sporadic chest pains over the past month. What pattern did the pains follow?",
+      "type": "choice",
+      "options": [
+        "They occurred at regular, predictable intervals every few days",
+        "They were constant and completely unrelenting throughout the entire month",
+        "They occurred irregularly, at scattered, unpredictable times",
+        "They only happened during vigorous physical exercise or exertion"
+      ],
+      "answer": "They occurred irregularly, at scattered, unpredictable times",
+      "explanation": "Sporadic means occurring at irregular intervals; not continuous or systematic.\n• sporadic = scattered, occasional, irregular\n• From Greek: 'sporaden' — here and there, scattered\n• 'Sporadic violence' = isolated outbreaks, not sustained conflict"
+    },
+    {
+      "word": "encyclopedic",
+      "question": "The professor had encyclopedic knowledge of medieval history. What does this suggest about her knowledge?",
+      "type": "choice",
+      "options": [
+        "She knew a few key facts in extraordinary depth and detail",
+        "She had broad, comprehensive knowledge covering a wide range of details",
+        "She had memorized one specific, well-regarded textbook cover to cover",
+        "Her knowledge was thorough but dated — she had not kept up with new research"
+      ],
+      "answer": "She had broad, comprehensive knowledge covering a wide range of details",
+      "explanation": "Encyclopedic means covering a wide range of subjects in great detail — like an encyclopedia.\n• encyclopedic = comprehensive and wide-ranging in knowledge\n• Does not mean 'deep in one area' — it implies breadth across many details\n• 'An encyclopedic memory' = able to recall vast amounts of information"
+    },
+    {
+      "word": "spasmodic",
+      "question": "His attendance at meetings was spasmodic — sometimes three in a row, then nothing for weeks. What pattern is described?",
+      "type": "choice",
+      "options": [
+        "Regular and reliable attendance at every single scheduled meeting",
+        "A gradual and steady decline in attendance over the course of the year",
+        "Sudden, irregular bursts of attendance with long gaps",
+        "A slow but consistent improvement in attendance as the months went on"
+      ],
+      "answer": "Sudden, irregular bursts of attendance with long gaps",
+      "explanation": "Spasmodic means occurring in sudden bursts at irregular intervals.\n• spasmodic = happening in irregular spasms or bursts; fitful\n• From Greek: 'spasmos' — convulsion\n• Like muscle spasms — sudden, not sustained, unpredictable"
+    },
+    {
+      "word": "episodic",
+      "question": "The doctor described the patient's memory loss as episodic rather than constant. What does this mean?",
+      "type": "choice",
+      "options": [
+        "The memory loss was permanent, total, and irreversible with no exceptions",
+        "It occurred in distinct, separate episodes rather than continuously",
+        "The memory loss was entirely linked to one specific traumatic past event only",
+        "The memory loss was gradually and measurably worsening over time"
+      ],
+      "answer": "It occurred in distinct, separate episodes rather than continuously",
+      "explanation": "Episodic means occurring in episodes — separate, distinct occurrences rather than continuously.\n• episodic = happening as isolated episodes, not continuously\n• From Greek: 'epeisodion' — a coming in besides; an inserted section\n• 'Episodic memory' = memory of specific events (vs. general knowledge)"
+    },
+    {
+      "word": "prolific",
+      "question": "The prolific novelist published seventeen books in ten years. What does 'prolific' tell us about her output?",
+      "type": "choice",
+      "options": [
+        "She produced very few but extremely well-crafted works",
+        "She produced an exceptionally large amount of work",
+        "She wrote only one genre of fiction",
+        "Her books were all short and quickly written"
+      ],
+      "answer": "She produced an exceptionally large amount of work",
+      "explanation": "Prolific means producing many works, results, or offspring — highly productive.\n• prolific = producing a large quantity; highly fertile or creative\n• From Latin: 'proles' (offspring) + 'facere' (to make)\n• 'A prolific goal scorer', 'a prolific writer' — always about high output quantity"
+    },
+    {
+      "word": "horrific",
+      "question": "Witnesses described the accident as horrific. How did they feel watching it?",
+      "type": "choice",
+      "options": [
+        "Mildly concerned but not particularly alarmed by what they saw",
+        "Deeply shocked and disturbed by something extremely terrible",
+        "Curious and fascinated, unable to look away from the unfolding scene",
+        "Confused and disoriented because they could not understand what had happened"
+      ],
+      "answer": "Deeply shocked and disturbed by something extremely terrible",
+      "explanation": "Horrific means causing horror — extremely shocking and disturbing.\n• horrific = causing feelings of horror or shock; dreadful\n• From Latin: 'horrificus' — causing dread\n• Stronger than 'terrible' — implies visceral shock and distress"
+    },
+    {
+      "word": "beatific",
+      "question": "The monk sat in meditation with a beatific smile. What kind of smile was it?",
+      "type": "choice",
+      "options": [
+        "A forced, polite smile maintained for the benefit of those around him",
+        "A blissfully serene and radiantly happy expression",
+        "A sly, knowing grin suggesting secret amusement at something private",
+        "A pained smile carefully concealing considerable discomfort and distress"
+      ],
+      "answer": "A blissfully serene and radiantly happy expression",
+      "explanation": "Beatific means blissfully happy — expressing supreme happiness or blessedness.\n• beatific = showing or producing a feeling of supreme happiness\n• From Latin: 'beatus' — blessed, happy\n• 'A beatific vision' in theology = seeing God directly; 'beatification' = step toward sainthood"
+    },
+    {
+      "word": "synergic",
+      "question": "The two companies' synergic partnership produced results neither could have achieved alone. What does 'synergic' mean here?",
+      "type": "choice",
+      "options": [
+        "Each company worked entirely independently and avoided all overlap",
+        "The combined effort created a result greater than the sum of their separate efforts",
+        "One company provided the capital while the other provided all of the labor",
+        "The companies entered into fierce competition to see which could outperform the other"
+      ],
+      "answer": "The combined effort created a result greater than the sum of their separate efforts",
+      "explanation": "Synergic (or synergistic) means working together to produce a combined effect greater than the sum of individual efforts.\n• synergic = relating to synergy; cooperative interaction that boosts overall effect\n• From Greek: 'synergos' — working together\n• '1 + 1 = 3' is the classic synergy metaphor"
+    },
+    {
+      "word": "chic",
+      "question": "The fashion editor called the designer's new collection effortlessly chic. What was she praising?",
+      "type": "choice",
+      "options": [
+        "Its affordability and accessibility",
+        "Its elegance and stylish sophistication",
+        "Its bold and shocking provocation",
+        "Its use of traditional, classic materials"
+      ],
+      "answer": "Its elegance and stylish sophistication",
+      "explanation": "Chic means elegantly fashionable and sophisticated.\n• chic = stylish in a refined, effortless way\n• From French: 'chic' — elegance, style\n• Implies understated elegance rather than flashy or try-hard fashion"
+    },
+    {
+      "word": "seraphic",
+      "question": "The choirboy's seraphic voice reduced the congregation to tears. What quality did his voice have?",
+      "type": "choice",
+      "options": [
+        "A powerful, thundering resonance",
+        "A heavenly, pure, and angelic beauty",
+        "A rough and emotionally raw quality",
+        "A technically precise, cold perfection"
+      ],
+      "answer": "A heavenly, pure, and angelic beauty",
+      "explanation": "Seraphic means characteristic of a seraph — pure, angelic, and heavenly.\n• seraphic = angelically beautiful, blissfully serene, and pure\n• Seraphim are the highest order of angels in Jewish and Christian tradition\n• 'A seraphic smile' = innocent and radiantly joyful"
+    },
+    {
+      "word": "graphic",
+      "question": "The news broadcast warned viewers that the next footage contained graphic images. What should viewers expect?",
+      "type": "choice",
+      "options": [
+        "Artistic, carefully composed imagery of the highest aesthetic quality",
+        "Vivid, disturbing images not suitable for sensitive viewers",
+        "Low-resolution, blurry archival footage that was hard to make out clearly",
+        "Animated explanatory diagrams illustrating the key facts of the story"
+      ],
+      "answer": "Vivid, disturbing images not suitable for sensitive viewers",
+      "explanation": "Graphic (in this context) means vividly explicit — especially of violence, injury, or disturbing content.\n• graphic = clearly and vividly depicted, often disturbingly so\n• From Greek: 'graphikos' — of writing or drawing\n• 'Graphic violence' = depicted in explicit, disturbing detail"
+    },
+    {
+      "word": "hieroglyphic",
+      "question": "The archaeologist found hieroglyphic inscriptions on the tomb wall. What kind of writing did she find?",
+      "type": "choice",
+      "options": [
+        "Latin script inscribed during the Roman occupation of the region",
+        "Ancient Egyptian picture-based writing symbols",
+        "An early form of the Greek alphabet used in the Hellenistic period",
+        "A form of Chinese calligraphy dating from the early Han dynasty"
+      ],
+      "answer": "Ancient Egyptian picture-based writing symbols",
+      "explanation": "Hieroglyphic refers to the ancient Egyptian writing system using pictorial symbols.\n• hieroglyphic = relating to a system of writing using pictorial characters\n• From Greek: 'hieros' (sacred) + 'glyphein' (to carve) — 'sacred carvings'\n• Now used informally: 'I can't read your hieroglyphics' = illegible handwriting"
+    },
+    {
+      "word": "paleolithic",
+      "question": "Archaeologists discovered paleolithic tools at the dig site. Roughly when were these tools made?",
+      "type": "choice",
+      "options": [
+        "About 500 years ago, during the early modern period of European history",
+        "Around 2,500 years ago, in the classical era of ancient Greece",
+        "Between roughly 2.5 million and 10,000 years ago, in the Old Stone Age",
+        "In the Bronze Age, approximately 3,000 to 4,000 years before the present"
+      ],
+      "answer": "Between roughly 2.5 million and 10,000 years ago, in the Old Stone Age",
+      "explanation": "Paleolithic means relating to the early Stone Age, characterized by chipped stone tools.\n• paleolithic = of the Old Stone Age (the earliest period of human prehistory)\n• From Greek: 'palaios' (ancient) + 'lithos' (stone)\n• Contrast: Neolithic = the New Stone Age (polished stone tools, farming begins)"
+    },
+    {
+      "word": "neolithic",
+      "question": "A neolithic settlement was uncovered, complete with grain storage pits. What does this tell us about the people who lived there?",
+      "type": "choice",
+      "options": [
+        "They were nomadic hunter-gatherers who never built permanent structures",
+        "They lived in the New Stone Age and practiced farming and settled life",
+        "They were early Bronze Age metalworkers using copper and tin alloys",
+        "They belonged to a classical Greek colony established around 700 BCE"
+      ],
+      "answer": "They lived in the New Stone Age and practiced farming and settled life",
+      "explanation": "Neolithic means relating to the later Stone Age, when humans developed farming and settled communities.\n• neolithic = of the New Stone Age; characterized by polished stone tools and agriculture\n• From Greek: 'neos' (new) + 'lithos' (stone)\n• Grain storage confirms farming — a defining neolithic trait"
+    },
+    {
+      "word": "cephalic",
+      "question": "The doctor measured the baby's cephalic index. What was she measuring?",
+      "type": "choice",
+      "options": [
+        "The baby's weight relative to its length on a standard growth chart",
+        "A ratio relating to the dimensions of the skull/head",
+        "The circumference of the baby's chest measured at the nipple line",
+        "The electrical activity of the baby's brain recorded during sleep"
+      ],
+      "answer": "A ratio relating to the dimensions of the skull/head",
+      "explanation": "Cephalic means relating to the head or skull.\n• cephalic = of or relating to the head\n• From Greek: 'kephale' — head\n• 'Cephalic index' = ratio of skull width to length; used in physical anthropology"
+    },
+    {
+      "word": "diabolic",
+      "question": "The villain's plan was described as diabolic in its cruelty. What does this tell us about the plan?",
+      "type": "choice",
+      "options": [
+        "It was cleverly simple and efficient",
+        "It was fiendishly evil and cruel",
+        "It was well-intentioned but misguided",
+        "It was too complicated to ever work"
+      ],
+      "answer": "It was fiendishly evil and cruel",
+      "explanation": "Diabolic means characteristic of the devil — outrageously evil or cruel.\n• diabolic = devilish; extremely wicked\n• From Greek: 'diabolos' — the devil, the accuser\n• 'A diabolic scheme' implies it is not just bad, but maliciously, viciously evil"
+    },
+    {
+      "word": "bucolic",
+      "question": "The painting showed a bucolic scene: rolling meadows, grazing sheep, a quiet farmhouse. What kind of scene is this?",
+      "type": "choice",
+      "options": [
+        "A dramatic, stormy urban landscape",
+        "A peaceful, idealized rural scene",
+        "A busy harvest scene full of laborers",
+        "A bleak, industrial countryside"
+      ],
+      "answer": "A peaceful, idealized rural scene",
+      "explanation": "Bucolic means relating to the pleasant aspects of rural life — charmingly pastoral.\n• bucolic = of or relating to the pleasant, idealized countryside\n• From Greek: 'boukolikos' — of a herdsman\n• 'Bucolic tranquility' = the peaceful, simple life of the countryside"
+    },
+    {
+      "word": "catholic",
+      "question": "A critic praised the curator's catholic taste in art, noting that the exhibition covered everything from Renaissance masters to contemporary street art. What does 'catholic' mean here?",
+      "type": "choice",
+      "options": [
+        "Religiously inspired art with direct connections to church doctrine",
+        "Art focused on a narrow, concentrated theme from a single tradition",
+        "A wide-ranging, all-inclusive appreciation with no narrow limits",
+        "Art that had received formal approval and endorsement from church authorities"
+      ],
+      "answer": "A wide-ranging, all-inclusive appreciation with no narrow limits",
+      "explanation": "With a lowercase 'c', catholic means universal, all-embracing, or wide-ranging in taste.\n• catholic (lowercase) = broad-minded; covering or including much; universal\n• From Greek: 'katholikos' — universal\n• Distinct from 'Catholic' (uppercase) = relating to the Roman Catholic Church"
+    },
+    {
+      "word": "vitriolic",
+      "question": "The politician's vitriolic speech shocked even his own supporters. What was the tone of the speech?",
+      "type": "choice",
+      "options": [
+        "Measured, calm, and carefully supported with evidence and data",
+        "Bitter, caustic, and savagely attacking",
+        "Emotional but ultimately optimistic and hopeful about the future",
+        "Dry, factual, and deliberately stripped of any personal feeling"
+      ],
+      "answer": "Bitter, caustic, and savagely attacking",
+      "explanation": "Vitriolic means filled with bitter, scathing criticism — like vitriol (sulfuric acid).\n• vitriolic = savagely harsh and bitter in speech or writing\n• From 'vitriol' — sulfuric acid, a highly corrosive substance\n• 'A vitriolic attack' burns with bitterness and contempt"
+    },
+    {
+      "word": "ceramic",
+      "question": "The museum displayed a collection of ceramic vessels from ancient Greece. What were the vessels made from?",
+      "type": "choice",
+      "options": [
+        "Bronze and copper alloys worked by skilled craftsmen using hammers",
+        "Clay that has been shaped and hardened by heat",
+        "Stone that was carefully carved and polished into smooth vessel shapes",
+        "Woven plant fibers coated with resin to form a watertight surface"
+      ],
+      "answer": "Clay that has been shaped and hardened by heat",
+      "explanation": "Ceramic refers to objects made from clay and hardened by firing at high temperatures.\n• ceramic = made from clay, fired to harden it\n• From Greek: 'keramos' — potter's clay\n• Ceramics include pottery, porcelain, tiles, and bricks"
+    },
+    {
+      "word": "panoramic",
+      "question": "The hotel advertised panoramic views from every room. What would guests see from their windows?",
+      "type": "choice",
+      "options": [
+        "A partial view of the garden, framed by the surrounding architecture",
+        "A wide, sweeping, unobstructed view in all directions",
+        "A view restricted to the hotel's own landscaped interior courtyard",
+        "A view framed tightly on both sides by rows of closely planted trees"
+      ],
+      "answer": "A wide, sweeping, unobstructed view in all directions",
+      "explanation": "Panoramic means giving a wide, complete view of an extensive area.\n• panoramic = offering a sweeping, all-encompassing view\n• From Greek: 'pan' (all) + 'horama' (view)\n• 'A panoramic photograph' = a wide-angle image capturing the full scene"
+    },
+    {
+      "word": "epidemic",
+      "question": "Health officials declared a flu epidemic in the city. What does this indicate?",
+      "type": "choice",
+      "options": [
+        "A single isolated confirmed case of flu was being investigated",
+        "Flu was always present at consistently low background levels",
+        "Flu cases had spread rapidly and widely within the city's population",
+        "Flu had simultaneously spread to every country and territory on Earth"
+      ],
+      "answer": "Flu cases had spread rapidly and widely within the city's population",
+      "explanation": "An epidemic is a widespread outbreak of a disease within a specific community or region.\n• epidemic = a disease spreading rapidly through a specific population\n• From Greek: 'epi' (upon) + 'demos' (people)\n• Contrast: endemic (always present locally), pandemic (global spread)"
+    },
+    {
+      "word": "pandemic",
+      "question": "When COVID-19 was declared a pandemic, what had changed from being merely an epidemic?",
+      "type": "choice",
+      "options": [
+        "The disease had suddenly become more lethal in its newest variant",
+        "The outbreak had spread across multiple countries, affecting the whole world",
+        "Several dangerous new variants had been discovered in quick succession",
+        "The official death toll had passed a specific internationally agreed threshold"
+      ],
+      "answer": "The outbreak had spread across multiple countries, affecting the whole world",
+      "explanation": "A pandemic is a disease outbreak occurring across a very wide area — multiple countries or worldwide.\n• pandemic = an epidemic that has spread globally\n• From Greek: 'pan' (all) + 'demos' (people)\n• Key distinction from epidemic: scale — epidemic = regional, pandemic = global"
+    },
+    {
+      "word": "endemic",
+      "question": "Malaria is endemic to many tropical regions. What does this mean?",
+      "type": "choice",
+      "options": [
+        "Malaria has been completely eradicated from those regions",
+        "Malaria regularly occurs there as a permanent, expected presence",
+        "Malaria only appears there during extreme weather events each year",
+        "Malaria is spreading rapidly from those regions toward a global pandemic"
+      ],
+      "answer": "Malaria regularly occurs there as a permanent, expected presence",
+      "explanation": "Endemic means habitually present in a particular area — a persistent, ongoing presence rather than an outbreak.\n• endemic = native to or regularly found in a specific region\n• From Greek: 'en' (in) + 'demos' (people)\n• Also used for species: 'The kiwi is endemic to New Zealand' = found only there"
+    },
+    {
+      "word": "polemic",
+      "question": "The pamphlet was a polemic against industrial farming. What kind of writing was it?",
+      "type": "choice",
+      "options": [
+        "A carefully balanced, peer-reviewed scientific assessment of farming methods",
+        "A strongly argued, combative attack on a position or practice",
+        "A personal memoir about the author's own experiences growing up on a farm",
+        "An official government policy document outlining proposed new regulations"
+      ],
+      "answer": "A strongly argued, combative attack on a position or practice",
+      "explanation": "A polemic is a strong verbal or written attack on a particular opinion, doctrine, or person.\n• polemic = a controversial argument; a piece of writing attacking a position\n• From Greek: 'polemikos' — warlike, hostile\n• A polemicist does not seek balance — they argue one side forcefully"
+    },
+    {
+      "word": "anemic",
+      "question": "Critics called the film's plot anemic. What were they saying about it?",
+      "type": "choice",
+      "options": [
+        "Overly complex, confusing, and impossible to follow without prior knowledge",
+        "Thin, weak, and lacking in substance",
+        "Too predictable, following the genre formula without any deviation",
+        "Derivative — clearly copying the style and structure of earlier, better films"
+      ],
+      "answer": "Thin, weak, and lacking in substance",
+      "explanation": "Anemic used figuratively means lacking in vitality, weak, or thin.\n• anemic = (figuratively) lacking strength, color, or vigor\n• From the medical condition 'anemia' — insufficient red blood cells, causing weakness\n• 'An anemic performance' = weak, lifeless, unconvincing"
+    },
+    {
+      "word": "arrhythmic",
+      "question": "The cardiologist noted that the patient's heartbeat was arrhythmic. What concerned her?",
+      "type": "choice",
+      "options": [
+        "The heart was beating too fast but maintaining a perfectly steady pattern",
+        "The heart's rhythm was irregular and not beating in a normal pattern",
+        "The heart was beating too slowly but with a completely consistent rhythm",
+        "The heart showed clear signs of structural enlargement on the scan"
+      ],
+      "answer": "The heart's rhythm was irregular and not beating in a normal pattern",
+      "explanation": "Arrhythmic means lacking a regular rhythm — especially of the heartbeat.\n• arrhythmic = having an irregular, abnormal rhythm\n• From Greek: 'a-' (without) + 'rhythmos' (rhythm)\n• Cardiac arrhythmia = a group of conditions where the heart beats irregularly"
+    },
+    {
+      "word": "comic",
+      "question": "The director wanted the scene to be comic rather than dramatic. How should the actors play it?",
+      "type": "choice",
+      "options": [
+        "With intense, emotional seriousness",
+        "In a way intended to provoke laughter",
+        "In a tragic, somber manner",
+        "As realistically and quietly as possible"
+      ],
+      "answer": "In a way intended to provoke laughter",
+      "explanation": "Comic means relating to or causing comedy — intended to amuse.\n• comic = causing amusement; humorous\n• From Greek: 'komikos' — of comedy\n• 'Comic timing', 'comic effect' — always connected to humor, not drama"
+    },
+    {
+      "word": "gnomic",
+      "question": "The philosopher's gnomic reply — 'The answer is always in the question' — left the students puzzled. What characterized his reply?",
+      "type": "choice",
+      "options": [
+        "It was a lengthy, detailed philosophical explanation covering multiple points",
+        "It was brief, pithy, and cryptically wise",
+        "It was a blunt and direct refusal to engage with the question at all",
+        "It was a light-hearted joke designed to make the students laugh and relax"
+      ],
+      "answer": "It was brief, pithy, and cryptically wise",
+      "explanation": "Gnomic means expressed in short, cryptic sayings that sound wise but are hard to interpret.\n• gnomic = using or containing short, memorable, often obscure statements of wisdom\n• From Greek: 'gnome' — maxim, judgment\n• A gnomic utterance is like a riddle wrapped in wisdom"
+    },
+    {
+      "word": "hypodermic",
+      "question": "The nurse prepared a hypodermic needle to administer the vaccine. Where would the injection go?",
+      "type": "choice",
+      "options": [
+        "Directly and deeply into a major vein for rapid absorption",
+        "Just beneath the surface of the skin",
+        "Deep into a large muscle group such as the gluteus or deltoid",
+        "Orally, swallowed as a liquid passing down through the stomach"
+      ],
+      "answer": "Just beneath the surface of the skin",
+      "explanation": "Hypodermic means relating to the area just beneath the skin.\n• hypodermic = under the skin\n• From Greek: 'hypo' (under) + 'derma' (skin)\n• A hypodermic injection delivers medicine just below the skin layer"
+    },
+    {
+      "word": "seismic",
+      "question": "Scientists detected seismic activity near the volcano. What were their instruments picking up?",
+      "type": "choice",
+      "options": [
+        "Unusual and rapid changes in the prevailing wind patterns",
+        "Vibrations and tremors moving through the ground",
+        "A measurable increase in volcanic gas emissions into the surrounding air",
+        "A steady rise in the surface temperature of the rock around the caldera"
+      ],
+      "answer": "Vibrations and tremors moving through the ground",
+      "explanation": "Seismic relates to earthquakes or vibrations through the earth.\n• seismic = of or relating to earthquakes or ground vibrations\n• From Greek: 'seismos' — shaking\n• Figurative: 'a seismic shift in policy' = an enormously significant change"
+    },
+    {
+      "word": "cosmic",
+      "question": "The philosopher asked: 'What is our cosmic significance?' What scale was she questioning?",
+      "type": "choice",
+      "options": [
+        "The importance of individual humans within their own nation and culture",
+        "Human significance in the context of the entire universe",
+        "The proper role of science and reason in contemporary modern society",
+        "The long-term future of Earth and its biosphere over the next thousand years"
+      ],
+      "answer": "Human significance in the context of the entire universe",
+      "explanation": "Cosmic means relating to the universe — of unimaginably vast scale.\n• cosmic = of or relating to the cosmos (the universe as a whole)\n• From Greek: 'kosmos' — order, universe\n• 'Cosmic rays', 'cosmic scale', 'cosmic significance' — all imply the universe-level"
+    },
+    {
+      "word": "satanic",
+      "question": "The community described the cult leader's influence as satanic. What were they implying?",
+      "type": "choice",
+      "options": [
+        "He was a deeply religious man who followed strict rules",
+        "His influence was pure evil and diabolically corrupting",
+        "He was simply very strict and demanding",
+        "He was involved in unusual but harmless rituals"
+      ],
+      "answer": "His influence was pure evil and diabolically corrupting",
+      "explanation": "Satanic means of or relating to Satan — supremely evil, diabolical.\n• satanic = characteristic of the devil; profoundly wicked\n• From 'Satan' — the embodiment of evil in Abrahamic religions\n• Used hyperbolically: 'a satanic plan' = one of monstrous evil"
+    },
+    {
+      "word": "titanic",
+      "question": "The construction project required a titanic effort from the entire workforce. How large was the effort required?",
+      "type": "choice",
+      "options": [
+        "A modest but sustained daily contribution from individual workers",
+        "An effort of enormous, almost superhuman scale",
+        "A carefully phased series of small, precisely coordinated steps over years",
+        "A single decisive burst of energy concentrated over one intense final week"
+      ],
+      "answer": "An effort of enormous, almost superhuman scale",
+      "explanation": "Titanic means of exceptional strength, scale, or importance — like the Titans.\n• titanic = gigantic; of enormous power or scale\n• From the Titans of Greek mythology — beings of immense power\n• Note: 'Titanic' (uppercase) = the famous ship; 'titanic' (lowercase) = the adjective"
+    },
+    {
+      "word": "cryogenic",
+      "question": "The scientists stored the biological samples using cryogenic techniques. What did this involve?",
+      "type": "choice",
+      "options": [
+        "Exposing samples to very high temperatures in order to fully sterilize them",
+        "Storing samples at extremely low temperatures to preserve them",
+        "Chemically fixing and embedding the samples permanently in clear resin",
+        "Removing all moisture by freeze-drying the samples inside a vacuum chamber"
+      ],
+      "answer": "Storing samples at extremely low temperatures to preserve them",
+      "explanation": "Cryogenic means relating to very low temperatures — used for freezing and preservation.\n• cryogenic = of or relating to the production and effects of very low temperatures\n• From Greek: 'kryos' (cold, frost) + '-genic' (producing)\n• Cryogenic storage is used for cells, embryos, and even human bodies ('cryonics')"
+    },
+    {
+      "word": "eugenic",
+      "question": "The early 20th-century government pursued eugenic policies, deciding who could and could not have children. What was the aim of such policies?",
+      "type": "choice",
+      "options": [
+        "Providing better healthcare and nutrition for all newborn children",
+        "Controlling reproduction to supposedly improve population genetics",
+        "Encouraging higher birth rates among the poorest and most deprived communities",
+        "Improving educational outcomes and social mobility for disadvantaged groups"
+      ],
+      "answer": "Controlling reproduction to supposedly improve population genetics",
+      "explanation": "Eugenic means relating to eugenics — the practice of attempting to 'improve' a population through selective breeding.\n• eugenic = relating to the controlled reproduction of humans to increase 'desirable' traits\n• From Greek: 'eu-' (good, well) + 'genos' (race, birth)\n• Eugenics was used to justify horrific abuses and is now widely condemned"
+    },
+    {
+      "word": "ethnic",
+      "question": "The census recorded the ethnic composition of the country. What was it measuring?",
+      "type": "choice",
+      "options": [
+        "The declared religious beliefs and denominational affiliations of the population",
+        "The groupings based on shared cultural, national, or ancestral background",
+        "The distribution of income levels and economic classes across different regions",
+        "The specific languages and regional dialects spoken by each household"
+      ],
+      "answer": "The groupings based on shared cultural, national, or ancestral background",
+      "explanation": "Ethnic means relating to a group of people sharing a common cultural, national, tribal, or ancestral heritage.\n• ethnic = of or relating to a human group sharing distinctive cultural, racial, or national traits\n• From Greek: 'ethnos' — nation, people\n• 'Ethnic food', 'ethnic minority', 'ethnic identity'"
+    },
+    {
+      "word": "laconic",
+      "question": "When asked for his opinion of the 400-page report, the general's laconic reply was: 'Fix it.' What does this tell us about his communication style?",
+      "type": "choice",
+      "options": [
+        "He used long, elaborate sentences full of nuance",
+        "He communicated using very few words",
+        "He refused to give any feedback at all",
+        "He preferred to write rather than speak"
+      ],
+      "answer": "He communicated using very few words",
+      "explanation": "Laconic means using very few words — brief to the point of curtness.\n• laconic = expressing much in few words; terse\n• From 'Laconia' (Sparta) — Spartans were famously brief in speech\n• Classic example: when Philip II threatened Sparta ('If I enter Laconia, I will raze it'), Sparta's reply was: 'If.'"
+    },
+    {
+      "word": "hedonic",
+      "question": "The psychologist described the subject's hedonic baseline — the level of pleasure at which he normally operated. What aspect of his life was being measured?",
+      "type": "choice",
+      "options": [
+        "His intellectual capacity and academic performance across various subjects",
+        "His typical level of pleasure, enjoyment, and well-being",
+        "His capacity to endure and tolerate pain, discomfort, and suffering",
+        "His patterns of moral and ethical decision-making in difficult situations"
+      ],
+      "answer": "His typical level of pleasure, enjoyment, and well-being",
+      "explanation": "Hedonic means relating to pleasure — the pursuit of happiness or enjoyable sensations.\n• hedonic = of or relating to pleasure; concerned with pleasurable experience\n• From Greek: 'hedone' — pleasure\n• 'Hedonic treadmill' = the tendency to return to a stable level of happiness after events"
+    },
+    {
+      "word": "histrionic",
+      "question": "When told she had to wait fifteen minutes, the customer became histrionic — weeping and shouting. What does 'histrionic' mean here?",
+      "type": "choice",
+      "options": [
+        "She reacted with calm, measured frustration and asked to speak to a manager",
+        "She reacted in an excessively theatrical, overdramatic way",
+        "She quietly and patiently explained her grievance to the member of staff",
+        "She became withdrawn and silent, refusing to engage with anyone present"
+      ],
+      "answer": "She reacted in an excessively theatrical, overdramatic way",
+      "explanation": "Histrionic means excessively theatrical or melodramatic in behavior.\n• histrionic = overly dramatic; performing emotions in an exaggerated way\n• From Latin: 'histrio' — actor\n• Histrionic behavior is about performance: the reaction is out of proportion to the situation"
+    },
+    {
+      "word": "chronic",
+      "question": "The patient had chronic back pain. How long had she likely been suffering?",
+      "type": "choice",
+      "options": [
+        "For only a few days following the initial injury before fully subsiding",
+        "During a brief but extremely intense period that then resolved completely",
+        "For a long time — months or years — on an ongoing basis",
+        "Repeatedly, in isolated bursts lasting only a few minutes at a time"
+      ],
+      "answer": "For a long time — months or years — on an ongoing basis",
+      "explanation": "Chronic means persisting for a long time or constantly recurring — not acute or brief.\n• chronic = long-lasting, persistent (of an illness or condition)\n• From Greek: 'chronos' — time\n• Opposite: acute (severe and short-lived). 'Chronic' implies duration, not necessarily severity"
+    },
+    {
+      "word": "platonic",
+      "question": "She insisted that her relationship with her male colleague was purely platonic. What was she clarifying?",
+      "type": "choice",
+      "options": [
+        "Their friendship was based on a shared passion for philosophy and ideas",
+        "There was nothing romantic or sexual in their relationship — just friendship",
+        "They had a complicated history that had once included a romantic involvement",
+        "She admired him greatly from a distance but had never personally spoken to him"
+      ],
+      "answer": "There was nothing romantic or sexual in their relationship — just friendship",
+      "explanation": "Platonic means intimate and affectionate but not sexual or romantic.\n• platonic = of close friendship without romantic or physical elements\n• From Plato — who wrote about a pure, spiritual form of love ('Platonic love')\n• 'Platonic friendship' = deep but non-romantic"
+    },
+    {
+      "word": "embryonic",
+      "question": "The startup was still in its embryonic stage. What does this tell us about the company?",
+      "type": "choice",
+      "options": [
+        "It was well-established, growing steadily, and posting consistent profits",
+        "It was just beginning and not yet fully formed or developed",
+        "It had recently undergone a major internal restructuring and rebranding",
+        "It was in advanced talks and close to being acquired by a much larger firm"
+      ],
+      "answer": "It was just beginning and not yet fully formed or developed",
+      "explanation": "Embryonic means in an early, undeveloped stage — like an embryo before it has fully formed.\n• embryonic = in the very early stages of development\n• From Greek: 'embryon' — fetus\n• 'Embryonic ideas', 'embryonic technology' — just beginning, not yet mature"
+    },
+    {
+      "word": "runic",
+      "question": "Scholars struggled to decode the runic inscriptions on the ancient stone. What kind of writing were they?",
+      "type": "choice",
+      "options": [
+        "Ancient Latin script inscribed during the Roman occupation of northern Europe",
+        "Characters from the ancient alphabet used by Germanic and Norse peoples",
+        "Oracle bone script from the Shang dynasty used in early Chinese divination",
+        "Symbols derived from the ancient Phoenician alphabet that spread westward"
+      ],
+      "answer": "Characters from the ancient alphabet used by Germanic and Norse peoples",
+      "explanation": "Runic means relating to runes — the characters of the alphabet used by ancient Germanic and Norse peoples.\n• runic = of or relating to runes; often mysterious or magical in connotation\n• From Old Norse: 'run' — secret, mystery\n• Runes were used for writing, divination, and inscriptions on objects"
+    },
+    {
+      "word": "cynic",
+      "question": "When the politician announced new pledges, the cynic in the crowd muttered, 'He'll never follow through.' What characterizes a cynic's worldview?",
+      "type": "choice",
+      "options": [
+        "A tendency to readily trust the stated good intentions of others",
+        "A belief that self-interest drives all, and things disappoint",
+        "An unusual ability to see the best possible outcome in any situation",
+        "A detailed scholarly knowledge of political history and institutions"
+      ],
+      "answer": "A belief that self-interest drives all, and things disappoint",
+      "explanation": "A cynic is someone who distrusts others' motives and expects the worst.\n• cynic = a person who believes people act from selfish motives and doubts sincerity\n• From the ancient Cynics — Greek philosophers who rejected social conventions\n• 'Cynical' = distrustful of sincerity; scornful of idealism"
+    },
+    {
+      "word": "kaleidoscopic",
+      "question": "The journalist described the festival as a kaleidoscopic mix of color, sound, and culture. What was she conveying?",
+      "type": "choice",
+      "options": [
+        "The festival had a simple, uniform look and feel throughout",
+        "The festival was a vivid, constantly shifting blend of varied elements",
+        "The festival focused solely on one specific regional cultural tradition",
+        "The festival was chaotically disorganized, with no clear program or structure"
+      ],
+      "answer": "The festival was a vivid, constantly shifting blend of varied elements",
+      "explanation": "Kaleidoscopic means constantly and colorfully shifting — made up of many vivid, changing elements.\n• kaleidoscopic = complex and varied, like the patterns seen in a kaleidoscope\n• From Greek: 'kalos' (beautiful) + 'eidos' (form) + 'skopein' (to look at)\n• Implies rich variety and constant, beautiful change"
+    },
+    {
+      "word": "microscopic",
+      "question": "The biologist said the contamination was caused by microscopic organisms. What does this tell us about the organisms?",
+      "type": "choice",
+      "options": [
+        "They were small but still visible to the naked eye",
+        "They were too small to see without a microscope",
+        "They were small enough to pass through a standard filter",
+        "They were invisible even under a microscope"
+      ],
+      "answer": "They were too small to see without a microscope",
+      "explanation": "Microscopic means too small to be seen by the naked eye — requiring a microscope.\n• microscopic = extremely small; visible only with microscopic magnification\n• From Greek: 'mikros' (small) + 'skopein' (to look at)\n• Figurative: 'microscopic detail' = an extremely fine level of scrutiny"
+    },
+    {
+      "word": "philanthropic",
+      "question": "The billionaire was known for his philanthropic activities. What did he do with his wealth?",
+      "type": "choice",
+      "options": [
+        "He invested it aggressively in emerging markets",
+        "He donated it to causes that benefited humanity",
+        "He established a luxury empire",
+        "He used it to fund political campaigns"
+      ],
+      "answer": "He donated it to causes that benefited humanity",
+      "explanation": "Philanthropic means charitable — showing a desire to promote the welfare of others.\n• philanthropic = devoted to helping others; generous and charitable\n• From Greek: 'philos' (loving) + 'anthropos' (human being)\n• 'Philanthropist' = a person who donates to humanitarian causes"
+    },
+    {
+      "word": "myopic",
+      "question": "The CEO was criticized for her myopic strategy that focused only on next quarter's profit. What was the flaw in her thinking?",
+      "type": "choice",
+      "options": [
+        "She was excessively focused on long-term sustainability at the cost of profit",
+        "She could only see immediate short-term gains and lacked broader vision",
+        "She was balancing too many competing strategic priorities simultaneously",
+        "She had completely ignored shareholder interests in her three-year plan"
+      ],
+      "answer": "She could only see immediate short-term gains and lacked broader vision",
+      "explanation": "Myopic means short-sighted — both literally (unable to see far) and figuratively (lacking foresight).\n• myopic = lacking imagination, foresight, or a long-term view\n• From Greek: 'myein' (to close the eyes) + 'ops' (eye)\n• Mirrors the eye condition: a myopic eye can only focus on what is near"
+    },
+    {
+      "word": "choleric",
+      "question": "His choleric temperament meant that even minor delays at the airport sent him into a rage. What does 'choleric' describe?",
+      "type": "choice",
+      "options": [
+        "A calm and easygoing nature",
+        "A tendency to anger quickly and easily",
+        "A deeply melancholic and sad disposition",
+        "An excessively optimistic outlook"
+      ],
+      "answer": "A tendency to anger quickly and easily",
+      "explanation": "Choleric means easily angered — having a hot-tempered, irritable personality.\n• choleric = bad-tempered, easily provoked to anger\n• From ancient humour theory: 'choler' (yellow bile) was the humour of anger\n• The four temperaments: sanguine, choleric, melancholic, phlegmatic"
+    },
+    {
+      "word": "generic",
+      "question": "The pharmacist offered a generic version of the medication at a lower price. What does 'generic' mean here?",
+      "type": "choice",
+      "options": [
+        "A lower-quality substitute made using inferior active ingredients",
+        "A non-branded version containing the same active ingredient",
+        "An older formulation that had been officially discontinued by the manufacturer",
+        "A product originally designed and licensed for an entirely different condition"
+      ],
+      "answer": "A non-branded version containing the same active ingredient",
+      "explanation": "Generic means not having a brand name — a general product not marketed under a proprietary name.\n• generic = not branded; belonging to a general class\n• A generic drug has the same active compound as the branded version\n• Figuratively: 'generic' = lacking distinctive qualities; standard and unspecific"
+    },
+    {
+      "word": "esoteric",
+      "question": "The professor's lecture on esoteric branches of medieval philosophy drew only three students. Why so few?",
+      "type": "choice",
+      "options": [
+        "The topic was far too basic — every student already knew it thoroughly",
+        "The topic was highly specialized, understood only by a few experts",
+        "The lecture had been awkwardly scheduled at a time nobody could make",
+        "The professor had a long-standing reputation for being a poor and dull teacher"
+      ],
+      "answer": "The topic was highly specialized, understood only by a few experts",
+      "explanation": "Esoteric means intended for or understood by only a small group with specialized knowledge.\n• esoteric = understood by few; specialist and obscure\n• From Greek: 'esoterikos' — inner, within (for insiders only)\n• Opposite: exoteric (accessible to all)"
+    },
+    {
+      "word": "meteoric",
+      "question": "The young musician's meteoric rise to fame surprised even her managers. What does 'meteoric' tell us about her rise?",
+      "type": "choice",
+      "options": [
+        "It was steady and gradual over many years",
+        "It was sudden and extremely rapid",
+        "It was driven by a large marketing budget",
+        "It was limited to a small regional fanbase"
+      ],
+      "answer": "It was sudden and extremely rapid",
+      "explanation": "Meteoric means very rapid and sudden — like the brief, blazing trail of a meteor.\n• meteoric = (of a career or rise) spectacularly fast and brilliant\n• From 'meteor' — a space rock that burns brightly but briefly across the sky\n• Note: a 'meteoric rise' borrows the speed but not the brevity of a meteor"
+    },
+    {
+      "word": "rhetoric",
+      "question": "The opposition accused the prime minister of relying on rhetoric rather than policy. What were they criticizing?",
+      "type": "choice",
+      "options": [
+        "His inability to speak publicly in a clear, confident, and articulate way",
+        "His use of persuasive language that lacked substantive content",
+        "His deliberate strategy of avoiding all contact with the press",
+        "His failure to command a working majority in the chamber of parliament"
+      ],
+      "answer": "His use of persuasive language that lacked substantive content",
+      "explanation": "Rhetoric refers to the art of persuasive speaking — often used to imply style over substance.\n• rhetoric = language designed to persuade; sometimes implying hollow or empty words\n• From Greek: 'rhetorike' — the art of an orator\n• 'Just rhetoric' = impressive words with no real meaning or action behind them"
+    },
+    {
+      "word": "prehistoric",
+      "question": "The cave paintings were prehistoric, predating any known writing system. What does this tell us about when they were made?",
+      "type": "choice",
+      "options": [
+        "They were produced in ancient Egypt or Mesopotamia around 3,000 BCE",
+        "They were made before humans developed written records",
+        "They were created in the early medieval period, before the year 1000 CE",
+        "They were produced by the very first organized literate civilizations"
+      ],
+      "answer": "They were made before humans developed written records",
+      "explanation": "Prehistoric means belonging to the period before written historical records.\n• prehistoric = relating to the time before written history\n• From Latin: 'prae' (before) + 'historia' (written record)\n• Prehistoric ≠ ancient history; it specifically means before any written accounts existed"
+    },
+    {
+      "word": "asymmetric",
+      "question": "The designer made the building's facade deliberately asymmetric. What does the facade look like?",
+      "type": "choice",
+      "options": [
+        "It has perfectly balanced, identical halves on both sides of a central axis",
+        "The two sides are different and do not mirror each other",
+        "It follows a precise repeating geometric pattern all the way around",
+        "It appears perfectly identical and symmetrical when viewed from all four sides"
+      ],
+      "answer": "The two sides are different and do not mirror each other",
+      "explanation": "Asymmetric means lacking symmetry — the two sides are unequal or different.\n• asymmetric = not identical on both sides; without symmetry\n• From Greek: 'a-' (without) + 'symmetria' (equal measure)\n• Asymmetric warfare = a conflict where the two sides have very unequal power"
+    },
+    {
+      "word": "concentric",
+      "question": "The target had five concentric rings. How were the rings arranged?",
+      "type": "choice",
+      "options": [
+        "Stacked directly on top of one another in parallel horizontal rows",
+        "Arranged outward in a widening spiral from a single starting point",
+        "Nested inside each other, sharing the same center point",
+        "Placed side by side in a row with equal gaps of white space between them"
+      ],
+      "answer": "Nested inside each other, sharing the same center point",
+      "explanation": "Concentric means sharing the same center — circles or rings nested within each other.\n• concentric = (of circles) having a common center\n• From Latin: 'con-' (together) + 'centrum' (center)\n• The classic example: ripples in water, or a target's rings"
+    },
+    {
+      "word": "egocentric",
+      "question": "Her egocentric colleague interrupted every meeting to talk about his own achievements. What does 'egocentric' mean?",
+      "type": "choice",
+      "options": [
+        "He was deeply insecure and constantly sought reassurance from his colleagues",
+        "He was self-centered, placing himself at the center of everything",
+        "He was highly ambitious and exclusively goal-focused in all his activities",
+        "He was introverted, reserved, and frequently awkward in large group settings"
+      ],
+      "answer": "He was self-centered, placing himself at the center of everything",
+      "explanation": "Egocentric means self-centered — thinking only from one's own perspective.\n• egocentric = regarding oneself as the center of everything; excessively self-focused\n• From Latin: 'ego' (I) + 'centrum' (center)\n• Distinct from narcissism (admiring oneself); egocentrism is about perspective, not just vanity"
+    },
+    {
+      "word": "gastric",
+      "question": "The patient was admitted for gastric surgery. Which organ was the surgeon operating on?",
+      "type": "choice",
+      "options": [
+        "The liver",
+        "The stomach",
+        "The small intestine",
+        "The gallbladder"
+      ],
+      "answer": "The stomach",
+      "explanation": "Gastric means relating to the stomach.\n• gastric = of or relating to the stomach\n• From Greek: 'gaster' — stomach\n• 'Gastric acid', 'gastric band', 'gastric bypass' — all involve the stomach"
+    },
+    {
+      "word": "panegyric",
+      "question": "The senator delivered a panegyric at the retiring general's farewell ceremony. What did she deliver?",
+      "type": "choice",
+      "options": [
+        "A frank critical assessment of his career's most significant failures and regrets",
+        "An elaborate speech of glowing praise in his honor",
+        "A brief administrative announcement marking the end of his official posting",
+        "A formal eulogy delivered in honor of someone who had recently passed away"
+      ],
+      "answer": "An elaborate speech of glowing praise in his honor",
+      "explanation": "A panegyric is a public speech or writing offering elaborate praise of a person or achievement.\n• panegyric = a formal public speech or text full of praise\n• From Greek: 'panegyrikos' — of a public assembly\n• Note: a panegyric is for the living; a eulogy is specifically for the dead"
+    },
+    {
+      "word": "analgesic",
+      "question": "The doctor prescribed an analgesic for the patient's post-operative pain. What type of medication is this?",
+      "type": "choice",
+      "options": [
+        "A medication prescribed specifically to help the patient sleep and rest",
+        "A medication that reduces or eliminates pain",
+        "A broad-spectrum antibiotic to prevent post-operative wound infections",
+        "A corticosteroid prescribed to reduce dangerous post-surgical inflammation"
+      ],
+      "answer": "A medication that reduces or eliminates pain",
+      "explanation": "An analgesic is a painkilling drug.\n• analgesic = a substance that relieves pain without loss of consciousness\n• From Greek: 'an-' (without) + 'algesis' (pain sensation)\n• Examples: aspirin, ibuprofen, morphine — all analgesics of different strengths"
+    },
+    {
+      "word": "forensic",
+      "question": "The forensic team was called to examine the crime scene. What was their job?",
+      "type": "choice",
+      "options": [
+        "To identify and formally arrest the prime suspects in the case",
+        "To apply scientific methods to gather and analyze evidence",
+        "To conduct detailed one-on-one interviews with all available witnesses",
+        "To write the official incident and preliminary investigation report"
+      ],
+      "answer": "To apply scientific methods to gather and analyze evidence",
+      "explanation": "Forensic means applying scientific methods to legal or criminal investigations.\n• forensic = relating to the use of science in legal contexts\n• From Latin: 'forensis' — of the forum (the public court)\n• 'Forensic evidence' = scientifically collected and analyzed evidence"
+    },
+    {
+      "word": "extrinsic",
+      "question": "The psychologist noted that the student was driven by extrinsic motivation — she studied only to win prizes. What kind of motivation is extrinsic?",
+      "type": "choice",
+      "options": [
+        "Motivation from a deep internal love and genuine curiosity for the subject",
+        "Motivation from external rewards or pressures outside the activity itself",
+        "Motivation that disappears the moment a major goal has been achieved",
+        "Motivation driven purely by rivalry and competition with peers"
+      ],
+      "answer": "Motivation from external rewards or pressures outside the activity itself",
+      "explanation": "Extrinsic means coming from outside — not part of the essential nature of something.\n• extrinsic = external; originating from outside\n• From Latin: 'extrinsecus' — from the outside\n• Opposite: intrinsic = belonging to the essential nature of something ('intrinsic value')"
+    },
+    {
+      "word": "emphatic",
+      "question": "When asked if she had any regrets, her answer was an emphatic 'No.' What does this tell us about her reply?",
+      "type": "choice",
+      "options": [
+        "She answered with some hesitation, leaving a trace of ambiguity in her reply",
+        "She answered with force and absolute certainty, leaving no room for doubt",
+        "She politely declined to answer the personal question at all",
+        "She gave a long, thoughtful, nuanced answer exploring multiple perspectives"
+      ],
+      "answer": "She answered with force and absolute certainty, leaving no room for doubt",
+      "explanation": "Emphatic means expressing something forcefully and with no ambiguity.\n• emphatic = clearly and strongly expressed; definitive\n• From Greek: 'emphatikos' — significant, expressive\n• 'An emphatic win' = a decisive, clear-cut victory"
+    },
+    {
+      "word": "schematic",
+      "question": "The engineer handed the trainee a schematic of the electrical system. What did the trainee receive?",
+      "type": "choice",
+      "options": [
+        "A detailed photographic record of the finished, fully installed system",
+        "A simplified diagram showing how the system is organized and connected",
+        "A comprehensive written manual explaining how to safely operate the system",
+        "A full parts list itemizing every component needed to build the system"
+      ],
+      "answer": "A simplified diagram showing how the system is organized and connected",
+      "explanation": "A schematic is a simplified, symbolic diagram representing a system or structure.\n• schematic = a diagram using symbols to represent the structure of a system\n• From Greek: 'schema' — shape, form\n• 'Schematic diagram' shows relationships, not realistic appearances"
+    },
+    {
+      "word": "thematic",
+      "question": "The literature professor organized the course thematically rather than chronologically. How was it organized?",
+      "type": "choice",
+      "options": [
+        "Books were arranged in strict chronological order by publication date",
+        "Books were grouped by shared themes, ignoring when they were written",
+        "Books were sorted by the country or region in which they were published",
+        "Books were assigned in ascending order from shortest to longest"
+      ],
+      "answer": "Books were grouped by shared themes, ignoring when they were written",
+      "explanation": "Thematic means organized according to themes or subjects.\n• thematic = relating to or based on themes\n• From Greek: 'thema' — proposition, theme\n• 'Thematic analysis' groups material by recurring ideas rather than by time or author"
+    },
+    {
+      "word": "emblematic",
+      "question": "The Berlin Wall was described as emblematic of the Cold War. What does this mean?",
+      "type": "choice",
+      "options": [
+        "It was the single most destructive and costly event of the entire Cold War",
+        "It was a perfect symbolic representation of the Cold War's divisions",
+        "It is widely regarded as the formal starting point of the Cold War period",
+        "It remained the Cold War's least well-known and most overlooked monument"
+      ],
+      "answer": "It was a perfect symbolic representation of the Cold War's divisions",
+      "explanation": "Emblematic means serving as a symbol or typical example of something.\n• emblematic = symbolic of; a perfect representative case\n• From 'emblem' — a symbolic image or badge\n• 'Emblematic of the era' = a single thing that captures the whole spirit of a period"
+    },
+    {
+      "word": "pragmatic",
+      "question": "Faced with the housing crisis, the mayor took a pragmatic approach: rather than wait for a perfect solution, she approved temporary shelter immediately. What does 'pragmatic' mean here?",
+      "type": "choice",
+      "options": [
+        "She applied a strict and consistent ideological framework to every decision",
+        "She dealt with the situation practically, based on what would actually work",
+        "She delayed taking any action until a full independent study had been completed",
+        "She ignored the housing crisis in favor of other items on her policy agenda"
+      ],
+      "answer": "She dealt with the situation practically, based on what would actually work",
+      "explanation": "Pragmatic means dealing with things in a practical, realistic way rather than according to fixed theory.\n• pragmatic = concerned with practical results; sensible and realistic\n• From Greek: 'pragmatikos' — skilled in business\n• Opposite of idealistic or dogmatic — pragmatism prioritizes what works"
+    },
+    {
+      "word": "phlegmatic",
+      "question": "When the office fire alarm went off — for the fourth time that month — the phlegmatic receptionist calmly picked up her coffee and walked out. What does 'phlegmatic' describe?",
+      "type": "choice",
+      "options": [
+        "A quick temper and dramatic reactions",
+        "A calm, composed, unhurried temperament",
+        "A fearful and anxious personality",
+        "An excessively cheerful and sociable nature"
+      ],
+      "answer": "A calm, composed, unhurried temperament",
+      "explanation": "Phlegmatic means having a calm, stoic, and unemotional disposition.\n• phlegmatic = calmly self-possessed; not easily excited or upset\n• From the humour theory: 'phlegm' was the humour of calmness\n• The four temperaments: sanguine (cheerful), choleric (angry), melancholic (sad), phlegmatic (calm)"
+    },
+    {
+      "word": "astigmatic",
+      "question": "The optometrist found that the patient was astigmatic. What is wrong with his vision?",
+      "type": "choice",
+      "options": [
+        "He can see distant objects clearly but everything close up appears blurry",
+        "He has an irregularly shaped cornea that causes blurred vision at all distances",
+        "He experiences very poor vision in low light and complete darkness only",
+        "He cannot distinguish between certain pairs of colors, particularly red and green"
+      ],
+      "answer": "He has an irregularly shaped cornea that causes blurred vision at all distances",
+      "explanation": "Astigmatic means affected by astigmatism — a refractive error caused by an irregular cornea.\n• astigmatic = having astigmatism; vision that is blurred due to irregular cornea shape\n• From Greek: 'a-' (without) + 'stigma' (point) — the eye cannot focus to a single point\n• Unlike myopia (near) or hyperopia (far), astigmatism blurs at all distances"
+    },
+    {
+      "word": "diplomatic",
+      "question": "When asked which of her two friends she preferred, Carla gave a diplomatic answer: 'You both bring something unique.' What made her answer diplomatic?",
+      "type": "choice",
+      "options": [
+        "It was completely honest and direct, stating her genuine preference clearly",
+        "It was tactful and careful, avoiding offense to either party",
+        "It avoided the question entirely by suddenly changing the subject",
+        "It was curt and dismissive, ending the conversation as quickly as possible"
+      ],
+      "answer": "It was tactful and careful, avoiding offense to either party",
+      "explanation": "Diplomatic means tactful, skilled at handling sensitive situations without causing offense.\n• diplomatic = showing sensitivity and skill in dealing with people\n• From 'diplomat' — an official trained in negotiation and tact\n• Diplomatic ≠ dishonest; it means carefully worded to preserve relationships"
+    },
+    {
+      "word": "aromatic",
+      "question": "The chef scattered fresh herbs over the dish to make it more aromatic. What did the herbs add?",
+      "type": "choice",
+      "options": [
+        "Additional texture and a satisfying crunch when eating the dish",
+        "A pleasant, distinctive fragrance",
+        "A stronger, more pronounced heat and spiciness to the overall flavor",
+        "A burst of bright visual color that improved the presentation of the dish"
+      ],
+      "answer": "A pleasant, distinctive fragrance",
+      "explanation": "Aromatic means having a pleasant, notable fragrance.\n• aromatic = having a strong, pleasant smell\n• From Greek: 'aroma' — spice, fragrance\n• In chemistry: 'aromatic compounds' have a ring structure — a separate technical meaning"
+    },
+    {
+      "word": "chromatic",
+      "question": "The musician played a chromatic scale. What does this tell us about the notes she played?",
+      "type": "choice",
+      "options": [
+        "She played only the notes belonging to the standard major key of the piece",
+        "She played every semitone — all twelve notes within an octave",
+        "She improvised freely, playing notes in a completely random spontaneous order",
+        "She played exclusively the black keys on the piano, avoiding all white keys"
+      ],
+      "answer": "She played every semitone — all twelve notes within an octave",
+      "explanation": "Chromatic in music means involving all twelve semitones of the scale.\n• chromatic scale = a scale moving by semitones, using all 12 notes in an octave\n• From Greek: 'khroma' — color (the 'color' notes outside the diatonic scale)\n• In visual art: 'chromatic' relates to color — both senses share the Greek root"
+    },
+    {
+      "word": "achromatic",
+      "question": "The gallery displayed the achromatic photographs alongside colorful paintings. What did the photographs look like?",
+      "type": "choice",
+      "options": [
+        "They were printed in unusually vibrant, saturated colors",
+        "They were in black and white, containing no color",
+        "They were tinted in a single warm hue",
+        "They were blurred and out of focus"
+      ],
+      "answer": "They were in black and white, containing no color",
+      "explanation": "Achromatic means without color — in tones of black, white, and gray only.\n• achromatic = free of color; using only black, white, and gray\n• From Greek: 'a-' (without) + 'khroma' (color)\n• An achromatic lens (in optics) corrects color distortion"
+    },
+    {
+      "word": "monochromatic",
+      "question": "The interior designer created a monochromatic room using only shades of blue. What is the defining feature of a monochromatic scheme?",
+      "type": "choice",
+      "options": [
+        "It uses no color at all — only black, white, and gray",
+        "It uses a single color in various shades and tints",
+        "It uses two complementary colors in equal proportion",
+        "It uses the full spectrum of rainbow colors"
+      ],
+      "answer": "It uses a single color in various shades and tints",
+      "explanation": "Monochromatic means consisting of one color — varying shades and tints of a single hue.\n• monochromatic = using or involving only one color\n• From Greek: 'mono-' (one) + 'khroma' (color)\n• Distinct from achromatic (no color) — monochromatic has color, but only one"
+    },
+    {
+      "word": "somatic",
+      "question": "The therapist explained that anxiety can produce somatic symptoms like headaches and stomach pain. What does 'somatic' mean?",
+      "type": "choice",
+      "options": [
+        "Relating to the mind, emotions, and psychological inner experience",
+        "Relating to the body, as distinct from the mind",
+        "Relating specifically to the central and peripheral nervous system",
+        "Relating to sleep, rest cycles, and the physical process of recovery"
+      ],
+      "answer": "Relating to the body, as distinct from the mind",
+      "explanation": "Somatic means of or relating to the body — as opposed to the mind or psyche.\n• somatic = bodily; relating to the physical body\n• From Greek: 'soma' — body\n• 'Somatic symptoms' = physical symptoms arising from psychological causes"
+    },
+    {
+      "word": "numismatic",
+      "question": "A numismatic collector attended the auction, outbidding everyone for a rare Roman coin. What does she collect?",
+      "type": "choice",
+      "options": [
+        "Antique furniture and silverware",
+        "Rare stamps and postal history",
+        "Coins, banknotes, and medals",
+        "Antique maps and manuscripts"
+      ],
+      "answer": "Coins, banknotes, and medals",
+      "explanation": "Numismatic means relating to the study or collection of coins, banknotes, and medals.\n• numismatic = of or relating to numismatics — the study of currency\n• From Latin: 'numisma' — coin\n• A numismatist is a coin collector or specialist"
+    },
+    {
+      "word": "fanatic",
+      "question": "The sports fanatic painted his face, arrived four hours early, and refused to leave even in the pouring rain. What does 'fanatic' describe?",
+      "type": "choice",
+      "options": [
+        "A casual supporter who attends a few games each season when available",
+        "A person with an extreme, obsessive devotion to something",
+        "A professional hired specifically to promote the team in the stands",
+        "A sports journalist covering the match for a national newspaper"
+      ],
+      "answer": "A person with an extreme, obsessive devotion to something",
+      "explanation": "A fanatic is a person with an extreme and uncritical enthusiasm or devotion to something.\n• fanatic = excessively enthusiastic; obsessively devoted\n• From Latin: 'fanaticus' — inspired by a god, frenzied\n• 'Fan' is a shortening of 'fanatic'"
+    },
+    {
+      "word": "static",
+      "question": "The property market had been static for over a year. What does this tell us about prices?",
+      "type": "choice",
+      "options": [
+        "Prices had been rising sharply and consistently month after month",
+        "Prices had been falling steadily throughout the year",
+        "Prices had barely changed — they were fixed in place",
+        "Prices had become erratic and completely unpredictable for buyers"
+      ],
+      "answer": "Prices had barely changed — they were fixed in place",
+      "explanation": "Static means showing little or no movement, change, or activity.\n• static = lacking movement or development; stationary\n• From Greek: 'statikos' — causing to stand\n• 'Static electricity' is another sense — charge at rest, not flowing"
+    },
+    {
+      "word": "aquatic",
+      "question": "The nature reserve was created to protect aquatic species. Which organisms were being protected?",
+      "type": "choice",
+      "options": [
+        "Plants and animals living in deserts",
+        "Animals that live underground",
+        "Creatures that live in or near water",
+        "Species that live in forested mountain areas"
+      ],
+      "answer": "Creatures that live in or near water",
+      "explanation": "Aquatic means living or taking place in water.\n• aquatic = of, in, or relating to water\n• From Latin: 'aquaticus' — from 'aqua' (water)\n• Aquatic animals include fish, amphibians, and aquatic mammals like dolphins"
+    },
+    {
+      "word": "didactic",
+      "question": "The critic said the film was too didactic — it never showed, only told. What was the criticism?",
+      "type": "choice",
+      "options": [
+        "The film was too subtle, leaving most audiences thoroughly confused",
+        "The film was overly preachy, moralizing instead of trusting the story",
+        "The film had no coherent message or theme at all",
+        "The film relied too heavily on expensive special effects and action sequences"
+      ],
+      "answer": "The film was overly preachy, moralizing instead of trusting the story",
+      "explanation": "Didactic means designed to teach or moralize — and often implies doing so in a heavy-handed way.\n• didactic = intended to instruct; often pejoratively, over-preachy\n• From Greek: 'didaktikos' — apt at teaching\n• 'A didactic novel' lectures the reader; it doesn't trust the story to carry the message"
+    },
+    {
+      "word": "lactic",
+      "question": "After an intense workout, lactic acid built up in the runner's muscles. What does 'lactic' relate to?",
+      "type": "choice",
+      "options": [
+        "The distribution and efficiency of oxygen delivery through the bloodstream",
+        "Milk-related compounds or processes involving milk sugar fermentation",
+        "The transmission of electrical signals between individual muscle cells",
+        "The filtration and removal of metabolic waste products by the kidneys"
+      ],
+      "answer": "Milk-related compounds or processes involving milk sugar fermentation",
+      "explanation": "Lactic means relating to milk — lactic acid is produced by the fermentation of lactose.\n• lactic = of or relating to milk\n• From Latin: 'lac' (gen. 'lactis') — milk\n• Lactic acid is produced in muscles during anaerobic exercise — the same compound made in yogurt fermentation"
+    },
+    {
+      "word": "tactic",
+      "question": "The chess player's winning tactic was to sacrifice her rook to expose the king. What is a tactic?",
+      "type": "choice",
+      "options": [
+        "A comprehensive long-term strategic plan spanning many carefully plotted moves",
+        "A specific action or maneuver used to achieve an immediate goal",
+        "A fortunate mistake that accidentally ended up turning into an advantage",
+        "A defensive holding position designed primarily to avoid losing any more pieces"
+      ],
+      "answer": "A specific action or maneuver used to achieve an immediate goal",
+      "explanation": "A tactic is a specific method or action used to achieve a particular short-term objective.\n• tactic = a planned action or method used to achieve a goal\n• From Greek: 'taktike' — the art of arrangement\n• Strategy is the overall plan; tactics are the specific actions that carry it out"
+    },
+    {
+      "word": "hectic",
+      "question": "The ER nurse described her twelve-hour shift as hectic. What was her shift like?",
+      "type": "choice",
+      "options": [
+        "Long but remarkably quiet, with plenty of time to rest between patients",
+        "Full of frantic, non-stop activity and little chance to rest",
+        "Tediously slow, uneventful, and frustrating in its lack of any real challenge",
+        "Extremely well-organized and running efficiently from start to finish"
+      ],
+      "answer": "Full of frantic, non-stop activity and little chance to rest",
+      "explanation": "Hectic means full of incessant or frenzied activity — rushed, busy, and exhausting.\n• hectic = characterized by feverish, unrelenting activity\n• From Greek: 'hektikos' — habitual (originally used of a persistent fever)\n• 'A hectic schedule', 'a hectic day' — the defining quality is breathless busyness"
+    },
+    {
+      "word": "eclectic",
+      "question": "The DJ's eclectic playlist moved from 1960s soul to drum and bass to classical violin in the space of an hour. What does 'eclectic' mean here?",
+      "type": "choice",
+      "options": [
+        "The playlist followed a strict historical order",
+        "It drew from a wide variety of very different sources and styles",
+        "It featured only one genre but many artists",
+        "It was designed to appeal to the most mainstream audience possible"
+      ],
+      "answer": "It drew from a wide variety of very different sources and styles",
+      "explanation": "Eclectic means deriving ideas, style, or taste from a broad and diverse range of sources.\n• eclectic = selecting from various sources; varied and wide-ranging in origin\n• From Greek: 'eklektikos' — selecting\n• An eclectic person or collection is defined by diversity, not specialization"
+    },
+    {
+      "word": "arctic",
+      "question": "The expedition was equipped for arctic conditions. What kind of environment were they preparing for?",
+      "type": "choice",
+      "options": [
+        "A hot, dry, arid desert environment with extreme daytime heat",
+        "An extremely cold environment in the far north",
+        "A hot, humid tropical jungle with high rainfall and dense vegetation",
+        "A high-altitude mountain zone with dangerously thin air and strong winds"
+      ],
+      "answer": "An extremely cold environment in the far north",
+      "explanation": "Arctic means relating to the North Pole region — extremely cold.\n• arctic = of or relating to the Arctic (North Pole region); bitterly cold\n• From Greek: 'arktikos' — of the Bear (the constellation Ursa Major, visible in the north)\n• Lowercase 'arctic conditions' = any extremely cold, harsh environment"
+    },
+    {
+      "word": "antarctic",
+      "question": "The Antarctic research station was the most remote outpost on Earth. Where was it located?",
+      "type": "choice",
+      "options": [
+        "On the high plateau of central Asia",
+        "In the frozen wilderness around the North Pole",
+        "On or near the continent at the South Pole",
+        "On a remote island in the South Atlantic"
+      ],
+      "answer": "On or near the continent at the South Pole",
+      "explanation": "Antarctic means relating to the South Pole or the continent of Antarctica.\n• antarctic = of or relating to the Antarctic (South Pole region)\n• From Greek: 'anti-' (opposite) + 'arktikos' (of the north) — the opposite of the Arctic\n• Antarctica is the continent; the Arctic is an ocean surrounded by land"
+    },
+    {
+      "word": "ascetic",
+      "question": "The monk lived an ascetic life — one small meal a day, no possessions, and hours of silent prayer. What is an ascetic life?",
+      "type": "choice",
+      "options": [
+        "A life of luxury and sensory pleasure treated as a form of spiritual celebration",
+        "A life of strict self-denial and abstinence for spiritual reasons",
+        "A life devoted entirely to scholarly study, debate, and intellectual inquiry",
+        "A life of active, outward charity and direct service within the local community"
+      ],
+      "answer": "A life of strict self-denial and abstinence for spiritual reasons",
+      "explanation": "Ascetic means practicing severe self-discipline and abstaining from all forms of indulgence.\n• ascetic = characterized by severe self-denial; abstaining from pleasure\n• From Greek: 'asketes' — monk, one who practices spiritual exercises\n• An ascetic rejects physical pleasure not out of poverty but as a spiritual discipline"
+    }
+  ]
+}
