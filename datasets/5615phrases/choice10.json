@@ -1,0 +1,1305 @@
+{
+  "text": "quiz11",
+  "quiz": [
+    {
+      "word": "lounge",
+      "question": "He lounged in the hammock all afternoon without a care in the world. What does 'lounge' mean here?",
+      "type": "choice",
+      "options": [
+        "To lie or sit around in a relaxed, lazy way",
+        "To rest completely still to recover from exertion",
+        "To spend an afternoon without any fixed plans",
+        "To make the most of a peaceful day outdoors"
+      ],
+      "answer": "To lie or sit around in a relaxed, lazy way",
+      "explanation": "To lounge means to relax in a lazy, unhurried way — sprawling or lolling about.\n• lounge = to recline or move in a relaxed, idle manner\n• Origin uncertain; possibly from 'lungis' — a slow person\n• 'Lounge around', 'airport lounge' — both capture the sense of comfortable idleness"
+    },
+    {
+      "word": "expunge",
+      "question": "The court ordered that the conviction be expunged from his record. What does 'expunge' mean?",
+      "type": "choice",
+      "options": [
+        "To officially erase and remove from a record completely",
+        "To seal a record so it cannot be accessed by employers",
+        "To reclassify a conviction as a lesser offense",
+        "To note in the record that the sentence has been served, as the evidence showed"
+      ],
+      "answer": "To officially erase and remove from a record completely",
+      "explanation": "To expunge means to erase completely — to remove as if it never existed.\n• expunge = to obliterate; to remove completely from a record or memory\n• From Latin: 'expungere' — to mark for deletion (with dots)\n• 'Expunge a record', 'expunge the past' — total removal, not merely hiding"
+    },
+    {
+      "word": "surcharge",
+      "question": "The airline added a fuel surcharge of £40 to every ticket. What is a surcharge?",
+      "type": "choice",
+      "options": [
+        "An extra charge added on top of the base price",
+        "A tax levied by the government on airline tickets",
+        "A fee for booking a flight close to the departure date",
+        "An additional cost for selecting a specific seat"
+      ],
+      "answer": "An extra charge added on top of the base price",
+      "explanation": "A surcharge is an extra charge added on top of the normal price.\n• surcharge = an additional charge; an extra payment required\n• From French: 'surcharger' — to overload\n• 'Fuel surcharge', 'congestion surcharge' — an amount added above the headline price"
+    },
+    {
+      "word": "discharge",
+      "question": "The patient was discharged from hospital three days after surgery. What does 'discharge' mean here?",
+      "type": "choice",
+      "options": [
+        "To formally release someone from a place or duty",
+        "To transfer a patient to a lower-level care facility",
+        "To give a patient permission to leave for a limited period",
+        "To end treatment and close a patient's medical file"
+      ],
+      "answer": "To formally release someone from a place or duty",
+      "explanation": "To discharge means to officially release — from hospital, from duty, from responsibility.\n• discharge = to release from a duty, commitment, or place of confinement\n• From Old French: 'descharger' — to unload\n• 'Discharge from hospital', 'discharge a debt', 'discharge a weapon' — all involve release"
+    },
+    {
+      "word": "diverge",
+      "question": "The two paths diverged at the top of the hill. What does 'diverge' mean?",
+      "type": "choice",
+      "options": [
+        "To separate and go in different directions",
+        "To run parallel to each other at the same elevation",
+        "To meet briefly before continuing in the same direction",
+        "To merge into a single wider track"
+      ],
+      "answer": "To separate and go in different directions",
+      "explanation": "To diverge means to separate — to move apart from a common point in different directions.\n• diverge = to move in different directions from a shared point\n• From Latin: 'di-' (apart) + 'vergere' (to incline)\n• 'Diverging paths', 'diverging opinions' — going different ways"
+    },
+    {
+      "word": "dirge",
+      "question": "The brass band played a slow dirge as the coffin was carried out. What is a dirge?",
+      "type": "choice",
+      "options": [
+        "A mournful song or piece of music for the dead",
+        "A march played at a slower than normal tempo",
+        "A hymn traditionally associated with religious funerals",
+        "A piece of music played only during military burials"
+      ],
+      "answer": "A mournful song or piece of music for the dead",
+      "explanation": "A dirge is a slow, mournful song — a lament sung or played at a funeral or in grief.\n• dirge = a mournful song of lamentation; funeral music\n• From Latin: 'dirige' — the first word of the funeral office ('direct, O Lord')\n• Also used figuratively: 'a dirge for the old neighborhood' = a lament for something lost"
+    },
+    {
+      "word": "forge",
+      "question": "He forged the director's signature on the cheque. What does 'forge' mean here?",
+      "type": "choice",
+      "options": [
+        "To create a fraudulent copy of something",
+        "To trace a signature from an original document",
+        "To sign a document on someone's behalf without authority",
+        "To alter an existing document to change its meaning"
+      ],
+      "answer": "To create a fraudulent copy of something",
+      "explanation": "To forge means to produce a fraudulent copy — to counterfeit.\n• forge = to produce a fraudulent imitation of a document, signature, or currency\n• From Old French: 'forgier' — to fabricate (from the forge, where metals are shaped)\n• 'Forge a signature', 'forged passport' — deliberate fraud through imitation"
+    },
+    {
+      "word": "splurge",
+      "question": "She splurged on a weekend at a luxury spa after her promotion. What does 'splurge' mean?",
+      "type": "choice",
+      "options": [
+        "To spend extravagantly and indulgently on a treat",
+        "To reward oneself after achieving a significant goal",
+        "To book something far more expensive than usual",
+        "To spend money without checking the cost first"
+      ],
+      "answer": "To spend extravagantly and indulgently on a treat",
+      "explanation": "To splurge means to spend lavishly — to indulge in extravagant expenditure.\n• splurge = to spend a lot on something as a treat\n• Probably from 'surge' + 'splash' — a sudden outpouring\n• 'Have a splurge', 'splurge on dinner' — treating oneself extravagantly"
+    },
+    {
+      "word": "scourge",
+      "question": "Corruption was described as the scourge of the region's development. What is a scourge?",
+      "type": "choice",
+      "options": [
+        "A cause of great trouble and suffering",
+        "A persistent problem that resists all attempts at reform",
+        "A structural barrier to economic and social progress",
+        "A destructive force associated with political instability"
+      ],
+      "answer": "A cause of great trouble and suffering",
+      "explanation": "A scourge is a cause of great suffering — something that afflicts severely.\n• scourge = a person or thing that causes widespread misery\n• From Old French: 'escorge' — a whip\n• Literally: a whip for punishment; figuratively: anything that afflicts mercilessly"
+    },
+    {
+      "word": "purge",
+      "question": "The new leader purged the party of anyone who had supported his predecessor. What does 'purge' mean?",
+      "type": "choice",
+      "options": [
+        "To rid a group of unwanted or disloyal members by force",
+        "To dismiss members who failed to meet performance targets",
+        "To restructure an organization by removing an entire tier",
+        "To replace experienced members with loyal newcomers"
+      ],
+      "answer": "To rid a group of unwanted or disloyal members by force",
+      "explanation": "To purge means to remove forcibly — to rid something of unwanted elements.\n• purge = to remove by cleansing; to rid of undesirable people\n• From Latin: 'purgare' — to cleanse\n• 'A political purge', 'purge of dissidents' — clearing out perceived threats"
+    },
+    {
+      "word": "resurge",
+      "question": "Interest in vinyl records resurged in the streaming era. What does 'resurge' mean?",
+      "type": "choice",
+      "options": [
+        "To rise again with new strength after a period of decline",
+        "To recover to its previous level after falling sharply",
+        "To grow beyond its previous peak for the first time",
+        "To attract a new audience that was previously unreached, as the evidence showed"
+      ],
+      "answer": "To rise again with new strength after a period of decline",
+      "explanation": "To resurge means to rise again — to return and increase after declining.\n• resurge = to rise again; to show renewed strength\n• From Latin: 'resurgere' — to rise again\n• 'Resurgence' = the return and revival; 'resurging interest' = growing again"
+    },
+    {
+      "word": "gauge",
+      "question": "It was difficult to gauge how serious the situation truly was. What does 'gauge' mean here?",
+      "type": "choice",
+      "options": [
+        "To estimate or assess the extent of something",
+        "To measure something with a precise instrument",
+        "To compare a situation to established benchmarks",
+        "To predict how a situation is likely to develop"
+      ],
+      "answer": "To estimate or assess the extent of something",
+      "explanation": "To gauge means to estimate or evaluate — to assess the size, extent, or nature of something.\n• gauge = to measure or assess; to form a judgment about\n• From Old French: 'gauge' — a standard measure\n• Also a noun: a gauge is a measuring instrument or a standard measure"
+    },
+    {
+      "word": "subterfuge",
+      "question": "He obtained the information through subterfuge — pretending to be a journalist. What is subterfuge?",
+      "type": "choice",
+      "options": [
+        "Deception used to achieve a goal or escape a difficulty",
+        "An impersonation of someone in a position of authority, as the evidence showed",
+        "A lie told to avoid negative consequences",
+        "A concealed plan to extract information from someone"
+      ],
+      "answer": "Deception used to achieve a goal or escape a difficulty",
+      "explanation": "Subterfuge is deception — a stratagem used to achieve something by misleading others.\n• subterfuge = a trick used to escape or achieve something by deception\n• From Latin: 'subterfugere' — to flee secretly\n• 'Obtain by subterfuge', 'resort to subterfuge' — achieving through a dishonest dodge"
+    },
+    {
+      "word": "cache",
+      "question": "Police discovered a cache of weapons hidden beneath the floorboards. What is a cache?",
+      "type": "choice",
+      "options": [
+        "A hidden store of something accumulated secretly",
+        "A large quantity of contraband held in a single location",
+        "A collection of illegal items linked to a known criminal",
+        "A stockpile assembled over a long period of time"
+      ],
+      "answer": "A hidden store of something accumulated secretly",
+      "explanation": "A cache is a hidden store — a collection of something kept in a concealed place.\n• cache = a hidden supply; a secret store\n• From French: 'cacher' — to hide\n• 'A cache of weapons', 'browser cache' — something stored away, often for future use"
+    },
+    {
+      "word": "panache",
+      "question": "She carried off the difficult presentation with panache, as if it were effortless. What is panache?",
+      "type": "choice",
+      "options": [
+        "A flamboyant confidence and stylish flair",
+        "Thorough preparation that makes something look easy",
+        "A natural talent for public performance",
+        "A calm professionalism that inspires confidence in others"
+      ],
+      "answer": "A flamboyant confidence and stylish flair",
+      "explanation": "Panache is flamboyant confidence and stylish verve — doing things with flair.\n• panache = a quality of dashing flair and dash\n• From French: 'panache' — a plume (the feather in a cavalier's hat)\n• 'With panache' = with style and confidence that makes it look brilliant"
+    },
+    {
+      "word": "cliché",
+      "question": "The critic said the script relied too heavily on clichés. What is a cliché?",
+      "type": "choice",
+      "options": [
+        "A phrase or idea so overused it has lost its impact",
+        "A dramatic trope that audiences have seen many times",
+        "An unoriginal plot device borrowed from an earlier work",
+        "A predictable character type used in genre fiction"
+      ],
+      "answer": "A phrase or idea so overused it has lost its impact",
+      "explanation": "A cliché is a phrase or idea worn out by overuse — it once had meaning but is now stale.\n• cliché = a trite, overused expression or idea\n• From French: 'cliché' — a stereotype printing plate (producing identical copies)\n• 'Avoid clichés', 'a clichéd response' — predictable and devoid of freshness"
+    },
+    {
+      "word": "niche",
+      "question": "The company found a profitable niche selling accessories for left-handed people. What is a niche?",
+      "type": "choice",
+      "options": [
+        "A specialized segment of a market with few competitors",
+        "A small but loyal customer base with specific needs",
+        "An underserved product category with growth potential",
+        "A gap in the market identified through consumer research"
+      ],
+      "answer": "A specialized segment of a market with few competitors",
+      "explanation": "A niche is a specialized position — a distinct segment with particular characteristics.\n• niche = a specialized segment; a comfortable position suited to one's abilities\n• From French: 'niche' — a recess in a wall (a small, sheltered hollow)\n• 'Find your niche', 'niche market' — carving out a specific, well-suited space"
+    },
+    {
+      "word": "pastiche",
+      "question": "The film was an affectionate pastiche of 1960s spy thrillers. What is a pastiche?",
+      "type": "choice",
+      "options": [
+        "A work that imitates the style of another era or artist",
+        "A film that spoofs and parodies a well-known genre",
+        "A remake that updates an older film for modern audiences",
+        "A tribute to a specific director's most celebrated work"
+      ],
+      "answer": "A work that imitates the style of another era or artist",
+      "explanation": "A pastiche is a work that imitates the style of another artist or period — affectionately, not mockingly.\n• pastiche = an artistic work imitating the style of another\n• From Italian: 'pasticcio' — a pie, a medley\n• Distinct from parody (which mocks) — a pastiche celebrates through imitation"
+    },
+    {
+      "word": "avalanche",
+      "question": "The minister faced an avalanche of complaints after the announcement. What does 'avalanche' mean here?",
+      "type": "choice",
+      "options": [
+        "An overwhelming number that arrived suddenly",
+        "A large and organized campaign of public opposition",
+        "A series of escalating criticisms in the press",
+        "A flood of angry responses that was hard to manage"
+      ],
+      "answer": "An overwhelming number that arrived suddenly",
+      "explanation": "An avalanche (figuratively) means an overwhelming, sudden flood of something.\n• avalanche = a large mass moving suddenly; a sudden overwhelming quantity\n• From French: 'avalanche' — a rapid descent of snow\n• 'An avalanche of emails' = so many they are impossible to handle"
+    },
+    {
+      "word": "gauche",
+      "question": "It was considered gauche to ask about salaries at the dinner table. What does 'gauche' mean?",
+      "type": "choice",
+      "options": [
+        "Tactless and socially awkward — lacking in social grace",
+        "Rude and deliberately insensitive to others' feelings, as the evidence showed",
+        "Inappropriate because the timing was clearly wrong",
+        "Impolite and in breach of accepted etiquette"
+      ],
+      "answer": "Tactless and socially awkward — lacking in social grace",
+      "explanation": "Gauche means awkward and lacking in social grace — tactless without being malicious.\n• gauche = lacking social polish; awkwardly unsophisticated\n• From French: 'gauche' — left (left-handedness was once associated with clumsiness)\n• 'A gauche remark' = well-meaning but socially clumsy"
+    },
+    {
+      "word": "psyche",
+      "question": "The therapist said the trauma had deeply affected her psyche. What is the psyche?",
+      "type": "choice",
+      "options": [
+        "The mind and inner self — the seat of thought and emotion",
+        "The conscious part of the mind that controls behavior",
+        "The emotional responses that determine how one reacts",
+        "The self-image formed through experience and relationships"
+      ],
+      "answer": "The mind and inner self — the seat of thought and emotion",
+      "explanation": "The psyche is the mind — especially the inner self, including unconscious processes.\n• psyche = the human mind and soul; the totality of the human mind\n• From Greek: 'psyche' — the soul, mind\n• 'Psyche' gives us psychology, psychotherapy, psychoanalysis"
+    },
+    {
+      "word": "apostrophe",
+      "question": "The teacher corrected the student's use of an apostrophe in 'the dog's bowl.' Was the apostrophe correct?",
+      "type": "choice",
+      "options": [
+        "Yes — it correctly shows that the bowl belongs to the dog",
+        "No — apostrophes are only used to show missing letters",
+        "Yes — but only because 'dog' ends in a consonant",
+        "No — possessives of animals do not require an apostrophe, as the evidence showed"
+      ],
+      "answer": "Yes — it correctly shows that the bowl belongs to the dog",
+      "explanation": "An apostrophe is used to indicate possession or a missing letter.\n• apostrophe = a punctuation mark (') used for possession or contraction\n• From Greek: 'apostrophos' — turning away\n• 'The dog's bowl' = the bowl belonging to the dog — correct use of the possessive apostrophe"
+    },
+    {
+      "word": "wreathe",
+      "question": "The mountain peaks were wreathed in cloud. What does 'wreathe' mean?",
+      "type": "choice",
+      "options": [
+        "To encircle or surround as if wound around",
+        "To be partially hidden from view by a thin mist",
+        "To have clouds forming in the immediate vicinity",
+        "To be capped with cloud for much of the year"
+      ],
+      "answer": "To encircle or surround as if wound around",
+      "explanation": "To wreathe means to encircle or envelop — to wind or curl around something.\n• wreathe = to encircle; to surround with something wound around\n• From 'wreath' — a circular arrangement\n• 'Wreathed in smoke', 'wreathed in smiles' — enveloped or surrounded"
+    },
+    {
+      "word": "lathe",
+      "question": "The carpenter turned the chair leg on a lathe. What is a lathe?",
+      "type": "choice",
+      "options": [
+        "A machine that rotates material so it can be shaped by a cutting tool",
+        "A hand-held tool for carving curved shapes in wood",
+        "A frame used to hold timber while it is being cut",
+        "A type of saw used to cut circular sections from planks, as the evidence showed"
+      ],
+      "answer": "A machine that rotates material so it can be shaped by a cutting tool",
+      "explanation": "A lathe is a machine that rotates a piece of material against a cutting tool to shape it.\n• lathe = a machine for shaping wood or metal by rotation against a cutting tool\n• From Old English: 'læth' — a structure\n• 'Turned on a lathe' = shaped by the rotating action of the lathe"
+    },
+    {
+      "word": "loathe",
+      "question": "She loathed the smell of cigarette smoke and would leave any room it entered. What does 'loathe' mean?",
+      "type": "choice",
+      "options": [
+        "To feel intense dislike and disgust toward something",
+        "To find something unpleasant enough to avoid",
+        "To have a strong physical aversion to a stimulus, as the evidence showed",
+        "To disapprove of something on moral grounds"
+      ],
+      "answer": "To feel intense dislike and disgust toward something",
+      "explanation": "To loathe means to feel intense aversion — a deep hatred or disgust.\n• loathe = to feel strong hatred or disgust toward\n• From Old English: 'lathian' — to be hateful\n• 'Loathing' = intense disgust; stronger than dislike — approaching repulsion"
+    },
+    {
+      "word": "lithe",
+      "question": "The gymnast's lithe body moved effortlessly through the routine. What does 'lithe' mean?",
+      "type": "choice",
+      "options": [
+        "Thin and supple — bending easily with graceful flexibility",
+        "Compact and muscular from years of physical training",
+        "Light and quick in movement and physical response",
+        "Slender and elegant in appearance on and off the apparatus, as the evidence showed"
+      ],
+      "answer": "Thin and supple — bending easily with graceful flexibility",
+      "explanation": "Lithe means supple and gracefully flexible — bending easily without stiffness.\n• lithe = flexible and graceful; easily bent\n• From Old English: 'lithe' — mild, gentle, flexible\n• 'A lithe dancer', 'lithe movements' — a quality of easy, flowing flexibility"
+    },
+    {
+      "word": "blithe",
+      "question": "She went on holiday with blithe disregard for the work piling up in her absence. What does 'blithe' mean?",
+      "type": "choice",
+      "options": [
+        "Happily unconcerned — showing casual indifference",
+        "Deliberately ignoring something one does not want to face",
+        "Irresponsibly neglecting duties while away from work",
+        "Carelessly optimistic that problems will resolve themselves"
+      ],
+      "answer": "Happily unconcerned — showing casual indifference",
+      "explanation": "Blithe means cheerfully unconcerned — showing a happy, casual lack of worry.\n• blithe = showing a casual, happy indifference; carefree\n• From Old English: 'blithe' — happy, cheerful\n• 'Blithe disregard' = dismissing something with cheerful unconcern"
+    },
+    {
+      "word": "scythe",
+      "question": "The farmer swung his scythe through the tall grass. What is a scythe?",
+      "type": "choice",
+      "options": [
+        "A tool with a long curving blade on a long handle for cutting crops",
+        "A wide-bladed hoe for cutting weeds at ground level",
+        "A rotating blade mounted on a wheeled cutting machine",
+        "A serrated blade fixed to a long pole for harvesting grain, as the evidence showed"
+      ],
+      "answer": "A tool with a long curving blade on a long handle for cutting crops",
+      "explanation": "A scythe is a harvesting tool with a long curved blade attached to a long handle.\n• scythe = a tool with a long curving blade used to cut grass or crops\n• From Old English: 'sithe' — a cutting tool\n• Associated with the Grim Reaper — death is often depicted carrying a scythe"
+    },
+    {
+      "word": "belie",
+      "question": "Her calm voice belied the fear she felt inside. What does 'belie' mean?",
+      "type": "choice",
+      "options": [
+        "To give a false impression of — to contradict what is really true",
+        "To conceal a feeling by expressing its opposite",
+        "To suggest something by implication without stating it, as the evidence showed",
+        "To mask a true feeling successfully over a long period"
+      ],
+      "answer": "To give a false impression of — to contradict what is really true",
+      "explanation": "To belie means to give a misleading impression — the surface contradicts the reality.\n• belie = to contradict; to give a false picture of\n• From Old English: 'beleogan' — to deceive by lying\n• 'His smile belied his true feelings' — what appears is not what is"
+    },
+    {
+      "word": "bonhomie",
+      "question": "The innkeeper greeted every guest with a natural bonhomie that made them feel at home. What is bonhomie?",
+      "type": "choice",
+      "options": [
+        "Good-natured friendliness and easy cheerfulness",
+        "The professional warmth expected of those in service roles",
+        "A genuine interest in every person who walks through the door",
+        "A talent for making strangers feel welcome and comfortable"
+      ],
+      "answer": "Good-natured friendliness and easy cheerfulness",
+      "explanation": "Bonhomie is good-natured friendliness — warm, easy sociability.\n• bonhomie = cheerful friendliness; genial good humor\n• From French: 'bonhomme' — a good fellow\n• 'Full of bonhomie' = radiating warmth and goodwill effortlessly"
+    },
+    {
+      "word": "stymie",
+      "question": "Bureaucratic delays stymied the project for months. What does 'stymie' mean?",
+      "type": "choice",
+      "options": [
+        "To hinder or obstruct someone's plans or progress",
+        "To delay something through excessive administrative process",
+        "To make something so complicated it cannot continue",
+        "To prevent progress by refusing to cooperate"
+      ],
+      "answer": "To hinder or obstruct someone's plans or progress",
+      "explanation": "To stymie means to obstruct or hinder — to prevent someone from making progress.\n• stymie = to obstruct; to prevent action or progress\n• From golf: a 'stymie' was when an opponent's ball blocked your route to the hole\n• 'Stymied by red tape' = blocked and unable to move forward"
+    },
+    {
+      "word": "magpie",
+      "question": "He was a magpie who collected everything from bottle caps to rare coins. What does 'magpie' mean here?",
+      "type": "choice",
+      "options": [
+        "Someone who collects random things indiscriminately",
+        "A person with an eye for valuable items others overlook",
+        "Someone who borrows things and forgets to return them",
+        "A collector whose interests are eclectic but well-organized"
+      ],
+      "answer": "Someone who collects random things indiscriminately",
+      "explanation": "A magpie (figuratively) is a person who collects all manner of things indiscriminately.\n• magpie = a person who hoards miscellaneous objects; also one who chatters\n• From the bird, which is attracted to shiny objects and hoards them\n• 'A magpie collector' picks up anything that catches the eye"
+    },
+    {
+      "word": "gaucherie",
+      "question": "His gaucherie at the state dinner — reaching across the ambassador — left everyone cringing. What is gaucherie?",
+      "type": "choice",
+      "options": [
+        "Awkward behavior that reveals a lack of social sophistication",
+        "A breach of protocol that caused diplomatic embarrassment, as the evidence showed",
+        "An act of rudeness that was noticed by all present",
+        "A failure to observe the conventions of a formal occasion"
+      ],
+      "answer": "Awkward behavior that reveals a lack of social sophistication",
+      "explanation": "Gaucherie is social awkwardness — an embarrassing lack of tact or grace.\n• gaucherie = awkward or tactless behavior; a social blunder\n• From French: 'gauche' — left, clumsy\n• More specific than rudeness — gaucherie is clumsiness, not malice"
+    },
+    {
+      "word": "coterie",
+      "question": "The poet was championed by a small coterie of admirers who spread his reputation. What is a coterie?",
+      "type": "choice",
+      "options": [
+        "A small, exclusive group of people with shared interests",
+        "A group of critics who regularly review the same works",
+        "A literary circle that meets regularly to discuss poetry, as the evidence showed",
+        "A network of influential people who promote new talent"
+      ],
+      "answer": "A small, exclusive group of people with shared interests",
+      "explanation": "A coterie is a small, exclusive group — an inner circle with shared interests.\n• coterie = a small group of people with shared tastes; an exclusive circle\n• From French: 'coterie' — a group of peasants holding land together\n• A coterie is tightly knit and often deliberately exclusive"
+    },
+    {
+      "word": "calorie",
+      "question": "The nutrition label stated the meal contained 650 calories. What is a calorie?",
+      "type": "choice",
+      "options": [
+        "A unit measuring the energy content of food",
+        "A measurement of the fat content in a food portion",
+        "A unit of nutritional value based on carbohydrate content",
+        "A metric for the speed at which food is digested"
+      ],
+      "answer": "A unit measuring the energy content of food",
+      "explanation": "A calorie is a unit of energy — used to measure the energy provided by food.\n• calorie = a unit of heat or energy; in food, the energy available for metabolism\n• From Latin: 'calor' — heat\n• 'Counting calories' = monitoring energy intake; calories in food are technically kilocalories"
+    },
+    {
+      "word": "vie",
+      "question": "Three candidates vied for the single promotion. What does 'vie' mean?",
+      "type": "choice",
+      "options": [
+        "To compete eagerly against others for the same thing",
+        "To present one's case to a selection committee",
+        "To apply formally for a position that was advertised",
+        "To outperform rivals through superior results over time"
+      ],
+      "answer": "To compete eagerly against others for the same thing",
+      "explanation": "To vie means to compete — to contend with others for something.\n• vie = to compete; to contend for superiority\n• From Old French: 'vier' — to challenge\n• 'Vying for attention', 'vying for the top spot' — active, eager competition"
+    },
+    {
+      "word": "slake",
+      "question": "After three hours in the sun, she finally slaked her thirst with a long drink of cold water. What does 'slake' mean?",
+      "type": "choice",
+      "options": [
+        "To satisfy or quench a thirst or strong desire",
+        "To relieve the discomfort caused by excessive heat",
+        "To cool the body down after sustained physical effort",
+        "To rehydrate after losing fluids through exercise"
+      ],
+      "answer": "To satisfy or quench a thirst or strong desire",
+      "explanation": "To slake means to satisfy — to quench a thirst or relieve a craving.\n• slake = to quench; to satisfy a thirst, desire, or hunger\n• From Old English: 'slacian' — to become loose, abate\n• 'Slake your thirst', 'slake your curiosity' — fully satisfying a pressing need"
+    },
+    {
+      "word": "stake",
+      "question": "She had a significant stake in the company's success — her life savings were invested in it. What is a stake?",
+      "type": "choice",
+      "options": [
+        "A financial interest or investment in an enterprise",
+        "The amount of money one has put into a business, as the evidence showed",
+        "A percentage of ownership in a company",
+        "The risk one takes when investing in a venture"
+      ],
+      "answer": "A financial interest or investment in an enterprise",
+      "explanation": "A stake is an interest or investment — something at risk in an enterprise.\n• stake = an interest or share in something; what one stands to gain or lose\n• From the idea of 'staking' (posting) a bet\n• 'At stake' = at risk; 'stakeholder' = one who has an interest in an outcome"
+    },
+    {
+      "word": "hike",
+      "question": "The electricity company hiked its prices by 20% without warning. What does 'hike' mean here?",
+      "type": "choice",
+      "options": [
+        "To raise sharply and steeply",
+        "To increase by a set percentage each year",
+        "To adjust prices in line with inflation",
+        "To change pricing without notifying customers in advance"
+      ],
+      "answer": "To raise sharply and steeply",
+      "explanation": "To hike means to raise sharply — a steep, sudden increase.\n• hike = to increase substantially; a sharp rise\n• From 'hike' — to walk a long distance uphill (steep upward effort)\n• 'Price hike', 'rate hike' — a sudden, sharp upward move"
+    },
+    {
+      "word": "spike",
+      "question": "Hospital admissions spiked in January following the cold snap. What does 'spike' mean here?",
+      "type": "choice",
+      "options": [
+        "To increase sharply and suddenly",
+        "To reach an abnormally high level compared to the average",
+        "To rise steeply before falling back to normal levels",
+        "To exceed the previous year's total for the same period"
+      ],
+      "answer": "To increase sharply and suddenly",
+      "explanation": "To spike means to increase suddenly and steeply — a rapid, sharp rise.\n• spike = a sudden sharp increase; a brief, steep peak\n• From the shape of a spike — pointed and sudden\n• 'A spike in cases', 'spike in temperature' — a sharp, brief peak"
+    },
+    {
+      "word": "spoke",
+      "question": "The wheel's spokes were bent after the accident. What is a spoke?",
+      "type": "choice",
+      "options": [
+        "One of the thin rods connecting a wheel's hub to its rim",
+        "The central axle around which a wheel rotates",
+        "The outer rim that forms the circular edge of a wheel, as the evidence showed",
+        "The bearing that allows the wheel to rotate smoothly"
+      ],
+      "answer": "One of the thin rods connecting a wheel's hub to its rim",
+      "explanation": "A spoke is one of the rods running from the center hub to the outer rim of a wheel.\n• spoke = a rod connecting the hub to the rim of a wheel\n• From Old English: 'spaca' — a spoke\n• 'Put a spoke in someone's wheel' = obstruct their plans"
+    },
+    {
+      "word": "stoke",
+      "question": "His provocative comments stoked tensions that were already running high. What does 'stoke' mean here?",
+      "type": "choice",
+      "options": [
+        "To feed and intensify a growing fire or conflict",
+        "To create a problem where previously none existed",
+        "To provoke a reaction from a person or group",
+        "To make a situation significantly worse through carelessness"
+      ],
+      "answer": "To feed and intensify a growing fire or conflict",
+      "explanation": "To stoke means to intensify by feeding — like stoking a fire with fuel.\n• stoke = to tend and feed a fire; to intensify\n• From Dutch: 'stoken' — to push, stoke\n• 'Stoke tensions', 'stoke fears' — adding fuel to something already burning"
+    },
+    {
+      "word": "evoke",
+      "question": "The smell of fresh bread evoked memories of her grandmother's kitchen. What does 'evoke' mean?",
+      "type": "choice",
+      "options": [
+        "To bring a feeling or memory to mind",
+        "To remind someone of a specific past experience",
+        "To produce a strong and immediate emotional reaction",
+        "To cause someone to think of a person from their past"
+      ],
+      "answer": "To bring a feeling or memory to mind",
+      "explanation": "To evoke means to bring to mind — to call up a memory, feeling, or image.\n• evoke = to bring to consciousness; to call forth\n• From Latin: 'evocare' — to call out\n• 'Evoke a mood', 'evoke the past' — summoning something from within"
+    },
+    {
+      "word": "convoke",
+      "question": "The secretary-general convoked an emergency session of the council. What does 'convoke' mean?",
+      "type": "choice",
+      "options": [
+        "To formally summon people to assemble for a meeting",
+        "To call for an extraordinary meeting outside the regular schedule",
+        "To invite senior figures to attend an urgent consultation",
+        "To issue a formal agenda for an unscheduled meeting"
+      ],
+      "answer": "To formally summon people to assemble for a meeting",
+      "explanation": "To convoke means to formally call together — to summon an assembly.\n• convoke = to call together; to summon to an assembly\n• From Latin: 'convocare' — to call together\n• More formal than 'call a meeting' — convoking implies authority to summon"
+    },
+    {
+      "word": "yoke",
+      "question": "For centuries, the people had labored under the yoke of colonial rule. What does 'yoke' mean here?",
+      "type": "choice",
+      "options": [
+        "An oppressive burden or constraint imposed on others",
+        "A system of government that denies basic freedoms",
+        "A period of forced servitude under foreign administration",
+        "A system of taxation that drained a country of its wealth"
+      ],
+      "answer": "An oppressive burden or constraint imposed on others",
+      "explanation": "A yoke (figuratively) is an oppressive burden — a constraint placed on one's freedom.\n• yoke = a constraint; something that binds and burdens\n• Literally: the wooden frame placed across an ox's shoulders to harness it\n• 'Throw off the yoke', 'under the yoke' — a metaphor for oppressive subjugation"
+    },
+    {
+      "word": "rebuke",
+      "question": "The chairman rebuked the director for missing the deadline. What does 'rebuke' mean?",
+      "type": "choice",
+      "options": [
+        "To express sharp, official disapproval of someone's conduct",
+        "To warn someone that their behavior will have consequences, as the evidence showed",
+        "To criticize someone in front of their colleagues",
+        "To formally document a complaint against an employee"
+      ],
+      "answer": "To express sharp, official disapproval of someone's conduct",
+      "explanation": "To rebuke means to express sharp criticism or disapproval — a stern official censure.\n• rebuke = to reprimand; to criticize sharply\n• From Old French: 'rebukier' — to repel, cut back\n• A rebuke is more forceful than a reminder and less severe than a formal punishment"
+    },
+    {
+      "word": "locale",
+      "question": "The film director chose an isolated forest as the locale for the horror movie. What is a locale?",
+      "type": "choice",
+      "options": [
+        "A particular place where an event or story is set",
+        "A setting chosen for its visual impact on screen",
+        "The physical environment surrounding a specific location",
+        "A site that provides the atmosphere a project requires"
+      ],
+      "answer": "A particular place where an event or story is set",
+      "explanation": "A locale is a place or setting — especially as the context for events.\n• locale = a place, area, or location; the scene of an event\n• From French: 'local' — of a place\n• 'The locale of the action', 'a foreign locale' — the specific place where things happen"
+    },
+    {
+      "word": "gale",
+      "question": "The yacht was caught in a gale and limped into port with a torn sail. What is a gale?",
+      "type": "choice",
+      "options": [
+        "A very strong wind — stronger than a strong breeze",
+        "A brief, intense storm accompanied by heavy rainfall",
+        "Winds reaching hurricane strength at sea",
+        "A storm system that forms over warm ocean waters"
+      ],
+      "answer": "A very strong wind — stronger than a strong breeze",
+      "explanation": "A gale is a very strong wind — typically defined as force 7–10 on the Beaufort scale.\n• gale = a strong, sustained wind\n• From Scandinavian: 'galen' — bad, furious\n• 'A force-9 gale', 'gale warning' — severe wind; also: 'gales of laughter' = uncontrolled laughter"
+    },
+    {
+      "word": "regale",
+      "question": "He regaled his guests with stories from his years working abroad. What does 'regale' mean?",
+      "type": "choice",
+      "options": [
+        "To entertain with stories or food in a lavish or delightful way",
+        "To share experiences in a way that held his listeners' attention",
+        "To inform and entertain a gathering with personal anecdotes",
+        "To delight a group of people by telling amusing stories"
+      ],
+      "answer": "To entertain with stories or food in a lavish or delightful way",
+      "explanation": "To regale means to entertain lavishly — with food, drink, or wonderful stories.\n• regale = to entertain generously; to delight with stories or a feast\n• From French: 'régaler' — to entertain royally\n• 'Regale with tales', 'regale with a feast' — generous, pleasurable entertainment"
+    },
+    {
+      "word": "hale",
+      "question": "Despite being ninety, she was still hale and hearty. What does 'hale' mean?",
+      "type": "choice",
+      "options": [
+        "Strong and healthy — in robust good health",
+        "Active and alert despite being elderly",
+        "Mentally sharp and physically independent, as the evidence showed",
+        "Remarkable for one's age and constitution"
+      ],
+      "answer": "Strong and healthy — in robust good health",
+      "explanation": "Hale means healthy and vigorous — especially used of older people.\n• hale = in excellent health; robust and strong\n• From Old English: 'hal' — whole, healthy (also root of 'whole' and 'heal')\n• 'Hale and hearty' = completely healthy in body and spirit"
+    },
+    {
+      "word": "inhale",
+      "question": "She inhaled the sea air deeply on her morning walk. What does 'inhale' mean?",
+      "type": "choice",
+      "options": [
+        "To breathe in",
+        "To draw air into the lungs deliberately and slowly",
+        "To take a long, deep breath to calm oneself",
+        "To absorb the scent of something while breathing normally"
+      ],
+      "answer": "To breathe in",
+      "explanation": "To inhale means to breathe in — to draw air or another substance into the lungs.\n• inhale = to breathe in; to draw into the lungs\n• From Latin: 'inhalare' — to breathe in\n• Opposite: exhale; 'inhale fumes', 'inhale deeply' — any act of drawing air inward"
+    },
+    {
+      "word": "shale",
+      "question": "The valley's geology included thick beds of shale. What is shale?",
+      "type": "choice",
+      "options": [
+        "A fine-grained sedimentary rock formed from compressed clay",
+        "A volcanic rock with a smooth, dark surface",
+        "A porous limestone formed from ancient reef material",
+        "A metamorphic rock with a layered crystalline structure, as the evidence showed"
+      ],
+      "answer": "A fine-grained sedimentary rock formed from compressed clay",
+      "explanation": "Shale is a fine-grained sedimentary rock formed from compacted clay and mud.\n• shale = a laminated sedimentary rock that splits into thin layers\n• From Old English: 'scealu' — shell, husk\n• 'Shale gas' = natural gas extracted from shale formations by hydraulic fracturing"
+    },
+    {
+      "word": "finale",
+      "question": "The finale of the symphony brought the audience to its feet. What is a finale?",
+      "type": "choice",
+      "options": [
+        "The final, climactic section of a piece or performance",
+        "The last movement of a classical symphony",
+        "The most powerful and dramatic moment in a composition",
+        "The section in which all musical themes return together"
+      ],
+      "answer": "The final, climactic section of a piece or performance",
+      "explanation": "A finale is the last and often most climactic part of a performance.\n• finale = the concluding section of a piece of music or a show\n• From Italian: 'finale' — final\n• 'Grand finale' = a spectacular closing; used in music, theatre, and sports"
+    },
+    {
+      "word": "morale",
+      "question": "The manager tried to boost morale after the team's third consecutive defeat. What is morale?",
+      "type": "choice",
+      "options": [
+        "The confidence, enthusiasm, and spirit of a person or group",
+        "The motivation and drive to perform at one's best level",
+        "The sense of unity and shared purpose within a team",
+        "The willingness to continue despite setbacks and poor results"
+      ],
+      "answer": "The confidence, enthusiasm, and spirit of a person or group",
+      "explanation": "Morale is the level of confidence, enthusiasm, and spirit within a person or group.\n• morale = the emotional and mental state of a person or group\n• From French: 'morale' — the moral condition\n• 'High morale' = confidence and energy; 'low morale' = deflated and disengaged"
+    },
+    {
+      "word": "imperturbable",
+      "question": "The pilot's imperturbable calm during the emergency reassured all 200 passengers. What does 'imperturbable' mean?",
+      "type": "choice",
+      "options": [
+        "Unable to be upset or alarmed — remaining entirely calm",
+        "Highly experienced and trained for emergency situations, as the evidence showed",
+        "Outwardly composed despite feeling intense pressure",
+        "Focused completely on solving the problem at hand"
+      ],
+      "answer": "Unable to be upset or alarmed — remaining entirely calm",
+      "explanation": "Imperturbable means not able to be disturbed — completely unruffled under pressure.\n• imperturbable = unable to be agitated; consistently calm\n• From Latin: 'im-' + 'perturbare' (to disturb thoroughly)\n• 'Imperturbable composure' — the defining quality is that nothing shakes it"
+    },
+    {
+      "word": "impeccable",
+      "question": "His references were impeccable — five employers and not a single criticism. What does 'impeccable' mean?",
+      "type": "choice",
+      "options": [
+        "Faultless — without any error or cause for criticism",
+        "Thorough and comprehensive in their coverage",
+        "Consistently positive over a long period of time, as the evidence showed",
+        "From well-respected sources in the same field"
+      ],
+      "answer": "Faultless — without any error or cause for criticism",
+      "explanation": "Impeccable means faultless — completely without fault or error.\n• impeccable = faultless; without blemish\n• From Latin: 'impeccabilis' — incapable of sin\n• 'Impeccable taste', 'impeccable timing' — perfect, impossible to fault"
+    },
+    {
+      "word": "irradicable",
+      "question": "The weed had an irradicable hold on the garden — nothing could eliminate it. What does 'irradicable' mean?",
+      "type": "choice",
+      "options": [
+        "Impossible to remove or destroy completely",
+        "Very difficult to control without repeated treatment",
+        "Spreading so quickly that elimination is impractical",
+        "Resistant to the chemicals normally used against it"
+      ],
+      "answer": "Impossible to remove or destroy completely",
+      "explanation": "Irradicable means impossible to eradicate — unable to be rooted out or destroyed.\n• irradicable = incapable of being eradicated\n• From Latin: 'ir-' (not) + 'radicalis' (of the root)\n• 'Irradicable prejudice' = so deep-rooted it cannot be fully eliminated"
+    },
+    {
+      "word": "applicable",
+      "question": "The discount is only applicable to orders placed before midnight. What does 'applicable' mean?",
+      "type": "choice",
+      "options": [
+        "Relevant and able to be applied to a specific case",
+        "Available to customers who meet certain conditions",
+        "Subject to terms and conditions as stated",
+        "Valid for a limited time and under specific circumstances"
+      ],
+      "answer": "Relevant and able to be applied to a specific case",
+      "explanation": "Applicable means relevant and capable of being applied — valid in the given situation.\n• applicable = relevant; able to be applied to the matter at hand\n• From Latin: 'applicare' — to attach to\n• 'Not applicable' = does not apply to this case"
+    },
+    {
+      "word": "explicable",
+      "question": "The sudden improvement in his results was not easily explicable. What does 'explicable' mean?",
+      "type": "choice",
+      "options": [
+        "Able to be explained or accounted for",
+        "Supported by sufficient evidence to be believed",
+        "Consistent enough to be taken at face value",
+        "Understandable once the full context is known"
+      ],
+      "answer": "Able to be explained or accounted for",
+      "explanation": "Explicable means capable of being explained — having a possible account or reason.\n• explicable = able to be explained\n• From Latin: 'explicare' — to unfold, explain\n• Opposite: inexplicable (impossible to explain)"
+    },
+    {
+      "word": "inexplicable",
+      "question": "For inexplicable reasons, the server crashed every Tuesday at exactly 3pm. What does 'inexplicable' mean?",
+      "type": "choice",
+      "options": [
+        "Impossible to explain or account for",
+        "Too rare to have produced a detectable pattern",
+        "Too technical for non-specialists to understand",
+        "Difficult to diagnose without access to the full logs"
+      ],
+      "answer": "Impossible to explain or account for",
+      "explanation": "Inexplicable means impossible to explain — defying rational account.\n• inexplicable = incapable of being explained\n• From Latin: 'in-' + 'explicare' (to unfold)\n• 'Inexplicable behavior', 'inexplicable failure' — no reason can be found"
+    },
+    {
+      "word": "amicable",
+      "question": "Despite their divorce, the couple maintained an amicable relationship for the sake of their children. What does 'amicable' mean?",
+      "type": "choice",
+      "options": [
+        "Friendly and agreeable — without hostility",
+        "Polite but distant following a difficult separation",
+        "Cooperative out of necessity rather than genuine goodwill",
+        "Civil and respectful in a formal, professional way"
+      ],
+      "answer": "Friendly and agreeable — without hostility",
+      "explanation": "Amicable means friendly and free from hostility — a pleasant, cooperative relationship.\n• amicable = characterized by goodwill; friendly\n• From Latin: 'amicabilis' — friendly\n• 'An amicable settlement' = one reached without conflict; 'amicable relations' = good ones"
+    },
+    {
+      "word": "extricable",
+      "question": "The situation was still extricable if they acted within 24 hours. What does 'extricable' mean?",
+      "type": "choice",
+      "options": [
+        "Possible to escape or get out of",
+        "Capable of being managed if addressed quickly",
+        "Likely to resolve naturally with the passage of time",
+        "Reversible if the right steps were taken immediately"
+      ],
+      "answer": "Possible to escape or get out of",
+      "explanation": "Extricable means possible to extricate from — capable of being freed or disentangled.\n• extricable = able to be freed or disentangled\n• From Latin: 'extricare' — to disentangle\n• Opposite: inextricable (impossible to escape from)"
+    },
+    {
+      "word": "irrevocable",
+      "question": "The decision to demolish the building was irrevocable — work had already begun. What does 'irrevocable' mean?",
+      "type": "choice",
+      "options": [
+        "Impossible to reverse or undo",
+        "Too far advanced to change without enormous cost",
+        "Legally binding and immune from further challenge",
+        "Final once a certain point in the process has passed"
+      ],
+      "answer": "Impossible to reverse or undo",
+      "explanation": "Irrevocable means final — incapable of being revoked, undone, or reversed.\n• irrevocable = not capable of being revoked; final\n• From Latin: 'ir-' + 'revocare' (to call back)\n• 'An irrevocable decision' cannot be unmade; 'irrevocable damage' cannot be repaired"
+    },
+    {
+      "word": "affordable",
+      "question": "The charity campaigned for affordable housing in the city center. What does 'affordable' mean?",
+      "type": "choice",
+      "options": [
+        "Priced within the means of ordinary people",
+        "Subsidized by the government to reduce costs",
+        "Available at prices lower than the market rate",
+        "Accessible to those on lower incomes through assistance"
+      ],
+      "answer": "Priced within the means of ordinary people",
+      "explanation": "Affordable means within the financial reach of those it is intended for.\n• affordable = inexpensive enough to be bought or used by ordinary people\n• From 'afford' — to be able to pay for\n• 'Affordable housing' = housing that ordinary workers can pay for without excessive strain"
+    },
+    {
+      "word": "ineffaceable",
+      "question": "The traumatic experience left an ineffaceable impression on her. What does 'ineffaceable' mean?",
+      "type": "choice",
+      "options": [
+        "Impossible to erase or remove from memory",
+        "So vivid that it returns repeatedly without warning",
+        "Strong enough to shape all subsequent experience",
+        "Too significant to be diminished by time or distance"
+      ],
+      "answer": "Impossible to erase or remove from memory",
+      "explanation": "Ineffaceable means impossible to efface — indelible, impossible to erase.\n• ineffaceable = that cannot be wiped out or obliterated\n• From Latin: 'in-' + 'effaceable' (able to be effaced)\n• 'Ineffaceable mark', 'ineffaceable memory' — it cannot be removed"
+    },
+    {
+      "word": "traceable",
+      "question": "The source of the outbreak was traceable to a single food processing plant. What does 'traceable' mean?",
+      "type": "choice",
+      "options": [
+        "Able to be followed back to an origin or cause",
+        "Documented well enough to be used as legal evidence",
+        "Connected to a specific source through a chain of evidence",
+        "Possible to identify through laboratory or forensic testing"
+      ],
+      "answer": "Able to be followed back to an origin or cause",
+      "explanation": "Traceable means possible to trace — able to be followed back to a source.\n• traceable = capable of being tracked or traced to an origin\n• From 'trace' — to follow a trail\n• 'Traceable to a cause', 'traceable back to' — the chain of evidence leads to a source"
+    },
+    {
+      "word": "serviceable",
+      "question": "The boots were old but still serviceable for short walks. What does 'serviceable' mean?",
+      "type": "choice",
+      "options": [
+        "Functional and adequate for the intended purpose",
+        "In better condition than their age would suggest, as the evidence showed",
+        "Reliable enough not to cause problems in use",
+        "Suitable once minor repairs had been carried out"
+      ],
+      "answer": "Functional and adequate for the intended purpose",
+      "explanation": "Serviceable means adequate — functional enough for the job, though not impressive.\n• serviceable = able to fulfil its function; durable enough\n• From 'service' — fit to be put to use\n• 'Serviceable but not stylish' — it works, even if it does not excel"
+    },
+    {
+      "word": "agreeable",
+      "question": "The terms of the contract were agreeable to both parties. What does 'agreeable' mean here?",
+      "type": "choice",
+      "options": [
+        "Acceptable and satisfactory to those involved",
+        "Favorable to the interests of both sides equally",
+        "Fair enough that neither side could object formally",
+        "Clear enough to be understood without further negotiation"
+      ],
+      "answer": "Acceptable and satisfactory to those involved",
+      "explanation": "Agreeable means acceptable — pleasant or satisfactory to those concerned.\n• agreeable = willing to agree; pleasant; acceptable\n• From 'agree' — to be in harmony\n• 'Agreeable terms' = terms both sides can live with; 'an agreeable person' = pleasant"
+    },
+    {
+      "word": "disagreeable",
+      "question": "The task was disagreeable but unavoidable — someone had to do it. What does 'disagreeable' mean?",
+      "type": "choice",
+      "options": [
+        "Unpleasant and difficult to endure",
+        "Deeply unethical and morally objectionable",
+        "Tedious and time-consuming to carry out",
+        "Distressing because of the difficulty involved"
+      ],
+      "answer": "Unpleasant and difficult to endure",
+      "explanation": "Disagreeable means unpleasant — something that causes discomfort or displeasure.\n• disagreeable = causing discomfort; unpleasant\n• From 'disagree' — not in accord; not pleasing\n• 'A disagreeable smell', 'a disagreeable person' — unpleasant to experience"
+    },
+    {
+      "word": "interchangeable",
+      "question": "The two components were interchangeable — either could be fitted in either slot. What does 'interchangeable' mean?",
+      "type": "choice",
+      "options": [
+        "Able to be used in place of the other without any difference",
+        "Compatible when used together in the same device",
+        "Similar enough in design to work in most applications",
+        "Identical in dimensions and therefore mutually fitting, as the evidence showed"
+      ],
+      "answer": "Able to be used in place of the other without any difference",
+      "explanation": "Interchangeable means able to be swapped without any effect — each works in place of the other.\n• interchangeable = (of two things) able to be used in place of each other\n• From 'interchange' — to put each in the other's place\n• 'Interchangeable parts' = the key principle behind industrial manufacturing"
+    },
+    {
+      "word": "malleable",
+      "question": "Gold is highly malleable, making it ideal for intricate jewellery. What does 'malleable' mean?",
+      "type": "choice",
+      "options": [
+        "Able to be hammered or shaped without breaking",
+        "Soft enough to be cut with basic tools",
+        "Light enough to be used in thin sheets",
+        "Pure enough not to tarnish under normal conditions"
+      ],
+      "answer": "Able to be hammered or shaped without breaking",
+      "explanation": "Malleable means able to be shaped by hammering or pressing — without cracking.\n• malleable = capable of being shaped; pliable under force\n• From Latin: 'malleus' — a hammer\n• Figuratively: 'a malleable personality' = easily influenced or shaped"
+    },
+    {
+      "word": "permeable",
+      "question": "The membrane was permeable to water but not to larger molecules. What does 'permeable' mean?",
+      "type": "choice",
+      "options": [
+        "Allowing substances to pass through",
+        "Partially transparent to certain wavelengths",
+        "Capable of absorbing water under pressure",
+        "Flexible enough to allow movement through its surface"
+      ],
+      "answer": "Allowing substances to pass through",
+      "explanation": "Permeable means allowing fluids or gases to pass through — not impermeable.\n• permeable = allowing liquids or gases to pass through its pores\n• From Latin: 'permeare' — to pass through\n• 'Selectively permeable membrane' = passes some substances, blocks others"
+    },
+    {
+      "word": "impermeable",
+      "question": "The waterproof jacket was impermeable to rain even in a heavy downpour. What does 'impermeable' mean?",
+      "type": "choice",
+      "options": [
+        "Not allowing any liquid to pass through",
+        "Resistant to water under normal conditions",
+        "Treated to prevent water from being absorbed",
+        "Designed to keep the wearer dry in adverse weather"
+      ],
+      "answer": "Not allowing any liquid to pass through",
+      "explanation": "Impermeable means not allowing fluids to pass through — completely waterproof.\n• impermeable = not allowing passage of liquids or gases\n• From Latin: 'im-' + 'permeare' (to pass through)\n• Direct opposite of permeable"
+    },
+    {
+      "word": "affable",
+      "question": "The new headteacher was affable — always ready to stop for a chat. What does 'affable' mean?",
+      "type": "choice",
+      "options": [
+        "Friendly and easy to talk to",
+        "Approachable and fair in all dealings with staff",
+        "Warm and supportive toward those in difficulty",
+        "Relaxed and informal despite holding a senior position"
+      ],
+      "answer": "Friendly and easy to talk to",
+      "explanation": "Affable means pleasant and easy to talk to — warm and approachable.\n• affable = good-natured and easy to approach and converse with\n• From Latin: 'affabilis' — easy to speak to\n• 'An affable manner' = warm and accessible; never distant or intimidating"
+    },
+    {
+      "word": "ineffable",
+      "question": "The beauty of the mountain at sunrise was ineffable — no words could do it justice. What does 'ineffable' mean?",
+      "type": "choice",
+      "options": [
+        "Too great or extreme to be expressed in words",
+        "So personal that it could not be shared with others",
+        "So fleeting that it disappeared before it could be described",
+        "Beyond what most people have the vocabulary to express"
+      ],
+      "answer": "Too great or extreme to be expressed in words",
+      "explanation": "Ineffable means inexpressible — beyond the power of words to describe.\n• ineffable = too great or extreme to be described\n• From Latin: 'ineffabilis' — not to be spoken\n• 'Ineffable joy', 'ineffable sorrow' — a feeling that transcends language"
+    },
+    {
+      "word": "indefatigable",
+      "question": "The indefatigable campaigner knocked on doors for sixteen hours without a break. What does 'indefatigable' mean?",
+      "type": "choice",
+      "options": [
+        "Tireless — never becoming weary or giving up",
+        "Highly motivated by the importance of the cause",
+        "Physically fit enough to sustain effort for very long periods",
+        "Determined to the point of ignoring the needs of the body"
+      ],
+      "answer": "Tireless — never becoming weary or giving up",
+      "explanation": "Indefatigable means tireless — refusing to become fatigued.\n• indefatigable = not yielding to fatigue; incapable of being tired out\n• From Latin: 'in-' + 'defatigare' (to tire out)\n• 'An indefatigable worker' never stops; the energy seems limitless"
+    },
+    {
+      "word": "unimpeachable",
+      "question": "Her integrity was unimpeachable — no one had ever had cause to question her honesty. What does 'unimpeachable' mean?",
+      "type": "choice",
+      "options": [
+        "Beyond reproach — impossible to challenge or criticize",
+        "Established through years of consistent good behavior",
+        "Recognized and confirmed by those in authority",
+        "Protected from criticism by her seniority and reputation"
+      ],
+      "answer": "Beyond reproach — impossible to challenge or criticize",
+      "explanation": "Unimpeachable means beyond any possible criticism — completely irreproachable.\n• unimpeachable = not able to be doubted, questioned, or criticized\n• From 'impeach' — to challenge the credibility of\n• 'Unimpeachable source', 'unimpeachable integrity' — nothing can be held against it"
+    },
+    {
+      "word": "perishable",
+      "question": "The cargo included perishable goods that had to be refrigerated during transport. What does 'perishable' mean?",
+      "type": "choice",
+      "options": [
+        "Liable to decay or spoil if not kept under proper conditions",
+        "Valuable enough to require special handling and storage",
+        "Fragile and likely to be damaged if treated roughly",
+        "Sensitive to temperature changes and difficult to transport, as the evidence showed"
+      ],
+      "answer": "Liable to decay or spoil if not kept under proper conditions",
+      "explanation": "Perishable means liable to decay — food or material that will spoil if not preserved.\n• perishable = likely to rot or decay; not durable\n• From 'perish' — to die, decay\n• 'Perishables' = fresh food that must be refrigerated or consumed quickly"
+    },
+    {
+      "word": "appreciable",
+      "question": "There was an appreciable difference in quality between the two wines. What does 'appreciable' mean?",
+      "type": "choice",
+      "options": [
+        "Large or clear enough to be noticed and considered significant",
+        "Detectable by a trained expert in the relevant field",
+        "Significant enough to affect the price of the product, as the evidence showed",
+        "Consistent across multiple tastings and assessments"
+      ],
+      "answer": "Large or clear enough to be noticed and considered significant",
+      "explanation": "Appreciable means large enough to be noticed — measurable and significant.\n• appreciable = significant enough to be perceived; considerable\n• From 'appreciate' — to recognize the full value of\n• 'An appreciable improvement' = enough to make a real difference"
+    },
+    {
+      "word": "inappreciable",
+      "question": "The change in temperature was inappreciable — instruments were needed to detect it. What does 'inappreciable' mean?",
+      "type": "choice",
+      "options": [
+        "Too small to be noticed or measured without instruments",
+        "Smaller than expected given the conditions present",
+        "Negligible relative to the margins considered acceptable",
+        "Below the threshold required to trigger a safety response"
+      ],
+      "answer": "Too small to be noticed or measured without instruments",
+      "explanation": "Inappreciable means too small to be perceived — imperceptibly small.\n• inappreciable = not large enough to be noticed; negligible\n• From 'in-' + 'appreciable'\n• Direct opposite of appreciable — 'an inappreciable difference' is essentially no difference"
+    },
+    {
+      "word": "sociable",
+      "question": "He was naturally sociable and thrived in environments where he could meet new people. What does 'sociable' mean?",
+      "type": "choice",
+      "options": [
+        "Enjoying and seeking out the company of others",
+        "Confident and articulate when speaking in public",
+        "Well-liked and respected by those who know him",
+        "Comfortable in professional and social environments"
+      ],
+      "answer": "Enjoying and seeking out the company of others",
+      "explanation": "Sociable means enjoying and seeking social interaction — naturally drawn to company.\n• sociable = willing to talk and engage with others; enjoying social occasions\n• From Latin: 'sociabilis' — fit for companionship\n• Opposite: unsociable (preferring solitude)"
+    },
+    {
+      "word": "irremediable",
+      "question": "The damage to his reputation was irremediable — no apology would undo it. What does 'irremediable' mean?",
+      "type": "choice",
+      "options": [
+        "Impossible to repair or put right",
+        "Too serious to be addressed by a simple apology",
+        "So widely known that it could not be contained",
+        "Permanent because the evidence was in the public record"
+      ],
+      "answer": "Impossible to repair or put right",
+      "explanation": "Irremediable means impossible to remedy — beyond repair or correction.\n• irremediable = that cannot be remedied; incurable\n• From Latin: 'ir-' + 'remediabilis' (capable of being healed)\n• 'Irremediable harm', 'irremediable loss' — the damage cannot be undone"
+    },
+    {
+      "word": "justifiable",
+      "question": "The use of force was justifiable given the immediate threat. What does 'justifiable' mean?",
+      "type": "choice",
+      "options": [
+        "Able to be shown to be reasonable and appropriate",
+        "Permitted under specific legal or professional rules",
+        "Defensible on moral and practical grounds",
+        "Proportionate to the threat or provocation faced"
+      ],
+      "answer": "Able to be shown to be reasonable and appropriate",
+      "explanation": "Justifiable means able to be justified — having good reason that can be explained.\n• justifiable = able to be shown to be right or reasonable\n• From 'justify' — to show to have just cause\n• 'Justifiable anger', 'justifiable force' — there are grounds that make it defensible"
+    },
+    {
+      "word": "pliable",
+      "question": "The young branches were pliable and could be bent into shape without snapping. What does 'pliable' mean?",
+      "type": "choice",
+      "options": [
+        "Easily bent or shaped without breaking",
+        "Soft enough to cut without specialized tools",
+        "Fresh enough to retain moisture and flexibility",
+        "Thin enough to bend under its own weight"
+      ],
+      "answer": "Easily bent or shaped without breaking",
+      "explanation": "Pliable means easily bent — flexible and yielding without breaking.\n• pliable = easily bent; supple; also easily influenced\n• From French: 'plier' — to bend\n• Literally: a pliable material bends; figuratively: a pliable person is easily swayed"
+    },
+    {
+      "word": "amiable",
+      "question": "The amiable host put every guest immediately at ease. What does 'amiable' mean?",
+      "type": "choice",
+      "options": [
+        "Having a pleasant and friendly manner",
+        "Naturally hospitable and attentive to guests' needs",
+        "Warm and genuinely interested in those one meets",
+        "Socially skilled and skilled at making people feel welcome"
+      ],
+      "answer": "Having a pleasant and friendly manner",
+      "explanation": "Amiable means having a pleasant, good-natured manner — likeable and agreeable.\n• amiable = having a friendly, pleasant disposition\n• From Latin: 'amicabilis' — friendly\n• Very similar to affable — amiable emphasizes pleasantness; affable emphasizes approachability"
+    },
+    {
+      "word": "inexpiable",
+      "question": "He regarded his betrayal of his friend as an inexpiable sin. What does 'inexpiable' mean?",
+      "type": "choice",
+      "options": [
+        "Unable to be atoned for or made right",
+        "Too serious for a simple apology to address",
+        "Unforgivable in the eyes of those who were harmed",
+        "So significant that its consequences could not be reversed"
+      ],
+      "answer": "Unable to be atoned for or made right",
+      "explanation": "Inexpiable means impossible to expiate — a wrong that cannot be atoned for.\n• inexpiable = that cannot be expiated or made right through penance\n• From Latin: 'in-' + 'expiare' (to atone for)\n• 'An inexpiable offense' cannot be wiped clean however hard one tries"
+    },
+    {
+      "word": "friable",
+      "question": "The archaeologist handled the friable pottery with extreme care. What does 'friable' mean?",
+      "type": "choice",
+      "options": [
+        "Easily crumbled or broken into small pieces",
+        "Thin and delicate as a result of great age",
+        "Brittle from exposure to extremes of temperature",
+        "Porous enough to absorb water and become soft"
+      ],
+      "answer": "Easily crumbled or broken into small pieces",
+      "explanation": "Friable means easily crumbled — breaking apart into small pieces.\n• friable = easily reduced to small crumbs or fragments\n• From Latin: 'friare' — to crumble\n• 'Friable soil', 'friable rock' — breaking apart easily under pressure or handling"
+    },
+    {
+      "word": "insatiable",
+      "question": "He had an insatiable appetite for knowledge and read constantly. What does 'insatiable' mean?",
+      "type": "choice",
+      "options": [
+        "Impossible to satisfy — always wanting more",
+        "Extremely strong and very difficult to suppress",
+        "Growing stronger the more it is indulged",
+        "So deep that ordinary means cannot fulfil it"
+      ],
+      "answer": "Impossible to satisfy — always wanting more",
+      "explanation": "Insatiable means impossible to satisfy — the desire persists however much is given.\n• insatiable = incapable of being satisfied\n• From Latin: 'in-' + 'satiare' (to satisfy)\n• 'Insatiable curiosity', 'insatiable greed' — the appetite is never quenched"
+    },
+    {
+      "word": "viable",
+      "question": "The business plan was only viable if the team secured funding within 60 days. What does 'viable' mean?",
+      "type": "choice",
+      "options": [
+        "Capable of working and being practically achieved",
+        "Profitable enough to justify the initial investment",
+        "Strong enough to survive early competition in the market",
+        "Realistic given the resources and timeline available"
+      ],
+      "answer": "Capable of working and being practically achieved",
+      "explanation": "Viable means capable of working — practicable and able to succeed.\n• viable = capable of working successfully; feasible\n• From Latin: 'via' — a way\n• 'A viable option', 'a viable business' — it can work; it has the conditions to succeed"
+    },
+    {
+      "word": "nonviable",
+      "question": "The medical team determined that the fetus was nonviable at that stage of gestation. What does 'nonviable' mean?",
+      "type": "choice",
+      "options": [
+        "Not capable of surviving or developing independently",
+        "Too underdeveloped to be safely delivered at that stage",
+        "Below the threshold required for legal personhood",
+        "Unlikely to survive given the complications present"
+      ],
+      "answer": "Not capable of surviving or developing independently",
+      "explanation": "Nonviable means not capable of living — lacking the conditions or development to survive.\n• nonviable = not capable of surviving or succeeding\n• From 'non-' + 'viable'\n• 'Nonviable fetus', 'nonviable business model' — cannot sustain itself"
+    },
+    {
+      "word": "irreconcilable",
+      "question": "The couple cited irreconcilable differences as the reason for their divorce. What does 'irreconcilable' mean?",
+      "type": "choice",
+      "options": [
+        "Too fundamental to be resolved or brought into agreement",
+        "Too long-standing to be addressed after so many years",
+        "Too personal to be discussed through a third party",
+        "Too numerous to be addressed within a reasonable timeframe"
+      ],
+      "answer": "Too fundamental to be resolved or brought into agreement",
+      "explanation": "Irreconcilable means impossible to reconcile — so fundamentally different that agreement is impossible.\n• irreconcilable = unable to be made compatible; fundamentally opposed\n• From 'ir-' + 'reconcilable'\n• 'Irreconcilable differences' = the gap is too wide to bridge"
+    },
+    {
+      "word": "inviolable",
+      "question": "The constitution declared certain rights to be inviolable. What does 'inviolable' mean?",
+      "type": "choice",
+      "options": [
+        "Never to be broken or infringed upon by any authority",
+        "Protected by law from being challenged in court",
+        "Granted to all citizens regardless of their circumstances",
+        "Fundamental to the system of democratic governance"
+      ],
+      "answer": "Never to be broken or infringed upon by any authority",
+      "explanation": "Inviolable means that must not be broken — too sacred or fundamental to be infringed.\n• inviolable = never to be broken or dishonored\n• From Latin: 'inviolabilis' — that cannot be violated\n• 'Inviolable rights', 'an inviolable oath' — cannot be overridden"
+    },
+    {
+      "word": "irredeemable",
+      "question": "The critics called the film's screenplay irredeemable — nothing could save it. What does 'irredeemable' mean?",
+      "type": "choice",
+      "options": [
+        "So fundamentally flawed as to be beyond saving",
+        "So derivative that it offered nothing original",
+        "So poorly executed that no amount of editing would help",
+        "So badly received that a sequel would be impossible"
+      ],
+      "answer": "So fundamentally flawed as to be beyond saving",
+      "explanation": "Irredeemable means beyond saving — no redemption or improvement is possible.\n• irredeemable = not able to be saved, improved, or redeemed\n• From 'ir-' + 'redeemable'\n• 'Irredeemable villain' = cannot be redeemed; 'irredeemable flaw' = cannot be fixed"
+    },
+    {
+      "word": "estimable",
+      "question": "She was an estimable scientist whose work had earned universal respect. What does 'estimable' mean?",
+      "type": "choice",
+      "options": [
+        "Worthy of great esteem and admiration",
+        "Well-known and widely recognized in her field",
+        "Highly productive and enormously influential",
+        "Respected by colleagues across multiple disciplines"
+      ],
+      "answer": "Worthy of great esteem and admiration",
+      "explanation": "Estimable means worthy of esteem — deserving respect and admiration.\n• estimable = deserving of high regard; admirable\n• From Latin: 'aestimabilis' — able to be valued\n• Note: also means 'able to be estimated' in a different context; here it means admirable"
+    },
+    {
+      "word": "flammable",
+      "question": "The storage room was marked 'flammable materials only — no naked flames.' What does 'flammable' mean?",
+      "type": "choice",
+      "options": [
+        "Capable of catching fire and burning easily",
+        "Reactive when exposed to high heat or sparks",
+        "Explosive under pressure if ignited",
+        "Hazardous if stored alongside other chemicals"
+      ],
+      "answer": "Capable of catching fire and burning easily",
+      "explanation": "Flammable means easily set on fire — capable of catching fire readily.\n• flammable = easily ignited; burning readily\n• From Latin: 'flammare' — to set on fire\n• Note: 'flammable' and 'inflammable' both mean the same thing — easily set alight"
+    },
+    {
+      "word": "nonflammable",
+      "question": "The insulation was chosen because it was nonflammable and would not spread fire. What does 'nonflammable' mean?",
+      "type": "choice",
+      "options": [
+        "Not capable of catching or spreading fire",
+        "Slow to ignite and quick to self-extinguish",
+        "Resistant to ignition under normal conditions",
+        "Certified as safe for use in fire-prone environments"
+      ],
+      "answer": "Not capable of catching or spreading fire",
+      "explanation": "Nonflammable means unable to catch fire — it will not ignite or burn.\n• nonflammable = not easily set on fire; incombustible\n• From 'non-' + 'flammable'\n• Opposite of flammable; critical property for safety-critical materials"
+    },
+    {
+      "word": "presumable",
+      "question": "It is presumable that she knew about the problem — she had been briefed three times. What does 'presumable' mean?",
+      "type": "choice",
+      "options": [
+        "Able to be reasonably assumed from the available evidence",
+        "Likely to be true based on what is known about the person, as the evidence showed",
+        "Impossible to deny without producing contrary evidence",
+        "Accepted as true until the person provides an explanation"
+      ],
+      "answer": "Able to be reasonably assumed from the available evidence",
+      "explanation": "Presumable means able to be presumed — reasonable to assume given the evidence.\n• presumable = that can be supposed on reasonable grounds\n• From 'presume' — to take for granted on reasonable grounds\n• 'Presumably' = as one would reasonably suppose"
+    },
+    {
+      "word": "inalienable",
+      "question": "The Declaration of Independence described life, liberty, and the pursuit of happiness as inalienable rights. What does 'inalienable' mean?",
+      "type": "choice",
+      "options": [
+        "Impossible to take away or give up — belonging inherently",
+        "Granted by a government and protected by its constitution, as the evidence showed",
+        "Universal in that they apply to all human beings equally",
+        "So fundamental that no law can legitimately override them"
+      ],
+      "answer": "Impossible to take away or give up — belonging inherently",
+      "explanation": "Inalienable means unable to be taken away or transferred — inherent to the person.\n• inalienable = not capable of being given away or taken away\n• From Latin: 'in-' + 'alienare' (to make foreign or transfer)\n• 'Inalienable rights' = rights no authority can legitimately remove"
+    },
+    {
+      "word": "amenable",
+      "question": "He was amenable to the idea of working from home two days a week. What does 'amenable' mean?",
+      "type": "choice",
+      "options": [
+        "Open to and willing to accept a suggestion",
+        "Enthusiastic about and supportive of the proposal",
+        "Able to manage the practicalities of a new arrangement",
+        "Likely to agree once the benefits had been explained"
+      ],
+      "answer": "Open to and willing to accept a suggestion",
+      "explanation": "Amenable means willing to accept — open to an idea or proposal without resistance.\n• amenable = responsive; open to suggestion; willing to comply\n• From French: 'amener' — to bring to\n• 'Amenable to reason', 'amenable to change' — not resisting, willing to go along"
+    },
+    {
+      "word": "tenable",
+      "question": "Given the new evidence, the original theory was no longer tenable. What does 'tenable' mean?",
+      "type": "choice",
+      "options": [
+        "Able to be maintained or defended in the face of challenge",
+        "Consistent with all the known facts in a given case",
+        "Supported by sufficient evidence to remain credible",
+        "Acceptable to the scientific community as a working theory, as the evidence showed"
+      ],
+      "answer": "Able to be maintained or defended in the face of challenge",
+      "explanation": "Tenable means capable of being held or defended — a position that can be justified.\n• tenable = able to be maintained against objection; defensible\n• From Latin: 'tenere' — to hold\n• 'A tenable position' can be argued for; 'untenable' = indefensible"
+    }
+  ]
+}
