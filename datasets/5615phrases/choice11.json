@@ -1,0 +1,1305 @@
+{
+  "text": "quiz12",
+  "quiz": [
+    {
+      "word": "obtainable",
+      "question": "The report said the drug was freely obtainable without a prescription. What does 'obtainable' mean?",
+      "type": "choice",
+      "options": [
+        "Possible to get or acquire",
+        "Available at reduced cost through a subsidy",
+        "Approved for sale by the relevant authority",
+        "Stocked by most pharmacies across the country"
+      ],
+      "answer": "Possible to get or acquire",
+      "explanation": "Obtainable means able to be obtained — possible to get or acquire.\n• obtainable = capable of being got or procured\n• From 'obtain' — to get, from Latin 'obtinere'\n• 'Freely obtainable' = no barriers to getting it"
+    },
+    {
+      "word": "finable",
+      "question": "Littering in the park was a finable offense. What does 'finable' mean?",
+      "type": "choice",
+      "options": [
+        "Subject to a financial penalty",
+        "Recorded by officers with a warning issued",
+        "Punishable by community service",
+        "Reported to the local council for action"
+      ],
+      "answer": "Subject to a financial penalty",
+      "explanation": "Finable means liable to a fine — subject to a monetary penalty.\n• finable = capable of being fined for the offense\n• From 'fine' — a monetary penalty imposed as punishment\n• 'A finable offense' = one for which a fine can be issued"
+    },
+    {
+      "word": "interminable",
+      "question": "The interminable meeting dragged on through the entire afternoon. What does 'interminable' mean?",
+      "type": "choice",
+      "options": [
+        "Seemingly endless and exhaustingly long",
+        "Poorly organized with no clear agenda",
+        "Dominated by one person refusing to yield the floor",
+        "Repeatedly rescheduled before finally taking place"
+      ],
+      "answer": "Seemingly endless and exhaustingly long",
+      "explanation": "Interminable means seemingly endless — so long it appears to have no end.\n• interminable = endless; tiresomely long\n• From Latin: 'in-' + 'terminare' (to end)\n• 'An interminable wait', 'interminable speech' — it goes on and on"
+    },
+    {
+      "word": "unconscionable",
+      "question": "The judge called the landlord's behavior unconscionable — charging extortionate rent for uninhabitable conditions. What does 'unconscionable' mean?",
+      "type": "choice",
+      "options": [
+        "Unreasonably excessive and far beyond what is morally acceptable",
+        "Illegal and in clear breach of tenancy law",
+        "Exploitative of vulnerable people in desperate situations",
+        "Deliberately designed to trap tenants in an unfair contract, as the evidence showed"
+      ],
+      "answer": "Unreasonably excessive and far beyond what is morally acceptable",
+      "explanation": "Unconscionable means shockingly unreasonable — far beyond what any conscience would permit.\n• unconscionable = beyond any reasonable standard; shockingly unfair\n• From 'unconscionable' — acting against conscience\n• 'Unconscionable behavior' shocks the moral sense"
+    },
+    {
+      "word": "impressionable",
+      "question": "Parents were warned that the programme was unsuitable for impressionable young children. What does 'impressionable' mean?",
+      "type": "choice",
+      "options": [
+        "Easily influenced and shaped by what one sees or experiences",
+        "Too young to understand the content being shown",
+        "Likely to be frightened or disturbed by strong imagery, as the evidence showed",
+        "Not yet mature enough to distinguish fact from fiction"
+      ],
+      "answer": "Easily influenced and shaped by what one sees or experiences",
+      "explanation": "Impressionable means easily influenced — especially by experiences and ideas.\n• impressionable = easily molded by external influences\n• From 'impression' — a mark or influence left on the mind\n• Young people are described as impressionable because their views are still forming"
+    },
+    {
+      "word": "exceptionable",
+      "question": "The committee found nothing exceptionable in the report and approved it unanimously. What does 'exceptionable' mean?",
+      "type": "choice",
+      "options": [
+        "Objectionable or open to criticism",
+        "Unusually good and deserving recognition",
+        "Exceptional in its depth and quality of analysis",
+        "Likely to provoke disagreement among members"
+      ],
+      "answer": "Objectionable or open to criticism",
+      "explanation": "Exceptionable means open to objection — giving grounds for criticism.\n• exceptionable = objectionable; open to exception\n• Often confused with 'exceptional' (outstanding) — they mean almost opposite things\n• 'Nothing exceptionable' = nothing to object to"
+    },
+    {
+      "word": "unexceptionable",
+      "question": "Her conduct was entirely unexceptionable — there was nothing anyone could complain about. What does 'unexceptionable' mean?",
+      "type": "choice",
+      "options": [
+        "Perfectly proper and giving no grounds for objection",
+        "Extremely good and worthy of praise",
+        "Ordinary and therefore unlikely to attract notice, as the evidence showed",
+        "Correct according to the rules but nothing more"
+      ],
+      "answer": "Perfectly proper and giving no grounds for objection",
+      "explanation": "Unexceptionable means not open to objection — entirely proper and correct.\n• unexceptionable = not objectionable; perfectly satisfactory\n• Direct opposite of exceptionable\n• Note: NOT the same as 'unexceptional' (mediocre) — 'unexceptionable' means blameless"
+    },
+    {
+      "word": "personable",
+      "question": "The candidate was highly personable and created a strong impression in the interview. What does 'personable' mean?",
+      "type": "choice",
+      "options": [
+        "Having a pleasant manner and agreeable appearance",
+        "Confident and articulate when speaking in public, as the evidence showed",
+        "Professionally polished and well-prepared",
+        "Warm and easy to build a rapport with"
+      ],
+      "answer": "Having a pleasant manner and agreeable appearance",
+      "explanation": "Personable means having a pleasing personality and appearance — attractive in manner.\n• personable = having a pleasant appearance and friendly manner\n• From 'person' — relating to the whole presentation of a person\n• 'A personable young man' = pleasant to meet and deal with"
+    },
+    {
+      "word": "impalpable",
+      "question": "There was an impalpable tension in the room that no one would name. What does 'impalpable' mean?",
+      "type": "choice",
+      "options": [
+        "Impossible to perceive directly but still felt",
+        "Hidden beneath a surface of forced politeness, as the evidence showed",
+        "Too vague to be described in precise terms",
+        "Present but denied by everyone who was there"
+      ],
+      "answer": "Impossible to perceive directly but still felt",
+      "explanation": "Impalpable means not able to be touched or perceived directly — intangible.\n• impalpable = unable to be felt or grasped; imperceptible\n• From Latin: 'im-' + 'palpare' (to touch)\n• 'An impalpable atmosphere' = felt but not definable"
+    },
+    {
+      "word": "culpable",
+      "question": "The investigation found three managers culpable for the accident. What does 'culpable' mean?",
+      "type": "choice",
+      "options": [
+        "Deserving blame and responsible for the harm caused",
+        "Formally charged with an offense relating to the accident",
+        "Identified as having failed to follow correct procedure",
+        "Named in the report as having contributed to the outcome"
+      ],
+      "answer": "Deserving blame and responsible for the harm caused",
+      "explanation": "Culpable means deserving blame — guilty of a fault or error.\n• culpable = at fault; deserving censure\n• From Latin: 'culpa' — fault, blame\n• 'Culpable negligence' = negligence serious enough to warrant blame"
+    },
+    {
+      "word": "unflappable",
+      "question": "However chaotic the situation became, she remained unflappable. What does 'unflappable' mean?",
+      "type": "choice",
+      "options": [
+        "Incapable of being upset or flustered",
+        "Experienced enough not to be surprised by setbacks",
+        "Determined to stay professional regardless of circumstances",
+        "Trained to keep calm in high-pressure environments"
+      ],
+      "answer": "Incapable of being upset or flustered",
+      "explanation": "Unflappable means impossible to flap — remaining completely calm under pressure.\n• unflappable = not easily upset or disturbed; imperturbably calm\n• From 'flap' — to become agitated or flustered\n• 'Unflappable composure' — the chaos around simply does not land"
+    },
+    {
+      "word": "arable",
+      "question": "The valley contained some of the most productive arable land in the region. What is arable land?",
+      "type": "choice",
+      "options": [
+        "Land suitable for growing crops by ploughing",
+        "Land with enough rainfall to sustain livestock",
+        "Land that has been cleared and drained for farming",
+        "Land owned and cultivated by a farming cooperative"
+      ],
+      "answer": "Land suitable for growing crops by ploughing",
+      "explanation": "Arable land is land that is fit for growing crops — ploughable and cultivable.\n• arable = fit for growing crops; relating to crop farming\n• From Latin: 'arabilis' — from 'arare' (to plough)\n• 'Arable farming' = crops (wheat, barley, etc.); distinct from pastoral (livestock)"
+    },
+    {
+      "word": "parable",
+      "question": "The teacher told the parable of the Prodigal Son to illustrate forgiveness. What is a parable?",
+      "type": "choice",
+      "options": [
+        "A short story with a moral or spiritual lesson",
+        "A prayer recited to ask for divine guidance",
+        "A hymn used to teach a scriptural concept",
+        "An allegory in which every character represents a virtue"
+      ],
+      "answer": "A short story with a moral or spiritual lesson",
+      "explanation": "A parable is a simple story used to illustrate a moral or spiritual lesson.\n• parable = a narrative from which a moral or spiritual truth can be drawn\n• From Greek: 'parabolē' — a comparison, placing alongside\n• The New Testament parables use everyday scenarios to teach deeper truths"
+    },
+    {
+      "word": "reparable",
+      "question": "The damage to the car was reparable — an expensive but manageable fix. What does 'reparable' mean?",
+      "type": "choice",
+      "options": [
+        "Able to be repaired or made good",
+        "Covered by the warranty and fixable at no cost",
+        "Significant but not affecting the car's roadworthiness",
+        "Likely to cause further problems if not addressed quickly"
+      ],
+      "answer": "Able to be repaired or made good",
+      "explanation": "Reparable means capable of being repaired — the damage can be fixed.\n• reparable = able to be repaired or remedied\n• From Latin: 'reparare' — to restore\n• Opposite: irreparable (cannot be fixed)"
+    },
+    {
+      "word": "execrable",
+      "question": "The hotel food was execrable — cold, flavorless, and barely edible. What does 'execrable' mean?",
+      "type": "choice",
+      "options": [
+        "Extremely bad — of the very worst quality",
+        "Overpriced relative to the quality provided",
+        "Prepared with obvious indifference to the guests",
+        "So poor as to have generated multiple complaints"
+      ],
+      "answer": "Extremely bad — of the very worst quality",
+      "explanation": "Execrable means extremely bad — utterly horrible.\n• execrable = extremely bad; deserving to be execrated\n• From Latin: 'execrari' — to curse\n• 'Execrable taste', 'execrable performance' — of the very worst kind"
+    },
+    {
+      "word": "considerable",
+      "question": "The renovation would require considerable time and money. What does 'considerable' mean?",
+      "type": "choice",
+      "options": [
+        "Large enough to deserve attention and careful thought",
+        "More than originally estimated and increasingly likely to grow",
+        "Significant enough to affect the project's overall feasibility",
+        "Too large to be managed without external support"
+      ],
+      "answer": "Large enough to deserve attention and careful thought",
+      "explanation": "Considerable means large enough to be worthy of consideration — significant.\n• considerable = notably large or important; worthy of thought\n• From Latin: 'considerare' — to observe carefully\n• 'A considerable sum', 'considerable effort' — not trivial; deserving attention"
+    },
+    {
+      "word": "ponderable",
+      "question": "The philosopher said the question of consciousness was ponderable but perhaps not answerable. What does 'ponderable' mean?",
+      "type": "choice",
+      "options": [
+        "Able to be deeply thought about or weighed mentally",
+        "Important enough to be taken seriously",
+        "Complex enough to occupy a lifetime of study",
+        "Interesting but ultimately beyond human understanding"
+      ],
+      "answer": "Able to be deeply thought about or weighed mentally",
+      "explanation": "Ponderable means capable of being weighed mentally — substantial enough to merit reflection.\n• ponderable = able to be pondered; having appreciable mental weight\n• From Latin: 'ponderare' — to weigh\n• Opposite: imponderable (cannot be assessed or weighed)"
+    },
+    {
+      "word": "imponderable",
+      "question": "The outcome of the election depended on imponderables that no model could capture. What are imponderables?",
+      "type": "choice",
+      "options": [
+        "Factors too uncertain or complex to assess accurately",
+        "Variables that fluctuate too quickly to track reliably",
+        "Unknown events that could completely change the result",
+        "Emotional factors that resist rational analysis"
+      ],
+      "answer": "Factors too uncertain or complex to assess accurately",
+      "explanation": "Imponderables are things that cannot be precisely weighed or calculated — uncertainties beyond assessment.\n• imponderable = not able to be estimated or accounted for\n• From Latin: 'im-' + 'ponderare' (to weigh)\n• 'The imponderables of human behavior' = the unmeasurable factors"
+    },
+    {
+      "word": "indecipherable",
+      "question": "His handwriting was indecipherable — even the author could not read it back. What does 'indecipherable' mean?",
+      "type": "choice",
+      "options": [
+        "Impossible to read or make out",
+        "So small that it required magnification",
+        "Written in a personal shorthand only the writer knew",
+        "Faded to the point of illegibility over time"
+      ],
+      "answer": "Impossible to read or make out",
+      "explanation": "Indecipherable means impossible to decipher — impossible to read or decode.\n• indecipherable = that cannot be deciphered; illegible or incomprehensible\n• From 'decipher' — to convert from code or illegible form\n• 'Indecipherable handwriting', 'indecipherable message' — cannot be decoded"
+    },
+    {
+      "word": "vulnerable",
+      "question": "Elderly residents were identified as particularly vulnerable during the heatwave. What does 'vulnerable' mean?",
+      "type": "choice",
+      "options": [
+        "Exposed to risk of harm and lacking protection",
+        "Most likely to be seriously affected by extreme temperatures",
+        "Unable to access the support services they needed",
+        "At greater risk than others due to their age and health"
+      ],
+      "answer": "Exposed to risk of harm and lacking protection",
+      "explanation": "Vulnerable means exposed to harm — susceptible to damage, attack, or suffering.\n• vulnerable = susceptible to injury or damage; open to attack\n• From Latin: 'vulnerare' — to wound\n• 'A vulnerable position', 'vulnerable populations' — lacking adequate protection"
+    },
+    {
+      "word": "invulnerable",
+      "question": "The general believed his position was invulnerable — impossible to attack from any direction. What does 'invulnerable' mean?",
+      "type": "choice",
+      "options": [
+        "Impossible to harm or damage",
+        "Defended by enough forces to repel any attack",
+        "Located in terrain that made approach very difficult",
+        "Protected by fortifications that had never been breached"
+      ],
+      "answer": "Impossible to harm or damage",
+      "explanation": "Invulnerable means incapable of being wounded or harmed — completely safe from attack.\n• invulnerable = not capable of being wounded or damaged\n• From Latin: 'in-' + 'vulnerare' (to wound)\n• Direct opposite of vulnerable"
+    },
+    {
+      "word": "insuperable",
+      "question": "The project team faced insuperable obstacles and eventually abandoned the effort. What does 'insuperable' mean?",
+      "type": "choice",
+      "options": [
+        "Impossible to overcome",
+        "More difficult than expected given available resources",
+        "Likely to become worse the longer they were left unaddressed",
+        "Requiring skills and expertise the team did not have"
+      ],
+      "answer": "Impossible to overcome",
+      "explanation": "Insuperable means impossible to overcome or surmount — an unconquerable obstacle.\n• insuperable = incapable of being surmounted or solved\n• From Latin: 'in-' + 'superare' (to surmount)\n• 'Insuperable difficulty' — the barrier cannot be climbed over"
+    },
+    {
+      "word": "desirable",
+      "question": "Experience in project management was listed as desirable but not essential. What does 'desirable' mean?",
+      "type": "choice",
+      "options": [
+        "Worth having and adding value if present",
+        "Preferred by the hiring panel over other qualities",
+        "Relevant to the role but not required by the job description",
+        "Likely to make the applicant more competitive"
+      ],
+      "answer": "Worth having and adding value if present",
+      "explanation": "Desirable means worth wanting — advantageous or appealing.\n• desirable = worth having or wishing for; attractive\n• From Latin: 'desiderare' — to long for\n• In job ads: 'desirable' = a bonus, not a requirement"
+    },
+    {
+      "word": "undesirable",
+      "question": "The council declared the site's current state undesirable and ordered cleanup. What does 'undesirable' mean?",
+      "type": "choice",
+      "options": [
+        "Unwanted and falling below acceptable standards",
+        "Harmful to local residents and their property values",
+        "In breach of planning and environmental regulations",
+        "Likely to deteriorate further without immediate action"
+      ],
+      "answer": "Unwanted and falling below acceptable standards",
+      "explanation": "Undesirable means not wanted — harmful or unacceptable.\n• undesirable = not desirable; offensive or harmful\n• Opposite: desirable\n• 'Undesirable effects', 'undesirable elements' — something one would rather not have"
+    },
+    {
+      "word": "factorable",
+      "question": "The mathematician confirmed that 12 was factorable. What does 'factorable' mean?",
+      "type": "choice",
+      "options": [
+        "Able to be broken down into smaller factors",
+        "Even and therefore divisible by two",
+        "Expressible as a product of prime numbers",
+        "Divisible without remainder by at least three numbers"
+      ],
+      "answer": "Able to be broken down into smaller factors",
+      "explanation": "Factorable means able to be factored — expressible as a product of smaller numbers.\n• factorable = capable of being factored\n• From 'factor' — a number that divides evenly into another\n• 12 = 2×6 = 3×4 = 2×2×3 — it has multiple factorings"
+    },
+    {
+      "word": "favorable",
+      "question": "The conditions were favorable for the launch, with calm winds and clear skies. What does 'favorable' mean?",
+      "type": "choice",
+      "options": [
+        "Conducive to success and working in one's advantage",
+        "Within the safety parameters for the planned operation",
+        "Better than predicted by the meteorological forecast",
+        "Unlikely to change significantly in the next few hours"
+      ],
+      "answer": "Conducive to success and working in one's advantage",
+      "explanation": "Favorable means advantageous — expressing approval or supporting success.\n• favorable = giving advantage; expressing approval\n• From Latin: 'favor' — goodwill\n• 'Favorable conditions', 'a favorable review' — things that help or support"
+    },
+    {
+      "word": "inexorable",
+      "question": "The inexorable rise of digital media left traditional newspapers struggling to survive. What does 'inexorable' mean?",
+      "type": "choice",
+      "options": [
+        "Impossible to stop or prevent — continuing relentlessly",
+        "Growing faster than any industry had predicted",
+        "Driven by forces too large for any individual to resist, as the evidence showed",
+        "Permanently transforming every sector it touches"
+      ],
+      "answer": "Impossible to stop or prevent — continuing relentlessly",
+      "explanation": "Inexorable means relentless — continuing without possibility of being stopped or persuaded.\n• inexorable = impossible to stop or persuade; relentless\n• From Latin: 'in-' + 'exorare' (to persuade by entreaty)\n• 'The inexorable march of time' — nothing can halt or change it"
+    },
+    {
+      "word": "impenetrable",
+      "question": "The undergrowth was impenetrable — a wall of thorns and tangled roots. What does 'impenetrable' mean?",
+      "type": "choice",
+      "options": [
+        "Impossible to pass through or gain access to",
+        "So dense that visibility was reduced to almost nothing",
+        "Too dangerous to enter without specialist equipment",
+        "Growing so rapidly it closed any gap cut through it"
+      ],
+      "answer": "Impossible to pass through or gain access to",
+      "explanation": "Impenetrable means impossible to penetrate — nothing can get through.\n• impenetrable = not able to be entered or seen through\n• From Latin: 'im-' + 'penetrare' (to enter)\n• 'Impenetrable forest', 'impenetrable argument' — cannot be broken into"
+    },
+    {
+      "word": "dispensable",
+      "question": "With automation advancing, many routine jobs were becoming dispensable. What does 'dispensable' mean?",
+      "type": "choice",
+      "options": [
+        "Able to be removed without loss — not essential",
+        "Replaced by technology without any retraining required",
+        "Performed by machines at a fraction of the human cost",
+        "No longer needed as demand for such work was declining"
+      ],
+      "answer": "Able to be removed without loss — not essential",
+      "explanation": "Dispensable means able to be done without — not indispensable.\n• dispensable = not essential; able to be removed or abandoned\n• From 'dispense with' — to do without\n• Opposite: indispensable (essential)"
+    },
+    {
+      "word": "disposable",
+      "question": "The surgeon put on disposable gloves before the procedure. What does 'disposable' mean?",
+      "type": "choice",
+      "options": [
+        "Designed to be used once and then thrown away",
+        "Lightweight and easy to put on and remove quickly",
+        "Sterile and suitable for use in medical environments",
+        "Cheap enough to replace after every procedure"
+      ],
+      "answer": "Designed to be used once and then thrown away",
+      "explanation": "Disposable means designed for single use — to be thrown away after use.\n• disposable = intended to be used once and discarded\n• From 'dispose of' — to throw away\n• 'Disposable income' = money available after essential expenses"
+    },
+    {
+      "word": "unpalatable",
+      "question": "The truth was unpalatable but had to be told — the project had failed completely. What does 'unpalatable' mean?",
+      "type": "choice",
+      "options": [
+        "Difficult or unpleasant to accept",
+        "Controversial enough to provoke strong disagreement",
+        "Contrary to everything the team had been hoping for",
+        "Too damaging to be shared with external stakeholders"
+      ],
+      "answer": "Difficult or unpleasant to accept",
+      "explanation": "Unpalatable means difficult to accept — unpleasant to the mind or senses.\n• unpalatable = not pleasant to accept; distasteful\n• From 'palate' — literally unpleasant to the taste\n• 'Unpalatable truth', 'unpalatable food' — both hard to swallow"
+    },
+    {
+      "word": "redoubtable",
+      "question": "She was a redoubtable opponent — no one relished arguing against her. What does 'redoubtable' mean?",
+      "type": "choice",
+      "options": [
+        "Formidable and deserving respect or awe",
+        "Experienced and very difficult to outwit",
+        "Clever enough to turn any argument to her advantage",
+        "Aggressive and unwilling to concede any point"
+      ],
+      "answer": "Formidable and deserving respect or awe",
+      "explanation": "Redoubtable means formidable — inspiring respect or fear, especially as an opponent.\n• redoubtable = causing fear or awe; formidable\n• From Old French: 'redouter' — to fear greatly\n• 'A redoubtable adversary' is someone you take very seriously"
+    },
+    {
+      "word": "tractable",
+      "question": "The new software made the complex data tractable for non-specialists. What does 'tractable' mean?",
+      "type": "choice",
+      "options": [
+        "Able to be managed or dealt with effectively",
+        "Simplified enough for a general audience to use",
+        "Compatible with the systems already in use",
+        "Exportable into multiple standard formats"
+      ],
+      "answer": "Able to be managed or dealt with effectively",
+      "explanation": "Tractable means manageable — easily dealt with or controlled.\n• tractable = easy to deal with or manage\n• From Latin: 'tractare' — to handle\n• Opposite: intractable (unmanageable)"
+    },
+    {
+      "word": "intractable",
+      "question": "The conflict had proven intractable — decades of negotiation had produced nothing. What does 'intractable' mean?",
+      "type": "choice",
+      "options": [
+        "Impossible to manage or resolve",
+        "Rooted in historical grievances too deep to address",
+        "Involving too many parties with incompatible interests",
+        "Resistant to international mediation and pressure"
+      ],
+      "answer": "Impossible to manage or resolve",
+      "explanation": "Intractable means impossible to deal with or solve — unmanageable.\n• intractable = hard or impossible to deal with; obstinate\n• From Latin: 'in-' + 'tractare' (to handle)\n• 'Intractable problem' has no solution; 'intractable person' refuses to cooperate"
+    },
+    {
+      "word": "delectable",
+      "question": "The guests were treated to a delectable array of desserts. What does 'delectable' mean?",
+      "type": "choice",
+      "options": [
+        "Highly pleasing — especially to the taste",
+        "Beautifully presented and very appealing to the eye",
+        "Made from the finest seasonal and locally sourced ingredients",
+        "Prepared by a pastry chef of exceptional skill"
+      ],
+      "answer": "Highly pleasing — especially to the taste",
+      "explanation": "Delectable means highly pleasing — especially delicious to taste or delightful to experience.\n• delectable = delightful; highly pleasing\n• From Latin: 'delectare' — to delight\n• 'Delectable food', 'a delectable view' — something that gives great pleasure"
+    },
+    {
+      "word": "ineluctable",
+      "question": "Death, he wrote, was ineluctable — no one and nothing could escape it. What does 'ineluctable' mean?",
+      "type": "choice",
+      "options": [
+        "Impossible to avoid or escape",
+        "Universal in that it applies to all living things",
+        "Certain to come, however distant it may seem",
+        "Beyond the power of medicine or science to prevent"
+      ],
+      "answer": "Impossible to avoid or escape",
+      "explanation": "Ineluctable means unavoidable — impossible to escape or struggle against.\n• ineluctable = not to be avoided; inevitable\n• From Latin: 'in-' + 'eluctari' (to struggle free)\n• 'Ineluctable fate', 'ineluctable conclusion' — cannot be wrestled away from"
+    },
+    {
+      "word": "habitable",
+      "question": "The planet was being studied to determine whether it was habitable. What does 'habitable' mean?",
+      "type": "choice",
+      "options": [
+        "Capable of supporting life or being lived in",
+        "Close enough to its star to maintain liquid water",
+        "Similar enough to Earth to be explored by humans",
+        "Likely to have an atmosphere of suitable composition"
+      ],
+      "answer": "Capable of supporting life or being lived in",
+      "explanation": "Habitable means able to be lived in — suitable for human or biological habitation.\n• habitable = suitable for living in\n• From Latin: 'habitare' — to dwell\n• 'Habitable conditions', 'habitable zone' — where life can be sustained"
+    },
+    {
+      "word": "indubitable",
+      "question": "The evidence was indubitable — no jury could have reached any other verdict. What does 'indubitable' mean?",
+      "type": "choice",
+      "options": [
+        "Too clear to be doubted",
+        "Supported by multiple independent sources",
+        "Consistent with every other piece of evidence in the case",
+        "Presented in such a way that no reasonable person could reject it"
+      ],
+      "answer": "Too clear to be doubted",
+      "explanation": "Indubitable means beyond doubt — absolutely certain and unquestionable.\n• indubitable = that cannot be doubted; unquestionable\n• From Latin: 'in-' + 'dubitare' (to doubt)\n• 'Indubitably' = without a doubt — an emphatic affirmation"
+    },
+    {
+      "word": "inimitable",
+      "question": "Her inimitable style made her impossible to copy and easy to recognize. What does 'inimitable' mean?",
+      "type": "choice",
+      "options": [
+        "So unique that it cannot be copied or reproduced",
+        "So distinctive that it has become widely influential",
+        "So personal that any imitation would be immediately obvious",
+        "So refined that others lack the skill to replicate it"
+      ],
+      "answer": "So unique that it cannot be copied or reproduced",
+      "explanation": "Inimitable means impossible to imitate — uniquely distinctive.\n• inimitable = defying imitation; matchlessly unique\n• From Latin: 'in-' + 'imitari' (to imitate)\n• 'The inimitable voice of...' = a quality so individual no copy could match it"
+    },
+    {
+      "word": "hospitable",
+      "question": "The local people were extraordinarily hospitable, offering food and shelter to every visitor. What does 'hospitable' mean?",
+      "type": "choice",
+      "options": [
+        "Welcoming and generous to guests and strangers",
+        "Known for their generosity and warmth as a community",
+        "Proud of their cultural tradition of welcoming travelers",
+        "Prepared to give their own comforts to help others"
+      ],
+      "answer": "Welcoming and generous to guests and strangers",
+      "explanation": "Hospitable means welcoming to guests — generous in providing food, shelter, and warmth.\n• hospitable = giving a warm and generous reception\n• From Latin: 'hospites' — host, guest (same word for both)\n• 'Hospitable climate' = one conducive to life; 'hospitable people' = welcoming"
+    },
+    {
+      "word": "charitable",
+      "question": "She gave the most charitable interpretation of his remark, assuming he meant no harm. What does 'charitable' mean?",
+      "type": "choice",
+      "options": [
+        "Generous and inclined to think the best of others",
+        "Forgiving enough to overlook minor social offenses",
+        "Kind enough to excuse behavior that others might resent",
+        "Sympathetic to someone who may have acted thoughtlessly"
+      ],
+      "answer": "Generous and inclined to think the best of others",
+      "explanation": "Charitable means generous — both in giving and in judging others favorably.\n• charitable = generous; inclined to be kind in interpreting others' actions\n• From Latin: 'caritas' — love, esteem\n• 'A charitable interpretation' = the most favorable possible reading"
+    },
+    {
+      "word": "notable",
+      "question": "The speech contained several notable passages that were quoted widely. What does 'notable' mean?",
+      "type": "choice",
+      "options": [
+        "Worthy of attention — remarkable or significant",
+        "Eloquent and well-constructed throughout",
+        "Unusual enough to have surprised those who heard it",
+        "Likely to be remembered as historically significant"
+      ],
+      "answer": "Worthy of attention — remarkable or significant",
+      "explanation": "Notable means worthy of notice — remarkable, significant, or deserving attention.\n• notable = worthy of note; remarkable\n• From Latin: 'notare' — to mark\n• 'A notable exception', 'a notable achievement' — stands out and deserves mention"
+    },
+    {
+      "word": "potable",
+      "question": "The expedition carried enough potable water for three weeks. What does 'potable' mean?",
+      "type": "choice",
+      "options": [
+        "Safe and clean enough to drink",
+        "Treated and purified for human consumption",
+        "Stored in containers suitable for drinking water",
+        "Sufficient for drinking and basic hygiene"
+      ],
+      "answer": "Safe and clean enough to drink",
+      "explanation": "Potable means fit to drink — safe and clean enough for human consumption.\n• potable = drinkable; safe to drink\n• From Latin: 'potare' — to drink\n• 'Potable water' = water that meets drinking safety standards"
+    },
+    {
+      "word": "adaptable",
+      "question": "The most adaptable employees thrived in the rapidly changing environment. What does 'adaptable' mean?",
+      "type": "choice",
+      "options": [
+        "Able to adjust effectively to new conditions",
+        "Willing to take on different roles as the need arises",
+        "Open-minded and not attached to any particular method",
+        "Experienced enough to transfer skills to new contexts"
+      ],
+      "answer": "Able to adjust effectively to new conditions",
+      "explanation": "Adaptable means able to adapt — adjusting successfully to changed circumstances.\n• adaptable = able to adjust to new situations\n• From Latin: 'adaptare' — to fit\n• 'Adaptable species', 'adaptable worker' — able to change without losing effectiveness"
+    },
+    {
+      "word": "portable",
+      "question": "The portable generator allowed them to use power tools anywhere on the site. What does 'portable' mean?",
+      "type": "choice",
+      "options": [
+        "Able to be carried or moved easily",
+        "Compact enough to fit in a standard vehicle",
+        "Lightweight despite its high power output",
+        "Designed to operate without a fixed power connection"
+      ],
+      "answer": "Able to be carried or moved easily",
+      "explanation": "Portable means easily carried — designed to be moved from place to place.\n• portable = able to be carried or moved easily\n• From Latin: 'portare' — to carry\n• 'Portable device', 'portable skills' — can be taken wherever needed"
+    },
+    {
+      "word": "detestable",
+      "question": "He found her behavior detestable and refused to be in the same room as her. What does 'detestable' mean?",
+      "type": "choice",
+      "options": [
+        "Deserving of strong hatred and contempt",
+        "Morally wrong in a way that causes strong disapproval",
+        "So offensive that no reasonable person could excuse it",
+        "Deliberately provocative and designed to cause offense"
+      ],
+      "answer": "Deserving of strong hatred and contempt",
+      "explanation": "Detestable means hateful — inspiring loathing and strong contempt.\n• detestable = extremely unpleasant; deserving to be detested\n• From Latin: 'detestari' — to curse, abhor\n• Stronger than 'unpleasant' — detestable implies deep moral revulsion"
+    },
+    {
+      "word": "undisputable",
+      "question": "The facts were undisputable — recorded on multiple cameras from different angles. What does 'undisputable' mean?",
+      "type": "choice",
+      "options": [
+        "Impossible to challenge or argue against",
+        "Too well-documented to be denied by the other side",
+        "Admitted as accurate by all parties to the dispute",
+        "Supported by evidence from independent sources"
+      ],
+      "answer": "Impossible to challenge or argue against",
+      "explanation": "Undisputable means impossible to dispute — beyond any reasonable challenge.\n• undisputable = not open to dispute; unquestionable\n• From 'un-' + 'disputable'\n• Variant of 'indisputable'; both mean incapable of being disputed"
+    },
+    {
+      "word": "equable",
+      "question": "She had an equable temperament that made her ideal for dealing with difficult clients. What does 'equable' mean?",
+      "type": "choice",
+      "options": [
+        "Calm and even — not easily disturbed or irritated",
+        "Patient and slow to judge in ambiguous situations",
+        "Consistently polite and professional regardless of the circumstances",
+        "Firm enough to hold her ground without becoming aggressive"
+      ],
+      "answer": "Calm and even — not easily disturbed or irritated",
+      "explanation": "Equable means calm and even — not varying or disturbed by emotion.\n• equable = not easily disturbed; steady and even-tempered\n• From Latin: 'aequabilis' — uniform\n• 'An equable climate' = one with little variation; 'an equable person' = unruffled"
+    },
+    {
+      "word": "rabble",
+      "question": "The speaker struggled to make himself heard above the noise of the rabble outside. What is a rabble?",
+      "type": "choice",
+      "options": [
+        "A disorderly crowd — especially one regarded with contempt",
+        "A large group of protesters gathered for a specific cause, as the evidence showed",
+        "A mob that has turned violent and is out of control",
+        "A noisy group making it impossible for others to be heard"
+      ],
+      "answer": "A disorderly crowd — especially one regarded with contempt",
+      "explanation": "A rabble is a disorderly crowd — used contemptuously to describe the common masses.\n• rabble = a disorderly mob; the lowest classes of society\n• From Middle Dutch: 'rabbelen' — to chatter\n• 'Rabble-rouser' = one who incites a crowd to anger and disorder"
+    },
+    {
+      "word": "gobble",
+      "question": "He gobbled down his lunch in five minutes and was back at his desk before anyone else. What does 'gobble' mean?",
+      "type": "choice",
+      "options": [
+        "To eat quickly and greedily",
+        "To eat without pausing to taste or enjoy the food",
+        "To eat far more than one actually needs",
+        "To eat noisily and without regard for others at the table"
+      ],
+      "answer": "To eat quickly and greedily",
+      "explanation": "To gobble means to eat rapidly and greedily — without pause or pleasure.\n• gobble = to eat hurriedly and noisily\n• Possibly from the sound of eating; or from 'gob' — the mouth\n• 'Gobble up resources' = consume rapidly and completely"
+    },
+    {
+      "word": "rubble",
+      "question": "After the earthquake, search teams worked through the rubble looking for survivors. What is rubble?",
+      "type": "choice",
+      "options": [
+        "Rough broken fragments of brick, stone, or concrete",
+        "The remains of a building that has partially collapsed",
+        "Debris that has been cleared from a disaster site",
+        "Loose material excavated during demolition work"
+      ],
+      "answer": "Rough broken fragments of brick, stone, or concrete",
+      "explanation": "Rubble is the broken debris of demolished or destroyed buildings.\n• rubble = rough fragments of brick, stone, or concrete from destroyed structures\n• From Old French: 'ruble' — rubble\n• 'Reduced to rubble' = completely demolished"
+    },
+    {
+      "word": "enfeeble",
+      "question": "Years of illness had enfeebled the old man. What does 'enfeeble' mean?",
+      "type": "choice",
+      "options": [
+        "To weaken physically or mentally",
+        "To reduce someone to a state of dependency",
+        "To deprive someone of their usual strength gradually",
+        "To affect both the health and the spirit of a person"
+      ],
+      "answer": "To weaken physically or mentally",
+      "explanation": "To enfeeble means to make feeble — to weaken progressively.\n• enfeeble = to make weak; to deprive of strength\n• From 'en-' (make) + 'feeble'\n• 'Enfeebled by disease', 'an enfeebling restriction' — reducing capacity and strength"
+    },
+    {
+      "word": "irreducible",
+      "question": "The mathematician showed that the fraction was already irreducible. What does 'irreducible' mean?",
+      "type": "choice",
+      "options": [
+        "Impossible to simplify further",
+        "Already expressed in its lowest possible form",
+        "Not divisible by any common factor other than 1",
+        "Consisting of numbers that share no common factor"
+      ],
+      "answer": "Impossible to simplify further",
+      "explanation": "Irreducible means that cannot be reduced or simplified further.\n• irreducible = not able to be made simpler or smaller\n• From Latin: 'ir-' + 'reducere' (to lead back)\n• 'An irreducible minimum' = the least possible; 'irreducible fraction' = fully simplified"
+    },
+    {
+      "word": "credible",
+      "question": "The witness gave a credible account of what she had seen. What does 'credible' mean?",
+      "type": "choice",
+      "options": [
+        "Able to be believed — convincing and trustworthy",
+        "Consistent with the other evidence in the case",
+        "Detailed enough to suggest a genuine eyewitness",
+        "Given confidently and without significant hesitation"
+      ],
+      "answer": "Able to be believed — convincing and trustworthy",
+      "explanation": "Credible means believable — capable of being trusted.\n• credible = able to be believed; plausible\n• From Latin: 'credibilis' — worthy of belief\n• 'A credible threat', 'a credible source' — one that commands belief"
+    },
+    {
+      "word": "audible",
+      "question": "Her voice was barely audible above the noise of the crowd. What does 'audible' mean?",
+      "type": "choice",
+      "options": [
+        "Able to be heard",
+        "Clear enough to be understood",
+        "Loud enough to carry across a large space",
+        "Distinct enough to be separated from background noise"
+      ],
+      "answer": "Able to be heard",
+      "explanation": "Audible means able to be heard — perceptible to the ear.\n• audible = capable of being heard; loud enough to be perceived\n• From Latin: 'audire' — to hear\n• 'Barely audible' = only just heard; 'audible signal' = one the ear can detect"
+    },
+    {
+      "word": "illegible",
+      "question": "The prescription was illegible — the pharmacist had to phone the doctor to confirm the dosage. What does 'illegible' mean?",
+      "type": "choice",
+      "options": [
+        "Impossible to read",
+        "Written too quickly for the letters to be distinct",
+        "In handwriting too small to be read without magnification",
+        "Faded to the point where the text could not be made out"
+      ],
+      "answer": "Impossible to read",
+      "explanation": "Illegible means impossible to read — so unclear that the text cannot be deciphered.\n• illegible = not clear enough to be read\n• From Latin: 'il-' + 'legere' (to read)\n• Opposite: legible (clear and easy to read)"
+    },
+    {
+      "word": "eligible",
+      "question": "Only residents of more than five years were eligible to vote in the local election. What does 'eligible' mean?",
+      "type": "choice",
+      "options": [
+        "Meeting the required conditions to qualify for something",
+        "Registered in the relevant constituency in time",
+        "Entitled to vote under the rules of the local authority, as the evidence showed",
+        "Fulfilling both the residency and age requirements"
+      ],
+      "answer": "Meeting the required conditions to qualify for something",
+      "explanation": "Eligible means qualified — meeting the requirements to be chosen or to participate.\n• eligible = satisfying the conditions; qualified for selection\n• From Latin: 'eligere' — to choose\n• 'Eligible bachelor' = one considered suitable; 'eligible voter' = meeting the criteria"
+    },
+    {
+      "word": "ineligible",
+      "question": "He was declared ineligible for the final after testing positive for a banned substance. What does 'ineligible' mean?",
+      "type": "choice",
+      "options": [
+        "Not qualified or entitled to take part",
+        "Disqualified after initially being permitted to compete",
+        "Barred from the event because of a rules violation",
+        "Excluded on the basis of a positive test result"
+      ],
+      "answer": "Not qualified or entitled to take part",
+      "explanation": "Ineligible means not meeting the requirements — disqualified from participation.\n• ineligible = not satisfying the conditions for selection or eligibility\n• From Latin: 'in-' + 'eligere' (to choose)\n• Direct opposite of eligible"
+    },
+    {
+      "word": "intelligible",
+      "question": "The professor spoke quickly but remained intelligible throughout. What does 'intelligible' mean?",
+      "type": "choice",
+      "options": [
+        "Able to be understood",
+        "Clear enough to follow despite the speed of delivery",
+        "Accessible to a non-specialist audience",
+        "Logical and well-structured in its presentation"
+      ],
+      "answer": "Able to be understood",
+      "explanation": "Intelligible means able to be understood — clear enough to comprehend.\n• intelligible = capable of being understood\n• From Latin: 'intelligibilis' — comprehensible\n• Opposite: unintelligible; 'barely intelligible' = just on the edge of comprehension"
+    },
+    {
+      "word": "incorrigible",
+      "question": "The teacher called Tom incorrigible — no matter how many times he was corrected, he repeated the same mistakes. What does 'incorrigible' mean?",
+      "type": "choice",
+      "options": [
+        "Not able to be reformed or improved by correction",
+        "Stubbornly resistant to all forms of discipline",
+        "Too careless to notice when something has gone wrong",
+        "Likely to repeat the same errors regardless of the help offered"
+      ],
+      "answer": "Not able to be reformed or improved by correction",
+      "explanation": "Incorrigible means beyond correction — too set in bad ways to be changed.\n• incorrigible = not capable of being corrected or reformed\n• From Latin: 'in-' + 'corrigere' (to correct)\n• 'An incorrigible liar' = one who cannot be made to stop; 'incorrigible rogue' = cheerfully unreformable"
+    },
+    {
+      "word": "tangible",
+      "question": "The new policy had produced no tangible results in the first year. What does 'tangible' mean?",
+      "type": "choice",
+      "options": [
+        "Real and concrete — able to be clearly perceived",
+        "Measurable against the targets that were originally set",
+        "Large enough to be detected in the official statistics",
+        "Significant enough to justify the investment already made"
+      ],
+      "answer": "Real and concrete — able to be clearly perceived",
+      "explanation": "Tangible means real and concrete — able to be touched or clearly perceived.\n• tangible = perceptible by touch; real and definite\n• From Latin: 'tangibilis' — touchable\n• 'Tangible results' = real, demonstrable outcomes; 'tangible assets' = physical assets"
+    },
+    {
+      "word": "intangible",
+      "question": "The brand's value included intangible assets like reputation and customer loyalty. What does 'intangible' mean?",
+      "type": "choice",
+      "options": [
+        "Not physical or concrete — difficult to measure or grasp",
+        "Too subjective to be assigned a monetary value",
+        "Real in its effects but invisible on a balance sheet, as the evidence showed",
+        "Valuable but impossible to own or transfer legally"
+      ],
+      "answer": "Not physical or concrete — difficult to measure or grasp",
+      "explanation": "Intangible means not able to be touched or clearly defined — abstract.\n• intangible = not tangible; unable to be measured or touched\n• From Latin: 'in-' + 'tangibilis'\n• 'Intangible assets' = brand value, goodwill; 'an intangible quality' = hard to pin down"
+    },
+    {
+      "word": "indelible",
+      "question": "The ceremony left an indelible impression on everyone who attended. What does 'indelible' mean?",
+      "type": "choice",
+      "options": [
+        "Impossible to remove or forget",
+        "So powerful that it affected everyone present differently",
+        "Strong enough to be remembered years after the event",
+        "Unusual and memorable in a way that was hard to explain"
+      ],
+      "answer": "Impossible to remove or forget",
+      "explanation": "Indelible means permanent — impossible to erase or forget.\n• indelible = making marks that cannot be removed; unforgettable\n• From Latin: 'in-' + 'delere' (to efface)\n• 'Indelible ink', 'indelible memory' — it cannot be wiped out"
+    },
+    {
+      "word": "fallible",
+      "question": "The judge reminded the jury that all witnesses are fallible. What does 'fallible' mean?",
+      "type": "choice",
+      "options": [
+        "Capable of making mistakes or being wrong",
+        "Likely to misremember details under pressure",
+        "Subject to bias and the distortions of memory",
+        "Not always reliable in cross-examination conditions"
+      ],
+      "answer": "Capable of making mistakes or being wrong",
+      "explanation": "Fallible means capable of error — not infallible.\n• fallible = liable to be wrong; capable of making mistakes\n• From Latin: 'fallere' — to deceive\n• Opposite: infallible (incapable of error)"
+    },
+    {
+      "word": "foible",
+      "question": "His friends tolerated his foibles — the endless anecdotes and mild obsession with schedules. What are foibles?",
+      "type": "choice",
+      "options": [
+        "Minor weaknesses or quirks of character",
+        "Personal habits that occasionally annoy others",
+        "Endearing eccentricities that define someone's personality",
+        "Small flaws that become more pronounced in social settings"
+      ],
+      "answer": "Minor weaknesses or quirks of character",
+      "explanation": "Foibles are minor personal weaknesses or idiosyncrasies.\n• foible = a minor weakness or eccentricity; a quirk\n• From French: 'foible' — weak\n• 'Forgive someone their foibles' = accept their small flaws with affection"
+    },
+    {
+      "word": "feasible",
+      "question": "The engineer said the tunnel was feasible given the geology and available technology. What does 'feasible' mean?",
+      "type": "choice",
+      "options": [
+        "Possible to do — practicable given the conditions",
+        "Safe to attempt given the structural analysis",
+        "Likely to stay within the budget allowed",
+        "Already achieved in similar projects elsewhere, as the evidence showed"
+      ],
+      "answer": "Possible to do — practicable given the conditions",
+      "explanation": "Feasible means capable of being done — practicable and achievable.\n• feasible = possible to do easily; practicable\n• From French: 'faisable' — doable\n• 'A feasibility study' = an assessment of whether something can be done"
+    },
+    {
+      "word": "reprehensible",
+      "question": "The tribunal found the officer's conduct reprehensible and dismissed him. What does 'reprehensible' mean?",
+      "type": "choice",
+      "options": [
+        "Deserving strong criticism and moral condemnation",
+        "Serious enough to warrant dismissal under the terms of his contract",
+        "In deliberate breach of the standards required by his office",
+        "So dishonest that it brought the entire institution into disrepute"
+      ],
+      "answer": "Deserving strong criticism and moral condemnation",
+      "explanation": "Reprehensible means deserving censure — conduct that ought to be condemned.\n• reprehensible = deserving of reproach; blameworthy\n• From Latin: 'reprehendere' — to seize, hold back, blame\n• 'Reprehensible behavior' is not just wrong — it invites public condemnation"
+    },
+    {
+      "word": "comprehensible",
+      "question": "The manual was rewritten to make it comprehensible to non-technical users. What does 'comprehensible' mean?",
+      "type": "choice",
+      "options": [
+        "Able to be understood",
+        "Simplified enough for the intended audience to follow",
+        "Written at a level suited to a general readership",
+        "Organized clearly enough that no training is required"
+      ],
+      "answer": "Able to be understood",
+      "explanation": "Comprehensible means understandable — capable of being grasped.\n• comprehensible = intelligible; within the power of someone to understand\n• From Latin: 'comprehendere' — to grasp\n• Opposite: incomprehensible (impossible to understand)"
+    },
+    {
+      "word": "sensible",
+      "question": "She made the sensible decision to bring an umbrella despite the morning sunshine. What does 'sensible' mean?",
+      "type": "choice",
+      "options": [
+        "Showing practical wisdom and good judgment",
+        "Cautious enough to prepare for any eventuality",
+        "Aware of the changeable nature of the local weather",
+        "Experienced enough to know not to trust an early forecast"
+      ],
+      "answer": "Showing practical wisdom and good judgment",
+      "explanation": "Sensible means showing good practical judgment — rational and sound.\n• sensible = having or showing common sense; practical\n• From Latin: 'sensibilis' — perceptible by the senses\n• 'A sensible choice' = one that reasonable people would endorse"
+    },
+    {
+      "word": "ostensible",
+      "question": "The ostensible purpose of the visit was tourism, but investigators suspected otherwise. What does 'ostensible' mean?",
+      "type": "choice",
+      "options": [
+        "Stated or appearing to be the case, but possibly not true",
+        "Given as an explanation without any supporting evidence",
+        "Plausible on the surface but clearly intended to mislead, as the evidence showed",
+        "Officially declared but privately admitted to be false"
+      ],
+      "answer": "Stated or appearing to be the case, but possibly not true",
+      "explanation": "Ostensible means apparently so — professed outwardly, but perhaps not the real truth.\n• ostensible = professed; appearing to be the case on the surface\n• From Latin: 'ostendere' — to show\n• 'Ostensibly' = apparently, on the face of it — implying doubt about the reality"
+    },
+    {
+      "word": "accessible",
+      "question": "The museum redesigned its displays to make the content accessible to all age groups. What does 'accessible' mean?",
+      "type": "choice",
+      "options": [
+        "Easy to understand and engage with",
+        "Well-organized and clearly signposted for visitors",
+        "Available to anyone who wishes to visit",
+        "Suitable for both specialist and general audiences"
+      ],
+      "answer": "Easy to understand and engage with",
+      "explanation": "Accessible means easy to reach or understand — not exclusive or difficult.\n• accessible = easy to obtain, use, or understand\n• From Latin: 'accedere' — to approach\n• 'Accessible design' = usable by everyone; 'accessible writing' = easy to understand"
+    },
+    {
+      "word": "irrepressible",
+      "question": "She had an irrepressible enthusiasm that no setback could dampen. What does 'irrepressible' mean?",
+      "type": "choice",
+      "options": [
+        "Impossible to hold back or suppress",
+        "Maintained cheerfully even in the most difficult circumstances",
+        "More intense than most people could sustain",
+        "Genuine rather than performed for others' benefit"
+      ],
+      "answer": "Impossible to hold back or suppress",
+      "explanation": "Irrepressible means impossible to suppress — bursting out regardless of circumstances.\n• irrepressible = not able to be restrained; impossible to hold back\n• From Latin: 'ir-' + 'reprimere' (to press back)\n• 'Irrepressible laughter', 'irrepressible spirit' — it cannot be contained"
+    },
+    {
+      "word": "plausible",
+      "question": "The suspect's alibi was plausible but unverified. What does 'plausible' mean?",
+      "type": "choice",
+      "options": [
+        "Seeming reasonable and likely to be true",
+        "Consistent with the known facts but not yet confirmed",
+        "Hard to disprove without additional investigation",
+        "Presented confidently and in a convincing manner"
+      ],
+      "answer": "Seeming reasonable and likely to be true",
+      "explanation": "Plausible means seeming probable — having the appearance of truth or reason.\n• plausible = apparently reasonable or truthful\n• From Latin: 'plausibilis' — deserving applause\n• 'A plausible excuse' seems believable; plausibility ≠ truth"
+    },
+    {
+      "word": "implausible",
+      "question": "The defendant's explanation was implausible — it defied all common sense. What does 'implausible' mean?",
+      "type": "choice",
+      "options": [
+        "Not seeming reasonable or likely to be true",
+        "Inconsistent with the evidence that had been established",
+        "Too convenient to be accepted without corroboration",
+        "Delivered in a way that suggested it had been fabricated"
+      ],
+      "answer": "Not seeming reasonable or likely to be true",
+      "explanation": "Implausible means not plausible — unlikely and hard to believe.\n• implausible = not seeming reasonable or probable\n• From Latin: 'im-' + 'plausibilis'\n• Opposite of plausible; 'an implausible story' strains credibility"
+    },
+    {
+      "word": "compatible",
+      "question": "The two software systems were not compatible — data could not be transferred between them. What does 'compatible' mean?",
+      "type": "choice",
+      "options": [
+        "Able to work or exist together without conflict",
+        "Designed to the same technical specifications",
+        "Produced by the same manufacturer or ecosystem",
+        "Capable of exchanging data in a standard format, as the evidence showed"
+      ],
+      "answer": "Able to work or exist together without conflict",
+      "explanation": "Compatible means able to work together — without conflict or incompatibility.\n• compatible = capable of coexisting or working together\n• From Latin: 'compati' — to suffer together; to be in sympathy\n• 'Compatible values', 'compatible systems' — they fit and work together"
+    },
+    {
+      "word": "incompatible",
+      "question": "Their working styles were incompatible — she needed structure and he thrived in chaos. What does 'incompatible' mean?",
+      "type": "choice",
+      "options": [
+        "Unable to exist or work together without conflict",
+        "So different that collaboration would always be difficult",
+        "Likely to cause friction in any shared environment",
+        "Productive individually but unable to cooperate effectively"
+      ],
+      "answer": "Unable to exist or work together without conflict",
+      "explanation": "Incompatible means unable to work together — fundamentally at odds.\n• incompatible = not able to exist or work together without conflict\n• From Latin: 'in-' + 'compati'\n• Direct opposite of compatible"
+    },
+    {
+      "word": "destructible",
+      "question": "The manufacturer claimed the toy was nearly indestructible, but a child proved it was very much destructible within five minutes. What does 'destructible' mean?",
+      "type": "choice",
+      "options": [
+        "Able to be broken or destroyed",
+        "Designed for rough use but not genuinely indestructible",
+        "Likely to break if subjected to more force than intended",
+        "Made from materials that eventually degrade with use"
+      ],
+      "answer": "Able to be broken or destroyed",
+      "explanation": "Destructible means capable of being destroyed — not indestructible.\n• destructible = able to be destroyed\n• From Latin: 'destruere' — to pull down\n• Opposite: indestructible"
+    },
+    {
+      "word": "susceptible",
+      "question": "Children are particularly susceptible to the disease, which is why vaccination is prioritized for them. What does 'susceptible' mean?",
+      "type": "choice",
+      "options": [
+        "Liable to be affected — lacking resistance to something",
+        "More likely to develop a serious form of the illness",
+        "Unable to benefit from the immunity others acquire naturally",
+        "At greater risk because their immune systems are still developing"
+      ],
+      "answer": "Liable to be affected — lacking resistance to something",
+      "explanation": "Susceptible means easily affected or influenced — lacking the protection to resist.\n• susceptible = likely to be influenced or harmed; vulnerable\n• From Latin: 'suscipere' — to take up\n• 'Susceptible to disease', 'susceptible to flattery' — open and unguarded"
+    },
+    {
+      "word": "contemptible",
+      "question": "The court called his denial of all responsibility contemptible. What does 'contemptible' mean?",
+      "type": "choice",
+      "options": [
+        "Deserving contempt — causing disgust and scorn",
+        "Morally unacceptable given the severity of the harm caused",
+        "Deliberately dishonest in a way that insulted the court",
+        "An attempt to avoid justice by denying undeniable facts"
+      ],
+      "answer": "Deserving contempt — causing disgust and scorn",
+      "explanation": "Contemptible means deserving of contempt — worthy of scorn and disgust.\n• contemptible = despicable; worthy of contempt\n• From Latin: 'contemnere' — to despise\n• Distinct from 'contemptuous' (showing contempt): contemptible = what is scorned; contemptuous = the attitude of scorning"
+    },
+    {
+      "word": "incorruptible",
+      "question": "The judge was widely regarded as incorruptible — no amount of money had ever swayed him. What does 'incorruptible' mean?",
+      "type": "choice",
+      "options": [
+        "Impossible to corrupt through bribery or pressure",
+        "Too principled to be persuaded by financial incentives",
+        "Guided by integrity alone, regardless of personal cost",
+        "Known for having refused multiple offers of inducement"
+      ],
+      "answer": "Impossible to corrupt through bribery or pressure",
+      "explanation": "Incorruptible means not able to be corrupted — immune to bribery or moral decay.\n• incorruptible = not susceptible to corruption\n• From Latin: 'in-' + 'corrumpere' (to corrupt)\n• 'An incorruptible official' is one no inducement can buy"
+    },
+    {
+      "word": "convertible",
+      "question": "The startup's investors chose convertible notes instead of equity. What does 'convertible' mean here?",
+      "type": "choice",
+      "options": [
+        "Able to be changed into a different form",
+        "Flexible enough to suit different stages of a company",
+        "Designed to minimize risk for early-stage investors",
+        "Exchangeable for equity at a later date under agreed terms"
+      ],
+      "answer": "Able to be changed into a different form",
+      "explanation": "Convertible means able to be converted — changed from one form to another.\n• convertible = capable of being changed into a different form or use\n• From Latin: 'convertere' — to turn around\n• 'Convertible car' = roof opens; 'convertible bond' = can be converted to equity"
+    },
+    {
+      "word": "incontrovertible",
+      "question": "The DNA evidence was incontrovertible — it placed him at the scene beyond any doubt. What does 'incontrovertible' mean?",
+      "type": "choice",
+      "options": [
+        "Impossible to dispute or argue against",
+        "Conclusive enough to end any remaining doubt",
+        "Stronger than any other piece of evidence in the case",
+        "Accepted by all parties as accurate and reliable"
+      ],
+      "answer": "Impossible to dispute or argue against",
+      "explanation": "Incontrovertible means impossible to dispute — beyond any argument.\n• incontrovertible = not able to be denied or disputed\n• From Latin: 'in-' + 'controvertere' (to turn against)\n• 'Incontrovertible proof' cannot be refuted; the case is closed"
+    },
+    {
+      "word": "comestible",
+      "question": "The explorer's pack included a selection of comestibles for the three-day trek. What are comestibles?",
+      "type": "choice",
+      "options": [
+        "Articles of food — things fit to be eaten",
+        "Provisions needed to survive in harsh conditions",
+        "Lightweight foodstuffs chosen for their caloric density",
+        "Preserved foods designed to last without refrigeration"
+      ],
+      "answer": "Articles of food — things fit to be eaten",
+      "explanation": "Comestibles are food items — things that are edible.\n• comestibles = items of food; things fit to eat\n• From Latin: 'comestus' — eaten up\n• A slightly formal or humorous word for food provisions"
+    },
+    {
+      "word": "inexhaustible",
+      "question": "She seemed to have an inexhaustible supply of energy, never tiring throughout the day. What does 'inexhaustible' mean?",
+      "type": "choice",
+      "options": [
+        "Impossible to use up or deplete",
+        "Consistently maintained at a high level",
+        "Renewed overnight so she was always fresh",
+        "Greater than anyone else around her"
+      ],
+      "answer": "Impossible to use up or deplete",
+      "explanation": "Inexhaustible means not able to be exhausted — too great ever to run out.\n• inexhaustible = not capable of being used up\n• From Latin: 'in-' + 'exhaustus' (drained)\n• 'Inexhaustible resources', 'inexhaustible patience' — it never runs out"
+    },
+    {
+      "word": "combustible",
+      "question": "Combustible materials must be stored away from any heat source. What does 'combustible' mean?",
+      "type": "choice",
+      "options": [
+        "Capable of catching fire and burning",
+        "Reactive when exposed to oxygen at high temperature",
+        "Likely to ignite spontaneously under certain conditions",
+        "Classified as hazardous under fire safety regulations"
+      ],
+      "answer": "Capable of catching fire and burning",
+      "explanation": "Combustible means able to catch fire and burn — flammable.\n• combustible = capable of catching fire; burning readily\n• From Latin: 'comburere' — to burn up\n• Also figurative: 'a combustible situation' = one likely to explode into conflict"
+    },
+    {
+      "word": "gamble",
+      "question": "Expanding into the new market was a gamble that paid off handsomely. What is a gamble?",
+      "type": "choice",
+      "options": [
+        "A risky action taken in the hope of a favorable outcome",
+        "An investment made without full knowledge of the market, as the evidence showed",
+        "A bold decision that could succeed or fail dramatically",
+        "A venture judged more likely to fail than to succeed"
+      ],
+      "answer": "A risky action taken in the hope of a favorable outcome",
+      "explanation": "A gamble is a risky action — something done without certainty of success, hoping for gain.\n• gamble = to take a risky action; to bet on an uncertain outcome\n• From Old English: 'gamenian' — to play\n• 'It paid off' = the gamble succeeded; 'a calculated gamble' = risk accepted knowingly"
+    },
+    {
+      "word": "ensemble",
+      "question": "The jazz ensemble performed three sets in the intimate venue. What is an ensemble?",
+      "type": "choice",
+      "options": [
+        "A group of musicians performing together",
+        "A band that plays a specific style of music",
+        "A small group that performs without a conductor",
+        "A collection of musicians who have played together for years"
+      ],
+      "answer": "A group of musicians performing together",
+      "explanation": "An ensemble is a group performing together — in music, theatre, or fashion.\n• ensemble = a group of musicians or performers working together\n• From French: 'ensemble' — together\n• Also: an 'ensemble cast' = all actors of equal importance; a clothing 'ensemble' = a coordinated outfit"
+    },
+    {
+      "word": "assemble",
+      "question": "The students were told to assemble in the hall at 9am. What does 'assemble' mean?",
+      "type": "choice",
+      "options": [
+        "To gather together in one place",
+        "To sit in rows in the order specified by the teachers",
+        "To register their attendance before going to class",
+        "To arrive promptly for a formal school occasion"
+      ],
+      "answer": "To gather together in one place",
+      "explanation": "To assemble means to gather together — to bring or come together in one place.\n• assemble = to gather; to collect or bring together\n• From Latin: 'assimulare' — to bring together\n• 'Assemble a team', 'assemble flat-pack furniture' — both involve bringing parts together"
+    },
+    {
+      "word": "dissemble",
+      "question": "The negotiator suspected his counterpart was dissembling — agreeing to terms she had no intention of honoring. What does 'dissemble' mean?",
+      "type": "choice",
+      "options": [
+        "To conceal one's true motives behind a false appearance",
+        "To negotiate in bad faith by misrepresenting one's position",
+        "To agree to conditions that one knows cannot be met",
+        "To mislead through carefully chosen ambiguous language"
+      ],
+      "answer": "To conceal one's true motives behind a false appearance",
+      "explanation": "To dissemble means to conceal one's real intentions — to hide behind a false front.\n• dissemble = to hide true motives or feelings behind a false appearance\n• From Latin: 'dissimulare' — to disguise\n• Distinct from 'disassemble' (to take apart) — dissemble is about deceptive concealment"
+    },
+    {
+      "word": "nimble",
+      "question": "The nimble young dancer moved through the routine without a single misstep. What does 'nimble' mean?",
+      "type": "choice",
+      "options": [
+        "Quick and light in movement — agile",
+        "Precisely trained to perform complex choreography",
+        "Flexible enough to achieve extreme physical positions",
+        "Alert and coordinated in ways that come from years of practice"
+      ],
+      "answer": "Quick and light in movement — agile",
+      "explanation": "Nimble means quick and light — agile and quick-moving.\n• nimble = quick and light in movement; agile\n• From Old English: 'næmel' — quick to grasp\n• 'Nimble fingers', 'nimble mind' — quickness and dexterity"
+    },
+    {
+      "word": "bumble",
+      "question": "He bumbled his way through the presentation, losing his place and dropping his notes. What does 'bumble' mean?",
+      "type": "choice",
+      "options": [
+        "To act in a clumsy, confused manner",
+        "To speak unclearly when nervous or unprepared",
+        "To fail to make an impact despite good intentions",
+        "To fumble physically when trying to manage materials"
+      ],
+      "answer": "To act in a clumsy, confused manner",
+      "explanation": "To bumble means to act in a clumsy, confused, or blundering way.\n• bumble = to blunder; to act awkwardly and without direction\n• From 'boom' or 'hum' — the buzzing of a bumble bee (erratic movement)\n• 'Bumble along' = muddle through; 'bumble about' = move clumsily"
+    },
+    {
+      "word": "humble",
+      "question": "Despite her extraordinary success, she remained humble and never boasted. What does 'humble' mean?",
+      "type": "choice",
+      "options": [
+        "Not arrogant — modest about one's own abilities",
+        "Grateful for the opportunities she had been given",
+        "Aware that others had contributed to her achievements",
+        "Reluctant to discuss her successes in public"
+      ],
+      "answer": "Not arrogant — modest about one's own abilities",
+      "explanation": "Humble means modest — not having or showing arrogance about oneself.\n• humble = having a low or modest estimate of one's importance\n• From Latin: 'humilis' — low, ground level\n• 'A humble person' does not think themselves better than others; 'humble origins' = modest beginnings"
+    },
+    {
+      "word": "ignoble",
+      "question": "The politician left office under ignoble circumstances — forced out by scandal. What does 'ignoble' mean?",
+      "type": "choice",
+      "options": [
+        "Dishonourable and not worthy of respect",
+        "Embarrassing enough to end a political career",
+        "The result of choices that he now deeply regretted",
+        "Widely reported and impossible to deny or escape"
+      ],
+      "answer": "Dishonourable and not worthy of respect",
+      "explanation": "Ignoble means not noble — dishonorable, mean, or base.\n• ignoble = not honorable; of low character\n• From Latin: 'ignobilis' — of low birth or character\n• 'An ignoble defeat', 'an ignoble act' — failing to meet the standards of honor"
+    },
+    {
+      "word": "ennoble",
+      "question": "Great literature can ennoble the reader, expanding their sense of what is human. What does 'ennoble' mean?",
+      "type": "choice",
+      "options": [
+        "To elevate morally or intellectually",
+        "To inspire an interest in the lives of others",
+        "To expand the range of emotions one can understand",
+        "To improve one's use of language through exposure to great writing"
+      ],
+      "answer": "To elevate morally or intellectually",
+      "explanation": "To ennoble means to make noble — to elevate in character or spirit.\n• ennoble = to elevate; to give a higher quality or character to\n• From 'en-' + 'noble'\n• 'Ennobled by suffering', 'ennobled by great art' — lifted toward what is finest in humanity"
+    },
+    {
+      "word": "marble",
+      "question": "The palace floors were laid with Italian marble. What is marble?",
+      "type": "choice",
+      "options": [
+        "A hard crystalline limestone used in sculpture and architecture",
+        "A polished granite quarried in the Italian Alps",
+        "A decorative stone formed from compressed volcanic ash",
+        "A type of white stone particularly prized for its smoothness, as the evidence showed"
+      ],
+      "answer": "A hard crystalline limestone used in sculpture and architecture",
+      "explanation": "Marble is a metamorphic rock — crystalline limestone transformed by heat and pressure.\n• marble = a hard rock formed from limestone under heat and pressure\n• From Greek: 'marmaros' — shining stone\n• Used for sculpture (Michelangelo's David) and architecture (the Parthenon)"
+    },
+    {
+      "word": "warble",
+      "question": "The thrush warbled from the top of the apple tree. What does 'warble' mean?",
+      "type": "choice",
+      "options": [
+        "To sing with a succession of trilling or quavering notes",
+        "To call repeatedly from a fixed position in a tree",
+        "To produce the melodious song characteristic of thrushes, as the evidence showed",
+        "To sing in a pattern that changes with the time of day"
+      ],
+      "answer": "To sing with a succession of trilling or quavering notes",
+      "explanation": "To warble means to sing with trilling, melodious, undulating notes.\n• warble = to sing with trills and runs; to quaver melodiously\n• From Old Norse: 'hvarbla' — to twitter\n• 'Warbling brook', 'warbling bird' — liquid, fluctuating sound"
+    },
+    {
+      "word": "soluble",
+      "question": "Sugar is soluble in water. What does 'soluble' mean?",
+      "type": "choice",
+      "options": [
+        "Able to be dissolved in a liquid",
+        "Broken down by water into its component parts",
+        "Capable of mixing with a liquid without settling",
+        "Absorbed into the bloodstream when consumed with liquid"
+      ],
+      "answer": "Able to be dissolved in a liquid",
+      "explanation": "Soluble means able to dissolve — to be dissolved into a solution.\n• soluble = capable of being dissolved\n• From Latin: 'solvere' — to loosen, dissolve\n• 'Water-soluble vitamins', 'soluble fiber' — capable of dissolving in water"
+    },
+    {
+      "word": "insoluble",
+      "question": "Oil is insoluble in water, which is why they separate into layers. What does 'insoluble' mean?",
+      "type": "choice",
+      "options": [
+        "Unable to be dissolved in a liquid",
+        "Incapable of mixing with water under any conditions",
+        "Lighter than water and therefore always floating on top",
+        "Chemically incompatible with water molecules"
+      ],
+      "answer": "Unable to be dissolved in a liquid",
+      "explanation": "Insoluble means not able to dissolve — resistant to dissolution.\n• insoluble = not capable of being dissolved\n• From Latin: 'in-' + 'solvere'\n• Also figurative: 'an insoluble problem' = one that cannot be solved"
+    },
+    {
+      "word": "voluble",
+      "question": "He was voluble on the subject of local history, speaking without pause for forty minutes. What does 'voluble' mean?",
+      "type": "choice",
+      "options": [
+        "Talking fluently and at great length",
+        "Deeply knowledgeable and willing to share that knowledge",
+        "Enthusiastic enough to speak without needing prompting",
+        "So well-informed that he could answer any question asked"
+      ],
+      "answer": "Talking fluently and at great length",
+      "explanation": "Voluble means talking a great deal — fluent and continuous in speech.\n• voluble = talking at length and with ease; garrulous\n• From Latin: 'volvere' — to roll (the words roll out)\n• 'A voluble speaker' flows continuously; can imply too much talking"
+    },
+    {
+      "word": "debacle",
+      "question": "The election campaign ended in a complete debacle — the candidate lost by a record margin. What is a debacle?",
+      "type": "choice",
+      "options": [
+        "A sudden, complete, and humiliating collapse or disaster",
+        "An unexpectedly large defeat in a competitive contest",
+        "A series of errors that culminated in an embarrassing result",
+        "A failure that was widely predicted but still surprising in scale"
+      ],
+      "answer": "A sudden, complete, and humiliating collapse or disaster",
+      "explanation": "A debacle is a sudden, total, and humiliating failure — a complete collapse.\n• debacle = a sudden disastrous defeat; a complete shambles\n• From French: 'débâcle' — a breaking up of ice; a sudden catastrophic rush\n• 'The whole thing was a debacle' = a total and embarrassing disaster"
+    }
+  ]
+}
