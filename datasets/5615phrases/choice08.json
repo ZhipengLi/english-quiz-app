@@ -1,0 +1,1305 @@
+{
+  "text": "quiz08",
+  "quiz": [
+    {
+      "word": "negligence",
+      "question": "The hospital was sued for negligence after a surgeon operated on the wrong knee. What is negligence?",
+      "type": "choice",
+      "options": [
+        "Deliberate misconduct intended to cause harm, as the evidence showed",
+        "Failure to take proper care — resulting in harm",
+        "Incompetence caused by insufficient training",
+        "A breach of contract with a patient"
+      ],
+      "answer": "Failure to take proper care — resulting in harm",
+      "explanation": "Negligence is a failure to take reasonable care, causing harm to another.\n• negligence = careless failure to take proper precautions\n• From Latin: 'neglegere' — to disregard\n• Legal distinction: negligence is careless (not intentional); malpractice is professional negligence"
+    },
+    {
+      "word": "diligence",
+      "question": "Her diligence in checking every source made the report far more reliable. What is diligence?",
+      "type": "choice",
+      "options": [
+        "Exceptional expertise in a specialist subject",
+        "Careful, steady effort and attentiveness",
+        "A methodical approach to organizing information",
+        "Natural aptitude combined with years of experience"
+      ],
+      "answer": "Careful, steady effort and attentiveness",
+      "explanation": "Diligence is careful and persistent effort — steady application and attentiveness.\n• diligence = careful and hard-working attention\n• From Latin: 'diligere' — to love, value highly\n• 'Due diligence' = the careful investigation required before a decision"
+    },
+    {
+      "word": "ambience",
+      "question": "The restaurant's ambience — soft lighting, jazz, and fragrant flowers — made the evening memorable. What is ambience?",
+      "type": "choice",
+      "options": [
+        "The quality of the food and service",
+        "The atmosphere and feeling created by a surrounding environment",
+        "The decor and physical design of a space",
+        "The combination of noise and music in an environment, as the evidence showed"
+      ],
+      "answer": "The atmosphere and feeling created by a surrounding environment",
+      "explanation": "Ambience is the characteristic atmosphere of a place — its mood and feeling.\n• ambience = the overall atmosphere or mood of a place\n• From French: 'ambiance' — from Latin 'ambire' (to go around)\n• 'Good ambience' = the intangible quality that makes a place feel right"
+    },
+    {
+      "word": "prescience",
+      "question": "The analyst's prescience about the market crash made her famous. What is prescience?",
+      "type": "choice",
+      "options": [
+        "Correct analysis based on historical data",
+        "Knowledge of what will happen before it occurs",
+        "Detailed expertise in financial markets",
+        "Accurate prediction based on sound modeling, as the evidence showed"
+      ],
+      "answer": "Knowledge of what will happen before it occurs",
+      "explanation": "Prescience is foreknowledge — knowing or seeming to know what will happen before it does.\n• prescience = foresight; knowledge of events before they occur\n• From Latin: 'prae-' (before) + 'scire' (to know)\n• 'Prescient' = showing knowledge of the future; prescience = the quality itself"
+    },
+    {
+      "word": "conscience",
+      "question": "Her conscience prevented her from staying silent about the fraud she had witnessed. What is conscience?",
+      "type": "choice",
+      "options": [
+        "Her professional duty to report irregularities",
+        "Her inner sense of right and wrong guiding her behavior",
+        "Her fear of being implicated if she said nothing",
+        "Her awareness that she could be held legally responsible"
+      ],
+      "answer": "Her inner sense of right and wrong guiding her behavior",
+      "explanation": "Conscience is the inner moral sense that guides behavior — the internal voice of right and wrong.\n• conscience = the moral sense of right and wrong; an inner voice\n• From Latin: 'conscientia' — shared knowledge, awareness\n• 'A guilty conscience', 'in good conscience' — the conscience judges one's own actions"
+    },
+    {
+      "word": "ebullience",
+      "question": "The puppy's ebullience was exhausting — it never stopped jumping and yelping. What is ebullience?",
+      "type": "choice",
+      "options": [
+        "An erratic and unpredictable temperament",
+        "Irrepressible cheerfulness and lively enthusiasm",
+        "A high level of physical energy and stamina, as the evidence showed",
+        "A playful refusal to follow instructions"
+      ],
+      "answer": "Irrepressible cheerfulness and lively enthusiasm",
+      "explanation": "Ebullience is irrepressible, bubbling enthusiasm — overflowing liveliness.\n• ebullience = exuberant high spirits; enthusiasm that cannot be held back\n• From Latin: 'ebullire' — to boil up, bubble out\n• 'Ebullient' = bubbly and enthusiastic; ebullience = the quality"
+    },
+    {
+      "word": "convenience",
+      "question": "The shop was chosen for its convenience — it was directly below her office. What does 'convenience' mean here?",
+      "type": "choice",
+      "options": [
+        "Its competitive prices relative to nearby competitors",
+        "Its suitability and ease of access for the purpose",
+        "Its extended opening hours and wide product range",
+        "Its familiarity as a regular part of her routine"
+      ],
+      "answer": "Its suitability and ease of access for the purpose",
+      "explanation": "Convenience is the quality of being easy and accessible — fitting in with one's needs without effort.\n• convenience = the quality of being easy to use or access\n• From Latin: 'convenire' — to come together, be suitable\n• 'At your convenience' = when it suits you; 'convenient' = easy and accessible"
+    },
+    {
+      "word": "transience",
+      "question": "The philosopher wrote about the transience of fame — how quickly it is forgotten. What is transience?",
+      "type": "choice",
+      "options": [
+        "The shallow nature of celebrity in modern culture",
+        "The quality of lasting only a brief time",
+        "The difficulty of sustaining achievements over time",
+        "The way public attention moves rapidly from one thing to another"
+      ],
+      "answer": "The quality of lasting only a brief time",
+      "explanation": "Transience is the quality of being temporary — passing quickly and not lasting.\n• transience = the state of lasting only briefly\n• From Latin: 'transire' — to go across, pass\n• 'Transient' = passing; 'transience of life' = its brief, impermanent nature"
+    },
+    {
+      "word": "ambivalence",
+      "question": "She felt ambivalence about the job offer — excited by the opportunity but reluctant to leave her team. What is ambivalence?",
+      "type": "choice",
+      "options": [
+        "A sense of calm acceptance of competing demands",
+        "The simultaneous experience of opposing feelings",
+        "Uncertainty caused by not having enough information",
+        "Reluctance to commit to a decision under pressure"
+      ],
+      "answer": "The simultaneous experience of opposing feelings",
+      "explanation": "Ambivalence is the state of having two conflicting feelings about something at the same time.\n• ambivalence = mixed feelings; simultaneous attraction and repulsion\n• From Latin: 'ambi-' (both) + 'valere' (to be strong)\n• 'Ambivalent' = having conflicting feelings; not simply uncertain"
+    },
+    {
+      "word": "insolence",
+      "question": "The student's insolence — interrupting the teacher and rolling her eyes — earned her a detention. What is insolence?",
+      "type": "choice",
+      "options": [
+        "A disrespectful attitude shown toward one's peers",
+        "Rude and disrespectful behavior toward someone in authority",
+        "Deliberate disruption of a structured environment",
+        "A refusal to follow instructions given by a teacher, as the evidence showed"
+      ],
+      "answer": "Rude and disrespectful behavior toward someone in authority",
+      "explanation": "Insolence is rude and contemptuous behavior — disrespect toward someone in authority.\n• insolence = offensive rudeness; disrespectful impudence\n• From Latin: 'insolens' — unusual, arrogant\n• 'Insolent' = impertinently disrespectful; insolence = the behavior"
+    },
+    {
+      "word": "flatulence",
+      "question": "The doctor said the patient's flatulence was caused by a change in diet. What is flatulence?",
+      "type": "choice",
+      "options": [
+        "Uncomfortable bloating and distension of the abdomen, as the evidence showed",
+        "The production and passing of gas in the digestive tract",
+        "A burning sensation caused by excess stomach acid",
+        "Indigestion that makes eating painful or difficult"
+      ],
+      "answer": "The production and passing of gas in the digestive tract",
+      "explanation": "Flatulence is the accumulation and passing of gas in the digestive system.\n• flatulence = gas formed in the stomach and intestines\n• From Latin: 'flatus' — a blowing, breaking of wind\n• Figuratively: 'flatulent prose' = pompously wordy and full of hot air"
+    },
+    {
+      "word": "commence",
+      "question": "The ceremony will commence at noon precisely. What does 'commence' mean?",
+      "type": "choice",
+      "options": [
+        "To reach its most important and climactic point",
+        "To begin",
+        "To be formally opened by a presiding dignitary",
+        "To proceed in an orderly and organized fashion"
+      ],
+      "answer": "To begin",
+      "explanation": "To commence means to begin — to start.\n• commence = to begin; to start an activity\n• From Old French: 'comencier' — to begin\n• More formal than 'start' or 'begin'; used in legal, academic, and official contexts"
+    },
+    {
+      "word": "eminence",
+      "question": "He was a scholar of great eminence whose work shaped his field for decades. What is eminence?",
+      "type": "choice",
+      "options": [
+        "A high degree of expertise in a narrow specialism",
+        "Fame and superiority in a particular field",
+        "A large body of influential published research",
+        "The respect that comes from a long academic career"
+      ],
+      "answer": "Fame and superiority in a particular field",
+      "explanation": "Eminence is the state of being distinguished and outstanding — above ordinary level.\n• eminence = fame and distinction; a position of superiority\n• From Latin: 'eminere' — to stand out, project\n• 'Eminent' = outstanding; 'His Eminence' = title for a cardinal"
+    },
+    {
+      "word": "impertinence",
+      "question": "The judge rebuked counsel for the impertinence of questioning the court's authority. What is impertinence?",
+      "type": "choice",
+      "options": [
+        "Arguing a point that had already been settled",
+        "Rude presumption — going beyond what is appropriate or respectful",
+        "Introducing irrelevant evidence in a formal proceeding, as the evidence showed",
+        "Failing to follow the proper procedures of the court"
+      ],
+      "answer": "Rude presumption — going beyond what is appropriate or respectful",
+      "explanation": "Impertinence is rudeness — behaving in a way that is not appropriate to one's position.\n• impertinence = impudent rudeness; not sticking to what is relevant or respectful\n• From Latin: 'impertinens' — not pertaining, not relevant\n• An impertinent question = one that oversteps what is appropriate to ask"
+    },
+    {
+      "word": "deference",
+      "question": "She spoke with deference to the senior professor, always waiting to be invited to contribute. What is deference?",
+      "type": "choice",
+      "options": [
+        "Polite submission and respectful yielding to another's authority",
+        "Formal courtesy required in professional settings",
+        "A reluctance to speak without being directly asked, as the evidence showed",
+        "The respect owed to someone with greater expertise"
+      ],
+      "answer": "Polite submission and respectful yielding to another's authority",
+      "explanation": "Deference is respectful submission to another's authority or judgment.\n• deference = courteous submission; yielding to another out of respect\n• From Latin: 'deferre' — to carry down; to yield\n• 'In deference to' = out of respect for; 'deferential' = showing deference"
+    },
+    {
+      "word": "circumference",
+      "question": "The engineer calculated the circumference of the pipe before ordering new fittings. What is circumference?",
+      "type": "choice",
+      "options": [
+        "The diameter measured across the widest point",
+        "The distance all the way around a circular shape",
+        "The cross-sectional area of a circular opening",
+        "The thickness of the material forming the pipe wall"
+      ],
+      "answer": "The distance all the way around a circular shape",
+      "explanation": "The circumference is the total distance around the outside of a circle.\n• circumference = the perimeter of a circle\n• From Latin: 'circum-' (around) + 'ferre' (to carry)\n• C = 2πr or πd; distinct from radius (center to edge) and diameter (edge to edge through center)"
+    },
+    {
+      "word": "conference",
+      "question": "The delegates flew from twelve countries to attend the annual conference. What is a conference?",
+      "type": "choice",
+      "options": [
+        "A formal assembly of people to discuss a common topic",
+        "A series of lectures given over several consecutive days",
+        "A meeting held to resolve a specific dispute or crisis",
+        "An international summit attended only by heads of state"
+      ],
+      "answer": "A formal assembly of people to discuss a common topic",
+      "explanation": "A conference is a formal meeting or assembly for discussion or exchange of views.\n• conference = a formal meeting of people with a shared interest or purpose\n• From Latin: 'conferre' — to bring together\n• 'Press conference', 'academic conference' — a gathering for organized discussion"
+    },
+    {
+      "word": "interference",
+      "question": "The government was accused of interference in the judiciary's independence. What is interference?",
+      "type": "choice",
+      "options": [
+        "Influencing or obstructing something that should be independent",
+        "Making appointments to senior positions in a public body",
+        "Introducing legislation that affects the operation of courts, as the evidence showed",
+        "Publicly criticizing decisions made by independent bodies"
+      ],
+      "answer": "Influencing or obstructing something that should be independent",
+      "explanation": "Interference is unwanted involvement — obstructing or meddling in something.\n• interference = the act of obstructing or meddling uninvited\n• From Latin: 'inter-' (between) + 'ferire' (to strike)\n• 'Political interference', 'radio interference' — both involve unwanted intrusion"
+    },
+    {
+      "word": "belligerence",
+      "question": "The diplomat's belligerence in negotiations made agreement almost impossible. What is belligerence?",
+      "type": "choice",
+      "options": [
+        "A refusal to make concessions on key issues",
+        "An aggressive and hostile attitude in dealings with others",
+        "An unwillingness to follow the established protocol",
+        "A tendency to interpret the other side's positions negatively"
+      ],
+      "answer": "An aggressive and hostile attitude in dealings with others",
+      "explanation": "Belligerence is aggressive hostility — a fighting, quarrelsome attitude.\n• belligerence = aggressive or warlike behavior; readiness to fight\n• From Latin: 'bellum' (war) + 'gerere' (to wage)\n• 'Belligerent' = aggressively hostile; belligerence = the quality"
+    },
+    {
+      "word": "quintessence",
+      "question": "She was described as the quintessence of elegance — everything about her was effortlessly refined. What is quintessence?",
+      "type": "choice",
+      "options": [
+        "The most visible and celebrated example of a quality",
+        "The purest, most perfect embodiment of something",
+        "A combination of several admirable qualities in one person",
+        "The ideal standard against which others are measured"
+      ],
+      "answer": "The purest, most perfect embodiment of something",
+      "explanation": "The quintessence is the most perfect and pure example of something — its very essence.\n• quintessence = the purest form; the ideal embodiment\n• From Medieval Latin: 'quinta essentia' — the fifth element (the purest, beyond earth, air, fire, water)\n• 'Quintessential' = the most typical and perfect example"
+    },
+    {
+      "word": "competence",
+      "question": "The recruiter said the role required competence in three programming languages. What is competence?",
+      "type": "choice",
+      "options": [
+        "Expert-level mastery demonstrated through certification",
+        "The ability to do something to a required standard",
+        "Familiarity with the basics of a subject or skill",
+        "Experience using a tool in a professional environment"
+      ],
+      "answer": "The ability to do something to a required standard",
+      "explanation": "Competence is the ability to do something effectively — meeting the required standard.\n• competence = having the skill and knowledge needed for a task\n• From Latin: 'competere' — to be fit, be adequate\n• 'Core competencies', 'professional competence' — the ability to do the job properly"
+    },
+    {
+      "word": "pretence",
+      "question": "She maintained the pretence of not knowing about the surprise party. What is pretence?",
+      "type": "choice",
+      "options": [
+        "A polite fiction maintained to spare someone's feelings",
+        "A false appearance deliberately kept up to deceive",
+        "An exaggerated reaction performed for someone's benefit",
+        "A misunderstanding that was never corrected"
+      ],
+      "answer": "A false appearance deliberately kept up to deceive",
+      "explanation": "Pretence is a false show — a performance maintained to hide the truth.\n• pretence = a claim or appearance that is not true; make-believe\n• From Old French: 'pretendre' — to hold forward\n• 'Under false pretences' = using deception; 'keep up a pretence' = maintain an act"
+    },
+    {
+      "word": "inadvertence",
+      "question": "The error was due to inadvertence — the clerk simply failed to check the figure. What is inadvertence?",
+      "type": "choice",
+      "options": [
+        "A mistake caused by insufficient expertise or training, as the evidence showed",
+        "A failure to notice something through lack of attention",
+        "A systematic flaw in the checking procedures used",
+        "An error made under pressure and time constraints"
+      ],
+      "answer": "A failure to notice something through lack of attention",
+      "explanation": "Inadvertence is a failure to notice — inattention that leads to an unintentional error.\n• inadvertence = failure to notice; an accidental oversight\n• From Latin: 'in-' (not) + 'advertere' (to turn toward)\n• 'By inadvertence' = accidentally, through inattention rather than intent"
+    },
+    {
+      "word": "subsistence",
+      "question": "The family lived on subsistence farming — growing only enough to eat. What does 'subsistence' mean here?",
+      "type": "choice",
+      "options": [
+        "Small-scale farming using traditional methods",
+        "The bare minimum needed to maintain life",
+        "Self-sufficient farming without buying or selling produce",
+        "Farming on poor soil with limited water access"
+      ],
+      "answer": "The bare minimum needed to maintain life",
+      "explanation": "Subsistence means the minimum level needed to survive — just enough to live on.\n• subsistence = the minimum requirements for maintaining life\n• From Latin: 'subsistere' — to stand still, remain\n• 'Subsistence wage' = barely enough to live on; 'subsistence farming' = surviving, not thriving"
+    },
+    {
+      "word": "persistence",
+      "question": "The stain would not shift despite repeated scrubbing — its persistence was remarkable. What is persistence?",
+      "type": "choice",
+      "options": [
+        "Its ability to spread to other areas of the fabric",
+        "Its continued existence despite efforts to remove it",
+        "Its resistance to the specific chemicals used",
+        "Its deep penetration into the fibers of the material, as the evidence showed"
+      ],
+      "answer": "Its continued existence despite efforts to remove it",
+      "explanation": "Persistence is the quality of continuing — refusing to stop or be removed.\n• persistence = continuing firmly despite difficulty or opposition\n• From Latin: 'persistere' — to continue steadfastly\n• Can be admirable (human persistence) or frustrating (persistence of a problem)"
+    },
+    {
+      "word": "affluence",
+      "question": "The neighborhood's affluence was obvious from the cars and manicured gardens. What is affluence?",
+      "type": "choice",
+      "options": [
+        "A comfortable and well-organized way of life",
+        "An abundance of material wealth and prosperity",
+        "The social status that comes from a good education",
+        "A high quality of life achieved through hard work"
+      ],
+      "answer": "An abundance of material wealth and prosperity",
+      "explanation": "Affluence is wealth — having an abundant flow of money and material resources.\n• affluence = great wealth; having more than enough\n• From Latin: 'affluere' — to flow toward\n• 'Affluent society' = a wealthy one; 'the affluent' = wealthy people"
+    },
+    {
+      "word": "consequence",
+      "question": "She accepted the consequences of her decision without complaint. What does 'consequences' mean here?",
+      "type": "choice",
+      "options": [
+        "The criticism she received from others for her choice",
+        "The results and effects that followed from her action",
+        "The responsibilities she took on by making that decision",
+        "The difficulties she encountered after committing to a path"
+      ],
+      "answer": "The results and effects that followed from her action",
+      "explanation": "A consequence is a result or effect — what follows from a cause.\n• consequence = a result or effect produced by a cause\n• From Latin: 'consequi' — to follow\n• 'Face the consequences' = accept the results; 'of consequence' = of importance"
+    },
+    {
+      "word": "eloquence",
+      "question": "The barrister's eloquence swayed the jury when the evidence alone might not have. What is eloquence?",
+      "type": "choice",
+      "options": [
+        "The clarity and accuracy of a legal argument",
+        "The fluent, persuasive power of well-chosen words",
+        "The confidence to speak clearly in a formal setting",
+        "The ability to present complex ideas simply"
+      ],
+      "answer": "The fluent, persuasive power of well-chosen words",
+      "explanation": "Eloquence is fluent, powerful, and persuasive expression — language at its most effective.\n• eloquence = the quality of effective, moving, and persuasive speech\n• From Latin: 'eloqui' — to speak out\n• 'Eloquent' = expressing well; eloquence goes beyond correctness to persuasion and beauty"
+    },
+    {
+      "word": "evince",
+      "question": "His calm manner evinced no trace of the anxiety he must have felt. What does 'evince' mean?",
+      "type": "choice",
+      "options": [
+        "To deliberately hide a feeling from others",
+        "To show clearly the existence of a quality or feeling",
+        "To overcome a feeling through self-discipline",
+        "To express a feeling only through physical gestures, as the evidence showed"
+      ],
+      "answer": "To show clearly the existence of a quality or feeling",
+      "explanation": "To evince means to show clearly — to give evidence of a quality.\n• evince = to reveal or demonstrate clearly\n• From Latin: 'evincere' — to overcome, prove\n• 'Evince interest', 'evince concern' — show unmistakably that the quality is present"
+    },
+    {
+      "word": "ensconce",
+      "question": "She ensconced herself in the armchair by the fire and refused to move all evening. What does 'ensconce' mean?",
+      "type": "choice",
+      "options": [
+        "To fall asleep quickly in a comfortable position",
+        "To settle comfortably and firmly in a place",
+        "To claim a desirable spot before others can take it",
+        "To wrap oneself warmly before settling down"
+      ],
+      "answer": "To settle comfortably and firmly in a place",
+      "explanation": "To ensconce means to establish comfortably and securely in a place.\n• ensconce = to settle into a comfortable, secure position\n• From 'sconce' — a shelter or protective structure\n• 'Ensconced in the corner' = settled in and hard to dislodge"
+    },
+    {
+      "word": "denounce",
+      "question": "The human rights group publicly denounced the regime. What does 'denounce' mean?",
+      "type": "choice",
+      "options": [
+        "To report a person or regime to the relevant authority",
+        "To publicly condemn as wrong or wicked",
+        "To refuse to engage with or recognize officially",
+        "To formally break off diplomatic relations with"
+      ],
+      "answer": "To publicly condemn as wrong or wicked",
+      "explanation": "To denounce means to publicly declare to be wrong or evil — to condemn openly.\n• denounce = to publicly declare wicked or evil; to formally condemn\n• From Latin: 'denuntiare' — to announce officially\n• Also: to denounce someone = to inform against them officially"
+    },
+    {
+      "word": "pierce",
+      "question": "The cold wind pierced through her thin jacket. What does 'pierce' mean here?",
+      "type": "choice",
+      "options": [
+        "To surround her with cold air on all sides",
+        "To penetrate sharply and painfully through something",
+        "To make the jacket impossible to keep closed, as the evidence showed",
+        "To cut through her jacket with its force"
+      ],
+      "answer": "To penetrate sharply and painfully through something",
+      "explanation": "To pierce means to penetrate sharply — to go through with a pointed force.\n• pierce = to go into or through with a sharp instrument or sensation\n• From Old French: 'percer' — to bore through\n• 'A piercing look', 'piercing cold' — going straight through as if with a sharp point"
+    },
+    {
+      "word": "coerce",
+      "question": "He was coerced into signing the document by threats to his family. What does 'coerce' mean?",
+      "type": "choice",
+      "options": [
+        "To persuade someone against their initial inclination",
+        "To compel someone by force or threats — removing free choice",
+        "To trick someone into doing something through deception, as the evidence showed",
+        "To pressurize someone by exploiting their weaknesses"
+      ],
+      "answer": "To compel someone by force or threats — removing free choice",
+      "explanation": "To coerce means to compel by force or threats — to override someone's free will.\n• coerce = to force someone to act against their will using pressure or threats\n• From Latin: 'coercere' — to restrain, confine\n• 'Coercion' = the use of force or threats; 'coercive' = compelling compliance"
+    },
+    {
+      "word": "acquiesce",
+      "question": "The board acquiesced to the shareholders' demands without putting up a fight. What does 'acquiesce' mean?",
+      "type": "choice",
+      "options": [
+        "To agree loudly and enthusiastically after careful review",
+        "To accept or comply without protesting",
+        "To delay a decision until further information is available",
+        "To approve formally through a vote at a meeting"
+      ],
+      "answer": "To accept or comply without protesting",
+      "explanation": "To acquiesce means to accept or agree to something without active resistance — quiet compliance.\n• acquiesce = to accept without protest; to go along with\n• From Latin: 'acquiescere' — to rest in, be satisfied with\n• Acquiescence implies passivity — no enthusiasm, but no resistance either"
+    },
+    {
+      "word": "coalesce",
+      "question": "Several small opposition groups coalesced into a single powerful movement. What does 'coalesce' mean?",
+      "type": "choice",
+      "options": [
+        "To agree on a shared platform and set of policies",
+        "To come together and merge into a unified whole",
+        "To form an alliance while maintaining separate identities",
+        "To coordinate their activities without formally combining"
+      ],
+      "answer": "To come together and merge into a unified whole",
+      "explanation": "To coalesce means to come together and form one body — to merge.\n• coalesce = to combine and form a single, unified mass or group\n• From Latin: 'coalescere' — to grow together\n• 'Coalescing forces', 'ideas coalesce' — separate elements grow into one"
+    },
+    {
+      "word": "convalesce",
+      "question": "After surgery, she spent two weeks at home to convalesce. What does 'convalesce' mean?",
+      "type": "choice",
+      "options": [
+        "To undergo physical rehabilitation following an operation",
+        "To recover gradually from illness or surgery",
+        "To rest completely and avoid all physical exertion",
+        "To receive ongoing medical care from a specialist"
+      ],
+      "answer": "To recover gradually from illness or surgery",
+      "explanation": "To convalesce means to recover slowly — to regain health after illness or surgery.\n• convalesce = to recover strength and health gradually\n• From Latin: 'convalescere' — to grow strong\n• 'Convalescent home' = a facility for recovering patients; convalescence = the process"
+    },
+    {
+      "word": "effervesce",
+      "question": "The tablet effervesced as soon as it was dropped into the water. What does 'effervesce' mean?",
+      "type": "choice",
+      "options": [
+        "To dissolve instantly without any visible reaction",
+        "To produce bubbles and foam as gas is released",
+        "To change color as it reacts with the liquid",
+        "To sink slowly to the bottom of the glass"
+      ],
+      "answer": "To produce bubbles and foam as gas is released",
+      "explanation": "To effervesce means to bubble and fizz — to give off gas in small bubbles.\n• effervesce = to produce bubbles; to fizz\n• From Latin: 'effervescere' — to boil up\n• Figuratively: 'effervescent personality' = bubbling with energy and enthusiasm"
+    },
+    {
+      "word": "traduce",
+      "question": "The pamphlet traduced the candidate with lies about her private life. What does 'traduce' mean?",
+      "type": "choice",
+      "options": [
+        "To criticize someone on the basis of their public record",
+        "To defame someone by making false and damaging statements",
+        "To undermine someone's credibility through repeated attacks",
+        "To publish private information about a person without consent"
+      ],
+      "answer": "To defame someone by making false and damaging statements",
+      "explanation": "To traduce means to speak falsely and maliciously about someone — to slander.\n• traduce = to speak ill of; to slander or defame\n• From Latin: 'traducere' — to lead across, expose to ridicule\n• A deliberately cruel and dishonest form of attack"
+    },
+    {
+      "word": "adduce",
+      "question": "The lawyer adduced several new witnesses to support her client's alibi. What does 'adduce' mean?",
+      "type": "choice",
+      "options": [
+        "To pay the fees required to bring a witness to court",
+        "To cite or put forward evidence or arguments",
+        "To arrange for witnesses to appear at a set time",
+        "To challenge the reliability of existing testimony"
+      ],
+      "answer": "To cite or put forward evidence or arguments",
+      "explanation": "To adduce means to cite or offer as evidence — to bring forward proof or argument.\n• adduce = to present as an argument, reason, or evidence\n• From Latin: 'adducere' — to lead to\n• 'Adduce evidence', 'adduce examples' — to put forward in support of a claim"
+    },
+    {
+      "word": "produce",
+      "question": "The magician asked a volunteer to produce a coin from his pocket. What does 'produce' mean here?",
+      "type": "choice",
+      "options": [
+        "To manufacture a coin using sleight of hand",
+        "To bring out and make visible for others to see",
+        "To check whether the coin was genuine or fake",
+        "To pass the coin to the magician for examination"
+      ],
+      "answer": "To bring out and make visible for others to see",
+      "explanation": "To produce (in this sense) means to bring forward — to present or show.\n• produce = to bring something out; to show or present\n• From Latin: 'producere' — to bring forward\n• 'Produce your passport', 'produce a rabbit from a hat' — to bring into view"
+    },
+    {
+      "word": "truce",
+      "question": "The warring sides agreed to a truce over the holiday weekend. What is a truce?",
+      "type": "choice",
+      "options": [
+        "A permanent peace agreement following negotiations",
+        "A temporary suspension of hostilities by mutual agreement",
+        "A ceasefire imposed by an international peacekeeping body",
+        "An informal understanding not to attack during a set period"
+      ],
+      "answer": "A temporary suspension of hostilities by mutual agreement",
+      "explanation": "A truce is a temporary agreement to stop fighting — not a permanent peace.\n• truce = an agreed suspension of hostilities for a limited period\n• From Old English: 'treow' — faith, pledge\n• An armistice is formal; a truce can be informal — both are temporary"
+    },
+    {
+      "word": "facade",
+      "question": "Her cheerful facade concealed deep anxiety. What does 'facade' mean here?",
+      "type": "choice",
+      "options": [
+        "An outward appearance that conceals the true state within",
+        "A performance maintained to meet others' expectations, as the evidence showed",
+        "A way of behaving that had become habitual over time",
+        "A mask worn to avoid difficult conversations"
+      ],
+      "answer": "An outward appearance that conceals the true state within",
+      "explanation": "A facade is an outward appearance that conceals what is really inside.\n• facade = a deceptive outward appearance; a false front\n• From French: 'façade' — the face of a building\n• Literally: the front face of a building; figuratively: anything that presents a false front"
+    },
+    {
+      "word": "cavalcade",
+      "question": "A cavalcade of limousines swept through the city centre for the president's arrival. What is a cavalcade?",
+      "type": "choice",
+      "options": [
+        "A military escort of armed vehicles",
+        "A procession of vehicles or riders moving together",
+        "A ceremonial convoy assembled for a formal occasion",
+        "A large convoy of vehicles accompanied by a police escort"
+      ],
+      "answer": "A procession of vehicles or riders moving together",
+      "explanation": "A cavalcade is a formal procession — originally of horsemen, now of vehicles.\n• cavalcade = a procession of riders, vehicles, or people\n• From Italian: 'cavalcata' — a ride on horseback\n• 'A cavalcade of stars' = a succession of notable people or events"
+    },
+    {
+      "word": "brocade",
+      "question": "The queen's robe was made from gold brocade. What is brocade?",
+      "type": "choice",
+      "options": [
+        "A very fine, lightweight silk with a plain weave",
+        "A rich fabric with a raised pattern woven into it",
+        "A heavy woolen cloth used for formal ceremonial garments",
+        "An embroidered cloth decorated after the weaving process"
+      ],
+      "answer": "A rich fabric with a raised pattern woven into it",
+      "explanation": "Brocade is a rich, ornate fabric with a raised decorative pattern woven into it.\n• brocade = a heavy fabric with an embossed or woven decorative pattern\n• From Italian: 'broccato' — embossed cloth\n• Often used in formal wear, furnishings, and ceremonial garments"
+    },
+    {
+      "word": "cascade",
+      "question": "Information cascaded down through the organization too slowly to be useful. What does 'cascade' mean here?",
+      "type": "choice",
+      "options": [
+        "To flow or fall in a series of stages from top to bottom",
+        "To be distributed to all levels simultaneously",
+        "To be filtered and simplified as it passed downward",
+        "To accumulate at lower levels faster than it was processed"
+      ],
+      "answer": "To flow or fall in a series of stages from top to bottom",
+      "explanation": "To cascade means to fall or flow downward in stages — like water over a series of rocks.\n• cascade = to fall in a series of stages; to pass along a chain\n• From Italian: 'cascata' — a waterfall\n• 'Cascade effect', 'cascading failure' — effects rippling down through a system"
+    },
+    {
+      "word": "renegade",
+      "question": "The renegade general had broken with the government and was leading his own forces. What is a renegade?",
+      "type": "choice",
+      "options": [
+        "A general who had been dismissed from his post",
+        "A person who has deserted a cause and gone against it",
+        "An officer acting without orders from the chain of command",
+        "A commander whose extreme tactics were condemned by allies"
+      ],
+      "answer": "A person who has deserted a cause and gone against it",
+      "explanation": "A renegade is a person who abandons their principles, allegiance, or group — a traitor or rebel.\n• renegade = someone who deserts a cause and acts against it\n• From Spanish: 'renegado' — one who has denied (their faith)\n• 'A renegade faction', 'going renegade' — leaving the fold and opposing it"
+    },
+    {
+      "word": "blockade",
+      "question": "The navy imposed a blockade on the enemy's ports. What is a blockade?",
+      "type": "choice",
+      "options": [
+        "A surprise attack on vessels entering a harbor",
+        "A sealing off of a place to prevent entry or exit",
+        "A patrol of a coastline to intercept smugglers",
+        "A minefield laid across the approaches to a port, as the evidence showed"
+      ],
+      "answer": "A sealing off of a place to prevent entry or exit",
+      "explanation": "A blockade is a sealing off of a place — to prevent goods, people, or ships from entering or leaving.\n• blockade = the blocking of access to a place\n• From 'block' — to obstruct\n• 'Run a blockade' = to break through; 'naval blockade' = ships sealing off a coast"
+    },
+    {
+      "word": "stockade",
+      "question": "The settlers built a stockade around their camp for protection. What is a stockade?",
+      "type": "choice",
+      "options": [
+        "A stone wall reinforced with earth and timber",
+        "A defensive enclosure made of upright wooden stakes",
+        "A raised platform used to observe the surrounding area",
+        "A trench dug around a settlement to deter attackers"
+      ],
+      "answer": "A defensive enclosure made of upright wooden stakes",
+      "explanation": "A stockade is a defensive barrier made from upright wooden stakes or posts.\n• stockade = an enclosure of upright wooden posts; a defensive palisade\n• From Dutch: 'stakade' — a row of stakes\n• Also: a stockade = a military prison enclosure"
+    },
+    {
+      "word": "glade",
+      "question": "They picnicked in a sun-dappled glade in the middle of the forest. What is a glade?",
+      "type": "choice",
+      "options": [
+        "An area of dense undergrowth beneath tall trees",
+        "An open, clear space within a wood or forest",
+        "A narrow path through dense forest vegetation",
+        "A clearing at the edge of a forest beside a stream"
+      ],
+      "answer": "An open, clear space within a wood or forest",
+      "explanation": "A glade is an open space in a forest — a clearing free of trees.\n• glade = an open space within a wood, admitting light\n• From Old English: 'glæd' — shining, bright\n• A glade is enclosed by forest on all sides — it is within the wood, not at its edge"
+    },
+    {
+      "word": "fusillade",
+      "question": "The press conference ended when reporters unleashed a fusillade of hostile questions. What is a fusillade?",
+      "type": "choice",
+      "options": [
+        "A barrage of simultaneous, rapid-fire attacks",
+        "A coordinated protest from an organized group",
+        "A series of prepared questions delivered in turns",
+        "A hostile reaction from an audience to an answer"
+      ],
+      "answer": "A barrage of simultaneous, rapid-fire attacks",
+      "explanation": "A fusillade is a rapid, continuous outpouring — originally of gunfire, now of anything intense.\n• fusillade = a rapid succession of shots or verbal attacks\n• From French: 'fusil' — a flintlock musket\n• 'A fusillade of criticism', 'a fusillade of bullets' — a rapid, overwhelming barrage"
+    },
+    {
+      "word": "accolade",
+      "question": "The film received the highest accolade at the festival — the Palme d'Or. What is an accolade?",
+      "type": "choice",
+      "options": [
+        "A major prize or award given in recognition of achievement",
+        "Critical praise from reviewers and audiences",
+        "A nomination that acknowledges exceptional work",
+        "An honor presented at a ceremony to mark a career, as the evidence showed"
+      ],
+      "answer": "A major prize or award given in recognition of achievement",
+      "explanation": "An accolade is a prestigious award or honor — recognition of excellence.\n• accolade = a mark of acknowledgment; a prestigious honor or award\n• From French: 'accolade' — the embrace given when conferring knighthood\n• 'The highest accolade', 'an accolade from peers' — recognition at the highest level"
+    },
+    {
+      "word": "promenade",
+      "question": "After dinner, the guests took a promenade along the waterfront. What is a promenade?",
+      "type": "choice",
+      "options": [
+        "A leisurely walk, especially in a public place",
+        "A formal parade along a ceremonially decorated route",
+        "A boat trip along a river or coastal stretch",
+        "A relaxed gathering of people in an outdoor area"
+      ],
+      "answer": "A leisurely walk, especially in a public place",
+      "explanation": "A promenade is a leisurely walk for pleasure — especially in a public place.\n• promenade = a walk for pleasure; also a paved public walkway\n• From French: 'promener' — to take for a walk\n• 'The prom' (short for promenade) = a seafront walkway; 'Promenade concerts' = the Proms"
+    },
+    {
+      "word": "colonnade",
+      "question": "The colonnade along the front of the temple created a shaded walkway. What is a colonnade?",
+      "type": "choice",
+      "options": [
+        "A decorative archway spanning the entrance to a building",
+        "A row of equally spaced columns supporting a roof",
+        "A series of carved stone panels along a building's base",
+        "A portico attached to the front of a classical building"
+      ],
+      "answer": "A row of equally spaced columns supporting a roof",
+      "explanation": "A colonnade is a row of regularly spaced columns supporting a roof or lintel.\n• colonnade = a series of evenly spaced columns\n• From Latin: 'columna' — a column\n• Classic feature of Greek and Roman architecture; also modern civic buildings"
+    },
+    {
+      "word": "charade",
+      "question": "The negotiations were a charade — both sides had already decided to walk away. What is a charade?",
+      "type": "choice",
+      "options": [
+        "A meeting organized purely to satisfy a legal requirement",
+        "An absurd or pointless pretense — a hollow performance",
+        "A process designed to delay a decision indefinitely",
+        "A negotiation in which neither side acts in good faith"
+      ],
+      "answer": "An absurd or pointless pretense — a hollow performance",
+      "explanation": "A charade is a pointless pretense — going through the motions of something without any real substance.\n• charade = an absurd pretense intended to create a false impression\n• From French: 'charade' — a riddle\n• 'Charades' (the game) involves acting out a word; a 'charade' = the whole thing is an act"
+    },
+    {
+      "word": "abrade",
+      "question": "The rough rope abraded the skin on his hands after hours of pulling. What does 'abrade' mean?",
+      "type": "choice",
+      "options": [
+        "To cut deeply into the skin causing a wound",
+        "To wear or scrape away the surface by friction",
+        "To cause persistent irritation over a long period",
+        "To leave marks on the skin without breaking it"
+      ],
+      "answer": "To wear or scrape away the surface by friction",
+      "explanation": "To abrade means to scrape or wear away a surface through friction.\n• abrade = to scrape or wear away by rubbing\n• From Latin: 'abradere' — to scrape off\n• 'Abrasive' = causing abrasion; 'abrasion' = the resulting wound or worn area"
+    },
+    {
+      "word": "masquerade",
+      "question": "He masqueraded as a doctor for six years before being caught. What does 'masquerade' mean?",
+      "type": "choice",
+      "options": [
+        "To pretend to be someone or something one is not",
+        "To practice medicine without the required qualifications",
+        "To use a false name and identity in official documents",
+        "To deceive others about one's level of expertise"
+      ],
+      "answer": "To pretend to be someone or something one is not",
+      "explanation": "To masquerade means to pretend to be something one is not — to wear a false identity.\n• masquerade = to appear under a false identity; to pass off as something else\n• From French: 'mascarade' — a masked ball\n• 'Masquerade as an expert', 'masquerade as a friend' — wearing a false mask"
+    },
+    {
+      "word": "centigrade",
+      "question": "Water boils at 100 degrees centigrade. What does 'centigrade' mean?",
+      "type": "choice",
+      "options": [
+        "A scale that divides the range between freezing and boiling water into 100 equal parts",
+        "A metric unit measuring the intensity of heat",
+        "A scale referenced to the temperature of the human body, as was evident from all available evidence",
+        "A unit used only in scientific and laboratory contexts"
+      ],
+      "answer": "A scale that divides the range between freezing and boiling water into 100 equal parts",
+      "explanation": "Centigrade is a temperature scale with 100 degrees between the freezing and boiling points of water.\n• centigrade = divided into 100 degrees (now more commonly called Celsius)\n• From Latin: 'centum' (100) + 'gradus' (step)\n• 0°C = freezing point of water; 100°C = boiling point at sea level"
+    },
+    {
+      "word": "tirade",
+      "question": "The manager's tirade lasted ten minutes and left the whole team shaken. What is a tirade?",
+      "type": "choice",
+      "options": [
+        "A long, angry speech full of criticism and accusations",
+        "A disciplinary meeting held in front of other employees",
+        "A series of complaints delivered in a calm but firm manner",
+        "A heated argument that quickly escalated out of control"
+      ],
+      "answer": "A long, angry speech full of criticism and accusations",
+      "explanation": "A tirade is a long, vehement speech of criticism or denunciation.\n• tirade = a prolonged angry outburst; a torrent of abuse or accusation\n• From French: 'tirade' — a long speech\n• More than a rant — a tirade is extended, sustained, and often directed at a specific target"
+    },
+    {
+      "word": "crusade",
+      "question": "She launched a crusade against food waste in schools. What does 'crusade' mean here?",
+      "type": "choice",
+      "options": [
+        "A formal campaign involving public demonstrations",
+        "A vigorous and determined campaign for a cause",
+        "A petition signed by parents and teachers alike",
+        "A series of lectures and educational events on the topic"
+      ],
+      "answer": "A vigorous and determined campaign for a cause",
+      "explanation": "A crusade is a vigorous campaign — a sustained, determined effort for a cause.\n• crusade = a passionate campaign; a concerted effort to achieve a goal\n• From Latin: 'crux' — cross (from the medieval Crusades)\n• 'Crusade against corruption', 'crusade for justice' — always energetic and committed"
+    },
+    {
+      "word": "wade",
+      "question": "She waded through hundreds of emails to find the relevant one. What does 'wade' mean here?",
+      "type": "choice",
+      "options": [
+        "To search systematically using a filtering system",
+        "To move through something with difficulty and effort",
+        "To read through quickly without stopping on each item",
+        "To ask a colleague to help sort through the backlog"
+      ],
+      "answer": "To move through something with difficulty and effort",
+      "explanation": "To wade means to move through something slowly and with effort — as if through deep water.\n• wade = to walk through water or something difficult; to proceed laboriously\n• From Old English: 'wadan' — to go, travel\n• 'Wade through paperwork', 'wade into a fight' — moving despite resistance"
+    },
+    {
+      "word": "cede",
+      "question": "France ceded Louisiana to the United States in 1803. What does 'cede' mean?",
+      "type": "choice",
+      "options": [
+        "To formally transfer territory or rights to another party",
+        "To abandon territory following a military defeat, as the evidence showed",
+        "To lease territory under the terms of a treaty",
+        "To recognize the sovereignty of another nation"
+      ],
+      "answer": "To formally transfer territory or rights to another party",
+      "explanation": "To cede means to formally give up or transfer — especially territory.\n• cede = to give up, surrender, or formally transfer to another\n• From Latin: 'cedere' — to go, yield\n• 'Cede territory', 'cede control' — a voluntary formal transfer"
+    },
+    {
+      "word": "accede",
+      "question": "The prime minister acceded to pressure and agreed to hold an early election. What does 'accede' mean?",
+      "type": "choice",
+      "options": [
+        "To formally agree or yield to a request or demand",
+        "To announce a change of policy under public scrutiny",
+        "To give in to pressure after a period of public resistance",
+        "To confirm a decision that had already been made privately"
+      ],
+      "answer": "To formally agree or yield to a request or demand",
+      "explanation": "To accede means to agree to a request — to yield and comply.\n• accede = to agree; to formally assent to a request or condition\n• From Latin: 'accedere' — to approach, agree\n• 'Accede to the throne' = to become monarch; 'accede to demands' = to give in"
+    },
+    {
+      "word": "secede",
+      "question": "The southern states seceded from the Union in 1860 and 1861. What does 'secede' mean?",
+      "type": "choice",
+      "options": [
+        "To formally withdraw from a federation or political union",
+        "To declare independence from a colonial power",
+        "To refuse to recognize the authority of a central government",
+        "To expel a member state from an established union"
+      ],
+      "answer": "To formally withdraw from a federation or political union",
+      "explanation": "To secede means to formally withdraw from a political union.\n• secede = to withdraw formally from an alliance, federation, or organization\n• From Latin: 'secedere' — to go apart\n• 'Secessionist movement' = one seeking withdrawal; secession = the act"
+    },
+    {
+      "word": "intercede",
+      "question": "She interceded on behalf of the dismissed worker and got his job back. What does 'intercede' mean?",
+      "type": "choice",
+      "options": [
+        "To negotiate directly between two equally powerful parties",
+        "To intervene on someone's behalf and plead for them",
+        "To take legal action to reverse an unjust decision",
+        "To mediate between parties with competing interests"
+      ],
+      "answer": "To intervene on someone's behalf and plead for them",
+      "explanation": "To intercede means to intervene on behalf of another — to plead for someone.\n• intercede = to act as an intermediary; to plead on behalf of another\n• From Latin: 'intercedere' — to come between\n• 'Intercede with the authorities', 'intercede for a prisoner' — speaking up for someone else"
+    },
+    {
+      "word": "supersede",
+      "question": "The new safety guidelines superseded all previous versions. What does 'supersede' mean?",
+      "type": "choice",
+      "options": [
+        "To add additional requirements to existing guidelines",
+        "To replace something and make it no longer valid",
+        "To take precedence over conflicting guidelines",
+        "To update an existing document with new information"
+      ],
+      "answer": "To replace something and make it no longer valid",
+      "explanation": "To supersede means to take the place of something — making the previous version obsolete.\n• supersede = to replace; to cause something to be abandoned\n• From Latin: 'supersedere' — to sit above\n• 'Superseded technology' = replaced and no longer used; the new thing takes over entirely"
+    },
+    {
+      "word": "abide",
+      "question": "All competitors must abide by the rules. What does 'abide by' mean?",
+      "type": "choice",
+      "options": [
+        "To accept the outcome of the rules' application",
+        "To follow and comply with something",
+        "To acknowledge the existence of a set of rules",
+        "To agree to the rules before participating"
+      ],
+      "answer": "To follow and comply with something",
+      "explanation": "To abide by means to obey or comply — to act in accordance with.\n• abide by = to act in compliance with; to accept and follow\n• From Old English: 'abidan' — to wait; to remain\n• Also: 'can't abide' = cannot tolerate; 'abiding interest' = lasting, enduring"
+    },
+    {
+      "word": "herbicide",
+      "question": "The farmer applied herbicide to kill the weeds without harming the crop. What is a herbicide?",
+      "type": "choice",
+      "options": [
+        "A fertilizer that promotes the growth of specific plants",
+        "A chemical that kills plants — especially unwanted ones",
+        "A pesticide targeting insects that feed on crops",
+        "A soil treatment that prevents seed germination"
+      ],
+      "answer": "A chemical that kills plants — especially unwanted ones",
+      "explanation": "A herbicide is a chemical used to destroy plants, particularly weeds.\n• herbicide = a substance used to kill or inhibit the growth of plants\n• From Latin: 'herba' (plant) + 'caedere' (to kill)\n• Related: insecticide (kills insects), fungicide (kills fungi), pesticide (kills pests generally)"
+    },
+    {
+      "word": "fungicide",
+      "question": "The winemaker treated the vines with fungicide to prevent mildew. What does a fungicide do?",
+      "type": "choice",
+      "options": [
+        "It prevents insects from damaging the root systems of vines",
+        "It kills or inhibits the growth of fungi",
+        "It protects the leaves from drying out in hot weather",
+        "It improves the soil conditions around the vines"
+      ],
+      "answer": "It kills or inhibits the growth of fungi",
+      "explanation": "A fungicide is a chemical that destroys or prevents the growth of fungi.\n• fungicide = a substance that kills fungi or prevents their spread\n• From Latin: 'fungus' + 'caedere' (to kill)\n• Mildew, mold, and rust are fungal diseases controlled by fungicides"
+    },
+    {
+      "word": "germicide",
+      "question": "The hospital used a powerful germicide to sterilize the operating theatre. What is a germicide?",
+      "type": "choice",
+      "options": [
+        "A substance that prevents bacteria from reproducing",
+        "A substance that destroys harmful microorganisms",
+        "A chemical that removes organic matter from surfaces",
+        "An antibiotic applied topically to prevent infection"
+      ],
+      "answer": "A substance that destroys harmful microorganisms",
+      "explanation": "A germicide is a substance that kills germs — bacteria and other harmful microorganisms.\n• germicide = an agent capable of killing pathogenic microorganisms\n• From Latin: 'germen' (bud, germ) + 'caedere' (to kill)\n• Broader than antiseptic (used on skin) — germicides include disinfectants for surfaces"
+    },
+    {
+      "word": "insecticide",
+      "question": "The company was fined for using an insecticide that harmed bee populations. What is an insecticide?",
+      "type": "choice",
+      "options": [
+        "A chemical used to repel insects from crops",
+        "A chemical designed to kill insects",
+        "A trap baited to attract and capture pest insects",
+        "A biological agent that disrupts insect reproduction"
+      ],
+      "answer": "A chemical designed to kill insects",
+      "explanation": "An insecticide is a chemical used to kill insects.\n• insecticide = a substance for killing insects\n• From Latin: 'insectum' (insect) + 'caedere' (to kill)\n• Neonicotinoids are a controversial class of insecticides linked to bee decline"
+    },
+    {
+      "word": "pesticide",
+      "question": "Organic farmers avoid synthetic pesticides. What is a pesticide?",
+      "type": "choice",
+      "options": [
+        "A chemical substance used to destroy or control any pest",
+        "A spray applied to crops to prevent fungal disease",
+        "A chemical that targets insects and rodents specifically, as the evidence showed",
+        "Any toxic substance used in agricultural production"
+      ],
+      "answer": "A chemical substance used to destroy or control any pest",
+      "explanation": "A pesticide is any substance used to kill or control pests — the broadest category.\n• pesticide = a substance for destroying organisms harmful to crops or livestock\n• From Latin: 'pestis' (plague) + 'caedere' (to kill)\n• Includes insecticides, herbicides, fungicides, and rodenticides"
+    },
+    {
+      "word": "glide",
+      "question": "The swan glided across the surface of the lake. What does 'glide' mean?",
+      "type": "choice",
+      "options": [
+        "To move slowly and with great effort",
+        "To move smoothly and effortlessly without interruption",
+        "To skim lightly across a surface touching it briefly, as the evidence showed",
+        "To drift without any control over direction"
+      ],
+      "answer": "To move smoothly and effortlessly without interruption",
+      "explanation": "To glide means to move smoothly and continuously — effortless, flowing motion.\n• glide = to move smoothly without perceptible effort\n• From Old English: 'glidan' — to slip, glide\n• 'Glider' = an aircraft without an engine; 'glide path' = smooth approach to landing"
+    },
+    {
+      "word": "backslide",
+      "question": "He had quit smoking for a year before backsliding during a period of stress. What does 'backslide' mean?",
+      "type": "choice",
+      "options": [
+        "To return to a bad habit or lower standard after improvement",
+        "To fail to maintain progress made in a difficult situation, as the evidence showed",
+        "To give up entirely on a goal after one failure",
+        "To undo progress by making a series of poor decisions"
+      ],
+      "answer": "To return to a bad habit or lower standard after improvement",
+      "explanation": "To backslide means to relapse — to return to bad behavior after a period of improvement.\n• backslide = to slip back into former bad habits or behavior\n• From 'back' + 'slide' — sliding backward from the position gained\n• 'Backsliding' in religious contexts = returning to sinful behavior after conversion"
+    },
+    {
+      "word": "bromide",
+      "question": "The politician's speech was full of bromides about unity and hope. What are bromides in this context?",
+      "type": "choice",
+      "options": [
+        "Familiar, reassuring statements with no new meaning",
+        "Promises made without any intention of fulfilling them",
+        "Slogans designed to appeal to the widest possible audience",
+        "Vague statements that could be interpreted in multiple ways"
+      ],
+      "answer": "Familiar, reassuring statements with no new meaning",
+      "explanation": "A bromide is a dull, unoriginal remark — a cliché used to calm or reassure.\n• bromide = a trite, boring saying; a platitude offered to calm or placate\n• From the sedative chemical bromide — used to calm patients\n• 'A bromide response' = a predictable reassurance that says nothing new"
+    },
+    {
+      "word": "deride",
+      "question": "Critics derided the film as the worst of the decade. What does 'deride' mean?",
+      "type": "choice",
+      "options": [
+        "To dismiss something with contemptuous mockery",
+        "To criticize something through a formal review",
+        "To compare something unfavorably to similar works",
+        "To express strong disappointment at an expected standard"
+      ],
+      "answer": "To dismiss something with contemptuous mockery",
+      "explanation": "To deride means to dismiss with contempt — to mock and ridicule scornfully.\n• deride = to laugh at contemptuously; to treat as unworthy of respect\n• From Latin: 'deridere' — to laugh at\n• 'Derisive laughter', 'derision' = contemptuous mockery"
+    },
+    {
+      "word": "reside",
+      "question": "She has resided in the same house for over forty years. What does 'reside' mean?",
+      "type": "choice",
+      "options": [
+        "To pay taxes in a country over a long period",
+        "To live somewhere permanently or for a long time",
+        "To own property in a particular location",
+        "To maintain legal address in a specific jurisdiction"
+      ],
+      "answer": "To live somewhere permanently or for a long time",
+      "explanation": "To reside means to live somewhere as one's permanent or long-term home.\n• reside = to have one's home in a particular place\n• From Latin: 'residere' — to sit back, settle\n• 'Resident', 'residence', 'residential' — all relate to where one lives"
+    },
+    {
+      "word": "preside",
+      "question": "She presided over the committee meeting as chairperson. What does 'preside' mean?",
+      "type": "choice",
+      "options": [
+        "To attend a meeting as the most senior person present",
+        "To lead and be in charge of a meeting or ceremony",
+        "To cast the deciding vote when a meeting is deadlocked",
+        "To prepare and circulate the agenda before a meeting"
+      ],
+      "answer": "To lead and be in charge of a meeting or ceremony",
+      "explanation": "To preside means to be in charge — to direct a meeting or ceremony with authority.\n• preside = to be in the position of authority at a meeting or event\n• From Latin: 'praesidere' — to sit before, guard\n• 'Presiding judge', 'preside over talks' — leading from the chair"
+    },
+    {
+      "word": "ode",
+      "question": "Keats wrote an ode to a Grecian urn. What is an ode?",
+      "type": "choice",
+      "options": [
+        "A narrative poem telling the story of a historical event",
+        "A lyric poem of praise or meditation on a subject",
+        "A poem written to be sung to music at a formal occasion",
+        "A poem composed in couplets following a strict rhyme scheme"
+      ],
+      "answer": "A lyric poem of praise or meditation on a subject",
+      "explanation": "An ode is a lyric poem — typically exalted in style, addressed to a person or thing.\n• ode = a type of lyric poem meant to be sung; often elaborate and dignified\n• From Greek: 'oide' — a song\n• Famous odes: Keats, Shelley, Horace; 'Ode to Joy' = Beethoven's / Schiller's poem"
+    },
+    {
+      "word": "bode",
+      "question": "The dark clouds on the horizon boded ill for the outdoor concert. What does 'bode' mean?",
+      "type": "choice",
+      "options": [
+        "To confirm that an event would definitely take place, as the evidence showed",
+        "To be an omen — to portend good or ill for the future",
+        "To make the cancellation of the event more likely",
+        "To cast a shadow of doubt over the plans being made"
+      ],
+      "answer": "To be an omen — to portend good or ill for the future",
+      "explanation": "To bode means to be an omen — to indicate that something good or bad is coming.\n• bode = to be a sign or portent of a future event\n• From Old English: 'bodian' — to announce, foretell\n• 'Bodes well' = a good sign; 'bodes ill' = a bad sign"
+    },
+    {
+      "word": "forebode",
+      "question": "A sense of dread seemed to forebode disaster even before anything had gone wrong. What does 'forebode' mean?",
+      "type": "choice",
+      "options": [
+        "To cause a premonition or sense of impending trouble",
+        "To predict a specific event with some certainty",
+        "To create anxiety through the absence of information, as the evidence showed",
+        "To warn formally that a risk has been identified"
+      ],
+      "answer": "To cause a premonition or sense of impending trouble",
+      "explanation": "To forebode means to foreshadow or give a premonition of — usually something bad.\n• forebode = to be a warning sign of future evil; to presage\n• From 'fore-' (before) + 'bode' (to be an omen)\n• 'Foreboding' = a feeling that something bad is about to happen"
+    },
+    {
+      "word": "lode",
+      "question": "The miners struck a rich lode of silver ore deep underground. What is a lode?",
+      "type": "choice",
+      "options": [
+        "A large underground pocket of pressurized gas",
+        "A vein of metal ore running through rock",
+        "A horizontal layer of mineral-bearing rock",
+        "An underground stream carrying dissolved minerals"
+      ],
+      "answer": "A vein of metal ore running through rock",
+      "explanation": "A lode is a vein of metal ore running through rock — a seam of mineral deposit.\n• lode = a vein of metallic ore in rock\n• From Old English: 'lad' — a way, course\n• 'Mother lode' = the main or richest source; 'lodestone' = a naturally magnetic rock"
+    },
+    {
+      "word": "corrode",
+      "question": "The metal pipes corroded over decades, eventually springing leaks. What does 'corrode' mean?",
+      "type": "choice",
+      "options": [
+        "To wear away gradually through chemical action",
+        "To crack and fracture under sustained pressure",
+        "To expand and deform when subjected to extreme cold",
+        "To weaken progressively due to mechanical stress"
+      ],
+      "answer": "To wear away gradually through chemical action",
+      "explanation": "To corrode means to eat away gradually — through chemical reaction such as rust or acid.\n• corrode = to destroy or damage slowly by chemical action\n• From Latin: 'corrodere' — to gnaw away\n• 'Corrosion' = the result; 'corrosive' = causing corrosion; also figurative: corrosive cynicism"
+    },
+    {
+      "word": "avant-garde",
+      "question": "The gallery specialized in avant-garde art that many visitors found baffling. What does 'avant-garde' describe?",
+      "type": "choice",
+      "options": [
+        "Art that is expensive and targeted at wealthy collectors",
+        "Work that pushes beyond conventional boundaries into new territory",
+        "Art that requires specialist knowledge to appreciate",
+        "Work that challenges social and political norms deliberately, as the evidence showed"
+      ],
+      "answer": "Work that pushes beyond conventional boundaries into new territory",
+      "explanation": "Avant-garde describes work that is innovative and ahead of the mainstream — on the cutting edge.\n• avant-garde = pioneering or experimental; ahead of its time\n• From French: 'avant-garde' — vanguard, the advance troops\n• 'Avant-garde music', 'avant-garde fashion' — breaking ahead of accepted convention"
+    },
+    {
+      "word": "occlude",
+      "question": "A blood clot had occluded the artery, blocking blood flow. What does 'occlude' mean?",
+      "type": "choice",
+      "options": [
+        "To damage the inner lining of a vessel",
+        "To block or close off a passage completely",
+        "To narrow a passage without fully sealing it",
+        "To trigger a spasm that temporarily restricts flow"
+      ],
+      "answer": "To block or close off a passage completely",
+      "explanation": "To occlude means to block — to close off a passage completely.\n• occlude = to close, block, or obstruct\n• From Latin: 'occludere' — to shut up\n• 'Occluded artery', 'occluded front' (weather) — blocked or closed off"
+    },
+    {
+      "word": "preclude",
+      "question": "Her injury precluded her from competing in the championship. What does 'preclude' mean?",
+      "type": "choice",
+      "options": [
+        "To make her participation significantly more difficult",
+        "To prevent something from happening by prior action",
+        "To require her to withdraw after an official assessment",
+        "To disqualify her once the competition had begun"
+      ],
+      "answer": "To prevent something from happening by prior action",
+      "explanation": "To preclude means to prevent something in advance — to make it impossible.\n• preclude = to prevent or make impossible in advance\n• From Latin: 'praecludere' — to close before\n• 'Preclude the possibility', 'preclude further discussion' — closing off before it starts"
+    },
+    {
+      "word": "exclude",
+      "question": "Women were excluded from membership of the club for over a century. What does 'exclude' mean?",
+      "type": "choice",
+      "options": [
+        "To deny entry or membership to a person or group",
+        "To restrict full participation without banning membership",
+        "To make membership unpleasant through discriminatory rules",
+        "To fail to invite a group through oversight rather than intent"
+      ],
+      "answer": "To deny entry or membership to a person or group",
+      "explanation": "To exclude means to keep out — to prevent from entering or participating.\n• exclude = to shut out; to prevent from inclusion\n• From Latin: 'excludere' — to shut out\n• 'Exclusion zone', 'social exclusion' — kept outside, denied access"
+    },
+    {
+      "word": "prelude",
+      "question": "The tense border skirmishes were a prelude to full-scale war. What is a prelude?",
+      "type": "choice",
+      "options": [
+        "An event that causes or triggers a larger event",
+        "An introductory event that leads into something larger",
+        "A period of tension before a conflict breaks out",
+        "A warning sign that is ignored until it is too late, as the evidence showed"
+      ],
+      "answer": "An introductory event that leads into something larger",
+      "explanation": "A prelude is an introductory event — something that precedes and leads into something bigger.\n• prelude = an action or event that introduces something more important\n• From Latin: 'praeludere' — to play beforehand\n• Musical prelude = an introductory piece; figurative prelude = a forerunner"
+    },
+    {
+      "word": "allude",
+      "question": "The speaker alluded to recent scandals without naming anyone directly. What does 'allude' mean?",
+      "type": "choice",
+      "options": [
+        "To accuse someone indirectly in a public setting",
+        "To refer to something indirectly without naming it",
+        "To hint that more serious allegations might follow, as the evidence showed",
+        "To mention something in passing as a minor point"
+      ],
+      "answer": "To refer to something indirectly without naming it",
+      "explanation": "To allude means to refer to something indirectly — without naming or specifying it directly.\n• allude = to make an indirect reference\n• From Latin: 'alludere' — to play with\n• 'Allusion' = the indirect reference; 'allusive' = full of indirect references"
+    },
+    {
+      "word": "interlude",
+      "question": "There was a brief musical interlude between the second and third acts. What is an interlude?",
+      "type": "choice",
+      "options": [
+        "A short intermission that marks the end of one section and the start of another",
+        "A pause interval inserted between sections of a performance",
+        "A piece of music performed to fill a gap in a program",
+        "A transition scene connecting two parts of a dramatic work"
+      ],
+      "answer": "A pause interval inserted between sections of a performance",
+      "explanation": "An interlude is a pause or brief performance between the main sections of something.\n• interlude = an intervening period or event; a pause between sections\n• From Latin: 'inter-' (between) + 'ludere' (to play)\n• 'Musical interlude', 'a brief interlude of peace' — something happening in the in-between"
+    },
+    {
+      "word": "denude",
+      "question": "The hillside had been denuded of trees by decades of logging. What does 'denude' mean?",
+      "type": "choice",
+      "options": [
+        "To strip bare — to remove all covering from a surface",
+        "To damage irreversibly through sustained exploitation",
+        "To change the character of a landscape through removal",
+        "To remove vegetation making the soil vulnerable to erosion"
+      ],
+      "answer": "To strip bare — to remove all covering from a surface",
+      "explanation": "To denude means to strip bare — to remove all natural covering.\n• denude = to strip of covering; to make bare\n• From Latin: 'denudare' — to lay bare\n• 'Denuded hillside', 'denuded of power' — stripped of what should be there"
+    },
+    {
+      "word": "prude",
+      "question": "She was called a prude for refusing to laugh at the crude jokes. What is a prude?",
+      "type": "choice",
+      "options": [
+        "A person who holds others to unrealistically high standards",
+        "A person who is excessively proper and easily shocked by impropriety",
+        "A person who refuses to participate in social activities generally, as the evidence showed",
+        "A person who expresses moral disapproval of others publicly"
+      ],
+      "answer": "A person who is excessively proper and easily shocked by impropriety",
+      "explanation": "A prude is a person who is excessively proper — easily offended by anything indelicate.\n• prude = a person who is easily shocked by sexual matters or indelicate language\n• From French: 'prudefemme' — a respectable woman (later used mockingly)\n• 'Prudish' = excessively proper; prudery = the behavior of a prude"
+    },
+    {
+      "word": "obtrude",
+      "question": "His opinions obtrude into every conversation whether they are wanted or not. What does 'obtrude' mean?",
+      "type": "choice",
+      "options": [
+        "To force oneself or one's views on others uninvited",
+        "To introduce a topic that diverts a conversation",
+        "To express an opinion loudly and with great confidence",
+        "To raise issues that others would prefer to avoid"
+      ],
+      "answer": "To force oneself or one's views on others uninvited",
+      "explanation": "To obtrude means to push forward unwantedly — to intrude on others' attention.\n• obtrude = to impose on others without being invited; to thrust forward\n• From Latin: 'obtrudere' — to thrust against\n• 'Obtrusive' = attracting attention in an unwelcome way"
+    },
+    {
+      "word": "extrude",
+      "question": "The machine extruded aluminium into long thin bars. What does 'extrude' mean?",
+      "type": "choice",
+      "options": [
+        "To force a material through a shaped opening to form a specific profile",
+        "To compress a material into a mold at high temperature",
+        "To cut a material into sections using a rotary blade",
+        "To flatten a material by passing it between heavy rollers, as the evidence showed"
+      ],
+      "answer": "To force a material through a shaped opening to form a specific profile",
+      "explanation": "To extrude means to push or force material through a die or shaped opening.\n• extrude = to shape a material by forcing it through an opening\n• From Latin: 'extrudere' — to push out\n• 'Extruded plastic', 'extruded pasta' — shaped by forcing through a mold"
+    },
+    {
+      "word": "desuetude",
+      "question": "The law had fallen into desuetude and was no longer enforced by anyone. What is desuetude?",
+      "type": "choice",
+      "options": [
+        "A formal process of repealing outdated legislation",
+        "The state of no longer being used or practiced",
+        "The period during which a law awaits formal repeal",
+        "A legal doctrine allowing old laws to be disregarded"
+      ],
+      "answer": "The state of no longer being used or practiced",
+      "explanation": "Desuetude is the state of no longer being in use — having fallen into disuse.\n• desuetude = a state of disuse; the condition of being no longer practiced\n• From Latin: 'desuetudo' — disuse\n• 'Fall into desuetude' = to stop being used without being formally abolished"
+    },
+    {
+      "word": "solicitude",
+      "question": "He showed great solicitude for the welfare of his elderly neighbor. What is solicitude?",
+      "type": "choice",
+      "options": [
+        "Anxious concern and attentive care for another's well-being",
+        "Practical help given to someone who cannot manage alone",
+        "A sense of duty toward those who are weaker or vulnerable",
+        "Regular visits made to ensure someone is coping adequately, as the evidence showed"
+      ],
+      "answer": "Anxious concern and attentive care for another's well-being",
+      "explanation": "Solicitude is anxious or careful concern for someone's well-being.\n• solicitude = careful concern; anxious care for another\n• From Latin: 'solicitudo' — anxiety, concern\n• More intense than kindness — solicitude implies active worry and attention"
+    },
+    {
+      "word": "solitude",
+      "question": "She retreated to a remote cottage to enjoy a week of solitude. What is solitude?",
+      "type": "choice",
+      "options": [
+        "The peace that comes from being in a natural environment",
+        "The state of being alone — especially by choice",
+        "Freedom from the demands and noise of everyday life",
+        "An extended period of rest away from responsibilities"
+      ],
+      "answer": "The state of being alone — especially by choice",
+      "explanation": "Solitude is the state of being alone — often chosen for peace or reflection.\n• solitude = being alone; seclusion from the company of others\n• From Latin: 'solitudo' — loneliness\n• Positive connotation unlike 'loneliness' — solitude is often voluntary and valued"
+    },
+    {
+      "word": "amplitude",
+      "question": "The physicist measured the amplitude of the wave. What is amplitude?",
+      "type": "choice",
+      "options": [
+        "The frequency at which the wave repeats itself",
+        "The maximum extent of a vibration from its resting position",
+        "The speed at which a wave travels through a medium",
+        "The wavelength measured between two consecutive peaks, as the evidence showed"
+      ],
+      "answer": "The maximum extent of a vibration from its resting position",
+      "explanation": "Amplitude is the maximum displacement of a wave — how far it moves from its resting point.\n• amplitude = the maximum extent of a vibration; the height of a wave\n• From Latin: 'amplitude' — breadth, extent\n• In radio: amplitude modulation (AM) encodes sound by varying wave height"
+    },
+    {
+      "word": "plenitude",
+      "question": "The market offered a plenitude of fresh produce from across the region. What is plenitude?",
+      "type": "choice",
+      "options": [
+        "A wide variety of products from many different suppliers",
+        "An abundance — a full and generous supply",
+        "A concentration of the finest produce in one location",
+        "An unusually large seasonal harvest made available locally"
+      ],
+      "answer": "An abundance — a full and generous supply",
+      "explanation": "Plenitude is fullness and abundance — having more than enough.\n• plenitude = an abundance; a full and copious supply\n• From Latin: 'plenitudo' — fullness\n• Similar to 'plenty' but more formal and suggesting complete fullness"
+    },
+    {
+      "word": "magnitude",
+      "question": "Scientists did not fully grasp the magnitude of the problem until the data arrived. What is magnitude?",
+      "type": "choice",
+      "options": [
+        "The underlying causes that made the problem hard to solve",
+        "The great size or importance of something",
+        "The speed at which a problem was developing",
+        "The complexity that made the problem difficult to analyze"
+      ],
+      "answer": "The great size or importance of something",
+      "explanation": "Magnitude is the great size or scale of something — its extent or importance.\n• magnitude = great size or extent; importance\n• From Latin: 'magnitudo' — greatness\n• 'Of the first magnitude' = of the greatest importance; earthquake magnitude = size on Richter scale"
+    },
+    {
+      "word": "turpitude",
+      "question": "He was disbarred for moral turpitude — behavior utterly unbecoming of an officer of the court. What is turpitude?",
+      "type": "choice",
+      "options": [
+        "Depraved or wicked behavior that violates moral standards",
+        "A pattern of dishonesty extending over many years",
+        "Conduct that brings a profession into serious disrepute, as the evidence showed",
+        "A deliberate breach of a professional code of ethics"
+      ],
+      "answer": "Depraved or wicked behavior that violates moral standards",
+      "explanation": "Turpitude is wickedness or depravity — conduct that violates moral standards.\n• turpitude = wickedness; shameful or depraved behavior\n• From Latin: 'turpitudo' — baseness, from 'turpis' — base, foul\n• 'Moral turpitude' = the legal term for conduct considered contrary to community standards"
+    }
+  ]
+}
