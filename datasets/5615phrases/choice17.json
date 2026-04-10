@@ -1,0 +1,1305 @@
+{
+  "text": "quiz18",
+  "quiz": [
+    {
+      "word": "profligate",
+      "question": "The estate was ruined by the profligate spending of its heir. What does 'profligate' mean?",
+      "type": "choice",
+      "options": [
+        "Recklessly extravagant and wasteful",
+        "Spending far beyond what income could support",
+        "Careless about money in a way that caused resentment",
+        "Generous to the point of creating financial problems"
+      ],
+      "answer": "Recklessly extravagant and wasteful",
+      "explanation": "Profligate means recklessly wasteful — spending with complete disregard for consequences.\n• profligate = extravagant; shamelessly wasteful\n• From Latin: 'profligatus' — ruined, abandoned\n• 'Profligate lifestyle', 'profligate with public money' — waste without shame"
+    },
+    {
+      "word": "fumigate",
+      "question": "The building was fumigated after a severe infestation of insects. What does 'fumigate' mean?",
+      "type": "choice",
+      "options": [
+        "To disinfect or purify using chemical fumes or smoke",
+        "To treat a building with insecticide to kill pests",
+        "To clear a space of vermin by releasing toxic gas",
+        "To apply chemical treatment to all surfaces of a structure"
+      ],
+      "answer": "To disinfect or purify using chemical fumes or smoke",
+      "explanation": "To fumigate means to expose to smoke or fumes — to disinfect or kill pests.\n• fumigate = to apply fumes or smoke to disinfect or destroy pests\n• From Latin: 'fumigare' — to make smoke\n• 'Fumigate a room', 'fumigation certificate' — pest or pathogen removal by fumes"
+    },
+    {
+      "word": "irrigate",
+      "question": "Farmers irrigated the fields during the dry season to keep crops alive. What does 'irrigate' mean?",
+      "type": "choice",
+      "options": [
+        "To supply land with water through artificial channels",
+        "To use groundwater to compensate for insufficient rainfall",
+        "To distribute water evenly across a field using pipes",
+        "To manage water levels to prevent both flooding and drought"
+      ],
+      "answer": "To supply land with water through artificial channels",
+      "explanation": "To irrigate means to water artificially — to supply land through canals or pipes.\n• irrigate = to supply water to land through channels or pipes\n• From Latin: 'irrigare' — to bring water to\n• 'Irrigate a wound' = flush with fluid (medical use)"
+    },
+    {
+      "word": "mitigate",
+      "question": "The judge said her cooperation with investigators had mitigated the severity of the sentence. What does 'mitigate' mean?",
+      "type": "choice",
+      "options": [
+        "To make less severe — to reduce the intensity of",
+        "To reduce a sentence in recognition of good behavior",
+        "To take into account circumstances that reduce blame",
+        "To justify a lesser punishment through cooperation"
+      ],
+      "answer": "To make less severe — to reduce the intensity of",
+      "explanation": "To mitigate means to lessen — to make something less severe or serious.\n• mitigate = to make less severe; to reduce the impact of\n• From Latin: 'mitigare' — to soften\n• 'Mitigating circumstances' = factors that reduce blame or severity"
+    },
+    {
+      "word": "castigate",
+      "question": "The editorial castigated the government for its handling of the crisis. What does 'castigate' mean?",
+      "type": "choice",
+      "options": [
+        "To criticize or reprimand severely and publicly",
+        "To document the failures of an administration in detail",
+        "To call for an inquiry into the causes of a policy failure",
+        "To publish a formal condemnation of government behavior"
+      ],
+      "answer": "To criticize or reprimand severely and publicly",
+      "explanation": "To castigate means to reprimand harshly — to criticize or punish with severity.\n• castigate = to reprimand or criticize severely\n• From Latin: 'castigare' — to correct, chastise\n• 'Castigated for incompetence' = subjected to sharp, public criticism"
+    },
+    {
+      "word": "instigate",
+      "question": "The investigation found that he had instigated the attack. What does 'instigate' mean?",
+      "type": "choice",
+      "options": [
+        "To bring about an action by urging or provoking it",
+        "To plan an attack and direct those who carried it out",
+        "To give the order that caused a violent event to occur",
+        "To be identified as the person primarily responsible for harm"
+      ],
+      "answer": "To bring about an action by urging or provoking it",
+      "explanation": "To instigate means to stir up — to cause something to happen by urging or provoking.\n• instigate = to bring about; to incite someone to do something\n• From Latin: 'instigare' — to urge on\n• 'Instigate a rebellion', 'instigate proceedings' — setting something in motion"
+    },
+    {
+      "word": "promulgate",
+      "question": "The new rules were promulgated through an official government bulletin. What does 'promulgate' mean?",
+      "type": "choice",
+      "options": [
+        "To make known by official announcement — to proclaim",
+        "To distribute a new regulation to all affected parties",
+        "To publish a policy after receiving final approval",
+        "To inform the public of a new law through official channels"
+      ],
+      "answer": "To make known by official announcement — to proclaim",
+      "explanation": "To promulgate means to make known officially — to announce or put into effect.\n• promulgate = to make a decree or law known; to broadcast widely\n• From Latin: 'promulgare' — to make publicly known\n• 'Promulgate a law', 'promulgate doctrine' — official proclamation"
+    },
+    {
+      "word": "abrogate",
+      "question": "The new administration abrogated several treaties signed by its predecessor. What does 'abrogate' mean?",
+      "type": "choice",
+      "options": [
+        "To repeal or abolish a law or treaty formally",
+        "To refuse to honor the commitments of a previous government",
+        "To declare a treaty invalid because its conditions were not met",
+        "To withdraw from an international agreement unilaterally"
+      ],
+      "answer": "To repeal or abolish a law or treaty formally",
+      "explanation": "To abrogate means to abolish formally — to repeal a law, right, or agreement.\n• abrogate = to repeal or abolish officially\n• From Latin: 'abrogare' — to repeal\n• 'Abrogate a treaty', 'abrogation of rights' — formal annulment"
+    },
+    {
+      "word": "derogate",
+      "question": "The legislation allowed authorities to derogate from certain rights during a national emergency. What does 'derogate' mean?",
+      "type": "choice",
+      "options": [
+        "To deviate from or limit a rule in specific circumstances",
+        "To temporarily suspend rights during periods of crisis",
+        "To pass emergency legislation overriding normal protections",
+        "To grant exceptions to general rules for specific situations"
+      ],
+      "answer": "To deviate from or limit a rule in specific circumstances",
+      "explanation": "To derogate means to limit or deviate from — to partially reduce or set aside.\n• derogate = to detract from; to partially repeal or limit\n• From Latin: 'derogare' — to ask for the repeal of part of a law\n• In law: 'derogate from a right' = create a lawful exception to it"
+    },
+    {
+      "word": "arrogate",
+      "question": "The general arrogated to himself powers that should have remained with parliament. What does 'arrogate' mean?",
+      "type": "choice",
+      "options": [
+        "To claim or take something without rightful authority",
+        "To accumulate political power during a period of instability",
+        "To use a position of strength to override constitutional limits",
+        "To assume control by taking advantage of weak opposition"
+      ],
+      "answer": "To claim or take something without rightful authority",
+      "explanation": "To arrogate means to seize without right — to claim power or qualities one is not entitled to.\n• arrogate = to take or assume without justification\n• From Latin: 'arrogare' — to claim for oneself\n• 'Arrogate authority', 'arrogate credit' — claiming what belongs to another"
+    },
+    {
+      "word": "expurgate",
+      "question": "The original manuscript had been expurgated before publication. What does 'expurgate' mean?",
+      "type": "choice",
+      "options": [
+        "To remove objectionable or offensive parts from a text",
+        "To prepare a text for publication by editing for clarity",
+        "To shorten a work by removing passages of lesser importance",
+        "To correct errors and revise a manuscript before printing"
+      ],
+      "answer": "To remove objectionable or offensive parts from a text",
+      "explanation": "To expurgate means to purge — to remove objectionable parts from a text.\n• expurgate = to remove matter considered objectionable from a text\n• From Latin: 'expurgare' — to cleanse\n• 'An expurgated edition' = one with offensive passages removed"
+    },
+    {
+      "word": "subjugate",
+      "question": "The empire subjugated dozens of peoples over three centuries. What does 'subjugate' mean?",
+      "type": "choice",
+      "options": [
+        "To bring under complete control by force",
+        "To impose political authority over a conquered territory",
+        "To absorb independent peoples into a larger political unit",
+        "To use military power to establish long-term dominance"
+      ],
+      "answer": "To bring under complete control by force",
+      "explanation": "To subjugate means to conquer and dominate — to bring completely under control.\n• subjugate = to bring under domination; to conquer\n• From Latin: 'subjugare' — to put under the yoke\n• 'Subjugate a people', 'subjugate one's desires' — bringing under complete control"
+    },
+    {
+      "word": "corrugate",
+      "question": "The roof was made from corrugated iron sheets. What does 'corrugate' mean?",
+      "type": "choice",
+      "options": [
+        "To shape into a series of parallel ridges and grooves",
+        "To press metal into a wavy pattern to increase strength",
+        "To treat a material so it can withstand outdoor conditions",
+        "To fold a flat sheet so it overlaps at regular intervals"
+      ],
+      "answer": "To shape into a series of parallel ridges and grooves",
+      "explanation": "To corrugate means to form into ridges — to make into a corrugated pattern.\n• corrugate = to form into alternate ridges and grooves\n• From Latin: 'corrugare' — to wrinkle\n• 'Corrugated cardboard', 'corrugated iron' — the ridged pattern adds rigidity"
+    },
+    {
+      "word": "emaciate",
+      "question": "The prisoner emerged emaciated from years of inadequate food. What does 'emaciate' mean?",
+      "type": "choice",
+      "options": [
+        "To make abnormally thin through lack of nourishment",
+        "To weaken physically through years of deprivation",
+        "To reduce someone to a very low weight through starvation",
+        "To leave someone physically damaged from poor conditions"
+      ],
+      "answer": "To make abnormally thin through lack of nourishment",
+      "explanation": "To emaciate means to make extremely thin — to waste away through lack of food.\n• emaciate = to cause to become abnormally thin\n• From Latin: 'emaciare' — to make lean\n• 'Emaciated appearance', 'emaciated by disease' — severely wasted"
+    },
+    {
+      "word": "depreciate",
+      "question": "The car depreciated by 30% in the first three years of ownership. What does 'depreciate' mean?",
+      "type": "choice",
+      "options": [
+        "To fall in value over time",
+        "To lose market value at a rate faster than comparable models",
+        "To become worth less as its condition and age increase",
+        "To decline in resale value with each year of use"
+      ],
+      "answer": "To fall in value over time",
+      "explanation": "To depreciate means to decrease in value — to lose worth over time.\n• depreciate = to diminish in value; to belittle\n• From Latin: 'depretiare' — to lower in price\n• 'Depreciation', 'depreciating asset' — reduction in value over time"
+    },
+    {
+      "word": "enunciate",
+      "question": "The drama teacher encouraged students to enunciate each syllable clearly. What does 'enunciate' mean?",
+      "type": "choice",
+      "options": [
+        "To pronounce words clearly and distinctly",
+        "To speak loudly enough to be heard at the back of the room",
+        "To slow one's speech so that each word can be followed",
+        "To project the voice using techniques learned in training"
+      ],
+      "answer": "To pronounce words clearly and distinctly",
+      "explanation": "To enunciate means to pronounce clearly — to articulate each sound distinctly.\n• enunciate = to pronounce clearly; to state precisely\n• From Latin: 'enuntiare' — to announce\n• 'Enunciate clearly', 'enunciate a principle' — distinct pronunciation or statement"
+    },
+    {
+      "word": "denunciate",
+      "question": "The whistleblower denounced the scheme to the regulatory authority. What does 'denunciate' mean?",
+      "type": "choice",
+      "options": [
+        "To inform against or publicly accuse someone",
+        "To report illegal activity to those with authority to act",
+        "To publicly name a person responsible for wrongdoing",
+        "To provide evidence of a crime to the relevant authorities"
+      ],
+      "answer": "To inform against or publicly accuse someone",
+      "explanation": "To denunciate means to formally accuse — to inform against someone publicly.\n• denunciate = to inform against; to publicly accuse\n• From Latin: 'denuntiare' — to announce, denounce\n• Variant of 'denounce'; both mean publicly accusing or reporting"
+    },
+    {
+      "word": "renunciate",
+      "question": "He renunciated all worldly possessions when he entered the monastery. What does 'renunciate' mean?",
+      "type": "choice",
+      "options": [
+        "To formally give up or reject something",
+        "To hand over property as part of taking religious vows",
+        "To transfer ownership of possessions before a ceremony",
+        "To separate from material goods by an act of will"
+      ],
+      "answer": "To formally give up or reject something",
+      "explanation": "To renunciate means to formally give up — to renounce rights, beliefs, or possessions.\n• renunciate = to give up; to formally renounce\n• From Latin: 'renuntiare' — to bring back news; to renounce\n• 'Renunciation of title', 'renunciate the world' — formal giving up"
+    },
+    {
+      "word": "associate",
+      "question": "She associated the smell of pine trees with her childhood summers. What does 'associate' mean here?",
+      "type": "choice",
+      "options": [
+        "To mentally connect one thing with another",
+        "To identify a sensory experience with a particular memory",
+        "To recall a memory whenever a specific stimulus is encountered",
+        "To link a smell to a period of life through emotional memory"
+      ],
+      "answer": "To mentally connect one thing with another",
+      "explanation": "To associate means to make a mental connection — to link two things in the mind.\n• associate = to connect mentally; to join together\n• From Latin: 'associare' — to unite\n• 'Associate with a person', 'associated ideas' — connected mentally or in practice"
+    },
+    {
+      "word": "dissociate",
+      "question": "She tried to dissociate herself from her former colleagues after the scandal. What does 'dissociate' mean?",
+      "type": "choice",
+      "options": [
+        "To disconnect oneself from a person, group, or idea",
+        "To deny any knowledge of the activities of former colleagues",
+        "To make clear through public statement that she was not involved",
+        "To distance herself from an association that had become damaging"
+      ],
+      "answer": "To disconnect oneself from a person, group, or idea",
+      "explanation": "To dissociate means to separate — to disconnect from a person, group, or belief.\n• dissociate = to disconnect; to separate oneself\n• From Latin: 'dissociare' — to separate\n• 'Dissociate from', 'dissociative disorder' — breaking a connection"
+    },
+    {
+      "word": "excruciate",
+      "question": "The wait for the results was excruciating. What does 'excruciating' mean?",
+      "type": "choice",
+      "options": [
+        "Intensely painful or distressing",
+        "Long enough to cause serious psychological strain",
+        "Made worse by uncertainty about the outcome",
+        "Almost unbearable in its combination of tension and duration"
+      ],
+      "answer": "Intensely painful or distressing",
+      "explanation": "Excruciating means intensely painful — causing extreme suffering.\n• excruciate = to cause intense agony\n• From Latin: 'excruciare' — to torture on a cross\n• 'Excruciating pain', 'excruciating embarrassment' — the most intense kind"
+    },
+    {
+      "word": "irradiate",
+      "question": "The food was irradiated to extend its shelf life. What does 'irradiate' mean?",
+      "type": "choice",
+      "options": [
+        "To expose to radiation for preservation or treatment",
+        "To treat food with ultraviolet light to kill bacteria",
+        "To use heat to destroy microorganisms in food",
+        "To seal food in an environment that prevents spoilage"
+      ],
+      "answer": "To expose to radiation for preservation or treatment",
+      "explanation": "To irradiate means to expose to radiation — for treatment, preservation, or illumination.\n• irradiate = to expose to radiation; to illuminate\n• From Latin: 'irradiare' — to shine upon\n• 'Irradiate a tumor', 'irradiate food' — expose to radiation for a specific purpose"
+    },
+    {
+      "word": "mediate",
+      "question": "A retired diplomat was asked to mediate between the disputing nations. What does 'mediate' mean?",
+      "type": "choice",
+      "options": [
+        "To act as an intermediary to help reach a settlement",
+        "To negotiate a peace agreement between two hostile parties",
+        "To use diplomatic experience to resolve an international dispute",
+        "To represent both sides and propose terms both could accept"
+      ],
+      "answer": "To act as an intermediary to help reach a settlement",
+      "explanation": "To mediate means to act as a go-between — to help conflicting parties reach agreement.\n• mediate = to intervene between parties to bring about a settlement\n• From Latin: 'mediare' — to be in the middle\n• 'Mediate a dispute', 'mediator' — the neutral party facilitating agreement"
+    },
+    {
+      "word": "repudiate",
+      "question": "The company repudiated the claim and refused to pay compensation. What does 'repudiate' mean?",
+      "type": "choice",
+      "options": [
+        "To reject and refuse to accept or be bound by something",
+        "To contest a legal claim through official channels",
+        "To deny liability for an event it was accused of causing",
+        "To resist a demand for payment through formal objection"
+      ],
+      "answer": "To reject and refuse to accept or be bound by something",
+      "explanation": "To repudiate means to reject entirely — to refuse to accept or acknowledge.\n• repudiate = to deny; to refuse to accept or be bound by\n• From Latin: 'repudiare' — to divorce\n• 'Repudiate a debt', 'repudiate a claim' — flat rejection"
+    },
+    {
+      "word": "retaliate",
+      "question": "The country retaliated against the trade tariffs by imposing its own. What does 'retaliate' mean?",
+      "type": "choice",
+      "options": [
+        "To take action in return for harm or injury received",
+        "To respond to economic measures with equivalent ones",
+        "To punish a trading partner for an unfair trade policy",
+        "To match harmful measures with comparable countermeasures"
+      ],
+      "answer": "To take action in return for harm or injury received",
+      "explanation": "To retaliate means to strike back — to respond to harm with a comparable action.\n• retaliate = to take reprisal; to return like for like\n• From Latin: 'retaliare' — to repay in kind\n• 'Retaliate against an attack', 'retaliatory tariffs' — responding in kind"
+    },
+    {
+      "word": "ciliate",
+      "question": "Ciliated cells line the airways and sweep debris away from the lungs. What does 'ciliate' mean?",
+      "type": "choice",
+      "options": [
+        "Having tiny hair-like projections that produce movement",
+        "Covered in fine fibers that filter particles from the air",
+        "Equipped with microscopic structures that trap bacteria",
+        "Lined with cells that produce a protective mucous layer"
+      ],
+      "answer": "Having tiny hair-like projections that produce movement",
+      "explanation": "Ciliate means having cilia — tiny hair-like projections that beat rhythmically.\n• ciliate = bearing cilia; a microorganism that moves by means of cilia\n• From Latin: 'cilium' — eyelid, eyelash\n• 'Ciliated epithelium' = cells with cilia that sweep mucus and debris"
+    },
+    {
+      "word": "conciliate",
+      "question": "The chairman tried to conciliate the warring factions before the vote. What does 'conciliate' mean?",
+      "type": "choice",
+      "options": [
+        "To make peace between opposing parties — to placate",
+        "To find common ground between sides with different positions",
+        "To use authority to prevent conflict from disrupting proceedings",
+        "To offer incentives that persuaded both sides to cooperate"
+      ],
+      "answer": "To make peace between opposing parties — to placate",
+      "explanation": "To conciliate means to make peace — to bring opposing sides into harmony.\n• conciliate = to make friendly; to placate\n• From Latin: 'conciliare' — to bring together\n• 'Conciliatory gesture', 'conciliation service' — making peace"
+    },
+    {
+      "word": "affiliate",
+      "question": "The local branch was affiliated with the national organization. What does 'affiliate' mean?",
+      "type": "choice",
+      "options": [
+        "To be officially connected to a larger body",
+        "To operate under the authority of a national organization",
+        "To receive funding from a parent organization",
+        "To follow the policies of a larger body it belonged to"
+      ],
+      "answer": "To be officially connected to a larger body",
+      "explanation": "To affiliate means to join or be connected officially to a larger organization.\n• affiliate = to connect officially to a larger body\n• From Latin: 'affiliare' — to adopt\n• 'Affiliated club', 'affiliate marketing' — formal association with a parent"
+    },
+    {
+      "word": "palliate",
+      "question": "The medication could palliate the symptoms but not cure the underlying condition. What does 'palliate' mean?",
+      "type": "choice",
+      "options": [
+        "To relieve without curing — to make symptoms less severe",
+        "To provide temporary relief from the effects of disease",
+        "To reduce the pain of a condition that cannot be treated, as the evidence showed",
+        "To improve quality of life when recovery is not possible"
+      ],
+      "answer": "To relieve without curing — to make symptoms less severe",
+      "explanation": "To palliate means to relieve without curing — to ease but not eliminate.\n• palliate = to make less severe without removing the cause\n• From Latin: 'palliare' — to cover with a cloak\n• 'Palliative care' = comfort-focused care for the incurable"
+    },
+    {
+      "word": "defoliate",
+      "question": "The chemical weapon defoliated vast areas of forest. What does 'defoliate' mean?",
+      "type": "choice",
+      "options": [
+        "To strip a plant or area of all leaves",
+        "To destroy the vegetation of an area using chemicals",
+        "To kill trees and plants by removing their foliage",
+        "To damage forests permanently through chemical treatment"
+      ],
+      "answer": "To strip a plant or area of all leaves",
+      "explanation": "To defoliate means to strip of leaves — to remove foliage from plants or trees.\n• defoliate = to cause the leaves to fall; to strip vegetation\n• From Latin: 'de-' + 'folium' (leaf)\n• 'Agent Orange defoliated Vietnam' — destroying forest cover with chemicals"
+    },
+    {
+      "word": "calumniate",
+      "question": "He sued the newspaper for calumniating him with fabricated accusations. What does 'calumniate' mean?",
+      "type": "choice",
+      "options": [
+        "To make false statements that damage someone's reputation",
+        "To publish claims about a person that could not be supported",
+        "To spread damaging lies about someone in a public medium",
+        "To subject someone to a sustained campaign of reputational attack"
+      ],
+      "answer": "To make false statements that damage someone's reputation",
+      "explanation": "To calumniate means to slander — to make false, malicious statements about someone.\n• calumniate = to make false statements; to slander\n• From Latin: 'calumniari' — to accuse falsely\n• 'Calumny' = the false accusation; 'calumniate' = the act"
+    },
+    {
+      "word": "opiate",
+      "question": "Religion has been called the opiate of the masses. What does 'opiate' mean here?",
+      "type": "choice",
+      "options": [
+        "Something that dulls thought or feeling — a numbing influence",
+        "A belief system that prevents people from questioning authority",
+        "An ideology used to keep people passive and undemanding",
+        "A comfort that discourages critical thought about conditions"
+      ],
+      "answer": "Something that dulls thought or feeling — a numbing influence",
+      "explanation": "An opiate (figuratively) is something that dulls thought — a numbing distraction.\n• opiate = a drug containing opium; figuratively, anything that dulls critical faculties\n• From Greek: 'opion' — poppy juice\n• Marx's phrase 'religion is the opiate of the masses' — it numbs suffering"
+    },
+    {
+      "word": "expiate",
+      "question": "He spent years volunteering to expiate the guilt he felt over the accident. What does 'expiate' mean?",
+      "type": "choice",
+      "options": [
+        "To make amends for guilt through an act of reparation",
+        "To overcome guilt by doing enough good to compensate",
+        "To process guilt in a way that eventually leads to peace",
+        "To acknowledge responsibility and act to repair the harm caused"
+      ],
+      "answer": "To make amends for guilt through an act of reparation",
+      "explanation": "To expiate means to atone — to make amends for a wrong through action.\n• expiate = to make reparation for; to atone for\n• From Latin: 'expiare' — to appease\n• 'Expiate guilt', 'expiation' — making things right through action"
+    },
+    {
+      "word": "inebriate",
+      "question": "Several guests were clearly inebriated by the end of the reception. What does 'inebriate' mean?",
+      "type": "choice",
+      "options": [
+        "To make drunk — to intoxicate with alcohol",
+        "To affect someone's behavior through excessive drinking",
+        "To consume enough alcohol to noticeably impair judgment",
+        "To become visibly affected by alcohol in a social setting"
+      ],
+      "answer": "To make drunk — to intoxicate with alcohol",
+      "explanation": "To inebriate means to make drunk — to intoxicate.\n• inebriate = to make drunk; an habitual drunk\n• From Latin: 'inebriare' — to make drunk\n• 'Inebriated', 'inebriate' (noun) = a drunk person"
+    },
+    {
+      "word": "excoriate",
+      "question": "The report excoriated the government for its negligent handling of the crisis. What does 'excoriate' mean?",
+      "type": "choice",
+      "options": [
+        "To criticize severely and publicly — to flay with words",
+        "To publish a thorough analysis of the government's failures",
+        "To name specific individuals responsible for policy failures",
+        "To hold an institution accountable through detailed criticism"
+      ],
+      "answer": "To criticize severely and publicly — to flay with words",
+      "explanation": "To excoriate means to attack scathingly — to strip away reputation with harsh criticism.\n• excoriate = to criticize harshly; literally, to remove the skin\n• From Latin: 'excoriare' — to strip the skin from\n• 'Excoriated in the press' — the skin peeled off by savage criticism"
+    },
+    {
+      "word": "appropriate",
+      "question": "The council voted to appropriate funds for the new library. What does 'appropriate' mean here?",
+      "type": "choice",
+      "options": [
+        "To set aside money officially for a specific purpose",
+        "To approve a budget proposal submitted by the committee",
+        "To release funding that had been held pending a vote",
+        "To grant money from the public purse for a particular use"
+      ],
+      "answer": "To set aside money officially for a specific purpose",
+      "explanation": "To appropriate (as a verb) means to allocate — to set aside officially for a purpose.\n• appropriate = to take or allocate for a specific purpose\n• From Latin: 'appropriare' — to make one's own\n• 'Appropriate funds', 'appropriate credit' — taking or assigning to a purpose"
+    },
+    {
+      "word": "expropriate",
+      "question": "The government expropriated private land for the new railway. What does 'expropriate' mean?",
+      "type": "choice",
+      "options": [
+        "To take property from its owner for public use",
+        "To compulsorily purchase land needed for infrastructure",
+        "To seize private property without the owner's consent",
+        "To nationalize land by paying compensation to its owners"
+      ],
+      "answer": "To take property from its owner for public use",
+      "explanation": "To expropriate means to take away property — usually by government authority for public purposes.\n• expropriate = to take property from the owner, typically for public use\n• From Latin: 'ex-' + 'proprium' (one's own)\n• 'Expropriation', 'expropriated without compensation' — compulsory acquisition"
+    },
+    {
+      "word": "repatriate",
+      "question": "The refugees were repatriated to their home country once the conflict ended. What does 'repatriate' mean?",
+      "type": "choice",
+      "options": [
+        "To return someone to their country of origin",
+        "To organize the return of displaced people to their homeland",
+        "To provide transport for refugees to go back to their country",
+        "To facilitate the voluntary return of people who had fled"
+      ],
+      "answer": "To return someone to their country of origin",
+      "explanation": "To repatriate means to return to one's homeland — to send or bring back to the country of origin.\n• repatriate = to return someone to their native country\n• From Latin: 're-' + 'patria' (fatherland)\n• 'Repatriate funds', 'repatriate prisoners' — returning to the origin"
+    },
+    {
+      "word": "expatriate",
+      "question": "She lived as an expatriate in Singapore for fifteen years before returning home. What is an expatriate?",
+      "type": "choice",
+      "options": [
+        "A person living outside their country of origin",
+        "Someone who has permanently settled in a foreign country",
+        "A professional who has been posted abroad by their employer",
+        "A citizen who has given up the rights of their home country"
+      ],
+      "answer": "A person living outside their country of origin",
+      "explanation": "An expatriate is a person living outside their home country — often abbreviated to 'expat'.\n• expatriate = a person living in a country other than their native one\n• From Latin: 'ex-' + 'patria' (fatherland)\n• 'Expat community', 'expatriate worker' — living abroad, usually temporarily"
+    },
+    {
+      "word": "striate",
+      "question": "The geologist pointed out the striated rock surface left by a retreating glacier. What does 'striate' mean?",
+      "type": "choice",
+      "options": [
+        "To mark with parallel lines, grooves, or bands",
+        "To cut grooves into a surface through friction",
+        "To score lines into rock through the movement of ice",
+        "To leave visible marks on a surface through erosion"
+      ],
+      "answer": "To mark with parallel lines, grooves, or bands",
+      "explanation": "To striate means to mark with parallel lines or streaks.\n• striate = to mark with striations; parallel grooves or bands\n• From Latin: 'stria' — a groove, channel\n• 'Striated muscle' = muscle with visible banding; 'glacial striations' = ice-carved grooves"
+    },
+    {
+      "word": "infuriate",
+      "question": "His dismissive tone infuriated the entire committee. What does 'infuriate' mean?",
+      "type": "choice",
+      "options": [
+        "To make very angry — to enrage",
+        "To provoke a hostile reaction from a normally calm body",
+        "To cause serious offence through an inappropriate manner",
+        "To produce a collective reaction of frustration and anger"
+      ],
+      "answer": "To make very angry — to enrage",
+      "explanation": "To infuriate means to enrage — to make furious.\n• infuriate = to make extremely angry\n• From Latin: 'in-' + 'furia' (fury)\n• 'Infuriating habit', 'infuriated response' — producing intense anger"
+    },
+    {
+      "word": "expatiate",
+      "question": "He expatiated at length on the history of the region, losing his audience after the first hour. What does 'expatiate' mean?",
+      "type": "choice",
+      "options": [
+        "To speak or write at great length on a subject",
+        "To provide more historical background than the audience needed",
+        "To go into excessive detail when a summary would have served",
+        "To speak without time limits in a way that exhausted listeners"
+      ],
+      "answer": "To speak or write at great length on a subject",
+      "explanation": "To expatiate means to speak or write at length — to elaborate in excessive detail.\n• expatiate = to write or speak at length; to dwell on a subject\n• From Latin: 'expatiari' — to wander freely\n• 'Expatiate on a theme' = expand on it far beyond what was needed"
+    },
+    {
+      "word": "initiate",
+      "question": "The company initiated legal proceedings against the former employee. What does 'initiate' mean?",
+      "type": "choice",
+      "options": [
+        "To begin or start a process",
+        "To set in motion legal action against a named person",
+        "To take the first formal step in a dispute resolution process",
+        "To notify a court that a claim was being brought"
+      ],
+      "answer": "To begin or start a process",
+      "explanation": "To initiate means to begin — to start or set in motion.\n• initiate = to cause to begin; to introduce into a group or activity\n• From Latin: 'initiare' — to begin\n• 'Initiate proceedings', 'initiate a member' — starting something"
+    },
+    {
+      "word": "propitiate",
+      "question": "Ancient sacrifices were offered to propitiate the gods. What does 'propitiate' mean?",
+      "type": "choice",
+      "options": [
+        "To win or regain the favor of — to appease",
+        "To honor a deity through ritual and ceremony",
+        "To perform an act of worship to prevent divine punishment",
+        "To offer gifts as a mark of devotion and submission"
+      ],
+      "answer": "To win or regain the favor of — to appease",
+      "explanation": "To propitiate means to appease — to win the goodwill of a god or person through an offering.\n• propitiate = to win goodwill; to appease\n• From Latin: 'propitiare' — to make favorable\n• 'Propitiatory sacrifice', 'propitiate an angry authority' — gaining favor"
+    },
+    {
+      "word": "vitiate",
+      "question": "The presence of bias in the sample vitiated the entire study. What does 'vitiate' mean?",
+      "type": "choice",
+      "options": [
+        "To impair the quality or validity of something",
+        "To introduce an error serious enough to invalidate a result",
+        "To make a study unreliable by allowing bias to enter",
+        "To damage a piece of research in a way that cannot be corrected"
+      ],
+      "answer": "To impair the quality or validity of something",
+      "explanation": "To vitiate means to impair or invalidate — to spoil the quality or legal force of something.\n• vitiate = to impair; to destroy the effect or validity of\n• From Latin: 'vitiare' — to make faulty\n• 'Vitiate a contract', 'vitiate a study' — making it defective"
+    },
+    {
+      "word": "substantiate",
+      "question": "She could not substantiate her allegations with any evidence. What does 'substantiate' mean?",
+      "type": "choice",
+      "options": [
+        "To provide evidence to support or prove",
+        "To make a claim credible through supporting testimony",
+        "To demonstrate that an allegation is well-founded",
+        "To produce documentary evidence for a stated position"
+      ],
+      "answer": "To provide evidence to support or prove",
+      "explanation": "To substantiate means to prove with evidence — to give substance to a claim.\n• substantiate = to provide evidence for; to support with proof\n• From Latin: 'substantia' — substance\n• 'Substantiated claim', 'unsubstantiated allegation' — proven or unproven"
+    },
+    {
+      "word": "differentiate",
+      "question": "It is difficult to differentiate between the two species at a glance. What does 'differentiate' mean?",
+      "type": "choice",
+      "options": [
+        "To recognize or show the difference between things",
+        "To separate two things by identifying their distinguishing features",
+        "To determine which of two similar things is which",
+        "To classify things correctly based on subtle distinguishing marks"
+      ],
+      "answer": "To recognize or show the difference between things",
+      "explanation": "To differentiate means to tell apart — to identify or show the differences between things.\n• differentiate = to make or see a difference; to distinguish\n• From Latin: 'differentia' — difference\n• 'Differentiate between options', 'product differentiation' — creating or noting difference"
+    },
+    {
+      "word": "potentiate",
+      "question": "Alcohol can potentiate the effects of sedative medications. What does 'potentiate' mean?",
+      "type": "choice",
+      "options": [
+        "To increase or enhance the effect of something",
+        "To interact with another substance to produce stronger effects",
+        "To multiply the impact of a drug by combining it with another",
+        "To make a medication more powerful through co-administration"
+      ],
+      "answer": "To increase or enhance the effect of something",
+      "explanation": "To potentiate means to enhance the effect — to make more potent or powerful.\n• potentiate = to increase the power or effect of something\n• From Latin: 'potentia' — power\n• 'Potentiate a drug effect' — the combination is more powerful than the sum of its parts"
+    },
+    {
+      "word": "obviate",
+      "question": "The new software obviated the need for manual data entry. What does 'obviate' mean?",
+      "type": "choice",
+      "options": [
+        "To remove a need or difficulty before it becomes a problem",
+        "To replace a slow process with a faster automated one",
+        "To make a previous way of working unnecessary",
+        "To eliminate a task through the introduction of technology, as the evidence showed"
+      ],
+      "answer": "To remove a need or difficulty before it becomes a problem",
+      "explanation": "To obviate means to anticipate and remove — to eliminate a problem or need in advance.\n• obviate = to anticipate and prevent; to make unnecessary\n• From Latin: 'obviare' — to go to meet\n• 'Obviate the need', 'obviate a difficulty' — heading off before it arrives"
+    },
+    {
+      "word": "deviate",
+      "question": "The aircraft deviated from its planned route without explanation. What does 'deviate' mean?",
+      "type": "choice",
+      "options": [
+        "To depart from an established course or standard",
+        "To change direction unexpectedly during a flight",
+        "To alter a route without obtaining prior clearance",
+        "To diverge from a flight plan filed before departure"
+      ],
+      "answer": "To depart from an established course or standard",
+      "explanation": "To deviate means to depart — to stray from an established route, rule, or norm.\n• deviate = to depart from an expected course; to diverge\n• From Latin: 'deviare' — to turn from the road\n• 'Deviate from the norm', 'deviation from standard' — straying from the expected"
+    },
+    {
+      "word": "alleviate",
+      "question": "The new treatment was designed to alleviate chronic back pain. What does 'alleviate' mean?",
+      "type": "choice",
+      "options": [
+        "To make suffering or a problem less severe",
+        "To treat a condition in a way that reduces its impact",
+        "To provide relief from pain that has no other remedy",
+        "To improve quality of life for patients with chronic conditions"
+      ],
+      "answer": "To make suffering or a problem less severe",
+      "explanation": "To alleviate means to reduce — to make pain, suffering, or a problem less severe.\n• alleviate = to make less severe; to lighten\n• From Latin: 'alleviare' — to lighten\n• 'Alleviate poverty', 'alleviate symptoms' — reducing without necessarily curing"
+    },
+    {
+      "word": "asphyxiate",
+      "question": "The victim had been asphyxiated — there was no oxygen where he was found. What does 'asphyxiate' mean?",
+      "type": "choice",
+      "options": [
+        "To kill by depriving of oxygen",
+        "To suffocate by blocking the airway",
+        "To cause death through the absence of breathable air",
+        "To deprive a person of oxygen until consciousness is lost"
+      ],
+      "answer": "To kill by depriving of oxygen",
+      "explanation": "To asphyxiate means to suffocate — to kill by preventing oxygen from reaching the body.\n• asphyxiate = to kill by depriving of oxygen; to suffocate\n• From Greek: 'a-' (without) + 'sphyzein' (to throb)\n• 'Asphyxiation', 'asphyxiated by fumes' — death by oxygen deprivation"
+    },
+    {
+      "word": "relate",
+      "question": "She could not relate to the experiences described in the book. What does 'relate to' mean?",
+      "type": "choice",
+      "options": [
+        "To feel a personal connection with or understanding of",
+        "To find the content of a book relevant to her own life",
+        "To sympathize with the situations described in the text",
+        "To understand the feelings of the characters being described"
+      ],
+      "answer": "To feel a personal connection with or understanding of",
+      "explanation": "To relate to means to connect with personally — to find something resonant with one's own experience.\n• relate = to feel empathy with; to connect or recount\n• From Latin: 'relatus' — brought back\n• 'Can't relate', 'relate a story' — both from the same root: connecting"
+    },
+    {
+      "word": "inflate",
+      "question": "He was accused of inflating his expense claims. What does 'inflate' mean here?",
+      "type": "choice",
+      "options": [
+        "To increase artificially and dishonestly",
+        "To submit claims for more than was actually spent",
+        "To exaggerate costs in order to gain a larger reimbursement",
+        "To misrepresent expenses to extract additional payment"
+      ],
+      "answer": "To increase artificially and dishonestly",
+      "explanation": "To inflate means to exaggerate or increase artificially — to puff up beyond truth.\n• inflate = to expand artificially; to exaggerate\n• From Latin: 'inflare' — to blow into\n• 'Inflate prices', 'inflate one's CV' — making something larger than it really is"
+    },
+    {
+      "word": "conflate",
+      "question": "The article conflated correlation with causation — a common error. What does 'conflate' mean?",
+      "type": "choice",
+      "options": [
+        "To combine two distinct things as if they were the same",
+        "To confuse two separate concepts in an analysis",
+        "To treat a relationship between variables as proof of a cause",
+        "To allow one type of evidence to substitute for another"
+      ],
+      "answer": "To combine two distinct things as if they were the same",
+      "explanation": "To conflate means to wrongly combine — to treat two separate things as one.\n• conflate = to combine two or more things into one, often incorrectly\n• From Latin: 'conflare' — to fuse together\n• 'Conflate issues', 'don't conflate the two' — merging what should stay separate"
+    },
+    {
+      "word": "invigilate",
+      "question": "Three members of staff were needed to invigilate the exam. What does 'invigilate' mean?",
+      "type": "choice",
+      "options": [
+        "To supervise candidates during an examination",
+        "To ensure all students comply with examination rules",
+        "To watch over a test to prevent cheating",
+        "To manage the distribution and collection of exam papers"
+      ],
+      "answer": "To supervise candidates during an examination",
+      "explanation": "To invigilate means to supervise an exam — to watch over candidates to ensure fair conduct.\n• invigilate = to keep watch over students during an examination\n• From Latin: 'invigilare' — to watch over\n• British English; American equivalent: 'proctor'"
+    },
+    {
+      "word": "assimilate",
+      "question": "It took years for the immigrant family to assimilate into the local culture. What does 'assimilate' mean?",
+      "type": "choice",
+      "options": [
+        "To absorb and integrate into a group or culture",
+        "To adopt the language and customs of a new country",
+        "To gradually become accepted as part of a new community",
+        "To give up elements of one culture to fit into another"
+      ],
+      "answer": "To absorb and integrate into a group or culture",
+      "explanation": "To assimilate means to absorb and integrate — to become part of a larger culture or system.\n• assimilate = to absorb and incorporate; to take in and understand\n• From Latin: 'assimilare' — to make like\n• 'Assimilate information', 'assimilate into society' — incorporating fully"
+    },
+    {
+      "word": "ventilate",
+      "question": "The miners needed to ventilate the tunnel to prevent a buildup of toxic gases. What does 'ventilate' mean?",
+      "type": "choice",
+      "options": [
+        "To allow fresh air to circulate through a space",
+        "To pump clean air into a confined underground space",
+        "To remove dangerous gases by introducing outside air",
+        "To improve air quality in an enclosed working environment"
+      ],
+      "answer": "To allow fresh air to circulate through a space",
+      "explanation": "To ventilate means to allow fresh air to circulate — to provide air movement.\n• ventilate = to provide fresh air; to expose to open discussion\n• From Latin: 'ventilare' — to fan\n• 'Ventilate a room', 'mechanical ventilation' — circulating air"
+    },
+    {
+      "word": "flagellate",
+      "question": "He flagellated himself with guilt for years over the decision. What does 'flagellate' mean?",
+      "type": "choice",
+      "options": [
+        "To subject to harsh self-criticism or punishment",
+        "To revisit a past decision with increasing self-reproach",
+        "To torture oneself mentally with regret and blame",
+        "To engage in an extended period of remorse and self-examination"
+      ],
+      "answer": "To subject to harsh self-criticism or punishment",
+      "explanation": "To flagellate means to whip — literally or figuratively, to subject to harsh punishment.\n• flagellate = to flog; to subject to harsh criticism or self-punishment\n• From Latin: 'flagellum' — a whip\n• 'Self-flagellation' = harsh self-criticism; 'flagellants' = medieval penitents who whipped themselves"
+    },
+    {
+      "word": "vacillate",
+      "question": "He vacillated between accepting and declining the offer for weeks. What does 'vacillate' mean?",
+      "type": "choice",
+      "options": [
+        "To waver between different opinions or actions",
+        "To be unable to reach a decision because both options appealed",
+        "To delay a decision by repeatedly reconsidering the options",
+        "To move back and forth between two equally unappealing choices"
+      ],
+      "answer": "To waver between different opinions or actions",
+      "explanation": "To vacillate means to waver — to go back and forth between alternatives.\n• vacillate = to fluctuate between opinions; to be indecisive\n• From Latin: 'vacillare' — to sway, totter\n• 'Vacillating leadership', 'stop vacillating' — unable to commit"
+    },
+    {
+      "word": "oscillate",
+      "question": "The pendulum oscillated back and forth with perfect regularity. What does 'oscillate' mean?",
+      "type": "choice",
+      "options": [
+        "To swing back and forth in a regular rhythm",
+        "To move in a predictable arc between two fixed points",
+        "To maintain momentum by swinging in equal arcs",
+        "To continue moving without losing speed or energy"
+      ],
+      "answer": "To swing back and forth in a regular rhythm",
+      "explanation": "To oscillate means to swing regularly — to move back and forth in a periodic pattern.\n• oscillate = to move back and forth; to fluctuate between extremes\n• From Latin: 'oscillare' — to swing\n• 'Oscillating fan', 'oscillate between views' — regular back-and-forth movement"
+    },
+    {
+      "word": "percolate",
+      "question": "New ideas from the research community slowly percolated into mainstream policy. What does 'percolate' mean?",
+      "type": "choice",
+      "options": [
+        "To filter through gradually — to spread slowly",
+        "To work their way into public awareness over time",
+        "To gain acceptance in policy circles after years of discussion",
+        "To move from specialist to general knowledge slowly"
+      ],
+      "answer": "To filter through gradually — to spread slowly",
+      "explanation": "To percolate means to filter through gradually — to spread by seeping through.\n• percolate = to filter through; to spread gradually\n• From Latin: 'percolare' — to strain\n• 'Coffee percolates', 'percolate through society' — slow seeping passage"
+    },
+    {
+      "word": "immolate",
+      "question": "The monk immolated himself in protest at the government's policies. What does 'immolate' mean?",
+      "type": "choice",
+      "options": [
+        "To kill or offer as a sacrifice — especially by fire",
+        "To take one's own life as a political act of protest",
+        "To offer one's body in a ceremonial act of sacrifice",
+        "To destroy oneself publicly as an act of ultimate protest"
+      ],
+      "answer": "To kill or offer as a sacrifice — especially by fire",
+      "explanation": "To immolate means to sacrifice — especially by fire.\n• immolate = to kill as a sacrifice; to destroy by fire\n• From Latin: 'immolare' — to sacrifice\n• 'Self-immolation' = setting oneself on fire, especially in political protest"
+    },
+    {
+      "word": "extrapolate",
+      "question": "From the first three months of data, analysts extrapolated that the full-year result would be strong. What does 'extrapolate' mean?",
+      "type": "choice",
+      "options": [
+        "To extend known data to project an unknown result",
+        "To use early-stage data to forecast a full-year outcome",
+        "To predict future performance using the trend of past results",
+        "To apply the pattern of existing data to unknown territory"
+      ],
+      "answer": "To extend known data to project an unknown result",
+      "explanation": "To extrapolate means to extend — to project from known data into the unknown.\n• extrapolate = to extend data or conclusions into an area not directly observed\n• From 'extra-' + 'interpolate'\n• 'Extrapolate from limited data' — going beyond what is directly known"
+    },
+    {
+      "word": "interpolate",
+      "question": "A later editor had interpolated several passages into the original manuscript. What does 'interpolate' mean?",
+      "type": "choice",
+      "options": [
+        "To insert something into an existing text or sequence",
+        "To add passages that were not part of the original work",
+        "To introduce material between existing parts of a text",
+        "To insert content into a document without marking it as new"
+      ],
+      "answer": "To insert something into an existing text or sequence",
+      "explanation": "To interpolate means to insert — to add something into the middle of an existing sequence.\n• interpolate = to insert between existing elements\n• From Latin: 'interpolare' — to furbish up\n• 'Interpolate a passage', 'interpolate data points' — inserting between"
+    },
+    {
+      "word": "desolate",
+      "question": "She was utterly desolate after the loss of her husband. What does 'desolate' mean?",
+      "type": "choice",
+      "options": [
+        "Feeling alone and utterly without comfort or hope",
+        "Overwhelmed by grief to the point of being unable to function",
+        "Deeply saddened in a way that lasted for a very long time",
+        "Experiencing grief that isolated her from those who cared"
+      ],
+      "answer": "Feeling alone and utterly without comfort or hope",
+      "explanation": "Desolate (of a person) means utterly bereft — alone and without hope or comfort.\n• desolate = feeling lonely and abandoned; also: empty and bleak\n• From Latin: 'desolare' — to abandon\n• 'Desolate landscape', 'desolate grief' — both convey abandonment and emptiness"
+    },
+    {
+      "word": "insolate",
+      "question": "The tomatoes were insolated on a wire rack on the terrace to dry them. What does 'insolate' mean?",
+      "type": "choice",
+      "options": [
+        "To expose to the rays of the sun",
+        "To dry food by leaving it in direct sunlight",
+        "To use natural warmth to complete a drying process",
+        "To place items in sun-facing positions to maximize warmth"
+      ],
+      "answer": "To expose to the rays of the sun",
+      "explanation": "To insolate means to expose to sunlight — to dry or treat using solar radiation.\n• insolate = to expose to the sun's rays\n• From Latin: 'insolare' — to put in the sun\n• 'Insolation' = solar radiation; 'insolate crops' = dry in sun"
+    },
+    {
+      "word": "slate",
+      "question": "The committee slated the project for completion by the end of the year. What does 'slated for' mean?",
+      "type": "choice",
+      "options": [
+        "Scheduled or designated for something",
+        "Required to meet a deadline imposed by the committee",
+        "Added to a formal agenda with a target completion date",
+        "Approved as a priority project with a specified end date"
+      ],
+      "answer": "Scheduled or designated for something",
+      "explanation": "Slated for means scheduled or designated — put on the slate to happen.\n• slate = to schedule or designate\n• From the literal slate on which plans were written\n• 'Slated for release', 'slated to appear' — scheduled and assigned"
+    },
+    {
+      "word": "legislate",
+      "question": "Parliament was asked to legislate against the new form of online fraud. What does 'legislate' mean?",
+      "type": "choice",
+      "options": [
+        "To make laws — to create legislation through a formal process",
+        "To pass a law prohibiting a specific harmful behavior",
+        "To take parliamentary action to address an identified problem, as the evidence showed",
+        "To regulate a new activity through the passage of an act"
+      ],
+      "answer": "To make laws — to create legislation through a formal process",
+      "explanation": "To legislate means to make laws — to enact legislation through the formal process.\n• legislate = to make laws; to bring about through legislation\n• From Latin: 'legis lator' — proposer of laws\n• 'Legislate against discrimination', 'legislate for change' — passing laws"
+    },
+    {
+      "word": "perambulate",
+      "question": "The inspector perambulated the factory floor, checking each workstation. What does 'perambulate' mean?",
+      "type": "choice",
+      "options": [
+        "To walk slowly through or around a place",
+        "To carry out a formal inspection of a working environment",
+        "To move systematically through a space while taking notes",
+        "To tour a facility in an official capacity"
+      ],
+      "answer": "To walk slowly through or around a place",
+      "explanation": "To perambulate means to walk through — to travel through or around on foot.\n• perambulate = to walk through; to travel over on foot\n• From Latin: 'perambulare' — to walk through\n• 'Perambulator' (a pram) = something that walks around with you"
+    },
+    {
+      "word": "discombobulate",
+      "question": "The sudden change of plan completely discombobulated her. What does 'discombobulate' mean?",
+      "type": "choice",
+      "options": [
+        "To confuse and unsettle someone — to throw off balance",
+        "To make someone anxious by changing arrangements at short notice",
+        "To disrupt the plans of someone who had prepared carefully",
+        "To create uncertainty by withdrawing information unexpectedly"
+      ],
+      "answer": "To confuse and unsettle someone — to throw off balance",
+      "explanation": "To discombobulate means to confuse and disturb — to throw someone into a state of disorientation.\n• discombobulate = to disconcert; to throw into confusion\n• Probably a humorous elaboration of 'discompose'\n• 'Thoroughly discombobulated' = completely thrown off balance"
+    },
+    {
+      "word": "maculate",
+      "question": "The pristine white tablecloth was maculated with wine. What does 'maculate' mean?",
+      "type": "choice",
+      "options": [
+        "To mark with spots or stains — to blemish",
+        "To ruin the appearance of a cloth through accidental spillage",
+        "To leave a permanent stain that could not be removed",
+        "To damage the appearance of a fabric by introducing color"
+      ],
+      "answer": "To mark with spots or stains — to blemish",
+      "explanation": "To maculate means to mark with spots — to stain or blemish.\n• maculate = to mark with spots; to defile\n• From Latin: 'macula' — a spot, stain\n• 'Immaculate' = spotless; 'maculate' = its opposite"
+    },
+    {
+      "word": "peculate",
+      "question": "The treasurer had been peculating from the club's accounts for three years. What does 'peculate' mean?",
+      "type": "choice",
+      "options": [
+        "To embezzle money entrusted to one's care",
+        "To steal small amounts from funds one manages",
+        "To divert money from an organization to personal use",
+        "To misappropriate funds held on behalf of others"
+      ],
+      "answer": "To embezzle money entrusted to one's care",
+      "explanation": "To peculate means to embezzle — to steal from funds in one's care.\n• peculate = to steal money entrusted to one's care; to embezzle\n• From Latin: 'peculare' — to defraud (originally: theft of public money)\n• 'Peculation' = the act of embezzling; similar to defalcate"
+    },
+    {
+      "word": "speculate",
+      "question": "He speculated that the missing document had been deliberately destroyed. What does 'speculate' mean?",
+      "type": "choice",
+      "options": [
+        "To form a theory without firm evidence",
+        "To suggest a possible explanation that could not be proved",
+        "To reach a conclusion based on the available circumstantial evidence",
+        "To make an informed guess about the cause of an event"
+      ],
+      "answer": "To form a theory without firm evidence",
+      "explanation": "To speculate means to conjecture — to form an opinion without definite evidence.\n• speculate = to form a theory without firm evidence; to invest in high-risk assets\n• From Latin: 'speculari' — to spy out\n• 'Speculate about', 'speculative investment' — both involve uncertain bets"
+    },
+    {
+      "word": "matriculate",
+      "question": "She matriculated at the university in September. What does 'matriculate' mean?",
+      "type": "choice",
+      "options": [
+        "To enroll formally as a member of a university",
+        "To begin study at a university after completing enrollment",
+        "To be accepted and registered at an academic institution",
+        "To start the first year of a degree program"
+      ],
+      "answer": "To enroll formally as a member of a university",
+      "explanation": "To matriculate means to enroll formally at a university — to be admitted and registered.\n• matriculate = to be enrolled at a college or university\n• From Latin: 'matricula' — a register\n• 'Matriculation ceremony' = the formal admission ceremony"
+    },
+    {
+      "word": "articulate",
+      "question": "She articulated her concerns clearly and calmly. What does 'articulate' mean?",
+      "type": "choice",
+      "options": [
+        "To express ideas clearly and effectively",
+        "To raise concerns in a professional and measured way",
+        "To communicate a position without causing unnecessary offence",
+        "To make complex feelings understandable to those listening"
+      ],
+      "answer": "To express ideas clearly and effectively",
+      "explanation": "To articulate means to express clearly — to put thoughts into precise, effective language.\n• articulate = to express clearly; to pronounce distinctly\n• From Latin: 'articulare' — to divide into joints\n• 'Articulate a vision', 'an articulate speaker' — clear and effective expression"
+    },
+    {
+      "word": "inoculate",
+      "question": "Children were inoculated against measles as part of the national programme. What does 'inoculate' mean?",
+      "type": "choice",
+      "options": [
+        "To introduce a vaccine to create immunity",
+        "To inject a weakened pathogen to prevent full infection",
+        "To protect against disease through a vaccination procedure",
+        "To use a medical intervention to prevent a contagious illness"
+      ],
+      "answer": "To introduce a vaccine to create immunity",
+      "explanation": "To inoculate means to vaccinate — to introduce a substance that creates immunity.\n• inoculate = to introduce a vaccine or antibody to produce immunity\n• From Latin: 'inoculare' — to graft\n• 'Inoculate against flu' = vaccinate; 'inoculated against criticism' = made resistant"
+    },
+    {
+      "word": "circulate",
+      "question": "The memo was circulated to all department heads before the meeting. What does 'circulate' mean?",
+      "type": "choice",
+      "options": [
+        "To pass something around — to distribute to a group",
+        "To send an official document to all relevant parties",
+        "To ensure all department heads received the information",
+        "To distribute a document in advance of a formal gathering"
+      ],
+      "answer": "To pass something around — to distribute to a group",
+      "explanation": "To circulate means to pass around — to distribute among a group.\n• circulate = to move continuously; to pass from person to person\n• From Latin: 'circulare' — to move in a circle\n• 'Circulate a petition', 'blood circulates' — movement through a system"
+    },
+    {
+      "word": "emasculate",
+      "question": "The proposed law was so heavily amended that critics said it had been emasculated. What does 'emasculate' mean?",
+      "type": "choice",
+      "options": [
+        "To deprive of force or effectiveness — to weaken severely",
+        "To change a piece of legislation until it achieved nothing",
+        "To strip a law of the provisions that gave it power",
+        "To reduce the strength of a policy through excessive compromise"
+      ],
+      "answer": "To deprive of force or effectiveness — to weaken severely",
+      "explanation": "To emasculate means to deprive of power — to weaken by removing essential force.\n• emasculate = to make weak and ineffective; to deprive of strength\n• From Latin: 'emasculare' — to castrate\n• 'Emasculated legislation' = stripped of its power"
+    },
+    {
+      "word": "adulate",
+      "question": "The crowd adulated the star throughout the performance. What does 'adulate' mean?",
+      "type": "choice",
+      "options": [
+        "To admire excessively and flatteringly — to fawn over",
+        "To give enthusiastic applause throughout a performance",
+        "To respond with the kind of devotion reserved for celebrities",
+        "To demonstrate admiration in a public and visible way"
+      ],
+      "answer": "To admire excessively and flatteringly — to fawn over",
+      "explanation": "To adulate means to fawn over — to praise with excessive, slavish admiration.\n• adulate = to praise excessively and obsequiously; to worship\n• From Latin: 'adulari' — to flatter\n• 'Adulation', 'adoring fans who adulate' — excessive hero-worship"
+    },
+    {
+      "word": "modulate",
+      "question": "A good speaker modulates their voice to keep the audience engaged. What does 'modulate' mean?",
+      "type": "choice",
+      "options": [
+        "To adjust tone, pitch, or volume for effect",
+        "To vary the speed and loudness of speech deliberately",
+        "To use vocal variety to prevent audiences from losing interest",
+        "To control the projection and clarity of the voice"
+      ],
+      "answer": "To adjust tone, pitch, or volume for effect",
+      "explanation": "To modulate means to adjust and vary — to control pitch, tone, or intensity.\n• modulate = to regulate; to vary tone, pitch, or degree\n• From Latin: 'modulari' — to measure\n• 'Modulate the voice', 'modulate a signal' — controlled variation"
+    },
+    {
+      "word": "coagulate",
+      "question": "Blood coagulates when exposed to air, forming a clot. What does 'coagulate' mean?",
+      "type": "choice",
+      "options": [
+        "To change from liquid to a solid or semisolid state",
+        "To form a clot when exposed to air or a wound surface",
+        "To thicken and solidify as part of the body's defense",
+        "To change its structure when chemicals trigger a reaction"
+      ],
+      "answer": "To change from liquid to a solid or semisolid state",
+      "explanation": "To coagulate means to clot — to change from liquid to a solid or gel-like state.\n• coagulate = to change from liquid to a thickened or solid mass\n• From Latin: 'coagulare' — to curdle\n• 'Blood coagulates', 'coagulated egg' — thickening and solidifying"
+    },
+    {
+      "word": "regulate",
+      "question": "The agency was established to regulate financial markets. What does 'regulate' mean?",
+      "type": "choice",
+      "options": [
+        "To control by means of rules or standards",
+        "To oversee an industry to ensure it operates within the law",
+        "To set and enforce standards for a particular sector",
+        "To monitor and intervene in market activity when required"
+      ],
+      "answer": "To control by means of rules or standards",
+      "explanation": "To regulate means to control — to apply rules or standards to govern behavior.\n• regulate = to control by rules; to adjust to the required standard\n• From Latin: 'regulare' — to control\n• 'Regulate emissions', 'regulate behavior' — bringing under rule-based control"
+    },
+    {
+      "word": "pullulate",
+      "question": "The market pullulated with traders, tourists, and pickpockets. What does 'pullulate' mean?",
+      "type": "choice",
+      "options": [
+        "To swarm or teem — to be full of activity or creatures",
+        "To be packed so densely that movement was difficult",
+        "To contain a mix of people all pursuing different purposes",
+        "To attract so many visitors that the space was overwhelmed"
+      ],
+      "answer": "To swarm or teem — to be full of activity or creatures",
+      "explanation": "To pullulate means to swarm — to teem with life or activity.\n• pullulate = to teem; to swarm; to multiply rapidly\n• From Latin: 'pullulare' — to sprout\n• 'Pullulating with ideas' = teeming; the place is alive with activity"
+    },
+    {
+      "word": "emulate",
+      "question": "She worked hard to emulate the style of the great writers she admired. What does 'emulate' mean?",
+      "type": "choice",
+      "options": [
+        "To match or imitate someone as a model to aspire to",
+        "To adopt the techniques of a writer one admires",
+        "To model one's own work on the approach of great predecessors",
+        "To study an admired writer and attempt to reach their level"
+      ],
+      "answer": "To match or imitate someone as a model to aspire to",
+      "explanation": "To emulate means to imitate in order to match — to strive to equal or surpass.\n• emulate = to match or surpass by imitation; to rival\n• From Latin: 'aemulari' — to rival\n• 'Emulate a hero' = try to become as good; more ambitious than mere copying"
+    },
+    {
+      "word": "dissimulate",
+      "question": "She dissimulated her anxiety so well that no one in the room knew she was terrified. What does 'dissimulate' mean?",
+      "type": "choice",
+      "options": [
+        "To conceal one's true feelings behind a false appearance",
+        "To control visible signs of anxiety in a social situation",
+        "To perform confidence when one was actually frightened",
+        "To manage emotions so effectively that observers were deceived"
+      ],
+      "answer": "To conceal one's true feelings behind a false appearance",
+      "explanation": "To dissimulate means to disguise — to conceal one's real feelings or intentions.\n• dissimulate = to conceal or disguise; to hide one's true nature\n• From Latin: 'dissimulare' — to disguise\n• Similar to 'dissemble' — both mean hiding the truth behind a mask"
+    },
+    {
+      "word": "accumulate",
+      "question": "He had accumulated a fortune over forty years in business. What does 'accumulate' mean?",
+      "type": "choice",
+      "options": [
+        "To gather and build up over time",
+        "To generate wealth through decades of commercial activity",
+        "To acquire assets steadily through prudent investment",
+        "To build a financial position through sustained enterprise"
+      ],
+      "answer": "To gather and build up over time",
+      "explanation": "To accumulate means to gather progressively — to collect and build up over time.\n• accumulate = to gather together over time; to amass\n• From Latin: 'accumulare' — to heap up\n• 'Accumulate debt', 'accumulate evidence' — building up gradually"
+    },
+    {
+      "word": "stipulate",
+      "question": "The contract stipulated that delivery must be completed within 30 days. What does 'stipulate' mean?",
+      "type": "choice",
+      "options": [
+        "To demand or specify as a condition",
+        "To require as a legally binding term of an agreement",
+        "To state clearly that a specific condition must be met",
+        "To include in a contract the precise terms of delivery"
+      ],
+      "answer": "To demand or specify as a condition",
+      "explanation": "To stipulate means to specify as a requirement — to demand as a condition.\n• stipulate = to state a condition or requirement clearly\n• From Latin: 'stipulari' — to exact a guarantee\n• 'Stipulate terms', 'as stipulated' — a specific requirement made explicit"
+    },
+    {
+      "word": "insulate",
+      "question": "The walls were insulated to keep heat in during winter. What does 'insulate' mean?",
+      "type": "choice",
+      "options": [
+        "To protect by surrounding with a material that resists heat or electricity",
+        "To reduce heat loss by filling cavities in the walls",
+        "To improve energy efficiency by treating the building envelope, as the evidence showed",
+        "To line walls with material that prevents temperature exchange"
+      ],
+      "answer": "To protect by surrounding with a material that resists heat or electricity",
+      "explanation": "To insulate means to isolate — to wrap in material that resists the transfer of heat or electricity.\n• insulate = to protect with material that prevents heat or electric transfer\n• From Latin: 'insula' — an island\n• 'Insulate a home', 'insulate from criticism' — shielding from external effects"
+    },
+    {
+      "word": "encapsulate",
+      "question": "Her short speech encapsulated everything the organization stood for. What does 'encapsulate' mean?",
+      "type": "choice",
+      "options": [
+        "To express the essential quality of something concisely",
+        "To summarize the purpose of an organization in a speech",
+        "To describe the values of a body in precise and memorable terms",
+        "To represent an idea so completely that nothing more needed saying"
+      ],
+      "answer": "To express the essential quality of something concisely",
+      "explanation": "To encapsulate means to sum up perfectly — to contain the essence of something in compact form.\n• encapsulate = to express completely and succinctly\n• From Latin: 'capsula' — a small box\n• 'Encapsulate an idea', 'drug encapsulation' — containing something fully"
+    },
+    {
+      "word": "capitulate",
+      "question": "After months of resistance, the garrison finally capitulated. What does 'capitulate' mean?",
+      "type": "choice",
+      "options": [
+        "To surrender — to give up resistance",
+        "To accept defeat after sustaining heavy losses",
+        "To negotiate terms of surrender with the opposing force",
+        "To agree to stop fighting in exchange for safe passage"
+      ],
+      "answer": "To surrender — to give up resistance",
+      "explanation": "To capitulate means to give up — to surrender after resistance.\n• capitulate = to surrender; to cease resisting\n• From Latin: 'capitulare' — to draw up under headings\n• 'Capitulate to demands', 'finally capitulated' — yielding after holding out"
+    },
+    {
+      "word": "recapitulate",
+      "question": "At the end of the lecture, the professor recapitulated the main arguments. What does 'recapitulate' mean?",
+      "type": "choice",
+      "options": [
+        "To summarize the main points — to go over again",
+        "To remind the audience of the key conclusions reached",
+        "To repeat the central arguments in a condensed form",
+        "To briefly review the content covered during the session"
+      ],
+      "answer": "To summarize the main points — to go over again",
+      "explanation": "To recapitulate means to summarize — to go over the main points again briefly.\n• recapitulate = to repeat the main points of; to summarize\n• From Latin: 'recapitulare' — to go through headings again\n• 'Recapitulate the argument', 'to recap' — reviewing the essentials"
+    },
+    {
+      "word": "postulate",
+      "question": "The philosopher postulated that consciousness exists independently of the brain. What does 'postulate' mean?",
+      "type": "choice",
+      "options": [
+        "To suggest or assume something as a basis for reasoning",
+        "To advance a philosophical position that requires proof",
+        "To propose a theory that will be tested against evidence",
+        "To claim something is true in the absence of contrary evidence"
+      ],
+      "answer": "To suggest or assume something as a basis for reasoning",
+      "explanation": "To postulate means to assume as a starting point — to put forward as a basis for argument.\n• postulate = to suggest or assume as a basis for reasoning\n• From Latin: 'postulare' — to demand\n• 'Postulate a theory', 'Euclid's postulates' — fundamental assumptions"
+    },
+    {
+      "word": "expostulate",
+      "question": "He expostulated loudly with the referee after the decision went against him. What does 'expostulate' mean?",
+      "type": "choice",
+      "options": [
+        "To reason earnestly against something — to protest strongly",
+        "To argue with an official in a loud and visible way",
+        "To complain in a manner that risked further punishment, as the evidence showed",
+        "To dispute a decision with the person who had made it"
+      ],
+      "answer": "To reason earnestly against something — to protest strongly",
+      "explanation": "To expostulate means to protest strongly — to argue earnestly against something.\n• expostulate = to express strong objection; to remonstrate\n• From Latin: 'expostulare' — to demand urgently\n• 'Expostulate with someone' = reason against their action with strong feeling"
+    },
+    {
+      "word": "amalgamate",
+      "question": "The two rival unions amalgamated to form a single more powerful body. What does 'amalgamate' mean?",
+      "type": "choice",
+      "options": [
+        "To combine into a single unified whole",
+        "To merge two separate organizations into one larger body",
+        "To agree to share resources and coordinate activities",
+        "To join forces to increase collective bargaining power"
+      ],
+      "answer": "To combine into a single unified whole",
+      "explanation": "To amalgamate means to merge — to combine separate entities into one.\n• amalgamate = to combine or unite to form one organization\n• From 'amalgam' — an alloy of mercury with another metal\n• 'Amalgamate departments', 'amalgamated union' — merged into one"
+    },
+    {
+      "word": "stalemate",
+      "question": "Negotiations were stuck in a stalemate — neither side would move. What is a stalemate?",
+      "type": "choice",
+      "options": [
+        "A situation in which no progress is possible for either side",
+        "A stage in negotiations where both sides have reached their limits",
+        "A deadlock in which both parties refuse to make concessions",
+        "A point where progress has stopped and no resolution is visible"
+      ],
+      "answer": "A situation in which no progress is possible for either side",
+      "explanation": "A stalemate is a deadlock — neither side can win or make progress.\n• stalemate = a situation in which no progress can be made\n• From chess: a position where a player has no legal move but is not in check\n• 'Reach a stalemate', 'break the stalemate' — the block and its resolution"
+    },
+    {
+      "word": "decimate",
+      "question": "The disease decimated the rabbit population in the region. What does 'decimate' mean?",
+      "type": "choice",
+      "options": [
+        "To kill or destroy a large proportion of",
+        "To reduce a population dramatically through disease",
+        "To cause such severe losses that recovery is uncertain",
+        "To eliminate most of a group through a single destructive event"
+      ],
+      "answer": "To kill or destroy a large proportion of",
+      "explanation": "To decimate means to destroy a large part of — to cause severe losses.\n• decimate = to kill a large proportion of; to severely damage\n• From Latin: 'decimare' — to take a tenth (the Roman punishment of killing one in ten)\n• Now used loosely to mean destroy a large fraction"
+    },
+    {
+      "word": "sublimate",
+      "question": "He sublimated his aggressive tendencies into competitive sport. What does 'sublimate' mean?",
+      "type": "choice",
+      "options": [
+        "To redirect an impulse into a socially acceptable activity",
+        "To channel negative energy into something productive",
+        "To use sport as an outlet for feelings that could cause harm",
+        "To suppress a destructive tendency through physical activity"
+      ],
+      "answer": "To redirect an impulse into a socially acceptable activity",
+      "explanation": "To sublimate means to redirect — to transform an unacceptable impulse into something acceptable.\n• sublimate = to transform a drive into a socially acceptable activity\n• From Latin: 'sublimare' — to elevate\n• In chemistry: to pass directly from solid to gas; in psychology: redirect impulses"
+    },
+    {
+      "word": "acclimate",
+      "question": "She needed a few weeks to acclimate to the altitude of the mountain city. What does 'acclimate' mean?",
+      "type": "choice",
+      "options": [
+        "To become accustomed to a new environment or condition",
+        "To adjust physically to the reduced oxygen at high altitude",
+        "To allow the body time to adapt to new environmental conditions",
+        "To undergo the physiological changes needed for a new climate"
+      ],
+      "answer": "To become accustomed to a new environment or condition",
+      "explanation": "To acclimate means to adjust — to become adapted to a new climate or environment.\n• acclimate = to adapt to a new climate or conditions\n• From French: 'acclimater'\n• Variant of 'acclimatize'; 'acclimate to change' = adapt gradually"
+    },
+    {
+      "word": "inanimate",
+      "question": "The artist gave the inanimate objects in his still life a strange sense of life. What does 'inanimate' mean?",
+      "type": "choice",
+      "options": [
+        "Not living — lacking the qualities of a living thing",
+        "Static and incapable of movement",
+        "Passive objects that cannot respond to their environment",
+        "Things that have no organic structure or biological processes"
+      ],
+      "answer": "Not living — lacking the qualities of a living thing",
+      "explanation": "Inanimate means not alive — lacking the qualities of living organisms.\n• inanimate = not alive; lacking consciousness or vital qualities\n• From Latin: 'in-' + 'animatus' (given life)\n• 'Inanimate objects' = rocks, chairs, tools — not living"
+    }
+  ]
+}
