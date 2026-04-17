@@ -1,0 +1,1305 @@
+{
+  "text": "quiz34",
+  "quiz": [
+    {
+      "word": "illusion",
+      "question": "The magician created the illusion that the box was empty. What is an illusion?",
+      "type": "choice",
+      "options": [
+        "A false perception — something that deceives the senses or the mind",
+        "A performance technique that required years of practice to perfect, as the evidence showed",
+        "An appearance designed to mislead those watching",
+        "A trick that relied on the audience's willingness to be deceived"
+      ],
+      "answer": "A false perception — something that deceives the senses or the mind",
+      "explanation": "An illusion is a false impression — something that appears real but is not.\n• illusion = a false appearance; a deceptive perception\n• From Latin: 'illudere' — to mock\n• 'Optical illusion', 'under the illusion that' — false perception"
+    },
+    {
+      "word": "disillusion",
+      "question": "Years of broken promises disillusioned her about the political process. What does 'disillusion' mean?",
+      "type": "choice",
+      "options": [
+        "To cause someone to lose their ideals or naive beliefs",
+        "To produce a loss of faith through repeated failure to deliver",
+        "To change a person's view of an institution through disappointment",
+        "To transform an idealistic supporter into a cynical observer"
+      ],
+      "answer": "To cause someone to lose their ideals or naive beliefs",
+      "explanation": "To disillusion means to free from illusions — to destroy someone's idealistic belief.\n• disillusion = to free from illusion; to cause disappointment\n• From 'dis-' + 'illusion'\n• 'Disillusioned voter', 'growing disillusionment' — loss of idealistic belief"
+    },
+    {
+      "word": "approbation",
+      "question": "The proposal received the committee's approbation without a single objection. What is approbation?",
+      "type": "choice",
+      "options": [
+        "Approval and praise — formal or official endorsement",
+        "The unanimous agreement of a body that rarely agreed on anything",
+        "A level of support that gave the proposal official status",
+        "The formal acknowledgment that the proposal met the required standard"
+      ],
+      "answer": "Approval and praise — formal or official endorsement",
+      "explanation": "Approbation is approval — the expression of endorsement or praise.\n• approbation = formal approval; praise\n• From Latin: 'approbare' — to approve\n• 'Seek approbation', 'nod of approbation' — formal or expressed approval"
+    },
+    {
+      "word": "incubation",
+      "question": "The incubation period of the virus was between two and fourteen days. What is incubation?",
+      "type": "choice",
+      "options": [
+        "The period during which something develops before becoming apparent",
+        "The interval between infection and the appearance of symptoms",
+        "A stage defined by invisible biological activity",
+        "The time during which the virus was multiplying before the host felt ill"
+      ],
+      "answer": "The period during which something develops before becoming apparent",
+      "explanation": "Incubation is the period of development before symptoms or results appear.\n• incubation = the process of incubating; the period before symptoms appear\n• From Latin: 'incubare' — to lie on\n• 'Incubation period', 'incubate an egg' — development before emergence"
+    },
+    {
+      "word": "dedication",
+      "question": "Her dedication to the project through its most difficult phase was remarkable. What is dedication?",
+      "type": "choice",
+      "options": [
+        "Committed devotion of time and energy to a purpose",
+        "The willingness to continue when most would have stepped back",
+        "A quality that distinguished her from colleagues of equal talent",
+        "The persistence that carried a project through its hardest period"
+      ],
+      "answer": "Committed devotion of time and energy to a purpose",
+      "explanation": "Dedication is devoted commitment — giving oneself fully to a purpose.\n• dedication = devoted commitment; the act of dedicating\n• From Latin: 'dedicare' — to consecrate\n• 'Work with dedication', 'dedication ceremony' — committed devotion"
+    },
+    {
+      "word": "vindication",
+      "question": "The acquittal was vindication for a man who had always maintained his innocence. What is vindication?",
+      "type": "choice",
+      "options": [
+        "The action of clearing someone of blame — proof that they were right",
+        "The legal outcome that restored his standing in the community",
+        "The formal acknowledgement that his claim of innocence was correct, as the evidence showed",
+        "The conclusion of a process that had lasted years"
+      ],
+      "answer": "The action of clearing someone of blame — proof that they were right",
+      "explanation": "Vindication is clearance — the act of proving someone's innocence or correctness.\n• vindication = the act of clearing someone of blame or suspicion\n• From Latin: 'vindicare' — to claim, avenge\n• 'Complete vindication', 'feel vindicated' — proved right after dispute"
+    },
+    {
+      "word": "personification",
+      "question": "Justice is often depicted as a blindfolded woman — a personification of impartiality. What is personification?",
+      "type": "choice",
+      "options": [
+        "The representation of an abstract idea in human or personal form",
+        "A literary or artistic device that gives human qualities to concepts",
+        "A way of making abstract values visible and comprehensible",
+        "The tradition of depicting virtues as human figures in art"
+      ],
+      "answer": "The representation of an abstract idea in human or personal form",
+      "explanation": "Personification is giving human form to abstractions — making the abstract concrete.\n• personification = the attribution of human form to an abstract idea\n• From Latin: 'persona' + 'facere'\n• 'The personification of evil', 'personify hope' — embodying an abstract quality"
+    },
+    {
+      "word": "unification",
+      "question": "The unification of Germany in 1990 was one of the defining events of the late twentieth century. What is unification?",
+      "type": "choice",
+      "options": [
+        "The process of being united — the merging of separate parts into one",
+        "A political event that joined two states under a single government, as the evidence showed",
+        "The conclusion of a process begun when the Berlin Wall fell",
+        "A historic development whose consequences were felt for decades"
+      ],
+      "answer": "The process of being united — the merging of separate parts into one",
+      "explanation": "Unification is the process of becoming one — merging into a single unit.\n• unification = the process of being united into one\n• From Latin: 'unificare' — to make one\n• 'German unification', 'unification of forces' — merging into one"
+    },
+    {
+      "word": "gasification",
+      "question": "Gasification converts coal into synthetic gas for use as fuel. What is gasification?",
+      "type": "choice",
+      "options": [
+        "The process of converting a solid or liquid into gas",
+        "A chemical process that extracts energy from carbonaceous materials",
+        "An industrial technique that produces fuel from non-gas feedstocks",
+        "A conversion process used in energy generation and chemical production"
+      ],
+      "answer": "The process of converting a solid or liquid into gas",
+      "explanation": "Gasification is conversion to gas — changing a material into a gaseous state.\n• gasification = the process of converting into gas\n• From 'gas' + '-ification'\n• 'Coal gasification', 'biomass gasification' — converting to gas"
+    },
+    {
+      "word": "ratification",
+      "question": "The treaty required ratification by two-thirds of member states before it could take effect. What is ratification?",
+      "type": "choice",
+      "options": [
+        "The formal confirmation or approval of a decision — making it official",
+        "The legislative act of giving a treaty domestic legal force",
+        "The process by which states converted a signed agreement into law",
+        "The vote required before an international agreement could be enforced, as the evidence showed"
+      ],
+      "answer": "The formal confirmation or approval of a decision — making it official",
+      "explanation": "Ratification is formal confirmation — making a decision officially valid.\n• ratification = formal approval or confirmation\n• From Latin: 'ratus' (fixed) + 'facere' (to make)\n• 'Ratify a treaty', 'await ratification' — formal approval"
+    },
+    {
+      "word": "gratification",
+      "question": "Instant gratification has become the expectation of the digital age. What is gratification?",
+      "type": "choice",
+      "options": [
+        "The pleasure or satisfaction of having a desire fulfilled",
+        "The experience of receiving what was wanted without delay",
+        "A form of reward that the digital environment had normalised",
+        "The satisfaction that came from getting what one had asked for"
+      ],
+      "answer": "The pleasure or satisfaction of having a desire fulfilled",
+      "explanation": "Gratification is the satisfaction of a desire — the pleasure of fulfilment.\n• gratification = pleasure; the satisfaction of desire\n• From Latin: 'gratificari' — to do a favour\n• 'Instant gratification', 'seek gratification' — pleasure from fulfilment"
+    },
+    {
+      "word": "certification",
+      "question": "The technician needed certification before working on the new systems. What is certification?",
+      "type": "choice",
+      "options": [
+        "The act of formally attesting that standards have been met",
+        "A qualification recognised by the industry as proof of competence",
+        "The official credential required before undertaking certain work",
+        "A process that verified the holder's training through examination"
+      ],
+      "answer": "The act of formally attesting that standards have been met",
+      "explanation": "Certification is formal attestation — officially confirming that standards are met.\n• certification = the act of certifying; an official document attesting something\n• From Latin: 'certus' (certain) + 'facere' (to make)\n• 'Professional certification', 'safety certification' — formal attestation"
+    },
+    {
+      "word": "mortification",
+      "question": "The speech fell flat and she could feel the mortification rising. What is mortification?",
+      "type": "choice",
+      "options": [
+        "A feeling of intense embarrassment or humiliation",
+        "The emotional consequence of a public failure",
+        "A reaction so strong it was visible to everyone watching",
+        "The discomfort of knowing that others had witnessed the failure"
+      ],
+      "answer": "A feeling of intense embarrassment or humiliation",
+      "explanation": "Mortification is intense embarrassment — the feeling of being deeply humiliated.\n• mortification = intense embarrassment; the practice of self-denial\n• From Latin: 'mortificare' — to put to death\n• 'To his mortification', 'feel mortified' — acute embarrassment"
+    },
+    {
+      "word": "justification",
+      "question": "There was no justification for the violence, whatever the provocation. What is justification?",
+      "type": "choice",
+      "options": [
+        "A reason that shows an action to be right or reasonable",
+        "An argument that sought to defend an act against criticism",
+        "The kind of explanation that might reduce though not remove blame",
+        "A claim made after the fact to support a decision already taken"
+      ],
+      "answer": "A reason that shows an action to be right or reasonable",
+      "explanation": "Justification is a reason that makes something acceptable — a defence of an action.\n• justification = a reason for an action; the act of showing to be right\n• From Latin: 'justificare' — to do justice to\n• 'No justification for', 'justify an action' — making an action defensible"
+    },
+    {
+      "word": "implication",
+      "question": "The implication of his silence was clear to everyone in the room. What is an implication?",
+      "type": "choice",
+      "options": [
+        "A suggestion or inference — something implied but not stated directly",
+        "A conclusion that could be drawn without requiring explicit statement, as the evidence showed",
+        "The meaning that his behaviour communicated without words",
+        "An unstated signal that was nevertheless understood by all present"
+      ],
+      "answer": "A suggestion or inference — something implied but not stated directly",
+      "explanation": "An implication is a conclusion drawn from what is implied — not explicitly stated.\n• implication = something implied; an indirect suggestion\n• From Latin: 'implicare' — to enfold\n• 'The implications of', 'by implication' — what is suggested without being said"
+    },
+    {
+      "word": "application",
+      "question": "Her application of the theory to real-world problems was impressive. What is application?",
+      "type": "choice",
+      "options": [
+        "The practical use of something — putting knowledge or method to work",
+        "The translation of theoretical understanding into practical outcomes, as the evidence showed",
+        "The ability to use what she had learned in a new context",
+        "The quality that distinguished a practitioner from a theoretician"
+      ],
+      "answer": "The practical use of something — putting knowledge or method to work",
+      "explanation": "Application is putting something to practical use — using knowledge or skill.\n• application = the use of something for a purpose; a request\n• From Latin: 'applicare' — to attach to\n• 'Job application', 'practical application', 'application of force' — using or requesting"
+    },
+    {
+      "word": "sophistication",
+      "question": "Her sophistication was evident in the way she handled every situation with ease. What is sophistication?",
+      "type": "choice",
+      "options": [
+        "Refinement and worldly experience — cultured knowledge and judgment",
+        "The social confidence that came from exposure to diverse environments",
+        "A quality that made her comfortable in any company",
+        "The combination of knowledge and composure that experience produces"
+      ],
+      "answer": "Refinement and worldly experience — cultured knowledge and judgment",
+      "explanation": "Sophistication is refined worldliness — cultured, complex, and experienced.\n• sophistication = worldly knowledge and refinement; complexity\n• From Greek: 'sophistikos' — skilled\n• 'Sophisticated taste', 'lacking sophistication' — worldly refinement"
+    },
+    {
+      "word": "vocation",
+      "question": "Teaching was not just a job for her — it was a vocation. What is a vocation?",
+      "type": "choice",
+      "options": [
+        "A strong feeling that one is called to a particular kind of work",
+        "A commitment to work that went beyond professional obligation",
+        "The sense that a career and an identity were the same thing",
+        "A relationship with work defined by purpose rather than reward, as the evidence showed"
+      ],
+      "answer": "A strong feeling that one is called to a particular kind of work",
+      "explanation": "A vocation is a calling — a strong sense of purpose in one's work.\n• vocation = a strong inclination toward a particular career\n• From Latin: 'vocare' — to call\n• 'A vocation for teaching', 'vocational training' — a calling"
+    },
+    {
+      "word": "avocation",
+      "question": "Photography was his avocation — he did it for love, not money. What is an avocation?",
+      "type": "choice",
+      "options": [
+        "A hobby or secondary occupation — something pursued apart from one's main work",
+        "An activity that provided satisfaction that work did not",
+        "A pastime developed into a serious pursuit over many years",
+        "An interest that consumed as much energy as his professional work, as the evidence showed"
+      ],
+      "answer": "A hobby or secondary occupation — something pursued apart from one's main work",
+      "explanation": "An avocation is a hobby — a secondary occupation or interest pursued for pleasure.\n• avocation = a hobby; a minor occupation alongside one's main work\n• From Latin: 'avocare' — to call away\n• Distinguished from 'vocation' (calling) — an avocation is what calls you away"
+    },
+    {
+      "word": "equivocation",
+      "question": "The politician's equivocation on the key question impressed no one. What is equivocation?",
+      "type": "choice",
+      "options": [
+        "The use of ambiguous language to avoid committing to a clear answer",
+        "A verbal technique that answered without revealing a position",
+        "The art of satisfying the formal requirement of a reply",
+        "Language chosen to please all listeners by binding none of them, as the evidence showed"
+      ],
+      "answer": "The use of ambiguous language to avoid committing to a clear answer",
+      "explanation": "Equivocation is deliberate ambiguity — using vague language to avoid commitment.\n• equivocation = the use of ambiguous language to mislead\n• From Latin: 'aequus' (equal) + 'vox' (voice) — saying both at once\n• 'Equivocate', 'no equivocation' — deliberate evasion through ambiguity"
+    },
+    {
+      "word": "provocation",
+      "question": "He argued that the attack was unprovoked — there had been no provocation whatsoever. What is provocation?",
+      "type": "choice",
+      "options": [
+        "An action or remark that causes anger or a reaction",
+        "An event that might justify a response if one were looking for a reason",
+        "Any stimulus that could be used to explain subsequent behaviour",
+        "Conduct that fell short of the threshold required to excuse retaliation"
+      ],
+      "answer": "An action or remark that causes anger or a reaction",
+      "explanation": "Provocation is incitement — something that deliberately causes anger or reaction.\n• provocation = action or speech that provokes\n• From Latin: 'provocare' — to call forth\n• 'Extreme provocation', 'without provocation' — inciting a reaction"
+    },
+    {
+      "word": "gradation",
+      "question": "The painting showed a subtle gradation from light blue to deep purple. What is gradation?",
+      "type": "choice",
+      "options": [
+        "A gradual change from one state to another — a graded transition",
+        "A technique that required a skilled hand and careful preparation, as the evidence showed",
+        "A smooth transition between two colours in a painted composition",
+        "A visual quality that gave the work depth and atmosphere"
+      ],
+      "answer": "A gradual change from one state to another — a graded transition",
+      "explanation": "A gradation is a gradual change — a smooth transition by degrees.\n• gradation = a gradual change by degrees\n• From Latin: 'gradus' — a step\n• 'Gradation of colour', 'gradations of meaning' — change by degrees"
+    },
+    {
+      "word": "degradation",
+      "question": "Environmental degradation was accelerating faster than policy could address. What is degradation?",
+      "type": "choice",
+      "options": [
+        "A decline in quality or condition — the process of deteriorating",
+        "A worsening measurable through multiple environmental indicators, as the evidence showed",
+        "A trend that required intervention before it became irreversible",
+        "The cumulative result of practices that damaged natural systems"
+      ],
+      "answer": "A decline in quality or condition — the process of deteriorating",
+      "explanation": "Degradation is deterioration — a decline in quality or status.\n• degradation = deterioration; loss of dignity or quality\n• From Latin: 'degradare' — to lower in rank\n• 'Environmental degradation', 'human degradation' — decline in quality"
+    },
+    {
+      "word": "depredation",
+      "question": "The depredations of the invaders left the countryside stripped bare. What is depredation?",
+      "type": "choice",
+      "options": [
+        "Plundering and destruction — the act of pillaging",
+        "A pattern of attack that removed everything of value",
+        "Systematic looting carried out by a force that met no resistance",
+        "The damage left behind after an occupation had ended"
+      ],
+      "answer": "Plundering and destruction — the act of pillaging",
+      "explanation": "Depredation is plundering — destructive pillaging and laying waste.\n• depredation = the act of plundering; ravaging\n• From Latin: 'depraedari' — to plunder\n• 'The depredations of war', 'ravaged by depredation' — destructive plundering"
+    },
+    {
+      "word": "consolidation",
+      "question": "The merger was part of a wider consolidation in the banking sector. What is consolidation?",
+      "type": "choice",
+      "options": [
+        "The process of combining into a stronger or more stable whole",
+        "A trend in which smaller competitors merged to survive",
+        "A response to competitive pressure that reduced the number of players",
+        "A structural change that created larger and more dominant entities"
+      ],
+      "answer": "The process of combining into a stronger or more stable whole",
+      "explanation": "Consolidation is the process of merging — combining to create strength or stability.\n• consolidation = combining into a single strong unit\n• From Latin: 'consolidare' — to make solid\n• 'Consolidate debts', 'sector consolidation' — combining for strength"
+    },
+    {
+      "word": "dilapidation",
+      "question": "The building had fallen into dilapidation after decades of neglect. What is dilapidation?",
+      "type": "choice",
+      "options": [
+        "A state of disrepair — deterioration through neglect or age",
+        "The condition of a building that had not been maintained for many years",
+        "A physical state requiring substantial investment to reverse",
+        "The consequence of ownership that lacked either the means or will to repair"
+      ],
+      "answer": "A state of disrepair — deterioration through neglect or age",
+      "explanation": "Dilapidation is a state of disrepair — crumbling from neglect.\n• dilapidation = state of disrepair from neglect\n• From Latin: 'dilapidare' — to squander stone by stone\n• 'In dilapidation', 'dilapidated building' — fallen into disrepair"
+    },
+    {
+      "word": "propagation",
+      "question": "The propagation of misinformation through social media is a growing concern. What is propagation?",
+      "type": "choice",
+      "options": [
+        "The spreading or transmitting of something through a medium",
+        "The mechanism by which false content travels faster than corrections",
+        "A process enabled by the architecture of digital networks",
+        "The rate at which content moves through online platforms"
+      ],
+      "answer": "The spreading or transmitting of something through a medium",
+      "explanation": "Propagation is spreading — the transmission of something through a medium.\n• propagation = the spreading of something; plant reproduction by cuttings\n• From Latin: 'propagare' — to extend\n• 'Propagation of sound', 'plant propagation' — spreading or reproducing"
+    },
+    {
+      "word": "variegation",
+      "question": "The variegation in the leaves was caused by different amounts of chlorophyll. What is variegation?",
+      "type": "choice",
+      "options": [
+        "The presence of different colours in a pattern — varied colouring",
+        "A biological condition producing two-tone or multi-tone plant leaves",
+        "A visual effect caused by uneven distribution of pigment",
+        "A sought-after quality in ornamental plants"
+      ],
+      "answer": "The presence of different colours in a pattern — varied colouring",
+      "explanation": "Variegation is varied coloration — the appearance of different colours in a pattern.\n• variegation = variety of colours; irregular marking\n• From Latin: 'variare' — to make various\n• 'Variegated leaves', 'variegation in fabric' — varied colouring"
+    },
+    {
+      "word": "negation",
+      "question": "The negation of a positive claim requires evidence, not just doubt. What is negation?",
+      "type": "choice",
+      "options": [
+        "The denial or contradiction of something — the act of negating",
+        "The logical operation that reverses the truth value of a claim",
+        "A philosophical requirement that must be met to dismiss a position",
+        "The process of showing a statement to be false"
+      ],
+      "answer": "The denial or contradiction of something — the act of negating",
+      "explanation": "Negation is the act of denying — contradicting or nullifying a statement.\n• negation = denial; the opposite; in logic: making something false\n• From Latin: 'negare' — to deny\n• 'Negation of a claim', 'double negation' — denial or contradiction"
+    },
+    {
+      "word": "abnegation",
+      "question": "His life of priestly abnegation was genuinely voluntary — he had given up wealth by choice. What is abnegation?",
+      "type": "choice",
+      "options": [
+        "The denial or renunciation of something — self-denial",
+        "The decision to reject material possessions as a matter of principle",
+        "A lifestyle that placed spiritual above material values",
+        "The discipline required to maintain a vow of poverty consistently"
+      ],
+      "answer": "The denial or renunciation of something — self-denial",
+      "explanation": "Abnegation is self-denial — the renunciation of desires or interests.\n• abnegation = the act of renouncing or self-denial\n• From Latin: 'abnegare' — to refuse\n• 'Self-abnegation', 'abnegation of duty' — renouncing or denying"
+    },
+    {
+      "word": "obligation",
+      "question": "She felt a strong moral obligation to help, whether or not the law required it. What is an obligation?",
+      "type": "choice",
+      "options": [
+        "A duty or commitment — something one is bound to do",
+        "A moral requirement that operated independently of legal compulsion",
+        "A sense of responsibility that was self-imposed rather than external",
+        "A commitment that made inaction feel like a form of failure"
+      ],
+      "answer": "A duty or commitment — something one is bound to do",
+      "explanation": "An obligation is a duty — something one is morally or legally bound to do.\n• obligation = a duty; a binding commitment\n• From Latin: 'obligare' — to bind\n• 'Legal obligation', 'feel obligated' — something one is bound to do"
+    },
+    {
+      "word": "litigation",
+      "question": "The dispute ended in litigation that took three years to resolve. What is litigation?",
+      "type": "choice",
+      "options": [
+        "The process of taking legal action — conducting a lawsuit",
+        "A formal dispute resolved through the courts rather than negotiation",
+        "A legal process that consumed time and resources on both sides",
+        "The mechanism for resolving disagreements that could not be settled"
+      ],
+      "answer": "The process of taking legal action — conducting a lawsuit",
+      "explanation": "Litigation is legal action — the process of resolving a dispute through the courts.\n• litigation = the process of taking legal action\n• From Latin: 'litigare' — to go to law\n• 'Enter litigation', 'avoid litigation' — taking or risking a court case"
+    },
+    {
+      "word": "castigation",
+      "question": "The minister faced public castigation for the misleading statement. What is castigation?",
+      "type": "choice",
+      "options": [
+        "Severe criticism or punishment — a harsh public rebuke",
+        "The kind of reaction that a public figure faced when credibility failed",
+        "A sustained response that went beyond the original offence",
+        "A public reckoning that damaged his standing for months"
+      ],
+      "answer": "Severe criticism or punishment — a harsh public rebuke",
+      "explanation": "Castigation is severe criticism — harshly rebuking or chastising.\n• castigation = severe criticism or punishment\n• From Latin: 'castigare' — to chastise\n• 'Face castigation', 'harsh castigation' — severe rebuke"
+    },
+    {
+      "word": "emaciation",
+      "question": "The photographs showed the emaciation of prisoners held in the camps. What is emaciation?",
+      "type": "choice",
+      "options": [
+        "An abnormally thin condition — extreme loss of flesh and weight",
+        "A physical state resulting from sustained deprivation of food",
+        "A condition visible in photographs that made the suffering undeniable",
+        "The bodily consequence of captivity under the harshest conditions"
+      ],
+      "answer": "An abnormally thin condition — extreme loss of flesh and weight",
+      "explanation": "Emaciation is extreme thinness — a wasted physical state from deprivation.\n• emaciation = abnormal thinness from illness or starvation\n• From Latin: 'emaciare' — to make thin\n• 'Signs of emaciation', 'emaciated figure' — extreme thinness"
+    },
+    {
+      "word": "denunciation",
+      "question": "His public denunciation of the policy was unexpected given his earlier support. What is denunciation?",
+      "type": "choice",
+      "options": [
+        "The public condemnation of something or someone",
+        "A formal statement that reversed a previously held position",
+        "A public act that ended his association with the policy",
+        "A criticism strong enough to be treated as a political event"
+      ],
+      "answer": "The public condemnation of something or someone",
+      "explanation": "Denunciation is public condemnation — a formal declaration against something.\n• denunciation = public condemnation; formal accusation\n• From Latin: 'denuntiare' — to announce\n• 'Issue a denunciation', 'denounce a policy' — publicly condemning"
+    },
+    {
+      "word": "dissociation",
+      "question": "Her dissociation from the party was formally announced in a press statement. What is dissociation?",
+      "type": "choice",
+      "options": [
+        "The act of separating oneself from a connection or association",
+        "A formal act that severed her relationship with an organisation",
+        "The public statement of a separation long since effective in private",
+        "The public marking of an end to a political relationship"
+      ],
+      "answer": "The act of separating oneself from a connection or association",
+      "explanation": "Dissociation is separation — the act of disconnecting from an association.\n• dissociation = the state of being disconnected; separation\n• From Latin: 'dissociare' — to separate\n• 'Dissociation from a group', 'dissociative disorder' — separation"
+    },
+    {
+      "word": "retaliation",
+      "question": "The bombing was described as retaliation for the attack the week before. What is retaliation?",
+      "type": "choice",
+      "options": [
+        "An action taken in return for harm received — a reprisal",
+        "A military response intended to punish and deter further attacks",
+        "An act framed as a proportionate answer to what had been done",
+        "A strike whose justification rested on what had preceded it"
+      ],
+      "answer": "An action taken in return for harm received — a reprisal",
+      "explanation": "Retaliation is reprisal — action taken in return for harm done.\n• retaliation = the action of repaying harm in kind\n• From Latin: 'retaliare' — to repay\n• 'Retaliate', 'act of retaliation' — responding to harm with harm"
+    },
+    {
+      "word": "affiliation",
+      "question": "Her political affiliation was never formally declared. What is affiliation?",
+      "type": "choice",
+      "options": [
+        "A connection or association with a group — membership or alignment",
+        "A relationship that could be inferred from her votes and statements",
+        "A commitment to a political position that shaped her public conduct",
+        "A loyalty that defined how she was perceived by those who observed her"
+      ],
+      "answer": "A connection or association with a group — membership or alignment",
+      "explanation": "Affiliation is association — a connection with or membership of a group.\n• affiliation = membership or connection with an organisation\n• From Latin: 'affiliare' — to adopt as a son\n• 'Political affiliation', 'affiliated organisation' — connected membership"
+    },
+    {
+      "word": "expiation",
+      "question": "He devoted the rest of his life to the expiation of what he had done. What is expiation?",
+      "type": "choice",
+      "options": [
+        "The act of making amends — atoning for a wrongdoing",
+        "A sustained effort to restore something that had been damaged",
+        "The attempt to balance a past wrong through present right action",
+        "A way of living that acknowledged responsibility without escape"
+      ],
+      "answer": "The act of making amends — atoning for a wrongdoing",
+      "explanation": "Expiation is atonement — making amends for a sin or wrongdoing.\n• expiation = the act of making amends; atonement\n• From Latin: 'expiare' — to atone\n• 'Expiate guilt', 'in expiation of' — atoning for a wrong"
+    },
+    {
+      "word": "deviation",
+      "question": "Any deviation from the agreed protocol would require formal approval. What is deviation?",
+      "type": "choice",
+      "options": [
+        "A departure from an established course or standard",
+        "A change that required authorisation before being implemented",
+        "A modification that fell outside the parameters already agreed",
+        "Any act that departed from what had been formally established"
+      ],
+      "answer": "A departure from an established course or standard",
+      "explanation": "Deviation is departure — a divergence from the established path or norm.\n• deviation = departure from an accepted standard or course\n• From Latin: 'deviare' — to turn aside\n• 'Standard deviation', 'any deviation from' — departing from the norm"
+    },
+    {
+      "word": "escalation",
+      "question": "The escalation of the conflict had been gradual but relentless. What is escalation?",
+      "type": "choice",
+      "options": [
+        "A gradual increase in intensity or extent",
+        "A worsening that had passed through stages before reaching its current level",
+        "A progression that had been observable but not stopped",
+        "An increase that had reached a level requiring serious concern"
+      ],
+      "answer": "A gradual increase in intensity or extent",
+      "explanation": "Escalation is a gradual increase — a progressive worsening or intensification.\n• escalation = a rapid increase; the intensification of a conflict\n• From 'escalate' — to rise by steps\n• 'Escalation of tension', 'nuclear escalation' — intensifying increase"
+    },
+    {
+      "word": "oblation",
+      "question": "The priest received the oblation of bread and wine. What is an oblation?",
+      "type": "choice",
+      "options": [
+        "A religious offering — a sacrifice presented in worship",
+        "The eucharistic elements presented at a Christian service",
+        "A gift to God or the church made as part of liturgical practice",
+        "A sacred act central to the celebration of the Eucharist"
+      ],
+      "answer": "A religious offering — a sacrifice presented in worship",
+      "explanation": "An oblation is a religious offering — something presented to God in worship.\n• oblation = an offering to God; the act of making a religious offering\n• From Latin: 'oblatio' — an offering\n• 'Eucharistic oblation', 'make an oblation' — a religious gift or sacrifice"
+    },
+    {
+      "word": "revelation",
+      "question": "The biography was full of revelations about the politician's private life. What is a revelation?",
+      "type": "choice",
+      "options": [
+        "A striking disclosure — the making known of something previously hidden",
+        "Information disclosed for the first time that surprised those who read it",
+        "Details about a public figure that had not been known to the public",
+        "Material released by a biographer that created a new picture"
+      ],
+      "answer": "A striking disclosure — the making known of something previously hidden",
+      "explanation": "A revelation is a disclosure — something previously hidden that is now made known.\n• revelation = a surprising disclosure; divine communication\n• From Latin: 'revelare' — to unveil\n• 'Startling revelation', 'divine revelation' — an unveiling"
+    },
+    {
+      "word": "appellation",
+      "question": "The winery defended its right to use the appellation 'Champagne'. What is an appellation?",
+      "type": "choice",
+      "options": [
+        "A name or title — especially a designation protecting origin",
+        "A protected geographical term that could only be used by producers in that region",
+        "A label whose commercial value depended on what it guaranteed",
+        "A designation fought over by producers outside its traditional area"
+      ],
+      "answer": "A name or title — especially a designation protecting origin",
+      "explanation": "An appellation is a name or title — especially a geographically protected designation.\n• appellation = a name or title; a designation of origin\n• From Latin: 'appellare' — to address\n• 'Appellation contrôlée', 'the appellation Chablis' — protected name"
+    },
+    {
+      "word": "tribulation",
+      "question": "She wrote about the tribulations of emigrating alone with three young children. What is tribulation?",
+      "type": "choice",
+      "options": [
+        "Great trouble or suffering — a period of trial and hardship",
+        "The combination of practical difficulties and emotional strain",
+        "The kind of challenge whose full weight was only apparent in retrospect",
+        "An experience that tested resilience and required sustained courage"
+      ],
+      "answer": "Great trouble or suffering — a period of trial and hardship",
+      "explanation": "Tribulation is suffering — a period of serious trouble or affliction.\n• tribulation = great trouble or suffering\n• From Latin: 'tribulum' — a threshing board\n• 'Trials and tribulations', 'a time of tribulation' — suffering and hardship"
+    },
+    {
+      "word": "reticulation",
+      "question": "The reticulation of veins in a leaf creates a network visible to the naked eye. What is reticulation?",
+      "type": "choice",
+      "options": [
+        "A network of fine lines or veins — a net-like structure",
+        "The branching pattern visible in plant tissue",
+        "A system of interconnected channels that resembles a net",
+        "A biological structure that maximises the efficiency of distribution"
+      ],
+      "answer": "A network of fine lines or veins — a net-like structure",
+      "explanation": "Reticulation is a net-like pattern — a network of interlaced lines.\n• reticulation = a net-like arrangement or pattern\n• From Latin: 'reticulum' — a little net\n• 'Reticulated pattern', 'reticulation of waterways' — net-like network"
+    },
+    {
+      "word": "circulation",
+      "question": "The newspaper's circulation had fallen by half in a decade. What is circulation?",
+      "type": "choice",
+      "options": [
+        "The number of copies distributed — or the movement of something through a system",
+        "The number of readers reached by the paper each day",
+        "A measure of the paper's commercial reach and advertising value, as the evidence showed",
+        "The decline that had made the paper financially unviable"
+      ],
+      "answer": "The number of copies distributed — or the movement of something through a system",
+      "explanation": "Circulation is the movement through a system — or the number of copies distributed.\n• circulation = the movement through a system; the number of copies sold\n• From Latin: 'circulare' — to move in a circle\n• 'Newspaper circulation', 'blood circulation' — movement through a system"
+    },
+    {
+      "word": "coagulation",
+      "question": "Coagulation of the blood at the wound site prevents excessive bleeding. What is coagulation?",
+      "type": "choice",
+      "options": [
+        "The process of a liquid thickening into a solid or semi-solid mass",
+        "The biological mechanism by which blood clots to seal a wound",
+        "A chemical change that transformed a flowing substance into a stable one",
+        "The process triggered by injury to prevent dangerous blood loss"
+      ],
+      "answer": "The process of a liquid thickening into a solid or semi-solid mass",
+      "explanation": "Coagulation is clotting — the process of a liquid solidifying.\n• coagulation = the thickening of a liquid into a mass\n• From Latin: 'coagulare' — to curdle\n• 'Blood coagulation', 'coagulation cascade' — the clotting process"
+    },
+    {
+      "word": "strangulation",
+      "question": "The city's growth was threatened by the strangulation of its transport links. What is strangulation?",
+      "type": "choice",
+      "options": [
+        "The act of choking or cutting off — preventing something from functioning",
+        "A process that was slowly reducing the city's economic viability",
+        "A metaphor for the gradual removal of what a system needed to survive, as the evidence showed",
+        "The consequence of inadequate investment in essential infrastructure"
+      ],
+      "answer": "The act of choking or cutting off — preventing something from functioning",
+      "explanation": "Strangulation is choking off — constricting to the point of preventing function.\n• strangulation = the act of strangling; blocking a vital supply\n• From Latin: 'strangulare' — to throttle\n• 'Strangled by red tape', 'strangulation of trade' — cutting off"
+    },
+    {
+      "word": "stipulation",
+      "question": "The contract contained a stipulation that the work must be completed by March. What is a stipulation?",
+      "type": "choice",
+      "options": [
+        "A specific condition or requirement that must be met",
+        "A term placed in a contract to protect one party's interests",
+        "A deadline imposed by one side as a condition of agreement",
+        "A provision whose violation would entitle the injured party to remedies"
+      ],
+      "answer": "A specific condition or requirement that must be met",
+      "explanation": "A stipulation is a specified condition — a required term in an agreement.\n• stipulation = a condition or requirement specified in a contract\n• From Latin: 'stipulari' — to bargain\n• 'A stipulation in the contract', 'with the stipulation that' — a required condition"
+    },
+    {
+      "word": "declamation",
+      "question": "The actor's declamation filled every corner of the theatre without a microphone. What is declamation?",
+      "type": "choice",
+      "options": [
+        "The rhetorical delivery of a speech — oratory performed with force",
+        "A form of vocal performance that carried to the back of the house",
+        "The projection required to reach an audience in a large space",
+        "The style of delivery associated with classical theatrical training"
+      ],
+      "answer": "The rhetorical delivery of a speech — oratory performed with force",
+      "explanation": "Declamation is rhetorical delivery — the formal, powerful oral performance of a speech.\n• declamation = the practice of declaiming; a speech delivered rhetorically\n• From Latin: 'declamare' — to practice speaking\n• 'A fine declamation', 'declamatory style' — powerful formal oratory"
+    },
+    {
+      "word": "proclamation",
+      "question": "The king issued a proclamation declaring a day of national celebration. What is a proclamation?",
+      "type": "choice",
+      "options": [
+        "An official public announcement — a formal declaration",
+        "A document carrying the authority of the crown",
+        "A statement made by the highest authority on a matter of state",
+        "A formal notice that required public reading in every town"
+      ],
+      "answer": "An official public announcement — a formal declaration",
+      "explanation": "A proclamation is a formal public announcement — an official declaration.\n• proclamation = an official announcement; a public declaration\n• From Latin: 'proclamare' — to call forth\n• 'Royal proclamation', 'issue a proclamation' — official declaration"
+    },
+    {
+      "word": "inflammation",
+      "question": "The inflammation around the joint was causing significant pain and restricted movement. What is inflammation?",
+      "type": "choice",
+      "options": [
+        "A localised physical reaction — swelling, heat, and pain at an injury site",
+        "The body's response to injury or infection in a specific area",
+        "A process that protected the tissue while preventing normal function, as the evidence showed",
+        "A medical condition requiring anti-inflammatory treatment"
+      ],
+      "answer": "A localised physical reaction — swelling, heat, and pain at an injury site",
+      "explanation": "Inflammation is a localised reaction — heat, swelling, and pain at an injury or infection.\n• inflammation = the localised reaction to injury or infection\n• From Latin: 'inflammare' — to kindle\n• 'Chronic inflammation', 'anti-inflammatory' — the body's reaction to harm"
+    },
+    {
+      "word": "summation",
+      "question": "In her summation, the barrister reviewed every piece of evidence before the jury. What is a summation?",
+      "type": "choice",
+      "options": [
+        "A summary — a statement that draws together the main points",
+        "The final address in which a lawyer reviewed the evidence",
+        "The concluding argument in which the case was brought together",
+        "The speech in which the barrister made the final case for her client"
+      ],
+      "answer": "A summary — a statement that draws together the main points",
+      "explanation": "A summation is a summary — drawing together the key points at the end.\n• summation = a summary; the totalling of a series\n• From Latin: 'summa' — a sum\n• 'Final summation', 'closing summation' — summing up"
+    },
+    {
+      "word": "formation",
+      "question": "The soldiers marched in formation across the parade ground. What is a formation?",
+      "type": "choice",
+      "options": [
+        "An arranged structure — the pattern in which a group is organised",
+        "A military arrangement designed to project discipline and precision",
+        "A structure that allowed the group to move as a single unit",
+        "The arrangement required by the demands of ceremonial display"
+      ],
+      "answer": "An arranged structure — the pattern in which a group is organised",
+      "explanation": "A formation is an arranged structure — the ordered configuration of a group.\n• formation = the action of forming; an ordered arrangement\n• From Latin: 'formare' — to shape\n• 'Rock formation', 'battle formation', 'formation flying' — organised arrangement"
+    },
+    {
+      "word": "designation",
+      "question": "She was given the designation of Senior Fellow by the institution. What is a designation?",
+      "type": "choice",
+      "options": [
+        "An official name or title — a formal label given to a person or thing",
+        "A recognition that conferred a specific status within the organisation",
+        "A title that reflected both achievement and institutional commitment",
+        "A formal acknowledgement that gave her access to specific resources"
+      ],
+      "answer": "An official name or title — a formal label given to a person or thing",
+      "explanation": "A designation is an official name or title — a formal label.\n• designation = an official title or name; the act of designating\n• From Latin: 'designare' — to mark out\n• 'Professional designation', 'site designation' — official naming or labelling"
+    },
+    {
+      "word": "resignation",
+      "question": "She accepted the situation with resignation — there was nothing more she could do. What is resignation?",
+      "type": "choice",
+      "options": [
+        "The acceptance of an unpleasant situation — patient endurance",
+        "An attitude produced by the exhaustion of all alternatives",
+        "A form of composure that did not require the situation to improve",
+        "The emotional adjustment to circumstances that could not be changed"
+      ],
+      "answer": "The acceptance of an unpleasant situation — patient endurance",
+      "explanation": "Resignation is patient acceptance — enduring an unpleasant situation without resistance.\n• resignation = uncomplaining acceptance; also the act of resigning from a post\n• From Latin: 'resignare' — to unseal\n• 'With resignation', 'letter of resignation' — acceptance or departure"
+    },
+    {
+      "word": "ratiocination",
+      "question": "The detective's ratiocination led him from the tiniest clue to the correct solution. What is ratiocination?",
+      "type": "choice",
+      "options": [
+        "The process of logical reasoning — working through evidence step by step",
+        "The ability to reach correct conclusions from limited information",
+        "A form of reasoning associated with the classical detective genre",
+        "The systematic application of logic to a problem with many variables, as the evidence showed"
+      ],
+      "answer": "The process of logical reasoning — working through evidence step by step",
+      "explanation": "Ratiocination is logical reasoning — methodical thinking from evidence to conclusion.\n• ratiocination = logical reasoning; a reasoned argument\n• From Latin: 'ratiocinari' — to calculate\n• 'Sherlock Holmes's ratiocination', 'by ratiocination' — step-by-step reasoning"
+    },
+    {
+      "word": "hallucination",
+      "question": "High fever can cause hallucinations in some patients. What is a hallucination?",
+      "type": "choice",
+      "options": [
+        "A perception with no external cause — seeing or hearing things that are not there",
+        "A symptom that could indicate neurological or psychiatric involvement",
+        "An experience so vivid it was indistinguishable from reality to the patient, as the evidence showed",
+        "A form of sensory disturbance triggered by physical illness"
+      ],
+      "answer": "A perception with no external cause — seeing or hearing things that are not there",
+      "explanation": "A hallucination is a false perception — sensory experience without external stimulus.\n• hallucination = an apparent perception of something not present\n• From Latin: 'hallucinari' — to wander in thought\n• 'Visual hallucination', 'auditory hallucination' — perceiving what isn't there"
+    },
+    {
+      "word": "machination",
+      "question": "The coup was the result of years of machination by a small group of officers. What is machination?",
+      "type": "choice",
+      "options": [
+        "A scheming plot — secret or devious planning",
+        "A conspiracy developed over a long period among a small number of people",
+        "A plan whose success depended on the ignorance of those it targeted",
+        "A coordinated effort to achieve a goal through concealed means"
+      ],
+      "answer": "A scheming plot — secret or devious planning",
+      "explanation": "A machination is a devious plot — scheming and manipulative planning.\n• machination = a plot or scheme, usually underhanded\n• From Latin: 'machinari' — to contrive\n• 'Political machinations', 'the machinations of...' — scheming plots"
+    },
+    {
+      "word": "declination",
+      "question": "His declination of the invitation was politely worded but clearly final. What is declination?",
+      "type": "choice",
+      "options": [
+        "A formal refusal — the act of declining",
+        "A response worded carefully to avoid causing unnecessary offence",
+        "The decision not to accept something that had been offered",
+        "A rejection framed in language that closed the subject definitively"
+      ],
+      "answer": "A formal refusal — the act of declining",
+      "explanation": "A declination is a formal refusal — the act of declining an offer or invitation.\n• declination = a formal refusal; also: the angle between magnetic and true north\n• From Latin: 'declinare' — to turn aside\n• 'A polite declination', 'declination of an offer' — a refusal"
+    },
+    {
+      "word": "culmination",
+      "question": "The concert was the culmination of a world tour lasting eighteen months. What is a culmination?",
+      "type": "choice",
+      "options": [
+        "The highest or final point — the conclusion of a process",
+        "The last performance in a series that had built to this moment",
+        "The event that gave all that had come before its retrospective meaning",
+        "The end of a journey that had begun eighteen months earlier"
+      ],
+      "answer": "The highest or final point — the conclusion of a process",
+      "explanation": "A culmination is the highest point — the apex or final conclusion.\n• culmination = the highest or decisive point\n• From Latin: 'culmen' — a peak\n• 'The culmination of years of work', 'reach culmination' — the peak or end"
+    },
+    {
+      "word": "domination",
+      "question": "The company's domination of the market limited competition. What is domination?",
+      "type": "choice",
+      "options": [
+        "The exercise of control or authority — commanding power over others",
+        "A position of market strength that reduced the choices available to consumers",
+        "A commercial advantage maintained through scale rather than quality alone",
+        "A level of control that regulators were beginning to examine"
+      ],
+      "answer": "The exercise of control or authority — commanding power over others",
+      "explanation": "Domination is control — the exercise of commanding power or influence.\n• domination = power or influence over others\n• From Latin: 'dominari' — to be master\n• 'Market domination', 'political domination' — commanding control"
+    },
+    {
+      "word": "denomination",
+      "question": "She belonged to a Protestant denomination that placed great emphasis on lay participation. What is a denomination?",
+      "type": "choice",
+      "options": [
+        "A recognised branch of a religion — a distinct church or group",
+        "A tradition within Christianity defined by its theology and practice",
+        "A church with its own governance, membership, and identity",
+        "A sub-group within a major religion with specific beliefs"
+      ],
+      "answer": "A recognised branch of a religion — a distinct church or group",
+      "explanation": "A denomination is a branch or sub-group — especially within Christianity.\n• denomination = a branch of a religion; also the face value of a banknote\n• From Latin: 'denominare' — to name\n• 'Protestant denomination', 'small denomination coin' — named branch"
+    },
+    {
+      "word": "termination",
+      "question": "The termination of the contract came sooner than expected. What is termination?",
+      "type": "choice",
+      "options": [
+        "The ending or conclusion of something — a formal cessation",
+        "The legal end of a contractual relationship between parties",
+        "The point at which obligations on both sides came to an end",
+        "An event triggered by either the agreement's terms or a breach"
+      ],
+      "answer": "The ending or conclusion of something — a formal cessation",
+      "explanation": "Termination is the ending — the formal or definitive conclusion of something.\n• termination = the act of ending; a conclusion\n• From Latin: 'terminare' — to end\n• 'Termination of employment', 'contract termination' — formal ending"
+    },
+    {
+      "word": "peregrination",
+      "question": "His peregrinations across three continents eventually produced a remarkable memoir. What is peregrination?",
+      "type": "choice",
+      "options": [
+        "A journey — especially a long, wandering one",
+        "The kind of travel that accumulated experiences across many countries",
+        "Travel without a fixed itinerary that produced unexpected discoveries",
+        "A life of movement that had eventually found its literary expression"
+      ],
+      "answer": "A journey — especially a long, wandering one",
+      "explanation": "Peregrination is a journey — especially a long or wandering one.\n• peregrination = a long journey; wandering\n• From Latin: 'peregrinari' — to travel abroad\n• 'His peregrinations', 'peregrinate' — a long and wandering journey"
+    },
+    {
+      "word": "coronation",
+      "question": "The coronation of the new monarch was attended by heads of state from around the world. What is a coronation?",
+      "type": "choice",
+      "options": [
+        "The ceremony in which a monarch is formally crowned",
+        "The ritual marking the official beginning of a new reign",
+        "A public event at which sovereignty was transferred and acknowledged",
+        "A ceremony whose symbolism connected the new reign to those before it"
+      ],
+      "answer": "The ceremony in which a monarch is formally crowned",
+      "explanation": "A coronation is the crowning ceremony — the formal investiture of a monarch.\n• coronation = the ceremony of crowning a monarch\n• From Latin: 'corona' — a crown\n• 'Coronation service', 'coronation oath' — the crowning ceremony"
+    },
+    {
+      "word": "detonation",
+      "question": "The detonation shook buildings within a mile of the blast. What is detonation?",
+      "type": "choice",
+      "options": [
+        "The explosion of something — a rapid, destructive release of energy",
+        "The shock wave and sound produced by the explosion of a device, as the evidence showed",
+        "An event violent enough to be felt at a considerable distance",
+        "The physical consequence of an explosive discharge"
+      ],
+      "answer": "The explosion of something — a rapid, destructive release of energy",
+      "explanation": "Detonation is an explosion — the sudden, violent release of energy.\n• detonation = an explosion; the act of detonating\n• From Latin: 'detonare' — to thunder\n• 'Controlled detonation', 'detonation of a bomb' — explosive discharge"
+    },
+    {
+      "word": "extirpation",
+      "question": "The extirpation of the invasive species took a decade of sustained effort. What is extirpation?",
+      "type": "choice",
+      "options": [
+        "The complete removal or destruction — eradication",
+        "The elimination of a species from a defined area",
+        "The process of removing something with deliberate and sustained effort",
+        "The outcome of a campaign that left no trace of what had been targeted"
+      ],
+      "answer": "The complete removal or destruction — eradication",
+      "explanation": "Extirpation is complete eradication — the total removal or destruction of something.\n• extirpation = the complete destruction or removal of something\n• From Latin: 'extirpare' — to root out\n• 'Extirpation of disease', 'local extirpation' — complete eradication"
+    },
+    {
+      "word": "occupation",
+      "question": "The military occupation lasted three years before international pressure ended it. What is occupation?",
+      "type": "choice",
+      "options": [
+        "Control of a place by military force — also a person's job or activity",
+        "The exercise of authority over a territory through armed presence",
+        "A period of control that lacked the legitimacy of sovereignty",
+        "A condition ended only when external pressure made continuation impossible"
+      ],
+      "answer": "Control of a place by military force — also a person's job or activity",
+      "explanation": "Occupation is the control of territory — by military force; also one's regular work.\n• occupation = military control of a territory; a person's job\n• From Latin: 'occupare' — to seize\n• 'Military occupation', 'occupation of the land' — physical possession"
+    },
+    {
+      "word": "exhilaration",
+      "question": "The exhilaration of the descent was unlike anything she had felt before. What is exhilaration?",
+      "type": "choice",
+      "options": [
+        "A feeling of intense happiness and excitement — a rush of elation",
+        "The physical response to speed, altitude, and the removal of fear",
+        "The emotional state produced by an experience at the limits of ability",
+        "A level of pleasure too strong to be anticipated or fully described"
+      ],
+      "answer": "A feeling of intense happiness and excitement — a rush of elation",
+      "explanation": "Exhilaration is intense happiness — a rush of excitement and elation.\n• exhilaration = a feeling of great happiness and excitement\n• From Latin: 'exhilarare' — to gladden\n• 'Exhilaration of speed', 'feeling exhilarated' — intense excitement"
+    },
+    {
+      "word": "reparation",
+      "question": "Germany paid reparations to Holocaust survivors as part of a broader process of reparation. What is reparation?",
+      "type": "choice",
+      "options": [
+        "The act of making amends — compensation for harm done",
+        "A financial recognition of historical wrongdoing",
+        "A form of acknowledgement that also carried practical benefit",
+        "A payment made as part of a broader moral reckoning with the past"
+      ],
+      "answer": "The act of making amends — compensation for harm done",
+      "explanation": "Reparation is making amends — compensation or repair for harm caused.\n• reparation = the action of making amends; compensation\n• From Latin: 'reparare' — to restore\n• 'War reparations', 'in reparation for' — compensating for harm done"
+    },
+    {
+      "word": "execration",
+      "question": "The policy was met with execration from opposition groups. What is execration?",
+      "type": "choice",
+      "options": [
+        "Intense denunciation — the expression of extreme hatred or condemnation",
+        "A reaction that went beyond ordinary criticism to express deep contempt, as the evidence showed",
+        "The level of opposition associated with genuine moral outrage",
+        "A response so strong it communicated not just disagreement but disgust"
+      ],
+      "answer": "Intense denunciation — the expression of extreme hatred or condemnation",
+      "explanation": "Execration is intense condemnation — vehement denunciation or cursing.\n• execration = intense loathing; a vehement curse\n• From Latin: 'execrari' — to curse\n• 'Object of execration', 'public execration' — intense hatred and denunciation"
+    },
+    {
+      "word": "laceration",
+      "question": "The glass caused a deep laceration across her forearm. What is a laceration?",
+      "type": "choice",
+      "options": [
+        "A jagged wound — a tear in flesh caused by a sharp object",
+        "An injury with irregular edges rather than a clean cut",
+        "A wound requiring closure either by stitching or adhesive",
+        "A cut deep enough to affect tissue beneath the skin surface"
+      ],
+      "answer": "A jagged wound — a tear in flesh caused by a sharp object",
+      "explanation": "A laceration is a jagged tear — a wound with irregular edges.\n• laceration = a deep irregular wound; a tearing of flesh\n• From Latin: 'lacerare' — to tear\n• 'Deep laceration', 'lacerating criticism' — tearing wound or sharp attack"
+    },
+    {
+      "word": "generation",
+      "question": "Each generation inherits the problems its predecessors failed to solve. What is a generation?",
+      "type": "choice",
+      "options": [
+        "A group of people born at roughly the same time — or the act of producing",
+        "Those who share a common formative experience",
+        "The cohort who came of age in a particular era",
+        "The group whose experience was shaped by the events of their youth, as the evidence showed"
+      ],
+      "answer": "A group of people born at roughly the same time — or the act of producing",
+      "explanation": "A generation is a birth cohort — all people born in a similar period.\n• generation = a group of people born at the same time; the act of producing\n• From Latin: 'generare' — to beget\n• 'Generational change', 'power generation' — a cohort or the act of creating"
+    },
+    {
+      "word": "conflagration",
+      "question": "What began as a small fire became a conflagration that destroyed the entire district. What is a conflagration?",
+      "type": "choice",
+      "options": [
+        "A large, destructive fire — an extensive blaze",
+        "A fire that had grown beyond the capacity of ordinary measures to control",
+        "A catastrophic event that destroyed everything in its path",
+        "A fire whose scale had made it a historical rather than a personal event"
+      ],
+      "answer": "A large, destructive fire — an extensive blaze",
+      "explanation": "A conflagration is a large destructive fire — an extensive, consuming blaze.\n• conflagration = an extensive destructive fire\n• From Latin: 'conflagrare' — to burn up\n• 'A great conflagration', 'political conflagration' — a great fire or conflict"
+    },
+    {
+      "word": "aspiration",
+      "question": "Her aspiration to become a diplomat shaped every decision she made at university. What is aspiration?",
+      "type": "choice",
+      "options": [
+        "A hope or ambition — a strong desire for achievement",
+        "A goal specific enough to guide practical decisions",
+        "An ambition maintained across the years with consistent focus",
+        "A professional direction she had chosen early and pursued consistently"
+      ],
+      "answer": "A hope or ambition — a strong desire for achievement",
+      "explanation": "Aspiration is ambition — a strong desire to achieve something.\n• aspiration = a hope or ambition; also the act of breathing in\n• From Latin: 'aspirare' — to breathe toward\n• 'Career aspiration', 'aspirational goal' — a strong ambition"
+    },
+    {
+      "word": "respiration",
+      "question": "The patient's respiration was slow but regular throughout the night. What is respiration?",
+      "type": "choice",
+      "options": [
+        "The process of breathing — inhaling and exhaling",
+        "The vital sign that indicated the body was oxygenating normally",
+        "The function monitored throughout the night as a measure of recovery",
+        "The physical process indicating that the respiratory system was working"
+      ],
+      "answer": "The process of breathing — inhaling and exhaling",
+      "explanation": "Respiration is breathing — the process of inhaling oxygen and exhaling carbon dioxide.\n• respiration = the act of breathing; also the metabolic process of cells\n• From Latin: 'respirare' — to breathe again\n• 'Respiratory rate', 'artificial respiration' — the breathing process"
+    },
+    {
+      "word": "expiration",
+      "question": "The contract's expiration date meant the terms needed to be renegotiated. What is expiration?",
+      "type": "choice",
+      "options": [
+        "The end of a period of validity — the reaching of a deadline",
+        "The point at which existing terms ceased to have effect",
+        "The moment when an agreement concluded and new terms were needed",
+        "The date by which renewal or renegotiation had to be completed"
+      ],
+      "answer": "The end of a period of validity — the reaching of a deadline",
+      "explanation": "Expiration is the end of a period — the moment of conclusion or lapse.\n• expiration = the reaching of a deadline; death; also an exhalation\n• From Latin: 'expirare' — to breathe out\n• 'Expiration date', 'upon expiration' — reaching the end of validity"
+    },
+    {
+      "word": "oration",
+      "question": "The funeral oration moved even those who had not known the deceased. What is an oration?",
+      "type": "choice",
+      "options": [
+        "A formal speech delivered on a public or ceremonial occasion",
+        "A spoken tribute whose purpose was to honour and celebrate",
+        "A form of address that required both eloquence and composure, as the evidence showed",
+        "A prepared speech whose success depended on its delivery"
+      ],
+      "answer": "A formal speech delivered on a public or ceremonial occasion",
+      "explanation": "An oration is a formal speech — delivered on a ceremonial or public occasion.\n• oration = a formal speech, especially one delivered in public\n• From Latin: 'oratio' — a speech\n• 'Funeral oration', 'public oration' — formal ceremonial speech"
+    },
+    {
+      "word": "elaboration",
+      "question": "The report required further elaboration before the committee could reach a decision. What is elaboration?",
+      "type": "choice",
+      "options": [
+        "The process of developing or explaining in more detail",
+        "The addition of information needed to make a report complete",
+        "A fuller treatment of points that had been introduced but not developed",
+        "The expansion of a summary into an argument with supporting evidence"
+      ],
+      "answer": "The process of developing or explaining in more detail",
+      "explanation": "Elaboration is development in detail — explaining more fully.\n• elaboration = the process of developing or explaining in detail\n• From Latin: 'elaborare' — to work out carefully\n• 'Without elaboration', 'needs elaboration' — explaining further"
+    },
+    {
+      "word": "deterioration",
+      "question": "There was a marked deterioration in his condition overnight. What is deterioration?",
+      "type": "choice",
+      "options": [
+        "A decline or worsening — the process of becoming worse",
+        "A change in condition that required a review of his treatment",
+        "A development that moved the prognosis from guarded to serious",
+        "A change visible in the clinical indicators monitored through the night"
+      ],
+      "answer": "A decline or worsening — the process of becoming worse",
+      "explanation": "Deterioration is a worsening — the process of declining in quality or condition.\n• deterioration = the process of worsening\n• From Latin: 'deteriorare' — to make worse\n• 'Deterioration in health', 'deteriorating conditions' — getting worse"
+    },
+    {
+      "word": "coloration",
+      "question": "The unusual coloration of the feathers suggested the bird was from a tropical species. What is coloration?",
+      "type": "choice",
+      "options": [
+        "The colour or pattern of colouring — the pigmentation of something",
+        "A characteristic used to identify a species in the field",
+        "The combination of colours that made the bird distinctive",
+        "The physical quality that distinguished tropical from temperate species"
+      ],
+      "answer": "The colour or pattern of colouring — the pigmentation of something",
+      "explanation": "Coloration is the pattern of colouring — the arrangement and quality of pigment.\n• coloration = the colours of something; colouring\n• From Latin: 'colorare' — to colour\n• 'Unusual coloration', 'protective coloration' — the pattern of colour"
+    },
+    {
+      "word": "aberration",
+      "question": "His behaviour that evening was an aberration — quite unlike anything seen before. What is an aberration?",
+      "type": "choice",
+      "options": [
+        "A departure from the norm — something unusual or abnormal",
+        "An act that was so out of character it demanded explanation",
+        "A single event that could not be used to characterise him generally",
+        "A behaviour that surprised all those who thought they knew him"
+      ],
+      "answer": "A departure from the norm — something unusual or abnormal",
+      "explanation": "An aberration is an abnormal departure — something that deviates from the standard.\n• aberration = a departure from the norm; an abnormality\n• From Latin: 'aberrare' — to wander\n• 'A momentary aberration', 'optical aberration' — a deviation from normal"
+    },
+    {
+      "word": "penetration",
+      "question": "The company's penetration of the Asian market had been slow but steady. What is penetration?",
+      "type": "choice",
+      "options": [
+        "The degree of entry into a market or group — the extent of reach",
+        "The proportion of the market that had been successfully accessed, as the evidence showed",
+        "The measure of commercial success in a defined territory",
+        "The level of adoption achieved in a new geographical area"
+      ],
+      "answer": "The degree of entry into a market or group — the extent of reach",
+      "explanation": "Penetration is the degree of entry — how deeply something reaches into a space.\n• penetration = the act of penetrating; the extent of entry\n• From Latin: 'penetrare' — to enter\n• 'Market penetration', 'deep penetration' — degree of entry or reach"
+    },
+    {
+      "word": "configuration",
+      "question": "The configuration of the room was changed to allow for a larger audience. What is configuration?",
+      "type": "choice",
+      "options": [
+        "The way something is arranged — the structure or layout",
+        "The physical arrangement of a space adjusted for a specific purpose",
+        "The layout chosen to maximise the number of seats available",
+        "An arrangement different from the usual one used for the space"
+      ],
+      "answer": "The way something is arranged — the structure or layout",
+      "explanation": "Configuration is arrangement — the way the elements of something are organised.\n• configuration = an arrangement of parts; the layout of a system\n• From Latin: 'configurare' — to form after\n• 'System configuration', 'seating configuration' — how something is arranged"
+    },
+    {
+      "word": "pulsation",
+      "question": "She could feel the pulsation in her throat as her heart raced. What is a pulsation?",
+      "type": "choice",
+      "options": [
+        "A rhythmic beat or throb — a regular pulse",
+        "The physical sensation produced by rapid cardiovascular activity",
+        "A bodily process that became perceptible only under exertion",
+        "The physical manifestation of increased heart rate"
+      ],
+      "answer": "A rhythmic beat or throb — a regular pulse",
+      "explanation": "A pulsation is a rhythmic beat — a regular throbbing or pulsing.\n• pulsation = a rhythmic throbbing; a beat\n• From Latin: 'pulsare' — to beat\n• 'Feel a pulsation', 'pulsation of music' — a rhythmic beat"
+    },
+    {
+      "word": "sensation",
+      "question": "The film caused a sensation when it was first released. What is a sensation?",
+      "type": "choice",
+      "options": [
+        "A feeling produced in the body — or a person or event causing excitement",
+        "A critical or popular response that exceeded what had been expected, as the evidence showed",
+        "A reaction strong enough to constitute a cultural event",
+        "A response that made the film the subject of widespread discussion"
+      ],
+      "answer": "A feeling produced in the body — or a person or event causing excitement",
+      "explanation": "A sensation is a physical feeling — or a person or event that causes widespread excitement.\n• sensation = a physical feeling; an exciting event; a person causing excitement\n• From Latin: 'sensus' — feeling\n• 'Burning sensation', 'cause a sensation' — feeling or excitement"
+    },
+    {
+      "word": "cessation",
+      "question": "The cessation of hostilities was announced at midnight. What is cessation?",
+      "type": "choice",
+      "options": [
+        "The ending of something — a stopping or discontinuing",
+        "The formal conclusion of military activity",
+        "The moment at which an agreement came into force, as the evidence showed",
+        "The official end to a period of armed conflict"
+      ],
+      "answer": "The ending of something — a stopping or discontinuing",
+      "explanation": "Cessation is the ending — a bringing to a stop.\n• cessation = the fact or process of ending\n• From Latin: 'cessare' — to cease\n• 'Cessation of hostilities', 'cessation of payments' — stopping"
+    },
+    {
+      "word": "natation",
+      "question": "The dolphins demonstrated remarkable natation in the bay. What is natation?",
+      "type": "choice",
+      "options": [
+        "The act or skill of swimming",
+        "The ability to move through water with speed and precision",
+        "A form of locomotion natural to marine mammals",
+        "The physical skill that made dolphins so graceful in water"
+      ],
+      "answer": "The act or skill of swimming",
+      "explanation": "Natation is swimming — the action or skill of moving through water.\n• natation = the act of swimming\n• From Latin: 'natare' — to swim\n• 'Natatorial', 'natation competition' — relating to swimming"
+    },
+    {
+      "word": "affectation",
+      "question": "His affected accent was an obvious affectation — he had grown up in the same street as the rest of them. What is an affectation?",
+      "type": "choice",
+      "options": [
+        "Artificial behaviour designed to impress — pretentious mannerism",
+        "An attempt to appear to belong to a world he had not grown up in",
+        "A performance so transparent it had the opposite of its intended effect",
+        "A social strategy based on the assumption that others would be deceived"
+      ],
+      "answer": "Artificial behaviour designed to impress — pretentious mannerism",
+      "explanation": "An affectation is a pretentious mannerism — artificial behaviour to impress.\n• affectation = pretentious or artificial behaviour\n• From Latin: 'affectare' — to aim at\n• 'Accent affectation', 'put on an affectation' — pretentious manner"
+    },
+    {
+      "word": "delectation",
+      "question": "The feast was prepared for the delectation of the guests. What is delectation?",
+      "type": "choice",
+      "options": [
+        "Pleasure and delight — the satisfaction of enjoyment",
+        "The pleasure produced by food and hospitality at the highest level",
+        "A form of enjoyment associated with abundance and quality",
+        "The combination of pleasure and appreciation that the feast produced"
+      ],
+      "answer": "Pleasure and delight — the satisfaction of enjoyment",
+      "explanation": "Delectation is pleasure — the delight of enjoyment, especially of food and beauty.\n• delectation = pleasure; delight\n• From Latin: 'delectare' — to delight\n• 'For your delectation', 'delectation of guests' — pleasure and enjoyment"
+    },
+    {
+      "word": "citation",
+      "question": "The officer received a citation for bravery under fire. What is a citation?",
+      "type": "choice",
+      "options": [
+        "An official mention or commendation — a formal reference to an achievement",
+        "A recognition of conduct that exceeded what was formally required",
+        "A form of acknowledgement that was part of the military rewards system, as the evidence showed",
+        "A statement that entered the public record of the officer's service"
+      ],
+      "answer": "An official mention or commendation — a formal reference to an achievement",
+      "explanation": "A citation is a formal mention — an official recognition or reference.\n• citation = a formal mention; a commendation; a reference to a source\n• From Latin: 'citare' — to summon\n• 'Military citation', 'academic citation' — formal reference or commendation"
+    },
+    {
+      "word": "meditation",
+      "question": "She practised daily meditation to reduce the stress of her work. What is meditation?",
+      "type": "choice",
+      "options": [
+        "A practice of focused thought or mindfulness — mental contemplation",
+        "A technique for reducing mental activity to a calmer state",
+        "A method of managing stress through deliberate mental discipline",
+        "A daily practice that provided the counterweight to her demanding career"
+      ],
+      "answer": "A practice of focused thought or mindfulness — mental contemplation",
+      "explanation": "Meditation is contemplation — focused mental practice for clarity or peace.\n• meditation = focused thought; a contemplative practice\n• From Latin: 'meditari' — to think over\n• 'Daily meditation', 'a meditation on death' — focused thought"
+    },
+    {
+      "word": "imitation",
+      "question": "Flattery through imitation is the sincerest form of tribute. What is imitation?",
+      "type": "choice",
+      "options": [
+        "The act of copying — reproducing something as a model",
+        "A form of tribute that took the model's work as the standard",
+        "The highest compliment available in creative fields",
+        "A practice that connected the imitator to a tradition"
+      ],
+      "answer": "The act of copying — reproducing something as a model",
+      "explanation": "Imitation is copying — reproducing something or someone as a model.\n• imitation = the action of imitating someone or something\n• From Latin: 'imitari' — to copy\n• 'Imitation of a style', 'imitation leather' — copying or resembling"
+    },
+    {
+      "word": "capitation",
+      "question": "The clinic was funded on a capitation basis — it received a fixed amount per registered patient. What is capitation?",
+      "type": "choice",
+      "options": [
+        "Payment made per person — a fixed amount per head",
+        "A funding model that calculated income based on registered patients",
+        "A payment arrangement that rewarded a clinic for the size of its list",
+        "A system that provided predictable income for a fixed number of patients"
+      ],
+      "answer": "Payment made per person — a fixed amount per head",
+      "explanation": "Capitation is payment per person — a fixed sum per head.\n• capitation = a payment or tax made per person\n• From Latin: 'caput' — head\n• 'Capitation fee', 'capitation grant' — a per-person payment"
+    },
+    {
+      "word": "precipitation",
+      "question": "Climate change is altering patterns of precipitation around the world. What is precipitation?",
+      "type": "choice",
+      "options": [
+        "Water that falls from the atmosphere — rain, snow, or hail",
+        "The meteorological term for all forms of falling water",
+        "A measurable variable in climate monitoring and modelling",
+        "The form in which water returns to earth from the atmosphere"
+      ],
+      "answer": "Water that falls from the atmosphere — rain, snow, or hail",
+      "explanation": "Precipitation is water falling from the sky — rain, snow, sleet, or hail.\n• precipitation = rain, snow, or other moisture falling from clouds\n• From Latin: 'praecipitare' — to throw headlong\n• 'Annual precipitation', 'precipitation event' — atmospheric moisture falling"
+    },
+    {
+      "word": "irritation",
+      "question": "The constant delays were a source of irritation even to the most patient members of the team. What is irritation?",
+      "type": "choice",
+      "options": [
+        "A feeling of annoyance — the state of being irritated",
+        "An accumulating reaction to a series of small but consistent failures",
+        "A mild form of anger that did not prevent professional function",
+        "The natural response to a pattern of behaviour that could not be explained"
+      ],
+      "answer": "A feeling of annoyance — the state of being irritated",
+      "explanation": "Irritation is annoyance — the state of feeling vexed or frustrated.\n• irritation = the state of being irritated; mild anger\n• From Latin: 'irritare' — to provoke\n• 'Minor irritation', 'source of irritation' — annoyance"
+    },
+    {
+      "word": "exaltation",
+      "question": "She felt a surge of exaltation as she crossed the finish line first. What is exaltation?",
+      "type": "choice",
+      "options": [
+        "A feeling of great joy and triumph — elation",
+        "The emotional response to completing what had been her life's ambition",
+        "A physical and emotional peak produced by success after long effort",
+        "The reward for the discipline and sacrifice that the training had demanded"
+      ],
+      "answer": "A feeling of great joy and triumph — elation",
+      "explanation": "Exaltation is great joy and triumph — a feeling of being lifted high.\n• exaltation = a feeling of intense happiness; the act of raising in status\n• From Latin: 'exaltare' — to lift up\n• 'A surge of exaltation', 'exalt in victory' — intense joy and triumph"
+    },
+    {
+      "word": "recantation",
+      "question": "The prisoner's recantation of his testimony was dismissed as coerced. What is recantation?",
+      "type": "choice",
+      "options": [
+        "The withdrawal of a previously stated claim or belief",
+        "A formal reversal of testimony given under earlier circumstances",
+        "The retraction of statements made at an earlier point in proceedings",
+        "A statement that reversed what had been said in previous testimony"
+      ],
+      "answer": "The withdrawal of a previously stated claim or belief",
+      "explanation": "Recantation is a formal withdrawal — taking back a previously stated belief or claim.\n• recantation = the act of recanting; a formal withdrawal of a statement\n• From Latin: 'recantare' — to sing back\n• 'Public recantation', 'recant a confession' — withdrawing what was said"
+    }
+  ]
+}
