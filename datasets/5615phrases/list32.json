@@ -5,601 +5,601 @@
       "question": "____ bargain",
       "type": "blank",
       "answer": "good",
-      "explanation": "便宜货, 好便宜货. I got a good bargain at the sale. 我在大减价中得到了好便宜货。"
+      "explanation": "便宜货, 好便宜货. I got a good bargain at the sale. 我在大减价中得到了好便宜货。 | bargain->讨价还价（古法语bargaignier），bargain->交易/便宜货"
     },
     {
       "question": "____ porcelain",
       "type": "blank",
       "answer": "fine",
-      "explanation": "瓷器, 精美瓷器. The museum displayed fine porcelain from China. 博物馆展示了来自中国的精美瓷器。"
+      "explanation": "瓷器, 精美瓷器. The museum displayed fine porcelain from China. 博物馆展示了来自中国的精美瓷器。 | porcellana->贝壳（意大利语，因瓷器光滑如贝壳），porcelain->瓷器"
     },
     {
       "question": "plain _____",
       "type": "blank",
       "answer": "truth",
-      "explanation": "明白的, 明白的真相. He told us the plain truth about the situation. 他告诉我们关于情况的明白真相。"
+      "explanation": "明白的, 明白的真相. He told us the plain truth about the situation. 他告诉我们关于情况的明白真相。 | plain->平坦/简单明了，plain truth->不加修饰的真相（cf. plane飞机/平面，同音）"
     },
     {
       "question": "_____________ legerdemain",
       "type": "blank",
       "answer": "sophisticated",
-      "explanation": "戏法, 复杂的戏法. The magician performed sophisticated legerdemain. 魔术师表演了复杂的戏法。"
+      "explanation": "戏法, 复杂的戏法. The magician performed sophisticated legerdemain. 魔术师表演了复杂的戏法。 | léger->轻，de->的，main->手（法语），legerdemain->手法轻巧=戏法/诡计"
     },
     {
       "question": "refrain ____",
       "type": "blank",
       "answer": "from",
-      "explanation": "克制, 克制于. Please refrain from smoking in this area. 请在该区域克制吸烟。"
+      "explanation": "克制, 克制于. Please refrain from smoking in this area. 请在该区域克制吸烟。 | re->回，frain->勒住，refrain->勒回=克制（refrain也指歌曲中的副歌，重复出现）"
     },
     {
       "question": "grain ____",
       "type": "blank",
       "answer": "silo",
-      "explanation": "谷物, 谷物筒仓. The farmer stored wheat in the grain silo. 农民把小麦存放在谷物筒仓里。"
+      "explanation": "谷物, 谷物筒仓. The farmer stored wheat in the grain silo. 农民把小麦存放在谷物筒仓里。 | grain->谷粒/纹理，a grain of->一粒（cf. granule颗粒，granary粮仓）"
     },
     {
       "question": "_____ terrain",
       "type": "blank",
       "answer": "rocky",
-      "explanation": "地形, 岩石地形. Hikers struggled over the rocky terrain. 徒步旅行者在岩石地形上艰难行进。"
+      "explanation": "地形, 岩石地形. Hikers struggled over the rocky terrain. 徒步旅行者在岩石地形上艰难行进。 | terra->土地，terrain->地面状况=地形（cf. territory领土，Mediterranean地中海）"
     },
     {
       "question": "detain _ _______",
       "type": "blank",
       "answer": "a suspect",
-      "explanation": "拘留, 拘留嫌疑人. Police have authority to detain a suspect. 警察有权拘留嫌疑人。"
+      "explanation": "拘留, 拘留嫌疑人. Police have authority to detain a suspect. 警察有权拘留嫌疑人。 | de->向下，tain->持有，detain->按住不放=拘留（cf. retain保留，contain容纳）"
     },
     {
       "question": "retain _______",
       "type": "blank",
       "answer": "control",
-      "explanation": "保留, 保留控制权. The company struggled to retain control. 公司努力保留控制权。"
+      "explanation": "保留, 保留控制权. The company struggled to retain control. 公司努力保留控制权。 | re->再次，tain->持有，retain->继续持有=保留（cf. retainer保留者/律师预付费）"
     },
     {
       "question": "contain ___ ______",
       "type": "blank",
       "answer": "the spread",
-      "explanation": "控制, 控制蔓延. Measures were taken to contain the spread. 采取措施控制蔓延。"
+      "explanation": "控制, 控制蔓延. Measures were taken to contain the spread. 采取措施控制蔓延。 | con->共同，tain->持有，contain->共同持住=容纳/控制（cf. container容器）"
     },
     {
       "question": "stain _______",
       "type": "blank",
       "answer": "remover",
-      "explanation": "污渍, 去污剂. Use stain remover for tough marks. 使用去污剂去除顽固污渍。"
+      "explanation": "污渍, 去污剂. Use stain remover for tough marks. 使用去污剂去除顽固污渍。 | stain->染色/污渍（古挪威steina->涂色），stain->弄脏/污点（cf. stainless无锈的）"
     },
     {
       "question": "_____ ____ distain",
       "type": "blank",
       "answer": "stain with",
-      "explanation": "玷污, 用污渍玷污. The scandal would stain with distain his reputation. 丑闻会用污渍玷污他的声誉。"
+      "explanation": "玷污, 用污渍玷污. The scandal would stain with distain his reputation. 丑闻会用污渍玷污他的声誉。 | dis->彻底，tain->染色，distain->彻底染污=玷污（古词，现多用stain）"
     },
     {
       "question": "sustain ______",
       "type": "blank",
       "answer": "growth",
-      "explanation": "维持, 维持增长. The economy must sustain growth. 经济必须维持增长。"
+      "explanation": "维持, 维持增长. The economy must sustain growth. 经济必须维持增长。 | sus->在下，tain->持有，sustain->在下面撑住=维持（cf. sustainable可持续的）"
     },
     {
       "question": "attain _ ____",
       "type": "blank",
       "answer": "a goal",
-      "explanation": "达到, 达到目标. With hard work, you can attain a goal. 通过努力工作,你可以达到目标。"
+      "explanation": "达到, 达到目标. With hard work, you can attain a goal. 通过努力工作,你可以达到目标。 | at->朝向，tain->持有/触及，attain->触及目标=达到（cf. obtain获得，obtain=ob+tain）"
     },
     {
       "question": "_____ bin",
       "type": "blank",
       "answer": "trash",
-      "explanation": "垃圾箱, 垃圾箱. Please put litter in the trash bin. 请把垃圾放进垃圾箱。"
+      "explanation": "垃圾箱, 垃圾箱. Please put litter in the trash bin. 请把垃圾放进垃圾箱。 | bin->箱子（古英语binn->篮），trash bin->垃圾箱（cf. dustbin垃圾桶）"
     },
     {
       "question": "_________ din",
       "type": "blank",
       "answer": "deafening",
-      "explanation": "喧闹, 震耳欲聋的喧闹. The construction created a deafening din. 建筑工地制造了震耳欲聋的喧闹。"
+      "explanation": "喧闹, 震耳欲聋的喧闹. The construction created a deafening din. 建筑工地制造了震耳欲聋的喧闹。 | din->持续的噪音（古英语dyne），din->嘈杂声（cf. dine用餐，同音不同义）"
     },
     {
       "question": "____ skein",
       "type": "blank",
       "answer": "yarn",
-      "explanation": "一绞, 一绞纱线. She bought a yarn skein for knitting. 她买了一绞纱线用于编织。"
+      "explanation": "一绞, 一绞纱线. She bought a yarn skein for knitting. 她买了一绞纱线用于编织。 | skein->一绞线（古法语escaigne），a skein of->一绞/一群（飞鸟也用此词）"
     },
     {
       "question": "urchin ___",
       "type": "blank",
       "answer": "boy",
-      "explanation": "顽童, 顽童男孩. The urchin boy begged on the streets. 顽童男孩在街上乞讨。"
+      "explanation": "顽童, 顽童男孩. The urchin boy begged on the streets. 顽童男孩在街上乞讨。 | urchin->刺猬/顽童（古法语），sea urchin->海胆（形如刺猬），street urchin->街头顽童"
     },
     {
       "question": "_____ kin",
       "type": "blank",
       "answer": "close",
-      "explanation": "亲属, 近亲. She visited her close kin regularly. 她定期拜访她的近亲。"
+      "explanation": "亲属, 近亲. She visited her close kin regularly. 她定期拜访她的近亲。 | kin->亲族（古英语cynn），next of kin->最近亲属（cf. kind善良/种类，同词根）"
     },
     {
       "question": "maudlin _________",
       "type": "blank",
       "answer": "sentiment",
-      "explanation": "感伤的, 感伤的情绪. The movie was criticized for maudlin sentiment. 这部电影因感伤的情绪而受到批评。"
+      "explanation": "感伤的, 感伤的情绪. The movie was criticized for maudlin sentiment. 这部电影因感伤的情绪而受到批评。 | Maudlin->Mary Magdalene的变形（圣经中常哭泣），maudlin->过度感伤的=感伤的"
     },
     {
       "question": "tarpaulin _____",
       "type": "blank",
       "answer": "cover",
-      "explanation": "防水布, 防水布罩. Workers placed a tarpaulin cover over the cargo. 工人在货物上放置了防水布罩。"
+      "explanation": "防水布, 防水布罩. Workers placed a tarpaulin cover over the cargo. 工人在货物上放置了防水布罩。 | tar->焦油，paulin->布（pall布），tarpaulin->涂了焦油的防水布"
     },
     {
       "question": "_______ rejoin",
       "type": "blank",
       "answer": "wittily",
-      "explanation": "回答, 机智地回答. She would wittily rejoin to criticism. 她会机智地回答批评。"
+      "explanation": "回答, 机智地回答. She would wittily rejoin to criticism. 她会机智地回答批评。 | re->回，join->加入/回应，rejoin->回应=机智反驳（cf. rejoinder反驳）"
     },
     {
       "question": "enjoin _______ ____",
       "type": "blank",
       "answer": "someone from",
-      "explanation": "禁止, 禁止某人. The court will enjoin someone from further action. 法院将禁止某人采取进一步行动。"
+      "explanation": "禁止, 禁止某人. The court will enjoin someone from further action. 法院将禁止某人采取进一步行动。 | en->加强，join->命令（拉丁），enjoin->命令/禁止（cf. injunction禁令）"
     },
     {
       "question": "conjoin ______",
       "type": "blank",
       "answer": "forces",
-      "explanation": "结合, 结合力量. Allies decided to conjoin forces. 盟友决定结合力量。"
+      "explanation": "结合, 结合力量. Allies decided to conjoin forces. 盟友决定结合力量。 | con->共同，join->连接，conjoin->共同连接=结合（cf. conjunction连词，joint关节）"
     },
     {
       "question": "purloin _ ______",
       "type": "blank",
       "answer": "a letter",
-      "explanation": "偷窃, 偷窃信件. The spy managed to purloin a letter. 间谍设法偷窃了信件。"
+      "explanation": "偷窃, 偷窃信件. The spy managed to purloin a letter. 间谍设法偷窃了信件。 | pur->远离，loin->放置（古法语），purloin->偷偷放到远处=偷窃（cf. Poe的《失窃的信》）"
     },
     {
       "question": "spin ___ _____",
       "type": "blank",
       "answer": "the story",
-      "explanation": "编造, 编造故事. Politicians often spin the story to their advantage. 政客经常为自己的利益编造故事。"
+      "explanation": "编造, 编造故事. Politicians often spin the story to their advantage. 政客经常为自己的利益编造故事。 | spin->旋转/纺纱，spin a story->像纺纱一样编故事（cf. spin doctor政治公关）"
     },
     {
       "question": "saccharin _________",
       "type": "blank",
       "answer": "sweetness",
-      "explanation": "糖精, 糖精甜味. The drink had an artificial saccharin sweetness. 这种饮料有人工的糖精甜味。"
+      "explanation": "糖精, 糖精甜味. The drink had an artificial saccharin sweetness. 这种饮料有人工的糖精甜味。 | sacchar->糖（希腊sakkharon），saccharin->人工甜味剂（cf. saccharine过甜的/甜腻的）"
     },
     {
       "question": "grin _______",
       "type": "blank",
       "answer": "broadly",
-      "explanation": "露齿笑, 开心地露齿笑. He began to grin broadly at the joke. 他开始对这个笑话开心地露齿笑。"
+      "explanation": "露齿笑, 开心地露齿笑. He began to grin broadly at the joke. 他开始对这个笑话开心地露齿笑。 | grin->露齿而笑（古英语grennian），grin and bear it->咬牙忍受"
     },
     {
       "question": "____ chagrin",
       "type": "blank",
       "answer": "feel",
-      "explanation": "懊恼, 感到懊恼. She would feel chagrin at the mistake. 她会对错误感到懊恼。"
+      "explanation": "懊恼, 感到懊恼. She would feel chagrin at the mistake. 她会对错误感到懊恼。 | chagrin->粗砺（法语，磨损感），chagrin->因受挫而懊恼（cf. chagrined懊恼的）"
     },
     {
       "question": "____ resin",
       "type": "blank",
       "answer": "pine",
-      "explanation": "树脂, 松树脂. Pine resin was used to seal boats. 松树脂被用来密封船只。"
+      "explanation": "树脂, 松树脂. Pine resin was used to seal boats. 松树脂被用来密封船只。 | resin->树脂（拉丁resina），pine resin->松香（cf. rosin松香，violin弓用）"
     },
     {
       "question": "toxin ________",
       "type": "blank",
       "answer": "exposure",
-      "explanation": "毒素, 毒素暴露. Workers feared toxin exposure at the plant. 工人担心在工厂的毒素暴露。"
+      "explanation": "毒素, 毒素暴露. Workers feared toxin exposure at the plant. 工人担心在工厂的毒素暴露。 | tox->毒（希腊toxikon->箭毒），toxin->毒素（cf. toxic有毒的，antitoxin抗毒素）"
     },
     {
       "question": "condemn ___ ______",
       "type": "blank",
       "answer": "the attack",
-      "explanation": "谴责, 谴责袭击. World leaders united to condemn the attack. 世界领导人团结起来谴责袭击。"
+      "explanation": "谴责, 谴责袭击. World leaders united to condemn the attack. 世界领导人团结起来谴责袭击。 | con->加强，demn->损害（拉丁damnare），condemn->强烈定罪=谴责（cf. damn该死）"
     },
     {
       "question": "solemn ________",
       "type": "blank",
       "answer": "ceremony",
-      "explanation": "庄严的, 庄严的仪式. The memorial featured a solemn ceremony. 纪念活动以庄严的仪式为特色。"
+      "explanation": "庄严的, 庄严的仪式. The memorial featured a solemn ceremony. 纪念活动以庄严的仪式为特色。 | solemn->每年一次的（拉丁sollemnis），solemn->庄严隆重的（cf. solemnity庄严）"
     },
     {
       "question": "limn _ ________",
       "type": "blank",
       "answer": "a portrait",
-      "explanation": "描绘, 描绘肖像. The artist would limn a portrait in detail. 艺术家会详细描绘肖像。"
+      "explanation": "描绘, 描绘肖像. The artist would limn a portrait in detail. 艺术家会详细描绘肖像。 | limn->彩绘（来自illuminate照亮），limn->用线条描绘（cf. illuminate手稿彩饰）"
     },
     {
       "question": "______ hymn",
       "type": "blank",
       "answer": "church",
-      "explanation": "赞美诗, 教堂赞美诗. The congregation sang a church hymn. 会众唱了教堂赞美诗。"
+      "explanation": "赞美诗, 教堂赞美诗. The congregation sang a church hymn. 会众唱了教堂赞美诗。 | hymnos->颂歌（希腊），hymn->宗教赞美诗（注意n不发音，cf. hymnal赞美诗集）"
     },
     {
       "question": "beacon _____",
       "type": "blank",
       "answer": "light",
-      "explanation": "信标, 信标灯. The beacon light guided ships to shore. 信标灯引导船只靠岸。"
+      "explanation": "信标, 信标灯. The beacon light guided ships to shore. 信标灯引导船只靠岸。 | beacon->火焰信号（古英语beacen），beacon->灯塔/榜样（cf. beckon招手，形近）"
     },
     {
       "question": "___ pantechnicon",
       "type": "blank",
       "answer": "old",
-      "explanation": "搬家车, 旧搬家车. An old pantechnicon transported furniture. 一辆旧搬家车运送家具。"
+      "explanation": "搬家车, 旧搬家车. An old pantechnicon transported furniture. 一辆旧搬家车运送家具。 | pan->全部，techni->技艺，pantechnicon->百货仓库（后转指搬家大货车）"
     },
     {
       "question": "_____ lexicon",
       "type": "blank",
       "answer": "legal",
-      "explanation": "词汇, 法律词汇. Lawyers must master the legal lexicon. 律师必须掌握法律词汇。"
+      "explanation": "词汇, 法律词汇. Lawyers must master the legal lexicon. 律师必须掌握法律词汇。 | lexis->词语（希腊），lexicon->某领域词汇总集=词汇表（cf. lexical词汇的，dyslexia阅读障碍）"
     },
     {
       "question": "______ curmudgeon",
       "type": "blank",
       "answer": "cranky",
-      "explanation": "脾气坏的老头, 脾气暴躁的老头. The cranky curmudgeon complained about everything. 脾气暴躁的老头抱怨一切。"
+      "explanation": "脾气坏的老头, 脾气暴躁的老头. The cranky curmudgeon complained about everything. 脾气暴躁的老头抱怨一切。 | curmudgeon->来源不明，指脾气暴躁吝啬的老人（cf. grouch抱怨者）"
     },
     {
       "question": "_____ surgeon",
       "type": "blank",
       "answer": "heart",
-      "explanation": "外科医生, 心脏外科医生. The heart surgeon performed a bypass. 心脏外科医生进行了搭桥手术。"
+      "explanation": "外科医生, 心脏外科医生. The heart surgeon performed a bypass. 心脏外科医生进行了搭桥手术。 | chir->手，urg->工作（希腊），surgeon->用手操作的医生=外科医生（cf. surgery外科手术）"
     },
     {
       "question": "_____ pantheon",
       "type": "blank",
       "answer": "Roman",
-      "explanation": "万神殿, 罗马万神殿. The Roman pantheon is an architectural marvel. 罗马万神殿是建筑奇迹。"
+      "explanation": "万神殿, 罗马万神殿. The Roman pantheon is an architectural marvel. 罗马万神殿是建筑奇迹。 | pan->全部，theon->神，pantheon->供奉所有神的殿=万神殿"
     },
     {
       "question": "_ paragon __ ______",
       "type": "blank",
       "answer": "a of virtue",
-      "explanation": "典范, 美德的典范. She was considered a paragon of virtue. 她被认为是美德的典范。"
+      "explanation": "典范, 美德的典范. She was considered a paragon of virtue. 她被认为是美德的典范。 | para->旁边，gon->磨石（希腊），paragon->磨砺出来的最佳典范"
     },
     {
       "question": "_______ hexagon",
       "type": "blank",
       "answer": "regular",
-      "explanation": "六边形, 正六边形. A honeycomb forms a regular hexagon pattern. 蜂巢形成正六边形图案。"
+      "explanation": "六边形, 正六边形. A honeycomb forms a regular hexagon pattern. 蜂巢形成正六边形图案。 | hex->六（希腊），gon->角，hexagon->六角形（cf. pentagon五边形，octagon八边形）"
     },
     {
       "question": "_________ jargon",
       "type": "blank",
       "answer": "technical",
-      "explanation": "行话, 技术行话. The manual was filled with technical jargon. 手册充满了技术行话。"
+      "explanation": "行话, 技术行话. The manual was filled with technical jargon. 手册充满了技术行话。 | jargon->鸟鸣（古法语），jargon->像鸟叫一样让人听不懂的行话"
     },
     {
       "question": "______ suspicion",
       "type": "blank",
       "answer": "arouse",
-      "explanation": "怀疑, 引起怀疑. His behavior began to arouse suspicion. 他的行为开始引起怀疑。"
+      "explanation": "怀疑, 引起怀疑. His behavior began to arouse suspicion. 他的行为开始引起怀疑。 | sus->从下，spec->看，suspicion->从下面偷看=怀疑（cf. suspect怀疑，inspector检察官）"
     },
     {
       "question": "___ coercion",
       "type": "blank",
       "answer": "use",
-      "explanation": "强制, 使用强制. The confession was obtained by use coercion. 供词是通过使用强制获得的。"
+      "explanation": "强制, 使用强制. The confession was obtained by use coercion. 供词是通过使用强制获得的。 | co->共同，erc->围住（拉丁），coercion->围住迫使=强制（cf. coerce强迫）"
     },
     {
       "question": "scion __ _ ______",
       "type": "blank",
       "answer": "of a family",
-      "explanation": "后裔, 家族后裔. He was the scion of a family dynasty. 他是家族王朝的后裔。"
+      "explanation": "后裔, 家族后裔. He was the scion of a family dynasty. 他是家族王朝的后裔。 | scion->嫩枝/幼芽（园艺），scion->家族的新枝=后裔（cf. scissors剪刀，同词根sci->切）"
     },
     {
       "question": "_ legion __ ____",
       "type": "blank",
       "answer": "a of fans",
-      "explanation": "大批, 大批粉丝. The singer attracted a legion of fans. 歌手吸引了大批粉丝。"
+      "explanation": "大批, 大批粉丝. The singer attracted a legion of fans. 歌手吸引了大批粉丝。 | legion->罗马军团（约5000人），legion->大批（cf. legionnaire军团士兵）"
     },
     {
       "question": "____ battalion",
       "type": "blank",
       "answer": "army",
-      "explanation": "营, 陆军营. The army battalion deployed to the border. 陆军营部署到边境。"
+      "explanation": "营, 陆军营. The army battalion deployed to the border. 陆军营部署到边境。 | battail->战斗（古法语），battalion->战斗单位=营（约500-800人，cf. battle战役）"
     },
     {
       "question": "______ rapscallion",
       "type": "blank",
       "answer": "little",
-      "explanation": "流氓, 小流氓. The little rapscallion stole from the market. 小流氓从市场偷东西。"
+      "explanation": "流氓, 小流氓. The little rapscallion stole from the market. 小流氓从市场偷东西。 | rascal->无赖，rapscallion->rascal的强化变形=顽劣小流氓（cf. rascal无赖）"
     },
     {
       "question": "____ bullion",
       "type": "blank",
       "answer": "gold",
-      "explanation": "金条, 金条. The vault contained gold bullion bars. 金库里有金条。"
+      "explanation": "金条, 金条. The vault contained gold bullion bars. 金库里有金条。 | bouillon->沸腾（法语，熔化金属），bullion->熔铸的金属块=金条/银条"
     },
     {
       "question": "______ companion",
       "type": "blank",
       "answer": "travel",
-      "explanation": "同伴, 旅行同伴. She found a reliable travel companion. 她找到了一个可靠的旅行同伴。"
+      "explanation": "同伴, 旅行同伴. She found a reliable travel companion. 她找到了一个可靠的旅行同伴。 | com->共同，pan->面包（拉丁），companion->共同分享面包的人=同伴（cf. company公司）"
     },
     {
       "question": "champion ___ _____",
       "type": "blank",
       "answer": "the cause",
-      "explanation": "拥护, 拥护事业. Activists champion the cause of justice. 活动家拥护正义事业。"
+      "explanation": "拥护, 拥护事业. Activists champion the cause of justice. 活动家拥护正义事业。 | campus->战场（拉丁），champion->战场上的斗士=冠军/拥护者"
     },
     {
       "question": "_________ scorpion",
       "type": "blank",
       "answer": "poisonous",
-      "explanation": "蝎子, 有毒的蝎子. The desert harbored poisonous scorpion. 沙漠藏有有毒的蝎子。"
+      "explanation": "蝎子, 有毒的蝎子. The desert harbored poisonous scorpion. 沙漠藏有有毒的蝎子。 | scorpion->蝎子（拉丁scorpio），Scorpio->天蝎座，scorpion->蝎子"
     },
     {
       "question": "clarion ____",
       "type": "blank",
       "answer": "call",
-      "explanation": "嘹亮的, 嘹亮的号召. The leader issued a clarion call to action. 领导人发出了嘹亮的行动号召。"
+      "explanation": "嘹亮的, 嘹亮的号召. The leader issued a clarion call to action. 领导人发出了嘹亮的行动号召。 | clari->清亮（拉丁clarus），clarion->发出清亮声音的号角=嘹亮的（cf. clarity清晰）"
     },
     {
       "question": "__________ criterion",
       "type": "blank",
       "answer": "evaluation",
-      "explanation": "标准, 评估标准. Quality is the primary evaluation criterion. 质量是主要的评估标准。"
+      "explanation": "标准, 评估标准. Quality is the primary evaluation criterion. 质量是主要的评估标准。 | crit->判断（希腊），criterion->判断的依据=标准（复数criteria，cf. critic批评家）"
     },
     {
       "question": "carrion ______",
       "type": "blank",
       "answer": "feeder",
-      "explanation": "腐肉, 食腐动物. Vultures are carrion feeder birds. 秃鹫是食腐动物。"
+      "explanation": "腐肉, 食腐动物. Vultures are carrion feeder birds. 秃鹫是食腐动物。 | caro->肉（拉丁），carrion->腐烂的肉（cf. carnivore肉食动物，carnival嘉年华=吃肉节）"
     },
     {
       "question": "_____ centurion",
       "type": "blank",
       "answer": "Roman",
-      "explanation": "百夫长, 罗马百夫长. The Roman centurion commanded one hundred soldiers. 罗马百夫长指挥一百名士兵。"
+      "explanation": "百夫长, 罗马百夫长. The Roman centurion commanded one hundred soldiers. 罗马百夫长指挥一百名士兵。 | centur->百（拉丁centum），centurion->指挥百人的军官=百夫长（cf. century世纪，cent分）"
     },
     {
       "question": "____ abrasion",
       "type": "blank",
       "answer": "skin",
-      "explanation": "擦伤, 皮肤擦伤. The fall caused a minor skin abrasion. 跌倒造成了轻微的皮肤擦伤。"
+      "explanation": "擦伤, 皮肤擦伤. The fall caused a minor skin abrasion. 跌倒造成了轻微的皮肤擦伤。 | ab->去除，ras->刮擦，abrasion->刮去表面=擦伤（cf. abrasive研磨剂，erase擦除）"
     },
     {
       "question": "___ evasion",
       "type": "blank",
       "answer": "tax",
-      "explanation": "逃避, 逃税. The businessman was charged with tax evasion. 这位商人被指控逃税。"
+      "explanation": "逃避, 逃税. The businessman was charged with tax evasion. 这位商人被指控逃税。 | e->向外，vas->走，evasion->走出去逃开=逃避（cf. evade逃避，evasive回避的）"
     },
     {
       "question": "_____ cohesion",
       "type": "blank",
       "answer": "group",
-      "explanation": "凝聚力, 团队凝聚力. Strong leadership promotes group cohesion. 强有力的领导促进团队凝聚力。"
+      "explanation": "凝聚力, 团队凝聚力. Strong leadership promotes group cohesion. 强有力的领导促进团队凝聚力。 | co->共同，hes->粘（拉丁haerere），cohesion->粘在一起=凝聚力（cf. adhesion附着，coherent连贯的）"
     },
     {
       "question": "____ lesion",
       "type": "blank",
       "answer": "skin",
-      "explanation": "损伤, 皮肤损伤. The doctor examined the skin lesion carefully. 医生仔细检查了皮肤损伤。"
+      "explanation": "损伤, 皮肤损伤. The doctor examined the skin lesion carefully. 医生仔细检查了皮肤损伤。 | laes->伤害（拉丁laedere），lesion->受伤的部位=损伤（cf. lesion区别collision碰撞）"
     },
     {
       "question": "________ incision",
       "type": "blank",
       "answer": "surgical",
-      "explanation": "切口, 手术切口. The surgeon made a precise surgical incision. 外科医生做了精确的手术切口。"
+      "explanation": "切口, 手术切口. The surgeon made a precise surgical incision. 外科医生做了精确的手术切口。 | in->进入，cis->切，incision->切进去=切口（cf. scissors剪刀，decide决定=切断犹豫）"
     },
     {
       "question": "____-__ collision",
       "type": "blank",
       "answer": "head-on",
-      "explanation": "碰撞, 正面碰撞. The vehicles were involved in a head-on collision. 车辆发生了正面碰撞。"
+      "explanation": "碰撞, 正面碰撞. The vehicles were involved in a head-on collision. 车辆发生了正面碰撞。 | col->共同，lis->撞击，collision->共同撞在一起=碰撞（cf. collide碰撞）"
     },
     {
       "question": "_____ prevision",
       "type": "blank",
       "answer": "clear",
-      "explanation": "预见, 清晰的预见. The prophet claimed clear prevision of events. 先知声称对事件有清晰的预见。"
+      "explanation": "预见, 清晰的预见. The prophet claimed clear prevision of events. 先知声称对事件有清晰的预见。 | pre->提前，vis->看，prevision->提前看到=预见（cf. preview预览，provision预备）"
     },
     {
       "question": "envision ___ ______",
       "type": "blank",
       "answer": "the future",
-      "explanation": "设想, 设想未来. Leaders must envision the future. 领导者必须设想未来。"
+      "explanation": "设想, 设想未来. Leaders must envision the future. 领导者必须设想未来。 | en->使，vis->看，envision->在心中看到=设想（cf. vision视野，visual视觉的）"
     },
     {
       "question": "____ provision",
       "type": "blank",
       "answer": "food",
-      "explanation": "供应, 食物供应. Hikers packed food provision for the trip. 徒步旅行者为旅行准备了食物供应。"
+      "explanation": "供应, 食物供应. Hikers packed food provision for the trip. 徒步旅行者为旅行准备了食物供应。 | pro->提前，vis->看/准备，provision->提前准备=供应/条款（cf. provide提供，provisional临时的）"
     },
     {
       "question": "______ repulsion",
       "type": "blank",
       "answer": "strong",
-      "explanation": "排斥, 强烈的排斥. She felt strong repulsion at the sight. 她对这景象感到强烈的排斥。"
+      "explanation": "排斥, 强烈的排斥. She felt strong repulsion at the sight. 她对这景象感到强烈的排斥。 | re->回，puls->推，repulsion->推回去=排斥（cf. repel排斥，propulsion推进，compulsion强迫）"
     },
     {
       "question": "____________ compulsion",
       "type": "blank",
       "answer": "irresistible",
-      "explanation": "强迫, 不可抗拒的强迫. He felt an irresistible compulsion to confess. 他感到一种不可抗拒的坦白强迫。"
+      "explanation": "强迫, 不可抗拒的强迫. He felt an irresistible compulsion to confess. 他感到一种不可抗拒的坦白强迫。 | com->共同，puls->推，compulsion->合力推动=强迫（cf. compel强迫，impulsive冲动的）"
     },
     {
       "question": "______ propulsion",
       "type": "blank",
       "answer": "rocket",
-      "explanation": "推进, 火箭推进. The spacecraft uses rocket propulsion. 航天器使用火箭推进。"
+      "explanation": "推进, 火箭推进. The spacecraft uses rocket propulsion. 航天器使用火箭推进。 | pro->向前，puls->推，propulsion->向前推=推进（cf. propel推进，propeller螺旋桨）"
     },
     {
       "question": "______ convulsion",
       "type": "blank",
       "answer": "muscle",
-      "explanation": "痉挛, 肌肉痉挛. The patient experienced muscle convulsion. 患者经历了肌肉痉挛。"
+      "explanation": "痉挛, 肌肉痉挛. The patient experienced muscle convulsion. 患者经历了肌肉痉挛。 | con->共同，vuls->扯拉，convulsion->全身扯拉=痉挛/剧变（cf. convulse使痉挛，revulsion强烈反感）"
     },
     {
       "question": "_____ mansion",
       "type": "blank",
       "answer": "grand",
-      "explanation": "豪宅, 宏伟的豪宅. The millionaire owned a grand mansion. 百万富翁拥有一座宏伟的豪宅。"
+      "explanation": "豪宅, 宏伟的豪宅. The millionaire owned a grand mansion. 百万富翁拥有一座宏伟的豪宅。 | man->停留（拉丁manere），mansion->可长久停留的地方=豪宅（cf. manor庄园，remain留下）"
     },
     {
       "question": "_______ dimension",
       "type": "blank",
       "answer": "spatial",
-      "explanation": "维度, 空间维度. The problem involves multiple spatial dimension. 这个问题涉及多个空间维度。"
+      "explanation": "维度, 空间维度. The problem involves multiple spatial dimension. 这个问题涉及多个空间维度。 | di->两边，mens->测量，dimension->向两边测量=维度（cf. immense巨大的=无法测量的）"
     },
     {
       "question": "pension ____",
       "type": "blank",
       "answer": "fund",
-      "explanation": "养老金, 养老金基金. Workers contribute to the pension fund. 工人向养老金基金缴款。"
+      "explanation": "养老金, 养老金基金. Workers contribute to the pension fund. 工人向养老金基金缴款。 | pens->称量/支付（拉丁pendere），pension->定期支付的钱=养老金（cf. expense费用，compensate补偿）"
     },
     {
       "question": "______ pretension",
       "type": "blank",
       "answer": "social",
-      "explanation": "自命不凡, 社会自命不凡. Her social pretension annoyed friends. 她的社会自命不凡惹恼了朋友。"
+      "explanation": "自命不凡, 社会自命不凡. Her social pretension annoyed friends. 她的社会自命不凡惹恼了朋友。 | pre->提前，tens->伸展，pretension->伸手够不到的东西=自命不凡（cf. pretend假装，tension紧张）"
     },
     {
       "question": "hypertension _______",
       "type": "blank",
       "answer": "patient",
-      "explanation": "高血压, 高血压患者. The hypertension patient takes daily medication. 高血压患者每天服药。"
+      "explanation": "高血压, 高血压患者. The hypertension patient takes daily medication. 高血压患者每天服药。 | hyper->过度，tens->压力，hypertension->过度压力=高血压（cf. hypotension低血压）"
     },
     {
       "question": "_________ distension",
       "type": "blank",
       "answer": "abdominal",
-      "explanation": "膨胀, 腹部膨胀. The doctor noted abdominal distension. 医生注意到腹部膨胀。"
+      "explanation": "膨胀, 腹部膨胀. The doctor noted abdominal distension. 医生注意到腹部膨胀。 | dis->分开，tens->拉伸，distension->向外拉伸=膨胀（cf. distend膨胀，tension张力）"
     },
     {
       "question": "______ aversion",
       "type": "blank",
       "answer": "strong",
-      "explanation": "厌恶, 强烈的厌恶. He developed a strong aversion to crowds. 他对人群产生了强烈的厌恶。"
+      "explanation": "厌恶, 强烈的厌恶. He developed a strong aversion to crowds. 他对人群产生了强烈的厌恶。 | a->离开，vers->转，aversion->转身离开=厌恶（cf. avert避开，adverse不利的）"
     },
     {
       "question": "_____ reversion",
       "type": "blank",
       "answer": "title",
-      "explanation": "恢复, 产权恢复. The contract stipulated title reversion. 合同规定了产权恢复。"
+      "explanation": "恢复, 产权恢复. The contract stipulated title reversion. 合同规定了产权恢复。 | re->回，vers->转，reversion->转回原来=恢复/归还（cf. reverse逆转，revert恢复）"
     },
     {
       "question": "_______ excursion",
       "type": "blank",
       "answer": "weekend",
-      "explanation": "远足, 周末远足. The family planned a weekend excursion. 家人计划了周末远足。"
+      "explanation": "远足, 周末远足. The family planned a weekend excursion. 家人计划了周末远足。 | ex->向外，curs->跑，excursion->跑出去=短途旅行（cf. cursor光标，course路线）"
     },
     {
       "question": "____ compassion",
       "type": "blank",
       "answer": "show",
-      "explanation": "同情, 表现同情. We must show compassion for the suffering. 我们必须对受苦的人表现同情。"
+      "explanation": "同情, 表现同情. We must show compassion for the suffering. 我们必须对受苦的人表现同情。 | com->共同，pass->受苦，compassion->与人共同受苦=同情（cf. passion激情/受难，patient病人）"
     },
     {
       "question": "____ cession",
       "type": "blank",
       "answer": "land",
-      "explanation": "割让, 土地割让. The treaty involved land cession. 条约涉及土地割让。"
+      "explanation": "割让, 土地割让. The treaty involved land cession. 条约涉及土地割让。 | cess->走/让出（拉丁cedere），cession->让出=割让（cf. recession退潮，concession让步）"
     },
     {
       "question": "________ recession",
       "type": "blank",
       "answer": "economic",
-      "explanation": "衰退, 经济衰退. The country entered an economic recession. 国家进入了经济衰退。"
+      "explanation": "衰退, 经济衰退. The country entered an economic recession. 国家进入了经济衰退。 | re->后退，cess->走，recession->向后退=经济衰退/退场（cf. recede后退，procession行进）"
     },
     {
       "question": "____ _ concession",
       "type": "blank",
       "answer": "make a",
-      "explanation": "让步, 做出让步. Negotiators agreed to make a concession. 谈判者同意做出让步。"
+      "explanation": "让步, 做出让步. Negotiators agreed to make a concession. 谈判者同意做出让步。 | con->共同，cess->让出，concession->共同让出=让步/特许权（cf. concede承认，accede同意）"
     },
     {
       "question": "_____ digression",
       "type": "blank",
       "answer": "brief",
-      "explanation": "离题, 短暂的离题. After a brief digression, we returned to the topic. 经过短暂的离题后,我们回到话题。"
+      "explanation": "离题, 短暂的离题. After a brief digression, we returned to the topic. 经过短暂的离题后,我们回到话题。 | di->分离，gress->走，digression->走偏了=离题（cf. progress进步，transgress越界）"
     },
     {
       "question": "_____ transgression",
       "type": "blank",
       "answer": "grave",
-      "explanation": "违反, 严重的违反. The offense was a grave transgression. 该罪行是严重的违反。"
+      "explanation": "违反, 严重的违反. The offense was a grave transgression. 该罪行是严重的违反。 | trans->越过，gress->走，transgression->越过界限=违反（cf. trespass侵犯，aggression侵略）"
     },
     {
       "question": "________ depression",
       "type": "blank",
       "answer": "clinical",
-      "explanation": "抑郁症, 临床抑郁症. She was treated for clinical depression. 她接受了临床抑郁症的治疗。"
+      "explanation": "抑郁症, 临床抑郁症. She was treated for clinical depression. 她接受了临床抑郁症的治疗。 | de->向下，press->压，depression->被压下去=抑郁/经济萧条（cf. compress压缩，suppress压制）"
     },
     {
       "question": "_____ impression",
       "type": "blank",
       "answer": "first",
-      "explanation": "印象, 第一印象. First impression is often lasting. 第一印象往往持久。"
+      "explanation": "印象, 第一印象. First impression is often lasting. 第一印象往往持久。 | im->进入，press->压，impression->压进去留下的痕迹=印象（cf. express表达，oppress压迫）"
     },
     {
       "question": "obsession ____",
       "type": "blank",
       "answer": "with",
-      "explanation": "痴迷, 痴迷于. His obsession with details slowed progress. 他对细节的痴迷减缓了进展。"
+      "explanation": "痴迷, 痴迷于. His obsession with details slowed progress. 他对细节的痴迷减缓了进展。 | ob->在旁，sess->坐，obsession->有东西一直坐在旁边不走=痴迷（cf. possess占有，session会议）"
     },
     {
       "question": "_________ scission",
       "type": "blank",
       "answer": "political",
-      "explanation": "分裂, 政治分裂. The party faced political scission. 该党面临政治分裂。"
+      "explanation": "分裂, 政治分裂. The party faced political scission. 该党面临政治分裂。 | sciss->切（拉丁scindere），scission->切割=分裂（cf. scissors剪刀，rescission撤销）"
     },
     {
       "question": "____ abscission",
       "type": "blank",
       "answer": "leaf",
-      "explanation": "脱落, 叶子脱落. Autumn triggers leaf abscission. 秋天触发叶子脱落。"
+      "explanation": "脱落, 叶子脱落. Autumn triggers leaf abscission. 秋天触发叶子脱落。 | ab->离开，sciss->切，abscission->切断分离=脱落（植物学术语，cf. scissors剪刀）"
     },
     {
       "question": "rescission ______",
       "type": "blank",
       "answer": "notice",
-      "explanation": "撤销, 撤销通知. The company sent a rescission notice. 公司发送了撤销通知。"
+      "explanation": "撤销, 撤销通知. The company sent a rescission notice. 公司发送了撤销通知。 | re->回，sciss->切，rescission->切断退回=撤销合同（cf. recession经济衰退，scission分裂）"
     },
     {
       "question": "______ submission",
       "type": "blank",
       "answer": "formal",
-      "explanation": "提交, 正式提交. The proposal required formal submission. 该提案需要正式提交。"
+      "explanation": "提交, 正式提交. The proposal required formal submission. 该提案需要正式提交。 | sub->在下，miss->送，submission->送到下面=提交/屈服（cf. submit提交，missile导弹）"
     },
     {
       "question": "admission ______",
       "type": "blank",
       "answer": "ticket",
-      "explanation": "入场, 入场券. Visitors must present an admission ticket. 访客必须出示入场券。"
+      "explanation": "入场, 入场券. Visitors must present an admission ticket. 访客必须出示入场券。 | ad->进入，miss->送，admission->被送入=入场/承认（cf. permit允许，commit承诺）"
     },
     {
       "question": "___ remission",
       "type": "blank",
       "answer": "tax",
-      "explanation": "减免, 税收减免. The government granted tax remission. 政府批准了税收减免。"
+      "explanation": "减免, 税收减免. The government granted tax remission. 政府批准了税收减免。 | re->回，miss->送，remission->送回去=减免/病情缓解（cf. remit汇款，emit发射）"
     },
     {
       "question": "_____ commission",
       "type": "blank",
       "answer": "sales",
-      "explanation": "佣金, 销售佣金. Agents earn sales commission on transactions. 代理商在交易中赚取销售佣金。"
+      "explanation": "佣金, 销售佣金. Agents earn sales commission on transactions. 代理商在交易中赚取销售佣金。 | com->共同，miss->送，commission->共同委派=委员会/佣金（cf. commit承担，omit省略）"
     },
     {
       "question": "_____ intermission",
       "type": "blank",
       "answer": "movie",
-      "explanation": "中场休息, 电影中场休息. There was no movie intermission during the film. 电影期间没有中场休息。"
+      "explanation": "中场休息, 电影中场休息. There was no movie intermission during the film. 电影期间没有中场休息。 | inter->中间，miss->送，intermission->中间送走观众=中场休息（cf. intermediate中间的）"
     },
     {
       "question": "concussion ________",
       "type": "blank",
       "answer": "protocol",
-      "explanation": "脑震荡, 脑震荡协议. Athletes follow strict concussion protocol. 运动员遵循严格的脑震荡协议。"
+      "explanation": "脑震荡, 脑震荡协议. Athletes follow strict concussion protocol. 运动员遵循严格的脑震荡协议。 | con->共同，cuss->震动撞击，concussion->猛烈震动=脑震荡（cf. discuss讨论=摇动想法，percussion打击）"
     },
     {
       "question": "_____ percussion",
       "type": "blank",
       "answer": "snare",
-      "explanation": "打击乐, 小军鼓打击乐. The drummer played snare percussion. 鼓手演奏小军鼓打击乐。"
+      "explanation": "打击乐, 小军鼓打击乐. The drummer played snare percussion. 鼓手演奏小军鼓打击乐。 | per->穿透，cuss->敲击，percussion->敲打穿透=打击乐（cf. concussion脑震荡，discuss讨论）"
     },
     {
       "question": "_______ fusion",
       "type": "blank",
       "answer": "nuclear",
-      "explanation": "聚变, 核聚变. Scientists research nuclear fusion energy. 科学家研究核聚变能源。"
+      "explanation": "聚变, 核聚变. Scientists research nuclear fusion energy. 科学家研究核聚变能源。 | fus->倒/熔合（拉丁fundere），fusion->熔合在一起=聚变（cf. diffusion扩散，confusion混乱，infuse灌输）"
     }
   ]
 }
