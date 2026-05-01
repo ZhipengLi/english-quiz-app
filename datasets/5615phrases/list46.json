@@ -5,603 +5,601 @@
       "question": "decrepit ________",
       "type": "blank",
       "answer": "building",
-      "explanation": "破旧的; 衰老的, 破旧的建筑. The decrepit building was scheduled for demolition. 这座破旧的建筑计划拆除。"
+      "explanation": "破旧的; 衰老的, 破旧的建筑. The decrepit building was scheduled for demolition. 这座破旧的建筑计划拆除。 | de->向下，crep->发出噼啪声（拉丁crepare），decrepit->向下破裂=破旧的（cf. crepuscular黄昏的=光线破碎，decrepitude衰老）"
     },
     {
       "question": "pulpit ______",
       "type": "blank",
       "answer": "sermon",
-      "explanation": "讲道坛, 讲道坛布道. The minister delivered a pulpit sermon on forgiveness. 牧师在讲道坛上发表了关于宽恕的布道。"
+      "explanation": "讲道坛, 讲道坛布道. The minister delivered a pulpit sermon on forgiveness. 牧师在讲道坛上发表了关于宽恕的布道。 | pulpit->讲台（拉丁pulpitum->台），pulpit->布道台（cf. pulp纸浆，pulpit station布道台）"
     },
     {
       "question": "merit ___",
       "type": "blank",
       "answer": "pay",
-      "explanation": "功绩; 优点, 绩效工资. Employees receive merit pay based on performance. 员工根据表现获得绩效工资。"
+      "explanation": "功绩; 优点, 绩效工资. Employees receive merit pay based on performance. 员工根据表现获得绩效工资。 | merit->应得（拉丁merere->赚到），merit->功绩/值得（cf. meritorious有功的，meretricious华而不实，demerit缺点）"
     },
     {
       "question": "_____ _ writ",
       "type": "blank",
       "answer": "issue a",
-      "explanation": "令状; 文书, 发出令状. The court will issue a writ of habeas corpus. 法院将发出人身保护令状。"
+      "explanation": "令状; 文书, 发出令状. The court will issue a writ of habeas corpus. 法院将发出人身保护令状。 | writ->写下的东西（古英语writan），writ->法律文书（cf. write写，written书面的，Scripture圣经=写下的）"
     },
     {
       "question": "posit _ ______",
       "type": "blank",
       "answer": "a theory",
-      "explanation": "假定; 提出, 提出理论. Scientists posit a theory to explain the phenomenon. 科学家提出理论来解释这一现象。"
+      "explanation": "假定; 提出, 提出理论. Scientists posit a theory to explain the phenomenon. 科学家提出理论来解释这一现象。 | posit->放置（拉丁ponere），posit->提出假设（cf. position位置，deposit存款，compose作曲，oppose反对）"
     },
     {
       "question": "____ deposit",
       "type": "blank",
       "answer": "bank",
-      "explanation": "存款; 押金, 银行存款. She made a bank deposit of her paycheck. 她将薪水存入了银行存款。"
+      "explanation": "存款; 押金, 银行存款. She made a bank deposit of her paycheck. 她将薪水存入了银行存款。 | de->向下，posit->放置，deposit->放到下面=存款/押金（cf. compose作品，impose强加，expose暴露，depose废黜）"
     },
     {
       "question": "________ circuit",
       "type": "blank",
       "answer": "electric",
-      "explanation": "电路; 巡回, 电路. The electric circuit powers all the lights. 电路为所有灯供电。"
+      "explanation": "电路; 巡回, 电路. The electric circuit powers all the lights. 电路为所有灯供电。 | circui->绕圈（拉丁circuire），circuit->绕一圈=电路/巡回（cf. circle圆，circulate循环，circumference周长）"
     },
     {
       "question": "_____ conduit",
       "type": "blank",
       "answer": "water",
-      "explanation": "管道; 导管, 水管. The water conduit supplies the entire neighborhood. 水管供应整个社区。"
+      "explanation": "管道; 导管, 水管. The water conduit supplies the entire neighborhood. 水管供应整个社区。 | con->共同，duit->引导（拉丁ducere），conduit->引导流体的管道（cf. conduct传导，duct管道，aqueduct渡槽）"
     },
     {
       "question": "bruit _____",
       "type": "blank",
       "answer": "about",
-      "explanation": "传播; 散布, 四处传播. Don't bruit about confidential information. 不要四处传播机密信息。"
+      "explanation": "传播; 散布, 四处传播. Do not bruit about confidential information. 不要四处传播机密信息。 | bruit->噪音/传闻（法语bruit->声音），bruit about->到处散布传闻（cf. brute野兽，bruise淤伤，bruit=rumor传播）"
     },
     {
       "question": "recruit ___ _______",
       "type": "blank",
       "answer": "new members",
-      "explanation": "招募; 新兵, 招募新成员. The club aims to recruit new members this year. 俱乐部今年旨在招募新成员。"
+      "explanation": "招募; 新兵, 招募新成员. The club aims to recruit new members this year. 俱乐部今年旨在招募新成员。 | re->再，cruit->生长（拉丁crescere），recruit->重新补充生长=招募（cf. crescent月牙，accrue积累，increase增加）"
     },
     {
       "question": "_____ affidavit",
       "type": "blank",
       "answer": "sworn",
-      "explanation": "宣誓书, 宣誓的宣誓书. He signed a sworn affidavit before the notary. 他在公证人面前签署了宣誓书。"
+      "explanation": "宣誓书, 宣誓的宣誓书. He signed a sworn affidavit before the notary. 他在公证人面前签署了宣誓书。 | affidavit->他发誓了（拉丁，affidar->信任），affidavit->宣誓陈述书（cf. fidelity忠诚，fiancé未婚夫，confide信任）"
     },
     {
       "question": "_____ wit",
       "type": "blank",
       "answer": "sharp",
-      "explanation": "机智; 才智, 敏锐的机智. Her sharp wit made her a popular speaker. 她敏锐的机智使她成为受欢迎的演讲者。"
+      "explanation": "机智; 才智, 敏锐的机智. Her sharp wit made her a popular speaker. 她敏锐的机智使她成为受欢迎的演讲者。 | wit->知道（古英语witan），wit->机智/才智（cf. witness目击者=知道的人，witty机智的，witticism妙语）"
     },
     {
       "question": "exalt ______",
       "type": "blank",
       "answer": "virtue",
-      "explanation": "赞扬; 提升, 赞扬美德. Religious texts often exalt virtue and righteousness. 宗教文本经常赞扬美德和正义。"
+      "explanation": "赞扬; 提升, 赞扬美德. Religious texts often exalt virtue and righteousness. 宗教文本经常赞扬美德和正义。 | ex->向上，alt->高（拉丁altus），exalt->举到高处=赞扬/提升（cf. altitude高度，exaltation兴奋，exalted崇高）"
     },
     {
       "question": "tilt __ _________",
       "type": "blank",
       "answer": "at windmills",
-      "explanation": "倾斜; 攻击, 攻击风车(徒劳的战斗). Don't tilt at windmills like Don Quixote. 不要像堂吉诃德那样攻击风车。"
+      "explanation": "倾斜; 攻击, 攻击风车(徒劳的战斗). Do not tilt at windmills like Don Quixote. 不要像堂吉诃德那样攻击风车。 | tilt->倾斜（古英语tealt），tilt at windmills->向风车冲刺=做徒劳的事（堂吉诃德把风车当巨人，cf. tilt倾斜）"
     },
     {
       "question": "_________ bolt",
       "type": "blank",
       "answer": "lightning",
-      "explanation": "螺栓; 闪电, 闪电. A lightning bolt struck the tree during the storm. 暴风雨期间,闪电击中了树。"
+      "explanation": "螺栓; 闪电, 闪电. A lightning bolt struck the tree during the storm. 暴风雨期间,闪电击中了树。 | bolt->快速飞出（古英语bolt->箭），bolt->螺栓/闪电/逃跑（cf. bolt from the blue晴天霹雳，deadbolt死锁）"
     },
     {
       "question": "revolt _______",
       "type": "blank",
       "answer": "against",
-      "explanation": "反叛; 起义, 反抗. Citizens began to revolt against the oppressive regime. 公民开始反抗压迫性政权。"
+      "explanation": "反叛; 起义, 反抗. Citizens began to revolt against the oppressive regime. 公民开始反抗压迫性政权。 | re->回，volt->转（拉丁volvere），revolt->转过身来=反叛（cf. revolve旋转，revolution革命，convoluted复杂）"
     },
     {
       "question": "fault ____",
       "type": "blank",
       "answer": "line",
-      "explanation": "断层; 过错, 断层线. The earthquake occurred along a major fault line. 地震发生在主要断层线上。"
+      "explanation": "断层; 过错, 断层线. The earthquake occurred along a major fault line. 地震发生在主要断层线上。 | fault->缺陷（拉丁fallere->失败），fault->过错/断层（cf. default默认/违约，default=de+fault，faulty有缺陷的）"
     },
     {
       "question": "____ vault",
       "type": "blank",
       "answer": "bank",
-      "explanation": "金库; 跳跃, 银行金库. Valuables are stored in the bank vault. 贵重物品存放在银行金库中。"
+      "explanation": "金库; 跳跃, 银行金库. Valuables are stored in the bank vault. 贵重物品存放在银行金库中。 | vault->拱形（拉丁volvere->卷），vault->拱形屋顶/金库/跳跃（cf. vault过跳，pole vault撑杆跳，the vault of heaven天穹）"
     },
     {
       "question": "occult ________",
       "type": "blank",
       "answer": "practice",
-      "explanation": "神秘的; 玄学的, 神秘实践. Some people study occult practice and mysticism. 有些人研究神秘实践和神秘主义。"
+      "explanation": "神秘的; 玄学的, 神秘实践. Some people study occult practice and mysticism. 有些人研究神秘实践和神秘主义。 | oc->覆盖，cult->隐藏（拉丁celare），occult->被隐藏的=神秘的（cf. conceal隐藏，ceiling天花板，occultation掩星）"
     },
     {
       "question": "______ catapult",
       "type": "blank",
       "answer": "launch",
-      "explanation": "弹射器; 猛然推进, 发射弹射器. Ancient armies would launch catapult projectiles. 古代军队会发射弹射器抛射物。"
+      "explanation": "弹射器; 猛然推进, 发射弹射器. Ancient armies would launch catapult projectiles. 古代军队会发射弹射器抛射物。 | kata->向下，pult->抛（希腊pallein），catapult->向下抛射=弹射器（cf. impel推动，propel推进，repel击退）"
     },
     {
       "question": "exult __ _______",
       "type": "blank",
       "answer": "in victory",
-      "explanation": "欢欣鼓舞; 狂喜, 为胜利欢欣鼓舞. The team will exult in victory after the championship. 球队将在赢得冠军后为胜利欢欣鼓舞。"
+      "explanation": "欢欣鼓舞; 狂喜, 为胜利欢欣鼓舞. The team will exult in victory after the championship. 球队将在赢得冠军后为胜利欢欣鼓舞。 | ex->向外，ult->跳跃（拉丁salire），exult->向外跳跃=欢欣鼓舞（cf. result结果，insult侮辱，exultation狂喜）"
     },
     {
       "question": "_____ cant",
       "type": "blank",
       "answer": "pious",
-      "explanation": "伪善的话; 行话, 虚伪的伪善话. His pious cant fooled no one. 他虚伪的伪善话骗不了任何人。"
+      "explanation": "伪善的话; 行话, 虚伪的伪善话. His pious cant fooled no one. 他虚伪的伪善话骗不了任何人。 | cant->歌唱/吟诵（拉丁cantare），cant->宗教式的吟诵=虚伪的说教（cf. chant吟唱，enchant迷住，incantation咒语）"
     },
     {
       "question": "decant ___ ____",
       "type": "blank",
       "answer": "the wine",
-      "explanation": "倒酒; 倾析, 倒酒. Let the wine breathe, then decant the wine carefully. 让酒透气,然后小心地倒酒。"
+      "explanation": "倒酒; 倾析, 倒酒. Let the wine breathe, then decant the wine carefully. 让酒透气,然后小心地倒酒。 | de->向下，cant->倾斜/罐（拉丁canthus->罐沿），decant->倾斜倒出=倒酒/倾析（cf. can罐，decanter酒壶）"
     },
     {
       "question": "recant _________",
       "type": "blank",
       "answer": "testimony",
-      "explanation": "撤回; 放弃, 撤回证词. The witness refused to recant testimony under pressure. 证人拒绝在压力下撤回证词。"
+      "explanation": "撤回; 放弃, 撤回证词. The witness refused to recant testimony under pressure. 证人拒绝在压力下撤回证词。 | re->回，cant->唱/说，recant->收回所说的话=撤回声明（cf. cant伪善话，chant吟唱，enchant迷住）"
     },
     {
       "question": "_______ mendicant",
       "type": "blank",
       "answer": "begging",
-      "explanation": "乞丐; 托钵僧, 乞讨的乞丐. The begging mendicant asked for alms on the street. 乞讨的乞丐在街上乞求施舍。"
+      "explanation": "乞丐; 托钵僧, 乞讨的乞丐. The begging mendicant asked for alms on the street. 乞讨的乞丐在街上乞求施舍。 | mendic->乞讨（拉丁mendicus），mendicant->以乞讨为生的人=乞丐/托钵僧（cf. mendicancy乞讨，beg乞求）"
     },
     {
       "question": "_____________ significant",
       "type": "blank",
       "answer": "statistically",
-      "explanation": "重要的; 显著的, 统计上显著的. The results were statistically significant at the 0.05 level. 结果在0.05水平上具有统计显著性。"
+      "explanation": "重要的; 显著的, 统计上显著的. The results were statistically significant at the 0.05 level. 结果在0.05水平上具有统计显著性。 | sign->标记，fic->制造，significant->制造出标记/含义=显著的（cf. sign标志，signal信号，signify意味）"
     },
     {
       "question": "___ applicant",
       "type": "blank",
       "answer": "job",
-      "explanation": "申请人, 求职者. The job applicant submitted an impressive resume. 求职者提交了一份令人印象深刻的简历。"
+      "explanation": "申请人, 求职者. The job applicant submitted an impressive resume. 求职者提交了一份令人印象深刻的简历。 | apply->申请，cant->做的人（拉丁），applicant->申请的人（cf. apply申请，application申请，applicable适用的）"
     },
     {
       "question": "______ supplicant",
       "type": "blank",
       "answer": "humble",
-      "explanation": "恳求者; 哀求者, 谦卑的恳求者. The humble supplicant begged for mercy. 谦卑的恳求者乞求怜悯。"
+      "explanation": "恳求者; 哀求者, 谦卑的恳求者. The humble supplicant begged for mercy. 谦卑的恳求者乞求怜悯。 | sup->向下，plic->折叠/弯曲（拉丁），supplicant->弯下膝盖的人=恳求者（cf. suppliant同义，supplicate跪求，supplant取代）"
     },
     {
       "question": "______ lubricant",
       "type": "blank",
       "answer": "engine",
-      "explanation": "润滑剂, 发动机润滑剂. Regular engine lubricant changes extend vehicle life. 定期更换发动机润滑剂可延长车辆寿命。"
+      "explanation": "润滑剂, 发动机润滑剂. Regular engine lubricant changes extend vehicle life. 定期更换发动机润滑剂可延长车辆寿命。 | lubric->滑（拉丁lubricus），lubricant->使滑动的物质=润滑剂（cf. lubricate润滑，lubricious好色的=滑腻的）"
     },
     {
       "question": "scant ________",
       "type": "blank",
       "answer": "evidence",
-      "explanation": "不足的; 缺乏的, 缺乏的证据. There was scant evidence to support the claim. 几乎没有证据支持这一说法。"
+      "explanation": "不足的; 缺乏的, 缺乏的证据. There was scant evidence to support the claim. 几乎没有证据支持这一说法。 | scant->短缺（古挪威skamt->短），scant->不足的/吝啬（cf. scanty短缺的，skimp吝啬，scarcely几乎不）"
     },
     {
       "question": "__________ pedant",
       "type": "blank",
       "answer": "nitpicking",
-      "explanation": "学究; 书呆子, 吹毛求疵的学究. The nitpicking pedant corrected every minor error. 吹毛求疵的学究纠正每个小错误。"
+      "explanation": "学究; 书呆子, 吹毛求疵的学究. The nitpicking pedant corrected every minor error. 吹毛求疵的学究纠正每个小错误。 | pedant->教师（意大利pedagogo->教导），pedant->过分拘泥于书本的老师=学究（cf. pedagogy教学法，pedantic学究的）"
     },
     {
       "question": "_______ confidant",
       "type": "blank",
       "answer": "trusted",
-      "explanation": "密友; 知己, 值得信赖的密友. She shared her secrets with her trusted confidant. 她与她值得信赖的密友分享秘密。"
+      "explanation": "密友; 知己, 值得信赖的密友. She shared her secrets with her trusted confidant. 她与她值得信赖的密友分享秘密。 | con->共同，fid->信任（拉丁fides），confidant->可以共同信任的人=知己（cf. confident自信的，confide信赖，fidelity忠诚）"
     },
     {
       "question": "______ descendant",
       "type": "blank",
       "answer": "direct",
-      "explanation": "后裔; 后代, 直系后代. He is a direct descendant of the founder. 他是创始人的直系后代。"
+      "explanation": "后裔; 后代, 直系后代. He is a direct descendant of the founder. 他是创始人的直系后代。 | de->向下，scend->爬（拉丁scandere），descendant->向下爬的后代（cf. ascend上升，transcend超越，condescend屈尊）"
     },
     {
       "question": "________ defendant",
       "type": "blank",
       "answer": "criminal",
-      "explanation": "被告, 刑事被告. The criminal defendant pleaded not guilty. 刑事被告表示不认罪。"
+      "explanation": "被告, 刑事被告. The criminal defendant pleaded not guilty. 刑事被告表示不认罪。 | de->加强，fend->防御（拉丁defendere），defendant->防御自己的人=被告（cf. defend防御，offense进攻，fend off抵挡）"
     },
     {
       "question": "abundant ______",
       "type": "blank",
       "answer": "supply",
-      "explanation": "丰富的; 充裕的, 充足的供应. The region has an abundant supply of fresh water. 该地区有充足的淡水供应。"
+      "explanation": "丰富的; 充裕的, 充足的供应. The region has an abundant supply of fresh water. 该地区有充足的淡水供应。 | ab->离开/充满，und->水（拉丁unda->波浪），abundant->水浪涌出的=充裕的（cf. undulate波动，inundate淹没，redundant多余）"
     },
     {
       "question": "verdant _____",
       "type": "blank",
       "answer": "field",
-      "explanation": "翠绿的; 青翠的, 翠绿的田野. Spring rains create verdant field landscapes. 春雨造就了翠绿的田野景观。"
+      "explanation": "翠绿的; 青翠的, 翠绿的田野. Spring rains create verdant field landscapes. 春雨造就了翠绿的田野景观。 | verd->绿（拉丁viridis），verdant->绿意盎然的（cf. verdigris铜绿，verdure青翠，cf. verde西班牙语/意大利语的绿）"
     },
     {
       "question": "mordant ___",
       "type": "blank",
       "answer": "wit",
-      "explanation": "尖刻的; 讽刺的, 尖刻的机智. His mordant wit could be quite cutting. 他尖刻的机智可能相当刺耳。"
+      "explanation": "尖刻的; 讽刺的, 尖刻的机智. His mordant wit could be quite cutting. 他尖刻的机智可能相当刺耳。 | mord->咬（拉丁mordere），mordant->像咬人一样尖刻的（cf. mordacious尖刻，remorse悔恨=再次咬，morsels碎片=咬一口）"
     },
     {
       "question": "______ pageant",
       "type": "blank",
       "answer": "beauty",
-      "explanation": "选美; 盛典, 选美比赛. She competed in the beauty pageant last summer. 她去年夏天参加了选美比赛。"
+      "explanation": "选美; 盛典, 选美比赛. She competed in the beauty pageant last summer. 她去年夏天参加了选美比赛。 | pageant->活动舞台（中世纪拉丁pagina->舞台），pageant->盛大的展示/选美（cf. page页面，pageantry盛典，display展示）"
     },
     {
       "question": "_____ litigant",
       "type": "blank",
       "answer": "civil",
-      "explanation": "诉讼当事人, 民事诉讼当事人. The civil litigant filed a lawsuit for damages. 民事诉讼当事人提起损害赔偿诉讼。"
+      "explanation": "诉讼当事人, 民事诉讼当事人. The civil litigant filed a lawsuit for damages. 民事诉讼当事人提起损害赔偿诉讼。 | litig->争论（拉丁lis->诉讼），litigant->参与诉讼的人（cf. litigate诉讼，litigation诉讼，litigious好打官司的）"
     },
     {
       "question": "enchant ___ _____",
       "type": "blank",
       "answer": "the crowd",
-      "explanation": "使着迷; 施魔法, 使人群着迷. The magician's tricks will enchant the crowd. 魔术师的戏法将使人群着迷。"
+      "explanation": "使着迷; 施魔法, 使人群着迷. The magicians tricks will enchant the crowd. 魔术师的戏法将使人群着迷。 | en->使，chant->歌唱（拉丁cantare），enchant->对着施魔法歌唱=迷住（cf. chant吟唱，disenchant使幻灭，incantation咒语）"
     },
     {
       "question": "penchant ___ ____",
       "type": "blank",
       "answer": "for jazz",
-      "explanation": "嗜好; 倾向, 对爵士乐的嗜好. He has a penchant for jazz music. 他对爵士乐有嗜好。"
+      "explanation": "嗜好; 倾向, 对爵士乐的嗜好. He has a penchant for jazz music. 他对爵士乐有嗜好。 | penchant->倾斜（法语pencher->倾斜），penchant->心倾向于某物=嗜好（cf. pendant悬挂，pendulum钟摆，depend依赖）"
     },
     {
       "question": "trenchant ________",
       "type": "blank",
       "answer": "critique",
-      "explanation": "尖锐的; 鲜明的, 尖锐的批评. The reviewer wrote a trenchant critique of the film. 评论家对这部电影写了尖锐的批评。"
+      "explanation": "尖锐的; 鲜明的, 尖锐的批评. The reviewer wrote a trenchant critique of the film. 评论家对这部电影写了尖锐的批评。 | trench->切/挖（法语trancher->切），trenchant->像利刃切割的=尖锐的（cf. trench战壕，entrench巩固，retrench削减）"
     },
     {
       "question": "disenchant ___ ______",
       "type": "blank",
       "answer": "the public",
-      "explanation": "使幻想破灭, 使公众幻想破灭. The scandal will disenchant the public with politics. 这起丑闻将使公众对政治幻想破灭。"
+      "explanation": "使幻想破灭, 使公众幻想破灭. The scandal will disenchant the public with politics. 这起丑闻将使公众对政治幻想破灭。 | dis->去除，enchant->迷住，disenchant->去除魔法=使幻灭（cf. enchant迷住，disenchantment幻灭，disillusioned幻灭的）"
     },
     {
       "question": "__________ sycophant",
       "type": "blank",
       "answer": "obsequious",
-      "explanation": "马屁精; 谄媚者, 谄媚的马屁精. The obsequious sycophant flattered the boss constantly. 谄媚的马屁精不断奉承老板。"
+      "explanation": "马屁精; 谄媚者, 谄媚的马屁精. The obsequious sycophant flattered the boss constantly. 谄媚的马屁精不断奉承老板。 | syco->无花果，phant->显示（希腊），sycophant->原指告发无花果走私者=告密/拍马屁（cf. phantom幽灵，phenomenon现象）"
     },
     {
       "question": "insouciant _____",
       "type": "blank",
       "answer": "smile",
-      "explanation": "漫不经心的; 无忧无虑的, 漫不经心的微笑. She wore an insouciant smile despite the troubles. 尽管有麻烦,她脸上还是带着漫不经心的微笑。"
+      "explanation": "漫不经心的; 无忧无虑的, 漫不经心的微笑. She wore an insouciant smile despite the troubles. 尽管有麻烦,她脸上还是带着漫不经心的微笑。 | in->否定，souciant->担忧（法语soucier->担心），insouciant->不担心的=漫不经心（cf. solicitous关心备至，nonchalant冷淡）"
     },
     {
       "question": "valiant ______",
       "type": "blank",
       "answer": "effort",
-      "explanation": "英勇的; 勇敢的, 英勇的努力. They made a valiant effort to save the company. 他们做出了拯救公司的英勇努力。"
+      "explanation": "英勇的; 勇敢的, 英勇的努力. They made a valiant effort to save the company. 他们做出了拯救公司的英勇努力。 | val->强壮/价值（拉丁valere），valiant->有价值的勇气=英勇的（cf. valor英勇，valid有效，value价值，valorous英勇的）"
     },
     {
       "question": "____ defoliant",
       "type": "blank",
       "answer": "leaf",
-      "explanation": "落叶剂, 落叶剂. Agent Orange was a powerful leaf defoliant used in war. 橙剂是战争中使用的强力落叶剂。"
+      "explanation": "落叶剂, 落叶剂. Agent Orange was a powerful leaf defoliant used in war. 橙剂是战争中使用的强力落叶剂。 | de->去除，foli->叶（拉丁folium），ant->使...的物质，defoliant->使树叶脱落的药剂（cf. foliage叶子，portfolio文件夹）"
     },
     {
       "question": "pliant ________",
       "type": "blank",
       "answer": "material",
-      "explanation": "柔软的; 易弯曲的, 柔韧的材料. Leather becomes pliant material when properly treated. 皮革经过适当处理后会变成柔韧的材料。"
+      "explanation": "柔软的; 易弯曲的, 柔韧的材料. Leather becomes pliant material when properly treated. 皮革经过适当处理后会变成柔韧的材料。 | pli->折叠（法语plier->折），pliant->可以折叠弯曲的（cf. comply遵从，supply供应，implicate牵连，pliable柔韧）"
     },
     {
       "question": "compliant ________",
       "type": "blank",
       "answer": "behavior",
-      "explanation": "顺从的; 服从的, 顺从的行为. The regulations require compliant behavior from all staff. 法规要求所有员工有顺从的行为。"
+      "explanation": "顺从的; 服从的, 顺从的行为. The regulations require compliant behavior from all staff. 法规要求所有员工有顺从的行为。 | com->共同，pli->折叠，compliant->弯曲以配合=顺从的（cf. comply遵从，compliance服从，pliable柔韧）"
     },
     {
       "question": "________ suppliant",
       "type": "blank",
       "answer": "kneeling",
-      "explanation": "恳求的; 哀求者, 跪着的恳求者. The kneeling suppliant begged for forgiveness. 跪着的恳求者乞求宽恕。"
+      "explanation": "恳求的; 哀求者, 跪着的恳求者. The kneeling suppliant begged for forgiveness. 跪着的恳求者乞求宽恕。 | sup->向下，pli->弯曲，suppliant->向下弯曲跪求的人=恳求者（cf. supplicant同义，supplicate跪求，supplant取代）"
     },
     {
       "question": "luxuriant ______",
       "type": "blank",
       "answer": "growth",
-      "explanation": "茂盛的; 丰富的, 茂盛的生长. The tropical rainforest shows luxuriant growth. 热带雨林显示出茂盛的生长。"
+      "explanation": "茂盛的; 丰富的, 茂盛的生长. The tropical rainforest shows luxuriant growth. 热带雨林显示出茂盛的生长。 | luxuri->奢侈/丰盛（拉丁luxus），luxuriant->丰盛茂盛的（注意luxuriant=茂盛，luxurious=奢华，cf. luxury奢侈）"
     },
     {
       "question": "deviant ________",
       "type": "blank",
       "answer": "behavior",
-      "explanation": "偏离的; 异常的, 偏离的行为. Psychologists study deviant behavior patterns. 心理学家研究偏离的行为模式。"
+      "explanation": "偏离的; 异常的, 偏离的行为. Psychologists study deviant behavior patterns. 心理学家研究偏离的行为模式。 | de->离开，vi->路（拉丁via），deviant->偏离道路的=异常的（cf. deviate偏离，obvious明显，devious迂回）"
     },
     {
       "question": "nonchalant ________",
       "type": "blank",
       "answer": "attitude",
-      "explanation": "冷淡的; 漠不关心的, 冷淡的态度. His nonchalant attitude masked deep concerns. 他冷淡的态度掩盖了深深的担忧。"
+      "explanation": "冷淡的; 漠不关心的, 冷淡的态度. His nonchalant attitude masked deep concerns. 他冷淡的态度掩盖了深深的担忧。 | non->否定，chalant->热（法语chaloir->在乎），nonchalant->不在乎的=漠不关心（cf. insouciant无忧无虑，cool冷静）"
     },
     {
       "question": "sibilant ____",
       "type": "blank",
       "answer": "hiss",
-      "explanation": "咝咝作响的, 咝咝的嘶嘶声. The snake made a sibilant hiss as a warning. 蛇发出咝咝的嘶嘶声作为警告。"
+      "explanation": "咝咝作响的, 咝咝的嘶嘶声. The snake made a sibilant hiss as a warning. 蛇发出咝咝的嘶嘶声作为警告。 | sibilant->发出咝咝声（拉丁sibilare->嘶嘶），sibilant->咝咝的（cf. hiss嘶嘶声，whisper低语，sibilant sounds如s/sh/z音）"
     },
     {
       "question": "jubilant _____",
       "type": "blank",
       "answer": "crowd",
-      "explanation": "欢欣鼓舞的, 欢欣鼓舞的人群. The jubilant crowd celebrated the team's victory. 欢欣鼓舞的人群庆祝球队的胜利。"
+      "explanation": "欢欣鼓舞的, 欢欣鼓舞的人群. The jubilant crowd celebrated the teams victory. 欢欣鼓舞的人群庆祝球队的胜利。 | jubil->欢呼（希伯来语yobel->羊角号），jubilant->欢腾的（cf. jubilee周年庆典=50年吹号庆祝，jubilation欢腾）"
     },
     {
       "question": "vigilant _____",
       "type": "blank",
       "answer": "watch",
-      "explanation": "警惕的; 警觉的, 警惕的监视. Security maintains a vigilant watch over the premises. 保安对场所保持警惕的监视。"
+      "explanation": "警惕的; 警觉的, 警惕的监视. Security maintains a vigilant watch over the premises. 保安对场所保持警惕的监视。 | vigil->守夜（拉丁vigil->醒着），vigilant->保持清醒警惕的（cf. vigil守夜，vigor活力，vigilante私刑者）"
     },
     {
       "question": "implant ______",
       "type": "blank",
       "answer": "device",
-      "explanation": "植入; 灌输, 植入装置. The surgeon inserted an implant device in the patient. 外科医生在患者体内插入了植入装置。"
+      "explanation": "植入; 灌输, 植入装置. The surgeon inserted an implant device in the patient. 外科医生在患者体内插入了植入装置。 | im->进入，plant->种植，implant->植入/灌输（cf. transplant移植，supplant取代，plant种植）"
     },
     {
       "question": "supplant _ ______",
       "type": "blank",
       "answer": "a leader",
-      "explanation": "取代; 代替, 取代领导者. The coup attempt sought to supplant a leader. 政变企图试图取代领导者。"
+      "explanation": "取代; 代替, 取代领导者. The coup attempt sought to supplant a leader. 政变企图试图取代领导者。 | sub->从下，plant->脚（拉丁planta），supplant->从脚下绊倒取代=取代（cf. plant种植，implant植入，transplant移植）"
     },
     {
       "question": "_____ coagulant",
       "type": "blank",
       "answer": "blood",
-      "explanation": "凝结剂, 血液凝固剂. The blood coagulant helps stop excessive bleeding. 血液凝固剂有助于止血。"
+      "explanation": "凝结剂, 血液凝固剂. The blood coagulant helps stop excessive bleeding. 血液凝固剂有助于止血。 | coagul->凝固（拉丁coagulare），coagulant->使凝固的物质（cf. coagulate凝固，blood clot血凝块，coagulation凝血）"
     },
     {
       "question": "petulant _____",
       "type": "blank",
       "answer": "child",
-      "explanation": "任性的; 脾气坏的, 任性的孩子. The petulant child threw a tantrum in the store. 任性的孩子在商店里发脾气。"
+      "explanation": "任性的; 脾气坏的, 任性的孩子. The petulant child threw a tantrum in the store. 任性的孩子在商店里发脾气。 | petul->攻击/索求（拉丁petere），petulant->任性地攻击要求的（cf. impetuous冲动，petition请求，compete竞争）"
     },
     {
       "question": "dormant _______",
       "type": "blank",
       "answer": "volcano",
-      "explanation": "休眠的; 静止的, 休眠的火山. Scientists monitor the dormant volcano for activity. 科学家监测休眠火山的活动。"
+      "explanation": "休眠的; 静止的, 休眠的火山. Scientists monitor the dormant volcano for activity. 科学家监测休眠火山的活动。 | dorm->睡眠（拉丁dormire），dormant->沉睡的=休眠的（cf. dormitory宿舍，dormouse睡鼠，dormition安眠）"
     },
     {
       "question": "_________ tenant",
       "type": "blank",
       "answer": "apartment",
-      "explanation": "房客; 承租人, 公寓租户. The apartment tenant pays rent on the first of each month. 公寓租户每月一号支付租金。"
+      "explanation": "房客; 承租人, 公寓租户. The apartment tenant pays rent on the first of each month. 公寓租户每月一号支付租金。 | ten->持有（拉丁tenere），tenant->持有土地的人=租户（cf. tenacious顽强，tenure任期，retain保留）"
     },
     {
       "question": "_______ covenant",
       "type": "blank",
       "answer": "binding",
-      "explanation": "契约; 盟约, 有约束力的契约. They signed a binding covenant to share resources. 他们签署了一项有约束力的资源共享契约。"
+      "explanation": "契约; 盟约, 有约束力的契约. They signed a binding covenant to share resources. 他们签署了一项有约束力的资源共享契约。 | con->共同，vent->来（拉丁venire），covenant->共同来到/约定（cf. convention惯例，convene召集，convent修道院）"
     },
     {
       "question": "stagnant ____",
       "type": "blank",
       "answer": "pool",
-      "explanation": "停滞的; 不流动的, 停滞的水池. Mosquitoes breed in stagnant pool water. 蚊子在停滞的水池中繁殖。"
+      "explanation": "停滞的; 不流动的, 停滞的水池. Mosquitoes breed in stagnant pool water. 蚊子在停滞的水池中繁殖。 | stagn->死水（拉丁stagnum->水池），stagnant->像死水一样停滞的（cf. stagnate停滞，stagnation停滞，stagnant economy萧条经济）"
     },
     {
       "question": "pregnant _____",
       "type": "blank",
       "answer": "pause",
-      "explanation": "怀孕的; 意味深长的, 意味深长的停顿. There was a pregnant pause before she answered. 她回答前有一个意味深长的停顿。"
+      "explanation": "怀孕的; 意味深长的, 意味深长的停顿. There was a pregnant pause before she answered. 她回答前有一个意味深长的停顿。 | preg->之前/充满，nat->出生，pregnant->充满/有孕的（cf. prenatal出生前，nation国家，pregnant pause意味深长）"
     },
     {
       "question": "malignant _____",
       "type": "blank",
       "answer": "tumor",
-      "explanation": "恶性的; 有害的, 恶性肿瘤. The biopsy revealed a malignant tumor. 活检显示有恶性肿瘤。"
+      "explanation": "恶性的; 有害的, 恶性肿瘤. The biopsy revealed a malignant tumor. 活检显示有恶性肿瘤。 | mal->坏，lign->出生/本性（拉丁），malignant->本性邪恶的=恶性的（cf. benign良性，malign中伤，malignancy恶性肿瘤）"
     },
     {
       "question": "poignant _____",
       "type": "blank",
       "answer": "scene",
-      "explanation": "辛酸的; 深刻的, 辛酸的场景. The movie's ending featured a poignant scene. 电影的结局有一个辛酸的场景。"
+      "explanation": "辛酸的; 深刻的, 辛酸的场景. The movies ending featured a poignant scene. 电影的结局有一个辛酸的场景。 | poign->刺（法语poindre，拉丁pungere），poignant->像刺一样触动心灵的=辛酸（cf. puncture刺穿，pungent刺鼻，poignancy辛酸）"
     },
     {
       "question": "repugnant ___",
       "type": "blank",
       "answer": "act",
-      "explanation": "令人厌恶的; 可憎的, 令人厌恶的行为. The crime was a repugnant act that shocked everyone. 这起犯罪是令人厌恶的行为,震惊了所有人。"
+      "explanation": "令人厌恶的; 可憎的, 令人厌恶的行为. The crime was a repugnant act that shocked everyone. 这起犯罪是令人厌恶的行为,震惊了所有人。 | re->对抗，pugn->拳（拉丁pugnus），repugnant->对抗排斥的=令人厌恶（cf. pugnacious好斗，impugn质疑，pugilist拳击手）"
     },
     {
       "question": "dominant ________",
       "type": "blank",
       "answer": "position",
-      "explanation": "占优势的; 支配的, 主导地位. The company holds a dominant position in the market. 该公司在市场上占据主导地位。"
+      "explanation": "占优势的; 支配的, 主导地位. The company holds a dominant position in the market. 该公司在市场上占据主导地位。 | domin->主人（拉丁dominus），dominant->像主人一样支配的（cf. domain领域，dominate支配，predominant占优势的）"
     },
     {
       "question": "predominant ______",
       "type": "blank",
       "answer": "factor",
-      "explanation": "主要的; 占优势的, 主要因素. Price was the predominant factor in their decision. 价格是他们决定的主要因素。"
+      "explanation": "主要的; 占优势的, 主要因素. Price was the predominant factor in their decision. 价格是他们决定的主要因素。 | pre->提前/更，dominant->支配的，predominant->更加支配的=主要的（cf. dominant支配，dominate支配，predominance优势）"
     },
     {
       "question": "___ determinant",
       "type": "blank",
       "answer": "key",
-      "explanation": "决定因素, 关键决定因素. Education is a key determinant of success. 教育是成功的关键决定因素。"
+      "explanation": "决定因素, 关键决定因素. Education is a key determinant of success. 教育是成功的关键决定因素。 | de->彻底，termin->边界/结束，determinant->决定边界的因素（cf. determine决定，terminal终端，exterminate消灭）"
     },
     {
       "question": "ruminant ______",
       "type": "blank",
       "answer": "animal",
-      "explanation": "反刍动物, 反刍动物. Cows are ruminant animal with multiple stomach chambers. 牛是有多个胃室的反刍动物。"
+      "explanation": "反刍动物, 反刍动物. Cows are ruminant animal with multiple stomach chambers. 牛是有多个胃室的反刍动物。 | rumin->喉咙/反刍（拉丁rumen->前胃），ruminant->反复咀嚼的动物（cf. ruminate沉思=反复咀嚼，ruminant vs. rumination深思）"
     },
     {
       "question": "____ pennant",
       "type": "blank",
       "answer": "team",
-      "explanation": "锦旗; 三角旗, 球队锦旗. The baseball team pennant hung in the stadium. 棒球队锦旗悬挂在体育场。"
+      "explanation": "锦旗; 三角旗, 球队锦旗. The baseball team pennant hung in the stadium. 棒球队锦旗悬挂在体育场。 | penn->羽毛/旗（拉丁penna->羽毛），pennant->像羽毛飘扬的小旗（cf. pen钢笔=羽毛笔，pennon旗帜，pinion翅膀）"
     },
     {
       "question": "resonant _____",
       "type": "blank",
       "answer": "voice",
-      "explanation": "共鸣的; 洪亮的, 洪亮的声音. His resonant voice filled the concert hall. 他洪亮的声音充满了音乐厅。"
+      "explanation": "共鸣的; 洪亮的, 洪亮的声音. His resonant voice filled the concert hall. 他洪亮的声音充满了音乐厅。 | re->回，son->声音，resonant->声音回响的=共鸣的（cf. sound声音，sonic声音的，resonate共鸣，sonorous洪亮）"
     },
     {
       "question": "consonant _______",
       "type": "blank",
       "answer": "cluster",
-      "explanation": "辅音; 一致的, 辅音群. English has many consonant cluster combinations. 英语有许多辅音群组合。"
+      "explanation": "辅音; 一致的, 辅音群. English has many consonant cluster combinations. 英语有许多辅音群组合。 | con->共同，son->声音，consonant->共同发声=辅音/一致的（cf. resonant共鸣，dissonant不和谐，assonance元音押韵）"
     },
     {
       "question": "dissonant _____",
       "type": "blank",
       "answer": "chord",
-      "explanation": "不和谐的; 刺耳的, 不和谐的和弦. The composer used a dissonant chord for tension. 作曲家使用不和谐的和弦来制造紧张感。"
+      "explanation": "不和谐的; 刺耳的, 不和谐的和弦. The composer used a dissonant chord for tension. 作曲家使用不和谐的和弦来制造紧张感。 | dis->分开，son->声音，dissonant->声音分离不和谐的（cf. consonant辅音/一致，resonant共鸣，dissonance不和谐）"
     },
     {
       "question": "rampant _____",
       "type": "blank",
       "answer": "crime",
-      "explanation": "猖獗的; 蔓延的, 猖獗的犯罪. Rampant crime plagued the neighborhood. 猖獗的犯罪困扰着这个社区。"
+      "explanation": "猖獗的; 蔓延的, 猖獗的犯罪. Rampant crime plagued the neighborhood. 猖獗的犯罪困扰着这个社区。 | ramp->爬升（古法语ramper->爬），rampant->像爬坡一样蔓延的=猖獗的（cf. ramp斜坡，rampage狂暴，rampart城墙）"
     },
     {
       "question": "flippant ______",
       "type": "blank",
       "answer": "remark",
-      "type": "blank",
-      "answer": "remark",
-      "explanation": "轻率的; 无礼的, 轻率的评论. His flippant remark offended the grieving family. 他轻率的评论冒犯了悲伤的家人。"
+      "explanation": "轻率的; 无礼的, 轻率的评论. His flippant remark offended the grieving family. 他轻率的评论冒犯了悲伤的家人。 | flip->轻弹（象声词），flippant->像轻弹一样轻率的（cf. flip轻弹，flip side反面，flippancy轻率，flipper鳍肢）"
     },
     {
       "question": "rant ______",
       "type": "blank",
       "answer": "speech",
-      "explanation": "咆哮; 激烈演说, 激烈演说. The politician delivered an angry rant speech. 这位政客发表了愤怒的激烈演说。"
+      "explanation": "咆哮; 激烈演说, 激烈演说. The politician delivered an angry rant speech. 这位政客发表了愤怒的激烈演说。 | rant->咆哮（荷兰语ranten->说胡话），rant->激烈咆哮（cf. rant and rave大发雷霆，ranting咆哮）"
     },
     {
       "question": "vibrant _________",
       "type": "blank",
       "answer": "community",
-      "explanation": "充满活力的; 鲜艳的, 充满活力的社区. The city has a vibrant community of artists. 这座城市有一个充满活力的艺术家社区。"
+      "explanation": "充满活力的; 鲜艳的, 充满活力的社区. The city has a vibrant community of artists. 这座城市有一个充满活力的艺术家社区。 | vibr->振动（拉丁vibrare），vibrant->充满振动活力的（cf. vibrate振动，vibration震动，vivid生动）"
     },
     {
       "question": "______ hydrant",
       "type": "blank",
       "answer": "street",
-      "explanation": "消防栓, 街道消防栓. Firefighters connected hoses to the street hydrant. 消防员将水管连接到街道消防栓。"
+      "explanation": "消防栓, 街道消防栓. Firefighters connected hoses to the street hydrant. 消防员将水管连接到街道消防栓。 | hydr->水（希腊hydor），ant->装置，hydrant->出水装置=消防栓（cf. hydraulic液压，hydrogen氢=产水元素，dehydrate脱水）"
     },
     {
       "question": "_ preponderant _____",
       "type": "blank",
       "answer": "a share",
-      "explanation": "占优势的; 主要的, 主要份额. He inherited a preponderant share of the estate. 他继承了遗产的主要份额。"
+      "explanation": "占优势的; 主要的, 主要份额. He inherited a preponderant share of the estate. 他继承了遗产的主要份额。 | pre->超过，ponder->重量（拉丁），preponderant->重量超过的=占优势的（cf. ponder思考，ponderous沉重，preponderance优势）"
     },
     {
       "question": "itinerant ______",
       "type": "blank",
       "answer": "worker",
-      "explanation": "巡回的; 流动的, 流动工人. The itinerant worker traveled from farm to farm. 流动工人从一个农场到另一个农场。"
+      "explanation": "巡回的; 流动的, 流动工人. The itinerant worker traveled from farm to farm. 流动工人从一个农场到另一个农场。 | iter->旅程（拉丁iter->旅程），itinerant->不断旅行的=流动的（cf. itinerary行程，reiterate重复=再走一遍，exit出口）"
     },
     {
       "question": "__________ grant",
       "type": "blank",
       "answer": "government",
-      "explanation": "授予; 拨款, 政府拨款. The research was funded by a government grant. 这项研究由政府拨款资助。"
+      "explanation": "授予; 拨款, 政府拨款. The research was funded by a government grant. 这项研究由政府拨款资助。 | grant->给予（古法语granter），grant->授予/拨款（cf. guarantee保证，warant授权，take for granted认为理所当然）"
     },
     {
       "question": "fragrant _______",
       "type": "blank",
       "answer": "blossom",
-      "explanation": "芳香的; 香的, 芳香的花朵. Spring brings fragrant blossom to the gardens. 春天给花园带来芳香的花朵。"
+      "explanation": "芳香的; 香的, 芳香的花朵. Spring brings fragrant blossom to the gardens. 春天给花园带来芳香的花朵。 | fragr->香气（拉丁fragrare->散发香气），fragrant->散发香气的（cf. flagrant明目张胆=像火焰一样显眼，同根不同义）"
     },
     {
       "question": "____________ aspirant",
       "type": "blank",
       "answer": "presidential",
-      "explanation": "有抱负者; 候选人, 总统候选人. The presidential aspirant announced his campaign. 总统候选人宣布了他的竞选活动。"
+      "explanation": "有抱负者; 候选人, 总统候选人. The presidential aspirant announced his campaign. 总统候选人宣布了他的竞选活动。 | aspir->呼吸/向往（拉丁aspirare），aspirant->向往某个目标的人（cf. aspire向往，aspiration抱负，inspire激励）"
     },
     {
       "question": "______ warrant",
       "type": "blank",
       "answer": "search",
-      "explanation": "授权; 搜查令, 搜查令. Police obtained a search warrant for the premises. 警方获得了对该场所的搜查令。"
+      "explanation": "授权; 搜查令, 搜查令. Police obtained a search warrant for the premises. 警方获得了对该场所的搜查令。 | warrant->保证（古法语warantir->保护），warrant->授权/搜查令（cf. guarantee保证，warranty保修，warranted有依据的）"
     },
     {
       "question": "aberrant ________",
       "type": "blank",
       "answer": "behavior",
-      "explanation": "异常的; 偏离的, 异常行为. The psychologist studied aberrant behavior patterns. 心理学家研究异常行为模式。"
+      "explanation": "异常的; 偏离的, 异常行为. The psychologist studied aberrant behavior patterns. 心理学家研究异常行为模式。 | ab->偏离，err->走/错，aberrant->偏离正途的=异常的（cf. err犯错，error错误，aberration偏差，errant漫游的）"
     },
     {
       "question": "recalcitrant _____",
       "type": "blank",
       "answer": "child",
-      "explanation": "顽固的; 不服从的, 顽固的孩子. The recalcitrant child refused all discipline. 顽固的孩子拒绝所有纪律。"
+      "explanation": "顽固的; 不服从的, 顽固的孩子. The recalcitrant child refused all discipline. 顽固的孩子拒绝所有纪律。 | re->回，calcitrant->踢（拉丁calcitrare->用脚后跟踢），recalcitrant->一直往后踢=顽固不服从（cf. calculus微积分，calcium钙=石头）"
     },
     {
       "question": "_____ tyrant",
       "type": "blank",
       "answer": "cruel",
-      "explanation": "暴君; 专制君主, 残酷的暴君. The cruel tyrant oppressed his people for decades. 残酷的暴君压迫他的人民数十年。"
+      "explanation": "暴君; 专制君主, 残酷的暴君. The cruel tyrant oppressed his people for decades. 残酷的暴君压迫他的人民数十年。 | tyrant->暴君（希腊tyrannos->君主），tyrant->专制暴君（cf. tyranny暴政，tyrannical专制的，cf. originally neutral then negative）"
     },
     {
       "question": "______ complaisant",
       "type": "blank",
       "answer": "overly",
-      "explanation": "殷勤的; 讨好的, 过分殷勤的. His overly complaisant manner seemed insincere. 他过分殷勤的态度似乎不真诚。"
+      "explanation": "殷勤的; 讨好的, 过分殷勤的. His overly complaisant manner seemed insincere. 他过分殷勤的态度似乎不真诚。 | com->共同，plais->取悦（法语，拉丁placere），complaisant->竭力取悦的=殷勤的（cf. complacent自满，complain抱怨，please取悦）"
     },
     {
       "question": "conversant ____",
       "type": "blank",
       "answer": "with",
-      "explanation": "熟悉的; 精通的, 熟悉. She is conversant with current technology trends. 她熟悉当前的技术趋势。"
+      "explanation": "熟悉的; 精通的, 熟悉. She is conversant with current technology trends. 她熟悉当前的技术趋势。 | convers->交谈（拉丁conversari），conversant->通过交谈熟悉的=精通（cf. converse交谈，conversation对话，convert转变）"
     },
     {
       "question": "incessant _____",
       "type": "blank",
       "answer": "noise",
-      "explanation": "不断的; 持续的, 不断的噪音. The incessant noise made it impossible to concentrate. 不断的噪音使人无法集中注意力。"
+      "explanation": "不断的; 持续的, 不断的噪音. The incessant noise made it impossible to concentrate. 不断的噪音使人无法集中注意力。 | in->否定，cess->停止（拉丁cessare），incessant->不停止的（cf. cease停止，recess休息，concession让步，incessantly不停地）"
     },
     {
       "question": "___ depressant",
       "type": "blank",
       "answer": "use",
-      "explanation": "抑制剂; 镇静剂, 使用镇静剂. Doctors may use depressant medications carefully. 医生可能会谨慎使用镇静剂药物。"
+      "explanation": "抑制剂; 镇静剂, 使用镇静剂. Doctors may use depressant medications carefully. 医生可能会谨慎使用镇静剂药物。 | de->向下，press->压，depressant->向下压制的物质=镇静剂（cf. depress使沮丧，suppress压制，stimulant兴奋剂=反义）"
     },
     {
       "question": "puissant _____",
       "type": "blank",
       "answer": "state",
-      "explanation": "强大的; 有力的, 强大的国家. The puissant state dominated regional politics. 强大的国家主导了区域政治。"
+      "explanation": "强大的; 有力的, 强大的国家. The puissant state dominated regional politics. 强大的国家主导了区域政治。 | puiss->力量（法语pouvoir->能够），puissant->强大有力的（cf. power力量，possible可能，puissance力量，impotent无力的）"
     },
     {
       "question": "blatant ___",
       "type": "blank",
       "answer": "lie",
-      "explanation": "明目张胆的; 公然的, 明目张胆的谎言. His testimony was a blatant lie. 他的证词是明目张胆的谎言。"
+      "explanation": "明目张胆的; 公然的, 明目张胆的谎言. His testimony was a blatant lie. 他的证词是明目张胆的谎言。 | blatant->来自Spenser《仙后》的怪兽Blatant Beast（叫声响亮），blatant->公然嚣张的（cf. bleat羊叫，flagrant公然的）"
     },
     {
       "question": "________ reactant",
       "type": "blank",
       "answer": "chemical",
-      "explanation": "反应物, 化学反应物. The chemical reactant was added to the solution. 化学反应物被加入溶液中。"
+      "explanation": "反应物, 化学反应物. The chemical reactant was added to the solution. 化学反应物被加入溶液中。 | re->回，act->行动，reactant->在反应中起作用的物质=反应物（cf. react反应，reaction反应，reagent试剂）"
     },
     {
       "question": "___ disinfectant",
       "type": "blank",
       "answer": "use",
-      "explanation": "消毒剂, 使用消毒剂. Always use disinfectant on contaminated surfaces. 始终在受污染的表面使用消毒剂。"
+      "explanation": "消毒剂, 使用消毒剂. Always use disinfectant on contaminated surfaces. 始终在受污染的表面使用消毒剂。 | dis->去除，infect->感染，ant->物质，disinfectant->去除感染的物质=消毒剂（cf. disinfect消毒，antiseptic防腐剂）"
     },
     {
       "question": "____ inhabitant",
       "type": "blank",
       "answer": "city",
-      "explanation": "居民, 城市居民. The city inhabitant enjoys urban amenities. 城市居民享受城市便利设施。"
+      "explanation": "居民, 城市居民. The city inhabitant enjoys urban amenities. 城市居民享受城市便利设施。 | in->在内，habit->居住（拉丁），ant->人，inhabitant->在里面居住的人=居民（cf. habitat栖息地，inhabit居住，habitual习惯的）"
     },
     {
       "question": "exorbitant _____",
       "type": "blank",
       "answer": "price",
-      "explanation": "过高的; 过分的, 过高的价格. The hotel charged an exorbitant price for the room. 酒店对房间收取了过高的价格。"
+      "explanation": "过高的; 过分的, 过高的价格. The hotel charged an exorbitant price for the room. 酒店对房间收取了过高的价格。 | ex->超出，orbit->轨道（拉丁orbita），exorbitant->超出轨道的=过分的（cf. orbit轨道，orbital轨道的，exorbitance过度）"
     }
   ]
 }
