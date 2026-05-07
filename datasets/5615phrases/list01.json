@@ -1,605 +1,612 @@
 {
-  "text": "",
+  "text": "utopia：ou（无）+ topos（地方），不存在的地方=乌托邦，托马斯·莫尔1516年创造，dystopia（反乌托邦）是其对应词
+cornucopia：cornu（角）+ copia（丰富），希腊神话中阿玛尔西亚的丰饶角，copy（拷贝）和 copious（丰富的）同根
+trivia：古罗马十字路口（tri+via=三条路）公告板上张贴的无关紧要信息，trivial（琐碎的）由此而来
+chimera：希腊神话中狮头羊身蛇尾怪兽，引申为不可能实现的幻想
+magenta：以1859年法国在意大利北部马真塔镇击败奥地利军队命名的品红色染料
+snob：18世纪剑桥俚语指非贵族出身的学生（shoe + nob），后演变为自视高人一等的人
+aplomb：法语"铅锤般垂直"（à plomb），像铅锤一样沉稳=沉着，plumber（水管工）同根
+larva：拉丁语"幽灵/面具"，因幼虫外形隐藏了成虫面貌而得名",
   "quiz": [
     {
       "question": "_____ replica",
       "type": "blank",
       "answer": "exact",
-      "explanation": "复制品，精确的复制品。The museum displayed an exact replica of the ancient artifact. 博物馆展出了古代文物的精确的复制品。"
+      "explanation": "复制品，精确的复制品。The museum displayed an exact replica of the ancient artifact. 博物馆展出了古代文物的精确的复制品。 | replic->折回（拉丁replicare->折叠回），replica->折回原样的复制品（cf. reply回复=折回，replicate复制，application申请）"
     },
     {
       "question": "_______ armada",
       "type": "blank",
       "answer": "Spanish",
-      "explanation": "舰队，西班牙舰队。The Spanish armada sailed against England in 1588. 西班牙舰队在1588年向英格兰进发。"
+      "explanation": "舰队，西班牙舰队。The Spanish armada sailed against England in 1588. 西班牙舰队在1588年向英格兰进发。 | armar->武装（西班牙语，拉丁armare），armada->武装的船队=舰队（cf. arm手臂/武装，armor盔甲，army军队）"
     },
     {
       "question": "_______ agenda",
       "type": "blank",
       "answer": "meeting",
-      "explanation": "议程，会议议程。The secretary prepared the meeting agenda for discussion. 秘书准备了讨论的会议议程。"
+      "explanation": "议程，会议议程。The secretary prepared the meeting agenda for discussion. 秘书准备了讨论的会议议程。 | agend->需要被做的事（拉丁agere->做），agenda->待办事项的清单（cf. act行动，agent代理人，agile敏捷，cf. agenda复数=多件事）"
     },
     {
       "question": "_____ coda",
       "type": "blank",
       "answer": "music",
-      "explanation": "尾声，音乐尾声。The symphony ended with a beautiful music coda. 交响乐以美妙的音乐尾声结束。"
+      "explanation": "尾声，音乐尾声。The symphony ended with a beautiful music coda. 交响乐以美妙的音乐尾声结束。 | coda->尾巴（意大利语，拉丁cauda），coda->音乐的收尾段（cf. codicil遗嘱附录，queue队列=尾巴，cauda尾巴）"
     },
     {
       "question": "_________ panacea",
       "type": "blank",
       "answer": "universal",
-      "explanation": "万能药，万能的万能药。There is no universal panacea for all of life's problems. 没有万能的万能药能解决生活中的所有问题。"
+      "explanation": "万能药，万能的万能药。There is no universal panacea for all of life's problems. 没有万能的万能药能解决生活中的所有问题。 | pan->全部（希腊），acea->治愈（希腊akos），panacea->治愈所有的=万能药（cf. pandemic全球流行，panorama全景，pantheism泛神论）"
     },
     {
       "question": "______ saga",
       "type": "blank",
       "answer": "family",
-      "explanation": "传奇故事，家族传奇故事。The novel told a long family saga spanning generations. 这部小说讲述了一个跨越几代人的漫长家族传奇故事。"
+      "explanation": "传奇故事，家族传奇故事。The novel told a long family saga spanning generations. 这部小说讲述了一个跨越几代人的漫长家族传奇故事。 | saga->故事（古挪威，sagas北欧英雄传说），saga->长篇历史传奇（cf. sage智者，say说，cf. Norse sagas冰岛传说）"
     },
     {
       "question": "________ apocrypha",
       "type": "blank",
       "answer": "biblical",
-      "explanation": "伪经，圣经伪经。Scholars debate the authenticity of biblical apocrypha. 学者们争论圣经伪经的真实性。"
+      "explanation": "伪经，圣经伪经。Scholars debate the authenticity of biblical apocrypha. 学者们争论圣经伪经的真实性。 | apo->离开，krypt->隐藏（希腊），apocrypha->隐藏起来的书=伪经（cf. crypt地下室，cryptic神秘，encryption加密）"
     },
     {
       "question": "______ phobia",
       "type": "blank",
       "answer": "social",
-      "explanation": "恐惧症，社交恐惧症。She struggled with social phobia in crowded places. 她在拥挤的地方与社交恐惧症作斗争。"
+      "explanation": "恐惧症，社交恐惧症。She struggled with social phobia in crowded places. 她在拥挤的地方与社交恐惧症作斗争。 | phob->恐惧（希腊phobos），phobia->非理性的强烈恐惧（cf. claustrophobia幽闭恐惧，acrophobia恐高，xenophobia仇外）"
     },
     {
       "question": "____ acrophobia",
       "type": "blank",
       "answer": "have",
-      "explanation": "恐高症，患有恐高症。People who have acrophobia fear heights intensely. 患有恐高症的人非常害怕高度。"
+      "explanation": "恐高症，患有恐高症。People who have acrophobia fear heights intensely. 患有恐高症的人非常害怕高度。 | acro->顶端（希腊akros），phobia->恐惧，acrophobia->对高处的恐惧（cf. acrobat杂技=高处走，acropolis雅典卫城，acronym首字母词）"
     },
     {
       "question": "fascia _____",
       "type": "blank",
       "answer": "board",
-      "explanation": "筋膜板，筋膜板。The carpenter installed the fascia board under the roof edge. 木匠在屋顶边缘下安装了筋膜板。"
+      "explanation": "筋膜板，筋膜板。The carpenter installed the fascia board under the roof edge. 木匠在屋顶边缘下安装了筋膜板。 | fascia->束/带（拉丁，fasces->捆束），fascia->成束的结缔组织/带状板（cf. fascism法西斯=束棒符号，fascinate迷住=束缚）"
     },
     {
       "question": "______ encyclopedia",
       "type": "blank",
       "answer": "pocket",
-      "explanation": "百科全书，袖珍百科全书。She carried a pocket encyclopedia for quick reference. 她随身携带袖珍百科全书以便快速查阅。"
+      "explanation": "百科全书，袖珍百科全书。She carried a pocket encyclopedia for quick reference. 她随身携带袖珍百科全书以便快速查阅。 | enkyklios->圆形/普遍（希腊），paideia->教育，encyclopedia->圆形教育=百科全书（cf. cycle循环，pedagogy教育学，pedant学究）"
     },
     {
       "question": "_____ nostalgia",
       "type": "blank",
       "answer": "sweet",
-      "explanation": "怀旧，甜蜜的怀旧。He felt sweet nostalgia when visiting his childhood home. 他访问童年住所时感到甜蜜的怀旧。"
+      "explanation": "怀旧，甜蜜的怀旧。He felt sweet nostalgia when visiting his childhood home. 他访问童年住所时感到甜蜜的怀旧。 | nostos->归家（希腊），algia->痛（希腊），nostalgia->想回家的痛=怀旧（cf. algae海藻，nostalgia最初指士兵想家的病症）"
     },
     {
       "question": "hemophilia _______",
       "type": "blank",
       "answer": "carrier",
-      "explanation": "血友病，血友病携带者。She was a hemophilia carrier but showed no symptoms. 她是血友病携带者，但没有表现出症状。"
+      "explanation": "血友病，血友病携带者。She was a hemophilia carrier but showed no symptoms. 她是血友病携带者，但没有表现出症状。 | hemo->血（希腊haima），philia->喜爱/倾向，hemophilia->血液倾向流不止=血友病（cf. hemoglobin血红蛋白，hemostasis止血）"
     },
     {
       "question": "____-__________ anemia",
       "type": "blank",
       "answer": "iron-deficiency",
-      "explanation": "贫血，缺铁性贫血。The doctor diagnosed iron-deficiency anemia and prescribed supplements. 医生诊断为缺铁性贫血并开了补充剂。"
+      "explanation": "贫血，缺铁性贫血。The doctor diagnosed iron-deficiency anemia and prescribed supplements. 医生诊断为缺铁性贫血并开了补充剂。 | an->无，emia->血（希腊haima），anemia->血液不足=贫血（cf. hemoglobin血红蛋白，leukemia白血病，anemic贫血的）"
     },
     {
       "question": "________ mania",
       "type": "blank",
       "answer": "football",
-      "explanation": "狂热，足球狂热。During the World Cup, football mania swept the nation. 世界杯期间，足球狂热席卷全国。"
+      "explanation": "狂热，足球狂热。During the World Cup, football mania swept the nation. 世界杯期间，足球狂热席卷全国。 | mania->疯狂（希腊mainesthai->疯），mania->狂热/强迫症（cf. maniac疯子，manic狂躁，dementia痴呆）"
     },
     {
       "question": "_________ megalomania",
       "type": "blank",
       "answer": "political",
-      "explanation": "自大狂，政治自大狂。The dictator's political megalomania knew no bounds. 独裁者的政治自大狂没有界限。"
+      "explanation": "自大狂，政治自大狂。The dictator's political megalomania knew no bounds. 独裁者的政治自大狂没有界限。 | megalo->巨大（希腊megas），mania->狂，megalomania->关于伟大的狂热=自大狂（cf. megalopolis超大城市，megaphone扩音器，mega巨大）"
     },
     {
       "question": "monomania ___ _____",
       "type": "blank",
       "answer": "for order",
-      "explanation": "偏执狂，对秩序的偏执狂。His monomania for order made him organize everything obsessively. 他对秩序的偏执狂让他强迫性地整理一切。"
+      "explanation": "偏执狂，对秩序的偏执狂。His monomania for order made him organize everything obsessively. 他对秩序的偏执狂让他强迫性地整理一切。 | mono->单一（希腊），mania->狂，monomania->对单一事物的狂热=偏执（cf. monopoly垄断，monologue独白，monotony单调）"
     },
     {
       "question": "pyromania ____",
       "type": "blank",
       "answer": "case",
-      "explanation": "纵火狂，纵火狂案例。The psychiatrist studied the pyromania case carefully. 精神病医生仔细研究了纵火狂案例。"
+      "explanation": "纵火狂，纵火狂案例。The psychiatrist studied the pyromania case carefully. 精神病医生仔细研究了纵火狂案例。 | pyro->火（希腊pyr），mania->狂，pyromania->对火的强迫性狂热=纵火狂（cf. pyrotechnics烟火技术，pyre火葬堆，pyrex耐热玻璃）"
     },
     {
       "question": "_______ dipsomania",
       "type": "blank",
       "answer": "alcohol",
-      "explanation": "酗酒狂，酒精酗酒狂。His alcohol dipsomania required professional treatment. 他的酒精酗酒狂需要专业治疗。"
+      "explanation": "酗酒狂，酒精酗酒狂。His alcohol dipsomania required professional treatment. 他的酒精酗酒狂需要专业治疗。 | dipso->口渴（希腊dipsa），mania->狂，dipsomania->对饮酒的狂热渴望=酗酒狂（cf. dipsomaniac酗酒狂，thirst渴，dipsomania=病理性饮酒冲动）"
     },
     {
       "question": "gardenia _______",
       "type": "blank",
       "answer": "blossom",
-      "explanation": "栀子花，栀子花花朵。The fragrant gardenia blossom filled the garden with perfume. 芳香的栀子花花朵让花园充满香气。"
+      "explanation": "栀子花，栀子花花朵。The fragrant gardenia blossom filled the garden with perfume. 芳香的栀子花花朵让花园充满香气。 | Gardenia->以苏格兰植物学家亚历山大·加登命名，gardenia->栀子花（cf. garden花园，cf. 以人名命名的植物）"
     },
     {
       "question": "________ insignia",
       "type": "blank",
       "answer": "military",
-      "explanation": "徽章，军事徽章。The officer wore military insignia on his uniform. 军官在制服上佩戴军事徽章。"
+      "explanation": "徽章，军事徽章。The officer wore military insignia on his uniform. 军官在制服上佩戴军事徽章。 | in->上面，sign->标记（拉丁signum），insignia->标记在上的=徽章（cf. sign标志，signal信号，signature签名，insignificant微不足道）"
     },
     {
       "question": "______ insomnia",
       "type": "blank",
       "answer": "suffer",
-      "explanation": "失眠，遭受失眠。Many people suffer insomnia due to stress. 许多人因压力而遭受失眠。"
+      "explanation": "失眠，遭受失眠。Many people suffer insomnia due to stress. 许多人因压力而遭受失眠。 | in->否定，somn->睡眠（拉丁somnus），insomnia->无法睡眠（cf. dormitory宿舍，somnambulism梦游，somnolent困倦，dormant休眠）"
     },
     {
       "question": "paranoia ________",
       "type": "blank",
       "answer": "disorder",
-      "explanation": "偏执症，偏执症障碍。The patient was diagnosed with paranoia disorder. 患者被诊断患有偏执症障碍。"
+      "explanation": "偏执症，偏执症障碍。The patient was diagnosed with paranoia disorder. 患者被诊断患有偏执症障碍。 | para->旁边/反常（希腊），noia->心智（希腊nous），paranoia->偏离正常心智=偏执症（cf. paranoid偏执的，paranormal超自然）"
     },
     {
       "question": "cornucopia __ _______",
       "type": "blank",
       "answer": "of options",
-      "explanation": "丰饶，选择的丰饶。The buffet offered a cornucopia of options for diners. 自助餐为食客提供了选择的丰饶。"
+      "explanation": "丰饶，选择的丰饶。The buffet offered a cornucopia of options for diners. 自助餐为食客提供了选择的丰饶。 | cornu->角（拉丁），copia->丰富，cornucopia->丰饶角（希腊神话中阿玛尔西亚的角，cf. copy拷贝，copious丰富）"
     },
     {
       "question": "_____ utopia",
       "type": "blank",
       "answer": "ideal",
-      "explanation": "乌托邦，理想的乌托邦。The philosopher described his vision of an ideal utopia. 哲学家描述了他对理想的乌托邦的愿景。"
+      "explanation": "乌托邦，理想的乌托邦。The philosopher described his vision of an ideal utopia. 哲学家描述了他对理想的乌托邦的愿景。 | u->无（希腊ou），topia->地方（希腊topos），utopia->不存在的地方=乌托邦（托马斯·莫尔1516年创造，cf. dystopia反乌托邦）"
     },
     {
       "question": "_________ myopia",
       "type": "blank",
       "answer": "marketing",
-      "explanation": "短视，营销短视。The company suffered from marketing myopia and lost customers. 公司遭受营销短视并失去了客户。"
+      "explanation": "短视，营销短视。The company suffered from marketing myopia and lost customers. 公司遭受营销短视并失去了客户。 | myo->闭合（希腊myein->闭眼），opia->视力（希腊），myopia->眯眼看=近视/短视（cf. myopic短视的，hyperopia远视，telescope望远镜）"
     },
     {
       "question": "_____ aria",
       "type": "blank",
       "answer": "opera",
-      "explanation": "咏叹调，歌剧咏叹调。The soprano sang a beautiful opera aria. 女高音唱了一首美妙的歌剧咏叹调。"
+      "explanation": "咏叹调，歌剧咏叹调。The soprano sang a beautiful opera aria. 女高音唱了一首美妙的歌剧咏叹调。 | aria->咏唱（意大利语，拉丁aer->空气），aria->歌剧中的独唱曲（cf. air旋律/空气，airy轻盈，aura氛围）"
     },
     {
       "question": "_______ bacteria",
       "type": "blank",
       "answer": "harmful",
-      "explanation": "细菌，有害的细菌。Washing hands removes harmful bacteria. 洗手可以去除有害的细菌。"
+      "explanation": "细菌，有害的细菌。Washing hands removes harmful bacteria. 洗手可以去除有害的细菌。 | bakterion->小棒（希腊，因早期显微镜下杆状），bacteria->杆状微生物=细菌（cf. bacterium单数，antibiotic抗生素，probiotic益生菌）"
     },
     {
       "question": "____ __ euphoria",
       "type": "blank",
       "answer": "wave of",
-      "explanation": "欣快感，欣快感的浪潮。The victory brought a wave of euphoria to the fans. 胜利给球迷带来了欣快感的浪潮。"
+      "explanation": "欣快感，欣快感的浪潮。The victory brought a wave of euphoria to the fans. 胜利给球迷带来了欣快感的浪潮。 | eu->好（希腊），phor->携带（希腊pherein），euphoria->承载着好的感觉=欣快感（cf. euphemism委婉，euphony悦耳，dysphoria烦躁）"
     },
     {
       "question": "__________ fantasia",
       "type": "blank",
       "answer": "orchestral",
-      "explanation": "幻想曲，管弦乐幻想曲。The composer wrote an elaborate orchestral fantasia. 作曲家创作了一首精心制作的管弦乐幻想曲。"
+      "explanation": "幻想曲，管弦乐幻想曲。The composer wrote an elaborate orchestral fantasia. 作曲家创作了一首精心制作的管弦乐幻想曲。 | phantasia->显现（希腊phainein->显示），fantasia->想象中显现的=幻想曲（cf. phantom幻影，fantasy幻想，fantasy=fantasia的英语形式）"
     },
     {
       "question": "_____ analgesia",
       "type": "blank",
       "answer": "local",
-      "explanation": "镇痛，局部镇痛。The dentist applied local analgesia before the procedure. 牙医在手术前进行了局部镇痛。"
+      "explanation": "镇痛，局部镇痛。The dentist applied local analgesia before the procedure. 牙医在手术前进行了局部镇痛。 | an->无，alg->痛（希腊algos），analgesia->无痛状态=镇痛（cf. analgesic镇痛药，nostalgia怀旧=想家的痛，neuralgia神经痛）"
     },
     {
       "question": "_________ amnesia",
       "type": "blank",
       "answer": "temporary",
-      "explanation": "失忆症，暂时性失忆症。After the accident, he suffered temporary amnesia. 事故后，他患上了暂时性失忆症。"
+      "explanation": "失忆症，暂时性失忆症。After the accident, he suffered temporary amnesia. 事故后，他患上了暂时性失忆症。 | a->无，mnesia->记忆（希腊mneme），amnesia->无记忆=失忆症（cf. mnemonic记忆术，amnesty特赦=忘记罪行，Mnemosyne记忆女神）"
     },
     {
       "question": "_____ militia",
       "type": "blank",
       "answer": "local",
-      "explanation": "民兵，地方民兵。The local militia defended the village. 地方民兵保卫了村庄。"
+      "explanation": "民兵，地方民兵。The local militia defended the village. 地方民兵保卫了村庄。 | miles->士兵（拉丁），militia->公民兵役组织=民兵（cf. military军事，militant好战的，militate对抗，mile英里=千步）"
     },
     {
       "question": "_________ inertia",
       "type": "blank",
       "answer": "Newtonian",
-      "explanation": "惯性，牛顿惯性。Physics students study Newtonian inertia. 物理学生学习牛顿惯性。"
+      "explanation": "惯性，牛顿惯性。Physics students study Newtonian inertia. 物理学生学习牛顿惯性。 | iners->无技能/懒（拉丁，in+ars->无技艺），inertia->无活动性=惯性（cf. inert惰性，art艺术，artisan工匠，inertia牛顿第一定律）"
     },
     {
       "question": "_______ minutia",
       "type": "blank",
       "answer": "trivial",
-      "explanation": "细节，琐碎的细节。Don't get lost in trivial minutia; focus on the big picture. 不要迷失在琐碎的细节中；关注大局。"
+      "explanation": "细节，琐碎的细节。Don't get lost in trivial minutia; focus on the big picture. 不要迷失在琐碎的细节中；关注大局。 | minut->细小（拉丁minutus），minutia->极小的细节（cf. minute分钟/细小，mini迷你，diminish减少，miniature小型）"
     },
     {
       "question": "_______ trivia",
       "type": "blank",
       "answer": "useless",
-      "explanation": "琐事，无用的琐事。His head was full of useless trivia. 他的脑子里充满了无用的琐事。"
+      "explanation": "琐事，无用的琐事。His head was full of useless trivia. 他的脑子里充满了无用的琐事。 | tri->三，via->路（拉丁），trivia->三叉路口=琐碎信息（古罗马三叉路口公告板上贴无关紧要信息，cf. trivial琐碎，via经由）"
     },
     {
       "question": "dyslexia _________",
       "type": "blank",
       "answer": "diagnosis",
-      "explanation": "阅读障碍，阅读障碍诊断。Early dyslexia diagnosis can help with treatment. 早期阅读障碍诊断可以帮助治疗。"
+      "explanation": "阅读障碍，阅读障碍诊断。Early dyslexia diagnosis can help with treatment. 早期阅读障碍诊断可以帮助治疗。 | dys->困难（希腊），lexia->阅读（希腊lexis->词），dyslexia->阅读困难=阅读障碍（cf. dysfunctional失调，lexicon词汇，lexis词汇）"
     },
     {
       "question": "anorexia _______",
       "type": "blank",
       "answer": "nervosa",
-      "explanation": "厌食症，神经性厌食症。She received treatment for anorexia nervosa. 她接受了神经性厌食症的治疗。"
+      "explanation": "厌食症，神经性厌食症。She received treatment for anorexia nervosa. 她接受了神经性厌食症的治疗。 | an->无，orexia->食欲（希腊orexis），anorexia->无食欲=厌食症（cf. anorectic厌食的，bulimia暴食症，appetite食欲）"
     },
     {
       "question": "asphyxia _____",
       "type": "blank",
       "answer": "death",
-      "explanation": "窒息，窒息死亡。The autopsy revealed asphyxia death as the cause. 尸检显示窒息死亡是死因。"
+      "explanation": "窒息，窒息死亡。The autopsy revealed asphyxia death as the cause. 尸检显示窒息死亡是死因。 | a->无，sphyxia->脉搏（希腊sphyxis），asphyxia->脉搏停止=窒息（cf. asphyxiate使窒息，suffocate窒息，pulse脉搏）"
     },
     {
       "question": "___-_____ parka",
       "type": "blank",
       "answer": "fur-lined",
-      "explanation": "派克大衣，毛皮内衬派克大衣。She wore a warm fur-lined parka in the Arctic. 她在北极穿着温暖的毛皮内衬派克大衣。"
+      "explanation": "派克大衣，毛皮内衬派克大衣。She wore a warm fur-lined parka in the Arctic. 她在北极穿着温暖的毛皮内衬派克大衣。 | parka->毛皮上衣（涅涅茨语，西伯利亚土著），parka->原为因纽特人的毛皮外套（cf. anorak风衣=格陵兰因纽特语）"
     },
     {
       "question": "_______ sequela",
       "type": "blank",
       "answer": "disease",
-      "explanation": "后遗症，疾病后遗症。The disease sequela affected him for years. 疾病后遗症影响了他多年。"
+      "explanation": "后遗症，疾病后遗症。The disease sequela affected him for years. 疾病后遗症影响了他多年。 | sequ->跟随（拉丁sequi），sequela->疾病之后跟随的=后遗症（cf. sequel续集，sequence序列，consequence后果，subsequent随后）"
     },
     {
       "question": "________ gorilla",
       "type": "blank",
       "answer": "mountain",
-      "explanation": "大猩猩，山地大猩猩。The mountain gorilla is an endangered species. 山地大猩猩是濒危物种。"
+      "explanation": "大猩猩，山地大猩猩。The mountain gorilla is an endangered species. 山地大猩猩是濒危物种。 | gorilla->野蛮毛人（希腊Gorillai，北非土著词），gorilla->大猩猩（汉诺的航海记中记载，cf. guerrilla游击队=小型战斗团体）"
     },
     {
       "question": "parabola _____",
       "type": "blank",
       "answer": "curve",
-      "explanation": "抛物线，抛物线曲线。The mathematics teacher explained the parabola curve. 数学老师解释了抛物线曲线。"
+      "explanation": "抛物线，抛物线曲线。The mathematics teacher explained the parabola curve. 数学老师解释了抛物线曲线。 | para->旁边，bol->投掷（希腊ballein），parabola->投掷旁边的曲线=抛物线（cf. parable寓言，symbol象征，hyperbole夸张=过度投掷）"
     },
     {
       "question": "________ formula",
       "type": "blank",
       "answer": "chemical",
-      "explanation": "公式，化学公式。The chemist wrote the chemical formula on the board. 化学家在黑板上写下化学公式。"
+      "explanation": "公式，化学公式。The chemist wrote the chemical formula on the board. 化学家在黑板上写下化学公式。 | form->形式（拉丁forma），formula->小形式=表达规则的格式（cf. formal正式，reform改革，inform通知，uniform制服）"
     },
     {
       "question": "_______ peninsula",
       "type": "blank",
       "answer": "Iberian",
-      "explanation": "半岛，伊比利亚半岛。Spain and Portugal are located on the Iberian peninsula. 西班牙和葡萄牙位于伊比利亚半岛上。"
+      "explanation": "半岛，伊比利亚半岛。Spain and Portugal are located on the Iberian peninsula. 西班牙和葡萄牙位于伊比利亚半岛上。 | paene->几乎（拉丁），insula->岛，peninsula->几乎是岛=半岛（cf. island岛，insulate绝缘，penury赤贫=几乎没有，penultimate倒数第二）"
     },
     {
       "question": "_______ spatula",
       "type": "blank",
       "answer": "kitchen",
-      "explanation": "铲子，厨房铲子。She used a kitchen spatula to flip the pancakes. 她用厨房铲子翻煎饼。"
+      "explanation": "铲子，厨房铲子。She used a kitchen spatula to flip the pancakes. 她用厨房铲子翻煎饼。 | spat->宽扁（拉丁spatha->宽剑），spatula->小宽扁工具=铲子（cf. spade铁锹，spadix花序，epaulet肩章=小肩膀）"
     },
     {
       "question": "______ melodrama",
       "type": "blank",
       "answer": "family",
-      "explanation": "情节剧，家庭情节剧。The TV show was a typical family melodrama. 这个电视节目是典型的家庭情节剧。"
+      "explanation": "情节剧，家庭情节剧。The TV show was a typical family melodrama. 这个电视节目是典型的家庭情节剧。 | melo->歌曲（希腊melos），drama->戏剧，melodrama->有音乐的戏剧=情节剧（cf. melody旋律，dramatic戏剧性，drama戏剧）"
     },
     {
       "question": "________ panorama",
       "type": "blank",
       "answer": "mountain",
-      "explanation": "全景，山景全景。The lookout offered a breathtaking mountain panorama. 瞭望台提供了令人惊叹的山景全景。"
+      "explanation": "全景，山景全景。The lookout offered a breathtaking mountain panorama. 瞭望台提供了令人惊叹的山景全景。 | pan->全部（希腊），horama->景象（希腊horan->看），panorama->全面的景象=全景（cf. pantheism泛神，pandemic全球流行，panoramic全景的）"
     },
     {
       "question": "_____ anathema",
       "type": "blank",
       "answer": "utter",
-      "explanation": "诅咒，彻底的诅咒。Such behavior was utter anathema to their beliefs. 这种行为对他们的信仰来说是彻底的诅咒。"
+      "explanation": "诅咒，彻底的诅咒。Such behavior was utter anathema to their beliefs. 这种行为对他们的信仰来说是彻底的诅咒。 | ana->向上，thema->放置（希腊），anathema->放上去献祭/诅咒=诅咒（cf. theme主题，theorem定理，hypothesis假设=放置在下）"
     },
     {
       "question": "_________ dogma",
       "type": "blank",
       "answer": "religious",
-      "explanation": "教条，宗教教条。The sect followed strict religious dogma. 这个教派遵循严格的宗教教条。"
+      "explanation": "教条，宗教教条。The sect followed strict religious dogma. 这个教派遵循严格的宗教教条。 | dogma->信念（希腊dokein->认为），dogma->被认定的教义=教条（cf. dogmatic武断的，orthodox正统，doctrine教义，paradox悖论）"
     },
     {
       "question": "asthma ______",
       "type": "blank",
       "answer": "attack",
-      "explanation": "哮喘，哮喘发作。She carried an inhaler in case of an asthma attack. 她随身携带吸入器以防哮喘发作。"
+      "explanation": "哮喘，哮喘发作。She carried an inhaler in case of an asthma attack. 她随身携带吸入器以防哮喘发作。 | asthma->喘息（希腊azein->喘），asthma->呼吸困难的病（cf. aeration通气，aspirate吸气，aerobic有氧）"
     },
     {
       "question": "_____ dilemma",
       "type": "blank",
       "answer": "moral",
-      "explanation": "困境，道德困境。The doctor faced a difficult moral dilemma. 医生面临着困难的道德困境。"
+      "explanation": "困境，道德困境。The doctor faced a difficult moral dilemma. 医生面临着困难的道德困境。 | di->两个（希腊），lemma->前提/选择（希腊），dilemma->两个前提的困境（cf. trilemma三难困境，lemma引理，double bind双重束缚）"
     },
     {
       "question": "______ comma",
       "type": "blank",
       "answer": "Oxford",
-      "explanation": "逗号，牛津逗号。Writers debate whether to use the Oxford comma. 作家们争论是否使用牛津逗号。"
+      "explanation": "逗号，牛津逗号。Writers debate whether to use the Oxford comma. 作家们争论是否使用牛津逗号。 | komma->切断（希腊koptein->切），comma->切断句子的标记=逗号（cf. colon结肠/冒号，semicolon分号，period句号）"
     },
     {
       "question": "____ ____ coma",
       "type": "blank",
       "answer": "fall into",
-      "explanation": "昏迷，陷入昏迷。The patient would fall into coma after the accident. 患者会在事故后陷入昏迷。"
+      "explanation": "昏迷，陷入昏迷。The patient would fall into coma after the accident. 患者会在事故后陷入昏迷。 | koma->深睡（希腊），coma->深度无意识状态=昏迷（cf. comma逗号同根，somnolent困倦，sedation镇静）"
     },
     {
       "question": "____ aroma",
       "type": "blank",
       "answer": "rich",
-      "explanation": "香味，浓郁的香味。The coffee had a rich aroma that filled the room. 咖啡有浓郁的香味弥漫整个房间。"
+      "explanation": "香味，浓郁的香味。The coffee had a rich aroma that filled the room. 咖啡有浓郁的香味弥漫整个房间。 | aroma->香料（希腊，来自东方香料），aroma->令人愉快的气味（cf. aromatic芳香的，aromatherapy香薰疗法，spice香料）"
     },
     {
       "question": "_____ miasma",
       "type": "blank",
       "answer": "toxic",
-      "explanation": "瘴气，有毒的瘴气。A toxic miasma rose from the swamp. 有毒的瘴气从沼泽升起。"
+      "explanation": "瘴气，有毒的瘴气。A toxic miasma rose from the swamp. 有毒的瘴气从沼泽升起。 | miasma->污染（希腊miainein->污染），miasma->有毒的瘴气（中世纪认为瘴气致病，malaria=mal+aria=坏空气，cf. miasmatic瘴气的）"
     },
     {
       "question": "________ charisma",
       "type": "blank",
       "answer": "magnetic",
-      "explanation": "魅力，磁性的魅力。The leader had magnetic charisma that attracted followers. 领导者有磁性的魅力吸引追随者。"
+      "explanation": "魅力，磁性的魅力。The leader had magnetic charisma that attracted followers. 领导者有磁性的魅力吸引追随者。 | charis->恩典（希腊），charisma->神赐的魅力（cf. grace恩典，charity慈善，charismatic有魅力，eucharist圣餐=感恩）"
     },
     {
       "question": "_______ phenomena",
       "type": "blank",
       "answer": "natural",
-      "explanation": "现象，自然现象。Scientists study natural phenomena to understand the world. 科学家研究自然现象以了解世界。"
+      "explanation": "现象，自然现象。Scientists study natural phenomena to understand the world. 科学家研究自然现象以了解世界。 | phainomenon->出现的事物（希腊），phenomena->多个现象（cf. phenomenon单数，phenomenal非凡，phantom幻影，fantasy幻想）"
     },
     {
       "question": "_____ _ subpoena",
       "type": "blank",
       "answer": "serve a",
-      "explanation": "传票，送达传票。The court officer would serve a subpoena to the witness. 法庭官员会向证人送达传票。"
+      "explanation": "传票，送达传票。The court officer would serve a subpoena to the witness. 法庭官员会向证人送达传票。 | sub->在...下，poena->惩罚（拉丁），subpoena->在惩罚威胁下=传票（cf. pain痛苦，penal惩罚，penalty罚款，punish惩罚）"
     },
     {
       "question": "______ ballerina",
       "type": "blank",
       "answer": "ballet",
-      "explanation": "芭蕾舞女演员，芭蕾舞女演员。The graceful ballet ballerina performed beautifully. 优雅的芭蕾舞女演员表演得很美。"
+      "explanation": "芭蕾舞女演员，芭蕾舞女演员。The graceful ballet ballerina performed beautifully. 优雅的芭蕾舞女演员表演得很美。 | ballare->舞蹈（意大利语，希腊ballizein->跳），ballerina->女舞者（cf. ballet芭蕾，ball舞会，balloon气球=圆球）"
     },
     {
       "question": "_____ patina",
       "type": "blank",
       "answer": "green",
-      "explanation": "铜绿，绿色铜绿。The old bronze statue had a green patina. 旧青铜雕像有绿色铜绿。"
+      "explanation": "铜绿，绿色铜绿。The old bronze statue had a green patina. 旧青铜雕像有绿色铜绿。 | patina->浅盘（拉丁patina->平锅），patina->金属表面的薄层氧化=铜绿（cf. pan平底锅，paten圣餐盘，patina of age岁月痕迹）"
     },
     {
       "question": "__ antenna",
       "type": "blank",
       "answer": "TV",
-      "explanation": "天线，电视天线。They adjusted the TV antenna to improve reception. 他们调整电视天线以改善接收。"
+      "explanation": "天线，电视天线。They adjusted the TV antenna to improve reception. 他们调整电视天线以改善接收。 | antenna->斜桁（拉丁，帆船上的横杆），antenna->昆虫触角/无线电天线（cf. antenna昆虫的触须，broadcast广播，reception接收）"
     },
     {
       "question": "penumbra __ _____",
       "type": "blank",
       "answer": "of doubt",
-      "explanation": "半影，疑云的半影。A penumbra of doubt surrounded the decision. 疑云的半影笼罩着这个决定。"
+      "explanation": "半影，疑云的半影。A penumbra of doubt surrounded the decision. 疑云的半影笼罩着这个决定。 | paene->几乎（拉丁），umbra->影子，penumbra->几乎是影子=半影（cf. umbrella雨伞=小影子，umbrage生气=被阴影笼罩，adumbrate概述）"
     },
     {
       "question": "______ tundra",
       "type": "blank",
       "answer": "frozen",
-      "explanation": "苔原，冰冻的苔原。The Arctic frozen tundra is a harsh environment. 北极冰冻的苔原是严酷的环境。"
+      "explanation": "苔原，冰冻的苔原。The Arctic frozen tundra is a harsh environment. 北极冰冻的苔原是严酷的环境。 | tundra->山上平原（芬兰语tunturi->平顶山），tundra->北极无树平原=苔原（cf. taiga针叶林带，permafrost永久冻土）"
     },
     {
       "question": "____ chimera",
       "type": "blank",
       "answer": "wild",
-      "explanation": "幻想，狂野的幻想。His plan was just a wild chimera with no basis in reality. 他的计划只是没有现实基础的狂野的幻想。"
+      "explanation": "幻想，狂野的幻想。His plan was just a wild chimera with no basis in reality. 他的计划只是没有现实基础的狂野的幻想。 | Chimaira->希腊神话狮头羊身蛇尾怪兽，chimera->不可能实现的幻想（cf. chimerical荒诞的，chimeric基因嵌合体）"
     },
     {
       "question": "_ plethora __",
       "type": "blank",
       "answer": "a of",
-      "explanation": "过剩，过剩的。The store offered a plethora of choices. 商店提供了过剩的选择。"
+      "explanation": "过剩，过剩的。The store offered a plethora of choices. 商店提供了过剩的选择。 | plethora->充满（希腊plethein->充满），plethora->过多=过剩（cf. plentiful充裕，replete充满，plenty充足，complete完整）"
     },
     {
       "question": "______ flora",
       "type": "blank",
       "answer": "alpine",
-      "explanation": "植物群，高山植物群。Botanists study the unique alpine flora. 植物学家研究独特的高山植物群。"
+      "explanation": "植物群，高山植物群。Botanists study the unique alpine flora. 植物学家研究独特的高山植物群。 | Flora->罗马花神，flora->某地区的植物总称（cf. flower花，flourish繁荣，floral花卉的，fauna动物群=与flora对应）"
     },
     {
       "question": "________ orchestra",
       "type": "blank",
       "answer": "symphony",
-      "explanation": "管弦乐队，交响乐团。The symphony orchestra performed Beethoven. 交响乐团演奏了贝多芬的作品。"
+      "explanation": "管弦乐队，交响乐团。The symphony orchestra performed Beethoven. 交响乐团演奏了贝多芬的作品。 | orkhestra->舞蹈的地方（希腊，古剧场合唱队站的区域），orchestra->乐队演奏区=管弦乐队（cf. orchestrate精心安排，choreography编舞）"
     },
     {
       "question": "bravura ___________",
       "type": "blank",
       "answer": "performance",
-      "explanation": "华丽的技巧，华丽的技巧表演。The pianist gave a bravura performance. 钢琴家进行了华丽的技巧表演。"
+      "explanation": "华丽的技巧，华丽的技巧表演。The pianist gave a bravura performance. 钢琴家进行了华丽的技巧表演。 | bravura->勇气（意大利语，拉丁bravus->勇敢），bravura->炫技的精彩表演（cf. brave勇敢，bravo喝彩，bravado虚张声势）"
     },
     {
       "question": "______ mesa",
       "type": "blank",
       "answer": "desert",
-      "explanation": "平顶山，沙漠平顶山。The desert mesa rose dramatically from the plain. 沙漠平顶山从平原上戏剧性地升起。"
+      "explanation": "平顶山，沙漠平顶山。The desert mesa rose dramatically from the plain. 沙漠平顶山从平原上戏剧性地升起。 | mesa->桌子（西班牙语，拉丁mensa），mesa->桌状平顶山（cf. mensa桌子/门萨高智商协会，meseta高原，tableland台地）"
     },
     {
       "question": "_____ sonata",
       "type": "blank",
       "answer": "piano",
-      "explanation": "奏鸣曲，钢琴奏鸣曲。She practiced the piano sonata for hours. 她练习钢琴奏鸣曲好几个小时。"
+      "explanation": "奏鸣曲，钢琴奏鸣曲。She practiced the piano sonata for hours. 她练习钢琴奏鸣曲好几个小时。 | sonata->鸣响（意大利语sonare->鸣响，拉丁），sonata->用乐器演奏的曲子（cf. sound声音，sonic声音的，resonant共鸣，sonorous洪亮）"
     },
     {
       "question": "____ cantata",
       "type": "blank",
       "answer": "Bach",
-      "explanation": "康塔塔，巴赫康塔塔。The choir performed a Bach cantata at the church. 合唱团在教堂演唱了巴赫康塔塔。"
+      "explanation": "康塔塔，巴赫康塔塔。The choir performed a Bach cantata at the church. 合唱团在教堂演唱了巴赫康塔塔。 | cantata->歌唱（意大利语cantare->唱，拉丁），cantata->声乐作品（cf. chant吟唱，incantation咒语，cant伪善话，descant复调）"
     },
     {
       "question": "_____ delta",
       "type": "blank",
       "answer": "river",
-      "explanation": "三角洲，河流三角洲。The Nile river delta is extremely fertile. 尼罗河河流三角洲极其肥沃。"
+      "explanation": "三角洲，河流三角洲。The Nile river delta is extremely fertile. 尼罗河河流三角洲极其肥沃。 | Delta->希腊字母Δ（三角形），delta->像三角形的河口地带（cf. delta波希腊字母D，triangular三角形的，deltoid三角肌）"
     },
     {
       "question": "magenta _____",
       "type": "blank",
       "answer": "dress",
-      "explanation": "品红色，品红色连衣裙。She wore a bright magenta dress to the party. 她穿着鲜艳的品红色连衣裙去参加派对。"
+      "explanation": "品红色，品红色连衣裙。She wore a bright magenta dress to the party. 她穿着鲜艳的品红色连衣裙去参加聚会。 | Magenta->意大利小镇，1859年法军在此大败奥军，用胜利纪念命名新发现的品红色染料（cf. 以历史事件命名的颜色）"
     },
     {
       "question": "___ __ iota",
       "type": "blank",
       "answer": "not an",
-      "explanation": "一点点，一点都没有。There is not an iota of truth in his story. 他的故事中一点都没有真实性。"
+      "explanation": "一点点，一点都没有。There is not an iota of truth in his story. 他的故事中一点都没有真实性。 | iota->希腊字母ι（最小的字母），iota->极微小的量（cf. jot一点，tittle一点，not one jot or tittle一点也没有）"
     },
     {
       "question": "_____ quota",
       "type": "blank",
       "answer": "sales",
-      "explanation": "配额，销售配额。The salesman exceeded his sales quota this month. 销售员这个月超额完成了销售配额。"
+      "explanation": "配额，销售配额。The salesman exceeded his sales quota this month. 销售员这个月超额完成了销售配额。 | quot->多少（拉丁quotus->第几个），quota->被分配的份额（cf. quote引用，quotient商数，quotidian日常的）"
     },
     {
       "question": "aorta ________",
       "type": "blank",
       "answer": "aneurysm",
-      "explanation": "主动脉，主动脉动脉瘤。The surgeon repaired the dangerous aorta aneurysm. 外科医生修复了危险的主动脉动脉瘤。"
+      "explanation": "主动脉，主动脉动脉瘤。The surgeon repaired the dangerous aorta aneurysm. 外科医生修复了危险的主动脉动脉瘤。 | aorta->提起的（希腊aeirein->提起），aorta->被心脏提起的大动脉（cf. artery动脉，aortic主动脉的，cardiovascular心血管）"
     },
     {
       "question": "vista _____",
       "type": "blank",
       "answer": "point",
-      "explanation": "远景，远景点。The hiking trail offered a beautiful vista point. 徒步小径提供了美丽的远景点。"
+      "explanation": "远景，远景点。The hiking trail offered a beautiful vista point. 徒步小径提供了美丽的远景点。 | vista->看见（意大利语，拉丁videre->看），vista->远处的景色（cf. vision视觉，visit访问，visual视觉的，supervise监督）"
     },
     {
       "question": "_____ operetta",
       "type": "blank",
       "answer": "comic",
-      "explanation": "轻歌剧，喜剧轻歌剧。The theater staged a delightful comic operetta. 剧院上演了令人愉快的喜剧轻歌剧。"
+      "explanation": "轻歌剧，喜剧轻歌剧。The theater staged a delightful comic operetta. 剧院上演了令人愉快的喜剧轻歌剧。 | opera->作品（拉丁opus），operetta->小型轻松的歌剧（cf. opera歌剧，opus作品，operate操作，cooperation合作）"
     },
     {
       "question": "______ lava",
       "type": "blank",
       "answer": "molten",
-      "explanation": "熔岩，熔融的熔岩。Molten lava flowed down the volcano's sides. 熔融的熔岩从火山的侧面流下。"
+      "explanation": "熔岩，熔融的熔岩。Molten lava flowed down the volcano's sides. 熔融的熔岩从火山的侧面流下。 | lava->洗（意大利语lavare->洗，拉丁），lava->像洪水冲刷的熔岩（cf. lavatory洗手间，lavish洗涤/奢华，laundry洗衣）"
     },
     {
       "question": "_______ nova",
       "type": "blank",
       "answer": "stellar",
-      "explanation": "新星，恒星新星。Astronomers observed a bright stellar nova. 天文学家观察到一颗明亮的恒星新星。"
+      "explanation": "新星，恒星新星。Astronomers observed a bright stellar nova. 天文学家观察到一颗明亮的恒星新星。 | nova->新的（拉丁novus），nova->突然变亮的新星（cf. novel新奇，novice新手，renovate翻新，innovation创新）"
     },
     {
       "question": "_______ supernova",
       "type": "blank",
       "answer": "stellar",
-      "explanation": "超新星，恒星超新星。The stellar supernova was visible from Earth. 恒星超新星从地球上可见。"
+      "explanation": "超新星，恒星超新星。The stellar supernova was visible from Earth. 恒星超新星从地球上可见。 | super->超过，nova->新星，supernova->超级新星爆炸（cf. superior优越，supernatural超自然，supersede取代，supreme最高）"
     },
     {
       "question": "________ larva",
       "type": "blank",
       "answer": "mosquito",
-      "explanation": "幼虫，蚊子幼虫。The mosquito larva develops in standing water. 蚊子幼虫在死水中发育。"
+      "explanation": "幼虫，蚊子幼虫。The mosquito larva develops in standing water. 蚊子幼虫在死水中发育。 | larva->幽灵/蒙面（拉丁，因幼虫形态隐藏了成虫面貌），larva->幼虫（cf. larval幼虫的，mask面具，larvae复数）"
     },
     {
       "question": "____ stanza",
       "type": "blank",
       "answer": "poem",
-      "explanation": "诗节，诗歌诗节。The poem stanza contained four lines. 诗歌诗节包含四行。"
+      "explanation": "诗节，诗歌诗节。The poem stanza contained four lines. 诗歌诗节包含四行。 | stanza->停留的地方（意大利语，拉丁stare->站），stanza->诗中停顿的单元（cf. stance立场，stanza站=诗歌的\"房间\"，cf. instance实例）"
     },
     {
       "question": "_____ piazza",
       "type": "blank",
       "answer": "sunny",
-      "explanation": "广场，阳光明媚的广场。Tourists gathered in the sunny piazza. 游客们聚集在阳光明媚的广场上。"
+      "explanation": "广场，阳光明媚的广场。Tourists gathered in the sunny piazza. 游客们聚集在阳光明媚的广场上。 | piazza->广场（意大利语，希腊plateia->宽路），piazza->开阔的城市广场（cf. plaza广场，place地方，plat平坦，plateau高原）"
     },
     {
       "question": "scab _____",
       "type": "blank",
       "answer": "wound",
-      "explanation": "痂，伤口痂。Don't pick at the scab wound or it will scar. 不要抠伤口痂，否则会留疤。"
+      "explanation": "痂，伤口痂。Don't pick at the scab wound or it will scar. 不要抠伤口痂，否则会留疤。 | scab->结痂（古挪威skabb->疥疮），scab->伤口上的保护性硬壳/工贼（cf. scabies疥疮，shabby破旧，scabrous粗糙）"
     },
     {
       "question": "_____ slab",
       "type": "blank",
       "answer": "stone",
-      "explanation": "厚板，石头厚板。The workers lifted the heavy stone slab. 工人们抬起沉重的石头厚板。"
+      "explanation": "厚板，石头厚板。The workers lifted the heavy stone slab. 工人们抬起沉重的石头厚板。 | slab->厚板（来源不明，中古英语slabe），slab->厚而平的板（cf. tablet石板，plaque匾，flagstone石板，cf. slab of meat一大块）"
     },
     {
       "question": "drab _____",
       "type": "blank",
       "answer": "color",
-      "explanation": "单调的，单调的颜色。The room was painted in drab color. 房间涂着单调的颜色。"
+      "explanation": "单调的，单调的颜色。The room was painted in drab color. 房间涂着单调的颜色。 | drab->灰黄色布料（古法语drap->布料），drab->像旧布一样暗淡单调的（cf. drape布帘，draper布商，cf. drab khaki卡其色）"
     },
     {
       "question": "stab _____",
       "type": "blank",
       "answer": "wound",
-      "explanation": "刺伤，刺伤伤口。The victim suffered a stab wound to the chest. 受害者胸部遭受刺伤伤口。"
+      "explanation": "刺伤，刺伤伤口。The victim suffered a stab wound to the chest. 受害者胸部遭受刺伤伤口。 | stab->刺（中古英语，可能来自Gaelic stob->棍），stab->用尖物刺穿（cf. stab in the back背刺，stability稳定，establish建立）"
     },
     {
       "question": "adlib ______",
       "type": "blank",
       "answer": "speech",
-      "explanation": "即兴，即兴演讲。The speaker gave an impressive adlib speech. 演讲者进行了令人印象深刻的即兴演讲。"
+      "explanation": "即兴，即兴演讲。The speaker gave an impressive adlib speech. 演讲者进行了令人印象深刻的即兴演讲。 | ad->随意，lib->随意（拉丁ad libitum->随意），adlib->不按剧本即兴发挥（cf. library图书馆，liberate解放，liberal自由，liberty自由）"
     },
     {
       "question": "glib ______",
       "type": "blank",
       "answer": "answer",
-      "explanation": "油嘴滑舌的，油嘴滑舌的回答。His glib answer didn't convince anyone. 他油嘴滑舌的回答没有说服任何人。"
+      "explanation": "油嘴滑舌的，油嘴滑舌的回答。His glib answer didn't convince anyone. 他油嘴滑舌的回答没有说服任何人。 | glib->滑（低地德语glibberig->滑腻），glib->说话流利但缺乏诚意=油嘴滑舌（cf. slip滑，slippery滑，glibness油嘴滑舌）"
     },
     {
       "question": "___ nib",
       "type": "blank",
       "answer": "pen",
-      "explanation": "笔尖，钢笔笔尖。The fountain pen nib needed to be replaced. 钢笔笔尖需要更换。"
+      "explanation": "笔尖，钢笔笔尖。The fountain pen nib needed to be replaced. 钢笔笔尖需要更换。 | nib->鸟嘴/笔尖（古英语nebb->鸟嘴），nib->笔的尖端（cf. beak鸟嘴，bill鸟嘴，nibble小口咬，nib钢笔尖）"
     },
     {
       "question": "____ jamb",
       "type": "blank",
       "answer": "door",
-      "explanation": "门框，门框。The carpenter measured the door jamb carefully. 木匠仔细测量了门框。"
+      "explanation": "门框，门框。The carpenter measured the door jamb carefully. 木匠仔细测量了门框。 | jambe->腿（古法语），jamb->像腿一样支撑的门柱（cf. jambon火腿=腿肉，gambrel屋顶=弯腿，jamb门框竖木）"
     },
     {
       "question": "_____ limb",
       "type": "blank",
       "answer": "upper",
-      "explanation": "肢体，上肢。The physical therapist examined the upper limb. 物理治疗师检查了上肢。"
+      "explanation": "肢体，上肢。The physical therapist examined the upper limb. 物理治疗师检查了上肢。 | limb->肢体（古英语lim），limb->手臂腿等肢体（cf. limber柔韧，dismantle拆卸，cf. out on a limb处于险境=站在树枝上）"
     },
     {
       "question": "____ aplomb",
       "type": "blank",
       "answer": "cool",
-      "explanation": "沉着，冷静的沉着。She handled the crisis with cool aplomb. 她以冷静的沉着处理了危机。"
+      "explanation": "沉着，冷静的沉着。She handled the crisis with cool aplomb. 她以冷静的沉着处理了危机。 | aplomb->垂直（法语，à plomb->铅锤般）aplomb->像铅锤一样沉稳=沉着（cf. plumb铅锤/垂直，plumber水管工=用铅管，plummet骤降）"
     },
     {
       "question": "succumb __ _______",
       "type": "blank",
       "answer": "to illness",
-      "explanation": "屈服，屈服于疾病。The elderly man would succumb to illness after a long battle. 老人在长期斗争后会屈服于疾病。"
+      "explanation": "屈服，屈服于疾病。The elderly man would succumb to illness after a long battle. 老人在长期斗争后会屈服于疾病。 | suc->在下，cumb->躺（拉丁），succumb->倒下屈服=屈服（cf. recumbent斜躺，incumbent现任=压在...上，incubate孵化）"
     },
     {
       "question": "numb _______",
       "type": "blank",
       "answer": "fingers",
-      "explanation": "麻木的，麻木的手指。The cold made her numb fingers unable to move. 寒冷让她麻木的手指无法移动。"
+      "explanation": "麻木的，麻木的手指。The cold made her numb fingers unable to move. 寒冷让她麻木的手指无法移动。 | numb->麻木（古英语niman->抓取，numb=被拿走感觉），numb->失去感觉的（cf. number数字，benumb使麻木，numb to习以为常）"
     },
     {
       "question": "____ cob",
       "type": "blank",
       "answer": "corn",
-      "explanation": "玉米棒，玉米棒。They roasted corn cob over the fire. 他们在火上烤玉米棒。"
+      "explanation": "玉米棒，玉米棒。They roasted corn cob over the fire. 他们在火上烤玉米棒。 | cob->圆头（中古英语，来源不明），cob->玉米穗轴（cf. cobblestone鹅卵石=圆石，cobbler修鞋匠，corn cob玉米芯）"
     },
     {
       "question": "snob ______",
       "type": "blank",
       "answer": "appeal",
-      "explanation": "势利，势利吸引力。The luxury brand has snob appeal. 这个奢侈品牌有势利吸引力。"
+      "explanation": "势利，势利吸引力。The luxury brand has snob appeal. 这个奢侈品牌有势利吸引力。 | snob->鞋匠（18世纪英国剑桥俚语指非贵族学生），snob->自视高人一等的人（cf. snobbish势利，snobbery势利眼，elitist精英主义者）"
     },
     {
       "question": "barb __ _______",
       "type": "blank",
       "answer": "of sarcasm",
-      "explanation": "倒钩，讽刺的倒钩。His comment had a sharp barb of sarcasm. 他的评论有尖锐的讽刺的倒钩。"
+      "explanation": "倒钩，讽刺的倒钩。His comment had a sharp barb of sarcasm. 他的评论有尖锐的讽刺的倒钩。 | barba->胡须/尖刺（拉丁），barb->像倒刺钩住人的刻薄语言（cf. barber理发师，barbarian野蛮人=蓄胡须的，barbarous残忍）"
     }
   ]
 }
