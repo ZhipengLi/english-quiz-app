@@ -1,0 +1,3004 @@
+{
+  "text": "",
+  "quiz": [
+    {
+      "question": "____ bulk",
+      "type": "blank",
+      "answer": "ship",
+      "explanation": "大量, 运送大量货物. The company will ship bulk orders overseas. 公司将把大量订单运送到海外。 | bulk->膨胀的大量（古Norse bulki->货物），in bulk->大批量地"
+    },
+    {
+      "question": "_______ hulk",
+      "type": "blank",
+      "answer": "rusting",
+      "explanation": "废船, 生锈的废船. A rusting hulk lay abandoned in the harbor. 一艘生锈的废船被遗弃在港口。 | hulk->庞大的东西，hulk->废弃的大船/魁梧的人（cf. Hulk绿巨人）"
+    },
+    {
+      "question": "_____ mountebank",
+      "type": "blank",
+      "answer": "quack",
+      "explanation": "江湖骗子, 江湖骗子医生. The quack mountebank sold fake remedies. 江湖骗子医生出售假药。 | mount->爬上，bank->长凳，mountebank->爬上长凳叫卖的人=江湖骗子"
+    },
+    {
+      "question": "spank _ _____",
+      "type": "blank",
+      "answer": "a child",
+      "explanation": "打屁股, 打孩子屁股. Parents debated whether to spank a child for misbehavior. 父母就是否因不当行为打孩子屁股而争论。 | spank->拍打（象声词），spanking->崭新的/打屁股"
+    },
+    {
+      "question": "swank _____",
+      "type": "blank",
+      "answer": "hotel",
+      "explanation": "豪华的, 豪华酒店. They stayed at a swank hotel in Manhattan. 他们住在曼哈顿的一家豪华酒店。 | swank->炫耀/豪华，swanky->时髦豪华的"
+    },
+    {
+      "question": "shrink __ ____",
+      "type": "blank",
+      "answer": "in fear",
+      "explanation": "畏缩, 畏缩恐惧. The timid child would shrink in fear from strangers. 胆小的孩子会因陌生人而畏缩恐惧。 | shrink->收缩/畏缩，shrink->精神科医生（俚语，因为分析人的内心）"
+    },
+    {
+      "question": "wink __",
+      "type": "blank",
+      "answer": "at",
+      "explanation": "眨眼, 对...眨眼. He would wink at her across the room. 他会从房间对面对她眨眼。 | wink->眨眼，wink at->眨眼示意/默许（cf. forty winks小睡）"
+    },
+    {
+      "question": "_ hunk __ _____",
+      "type": "blank",
+      "answer": "a of bread",
+      "explanation": "大块, 一大块面包. He tore off a hunk of bread from the loaf. 他从面包上撕下一大块。 | hunk->大块/肌肉男（俚语），a hunk of->一大块"
+    },
+    {
+      "question": "_ chunk __ ___",
+      "type": "blank",
+      "answer": "a of ice",
+      "explanation": "厚块, 一大块冰. A chunk of ice broke off from the glacier. 一大块冰从冰川上断裂。 | chunk->厚重的一块（cf. hunk大块，chunk更强调厚实）"
+    },
+    {
+      "question": "_______ skunk",
+      "type": "blank",
+      "answer": "striped",
+      "explanation": "臭鼬, 条纹臭鼬. The striped skunk is known for its defensive spray. 条纹臭鼬以其防御性喷雾而闻名。 | skunk->臭鼬（来自美洲原住民语），drunk as a skunk->烂醉如泥"
+    },
+    {
+      "question": "flunk _ ____",
+      "type": "blank",
+      "answer": "a test",
+      "explanation": "不及格, 考试不及格. Students who don't study may flunk a test. 不学习的学生可能会考试不及格。 | flunk->失败（可能源自funk->退缩），flunk out->因成绩差被退学"
+    },
+    {
+      "question": "chipmunk _____",
+      "type": "blank",
+      "answer": "cheek",
+      "explanation": "花栗鼠, 花栗鼠脸颊. The chipmunk cheek bulged with stored nuts. 花栗鼠脸颊因储存的坚果而鼓起。 | chip->条纹，munk->松鼠，chipmunk->有条纹的松鼠=花栗鼠"
+    },
+    {
+      "question": "____ spunk",
+      "type": "blank",
+      "answer": "show",
+      "explanation": "勇气, 展现勇气. The underdog team continued to show spunk. 处于劣势的球队继续展现勇气。 | spunk->火绒/勇气（苏格兰语），spunky->勇敢有活力的"
+    },
+    {
+      "question": "overlook _ ______",
+      "type": "blank",
+      "answer": "a detail",
+      "explanation": "忽略, 忽略细节. It's easy to overlook a detail in complex documents. 在复杂文件中很容易忽略细节。 | over->在上，look->看，overlook->从上俯视/忽略（一词两义）"
+    },
+    {
+      "question": "brook __ _______",
+      "type": "blank",
+      "answer": "no dissent",
+      "explanation": "容忍, 不容忍异议. The dictator would brook no dissent from subordinates. 独裁者不会容忍下属的异议。 | brook->小溪/容忍（反义同词），brook no->无法容忍"
+    },
+    {
+      "question": "bark ______",
+      "type": "blank",
+      "answer": "loudly",
+      "explanation": "吠叫, 大声吠叫. The guard dog would bark loudly at intruders. 看门狗会对入侵者大声吠叫。 | bark->树皮/吠叫/小船（一词多义），barking up the wrong tree->找错对象"
+    },
+    {
+      "question": "debark __________",
+      "type": "blank",
+      "answer": "passengers",
+      "explanation": "下船, 让乘客下船. The crew prepared to debark passengers at the port. 船员准备在港口让乘客下船。 | de->离开，bark->小船，debark->离开船=下船（cf. embark上船）"
+    },
+    {
+      "question": "_____ hallmark",
+      "type": "blank",
+      "answer": "brand",
+      "explanation": "特征, 品牌特征. Quality is the brand hallmark of luxury goods. 质量是奢侈品的品牌特征。 | hall->金匠公会大厅，mark->标记，hallmark->公会认证标记=品质特征"
+    },
+    {
+      "question": "spark ________",
+      "type": "blank",
+      "answer": "interest",
+      "explanation": "激发, 激发兴趣. The discovery helped spark interest in ancient history. 这一发现帮助激发了对古代历史的兴趣。 | spark->火花，spark interest->点燃兴趣的火花"
+    },
+    {
+      "question": "stark ________",
+      "type": "blank",
+      "answer": "contrast",
+      "explanation": "明显的, 明显的对比. The two paintings showed a stark contrast in style. 这两幅画在风格上显示出明显的对比。 | stark->僵硬/完全（古英语），stark contrast->鲜明对比，stark naked->赤裸裸"
+    },
+    {
+      "question": "______ jerk",
+      "type": "blank",
+      "answer": "sudden",
+      "explanation": "猛拉, 突然的猛拉. The train stopped with a sudden jerk. 火车突然猛拉一下停了下来。 | jerk->猛拉/蠢货（俚语），beef jerky->牛肉干（晒干时反复拉扯）"
+    },
+    {
+      "question": "shirk ______________",
+      "type": "blank",
+      "answer": "responsibility",
+      "explanation": "逃避, 逃避责任. Good leaders never shirk responsibility for mistakes. 好的领导者从不逃避责任的错误。 | shirk->回避/逃避（cf. shark鲨鱼，同音联想：像鲨鱼一样滑走）"
+    },
+    {
+      "question": "quirk __ ____",
+      "type": "blank",
+      "answer": "of fate",
+      "explanation": "怪癖, 命运的怪癖. Meeting her again was a strange quirk of fate. 再次遇见她是命运的怪癖。 | quirk->扭曲/怪癖，quirky->古怪有个性的（cf. queer奇怪）"
+    },
+    {
+      "question": "____ fretwork",
+      "type": "blank",
+      "answer": "lace",
+      "explanation": "回纹细工, 花边回纹细工. The dress featured delicate lace fretwork. 这件连衣裙以精致的花边回纹细工为特色。 | fret->焦虑/镂空装饰，fretwork->镂空装饰细工"
+    },
+    {
+      "question": "_____ obelisk",
+      "type": "blank",
+      "answer": "stone",
+      "explanation": "方尖碑, 石方尖碑. The ancient stone obelisk stood in the plaza. 古老的石方尖碑矗立在广场上。 | obelos->烤肉扦（希腊），obelisk->扦形石柱=方尖碑"
+    },
+    {
+      "question": "________ asterisk",
+      "type": "blank",
+      "answer": "footnote",
+      "explanation": "星号, 脚注星号. A footnote asterisk marked additional information. 脚注星号标记了额外信息。 | aster->星星（希腊），asterisk->小星星=星号（cf. asteroid小行星，astronomy天文学）"
+    },
+    {
+      "question": "______ kiosk",
+      "type": "blank",
+      "answer": "ticket",
+      "explanation": "售货亭, 售票亭. Passengers bought tickets at the ticket kiosk. 乘客在售票亭购买票。 | köşk->凉亭（土耳其语），kiosk->小亭子=售货亭"
+    },
+    {
+      "question": "____ husk",
+      "type": "blank",
+      "answer": "corn",
+      "explanation": "外壳, 玉米外壳. Remove the corn husk before cooking. 烹饪前去除玉米外壳。 | husk->外壳/嘶哑，husky->声音嘶哑的/哈士奇（厚皮毛）"
+    },
+    {
+      "question": "________ tusk",
+      "type": "blank",
+      "answer": "elephant",
+      "explanation": "象牙, 大象象牙. Poachers illegally hunt elephant tusk. 偷猎者非法猎取大象象牙。 | tusk->长牙（古英语tusc），tusk->象牙/野猪獠牙"
+    },
+    {
+      "question": "hawk _ _______",
+      "type": "blank",
+      "answer": "a product",
+      "explanation": "兜售, 兜售产品. Vendors would hawk a product on street corners. 小贩会在街角兜售产品。 | hawk->鹰/兜售/清喉咙（一词三义），hawker->小贩"
+    },
+    {
+      "question": "______ cabal",
+      "type": "blank",
+      "answer": "secret",
+      "explanation": "阴谋集团, 秘密阴谋集团. A secret cabal plotted to overthrow the government. 一个秘密阴谋集团密谋推翻政府。 | cabala->犹太神秘教义（秘密传授），cabal->秘密小团体=阴谋集团"
+    },
+    {
+      "question": "verbal _____",
+      "type": "blank",
+      "answer": "abuse",
+      "explanation": "言语的, 言语虐待. The employee suffered verbal abuse from the supervisor. 员工遭受主管的言语虐待。 | verb->词/动词，verbal->言语的（cf. verbose冗长的，verbatim逐字的）"
+    },
+    {
+      "question": "methodical ________",
+      "type": "blank",
+      "answer": "approach",
+      "explanation": "有条理的, 有条理的方法. The scientist used a methodical approach to research. 科学家使用有条理的方法进行研究。 | method->方法，methodical->按方法来的=有条理的（cf. methodology方法论）"
+    },
+    {
+      "question": "________ periodical",
+      "type": "blank",
+      "answer": "academic",
+      "explanation": "期刊, 学术期刊. The professor published in an academic periodical. 教授在学术期刊上发表文章。 | period->周期，periodical->定期出版的=期刊（cf. periodic定期的）"
+    },
+    {
+      "question": "pontifical ____",
+      "type": "blank",
+      "answer": "tone",
+      "explanation": "自以为是的, 自以为是的语气. His pontifical tone annoyed colleagues. 他自以为是的语气惹恼了同事。 | pontiff->教皇，pontifical->教皇般的=自以为是的（cf. pontificate高谈阔论）"
+    },
+    {
+      "question": "pathological ____",
+      "type": "blank",
+      "answer": "liar",
+      "explanation": "病态的, 病态的说谎者. The pathological liar couldn't distinguish truth from fiction. 病态的说谎者无法区分真假。 | patho->疾病，log->研究，pathological->病理学的/病态的（cf. pathology病理学）"
+    },
+    {
+      "question": "physiological ________",
+      "type": "blank",
+      "answer": "response",
+      "explanation": "生理的, 生理反应. Fear triggers a physiological response in the body. 恐惧在身体中触发生理反应。 | physio->自然/身体，log->研究，physiological->生理学的（cf. physician医生）"
+    },
+    {
+      "question": "tautological ____",
+      "type": "blank",
+      "answer": "loop",
+      "explanation": "同义反复的, 同义反复的循环. The argument fell into a tautological loop. 论证陷入了同义反复的循环。 | tauto->同样（希腊），log->说，tautological->说同样的话=同义反复的"
+    },
+    {
+      "question": "typographical _____",
+      "type": "blank",
+      "answer": "error",
+      "explanation": "排版的, 排版错误. The book contained several typographical error. 这本书包含几处排版错误。 | typo->字模，graph->写，typographical->印刷排版的（typo是typographical error的缩写）"
+    },
+    {
+      "question": "cyclical ________",
+      "type": "blank",
+      "answer": "downturn",
+      "explanation": "周期性的, 周期性衰退. The economy experienced a cyclical downturn. 经济经历了周期性衰退。 | cycl->圆/循环，cyclical->循环的（cf. bicycle自行车，recycle循环）"
+    },
+    {
+      "question": "diabolical ______",
+      "type": "blank",
+      "answer": "scheme",
+      "explanation": "恶魔般的, 恶魔般的阴谋. The villain hatched a diabolical scheme. 反派策划了一个恶魔般的阴谋。 | diablo->魔鬼（希腊diabolos->诽谤者），diabolical->魔鬼般的（cf. devil魔鬼）"
+    },
+    {
+      "question": "polemical _____",
+      "type": "blank",
+      "answer": "essay",
+      "explanation": "论战的, 论战性文章. The author wrote a polemical essay on politics. 作者写了一篇关于政治的论战性文章。 | polemos->战争（希腊），polemical->战斗性的=论战的（cf. polemic论战）"
+    },
+    {
+      "question": "inimical __ ______",
+      "type": "blank",
+      "answer": "to health",
+      "explanation": "有害的, 对健康有害的. Smoking is inimical to health. 吸烟对健康有害。 | in->否定，amic->友好，inimical->不友好的=有害的（cf. enemy敌人，amicable友好的）"
+    },
+    {
+      "question": "economical ___",
+      "type": "blank",
+      "answer": "car",
+      "explanation": "经济的, 经济型汽车. The economical car saves money on fuel. 经济型汽车节省燃料费用。 | eco->家/管理，nom->法则，economical->节省管理的=经济实惠的（注意区分economic经济学的）"
+    },
+    {
+      "question": "astronomical _____",
+      "type": "blank",
+      "answer": "price",
+      "explanation": "天文数字的, 天文数字的价格. The artwork sold for an astronomical price. 这件艺术品以天文数字的价格售出。 | astro->星星，nom->法则，astronomical->天文学的/天文数字般巨大的"
+    },
+    {
+      "question": "anatomical _____",
+      "type": "blank",
+      "answer": "model",
+      "explanation": "解剖的, 解剖模型. Medical students studied the anatomical model. 医学生研究解剖模型。 | ana->向上，tom->切，anatomical->切开研究的=解剖的（cf. atom原子=不可再切的）"
+    },
+    {
+      "question": "mechanical _______",
+      "type": "blank",
+      "answer": "failure",
+      "explanation": "机械的, 机械故障. The plane crash was caused by mechanical failure. 飞机坠毁是由机械故障引起的。 | mechan->机械，mechanical->机械的/机械式的（cf. mechanism机制）"
+    },
+    {
+      "question": "ecumenical _______",
+      "type": "blank",
+      "answer": "council",
+      "explanation": "普世的, 普世会议. The ecumenical council brought together different faiths. 普世会议汇集了不同的信仰。 | oikoumene->整个居住世界（希腊），ecumenical->全基督教世界的=普世的"
+    },
+    {
+      "question": "canonical ____",
+      "type": "blank",
+      "answer": "text",
+      "explanation": "经典的, 经典文本. Shakespeare's works are canonical text in English literature. 莎士比亚的作品是英国文学的经典文本。 | canon->教规/经典（希腊kanon->直尺），canonical->符合经典标准的"
+    },
+    {
+      "question": "empirical ________",
+      "type": "blank",
+      "answer": "evidence",
+      "explanation": "经验的, 经验证据. The theory was supported by empirical evidence. 该理论得到经验证据的支持。 | empiri->经验（希腊peira->尝试），empirical->基于实际经验的（cf. empiricism经验主义）"
+    },
+    {
+      "question": "metrical _______",
+      "type": "blank",
+      "answer": "pattern",
+      "explanation": "韵律的, 韵律模式. The poem followed a strict metrical pattern. 这首诗遵循严格的韵律模式。 | metr->度量/节拍，metrical->按节拍度量的=韵律的（cf. meter米/节拍）"
+    },
+    {
+      "question": "lackadaisical ________",
+      "type": "blank",
+      "answer": "attitude",
+      "explanation": "懒散的, 懒散的态度. His lackadaisical attitude toward work was problematic. 他对工作懒散的态度是有问题的。 | lackaday->哎呀（感叹无聊），lackadaisical->无精打采懒洋洋的"
+    },
+    {
+      "question": "whimsical ____",
+      "type": "blank",
+      "answer": "idea",
+      "explanation": "异想天开的, 异想天开的想法. The artist had a whimsical idea for the sculpture. 艺术家对雕塑有一个异想天开的想法。 | whim->突发奇想，whimsical->充满奇思妙想的=异想天开的"
+    },
+    {
+      "question": "nonsensical ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "荒谬的, 荒谬的评论. He dismissed the proposal as a nonsensical remark. 他将该提议视为荒谬的评论而不予理会。 | non->否定，sense->意义，nonsensical->毫无意义的=荒谬的"
+    },
+    {
+      "question": "metaphysical ________",
+      "type": "blank",
+      "answer": "question",
+      "explanation": "形而上学的, 形而上学问题. Philosophers debate metaphysical question about existence. 哲学家辩论关于存在的形而上学问题。 | meta->在…之后/超越，physic->自然，metaphysical->超越物理的=形而上学的"
+    },
+    {
+      "question": "alphabetical _____",
+      "type": "blank",
+      "answer": "order",
+      "explanation": "按字母顺序的, 按字母顺序. The dictionary lists words in alphabetical order. 字典按字母顺序列出单词。 | alpha+beta->希腊字母前两个，alphabetical->按字母表顺序的"
+    },
+    {
+      "question": "hypothetical ________",
+      "type": "blank",
+      "answer": "scenario",
+      "explanation": "假设的, 假设的情景. The professor presented a hypothetical scenario. 教授提出了一个假设的情景。 | hypo->在下/假设，thes->放置，hypothetical->放在下面作基础的=假设的（cf. hypothesis假说）"
+    },
+    {
+      "question": "heretical ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "异端的, 异端观点. The church condemned his heretical view. 教会谴责了他的异端观点。 | hairein->选择（希腊），heretical->自己选择信仰而非遵从教义=异端的（cf. heresy异端）"
+    },
+    {
+      "question": "theoretical _________",
+      "type": "blank",
+      "answer": "framework",
+      "explanation": "理论的, 理论框架. The study employed a strong theoretical framework. 该研究采用了强大的理论框架。 | theor->观察（希腊），theoretical->基于观察推论的=理论的（cf. theater剧场，theory理论）"
+    },
+    {
+      "question": "critical _________",
+      "type": "blank",
+      "answer": "condition",
+      "explanation": "危急的, 危急状况. The patient remained in critical condition. 患者仍处于危急状况。 | crit->判断（希腊），critical->做出判断的关键时刻=危急的/批判的（cf. criterion标准）"
+    },
+    {
+      "question": "sceptical ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "怀疑的, 怀疑的观点. Scientists took a sceptical view of the claims. 科学家对这些声明持怀疑的观点。 | skept->考察（希腊），sceptical->不断考察质疑的=怀疑的（cf. skeptic怀疑者）"
+    },
+    {
+      "question": "elliptical _____",
+      "type": "blank",
+      "answer": "orbit",
+      "explanation": "椭圆的, 椭圆轨道. Planets follow an elliptical orbit around the sun. 行星沿着围绕太阳的椭圆轨道运行。 | elleipsis->缺失（希腊），ellipse->缺了一角的圆=椭圆，elliptical->椭圆的/省略的"
+    },
+    {
+      "question": "vertical ____",
+      "type": "blank",
+      "answer": "axis",
+      "explanation": "垂直的, 垂直轴. The graph shows data along the vertical axis. 图表沿垂直轴显示数据。 | vert->转/顶点（拉丁vertex），vertical->从顶点向下的=垂直的（cf. vertex顶点）"
+    },
+    {
+      "question": "nautical _____",
+      "type": "blank",
+      "answer": "chart",
+      "explanation": "航海的, 航海图. Sailors navigate using a nautical chart. 水手使用航海图导航。 | naut->船/水手（希腊），nautical->航海的（cf. astronaut宇航员，cosmonaut宇航员）"
+    },
+    {
+      "question": "pharmaceutical _______",
+      "type": "blank",
+      "answer": "company",
+      "explanation": "制药的, 制药公司. The pharmaceutical company developed new treatments. 制药公司开发了新的治疗方法。 | pharmak->药物（希腊），pharmaceutical->制药的（cf. pharmacy药店）"
+    },
+    {
+      "question": "lexical ____",
+      "type": "blank",
+      "answer": "item",
+      "explanation": "词汇的, 词汇项. The dictionary defines each lexical item precisely. 字典精确定义每个词汇项。 | lexis->词语（希腊），lexical->词汇的（cf. lexicon词典，dyslexia阅读障碍）"
+    },
+    {
+      "question": "reciprocal _______",
+      "type": "blank",
+      "answer": "respect",
+      "explanation": "相互的, 相互尊重. Good relationships require reciprocal respect. 良好的关系需要相互尊重。 | recip->来回，proc->向前，reciprocal->来回往返的=相互的（cf. recipe食谱=收到的东西）"
+    },
+    {
+      "question": "univocal ____",
+      "type": "blank",
+      "answer": "term",
+      "explanation": "单义的, 单义术语. The scientific definition is a univocal term. 科学定义是一个单义术语。 | uni->一，voc->声音/意义，univocal->只有一种意义的=单义的（cf. equivocal模棱两可的）"
+    },
+    {
+      "question": "____ medal",
+      "type": "blank",
+      "answer": "gold",
+      "explanation": "奖章, 金牌. The athlete won a gold medal at the Olympics. 运动员在奥运会上赢得了金牌。 | medal->金属片（拉丁metallum），medal->奖章（注意区分meddle干涉，同音）"
+    },
+    {
+      "question": "pedal _____",
+      "type": "blank",
+      "answer": "power",
+      "explanation": "踏板, 踏板动力. The bicycle runs on pedal power alone. 自行车仅靠踏板动力运行。 | ped->脚（拉丁），pedal->用脚踩的=踏板（cf. pedestrian行人，pedicure足疗）"
+    },
+    {
+      "question": "_______ sandal",
+      "type": "blank",
+      "answer": "leather",
+      "explanation": "凉鞋, 皮凉鞋. She wore comfortable leather sandal in summer. 她在夏天穿舒适的皮凉鞋。 | sandalon->凉鞋（希腊），sandal->凉鞋（cf. sandalwood檀香木，因制凉鞋）"
+    },
+    {
+      "question": "heal ___ _____",
+      "type": "blank",
+      "answer": "the wound",
+      "explanation": "治愈, 治愈伤口. Time will help heal the wound both physically and emotionally. 时间将帮助治愈身体和情感上的伤口。 | heal->使完整（古英语hal->整全），heal->治愈（cf. health健康，whole完整）"
+    },
+    {
+      "question": "piecemeal ______",
+      "type": "blank",
+      "answer": "reform",
+      "explanation": "零碎的, 零碎的改革. The government implemented piecemeal reform instead of comprehensive change. 政府实施零碎的改革而不是全面改革。 | piece->片，meal->一次（古英语，量词），piecemeal->一片一片地=零碎的"
+    },
+    {
+      "question": "oatmeal ________",
+      "type": "blank",
+      "answer": "porridge",
+      "explanation": "燕麦片, 燕麦片粥. She ate warm oatmeal porridge for breakfast. 她早餐吃温暖的燕麦片粥。 | oat->燕麦，meal->磨碎的谷物，oatmeal->磨碎的燕麦=燕麦片"
+    },
+    {
+      "question": "lineal __________",
+      "type": "blank",
+      "answer": "descendant",
+      "explanation": "直系的, 直系后裔. He is a lineal descendant of the royal family. 他是王室的直系后裔。 | line->线，lineal->沿直线传承的=直系的（cf. linear线性的，lineage血统）"
+    },
+    {
+      "question": "repeal _ ___",
+      "type": "blank",
+      "answer": "a law",
+      "explanation": "废除, 废除法律. Congress voted to repeal a law that was outdated. 国会投票废除一项过时的法律。 | re->回，peal->呼吁，repeal->撤回呼吁=废除（cf. appeal上诉/呼吁）"
+    },
+    {
+      "question": "____ appeal",
+      "type": "blank",
+      "answer": "make",
+      "explanation": "呼吁, 发出呼吁. The charity will make appeal for donations. 慈善机构将发出捐款呼吁。 | ap->朝向，peal->呼喊，appeal->朝某人呼喊=呼吁/上诉（cf. repeal废除）"
+    },
+    {
+      "question": "_________ cereal",
+      "type": "blank",
+      "answer": "breakfast",
+      "explanation": "谷物, 早餐谷物. Children enjoy eating breakfast cereal with milk. 孩子们喜欢吃加牛奶的早餐谷物。 | Ceres->罗马谷物女神，cereal->谷物（注意区分serial连续的，同音）"
+    },
+    {
+      "question": "sidereal ____",
+      "type": "blank",
+      "answer": "time",
+      "explanation": "恒星的, 恒星时. Astronomers use sidereal time for observations. 天文学家使用恒星时进行观测。 | sider->星星（拉丁sidus），sidereal->星星的=恒星的（cf. consider->con+sider->观星=考虑）"
+    },
+    {
+      "question": "ethereal ______",
+      "type": "blank",
+      "answer": "beauty",
+      "explanation": "飘渺的, 飘渺的美丽. The dancer possessed an ethereal beauty. 舞者拥有飘渺的美丽。 | ether->天空/以太（希腊），ethereal->天空般的=飘渺轻盈的（cf. ether乙醚）"
+    },
+    {
+      "question": "funereal ____",
+      "type": "blank",
+      "answer": "mood",
+      "explanation": "阴郁的, 阴郁的气氛. A funereal mood settled over the gathering. 阴郁的气氛笼罩着聚会。 | funer->葬礼（拉丁），funereal->葬礼般阴沉的（cf. funeral葬礼）"
+    },
+    {
+      "question": "arboreal _______",
+      "type": "blank",
+      "answer": "habitat",
+      "explanation": "树栖的, 树栖栖息地. Monkeys thrive in their arboreal habitat. 猴子在它们的树栖栖息地中茁壮成长。 | arbor->树（拉丁），arboreal->树上生活的（cf. arboretum植物园）"
+    },
+    {
+      "question": "incorporeal ______",
+      "type": "blank",
+      "answer": "spirit",
+      "explanation": "无形的, 无形的精神. Ghost stories speak of incorporeal spirit. 鬼故事讲述无形的精神。 | in->否定，corpor->身体，incorporeal->没有身体的=无形的（cf. corporal肉体的，incorporate合并）"
+    },
+    {
+      "question": "empyreal _____",
+      "type": "blank",
+      "answer": "light",
+      "explanation": "天空的, 天空之光. The painting depicted empyreal light from heaven. 这幅画描绘了来自天堂的天空之光。 | empyr->火（希腊），empyreal->最高天的（cf. empyrean最高天）"
+    },
+    {
+      "question": "regal _______",
+      "type": "blank",
+      "answer": "bearing",
+      "explanation": "帝王的, 帝王气质. The queen maintained a regal bearing. 女王保持着帝王气质。 | reg->统治（拉丁rex->国王），regal->国王的（cf. reign统治，royal皇家的）"
+    },
+    {
+      "question": "prodigal ___",
+      "type": "blank",
+      "answer": "son",
+      "explanation": "挥霍的, 浪子. The parable tells of the prodigal son who returned home. 寓言讲述了回家的浪子。 | pro->向前，dig->驱赶，prodigal->把财产都驱赶出去的=挥霍的（cf. prodigious巨大的）"
+    },
+    {
+      "question": "____ madrigal",
+      "type": "blank",
+      "answer": "love",
+      "explanation": "情歌, 爱情牧歌. The choir performed a beautiful love madrigal. 合唱团演唱了一首美丽的爱情牧歌。 | madrigal->田园情歌（意大利），多声部无伴奏合唱的世俗歌曲"
+    },
+    {
+      "question": "centrifugal _____",
+      "type": "blank",
+      "answer": "force",
+      "explanation": "离心的, 离心力. Centrifugal force pushes objects outward during rotation. 离心力在旋转期间将物体向外推。 | centri->中心，fug->逃离，centrifugal->逃离中心的=离心的（cf. centripetal向心的）"
+    },
+    {
+      "question": "conjugal ______",
+      "type": "blank",
+      "answer": "rights",
+      "explanation": "婚姻的, 婚姻权利. The couple discussed their conjugal rights. 这对夫妇讨论了他们的婚姻权利。 | con->共同，jug->结合（拉丁jugum->轭），conjugal->共同套上轭的=婚姻的（cf. conjugate结合）"
+    },
+    {
+      "question": "apocryphal _____",
+      "type": "blank",
+      "answer": "story",
+      "explanation": "杜撰的, 杜撰的故事. The legend is probably an apocryphal story. 这个传说可能是一个杜撰的故事。 | apo->离开，crypt->隐藏，apocryphal->隐藏起来的（未被认可的）=杜撰的/伪经的"
+    },
+    {
+      "question": "_____ marshal",
+      "type": "blank",
+      "answer": "field",
+      "explanation": "元帅, 陆军元帅. The field marshal commanded the entire army. 陆军元帅指挥整个军队。 | marah->马，scalc->仆人（古日耳曼），marshal->管马的人->指挥官=元帅"
+    },
+    {
+      "question": "connubial _____",
+      "type": "blank",
+      "answer": "bliss",
+      "explanation": "婚姻的, 婚姻幸福. The newlyweds enjoyed connubial bliss. 新婚夫妇享受婚姻幸福。 | con->共同，nub->结婚（拉丁nubere），connubial->共同结婚的=婚姻的（cf. nuptial婚礼的）"
+    },
+    {
+      "question": "glacial ____",
+      "type": "blank",
+      "answer": "pace",
+      "explanation": "极慢的, 极慢的步伐. The project moved forward at a glacial pace. 该项目以极慢的步伐向前推进。 | glaci->冰（拉丁glacies），glacial->冰川般缓慢的（cf. glacier冰川）"
+    },
+    {
+      "question": "judicial ______",
+      "type": "blank",
+      "answer": "review",
+      "explanation": "司法的, 司法审查. The court conducted a judicial review of the law. 法院对该法律进行了司法审查。 | judici->判断（拉丁judex->法官），judicial->法官/司法的（cf. judge法官，prejudice偏见）"
+    },
+    {
+      "question": "cordial _________",
+      "type": "blank",
+      "answer": "relations",
+      "explanation": "友好的, 友好关系. The two nations maintained cordial relations. 两国保持友好关系。 | cord->心脏（拉丁cor），cordial->发自心脏的=真诚友好的（cf. core核心，record记录=重新回心上）"
+    },
+    {
+      "question": "vestigial ____",
+      "type": "blank",
+      "answer": "tail",
+      "explanation": "退化的, 退化的尾巴. Humans have a vestigial tail called the coccyx. 人类有一个称为尾骨的退化尾巴。 | vestig->脚印/痕迹（拉丁），vestigial->只留下痕迹的=退化的（cf. investigate调查=追踪脚印）"
+    },
+    {
+      "question": "parochial ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "狭隘的, 狭隘的观点. His parochial view prevented understanding other cultures. 他狭隘的观点阻碍了对其他文化的理解。 | par->旁边，oik->家（希腊），parochial->只顾自家教区的=狭隘的（cf. parish教区）"
+    },
+    {
+      "question": "filial ____",
+      "type": "blank",
+      "answer": "duty",
+      "explanation": "孝顺的, 孝顺义务. Caring for elderly parents is a filial duty. 照顾年迈父母是孝顺义务。 | fili->儿女（拉丁filius），filial->儿女对父母的=孝顺的（cf. affiliate附属，affiliate=认作儿子）"
+    },
+    {
+      "question": "genial ____",
+      "type": "blank",
+      "answer": "host",
+      "explanation": "和蔼的, 和蔼的主人. The genial host made everyone feel welcome. 和蔼的主人让每个人都感到受欢迎。 | geni->天性/精神（拉丁genius），genial->天性和善的（cf. genius天才，congenial意气相投的）"
+    },
+    {
+      "question": "congenial _______",
+      "type": "blank",
+      "answer": "company",
+      "explanation": "意气相投的, 意气相投的同伴. She enjoyed spending time with congenial company. 她喜欢与意气相投的同伴共度时光。 | con->共同，geni->天性，congenial->天性相同的=意气相投的（cf. genial和蔼的）"
+    },
+{
+      "question": "menial ___",
+      "type": "blank",
+      "answer": "job",
+      "explanation": "卑微的, 卑微的工作. He refused to accept menial job despite financial struggles. 尽管经济困难,他拒绝接受卑微的工作。 | meni->家务/仆人，menial->仆人做的=卑微的（cf. domestic家务的）"
+    },
+    {
+      "question": "venial ___",
+      "type": "blank",
+      "answer": "sin",
+      "explanation": "可宽恕的, 可宽恕的罪. The priest distinguished between mortal and venial sin. 神父区分了不可饶恕的罪和可宽恕的罪。 | venia->宽恕（拉丁），venial->可被宽恕的（注意区分venal贪污的）"
+    },
+    {
+      "question": "biennial __________",
+      "type": "blank",
+      "answer": "exhibition",
+      "explanation": "两年一次的, 两年一次的展览. The art museum hosts a biennial exhibition. 艺术博物馆举办两年一次的展览。 | bi->二，enni->年，biennial->两年一次的（cf. annual年度的，centennial百年的）"
+    },
+    {
+      "question": "perennial _____",
+      "type": "blank",
+      "answer": "plant",
+      "explanation": "多年生的, 多年生植物. The garden featured many perennial plant varieties. 花园有许多多年生植物品种。 | per->穿越，enni->年，perennial->穿越多年的=多年生的/长久的"
+    },
+    {
+      "question": "marsupial _____",
+      "type": "blank",
+      "answer": "pouch",
+      "explanation": "有袋动物, 有袋动物育儿袋. Kangaroos carry their young in a marsupial pouch. 袋鼠在育儿袋中携带幼崽。 | marsupium->育儿袋（拉丁），marsupial->有育儿袋的动物=有袋动物"
+    },
+    {
+      "question": "actuarial _____",
+      "type": "blank",
+      "answer": "table",
+      "explanation": "精算的, 精算表. Insurance companies use actuarial table to calculate premiums. 保险公司使用精算表来计算保费。 | actuar->记录员，actuarial->精算师的（精算师用数学计算风险）"
+    },
+    {
+      "question": "aerial ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "空中的, 空中视角. The drone captured a stunning aerial view of the city. 无人机拍摄了城市令人惊叹的空中视角。 | aer->空气（希腊），aerial->空气中的=空中的（cf. aerobic有氧的）"
+    },
+    {
+      "question": "imperial ______",
+      "type": "blank",
+      "answer": "palace",
+      "explanation": "帝国的, 皇宫. The imperial palace displayed magnificent architecture. 皇宫展示了宏伟的建筑。 | imperium->统治权（拉丁），imperial->帝王统治的（cf. empire帝国）"
+    },
+    {
+      "question": "magisterial ____",
+      "type": "blank",
+      "answer": "tone",
+      "explanation": "威严的, 威严的语气. The professor spoke in a magisterial tone. 教授用威严的语气说话。 | magister->长官/主人（拉丁），magisterial->长官般威严的（cf. magistrate地方法官）"
+    },
+    {
+      "question": "___ memorial",
+      "type": "blank",
+      "answer": "war",
+      "explanation": "纪念碑, 战争纪念碑. The war memorial honored fallen soldiers. 战争纪念碑纪念阵亡士兵。 | memor->记忆，memorial->帮助记忆的=纪念碑（cf. memory记忆，commemorate纪念）"
+    },
+    {
+      "question": "_____ ____ immemorial",
+      "type": "blank",
+      "answer": "since time",
+      "explanation": "远古的, 自古以来. This tradition has existed since time immemorial. 这个传统自古以来就存在。 | im->否定，memor->记忆，immemorial->超出记忆所及的=远古的"
+    },
+    {
+      "question": "tonsorial ___",
+      "type": "blank",
+      "answer": "art",
+      "explanation": "理发的, 理发艺术. The barber practiced the tonsorial art with skill. 理发师娴熟地实践理发艺术。 | tonso->剪切（拉丁tondere），tonsorial->剪发的=理发的（cf. tonsure剃发）"
+    },
+    {
+      "question": "piscatorial _______",
+      "type": "blank",
+      "answer": "village",
+      "explanation": "渔业的, 渔村. The piscatorial village depended on fishing for income. 渔村依靠捕鱼为生。 | pisc->鱼（拉丁piscis），piscatorial->关于鱼/钓鱼的（cf. Pisces双鱼座）"
+    },
+    {
+      "question": "pictorial ______",
+      "type": "blank",
+      "answer": "record",
+      "explanation": "图画的, 图画记录. The magazine provided a pictorial record of events. 杂志提供了事件的图画记录。 | pict->画（拉丁pingere），pictorial->用图画的（cf. picture图片，depict描绘）"
+    },
+    {
+      "question": "sartorial ________",
+      "type": "blank",
+      "answer": "elegance",
+      "explanation": "服装的, 服装优雅. The gentleman was known for his sartorial elegance. 这位绅士以其服装优雅而闻名。 | sartor->裁缝（拉丁），sartorial->裁缝的/服装的（cf. sartorius缝匠肌）"
+    },
+    {
+      "question": "reportorial _____",
+      "type": "blank",
+      "answer": "style",
+      "explanation": "记者的, 记者风格. The author adopted a reportorial style for the book. 作者为这本书采用了记者风格。 | report->报道，reportorial->记者报道式的"
+    },
+    {
+      "question": "terrestrial _______",
+      "type": "blank",
+      "answer": "habitat",
+      "explanation": "陆地的, 陆地栖息地. Many species thrive in terrestrial habitat. 许多物种在陆地栖息地中茁壮成长。 | terra->土地，terrestrial->陆地上的（cf. terrain地形，Mediterranean地中海）"
+    },
+    {
+      "question": "burial ____",
+      "type": "blank",
+      "answer": "site",
+      "explanation": "埋葬, 墓地. Archaeologists excavated an ancient burial site. 考古学家挖掘了一个古代墓地。 | bury->埋，burial->埋葬（的行为/地点）"
+    },
+    {
+      "question": "mercurial ___________",
+      "type": "blank",
+      "answer": "temperament",
+      "explanation": "善变的, 善变的性格. The artist had a mercurial temperament. 这位艺术家有善变的性格。 | Mercury->信使神（行动迅速多变），mercurial->像水星/墨丘利一样善变的"
+    },
+    {
+      "question": "ambrosial _____",
+      "type": "blank",
+      "answer": "aroma",
+      "explanation": "芳香的, 芳香的香味. An ambrosial aroma filled the bakery. 芳香的香味充满了面包店。 | ambrosia->神的食物（希腊神话），ambrosial->如神食般芳香的"
+    },
+    {
+      "question": "palatial _________",
+      "type": "blank",
+      "answer": "residence",
+      "explanation": "宫殿般的, 宫殿般的住所. The billionaire owned a palatial residence. 亿万富翁拥有一座宫殿般的住所。 | Palatine->罗马七丘之一（皇帝在此建宫殿），palatial->宫殿般宏大的"
+    },
+    {
+      "question": "spatial _________",
+      "type": "blank",
+      "answer": "awareness",
+      "explanation": "空间的, 空间意识. Pilots require excellent spatial awareness. 飞行员需要出色的空间意识。 | spati->空间（拉丁spatium），spatial->空间的（cf. space空间）"
+    },
+    {
+      "question": "insubstantial ________",
+      "type": "blank",
+      "answer": "evidence",
+      "explanation": "不充分的, 不充分的证据. The prosecution offered only insubstantial evidence. 检方只提供了不充分的证据。 | in->否定，sub->在下，stant->站立，insubstantial->站不住脚的=不充分的"
+    },
+    {
+      "question": "circumstantial ________",
+      "type": "blank",
+      "answer": "evidence",
+      "explanation": "间接的, 间接证据. The case relied heavily on circumstantial evidence. 该案严重依赖间接证据。 | circum->周围，stant->站立，circumstantial->站在周围的=间接的"
+    },
+    {
+      "question": "confidential ___________",
+      "type": "blank",
+      "answer": "information",
+      "explanation": "机密的, 机密信息. The document contained confidential information. 该文件包含机密信息。 | con->共同，fide->信任，confidential->只在信任圈内的=机密的（cf. confide倾诉）"
+    },
+    {
+      "question": "providential ______",
+      "type": "blank",
+      "answer": "escape",
+      "explanation": "天赐的, 天赐的逃脱. Their providential escape from danger seemed miraculous. 他们天赐的逃脱危险似乎是奇迹。 | providence->天意，providential->有如天助的（cf. provide提供）"
+    },
+    {
+      "question": "tangential ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "离题的, 离题的评论. His tangential remark distracted from the main point. 他离题的评论分散了主要观点的注意力。 | tang->触碰，tangential->仅擦边而过的=离题的（cf. tangent切线）"
+    },
+    {
+      "question": "deferential ____",
+      "type": "blank",
+      "answer": "tone",
+      "explanation": "恭敬的, 恭敬的语气. The assistant spoke in a deferential tone. 助理用恭敬的语气说话。 | de->向下，fer->带去，deferential->向下带去（低头）=恭敬的（cf. defer推迟/服从）"
+    },
+    {
+      "question": "existential _____",
+      "type": "blank",
+      "answer": "angst",
+      "explanation": "存在的, 存在焦虑. The character experienced existential angst. 这个角色经历了存在焦虑。 | exist->存在，existential->关于存在意义的（cf. existence存在）"
+    },
+    {
+      "question": "sequential _____",
+      "type": "blank",
+      "answer": "order",
+      "explanation": "顺序的, 顺序. The instructions must be followed in sequential order. 必须按顺序遵循指示。 | sequ->跟随，sequential->一个接一个跟随的=顺序的（cf. sequel续集）"
+    },
+    {
+      "question": "inconsequential ______",
+      "type": "blank",
+      "answer": "detail",
+      "explanation": "不重要的, 不重要的细节. The dispute was over an inconsequential detail. 争论是关于一个不重要的细节。 | in->否定，consequent->有结果的，inconsequential->没有后果的=不重要的"
+    },
+    {
+      "question": "nuptial ____",
+      "type": "blank",
+      "answer": "vows",
+      "explanation": "婚礼的, 婚礼誓言. The couple exchanged nuptial vows at the ceremony. 这对夫妇在仪式上交换了婚礼誓言。 | nupti->婚姻（拉丁nubere->结婚），nuptial->婚礼的（cf. prenuptial婚前的）"
+    },
+    {
+      "question": "martial ___",
+      "type": "blank",
+      "answer": "law",
+      "explanation": "军事的, 戒严法. The government declared martial law during the crisis. 政府在危机期间宣布了戒严法。 | Mars->战神，martial->战神的=军事的（注意区分marital婚姻的）"
+    },
+    {
+      "question": "partial _______",
+      "type": "blank",
+      "answer": "payment",
+      "explanation": "部分的, 部分付款. The buyer made a partial payment on the house. 买家支付了房子的部分款项。 | part->部分，partial->部分的（cf. impartial公正的=不偏袒任何部分）"
+    },
+    {
+      "question": "impartial _____",
+      "type": "blank",
+      "answer": "judge",
+      "explanation": "公正的, 公正的法官. An impartial judge must decide the case fairly. 公正的法官必须公平地裁决案件。 | im->否定，partial->偏向某方，impartial->不偏向任何一方=公正的"
+    },
+    {
+      "question": "bestial ___",
+      "type": "blank",
+      "answer": "act",
+      "explanation": "野兽般的, 野兽般的行为. The crime was a bestial act of violence. 该罪行是野兽般的暴力行为。 | best->野兽（拉丁bestia），bestial->野兽般的（cf. beast野兽）"
+    },
+    {
+      "question": "celestial ______",
+      "type": "blank",
+      "answer": "sphere",
+      "explanation": "天体的, 天球. Astronomers study objects in the celestial sphere. 天文学家研究天球中的物体。 | caelum->天空（拉丁），celestial->天空的=天体的（cf. ceiling天花板）"
+    },
+    {
+      "question": "colloquial ______",
+      "type": "blank",
+      "answer": "speech",
+      "explanation": "口语的, 口语. The novel used colloquial speech to create authenticity. 小说使用口语来创造真实性。 | col->共同，loqu->说，colloquial->日常共同说的=口语的（cf. colloquium讨论会）"
+    },
+    {
+      "question": "convivial ______",
+      "type": "blank",
+      "answer": "dinner",
+      "explanation": "欢乐的, 欢乐的晚餐. Friends gathered for a convivial dinner. 朋友们聚在一起享用欢乐的晚餐。 | con->共同，viv->生活，convivial->共同生活欢庆的=欢乐的（cf. vivid生动的）"
+    },
+    {
+      "question": "fluvial _______",
+      "type": "blank",
+      "answer": "process",
+      "explanation": "河流的, 河流作用. Erosion is a fluvial process that shapes landscapes. 侵蚀是塑造地貌的河流作用。 | fluv->流水（拉丁fluvius->河流），fluvial->河流的（cf. fluid流体，flux流动）"
+    },
+    {
+      "question": "____-_______ mammal",
+      "type": "blank",
+      "answer": "warm-blooded",
+      "explanation": "哺乳动物, 温血哺乳动物. Humans are warm-blooded mammal that regulate body temperature. 人类是调节体温的温血哺乳动物。 | mamma->乳房（拉丁），mammal->用乳汁哺育幼崽的动物=哺乳动物"
+    },
+    {
+      "question": "banal ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "陈腐的, 陈腐的评论. His banal remark added nothing to the discussion. 他陈腐的评论对讨论毫无帮助。 | ban->强制公告（封建领主公告所有人必须使用的）->人人皆知->banal->陈腐的"
+    },
+    {
+      "question": "bacchanal _______",
+      "type": "blank",
+      "answer": "revelry",
+      "explanation": "狂欢的, 狂欢作乐. The festival descended into bacchanal revelry. 节日沦为狂欢作乐。 | Bacchus->罗马酒神，bacchanal->酒神节的=狂饮狂欢的"
+    },
+    {
+      "question": "_______ arsenal",
+      "type": "blank",
+      "answer": "weapons",
+      "explanation": "军火库, 武器军火库. The military maintained a large weapons arsenal. 军方维持了一个大型武器军火库。 | dar al-sinaa->制造之屋（阿拉伯语），arsenal->武器制造/储存之处=军火库"
+    },
+    {
+      "question": "venal ________",
+      "type": "blank",
+      "answer": "official",
+      "explanation": "贪污的, 贪污的官员. The venal official accepted bribes regularly. 贪污的官员经常收受贿赂。 | vena->出卖（拉丁），venal->可以被买通的=贪污的（注意区分venial可宽恕的）"
+    },
+    {
+      "question": "cardinal ____",
+      "type": "blank",
+      "answer": "rule",
+      "explanation": "最重要的, 最重要的规则. Safety is the cardinal rule in the laboratory. 安全是实验室最重要的规则。 | cardo->铰链（拉丁，一切围绕它转），cardinal->如铰链般核心的=最重要的"
+    },
+    {
+      "question": "original ___",
+      "type": "blank",
+      "answer": "sin",
+      "explanation": "最初的, 原罪. The doctrine of original sin is central to Christianity. 原罪教义是基督教的核心。 | origin->起源，original->最初的/有独创性的（cf. originate起源）"
+    },
+    {
+      "question": "aboriginal ___",
+      "type": "blank",
+      "answer": "art",
+      "explanation": "土著的, 土著艺术. The museum displayed aboriginal art from Australia. 博物馆展示了来自澳大利亚的土著艺术。 | ab->从，origin->起源，aboriginal->从起源就在此的=土著的"
+    },
+    {
+      "question": "marginal ____",
+      "type": "blank",
+      "answer": "note",
+      "explanation": "边缘的, 页边注释. The student wrote marginal note in the textbook. 学生在教科书中写了页边注释。 | marg->边缘（拉丁margo），marginal->边缘的（cf. margin页边空白）"
+    },
+    {
+      "question": "seminal ____",
+      "type": "blank",
+      "answer": "work",
+      "explanation": "开创性的, 开创性作品. Darwin's theory was a seminal work in biology. 达尔文的理论是生物学的开创性作品。 | semin->种子（拉丁），seminal->播下种子的=开创性的（cf. seminary神学院）"
+    },
+    {
+      "question": "subliminal _______",
+      "type": "blank",
+      "answer": "message",
+      "explanation": "潜意识的, 潜意识信息. Advertisers sometimes use subliminal message. 广告商有时使用潜意识信息。 | sub->在下，limin->门槛，subliminal->在意识门槛之下的=潜意识的（cf. sublime崇高）"
+    },
+    {
+      "question": "nominal ___",
+      "type": "blank",
+      "answer": "fee",
+      "explanation": "名义上的, 名义费用. The club charges only a nominal fee for membership. 俱乐部只收取名义会员费。 | nomen->名字，nominal->仅在名义上的（cf. name名字，denominator分母）"
+    },
+    {
+      "question": "terminal _______",
+      "type": "blank",
+      "answer": "illness",
+      "explanation": "晚期的, 晚期疾病. The patient was diagnosed with terminal illness. 患者被诊断为晚期疾病。 | termin->终点，terminal->到达终点的=晚期的/终端（cf. terminate终止）"
+    },
+    {
+      "question": "provisional __________",
+      "type": "blank",
+      "answer": "government",
+      "explanation": "临时的, 临时政府. A provisional government ruled after the revolution. 革命后临时政府统治。 | pro->提前，vis->看，provisional->提前预备的=临时的（cf. provision预备）"
+    },
+    {
+      "question": "unidimensional ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "单一维度的, 单一维度的观点. Critics called it a unidimensional view of the problem. 批评者称其为对问题的单一维度观点。 | uni->一，dimension->维度，unidimensional->只有一个维度的=片面的"
+    },
+    {
+      "question": "rational ______",
+      "type": "blank",
+      "answer": "choice",
+      "explanation": "理性的, 理性选择. Making a rational choice requires careful analysis. 做出理性选择需要仔细分析。 | ratio->计算/理性（拉丁），rational->基于理性的（cf. ratio比率，irrational非理性的）"
+    },
+    {
+      "question": "gravitational ____",
+      "type": "blank",
+      "answer": "pull",
+      "explanation": "引力的, 引力. The moon's gravitational pull affects ocean tides. 月球的引力影响海洋潮汐。 | grav->重（拉丁gravis），gravitational->重力的（cf. grave严重的，gravity重力）"
+    },
+    {
+      "question": "fractional _____",
+      "type": "blank",
+      "answer": "share",
+      "explanation": "部分的, 部分股份. Investors can purchase fractional share of stock. 投资者可以购买部分股份。 | fract->破碎（拉丁frangere），fractional->破碎的一部分（cf. fraction分数，fracture骨折）"
+    },
+    {
+      "question": "intentional ___",
+      "type": "blank",
+      "answer": "act",
+      "explanation": "故意的, 故意行为. The damage was caused by an intentional act. 损害是由故意行为造成的。 | intent->意图，intentional->出于意图的=故意的（cf. intention意图）"
+    },
+    {
+      "question": "conventional ______",
+      "type": "blank",
+      "answer": "wisdom",
+      "explanation": "传统的, 传统智慧. The theory challenged conventional wisdom. 该理论挑战了传统智慧。 | con->共同，ven->来，conventional->大家共同传承的=传统的（cf. convention惯例/大会）"
+    },
+    {
+      "question": "devotional ____",
+      "type": "blank",
+      "answer": "song",
+      "explanation": "祈祷的, 祈祷歌曲. The choir sang a devotional song. 合唱团唱了一首祈祷歌曲。 | devot->奉献，devotional->充满奉献/虔诚的（cf. devote奉献，devotee信徒）"
+    },
+    {
+      "question": "exceptional ____",
+      "type": "blank",
+      "answer": "case",
+      "explanation": "例外的, 例外情况. This represents an exceptional case. 这代表了一个例外情况。 | except->除外，exceptional->被除外的=例外的/杰出的（cf. exception例外）"
+    },
+    {
+      "question": "unexceptional ___",
+      "type": "blank",
+      "answer": "day",
+      "explanation": "平凡的, 平凡的一天. It was an unexceptional day at the office. 这是办公室平凡的一天。 | un->否定，exceptional->例外的，unexceptional->没有任何例外=平凡普通的"
+    },
+    {
+      "question": "optional _____",
+      "type": "blank",
+      "answer": "extra",
+      "explanation": "可选的, 可选额外项. The car comes with several optional extra. 这辆车配有几个可选额外项。 | opt->选择，optional->可供选择的（cf. option选项，adopt采用）"
+    },
+    {
+      "question": "constitutional ______",
+      "type": "blank",
+      "answer": "rights",
+      "explanation": "宪法的, 宪法权利. Citizens must defend their constitutional rights. 公民必须捍卫他们的宪法权利。 | constitu->建立，constitutional->由根本法律建立的（cf. constitution宪法/体质）"
+    },
+    {
+      "question": "atonal _____",
+      "type": "blank",
+      "answer": "music",
+      "explanation": "无调性的, 无调性音乐. The composer experimented with atonal music. 作曲家尝试无调性音乐。 | a->否定，tonal->调性的，atonal->没有调性的（cf. tone音调，monotone单调）"
+    },
+    {
+      "question": "maternal ________",
+      "type": "blank",
+      "answer": "instinct",
+      "explanation": "母性的, 母性本能. The mother displayed strong maternal instinct. 母亲表现出强烈的母性本能。 | mater->母亲（拉丁），maternal->母亲的（cf. maternity产假，alma mater母校）"
+    },
+    {
+      "question": "fraternal _____",
+      "type": "blank",
+      "answer": "twins",
+      "explanation": "兄弟的, 异卵双胞胎. Fraternal twins can be different genders. 异卵双胞胎可以是不同性别。 | frater->兄弟（拉丁），fraternal->兄弟般的（cf. fraternity兄弟会，friar修士）"
+    },
+    {
+      "question": "vernal _______",
+      "type": "blank",
+      "answer": "equinox",
+      "explanation": "春天的, 春分. The vernal equinox marks the beginning of spring. 春分标志着春天的开始。 | ver->春天（拉丁），vernal->春天的（cf. vernacular本土的，如春天般自然生长）"
+    },
+    {
+      "question": "diurnal _____",
+      "type": "blank",
+      "answer": "cycle",
+      "explanation": "昼夜的, 昼夜周期. Many animals follow a diurnal cycle of activity. 许多动物遵循昼夜活动周期。 | diurn->白天（拉丁dies->日），diurnal->白天活动的/昼夜的（cf. journal日记）"
+    },
+    {
+      "question": "nocturnal ______",
+      "type": "blank",
+      "answer": "animal",
+      "explanation": "夜间活动的, 夜间活动动物. Owls are nocturnal animal that hunt at night. 猫头鹰是夜间狩猎的夜间活动动物。 | noct->夜晚（拉丁nox），nocturnal->夜晚的（cf. nocturne夜曲）"
+    },
+    {
+      "question": "_____________ tribunal",
+      "type": "blank",
+      "answer": "international",
+      "explanation": "法庭, 国际法庭. The international tribunal tried war crimes. 国际法庭审判战争罪。 | tri->三，tribunal->三方（原告被告仲裁）会审法庭"
+    },
+    {
+      "question": "communal ______",
+      "type": "blank",
+      "answer": "living",
+      "explanation": "公共的, 公共生活. The commune practiced communal living. 公社实行公共生活。 | commun->共同（拉丁），communal->共同体的（cf. community社区，commune公社）"
+    },
+    {
+      "question": "____ shoal",
+      "type": "blank",
+      "answer": "sand",
+      "explanation": "浅滩, 沙洲. The ship ran aground on a sand shoal. 船在沙洲上搁浅。 | shoal->浅（古英语sceald），shoal->浅水处/沙洲（也指鱼群，因鱼群使水变浅）"
+    },
+    {
+      "question": "principal ______",
+      "type": "blank",
+      "answer": "amount",
+      "explanation": "主要的, 本金数额. The loan requires repayment of principal amount plus interest. 贷款需要偿还本金数额加利息。 | princip->第一/首要（拉丁），principal->首要的/本金（注意区分principle原则）"
+    },
+    {
+      "question": "cerebral ______",
+      "type": "blank",
+      "answer": "cortex",
+      "explanation": "大脑的, 大脑皮层. The cerebral cortex controls higher brain functions. 大脑皮层控制较高级的大脑功能。 | cerebrum->大脑（拉丁），cerebral->大脑的（cf. cerebellum小脑）"
+    },
+    {
+      "question": "______ cathedral",
+      "type": "blank",
+      "answer": "Gothic",
+      "explanation": "大教堂, 哥特式大教堂. The Gothic cathedral featured stunning architecture. 哥特式大教堂具有令人惊叹的建筑。 | cathedra->主教椅子（希腊），cathedral->设有主教椅的教堂=大教堂（cf. ex cathedra权威地）"
+    },
+    {
+      "question": "visceral ________",
+      "type": "blank",
+      "answer": "reaction",
+      "explanation": "本能的, 本能反应. The image provoked a visceral reaction. 这张图片引发了本能反应。 | viscera->内脏，visceral->发自内脏深处的=本能的"
+    },
+    {
+      "question": "feral ___",
+      "type": "blank",
+      "answer": "cat",
+      "explanation": "野生的, 野猫. The feral cat avoided human contact. 野猫避免与人接触。 | fera->野兽（拉丁），feral->变回野生状态的（cf. fierce凶猛的）"
+    },
+    {
+      "question": "peripheral ______",
+      "type": "blank",
+      "answer": "device",
+      "explanation": "外围的, 外围设备. The computer has several peripheral device attached. 计算机连接了几个外围设备。 | peri->周围，pher->携带，peripheral->在周围携带的=外围的（cf. perimeter周长）"
+    },
+    {
+      "question": "ephemeral ______",
+      "type": "blank",
+      "answer": "beauty",
+      "explanation": "短暂的, 短暂的美丽. Cherry blossoms possess ephemeral beauty. 樱花拥有短暂的美丽。 | epi->在上，hemer->天（希腊），ephemeral->只存在一天的=短暂的（cf. epidemic流行病）"
+    },
+    {
+      "question": "lateral ________",
+      "type": "blank",
+      "answer": "movement",
+      "explanation": "侧面的, 侧面移动. The crab scuttled with lateral movement. 螃蟹以侧面移动匆匆爬行。 | later->侧面（拉丁latus），lateral->侧面的（cf. bilateral双边的，collateral并行的）"
+    },
+    {
+      "question": "unilateral ______",
+      "type": "blank",
+      "answer": "action",
+      "explanation": "单方面的, 单方面行动. The country took unilateral action without consultation. 该国在没有协商的情况下采取了单方面行动。 | uni->一，lateral->侧面，unilateral->只从一侧出发的=单方面的"
+    },
+    {
+      "question": "____ collateral",
+      "type": "blank",
+      "answer": "loan",
+      "explanation": "抵押品, 贷款抵押品. The bank required loan collateral for the mortgage. 银行要求提供抵押贷款的抵押品。 | col->共同，lateral->侧面，collateral->并排在侧的=附属担保=抵押品"
+    },
+    {
+      "question": "literal ___________",
+      "type": "blank",
+      "answer": "translation",
+      "explanation": "字面的, 字面翻译. A literal translation may miss nuanced meanings. 字面翻译可能会遗漏细微的含义。 | liter->字母/文字（拉丁），literal->按文字的=字面的（cf. literature文学，literate有文化的）"
+    },
+    {
+      "question": "integral ____",
+      "type": "blank",
+      "answer": "part",
+      "explanation": "不可或缺的, 不可或缺的部分. Teamwork is an integral part of success. 团队合作是成功不可或缺的部分。 | integr->完整（拉丁），integral->组成完整的=不可或缺的（cf. integrity诚信，integrate整合）"
+    },
+    {
+      "question": "amoral ______",
+      "type": "blank",
+      "answer": "action",
+      "explanation": "非道德的, 非道德行为. The character's amoral action shocked readers. 这个角色的非道德行为震惊了读者。 | a->无，moral->道德，amoral->无关道德的（区分immoral->违反道德的）"
+    },
+    {
+      "question": "temporal ____",
+      "type": "blank",
+      "answer": "lobe",
+      "explanation": "颞部的, 颞叶. The temporal lobe processes auditory information. 颞叶处理听觉信息。 | tempor->时间/太阳穴（拉丁），temporal->太阳穴的/时间的（cf. temporary暂时的）"
+    },
+    {
+      "question": "corporal __________",
+      "type": "blank",
+      "answer": "punishment",
+      "explanation": "肉体的, 体罚. Many schools banned corporal punishment. 许多学校禁止体罚。 | corpus->身体（拉丁），corporal->身体的（cf. corporation公司，corps军团）"
+    },
+    {
+      "question": "pastoral _____",
+      "type": "blank",
+      "answer": "scene",
+      "explanation": "田园的, 田园景色. The painting depicted a peaceful pastoral scene. 这幅画描绘了一个宁静的田园景色。 | pastor->牧羊人（拉丁），pastoral->牧羊人的=田园的（cf. pasture牧场）"
+    },
+    {
+      "question": "littoral ____",
+      "type": "blank",
+      "answer": "zone",
+      "explanation": "海岸的, 海岸带. Marine biologists study the littoral zone. 海洋生物学家研究海岸带。 | litor->海岸（拉丁litus），littoral->海岸的（cf. literal字面的，同形不同义）"
+    },
+    {
+      "question": "______ corral",
+      "type": "blank",
+      "answer": "cattle",
+      "explanation": "畜栏, 牛栏. Cowboys herded cattle into the cattle corral. 牛仔把牛赶进牛栏。 | corral->围起来的地方（西班牙语），corral->畜栏/把…围住"
+    },
+    {
+      "question": "spectral ________",
+      "type": "blank",
+      "answer": "analysis",
+      "explanation": "光谱的, 光谱分析. Chemists use spectral analysis to identify substances. 化学家使用光谱分析来识别物质。 | spect->看/显现，spectral->光谱的/幽灵般的（cf. spectrum光谱，specter幽灵）"
+    },
+    {
+      "question": "ventral ___",
+      "type": "blank",
+      "answer": "fin",
+      "explanation": "腹部的, 腹鳍. The fish uses its ventral fin for balance. 鱼用腹鳍保持平衡。 | ventr->腹部（拉丁venter），ventral->腹部的（cf. dorsal背部的，两者相对）"
+    },
+    {
+      "question": "_______ mistral",
+      "type": "blank",
+      "answer": "howling",
+      "explanation": "冷风, 呼啸的冷风. The howling mistral swept down from the mountains. 呼啸的冷风从山上吹下来。 | magistral->主风（拉丁magister->主），mistral->地中海地区主导性的强冷北风"
+    },
+    {
+      "question": "inaugural _______",
+      "type": "blank",
+      "answer": "address",
+      "explanation": "就职的, 就职演说. The president delivered his inaugural address. 总统发表了他的就职演说。 | inaugur->占卜/开始（拉丁，以观鸟兆开始典礼），inaugural->开始典礼的=就职的"
+    },
+    {
+      "question": "mural ________",
+      "type": "blank",
+      "answer": "painting",
+      "explanation": "壁画, 壁画. The artist created a stunning mural painting. 艺术家创作了一幅令人惊叹的壁画。 | mur->墙（拉丁murus），mural->画在墙上的=壁画（cf. immure监禁=把人关入墙内）"
+    },
+    {
+      "question": "preternatural ____",
+      "type": "blank",
+      "answer": "calm",
+      "explanation": "超自然的, 超自然的平静. She maintained a preternatural calm during the crisis. 她在危机期间保持了超自然的平静。 | preter->超越，natural->自然的，preternatural->超越自然范围的（区分supernatural完全超自然的）"
+    },
+    {
+      "question": "nasal _____",
+      "type": "blank",
+      "answer": "voice",
+      "explanation": "鼻音的, 鼻音. The singer had a distinctive nasal voice. 歌手有独特的鼻音。 | nas->鼻子（拉丁nasus），nasal->鼻子的（cf. nose鼻子，nostril鼻孔）"
+    },
+    {
+      "question": "________ reprisal",
+      "type": "blank",
+      "answer": "military",
+      "explanation": "报复, 军事报复. The attack triggered military reprisal. 这次袭击引发了军事报复。 | re->回，prisal->夺取，reprisal->夺回=以牙还牙的报复（cf. reprise重复，prize战利品）"
+    },
+{
+      "question": "________ proposal",
+      "type": "blank",
+      "answer": "marriage",
+      "explanation": "提议, 求婚. He made a romantic marriage proposal at sunset. 他在日落时做出了浪漫的求婚。 | marry->结婚，marriage->婚姻/求婚"
+    },
+    {
+      "question": "_____ rehearsal",
+      "type": "blank",
+      "answer": "dress",
+      "explanation": "排练, 彩排. The actors attended the final dress rehearsal. 演员们参加了最后的彩排。 | re->再次，hear->听，rehearsal->反复排练"
+    },
+    {
+      "question": "dorsal ___",
+      "type": "blank",
+      "answer": "fin",
+      "explanation": "背部的, 背鳍. The shark's dorsal fin cut through the water. 鲨鱼的背鳍划破水面。 | dors->背部，dorsal->背部的（cf. ventral腹部的）"
+    },
+    {
+      "question": "colossal ______",
+      "type": "blank",
+      "answer": "statue",
+      "explanation": "巨大的, 巨大的雕像. The ancient city featured a colossal statue of a god. 古城有一座神的巨大雕像。 | Colossus->巨人像，colossal->巨大的"
+    },
+    {
+      "question": "causal ____",
+      "type": "blank",
+      "answer": "link",
+      "explanation": "因果的, 因果联系. Researchers established a causal link between variables. 研究人员建立了变量之间的因果联系。 | cause->原因，causal->因果的"
+    },
+    {
+      "question": "espousal __ _____",
+      "type": "blank",
+      "answer": "of cause",
+      "explanation": "支持, 支持事业. Her espousal of cause brought many followers. 她对事业的支持带来了许多追随者。 | espouse->支持/娶，espousal->支持/拥护"
+    },
+    {
+      "question": "natal _____",
+      "type": "blank",
+      "answer": "chart",
+      "explanation": "出生的, 出生图. Astrologers study a person's natal chart. 占星家研究一个人的出生图。 | nat->出生，natal->出生的（cf. prenatal产前，postnatal产后）"
+    },
+    {
+      "question": "____ petal",
+      "type": "blank",
+      "answer": "rose",
+      "explanation": "花瓣, 玫瑰花瓣. A delicate rose petal fell to the ground. 一片娇嫩的玫瑰花瓣落到地上。 | pet->小的/宠爱，petal->花瓣（花的小叶片）"
+    },
+    {
+      "question": "centripetal _____",
+      "type": "blank",
+      "answer": "force",
+      "explanation": "向心的, 向心力. Centripetal force keeps planets in orbit. 向心力使行星保持在轨道上。 | centri->中心，pet->追求，centripetal->向中心追去的=向心的"
+    },
+    {
+      "question": "congenital ______",
+      "type": "blank",
+      "answer": "defect",
+      "explanation": "先天的, 先天缺陷. The baby was born with a congenital defect. 婴儿出生时有先天缺陷。 | con->共同，genit->出生，congenital->与生俱来的=先天的"
+    },
+    {
+      "question": "marital ______",
+      "type": "blank",
+      "answer": "status",
+      "explanation": "婚姻的, 婚姻状况. The form asked for marital status. 表格询问婚姻状况。 | marry->结婚，marital->婚姻的（注意勿混淆martial武术的）"
+    },
+    {
+      "question": "vital _____",
+      "type": "blank",
+      "answer": "signs",
+      "explanation": "生命的, 生命体征. Nurses regularly check patients' vital signs. 护士定期检查患者的生命体征。 | vit->生命，vital->生命的（cf. vitamin维生素）"
+    },
+    {
+      "question": "Occidental _______",
+      "type": "blank",
+      "answer": "culture",
+      "explanation": "西方的, 西方文化. The scholar studied Occidental culture extensively. 学者广泛研究了西方文化。 | occid->落下（太阳西落），Occidental->西方的（cf. Oriental东方的）"
+    },
+    {
+      "question": "transcendental __________",
+      "type": "blank",
+      "answer": "philosophy",
+      "explanation": "超验的, 超验哲学. Kant developed transcendental philosophy. 康德发展了超验哲学。 | trans->超越，scend->攀登，transcendental->超越经验的"
+    },
+    {
+      "question": "fundamental _________",
+      "type": "blank",
+      "answer": "principle",
+      "explanation": "基本的, 基本原则. Democracy rests on fundamental principle of equality. 民主建立在平等的基本原则上。 | fundament->基础，fundamental->基本的（cf. foundation地基）"
+    },
+    {
+      "question": "detrimental ______",
+      "type": "blank",
+      "answer": "effect",
+      "explanation": "有害的, 有害影响. Smoking has a detrimental effect on health. 吸烟对健康有有害影响。 | detri->磨损/损害，mental->的，detrimental->有害的"
+    },
+    {
+      "question": "monumental ______",
+      "type": "blank",
+      "answer": "effort",
+      "explanation": "巨大的, 巨大的努力. The project required monumental effort from the team. 该项目需要团队付出巨大的努力。 | monument->纪念碑，monumental->纪念碑般巨大的"
+    },
+    {
+      "question": "instrumental ____",
+      "type": "blank",
+      "answer": "role",
+      "explanation": "重要的, 重要作用. She played an instrumental role in the success. 她在成功中发挥了重要作用。 | instrument->工具，instrumental->起工具性作用的=重要的"
+    },
+    {
+      "question": "teetotal _________",
+      "type": "blank",
+      "answer": "lifestyle",
+      "explanation": "绝对戒酒的, 绝对戒酒的生活方式. He adopted a teetotal lifestyle for health reasons. 他出于健康原因采用了绝对戒酒的生活方式。 | tee（T字头强调）+total->完全的，teetotal->完全戒酒的"
+    },
+    {
+      "question": "immortal ____",
+      "type": "blank",
+      "answer": "soul",
+      "explanation": "不朽的, 不朽的灵魂. Many religions believe in the immortal soul. 许多宗教相信不朽的灵魂。 | im->否定，mort->死亡，immortal->不死的=不朽的"
+    },
+    {
+      "question": "_____ pedestal",
+      "type": "blank",
+      "answer": "stone",
+      "explanation": "底座, 石底座. The statue stood on a stone pedestal. 雕像矗立在石底座上。 | ped->脚，pedestal->脚的站立处=底座/基座"
+    },
+    {
+      "question": "festal ________",
+      "type": "blank",
+      "answer": "occasion",
+      "explanation": "节日的, 节日场合. The community gathered for the festal occasion. 社区为节日场合聚集在一起。 | fest->节日，festal->节日的（cf. festival节日）"
+    },
+    {
+      "question": "distal ____",
+      "type": "blank",
+      "answer": "limb",
+      "explanation": "远端的, 远端肢体. The injury affected the distal limb. 伤害影响了远端肢体。 | dist->距离，distal->远离中心的=远端的（cf. proximal近端的）"
+    },
+    {
+      "question": "____ acquittal",
+      "type": "blank",
+      "answer": "full",
+      "explanation": "无罪判决, 完全无罪判决. The defendant received full acquittal on all charges. 被告在所有指控上获得完全无罪判决。 | acquit->宣判无罪，acquittal->无罪判决"
+    },
+    {
+      "question": "______ rebuttal",
+      "type": "blank",
+      "answer": "strong",
+      "explanation": "反驳, 强有力的反驳. The lawyer delivered a strong rebuttal to accusations. 律师对指控进行了强有力的反驳。 | re->回，butt->撞击，rebuttal->反击=反驳"
+    },
+    {
+      "question": "dual ___________",
+      "type": "blank",
+      "answer": "citizenship",
+      "explanation": "双重的, 双重国籍. She holds dual citizenship in two countries. 她持有两个国家的双重国籍。 | du->二，dual->双重的（cf. duel决斗，两人之间）"
+    },
+    {
+      "question": "residual ______",
+      "type": "blank",
+      "answer": "income",
+      "explanation": "剩余的, 剩余收入. Actors earn residual income from reruns. 演员从重播中赚取剩余收入。 | resid->留下，residual->留下的=剩余的（cf. reside居住）"
+    },
+    {
+      "question": "lingual _____",
+      "type": "blank",
+      "answer": "nerve",
+      "explanation": "舌的, 舌神经. The dentist was careful not to damage the lingual nerve. 牙医小心不损伤舌神经。 | lingu->舌头，lingual->舌的（cf. bilingual双语的）"
+    },
+    {
+      "question": "bilingual _________",
+      "type": "blank",
+      "answer": "education",
+      "explanation": "双语的, 双语教育. The school offers bilingual education programs. 学校提供双语教育项目。 | bi->二，lingu->语言，bilingual->双语的"
+    },
+    {
+      "question": "sensual ________",
+      "type": "blank",
+      "answer": "pleasure",
+      "explanation": "感官的, 感官享受. The spa promised sensual pleasure and relaxation. 水疗中心承诺感官享受和放松。 | sens->感觉，sensual->感官的（cf. sensory感觉的）"
+    },
+    {
+      "question": "factual ________",
+      "type": "blank",
+      "answer": "evidence",
+      "explanation": "事实的, 事实证据. The report was based on factual evidence. 报告基于事实证据。 | fact->事实，factual->基于事实的"
+    },
+    {
+      "question": "ineffectual ______",
+      "type": "blank",
+      "answer": "effort",
+      "explanation": "无效的, 无效的努力. Their ineffectual effort failed to solve the problem. 他们无效的努力未能解决问题。 | in->否定，effect->效果，ineffectual->没有效果的=无效的"
+    },
+    {
+      "question": "______ intellectual",
+      "type": "blank",
+      "answer": "public",
+      "explanation": "知识分子, 公共知识分子. The public intellectual wrote influential essays. 这位公共知识分子写了有影响力的文章。 | intellect->智力，intellectual->智识的/知识分子"
+    },
+    {
+      "question": "perpetual ______",
+      "type": "blank",
+      "answer": "motion",
+      "explanation": "永久的, 永动. Scientists proved perpetual motion is impossible. 科学家证明永动是不可能的。 | per->完全，pet->追求，perpetual->永久持续追求的=永久的"
+    },
+    {
+      "question": "_______ ritual",
+      "type": "blank",
+      "answer": "ancient",
+      "explanation": "仪式, 古老的仪式. The tribe performed an ancient ritual. 部落进行了古老的仪式。 | rit->仪式，ritual->仪式性的/仪式（cf. rite仪式）"
+    },
+    {
+      "question": "spiritual ______",
+      "type": "blank",
+      "answer": "growth",
+      "explanation": "精神的, 精神成长. Meditation promotes spiritual growth. 冥想促进精神成长。 | spirit->精神/灵魂，spiritual->精神的"
+    },
+    {
+      "question": "_______ upheaval",
+      "type": "blank",
+      "answer": "violent",
+      "explanation": "剧变, 暴力剧变. The revolution caused violent upheaval in society. 革命在社会中引起了暴力剧变。 | up->向上，heave->用力举，upheaval->地层上涌=剧变"
+    },
+    {
+      "question": "medieval ______",
+      "type": "blank",
+      "answer": "castle",
+      "explanation": "中世纪的, 中世纪城堡. Tourists visited the medieval castle. 游客参观了中世纪城堡。 | medi->中间，ev->时代，medieval->中间时代的=中世纪的"
+    },
+    {
+      "question": "coeval _______",
+      "type": "blank",
+      "answer": "friends",
+      "explanation": "同时代的, 同时代的朋友. The two artists were coeval friends. 这两位艺术家是同时代的朋友。 | co->共同，ev->时代，coeval->共同时代的=同时代的"
+    },
+    {
+      "question": "________ rival",
+      "type": "blank",
+      "answer": "business",
+      "explanation": "竞争对手, 商业竞争对手. The companies have been business rival for years. 这些公司多年来一直是商业竞争对手。 | riv->河流，rival->共用一条河的人=竞争对手"
+    },
+    {
+      "question": "______ avowal",
+      "type": "blank",
+      "answer": "public",
+      "explanation": "公开承认, 公开承认. His public avowal surprised everyone. 他的公开承认让每个人都感到惊讶。 | a->加强，vow->誓言，avowal->公开表态/承认"
+    },
+    {
+      "question": "decibel _____",
+      "type": "blank",
+      "answer": "level",
+      "explanation": "分贝, 分贝水平. The concert exceeded safe decibel level. 音乐会超过了安全分贝水平。 | deci->十分之一，bel->贝尔（单位），decibel->分贝"
+    },
+    {
+      "question": "______ libel",
+      "type": "blank",
+      "answer": "commit",
+      "explanation": "诽谤, 犯诽谤罪. The newspaper was sued for publishing statements that commit libel. 该报纸因发表犯诽谤罪的声明而被起诉。 | libell->小册子，libel->（以文字）诽谤"
+    },
+    {
+      "question": "excel __ ____",
+      "type": "blank",
+      "answer": "at math",
+      "explanation": "擅长, 擅长数学. She naturally excel at math and science. 她天生擅长数学和科学。 | ex->超出，cel->高，excel->超出高处=出类拔萃"
+    },
+    {
+      "question": "peel __ ______",
+      "type": "blank",
+      "answer": "an orange",
+      "explanation": "剥皮, 剥橙子皮. He used a knife to peel an orange. 他用刀剥橙子皮。 | peel->剥皮（象声词，撕扯声），peel an orange->剥橙子"
+    },
+    {
+      "question": "reel ____ _____",
+      "type": "blank",
+      "answer": "from shock",
+      "explanation": "蹒跚, 因震惊而蹒跚. She continued to reel from shock of the news. 她继续因消息的震惊而蹒跚。 | reel->卷轴/旋转，reel from->被…冲击得踉跄"
+    },
+    {
+      "question": "genteel _______",
+      "type": "blank",
+      "answer": "manners",
+      "explanation": "有教养的, 有教养的举止. The lady displayed genteel manners. 这位女士表现出有教养的举止。 | gent->贵族，genteel->贵族气质的=有教养的（cf. gentle温文的）"
+    },
+    {
+      "question": "_______ yokel",
+      "type": "blank",
+      "answer": "country",
+      "explanation": "乡巴佬, 乡下人. The sophisticated urbanite mocked the country yokel. 老练的城里人嘲笑乡下人。 | yoke->牛轭，yokel->套牛轭的人=乡下农夫=乡巴佬"
+    },
+    {
+      "question": "parallel _____",
+      "type": "blank",
+      "answer": "lines",
+      "explanation": "平行的, 平行线. Parallel lines never intersect. 平行线永不相交。 | para->旁边，allel->彼此，parallel->彼此并排的=平行的"
+    },
+    {
+      "question": "enamel _______",
+      "type": "blank",
+      "answer": "coating",
+      "explanation": "珐琅, 珐琅涂层. The bathtub had a white enamel coating. 浴缸有白色珐琅涂层。 | en->使成为，amel->熔融物，enamel->熔化后的光滑涂层=珐琅/釉"
+    },
+    {
+      "question": "_____ trammel",
+      "type": "blank",
+      "answer": "legal",
+      "explanation": "束缚, 法律束缚. The regulation acted as a legal trammel on freedom. 该法规作为对自由的法律束缚。 | tra->穿过，mmel->网，trammel->绊网=束缚"
+    },
+    {
+      "question": "___ kennel",
+      "type": "blank",
+      "answer": "dog",
+      "explanation": "狗舍, 狗舍. The family left their pet at the dog kennel. 家人把宠物留在狗舍。 | can->狗（拉丁），kennel->养狗的地方=狗舍（cf. canine犬的）"
+    },
+    {
+      "question": "_______ personnel",
+      "type": "blank",
+      "answer": "company",
+      "explanation": "人员, 公司人员. The company personnel attended the training. 公司人员参加了培训。 | person->人，personnel->全体人员（注意重音在最后）"
+    },
+    {
+      "question": "_____ chapel",
+      "type": "blank",
+      "answer": "small",
+      "explanation": "小教堂, 小教堂. They were married in a small chapel. 他们在一个小教堂结婚。 | chap->斗篷（存放圣物），chapel->存放圣徒斗篷的地方=小教堂"
+    },
+    {
+      "question": "impel ______",
+      "type": "blank",
+      "answer": "action",
+      "explanation": "推动, 推动行动. Moral duty should impel action. 道德责任应该推动行动。 | im->向内，pel->推，impel->从内部推动=驱使"
+    },
+    {
+      "question": "compel __________",
+      "type": "blank",
+      "answer": "compliance",
+      "explanation": "强迫, 强迫遵守. The law will compel compliance with regulations. 法律将强迫遵守法规。 | com->共同，pel->推，compel->合力推动=强迫"
+    },
+    {
+      "question": "_________ gospel",
+      "type": "blank",
+      "answer": "Christian",
+      "explanation": "福音, 基督教福音. The Christian gospel spread throughout the world. 基督教福音传播到世界各地。 | god+spell->上帝的话语，gospel->福音"
+    },
+    {
+      "question": "expel _ _______",
+      "type": "blank",
+      "answer": "a student",
+      "explanation": "驱逐, 开除学生. The school decided to expel a student for cheating. 学校决定因作弊开除一名学生。 | ex->向外，pel->推，expel->推出去=驱逐/开除"
+    },
+    {
+      "question": "______ apparel",
+      "type": "blank",
+      "answer": "casual",
+      "explanation": "服装, 休闲服装. The office allows casual apparel on Fridays. 办公室周五允许穿休闲服装。 | ap->为…，par->准备，apparel->为身体准备的=服装"
+    },
+    {
+      "question": "doggerel _____",
+      "type": "blank",
+      "answer": "verse",
+      "explanation": "打油诗, 打油诗. The comedian recited doggerel verse. 喜剧演员背诵打油诗。 | dogger->低等的，doggerel->低劣的诗=打油诗"
+    },
+    {
+      "question": "mongrel ___",
+      "type": "blank",
+      "answer": "dog",
+      "explanation": "杂种, 杂种狗. The mongrel dog was adopted from the shelter. 杂种狗从收容所被收养。 | mong->混合，mongrel->混合品种=杂种"
+    },
+    {
+      "question": "_____ ____ _ squirrel",
+      "type": "blank",
+      "answer": "hoard like a",
+      "explanation": "松鼠, 像松鼠一样囤积. He tends to hoard like a squirrel preparing for winter. 他倾向于像松鼠准备过冬一样囤积。 | squi->遮荫，squirrel->在树荫下的动物=松鼠"
+    },
+    {
+      "question": "____ wastrel",
+      "type": "blank",
+      "answer": "idle",
+      "explanation": "浪费者, 游手好闲的浪费者. The idle wastrel squandered his inheritance. 游手好闲的浪费者挥霍了他的遗产。 | waste->浪费，wastrel->浪费者/游手好闲者"
+    },
+    {
+      "question": "______'_ easel",
+      "type": "blank",
+      "answer": "artist's",
+      "explanation": "画架, 艺术家的画架. The painter set up the artist's easel outdoors. 画家在户外架起艺术家的画架。 | ease->轻松，easel->让作画轻松的架子=画架"
+    },
+    {
+      "question": "_____ vessel",
+      "type": "blank",
+      "answer": "cargo",
+      "explanation": "船只, 货船. The cargo vessel transported goods across the ocean. 货船运送货物穿越海洋。 | vas->容器，vessel->容器/船只（既指器皿也指船）"
+    },
+    {
+      "question": "pastel _____",
+      "type": "blank",
+      "answer": "color",
+      "explanation": "淡色的, 淡色. The nursery was painted in soft pastel color. 育儿室用柔和的淡色粉刷。 | paste->糊状物，pastel->粉笔画/粉彩/柔和淡色"
+    },
+    {
+      "question": "______ duel",
+      "type": "blank",
+      "answer": "pistol",
+      "explanation": "决斗, 手枪决斗. The gentlemen engaged in a pistol duel at dawn. 绅士们在黎明时进行了手枪决斗。 | du->二，duel->两人之间的战斗=决斗（cf. dual双重的）"
+    },
+    {
+      "question": "_____'_ gavel",
+      "type": "blank",
+      "answer": "judge's",
+      "explanation": "法槌, 法官的法槌. The judge's gavel struck the bench for order. 法官的法槌敲击长凳以维持秩序。 | gav->给予，gavel->敲击给予命令的锤子=法槌"
+    },
+    {
+      "question": "ravel ___",
+      "type": "blank",
+      "answer": "out",
+      "explanation": "解开, 解开. The sweater began to ravel out at the seams. 毛衣开始在接缝处解开。 | ravel->缠绕/解开（反义同词），ravel out->解开散开"
+    },
+    {
+      "question": "gravel ________",
+      "type": "blank",
+      "answer": "driveway",
+      "explanation": "砾石, 砾石车道. The gravel driveway crunched under the car's tires. 砾石车道在汽车轮胎下嘎吱作响。 | grav->沙砾，gravel->细石子=砾石（cf. grave严肃，同词根）"
+    },
+    {
+      "question": "____ drivel",
+      "type": "blank",
+      "answer": "talk",
+      "explanation": "胡言乱语, 说胡言乱语. Don't talk drivel about things you don't understand. 不要胡言乱语你不懂的事情。 | drivel->流口水/废话，drivel->胡言乱语（像流口水一样说话）"
+    },
+    {
+      "question": "marvel __ ___________",
+      "type": "blank",
+      "answer": "of engineering",
+      "explanation": "奇迹, 工程奇迹. The bridge is a marvel of engineering. 这座桥是工程奇迹。 | mir->惊奇，marvel->令人惊奇之物=奇迹（cf. miracle奇迹）"
+    },
+    {
+      "question": "____ bail",
+      "type": "blank",
+      "answer": "post",
+      "explanation": "保释金, 缴纳保释金. The lawyer helped post bail for the defendant. 律师帮助为被告缴纳保释金。 | bail->桶/保释，bail->（交桶装钱）保释"
+    },
+    {
+      "question": "hail _____",
+      "type": "blank",
+      "answer": "storm",
+      "explanation": "冰雹, 冰雹风暴. The hail storm damaged crops in the fields. 冰雹风暴损坏了田里的庄稼。 | hail->冰雹/欢呼，hail storm->冰雹暴风（注意一词两义）"
+    },
+    {
+      "question": "______ blackmail",
+      "type": "blank",
+      "answer": "commit",
+      "explanation": "勒索, 进行勒索. The criminal attempted to commit blackmail. 罪犯试图进行勒索。 | black->黑色/非法，mail->租金，blackmail->非法索要钱财=勒索"
+    },
+    {
+      "question": "rail _______",
+      "type": "blank",
+      "answer": "against",
+      "explanation": "抱怨, 抱怨. He would rail against injustice in society. 他会抱怨社会的不公正。 | rail->栏杆/猛烈抨击，rail against->强烈抗议"
+    },
+    {
+      "question": "assail ___ ________",
+      "type": "blank",
+      "answer": "the position",
+      "explanation": "攻击, 攻击阵地. The army prepared to assail the position. 军队准备攻击阵地。 | as->朝向，sail->跳跃，assail->跳扑上去=攻击（cf. assault攻击）"
+    },
+    {
+      "question": "entail _____",
+      "type": "blank",
+      "answer": "costs",
+      "explanation": "需要, 需要成本. The project will entail costs beyond the budget. 该项目将需要超出预算的成本。 | en->使，tail->切割，entail->切割限定=必然包含/需要"
+    },
+    {
+      "question": "curtail ________",
+      "type": "blank",
+      "answer": "spending",
+      "explanation": "削减, 削减开支. The company had to curtail spending due to losses. 由于亏损,公司不得不削减开支。 | curt->短，tail->尾巴，curtail->截断尾巴=削减"
+    },
+    {
+      "question": "prevail ____",
+      "type": "blank",
+      "answer": "upon",
+      "explanation": "劝说, 劝说. She managed to prevail upon him to reconsider. 她设法劝说他重新考虑。 | pre->前，vail->强壮，prevail->压倒性强壮=占优/劝服"
+    },
+    {
+      "question": "stencil _______",
+      "type": "blank",
+      "answer": "pattern",
+      "explanation": "模板, 模板图案. The artist used a stencil pattern for the design. 艺术家使用模板图案进行设计。 | stencil->闪光（镂空后透光），stencil->镂花模板"
+    },
+    {
+      "question": "nonpareil _______",
+      "type": "blank",
+      "answer": "quality",
+      "explanation": "无与伦比的, 无与伦比的质量. The product is of nonpareil quality. 该产品具有无与伦比的质量。 | non->无，pareil->同等（法语），nonpareil->没有同等的=无与伦比的"
+    },
+    {
+      "question": "______ veil",
+      "type": "blank",
+      "answer": "bridal",
+      "explanation": "面纱, 新娘面纱. The bride wore a beautiful bridal veil. 新娘戴着美丽的新娘面纱。 | vel->遮盖，veil->遮盖物=面纱（cf. reveal揭开=re+veil）"
+    },
+    {
+      "question": "fulfil _ _______",
+      "type": "blank",
+      "answer": "a promise",
+      "explanation": "履行, 履行诺言. He always strives to fulfil a promise he makes. 他总是努力履行他做出的诺言。 | full->充满，fill->填满，fulfil->完全填满=履行/实现"
+    },
+    {
+      "question": "____ __ nil",
+      "type": "blank",
+      "answer": "come to",
+      "explanation": "零, 化为零. Their efforts seemed to come to nil. 他们的努力似乎化为零。 | nil->零（拉丁nihil），come to nil->化为乌有"
+    },
+    {
+      "question": "foil ___ ____",
+      "type": "blank",
+      "answer": "the plot",
+      "explanation": "挫败, 挫败阴谋. The detective managed to foil the plot. 侦探设法挫败了阴谋。 | foil->箔/衬托/挫败，foil the plot->使阴谋落空"
+    },
+    {
+      "question": "spoil ___ ___",
+      "type": "blank",
+      "answer": "the fun",
+      "explanation": "破坏, 破坏乐趣. Don't spoil the fun with negative comments. 不要用消极评论破坏乐趣。 | spoil->掠夺/腐败/破坏，spoil the fun->扫兴"
+    },
+    {
+      "question": "despoil ___ ____",
+      "type": "blank",
+      "answer": "the land",
+      "explanation": "掠夺, 掠夺土地. Invaders would despoil the land of resources. 侵略者会掠夺土地资源。 | de->加强，spoil->掠夺，despoil->彻底掠夺"
+    },
+    {
+      "question": "roil ___ ______",
+      "type": "blank",
+      "answer": "the market",
+      "explanation": "搅乱, 搅乱市场. The scandal continued to roil the market. 丑闻继续搅乱市场。 | roil->搅浑（水），roil the market->搅乱市场（cf. rile激怒）"
+    },
+    {
+      "question": "broil _____",
+      "type": "blank",
+      "answer": "steak",
+      "explanation": "烤, 烤牛排. The chef will broil steak for dinner. 厨师将为晚餐烤牛排。 | broil->炙烤/纷争，broil steak->直火烤牛排"
+    },
+    {
+      "question": "embroil __ _______",
+      "type": "blank",
+      "answer": "in scandal",
+      "explanation": "卷入, 卷入丑闻. The politician became embroil in scandal. 这位政客卷入了丑闻。 | em->进入，broil->纷争，embroil->卷入纷争中"
+    },
+    {
+      "question": "imperil ______",
+      "type": "blank",
+      "answer": "safety",
+      "explanation": "危及, 危及安全. Reckless driving will imperil safety on roads. 鲁莽驾驶会危及道路安全。 | im->使成为，peril->危险，imperil->使陷入危险=危及"
+    },
+    {
+      "question": "_______ utensil",
+      "type": "blank",
+      "answer": "kitchen",
+      "explanation": "器具, 厨房器具. She stored kitchen utensil in drawers. 她把厨房器具存放在抽屉里。 | uten->使用，utensil->使用的工具=器具（cf. use使用）"
+    },
+    {
+      "question": "cavil __ _______",
+      "type": "blank",
+      "answer": "at details",
+      "explanation": "挑剔, 对细节挑剔. Critics cavil at details but miss the main point. 批评者对细节挑剔但错过了要点。 | cav->空洞，cavil->找空洞=无理挑剔"
+    },
+    {
+      "question": "daredevil _____",
+      "type": "blank",
+      "answer": "stunt",
+      "explanation": "冒险者, 冒险特技. The actor performed a dangerous daredevil stunt. 演员表演了一个危险的冒险特技。 | dare->敢，devil->魔鬼，daredevil->敢于挑战魔鬼的人=亡命之徒"
+    },
+    {
+      "question": "__________'_ anvil",
+      "type": "blank",
+      "answer": "blacksmith's",
+      "explanation": "铁砧, 铁匠的铁砧. The blacksmith's anvil rang with each hammer blow. 铁匠的铁砧随着每次锤击而响起。 | an->在上，vil->打击，anvil->在上面打击的台=铁砧"
+    },
+    {
+      "question": "blackball _ _________",
+      "type": "blank",
+      "answer": "a candidate",
+      "explanation": "投票反对, 投票反对候选人. Club members voted to blackball a candidate. 俱乐部成员投票反对一位候选人。 | black->黑色，ball->球，blackball->投黑球否决（古代投票用黑球表示反对）"
+    },
+    {
+      "question": "______ pitfall",
+      "type": "blank",
+      "answer": "hidden",
+      "explanation": "陷阱, 隐藏的陷阱. Investors must avoid hidden pitfall in contracts. 投资者必须避免合同中隐藏的陷阱。 | pit->坑，fall->落入，pitfall->落入坑中=陷阱"
+    },
+    {
+      "question": "____ _ pall",
+      "type": "blank",
+      "answer": "cast a",
+      "explanation": "笼罩, 投下阴影. The tragedy would cast a pall over celebrations. 悲剧会给庆祝活动投下阴影。 | pall->棺材布/阴影，cast a pall->投下一层阴影"
+    },
+    {
+      "question": "__ thrall __",
+      "type": "blank",
+      "answer": "in to",
+      "explanation": "奴役, 受奴役于. He lived in thrall to his addiction. 他受奴役于他的成瘾。 | thrall->奴隶（古英语），in thrall to->受控于/被奴役于"
+    },
+{
+      "question": "______ stall",
+      "type": "blank",
+      "answer": "market",
+      "explanation": "摊位, 市场摊位. Vendors sold produce from their market stall. 小贩从他们的市场摊位出售农产品。 | stall->摊位/停滞，market stall->市场摊位"
+    },
+    {
+      "question": "forestall _ ______",
+      "type": "blank",
+      "answer": "a crisis",
+      "explanation": "预防, 预防危机. Quick action helped forestall a crisis. 迅速行动帮助预防了危机。 | fore->提前，stall->阻止，forestall->提前阻止=预防"
+    },
+    {
+      "question": "install ________",
+      "type": "blank",
+      "answer": "software",
+      "explanation": "安装, 安装软件. The technician will install software on all computers. 技术人员将在所有计算机上安装软件。 | in->进入，stall->摊位/位置，install->放入指定位置=安装"
+    },
+    {
+      "question": "______ squall",
+      "type": "blank",
+      "answer": "sudden",
+      "explanation": "暴风, 突然的暴风. A sudden squall caught sailors by surprise. 突然的暴风让水手措手不及。 | squall->尖叫/暴风（象声词，风的嚎叫声）"
+    },
+    {
+      "question": "stonewall ________",
+      "type": "blank",
+      "answer": "question",
+      "explanation": "阻碍, 阻碍质询. The official tried to stonewall question from reporters. 官员试图阻碍记者的质询。 | stone->石头，wall->墙，stonewall->筑石墙阻挡=拒绝回答"
+    },
+    {
+      "question": "fell _____",
+      "type": "blank",
+      "answer": "swoop",
+      "explanation": "凶猛的, 一举. The army took the city in one fell swoop. 军队一举拿下了这座城市。 | fell->凶猛的（古英语），one fell swoop->一击即中=一举"
+    },
+    {
+      "question": "pell-mell ____",
+      "type": "blank",
+      "answer": "rush",
+      "explanation": "混乱地, 混乱的冲刺. People made a pell-mell rush for the exits. 人们混乱地冲向出口。 | pell-mell->乱作一团（法语pêle-mêle，混乱混杂）"
+    },
+    {
+      "question": "_____ mill",
+      "type": "blank",
+      "answer": "grain",
+      "explanation": "磨坊, 谷物磨坊. The old grain mill still operates today. 古老的谷物磨坊今天仍在运营。 | mill->磨，grain mill->磨谷物的坊=谷物磨坊"
+    },
+    {
+      "question": "_____ drill",
+      "type": "blank",
+      "answer": "power",
+      "explanation": "钻头, 电钻. The carpenter used a power drill for the job. 木匠用电钻完成工作。 | drill->钻孔/操练，power drill->电动钻头"
+    },
+    {
+      "question": "distill _____",
+      "type": "blank",
+      "answer": "water",
+      "explanation": "蒸馏, 蒸馏水. The lab equipment can distill water for experiments. 实验室设备可以为实验蒸馏水。 | di->分开，still->滴落，distill->使液体滴落分离=蒸馏"
+    },
+    {
+      "question": "instill ______",
+      "type": "blank",
+      "answer": "values",
+      "explanation": "灌输, 灌输价值观. Parents work to instill values in their children. 父母努力向孩子灌输价值观。 | in->向内，still->滴入，instill->一滴一滴注入=灌输"
+    },
+    {
+      "question": "______ knoll",
+      "type": "blank",
+      "answer": "grassy",
+      "explanation": "小山丘, 长满草的小山丘. They picnicked on a grassy knoll overlooking the valley. 他们在俯瞰山谷的长满草的小山丘上野餐。 | knoll->小圆丘（cf. kneel跪，膝盖高度的小丘）"
+    },
+    {
+      "question": "____ poll",
+      "type": "blank",
+      "answer": "exit",
+      "explanation": "民意调查, 出口民意调查. The exit poll predicted election results accurately. 出口民意调查准确预测了选举结果。 | poll->头部/计数，exit poll->出口处清点意见=出口民调"
+    },
+    {
+      "question": "droll _____",
+      "type": "blank",
+      "answer": "humor",
+      "explanation": "滑稽的, 滑稽的幽默. His droll humor kept everyone entertained. 他滑稽的幽默让每个人都很开心。 | droll->滚动的小人（荷兰语trol），droll->逗趣滑稽的"
+    },
+    {
+      "question": "stroll ______",
+      "type": "blank",
+      "answer": "around",
+      "explanation": "漫步, 四处漫步. Couples stroll around the park at sunset. 情侣们在日落时分四处漫步于公园。 | stroll->悠闲滚动前行=漫步（cf. scroll卷轴/滚动）"
+    },
+    {
+      "question": "____ toll",
+      "type": "blank",
+      "answer": "road",
+      "explanation": "通行费, 道路通行费. Drivers must pay road toll to use the highway. 司机必须支付道路通行费才能使用高速公路。 | toll->计数/敲钟/收费，road toll->过路费"
+    },
+    {
+      "question": "dull ____",
+      "type": "blank",
+      "answer": "ache",
+      "explanation": "钝痛, 钝痛. He felt a dull ache in his shoulder. 他感到肩膀有钝痛。 | dull->迟钝/不锋利，dull ache->不锐利的痛=钝痛"
+    },
+    {
+      "question": "___ gull",
+      "type": "blank",
+      "answer": "sea",
+      "explanation": "海鸥, 海鸥. A sea gull circled overhead looking for food. 一只海鸥在头顶盘旋寻找食物。 | gull->海鸥/欺骗，sea gull->海上的鸟=海鸥"
+    },
+    {
+      "question": "____ hull",
+      "type": "blank",
+      "answer": "ship",
+      "explanation": "船体, 船体. The ship hull was damaged by the rocks. 船体被岩石损坏。 | hull->外壳/剥壳，ship hull->船的外壳=船体"
+    },
+    {
+      "question": "________ idyll",
+      "type": "blank",
+      "answer": "pastoral",
+      "explanation": "田园诗, 田园牧歌. The poem described a pastoral idyll of rural life. 这首诗描述了乡村生活的田园牧歌。 | idyll->小画/小诗（希腊），idyll->田园牧歌（cf. idol偶像，同音近形）"
+    },
+    {
+      "question": "___ idol",
+      "type": "blank",
+      "answer": "pop",
+      "explanation": "偶像, 流行偶像. The teenager's room was covered with pop idol posters. 青少年的房间里贴满了流行偶像海报。 | idol->形象/偶像（cf. idyll田园诗，注意区分）"
+    },
+    {
+      "question": "menthol _____",
+      "type": "blank",
+      "answer": "candy",
+      "explanation": "薄荷醇, 薄荷糖. The menthol candy soothed her sore throat. 薄荷糖缓解了她的喉咙痛。 | menth->薄荷，ol->醇，menthol->薄荷醇"
+    },
+    {
+      "question": "_____ whirlpool",
+      "type": "blank",
+      "answer": "water",
+      "explanation": "漩涡, 水漩涡. The water whirlpool pulled debris under the surface. 水漩涡将碎片拉到水面下。 | whirl->旋转，pool->水池，whirlpool->旋转的水=漩涡"
+    },
+    {
+      "question": "______ spool",
+      "type": "blank",
+      "answer": "thread",
+      "explanation": "线轴, 线轴. She wound the thread spool for sewing. 她缠绕线轴以备缝纫。 | spool->线圈/轴（cf. pool合并，同韵）"
+    },
+    {
+      "question": "____ carol",
+      "type": "blank",
+      "answer": "sing",
+      "explanation": "颂歌, 唱颂歌. Children gather to sing carol at Christmas. 孩子们聚在一起在圣诞节唱颂歌。 | carol->欢唱/颂歌（cf. chorus合唱）"
+    },
+    {
+      "question": "pistol ____",
+      "type": "blank",
+      "answer": "shot",
+      "explanation": "手枪, 手枪射击. The race began with a pistol shot. 比赛以手枪射击开始。 | pistol->手枪（捷克pist->管子），pistol shot->手枪射击"
+    },
+    {
+      "question": "extol ___ _______",
+      "type": "blank",
+      "answer": "the virtues",
+      "explanation": "赞美, 赞美美德. The speaker continued to extol the virtues of hard work. 演讲者继续赞美努力工作的美德。 | ex->向上，tol->举起，extol->高高举起=颂扬"
+    },
+    {
+      "question": "_____ churl",
+      "type": "blank",
+      "answer": "surly",
+      "explanation": "粗人, 脾气坏的粗人. The surly churl refused to help anyone. 脾气坏的粗人拒绝帮助任何人。 | churl->农奴/粗鄙之人，churlish->粗鲁无礼的"
+    },
+    {
+      "question": "______ overhaul",
+      "type": "blank",
+      "answer": "engine",
+      "explanation": "大修, 发动机大修. The mechanic performed an engine overhaul. 机械师进行了发动机大修。 | over->全面，haul->拖拉，overhaul->全面拖出检修=大修"
+    },
+    {
+      "question": "maul _ ______",
+      "type": "blank",
+      "answer": "a victim",
+      "explanation": "撕咬, 撕咬受害者. The wild animal could maul a victim severely. 野生动物可能会严重撕咬受害者。 | maul->重锤/猛击，maul->像锤击一样撕打"
+    },
+    {
+      "question": "resourceful ______",
+      "type": "blank",
+      "answer": "leader",
+      "explanation": "足智多谋的, 足智多谋的领导者. The resourceful leader found solutions to every problem. 足智多谋的领导者为每个问题找到了解决方案。 | resource->资源，resourceful->善用资源的=足智多谋的"
+    },
+    {
+      "question": "vengeful ______",
+      "type": "blank",
+      "answer": "spirit",
+      "explanation": "复仇的, 复仇的精神. The legend spoke of a vengeful spirit. 传说讲述了一个复仇的精神。 | venge->复仇，vengeful->充满复仇欲的（cf. avenge复仇）"
+    },
+    {
+      "question": "dutiful ___",
+      "type": "blank",
+      "answer": "son",
+      "explanation": "尽职的, 尽职的儿子. The dutiful son cared for his aging parents. 尽职的儿子照顾年迈的父母。 | duty->职责，dutiful->充满职责感的=尽职的"
+    },
+    {
+      "question": "willful _______",
+      "type": "blank",
+      "answer": "neglect",
+      "explanation": "故意的, 故意的忽视. The charge was willful neglect of duty. 指控是故意忽视职责。 | will->意志/故意，willful->出于意志的=故意的"
+    },
+    {
+      "question": "blissful _______",
+      "type": "blank",
+      "answer": "silence",
+      "explanation": "幸福的, 幸福的寂静. They enjoyed blissful silence in the countryside. 他们在乡村享受幸福的寂静。 | bliss->极乐，blissful->充满极乐的=幸福的"
+    },
+    {
+      "question": "fitful _____",
+      "type": "blank",
+      "answer": "sleep",
+      "explanation": "断断续续的, 断断续续的睡眠. Anxiety caused fitful sleep throughout the night. 焦虑导致整夜断断续续的睡眠。 | fit->发作/间歇，fitful->一阵一阵发作的=断断续续的"
+    },
+    {
+      "question": "________ mogul",
+      "type": "blank",
+      "answer": "business",
+      "explanation": "大亨, 商业大亨. The business mogul owned multiple companies. 商业大亨拥有多家公司。 | mogul->蒙古大汗，mogul->权贵大亨"
+    },
+    {
+      "question": "annul ________",
+      "type": "blank",
+      "answer": "marriage",
+      "explanation": "废除, 废除婚姻. The court decided to annul marriage on legal grounds. 法院决定以法律理由废除婚姻。 | an->加强，nul->零/无效，annul->使归零=废除"
+    },
+    {
+      "question": "foul _____",
+      "type": "blank",
+      "answer": "smell",
+      "explanation": "恶臭的, 恶臭味. A foul smell filled the room. 恶臭味充满了房间。 | foul->腐烂/污秽，foul smell->令人厌恶的气味（cf. fowl禽类，同音）"
+    },
+    {
+      "question": "_______ consul",
+      "type": "blank",
+      "answer": "Italian",
+      "explanation": "领事, 意大利领事. The Italian consul assisted citizens abroad. 意大利领事在海外协助公民。 | consul->共同商议者（拉丁），consul->领事（cf. council议会）"
+    },
+    {
+      "question": "______ awl",
+      "type": "blank",
+      "answer": "sewing",
+      "explanation": "锥子, 缝纫锥子. The cobbler used a sewing awl for leather work. 鞋匠使用缝纫锥子进行皮革工作。 | awl->锥子（古英语æl），sewing awl->缝纫用锥子"
+    },
+    {
+      "question": "trawl ___ ____",
+      "type": "blank",
+      "answer": "for data",
+      "explanation": "搜寻, 搜寻数据. Researchers trawl for data in archives. 研究人员在档案中搜寻数据。 | trawl->拖网捕鱼，trawl for data->像拖网一样搜寻数据"
+    },
+    {
+      "question": "_______ sibyl",
+      "type": "blank",
+      "answer": "ancient",
+      "explanation": "女预言家, 古代女预言家. The ancient sibyl prophesied future events. 古代女预言家预言未来事件。 | sibyl->古希腊罗马神话中的女先知，sibylline->神秘预言的"
+    },
+    {
+      "question": "_____ beam",
+      "type": "blank",
+      "answer": "laser",
+      "explanation": "光束, 激光束. The laser beam cut through the metal. 激光束切割金属。 | beam->光束/梁，laser beam->激光束"
+    },
+    {
+      "question": "seam _________",
+      "type": "blank",
+      "answer": "allowance",
+      "explanation": "缝, 缝份. The pattern includes seam allowance measurements. 图案包括缝份尺寸。 | seam->缝合线（cf. seem看似，同音），seam allowance->缝份"
+    },
+    {
+      "question": "_____ amalgam",
+      "type": "blank",
+      "answer": "metal",
+      "explanation": "混合物, 金属混合物. Dentists used metal amalgam for fillings. 牙医使用金属混合物进行填充。 | amal->软化，gam->汞，amalgam->汞与金属的混合=合金/混合物"
+    },
+    {
+      "question": "_______ logjam",
+      "type": "blank",
+      "answer": "traffic",
+      "explanation": "僵局, 交通僵局. The accident created a traffic logjam on the highway. 事故在高速公路上造成了交通僵局。 | log->原木，jam->堵塞，logjam->原木堵塞河道=僵局"
+    },
+    {
+      "question": "____ clam",
+      "type": "blank",
+      "answer": "hard",
+      "explanation": "蛤蜊, 硬壳蛤蜊. Divers collected hard clam from the ocean floor. 潜水员从海底收集硬壳蛤蜊。 | clam->夹住（蛤蜊紧夹），clam up->闭口不言（像蛤蜊一样夹紧）"
+    },
+    {
+      "question": "_______ loam",
+      "type": "blank",
+      "answer": "fertile",
+      "explanation": "壤土, 肥沃的壤土. The garden had rich fertile loam for planting. 花园有丰富的肥沃壤土用于种植。 | loam->黏土质壤土（砂土+黏土+腐殖质的混合）"
+    },
+    {
+      "question": "ram _______",
+      "type": "blank",
+      "answer": "through",
+      "explanation": "猛推, 强行通过. The government tried to ram through legislation. 政府试图强行通过立法。 | ram->公羊/撞击，ram through->像公羊冲撞一样强行推过"
+    },
+    {
+      "question": "___ _____ diagram",
+      "type": "blank",
+      "answer": "bar chart",
+      "explanation": "图表, 条形图. The presentation included a bar chart diagram. 演示文稿包括条形图。 | dia->穿过，gram->写/画，diagram->画出来的图=图表"
+    },
+    {
+      "question": "____ anagram",
+      "type": "blank",
+      "answer": "word",
+      "explanation": "字谜, 单词字谜. Solving the word anagram required rearranging letters. 解决单词字谜需要重新排列字母。 | ana->重新，gram->字母，anagram->重新排列字母=字谜"
+    },
+    {
+      "question": "_____ epigram",
+      "type": "blank",
+      "answer": "witty",
+      "explanation": "警句, 机智的警句. The author was famous for witty epigram. 作者以机智的警句而闻名。 | epi->在上面，gram->写，epigram->题刻在上面的话=警句"
+    },
+    {
+      "question": "redeem ______",
+      "type": "blank",
+      "answer": "coupon",
+      "explanation": "兑换, 兑换优惠券. Customers can redeem coupon at checkout. 顾客可以在结账时兑换优惠券。 | re->回，deem->买回，redeem->买回=赎回/兑换"
+    },
+    {
+      "question": "_______ stratagem",
+      "type": "blank",
+      "answer": "cunning",
+      "explanation": "计谋, 狡猾的计谋. The general devised a cunning stratagem. 将军设计了一个狡猾的计谋。 | strat->军队，agem->引导，stratagem->引导军队的手段=计谋"
+    },
+    {
+      "question": "hem _ _____",
+      "type": "blank",
+      "answer": "a skirt",
+      "explanation": "缝边, 给裙子缝边. The tailor will hem a skirt to the right length. 裁缝会把裙子缝边到合适的长度。 | hem->边缘/缝边，hem in->包围（围住边缘）"
+    },
+    {
+      "question": "________ anthem",
+      "type": "blank",
+      "answer": "national",
+      "explanation": "国歌, 国歌. The crowd stood for the national anthem. 人群站立聆听国歌。 | anti->对，phon->声音，anthem->对唱的歌=颂歌/国歌"
+    },
+    {
+      "question": "_____ mayhem",
+      "type": "blank",
+      "answer": "urban",
+      "explanation": "混乱, 城市混乱. The riot caused urban mayhem in the streets. 骚乱在街道上造成了城市混乱。 | maim->致残，mayhem->原指故意致残=蓄意破坏/大混乱"
+    },
+    {
+      "question": "____ apothegm",
+      "type": "blank",
+      "answer": "wise",
+      "explanation": "格言, 智慧格言. The philosopher shared a wise apothegm. 哲学家分享了一句智慧格言。 | apo->离开，thegm->说话，apothegm->精炼说出的话=格言（cf. epigram警句）"
+    },
+    {
+      "question": "________ paradigm",
+      "type": "blank",
+      "answer": "teaching",
+      "explanation": "范例, 教学范例. The school adopted a new teaching paradigm. 学校采用了新的教学范例。 | para->旁边，digm->展示，paradigm->展示给旁人看的=范例/典范"
+    },
+    {
+      "question": "________ acclaim",
+      "type": "blank",
+      "answer": "critical",
+      "explanation": "赞誉, 评论界赞誉. The film received critical acclaim from reviewers. 这部电影获得了评论界的赞誉。 | ac->朝向，claim->呼喊，acclaim->向某人呼喊喝彩=赞誉"
+    },
+    {
+      "question": "declaim ______",
+      "type": "blank",
+      "answer": "poetry",
+      "explanation": "朗诵, 朗诵诗歌. The actor would declaim poetry dramatically. 演员会戏剧性地朗诵诗歌。 | de->加强，claim->呼喊，declaim->大声呼喊=慷慨激昂地朗诵"
+    },
+    {
+      "question": "reclaim ____",
+      "type": "blank",
+      "answer": "land",
+      "explanation": "开垦, 开垦土地. Engineers worked to reclaim land from the sea. 工程师努力从海中开垦土地。 | re->重新，claim->要回，reclaim->重新要回=开垦/回收"
+    },
+    {
+      "question": "disclaim ______________",
+      "type": "blank",
+      "answer": "responsibility",
+      "explanation": "否认, 否认责任. The company tried to disclaim responsibility for damages. 公司试图否认对损害的责任。 | dis->否定，claim->声称，disclaim->否认声称=放弃/否认"
+    },
+    {
+      "question": "____ whim",
+      "type": "blank",
+      "answer": "idle",
+      "explanation": "突发奇想, 无聊的突发奇想. He made decisions on idle whim rather than planning. 他根据无聊的突发奇想而不是计划做决定。 | whim->突发奇想，whimsical->异想天开的"
+    },
+    {
+      "question": "denim ______",
+      "type": "blank",
+      "answer": "jacket",
+      "explanation": "牛仔布, 牛仔布夹克. She wore a classic denim jacket. 她穿着一件经典的牛仔布夹克。 | denim->来自法国Nîmes城的布料（de Nîmes->denim）"
+    },
+    {
+      "question": "_____ interim",
+      "type": "blank",
+      "answer": "short",
+      "explanation": "过渡期间, 短暂的过渡期间. There was a short interim between leaders. 领导人之间有一个短暂的过渡期间。 | inter->之间，im->进入，interim->在两者之间的时期=过渡期"
+    },
+    {
+      "question": "_________ pilgrim",
+      "type": "blank",
+      "answer": "religious",
+      "explanation": "朝圣者, 宗教朝圣者. The religious pilgrim traveled to holy sites. 宗教朝圣者前往圣地。 | per->穿越，agri->田野，pilgrim->穿越田野的旅行者=朝圣者"
+    },
+    {
+      "question": "prim _______",
+      "type": "blank",
+      "answer": "manners",
+      "explanation": "拘谨的, 拘谨的举止. The lady maintained prim manners at all times. 这位女士始终保持拘谨的举止。 | prim->最初/整洁，prim->过分整洁拘谨（cf. prime首要的）"
+    },
+    {
+      "question": "_____ verbatim",
+      "type": "blank",
+      "answer": "quote",
+      "explanation": "逐字地, 逐字引用. Please quote verbatim from the original text. 请从原文逐字引用。 | verb->词/字，verbatim->逐字的（cf. verbal口头的）"
+    },
+    {
+      "question": "vim ___ _____",
+      "type": "blank",
+      "answer": "and vigor",
+      "explanation": "精力, 精力和活力. The young athlete played with vim and vigor. 年轻运动员精力充沛地比赛。 | vim->力量（拉丁vis的宾格），vim and vigor->精力与活力"
+    },
+    {
+      "question": "_____ maxim",
+      "type": "blank",
+      "answer": "moral",
+      "explanation": "格言, 道德格言. The teacher taught students a moral maxim. 老师向学生教授道德格言。 | max->最大，maxim->最高准则=格言（cf. maximum最大值）"
+    },
+    {
+      "question": "________ balm",
+      "type": "blank",
+      "answer": "soothing",
+      "explanation": "香膏, 舒缓香膏. The soothing balm relieved her dry skin. 舒缓香膏缓解了她的干燥皮肤。 | balm->香脂（balsam的缩写），balm->舒缓之物（cf. embalm防腐）"
+    },
+    {
+      "question": "___ realm __ ___",
+      "type": "blank",
+      "answer": "the of art",
+      "explanation": "领域, 艺术领域. His work explores the realm of art and science. 他的作品探索艺术和科学领域。 | real->王权，realm->王权管辖的范围=领域/王国"
+    },
+    {
+      "question": "____ _ psalm",
+      "type": "blank",
+      "answer": "sing a",
+      "explanation": "赞美诗, 唱赞美诗. The congregation gathered to sing a psalm. 会众聚集唱赞美诗。 | psalm->弹拨乐器伴奏的歌（p不发音），psalm->赞美诗"
+    },
+    {
+      "question": "_ ______ qualm",
+      "type": "blank",
+      "answer": "a sudden",
+      "explanation": "疑虑, 突然的疑虑. She felt a sudden qualm about the decision. 她对这个决定感到突然的疑虑。 | qualm->恶心/良心不安（l不发音），qualm->突来的疑虑/不适"
+    },
+    {
+      "question": "elm ____",
+      "type": "blank",
+      "answer": "tree",
+      "explanation": "榆树, 榆树. The old elm tree stood in the town square. 古老的榆树矗立在城镇广场上。 | elm->榆树（古英语），elm tree->榆树（著名如Elm Street榆树街）"
+    },
+    {
+      "question": "____ ___ helm",
+      "type": "blank",
+      "answer": "take the",
+      "explanation": "舵, 掌舵. The new CEO will take the helm next month. 新任首席执行官将于下月掌舵。 | helm->舵/头盔（古英语），take the helm->掌舵=执掌领导权"
+    },
+    {
+      "question": "whelm ____ _____",
+      "type": "blank",
+      "answer": "with grief",
+      "explanation": "淹没, 被悲伤淹没. Sorrow seemed to whelm with grief. 悲伤似乎被悲痛淹没。 | whelm->淹没/翻覆，overwhelm->彻底淹没（over加强）"
+    },
+    {
+      "question": "overwhelm ___ ______",
+      "type": "blank",
+      "answer": "the senses",
+      "explanation": "压倒, 压倒感官. The spectacular view would overwhelm the senses. 壮观的景色会压倒感官。 | over->超过，whelm->淹没，overwhelm->完全淹没=压倒"
+    },
+    {
+      "question": "boredom _________",
+      "type": "blank",
+      "answer": "threshold",
+      "explanation": "无聊, 无聊阈值. Everyone has a different boredom threshold. 每个人都有不同的无聊阈值。 | bore->钻孔/令人厌烦，boredom->无聊状态（-dom表状态）"
+    },
+    {
+      "question": "______ serfdom",
+      "type": "blank",
+      "answer": "feudal",
+      "explanation": "农奴制, 封建农奴制. The country abolished feudal serfdom centuries ago. 该国几个世纪前废除了封建农奴制。 | serf->农奴（拉丁servus奴隶），serfdom->农奴制度（-dom表制度）"
+    },
+    {
+      "question": "random ______",
+      "type": "blank",
+      "answer": "sample",
+      "explanation": "随机的, 随机样本. Researchers selected a random sample for the study. 研究人员为研究选择了随机样本。 | random->奔跑/无方向（古法语），random->无规律的=随机的"
+    },
+    {
+      "question": "____-_______ axiom",
+      "type": "blank",
+      "answer": "self-evident",
+      "explanation": "公理, 不言而喻的公理. The declaration began with a self-evident axiom. 宣言以一个不言而喻的公理开始。 | axios->有价值（希腊），axiom->不需证明的真理=公理"
+    },
+    {
+      "question": "________ boom",
+      "type": "blank",
+      "answer": "economic",
+      "explanation": "繁荣, 经济繁荣. The region experienced an economic boom. 该地区经历了经济繁荣。 | boom->爆炸声/激增，economic boom->经济爆炸式增长=经济繁荣"
+    },
+    {
+      "question": "______ heirloom",
+      "type": "blank",
+      "answer": "family",
+      "explanation": "传家宝, 家族传家宝. The ring is a precious family heirloom. 这枚戒指是珍贵的家族传家宝。 | heir->继承人，loom->织机，heirloom->传给继承人的织机=传家宝"
+    },
+    {
+      "question": "_______ groom",
+      "type": "blank",
+      "answer": "wedding",
+      "explanation": "新郎, 婚礼新郎. The wedding groom nervously awaited his bride. 婚礼新郎紧张地等待他的新娘。 | groom->梳理/新郎，wedding groom->婚礼上被打扮好的男人=新郎"
+    },
+    {
+      "question": "_ maelstrom __",
+      "type": "blank",
+      "answer": "a of",
+      "explanation": "大漩涡, 大漩涡. The scandal created a maelstrom of controversy. 丑闻引起了争议的大漩涡。 | mael->研磨，strom->流，maelstrom->旋转研磨的水流=大漩涡"
+    },
+    {
+      "question": "___ ransom",
+      "type": "blank",
+      "answer": "pay",
+      "explanation": "赎金, 支付赎金. The family refused to pay ransom to kidnappers. 家人拒绝向绑架者支付赎金。 | ransom->赎回（拉丁redemptio），ransom->赎金（cf. redeem赎回）"
+    },
+    {
+      "question": "phantom ____",
+      "type": "blank",
+      "answer": "limb",
+      "explanation": "幻影, 幻肢. Amputees sometimes experience phantom limb sensations. 截肢者有时会经历幻肢感觉。 | phant->显现，phantom->显现之物=幻影（cf. fantastic幻想的）"
+    },
+    {
+      "question": "buxom ______",
+      "type": "blank",
+      "answer": "figure",
+      "explanation": "丰满的, 丰满的身材. The painting depicted a woman with a buxom figure. 这幅画描绘了一个身材丰满的女人。 | buxom->柔顺/健壮（古英语），buxom->丰满健美的"
+    },
+    {
+      "question": "_____ charm",
+      "type": "blank",
+      "answer": "lucky",
+      "explanation": "魅力, 幸运符. She carried a lucky charm for good fortune. 她带着一个幸运符以求好运。 | charm->歌唱/咒语（拉丁carmen），charm->魅力/护身符"
+    },
+    {
+      "question": "disarm _________",
+      "type": "blank",
+      "answer": "suspicion",
+      "explanation": "消除, 消除怀疑. His honest approach helped disarm suspicion. 他诚实的态度有助于消除怀疑。 | dis->去除，arm->武装，disarm->解除武装=消除（戒备/怀疑）"
+    },
+    {
+      "question": "lukewarm ________",
+      "type": "blank",
+      "answer": "response",
+      "explanation": "冷淡的, 冷淡的反应. The proposal received only a lukewarm response. 该提议只得到了冷淡的反应。 | luke->温热（古英语），warm->暖，lukewarm->微温=不冷不热=冷淡的"
+    },
+    {
+      "question": "germ ______",
+      "type": "blank",
+      "answer": "theory",
+      "explanation": "细菌, 细菌理论. Pasteur developed the germ theory of disease. 巴斯德发展了疾病的细菌理论。 | germ->萌芽/种子，germ->病菌（最初指胚芽，后指致病微生物）"
+    },
+    {
+      "question": "affirm ___ _______",
+      "type": "blank",
+      "answer": "the verdict",
+      "explanation": "确认, 确认判决. The appeals court decided to affirm the verdict. 上诉法院决定确认判决。 | af->朝向，firm->坚定，affirm->使坚定=确认（cf. confirm再次确认）"
+    },
+    {
+      "question": "infirm _______",
+      "type": "blank",
+      "answer": "patient",
+      "explanation": "虚弱的, 虚弱的病人. The nurse cared for the infirm patient. 护士照顾虚弱的病人。 | in->否定，firm->坚强，infirm->不坚强的=虚弱的（cf. infirmary医务室）"
+    },
+    {
+      "question": "confirm ___________",
+      "type": "blank",
+      "answer": "reservation",
+      "explanation": "确认, 确认预订. Please call to confirm reservation for dinner. 请致电确认晚餐预订。 | con->共同，firm->坚定，confirm->共同坚定=确认"
+    },
+    {
+      "question": "______ uniform",
+      "type": "blank",
+      "answer": "school",
+      "explanation": "制服, 校服. Students must wear school uniform daily. 学生必须每天穿校服。 | uni->一，form->形式，uniform->统一形式=制服/一致的"
+    },
+    {
+      "question": "misinform ___ ______",
+      "type": "blank",
+      "answer": "the public",
+      "explanation": "误导, 误导公众. False news can misinform the public. 假新闻会误导公众。 | mis->错误，inform->告知，misinform->错误告知=误导"
+    }, {
+      "question": "conform __ _____",
+      "type": "blank",
+      "answer": "to norms",
+      "explanation": "遵守, 遵守规范. Society expects individuals to conform to norms. 社会期望个人遵守规范。 | con->共同，form->形式，conform->与共同形式一致=遵守"
+    },
+    {
+      "question": "______ norm",
+      "type": "blank",
+      "answer": "social",
+      "explanation": "规范, 社会规范. Breaking social norm can lead to disapproval. 违反社会规范可能会导致不认可。 | norm->标准/正常（拉丁norma->直角尺），normal->正常的"
+    },
+    {
+      "question": "______ ostracism",
+      "type": "blank",
+      "answer": "social",
+      "explanation": "排斥, 社会排斥. The whistleblower faced social ostracism. 告密者面临社会排斥。 | ostracon->陶片（古希腊用陶片投票放逐），ostracism->放逐/排斥"
+    },
+    {
+      "question": "_______ empiricism",
+      "type": "blank",
+      "answer": "medical",
+      "explanation": "经验主义, 医学经验主义. Medical empiricism relies on observation and experience. 医学经验主义依赖观察和经验。 | empiri->经验，empiricism->以经验为基础的主义"
+    },
+    {
+      "question": "________ eclecticism",
+      "type": "blank",
+      "answer": "literary",
+      "explanation": "折衷主义, 文学折衷主义. The author's style showed literary eclecticism. 作者的风格显示出文学折衷主义。 | ec->从中，lect->选择，eclecticism->从各处选取精华=折衷主义"
+    },
+    {
+      "question": "witticism ______",
+      "type": "blank",
+      "answer": "galore",
+      "explanation": "妙语, 大量妙语. His speech contained witticism galore. 他的演讲包含大量妙语。 | wit->机智，witticism->机智说出的话=妙语"
+    },
+    {
+      "question": "_______ absenteeism",
+      "type": "blank",
+      "answer": "chronic",
+      "explanation": "旷工, 长期旷工. The company struggled with chronic absenteeism. 公司与长期旷工作斗争。 | absent->缺席，absenteeism->习惯性缺席=旷工"
+    },
+    {
+      "question": "atheism ______",
+      "type": "blank",
+      "answer": "debate",
+      "explanation": "无神论, 无神论辩论. The atheism debate continued for hours. 无神论辩论持续了数小时。 | a->否定，theos->神，atheism->否定神存在的主义=无神论"
+    },
+    {
+      "question": "____ neologism",
+      "type": "blank",
+      "answer": "tech",
+      "explanation": "新词, 科技新词. Social media created many tech neologism. 社交媒体创造了许多科技新词。 | neo->新，log->词，neologism->新造的词=新词"
+    },
+    {
+      "question": "_____ schism",
+      "type": "blank",
+      "answer": "party",
+      "explanation": "分裂, 政党分裂. A party schism divided the organization. 政党分裂分裂了组织。 | schiz->切开（cf. schizophrenia精神分裂），schism->切开=分裂"
+    },
+    {
+      "question": "sophism ____",
+      "type": "blank",
+      "answer": "trap",
+      "explanation": "诡辩, 诡辩陷阱. The argument was a clever sophism trap. 这个论点是一个巧妙的诡辩陷阱。 | sophos->智慧（希腊），sophism->貌似智慧实为狡猾的论证=诡辩"
+    },
+    {
+      "question": "surrealism ___",
+      "type": "blank",
+      "answer": "art",
+      "explanation": "超现实主义, 超现实主义艺术. Dali was a master of surrealism art. 达利是超现实主义艺术的大师。 | sur->超越，real->现实，surrealism->超越现实的艺术主义"
+    },
+    {
+      "question": "___________ parallelism",
+      "type": "blank",
+      "answer": "grammatical",
+      "explanation": "平行, 语法平行. The sentence lacked grammatical parallelism. 这个句子缺乏语法平行。 | para->旁边，allel->彼此，parallelism->结构彼此并排=平行"
+    },
+    {
+      "question": "pugilism _____",
+      "type": "blank",
+      "answer": "match",
+      "explanation": "拳击, 拳击比赛. The championship pugilism match drew crowds. 冠军拳击比赛吸引了人群。 | pugil->拳击手（拉丁pugnus->拳头），pugilism->拳击运动"
+    },
+    {
+      "question": "_____________ nihilism",
+      "type": "blank",
+      "answer": "philosophical",
+      "explanation": "虚无主义, 哲学虚无主义. Nietzsche explored philosophical nihilism. 尼采探索了哲学虚无主义。 | nihil->虚无（拉丁），nihilism->一切皆虚无的主义"
+    },
+    {
+      "question": "______ euphemism",
+      "type": "blank",
+      "answer": "polite",
+      "explanation": "委婉语, 礼貌的委婉语. Passed away is a polite euphemism for died. 去世是死亡的礼貌委婉语。 | eu->好，phem->说，euphemism->说得好听=委婉语"
+    },
+    {
+      "question": "____ pessimism",
+      "type": "blank",
+      "answer": "deep",
+      "explanation": "悲观主义, 深度悲观主义. The crisis generated deep pessimism. 危机产生了深度悲观主义。 | pessim->最坏（拉丁），pessimism->认为事情最坏的主义（cf. optimism乐观主义）"
+    },
+    {
+      "question": "_______ optimism",
+      "type": "blank",
+      "answer": "guarded",
+      "explanation": "乐观主义, 谨慎的乐观主义. Officials expressed guarded optimism about recovery. 官员对复苏表示谨慎的乐观。 | optim->最好（拉丁），optimism->认为事情最好的主义"
+    },
+    {
+      "question": "______ organism",
+      "type": "blank",
+      "answer": "living",
+      "explanation": "有机体, 生物有机体. Every living organism requires water. 每个生物有机体都需要水。 | organ->器官/组织，organism->有器官组织的生命体"
+    },
+    {
+      "question": "microorganism ______",
+      "type": "blank",
+      "answer": "growth",
+      "explanation": "微生物, 微生物生长. Temperature affects microorganism growth. 温度影响微生物生长。 | micro->微小，organism->有机体，microorganism->微小的有机体=微生物"
+    },
+    {
+      "question": "_______ mechanism",
+      "type": "blank",
+      "answer": "defense",
+      "explanation": "机制, 防御机制. Denial is a common defense mechanism. 否认是一种常见的防御机制。 | mechan->机械，mechanism->运作方式=机制（cf. machine机器）"
+    },
+    {
+      "question": "cosmopolitanism _____",
+      "type": "blank",
+      "answer": "ideal",
+      "explanation": "世界主义, 世界主义理想. The city embodied the cosmopolitanism ideal. 这座城市体现了世界主义理想。 | cosmo->世界，polit->城邦，cosmopolitanism->全球城邦公民理想=世界主义"
+    },
+    {
+      "question": "_____ chauvinism",
+      "type": "blank",
+      "answer": "rabid",
+      "explanation": "沙文主义, 狂热的沙文主义. His rabid chauvinism alienated colleagues. 他狂热的沙文主义疏远了同事。 | Chauvin->法国极端爱国军人，chauvinism->极端民族优越感=沙文主义"
+    },
+    {
+      "question": "____-_________ hedonism",
+      "type": "blank",
+      "answer": "self-indulgent",
+      "explanation": "享乐主义, 自我放纵的享乐主义. The lifestyle represented self-indulgent hedonism. 这种生活方式代表了自我放纵的享乐主义。 | hedone->快乐（希腊），hedonism->以追求快乐为最高目标的主义"
+    },
+    {
+      "question": "____ antagonism",
+      "type": "blank",
+      "answer": "open",
+      "explanation": "对抗, 公开对抗. There was open antagonism between the rivals. 对手之间存在公开对抗。 | anti->对抗，agon->竞争，antagonism->相互竞争对抗"
+    },
+    {
+      "question": "_______ egoism",
+      "type": "blank",
+      "answer": "selfish",
+      "explanation": "利己主义, 自私的利己主义. His behavior showed selfish egoism. 他的行为表现出自私的利己主义。 | ego->自我（拉丁），egoism->以自我为中心的主义（cf. egotism自大）"
+    },
+    {
+      "question": "jingoism ________",
+      "type": "blank",
+      "answer": "rhetoric",
+      "explanation": "沙文主义, 沙文主义言辞. Political speeches used jingoism rhetoric. 政治演讲使用了沙文主义言辞。 | jingo->19世纪英国好战歌词中的语气词，jingoism->好战的极端爱国主义"
+    },
+    {
+      "question": "escapism _______",
+      "type": "blank",
+      "answer": "fantasy",
+      "explanation": "逃避主义, 逃避主义幻想. The novel offered escapism fantasy from reality. 小说提供了逃避现实的逃避主义幻想。 | escape->逃跑，escapism->通过幻想逃避现实的倾向"
+    },
+    {
+      "question": "_____ malapropism",
+      "type": "blank",
+      "answer": "comic",
+      "explanation": "词语误用, 滑稽的词语误用. The character's speech was full of comic malapropism. 这个角色的演讲充满了滑稽的词语误用。 | mal->错误，à propos->恰当，malapropism->用错相似词=词语误用"
+    },
+    {
+      "question": "plagiarism ____",
+      "type": "blank",
+      "answer": "case",
+      "explanation": "抄袭, 抄袭案件. The university investigated the plagiarism case. 大学调查了抄袭案件。 | plagiarius->诱拐者（拉丁），plagiarism->偷窃他人思想=抄袭"
+    },
+    {
+      "question": "________ mesmerism",
+      "type": "blank",
+      "answer": "practice",
+      "explanation": "催眠术, 实践催眠术. The doctor would practice mesmerism on patients. 医生会对病人实践催眠术。 | Mesmer->18世纪医生Franz Mesmer，mesmerism->由他发明的催眠术"
+    },
+    {
+      "question": "_____ aphorism",
+      "type": "blank",
+      "answer": "pithy",
+      "explanation": "格言, 简洁的格言. Franklin was known for pithy aphorism. 富兰克林以简洁的格言而闻名。 | apo->离开，hori->界定，aphorism->划定界限的话=格言（cf. apothegm格言）"
+    },
+    {
+      "question": "_____ dogmatism",
+      "type": "blank",
+      "answer": "rigid",
+      "explanation": "教条主义, 僵化的教条主义. His rigid dogmatism prevented compromise. 他僵化的教条主义阻止了妥协。 | dogma->教义，dogmatism->固守教义不变通=教条主义"
+    },
+    {
+      "question": "patriotism ______",
+      "type": "blank",
+      "answer": "spirit",
+      "explanation": "爱国主义, 爱国主义精神. The holiday celebrates patriotism spirit. 这个节日庆祝爱国主义精神。 | patri->父亲/祖国，patriotism->热爱祖国的情感=爱国主义"
+    },
+    {
+      "question": "_________ nepotism",
+      "type": "blank",
+      "answer": "shameless",
+      "explanation": "裙带关系, 无耻的裙带关系. The leader practiced shameless nepotism. 领导人实行无耻的裙带关系。 | nepos->侄子（拉丁，教皇任命侄子为要职），nepotism->任人唯亲"
+    },
+    {
+      "question": "___________ despotism",
+      "type": "blank",
+      "answer": "enlightened",
+      "explanation": "专制, 开明专制. The ruler claimed to practice enlightened despotism. 统治者声称实行开明专制。 | despotes->主人（希腊），despotism->主人独掌一切=专制"
+    },
+    {
+      "question": "_____ truism",
+      "type": "blank",
+      "answer": "tired",
+      "explanation": "陈词滥调, 陈腐的陈词滥调. The speech repeated tired truism. 演讲重复了陈腐的陈词滥调。 | true->真实，truism->人人皆知的真理=陈词滥调"
+    },
+    {
+      "question": "____ altruism",
+      "type": "blank",
+      "answer": "pure",
+      "explanation": "利他主义, 纯粹的利他主义. Her actions demonstrated pure altruism. 她的行为展示了纯粹的利他主义。 | altr->他人（拉丁alter），altruism->为他人着想的主义（cf. egoism利己主义）"
+    },
+    {
+      "question": "cronyism _______",
+      "type": "blank",
+      "answer": "scandal",
+      "explanation": "任人唯亲, 任人唯亲丑闻. The mayor was embroiled in a cronyism scandal. 市长卷入了任人唯亲丑闻。 | crony->老朋友，cronyism->提拔老朋友的做法=任人唯亲（cf. nepotism裙带关系）"
+    },
+    {
+      "question": "______ cataclysm",
+      "type": "blank",
+      "answer": "global",
+      "explanation": "大灾难, 全球大灾难. Climate change could trigger a global cataclysm. 气候变化可能引发全球大灾难。 | cata->向下，clysm->洪水，cataclysm->大洪水般的灾难"
+    },
+    {
+      "question": "_ modicum __ _____",
+      "type": "blank",
+      "answer": "a of truth",
+      "explanation": "少量, 少量真相. There was a modicum of truth in the rumor. 谣言中有少量真相。 | mod->适度，modicum->适度的少量（cf. moderate适中）"
+    },
+    {
+      "question": "________ addendum",
+      "type": "blank",
+      "answer": "contract",
+      "explanation": "附录, 合同附录. The lawyer prepared a contract addendum. 律师准备了合同附录。 | add->加入，addendum->需要加入的东西=附录（复数addenda）"
+    },
+    {
+      "question": "linoleum _____",
+      "type": "blank",
+      "answer": "floor",
+      "explanation": "油毡, 油毡地板. The kitchen had a linoleum floor. 厨房有油毡地板。 | lino->亚麻，oleum->油，linoleum->亚麻油制成的地板材料=油毡"
+    },
+    {
+      "question": "petroleum ________",
+      "type": "blank",
+      "answer": "refinery",
+      "explanation": "石油, 石油炼油厂. The petroleum refinery operated twenty-four hours. 石油炼油厂二十四小时运营。 | petra->岩石，oleum->油，petroleum->岩石中的油=石油"
+    },
+    {
+      "question": "calcium ______",
+      "type": "blank",
+      "answer": "intake",
+      "explanation": "钙, 钙摄入量. Doctors recommend adequate calcium intake. 医生建议充足的钙摄入量。 | calx->石灰（拉丁），calcium->石灰中提取的金属元素=钙"
+    },
+    {
+      "question": "medium __ ________",
+      "type": "blank",
+      "answer": "of exchange",
+      "explanation": "媒介, 交换媒介. Money serves as a medium of exchange. 货币作为交换媒介。 | medi->中间，medium->中间物=媒介（cf. medieval中世纪，intermediate中间的）"
+    },
+    {
+      "question": "____-_______ tedium",
+      "type": "blank",
+      "answer": "mind-numbing",
+      "explanation": "乏味, 令人麻木的乏味. The work involved mind-numbing tedium. 工作涉及令人麻木的乏味。 | taed->厌烦（拉丁），tedium->令人厌烦的状态（cf. tedious乏味的）"
+    },
+    {
+      "question": "_______ compendium",
+      "type": "blank",
+      "answer": "concise",
+      "explanation": "纲要, 简明纲要. The book is a concise compendium of facts. 这本书是事实的简明纲要。 | com->共同，pend->称重，compendium->称量汇总的要点=纲要"
+    },
+    {
+      "question": "______ odium",
+      "type": "blank",
+      "answer": "public",
+      "explanation": "憎恶, 公众憎恶. The scandal brought public odium upon him. 丑闻给他带来了公众憎恶。 | odi->恨（拉丁odi=I hate），odium->被众人憎恨（cf. odious可憎的）"
+    },
+    {
+      "question": "_____ podium",
+      "type": "blank",
+      "answer": "award",
+      "explanation": "领奖台, 领奖台. The athlete stood on the award podium. 运动员站在领奖台上。 | pod->脚（希腊），podium->脚下的台子=讲台/领奖台（cf. tripod三脚架）"
+    },
+    {
+      "question": "premium _______",
+      "type": "blank",
+      "answer": "quality",
+      "explanation": "优质的, 优质品质. The company offers premium quality products. 公司提供优质品质产品。 | pre->之前/最先，em->取得，premium->最先取得的奖励=优质/溢价"
+    },
+    {
+      "question": "__________ encomium",
+      "type": "blank",
+      "answer": "flattering",
+      "explanation": "赞颂, 奉承的赞颂. The speaker delivered a flattering encomium. 演讲者发表了奉承的赞颂。 | en->在内，comium->游行/庆典（希腊komos），encomium->庆典中的赞颂"
+    },
+    {
+      "question": "_ ___ millennium",
+      "type": "blank",
+      "answer": "a new",
+      "explanation": "千年, 新千年. We celebrate the beginning of a new millennium. 我们庆祝新千年的开始。 | mille->千，annum->年，millennium->一千年（cf. centennial百年）"
+    },
+    {
+      "question": "_____ pandemonium",
+      "type": "blank",
+      "answer": "total",
+      "explanation": "大混乱, 完全混乱. The announcement caused total pandemonium. 这一公告引起了完全混乱。 | pan->全部，demon->恶魔，pandemonium->所有恶魔聚集=大混乱"
+    },
+    {
+      "question": "___ honorarium",
+      "type": "blank",
+      "answer": "pay",
+      "explanation": "酬金, 支付酬金. The university will pay honorarium to guest speakers. 大学将向客座演讲者支付酬金。 | honor->荣誉，honorarium->以荣誉之名支付的酬劳=酬金"
+    },
+    {
+      "question": "______ equilibrium",
+      "type": "blank",
+      "answer": "market",
+      "explanation": "平衡, 市场平衡. Supply and demand reach market equilibrium. 供求达到市场平衡。 | equi->相等，libr->秤，equilibrium->秤两端相等=平衡（cf. equilateral等边）"
+    },
+    {
+      "question": "______ bacterium",
+      "type": "blank",
+      "answer": "single",
+      "explanation": "细菌, 单个细菌. A single bacterium can multiply rapidly. 单个细菌可以迅速繁殖。 | bacter->小棒（希腊，形似棒状），bacterium->细菌（复数bacteria）"
+    },
+    {
+      "question": "delirium _______",
+      "type": "blank",
+      "answer": "tremens",
+      "explanation": "谵妄, 震颤性谵妄. Alcohol withdrawal can cause delirium tremens. 酒精戒断会引起震颤性谵妄。 | de->偏离，lira->轨道，delirium->偏离正轨=神志错乱/谵妄"
+    },
+    {
+      "question": "________ sanatorium",
+      "type": "blank",
+      "answer": "mountain",
+      "explanation": "疗养院, 山间疗养院. The patient recovered at a mountain sanatorium. 患者在山间疗养院康复。 | san->健康，sanatorium->使人恢复健康的地方=疗养院（cf. sanitary卫生的）"
+    },
+    {
+      "question": "____ moratorium",
+      "type": "blank",
+      "answer": "loan",
+      "explanation": "暂停, 贷款暂停. The bank declared a loan moratorium. 银行宣布贷款暂停。 | mora->延迟（拉丁），moratorium->官方批准的延迟=暂停（cf. morass泥沼）"
+    },
+    {
+      "question": "______ auditorium",
+      "type": "blank",
+      "answer": "school",
+      "explanation": "礼堂, 学校礼堂. The concert was held in the school auditorium. 音乐会在学校礼堂举行。 | audit->听，auditorium->供人聆听的场所=礼堂（cf. audience观众）"
+    },
+    {
+      "question": "________ symposium",
+      "type": "blank",
+      "answer": "academic",
+      "explanation": "研讨会, 学术研讨会. Scholars presented papers at the academic symposium. 学者在学术研讨会上提交论文。 | sym->共同，posium->饮酒，symposium->共饮畅谈=研讨会（古希腊饮酒讨论会）"
+    },
+    {
+      "question": "________ colloquium",
+      "type": "blank",
+      "answer": "academic",
+      "explanation": "学术讨论会, 学术讨论会. The professor hosted an academic colloquium. 教授主持了学术讨论会。 | col->共同，loqu->说话，colloquium->共同说话=学术讨论会（cf. colloquial口语的）"
+    },
+    {
+      "question": "______ curriculum",
+      "type": "blank",
+      "answer": "school",
+      "explanation": "课程, 学校课程. The school curriculum includes math and science. 学校课程包括数学和科学。 | curr->跑，curriculum->跑完的赛程=课程（cf. current水流，race赛跑）"
+    },
+    {
+      "question": "________ pendulum",
+      "type": "blank",
+      "answer": "swinging",
+      "explanation": "钟摆, 摆动的钟摆. The swinging pendulum measured time. 摆动的钟摆测量时间。 | pend->悬挂，pendulum->悬挂摆动的东西=钟摆（cf. pendant挂件，depend依赖）"
+    },
+    {
+      "question": "_________ asylum",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "庇护, 政治庇护. The refugee sought political asylum. 难民寻求政治庇护。 | a->无，sylum->抓取（希腊），asylum->不可被抓取的地方=庇护所"
+    },
+    {
+      "question": "_____ chrysanthemum",
+      "type": "blank",
+      "answer": "white",
+      "explanation": "菊花, 白菊花. The garden featured beautiful white chrysanthemum. 花园里有美丽的白菊花。 | chryso->金，anthemum->花，chrysanthemum->金色的花=菊花"
+    },
+    {
+      "question": "optimum _____",
+      "type": "blank",
+      "answer": "level",
+      "explanation": "最佳的, 最佳水平. The machine operates at optimum level. 机器在最佳水平运行。 | optim->最好，optimum->最佳状态（cf. optimism乐观主义，maximum最大值）"
+    },
+    {
+      "question": "_____ interregnum",
+      "type": "blank",
+      "answer": "power",
+      "explanation": "空位期, 权力空位期. A power interregnum followed the king's death. 国王去世后出现了权力空位期。 | inter->之间，regnum->统治，interregnum->两次统治之间的空档=空位期"
+    },
+    {
+      "question": "____ ___ fulcrum",
+      "type": "blank",
+      "answer": "find the",
+      "explanation": "支点, 找到支点. Engineers must find the fulcrum for the lever. 工程师必须为杠杆找到支点。 | fulc->支撑，fulcrum->支撑杠杆的点=支点（cf. fulcrum在政治中指关键支撑点）"
+    },
+    {
+      "question": "humdrum _______",
+      "type": "blank",
+      "answer": "routine",
+      "explanation": "单调的, 单调的例行公事. Workers tired of the humdrum routine. 工人厌倦了单调的例行公事。 | hum->哼哼，drum->鼓声，humdrum->像鼓声一样重复的=单调乏味"
+    },
+    {
+      "question": "_____ _ conundrum",
+      "type": "blank",
+      "answer": "solve a",
+      "explanation": "难题, 解决难题. The detective tried to solve a conundrum. 侦探试图解决难题。 | conundrum->来源不明的戏谑词，今指令人困惑的难题/谜题"
+    },
+    {
+      "question": "____ decorum",
+      "type": "blank",
+      "answer": "show",
+      "explanation": "礼仪, 表现礼仪. Guests were expected to show decorum. 客人被期望表现礼仪。 | decor->装饰/得体，decorum->得体的行为举止=礼仪（cf. decorate装饰）"
+    },
+    {
+      "question": "______ forum",
+      "type": "blank",
+      "answer": "online",
+      "explanation": "论坛, 在线论坛. Users discussed issues in the online forum. 用户在在线论坛讨论问题。 | forum->罗马广场（公共讨论场所），forum->论坛（cf. forensic法庭的）"
+    },
+    {
+      "question": "_____ spectrum",
+      "type": "blank",
+      "answer": "color",
+      "explanation": "光谱, 色谱. The prism revealed the color spectrum. 棱镜显示了色谱。 | spect->看，spectrum->可见的范围=光谱（cf. inspect检查，spectacle奇观）"
+    },
+    {
+      "question": "_______ nostrum",
+      "type": "blank",
+      "answer": "miracle",
+      "explanation": "秘方, 神奇秘方. The salesman peddled a miracle nostrum. 推销员兜售神奇秘方。 | nostr->我们的（拉丁），nostrum->我们自己的秘方=万能药/秘方"
+    },
+    {
+      "question": "____ ___ rostrum",
+      "type": "blank",
+      "answer": "take the",
+      "explanation": "讲台, 走上讲台. The speaker prepared to take the rostrum. 演讲者准备走上讲台。 | rostr->鸟嘴/船嘴，rostrum->罗马广场上的演讲台（以战船喙装饰）=讲台"
+    },
+    {
+      "question": "___ desideratum",
+      "type": "blank",
+      "answer": "top",
+      "explanation": "迫切需要的东西, 首要需求. Peace is the top desideratum. 和平是首要需求。 | desider->渴望（拉丁），desideratum->迫切渴望的东西（cf. desire渴望）"
+    },
+    {
+      "question": "____ stratum",
+      "type": "blank",
+      "answer": "rock",
+      "explanation": "地层, 岩层. Geologists studied the ancient rock stratum. 地质学家研究古老的岩层。 | strat->铺展/层，stratum->铺展的一层=地层（复数strata，cf. strategy战略）"
+    },
+    {
+      "question": "________ substratum",
+      "type": "blank",
+      "answer": "cultural",
+      "explanation": "基础, 文化基础. Language reflects the cultural substratum. 语言反映文化基础。 | sub->下面，stratum->层，substratum->最底下的层=基础/底层"
+    },
+    {
+      "question": "_____ dictum",
+      "type": "blank",
+      "answer": "legal",
+      "explanation": "格言, 法律格言. The judge cited a famous legal dictum. 法官引用了一句著名的法律格言。 | dict->说（拉丁），dictum->所说之话=格言（cf. dictate命令，predict预言）"
+    },
+    {
+      "question": "____ arboretum",
+      "type": "blank",
+      "answer": "city",
+      "explanation": "植物园, 城市植物园. The city arboretum displays rare trees. 城市植物园展示稀有树木。 | arbor->树（拉丁），arboretum->种树的地方=植物园（cf. arbor凉亭）"
+    },
+    {
+      "question": "______ factotum",
+      "type": "blank",
+      "answer": "office",
+      "explanation": "杂役, 办公室杂役. The office factotum handled various tasks. 办公室杂役处理各种任务。 | fac->做，totum->一切，factotum->做一切事的人=杂役/万事通"
+    },
+    {
+      "question": "___ pseudonym",
+      "type": "blank",
+      "answer": "pen",
+      "explanation": "笔名, 笔名. The author wrote under a pen pseudonym. 作者用笔名写作。 | pseudo->假，onym->名字，pseudonym->假名字=笔名（cf. anonymous匿名）"
+    },
+    {
+      "question": "______ acronym",
+      "type": "blank",
+      "answer": "famous",
+      "explanation": "首字母缩写, 著名的首字母缩写. NASA is a famous acronym. NASA是一个著名的首字母缩写。 | acro->顶端/首位，onym->名字，acronym->取首字母组成的名字=缩写词"
+    },
+    {
+      "question": "pecan ___",
+      "type": "blank",
+      "answer": "pie",
+      "explanation": "山核桃, 山核桃派. Thanksgiving dinner included pecan pie. 感恩节晚餐包括山核桃派。 | pecan->来自美洲原住民语pakani，指坚硬壳果，pecan pie->感恩节经典甜点"
+    },
+    {
+      "question": "_____ harridan",
+      "type": "blank",
+      "answer": "harsh",
+      "explanation": "泼妇, 严厉的泼妇. The harsh harridan scolded everyone. 严厉的泼妇责骂每个人。 | harridan->可能源自法语haridelle（老驽马），harridan->粗暴刁蛮的老妇=泼妇"
+    },
+    {
+      "question": "__________ paean",
+      "type": "blank",
+      "answer": "triumphant",
+      "explanation": "赞歌, 胜利的赞歌. The poem was a triumphant paean to freedom. 这首诗是对自由的胜利赞歌。 | Paean->希腊治疗神，paean->献给神的颂歌=赞歌（注意区分peon苦力）"
+    },
+    {
+      "question": "lean ____",
+      "type": "blank",
+      "answer": "meat",
+      "explanation": "瘦的, 瘦肉. The doctor recommended eating lean meat. 医生建议吃瘦肉。 | lean->倾斜/瘦，lean meat->无多余脂肪的肉=瘦肉"
+    },
+    {
+      "question": "glean ___________",
+      "type": "blank",
+      "answer": "information",
+      "explanation": "搜集, 搜集信息. Researchers glean information from various sources. 研究人员从各种来源搜集信息。 | glean->拾穗（收割后捡剩余麦穗），glean->零散搜集=搜集信息"
+    },
+    {
+      "question": "demean _______",
+      "type": "blank",
+      "answer": "oneself",
+      "explanation": "贬低, 贬低自己. Don't demean oneself by begging. 不要通过乞求贬低自己。 | de->向下，mean->低劣，demean->使降低身份=贬低（cf. demeanor举止）"
+    },
+    {
+      "question": "subterranean _____",
+      "type": "blank",
+      "answer": "river",
+      "explanation": "地下的, 地下河流. Explorers discovered a subterranean river. 探险者发现了地下河流。 | sub->在下，terra->土地，subterranean->在土地之下的=地下的（cf. terrain地形）"
+    },
+    {
+      "question": "epicurean _____",
+      "type": "blank",
+      "answer": "taste",
+      "explanation": "美食的, 美食品味. The chef catered to epicurean taste. 厨师迎合美食品味。 | Epicurus->古希腊哲学家（主张感官享乐），epicurean->追求感官精致享受的=美食的"
+    },
+    {
+      "question": "___ empyrean",
+      "type": "blank",
+      "answer": "the",
+      "explanation": "最高天, 最高天. Angels dwell in the empyrean. 天使居住在最高天。 | empyr->火（希腊，古人认为最高天由火构成），empyrean->火的天界=最高天"
+    },
+    {
+      "question": "protean ______",
+      "type": "blank",
+      "answer": "talent",
+      "explanation": "多变的, 多变的才能. The actor possessed protean talent. 演员拥有多变的才能。 | Proteus->希腊海神（能随意变形），protean->像海神一样多变的"
+    },
+    {
+      "question": "procrustean ____",
+      "type": "blank",
+      "answer": "rule",
+      "explanation": "强求一致的, 强求一致的规则. The procrustean rule stifled creativity. 强求一致的规则扼杀了创造力。 | Procrustes->希腊神话强盗（把人拉长或截断以符合床的尺寸），procrustean->强求一致的"
+    },
+    {
+      "question": "wean _____",
+      "type": "blank",
+      "answer": "child",
+      "explanation": "断奶, 给孩子断奶. Mothers gradually wean child from breastfeeding. 母亲逐渐给孩子断奶。 | wean->使习惯于（古英语），wean from->使脱离依赖=断奶/戒除"
+    },
+    {
+      "question": "pagan ______",
+      "type": "blank",
+      "answer": "ritual",
+      "explanation": "异教的, 异教仪式. Ancient tribes practiced pagan ritual. 古代部落实行异教仪式。 | paganus->乡村居民（拉丁，基督教传入城市后乡村仍信旧神），pagan->异教徒"
+    },
+    {
+      "question": "amphibian _______",
+      "type": "blank",
+      "answer": "species",
+      "explanation": "两栖动物, 两栖动物物种. Frogs are common amphibian species. 青蛙是常见的两栖动物物种。 | amphi->两者，bio->生命，amphibian->能在两种环境生存的=两栖动物"
+    },
+    {
+      "question": "______ academician",
+      "type": "blank",
+      "answer": "member",
+      "explanation": "院士, 院士成员. She was elected a member academician. 她被选为院士成员。 | Academy->柏拉图的学园（雅典地名），academician->学术机构的正式成员=院士"
+    }
+  ]
+}
