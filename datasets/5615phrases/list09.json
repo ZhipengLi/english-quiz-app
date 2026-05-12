@@ -1,605 +1,605 @@
 {
-  "text": "",
+  "text": "本批词根亮点：\n\n• -tude 大家族收尾：pulchritude（美丽）/lassitude（倦怠）/vicissitude（变迁）/platitude（陈词滥调）/rectitude（正直），全来自拉丁 -tudo 表示状态/性质的名词后缀\n\n• mortgage：mort（死亡）+ gage（抵押），\"死亡的承诺\"——贷款还清前财产如同死亡，还清后才重获；词源解释了为何抵押贷款压力如此之大\n\n• sacrilege：sacri（神圣）+ leg（拿走），把神圣之物拿走=亵渎，sacred（神圣）/sacrament（圣礼）同根\n\n• privilege：privi（私人）+ leg（法律），私人的法律=特权，cf. private/privation（剥夺）同根\n\n• prestige：来自拉丁 praestigiae（魔术师的把戏），原意是\"幻觉\"，后演变为令人印象深刻的\"威望\"\n\n• espionage：来自法语 espion（间谍，来自意大利语 spia），espionage=间谍活动，spy 同根\n\n• umbrage：umbra（阴影/树荫），take umbrage=受到阴影笼罩=感到不快，umbrella（雨伞=小阴影）同根\n\n• perigee/apogee：peri（近）/apo（远）+ gee（地球），近地点/远地点，geography（地理）同根",
   "quiz": [
     {
       "question": "pulchritude ___ _____",
       "type": "blank",
       "answer": "and grace",
-      "explanation": "美丽，美丽和优雅。The dancer performed with pulchritude and grace. 舞者以美丽和优雅表演。"
+      "explanation": "美丽，美丽和优雅。The dancer performed with pulchritude and grace. 舞者以美丽和优雅表演。 | pulcher->美丽（拉丁），tude->状态，pulchritude->美丽的状态（cf. pulchritudinous美丽的，belle美女，beauty美丽）"
     },
     {
       "question": "_____ lassitude",
       "type": "blank",
       "answer": "utter",
-      "explanation": "倦怠，完全的倦怠。He felt utter lassitude after the long journey. 长途旅行后，他感到完全的倦怠。"
+      "explanation": "倦怠，完全的倦怠。He felt utter lassitude after the long journey. 长途旅行后，他感到完全的倦怠。 | lass->疲惫（拉丁lassus），tude->状态，lassitude->疲惫的状态=倦怠（cf. alas悲叹=啊疲惫，lax松弛，relax放松，languid慵懒）"
     },
     {
       "question": "____ vicissitude",
       "type": "blank",
       "answer": "life",
-      "explanation": "变迁，生活变迁。She endured many life vicissitude over the years. 多年来她经历了许多生活变迁。"
+      "explanation": "变迁，生活变迁。She endured many life vicissitude over the years. 多年来她经历了许多生活变迁。 | vicis->轮换（拉丁），tude->状态，vicissitude->轮换变化=变迁（cf. vice副职=轮换的，vicious恶性循环，vicarious替代的，vice versa反之）"
     },
     {
       "question": "______ latitude",
       "type": "blank",
       "answer": "travel",
-      "explanation": "纬度，旅行纬度。Ships measure travel latitude for navigation. 船只测量旅行纬度进行导航。"
+      "explanation": "纬度，旅行纬度。Ships measure travel latitude for navigation. 船只测量旅行纬度进行导航。 | lat->宽（拉丁latus），tude->状态，latitude->宽度=纬度/自由度（cf. latus宽，lateral侧面，oblate扁圆，latitude也指自由空间）"
     },
     {
       "question": "_____ platitude",
       "type": "blank",
       "answer": "empty",
-      "explanation": "陈词滥调，空洞的陈词滥调。His speech was full of empty platitude. 他的演讲充满了空洞的陈词滥调。"
+      "explanation": "陈词滥调，空洞的陈词滥调。His speech was full of empty platitude. 他的演讲充满了空洞的陈词滥调。 | plat->平坦（法语，拉丁platus），tude->状态，platitude->平淡的话=陈词滥调（cf. plateau高原，plate盘，platform平台，flat平坦）"
     },
     {
       "question": "_______ gratitude",
       "type": "blank",
       "answer": "express",
-      "explanation": "感激，表达感激。She wanted to express gratitude for their help. 她想表达感激他们的帮助。"
+      "explanation": "感激，表达感激。She wanted to express gratitude for their help. 她想表达感激他们的帮助。 | gratus->令人愉快（拉丁），tude->状态，gratitude->令人愉快的状态=感激（cf. grace恩典，grateful感激，gratuity小费，gratuitous无偿的）"
     },
     {
       "question": "__________ exactitude",
       "type": "blank",
       "answer": "scientific",
-      "explanation": "精确，科学精确。The measurements required scientific exactitude. 测量需要科学精确。"
+      "explanation": "精确，科学精确。The measurements required scientific exactitude. 测量需要科学精确。 | exact->精确（拉丁exigere->要求），tude->状态，exactitude->精确的状态（cf. exact精确，exacting苛求，exaction强征，exact sciences精确科学）"
     },
     {
       "question": "_____ rectitude",
       "type": "blank",
       "answer": "moral",
-      "explanation": "正直，道德正直。He was known for his moral rectitude. 他以道德正直闻名。"
+      "explanation": "正直，道德正直。He was known for his moral rectitude. 他以道德正直闻名。 | rect->直（拉丁rectus），tude->状态，rectitude->正直的状态（cf. correct纠正，direct指导，erect直立，rectangle长方形，rectify纠正）"
     },
     {
       "question": "_____ multitude",
       "type": "blank",
       "answer": "large",
-      "explanation": "众多，大量众多。A large multitude gathered for the concert. 大量众多的人聚集观看音乐会。"
+      "explanation": "众多，大量众多。A large multitude gathered for the concert. 大量众多的人聚集观看音乐会。 | multi->许多（拉丁multus），tude->状态，multitude->众多的状态（cf. multiply增多，multiple多重，multilingual多语言，multimedia多媒体）"
     },
     {
       "question": "plentitude __ _________",
       "type": "blank",
       "answer": "of resources",
-      "explanation": "丰富，资源的丰富。The region had a plentitude of resources. 该地区有资源的丰富。"
+      "explanation": "丰富，资源的丰富。The region had a plentitude of resources. 该地区有资源的丰富。 | plen->充满（拉丁plenus），tude->状态，plentitude->充满的状态（cf. plenty充足，replenish补充，plenitude也是同义词，plenary全体的）"
     },
     {
       "question": "__________ ineptitude",
       "type": "blank",
       "answer": "blundering",
-      "explanation": "无能，笨拙的无能。His blundering ineptitude caused many problems. 他笨拙的无能造成了许多问题。"
+      "explanation": "无能，笨拙的无能。His blundering ineptitude caused many problems. 他笨拙的无能造成了许多问题。 | in->否定，apt->适合（拉丁aptus），tude->状态，ineptitude->不适合的状态=无能（cf. apt适当，aptitude才能，adapt适应，inept笨拙）"
     },
     {
       "question": "_____ certitude",
       "type": "blank",
       "answer": "moral",
-      "explanation": "确信，道德确信。She spoke with moral certitude. 她以道德确信说话。"
+      "explanation": "确信，道德确信。She spoke with moral certitude. 她以道德确信说话。 | cert->确定（拉丁certus），tude->状态，certitude->确定的状态=确信（cf. certain确定，certify证明，certificate证书，discern辨别）"
     },
     {
       "question": "_____ __ incertitude",
       "type": "blank",
       "answer": "state of",
-      "explanation": "不确定，不确定状态。He lived in a state of incertitude. 他生活在不确定状态中。"
+      "explanation": "不确定，不确定状态。He lived in a state of incertitude. 他生活在不确定状态中。 | in->否定，certitude->确信，incertitude->不确定（cf. uncertain不确定，certitude确信，uncertainty不确定性，dubiety疑惑）"
     },
     {
       "question": "_____ fortitude",
       "type": "blank",
       "answer": "moral",
-      "explanation": "坚韧，道德坚韧。She faced hardship with moral fortitude. 她以道德坚韧面对困难。"
+      "explanation": "坚韧，道德坚韧。She faced hardship with moral fortitude. 她以道德坚韧面对困难。 | fort->强壮（拉丁fortis），tude->状态，fortitude->强壮的状态=坚韧（cf. fort堡垒，fortress要塞，fortify加固，effort努力，comfort安慰）"
     },
     {
       "question": "exude __________",
       "type": "blank",
       "answer": "confidence",
-      "explanation": "散发，散发信心。The leader would exude confidence. 领导者会散发信心。"
+      "explanation": "散发，散发信心。The leader would exude confidence. 领导者会散发信心。 | ex->向外，ud->流出（拉丁sudare->出汗），exude->向外流出=散发（cf. sudorific出汗的，transude渗出，exudation渗出物）"
     },
     {
       "question": "_____ perigee",
       "type": "blank",
       "answer": "lunar",
-      "explanation": "近地点，月球近地点。The lunar perigee occurs monthly. 月球近地点每月发生。"
+      "explanation": "近地点，月球近地点。The lunar perigee occurs monthly. 月球近地点每月发生。 | peri->周围/近（希腊），gee->地球（希腊ge），perigee->距地球最近点（cf. perihelion近日点，apogee远地点，geography地理，geology地质）"
     },
     {
       "question": "apogee __ _____",
       "type": "blank",
       "answer": "of power",
-      "explanation": "顶点，权力的顶点。The empire reached the apogee of power. 帝国达到了权力的顶点。"
+      "explanation": "顶点，权力的顶点。The empire reached the apogee of power. 帝国达到了权力的顶点。 | apo->远离（希腊），gee->地球，apogee->距地球最远点=顶点（cf. perigee近地点，aphelion远日点，apex顶点，zenith天顶）"
     },
     {
       "question": "___ refugee",
       "type": "blank",
       "answer": "war",
-      "explanation": "难民，战争难民。The war refugee sought asylum. 战争难民寻求庇护。"
+      "explanation": "难民，战争难民。The war refugee sought asylum. 战争难民寻求庇护。 | re->回，fug->逃跑（拉丁fugere），refugee->逃回来的人=难民（cf. fugitive逃犯，refuge避难所，subterfuge诡计=从下面逃脱）"
     },
     {
       "question": "____ toupee",
       "type": "blank",
       "answer": "wear",
-      "explanation": "假发，戴假发。He chose to wear toupee to hide baldness. 他选择戴假发来掩盖秃头。"
+      "explanation": "假发，戴假发。He chose to wear toupee to hide baldness. 他选择戴假发来掩盖秃头。 | toupee->小假发（法语toupet->发簇），toupee->覆盖秃头的小假发片（cf. wig假发，hairpiece假发，toupee只覆盖部分头顶）"
     },
     {
       "question": "____________ decree",
       "type": "blank",
       "answer": "presidential",
-      "explanation": "法令，总统法令。The presidential decree was issued yesterday. 总统法令昨天发布。"
+      "explanation": "法令，总统法令。The presidential decree was issued yesterday. 总统法令昨天发布。 | de->完全，cre->判定（拉丁cernere），decree->完全判定=法令（cf. discern辨别，certain确定，secret秘密=分开判定，crime犯罪）"
     },
     {
       "question": "____ filigree",
       "type": "blank",
       "answer": "gold",
-      "explanation": "金银丝细工，金金银丝细工。The jewelry featured delicate gold filigree. 珠宝以精致的金金银丝细工为特色。"
+      "explanation": "金银丝细工，金金银丝细工。The jewelry featured delicate gold filigree. 珠宝以精致的金金银丝细工为特色。 | filum->线（拉丁），granum->谷粒，filigree->细线和小珠的工艺（cf. file文件/锉，filament细丝，grain谷粒，filigree精细工艺）"
     },
     {
       "question": "_____ jamboree",
       "type": "blank",
       "answer": "music",
-      "explanation": "大型集会，音乐大型集会。The music jamboree attracted thousands. 音乐大型集会吸引了数千人。"
+      "explanation": "大型集会，音乐大型集会。The music jamboree attracted thousands. 音乐大型集会吸引了数千人。 | jamboree->大集会（来源不明，可能来自法语 jaleux+bourbon），jamboree->热闹的大型聚会（cf. rally集会，festival节日，convention大会）"
     },
     {
       "question": "entrée ______",
       "type": "blank",
       "answer": "course",
-      "explanation": "主菜，主菜菜肴。The entrée course was delicious. 主菜菜肴很美味。"
+      "explanation": "主菜，主菜菜肴。The entrée course was delicious. 主菜菜肴很美味。 | entrée->入口/进入（法语entrer->进入），entrée->进入主菜（cf. enter进入，entry入口，entrance入口，entre之间=appetizer和dessert之间的菜）"
     },
     {
       "question": "oversee __________",
       "type": "blank",
       "answer": "operations",
-      "explanation": "监督，监督运营。The manager would oversee operations daily. 经理每天都会监督运营。"
+      "explanation": "监督，监督运营。The manager would oversee operations daily. 经理每天都会监督运营。 | over->在上，see->看，oversee->从上方看=监督（cf. overlook俯视/忽视，supervisor监督者，superintend监督，inspect检查）"
     },
     {
       "question": "_____-____ guarantee",
       "type": "blank",
       "answer": "money-back",
-      "explanation": "保证，退款保证。The product comes with a money-back guarantee. 该产品附带退款保证。"
+      "explanation": "保证，退款保证。The product comes with a money-back guarantee. 该产品附带退款保证。 | warrant->保证（日耳曼语），guarantee->保证/担保（cf. warrant授权，warranty保修，guarantor担保人，surety担保）"
     },
     {
       "question": "devotee __ ___",
       "type": "blank",
       "answer": "of art",
-      "explanation": "爱好者，艺术爱好者。She was a devotee of art and culture. 她是艺术和文化的爱好者。"
+      "explanation": "爱好者，艺术爱好者。She was a devotee of art and culture. 她是艺术和文化的爱好者。 | devot->誓言（拉丁votum），devotee->发誓献身的人=爱好者（cf. devote奉献，devotion奉献，vow誓言，vote投票，devout虔诚）"
     },
     {
       "question": "_____ repartee",
       "type": "blank",
       "answer": "smart",
-      "explanation": "机智的应答，机智的应答。They exchanged smart repartee. 他们交换机智的应答。"
+      "explanation": "机智的应答，机智的应答。They exchanged smart repartee. 他们交换机智的应答。 | repartir->再次出发/回击（法语），repartee->机智的即时回击（cf. parry格挡，retort反驳，riposte还击，wit机智）"
     },
     {
       "question": "_____ levee",
       "type": "blank",
       "answer": "river",
-      "explanation": "堤坝，河堤坝。The river levee protected the town from flooding. 河堤坝保护城镇免受洪水侵袭。"
+      "explanation": "堤坝，河堤坝。The river levee protected the town from flooding. 河堤坝保护城镇免受洪水侵袭。 | lever->举起（法语，拉丁levare），levee->举起的堤坝（cf. lever杠杆，elevate提升，levy征税，relieve减轻）"
     },
     {
       "question": "chafe ____",
       "type": "blank",
       "answer": "skin",
-      "explanation": "擦伤，擦伤皮肤。The rough fabric would chafe skin. 粗糙的织物会擦伤皮肤。"
+      "explanation": "擦伤，擦伤皮肤。The rough fabric would chafe skin. 粗糙的织物会擦伤皮肤。 | chauffer->加热（法语，拉丁calefacere），chafe->摩擦生热=擦伤（cf. chauffeur司机=加热炉的人，chafing dish暖锅，gall摩擦伤）"
     },
     {
       "question": "_____ carafe",
       "type": "blank",
       "answer": "glass",
-      "explanation": "玻璃瓶，玻璃瓶。Water was served in a glass carafe. 水装在玻璃瓶里供应。"
+      "explanation": "玻璃瓶，玻璃瓶。Water was served in a glass carafe. 水装在玻璃瓶里供应。 | gharrafa->水容器（阿拉伯语），carafe->玻璃水瓶（cf. carafe玻璃水壶，decanter醒酒器，pitcher大水罐，flagon大酒壶）"
     },
     {
       "question": "fail-safe _________",
       "type": "blank",
       "answer": "mechanism",
-      "explanation": "故障保险，故障保险机制。The system had a fail-safe mechanism. 系统有故障保险机制。"
+      "explanation": "故障保险，故障保险机制。The system had a fail-safe mechanism. 系统有故障保险机制。 | fail->失败，safe->安全，fail-safe->失败时仍然安全的=故障保险（cf. failsafe故障保险，redundant冗余，backup备用，foolproof万无一失）"
     },
     {
       "question": "__________ gaffe",
       "type": "blank",
       "answer": "diplomatic",
-      "explanation": "失礼，外交失礼。The politician made a diplomatic gaffe. 政客犯了外交失礼。"
+      "explanation": "失礼，外交失礼。The politician made a diplomatic gaffe. 政客犯了外交失礼。 | gaffe->钩/鱼叉（法语，航海用语），gaffe->不得体的失言（cf. gaffe社交失误，faux pas失礼=错误的一步，blunder错误，blunder失误）"
     },
     {
       "question": "rife ____ ______",
       "type": "blank",
       "answer": "with errors",
-      "explanation": "充满，充满错误。The document was rife with errors. 文件充满错误。"
+      "explanation": "充满，充满错误。The document was rife with errors. 文件充满错误。 | rife->普遍（古英语ryfe->通行），rife->充满/普遍（cf. rife with充满，prevalent普遍，rampant猖獗，widespread广泛）"
     },
     {
       "question": "___ adage",
       "type": "blank",
       "answer": "old",
-      "explanation": "格言，古老的格言。The old adage proved true once again. 古老的格言再次证明是正确的。"
+      "explanation": "格言，古老的格言。The old adage proved true once again. 古老的格言再次证明是正确的。 | ad->向，age->说（拉丁aio->说），adage->流传下来的古话=格言（cf. proverb谚语，maxim格言，axiom公理，saying说法）"
     },
     {
       "question": "____ appendage",
       "type": "blank",
       "answer": "limb",
-      "explanation": "附属物，肢体附属物。The limb appendage was injured. 肢体附属物受伤了。"
+      "explanation": "附属物，肢体附属物。The limb appendage was injured. 肢体附属物受伤了。 | ap->朝向，pend->悬挂（拉丁pendere），appendage->附加悬挂在上的=附属物（cf. append附加，appendix阑尾/附录，pendant悬挂物，depend依赖）"
     },
     {
       "question": "bondage ___ _______",
       "type": "blank",
       "answer": "and freedom",
-      "explanation": "束缚，束缚和自由。The book explored themes of bondage and freedom. 这本书探讨了束缚和自由的主题。"
+      "explanation": "束缚，束缚和自由。The book explored themes of bondage and freedom. 这本书探讨了束缚和自由的主题。 | bond->绑（古英语bindan），bondage->绑缚的状态=束缚（cf. bind绑，bundle捆，band带，bond联系，bonding结合）"
     },
     {
       "question": "_____ lineage",
       "type": "blank",
       "answer": "royal",
-      "explanation": "血统，皇家血统。She claimed royal lineage. 她声称有皇家血统。"
+      "explanation": "血统，皇家血统。She claimed royal lineage. 她声称有皇家血统。 | ligne->线（法语，拉丁linea），lineage->血脉线=血统（cf. line线，linear线性，linen亚麻布，lineal直系的，align对齐）"
     },
     {
       "question": "mortgage ____",
       "type": "blank",
       "answer": "loan",
-      "explanation": "抵押贷款，抵押贷款。They applied for a mortgage loan. 他们申请了抵押贷款。"
+      "explanation": "抵押贷款，抵押贷款。They applied for a mortgage loan. 他们申请了抵押贷款。 | mort->死亡（拉丁mors），gage->抵押（法语），mortgage->死亡的承诺=抵押贷款（cf. mortal死亡，immortal不死，mortuary太平间，dead pledge=mortgage）"
     },
     {
       "question": "_______ hemorrhage",
       "type": "blank",
       "answer": "massive",
-      "explanation": "出血，大出血。The patient suffered a massive hemorrhage. 患者遭受了大出血。"
+      "explanation": "出血，大出血。The patient suffered a massive hemorrhage. 患者遭受了大出血。 | hemo->血（希腊haima），rrhage->流出，hemorrhage->血液大量流出=出血（cf. hemoglobin血红蛋白，hemorrhoid痔疮，anemia贫血）"
     },
     {
       "question": "_____ verbiage",
       "type": "blank",
       "answer": "empty",
-      "explanation": "冗词，空洞的冗词。The contract was full of empty verbiage. 合同充满了空洞的冗词。"
+      "explanation": "冗词，空洞的冗词。The contract was full of empty verbiage. 合同充满了空洞的冗词。 | verb->词（拉丁verbum），age->大量，verbiage->大量无用的词=冗词（cf. verbal口头的，verbose冗长，verbatim逐字地，adverb副词）"
     },
     {
       "question": "______ foliage",
       "type": "blank",
       "answer": "autumn",
-      "explanation": "树叶，秋天树叶。The autumn foliage was spectacular. 秋天树叶非常壮观。"
+      "explanation": "树叶，秋天树叶。The autumn foliage was spectacular. 秋天树叶非常壮观。 | folium->叶子（拉丁），age->集合，foliage->树叶的集合（cf. folio对折/页面，folder文件夹，portfolio作品集=携带叶子，portfolio投资组合）"
     },
     {
       "question": "_____ leakage",
       "type": "blank",
       "answer": "water",
-      "explanation": "泄漏，水泄漏。The plumber fixed the water leakage. 水管工修好了水泄漏。"
+      "explanation": "泄漏，水泄漏。The plumber fixed the water leakage. 水管工修好了水泄漏。 | leak->漏（古挪威leka），age->过程，leakage->漏的过程（cf. leak漏，leaky漏水的，seepage渗漏，drainage排水）"
     },
     {
       "question": "________ blockage",
       "type": "blank",
       "answer": "arterial",
-      "explanation": "阻塞，动脉阻塞。The arterial blockage required surgery. 动脉阻塞需要手术。"
+      "explanation": "阻塞，动脉阻塞。The arterial blockage required surgery. 动脉阻塞需要手术。 | block->阻塞，age->结果，blockage->阻塞的结果（cf. block阻塞，blockade封锁，roadblock路障，obstacle障碍）"
     },
     {
       "question": "_____ tutelage",
       "type": "blank",
       "answer": "under",
-      "explanation": "监护，在监护下。She studied under tutelage of a master. 她在大师的监护下学习。"
+      "explanation": "监护，在监护下。She studied under tutelage of a master. 她在大师的监护下学习。 | tutel->守护（拉丁tutela->保护），age->状态，tutelage->守护的状态=监护（cf. tutor导师，tutorial辅导，intuition直觉=内部守护，tutelary守护的）"
     },
     {
       "question": "_____ persiflage",
       "type": "blank",
       "answer": "light",
-      "explanation": "戏谑，轻松的戏谑。They engaged in light persiflage. 他们进行轻松的戏谑。"
+      "explanation": "戏谑，轻松的戏谑。They engaged in light persiflage. 他们进行轻松的戏谑。 | persifler->口哨嘲弄（法语），persiflage->轻松戏谑的玩笑（cf. banter打趣，badinage戏谑，raillery打趣，repartee机智应答）"
     },
     {
       "question": "pillage _ ____",
       "type": "blank",
       "answer": "a town",
-      "explanation": "掠夺，掠夺城镇。The invaders would pillage a town. 入侵者会掠夺城镇。"
+      "explanation": "掠夺，掠夺城镇。The invaders would pillage a town. 入侵者会掠夺城镇。 | piller->掠夺（法语，拉丁pilare->剥皮），pillage->有组织的掠夺（cf. plunder掠夺，loot抢劫，sack洗劫，pillager掠夺者）"
     },
     {
       "question": "_____ collage",
       "type": "blank",
       "answer": "photo",
-      "explanation": "拼贴画，照片拼贴画。She created a beautiful photo collage. 她创作了一幅美丽的照片拼贴画。"
+      "explanation": "拼贴画，照片拼贴画。She created a beautiful photo collage. 她创作了一幅美丽的照片拼贴画。 | coller->粘贴（法语，拉丁glutinare），collage->粘贴在一起的艺术=拼贴画（cf. glue胶，collage拼贴，decoupage剪贴，montage蒙太奇）"
     },
     {
       "question": "___ homage",
       "type": "blank",
       "answer": "pay",
-      "explanation": "敬意，表示敬意。They came to pay homage to the hero. 他们来表示敬意英雄。"
+      "explanation": "敬意，表示敬意。They came to pay homage to the hero. 他们来表示敬意英雄。 | homme->男人（法语，拉丁homo），homage->臣子向领主效忠的誓言=敬意（cf. homo人类，human人，homicide杀人，hombre男人）"
     },
     {
       "question": "____ drainage",
       "type": "blank",
       "answer": "city",
-      "explanation": "排水，城市排水。The city drainage system needed repair. 城市排水系统需要修理。"
+      "explanation": "排水，城市排水。The city drainage system needed repair. 城市排水系统需要修理。 | drain->排水（古英语dragan->拉），age->过程，drainage->排水的过程（cf. drain排水，brain大脑，strain拉紧，drain vs irrigate）"
     },
     {
       "question": "_____ badinage",
       "type": "blank",
       "answer": "light",
-      "explanation": "打趣，轻松的打趣。They exchanged light badinage. 他们交换轻松的打趣。"
+      "explanation": "打趣，轻松的打趣。They exchanged light badinage. 他们交换轻松的打趣。 | badiner->开玩笑（法语），badinage->轻松愉快的戏谑（cf. banter打趣，raillery打趣，persiflage戏谑，jest笑话）"
     },
     {
       "question": "__________ espionage",
       "type": "blank",
       "answer": "industrial",
-      "explanation": "间谍活动，工业间谍活动。The company was accused of industrial espionage. 该公司被指控工业间谍活动。"
+      "explanation": "间谍活动，工业间谍活动。The company was accused of industrial espionage. 该公司被指控工业间谍活动。 | espio->监视（法语，意大利语spia->间谍），espionage->间谍活动（cf. spy间谍，espion间谍，intelligence情报，covert秘密）"
     },
     {
       "question": "_________ patronage",
       "type": "blank",
       "answer": "political",
-      "explanation": "赞助，政治赞助。The artist relied on political patronage. 艺术家依赖政治赞助。"
+      "explanation": "赞助，政治赞助。The artist relied on political patronage. 艺术家依赖政治赞助。 | pater->父亲（拉丁），patron->父亲般的保护者，patronage->赞助支持（cf. patron赞助人，patrician贵族，patriarch族长，paternal父亲的）"
     },
     {
       "question": "_________ personage",
       "type": "blank",
       "answer": "prominent",
-      "explanation": "名人，杰出的名人。A prominent personage attended the event. 杰出的名人出席了活动。"
+      "explanation": "名人，杰出的名人。A prominent personage attended the event. 杰出的名人出席了活动。 | person->人（拉丁persona->面具），personage->重要的人（cf. person人，personality个性，persona角色，impersonate模仿）"
     },
     {
       "question": "_____ slippage",
       "type": "blank",
       "answer": "price",
-      "explanation": "下滑，价格下滑。The market experienced price slippage. 市场经历了价格下滑。"
+      "explanation": "下滑，价格下滑。The market experienced price slippage. 市场经历了价格下滑。 | slip->滑落，age->过程，slippage->滑落的过程=下滑（cf. slip滑倒，slippery滑溜，slide滑动，erosion侵蚀）"
     },
     {
       "question": "____ umbrage",
       "type": "blank",
       "answer": "take",
-      "explanation": "不快，感到不快。He would take umbrage at the criticism. 他会对批评感到不快。"
+      "explanation": "不快，感到不快。He would take umbrage at the criticism. 他会对批评感到不快。 | umbra->阴影（拉丁），umbrage->被阴影笼罩=不快（cf. umbrella雨伞=小阴影，penumbra半影，adumbrate概述，cf. somber阴暗）"
     },
     {
       "question": "___ beverage",
       "type": "blank",
       "answer": "hot",
-      "explanation": "饮料，热饮料。They served hot beverage to warm the guests. 他们供应热饮料让客人暖和。"
+      "explanation": "饮料，热饮料。They served hot beverage to warm the guests. 他们供应热饮料让客人暖和。 | bever->饮（法语，拉丁bibere->喝），age->行为，beverage->饮品（cf. imbibe饮/吸收，bibulous爱饮酒，beer啤酒，beverage饮料）"
     },
     {
       "question": "_____'_ suffrage",
       "type": "blank",
       "answer": "women's",
-      "explanation": "选举权，妇女选举权。The movement fought for women's suffrage. 该运动为妇女选举权而斗争。"
+      "explanation": "选举权，妇女选举权。The movement fought for women's suffrage. 该运动为妇女选举权而斗争。 | suffr->支持（拉丁suffragium->选票），age->权利，suffrage->投票支持的权利=选举权（cf. suffragette妇女参政论者，vote投票，franchise选举权）"
     },
     {
       "question": "______ mirage",
       "type": "blank",
       "answer": "desert",
-      "explanation": "海市蜃楼，沙漠海市蜃楼。Travelers saw a desert mirage in the distance. 旅行者在远处看到了沙漠海市蜃楼。"
+      "explanation": "海市蜃楼，沙漠海市蜃楼。Travelers saw a desert mirage in the distance. 旅行者在远处看到了沙漠海市蜃楼。 | mirer->看/反射（法语，拉丁mirare），mirage->光线反射的幻象=海市蜃楼（cf. mirror镜子，admire欣赏，miracle奇迹，marvel奇迹）"
     },
     {
       "question": "barrage __ _________",
       "type": "blank",
       "answer": "of questions",
-      "explanation": "连续，连续的问题。The speaker faced a barrage of questions. 演讲者面临连续的问题。"
+      "explanation": "连续，连续的问题。The speaker faced a barrage of questions. 演讲者面临连续的问题。 | barre->阻拦（法语），barrage->像拦河坝一样连续的=连续炮击（cf. barrier屏障，embargo禁运，bar阻拦，barricade路障）"
     },
     {
       "question": "____________ entourage",
       "type": "blank",
       "answer": "presidential",
-      "explanation": "随行人员，总统随行人员。The presidential entourage arrived at the hotel. 总统随行人员抵达了酒店。"
+      "explanation": "随行人员，总统随行人员。The presidential entourage arrived at the hotel. 总统随行人员抵达了酒店。 | entourer->围绕（法语），entourage->围绕在旁的人=随行人员（cf. tour旅行，contour轮廓，detour绕道，surroundings周围环境）"
     },
     {
       "question": "____ sage",
       "type": "blank",
       "answer": "wise",
-      "explanation": "圣人，智慧的圣人。The wise sage offered advice. 智慧的圣人提供建议。"
+      "explanation": "圣人，智慧的圣人。The wise sage offered advice. 智慧的圣人提供建议。 | sapiens->智慧（拉丁，sapere->品味/知道），sage->智慧的人（cf. sapient智慧，savant学者，savvy精明，insipid无味=无智慧）"
     },
     {
       "question": "____ presage",
       "type": "blank",
       "answer": "dark",
-      "explanation": "预兆，黑暗的预兆。The dark presage worried everyone. 黑暗的预兆让每个人都担心。"
+      "explanation": "预兆，黑暗的预兆。The dark presage worried everyone. 黑暗的预兆让每个人都担心。 | pre->之前，sag->感知（拉丁sagire->预感），presage->提前感知=预兆（cf. sage智者，sagacious睿智，presage预示，augury预兆）"
     },
     {
       "question": "envisage _ ______",
       "type": "blank",
       "answer": "a future",
-      "explanation": "设想，设想未来。They tried to envisage a future together. 他们试图设想未来在一起。"
+      "explanation": "设想，设想未来。They tried to envisage a future together. 他们试图设想未来在一起。 | en->使，visage->面容（拉丁visus->看），envisage->在心中看到=设想（cf. visage面容，vision视觉，envision设想，imagine想象）"
     },
     {
       "question": "vantage _____",
       "type": "blank",
       "answer": "point",
-      "explanation": "有利位置，有利位置点。From this vantage point, the view was perfect. 从这个有利位置点，景色完美。"
+      "explanation": "有利位置，有利位置点。From this vantage point, the view was perfect. 从这个有利位置点，景色完美。 | avant->之前（法语，拉丁ab+ante），vantage->处于前面的优势（cf. advantage优势，avant-garde前卫，advance前进，van先锋）"
     },
     {
       "question": "____ montage",
       "type": "blank",
       "answer": "film",
-      "explanation": "蒙太奇，电影蒙太奇。The film montage showed time passing. 电影蒙太奇显示时间流逝。"
+      "explanation": "蒙太奇，电影蒙太奇。The film montage showed time passing. 电影蒙太奇显示时间流逝。 | monter->装配（法语），montage->装配在一起的影像=蒙太奇（cf. mount安装，mountain山=高地，collage拼贴，assemblage组合）"
     },
     {
       "question": "__ ___'_ dotage",
       "type": "blank",
       "answer": "in one's",
-      "explanation": "老年昏聩，在老年昏聩中。He was in one's dotage and forgetful. 他在老年昏聩中健忘。"
+      "explanation": "老年昏聩，在老年昏聩中。He was in one's dotage and forgetful. 他在老年昏聩中健忘。 | dote->溺爱/老糊涂（中古英语），dotage->老年的糊涂状态（cf. dote on溺爱，dotard老糊涂，senility老糊涂，dotty稍微疯狂）"
     },
     {
       "question": "___ reportage",
       "type": "blank",
       "answer": "war",
-      "explanation": "报道，战争报道。The journalist's war reportage won awards. 记者的战争报道获奖了。"
+      "explanation": "报道，战争报道。The journalist's war reportage won awards. 记者的战争报道获奖了。 | reporter->报道者（法语），reportage->新闻报道的风格（cf. report报告，reporter记者，portage搬运，deportage外来报道）"
     },
     {
       "question": "offstage _______",
       "type": "blank",
       "answer": "whisper",
-      "explanation": "幕后，幕后低语。An offstage whisper could be heard. 可以听到幕后低语。"
+      "explanation": "幕后，幕后低语。An offstage whisper could be heard. 可以听到幕后低语。 | off->离开，stage->舞台，offstage->舞台之外=幕后（cf. backstage后台，onstage在台上，upstage舞台后方/抢镜，stage舞台）"
     },
     {
       "question": "upstage ___ ____",
       "type": "blank",
       "answer": "the star",
-      "explanation": "抢镜头，抢明星镜头。The young actor tried to upstage the star. 年轻演员试图抢明星镜头。"
+      "explanation": "抢镜头，抢明星镜头。The young actor tried to upstage the star. 年轻演员试图抢明星镜头。 | up->向上，stage->舞台后方（舞台后方较高），upstage->把人推到舞台后方=抢镜（cf. downstage台前，offstage幕后，backstage后台）"
     },
     {
       "question": "assuage _____",
       "type": "blank",
       "answer": "fears",
-      "explanation": "缓和，缓和恐惧。The leader tried to assuage fears. 领导者试图缓和恐惧。"
+      "explanation": "缓和，缓和恐惧。The leader tried to assuage fears. 领导者试图缓和恐惧。 | as->朝向，suage->温和（拉丁suavis->甜），assuage->使向温和=缓和（cf. suave温文尔雅，sweet甜，persuade说服，dissuade劝阻）"
     },
     {
       "question": "_________ cleavage",
       "type": "blank",
       "answer": "political",
-      "explanation": "分裂，政治分裂。The political cleavage divided the nation. 政治分裂分裂了国家。"
+      "explanation": "分裂，政治分裂。The political cleavage divided the nation. 政治分裂分裂了国家。 | cleave->劈开（古英语cleofan），age->结果，cleavage->劈开的结果=分裂（cf. cleave劈/坚守，cleft裂缝，cleaver切肉刀，bifurcation分叉）"
     },
     {
       "question": "___-____ ravage",
       "type": "blank",
       "answer": "war-time",
-      "explanation": "破坏，战时破坏。The war-time ravage left the city in ruins. 战时破坏让城市成为废墟。"
+      "explanation": "破坏，战时破坏。The war-time ravage left the city in ruins. 战时破坏让城市成为废墟。 | raver->掠夺（古法语，来自拉丁rapere），ravage->大规模破坏（cf. rape强夺，rapid迅速，rapacious掠夺，raven掠食/乌鸦）"
     },
     {
       "question": "savage _____",
       "type": "blank",
       "answer": "beast",
-      "explanation": "野蛮的，野蛮的野兽。The savage beast attacked without warning. 野蛮的野兽毫无预警地攻击。"
+      "explanation": "野蛮的，野蛮的野兽。The savage beast attacked without warning. 野蛮的野兽毫无预警地攻击。 | silvaticus->树林里的（拉丁silva->树林），savage->树林中生活的=野蛮的（cf. sylvan树林的，Pennsylvania森林之州，savage野蛮，silviculture林业）"
     },
     {
       "question": "salvage _________",
       "type": "blank",
       "answer": "operation",
-      "explanation": "打捞，打捞行动。The salvage operation recovered the cargo. 打捞行动找回了货物。"
+      "explanation": "打捞，打捞行动。The salvage operation recovered the cargo. 打捞行动找回了货物。 | salv->拯救（拉丁salvare），age->行动，salvage->拯救财物（cf. save拯救，salvation救赎，salve药膏，salvage从危险中抢救）"
     },
     {
       "question": "______ wage",
       "type": "blank",
       "answer": "hourly",
-      "explanation": "工资，小时工资。Workers received an hourly wage. 工人按小时工资领取报酬。"
+      "explanation": "工资，小时工资。Workers received an hourly wage. 工人按小时工资领取报酬。 | wage->工资（古北法语wagier->承诺），wage->劳动报酬（cf. wager赌注，engage订婚/约定，gage担保，minimum wage最低工资）"
     },
     {
       "question": "hedge ____",
       "type": "blank",
       "answer": "risk",
-      "explanation": "对冲，对冲风险。Investors hedge risk with diversification. 投资者通过多样化对冲风险。"
+      "explanation": "对冲，对冲风险。Investors hedge risk with diversification. 投资者通过多样化对冲风险。 | hedge->树篱（古英语hecg），hedge->用树篱围住/对冲（cf. hedge fund对冲基金，hedgehog刺猬=住在篱笆中的猪，hedge risk对冲风险）"
     },
     {
       "question": "pledge __________",
       "type": "blank",
       "answer": "allegiance",
-      "explanation": "誓言，宣誓效忠。Citizens pledge allegiance to the flag. 公民向国旗宣誓效忠。"
+      "explanation": "誓言，宣誓效忠。Citizens pledge allegiance to the flag. 公民向国旗宣誓效忠。 | pleg->保证（古法语plege），pledge->担保承诺=誓言（cf. plead恳求，plea恳求，gage担保，engage约定）"
     },
     {
       "question": "______ foreknowledge",
       "type": "blank",
       "answer": "divine",
-      "explanation": "预知，神圣的预知。Some believe in divine foreknowledge. 有些人相信神圣的预知。"
+      "explanation": "预知，神圣的预知。Some believe in divine foreknowledge. 有些人相信神圣的预知。 | fore->之前，knowledge->知识，foreknowledge->提前的知识=预知（cf. foresight预见，prescience预知，omniscience全知，clairvoyance预知）"
     },
     {
       "question": "________ ridge",
       "type": "blank",
       "answer": "mountain",
-      "explanation": "山脊，山脊。Hikers followed the mountain ridge. 徒步旅行者沿着山脊前进。"
+      "explanation": "山脊，山脊。Hikers followed the mountain ridge. 徒步旅行者沿着山脊前进。 | hrycg->脊背（古英语），ridge->长形的隆起=山脊（cf. ridge山脊，ridgeline山脊线，spine脊骨，crest山顶）"
     },
     {
       "question": "abridge _ ____",
       "type": "blank",
       "answer": "a book",
-      "explanation": "删节，删节书籍。The editor would abridge a book for children. 编辑会为儿童删节书籍。"
+      "explanation": "删节，删节书籍。The editor would abridge a book for children. 编辑会为儿童删节书籍。 | a->到，bridge->桥（拉丁abbreviare->缩短），abridge->缩短（cf. abbreviate缩写，brief简短，brevity简洁，bridge架桥/缩短距离）"
     },
     {
       "question": "___ porridge",
       "type": "blank",
       "answer": "hot",
-      "explanation": "粥，热粥。She ate hot porridge for breakfast. 她早餐吃热粥。"
+      "explanation": "粥，热粥。She ate hot porridge for breakfast. 她早餐吃热粥。 | porree->韭葱汤（古法语，演变），porridge->粗粮熬成的稀饭（cf. pottage蔬菜汤，potage法式浓汤，pot锅，porridge英式燕麦粥）"
     },
     {
       "question": "______ hodgepodge",
       "type": "blank",
       "answer": "random",
-      "explanation": "大杂烩，随意的大杂烩。The room was a random hodgepodge of furniture. 房间是家具的随意的大杂烩。"
+      "explanation": "大杂烩，随意的大杂烩。The room was a random hodgepodge of furniture. 房间是家具的随意的大杂烩。 | hochepot->摇晃锅（法语hocher->摇），hodgepodge->把各种东西摇进锅里=大杂烩（cf. jumble混乱，medley混合，mishmash大杂烩）"
     },
     {
       "question": "begrudge _______",
       "type": "blank",
       "answer": "success",
-      "explanation": "嫉妒，嫉妒成功。Don't begrudge success to others. 不要嫉妒别人的成功。"
+      "explanation": "嫉妒，嫉妒成功。Don't begrudge success to others. 不要嫉妒别人的成功。 | be->使，grudge->怨恨，begrudge->对...怨恨=嫉妒（cf. grudge怨恨，grudging勉强的，envy嫉妒，resent怨恨）"
     },
     {
       "question": "___ siege",
       "type": "blank",
       "answer": "lay",
-      "explanation": "围攻，进行围攻。The army would lay siege to the castle. 军队会对城堡进行围攻。"
+      "explanation": "围攻，进行围攻。The army would lay siege to the castle. 军队会对城堡进行围攻。 | siege->围攻（古法语sege->座位），siege->包围使之坐以待毙（cf. besiege围攻，siege mentality围困心态，seat座位，session会议=坐下来）"
     },
     {
       "question": "besiege ____",
       "type": "blank",
       "answer": "city",
-      "explanation": "围攻，围攻城市。The enemy would besiege city for months. 敌人会围攻城市数月。"
+      "explanation": "围攻，围攻城市。The enemy would besiege city for months. 敌人会围攻城市数月。 | be->使，siege->围攻，besiege->对...进行围攻（cf. siege围攻，obsess困扰=坐在上面，preside主持=坐在前面，sediment沉积）"
     },
     {
       "question": "___ __ sacrilege",
       "type": "blank",
       "answer": "act of",
-      "explanation": "亵渎，亵渎行为。Destroying the temple was an act of sacrilege. 摧毁寺庙是亵渎行为。"
+      "explanation": "亵渎，亵渎行为。Destroying the temple was an act of sacrilege. 摧毁寺庙是亵渎行为。 | sacri->神圣（拉丁sacer），lege->拿走（拉丁legere），sacrilege->把神圣之物拿走=亵渎（cf. sacred神圣，sacrifice牺牲，consecrate奉献，desecrate亵渎）"
     },
     {
       "question": "_______ privilege",
       "type": "blank",
       "answer": "special",
-      "explanation": "特权，特殊特权。The elite enjoyed special privilege. 精英享有特殊特权。"
+      "explanation": "特权，特殊特权。The elite enjoyed special privilege. 精英享有特殊特权。 | privi->私人（拉丁privus），leg->法律，privilege->私人的法律=特权（cf. private私人，privacy隐私，privation剥夺，deprive剥夺）"
     },
     {
       "question": "renege __ _______",
       "type": "blank",
       "answer": "on promise",
-      "explanation": "违背，违背承诺。He would renege on promise. 他会违背承诺。"
+      "explanation": "违背，违背承诺。He would renege on promise. 他会违背承诺。 | re->再次，neg->否认（拉丁negare），renege->再次否认=违背承诺（cf. negate否定，deny否认，abrogate废除，renegade叛徒=否认回去）"
     },
     {
       "question": "______ prestige",
       "type": "blank",
       "answer": "social",
-      "explanation": "威望，社会威望。The position brought social prestige. 该职位带来了社会威望。"
+      "explanation": "威望，社会威望。The position brought social prestige. 该职位带来了社会威望。 | praestigiae->魔术师把戏（拉丁），prestige->最初指幻觉，后演变为令人印象深刻的威望（cf. prestigious有声望，illusion幻觉，prestige令人印象深刻）"
     },
     {
       "question": "indulge _______",
       "type": "blank",
       "answer": "oneself",
-      "explanation": "放纵，放纵自己。He would indulge oneself with dessert. 他会放纵自己吃甜点。"
+      "explanation": "放纵，放纵自己。He would indulge oneself with dessert. 他会放纵自己吃甜点。 | in->使，dulg->允许（拉丁indulgere->纵容），indulge->允许自己=放纵（cf. indulgent放纵的，indulgence放纵，self-indulgent自我放纵）"
     },
     {
       "question": "____ flange",
       "type": "blank",
       "answer": "pipe",
-      "explanation": "法兰，管道法兰。The pipe flange connected two sections. 管道法兰连接两段。"
+      "explanation": "法兰，管道法兰。The pipe flange connected two sections. 管道法兰连接两段。 | flange->突出边缘（法语flanchir->弯曲），flange->连接管道的凸缘（cf. flank侧翼，flange凸缘，coupling连接，fitting配件）"
     },
     {
       "question": "estrange _______",
       "type": "blank",
       "answer": "friends",
-      "explanation": "疏远，疏远朋友。The argument would estrange friends. 争吵会疏远朋友。"
+      "explanation": "疏远，疏远朋友。The argument would estrange friends. 争吵会疏远朋友。 | estrange->使陌生（拉丁extraneare），estrange->使变得陌生=疏远（cf. strange陌生，stranger陌生人，alienate疏远，ostracize排斥）"
     },
     {
       "question": "____ revenge",
       "type": "blank",
       "answer": "seek",
-      "explanation": "报复，寻求报复。He swore to seek revenge. 他发誓要寻求报复。"
+      "explanation": "报复，寻求报复。He swore to seek revenge. 他发誓要寻求报复。 | re->回，venge->复仇（拉丁vindicare），revenge->向回复仇（cf. avenge复仇，vengeance复仇，vindictive报复性，vendetta世仇）"
     },
     {
       "question": "____ hinge",
       "type": "blank",
       "answer": "door",
-      "explanation": "铰链，门铰链。The door hinge needed oiling. 门铰链需要上油。"
+      "explanation": "铰链，门铰链。The door hinge needed oiling. 门铰链需要上油。 | hinge->铰链（来源不明，可能来自hang->悬挂），hinge->门的旋转轴（cf. hang悬挂，pivot轴心，hinge on取决于，keystone关键石）"
     },
     {
       "question": "impinge __ ______",
       "type": "blank",
       "answer": "on rights",
-      "explanation": "侵犯，侵犯权利。The new law would impinge on rights. 新法律会侵犯权利。"
+      "explanation": "侵犯，侵犯权利。The new law would impinge on rights. 新法律会侵犯权利。 | im->使，ping->打击（拉丁pangere），impinge->打击到=侵犯（cf. impact冲击，impinging侵犯，infringe侵犯，compact紧密）"
     },
     {
       "question": "fringe ________",
       "type": "blank",
       "answer": "benefits",
-      "explanation": "附加，附加福利。The job offered fringe benefits. 这份工作提供附加福利。"
+      "explanation": "附加，附加福利。The job offered fringe benefits. 这份工作提供附加福利。 | fimbria->穗（拉丁），fringe->边缘流苏=附加的（cf. fringe边缘，fringed有流苏的，peripheral边缘的，marginal边缘的）"
     },
     {
       "question": "infringe ______",
       "type": "blank",
       "answer": "rights",
-      "explanation": "侵犯，侵犯权利。The policy would infringe rights. 该政策会侵犯权利。"
+      "explanation": "侵犯，侵犯权利。The policy would infringe rights. 该政策会侵犯权利。 | in->使，fring->破碎（拉丁frangere），infringe->打破=侵犯（cf. fracture骨折，fragile脆，infraction违规，fragment碎片）"
     },
     {
       "question": "constringe _______",
       "type": "blank",
       "answer": "vessels",
-      "explanation": "收缩，收缩血管。Cold temperatures constringe vessels. 寒冷的温度会收缩血管。"
+      "explanation": "收缩，收缩血管。Cold temperatures constringe vessels. 寒冷的温度会收缩血管。 | con->共同，string->紧缩（拉丁stringere），constringe->使收缩（cf. constrict收缩，strict严格，stringent严格，restrict限制）"
     },
     {
       "question": "_______ syringe",
       "type": "blank",
       "answer": "insulin",
-      "explanation": "注射器，胰岛素注射器。The diabetic used an insulin syringe. 糖尿病患者使用胰岛素注射器。"
+      "explanation": "注射器，胰岛素注射器。The diabetic used an insulin syringe. 糖尿病患者使用胰岛素注射器。 | syrinx->管子（希腊，牧神潘的芦笛），syringe->注射用的管子（cf. syrinx芦笛，Pan牧神，panpipe排箫，syringe注射器）"
     },
     {
       "question": "plunge ____",
       "type": "blank",
       "answer": "into",
-      "explanation": "投入，投入。He would plunge into the cold water. 他会投入冷水中。"
+      "explanation": "投入，投入。He would plunge into the cold water. 他会投入冷水中。 | plumb->铅锤（拉丁plumbum->铅），plunge->像铅锤一样直落（cf. plumb垂直，plumber水管工，plummet骤降，aplomb沉着=铅锤般稳定）"
     }
   ]
 }
