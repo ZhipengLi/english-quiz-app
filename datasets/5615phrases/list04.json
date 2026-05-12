@@ -1,607 +1,605 @@
 {
-  "text": "",
+  "text": "本批词根亮点：\n\n• ingrained/grain：ingrained=深入纹理的=根深蒂固的，和 grain（纹理/谷粒）同根，木头的纹理深处=习惯难改\n\n• dilapidated：di+lapid（石头），原意\"石头散落\"=建筑物损坏，lapis lazuli（青金石）同根\n\n• sophisticated：来自 sophist（诡辩家），原意\"被诡辩腐化的\"，后演变为\"复杂世故的\"，philosophy（哲学）同根\n\n• star-crossed：来自占星术，crossed by stars=星象不利=命运多舛，Shakespeare 在《罗密欧与朱丽叶》中创造\n\n• infatuated：fatuus（愚蠢），infatuated=被愚弄而着迷的，fatuity（愚蠢）同根\n\n• inured：in+ure（使用/工作），通过反复使用而习以为常=习惯于，manure（肥料=手工劳作）同根\n\n• serrated：serra（锯子，拉丁），serrated=像锯一样有齿的，Sierra Nevada（内华达山脉=锯齿山）同根\n\n• superannuated：super+annus（年），超过年龄=过了使用年限=过时的，annual（年度）同根",
   "quiz": [
     {
       "question": "verified _______",
       "type": "blank",
       "answer": "account",
-      "explanation": "经过验证的，经过验证的账户。Her social media verified account had a blue checkmark. 她的社交媒体经过验证的账户有蓝色标记。"
+      "explanation": "经过验证的，经过验证的账户。Her social media verified account had a blue checkmark. 她的社交媒体经过验证的账户有蓝色标记。 | ver->真（拉丁verus），verified->被证明为真的（cf. verify核实，veracity真实性，verdict裁决，aver断言）"
     },
     {
       "question": "unjustified _____",
       "type": "blank",
       "answer": "claim",
-      "explanation": "不合理的，不合理的声明。The lawsuit was based on an unjustified claim. 这起诉讼基于不合理的声明。"
+      "explanation": "不合理的，不合理的声明。The lawsuit was based on an unjustified claim. 这起诉讼基于不合理的声明。 | un->否定，just->正当（拉丁justus），unjustified->没有正当理由的（cf. justify证明正当，justice正义，adjust调整）"
     },
     {
       "question": "pied _______",
       "type": "blank",
       "answer": "wagtail",
-      "explanation": "斑驳的，斑驳的鹡鸰。The pied wagtail is a common British bird. 斑驳的鹡鸰是常见的英国鸟类。"
+      "explanation": "斑驳的，斑驳的鹡鸰。The pied wagtail is a common British bird. 斑驳的鹡鸰是常见的英国鸟类。 | pied->杂色的（来自magpie=喜鹊的黑白色），pied->有两种颜色斑块的（cf. pie馅饼=多种材料混合，piebald花斑马，Pied Piper花衣魔笛手）"
     },
     {
       "question": "serried _____",
       "type": "blank",
       "answer": "ranks",
-      "explanation": "密集的，密集的队列。The soldiers stood in serried ranks. 士兵们站成密集的队列。"
+      "explanation": "密集的，密集的队列。The soldiers stood in serried ranks. 士兵们站成密集的队列。 | serr->锁紧（拉丁serrare->锁），serried->紧密排列的（cf. series系列，serial连续的，insert插入=放入之间）"
     },
     {
       "question": "packed _______",
       "type": "blank",
       "answer": "stadium",
-      "explanation": "拥挤的，拥挤的体育场。The packed stadium roared with excitement. 拥挤的体育场充满兴奋的欢呼。"
+      "explanation": "拥挤的，拥挤的体育场。The packed stadium roared with excitement. 拥挤的体育场充满兴奋的欢呼。 | pack->打包（古挪威pakki），packed->塞满的=拥挤的（cf. pack包裹，package包装，compact紧凑，impact冲击=打包进去）"
     },
     {
       "question": "henpecked _______",
       "type": "blank",
       "answer": "husband",
-      "explanation": "怕老婆的，怕老婆的丈夫。The henpecked husband never made decisions alone. 怕老婆的丈夫从不独自做决定。"
+      "explanation": "怕老婆的，怕老婆的丈夫。The henpecked husband never made decisions alone. 怕老婆的丈夫从不独自做决定。 | hen->母鸡，pecked->啄，henpecked->被母鸡啄的=被老婆管的（cf. hen母鸡，peck啄，cf. under the thumb在拇指下=受控制）"
     },
     {
       "question": "wicked ____",
       "type": "blank",
       "answer": "deed",
-      "explanation": "邪恶的，邪恶的行为。The villain committed a wicked deed. 恶棍犯下了邪恶的行为。"
+      "explanation": "邪恶的，邪恶的行为。The villain committed a wicked deed. 恶棍犯下了邪恶的行为。 | wicca->巫师（古英语），wicked->像巫师一样邪恶的（cf. witch女巫，Wicca现代巫术，cf. wicked witch邪恶女巫）"
     },
     {
       "question": "landlocked _______",
       "type": "blank",
       "answer": "country",
-      "explanation": "内陆的，内陆的国家。Switzerland is a landlocked country with no coastline. 瑞士是没有海岸线的内陆的国家。"
+      "explanation": "内陆的，内陆的国家。Switzerland is a landlocked country with no coastline. 瑞士是没有海岸线的内陆的国家。 | land->陆地，locked->锁住，landlocked->被陆地锁住的=内陆的（cf. lock锁，deadlock僵局，hemmed in被围困）"
     },
     {
       "question": "marked ___________",
       "type": "blank",
       "answer": "improvement",
-      "explanation": "显著的，显著的改进。There was a marked improvement in his grades. 他的成绩有显著的改进。"
+      "explanation": "显著的，显著的改进。There was a marked improvement in his grades. 他的成绩有显著的改进。 | mark->标记，marked->被明确标记出来的=显著的（cf. remarkable值得注意，marker标记，hallmark特征，benchmark基准）"
     },
     {
       "question": "garbled _______",
       "type": "blank",
       "answer": "message",
-      "explanation": "混乱的，混乱的信息。The garbled message was impossible to understand. 混乱的信息无法理解。"
+      "explanation": "混乱的，混乱的信息。The garbled message was impossible to understand. 混乱的信息无法理解。 | garble->筛选/曲解（阿拉伯语gharbala->筛），garbled->被混乱曲解的（cf. garbage垃圾=筛选后的废料，cf. garble original message歪曲原意）"
     },
     {
       "question": "unbridled _______",
       "type": "blank",
       "answer": "passion",
-      "explanation": "不受约束的，不受约束的激情。His unbridled passion for music was evident. 他对音乐不受约束的激情是显而易见的。"
+      "explanation": "不受约束的，不受约束的激情。His unbridled passion for music was evident. 他对音乐不受约束的激情是显而易见的。 | un->否定，bridle->马笼头，unbridled->没有马笼头约束的=放纵的（cf. bridle缰绳，rein控制，unrestrained不受约束）"
     },
     {
       "question": "brindled ____",
       "type": "blank",
       "answer": "coat",
-      "explanation": "有斑纹的，有斑纹的皮毛。The dog had a distinctive brindled coat. 这只狗有独特的有斑纹的皮毛。"
+      "explanation": "有斑纹的，有斑纹的皮毛。The dog had a distinctive brindled coat. 这只狗有独特的有斑纹的皮毛。 | brindled->有黑褐色条纹（来自brand->烙印），brindled->有深色条纹的（cf. brand烙印，brindle虎斑，tabby猫斑纹）"
     },
     {
       "question": "disheveled ____",
       "type": "blank",
       "answer": "hair",
-      "explanation": "凌乱的，凌乱的头发。She woke up with disheveled hair. 她醒来时头发凌乱的头发。"
+      "explanation": "凌乱的，凌乱的头发。She woke up with disheveled hair. 她醒来时头发凌乱的头发。 | dis->散开，chevel->头发（法语，拉丁capillus），disheveled->头发散开的=凌乱的（cf. capillary毛细管=像发丝，dishevel使蓬乱）"
     },
     {
       "question": "muffled _____",
       "type": "blank",
       "answer": "sound",
-      "explanation": "低沉的，低沉的声音。A muffled sound came from behind the door. 门后传来低沉的声音。"
+      "explanation": "低沉的，低沉的声音。A muffled sound came from behind the door. 门后传来低沉的声音。 | muffle->包裹（古法语mofle->厚手套），muffled->被包裹住而变低沉的（cf. muffle消音，muffler消音器/围巾，smother闷住）"
     },
     {
       "question": "unspoiled ______",
       "type": "blank",
       "answer": "nature",
-      "explanation": "未受破坏的，未受破坏的自然。The island had beautiful unspoiled nature. 该岛有美丽的未受破坏的自然。"
+      "explanation": "未受破坏的，未受破坏的自然。The island had beautiful unspoiled nature. 该岛有美丽的未受破坏的自然。 | un->否定，spoil->破坏（拉丁spolium->战利品），unspoiled->未被破坏的（cf. spoil破坏/溺爱，despoil掠夺，spoliation掠夺）"
     },
     {
       "question": "unprincipled _____",
       "type": "blank",
       "answer": "rogue",
-      "explanation": "无原则的，无原则的恶棍。The unprincipled rogue would do anything for money. 无原则的恶棍会为钱做任何事。"
+      "explanation": "无原则的，无原则的恶棍。The unprincipled rogue would do anything for money. 无原则的恶棍会为钱做任何事。 | un->否定，principal->主要的/原则（拉丁princeps->第一），unprincipled->没有原则的（cf. principle原则，principal主要，prince王子）"
     },
     {
       "question": "dappled ________",
       "type": "blank",
       "answer": "sunlight",
-      "explanation": "斑驳的，斑驳的阳光。Dappled sunlight filtered through the trees. 斑驳的阳光透过树木。"
+      "explanation": "斑驳的，斑驳的阳光。Dappled sunlight filtered through the trees. 斑驳的阳光透过树木。 | dapple->斑点（古挪威depill->点），dappled->有明暗斑点的（cf. dapple gray苹果灰马，mottled有斑点的，speckled有斑点的）"
     },
     {
       "question": "gnarled ____",
       "type": "blank",
       "answer": "tree",
-      "explanation": "扭曲的，扭曲的树。The ancient gnarled tree stood in the park. 古老的扭曲的树矗立在公园里。"
+      "explanation": "扭曲的，扭曲的树。The ancient gnarled tree stood in the park. 古老的扭曲的树矗立在公园里。 | gnarled->有节疤（来自knot->节），gnarled->因年老而扭曲节疤累累的（cf. knot节，gnarl树瘤，gnarly困难的/扭曲的）"
     },
     {
       "question": "settled _____",
       "type": "blank",
       "answer": "habit",
-      "explanation": "固定的，固定的习惯。Reading before bed became a settled habit. 睡前阅读成为固定的习惯。"
+      "explanation": "固定的，固定的习惯。Reading before bed became a settled habit. 睡前阅读成为固定的习惯。 | settle->定居（古英语setlan），settled->已经安定固定的（cf. settlement定居点，unsettled不稳定，settle down安定）"
     },
     {
       "question": "inflamed ______",
       "type": "blank",
       "answer": "tissue",
-      "explanation": "发炎的，发炎的组织。The doctor treated the inflamed tissue. 医生治疗了发炎的组织。"
+      "explanation": "发炎的，发炎的组织。The doctor treated the inflamed tissue. 医生治疗了发炎的组织。 | in->使，flame->火焰（拉丁flamma），inflamed->被火点燃的=发炎的（cf. inflammation发炎，flamboyant炫耀的，flammable易燃，flamingo火烈鸟）"
     },
     {
       "question": "mistimed ______",
       "type": "blank",
       "answer": "remark",
-      "explanation": "不合时宜的，不合时宜的评论。His mistimed remark embarrassed everyone. 他不合时宜的评论让每个人都很尴尬。"
+      "explanation": "不合时宜的，不合时宜的评论。His mistimed remark embarrassed everyone. 他不合时宜的评论让每个人都很尴尬。 | mis->错误，timed->定时，mistimed->时机选择错误的（cf. timely及时，untimely过早，ill-timed不合时宜）"
     },
     {
       "question": "well-groomed __________",
       "type": "blank",
       "answer": "appearance",
-      "explanation": "仪表整洁的，仪表整洁的外表。The executive maintained a well-groomed appearance. 这位高管保持着仪表整洁的外表。"
+      "explanation": "仪表整洁的，仪表整洁的外表。The executive maintained a well-groomed appearance. 这位高管保持着仪表整洁的外表。 | groom->打扮（古挪威gromr->男孩/侍者），well-groomed->被精心打扮的=仪表整洁的（cf. bridegroom新郎=婚礼侍者，grooming梳洗）"
     },
     {
       "question": "____ informed",
       "type": "blank",
       "answer": "well",
-      "explanation": "消息灵通的，消息灵通的。She was well informed about current events. 她对时事消息灵通的。"
+      "explanation": "消息灵通的，消息灵通的。She was well informed about current events. 她对时事消息灵通的。 | inform->告知（拉丁informare->给予形式），well-informed->被充分告知的=消息灵通的（cf. information信息，reform改革，uniform制服）"
     },
     {
       "question": "unenlightened ____",
       "type": "blank",
       "answer": "view",
-      "explanation": "愚昧的，愚昧的观点。His unenlightened view was outdated. 他愚昧的观点过时了。"
+      "explanation": "愚昧的，愚昧的观点。His unenlightened view was outdated. 他愚昧的观点过时了。 | un->否定，enlighten->启蒙（en+light），unenlightened->未受启蒙的=愚昧的（cf. enlightenment启蒙，illuminate照亮，the Enlightenment启蒙运动）"
     },
     {
       "question": "wizened ____",
       "type": "blank",
       "answer": "face",
-      "explanation": "干瘪的，干瘪的脸。The old woman had a wizened face. 老妇人有一张干瘪的脸。"
+      "explanation": "干瘪的，干瘪的脸。The old woman had a wizened face. 老妇人有一张干瘪的脸。 | wizened->干缩（古英语wisnian->干缩），wizened->因年老而干瘪萎缩的（cf. wizen干缩，shrivel萎缩，withered枯萎，shrunken收缩）"
     },
     {
       "question": "feigned _______",
       "type": "blank",
       "answer": "illness",
-      "explanation": "假装的，假装的疾病。His feigned illness didn't fool the doctor. 他假装的疾病没有骗过医生。"
+      "explanation": "假装的，假装的疾病。His feigned illness didn't fool the doctor. 他假装的疾病没有骗过医生。 | feindre->假装（古法语，拉丁fingere->塑造），feigned->被虚构伪装的（cf. fiction虚构，feint假动作，figment虚构物，effigy肖像）"
     },
     {
       "question": "unfeigned _______",
       "type": "blank",
       "answer": "delight",
-      "explanation": "真诚的，真诚的喜悦。She expressed unfeigned delight at the news. 她对这个消息表达了真诚的喜悦。"
+      "explanation": "真诚的，真诚的喜悦。She expressed unfeigned delight at the news. 她对这个消息表达了真诚的喜悦。 | un->否定，feigned->假装的，unfeigned->非伪装的=真诚的（cf. genuine真诚，sincere真诚，heartfelt由衷的）"
     },
     {
       "question": "resigned __________",
       "type": "blank",
       "answer": "acceptance",
-      "explanation": "顺从的，顺从的接受。He showed resigned acceptance of his fate. 他表现出对命运的顺从的接受。"
+      "explanation": "顺从的，顺从的接受。He showed resigned acceptance of his fate. 他表现出对命运的顺从的接受。 | re->回，sign->标志，resigned->把签名收回=辞职/顺从接受（cf. resign辞职，signature签名，design设计，consign托付）"
     },
     {
       "question": "ingrained _____",
       "type": "blank",
       "answer": "habit",
-      "explanation": "根深蒂固的，根深蒂固的习惯。Smoking was an ingrained habit he couldn't break. 吸烟是他无法打破的根深蒂固的习惯。"
+      "explanation": "根深蒂固的，根深蒂固的习惯。Smoking was an ingrained habit he couldn't break. 吸烟是他无法打破的根深蒂固的习惯。 | in->进入，grain->纹理/谷粒，ingrained->深入纹理的=根深蒂固的（cf. grain纹理，engrave雕刻=深入，deep-seated根深蒂固）"
     },
     {
       "question": "constrained _____",
       "type": "blank",
       "answer": "smile",
-      "explanation": "勉强的，勉强的微笑。She gave a constrained smile at the bad joke. 她对这个糟糕的笑话露出勉强的微笑。"
+      "explanation": "勉强的，勉强的微笑。She gave a constrained smile at the bad joke. 她对这个糟糕的笑话露出勉强的微笑。 | con->共同，strain->拉紧（拉丁stringere），constrained->被紧紧绑住的=勉强的（cf. restrain约束，strict严格，constrict收缩，strain张力）"
     },
     {
       "question": "sustained ______",
       "type": "blank",
       "answer": "effort",
-      "explanation": "持续的，持续的努力。Success requires sustained effort over time. 成功需要长期持续的努力。"
+      "explanation": "持续的，持续的努力。Success requires sustained effort over time. 成功需要长期持续的努力。 | sus->在下，tain->持（拉丁tenere），sustained->被持续支撑的（cf. sustain维持，maintain保持，retain保留，obtain获得）"
     },
     {
       "question": "____ defined",
       "type": "blank",
       "answer": "well",
-      "explanation": "明确的，明确定义的。The project had well defined objectives. 该项目有明确定义的目标。"
+      "explanation": "明确的，明确定义的。The project had well defined objectives. 该项目有明确定义的目标。 | de->设定，fine->边界（拉丁finis），defined->设定了边界=被定义的（cf. define定义，definite明确，finite有限，infinite无限）"
     },
     {
       "question": "___ tined ____",
       "type": "blank",
       "answer": "two fork",
-      "explanation": "叉齿的，两叉齿的叉子。The salad was served with a two tined fork. 沙拉配有两叉齿的叉子。"
+      "explanation": "叉齿的，两叉齿的叉子。The salad was served with a two tined fork. 沙拉配有两叉齿的叉子。 | tine->叉齿（古英语tind->尖，古挪威tindr->山峰），tined->有齿的（cf. prong叉齿，tine叉的齿，pitchfork干草叉）"
     },
     {
       "question": "impassioned ____",
       "type": "blank",
       "answer": "plea",
-      "explanation": "激昂的，激昂的恳求。The lawyer made an impassioned plea for mercy. 律师发表了激昂的恳求请求宽恕。"
+      "explanation": "激昂的，激昂的恳求。The lawyer made an impassioned plea for mercy. 律师发表了激昂的恳求请求宽恕。 | im->使，passion->激情（拉丁pati->受苦），impassioned->充满激情的（cf. passionate热情，compassion同情，dispassionate冷静）"
     },
     {
       "question": "unimpassioned ________",
       "type": "blank",
       "answer": "analysis",
-      "explanation": "冷静的，冷静的分析。The scientist provided an unimpassioned analysis of the data. 科学家提供了数据的冷静的分析。"
+      "explanation": "冷静的，冷静的分析。The scientist provided an unimpassioned analysis of the data. 科学家提供了数据的冷静的分析。 | un->否定，impassioned->充满激情的，unimpassioned->不带激情的=冷静的（cf. dispassionate冷静，detached超然，objective客观）"
     },
     {
       "question": "seasoned _______",
       "type": "blank",
       "answer": "veteran",
-      "explanation": "经验丰富的，经验丰富的老手。The seasoned veteran knew how to handle pressure. 经验丰富的老手知道如何应对压力。"
+      "explanation": "经验丰富的，经验丰富的老手。The seasoned veteran knew how to handle pressure. 经验丰富的老手知道如何应对压力。 | season->季节/调味（拉丁satio->播种），seasoned->经历过多个季节的=经验丰富的（cf. season季节，seasoning调料，well-seasoned经验丰富）"
     },
     {
       "question": "biped ____",
       "type": "blank",
       "answer": "gait",
-      "explanation": "两足动物的，两足动物的步态。Humans walk with a distinctive biped gait. 人类以独特的两足动物的步态行走。"
+      "explanation": "两足动物的，两足动物的步态。Humans walk with a distinctive biped gait. 人类以独特的两足动物的步态行走。 | bi->两，ped->脚（拉丁pes），biped->有两只脚的（cf. quadruped四足，centipede百足虫，pedal踏板，pedestrian行人）"
     },
     {
       "question": "damped ___________",
       "type": "blank",
       "answer": "oscillation",
-      "explanation": "阻尼的，阻尼的振荡。The engineer designed a damped oscillation system. 工程师设计了阻尼的振荡系统。"
+      "explanation": "阻尼的，阻尼的振荡。The engineer designed a damped oscillation system. 工程师设计了阻尼的振荡系统。 | damp->潮湿/减弱（古挪威dampi->蒸汽），damped->被减弱的=阻尼的（cf. damp潮湿，dampen减弱，dampener减震器）"
     },
     {
       "question": "untapped _________",
       "type": "blank",
       "answer": "potential",
-      "explanation": "未开发的，未开发的潜力。The region has vast untapped potential. 该地区有巨大的未开发的潜力。"
+      "explanation": "未开发的，未开发的潜力。The region has vast untapped potential. 该地区有巨大的未开发的潜力。 | un->否定，tap->开龙头/利用，untapped->龙头未开的=未被利用的（cf. tap水龙头，tap into利用，exploit开发，harness利用）"
     },
     {
       "question": "____-______ quadruped",
       "type": "blank",
       "answer": "four-legged",
-      "explanation": "四足动物，四条腿的四足动物。Dogs are four-legged quadruped mammals. 狗是四条腿的四足动物哺乳动物。"
+      "explanation": "四足动物，四条腿的四足动物。Dogs are four-legged quadruped mammals. 狗是四条腿的四足动物哺乳动物。 | quadru->四（拉丁），ped->脚，quadruped->有四只脚的（cf. biped两足，centipede百足，tripod三脚架，quadrant四分之一）"
     },
     {
       "question": "vinegared _____",
       "type": "blank",
       "answer": "taste",
-      "explanation": "醋味的，醋味的味道。The salad had a vinegared taste. 沙拉有醋味的味道。"
+      "explanation": "醋味的，醋味的味道。The salad had a vinegared taste. 沙拉有醋味的味道。 | vin->葡萄酒（法语，拉丁vinum），egre->酸（法语aigre），vinegar->酸葡萄酒=醋（cf. wine葡萄酒，eager渴望=酸得流口水，vineyard葡萄园）"
     },
     {
       "question": "lowbred ______",
       "type": "blank",
       "answer": "fellow",
-      "explanation": "粗俗的，粗俗的家伙。The lowbred fellow lacked manners. 粗俗的家伙缺乏礼貌。"
+      "explanation": "粗俗的，粗俗的家伙。The lowbred fellow lacked manners. 粗俗的家伙缺乏礼貌。 | low->低，bred->培育，lowbred->在低等环境中培育的=粗俗的（cf. well-bred有教养，thoroughbred纯种，inbred近亲繁殖/根深蒂固）"
     },
     {
       "question": "sacred ___",
       "type": "blank",
       "answer": "vow",
-      "explanation": "神圣的，神圣的誓言。The monks took a sacred vow of silence. 僧侣们立下了神圣的誓言保持沉默。"
+      "explanation": "神圣的，神圣的誓言。The monks took a sacred vow of silence. 僧侣们立下了神圣的誓言保持沉默。 | sacr->神圣（拉丁sacer），sacred->被奉献给神的=神圣的（cf. sacrifice牺牲，sacrilege亵渎，consecrate奉献，desecrate亵渎）"
     },
     {
       "question": "kindred _______",
       "type": "blank",
       "answer": "spirits",
-      "explanation": "志同道合的，志同道合的灵魂。They were kindred spirits who shared the same values. 他们是志同道合的灵魂，有着相同的价值观。"
+      "explanation": "志同道合的，志同道合的灵魂。They were kindred spirits who shared the same values. 他们是志同道合的灵魂，有着相同的价值观。 | kin->亲属（古英语cynn->家族），kindred->同族/相似的（cf. kin亲属，kind种类/善良，kindergarten幼儿园，kindle点燃）"
     },
     {
       "question": "checkered ____",
       "type": "blank",
       "answer": "past",
-      "explanation": "有污点的，有污点的过去。The politician had a checkered past. 这位政客有有污点的过去。"
+      "explanation": "有污点的，有污点的过去。The politician had a checkered past. 这位政客有有污点的过去。 | checker->棋盘格（来自chess国际象棋），checkered->像棋盘格黑白交错=起伏不定有污点的（cf. chess象棋，exchequer国库，check棋格/支票）"
     },
     {
       "question": "mannered _____",
       "type": "blank",
       "answer": "style",
-      "explanation": "矫揉造作的，矫揉造作的风格。The writer's mannered style was criticized. 这位作家矫揉造作的风格受到批评。"
+      "explanation": "矫揉造作的，矫揉造作的风格。The writer's mannered style was criticized. 这位作家矫揉造作的风格受到批评。 | manner->方式（拉丁manus->手），mannered->过分注重方式的=矫揉造作的（cf. manners礼貌，mannerism独特怪癖，unmannerly失礼）"
     },
     {
       "question": "even-tempered ______",
       "type": "blank",
       "answer": "leader",
-      "explanation": "性情平和的，性情平和的领导者。The even-tempered leader remained calm in crises. 性情平和的领导者在危机中保持冷静。"
+      "explanation": "性情平和的，性情平和的领导者。The even-tempered leader remained calm in crises. 性情平和的领导者在危机中保持冷静。 | even->平均，temper->脾气（拉丁temperare->调和），even-tempered->脾气均衡的=性情平和的（cf. temperament气质，temperature温度，temper脾气）"
     },
     {
       "question": "____ flustered",
       "type": "blank",
       "answer": "feel",
-      "explanation": "慌乱的，感到慌乱。The unexpected question made her feel flustered. 意外的问题让她感到慌乱。"
+      "explanation": "慌乱的，感到慌乱。The unexpected question made her feel flustered. 意外的问题让她感到慌乱。 | fluster->使慌乱（古挪威flaustr->匆忙），flustered->被弄得慌乱的（cf. fluster慌乱，flurry忙乱，flutter扑腾，bluster虚张声势）"
     },
     {
       "question": "shattered _____",
       "type": "blank",
       "answer": "glass",
-      "explanation": "破碎的，破碎的玻璃。Shattered glass covered the floor. 破碎的玻璃覆盖了地板。"
+      "explanation": "破碎的，破碎的玻璃。Shattered glass covered the floor. 破碎的玻璃覆盖了地板。 | shatter->碎裂（中古英语schateren），shattered->粉碎的/精疲力竭的（cf. shatter粉碎，shattered筋疲力尽，scatter散落，splatter溅散）"
     },
     {
       "question": "acquired _____",
       "type": "blank",
       "answer": "taste",
-      "explanation": "后天养成的，后天养成的品味。Caviar is an acquired taste. 鱼子酱是后天养成的品味。"
+      "explanation": "后天养成的，后天养成的品味。Caviar is an acquired taste. 鱼子酱是后天养成的品味。 | ac->朝向，quire->寻求（拉丁quaerere），acquired->通过努力获得的（cf. acquire获得，require需要，inquiry调查，inquisitive好奇）"
     },
     {
       "question": "labored _________",
       "type": "blank",
       "answer": "breathing",
-      "explanation": "费力的，费力的呼吸。The patient had labored breathing. 患者有费力的呼吸。"
+      "explanation": "费力的，费力的呼吸。The patient had labored breathing. 患者有费力的呼吸。 | labor->劳动（拉丁），labored->费了很大力气的（cf. labor劳动，elaborate精心制作，laboratory实验室=劳动的地方，collaborate合作）"
     },
     {
       "question": "enamored __",
       "type": "blank",
       "answer": "of",
-      "explanation": "迷恋的，迷恋。She was enamored of the handsome stranger. 她迷恋那个英俊的陌生人。"
+      "explanation": "迷恋的，迷恋。She was enamored of the handsome stranger. 她迷恋那个英俊的陌生人。 | en->使，amor->爱（拉丁），enamored->被爱所俘虏的=迷恋的（cf. amorous多情，amiable和蔼，amateur爱好者，amour恋情）"
     },
     {
       "question": "_____ restored",
       "type": "blank",
       "answer": "fully",
-      "explanation": "修复的，完全修复的。The antique car was fully restored. 古董车被完全修复的。"
+      "explanation": "修复的，完全修复的。The antique car was fully restored. 古董车被完全修复的。 | re->再次，store->储存（拉丁instaurare->重建），restored->重新建立的=修复的（cf. restore修复，store储存，storage仓储，instore在店内）"
     },
     {
       "question": "untutored ___",
       "type": "blank",
       "answer": "ear",
-      "explanation": "未受训练的，未受训练的耳朵。To the untutored ear, the music sounded similar. 对未受训练的耳朵来说，音乐听起来相似。"
+      "explanation": "未受训练的，未受训练的耳朵。To the untutored ear, the music sounded similar. 对未受训练的耳朵来说，音乐听起来相似。 | un->否定，tutor->导师（拉丁tutus->保护），untutored->未受指导的=未受训练的（cf. tutor家教，tutorial辅导，intuition直觉）"
     },
     {
       "question": "marred __________",
       "type": "blank",
       "answer": "reputation",
-      "explanation": "损坏的，损坏的声誉。The scandal marred reputation of the company. 丑闻损坏的声誉了公司的。"
+      "explanation": "损坏的，损坏的声誉。The scandal marred reputation of the company. 丑闻损坏的声誉了公司的。 | mar->损坏（古英语merran->阻碍），marred->被损坏的（cf. mar损坏，blemish污点，tarnish失去光泽，sully玷污）"
     },
     {
       "question": "inured __ ____",
       "type": "blank",
       "answer": "to pain",
-      "explanation": "习惯于，习惯于痛苦。The boxer was inured to pain from years of training. 拳击手经过多年训练习惯于痛苦。"
+      "explanation": "习惯于，习惯于痛苦。The boxer was inured to pain from years of training. 拳击手经过多年训练习惯于痛苦。 | in->使，ure->使用/工作（古法语œuvrer->工作），inured->通过反复使用而习惯的（cf. manure肥料=手工劳作，inure习惯，endure忍耐）"
     },
     {
       "question": "measured ________",
       "type": "blank",
       "answer": "response",
-      "explanation": "慎重的，慎重的回应。The diplomat gave a measured response. 外交官给出了慎重的回应。"
+      "explanation": "慎重的，慎重的回应。The diplomat gave a measured response. 外交官给出了慎重的回应。 | measure->测量（拉丁mensura），measured->经过仔细测量权衡的=慎重的（cf. measure测量，commensurate相称，immeasurable无法衡量）"
     },
     {
       "question": "assured _______",
       "type": "blank",
       "answer": "victory",
-      "explanation": "确定的，确定的胜利。The team's assured victory seemed certain. 球队确定的胜利似乎是肯定的。"
+      "explanation": "确定的，确定的胜利。The team's assured victory seemed certain. 球队确定的胜利似乎是肯定的。 | as->朝向，sure->确定（拉丁securus），assured->被确认的=确定的（cf. sure确定，secure安全，assurance保证，insurance保险）"
     },
     {
       "question": "improvised ______",
       "type": "blank",
       "answer": "speech",
-      "explanation": "即兴的，即兴的演讲。The mayor gave an impressive improvised speech. 市长发表了令人印象深刻的即兴的演讲。"
+      "explanation": "即兴的，即兴的演讲。The mayor gave an impressive improvised speech. 市长发表了令人印象深刻的即兴的演讲。 | im->否定，provis->预见（拉丁providere），improvised->未事先准备的=即兴的（cf. provide提供，provision供应，improvise即兴）"
     },
     {
       "question": "______ composed",
       "type": "blank",
       "answer": "remain",
-      "explanation": "镇定的，保持镇定。She managed to remain composed during the interview. 她在面试期间设法保持镇定。"
+      "explanation": "镇定的，保持镇定。She managed to remain composed during the interview. 她在面试期间设法保持镇定。 | com->共同，pose->放置（拉丁ponere），composed->把自己放置好=镇定的（cf. compose作曲，composure镇定，decompose分解）"
     },
     {
       "question": "__ disposed",
       "type": "blank",
       "answer": "so",
-      "explanation": "有意向的，有此意向。If you are so disposed, please join us. 如果你有此意向，请加入我们。"
+      "explanation": "有意向的，有此意向。If you are so disposed, please join us. 如果你有此意向，请加入我们。 | dis->分，pose->放置，disposed->倾向于某方向放置=有意向的（cf. dispose处置，disposition倾向，predisposed预先倾向，indisposed不舒服）"
     },
     {
       "question": "depressed ______",
       "type": "blank",
       "answer": "market",
-      "explanation": "萧条的，萧条的市场。The depressed market showed no signs of recovery. 萧条的市场没有复苏的迹象。"
+      "explanation": "萧条的，萧条的市场。The depressed market showed no signs of recovery. 萧条的市场没有复苏的迹象。 | de->向下，press->压（拉丁premere），depressed->被向下压的=萧条的（cf. suppress镇压，impress给印象，express表达，oppress压迫）"
     },
     {
       "question": "repressed ______",
       "type": "blank",
       "answer": "memory",
-      "explanation": "压抑的，压抑的记忆。The therapist helped unlock repressed memory. 治疗师帮助解锁压抑的记忆。"
+      "explanation": "压抑的，压抑的记忆。The therapist helped unlock repressed memory. 治疗师帮助解锁压抑的记忆。 | re->向后，press->压，repressed->被向后压制的=压抑的（cf. repress压制，suppress镇压，oppress压迫，depress使沮丧）"
     },
     {
       "question": "______ impressed",
       "type": "blank",
       "answer": "deeply",
-      "explanation": "印象深刻的，深深印象深刻。I was deeply impressed by her presentation. 我对她的演讲深深印象深刻。"
+      "explanation": "印象深刻的，深深印象深刻。I was deeply impressed by her presentation. 我对她的演讲深深印象深刻。 | im->进入，press->压，impressed->被压入印记=印象深刻的（cf. impression印象，impress给印象，express表达，compress压缩）"
     },
     {
       "question": "possessed __ ____",
       "type": "blank",
       "answer": "by fear",
-      "explanation": "被控制的，被恐惧控制。He was possessed by fear and couldn't move. 他被恐惧控制，无法移动。"
+      "explanation": "被控制的，被恐惧控制。He was possessed by fear and couldn't move. 他被恐惧控制，无法移动。 | pos->放置，sess->坐（拉丁），possessed->被某物占据坐上=被控制的（cf. possess拥有，obsess困扰，assess评估，session会议）"
     },
     {
       "question": "star-crossed ______",
       "type": "blank",
       "answer": "lovers",
-      "explanation": "命运多舛的，命运多舛的恋人。Romeo and Juliet were star-crossed lovers. 罗密欧和朱丽叶是命运多舛的恋人。"
+      "explanation": "命运多舛的，命运多舛的恋人。Romeo and Juliet were star-crossed lovers. 罗密欧和朱丽叶是命运多舛的恋人。 | star->星，crossed->交叉/阻碍，star-crossed->被星象阻碍的=命运多舛（莎士比亚创造词，cf. cross阻碍，ill-fated命运多舛）"
     },
     {
       "question": "sophisticated ________",
       "type": "blank",
       "answer": "analysis",
-      "explanation": "复杂的，复杂的分析。The researcher provided a sophisticated analysis. 研究人员提供了复杂的分析。"
+      "explanation": "复杂的，复杂的分析。The researcher provided a sophisticated analysis. 研究人员提供了复杂的分析。 | sophist->诡辩家（希腊sophos->智慧），sophisticated->被诡辩复杂化的=复杂世故的（cf. philosophy哲学=爱智慧，naive单纯=反义）"
     },
     {
       "question": "dilapidated _____",
       "type": "blank",
       "answer": "house",
-      "explanation": "破旧的，破旧的房子。The dilapidated house needed extensive repairs. 破旧的房子需要大量维修。"
+      "explanation": "破旧的，破旧的房子。The dilapidated house needed extensive repairs. 破旧的房子需要大量维修。 | di->分散，lapid->石头（拉丁lapis），dilapidated->石头散落的=破败的（cf. lapis lazuli青金石，lapidary宝石的，lapidation石刑）"
     },
     {
       "question": "unmitigated ________",
       "type": "blank",
       "answer": "disaster",
-      "explanation": "完全的，完全的灾难。The project was an unmitigated disaster. 该项目是完全的灾难。"
+      "explanation": "完全的，完全的灾难。The project was an unmitigated disaster. 该项目是完全的灾难。 | un->否定，mitig->软化（拉丁mitis->温和），unmitigated->未被软化的=完全的（cf. mitigate减轻，mild温和，emollient润肤）"
     },
     {
       "question": "striated ______",
       "type": "blank",
       "answer": "muscle",
-      "explanation": "有条纹的，有条纹的肌肉。Striated muscle tissue contracts voluntarily. 有条纹的肌肉组织自主收缩。"
+      "explanation": "有条纹的，有条纹的肌肉。Striated muscle tissue contracts voluntarily. 有条纹的肌肉组织自主收缩。 | stria->条纹（拉丁），striated->有条纹的（cf. striate有条纹，stripe条纹，streak条痕，stria地质条纹）"
     },
     {
       "question": "satiated ________",
       "type": "blank",
       "answer": "appetite",
-      "explanation": "满足的，满足的食欲。The large meal satiated appetite. 大餐满足的食欲。"
+      "explanation": "满足的，满足的食欲。The large meal satiated appetite. 大餐满足的食欲。 | sat->够了（拉丁satis->足够），satiated->被满足的（cf. satisfy满足，saturate饱和，satiate使满足，insatiable贪得无厌）"
     },
     {
       "question": "___ uninitiated",
       "type": "blank",
       "answer": "the",
-      "explanation": "外行的，外行人。The technical jargon confused the uninitiated. 专业术语让外行人感到困惑。"
+      "explanation": "外行的，外行人。The technical jargon confused the uninitiated. 专业术语让外行人感到困惑。 | un->否定，initiate->入门（拉丁initiare->开始），uninitiated->未入门的=外行的（cf. initiate开始，initial初始，initiative主动权）"
     },
     {
       "question": "unsubstantiated _____",
       "type": "blank",
       "answer": "claim",
-      "explanation": "未经证实的，未经证实的声明。The unsubstantiated claim was dismissed. 未经证实的声明被驳回。"
+      "explanation": "未经证实的，未经证实的声明。The unsubstantiated claim was dismissed. 未经证实的声明被驳回。 | un->否定，sub->在下，stant->站立，unsubstantiated->没有实质支撑的=未证实的（cf. substantial实质，substance物质，instantiate实例化）"
     },
     {
       "question": "belated _______",
       "type": "blank",
       "answer": "apology",
-      "explanation": "迟来的，迟来的道歉。He offered a belated apology for his mistake. 他为自己的错误提供了迟来的道歉。"
+      "explanation": "迟来的，迟来的道歉。He offered a belated apology for his mistake. 他为自己的错误提供了迟来的道歉。 | be->使，late->晚，belated->变得太晚了的=迟来的（cf. late晚，lately近来，delay延迟，tardy迟到）"
     },
     {
       "question": "deflated ___",
       "type": "blank",
       "answer": "ego",
-      "explanation": "受挫的，受挫的自我。His failure left him with a deflated ego. 他的失败让他有受挫的自我。"
+      "explanation": "受挫的，受挫的自我。His failure left him with a deflated ego. 他的失败让他有受挫的自我。 | de->向下，flat->平坦（拉丁flatus->吹气），deflated->被放了气的=受挫的（cf. inflate充气，deflate放气，inflation通货膨胀，flatulence胀气）"
     },
     {
       "question": "____ discombobulated",
       "type": "blank",
       "answer": "feel",
-      "explanation": "混乱的，感到混乱。The complicated instructions made him feel discombobulated. 复杂的说明让他感到混乱。"
+      "explanation": "混乱的，感到混乱。The complicated instructions made him feel discombobulated. 复杂的说明让他感到混乱。 | discombobulate->使混乱（19世纪美国俚语，可能来自discompose+bother），discombobulated->被彻底搞糊涂的（cf. flummoxed困惑，bamboozled被耍）"
     },
     {
       "question": "maculated ____",
       "type": "blank",
       "answer": "leaf",
-      "explanation": "有斑点的，有斑点的叶子。The disease caused maculated leaf. 疾病导致有斑点的叶子。"
+      "explanation": "有斑点的，有斑点的叶子。The disease caused maculated leaf. 疾病导致有斑点的叶子。 | macula->斑点（拉丁），maculated->有斑点的（cf. immaculate无瑕疵的=无斑点，macular黄斑的，maculate有斑点）"
     },
     {
       "question": "calculated ____",
       "type": "blank",
       "answer": "move",
-      "explanation": "精心策划的，精心策划的举动。It was a calculated move to gain advantage. 这是精心策划的举动以获得优势。"
+      "explanation": "精心策划的，精心策划的举动。It was a calculated move to gain advantage. 这是精心策划的举动以获得优势。 | calcul->小石子（拉丁calculus->小石子，古代用于计数），calculated->经过仔细计算的（cf. calculate计算，calculus微积分，calcium钙=石灰石）"
     },
     {
       "question": "unregulated ______",
       "type": "blank",
       "answer": "market",
-      "explanation": "不受监管的，不受监管的市场。The unregulated market led to chaos. 不受监管的市场导致混乱。"
+      "explanation": "不受监管的，不受监管的市场。The unregulated market led to chaos. 不受监管的市场导致混乱。 | un->否定，regulate->调节（拉丁regula->规则），unregulated->没有规则调节的（cf. regular定期，regulate调节，ruler统治者/尺子）"
     },
     {
       "question": "animated ____",
       "type": "blank",
       "answer": "film",
-      "explanation": "动画的，动画电影。The children watched an animated film. 孩子们观看了动画电影。"
+      "explanation": "动画的，动画电影。The children watched an animated film. 孩子们观看了动画电影。 | anima->灵魂/生命（拉丁），animated->赋予生命/动作的（cf. animal动物=有灵魂的，animate赋予生命，magnanimous宽宏大量，unanimous全体一致）"
     },
     {
       "question": "_______ underestimated",
       "type": "blank",
       "answer": "grossly",
-      "explanation": "被低估的，被严重低估。The cost was grossly underestimated. 成本被严重低估。"
+      "explanation": "被低估的，被严重低估。The cost was grossly underestimated. 成本被严重低估。 | under->低于，estimate->估计（拉丁aestimare），underestimated->估计低于实际的（cf. estimate估计，esteem尊重，overestimate高估）"
     },
     {
       "question": "opinionated ______",
       "type": "blank",
       "answer": "stance",
-      "explanation": "固执己见的，固执己见的立场。He took an opinionated stance on the issue. 他对这个问题采取了固执己见的立场。"
+      "explanation": "固执己见的，固执己见的立场。He took an opinionated stance on the issue. 他对这个问题采取了固执己见的立场。 | opinion->意见（拉丁opinio），opinionated->过分坚持自己意见的（cf. opinion意见，opine持有意见，pinion翅膀=观点支持）"
     },
     {
       "question": "bloated ___________",
       "type": "blank",
       "answer": "bureaucracy",
-      "explanation": "臃肿的，臃肿的官僚机构。The bloated bureaucracy needed reform. 臃肿的官僚机构需要改革。"
+      "explanation": "臃肿的，臃肿的官僚机构。The bloated bureaucracy needed reform. 臃肿的官僚机构需要改革。 | bloat->膨胀（古挪威blautr->软湿），bloated->过度膨胀的=臃肿的（cf. bloat膨胀，inflate充气，distended膨胀，obese肥胖）"
     },
     {
       "question": "celebrated ______",
       "type": "blank",
       "answer": "artist",
-      "explanation": "著名的，著名的艺术家。The celebrated artist displayed her work. 著名的艺术家展示了她的作品。"
+      "explanation": "著名的，著名的艺术家。The celebrated artist displayed her work. 著名的艺术家展示了她的作品。 | celeber->著名（拉丁），celebrated->被广泛庆贺而著名的（cf. celebrate庆祝，celebrity名人，celebrity status名人地位）"
     },
     {
       "question": "serrated _____",
       "type": "blank",
       "answer": "knife",
-      "explanation": "锯齿状的，锯齿状的刀。Use a serrated knife to cut the bread. 用锯齿状的刀切面包。"
+      "explanation": "锯齿状的，锯齿状的刀。Use a serrated knife to cut the bread. 用锯齿状的刀切面包。 | serra->锯子（拉丁），serrated->像锯一样有齿的（cf. Sierra山脉=锯齿山，serration锯齿，saw锯子）"
     },
     {
       "question": "saturated ___",
       "type": "blank",
       "answer": "fat",
-      "explanation": "饱和的，饱和脂肪。Saturated fat should be limited in diet. 饮食中应限制饱和脂肪。"
+      "explanation": "饱和的，饱和脂肪。Saturated fat should be limited in diet. 饮食中应限制饱和脂肪。 | satur->足够（拉丁satis），saturated->充分填满的=饱和的（cf. satiate满足，satisfy满足，insatiable贪得无厌，Saturday土星日=充足）"
     },
     {
       "question": "sated ________",
       "type": "blank",
       "answer": "appetite",
-      "explanation": "满足的，满足的食欲。After the feast, everyone had a sated appetite. 盛宴后，每个人都有满足的食欲。"
+      "explanation": "满足的，满足的食欲。After the feast, everyone had a sated appetite. 盛宴后，每个人都有满足的食欲。 | satis->足够（拉丁），sated->被充分满足的（cf. satisfy满足，satiate使满足，saturate饱和，insatiable贪得无厌）"
     },
     {
       "question": "premeditated ______",
       "type": "blank",
       "answer": "murder",
-      "explanation": "预谋的，预谋的谋杀。The crime was premeditated murder. 这起犯罪是预谋的谋杀。"
+      "explanation": "预谋的，预谋的谋杀。The crime was premeditated murder. 这起犯罪是预谋的谋杀。 | pre->提前，meditat->思考（拉丁meditari），premeditated->提前思考策划的（cf. meditate冥想，mediation调解，remedy补救）"
     },
     {
       "question": "unpremeditated ___",
       "type": "blank",
       "answer": "act",
-      "explanation": "非预谋的，非预谋的行为。It was an unpremeditated act of passion. 这是激情的非预谋的行为。"
+      "explanation": "非预谋的，非预谋的行为。It was an unpremeditated act of passion. 这是激情的非预谋的行为。 | un->否定，premeditated->预谋的，unpremeditated->未经预谋的=非预谋的（cf. spontaneous自发，impulsive冲动，spur-of-the-moment一时冲动）"
     },
     {
       "question": "agitated _____",
       "type": "blank",
       "answer": "crowd",
-      "explanation": "激动的，激动的人群。The agitated crowd demanded answers. 激动的人群要求答案。"
+      "explanation": "激动的，激动的人群。The agitated crowd demanded answers. 激动的人群要求答案。 | agit->推动（拉丁agitare->驱使），agitated->被激烈推动的=激动的（cf. agitate激动，agitation鼓动，agitator鼓动者，agile敏捷）"
     },
     {
       "question": "understated ________",
       "type": "blank",
       "answer": "elegance",
-      "explanation": "低调的，低调的优雅。The room had understated elegance. 房间有低调的优雅。"
+      "explanation": "低调的，低调的优雅。The room had understated elegance. 房间有低调的优雅。 | under->低于，stated->表达的，understated->表达低于实际的=低调的（cf. understate低调表达，overstate夸大，understatement保守说法）"
     },
     {
       "question": "graduated ___",
       "type": "blank",
       "answer": "tax",
-      "explanation": "累进的，累进税。The country has a graduated tax system. 该国有累进税制度。"
+      "explanation": "累进的，累进税。The country has a graduated tax system. 该国有累进税制度。 | gradu->步骤（拉丁gradus->阶梯），graduated->按阶梯分级的=累进的（cf. grade等级，gradual逐渐，gradient坡度，degrade降级）"
     },
     {
       "question": "superannuated _________",
       "type": "blank",
       "answer": "equipment",
-      "explanation": "过时的，过时的设备。The factory used superannuated equipment. 工厂使用过时的设备。"
+      "explanation": "过时的，过时的设备。The factory used superannuated equipment. 工厂使用过时的设备。 | super->超过，annu->年（拉丁annus），superannuated->超过年龄限制的=过时的（cf. annual年度，anniversary周年，annuity年金，biannual每两年）"
     },
     {
       "question": "antiquated ______",
       "type": "blank",
       "answer": "system",
-      "explanation": "陈旧的，陈旧的系统。The antiquated system needed updating. 陈旧的系统需要更新。"
+      "explanation": "陈旧的，陈旧的系统。The antiquated system needed updating. 陈旧的系统需要更新。 | antiqu->古（拉丁antiquus），antiquated->变得过于古老的=陈旧的（cf. antique古董，antiquity古代，antiquarian古物研究者）"
     },
     {
       "question": "infatuated ___",
       "type": "blank",
       "answer": "fan",
-      "explanation": "迷恋的，迷恋的粉丝。The infatuated fan followed the celebrity everywhere. 迷恋的粉丝到处跟着这位名人。"
+      "explanation": "迷恋的，迷恋的粉丝。The infatuated fan followed the celebrity everywhere. 迷恋的粉丝到处跟着这位名人。 | in->使，fatuus->愚蠢（拉丁），infatuated->被愚弄而着迷的=迷恋的（cf. fatuous愚蠢，fatuity愚蠢，fanatic狂热者=fanum神庙）"
     },
     {
       "question": "cultivated _____",
       "type": "blank",
       "answer": "taste",
-      "explanation": "有修养的，有修养的品味。He had cultivated taste in art. 他在艺术方面有有修养的品味。"
+      "explanation": "有修养的，有修养的品味。He had cultivated taste in art. 他在艺术方面有有修养的品味。 | cultiv->耕作（拉丁colere->耕），cultivated->经过精心耕耘培养的（cf. culture文化，cultivate培养，agriculture农业，cult崇拜）"
     },
     {
       "question": "______ indebted",
       "type": "blank",
       "answer": "deeply",
-      "explanation": "负债的，深深负债。The company was deeply indebted. 公司深深负债。"
+      "explanation": "负债的，深深负债。The company was deeply indebted. 公司深深负债。 | in->进入，debt->债务（拉丁debitum），indebted->欠债的/感激的（cf. debt债务，debit借方，due应付的，owe欠）"
     },
     {
       "question": "distracted _______",
       "type": "blank",
       "answer": "driving",
-      "explanation": "分心的，分心的驾驶。Distracted driving causes many accidents. 分心的驾驶导致许多事故。"
+      "explanation": "分心的，分心的驾驶。Distracted driving causes many accidents. 分心的驾驶导致许多事故。 | dis->分开，tract->拉（拉丁trahere），distracted->被拉向不同方向=分心的（cf. distract分心，attract吸引，extract提取，tractor拖拉机）"
     },
     {
       "question": "dejected ____",
       "type": "blank",
       "answer": "look",
-      "type": "blank",
-      "answer": "look",
-      "explanation": "沮丧的，沮丧的表情。He had a dejected look after losing the game. 输掉比赛后，他有沮丧的表情。"
+      "explanation": "沮丧的，沮丧的表情。He had a dejected look after losing the game. 输掉比赛后，他有沮丧的表情。 | de->向下，ject->投掷（拉丁jacere），dejected->被向下投掷=沮丧的（cf. reject拒绝，project投影，inject注射，eject驱逐）"
     },
     {
       "question": "______ collected",
       "type": "blank",
       "answer": "remain",
-      "explanation": "镇定的，保持镇定。Despite the chaos, she managed to remain collected. 尽管一片混乱，她还是设法保持镇定。"
+      "explanation": "镇定的，保持镇定。Despite the chaos, she managed to remain collected. 尽管一片混乱，她还是设法保持镇定。 | col->共同，lect->选择（拉丁legere），collected->把自己整合集中=镇定的（cf. collect收集，select选择，recollect回忆，intellect智力）"
     }
   ]
 }
