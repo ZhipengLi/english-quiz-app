@@ -1,0 +1,3004 @@
+{
+  "text": "本批词根亮点：\n\n• melancholy：melan（黑）+ choly（胆汁），古医学认为黑胆汁过多=忧郁，melanin（黑色素）同根\n\n• canary：来自加那利群岛（Canaria=犬岛），岛上的黄色小鸟=金丝雀，canine（犬的）同根\n\n• satin：来自中国泉州（阿拉伯名 Zaitun），一种光滑的中国丝绸\n\n• pygmy：希腊语\"拳头大小的测量单位\"（pygme），pugilist（拳击手）同根\n\n• gadfly：苏格拉底被称为雅典的\"牛虻\"，不断刺激市民思考\n\n• accompany：来自 companion（拉丁 com+panis=共同吃饼的人），公司（company）同根\n\n• decoy：荷兰语 kooi（鸟笼），把猎物引入笼中=诱饵\n\n• vagary：和 vagrant/vague/extravagant 同根，都来自 vagari（漫游）",
+  "quiz": [
+    {
+      "question": "cameo __________",
+      "type": "blank",
+      "answer": "appearance",
+      "explanation": "浮雕宝石; 小配角, 客串出演. The director made a cameo appearance in the film's opening scene. 导演在电影的开场戏中客串出演。 | cameo->浮雕宝石（意大利语），cameo->宝石般短暂精彩的出现=客串（cf. intaglio凹雕，相对于浮雕）"
+    },
+    {
+      "question": "_____ archipelago",
+      "type": "blank",
+      "answer": "Greek",
+      "explanation": "群岛, 希腊群岛. We sailed through the Greek archipelago, visiting dozens of beautiful islands. 我们航行穿过希腊群岛,游览了数十个美丽的岛屿。 | Archi->主要，pelagos->海（希腊），archipelago->主海=爱琴海，后泛指群岛"
+    },
+    {
+      "question": "________ virago",
+      "type": "blank",
+      "answer": "shouting",
+      "explanation": "泼妇; 悍妇, 大喊大叫的泼妇. The shouting virago frightened all the customers in the restaurant. 那个大喊大叫的泼妇吓坏了餐厅里所有的顾客。 | vir->男人（拉丁），virago->像男人一样凶悍的女人=悍妇（cf. virile男性的，virtue美德）"
+    },
+    {
+      "question": "___ doggo",
+      "type": "blank",
+      "answer": "lie",
+      "explanation": "一动不动地躲藏, 躲藏着不动. The thief decided to lie doggo until the police left the area. 小偷决定躲藏着不动,直到警察离开该地区。 | doggo->像狗一样趴着（俚语），lie doggo->趴伏不动=躲藏潜伏"
+    },
+    {
+      "question": "______ vertigo",
+      "type": "blank",
+      "answer": "motion",
+      "explanation": "眩晕, 动晕症. She experienced motion vertigo during the turbulent flight. 她在颠簸的飞行中感到晕眩。 | vert->转（拉丁vertere），vertigo->一直转转转=眩晕（cf. vertex顶点，invert倒转，divert转移）"
+    },
+    {
+      "question": "_____ tango",
+      "type": "blank",
+      "answer": "dance",
+      "explanation": "探戈舞, 跳探戈. They learned to dance tango at the evening class. 他们在晚间课程上学习跳探戈。 | tango->探戈（来自南美，可能源自拉丁语tangere->触碰），it takes two to tango->一个巴掌拍不响"
+    },
+    {
+      "question": "cargo ____",
+      "type": "blank",
+      "answer": "ship",
+      "explanation": "货物, 货船. The cargo ship sailed across the Pacific Ocean carrying electronics. 货船载着电子产品横渡太平洋。 | car->装载（西班牙语cargar->装货），cargo->船上装载的货物（cf. car汽车，charge装载/收费）"
+    },
+    {
+      "question": "____ poncho",
+      "type": "blank",
+      "answer": "rain",
+      "explanation": "雨披; 斗篷, 雨披. He wore a rain poncho to stay dry during the storm. 他穿着雨披在暴风雨中保持干燥。 | poncho->斗篷（克丘亚语，南美原住民语），poncho->无袖披风=雨披"
+    },
+    {
+      "question": "_____ braggadocio",
+      "type": "blank",
+      "answer": "empty",
+      "explanation": "吹嘘; 自夸, 空洞的自夸. His claims of success were nothing but empty braggadocio. 他声称的成功不过是空洞的自夸。 | Braggadocchio->斯宾塞《仙后》中的吹牛人物，braggadocio->吹嘘自夸（cf. brag吹牛）"
+    },
+    {
+      "question": "_________ imbroglio",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "复杂的纠纷; 困境, 政治纠葛. The scandal turned into a political imbroglio that lasted for months. 这起丑闻演变成了一场持续数月的政治纠葛。 | imbroglio->纠缠（意大利语，im+broglio->乱成一团），imbroglio->复杂纠纷（cf. embroil卷入）"
+    },
+    {
+      "question": "__________ portfolio",
+      "type": "blank",
+      "answer": "investment",
+      "explanation": "公文包; 投资组合, 投资组合. She carefully diversified her investment portfolio to reduce risk. 她仔细地分散了投资组合以降低风险。 | port->携带，folio->页/纸张（拉丁），portfolio->携带纸张的夹子=公文包/作品集"
+    },
+    {
+      "question": "_____-____ scenario",
+      "type": "blank",
+      "answer": "worst-case",
+      "explanation": "方案; 场景, 最坏情况. The emergency plan covered the worst-case scenario of complete power failure. 应急计划涵盖了完全停电的最坏情况。 | scen->舞台（意大利語），scenario->舞台场景=剧本/方案（cf. scene场景，scenery风景）"
+    },
+    {
+      "question": "_____ impresario",
+      "type": "blank",
+      "answer": "opera",
+      "explanation": "演出经理人; 主办者, 歌剧经理人. The famous opera impresario brought world-class productions to our city. 这位著名的歌剧经理人将世界级的演出带到了我们的城市。 | impresa->企业/事业（意大利语），impresario->承担演出事业的人=演出经理人"
+    },
+    {
+      "question": "______ oratorio",
+      "type": "blank",
+      "answer": "sacred",
+      "explanation": "清唱剧, 宗教清唱剧. The choir performed a sacred oratorio for the Christmas celebration. 合唱团为圣诞庆典演出了一部宗教清唱剧。 | orator->祷告所（意大利语），oratorio->在祷告所演出的宗教歌曲=清唱剧（cf. oration演讲，oratory雄辩术）"
+    },
+    {
+      "question": "____ cello",
+      "type": "blank",
+      "answer": "solo",
+      "explanation": "大提琴, 大提琴独奏. The concert featured a beautiful solo cello performance. 音乐会上有一段优美的大提琴独奏表演。 | violoncello->小提琴族大琴（意大利语），cello->violoncello的缩写=大提琴"
+    },
+    {
+      "question": "_____ peccadillo",
+      "type": "blank",
+      "answer": "minor",
+      "explanation": "小过失; 轻罪, 小过失. His tardiness was just a minor peccadillo compared to more serious offenses. 与更严重的过失相比,他的迟到只是一个小过失。 | pecado->罪（西班牙语，拉丁peccare->犯罪），peccadillo->小罪=小过失（cf. impeccable无可挑剔的=不犯错的）"
+    },
+    {
+      "question": "________ dynamo",
+      "type": "blank",
+      "answer": "electric",
+      "explanation": "发电机; 精力充沛的人, 发电机. The bicycle's electric dynamo powered the headlight. 自行车的发电机为前灯供电。 | dynam->力量（希腊dynamis），dynamo->产生力量的机器=发电机（cf. dynamic动态的，dynamite炸药）"
+    },
+    {
+      "question": "albino ______",
+      "type": "blank",
+      "answer": "animal",
+      "explanation": "白化病患者; 白化的, 白化动物. The zoo acquired a rare albino animal for its collection. 动物园为其收藏获得了一只罕见的白化动物。 | alb->白（拉丁albus），albino->缺乏色素的白色生物（cf. album白色册子，albatross信天翁）"
+    },
+    {
+      "question": "_______ inferno",
+      "type": "blank",
+      "answer": "burning",
+      "explanation": "地狱; 火海, 燃烧的火海. The warehouse became a burning inferno within minutes. 仓库在几分钟内变成了燃烧的火海。 | infernus->地下（拉丁，来自infra->下面），inferno->地下火=地狱/火海（cf. Dante's Inferno但丁地狱）"
+    },
+    {
+      "question": "boo ______",
+      "type": "blank",
+      "answer": "loudly",
+      "explanation": "发嘘声, 大声嘘. The audience began to boo loudly when the performance faltered. 当表演出现失误时,观众开始大声嘘。 | boo->嘘声（象声词），boo->发嘘声表示不满（cf. taboo禁忌=ta+boo，令人发嘘的事）"
+    },
+    {
+      "question": "_________ bugaboo",
+      "type": "blank",
+      "answer": "childhood",
+      "explanation": "恐惧的事物; 困扰, 童年恐惧. Darkness remained a childhood bugaboo that he never quite outgrew. 黑暗仍然是他从未真正克服的童年恐惧。 | bug->鬼怪（威尔士语bwg），bugaboo->令人恐惧的怪物=恐惧之物（cf. bugbear恐惧对象，bogey鬼怪）"
+    },
+    {
+      "question": "kangaroo _____",
+      "type": "blank",
+      "answer": "court",
+      "explanation": "袋鼠, 袋鼠法庭(非正式法庭). The prisoners faced a kangaroo court with no real due process. 囚犯面对的是一个没有真正正当程序的袋鼠法庭。 | kangaroo->袋鼠（澳大利亚原住民语），kangaroo court->像袋鼠跳跃一样跳过程序的非正式法庭"
+    },
+    {
+      "question": "woo _________",
+      "type": "blank",
+      "answer": "investors",
+      "explanation": "追求; 争取, 争取投资者. The startup worked hard to woo investors with their innovative pitch. 这家初创公司努力用他们创新的提案来争取投资者。 | woo->追求（古英语wogian），woo->殷勤追求/争取（cf. suitor追求者）"
+    },
+    {
+      "question": "____ tempo",
+      "type": "blank",
+      "answer": "fast",
+      "explanation": "节奏; 速度, 快节奏. The orchestra played the piece at a fast tempo. 管弦乐队以快节奏演奏这首曲子。 | tempus->时间（拉丁），tempo->音乐的时间=节奏/速度（cf. temporary暂时的，contemporary同时代的）"
+    },
+    {
+      "question": "______ maestro",
+      "type": "blank",
+      "answer": "master",
+      "explanation": "大师; 音乐大师, 大师级指挥. The master maestro conducted the symphony with extraordinary skill. 大师级指挥以非凡的技艺指挥交响乐团。 | maestro->大师（意大利语，来自拉丁magister->主），maestro->乐坛大师（cf. master主人，magistrate法官）"
+    },
+    {
+      "question": "_ ____ tyro",
+      "type": "blank",
+      "answer": "a mere",
+      "explanation": "新手; 初学者, 仅仅是新手. He was a mere tyro in the field of law. 他在法律领域仅仅是个新手。 | tyro->新兵（拉丁tiro），tyro->初学者=新手（cf. rookie新手，novice初学者）"
+    },
+    {
+      "question": "_____ virtuoso",
+      "type": "blank",
+      "answer": "piano",
+      "explanation": "艺术大师; 名家, 钢琴大师. The young piano virtuoso amazed audiences with her technical prowess. 这位年轻的钢琴大师以其高超的技艺使观众惊叹不已。 | virtus->美德/才能（拉丁），virtuoso->才能卓越的人=大师（cf. virtue美德，virtual实际上的）"
+    },
+    {
+      "question": "_____ torso",
+      "type": "blank",
+      "answer": "human",
+      "explanation": "躯干, 人体躯干. The sculpture depicted a human torso in marble. 这座雕塑用大理石描绘了人体躯干。 | torso->茎/躯干（意大利语，来自希腊thyrsus->茎），torso->去掉头手脚的躯干"
+    },
+    {
+      "question": "staccato _____",
+      "type": "blank",
+      "answer": "notes",
+      "explanation": "断奏的; 断续的, 断音. The violinist played the staccato notes with precision. 小提琴家精确地演奏断音。 | staccare->分离（意大利语），staccato->分离弹奏=断奏（cf. detach分离，attach附着，相对为legato连奏）"
+    },
+    {
+      "question": "veto _____",
+      "type": "blank",
+      "answer": "power",
+      "explanation": "否决权; 否决, 否决权. The president exercised his veto power to block the legislation. 总统行使否决权来阻止该立法。 | veto->我禁止（拉丁，罗马护民官的口令），veto->否决权（cf. vote投票，devote奉献）"
+    },
+    {
+      "question": "mosquito ____",
+      "type": "blank",
+      "answer": "bite",
+      "explanation": "蚊子, 蚊子叮咬. The itchy mosquito bite kept her awake all night. 发痒的蚊子叮咬让她整夜无法入睡。 | mosca->苍蝇（西班牙语），mosquito->小苍蝇=蚊子（cf. mosque清真寺，同词根）"
+    },
+    {
+      "question": "____ canto",
+      "type": "blank",
+      "answer": "epic",
+      "explanation": "篇章(长诗的), 史诗篇章. The poet recited the epic canto with great passion. 诗人充满激情地朗诵史诗篇章。 | cant->唱（拉丁cantare），canto->歌唱的一段=长诗的篇章（cf. cantata清唱曲，chant吟唱，enchant迷住）"
+    },
+    {
+      "question": "________ memento",
+      "type": "blank",
+      "answer": "keepsake",
+      "explanation": "纪念品, 纪念品. She kept the locket as a keepsake memento of her grandmother. 她保留着这个小盒作为祖母的纪念品。 | memento->记住（拉丁memini，祈使语气），memento->提醒记忆的物品=纪念品（cf. memory记忆，remember记得）"
+    },
+    {
+      "question": "_____ concerto",
+      "type": "blank",
+      "answer": "piano",
+      "explanation": "协奏曲, 钢琴协奏曲. The famous piano concerto was composed by Rachmaninoff. 这首著名的钢琴协奏曲由拉赫玛尼诺夫创作。 | concertare->共同竞技（意大利语），concerto->独奏乐器与乐队竞技=协奏曲（cf. concert音乐会，concerted协调的）"
+    },
+    {
+      "question": "_____ manifesto",
+      "type": "blank",
+      "answer": "party",
+      "explanation": "宣言, 政党宣言. The party manifesto outlined their policies for the next term. 政党宣言概述了他们下一任期的政策。 | mani->手，fest->显现，manifesto->用手公开展示=宣言（cf. manifest明显的，manifestation表现）"
+    },
+    {
+      "question": "________ gusto",
+      "type": "blank",
+      "answer": "artistic",
+      "explanation": "热情; 兴致, 艺术热情. She painted with artistic gusto, her brushstrokes bold and confident. 她以艺术热情作画,笔触大胆而自信。 | gusto->品味/热情（意大利语，拉丁gustus->品尝），gusto->热情享受（cf. disgust厌恶，gustation味觉）"
+    },
+    {
+      "question": "_____ libretto",
+      "type": "blank",
+      "answer": "opera",
+      "explanation": "歌剧脚本, 歌剧脚本. The composer collaborated closely with the writer of the opera libretto. 作曲家与歌剧脚本的作者密切合作。 | libro->书（意大利语），libretto->小书=歌剧脚本（cf. library图书馆，liberate解放=从书中获得自由）"
+    },
+    {
+      "question": "______ motto",
+      "type": "blank",
+      "answer": "family",
+      "explanation": "座右铭; 格言, 家族格言. The family motto had been passed down for generations. 这个家族格言已经传承了好几代。 | motto->话语（意大利语，拉丁muttum->发声），motto->简短有力的格言（cf. mutter嘟囔，mute沉默）"
+    },
+    {
+      "question": "_____ arroyo",
+      "type": "blank",
+      "answer": "rocky",
+      "explanation": "干涸的河床; 峡谷, 多岩石的干涸河床. We hiked through the rocky arroyo in the desert. 我们徒步穿越沙漠中多岩石的干涸河床。 | arroyo->小溪/干河床（西班牙语），arroyo->西南美洲季节性干涸的河床"
+    },
+    {
+      "question": "reap ________",
+      "type": "blank",
+      "answer": "benefits",
+      "explanation": "收获; 获得, 获得好处. Hard work allows you to reap benefits in the long run. 努力工作让你从长远来看获得好处。 | reap->收割（古英语reopan），reap->收割/获得（reap what you sow->种瓜得瓜）"
+    },
+    {
+      "question": "lap ____",
+      "type": "blank",
+      "answer": "time",
+      "explanation": "一圈; 大腿部, 单圈时间. The race car driver achieved the fastest lap time of the day. 赛车手创下了当天最快的单圈时间。 | lap->折叠/一圈（古英语læppa），lap->一圈赛道/大腿（坐时大腿形成的折叠处）"
+    },
+    {
+      "question": "overlap ____",
+      "type": "blank",
+      "answer": "area",
+      "explanation": "重叠; 交叉, 重叠区域. There is significant overlap area between the two research fields. 这两个研究领域之间有显著的重叠区域。 | over->在上，lap->折叠，overlap->折叠在上面=重叠（cf. lap一圈，flap拍打）"
+    },
+    {
+      "question": "scrap _____",
+      "type": "blank",
+      "answer": "metal",
+      "explanation": "废料; 碎片, 废金属. The recycling plant processes tons of scrap metal daily. 回收厂每天处理数吨废金属。 | scrap->刮下来的碎片（古挪威skrap），scrap->废料/打架（碎片状的争斗）"
+    },
+    {
+      "question": "sap ________",
+      "type": "blank",
+      "answer": "strength",
+      "explanation": "树液; 削弱, 削弱力量. The prolonged illness began to sap strength from his body. 长期的疾病开始削弱他身体的力量。 | sap->树液（古英语sæp），sap->像树液般缓慢流失=削弱（cf. sapling树苗，sapwood边材）"
+    },
+    {
+      "question": "wiretap ____",
+      "type": "blank",
+      "answer": "call",
+      "explanation": "窃听; 窃听装置, 窃听电话. The police obtained a warrant to wiretap call records of the suspect. 警方获得了窃听嫌疑人电话记录的授权。 | wire->电线，tap->轻拍/接入，wiretap->接入电话线=窃听"
+    },
+    {
+      "question": "peep _______",
+      "type": "blank",
+      "answer": "through",
+      "explanation": "偷看; 窥视, 透过...偷看. Children love to peep through the keyhole at night. 孩子们喜欢在晚上透过钥匙孔偷看。 | peep->偷看/小声叫（象声词），peep->窥视（cf. peek偷瞄，peeping Tom偷窥者）"
+    },
+    {
+      "question": "steep _____",
+      "type": "blank",
+      "answer": "price",
+      "explanation": "陡峭的; 过高的, 高昂的价格. The luxury car comes with a steep price tag. 这辆豪华汽车的价格标签很高昂。 | steep->陡峭（古英语steap），steep price->陡峭的价格=高昂（也指浸泡，steep tea->泡茶）"
+    },
+    {
+      "question": "______ chip",
+      "type": "blank",
+      "answer": "potato",
+      "explanation": "芯片; 碎片, 薯片. She enjoyed eating a potato chip while watching television. 她喜欢边看电视边吃薯片。 | chip->碎片（古英语forcippian->切），chip->芯片/薯片（a chip off the old block->有其父必有其子）"
+    },
+    {
+      "question": "____ draftsmanship",
+      "type": "blank",
+      "answer": "fine",
+      "explanation": "绘图技巧, 精湛的绘图技巧. The architect's fine draftsmanship was evident in every detail. 建筑师精湛的绘图技巧在每个细节中都显而易见。 | draft->草图，man->人，ship->技艺，draftsmanship->绘制草图的技艺"
+    },
+    {
+      "question": "_____ championship",
+      "type": "blank",
+      "answer": "world",
+      "explanation": "锦标赛; 冠军, 世界锦标赛. The athlete trained for years to compete in the world championship. 这位运动员训练多年以参加世界锦标赛。 | champion->战场斗士，ship->身份/状态，championship->冠军地位/锦标赛"
+    },
+    {
+      "question": "flip _ ____",
+      "type": "blank",
+      "answer": "a coin",
+      "explanation": "翻转; 抛, 抛硬币. Let's flip a coin to decide who goes first. 让我们抛硬币来决定谁先开始。 | flip->轻弹翻转（象声词），flip a coin->抛硬币（cf. flippant轻率的=不停翻转的）"
+    },
+    {
+      "question": "nip __ ___ ___",
+      "type": "blank",
+      "answer": "in the bud",
+      "explanation": "掐; 夹, 把...扼杀在萌芽状态. We must nip in the bud any rumors before they spread. 我们必须在谣言传播之前把它扼杀在萌芽状态。 | nip->掐/夹，bud->花苞，nip in the bud->在花苞时掐掉=扼杀在萌芽"
+    },
+    {
+      "question": "snip ___",
+      "type": "blank",
+      "answer": "off",
+      "explanation": "剪; 剪断, 剪掉. She used scissors to snip off the loose thread. 她用剪刀剪掉松散的线头。 | snip->快速剪（象声词，cf. snap啪嗒），snip->剪断/便宜货（英式俚语）"
+    },
+    {
+      "question": "rip _____",
+      "type": "blank",
+      "answer": "apart",
+      "explanation": "撕裂; 撕开, 撕开. The strong wind threatened to rip apart the tent. 强风威胁要把帐篷撕开。 | rip->撕裂（象声词），rip->快速撕开（cf. rip current离岸流，RIP安息=rest in peace）"
+    },
+    {
+      "question": "sip ___",
+      "type": "blank",
+      "answer": "tea",
+      "explanation": "啜饮; 小口喝, 啜饮茶. She sat quietly to sip tea in the garden. 她静静地坐在花园里啜饮茶水。 | sip->小口喝（象声词），sip->啜饮（cf. sup小口吸，gulp大口吞）"
+    },
+    {
+      "question": "quip __ ___ ___",
+      "type": "blank",
+      "answer": "of the day",
+      "explanation": "俏皮话; 妙语, 每日妙语. His clever quip of the day made everyone laugh. 他每日妙语让所有人都笑了。 | quip->俏皮话（拉丁quippe->确实），quip->机智的妙语（cf. quibble吹毛求疵）"
+    },
+    {
+      "question": "____ whelp",
+      "type": "blank",
+      "answer": "wolf",
+      "explanation": "幼兽; 幼崽, 狼崽. The mother protected her wolf whelp from danger. 母狼保护她的狼崽免受危险。 | whelp->幼兽（古英语hwelp），whelp->狗/狼的幼崽（cf. puppy小狗，cub熊/狮子幼崽）"
+    },
+    {
+      "question": "______ pulp",
+      "type": "blank",
+      "answer": "orange",
+      "explanation": "果肉; 纸浆, 橙子果肉. Fresh juice contains lots of orange pulp and vitamins. 新鲜果汁含有大量橙子果肉和维生素。 | pulpa->果肉（拉丁），pulp->果肉/纸浆（cf. pulpit讲坛=用木浆做的台，pulpy多汁的）"
+    },
+    {
+      "question": "decamp __ _____",
+      "type": "blank",
+      "answer": "at night",
+      "explanation": "撤营; 逃走, 夜间撤离. The soldiers decided to decamp at night to avoid detection. 士兵们决定夜间撤离以避免被发现。 | de->离开，camp->营地，decamp->离开营地=撤营/逃走（cf. camp营地，campaign战役）"
+    },
+    {
+      "question": "damp _____",
+      "type": "blank",
+      "answer": "cloth",
+      "explanation": "潮湿的; 使潮湿, 湿布. Clean the surface with a damp cloth. 用湿布清洁表面。 | damp->潮湿（中古荷兰语damp->蒸气），damp->潮湿/压制（dampen->使潮湿/压制热情）"
+    },
+    {
+      "question": "____ clamp",
+      "type": "blank",
+      "answer": "hose",
+      "explanation": "夹子; 夹紧, 软管夹. Tighten the hose clamp to prevent leaks. 拧紧软管夹以防止泄漏。 | clamp->夹紧（荷兰语klampe->钩），clamp->夹子/严格限制（cf. cramp抽筋/夹子，clench握紧）"
+    },
+    {
+      "question": "________ stamp",
+      "type": "blank",
+      "answer": "passport",
+      "explanation": "邮票; 印章, 护照印章. The immigration officer placed a passport stamp on the document. 移民官员在文件上盖了护照印章。 | stamp->踩/盖章（古英语stampe->捣碎），stamp->邮票/印章（cf. stomp重踩，trample践踏）"
+    },
+    {
+      "question": "swamp ____ ____",
+      "type": "blank",
+      "answer": "with work",
+      "explanation": "沼泽; 使应接不暇, 工作繁重. The new orders will swamp with work the entire department. 新订单将使整个部门工作繁重。 | swamp->沼泽（低地德语swamp），swamp->沼泽/淹没（cf. bog沼泽，marsh湿地）"
+    },
+    {
+      "question": "temp ______",
+      "type": "blank",
+      "answer": "worker",
+      "explanation": "临时工; 临时的, 临时工. The company hired a temp worker to cover the vacation period. 公司雇用了一名临时工来顶替休假期间的工作。 | temp->temporary的缩写，temp worker->临时工（cf. temporary暂时的，temporal时间的）"
+    },
+    {
+      "question": "___________ imp",
+      "type": "blank",
+      "answer": "mischievous",
+      "explanation": "小恶魔; 顽童, 淘气的小恶魔. The mischievous imp played pranks on everyone in the village. 淘气的小恶魔对村里的每个人都恶作剧。 | imp->接枝/小鬼（古英语impa->嫁接的枝），imp->小恶魔（嫁接在魔鬼树上的小枝）"
+    },
+    {
+      "question": "skimp __ _______",
+      "type": "blank",
+      "answer": "on quality",
+      "explanation": "节省; 吝啬, 在质量上吝啬. Never skimp on quality when buying safety equipment. 购买安全设备时绝不要在质量上吝啬。 | skimp->节省过度（可能来自scrimp->节俭），skimp->吝啬克扣（cf. scrimp节衣缩食，scant不足的）"
+    },
+    {
+      "question": "limp _________",
+      "type": "blank",
+      "answer": "handshake",
+      "explanation": "跛行; 软弱无力的, 软弱无力的握手. His limp handshake gave a poor first impression. 他软弱无力的握手给人留下了糟糕的第一印象。 | limp->软弱（古英语lemphealt->跛），limp->跛行/软弱无力的（cf. lame跛脚的，flimsy脆弱的）"
+    },
+    {
+      "question": "primp _______",
+      "type": "blank",
+      "answer": "oneself",
+      "explanation": "打扮; 精心装扮, 精心打扮自己. She took an hour to primp oneself before the party. 她花了一个小时精心打扮自己才去参加派对。 | primp->精心装扮（prim->整洁），primp->对镜梳妆打扮（cf. preen梳羽/打扮，prim拘谨整洁）"
+    },
+    {
+      "question": "_____ bump",
+      "type": "blank",
+      "answer": "speed",
+      "explanation": "碰撞; 肿块, 减速带. Drive slowly over the speed bump to protect your car. 慢速驾驶通过减速带以保护您的汽车。 | bump->碰撞（象声词），bump->肿块/减速带（cf. lump块状，hump驼峰）"
+    },
+    {
+      "question": "_ lump ___",
+      "type": "blank",
+      "answer": "a sum",
+      "explanation": "肿块; 一次性付款, 一次性总付. He received a lump sum payment when he retired. 他退休时收到了一次性总付款项。 | lump->块（斯堪的纳维亚语），lump sum->整块钱=一次性总付（cf. clump树丛，clod泥块）"
+    },
+    {
+      "question": "plump ______",
+      "type": "blank",
+      "answer": "cheeks",
+      "explanation": "丰满的; 使丰满, 丰满的脸颊. The baby had adorable plump cheeks. 婴儿有可爱的丰满脸颊。 | plump->丰满（中古荷兰语plomp->粗钝），plump->圆润丰满（cf. plum李子=饱满圆润，plump up使丰满）"
+    },
+    {
+      "question": "____ fop",
+      "type": "blank",
+      "answer": "vain",
+      "explanation": "花花公子; 纨绔子弟, 虚荣的花花公子. The vain fop spent hours admiring himself in the mirror. 这个虚荣的花花公子花几个小时在镜子前欣赏自己。 | fop->来源不明，指过度注重外表的人=花花公子（cf. dandy花花公子，popinjay自命不凡者）"
+    },
+    {
+      "question": "_______ coop",
+      "type": "blank",
+      "answer": "chicken",
+      "explanation": "笼子; 鸡舍, 鸡舍. The farmer built a new chicken coop for his hens. 农夫为他的母鸡建了一个新鸡舍。 | coop->桶/笼（拉丁cupa->桶），chicken coop->鸡笼（fly the coop->逃跑=飞出笼子）"
+    },
+    {
+      "question": "____ scoop",
+      "type": "blank",
+      "answer": "news",
+      "explanation": "勺子; 独家新闻, 独家新闻. The journalist got the news scoop of the year. 这位记者获得了年度独家新闻。 | scoop->挖勺（荷兰语schoepe），scoop->勺子/独家报道（first to scoop=第一个挖到独家）"
+    },
+    {
+      "question": "__________ hoop",
+      "type": "blank",
+      "answer": "basketball",
+      "explanation": "箍; 篮圈, 篮球框. The player shot the ball through the basketball hoop. 球员把球投进篮球框。 | hoop->箍圈（古英语hop），hoop->圆形框/篮圈（jump through hoops->跨越重重障碍）"
+    },
+    {
+      "question": "_____ loop",
+      "type": "blank",
+      "answer": "event",
+      "explanation": "环; 循环, 事件循环. The program runs continuously in an event loop. 程序在事件循环中持续运行。 | loop->环形（苏格兰语loup->跳），loop->循环/圈（keep in the loop->保持信息畅通）"
+    },
+    {
+      "question": "_____ backdrop",
+      "type": "blank",
+      "answer": "stage",
+      "explanation": "背景; 背景幕布, 舞台背景. The theater crew painted a beautiful stage backdrop for the play. 剧院工作人员为这出戏画了一幅美丽的舞台背景。 | back->背后，drop->垂下，backdrop->悬挂在舞台背后的幕布=背景（cf. background背景）"
+    },
+    {
+      "question": "_______ prop",
+      "type": "blank",
+      "answer": "support",
+      "explanation": "支柱; 道具, 支撑柱. The miners used a support prop to hold up the tunnel ceiling. 矿工使用支撑柱来支撑隧道顶部。 | prop->支撑物（荷兰语proppe->塞子），prop->支柱/道具（theatrical props->舞台道具）"
+    },
+    {
+      "question": "carp __ _______",
+      "type": "blank",
+      "answer": "at details",
+      "explanation": "鲤鱼; 挑剔, 对细节挑剔. He tends to carp at details instead of seeing the big picture. 他倾向于对细节挑剔,而不是看大局。 | carp->鲤鱼/喋喋不休抱怨（古挪威karpa->吹嘘），carp at->对...喋喋不休挑剔"
+    },
+    {
+      "question": "_____ scarp",
+      "type": "blank",
+      "answer": "steep",
+      "explanation": "陡坡; 悬崖, 陡峭的悬崖. The climbers carefully ascended the steep scarp. 登山者小心翼翼地攀登陡峭的悬崖。 | scarpa->斜坡（意大利语），scarp->陡峭的悬崖面（cf. escarpment悬崖，sharp锋利/陡峭）"
+    },
+    {
+      "question": "harp __",
+      "type": "blank",
+      "answer": "on",
+      "explanation": "竖琴; 喋喋不休, 对...喋喋不休. Stop trying to harp on past mistakes. 不要再对过去的错误喋喋不休了。 | harp->竖琴（古英语hearpe），harp on->像拨琴弦一样反复=喋喋不休（cf. harpoon鱼叉，同根harpe）"
+    },
+    {
+      "question": "_____-____ warp",
+      "type": "blank",
+      "answer": "space-time",
+      "explanation": "弯曲; 扭曲, 时空扭曲. Einstein's theory describes the space-time warp caused by massive objects. 爱因斯坦的理论描述了大质量物体造成的时空扭曲。 | warp->扭曲（古英语weorpan->投掷），warp->翘曲/扭曲（cf. warp speed曲速，weft纬线）"
+    },
+    {
+      "question": "usurp _____",
+      "type": "blank",
+      "answer": "power",
+      "explanation": "篡夺; 侵占, 篡夺权力. The general attempted to usurp power from the legitimate government. 将军试图从合法政府篡夺权力。 | usurp->用（拉丁usus），rap->抓取，usurp->用手抓取本不属于自己的=篡夺（cf. usury放高利贷）"
+    },
+    {
+      "question": "________ coup",
+      "type": "blank",
+      "answer": "military",
+      "explanation": "政变; 妙计, 军事政变. The military coup overthrew the democratically elected president. 军事政变推翻了民选总统。 | coup->打击（法语，拉丁colpus->打），coup d'état->打击国家=政变（cf. cope应对，cf. coupon优惠券）"
+    },
+    {
+      "question": "______ bazaar",
+      "type": "blank",
+      "answer": "street",
+      "explanation": "集市; 市场, 街头集市. The colorful street bazaar sold everything from spices to textiles. 五彩缤纷的街头集市出售从香料到纺织品的各种商品。 | bazar->市场（波斯语），bazaar->东方式露天市集（cf. bizarre奇异的，同音不同义）"
+    },
+    {
+      "question": "debar ____ ______",
+      "type": "blank",
+      "answer": "from office",
+      "explanation": "禁止; 排除, 禁止担任公职. The court decided to debar from office the corrupt official. 法院决定禁止这名腐败官员担任公职。 | de->去除，bar->栏/禁止，debar->设立障碍排除=禁止（cf. bar律师协会/栏，disbar取消律师资格）"
+    },
+    {
+      "question": "disbar _ ______",
+      "type": "blank",
+      "answer": "a lawyer",
+      "explanation": "取消律师资格, 取消律师资格. The bar association voted to disbar a lawyer for unethical conduct. 律师协会投票决定因不道德行为而取消一名律师的资格。 | dis->去除，bar->律师协会，disbar->从律师协会除名=取消律师资格"
+    },
+    {
+      "question": "_______ flatcar",
+      "type": "blank",
+      "answer": "railway",
+      "explanation": "平板车厢, 铁路平板车. The railway flatcar transported heavy machinery across the country. 铁路平板车将重型机械运输到全国各地。 | flat->平坦，car->车厢，flatcar->没有侧壁的平板车厢"
+    },
+    {
+      "question": "_______ forebear",
+      "type": "blank",
+      "answer": "honored",
+      "explanation": "祖先, 受尊敬的祖先. We pay tribute to our honored forebear who founded this family. 我们向创立这个家族的受尊敬的祖先致敬。 | fore->之前，bear->生育（古英语beran），forebear->在我之前生育的人=祖先（注意区分forbear忍耐）"
+    },
+    {
+      "question": "shear ______",
+      "type": "blank",
+      "answer": "stress",
+      "explanation": "剪; 剪切, 剪切应力. Engineers must calculate shear stress when designing bridges. 工程师在设计桥梁时必须计算剪切应力。 | shear->剪切（古英语sceran），shear->剪羊毛/剪切力（cf. scissors剪刀，share分享=切分）"
+    },
+    {
+      "question": "linear _____",
+      "type": "blank",
+      "answer": "model",
+      "explanation": "线性的, 线性模型. The statistician used a linear model to analyze the data. 统计学家使用线性模型来分析数据。 | line->线，linear->线性的（cf. lineage血统，lineal直系的，outline轮廓）"
+    },
+    {
+      "question": "_____ _ spear",
+      "type": "blank",
+      "answer": "throw a",
+      "explanation": "矛; 长矛, 投掷长矛. The athlete prepared to throw a spear in the competition. 运动员准备在比赛中投掷长矛。 | spear->矛（古英语spere），spear->长矛（Shakespeare->shake+spear=甩长矛者）"
+    },
+    {
+      "question": "tear _____",
+      "type": "blank",
+      "answer": "apart",
+      "explanation": "撕裂; 眼泪, 撕开. The conflict threatened to tear apart the community. 这场冲突威胁要撕裂整个社区。 | tear->撕裂（古英语teran），tear->眼泪/撕裂（两义同形，tear apart->撕碎）"
+    },
+    {
+      "question": "vulgar ____",
+      "type": "blank",
+      "answer": "joke",
+      "explanation": "粗俗的; 庸俗的, 粗俗的笑话. His vulgar joke offended many people at the dinner party. 他粗俗的笑话冒犯了晚宴上的许多人。 | vulgus->普通大众（拉丁），vulgar->大众的/粗俗的（cf. Vulgate通俗拉丁文圣经，divulge泄露=对大众说）"
+    },
+    {
+      "question": "________ hangar",
+      "type": "blank",
+      "answer": "aircraft",
+      "explanation": "飞机库, 飞机库. The military aircraft hangar housed dozens of fighter jets. 军用飞机库容纳了数十架战斗机。 | hangard->围起来的地方（法语），hangar->存放飞机的大棚（注意区分hanger衣架，同音）"
+    },
+    {
+      "question": "________ cougar",
+      "type": "blank",
+      "answer": "mountain",
+      "explanation": "美洲狮, 山狮. Hikers should be cautious of the mountain cougar in this region. 徒步旅行者在这个地区应该小心山狮。 | çuçuarana->美洲狮（图皮语），cougar->美洲狮（cf. puma美洲狮，同义）"
+    },
+    {
+      "question": "char _____",
+      "type": "blank",
+      "answer": "grill",
+      "explanation": "烧焦; 炭, 炭烤架. The chef used a char grill to cook the steaks perfectly. 厨师使用炭烤架将牛排烤得恰到好处。 | char->烧成炭（古英语cerran->变成），char->烧焦/炭（cf. charcoal木炭，charred烧焦的）"
+    },
+    {
+      "question": "______ verisimilar",
+      "type": "blank",
+      "answer": "highly",
+      "explanation": "似真的; 逼真的, 高度逼真的. The special effects were highly verisimilar and fooled many viewers. 特效高度逼真,欺骗了许多观众。 | veri->真（拉丁verus），simil->相似，verisimilar->像真的一样=逼真的（cf. verify证实，similar相似）"
+    },
+    {
+      "question": "____ cellar",
+      "type": "blank",
+      "answer": "wine",
+      "explanation": "地窖; 酒窖, 酒窖. The restaurant has an extensive wine cellar with rare vintages. 这家餐厅有一个藏有稀有年份酒的大型酒窖。 | cella->小房间（拉丁），cellar->地下小室=地窖（cf. cell牢房/细胞，cellular手机）"
+    },
+    {
+      "question": "stellar ___________",
+      "type": "blank",
+      "answer": "performance",
+      "explanation": "恒星的; 杰出的, 出色的表现. The actor delivered a stellar performance in the leading role. 这位演员在主角中奉献了出色的表现。 | stella->星星（拉丁），stellar->星星般耀眼的=杰出的（cf. constellation星座，interstellar星际）"
+    },
+{
+      "question": "_____ pillar",
+      "type": "blank",
+      "answer": "stone",
+      "explanation": "柱子; 支柱, 石柱. The ancient temple was supported by a massive stone pillar. 古老的寺庙由一根巨大的石柱支撑。 | pila->柱（拉丁），pillar->支撑柱（cf. pillow枕头，compile编辑=堆积在一起）"
+    },
+    {
+      "question": "caterpillar _____",
+      "type": "blank",
+      "answer": "track",
+      "explanation": "毛毛虫; 履带, 履带. The tank moved slowly on its caterpillar track across rough terrain. 坦克在崎岖的地形上用履带缓慢移动。 | chate->毛，pillier->毛发（古法语），caterpillar->毛茸茸的虫=毛毛虫"
+    },
+    {
+      "question": "_____ collar",
+      "type": "blank",
+      "answer": "white",
+      "explanation": "衣领; 项圈, 白领. She worked in a white collar office environment. 她在白领办公环境中工作。 | collum->颈（拉丁），collar->围绕颈部的=衣领（white collar白领，blue collar蓝领）"
+    },
+    {
+      "question": "molar _____",
+      "type": "blank",
+      "answer": "tooth",
+      "explanation": "臼齿, 臼齿. The dentist examined my molar tooth for cavities. 牙医检查我的臼齿是否有蛀牙。 | mola->磨石（拉丁），molar->像磨石一样研磨的牙=臼齿（cf. molecule分子，grind磨碎）"
+    },
+    {
+      "question": "polar ________",
+      "type": "blank",
+      "answer": "opposite",
+      "explanation": "极地的; 截然相反的, 截然相反. Their political views were polar opposite on every issue. 他们的政治观点在每个问题上都截然相反。 | polus->极点（希腊），polar->极点的（cf. pole极点，bipolar两极的）"
+    },
+    {
+      "question": "______ vernacular",
+      "type": "blank",
+      "answer": "street",
+      "explanation": "方言; 本地话, 街头俚语. The rapper used street vernacular in his lyrics. 说唱歌手在歌词中使用街头俚语。 | verna->家生奴隶（拉丁，在家出生的），vernacular->家乡原生的语言=方言（cf. vernal春天的）"
+    },
+    {
+      "question": "oracular _____________",
+      "type": "blank",
+      "answer": "pronouncement",
+      "explanation": "神谕的; 晦涩的, 神谕般的声明. The philosopher made an oracular pronouncement about the future. 哲学家对未来作出了神谕般的声明。 | oraculum->神谕（拉丁，来自os->口），oracular->像神谕一样晦涩=神谕的（cf. oracle神谕，oration演讲）"
+    },
+    {
+      "question": "spectacular ____",
+      "type": "blank",
+      "answer": "view",
+      "explanation": "壮观的; 惊人的, 壮观的景色. The mountain summit offered a spectacular view of the valley. 山顶提供了山谷的壮观景色。 | spect->看，acular->形容词后缀，spectacular->值得看的=壮观的（cf. spectacle奇观，inspect检查）"
+    },
+    {
+      "question": "secular _________",
+      "type": "blank",
+      "answer": "education",
+      "explanation": "世俗的; 非宗教的, 世俗教育. The country adopted a secular education system. 该国采用了世俗教育体系。 | saeculum->时代/世纪（拉丁），secular->属于此世的=世俗的（cf. century世纪，medieval中世纪）"
+    },
+    {
+      "question": "perpendicular ____",
+      "type": "blank",
+      "answer": "line",
+      "explanation": "垂直的, 垂直线. Draw a perpendicular line from the base to the apex. 从底边到顶点画一条垂直线。 | per->穿过，pendere->悬挂，perpendicular->完全垂直悬挂的=垂直的（cf. pendant挂件，pendulum钟摆）"
+    },
+    {
+      "question": "auricular _____",
+      "type": "blank",
+      "answer": "nerve",
+      "explanation": "耳的; 听觉的, 耳神经. The doctor examined the damage to the auricular nerve. 医生检查了耳神经的损伤。 | auris->耳（拉丁），auricular->耳的（cf. aural听觉的，auricle耳廓）"
+    },
+    {
+      "question": "particular _______",
+      "type": "blank",
+      "answer": "concern",
+      "explanation": "特别的; 特定的, 特别关注. Safety is a particular concern for parents. 安全是父母特别关注的问题。 | particul->小部分（拉丁particula），particular->针对某一小部分的=特定的（cf. particle粒子，part部分）"
+    },
+    {
+      "question": "avuncular ______",
+      "type": "blank",
+      "answer": "advice",
+      "explanation": "伯父般的; 慈祥的, 伯父般的建议. He offered avuncular advice to the young graduates. 他向年轻的毕业生提供了伯父般的建议。 | avunculus->母亲的兄弟（拉丁，舅舅），avuncular->像慈祥舅舅般的（cf. uncle叔舅，同词源）"
+    },
+    {
+      "question": "ocular _______",
+      "type": "blank",
+      "answer": "disease",
+      "explanation": "眼睛的; 视觉的, 眼疾. The patient suffered from a serious ocular disease. 患者患有严重的眼疾。 | oculus->眼睛（拉丁），ocular->眼睛的（cf. binoculars双筒望远镜，monocle单片眼镜）"
+    },
+    {
+      "question": "jocular ____",
+      "type": "blank",
+      "answer": "tone",
+      "explanation": "滑稽的; 诙谐的, 诙谐的语气. He spoke in a jocular tone to lighten the mood. 他用诙谐的语气说话来缓和气氛。 | jocus->玩笑（拉丁），jocular->充满玩笑的=诙谐的（cf. joke笑话，jocund欢乐的）"
+    },
+    {
+      "question": "circular ______",
+      "type": "blank",
+      "answer": "motion",
+      "explanation": "圆形的; 循环的, 圆周运动. The planets follow a circular motion around the sun. 行星围绕太阳做圆周运动。 | circul->圆圈，circular->圆形的/循环的（cf. circle圆，circulation循环，circumference周长）"
+    },
+    {
+      "question": "vascular ______",
+      "type": "blank",
+      "answer": "system",
+      "explanation": "血管的, 血管系统. The vascular system carries blood throughout the body. 血管系统将血液输送到全身。 | vasculum->小容器（拉丁vas->容器），vascular->管道的=血管的（cf. vessel船/容器，vast广大的）"
+    },
+    {
+      "question": "crepuscular _____",
+      "type": "blank",
+      "answer": "light",
+      "explanation": "黄昏的; 朦胧的, 黄昏之光. The photographer captured the crepuscular light at dusk. 摄影师捕捉到了黄昏时的黄昏之光。 | crepusculum->黄昏（拉丁，creper->昏暗），crepuscular->黄昏的（cf. decrepit衰老=从昏暗走向的）"
+    },
+    {
+      "question": "angular ____",
+      "type": "blank",
+      "answer": "face",
+      "explanation": "有角的; 棱角分明的, 棱角分明的脸. The model had an angular face with sharp cheekbones. 模特有一张棱角分明的脸,颧骨很高。 | angul->角（拉丁angulus），angular->有角的=棱角分明的（cf. angle角度，triangle三角形）"
+    },
+    {
+      "question": "insular _________",
+      "type": "blank",
+      "answer": "mentality",
+      "explanation": "岛屿的; 狭隘的, 狭隘心态. The community suffered from an insular mentality. 该社区存在狭隘心态。 | insula->岛（拉丁），insular->岛屿般与外界隔绝的=狭隘的（cf. island岛，insulate绝缘，peninsula半岛）"
+    },
+    {
+      "question": "titular ____",
+      "type": "blank",
+      "answer": "head",
+      "explanation": "名义上的; 有名无实的, 名义上的领导. He was the titular head of the organization with no real authority. 他是该组织名义上的领导,没有实权。 | titulus->称号（拉丁），titular->只有称号的=名义上的（cf. title头衔，entitle赋予权利）"
+    },
+    {
+      "question": "mar ___ _______",
+      "type": "blank",
+      "answer": "the surface",
+      "explanation": "损坏; 破坏, 损坏表面. Be careful not to mar the surface of the antique table. 小心不要损坏古董桌的表面。 | mar->损毁（古英语mierran），mar->破坏（cf. marred受损的，blemish瑕疵）"
+    },
+    {
+      "question": "______ oar",
+      "type": "blank",
+      "answer": "wooden",
+      "explanation": "桨; 橹, 木桨. The rowers pulled the wooden oar through the water. 划船者用木桨在水中划动。 | oar->桨（古英语ar），oar->划船用的桨（put one's oar in->多管闲事=插桨）"
+    },
+    {
+      "question": "_____ nectar",
+      "type": "blank",
+      "answer": "drink",
+      "explanation": "花蜜; 甘露, 饮用花蜜. Bees collect and drink nectar from flowers. 蜜蜂从花朵中采集和饮用花蜜。 | nektar->神饮（希腊，nek->死亡，tar->越过），nectar->越过死亡的神饮/花蜜（cf. necromancy死灵术）"
+    },
+    {
+      "question": "___ mortar",
+      "type": "blank",
+      "answer": "mix",
+      "explanation": "灰浆; 研钵, 搅拌灰浆. The mason had to mix mortar for the brickwork. 泥瓦匠必须为砖砌工程搅拌灰浆。 | mortarium->研钵（拉丁），mortar->研钵/灰浆/迫击炮（三义共用，都有研磨/混合之意）"
+    },
+    {
+      "question": "jabber ____",
+      "type": "blank",
+      "answer": "away",
+      "explanation": "快速含糊地说, 喋喋不休. The children would jabber away in the playground. 孩子们会在操场上喋喋不休。 | jabber->快速含混说话（象声词），jabber away->喋喋不休（cf. jabberwocky胡言乱语）"
+    },
+    {
+      "question": "limber ____",
+      "type": "blank",
+      "answer": "body",
+      "explanation": "柔软的; 灵活的, 柔软的身体. Yoga helps maintain a limber body as you age. 瑜伽有助于随着年龄增长保持柔软的身体。 | limber->柔韧（来源不明），limber up->热身拉伸（cf. limp软弱无力，supple柔软）"
+    },
+    {
+      "question": "______ timber",
+      "type": "blank",
+      "answer": "lumber",
+      "explanation": "木材; 木料, 木材. The construction crew ordered lumber timber for the new house. 施工队为新房订购了木材。 | timbre->建筑材料（古法语），timber->建筑用木材（cf. timbre音色=木质乐器发出的，同词源）"
+    },
+    {
+      "question": "cumber ____ _____",
+      "type": "blank",
+      "answer": "with rules",
+      "explanation": "妨碍; 使负担, 用规则束缚. Too many regulations cumber with rules the creative process. 太多的规定用规则束缚了创作过程。 | combre->障碍（古法语），cumber->造成阻碍=妨碍（cf. encumber阻碍，cucumber黄瓜=绕藤而生）"
+    },
+    {
+      "question": "encumber ________",
+      "type": "blank",
+      "answer": "progress",
+      "explanation": "妨碍; 阻碍, 阻碍进展. Excessive bureaucracy can encumber progress in any organization. 过度的官僚主义会阻碍任何组织的进展。 | en->使，cumber->阻碍，encumber->使受阻=妨碍（cf. cumber妨碍，cucumber黄瓜）"
+    },
+    {
+      "question": "lumber ____",
+      "type": "blank",
+      "answer": "yard",
+      "explanation": "木材; 缓慢移动, 木材场. We bought supplies from the local lumber yard. 我们从当地木材场购买了物资。 | lumber->木材/笨重移动（斯堪的纳维亚语），lumber yard->木材场（lumber along->笨拙地走）"
+    },
+    {
+      "question": "____ slumber",
+      "type": "blank",
+      "answer": "deep",
+      "explanation": "睡眠; 沉睡, 深度睡眠. The baby fell into a deep slumber after feeding. 婴儿喂食后进入深度睡眠。 | slumber->睡眠（古英语sluma），slumber->沉睡（cf. slumberous催眠的，slumber party睡衣派对）"
+    },
+    {
+      "question": "sober ________",
+      "type": "blank",
+      "answer": "judgment",
+      "explanation": "清醒的; 冷静的, 冷静的判断. The situation required sober judgment rather than emotion. 这种情况需要冷静的判断而不是情绪化。 | sobrius->不醉的（拉丁），sober->清醒的/冷静的（cf. sobriety清醒，sob哭泣，不同来源）"
+    },
+    {
+      "question": "______ tuber",
+      "type": "blank",
+      "answer": "potato",
+      "explanation": "块茎, 马铃薯块茎. The farmer harvested the potato tuber from the field. 农民从田里收获马铃薯块茎。 | tuber->块茎/肿块（拉丁），tuber->块状根茎（cf. tubercle小结节，tuberculosis结核病）"
+    },
+    {
+      "question": "_______ ulcer",
+      "type": "blank",
+      "answer": "stomach",
+      "explanation": "溃疡, 胃溃疡. Stress can contribute to developing a stomach ulcer. 压力会导致胃溃疡的形成。 | ulcus->溃疡（拉丁），ulcer->溃烂的伤口=溃疡（cf. ulcerate溃烂，fester化脓）"
+    },
+    {
+      "question": "freelancer ___",
+      "type": "blank",
+      "answer": "gig",
+      "explanation": "自由职业者, 自由职业者工作. She found a new freelancer gig designing websites. 她找到了一份设计网站的新自由职业者工作。 | free->自由，lance->长矛，freelancer->自由骑士（中世纪不属于任何领主的雇佣骑士）"
+    },
+    {
+      "question": "______ fodder",
+      "type": "blank",
+      "answer": "cannon",
+      "explanation": "饲料; 素材, 炮灰. The young soldiers were treated as cannon fodder in the war. 年轻士兵在战争中被当作炮灰。 | foder->喂食（古英语），fodder->牲口饲料（cannon fodder->炮灰=被当成炮弹饲料的人）"
+    },
+    {
+      "question": "____ rudder",
+      "type": "blank",
+      "answer": "ship",
+      "explanation": "舵, 船舵. The captain turned the ship rudder to change course. 船长转动船舵改变航向。 | rother->桨/舵（古英语），rudder->控制方向的船舵（cf. row划桨，ruddy红润的，不同词源）"
+    },
+    {
+      "question": "bewilder ___ ________",
+      "type": "blank",
+      "answer": "the audience",
+      "explanation": "使困惑; 使迷惑, 使观众困惑. The magician's tricks would bewilder the audience completely. 魔术师的戏法会完全使观众困惑。 | be->使，wilder->迷路于荒野，bewilder->使如迷失于荒野=使困惑（cf. wild荒野，wilderness荒野）"
+    },
+    {
+      "question": "____ folder",
+      "type": "blank",
+      "answer": "file",
+      "explanation": "文件夹, 文件夹. Please save the document in the file folder on the desktop. 请将文档保存在桌面上的文件夹中。 | fold->折叠，folder->折叠起来的容器=文件夹（cf. fold折叠，manifold多重的）"
+    },
+    {
+      "question": "___ beholder",
+      "type": "blank",
+      "answer": "the",
+      "explanation": "旁观者; 观看者, 旁观者. Beauty is in the eye of the beholder. 情人眼里出西施。 | be->注意，hold->持有，beholder->持续注视的人=观看者（beauty is in the eye of the beholder->美在观者眼中）"
+    },
+    {
+      "question": "solder _____",
+      "type": "blank",
+      "answer": "joint",
+      "explanation": "焊接; 焊料, 焊接接头. The technician carefully heated the solder joint. 技术员小心地加热焊接接头。 | solidare->使坚固（拉丁），solder->使金属融合接合=焊接（注意l不发音，cf. solid固体，consolidate巩固）"
+    },
+    {
+      "question": "____ boulder",
+      "type": "blank",
+      "answer": "huge",
+      "explanation": "巨石, 巨大的巨石. A huge boulder blocked the mountain path. 一块巨大的巨石挡住了山路。 | bullersten->大声作响的石头（古斯堪的纳维亚语），boulder->巨石（cf. bold大胆，build建造）"
+    },
+    {
+      "question": "shoulder ___ ______",
+      "type": "blank",
+      "answer": "the burden",
+      "explanation": "肩膀; 承担, 承担负担. He had to shoulder the burden of caring for his family alone. 他不得不独自承担照顾家人的负担。 | shoulder->肩膀（古英语sculdor），shoulder->肩/承担（cf. cold shoulder冷落=转过冷肩膀）"
+    },
+    {
+      "question": "meander _____",
+      "type": "blank",
+      "answer": "river",
+      "explanation": "蜿蜒而行; 漫步, 蜿蜒的河流. The meander river wound slowly through the valley. 蜿蜒的河流缓慢地穿过山谷。 | Maeandros->土耳其西部极度弯曲的河流（希腊语），meander->像那条河一样弯弯曲曲"
+    },
+    {
+      "question": "_ gander __",
+      "type": "blank",
+      "answer": "a at",
+      "explanation": "雄鹅; 看一眼, 看一眼. Take a gander at this interesting article. 看一眼这篇有趣的文章。 | gander->雄鹅（古英语gandra），take a gander->像鹅伸长脖子张望=看一眼（cf. goose鹅，gender性别，同词根）"
+    },
+    {
+      "question": "_______ colander",
+      "type": "blank",
+      "answer": "kitchen",
+      "explanation": "滤器; 漏勺, 厨房滤器. Drain the pasta using a kitchen colander. 用厨房滤器沥干意大利面。 | colare->过滤（拉丁），colander->过滤用的器具=漏勺（cf. percolate渗滤，filter过滤）"
+    },
+    {
+      "question": "gerrymander ________",
+      "type": "blank",
+      "answer": "district",
+      "explanation": "不公正地划分选区, 不公正划分的选区. Politicians tried to gerrymander district boundaries for electoral advantage. 政客们试图为了选举优势而不公正划分选区边界。 | Gerry->马萨诸塞州长，salamander->蝾螈（划出的选区形似蝾螈），gerrymander->政治操控选区划分"
+    },
+    {
+      "question": "pander __ ______",
+      "type": "blank",
+      "answer": "to tastes",
+      "explanation": "迎合; 拉皮条, 迎合口味. The media tends to pander to tastes of the lowest common denominator. 媒体往往迎合最低共同标准的口味。 | Pandarus->特洛伊战争中的拉皮条者（荷马史诗），pander->迎合低级趣味（cf. pandemonium大混乱）"
+    },
+    {
+      "question": "squander _____",
+      "type": "blank",
+      "answer": "money",
+      "explanation": "挥霍; 浪费, 挥霍金钱. Don't squander money on things you don't need. 不要在你不需要的东西上挥霍金钱。 | squander->挥霍（来源不明），squander->浪费挥霍（cf. wander漫游，founder沉没，同韵联想）"
+    },
+    {
+      "question": "___ fender",
+      "type": "blank",
+      "answer": "car",
+      "explanation": "挡泥板, 汽车挡泥板. The accident left a dent in the car fender. 事故在汽车挡泥板上留下了凹痕。 | fend->抵挡，fender->抵挡碰撞的部件=挡泥板（cf. defend防御，offend冒犯，fend off抵挡）"
+    },
+    {
+      "question": "engender _____",
+      "type": "blank",
+      "answer": "trust",
+      "explanation": "产生; 引起, 产生信任. Good communication can engender trust between team members. 良好的沟通可以在团队成员之间产生信任。 | en->使，gender->生育/产生，engender->使产生=引起（cf. generate产生，gender性别，genre类型）"
+    },
+    {
+      "question": "render _ _______",
+      "type": "blank",
+      "answer": "a verdict",
+      "explanation": "提供; 宣布, 宣布裁决. The jury will render a verdict after deliberation. 陪审团将在审议后宣布裁决。 | rendre->给回（古法语），render->给予/提供/宣布（cf. surrender投降=交出，surrender=sur+render）"
+    },
+    {
+      "question": "________ surrender",
+      "type": "blank",
+      "answer": "military",
+      "explanation": "投降; 放弃, 军事投降. The enemy announced their military surrender at dawn. 敌人在黎明时宣布军事投降。 | sur->在上，render->交出，surrender->向上交出=投降（cf. render给予，tender温柔/投标）"
+    },
+    {
+      "question": "tender _____",
+      "type": "blank",
+      "answer": "offer",
+      "explanation": "温柔的; 投标, 投标报价. The company submitted a tender offer to buy the competitor. 该公司提交了收购竞争对手的投标报价。 | tend->伸向（拉丁tendere），tender->伸出/温柔的/投标（cf. extend延伸，intend意图，attend参加）"
+    },
+    {
+      "question": "_____ provender",
+      "type": "blank",
+      "answer": "horse",
+      "explanation": "饲料; 食物, 马饲料. The stable keeper prepared horse provender for the evening. 马厩管理员为晚上准备了马饲料。 | pro->为...准备，vend->出售（拉丁），provender->预备好的饲料（cf. vendor小贩，vend出售）"
+    },
+    {
+      "question": "___ remainder",
+      "type": "blank",
+      "answer": "the",
+      "explanation": "剩余部分, 剩余部分. She spent the remainder of the day reading. 她把一天剩余的时间都用来阅读。 | re->再次，main->留下（拉丁manere），remainder->留下来的部分=剩余（cf. remain留下，remains遗迹）"
+    },
+    {
+      "question": "_______ faultfinder",
+      "type": "blank",
+      "answer": "chronic",
+      "explanation": "挑剔的人; 吹毛求疵者, 长期挑剔的人. The chronic faultfinder complained about every minor detail. 这个长期挑剔的人对每个小细节都抱怨。 | fault->缺陷，finder->寻找者，faultfinder->专门找缺陷的人=吹毛求疵者"
+    },
+    {
+      "question": "hinder ________",
+      "type": "blank",
+      "answer": "progress",
+      "explanation": "阻碍; 妨碍, 阻碍进展. Bad weather conditions can hinder progress on construction projects. 恶劣的天气条件会阻碍建筑项目的进展。 | hinder->后面的/阻碍（古英语hindan->从后面），hinder->从后面拦住=阻碍（cf. behind在后面，hindrance障碍）"
+    },
+    {
+      "question": "______ cylinder",
+      "type": "blank",
+      "answer": "engine",
+      "explanation": "圆柱体; 汽缸, 发动机气缸. The mechanic checked each engine cylinder for damage. 机械师检查每个发动机气缸是否有损坏。 | kylindros->滚筒（希腊），cylinder->圆柱形/汽缸（cf. cylindrical圆柱形的，on all cylinders全力运转）"
+    },
+    {
+      "question": "________ reminder",
+      "type": "blank",
+      "answer": "friendly",
+      "explanation": "提醒物; 提示, 友好的提醒. This is just a friendly reminder about tomorrow's meeting. 这只是关于明天会议的友好提醒。 | re->再次，mind->记住，reminder->再次让人记住的东西=提醒（cf. remind提醒，memory记忆）"
+    },
+    {
+      "question": "_____ rejoinder",
+      "type": "blank",
+      "answer": "witty",
+      "explanation": "回答; 反驳, 机智的回答. She delivered a witty rejoinder that silenced her critics. 她做出了一个机智的回答,让批评者哑口无言。 | re->回，joindre->加入/回应（古法语），rejoinder->回击的回答=反驳（cf. rejoin回答，join加入）"
+    },
+    {
+      "question": "tinder ___",
+      "type": "blank",
+      "answer": "box",
+      "explanation": "火绒; 引火物, 火绒盒. The old tinder box contained materials to start a fire. 旧火绒盒里装着生火的材料。 | tinder->引火物（古英语tynder），tinder->火绒/引燃物（tinder box->打火盒，Tinder约会软件=点火）"
+    },
+    {
+      "question": "____ larder",
+      "type": "blank",
+      "answer": "food",
+      "explanation": "食品储藏室, 食品储藏室. She stocked the food larder with provisions for winter. 她在食品储藏室里储存了冬天的食物。 | lardarium->猪油储藏室（拉丁lard->猪油），larder->原指储存猪油的地方=食品储藏室（cf. lard猪油）"
+    },
+    {
+      "question": "_____ girder",
+      "type": "blank",
+      "answer": "steel",
+      "explanation": "大梁; 主梁, 钢梁. The bridge was supported by massive steel girder beams. 这座桥由巨大的钢梁支撑。 | gird->围绕/束紧（古英语gyrdan），girder->围绕/支撑结构的主梁（cf. gird腰带，girdle腰带）"
+    },
+    {
+      "question": "sheer _____",
+      "type": "blank",
+      "answer": "cliff",
+      "explanation": "陡峭的; 纯粹的, 陡峭的悬崖. The climbers faced a sheer cliff that rose hundreds of feet. 登山者面对一座高达数百英尺的陡峭悬崖。 | sheer->完全/纯粹（古挪威skerr->纯净），sheer cliff->完全垂直的悬崖（cf. sheer fabric极薄的布料）"
+    },
+    {
+      "question": "_____ veneer",
+      "type": "blank",
+      "answer": "moral",
+      "explanation": "饰面; 虚饰, 道德伪装. His politeness was just a moral veneer hiding his true intentions. 他的礼貌只是掩盖其真实意图的道德伪装。 | furnieren->用薄板贴面（德语），veneer->表面薄板=虚饰（cf. fur皮毛，furniture家具）"
+    },
+    {
+      "question": "_____ mutineer",
+      "type": "blank",
+      "answer": "naval",
+      "explanation": "叛变者, 海军叛变者. The naval mutineer was court-martialed for his actions. 这名海军叛变者因其行为被军事法庭审判。 | mutin->叛乱（古法语），mutineer->参与叛乱的人=叛变者（cf. mutiny兵变，mute沉默，不同词源）"
+    },
+    {
+      "question": "racketeer ____",
+      "type": "blank",
+      "answer": "ring",
+      "explanation": "敲诈者; 诈骗者, 敲诈团伙. The police broke up a dangerous racketeer ring. 警方捣毁了一个危险的敲诈团伙。 | racket->喧嚣/诈骗（可能来自rack->折磨），racketeer->从事非法勒索的人（cf. racket球拍/噪音）"
+    },
+    {
+      "question": "___ profiteer",
+      "type": "blank",
+      "answer": "war",
+      "explanation": "奸商; 牟取暴利者, 战争奸商. The war profiteer made millions from selling supplies. 战争奸商通过出售物资赚取了数百万。 | profit->利润，eer->人（后缀），profiteer->靠不当手段牟取暴利的人（cf. engineer工程师，volunteer志愿者）"
+    },
+    {
+      "question": "steer ___ ____________",
+      "type": "blank",
+      "answer": "the conversation",
+      "explanation": "驾驶; 引导, 引导对话. She tried to steer the conversation away from controversial topics. 她试图引导对话远离有争议的话题。 | steer->驾驶（古英语steoran），steer->引导方向（cf. stern船尾，steering wheel方向盘）"
+    },
+    {
+      "question": "_____ gazetteer",
+      "type": "blank",
+      "answer": "world",
+      "explanation": "地名词典, 世界地名词典. The world gazetteer listed every major city and landmark. 世界地名词典列出了每个主要城市和地标。 | gazetta->威尼斯小硬币/报纸（意大利语），gazetteer->像报纸一样记录地名的索引=地名词典（cf. gazette公报）"
+    },
+    {
+      "question": "queer ____",
+      "type": "blank",
+      "answer": "idea",
+      "explanation": "奇怪的; 古怪的, 奇怪的想法. That's a queer idea that nobody has considered before. 那是一个以前没人考虑过的奇怪想法。 | quer->斜/歪（德语），queer->不正常的=奇怪的（cf. query疑问，inquire询问，不同词源）"
+    },
+    {
+      "question": "defer _______",
+      "type": "blank",
+      "answer": "payment",
+      "explanation": "推迟; 延期, 延期付款. The bank allowed us to defer payment for three months. 银行允许我们延期付款三个月。 | de->向下/离开，fer->带（拉丁ferre），defer->推迟带来=延期（cf. refer参考，prefer偏好，infer推断）"
+    },
+    {
+      "question": "____ coffer",
+      "type": "blank",
+      "answer": "iron",
+      "explanation": "保险箱; 金库, 铁保险箱. The valuable documents were locked in an iron coffer. 贵重文件被锁在铁保险箱里。 | cophinus->篮子（希腊），coffer->存放贵重物品的箱子=保险箱（cf. coffin棺材=最终的箱子，同词源）"
+    },
+    {
+      "question": "buffer ____",
+      "type": "blank",
+      "answer": "zone",
+      "explanation": "缓冲; 缓冲区, 缓冲区. The UN established a buffer zone between the warring factions. 联合国在交战派系之间建立了一个缓冲区。 | buff->缓冲打击（古法语buffe->打击），buffer->吸收冲击的装置=缓冲（cf. buffet自助餐/猛击，bluff虚张声势）"
+    },
+    {
+      "question": "_________ conifer",
+      "type": "blank",
+      "answer": "evergreen",
+      "explanation": "针叶树, 常绿针叶树. The forest was filled with tall evergreen conifer trees. 森林里到处都是高大的常绿针叶树。 | con->球果（拉丁conus->圆锥），fer->携带，conifer->携带球果的树=针叶树（cf. cone圆锥，pine松树）"
+    },
+    {
+      "question": "________ aquifer",
+      "type": "blank",
+      "answer": "confined",
+      "explanation": "含水层, 承压含水层. The city drew water from a deep confined aquifer. 该市从深层承压含水层取水。 | aqui->水（拉丁aqua），fer->携带，aquifer->携带水的地层=含水层（cf. aquatic水生的，aqueduct水道）"
+    },
+    {
+      "question": "infer _______",
+      "type": "blank",
+      "answer": "meaning",
+      "explanation": "推断; 推论, 推断意义. We can infer meaning from the context of the sentence. 我们可以从句子的上下文推断意义。 | in->向内，fer->带，infer->从内部带出结论=推断（cf. refer参考，defer推迟，prefer偏好）"
+    },
+    {
+      "question": "meager ______",
+      "type": "blank",
+      "answer": "income",
+      "explanation": "贫乏的; 微薄的, 微薄的收入. They struggled to survive on their meager income. 他们努力靠微薄的收入生存。 | macer->消瘦（拉丁），meager->消瘦的=贫乏的（cf. emaciation消瘦，lean瘦的）"
+    },
+    {
+      "question": "______ forager",
+      "type": "blank",
+      "answer": "forest",
+      "explanation": "觅食者, 森林觅食者. The forest forager collected mushrooms and berries. 森林觅食者采集蘑菇和浆果。 | fourrage->干草（古法语），forage->四处觅食，forager->觅食者（cf. foray突击/搜寻，forage觅食）"
+    },
+    {
+      "question": "badger ____ _________",
+      "type": "blank",
+      "answer": "with questions",
+      "explanation": "獾; 纠缠, 用问题纠缠. The reporters would badger with questions every witness at the scene. 记者们会用问题纠缠现场的每个目击者。 | badger->獾（来源不明），badger->像獾一样死缠烂打=纠缠（badger baiting->逗獾，残忍运动）"
+    },
+    {
+      "question": "_______ ledger",
+      "type": "blank",
+      "answer": "general",
+      "explanation": "分类账; 账簿, 总账. The accountant recorded all transactions in the general ledger. 会计在总账中记录了所有交易。 | legger->躺着的东西（荷兰语，指横梁），ledger->账簿（横躺在桌上的大册子，cf. lie躺，lay放置）"
+    },
+    {
+      "question": "____ ranger",
+      "type": "blank",
+      "answer": "park",
+      "explanation": "护林员; 巡逻员, 公园护林员. The park ranger guided tourists through the wilderness. 公园护林员带领游客穿越荒野。 | range->范围/巡逻，ranger->在范围内巡逻的人=护林员（cf. arrange安排，range范围，Lone Ranger独行侠）"
+    },
+    {
+      "question": "harbinger __ ______",
+      "type": "blank",
+      "answer": "of change",
+      "explanation": "先兆; 预兆, 变革的先兆. The election results were seen as a harbinger of change. 选举结果被视为变革的先兆。 | heriberga->军队庇护所（古高地德语），harbinger->先行安排住所的人=先驱/先兆（cf. harbor港湾，heritage遗产）"
+    },
+    {
+      "question": "ginger ___",
+      "type": "blank",
+      "answer": "tea",
+      "explanation": "姜; 生姜, 姜茶. She drank ginger tea to soothe her upset stomach. 她喝姜茶来缓解胃部不适。 | srngaveram->角状根（梵语），ginger->生姜（ginger up->激励=用姜刺激，gingerly->小心地）"
+    },
+    {
+      "question": "malinger __ ____",
+      "type": "blank",
+      "answer": "at work",
+      "explanation": "装病; 逃避工作, 在工作中装病. Some employees malinger at work to avoid difficult tasks. 一些员工在工作中装病以逃避困难任务。 | mal->坏，lingrer->拖延（法语），malinger->故意拖延假装生病=装病（cf. linger徘徊，malingerer装病者）"
+    },
+    {
+      "question": "____ versemonger",
+      "type": "blank",
+      "answer": "hack",
+      "explanation": "蹩脚诗人, 蹩脚诗人. The critic dismissed him as a hack versemonger with no talent. 批评家认为他是一个没有才华的蹩脚诗人。 | verse->诗，monger->商贩，versemonger->贩卖劣质诗的人=蹩脚诗人（cf. ironmonger铁器商，fishmonger鱼贩）"
+    },
+    {
+      "question": "_______ forger",
+      "type": "blank",
+      "answer": "skilled",
+      "explanation": "伪造者, 技艺高超的伪造者. The skilled forger created convincing fake documents. 技艺高超的伪造者制作了令人信服的假文件。 | forge->锻造/伪造（拉丁fabricare），forger->锻造者/伪造者（cf. fabricate制造/编造，falsify伪造）"
+    },
+    {
+      "question": "___ __ auger",
+      "type": "blank",
+      "answer": "use an",
+      "explanation": "螺旋钻, 使用螺旋钻. The carpenter will use an auger to drill holes in the wood. 木匠将使用螺旋钻在木头上钻孔。 | nafu->hub of wheel（古英语，车轮毂），auger->从nafu+gar（矛）演变，用于钻孔的螺旋工具（注意来自a+nauger）"
+    },
+    {
+      "question": "archer ____",
+      "type": "blank",
+      "answer": "fish",
+      "explanation": "弓箭手, 射水鱼. The archer fish shoots water at insects above the surface. 射水鱼向水面上的昆虫射水。 | arc->弓（拉丁arcus），archer->使用弓的人=弓箭手（cf. arc弧，archery射箭，arcade拱廊）"
+    },
+    {
+      "question": "pitcher _____",
+      "type": "blank",
+      "answer": "plant",
+      "explanation": "水罐; 投手, 猪笼草. The carnivorous pitcher plant traps insects for nutrition. 食肉的猪笼草捕捉昆虫作为营养。 | pitcher->水罐（古法语pichier），pitcher plant->形似水罐的植物=猪笼草（cf. pitch投掷，pitcher投手/水罐）"
+    },
+    {
+      "question": "lexicographer ___",
+      "type": "blank",
+      "answer": "job",
+      "explanation": "词典编纂者, 词典编纂者的工作. The lexicographer job requires extensive knowledge of language. 词典编纂者的工作需要广泛的语言知识。 | lexis->词语，grapher->书写者，lexicographer->书写词语的人=词典编纂者（cf. lexicon词典，geography地理）"
+    },
+    {
+      "question": "cartographer's ___",
+      "type": "blank",
+      "answer": "map",
+      "explanation": "地图制作者, 地图制作者的地图. The cartographer's map showed incredible detail of the terrain. 地图制作者的地图显示了地形的惊人细节。 | carta->纸/地图（拉丁），grapher->书写者，cartographer->绘制地图的人（cf. chart图表，graphic图形）"
+    },
+    {
+      "question": "______ cipher",
+      "type": "blank",
+      "answer": "secret",
+      "explanation": "密码; 暗号, 秘密密码. Spies communicated using a secret cipher during the war. 间谍在战争期间使用秘密密码进行通信。 | sifr->零（阿拉伯语，来自梵语sunya->空），cipher->零/密码（cf. zero零，decipher解密）"
+    },
+    {
+      "question": "decipher _ ____",
+      "type": "blank",
+      "answer": "a code",
+      "explanation": "破译; 解码, 破译密码. The cryptographer worked to decipher a code from the enemy. 密码学家努力破译敌人的密码。 | de->去除，cipher->密码，decipher->去除密码的遮掩=破译（cf. encipher加密，cipher密码）"
+    },
+    {
+      "question": "encipher _ _______",
+      "type": "blank",
+      "answer": "a message",
+      "explanation": "加密, 加密信息. Intelligence officers must encipher a message before transmission. 情报官员必须在传输前加密信息。 | en->使成为，cipher->密码，encipher->使成为密码=加密（cf. decipher破译，encrypt加密）"
+    },
+    {
+      "question": "___ gusher",
+      "type": "blank",
+      "answer": "oil",
+      "explanation": "喷涌的东西, 油井喷涌. The prospectors struck an oil gusher in the Texas plains. 勘探者在德克萨斯平原上发现了一个喷油井。 | gush->喷涌（古挪威gjósa），gusher->喷涌的东西=喷油井/过分热情的人（cf. gust一阵风，gust of enthusiasm热情迸发）"
+    },
+    {
+      "question": "______ bather",
+      "type": "blank",
+      "answer": "public",
+      "explanation": "沐浴者, 公共泳者. The public bather enjoyed swimming at the community pool. 公共泳者喜欢在社区游泳池游泳。 | bath->沐浴（古英语bæth），bather->沐浴者（cf. bath浴室，bathe沐浴，bathroom浴室）"
+    },
+    {
+      "question": "bellwether _____",
+      "type": "blank",
+      "answer": "stock",
+      "explanation": "领头羊; 指标, 指标股. Analysts watch the bellwether stock to predict market trends. 分析师关注指标股以预测市场趋势。 | bell->铃铛，wether->阉割的公羊，bellwether->脖子上挂铃铛领路的公羊=先驱/指标（cf. whether是否，weather天气）"
+    },
+{
+      "question": "_____ panther",
+      "type": "blank",
+      "answer": "black",
+      "explanation": "黑豹, 黑豹. The black panther moved silently through the jungle. 黑豹无声地穿过丛林。 | panthera->豹（希腊），panther->豹（黑豹是豹的黑色变体，cf. leopard豹，pantheon万神殿）"
+    },
+    {
+      "question": "cavalier ________",
+      "type": "blank",
+      "answer": "attitude",
+      "explanation": "骑士; 傲慢的, 傲慢的态度. His cavalier attitude toward safety rules worried his colleagues. 他对安全规则的傲慢态度让同事们担心。 | caval->马（拉丁caballus），cavalier->骑马的人=骑士（骑马者态度傲慢）=轻慢的（cf. cavalry骑兵，chivalry骑士精神）"
+    },
+    {
+      "question": "_______ chandelier",
+      "type": "blank",
+      "answer": "crystal",
+      "explanation": "枝形吊灯, 水晶吊灯. The crystal chandelier sparkled in the ballroom. 水晶吊灯在舞厅里闪闪发光。 | chandelle->蜡烛（法语），chandelier->悬挂多支蜡烛的灯架=枝形吊灯（cf. candle蜡烛，chandler蜡烛商）"
+    },
+    {
+      "question": "_______ pier",
+      "type": "blank",
+      "answer": "fishing",
+      "explanation": "码头; 桥墩, 钓鱼码头. Locals gathered at the fishing pier every morning. 当地人每天早上都聚集在钓鱼码头。 | pier->支柱/码头（古法语piere->石头），pier->伸入水中的石头平台=码头（cf. pier glass立式穿衣镜）"
+    },
+    {
+      "question": "____________ dossier",
+      "type": "blank",
+      "answer": "intelligence",
+      "explanation": "档案; 卷宗, 情报档案. The spy carried a classified intelligence dossier. 间谍携带了一份机密情报档案。 | dos->背部（法语），dossier->背部有标签的文件捆=档案卷宗（cf. dose剂量，dorsal背部的）"
+    },
+    {
+      "question": "pucker ____",
+      "type": "blank",
+      "answer": "lips",
+      "explanation": "皱起; 撅起, 撅起嘴唇. She would pucker lips when tasting something sour. 她尝到酸的东西时会撅起嘴唇。 | pucker->皱褶（可能来自pocket口袋），pucker->收缩成皱褶=撅起（cf. pocket口袋，puckered皱的）"
+    },
+    {
+      "question": "canker ____",
+      "type": "blank",
+      "answer": "sore",
+      "explanation": "溃疡; 腐蚀, 口腔溃疡. The painful canker sore made eating difficult. 疼痛的口腔溃疡使进食困难。 | cancer->螃蟹（拉丁，因溃疡形似螃蟹爪），canker->腐蚀性溃疡（cf. cancer癌症，chancre下疳，同词源）"
+    },
+    {
+      "question": "____-______ broker",
+      "type": "blank",
+      "answer": "real-estate",
+      "explanation": "经纪人, 房地产经纪人. The real-estate broker showed us several properties. 房地产经纪人向我们展示了几处房产。 | brocher->打开酒桶（古法语），broker->最初指开桶卖酒的人=中间商/经纪人（cf. broke破产，brokerage经纪业）"
+    },
+    {
+      "question": "______ hawker",
+      "type": "blank",
+      "answer": "street",
+      "explanation": "小贩, 街头小贩. The street hawker sold fresh fruit from his cart. 街头小贩从他的推车上卖新鲜水果。 | hawk->鹰/兜售，hawker->像鹰一样四处搜寻顾客的人=小贩（cf. hawk叫卖，huckster小贩）"
+    },
+    {
+      "question": "______ dabbler",
+      "type": "blank",
+      "answer": "casual",
+      "explanation": "业余爱好者; 涉猎者, 业余涉猎者. He was just a casual dabbler in photography, not a professional. 他只是摄影的业余涉猎者,不是专业人士。 | dabble->轻拍水面/浅尝（dab->轻触），dabbler->浅尝辄止的人=业余涉猎者（cf. dip浅试）"
+    },
+    {
+      "question": "_______ cobbler",
+      "type": "blank",
+      "answer": "village",
+      "explanation": "鞋匠; 水果馅饼, 村里的鞋匠. The village cobbler repaired shoes for the community. 村里的鞋匠为社区修鞋。 | cobbler->鞋匠（来源不明，可能来自cobble->鹅卵石，修路人），cobbler->鞋匠/水果派（两义）"
+    },
+    {
+      "question": "____ wrangler",
+      "type": "blank",
+      "answer": "head",
+      "explanation": "牧马人; 争论者, 首席牧马人. The head wrangler supervised all the ranch hands. 首席牧马人监督所有牧场工人。 | wrangler->争辩者（低地德语wrangeln->扭打），wrangler->牛仔/争论者（cf. wrangle争吵，wrangle cattle管理牛群）"
+    },
+    {
+      "question": "potboiler _____",
+      "type": "blank",
+      "answer": "novel",
+      "explanation": "粗制滥造的作品, 粗制滥造的小说. The author wrote a potboiler novel to pay the bills. 作者写了一部粗制滥造的小说来支付账单。 | pot->锅，boiler->烧锅，potboiler->为了让锅不空（糊口）而匆忙写成的=粗制滥造的作品"
+    },
+    {
+      "question": "tickler ____",
+      "type": "blank",
+      "answer": "file",
+      "explanation": "提醒物; 备忘录, 提醒文件. Keep a tickler file to remember important deadlines. 保留一个提醒文件来记住重要的截止日期。 | tickle->触动/挠痒，tickler->触动记忆的东西=提醒备忘（cf. ticklish敏感的，tickler file提醒系统）"
+    },
+    {
+      "question": "_ stickler ___ ______",
+      "type": "blank",
+      "answer": "a for detail",
+      "explanation": "坚持细节的人; 固执者, 对细节很坚持的人. She is a stickler for detail in all her work. 她在所有工作中都是一个对细节很坚持的人。 | stickle->坚持（古英语stihtan->安排），stickler->坚持规则的人（cf. stick坚持，stickler for rules规则控）"
+    },
+    {
+      "question": "________ propeller",
+      "type": "blank",
+      "answer": "airplane",
+      "explanation": "螺旋桨, 飞机螺旋桨. The airplane propeller spun rapidly before takeoff. 飞机螺旋桨在起飞前快速旋转。 | pro->向前，pell->推，propeller->向前推进的装置=螺旋桨（cf. propel推进，compel强迫，repel排斥）"
+    },
+    {
+      "question": "____ painkiller",
+      "type": "blank",
+      "answer": "take",
+      "explanation": "止痛药, 服用止痛药. The doctor advised me to take painkiller for the headache. 医生建议我服用止痛药来治疗头痛。 | pain->痛，killer->杀手，painkiller->杀死疼痛的药=止痛药（cf. thriller惊悚片，thriller=thrill+er）"
+    },
+    {
+      "question": "______ sampler",
+      "type": "blank",
+      "answer": "needle",
+      "explanation": "样品; 刺绣样品, 刺绣样品. The antique needle sampler displayed beautiful stitching. 古董刺绣样品展示了美丽的针法。 | sample->样本（拉丁exemplum），sampler->展示样本的刺绣/采样器（cf. example例子，example->exemplum）"
+    },
+    {
+      "question": "______ rustler",
+      "type": "blank",
+      "answer": "cattle",
+      "explanation": "偷牛贼, 偷牛贼. The sheriff arrested the cattle rustler on the open range. 警长在开阔牧场上逮捕了偷牛贼。 | rustle->沙沙作响/偷盗（象声词，偷偷拿走时的声音），rustler->偷牛者（cf. hustle拼命，bustle忙碌）"
+    },
+    {
+      "question": "howler _______",
+      "type": "blank",
+      "answer": "mistake",
+      "explanation": "咆哮者; 大错误, 严重错误. The typo in the headline was a howler mistake. 标题中的拼写错误是一个严重错误。 | howl->嚎叫，howler->引人嚎叫的大错误（cf. howler monkey嚎猴，howl嚎叫）"
+    },
+    {
+      "question": "______ sizzler",
+      "type": "blank",
+      "answer": "summer",
+      "explanation": "炎热的天气; 热门事物, 炎热的夏天. This summer sizzler brought record-breaking temperatures. 这个炎热的夏天带来了创纪录的高温。 | sizzle->发出嘶嘶声（象声词，热锅上的声音），sizzler->令人如处热锅的=炎热天气/热门事物"
+    },
+    {
+      "question": "________ disclaimer",
+      "type": "blank",
+      "answer": "warranty",
+      "explanation": "免责声明, 保修免责声明. Read the warranty disclaimer carefully before purchasing. 购买前仔细阅读保修免责声明。 | dis->否定，claim->声称，disclaimer->否认声称=免责声明（cf. claim声称，disclaim否认，reclaim收回）"
+    },
+    {
+      "question": "______ hammer",
+      "type": "blank",
+      "answer": "sledge",
+      "explanation": "锤子, 大锤. The worker swung the sledge hammer to break the concrete. 工人挥动大锤打碎混凝土。 | hammer->锤（古英语hamor），sledge->雪橇/大锤（古英语slecg->沉重的锤），sledgehammer->像雪橇一样沉重的锤"
+    },
+    {
+      "question": "___ _ sledgehammer",
+      "type": "blank",
+      "answer": "use a",
+      "explanation": "大锤, 使用大锤. You'll need to use a sledgehammer to demolish that wall. 你需要使用大锤来拆除那堵墙。 | sledgehammer->用大锤（a sledgehammer approach->用大锤处理=粗暴/过激的方式）"
+    },
+    {
+      "question": "______ misnomer",
+      "type": "blank",
+      "answer": "common",
+      "explanation": "用词不当; 误称, 常见的误称. Calling it a jellyfish is a common misnomer since they're not fish. 称其为水母是一个常见的误称,因为它们不是鱼。 | mis->错误，nomer->名字（拉丁nomen），misnomer->错误的名字=误称（cf. nominate提名，nominal名义的）"
+    },
+    {
+      "question": "______ informer",
+      "type": "blank",
+      "answer": "police",
+      "explanation": "告密者; 线人, 警方线人. The police informer provided crucial information about the gang. 警方线人提供了关于该团伙的关键信息。 | in->进入，form->形式/告知，informer->向警方告知的人=线人（cf. inform通知，information信息）"
+    },
+    {
+      "question": "_______ designer",
+      "type": "blank",
+      "answer": "fashion",
+      "explanation": "设计师, 时装设计师. The famous fashion designer unveiled her new collection. 著名时装设计师发布了她的新系列。 | de->彻底，sign->标记，designer->精心标记设计的人=设计师（cf. sign标志，assign指定，designate指定）"
+    },
+    {
+      "question": "_____ retainer",
+      "type": "blank",
+      "answer": "legal",
+      "explanation": "聘用金; 固定器, 法律聘用金. The client paid a legal retainer to secure the lawyer's services. 客户支付了法律聘用金以获得律师的服务。 | re->继续，tain->持有，retainer->使持续持有的东西=聘用金/固定器（cf. retain保留，detain拘留）"
+    },
+    {
+      "question": "________ mariner",
+      "type": "blank",
+      "answer": "seasoned",
+      "explanation": "水手; 海员, 经验丰富的水手. The seasoned mariner navigated through the storm with skill. 经验丰富的水手熟练地在暴风雨中航行。 | mare->海（拉丁），mariner->海上的人=水手（cf. marine海洋的，maritime海事的，submarine潜水艇）"
+    },
+    {
+      "question": "forerunner __________",
+      "type": "blank",
+      "answer": "technology",
+      "explanation": "先驱; 前身, 先驱技术. The telegraph was a forerunner technology to modern communications. 电报是现代通信的先驱技术。 | fore->前，runner->跑者，forerunner->前方的跑者=先驱（cf. precursor先驱，predecessor前任）"
+    },
+    {
+      "question": "_______ practitioner",
+      "type": "blank",
+      "answer": "medical",
+      "explanation": "从业者; 执业者, 医疗从业者. The medical practitioner diagnosed the patient's condition. 医疗从业者诊断了患者的病情。 | practice->实践，itioner->执行者后缀，practitioner->将知识付诸实践的人=从业者（cf. practice实践，practical实际的）"
+    },
+    {
+      "question": "_____ petitioner",
+      "type": "blank",
+      "answer": "court",
+      "explanation": "请愿者; 上诉人, 法院上诉人. The court petitioner filed documents requesting a hearing. 法院上诉人提交了要求听证的文件。 | petit->请求（拉丁petere），petitioner->提出请求的人=请愿者（cf. petition请愿，compete竞争=一起请求）"
+    },
+    {
+      "question": "garner _______",
+      "type": "blank",
+      "answer": "support",
+      "explanation": "获得; 收集, 获得支持. The candidate worked hard to garner support from voters. 候选人努力工作以获得选民的支持。 | granarium->粮仓（拉丁），garner->像粮仓一样积累=收集（cf. granary粮仓，grain谷粒，garner support收集支持）"
+    },
+    {
+      "question": "______ vintner",
+      "type": "blank",
+      "answer": "French",
+      "explanation": "酿酒商, 法国酿酒商. The French vintner produced exceptional wines from his vineyard. 法国酿酒商从他的葡萄园生产出了卓越的葡萄酒。 | vinum->葡萄酒（拉丁），vintner->葡萄酒商人（cf. wine葡萄酒，vine葡萄藤，vintage年份酒）"
+    },
+    {
+      "question": "caper _____",
+      "type": "blank",
+      "answer": "about",
+      "explanation": "雀跃; 恶作剧, 雀跃. The children would caper about in the playground joyfully. 孩子们会在操场上欢快地雀跃。 | caper->跳跃（拉丁capriolus->小山羊），caper->像小山羊一样蹦跳=雀跃/恶作剧（cf. capriole马的跃起，capricorn山羊座）"
+    },
+    {
+      "question": "_____ reaper",
+      "type": "blank",
+      "answer": "grain",
+      "explanation": "收割者; 收割机, 谷物收割机. The farmer used a grain reaper to harvest the wheat. 农民使用谷物收割机收割小麦。 | reap->收割（古英语reopan），reaper->收割者（the Grim Reaper->死神=收割灵魂的人）"
+    },
+    {
+      "question": "_____ damper",
+      "type": "blank",
+      "answer": "piano",
+      "explanation": "减震器; 制音器, 钢琴制音器. The piano damper stops the strings from vibrating. 钢琴制音器阻止琴弦振动。 | damp->抑制/潮湿，damper->抑制振动的装置=制音器（put a damper on->给...泼冷水）"
+    },
+    {
+      "question": "_______ hamper",
+      "type": "blank",
+      "answer": "laundry",
+      "explanation": "妨碍; 洗衣篮, 洗衣篮. Put your dirty clothes in the laundry hamper. 把你的脏衣服放进洗衣篮。 | hamper->大篮子/妨碍（古法语hanapier->杯架），hamper->装东西的大篮/妨碍（两义）"
+    },
+    {
+      "question": "temper _______",
+      "type": "blank",
+      "answer": "justice",
+      "explanation": "脾气; 调和, 调和正义. The judge must temper justice with mercy. 法官必须以仁慈调和正义。 | tempus->时间/混合（拉丁），temper->适度调和（cf. temperature温度，temperament性情，temperate温和的）"
+    },
+    {
+      "question": "_________ interloper",
+      "type": "blank",
+      "answer": "unwelcome",
+      "explanation": "闯入者; 干涉者, 不受欢迎的闯入者. The unwelcome interloper disrupted the private meeting. 不受欢迎的闯入者扰乱了私人会议。 | inter->之间，loper->闯入者（荷兰loopen->跑），interloper->闯入中间的人=干涉者（cf. elope私奔=跑走）"
+    },
+    {
+      "question": "dapper _______",
+      "type": "blank",
+      "answer": "dresser",
+      "explanation": "衣着整洁的; 精神的, 穿着整洁的人. He was known as a dapper dresser with impeccable style. 他以穿着整洁、风格无可挑剔而闻名。 | dapper->整洁（荷兰语dapper->勇敢/敏捷），dapper->衣着整洁精神的（cf. natty整洁，spruce精神的）"
+    },
+    {
+      "question": "clipper ____",
+      "type": "blank",
+      "answer": "ship",
+      "explanation": "快速帆船; 剪刀, 快速帆船. The clipper ship sailed swiftly across the ocean. 快速帆船迅速驶过大洋。 | clip->剪/快速移动，clipper->剪得很快的/快速帆船（cf. clip剪，clippers剪刀，clipping剪报）"
+    },
+    {
+      "question": "_ pauper's _____",
+      "type": "blank",
+      "answer": "a grave",
+      "explanation": "贫民; 穷人, 贫民的坟墓. He was buried in a pauper's grave with no marker. 他被埋葬在一个没有标记的贫民的坟墓里。 | pauper->穷人（拉丁pauper->贫乏），pauper->一无所有的人（cf. poor穷，poverty贫困，impoverish使贫穷）"
+    },
+    {
+      "question": "_____ treasurer",
+      "type": "blank",
+      "answer": "state",
+      "explanation": "财务主管; 司库, 州财务主管. The state treasurer manages public funds. 州财务主管管理公共资金。 | thesaurus->宝库（希腊），treasurer->管理宝库的人=财务主管（cf. treasury财政部，thesaurus同义词典）"
+    },
+    {
+      "question": "miser's _____",
+      "type": "blank",
+      "answer": "hoard",
+      "explanation": "守财奴, 守财奴的储藏. The miser's hoard of gold was discovered after his death. 守财奴的储藏黄金在他死后被发现。 | miser->悲惨（拉丁miser->悲惨的），miser->因过度吝啬而悲惨的人=守财奴（cf. miserable悲惨的，misery痛苦）"
+    },
+    {
+      "question": "_____ hawser",
+      "type": "blank",
+      "answer": "steel",
+      "explanation": "粗缆绳, 钢缆绳. The ship was secured to the dock with a steel hawser. 船用钢缆绳固定在码头上。 | hausser->升起（古法语，来自拉丁altus->高），hawser->用来升锚的粗缆=粗缆绳（cf. hoist升起，haul拖拉）"
+    },
+    {
+      "question": "geyser ________",
+      "type": "blank",
+      "answer": "eruption",
+      "explanation": "间歇泉, 间歇泉喷发. Tourists gathered to watch the geyser eruption at Yellowstone. 游客聚集在黄石公园观看间歇泉喷发。 | Geysir->冰岛著名间歇泉（来自古挪威geysa->喷涌），geyser->间歇泉（cf. gush喷涌）"
+    },
+    {
+      "question": "cater _____",
+      "type": "blank",
+      "answer": "event",
+      "explanation": "承办酒席; 迎合, 承办活动. The restaurant will cater event for the wedding reception. 餐厅将为婚宴承办活动。 | acater->采购食物者（古法语），cater->采购食物/提供餐饮（cf. caterer餐饮承包商，catering餐饮服务）"
+    },
+    {
+      "question": "idolater _______",
+      "type": "blank",
+      "answer": "worship",
+      "explanation": "偶像崇拜者, 偶像崇拜. The idolater worship of celebrities can be excessive. 对名人的偶像崇拜可能过度。 | idol->偶像，later->崇拜者（希腊latreia->崇拜），idolater->崇拜偶像的人（cf. idol偶像，idolatry偶像崇拜）"
+    },
+    {
+      "question": "________ crater",
+      "type": "blank",
+      "answer": "volcanic",
+      "explanation": "火山口; 坑, 火山口. The volcanic crater was still steaming from recent activity. 火山口仍在冒着最近活动的蒸汽。 | krater->混合碗（希腊，古代混合葡萄酒的大碗），crater->碗状的坑=火山口（cf. krater古希腊混酒碗）"
+    },
+    {
+      "question": "_____ backwater",
+      "type": "blank",
+      "answer": "rural",
+      "explanation": "死水; 落后地区, 农村落后地区. The town was dismissed as a rural backwater by city dwellers. 这个城镇被城市居民认为是农村落后地区。 | back->倒退，water->水，backwater->向后流的死水=落后地区（cf. backlog积压，setback挫折）"
+    },
+    {
+      "question": "_______ specter",
+      "type": "blank",
+      "answer": "ghostly",
+      "explanation": "幽灵; 恐怖的景象, 幽灵般的鬼魂. A ghostly specter appeared in the haunted mansion. 幽灵般的鬼魂出现在闹鬼的豪宅中。 | spect->看（拉丁spectare），specter->能看到的东西=幽灵（cf. spectre幽灵，spectrum光谱，spectacle奇观）"
+    },
+    {
+      "question": "deter _____",
+      "type": "blank",
+      "answer": "crime",
+      "explanation": "阻止; 威慑, 威慑犯罪. Strict laws help deter crime in the community. 严格的法律有助于威慑社区的犯罪。 | de->离开，ter->使恐惧（拉丁terrere），deter->使通过恐惧而离开=威慑（cf. terror恐惧，terrible可怕的）"
+    },
+    {
+      "question": "______ diameter",
+      "type": "blank",
+      "answer": "circle",
+      "explanation": "直径, 圆的直径. Measure the circle diameter from edge to edge. 从边缘到边缘测量圆的直径。 | dia->穿过，meter->测量，diameter->穿过圆心测量=直径（cf. diagonal对角线，perimeter周长）"
+    },
+    {
+      "question": "_______ parameter",
+      "type": "blank",
+      "answer": "tunable",
+      "explanation": "参数, 可调参数. The model includes a tunable parameter for optimization. 该模型包括一个用于优化的可调参数。 | para->旁边，meter->测量，parameter->旁边的测量值=参数（cf. perimeter周长，barometer气压计）"
+    },
+    {
+      "question": "perimeter _____",
+      "type": "blank",
+      "answer": "fence",
+      "explanation": "周长; 周边, 周边围栏. Security guards patrol the perimeter fence regularly. 保安定期巡逻周边围栏。 | peri->周围，meter->测量，perimeter->测量周围=周长/周边（cf. diameter直径，parameter参数）"
+    },
+    {
+      "question": "odometer _______",
+      "type": "blank",
+      "answer": "reading",
+      "explanation": "里程表, 里程表读数. The odometer reading showed the car had traveled 50,000 miles. 里程表读数显示汽车已行驶5万英里。 | odo->路（希腊hodos），meter->测量，odometer->测量行路距离=里程表（cf. method方法=沿路走，episode插曲）"
+    },
+    {
+      "question": "____ slaughter",
+      "type": "blank",
+      "answer": "mass",
+      "explanation": "屠杀; 大量杀戮, 大屠杀. The battle resulted in a mass slaughter of soldiers. 这场战斗导致了士兵的大屠杀。 | slaughter->屠杀（古挪威slátr->屠宰），slaughterhouse->屠宰场（cf. daughter女儿，同音不同义）"
+    },
+    {
+      "question": "_____ arbiter",
+      "type": "blank",
+      "answer": "final",
+      "explanation": "仲裁者; 裁决者, 最终仲裁者. The Supreme Court serves as the final arbiter of the law. 最高法院是法律的最终仲裁者。 | arbiter->目击者/仲裁者（拉丁），arbiter->仲裁判决者（cf. arbitrate仲裁，arbitrary武断的=仲裁者说了算）"
+    },
+    {
+      "question": "loiter ______",
+      "type": "blank",
+      "answer": "around",
+      "explanation": "闲荡; 徘徊, 四处闲荡. Don't loiter around the store entrance. 不要在商店门口四处闲荡。 | loiter->徘徊（荷兰语loteren->摇晃），loiter->无目的地徘徊（cf. idle闲逛，linger逗留）"
+    },
+    {
+      "question": "reconnoiter ____",
+      "type": "blank",
+      "answer": "area",
+      "explanation": "侦察, 侦察区域. The scouts were sent ahead to reconnoiter area before the attack. 侦察兵被派去在进攻前侦察区域。 | re->再次，connoiter->认识/了解（拉丁cognoscere），reconnoiter->重新了解地形=侦察（cf. recognize认识，cognition认知）"
+    },
+    {
+      "question": "alter _ _____",
+      "type": "blank",
+      "answer": "a dress",
+      "explanation": "改变; 修改, 修改一件衣服. The tailor will alter a dress to fit you perfectly. 裁缝将修改一件衣服以完美适合你。 | alter->另一个（拉丁alter），alter->使成为另一个样子=改变（cf. alternate交替，alternative另一选择，altercation争吵）"
+    },
+    {
+      "question": "palter ____ _____",
+      "type": "blank",
+      "answer": "with truth",
+      "explanation": "含糊其辞; 欺骗, 对真相含糊其辞. Politicians often palter with truth during election campaigns. 政客们在竞选活动中经常对真相含糊其辞。 | palter->模糊敷衍（可能来自paltry->不值钱），palter->含糊其辞欺骗（cf. paltry微不足道的，falter踌躇）"
+    },
+    {
+      "question": "_ welter __ ____",
+      "type": "blank",
+      "answer": "a of data",
+      "explanation": "混乱; 杂乱, 大量数据的混乱. The researcher faced a welter of data to analyze. 研究人员面临大量数据的混乱需要分析。 | welter->翻滚（中古荷兰语welteren），welter->翻滚的混乱/大量（cf. swelter酷热，welterweight次中量级）"
+    },
+    {
+      "question": "_______ banter",
+      "type": "blank",
+      "answer": "playful",
+      "explanation": "玩笑; 戏谑, 有趣的玩笑. The friends exchanged playful banter over dinner. 朋友们在晚餐时交换有趣的玩笑。 | banter->戏谑（来源不明，17世纪出现），banter->轻松戏谑的交谈（cf. banter vs irony vs sarcasm程度递增）"
+    },
+    {
+      "question": "_______ carpenter",
+      "type": "blank",
+      "answer": "skilled",
+      "explanation": "木匠, 熟练的木匠. The skilled carpenter crafted beautiful furniture. 熟练的木匠制作了精美的家具。 | carpentarius->制作双轮马车的人（拉丁carpentum->马车），carpenter->木工（cf. car汽车，carriage马车，同词源）"
+    },
+    {
+      "question": "__ presenter",
+      "type": "blank",
+      "answer": "TV",
+      "explanation": "主持人, 电视主持人. The TV presenter interviewed the celebrity guest. 电视主持人采访了名人嘉宾。 | present->呈现/在场，presenter->将内容呈现给观众的人=主持人（cf. present礼物/呈现，representation代表）"
+    },
+    {
+      "question": "inter ___ ____",
+      "type": "blank",
+      "answer": "the body",
+      "explanation": "埋葬, 埋葬尸体. They decided to inter the body in the family cemetery. 他们决定在家族墓地埋葬尸体。 | inter->进入土地（拉丁in+terra->土地），inter->埋入土中=埋葬（cf. terrain地形，territory领土，Mediterranean地中海）"
+    },
+    {
+      "question": "disinter _______",
+      "type": "blank",
+      "answer": "remains",
+      "explanation": "挖出; 发掘, 挖出遗骸. Archaeologists worked to disinter remains from the ancient site. 考古学家努力从古代遗址挖出遗骸。 | dis->去除，inter->埋葬，disinter->从土地中取出=挖出/发掘（cf. inter埋葬，exhume挖掘）"
+    },
+    {
+      "question": "saunter _____",
+      "type": "blank",
+      "answer": "along",
+      "explanation": "漫步; 闲逛, 沿着...漫步. They would saunter along the beach at sunset. 他们会在日落时沿着海滩漫步。 | saunter->漫步（可能来自sainte terre->圣地，朝圣者悠然而行），saunter->悠然漫步（cf. stroll散步，amble缓行）"
+    },
+    {
+      "question": "______ encounter",
+      "type": "blank",
+      "answer": "chance",
+      "explanation": "遭遇; 邂逅, 偶然相遇. Their chance encounter at the airport led to a friendship. 他们在机场的偶然相遇促成了一段友谊。 | en->朝向，counter->对面/相对，encounter->面对面碰上=邂逅/遭遇（cf. counter柜台，counter反驳）"
+    },
+    {
+      "question": "________ scooter",
+      "type": "blank",
+      "answer": "electric",
+      "explanation": "踏板车, 电动踏板车. Many commuters now use an electric scooter to get to work. 许多通勤者现在使用电动踏板车上班。 | scoot->快速溜走（象声词），scooter->快速移动的车=踏板车（cf. scuttle匆忙，scurry疾跑）"
+    },
+    {
+      "question": "_________ charter",
+      "type": "blank",
+      "answer": "corporate",
+      "explanation": "宪章; 章程, 公司章程. The corporate charter defines the company's purpose and structure. 公司章程规定了公司的宗旨和结构。 | charta->纸/文件（拉丁），charter->重要的书面文件=宪章（cf. chart图表，carte blanche全权委托）"
+    },
+    {
+      "question": "____ deserter",
+      "type": "blank",
+      "answer": "army",
+      "explanation": "逃兵; 开小差者, 军队逃兵. The army deserter was caught and court-martialed. 军队逃兵被抓获并受到军事法庭审判。 | de->离开，sert->连接/部队，deserter->离开部队的人=逃兵（cf. desert沙漠/抛弃，dessert甜点，注意区分）"
+    },
+    {
+      "question": "alabaster ____",
+      "type": "blank",
+      "answer": "skin",
+      "explanation": "雪花石膏; 雪白的, 雪白的皮肤. The actress was admired for her alabaster skin. 这位女演员因其雪白的皮肤而受到赞赏。 | alabastros->埃及产白色石膏（希腊），alabaster->雪花石膏/洁白如石膏的（cf. alabastrine白如石膏的）"
+    },
+    {
+      "question": "plaster ____",
+      "type": "blank",
+      "answer": "wall",
+      "explanation": "石膏; 灰泥, 石膏墙. The contractor repaired the cracked plaster wall. 承包商修复了开裂的石膏墙。 | emplastron->涂抹物（希腊），plaster->涂抹于墙上的灰泥（cf. alabaster白石膏，plaster cast石膏模型）"
+    },
+    {
+      "question": "_____ daubster",
+      "type": "blank",
+      "answer": "inept",
+      "explanation": "拙劣的画家, 无能的拙劣画家. The critic dismissed him as an inept daubster with no talent. 评论家认为他是一个没有才华的无能的拙劣画家。 | daub->粗糙地涂抹（古法语dauber->涂白灰），daubster->粗糙涂抹的人=拙劣画家（cf. dauber涂抹者）"
+    },
+    {
+      "question": "_____ fester",
+      "type": "blank",
+      "answer": "wound",
+      "explanation": "化脓; 溃烂, 伤口化脓. If left untreated, the wound fester and become infected. 如果不治疗,伤口化脓并感染。 | fistula->管状脓疮（拉丁），fester->化脓腐烂（cf. festering积怨=情绪的化脓，fistula瘘管）"
+    },
+    {
+      "question": "pester ____ _____",
+      "type": "blank",
+      "answer": "with calls",
+      "explanation": "纠缠; 烦扰, 用电话纠缠. Telemarketers would pester with calls during dinner time. 电话推销员会在晚餐时间用电话纠缠。 | empestrer->用绳子绊住（法语），pester->像被绳子绊住一样=纠缠（cf. fester化脓，bother打扰）"
+    },
+    {
+      "question": "sequester ______",
+      "type": "blank",
+      "answer": "assets",
+      "explanation": "隔离; 扣押, 扣押资产. The court ordered authorities to sequester assets of the defendant. 法院命令当局扣押被告的资产。 | sequi->跟随（拉丁），sequester->随托管人而去=隔离/扣押（cf. sequence序列，consequence后果）"
+    },
+    {
+      "question": "sinister ______",
+      "type": "blank",
+      "answer": "motive",
+      "explanation": "邪恶的; 不祥的, 邪恶的动机. The detective suspected a sinister motive behind the crime. 侦探怀疑犯罪背后有邪恶的动机。 | sinister->左边的（拉丁，古罗马认为左边是凶兆），sinister->不祥的/邪恶的（cf. dexter右边/灵巧的，ambidextrous两手灵巧）"
+    },
+    {
+      "question": "_____ cloister",
+      "type": "blank",
+      "answer": "quiet",
+      "explanation": "修道院回廊; 使隐居, 安静的修道院. The monks lived in a quiet cloister away from the world. 僧侣们生活在远离世界的安静修道院中。 | claustrum->关闭的地方（拉丁claudere->关），cloister->关闭起来的地方=修道院（cf. close关闭，closet壁橱，clause条款）"
+    },
+    {
+      "question": "roister ___ _____",
+      "type": "blank",
+      "answer": "all night",
+      "explanation": "狂欢; 喧闹, 整夜狂欢. The revelers would roister all night during the festival. 狂欢者会在节日期间整夜狂欢。 | rustre->粗鲁的乡下人（古法语），roister->喧闹狂欢（cf. roister-doister吵闹鬼，cloister修道院）"
+    },
+    {
+      "question": "_____'_ barrister",
+      "type": "blank",
+      "answer": "Queen's",
+      "explanation": "出庭律师(英国), 王室大律师. The Queen's barrister presented the case in court. 王室大律师在法庭上陈述案件。 | bar->律师席/栏，barrister->有资格越过律师席的人=出庭律师（cf. bar律师界，disbar取消律师资格）"
+    },
+    {
+      "question": "______ huckster",
+      "type": "blank",
+      "answer": "street",
+      "explanation": "小贩; 叫卖者, 街头叫卖者. The street huckster sold knockoff merchandise to tourists. 街头叫卖者向游客出售仿冒商品。 | hoker->小贩（荷兰语），huckster->贩卖廉价商品的小贩（cf. hawk叫卖，hawker小贩）"
+    },
+    {
+      "question": "pollster ______",
+      "type": "blank",
+      "answer": "survey",
+      "explanation": "民意调查员, 民意调查. The pollster survey revealed changing public opinion. 民意调查显示公众意见正在改变。 | poll->计票/头，pollster->进行计票调查的人=民调员（cf. poll民调，polling station投票站）"
+    },
+    {
+      "question": "bolster __________",
+      "type": "blank",
+      "answer": "confidence",
+      "explanation": "支撑; 鼓励, 增强信心. The coach's words helped bolster confidence in the team. 教练的话帮助增强了团队的信心。 | bolster->长枕/支撑（古英语）,bolster->像枕头一样支撑=增强（cf. bolster up支撑，shoulder承担）"
+    },
+    {
+      "question": "___ holster",
+      "type": "blank",
+      "answer": "gun",
+      "explanation": "枪套, 枪套. The officer drew his weapon from the gun holster. 警官从枪套中拔出武器。 | holster->枪套（荷兰语holster->皮套），holster->枪的皮套（cf. holster在电影中常见，draw from holster拔枪）"
+    },
+    {
+      "question": "foster ____",
+      "type": "blank",
+      "answer": "care",
+      "explanation": "培养; 收养, 寄养. The child was placed in foster care after the incident. 事件发生后,孩子被安置在寄养家庭。 | foster->喂养（古英语fostrian），foster->养育/培养（cf. foster child养子，nurture培育）"
+    },
+    {
+      "question": "_____ poster",
+      "type": "blank",
+      "answer": "movie",
+      "explanation": "海报, 电影海报. The vintage movie poster sold for thousands at auction. 这张老式电影海报在拍卖会上以数千美元成交。 | post->柱子/张贴，poster->张贴在柱上的=海报（cf. post邮寄，posting张贴，postcard明信片）"
+    },
+    {
+      "question": "four-poster ___",
+      "type": "blank",
+      "answer": "bed",
+      "explanation": "四柱床, 四柱床. The master bedroom featured an antique four-poster bed. 主卧室配有一张古董四柱床。 | four->四，poster->柱子，four-poster->四根柱子支撑的=四柱床（cf. poster海报，post柱子）"
+    },
+    {
+      "question": "____ roster",
+      "type": "blank",
+      "answer": "team",
+      "explanation": "名册; 花名册, 团队名册. The coach announced changes to the team roster. 教练宣布了团队名册的变化。 | rooster->烤架（荷兰语rooster），roster->像烤架格子一样排列的名单=名册（cf. roost栖息，rooster公鸡）"
+    },
+    {
+      "question": "______ _ filibuster",
+      "type": "blank",
+      "answer": "launch a",
+      "explanation": "阻挠议事; 冗长演说, 发起阻挠议事. Senators threatened to launch a filibuster against the bill. 参议员们威胁要对该法案发起阻挠议事。 | vrijbuiter->自由劫掠者（荷兰语），filibuster->像海盗一样劫持议程=冗长演说阻挠议事（cf. freebooter劫掠者）"
+    },
+    {
+      "question": "_____ cluster",
+      "type": "blank",
+      "answer": "grape",
+      "explanation": "串; 群, 葡萄串. She picked a ripe grape cluster from the vine. 她从藤上摘下一串成熟的葡萄。 | cluster->聚集（古英语clyster），cluster->紧密聚集的一群/一串（cf. clump树丛，clutter杂乱）"
+    },
+    {
+      "question": "lackluster ___________",
+      "type": "blank",
+      "answer": "performance",
+      "explanation": "无光泽的; 平淡的, 平淡的表现. The team's lackluster performance disappointed the fans. 球队平淡的表现让球迷失望。 | lack->缺乏，luster->光泽，lackluster->缺乏光泽的=平淡无奇的（cf. illustrious卓越的=照亮的，lustre光泽）"
+    },
+    {
+      "question": "scatter _____",
+      "type": "blank",
+      "answer": "seeds",
+      "explanation": "分散; 撒播, 撒播种子. The farmer would scatter seeds across the field. 农民会在田野里撒播种子。 | scatter->分散（古挪威skattr），scatter->向四处撒去（cf. shatter打碎，clatter哗啦声，splatter飞溅）"
+    },
+    {
+      "question": "enfetter ___ ____",
+      "type": "blank",
+      "answer": "the mind",
+      "explanation": "束缚; 加枷锁, 束缚思想. Rigid traditions can enfetter the mind and limit creativity. 僵化的传统会束缚思想并限制创造力。 | en->使，fetter->脚镣（古英语fetor），enfetter->给...戴上脚镣=束缚（cf. fetter脚镣，letter字母，同形联想）"
+    },
+    {
+      "question": "embitter _________",
+      "type": "blank",
+      "answer": "relations",
+      "explanation": "使痛苦; 使怨恨, 使关系恶化. The dispute would embitter relations between the two nations. 这场争端会使两国关系恶化。 | em->使，bitter->苦，embitter->使变苦/使怨恨（cf. bitter苦的，bitterness苦涩/怨恨）"
+    },
+    {
+      "question": "_______ jitter",
+      "type": "blank",
+      "answer": "nervous",
+      "explanation": "紧张不安, 紧张不安. She felt nervous jitter before the important presentation. 她在重要演讲前感到紧张不安。 | jitter->颤抖（象声词），jitters->紧张不安（give someone the jitters->使某人紧张，cf. jittery紧张的）"
+    },
+    {
+      "question": "litter ___ ______",
+      "type": "blank",
+      "answer": "the street",
+      "explanation": "垃圾; 乱扔, 在街上乱扔垃圾. Please don't litter the street with trash. 请不要在街上乱扔垃圾。 | lit->床/垫子（拉丁lectus），litter->原指床草垫，后指散乱的垃圾（cf. litter一窝幼崽，literally字面上）"
+    },
+ {
+      "question": "_______ glitter",
+      "type": "blank",
+      "answer": "diamond",
+      "explanation": "闪光; 闪耀, 钻石闪光. The diamond glitter caught everyone's attention at the gala. 钻石闪光在晚会上吸引了所有人的注意。 | glitter->闪光（古挪威glitra），glitter->闪闪发光（All that glitters is not gold->闪光的不都是金子）"
+    },
+    {
+      "question": "___ otter",
+      "type": "blank",
+      "answer": "sea",
+      "explanation": "水獭, 海獭. The sea otter floated on its back eating shellfish. 海獭仰面漂浮着吃贝类。 | otter->水獭（古英语otor），otter->水獭（cf. water水，otter与water同源，水中的动物）"
+    },
+    {
+      "question": "utter ________",
+      "type": "blank",
+      "answer": "nonsense",
+      "explanation": "完全的; 说出, 完全的胡说. His speech was utter nonsense from beginning to end. 他的演讲从头到尾都是完全的胡说。 | utter->外部的/完全的（古英语utera->外面的），utter->彻底的/说出（cf. outer外部的，utterly完全地）"
+    },
+    {
+      "question": "scutter ___",
+      "type": "blank",
+      "answer": "off",
+      "explanation": "急忙跑开, 急忙跑开. The mouse would scutter off when it heard footsteps. 老鼠听到脚步声就会急忙跑开。 | scutter->急速奔跑（scatter的变体），scutter off->慌忙逃走（cf. scurry疾跑，scatter四散）"
+    },
+    {
+      "question": "____ gutter",
+      "type": "blank",
+      "answer": "rain",
+      "explanation": "排水沟; 贫民窟, 雨水排水沟. The rain gutter needs cleaning before the storm season. 雨水排水沟需要在暴风雨季节前清理。 | gutta->水滴（拉丁），gutter->汇集水滴的槽=排水沟（cf. guttural喉音的，gout痛风=关节积液）"
+    },
+    {
+      "question": "beleaguer ____",
+      "type": "blank",
+      "answer": "city",
+      "explanation": "围困; 困扰, 围困城市. Enemy forces continued to beleaguer city for months. 敌军继续围困城市数月。 | be->使，leaguer->营地/包围（荷兰leger->军营），beleaguer->用军营围住=围困（cf. league联盟，beleaguered被围困的）"
+    },
+    {
+      "question": "________ exchequer",
+      "type": "blank",
+      "answer": "national",
+      "explanation": "国库; 财政部, 国库. The national exchequer faced serious budget deficits. 国库面临严重的预算赤字。 | eschec->棋盘（古法语，来自波斯Shah->国王），exchequer->用格子布算账的地方=国库（cf. chess国际象棋，check支票）"
+    },
+    {
+      "question": "conquer ____",
+      "type": "blank",
+      "answer": "fear",
+      "explanation": "征服; 克服, 克服恐惧. She worked hard to conquer fear of public speaking. 她努力克服对公开演讲的恐惧。 | con->完全，quer->寻求/征服（拉丁quaerere），conquer->完全征服（cf. query疑问，conquest征服）"
+    },
+    {
+      "question": "aver ___ _____",
+      "type": "blank",
+      "answer": "the truth",
+      "explanation": "断言; 声明, 断言真相. The witness would aver the truth under oath. 证人会在宣誓下断言真相。 | a->朝向，ver->真（拉丁verus），aver->宣称真相=断言（cf. verify证实，verdict裁决，verisimilar逼真的）"
+    },
+    {
+      "question": "_____ cadaver",
+      "type": "blank",
+      "answer": "human",
+      "explanation": "尸体, 人类尸体. Medical students studied anatomy using a human cadaver. 医学生使用人类尸体学习解剖学。 | cadere->倒下（拉丁），cadaver->倒下的人=尸体（cf. cadaverous骨瘦如柴的，cadence节奏=落下的节拍）"
+    },
+    {
+      "question": "____ cleaver",
+      "type": "blank",
+      "answer": "meat",
+      "explanation": "切肉刀, 切肉刀. The butcher used a sharp meat cleaver to cut the beef. 屠夫用锋利的切肉刀切牛肉。 | cleave->劈开（古英语cleofan），cleaver->用来劈开的刀=切肉刀（cleave一词两义：劈开/紧附，cf. cling紧附）"
+    },
+    {
+      "question": "____ palaver",
+      "type": "blank",
+      "answer": "long",
+      "explanation": "冗长的谈话; 闲谈, 冗长的谈话. After a long palaver, they finally reached an agreement. 经过冗长的谈话,他们终于达成了协议。 | palavra->话语（葡萄牙语，来自拉丁parabola），palaver->（非洲贸易中）与土著的谈判=冗长谈话（cf. parable寓言）"
+    },
+    {
+      "question": "slaver ____",
+      "type": "blank",
+      "answer": "over",
+      "explanation": "流口水; 奴隶贩子, 对...垂涎. The dog would slaver over the delicious treat. 狗会对美味的食物垂涎。 | slaver->流口水（古挪威slafra），slaver->垂涎/奴隶贩子（cf. slobber流口水，drool垂涎）"
+    },
+    {
+      "question": "_______ lever",
+      "type": "blank",
+      "answer": "crowbar",
+      "explanation": "杠杆; 撬杠, 撬杠杠杆. He used a crowbar lever to pry open the crate. 他用撬杠杠杆撬开了板条箱。 | lever->举起（拉丁levare->减轻），lever->用来举起的工具=杠杆（cf. levity轻浮，elevate举起，relieve减轻）"
+    },
+    {
+      "question": "____-___ diver",
+      "type": "blank",
+      "answer": "deep-sea",
+      "explanation": "潜水员, 深海潜水员. The deep-sea diver explored the ocean floor for treasure. 深海潜水员在海底寻找宝藏。 | dive->潜入（古英语dyfan），diver->潜水的人=潜水员（cf. dive俯冲，dive-bomb俯冲轰炸）"
+    },
+    {
+      "question": "____ screwdriver",
+      "type": "blank",
+      "answer": "flat",
+      "explanation": "螺丝刀, 平头螺丝刀. Use a flat screwdriver to remove the cover plate. 使用平头螺丝刀拆下盖板。 | screw->螺丝，driver->驱动者，screwdriver->驱动螺丝的工具=螺丝刀（也是伏特加+橙汁的鸡尾酒名）"
+    },
+    {
+      "question": "gloss-over _______",
+      "type": "blank",
+      "answer": "problem",
+      "explanation": "掩饰; 粉饰, 掩饰问题. Don't gloss-over problem just because it's uncomfortable. 不要仅仅因为不舒服就掩饰问题。 | gloss->光泽/注释，gloss over->用光泽掩盖=粉饰/掩饰（cf. glossary词汇表，gloss解释）"
+    },
+    {
+      "question": "____ layover",
+      "type": "blank",
+      "answer": "long",
+      "explanation": "中途停留, 长时间中途停留. We had a long layover in Chicago before our connecting flight. 我们在芝加哥有一个长时间中途停留,然后转机。 | lay->放置/停下，over->结束，layover->在途中停留=中途停留（cf. stopover中途停留，layoff裁员）"
+    },
+    {
+      "question": "________ maneuver",
+      "type": "blank",
+      "answer": "military",
+      "explanation": "演习; 策略, 军事演习. The troops conducted a military maneuver in the desert. 部队在沙漠中进行了军事演习。 | manu->手，ouvrer->操作（法语），maneuver->用手操作=策略（cf. manual手册，manufacture制造，manure肥料=用手耕作）"
+    },
+    {
+      "question": "outmaneuver __ ________",
+      "type": "blank",
+      "answer": "an opponent",
+      "explanation": "以策略胜过, 智胜对手. The chess player managed to outmaneuver an opponent. 国际象棋选手设法智胜对手。 | out->超过，maneuver->策略，outmaneuver->在策略上超过=智胜（cf. outfox以智取胜，outflanking迂回）"
+    },
+    {
+      "question": "skewer ___ ________",
+      "type": "blank",
+      "answer": "the argument",
+      "explanation": "串肉扦; 刺穿, 驳斥论点. The debater used facts to skewer the argument completely. 辩论者用事实彻底驳斥了论点。 | skewer->串肉扦（来源不明），skewer->用扦串穿/驳斥（cf. pierce刺穿，skewered被串穿=被彻底驳斥）"
+    },
+    {
+      "question": "_____ bower",
+      "type": "blank",
+      "answer": "leafy",
+      "explanation": "凉亭; 树荫处, 绿叶凉亭. They sat in the leafy bower enjoying the shade. 他们坐在绿叶凉亭里享受阴凉。 | bur->小屋（古英语）,bower->树叶覆盖的小屋=凉亭（cf. boudoir闺房，neighbour邻居=附近的农舍）"
+    },
+    {
+      "question": "empower _____",
+      "type": "blank",
+      "answer": "women",
+      "explanation": "授权; 使能够, 赋权妇女. Education programs aim to empower women in developing countries. 教育项目旨在赋权发展中国家的妇女。 | em->使，power->力量，empower->使拥有力量=赋权（cf. embolden使大胆，enable使能够）"
+    },
+    {
+      "question": "bricklayer __________",
+      "type": "blank",
+      "answer": "apprentice",
+      "explanation": "砌砖工, 砌砖工学徒. The bricklayer apprentice learned the trade from a master. 砌砖工学徒向师傅学习这门手艺。 | brick->砖，layer->铺放者，bricklayer->铺砖的人=砌砖工（cf. lay放置，layer层）"
+    },
+    {
+      "question": "_______ naysayer",
+      "type": "blank",
+      "answer": "chronic",
+      "explanation": "反对者; 否定者, 长期反对者. The chronic naysayer opposed every new proposal. 长期反对者反对每一个新提议。 | nay->不/否（古英语nei），sayer->说话者，naysayer->说不的人=反对者（cf. nay古英语的no，yea古英语的yes）"
+    },
+    {
+      "question": "_____ foyer",
+      "type": "blank",
+      "answer": "hotel",
+      "explanation": "门厅; 休息室, 酒店门厅. Guests gathered in the hotel foyer before dinner. 客人们在晚餐前聚集在酒店门厅。 | foyer->火炉（法语，拉丁focus->壁炉），foyer->火炉旁的休息处=门厅（cf. focus焦点=壁炉，fuel燃料）"
+    },
+    {
+      "question": "________ flair",
+      "type": "blank",
+      "answer": "artistic",
+      "explanation": "天赋; 才华, 艺术天赋. She decorated her home with artistic flair and creativity. 她以艺术天赋和创造力装饰了她的家。 | flair->嗅出（法语，来自拉丁fragrare->散发香气），flair->嗅觉/天赋=才能（cf. fragrant芬芳的）"
+    },
+    {
+      "question": "debonair _____",
+      "type": "blank",
+      "answer": "charm",
+      "explanation": "温文尔雅的; 潇洒的, 潇洒的魅力. His debonair charm made him popular at social events. 他潇洒的魅力使他在社交活动中很受欢迎。 | de bon aire->有好气质（古法语），debonair->有良好气质的=潇洒的（cf. bon好，air气质/空气）"
+    },
+    {
+      "question": "impair ______",
+      "type": "blank",
+      "answer": "vision",
+      "explanation": "损害; 削弱, 损害视力. Excessive screen time can impair vision over time. 过度使用屏幕会随着时间损害视力。 | im->否定，pair->相等/完整，impair->使不完整=损害（cf. repair修复=重新使完整，pair一对）"
+    },
+    {
+      "question": "_____ nadir",
+      "type": "blank",
+      "answer": "reach",
+      "explanation": "最低点; 天底, 达到最低点. The company's fortunes would reach nadir during the recession. 该公司的财富在经济衰退期间达到最低点。 | nadir->正对脚下的点（阿拉伯语nazir->对应），nadir->天底/最低点（cf. zenith天顶/最高点，两者相对）"
+    },
+    {
+      "question": "______ souvenir",
+      "type": "blank",
+      "answer": "travel",
+      "explanation": "纪念品, 旅行纪念品. She bought a travel souvenir from every country she visited. 她从访问的每个国家都买了一个旅行纪念品。 | souvenir->记住（法语，来自拉丁subvenire->涌上心头），souvenir->唤起记忆的物品=纪念品（cf. subvention补助）"
+    },
+    {
+      "question": "______ choir",
+      "type": "blank",
+      "answer": "church",
+      "explanation": "合唱团, 教堂合唱团. The church choir sang beautifully during the service. 教堂合唱团在礼拜期间唱得很美。 | chorus->合唱（希腊），choir->合唱团（注意ch发k音，cf. chorus合唱，choral合唱的，choreography编舞）"
+    },
+    {
+      "question": "memoir ______",
+      "type": "blank",
+      "answer": "writer",
+      "explanation": "回忆录, 回忆录作家. The memoir writer recounted her childhood experiences. 回忆录作家讲述了她的童年经历。 | memoire->记忆（法语），memoir->记忆的书写=回忆录（cf. memory记忆，memorial纪念碑，memorize记忆）"
+    },
+    {
+      "question": "elixir __ ____",
+      "type": "blank",
+      "answer": "of life",
+      "explanation": "灵丹妙药; 长生不老药, 生命之药. Ancient alchemists searched for the elixir of life. 古代炼金术士寻找生命之药。 | al-iksir->干燥粉末（阿拉伯语，来自希腊xerion->干燥剂），elixir->炼金术士的神奇药剂（cf. dry干燥，alchemy炼金术）"
+    },
+    {
+      "question": "belabor ___ _____",
+      "type": "blank",
+      "answer": "the point",
+      "explanation": "过分详述; 反复说明, 反复强调要点. Don't belabor the point; we understand your argument. 不要反复强调要点,我们理解你的论点。 | be->使，labor->劳动/过度努力，belabor->过度劳动于=反复强调（cf. labor劳动，elaborate详细阐述）"
+    },
+    {
+      "question": "harbor _ ______",
+      "type": "blank",
+      "answer": "a grudge",
+      "explanation": "港口; 怀有, 怀恨在心. It's unhealthy to harbor a grudge for years. 多年怀恨在心是不健康的。 | heriberga->军队庇护所（古英语），harbor->给予庇护/暗中藏有（cf. harbinger先驱，harbour英式拼写）"
+    },
+    {
+      "question": "_____ succor",
+      "type": "blank",
+      "answer": "offer",
+      "explanation": "救援; 援助, 提供援助. The charity organization would offer succor to disaster victims. 慈善组织会向灾民提供援助。 | sub->从下，curr->跑（拉丁），succor->跑来相助=援助（cf. occur发生，incur招致，recur复发）"
+    },
+    {
+      "question": "____ rancor",
+      "type": "blank",
+      "answer": "deep",
+      "explanation": "怨恨; 仇恨, 深仇大恨. Deep rancor divided the two families for generations. 深仇大恨使两个家族分裂了几代人。 | rancere->腐烂发臭（拉丁），rancor->腐烂的积怨=长期的仇恨（cf. rancid腐臭的，rancorous怀恨的）"
+    },
+    {
+      "question": "____________ matador",
+      "type": "blank",
+      "answer": "bullfighting",
+      "explanation": "斗牛士, 斗牛士. The bullfighting matador entered the arena to cheers. 斗牛士在欢呼声中进入竞技场。 | matar->杀死（西班牙语，拉丁mactare），matador->杀牛者=斗牛士（cf. checkmate将死，mate伴侣/杀死）"
+    },
+    {
+      "question": "candor ___ _________",
+      "type": "blank",
+      "answer": "and sincerity",
+      "explanation": "坦率; 直率, 坦率和真诚. She spoke with candor and sincerity about her mistakes. 她坦率和真诚地谈论了她的错误。 | candor->白/纯洁（拉丁candidus->白色），candor->像白色一样纯洁=坦率（cf. candid坦率的，candidate候选人=穿白袍者）"
+    },
+    {
+      "question": "_____ splendor",
+      "type": "blank",
+      "answer": "royal",
+      "explanation": "壮丽; 辉煌, 皇家辉煌. The palace displayed royal splendor in every detail. 宫殿的每个细节都展现了皇家辉煌。 | splendere->闪耀（拉丁），splendor->闪耀的光辉=壮丽（cf. splendid壮丽的，resplendent光辉灿烂的）"
+    },
+    {
+      "question": "______ condor",
+      "type": "blank",
+      "answer": "Andean",
+      "explanation": "秃鹰, 安第斯秃鹰. The Andean condor is one of the largest flying birds. 安第斯秃鹰是最大的飞鸟之一。 | cuntur->秃鹰（克丘亚语，南美原住民语），condor->安第斯山脉的巨型秃鹰"
+    },
+    {
+      "question": "malodor _______",
+      "type": "blank",
+      "answer": "problem",
+      "explanation": "恶臭, 恶臭问题. The building had a persistent malodor problem. 这栋建筑有持续的恶臭问题。 | mal->坏，odor->气味（拉丁odor），malodor->坏气味=恶臭（cf. odorous有气味的，deodorant除臭剂）"
+    },
+    {
+      "question": "________ rigor",
+      "type": "blank",
+      "answer": "academic",
+      "explanation": "严格; 严谨, 学术严谨. The program is known for its academic rigor and high standards. 该项目以其学术严谨和高标准而闻名。 | rigor->僵硬/严格（拉丁rigere->僵硬），rigor->严格（rigor mortis->死亡僵硬，cf. rigid僵硬的）"
+    },
+    {
+      "question": "abhor ________",
+      "type": "blank",
+      "answer": "violence",
+      "explanation": "憎恶; 厌恶, 憎恶暴力. Most civilized societies abhor violence in all forms. 大多数文明社会憎恶各种形式的暴力。 | ab->离开，hor->恐惧（拉丁horrere），abhor->因恐惧而退避=憎恶（cf. horror恐惧，horrible可怕的，abhorrent令人憎恶的）"
+    },
+    {
+      "question": "____ anchor",
+      "type": "blank",
+      "answer": "drop",
+      "explanation": "锚; 主持人, 抛锚. The ship's captain ordered the crew to drop anchor in the bay. 船长命令船员在海湾抛锚。 | ankura->钩子（希腊），anchor->固定船只的钩=锚（cf. angle角/钓鱼，ankle踝，都与弯钩形有关）"
+    },
+    {
+      "question": "________ metaphor",
+      "type": "blank",
+      "answer": "extended",
+      "explanation": "隐喻; 比喻, 延伸隐喻. The author used an extended metaphor throughout the novel. 作者在整部小说中使用了延伸隐喻。 | meta->跨越，phor->携带（希腊pherein），metaphor->把意义从一处携带到另一处=隐喻（cf. transfer转移，Christopher携带基督者）"
+    },
+    {
+      "question": "inferior _____",
+      "type": "blank",
+      "answer": "goods",
+      "explanation": "低劣的; 次等的, 劣质商品. Consumers complained about receiving inferior goods. 消费者抱怨收到劣质商品。 | inferus->下面的（拉丁），inferior->比较级=更下面的=低劣的（cf. infernal地狱的，infra->在下面）"
+    },
+    {
+      "question": "ulterior ______",
+      "type": "blank",
+      "answer": "motive",
+      "explanation": "隐秘的; 别有用心的, 隐秘动机. She suspected he had an ulterior motive for his generosity. 她怀疑他的慷慨有隐秘动机。 | ultra->超越（拉丁），ulterior->更远处的=隐藏在后面的（cf. ultimate最终的，ultra超过，exterior外部的）"
+    },
+    {
+      "question": "anterior _______",
+      "type": "blank",
+      "answer": "chamber",
+      "explanation": "前面的; 先前的, 前房. The ophthalmologist examined the anterior chamber of the eye. 眼科医生检查了眼睛的前房。 | ante->前面（拉丁），anterior->比较级=更前面的（cf. antecedent前辈，antebellum战前，anterior vs posterior）"
+    },
+    {
+      "question": "posterior ___________",
+      "type": "blank",
+      "answer": "probability",
+      "explanation": "后面的; 后部的, 后验概率. The statistician calculated the posterior probability given new data. 统计学家根据新数据计算了后验概率。 | post->后面（拉丁），posterior->更后面的=后部的（cf. postscript附言，posterity后代，posterior vs anterior）"
+    },
+    {
+      "question": "_____ squalor",
+      "type": "blank",
+      "answer": "urban",
+      "explanation": "肮脏; 贫困, 城市贫民窟. Many families lived in urban squalor in the neglected district. 许多家庭生活在被忽视地区的城市贫民窟中。 | squalere->肮脏（拉丁），squalor->肮脏/贫困（cf. squalid肮脏的，squall暴风=混乱，squalid conditions恶劣条件）"
+    },
+    {
+      "question": "___ __ valor",
+      "type": "blank",
+      "answer": "act of",
+      "explanation": "英勇; 勇气, 英勇行为. The soldier received a medal for his act of valor. 士兵因其英勇行为获得了勋章。 | valere->强壮/有价值（拉丁），valor->力量/勇气（cf. valid有效的，value价值，valiant勇敢的）"
+    },
+    {
+      "question": "__________ chancellor",
+      "type": "blank",
+      "answer": "university",
+      "explanation": "大臣; 校长, 大学校长. The university chancellor welcomed new students at orientation. 大学校长在迎新会上欢迎新生。 | cancelli->格栅（拉丁，法庭格栅后的书记员），chancellor->在格栅后工作的人=大臣（cf. cancel取消=通过格栅划去）"
+    },
+    {
+      "question": "tenor _____",
+      "type": "blank",
+      "answer": "voice",
+      "explanation": "男高音; 要旨, 男高音. The opera featured a famous tenor voice in the lead role. 歌剧在主角中以著名的男高音为特色。 | tenere->持续（拉丁），tenor->持续的声音/要旨（cf. tenacious坚持的，tenure任期，continue继续）"
+    },
+    {
+      "question": "____________ boor",
+      "type": "blank",
+      "answer": "insufferable",
+      "explanation": "粗野的人; 粗人, 令人难以忍受的粗人. The insufferable boor offended everyone at the party. 令人难以忍受的粗人冒犯了派对上的所有人。 | boer->农民（荷兰语），boor->粗鲁的乡下人=粗人（cf. Boer布尔人，neighbor邻居=附近的农民，boorish粗鲁的）"
+    },
+    {
+      "question": "______ spoor",
+      "type": "blank",
+      "answer": "animal",
+      "explanation": "足迹; 踪迹, 动物足迹. The hunter followed the animal spoor through the forest. 猎人沿着森林中的动物足迹追踪。 | spoor->踪迹（荷兰语/南非荷兰语），spoor->猎物留下的足迹（cf. spur马刺/激励，spoor追踪）"
+    },
+    {
+      "question": "incisor _____",
+      "type": "blank",
+      "answer": "tooth",
+      "explanation": "门牙; 切牙, 门牙. The dentist checked each incisor tooth for cavities. 牙医检查每颗门牙是否有蛀牙。 | in->进入，cis->切，incisor->切入食物的牙=门牙（cf. incision切口，scissors剪刀，decide决定=切断犹豫）"
+    },
+    {
+      "question": "____ censor",
+      "type": "blank",
+      "answer": "film",
+      "explanation": "审查员; 检查, 电影审查员. The film censor removed controversial scenes from the movie. 电影审查员从电影中删除了有争议的场景。 | censor->评估者（拉丁，罗马负责道德的官员），censor->审查员（cf. census人口普查，censure谴责）"
+    },
+    {
+      "question": "________ precursor",
+      "type": "blank",
+      "answer": "chemical",
+      "explanation": "先驱; 前体, 化学前体. The scientist isolated the chemical precursor to the compound. 科学家分离出该化合物的化学前体。 | pre->之前，curs->跑（拉丁currere），precursor->提前跑来的=先驱（cf. cursor光标，course路线，occur发生）"
+    },
+    {
+      "question": "_________ predecessor",
+      "type": "blank",
+      "answer": "corporate",
+      "explanation": "前任; 前身, 公司前身. The new company acquired its corporate predecessor last year. 新公司去年收购了其公司前身。 | pre->之前，deces->离去（拉丁decedere），predecessor->在之前离去的人=前任（cf. decease死亡，successor继任者）"
+    },
+    {
+      "question": "_______ intercessor",
+      "type": "blank",
+      "answer": "saintly",
+      "explanation": "调解人; 代祷者, 圣洁的代祷者. The faithful prayed to a saintly intercessor for help. 信徒向圣洁的代祷者祈祷寻求帮助。 | inter->之间，cess->走（拉丁cedere），intercessor->走入两者之间=调解者（cf. intercede调解，recess休息，concession让步）"
+    },
+    {
+      "question": "________ aggressor",
+      "type": "blank",
+      "answer": "military",
+      "explanation": "侵略者; 挑衅者, 军事侵略者. The nation defended itself against the military aggressor. 国家抵御军事侵略者。 | ag->朝向，gress->走，aggressor->朝别人走去攻击的人=侵略者（cf. progress进步，congress会议，digress偏题）"
+    },
+    {
+      "question": "___ incubator",
+      "type": "blank",
+      "answer": "egg",
+      "explanation": "孵化器, 孵蛋器. The farmer placed fertilized eggs in the egg incubator. 农民将受精卵放入孵蛋器中。 | in->在上，cub->躺卧，incubator->趴在上面孵化的器具=孵化器（cf. incubation孵化，succumb倒下，cubicle小隔间）"
+    },
+    {
+      "question": "____ predator",
+      "type": "blank",
+      "answer": "apex",
+      "explanation": "捕食者, 顶级捕食者. The lion is an apex predator in the African savanna. 狮子是非洲大草原上的顶级捕食者。 | pred->掠夺（拉丁praeda->猎物），predator->掠夺者=捕食者（cf. prey猎物，depredation掠夺，plunder劫掠）"
+    },
+    {
+      "question": "______ defoliator",
+      "type": "blank",
+      "answer": "forest",
+      "explanation": "食叶虫; 落叶剂, 森林食叶虫. The forest defoliator destroyed thousands of trees. 森林食叶虫毁坏了数千棵树。 | de->去除，foli->叶（拉丁folium），defoliator->去除树叶的东西=食叶虫/落叶剂（cf. foliage叶子，portfolio文件夹）"
+    },
+    {
+      "question": "______ generator",
+      "type": "blank",
+      "answer": "backup",
+      "explanation": "发电机; 生成器, 备用发电机. The hospital relies on a backup generator during power outages. 医院在停电期间依靠备用发电机。 | gen->产生（拉丁generare），generator->产生电力的机器=发电机（cf. generate产生，generation世代，gene基因）"
+    },
+    {
+      "question": "______ curator",
+      "type": "blank",
+      "answer": "museum",
+      "explanation": "馆长; 策展人, 博物馆馆长. The museum curator organized a new exhibition. 博物馆馆长组织了一场新展览。 | cura->照料（拉丁curare），curator->负责照料保管的人=馆长（cf. cure治愈，curious好奇的，accurate精确的）"
+    },
+    {
+      "question": "______ spectator",
+      "type": "blank",
+      "answer": "sports",
+      "explanation": "观众; 旁观者, 体育观众. The sports spectator cheered loudly for his favorite team. 体育观众为他最喜欢的球队大声欢呼。 | spect->看（拉丁spectare），spectator->观看者=观众（cf. spectacular壮观的，inspect检查，expect期待）"
+    },
+    {
+      "question": "____ testator",
+      "type": "blank",
+      "answer": "will",
+      "explanation": "立遗嘱人, 遗嘱立遗嘱人. The will testator must be of sound mind when signing. 遗嘱立遗嘱人在签署时必须头脑清醒。 | test->见证/遗嘱（拉丁testis->证人），testator->立下证词的人=立遗嘱人（cf. testament遗嘱，testify作证）"
+    },
+    {
+      "question": "_____ ___ equator",
+      "type": "blank",
+      "answer": "cross the",
+      "explanation": "赤道, 穿越赤道. The ship's crew celebrated when they would cross the equator. 当船员将要穿越赤道时,他们庆祝了一番。 | equ->相等（拉丁aequus），equator->使昼夜相等的线=赤道（cf. equal平等，equation方程，equinox春秋分）"
+    },
+    {
+      "question": "_________ malefactor",
+      "type": "blank",
+      "answer": "notorious",
+      "explanation": "罪犯; 作恶者, 臭名昭著的罪犯. The notorious malefactor was finally captured by police. 臭名昭著的罪犯终于被警方抓获。 | male->坏，fact->做，malefactor->做坏事的人=罪犯（cf. benefactor恩人，factor因素，manufacture制造）"
+    },
+    {
+      "question": "_________ benefactor",
+      "type": "blank",
+      "answer": "anonymous",
+      "explanation": "捐助者; 恩人, 匿名捐助者. An anonymous benefactor donated millions to the university. 一位匿名捐助者向大学捐赠了数百万。 | bene->好，fact->做，benefactor->做好事的人=恩人（cf. malefactor罪犯，benefit利益，beneficial有益的）"
+    },
+    {
+      "question": "hector ___ _____",
+      "type": "blank",
+      "answer": "the staff",
+      "explanation": "威吓; 恐吓, 恐吓员工. The manager would hector the staff unnecessarily. 经理会无端地恐吓员工。 | Hector->特洛伊战争中的英雄（后被用作欺凌者的象征），hector->欺负/恐吓（cf. lecture演讲，rector校长）"
+    },
+    {
+      "question": "_______ projector",
+      "type": "blank",
+      "answer": "digital",
+      "explanation": "投影仪, 数字投影仪. The conference room has a new digital projector. 会议室有一台新的数字投影仪。 | pro->向前，ject->投射，projector->向前投射图像的机器=投影仪（cf. project项目/投射，inject注射，eject弹出）"
+    },
+    {
+      "question": "____ proctor",
+      "type": "blank",
+      "answer": "exam",
+      "explanation": "监考人, 考试监考人. The exam proctor distributed test papers to students. 考试监考人向学生分发试卷。 | proctor->procurator的缩写（代理人），proctor->监考/监督官员（cf. procure获取，proxy代理，prosecutor检察官）"
+    },
+    {
+      "question": "______ inhibitor",
+      "type": "blank",
+      "answer": "enzyme",
+      "explanation": "抑制剂, 酶抑制剂. The drug acts as an enzyme inhibitor in the body. 这种药物在体内充当酶抑制剂。 | in->进入，hibit->持有/阻止（拉丁habere），inhibitor->阻止进入的东西=抑制剂（cf. inhibit抑制，exhibit展示，prohibit禁止）"
+    },
+    {
+      "question": "______ progenitor",
+      "type": "blank",
+      "answer": "common",
+      "explanation": "祖先; 始祖, 共同祖先. Scientists traced the species back to a common progenitor. 科学家将该物种追溯到一个共同祖先。 | pro->向前，genit->生（拉丁gignere），progenitor->最先生育的人=祖先（cf. generate产生，progeny后代，genesis起源）"
+    },
+    {
+      "question": "_______ mentor",
+      "type": "blank",
+      "answer": "trusted",
+      "explanation": "导师; 顾问, 值得信赖的导师. Her trusted mentor guided her career decisions. 她值得信赖的导师指导她的职业决定。 | Mentor->荷马史诗中奥德修斯托付儿子特勒马科斯的智慧老者，mentor->导师（cf. mental精神的，comment评论）"
+    },
+    {
+      "question": "______ sculptor",
+      "type": "blank",
+      "answer": "master",
+      "explanation": "雕塑家, 大师级雕塑家. The master sculptor created lifelike marble statues. 大师级雕塑家创作了栩栩如生的大理石雕像。 | sculp->雕刻（拉丁sculpere），sculptor->雕刻者=雕塑家（cf. sculpt雕刻，sculpture雕塑）"
+    },
+    {
+      "question": "______ pastor",
+      "type": "blank",
+      "answer": "parish",
+      "explanation": "牧师, 教区牧师. The parish pastor delivered an inspiring sermon. 教区牧师发表了鼓舞人心的布道。 | pastor->牧羊人（拉丁），pastor->牧养羊群/引导信众的人=牧师（cf. pasture牧场，pastoral田园的，pasteurize巴氏杀菌）"
+    },
+    {
+      "question": "______ impostor",
+      "type": "blank",
+      "answer": "clever",
+      "explanation": "冒名顶替者; 骗子, 狡猾的冒名顶替者. The clever impostor fooled everyone for months. 狡猾的冒名顶替者欺骗了所有人好几个月。 | im->进入，pos->放置，impostor->把自己放入别人位置的人=冒名顶替者（cf. impose强加，impost税，imposter美式拼写）"
+    },
+    {
+      "question": "_____-______ interlocutor",
+      "type": "blank",
+      "answer": "quick-witted",
+      "explanation": "对话者; 谈话者, 机智的对话者. The quick-witted interlocutor kept the discussion lively. 机智的对话者使讨论保持活跃。 | inter->之间，locut->说话，interlocutor->在两者之间说话的人=对话者（cf. circumlocution迂回说法，elocution演讲术）"
+    },
+    {
+      "question": "_______ tutor",
+      "type": "blank",
+      "answer": "private",
+      "explanation": "家庭教师; 导师, 私人家庭教师. They hired a private tutor to help with mathematics. 他们聘请了一位私人家庭教师来辅导数学。 | tutor->守护者（拉丁tutus->保护），tutor->保护/指导学生的人=导师（cf. intuition直觉=向内守护，tutelage监护）"
+    },
+    {
+      "question": "______ languor",
+      "type": "blank",
+      "answer": "summer",
+      "explanation": "倦怠; 慵懒, 夏日慵懒. A feeling of summer languor settled over the town. 夏日慵懒的感觉笼罩着小镇。 | languere->虚弱（拉丁），languor->虚弱慵懒的状态（cf. languid无精打采的，language语言=无力说话？）"
+    },
+    {
+      "question": "_________ fervor",
+      "type": "blank",
+      "answer": "religious",
+      "explanation": "热情; 热诚, 宗教热情. The congregation sang with religious fervor. 会众以宗教热情歌唱。 | fervere->沸腾（拉丁），fervor->沸腾般的热情（cf. fervent热情的，fermentation发酵，fever发烧）"
+    },
+    {
+      "question": "____ surveyor",
+      "type": "blank",
+      "answer": "land",
+      "explanation": "测量员, 土地测量员. The land surveyor marked the property boundaries. 土地测量员标记了财产边界。 | sur->在上，vey->看（法语voir），surveyor->从上面看/测量的人=测量员（cf. survey调查，surveillance监视，vision视野）"
+    },
+    {
+      "question": "______ centaur",
+      "type": "blank",
+      "answer": "mythic",
+      "explanation": "半人马, 神话中的半人马. Ancient Greeks told stories about the mythic centaur. 古希腊人讲述关于神话中的半人马的故事。 | kentauros->半人马（希腊神话），centaur->上半人下半马的神话生物（cf. Sagittarius射手座也是半人马形象）"
+    },
+    {
+      "question": "incur _____",
+      "type": "blank",
+      "answer": "costs",
+      "explanation": "招致; 遭受, 招致成本. The company will incur costs from the expansion project. 公司将因扩张项目招致成本。 | in->进入，cur->跑（拉丁currere），incur->跑进去遭遇=招致（cf. occur发生，recur复发，excursion远足）"
+    },
+    {
+      "question": "concur ____",
+      "type": "blank",
+      "answer": "with",
+      "explanation": "同意; 一致, 同意. The committee members concur with the proposed changes. 委员会成员同意提议的变更。 | con->共同，cur->跑，concur->共同跑到同一结论=同意（cf. occur发生，concurrent同时发生的，currency流通货币）"
+    },
+    {
+      "question": "________ grandeur",
+      "type": "blank",
+      "answer": "imperial",
+      "explanation": "壮丽; 宏伟, 帝国的壮丽. The palace displayed imperial grandeur and opulence. 宫殿展现了帝国的壮丽和华丽。 | grand->伟大（法语，拉丁grandis），grandeur->伟大壮丽（cf. grand大的，grandiose宏大的，grandmother祖母）"
+    },
+    {
+      "question": "____ entrepreneur",
+      "type": "blank",
+      "answer": "tech",
+      "explanation": "企业家, 科技企业家. The young tech entrepreneur launched a successful startup. 年轻的科技企业家创办了一家成功的初创公司。 | entre->在...之间，prendre->拿取（法语），entrepreneur->在不同人之间承揽事业的人=企业家（cf. enterprise企业）"
+    },
+    {
+      "question": "_______ poseur",
+      "type": "blank",
+      "answer": "fashion",
+      "explanation": "装腔作势者, 时尚装腔作势者. The fashion poseur wore designer labels to impress others. 时尚装腔作势者穿名牌服装以打动他人。 | poser->摆姿势者（法语），poseur->故意摆出虚伪姿态的人=装腔作势者（cf. pose摆姿势，impostor冒名顶替者）"
+    },
+    {
+      "question": "____ connoisseur",
+      "type": "blank",
+      "answer": "wine",
+      "explanation": "鉴赏家, 葡萄酒鉴赏家. The wine connoisseur could identify vintages by taste. 葡萄酒鉴赏家可以通过品尝识别年份。 | connaître->认识（法语，拉丁cognoscere），connoisseur->深入认识的人=鉴赏家（cf. cognition认知，recognize认识，reconnoiter侦察）"
+    },
+    {
+      "question": "_____ raconteur",
+      "type": "blank",
+      "answer": "witty",
+      "explanation": "善于讲故事的人, 机智的故事讲述者. The witty raconteur entertained guests with amusing tales. 机智的故事讲述者用有趣的故事娱乐客人。 | raconter->讲述（法语，re+compter->重新计数/讲述），raconteur->善于讲故事的人（cf. recount重述，account叙述）"
+    },
+    {
+      "question": "_____ saboteur",
+      "type": "blank",
+      "answer": "enemy",
+      "explanation": "破坏者, 敌方破坏者. Security forces captured an enemy saboteur near the facility. 安全部队在设施附近抓获了一名敌方破坏者。 | sabot->木鞋（法语），saboteur->工人用木鞋踩坏机器以抗议=破坏者（cf. sabotage蓄意破坏）"
+    },
+    {
+      "question": "____ hauteur",
+      "type": "blank",
+      "answer": "cold",
+      "explanation": "傲慢; 高傲, 冷酷的傲慢. She treated everyone with cold hauteur and disdain. 她以冷酷的傲慢和轻蔑对待每个人。 | haut->高（法语，拉丁altus），hauteur->居高临下的态度=傲慢（cf. haughty傲慢的，haute cuisine高级料理）"
+    },
+    {
+      "question": "augur ____",
+      "type": "blank",
+      "answer": "well",
+      "explanation": "预示; 占卜, 预示良好. The early results augur well for the company's future. 早期结果为公司的未来预示良好。 | augur->罗马占卜官（观察鸟的飞行预测吉凶），augur->预示（cf. inaugural就职的=用占卜开始，August八月=奥古斯都大帝月）"
+    },
+    {
+      "question": "dour __________",
+      "type": "blank",
+      "answer": "expression",
+      "explanation": "严厉的; 阴郁的, 阴郁的表情. His dour expression revealed his disapproval. 他阴郁的表情显露出他的不满。 | durus->坚硬/严酷（拉丁），dour->严酷阴沉的（cf. durable耐久的，endure忍耐，duration持续时间）"
+    },
+    {
+      "question": "_____ downpour",
+      "type": "blank",
+      "answer": "heavy",
+      "explanation": "倾盆大雨, 大暴雨. A heavy downpour forced everyone indoors. 大暴雨迫使所有人待在室内。 | down->向下，pour->倾泻，downpour->向下倾泻的雨=倾盆大雨（cf. pour倾倒，outpour涌出，downfall下落/衰败）"
+    },
+{
+      "question": "____ _ detour",
+      "type": "blank",
+      "answer": "take a",
+      "explanation": "绕道; 迂回, 绕道. We had to take a detour because of road construction. 我们不得不绕道,因为道路施工。 | de->离开，tour->转/旅行（法语），detour->转离原路=绕道（cf. tour旅游，contour轮廓）"
+    },
+    {
+      "question": "devour _ ____",
+      "type": "blank",
+      "answer": "a book",
+      "explanation": "吞食; 狼吞虎咽, 一口气读完一本书. She would devour a book in a single sitting. 她会一口气读完一本书。 | de->彻底，vour->吞食（拉丁vorare），devour->彻底吞噬（cf. voracious贪吃的，carnivore肉食动物）"
+    },
+    {
+      "question": "spur ______",
+      "type": "blank",
+      "answer": "growth",
+      "explanation": "马刺; 刺激, 刺激增长. Tax incentives can spur growth in the economy. 税收优惠可以刺激经济增长。 | spur->马刺（古英语spura），spur->像马刺一样刺激=激励（cf. spurn用脚踢开，on the spur of the moment一时冲动）"
+    },
+    {
+      "question": "______ zephyr",
+      "type": "blank",
+      "answer": "spring",
+      "explanation": "和风; 微风, 春天的微风. A gentle spring zephyr rustled the leaves. 轻柔的春天微风吹动树叶。 | Zephyros->西风之神（希腊神话），zephyr->轻柔的西风/微风"
+    },
+    {
+      "question": "_________ martyr",
+      "type": "blank",
+      "answer": "Christian",
+      "explanation": "殉道者; 烈士, 基督教殉道者. The Christian martyr died for his faith. 基督教殉道者为信仰而死。 | martyr->见证者（希腊martys->证人），martyr->用生命见证信仰的人=殉道者"
+    },
+    {
+      "question": "______ fracas",
+      "type": "blank",
+      "answer": "street",
+      "explanation": "喧闹; 吵闹, 街头喧闹. A street fracas broke out between rival groups. 对立团体之间爆发了街头喧闹。 | fracasser->打碎（法语），fracas->打碎东西的喧闹=吵闹冲突（cf. fracture骨折，fragile易碎的）"
+    },
+    {
+      "question": "pancreas ________",
+      "type": "blank",
+      "answer": "function",
+      "explanation": "胰腺, 胰腺功能. Diabetes affects pancreas function significantly. 糖尿病严重影响胰腺功能。 | pan->全部，kreas->肉（希腊），pancreas->全是肉的=胰腺（cf. pandemic全球性的）"
+    },
+    {
+      "question": "___ specifics",
+      "type": "blank",
+      "answer": "the",
+      "explanation": "具体细节, 具体细节. Let us discuss the specifics of the proposal. 让我们讨论提案的具体细节。 | spec->看/具体（拉丁species->种类），specifics->具体细节（cf. species物种，specimen样本）"
+    },
+    {
+      "question": "____________ ethics",
+      "type": "blank",
+      "answer": "professional",
+      "explanation": "伦理学; 道德规范, 职业道德. Doctors must adhere to professional ethics standards. 医生必须遵守职业道德标准。 | ethos->品格/气质（希腊），ethics->关于品格的学问=伦理学（cf. ethnic民族的）"
+    },
+    {
+      "question": "____ ceramics",
+      "type": "blank",
+      "answer": "fine",
+      "explanation": "陶瓷, 精美陶瓷. The museum displays ancient fine ceramics from China. 博物馆展示来自中国的古代精美陶瓷。 | keramos->陶土（希腊），ceramics->陶土制品=陶瓷"
+    },
+    {
+      "question": "_______ mechanics",
+      "type": "blank",
+      "answer": "quantum",
+      "explanation": "力学; 机械学, 量子力学. Physicists study quantum mechanics at the subatomic level. 物理学家研究亚原子层面的量子力学。 | mechane->机器（希腊），mechanics->研究机器/力的学问=力学（cf. machine机器，mechanism机制）"
+    },
+    {
+      "question": "_____ mnemonics",
+      "type": "blank",
+      "answer": "study",
+      "explanation": "记忆术, 学习记忆术. Students use study mnemonics to memorize information. 学生使用学习记忆术来记忆信息。 | Mnemosyne->记忆女神（希腊神话），mnemonics->记忆的技术=记忆术（注意m不发音，cf. amnesia失忆症）"
+    },
+    {
+      "question": "pediatrics ____",
+      "type": "blank",
+      "answer": "ward",
+      "explanation": "儿科学, 儿科病房. The hospital opened a new pediatrics ward last month. 医院上个月开设了新的儿科病房。 | ped->儿童（希腊pais），iatrics->医疗，pediatrics->儿童医疗=儿科"
+    },
+    {
+      "question": "_____ metaphysics",
+      "type": "blank",
+      "answer": "study",
+      "explanation": "形而上学, 学习形而上学. Philosophy students study metaphysics in their second year. 哲学系学生在第二年学习形而上学。 | meta->之后/超越，physics->物理学，metaphysics->物理学之后的学问（亚里士多德著作的编排顺序）"
+    },
+    {
+      "question": "_______ athletics",
+      "type": "blank",
+      "answer": "college",
+      "explanation": "田径运动, 大学田径运动. College athletics programs attract talented athletes nationwide. 大学田径运动项目吸引了全国有才华的运动员。 | athlos->竞赛（希腊），athletics->竞技运动（cf. athlete运动员，pentathlon五项全能）"
+    },
+    {
+      "question": "_____ homiletics",
+      "type": "blank",
+      "answer": "learn",
+      "explanation": "讲道学, 学习讲道学. Seminary students learn homiletics as part of their training. 神学院学生在培训中学习讲道学。 | homilos->人群（希腊），homiletics->向人群讲道的学问（cf. homily布道）"
+    },
+    {
+      "question": "_____ genetics",
+      "type": "blank",
+      "answer": "study",
+      "explanation": "遗传学, 学习遗传学. Biologists study genetics to understand heredity. 生物学家学习遗传学以理解遗传。 | genesis->起源/产生（希腊），genetics->研究遗传起源的学问=遗传学（cf. gene基因）"
+    },
+    {
+      "question": "________ dietetics",
+      "type": "blank",
+      "answer": "clinical",
+      "explanation": "营养学, 临床营养学. She earned a degree in clinical dietetics. 她获得了临床营养学学位。 | diaita->生活方式（希腊），dietetics->研究饮食方式的学问=营养学（cf. diet饮食）"
+    },
+    {
+      "question": "orthodontics _________",
+      "type": "blank",
+      "answer": "treatment",
+      "explanation": "正畸学, 正畸治疗. The teenager needs orthodontics treatment for crooked teeth. 这个青少年的歪牙需要正畸治疗。 | ortho->直/正，dont->牙（希腊odous），orthodontics->使牙齿变直的学问=正畸学"
+    },
+    {
+      "question": "______ logistics",
+      "type": "blank",
+      "answer": "supply",
+      "explanation": "物流; 后勤, 供应物流. The company improved its supply logistics system. 公司改进了其供应物流系统。 | logistique->军队补给（法语），logistics->军队物资调配=后勤/物流（cf. logic逻辑）"
+    },
+    {
+      "question": "_____ linguistics",
+      "type": "blank",
+      "answer": "study",
+      "explanation": "语言学, 学习语言学. Students study linguistics to understand language structure. 学生学习语言学以理解语言结构。 | lingua->舌头/语言（拉丁），linguistics->研究语言的学问=语言学（cf. bilingual双语的）"
+    },
+    {
+      "question": "_____ aeronautics",
+      "type": "blank",
+      "answer": "study",
+      "explanation": "航空学, 航空学. He studied aeronautics at the engineering school. 他在工程学院专攻航空学。 | aero->空气（希腊aer），naut->航行者，aeronautics->在空气中航行的学问=航空学（cf. astronaut宇航员，nautical航海的）"
+    },
+    {
+      "question": "scads __ _____",
+      "type": "blank",
+      "answer": "of money",
+      "explanation": "大量, 大量金钱. The lottery winner received scads of money. 彩票中奖者获得了大量金钱。 | scads->大量，scads of->大量的"
+    },
+    {
+      "question": "____ odds",
+      "type": "blank",
+      "answer": "long",
+      "explanation": "可能性; 几率, 很小的可能性. Despite the long odds, they succeeded in their mission. 尽管可能性很小,他们还是完成了任务。 | odds->差异/比值（古英语），odds->赔率/可能性（at odds->不一致）"
+    },
+    {
+      "question": "_______ proceeds",
+      "type": "blank",
+      "answer": "auction",
+      "explanation": "收益; 收入, 拍卖收益. The auction proceeds will benefit the charity. 拍卖收益将用于慈善事业。 | pro->向前，ceed->走（拉丁cedere），proceeds->向前走得到的=收益（cf. proceed进行）"
+    },
+    {
+      "question": "_____ rapids",
+      "type": "blank",
+      "answer": "river",
+      "explanation": "急流, 河流急流. Kayakers navigated the dangerous river rapids. 皮划艇运动员穿越危险的河流急流。 | rapid->快速（拉丁rapidus），rapids->水流快速的地方=急流"
+    },
+    {
+      "question": "_________ viands",
+      "type": "blank",
+      "answer": "delicious",
+      "explanation": "食品; 佳肴, 美味佳肴. The banquet table was laden with delicious viands. 宴会桌上摆满了美味佳肴。 | vivanda->维持生命之物（拉丁vivere->生活），viands->维持生命的食物=佳肴（cf. vivid生动的，vitamin维生素）"
+    },
+    {
+      "question": "______ blinds",
+      "type": "blank",
+      "answer": "window",
+      "explanation": "百叶窗, 窗户百叶窗. Close the window blinds to block out the sunlight. 关上窗户百叶窗遮挡阳光。 | blind->遮蔽（古英语），blinds->遮挡光线的窗帘=百叶窗"
+    },
+    {
+      "question": "_____ auspices",
+      "type": "blank",
+      "answer": "under",
+      "explanation": "赞助; 支持, 在...赞助下. The event was held under auspices of the United Nations. 活动在联合国的赞助下举行。 | avis->鸟，spic->看（拉丁），auspices->观鸟占卜=吉兆/赞助（cf. auspicious吉祥的）"
+    },
+    {
+      "question": "rabies _______",
+      "type": "blank",
+      "answer": "vaccine",
+      "explanation": "狂犬病, 狂犬病疫苗. The dog received a rabies vaccine at the vet. 狗在兽医那里接种了狂犬病疫苗。 | rabere->发狂（拉丁），rabies->使发狂的病=狂犬病（cf. rabid狂热的，rage狂怒）"
+    },
+    {
+      "question": "______ facilities",
+      "type": "blank",
+      "answer": "sports",
+      "explanation": "设施, 体育设施. The university built new sports facilities for students. 大学为学生建造了新的体育设施。 | facilis->容易的（拉丁facere->做），facilities->方便做事的设备=设施（cf. facilitate便利）"
+    },
+    {
+      "question": "_____ securities",
+      "type": "blank",
+      "answer": "trade",
+      "explanation": "证券, 交易证券. Brokers trade securities on the stock exchange. 经纪人在证券交易所交易证券。 | securus->安全（拉丁），securities->安全投资凭证=证券"
+    },
+    {
+      "question": "__ shambles",
+      "type": "blank",
+      "answer": "in",
+      "explanation": "混乱; 废墟, 一片混乱. After the storm, the town was in shambles. 暴风雨过后,城镇一片混乱。 | shambles->原指凌乱的肉市，现指一片狼藉"
+    },
+    {
+      "question": "__ ___ throes __",
+      "type": "blank",
+      "answer": "in the of",
+      "explanation": "阵痛; 痛苦挣扎, 在...痛苦挣扎中. The nation is in the throes of economic crisis. 这个国家正处于经济危机的痛苦挣扎中。 | throes->剧烈阵痛（古英语thrawu->痛苦），in the throes of->正处于...的剧烈挣扎中"
+    },
+    {
+      "question": "______ mores",
+      "type": "blank",
+      "answer": "social",
+      "explanation": "风俗; 习惯, 社会习俗. Every culture has its own social mores and customs. 每种文化都有自己的社会习俗。 | mores->风俗（拉丁mos->习惯），mores->社会道德习俗（cf. moral道德的）"
+    },
+    {
+      "question": "______ tresses",
+      "type": "blank",
+      "answer": "golden",
+      "explanation": "长发; 辫子, 金色长发. The princess was known for her golden tresses. 公主以其金色长发而闻名。 | tresse->编发（古法语，来自希腊tricha->三股），tresses->编成的长发"
+    },
+    {
+      "question": "_______ minutes",
+      "type": "blank",
+      "answer": "meeting",
+      "explanation": "会议记录, 会议记录. The secretary took careful meeting minutes. 秘书仔细记录了会议记录。 | minuta->小的书写（拉丁），minutes->小字记录=会议记录（cf. minute微小的/分钟，minutiae细节）"
+    },
+    {
+      "question": "___ dregs __ _______",
+      "type": "blank",
+      "answer": "the of society",
+      "explanation": "渣滓; 糟粕, 社会渣滓. The criminal was considered the dregs of society. 这个罪犯被认为是社会渣滓。 | dregs->沉渣（古挪威dregg），dregs->底部沉积物=渣滓"
+    },
+    {
+      "question": "________ belongings",
+      "type": "blank",
+      "answer": "personal",
+      "explanation": "所有物; 财物, 个人财物. Please collect your personal belongings before leaving. 离开前请收拾您的个人财物。 | belong->属于（be+long），belongings->属于某人的东西=所有物"
+    },
+    {
+      "question": "______ palings",
+      "type": "blank",
+      "answer": "wooden",
+      "explanation": "栅栏; 围栏, 木栅栏. The garden was enclosed by wooden palings. 花园被木栅栏围起来。 | pale->木桩（拉丁palus->桩），palings->木桩围成的栅栏（cf. palisade栅栏）"
+    },
+    {
+      "question": "_____ filings",
+      "type": "blank",
+      "answer": "metal",
+      "explanation": "锉屑, 金属锉屑. Metal filings scattered across the workshop floor. 金属锉屑散落在车间地板上。 | file->锉（古英语feol），filings->锉下来的屑=锉屑"
+    },
+    {
+      "question": "____ shavings",
+      "type": "blank",
+      "answer": "wood",
+      "explanation": "刨花, 木刨花. Wood shavings covered the carpenteras bench. 木刨花覆盖了木匠的工作台。 | shave->刮/刨（古英语scafan），shavings->刨去的碎屑=刨花"
+    },
+    {
+      "question": "_______ tongs",
+      "type": "blank",
+      "answer": "kitchen",
+      "explanation": "钳子; 夹子, 厨房夹子. Use the kitchen tongs to handle hot items. 用厨房夹子处理热的物品。 | tang->夹（古英语tang），tongs->夹取工具=夹子（cf. tongue舌头，同词根，舌头像钳子）"
+    },
+    {
+      "question": "_____ précis",
+      "type": "blank",
+      "answer": "brief",
+      "explanation": "摘要; 概要, 简短摘要. The student wrote a brief précis of the article. 学生写了一篇文章的简短摘要。 | précis->精确简短（法语，来自拉丁praecisus->切短），précis->简洁摘要（cf. precise精确的）"
+    },
+    {
+      "question": "________ proboscis",
+      "type": "blank",
+      "answer": "elephant",
+      "explanation": "鼻子; 长鼻, 大象鼻子. The elephant proboscis is a versatile tool. 大象鼻子是一个多功能工具。 | pro->向前，bosk->喂食（希腊），proboscis->伸向前方采食的器官=长鼻"
+    },
+    {
+      "question": "_____ ___ aegis",
+      "type": "blank",
+      "answer": "under the",
+      "explanation": "保护; 赞助, 在...保护下. The project operates under the aegis of the government. 该项目在政府的保护下运作。 | Aigis->宙斯的神盾（希腊神话），aegis->神盾的保护=庇护"
+    },
+    {
+      "question": "_____ necropolis",
+      "type": "blank",
+      "answer": "royal",
+      "explanation": "墓地; 公墓, 皇家墓地. Archaeologists excavated the royal necropolis. 考古学家挖掘了皇家墓地。 | necro->死亡（希腊nekros），polis->城市，necropolis->死者之城=墓地（cf. necromancy死灵术）"
+    },
+    {
+      "question": "________ metropolis",
+      "type": "blank",
+      "answer": "bustling",
+      "explanation": "大都市, 繁华的大都市. New York is a bustling metropolis with millions of residents. 纽约是一个拥有数百万居民的繁华大都市。 | metro->母亲，polis->城市，metropolis->母城=大都市"
+    },
+    {
+      "question": "_____ epidermis",
+      "type": "blank",
+      "answer": "outer",
+      "explanation": "表皮, 外表皮. The outer epidermis protects the body from infection. 外表皮保护身体免受感染。 | epi->在上，dermis->皮肤（希腊），epidermis->在皮肤上面的=表皮（cf. dermatology皮肤科）"
+    },
+    {
+      "question": "bourgeois _____",
+      "type": "blank",
+      "answer": "class",
+      "explanation": "资产阶级的; 中产阶级的, 资产阶级. The bourgeois class emerged during the industrial revolution. 资产阶级在工业革命期间兴起。 | bourg->城镇（法语），bourgeois->城镇居民=中产阶级"
+    },
+    {
+      "question": "_____ debris",
+      "type": "blank",
+      "answer": "storm",
+      "explanation": "碎片; 残骸, 暴风雨残骸. Storm debris littered the streets after the hurricane. 飓风过后,暴风雨残骸散落在街道上。 | débriser->打碎（法语），debris->打碎后的碎片=残骸（注意s不发音）"
+    },
+    {
+      "question": "_____ hubris",
+      "type": "blank",
+      "answer": "fatal",
+      "explanation": "傲慢; 狂妄, 致命的傲慢. His fatal hubris led to his downfall. 他致命的傲慢导致了他的垮台。 | hubris->傲慢/冒犯神灵（希腊），hubris->在希腊悲剧中导致英雄毁灭的致命傲慢（cf. Nemesis报应）"
+    },
+    {
+      "question": "_____ verdigris",
+      "type": "blank",
+      "answer": "green",
+      "explanation": "铜绿, 绿色铜绿. Green verdigris formed on the old copper statue. 古老的铜像上形成了绿色铜绿。 | verd->绿（法语vert），verdigris->希腊绿=铜绿"
+    },
+    {
+      "question": "_________ stasis",
+      "type": "blank",
+      "answer": "political",
+      "explanation": "停滞; 静止, 政治停滞. The country experienced political stasis for years. 该国经历了多年的政治停滞。 | stasis->站立/停止（希腊histanai->使站立），stasis->停滞不动（cf. static静态的，ecstasy狂喜）"
+    },
+    {
+      "question": "________ homeostasis",
+      "type": "blank",
+      "answer": "maintain",
+      "explanation": "体内平衡, 维持体内平衡. The body works to maintain homeostasis constantly. 身体不断努力维持体内平衡。 | homeo->相同（希腊），stasis->静止，homeostasis->保持相同状态=体内平衡"
+    },
+    {
+      "question": "________ thesis",
+      "type": "blank",
+      "answer": "doctoral",
+      "explanation": "论文, 博士论文. She defended her doctoral thesis successfully. 她成功地为博士论文进行了答辩。 | thesis->放置/主张（希腊tithenai->放置），thesis->放置出来的主张=论文（cf. antithesis对立，synthesis综合）"
+    },
+    {
+      "question": "_______ antithesis",
+      "type": "blank",
+      "answer": "perfect",
+      "explanation": "对立; 对立面, 完全对立. His behavior was the perfect antithesis of professionalism. 他的行为与职业精神完全对立。 | anti->对，thesis->主张，antithesis->对立的主张=对立面"
+    },
+    {
+      "question": "_______ synthesis",
+      "type": "blank",
+      "answer": "protein",
+      "explanation": "综合; 合成, 蛋白质合成. Cells carry out protein synthesis using ribosomes. 细胞使用核糖体进行蛋白质合成。 | syn->共同，thesis->放置，synthesis->放在一起=综合/合成（cf. photosynthesis光合作用）"
+    },
+    {
+      "question": "_____ photosynthesis",
+      "type": "blank",
+      "answer": "plant",
+      "explanation": "光合作用, 植物光合作用. Plant photosynthesis converts sunlight into energy. 植物光合作用将阳光转化为能量。 | photo->光，synthesis->合成，photosynthesis->用光合成=光合作用"
+    },
+    {
+      "question": "__________ hypothesis",
+      "type": "blank",
+      "answer": "scientific",
+      "explanation": "假设; 假说, 科学假设. The researcher tested her scientific hypothesis through experiments. 研究人员通过实验检验了她的科学假设。 | hypo->在下，thesis->放置，hypothesis->放在下面的基础假设"
+    },
+    {
+      "question": "Nemesis ______",
+      "type": "blank",
+      "answer": "figure",
+      "explanation": "复仇女神; 宿敌, 宿敌人物. The detective finally confronted his Nemesis figure. 侦探最终面对了他的宿敌人物。 | Nemesis->希腊复仇女神（执行对傲慢者的惩罚），nemesis->报复/宿敌（对应hubris傲慢）"
+    },
+    {
+      "question": "____ __ Genesis",
+      "type": "blank",
+      "answer": "book of",
+      "explanation": "起源; 创世纪, 创世纪. The book of Genesis describes the creation of the world. 创世纪描述了世界的创造。 | genesis->起源（希腊gignesthai->产生），genesis->起源（cf. gene基因，genetics遗传学）"
+    },
+    {
+      "question": "apotheosis __ ___",
+      "type": "blank",
+      "answer": "of art",
+      "explanation": "神化; 典范, 艺术的典范. The painting represents the apotheosis of art in that era. 这幅画代表了那个时代艺术的典范。 | apo->提升，theos->神（希腊），apotheosis->提升到神的地位=神化/典范（cf. theology神学）"
+    },
+    {
+      "question": "______ symbiosis",
+      "type": "blank",
+      "answer": "mutual",
+      "explanation": "共生, 互惠共生. Bees and flowers have a mutual symbiosis relationship. 蜜蜂和花朵有互惠共生关系。 | sym->共同，bios->生命（希腊），symbiosis->共同生活=共生（cf. biology生物学）"
+    },
+    {
+      "question": "_______ osmosis",
+      "type": "blank",
+      "answer": "reverse",
+      "explanation": "渗透, 反渗透. The water purification system uses reverse osmosis technology. 净水系统使用反渗透技术。 | osmos->推/冲（希腊），osmosis->通过膜渗透=渗透（cf. by osmosis不知不觉地学会）"
+    },
+    {
+      "question": "_______ prognosis",
+      "type": "blank",
+      "answer": "medical",
+      "explanation": "预后; 预测, 医学预后. The doctor gave a positive medical prognosis for recovery. 医生给出了积极的康复医学预后。 | pro->提前，gnosis->知识（希腊），prognosis->提前知晓=预后（cf. diagnosis诊断）"
+    },
+    {
+      "question": "_______ neurosis",
+      "type": "blank",
+      "answer": "anxiety",
+      "explanation": "神经症, 焦虑神经症. The patient was diagnosed with anxiety neurosis. 患者被诊断患有焦虑神经症。 | neuro->神经（希腊neuron），osis->疾病状态，neurosis->神经的疾病状态=神经症"
+    },
+    {
+      "question": "___ __ ellipsis",
+      "type": "blank",
+      "answer": "use an",
+      "explanation": "省略号, 使用省略号. Writers use an ellipsis to indicate omitted text. 作家使用省略号来表示省略的文本。 | elleipsis->缺失（希腊），ellipsis->省去文字=省略号（cf. ellipse椭圆=缺了一块的圆）"
+    },
+    {
+      "question": "____ synopsis",
+      "type": "blank",
+      "answer": "plot",
+      "explanation": "概要; 梗概, 情节梗概. The publisher requested a plot synopsis of the novel. 出版商要求提供小说的情节梗概。 | syn->共同，opsis->看（希腊），synopsis->一起看=概览/梗概"
+    },
+    {
+      "question": "_________ catharsis",
+      "type": "blank",
+      "answer": "emotional",
+      "explanation": "宣泄; 净化, 情感宣泄. The therapy session provided emotional catharsis for her. 治疗过程为她提供了情感宣泄。 | katharsis->净化（希腊katharos->纯洁），catharsis->净化情感=宣泄"
+    },
+    {
+      "question": "_____ ecdysis",
+      "type": "blank",
+      "answer": "snake",
+      "explanation": "蜕皮, 蛇蜕皮. Snake ecdysis occurs several times per year. 蛇蜕皮每年发生多次。 | ek->出，dysis->潜入（希腊），ecdysis->从旧皮中出来=蜕皮"
+    },
+    {
+      "question": "____ gratis",
+      "type": "blank",
+      "answer": "free",
+      "explanation": "免费的, 免费. The software is available free gratis to students. 该软件免费提供给学生。 | gratis->出于感激/免费（拉丁gratia->恩惠），gratis->免费（cf. gratitude感激）"
+    },
+    {
+      "question": "_____ nephritis",
+      "type": "blank",
+      "answer": "acute",
+      "explanation": "肾炎, 急性肾炎. The patient was hospitalized with acute nephritis. 患者因急性肾炎住院。 | nephros->肾（希腊），itis->炎症，nephritis->肾脏炎症=肾炎"
+    },
+    {
+      "question": "__________ arthritis",
+      "type": "blank",
+      "answer": "rheumatoid",
+      "explanation": "关节炎, 类风湿性关节炎. Rheumatoid arthritis causes joint inflammation and pain. 类风湿性关节炎导致关节炎症和疼痛。 | arthron->关节（希腊），itis->炎症，arthritis->关节炎症=关节炎"
+    },
+    {
+      "question": "_______ gastritis",
+      "type": "blank",
+      "answer": "chronic",
+      "explanation": "胃炎, 慢性胃炎. Chronic gastritis can damage the stomach lining. 慢性胃炎会损害胃粘膜。 | gaster->胃（希腊），itis->炎症，gastritis->胃炎（cf. gastronomy美食学）"
+    },
+    {
+      "question": "_____ hepatitis",
+      "type": "blank",
+      "answer": "viral",
+      "explanation": "肝炎, 病毒性肝炎. Viral hepatitis can be prevented through vaccination. 病毒性肝炎可以通过疫苗接种预防。 | hepat->肝（希腊hepar），itis->炎症，hepatitis->肝脏炎症=肝炎"
+    },
+    {
+      "question": "axis __ ________",
+      "type": "blank",
+      "answer": "of rotation",
+      "explanation": "轴; 轴线, 旋转轴. Earth spins on its axis of rotation. 地球绕其旋转轴自转。 | axis->轴（拉丁，来自agere->驱动），axis->旋转轴（cf. axle车轴，axiom公理）"
+    },
+    {
+      "question": "__________ annals",
+      "type": "blank",
+      "answer": "historical",
+      "explanation": "编年史; 年鉴, 历史编年史. The event is recorded in the historical annals. 该事件记录在历史编年史中。 | annus->年（拉丁），annals->按年记录的史书=编年史（cf. annual年度的，anniversary周年）"
+    },
+    {
+      "question": "____ alms",
+      "type": "blank",
+      "answer": "give",
+      "explanation": "施舍; 救济金, 施舍. The monks would give alms to the poor. 僧侣会向穷人施舍。 | eleemosyne->怜悯（希腊），alms->慈悲施舍（注意l不发音，cf. eleemosynary慈善的）"
+    },
+    {
+      "question": "____ qualms",
+      "type": "blank",
+      "answer": "have",
+      "explanation": "疑虑; 不安, 有疑虑. I have qualms about accepting such a large gift. 我对接受这么大的礼物有疑虑。 | qualm->良心不安（古英语cwealm->死亡），qualms->良心上的疑虑"
+    },
+    {
+      "question": "__ ___ doldrums",
+      "type": "blank",
+      "answer": "in the",
+      "explanation": "忧郁; 停滞, 处于停滞状态. The economy has been in the doldrums for months. 经济已经处于停滞状态好几个月了。 | doldrums->赤道无风带（风平浪静船停），in the doldrums->处于停滞/忧郁"
+    },
+    {
+      "question": "_____ remains",
+      "type": "blank",
+      "answer": "human",
+      "explanation": "遗骸; 残余, 人类遗骸. Archaeologists discovered ancient human remains at the site. 考古学家在现场发现了古代人类遗骸。 | re->继续，main->留（拉丁manere），remains->留下来的=遗骸/残余"
+    },
+    {
+      "question": "____ environs",
+      "type": "blank",
+      "answer": "city",
+      "explanation": "周围地区; 郊区, 城市周围地区. They explored the city environs on their day off. 他们在休息日探索了城市周围地区。 | environ->围绕（法语），environs->围绕城市的地区=郊区（cf. environment环境）"
+    },
+    {
+      "question": "___ kudos",
+      "type": "blank",
+      "answer": "win",
+      "explanation": "荣誉; 赞扬, 赢得赞扬. The team will win kudos for their outstanding performance. 团队将因其出色表现赢得赞扬。 | kydos->荣耀（希腊），kudos->荣耀/赞誉（注意：kudos是单数）"
+    },
+    {
+      "question": "________ pathos",
+      "type": "blank",
+      "answer": "touching",
+      "explanation": "悲情; 感染力, 感人的悲情. The speech was filled with touching pathos. 演讲充满了感人的悲情。 | pathos->受苦/情感（希腊），pathos->引起怜悯的情感=悲情（cf. sympathy同情，empathy共情）"
+    },
+    {
+      "question": "_____ ethos",
+      "type": "blank",
+      "answer": "Greek",
+      "explanation": "气质; 精神, 希腊精神. Ancient Greek ethos emphasized virtue and excellence. 古希腊精神强调美德和卓越。 | ethos->品格/习惯（希腊），ethos->群体的气质精神（cf. ethnic民族的，ethics伦理）"
+    },
+    {
+      "question": "apropos ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "适当的; 恰当的, 恰当的评论. She made an apropos remark about the situation. 她对这种情况发表了恰当的评论。 | à propos->关于/恰当（法语），apropos->恰到好处的（cf. propose提议）"
+    },
+    {
+      "question": "____ __ pincers",
+      "type": "blank",
+      "answer": "pair of",
+      "explanation": "钳子; 螯, 一把钳子. The crab used its pair of pincers defensively. 螃蟹用它的一对螯进行防御。 | pincer->夹取（古法语pincier->夹），pincers->夹取工具（pincer movement->钳形攻势）"
+    },
+    {
+      "question": "_______ bleachers",
+      "type": "blank",
+      "answer": "stadium",
+      "explanation": "看台, 体育场看台. Fans filled the stadium bleachers to watch the game. 球迷挤满了体育场看台观看比赛。 | bleach->漂白，bleachers->在太阳下被晒白的木板看台=露天看台"
+    },
+    {
+      "question": "____ __ pliers",
+      "type": "blank",
+      "answer": "pair of",
+      "explanation": "钳子, 一把钳子. Use a pair of pliers to grip the wire tightly. 使用一把钳子紧紧抓住电线。 | plier->折叠者（法语plier->折叠），pliers->能弯折的夹具=钳子"
+    },
+    {
+      "question": "_______ calipers",
+      "type": "blank",
+      "answer": "Vernier",
+      "explanation": "卡尺, 游标卡尺. The engineer measured with Vernier calipers for precision. 工程师用游标卡尺进行精确测量。 | caliber->口径（阿拉伯语qalib->模具），calipers->测量口径的工具=卡尺"
+    },
+    {
+      "question": "____ nippers",
+      "type": "blank",
+      "answer": "nail",
+      "explanation": "指甲钳; 钳子, 指甲钳. She trimmed her nails with nail nippers. 她用指甲钳修剪指甲。 | nip->夹住（象声词），nippers->夹取工具=钳子（cf. nip in the bud扼杀在萌芽）"
+    },
+    {
+      "question": "_____ compass",
+      "type": "blank",
+      "answer": "moral",
+      "explanation": "指南针; 罗盘, 道德指南针. A strong moral compass guides ethical decisions. 强大的道德指南针指导道德决策。 | com->共同，pass->步（拉丁passus），compass->绕行一圈=指南针/包围（cf. compassion同情）"
+    },
+    {
+      "question": "encompass ___",
+      "type": "blank",
+      "answer": "all",
+      "explanation": "包含; 包围, 包含全部. The study aims to encompass all relevant factors. 该研究旨在包含所有相关因素。 | en->使，compass->绕行一圈，encompass->用圈子围住=包含"
+    },
+    {
+      "question": "surpass ____________",
+      "type": "blank",
+      "answer": "expectations",
+      "explanation": "超过; 胜过, 超过期望. The product sales will surpass expectations this quarter. 本季度产品销售将超过期望。 | sur->超过，pass->通过，surpass->超越通过=胜过（cf. bypass绕过）"
+    },
+    {
+      "question": "harass _ _______",
+      "type": "blank",
+      "answer": "a witness",
+      "explanation": "骚扰; 困扰, 骚扰证人. It is illegal to harass a witness in a legal case. 在法律案件中骚扰证人是非法的。 | harer->放犬追猎（古法语），harass->像猎犬一样追逐骚扰"
+    },
+    {
+      "question": "crass ______",
+      "type": "blank",
+      "answer": "remark",
+      "explanation": "粗鲁的; 愚钝的, 粗鲁的评论. His crass remark offended everyone at dinner. 他粗鲁的评论冒犯了晚餐上的所有人。 | crassus->粗/厚（拉丁），crass->厚实愚钝的=粗鲁的"
+    },
+    {
+      "question": "____________ morass",
+      "type": "blank",
+      "answer": "bureaucratic",
+      "explanation": "沼泽; 困境, 官僚困境. The project got stuck in a bureaucratic morass. 该项目陷入了官僚困境。 | moeras->沼泽（荷兰语），morass->沼泽/困境"
+    },
+    {
+      "question": "embarrass ___ ____",
+      "type": "blank",
+      "answer": "the host",
+      "explanation": "使尴尬; 使窘迫, 使主人尴尬. Do not embarrass the host with inappropriate questions. 不要用不恰当的问题使主人尴尬。 | embaraçar->阻碍（葡萄牙语），embarrass->像被栏杆卡住一样=使尴尬"
+    },
+    {
+      "question": "canvass ______",
+      "type": "blank",
+      "answer": "voters",
+      "explanation": "游说; 拉票, 游说选民. Campaign workers canvass voters door to door. 竞选工作人员挨家挨户游说选民。 | canvas->帆布（用帆布过滤），canvass->仔细筛查/游说（注意双写ss）"
+    }  ]
+}
