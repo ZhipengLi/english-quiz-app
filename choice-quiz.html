@@ -201,13 +201,13 @@
 
         .speak-btn:active, .explain-btn:active {
             transform: scale(0.95);
-        }        
-
+        }
+        
         .speak-btn.speaking {
             color: var(--correct-color);
             animation: pulse 1.5s infinite;
-        }        
-
+        }
+        
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 rgba(39, 174, 96, 0.4); }
             70% { box-shadow: 0 0 0 10px rgba(39, 174, 96, 0); }
@@ -456,22 +456,58 @@
 
         /* Improved Text Content Readability */
         .reference-content {
-            background-color: #fafbfc; /* slightly cleaner background */
+            background-color: #fafbfc;
             border: 1px solid #e1e4e8;
             border-radius: 8px;
-            padding: 24px; /* More breathing room */
+            padding: 24px;
             white-space: pre-wrap;
             word-wrap: break-word;
             overflow-y: auto;
             
             /* Typography Improvements */
-            font-family: 'Poppins', sans-serif; /* Override monospace for prose */
-            font-size: 1.05rem; /* Larger, readable size */
-            line-height: 1.7;  /* Increased line-height for better scanning */
-            color: #2c3e50;    /* Dark, strong contrast color */
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #2c3e50;
             font-weight: 400;
             flex-grow: 1;
-            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02); /* Very subtle depth */
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        /* Custom tooltips and Paragraph hovers */
+        .custom-tooltip {
+            position: fixed;
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            pointer-events: none;
+            z-index: 2000;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            white-space: normal;
+            max-width: 350px;
+            line-height: 1.4;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+        }
+
+        .hint-paragraph {
+            cursor: help;
+            border-radius: 6px;
+            padding: 4px 8px;
+            margin: -4px -8px 1em -8px; /* Compensate padding to align text */
+            transition: background-color 0.2s ease;
+        }
+
+        .hint-paragraph:last-child {
+            margin-bottom: -4px;
+        }
+
+        .hint-paragraph:hover {
+            background-color: rgba(52, 152, 219, 0.1);
         }
 
         @media (max-width: 480px) {
@@ -594,7 +630,7 @@
         <div class="modal-content">
             <button class="close-btn" id="close-text-btn">&times;</button>
             <h2>Summary Reference</h2>
-            <pre id="reference-text-content" class="reference-content"></pre>
+            <div id="reference-text-content" class="reference-content"></div>
         </div>
     </div>
 
@@ -602,7 +638,7 @@
         <div class="modal-content">
             <button class="close-btn" id="close-paragraph-btn">&times;</button>
             <h2>Article Context</h2>
-            <pre id="reference-paragraph-content" class="reference-content"></pre>
+            <div id="reference-paragraph-content" class="reference-content"></div>
         </div>
     </div>
 
@@ -659,6 +695,11 @@
             const referenceTextContent = document.getElementById('reference-text-content');
             const referenceParagraphContent = document.getElementById('reference-paragraph-content');
 
+            // --- CUSTOM TOOLTIP ELEMENT ---
+            const tooltip = document.createElement('div');
+            tooltip.className = 'custom-tooltip';
+            document.body.appendChild(tooltip);
+
             // Background canvas
             const pageBgCanvas = document.getElementById('page-bg-canvas');
             const pageBgCtx = pageBgCanvas.getContext('2d');
@@ -676,7 +717,8 @@
 
             const defaultQuizObject = {
               "text": "This is a sample text for the quiz. You can replace it with your own content.",
-              "paragraph": "This is an optional paragraph property. It provides additional context or a specific block of text relevant to the quiz questions below. You can delete this property to see the button gray out.",
+              "paragraph": "This is an optional paragraph property. It provides additional context or a specific block of text relevant to the quiz questions below. You can delete this property to see the button gray out.\n\nHere is a second paragraph. Hover over me to see the tooltip in action! It will extract the first 20 characters seamlessly.\n\nAnd finally, a third short paragraph to test the rendering.",
+              "translation": "这是一个可选的段落属性。它提供了与下面测验问题相关的附加上下文或特定文本块。您可以删除此属性以看到按钮变灰。\n\n这是第二段。将鼠标悬停在我上方以查看工具提示的作用！它将无缝提取前20个字符。\n\n最后，一个用于测试渲染的第三个短段落。",
               "quiz": [
                 {
                   "question": "In the `Embedding` class, what is the purpose of the `backward` method?",
@@ -957,15 +999,69 @@
                     quizData = parsedJson.quiz;
                     referenceText = parsedJson.text;
                     
-                    // Optional Paragraph Property Assignment
+                    // Optional Paragraph Property Assignment with Paragraph Chunking & Hover Listeners
                     if (parsedJson.paragraph && typeof parsedJson.paragraph === 'string' && parsedJson.paragraph.trim() !== '') {
                         referenceParagraph = parsedJson.paragraph;
                         showParagraphBtn.disabled = false;
-                        referenceParagraphContent.textContent = referenceParagraph;
+                        
+                        // Clear the container
+                        referenceParagraphContent.innerHTML = '';
+                        
+                        // Split by one or more line breaks to create individual paragraphs
+                        const paragraphs = referenceParagraph.split(/(?:\r?\n)+/);
+                        
+                        // Extract translations if available
+                        let translatedParagraphs = [];
+                        if (parsedJson.translation && typeof parsedJson.translation === 'string') {
+                            translatedParagraphs = parsedJson.translation.split(/(?:\r?\n)+/).map(t => t.trim()).filter(t => t);
+                        }
+                        
+                        let paragraphIndex = 0;
+                        
+                        paragraphs.forEach(pText => {
+                            const trimmedText = pText.trim();
+                            if (!trimmedText) return; // Skip empty paragraphs
+                            
+                            const pElement = document.createElement('p');
+                            pElement.className = 'hint-paragraph';
+                            pElement.textContent = trimmedText;
+                            
+                            const currentIndex = paragraphIndex;
+                            
+                            // Determine tooltip content: Translation or Fallback hint
+                            let tooltipContent = '';
+                            if (translatedParagraphs.length > currentIndex && translatedParagraphs[currentIndex]) {
+                                tooltipContent = translatedParagraphs[currentIndex];
+                            } else {
+                                // Get first 20 characters for the hint
+                                const first20 = trimmedText.substring(0, 20);
+                                const hintText = first20 + (trimmedText.length > 20 ? '...' : '');
+                                tooltipContent = `[${currentIndex}] Hint: ${hintText}`;
+                            }
+                            
+                            // Setup hover interaction to position and show tooltip
+                            pElement.addEventListener('mouseenter', () => {
+                                tooltip.textContent = tooltipContent;
+                                tooltip.style.opacity = '1';
+                            });
+                            
+                            pElement.addEventListener('mousemove', (e) => {
+                                tooltip.style.left = (e.clientX + 15) + 'px';
+                                tooltip.style.top = (e.clientY + 15) + 'px';
+                            });
+                            
+                            pElement.addEventListener('mouseleave', () => {
+                                tooltip.style.opacity = '0';
+                            });
+                            
+                            referenceParagraphContent.appendChild(pElement);
+                            paragraphIndex++;
+                        });
+
                     } else {
                         referenceParagraph = '';
                         showParagraphBtn.disabled = true;
-                        referenceParagraphContent.textContent = '';
+                        referenceParagraphContent.innerHTML = '';
                     }
                     
                     currentQuestionIndex = 0;
@@ -1263,7 +1359,10 @@
             const showParagraphModal = () => {
                 if (!showParagraphBtn.disabled) paragraphModal.classList.add('visible');
             };
-            const hideParagraphModal = () => paragraphModal.classList.remove('visible');
+            const hideParagraphModal = () => {
+                paragraphModal.classList.remove('visible');
+                tooltip.style.opacity = '0'; // Hide tooltip immediately when modal closes
+            };
 
             // --- INITIALIZATION ---
             const initialize = async () => {
