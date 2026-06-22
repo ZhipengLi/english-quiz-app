@@ -175,6 +175,12 @@
             flex-grow: 1;
         }
 
+        /* 这是为了让下划线分开的 CSS / CSS to space out the underscores */
+        .spaced-underscores {
+            letter-spacing: 0.25em; 
+            margin-right: -0.25em; /* 修正最后一个下划线多出的间距 */
+        }
+
         .action-btns {
             display: flex;
             gap: 5px;
@@ -721,6 +727,12 @@
               "translation": "这是一个可选的段落属性。它提供了与下面测验问题相关的附加上下文或特定文本块。您可以删除此属性以看到按钮变灰。\n\n这是第二段。将鼠标悬停在我上方以查看工具提示的作用！它将无缝提取前20个字符。\n\n最后，一个用于测试渲染的第三个短段落。",
               "quiz": [
                 {
+                  "question": "_____ philatelist",
+                  "type": "blank",
+                  "answer": "stamp",
+                  "explanation": "集邮家, 邮票集邮家. The stamp philatelist collected rare postage items. 邮票集邮家收集稀有邮政物品。 | philos->热爱，atelia->免税（希腊，ateleia->免邮费），philatelist->热爱免费邮票的人=集邮家（cf. philosophy哲学，philanthropy慈善）"
+                },
+                {
                   "question": "In the `Embedding` class, what is the purpose of the `backward` method?",
                   "type": "choice",
                   "options": [
@@ -731,24 +743,6 @@
                   ],
                   "answer": "To update the embedding weights for specific words seen in the forward pass.",
                   "explanation": "The backward method adds incoming gradients to the specific rows of the embedding matrix that were used, enabling learning."
-                },
-                {
-                  "question": "What is the primary role of `gamma` and `beta` in the `LayerNorm` class?",
-                  "type": "choice",
-                  "options": [
-                    "They store the mean and variance of the input.",
-                    "They are used to calculate the attention scores.",
-                    "They are non-trainable constants for numerical stability.",
-                    "They are learnable parameters that scale and shift the normalized output."
-                  ],
-                  "answer": "They are learnable parameters that scale and shift the normalized output.",
-                  "explanation": "They allow the network to learn the optimal scale and shift for activations after normalization."
-                },
-                {
-                  "question":"The core architecture of the model discussed is called a...",
-                  "type":"blank",
-                  "answer":"Transformer",
-                  "explanation":"The Transformer architecture, introduced in 'Attention Is All You Need', is the basis for this model."
                 }
               ]
             };
@@ -1126,7 +1120,12 @@
 
                 updateProgressBar();
                 
-                questionTextElement.textContent = questionToDisplay.question;
+                // 将文本中的下划线包裹在 span 中，以便应用 css 间隔
+                // We wrap underscores in a span so CSS letter-spacing can apply just to them
+                const tempDiv = document.createElement('div');
+                tempDiv.textContent = questionToDisplay.question;
+                const safeHtml = tempDiv.innerHTML;
+                questionTextElement.innerHTML = safeHtml.replace(/(_+)/g, '<span class="spaced-underscores">$1</span>');
 
                 if (type === 'choice') {
                     optionsContainer.classList.add('choice-options');
@@ -1134,7 +1133,7 @@
                     let shuffledOptions = shuffleArray(questionToDisplay.options);
 
                     shuffledOptions.forEach((optionText) => {
-                        const button = document.createElement('button');
+                        const button = document.createElement('option-btn');
                         button.classList.add('option-btn');
                         button.textContent = optionText;
                         button.dataset.isCorrect = (optionText === correctAnswerText);
