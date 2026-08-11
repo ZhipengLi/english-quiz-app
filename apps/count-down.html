@@ -146,6 +146,7 @@
         let isRunning = false;
         let timerId = null;
         let saveIntervalId = null;
+        let endTime = null;
 
         // DOM Elements
         const displayEl = document.getElementById('display');
@@ -182,6 +183,10 @@
         }
 
         function saveProgress() {
+            // Recalculate exact time left before saving if it is currently running
+            if (isRunning && endTime) {
+                timeLeft = Math.max(0, Math.ceil((endTime - Date.now()) / 1000));
+            }
             setCookie(COOKIE_NAME, timeLeft);
         }
 
@@ -206,6 +211,13 @@
                 clearInterval(saveIntervalId);
                 startPauseBtn.textContent = 'Resume';
                 isRunning = false;
+                
+                // Calculate exact time left at the moment of pausing
+                if (endTime) {
+                    timeLeft = Math.max(0, Math.ceil((endTime - Date.now()) / 1000));
+                }
+                
+                updateDisplay();
                 saveProgress();
             } else {
                 // Start action
@@ -213,8 +225,12 @@
                 isRunning = true;
                 hideCongrats();
 
+                // Calculate the exact time in the future when the timer should hit zero
+                endTime = Date.now() + (timeLeft * 1000);
+
                 timerId = setInterval(() => {
-                    timeLeft--;
+                    // Compare current absolute time to the target end time
+                    timeLeft = Math.max(0, Math.ceil((endTime - Date.now()) / 1000));
                     updateDisplay();
 
                     if (timeLeft <= 0) {
@@ -227,7 +243,7 @@
                         showCongrats();
                         saveProgress();
                     }
-                }, 1000);
+                }, 1000); // The interval can be throttled by the browser now, the math will still be perfectly accurate when it fires!
 
                 // Save to cookie every 10 minutes
                 saveIntervalId = setInterval(saveProgress, SAVE_INTERVAL_MS);
@@ -240,6 +256,7 @@
             clearInterval(saveIntervalId);
             isRunning = false;
             timeLeft = EIGHT_HOURS_IN_SECONDS;
+            endTime = null;
             startPauseBtn.textContent = 'Start';
             hideCongrats();
             updateDisplay();
