@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8-Hour Focus Timer</title>
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.4);
+            --glass-border: rgba(255, 255, 255, 0.6);
+            --text-color: #334155; /* Dark slate for high contrast on light bg */
+            --btn-bg: rgba(255, 255, 255, 0.5);
+            --btn-hover: rgba(255, 255, 255, 0.8);
+            --shadow-color: rgba(0, 0, 0, 0.08);
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            /* Mild, slow-moving pastel gradient */
+            background: linear-gradient(-45deg, #fdfbfb, #ebedee, #f3e7e9, #e3eeff);
+            background-size: 400% 400%;
+            animation: mildGradient 40s ease infinite;
+            color: var(--text-color);
+            overflow: hidden;
+        }
+
+        @keyframes mildGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .timer-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 3rem 4rem;
+            text-align: center;
+            box-shadow: 0 10px 40px 0 var(--shadow-color);
+            min-width: 350px;
+        }
+
+        .time-display {
+            font-size: 5.5rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            margin: 1rem 0 2rem 0;
+            font-variant-numeric: tabular-nums;
+            text-shadow: 0 2px 4px rgba(255,255,255,0.8); /* Changed to white glow for light mode */
+            color: #1e293b; /* Slightly darker for the numbers */
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        button {
+            background: var(--btn-bg);
+            border: 1px solid var(--glass-border);
+            color: var(--text-color);
+            padding: 0.8rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            outline: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            box-shadow: 0 2px 10px var(--shadow-color);
+        }
+
+        button:hover {
+            background: var(--btn-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .message {
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
+            min-height: 1.5rem;
+            font-weight: 600;
+            color: #15803d; /* Soft green for success in light mode */
+            text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .message.show {
+            opacity: 1;
+        }
+
+        .keyboard-hint {
+            margin-top: 2rem;
+            font-size: 0.85rem;
+            opacity: 0.6;
+            color: #475569;
+        }
+
+        kbd {
+            background: rgba(255,255,255,0.8);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            border: 1px solid rgba(0,0,0,0.1);
+            font-family: monospace;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            color: #1e293b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="timer-card">
+        <div class="time-display" id="display">08:00:00</div>
+        
+        <div class="controls">
+            <button id="startPauseBtn">Start</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+
+        <div class="message" id="message">Congratulations! You did it! 🎉</div>
+        
+        <div class="keyboard-hint">Press <kbd>Space</kbd> to Start/Pause</div>
+    </div>
+
+    <script>
+        const EIGHT_HOURS_IN_SECONDS = 8 * 60 * 60;
+        const COOKIE_NAME = 'focus_timer_progress';
+        const SAVE_INTERVAL_MS = 10 * 60 * 1000; // 10 minutes
+
+        let timeLeft = EIGHT_HOURS_IN_SECONDS;
+        let isRunning = false;
+        let timerId = null;
+        let saveIntervalId = null;
+
+        // DOM Elements
+        const displayEl = document.getElementById('display');
+        const startPauseBtn = document.getElementById('startPauseBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const messageEl = document.getElementById('message');
+
+        function setCookie(name, value, days = 30) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/;SameSite=Strict`;
+        }
+
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        function formatTime(seconds) {
+            const h = Math.floor(seconds / 3600);
+            const m = Math.floor((seconds % 3600) / 60);
+            const s = seconds % 60;
+            return [h, m, s].map(v => String(v).padStart(2, '0')).join(':');
+        }
+
+        function updateDisplay() {
+            displayEl.textContent = formatTime(timeLeft);
+        }
+
+        function saveProgress() {
+            setCookie(COOKIE_NAME, timeLeft);
+        }
+
+        function showCongrats() {
+            messageEl.classList.add('show');
+        }
+
+        function hideCongrats() {
+            messageEl.classList.remove('show');
+        }
+
+        function toggleTimer() {
+            // Prevent starting if time is up
+            if (timeLeft <= 0) return;
+
+            // Remove focus from button so spacebar doesn't trigger click AND keydown events simultaneously
+            document.activeElement.blur();
+
+            if (isRunning) {
+                // Pause action
+                clearInterval(timerId);
+                clearInterval(saveIntervalId);
+                startPauseBtn.textContent = 'Resume';
+                isRunning = false;
+                saveProgress();
+            } else {
+                // Start action
+                startPauseBtn.textContent = 'Pause';
+                isRunning = true;
+                hideCongrats();
+
+                timerId = setInterval(() => {
+                    timeLeft--;
+                    updateDisplay();
+
+                    if (timeLeft <= 0) {
+                        clearInterval(timerId);
+                        clearInterval(saveIntervalId);
+                        isRunning = false;
+                        startPauseBtn.textContent = 'Start';
+                        timeLeft = 0; // Prevent negative numbers
+                        updateDisplay();
+                        showCongrats();
+                        saveProgress();
+                    }
+                }, 1000);
+
+                // Save to cookie every 10 minutes
+                saveIntervalId = setInterval(saveProgress, SAVE_INTERVAL_MS);
+            }
+        }
+
+        function resetTimer() {
+            document.activeElement.blur();
+            clearInterval(timerId);
+            clearInterval(saveIntervalId);
+            isRunning = false;
+            timeLeft = EIGHT_HOURS_IN_SECONDS;
+            startPauseBtn.textContent = 'Start';
+            hideCongrats();
+            updateDisplay();
+            saveProgress();
+        }
+
+        function init() {
+            const savedTime = getCookie(COOKIE_NAME);
+            if (savedTime !== null) {
+                timeLeft = parseInt(savedTime, 10);
+                // If loaded with 0 left, show the congrats message immediately
+                if (timeLeft <= 0) {
+                    timeLeft = 0;
+                    showCongrats();
+                } else {
+                    // Update button text contextually
+                    startPauseBtn.textContent = timeLeft < EIGHT_HOURS_IN_SECONDS ? 'Resume' : 'Start';
+                }
+            }
+            updateDisplay();
+        }
+
+        startPauseBtn.addEventListener('click', toggleTimer);
+        resetBtn.addEventListener('click', resetTimer);
+
+        // Keyboard Spacebar listener
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'Space') {
+                e.preventDefault(); // Prevents page from scrolling down
+                toggleTimer();
+            }
+        });
+
+        // Save progress when the user leaves the page or refreshes
+        window.addEventListener('beforeunload', saveProgress);
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'hidden') {
+                saveProgress();
+            }
+        });
+
+        // Boot up
+        init();
+    </script>
+</body>
+</html>
