@@ -120,6 +120,106 @@
             box-shadow: 0 1px 2px rgba(0,0,0,0.05);
             color: #1e293b;
         }
+
+        .info-icon {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            width: 28px;
+            height: 28px;
+            color: var(--text-color);
+            opacity: 0.5;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .info-icon:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 100;
+        }
+
+        .modal-overlay.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-content {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2.5rem 3rem;
+            text-align: center;
+            box-shadow: 0 10px 40px 0 var(--shadow-color);
+            position: relative;
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+            max-width: 300px;
+        }
+
+        .modal-overlay.show .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-content h3 {
+            margin: 0 0 0.5rem 0;
+            color: #1e293b;
+        }
+
+        .modal-content p {
+            margin: 0;
+            color: #475569;
+        }
+
+        .modal-content .version {
+            font-weight: 600;
+            color: #3b82f6;
+            margin-bottom: 1rem;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: transparent;
+            border: none;
+            font-size: 1.5rem;
+            color: #64748b;
+            box-shadow: none;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            padding: 0;
+            line-height: 1;
+        }
+
+        .close-btn:hover {
+            background: rgba(0,0,0,0.05);
+            box-shadow: none;
+            transform: none;
+            color: #1e293b;
+        }
     </style>
 </head>
 <body>
@@ -135,6 +235,23 @@
         <div class="message" id="message">Congratulations! You did it! 🎉</div>
         
         <div class="keyboard-hint">Press <kbd>Space</kbd> to Start/Pause</div>
+    </div>
+
+    <div class="info-icon" id="infoBtn" title="About">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+    </div>
+
+    <div class="modal-overlay" id="infoModal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeBtn">&times;</button>
+            <h3>Focus Timer</h3>
+            <p class="version">Version 1.1.0</p>
+            <p style="font-size: 0.9rem;">A simple, reliable 8-hour timer featuring background-tab accuracy and session persistence.</p>
+        </div>
     </div>
 
     <script>
@@ -153,6 +270,10 @@
         const startPauseBtn = document.getElementById('startPauseBtn');
         const resetBtn = document.getElementById('resetBtn');
         const messageEl = document.getElementById('message');
+        
+        const infoBtn = document.getElementById('infoBtn');
+        const infoModal = document.getElementById('infoModal');
+        const closeBtn = document.getElementById('closeBtn');
 
         function setCookie(name, value, days = 30) {
             const date = new Date();
@@ -281,6 +402,20 @@
 
         startPauseBtn.addEventListener('click', toggleTimer);
         resetBtn.addEventListener('click', resetTimer);
+
+        infoBtn.addEventListener('click', () => {
+            infoModal.classList.add('show');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            infoModal.classList.remove('show');
+        });
+
+        infoModal.addEventListener('click', (e) => {
+            if (e.target === infoModal) {
+                infoModal.classList.remove('show');
+            }
+        });
 
         // Keyboard Spacebar listener
         document.addEventListener('keydown', (e) => {
