@@ -699,6 +699,354 @@
       "type": "blank",
       "answer": "chr(ord('a') + i)",
       "explanation": "This Python code adds i to the Unicode code point of 'a', then converts the resulting code point back into a character.\nThis is the inverse of ord(c) - ord('a'), and is commonly used to convert an array index back into its corresponding lowercase letter."
+    }，
+       {
+      "question": "Append x to the end of the list arr:________",
+      "type": "blank",
+      "answer": "arr.append(x)",
+      "explanation": "This Python code adds x as a new element at the end of the list arr, modifying arr in place.\nThis operation runs in O(1) amortized time."
+    },
+    {
+      "question": "Remove and return the last element of the list arr:________",
+      "type": "blank",
+      "answer": "arr.pop()",
+      "explanation": "This Python code removes and returns the final element of arr, modifying arr in place.\nWith no argument, this runs in O(1) time, since no elements need to be shifted."
+    },
+    {
+      "question": "Remove and return the element at index i from the list arr:________",
+      "type": "blank",
+      "answer": "arr.pop(i)",
+      "explanation": "This Python code removes and returns the element at position i in arr, shifting all subsequent elements one position to the left.\nUnlike arr.pop() with no argument, this runs in O(n) time in the worst case because of the required shifting."
+    },
+    {
+      "question": "Insert x into the list arr at index i, shifting subsequent elements to the right:________",
+      "type": "blank",
+      "answer": "arr.insert(i, x)",
+      "explanation": "This Python code inserts x into arr at position i, pushing all elements originally at or after that index one position to the right.\nThis runs in O(n) time in the worst case due to the required shifting of elements."
+    },
+    {
+      "question": "Remove the first occurrence of the value x from the list arr:________",
+      "type": "blank",
+      "answer": "arr.remove(x)",
+      "explanation": "This Python code searches arr for the first occurrence of the value x and removes it, shifting subsequent elements left.\nIf x is not found in arr, this raises a ValueError, and note this removes by value rather than by index, unlike pop(i)."
+    },
+    {
+      "question": "Find the index of the first occurrence of the value x in the list arr:________",
+      "type": "blank",
+      "answer": "arr.index(x)",
+      "explanation": "This Python code searches arr for the first occurrence of x and returns its index.\nIf x is not found anywhere in arr, this raises a ValueError."
+    },
+    {
+      "question": "Get the number of elements in the list arr:________",
+      "type": "blank",
+      "answer": "len(arr)",
+      "explanation": "This Python code returns the count of elements currently stored in the list arr.\nThis is an O(1) operation, since Python lists track their length internally."
+    },
+    {
+      "question": "Check whether x is an element of the list arr:________",
+      "type": "blank",
+      "answer": "x in arr",
+      "explanation": "This Python code searches through arr to determine whether x is present, returning True or False.\nUnlike membership testing on a set, this runs in O(n) time in the worst case because a list has no hash-based lookup."
+    },
+    {
+      "question": "Get a slice of the list arr from index left up to (but not including) index right:________",
+      "type": "blank",
+      "answer": "arr[left:right]",
+      "explanation": "This Python code returns a new list containing the elements of arr from index left through index right-1.\nThe original list arr is not modified, since slicing creates a new list object."
+    },
+    {
+      "question": "Get a slice of the list arr from the beginning up to (but not including) index i:________",
+      "type": "blank",
+      "answer": "arr[:i]",
+      "explanation": "This Python code returns a new list containing the elements of arr from the start through index i-1, since omitting the start of a slice defaults to index 0.\nThe original list arr remains unchanged."
+    },
+    {
+      "question": "Get a slice of the list arr from index i through the end of the list:________",
+      "type": "blank",
+      "answer": "arr[i:]",
+      "explanation": "This Python code returns a new list containing the elements of arr starting at index i through the last element, since omitting the end of a slice defaults to the list's length.\nThe original list arr remains unchanged."
+    },
+    {
+      "question": "Get a new list containing the elements of arr in reverse order using slice notation:________",
+      "type": "blank",
+      "answer": "arr[::-1]",
+      "explanation": "This Python code uses extended slice notation with a step of -1 to produce a new list with the elements of arr reversed.\nThe original list arr is not modified."
+    },
+    {
+      "question": "Use a list comprehension to create a new list with every element of nums doubled:________",
+      "type": "blank",
+      "answer": "[x * 2 for x in nums]",
+      "explanation": "This Python code creates a new list by iterating over nums and multiplying each element x by 2.\nList comprehensions like this are generally more concise and often faster than an equivalent explicit for-loop with append() calls."
+    },
+    {
+      "question": "Use a list comprehension to create a new list containing only the positive elements of nums:________",
+      "type": "blank",
+      "answer": "[x for x in nums if x > 0]",
+      "explanation": "This Python code creates a new list by iterating over nums and including only those elements x that satisfy the condition x > 0.\nThe if clause acts as a filter, so elements not satisfying the condition are simply skipped."
+    },
+    {
+      "question": "Use a nested list comprehension to flatten a simple 2D matrix into a single flat list:________",
+      "type": "blank",
+      "answer": "[x for row in matrix for x in row]",
+      "explanation": "This Python code iterates over each row in matrix, and for each row iterates over each element x within it, collecting all elements into a single flat list.\nThe order of the nested for clauses matches how you'd write the equivalent nested for-loops: outer loop first (for row in matrix), then inner loop (for x in row)."
+    },
+    {
+      "question": "Create a tuple point representing the coordinates x and y, something that appears constantly:________",
+      "type": "blank",
+      "answer": "point = (x, y)",
+      "explanation": "This Python code creates a tuple containing x and y and binds it to the name point.\nTuples are immutable, ordered collections, commonly used to bundle related values like coordinates together."
+    },
+    {
+      "question": "Unpack the tuple point into the variables x and y:________",
+      "type": "blank",
+      "answer": "x, y = point",
+      "explanation": "This Python code unpacks the two-element tuple point, assigning its first element to x and its second element to y.\nThis requires point to have exactly two elements, or Python raises a ValueError."
+    },
+    {
+      "question": "Create an empty set called visited, useful because tuples are hashable and can be stored in it:________",
+      "type": "blank",
+      "answer": "visited = set()",
+      "explanation": "This Python code creates a new, empty set bound to the name visited.\nBecause tuples are immutable and hashable, they can be added directly to a set, making this a common pattern for tracking visited grid cells or states."
+    },
+    {
+      "question": "Add the tuple (r, c) to the set visited:________",
+      "type": "blank",
+      "answer": "visited.add((r, c))",
+      "explanation": "This Python code inserts the tuple (r, c) into the set visited.\nStoring coordinate pairs as tuples in a set is a common technique for tracking visited cells in grid-traversal algorithms like BFS or DFS."
+    },
+    {
+      "question": "Check whether the tuple (r, c) is already present in the set visited:________",
+      "type": "blank",
+      "answer": "if (r, c) in visited:",
+      "explanation": "This Python code tests whether the tuple (r, c) is a member of the set visited, running in average O(1) time thanks to the set's hash table implementation.\nThis check is the standard way to avoid revisiting the same cell multiple times in grid traversal algorithms."
+    },
+    {
+      "question": "Get the number of elements in x, one of the built-ins you'd explicitly memorize:________",
+      "type": "blank",
+      "answer": "len(x)",
+      "explanation": "This Python code returns the number of elements or characters contained in x, which can be a list, string, dictionary, or other sized container.\nThis is one of the most frequently used built-in functions across nearly all Python programs."
+    },
+    {
+      "question": "Compute the sum of all elements in the list nums:________",
+      "type": "blank",
+      "answer": "sum(nums)",
+      "explanation": "This Python code adds together every numeric element in the iterable nums and returns the total.\nAn optional second argument can specify a starting value, e.g., sum(nums, 100), which defaults to 0 if omitted."
+    },
+    {
+      "question": "Get the maximum value in the list nums:________",
+      "type": "blank",
+      "answer": "max(nums)",
+      "explanation": "This Python code returns the largest value found in the iterable nums.\nIf nums is empty, this raises a ValueError unless a default value is provided."
+    },
+    {
+      "question": "Get the minimum value in the list nums:________",
+      "type": "blank",
+      "answer": "min(nums)",
+      "explanation": "This Python code returns the smallest value found in the iterable nums.\nIf nums is empty, this raises a ValueError unless a default value is provided."
+    },
+    {
+      "question": "Get the absolute value of x:________",
+      "type": "blank",
+      "answer": "abs(x)",
+      "explanation": "This Python code returns the non-negative magnitude of x, converting negative numbers to their positive equivalent and leaving non-negative numbers unchanged.\nThis works for integers, floats, and even complex numbers, where it returns the magnitude."
+    },
+    {
+      "question": "Check if every element in an iterable satisfies a given condition, one of the essential built-ins:________",
+      "type": "blank",
+      "answer": "all(...)",
+      "explanation": "This Python code returns True if every element in the given iterable is truthy (or satisfies a condition in a generator expression), and False if even one element fails.\nAn empty iterable returns True by convention, since there are no elements to violate the condition."
+    },
+    {
+      "question": "Check if at least one element in an iterable satisfies a given condition, one of the essential built-ins:________",
+      "type": "blank",
+      "answer": "any(...)",
+      "explanation": "This Python code returns True if at least one element in the given iterable is truthy (or satisfies a condition in a generator expression), and False only if none do.\nAn empty iterable returns False by convention, since there are no elements to satisfy the condition."
+    },
+    {
+      "question": "Pair each element of an iterable with its index, one of the essential built-ins:________",
+      "type": "blank",
+      "answer": "enumerate(...)",
+      "explanation": "This Python code wraps an iterable so that iterating over it yields (index, element) tuples, starting from index 0 by default.\nThis avoids the need to manually maintain a separate counter variable alongside a for-loop."
+    },
+    {
+      "question": "Combine multiple iterables element-wise into tuples, one of the essential built-ins:________",
+      "type": "blank",
+      "answer": "zip(...)",
+      "explanation": "This Python code takes two or more iterables and pairs up their corresponding elements into tuples, stopping as soon as the shortest iterable is exhausted.\nThis is commonly used to iterate over multiple sequences in parallel."
+    },
+    {
+      "question": "Generate a sequence of numbers from 0 up to (but not including) n, one of the essential built-ins:________",
+      "type": "blank",
+      "answer": "range(n)",
+      "explanation": "This Python code creates a range object representing the sequence of integers from 0 to n-1.\nrange objects are lazily evaluated and memory-efficient, generating values on demand rather than storing the full sequence."
+    },
+    {
+      "question": "Return a new sorted list from an iterable, one of the essential built-ins:________",
+      "type": "blank",
+      "answer": "sorted(...)",
+      "explanation": "This Python code takes any iterable and returns a new list containing its elements in ascending order by default.\nUnlike a list's in-place .sort() method, sorted() works on any iterable (not just lists) and always returns a new list without modifying the original."
+    },
+    {
+      "question": "Get an iterator that yields the elements of an iterable in reverse order, one of the essential built-ins:________",
+      "type": "blank",
+      "answer": "reversed(...)",
+      "explanation": "This Python code returns a reverse iterator over the given sequence, yielding elements from last to first.\nThis requires the input to support reverse iteration (like a list, tuple, or string), and does not create a new list immediately, unlike slicing with [::-1]."
+    },
+    {
+      "question": "Compute both the quotient and remainder of dividing a by b in a single call:________",
+      "type": "blank",
+      "answer": "divmod(a, b)",
+      "explanation": "This Python code returns a tuple containing the quotient and remainder of a divided by b, computed together in one call.\nThis is equivalent to (a // b, a % b), but bundles both results into a single function call."
+    },
+    {
+      "question": "Use divmod to compute the quotient and remainder of dividing 10 by 3, unpacking the results into q and r:________",
+      "type": "blank",
+      "answer": "q, r = divmod(10, 3)",
+      "explanation": "This Python code calls divmod(10, 3), which returns the tuple (3, 1), and unpacks it so that q becomes 3 (the quotient) and r becomes 1 (the remainder).\nThis matches the fact that 10 = 3 * 3 + 1."
+    },
+    {
+      "question": "Import the math module, useful for common mathematical operations:________",
+      "type": "blank",
+      "answer": "import math",
+      "explanation": "This Python code imports the built-in math module, which provides access to a wide range of mathematical functions and constants beyond what's available as built-ins.\nFunctions in math must be accessed with the math. prefix, e.g., math.sqrt(x)."
+    },
+    {
+      "question": "Access the constant representing positive infinity from the math module:________",
+      "type": "blank",
+      "answer": "math.inf",
+      "explanation": "This Python code accesses the math module's constant for positive infinity, which is equivalent to float('inf').\nUsing math.inf is a common alternative for readability when the math module is already imported for other purposes."
+    },
+    {
+      "question": "Round x up to the nearest integer using the math module:________",
+      "type": "blank",
+      "answer": "math.ceil(x)",
+      "explanation": "This Python code returns the smallest integer greater than or equal to x, effectively rounding up.\nThis returns an int in Python 3, regardless of whether the input x is an int or a float."
+    },
+    {
+      "question": "Round x down to the nearest integer using the math module:________",
+      "type": "blank",
+      "answer": "math.floor(x)",
+      "explanation": "This Python code returns the largest integer less than or equal to x, effectively rounding down.\nThis returns an int in Python 3, regardless of whether the input x is an int or a float."
+    },
+    {
+      "question": "Compute the square root of x as a float using the math module:________",
+      "type": "blank",
+      "answer": "math.sqrt(x)",
+      "explanation": "This Python code returns the square root of x as a floating-point number.\nIf x is negative, this raises a ValueError, since math.sqrt() does not support complex results."
+    },
+    {
+      "question": "Compute the integer square root of x (the floor of the exact square root) using the math module:________",
+      "type": "blank",
+      "answer": "math.isqrt(x)",
+      "explanation": "This Python code returns the largest integer whose square is less than or equal to x, computed exactly using integer arithmetic.\nUnlike math.sqrt(x), this avoids floating-point rounding errors and requires x to be a non-negative integer."
+    },
+    {
+      "question": "Compute the greatest common divisor of a and b using the math module:________",
+      "type": "blank",
+      "answer": "math.gcd(a, b)",
+      "explanation": "This Python code returns the largest positive integer that evenly divides both a and b.\nThis is commonly used in problems involving fractions, ratios, or number theory."
+    },
+    {
+      "question": "Compute the least common multiple of a and b using the math module:________",
+      "type": "blank",
+      "answer": "math.lcm(a, b)",
+      "explanation": "This Python code returns the smallest positive integer that is a multiple of both a and b.\nThis function was added in Python 3.9, and complements math.gcd() for problems involving finding common multiples."
+    },
+    {
+      "question": "Compute the number of combinations of n items taken k at a time using the math module:________",
+      "type": "blank",
+      "answer": "math.comb(n, k)",
+      "explanation": "This Python code returns the number of ways to choose k items from n items without regard to order, computed as n! / (k! * (n-k)!).\nThis is more efficient and numerically stable than manually computing factorials and dividing them."
+    },
+    {
+      "question": "Compute the factorial of n using the math module:________",
+      "type": "blank",
+      "answer": "math.factorial(n)",
+      "explanation": "This Python code returns the factorial of n (the product of all positive integers up to n), computed as n!.\nThis requires n to be a non-negative integer, or it raises a ValueError."
+    },
+    {
+      "question": "Import cache, very useful for dynamic programming and memoization, from the functools module:________",
+      "type": "blank",
+      "answer": "from functools import cache",
+      "explanation": "This Python code imports the cache decorator from the built-in functools module.\ncache stores the results of function calls so that repeated calls with the same arguments return instantly from the stored result, rather than recomputing, making it ideal for memoized recursive functions."
+    },
+    {
+      "question": "Apply the cache decorator to a recursive memoized function dfs that takes parameters i and state:________",
+      "type": "blank",
+      "answer": "@cache\ndef dfs(i, state):\n    ...",
+      "explanation": "This Python code decorates the function dfs with @cache, so that every unique combination of arguments (i, state) passed to dfs is computed only once and then reused on subsequent calls with the same arguments.\nThis is the standard modern idiom for top-down dynamic programming in Python, replacing manually maintained memoization dictionaries."
+    },
+    {
+      "question": "Import lru_cache, an alternative to cache, from the functools module:________",
+      "type": "blank",
+      "answer": "from functools import lru_cache",
+      "explanation": "This Python code imports the lru_cache decorator from the functools module.\nUnlike the simpler @cache decorator, lru_cache accepts a maxsize argument to limit how many results are stored, evicting the least-recently-used entries once that limit is reached."
+    },
+    {
+      "question": "Apply lru_cache with no size limit to a recursive memoized function dfs:________",
+      "type": "blank",
+      "answer": "@lru_cache(None)\ndef dfs(...):\n    ...",
+      "explanation": "This Python code decorates dfs with @lru_cache(None), where passing None as maxsize removes any limit on the number of cached results, making its behavior equivalent to @cache.\nFor current Python LeetCode solutions, @cache is generally preferred as the more concise, modern equivalent when an unbounded cache is desired."
+    },
+    {
+      "question": "Import SortedDict from the sortedcontainers module:________",
+      "type": "blank",
+      "answer": "from sortedcontainers import SortedDict",
+      "explanation": "This Python code imports the SortedDict class from the third-party sortedcontainers library.\nSortedDict maintains its keys in sorted order automatically, combining dictionary-style key-value lookup with efficient ordered access."
+    },
+    {
+      "question": "Import SortedList from the sortedcontainers module:________",
+      "type": "blank",
+      "answer": "from sortedcontainers import SortedList",
+      "explanation": "This Python code imports the SortedList class from the third-party sortedcontainers library.\nSortedList maintains its elements in sorted order automatically, supporting O(log n) insertion, removal, and lookup while keeping the underlying data sorted."
+    },
+    {
+      "question": "Create an empty SortedList and assign it to sl:________",
+      "type": "blank",
+      "answer": "sl = SortedList()",
+      "explanation": "This Python code creates a new, empty SortedList object and binds it to the name sl.\nElements added later will automatically be kept in sorted order."
+    },
+    {
+      "question": "Add x to the SortedList sl while maintaining sorted order:________",
+      "type": "blank",
+      "answer": "sl.add(x)",
+      "explanation": "This Python code inserts x into sl at the correct position to keep the list sorted, running in O(log n) time for the search but O(n) for the underlying insertion.\nUnlike a plain list's append(), this automatically maintains sorted order rather than adding to the end."
+    },
+    {
+      "question": "Remove the value x from the SortedList sl:________",
+      "type": "blank",
+      "answer": "sl.remove(x)",
+      "explanation": "This Python code removes the first occurrence of x from sl.\nIf x is not present in sl, this raises a ValueError, similar to how a plain list's remove() method behaves."
+    },
+    {
+      "question": "Access the smallest element in the SortedList sl:________",
+      "type": "blank",
+      "answer": "sl[0]",
+      "explanation": "This Python code returns the element at index 0 of sl, which, because sl maintains sorted order, is always the smallest element currently stored.\nThis is an O(log n) indexing operation in a SortedList."
+    },
+    {
+      "question": "Access the largest element in the SortedList sl:________",
+      "type": "blank",
+      "answer": "sl[-1]",
+      "explanation": "This Python code returns the last element of sl using negative indexing, which, because sl maintains sorted order, is always the largest element currently stored.\nThis is an O(log n) indexing operation in a SortedList."
+    },
+    {
+      "question": "Remove and return the smallest element (at index 0) from the SortedList sl:________",
+      "type": "blank",
+      "answer": "sl.pop(0)",
+      "explanation": "This Python code removes and returns the element at index 0 of sl, which is the smallest element since sl maintains sorted order.\nThis differs from a plain list's pop(0), which is O(n); SortedList is optimized for this kind of indexed removal."
+    },
+    {
+      "question": "Find the leftmost insertion point for x in the SortedList sl that keeps it sorted (before any existing equal elements):________",
+      "type": "blank",
+      "answer": "sl.bisect_left(x)",
+      "explanation": "This Python code returns the leftmost index at which x could be inserted into sl while keeping it sorted, placing the insertion before any existing elements equal to x.\nThis mirrors the standalone bisect_left() function from the bisect module, but as a method on the SortedList itself."
+    },
+    {
+      "question": "Find the rightmost insertion point for x in the SortedList sl that keeps it sorted (after any existing equal elements):________",
+      "type": "blank",
+      "answer": "sl.bisect_right(x)",
+      "explanation": "This Python code returns the rightmost index at which x could be inserted into sl while keeping it sorted, placing the insertion after any existing elements equal to x.\nThis mirrors the standalone bisect_right() function from the bisect module, but as a method on the SortedList itself."
     }
   ]
 }
