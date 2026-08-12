@@ -222,6 +222,54 @@
       "type": "blank",
       "answer": "for x in nums:count[x] = count.get(x, 0) + 1",
       "explanation": "This Python code iterates over every element x in nums, and for each one looks up its current count using count.get(x, 0) (which returns 0 if x hasn't been seen before), adds 1, and stores the result back into count[x].\nWriting the loop body on the same line as the for statement is valid Python syntax as long as the body is a single simple statement, though splitting it onto an indented line below is generally considered more readable."
+    },
+    {
+      "question": "Import defaultdict, one of the most useful LeetCode tools, from the collections module:________",
+      "type": "blank",
+      "answer": "from collections import defaultdict",
+      "explanation": "This Python code imports the defaultdict class from the built-in collections module.\ndefaultdict is a dictionary subclass that automatically supplies a default value for missing keys instead of raising a KeyError."
+    },
+    {
+      "question": "Create a defaultdict d where any missing key automatically gets a default value of 0 (via int):________",
+      "type": "blank",
+      "answer": "d = defaultdict(int)",
+      "explanation": "This Python code creates a defaultdict named d, passing int as the factory function used to generate default values.\nWhen a missing key is accessed, defaultdict calls int() with no arguments, which returns 0, and uses that as the initial value for the key."
+    },
+    {
+      "question": "Increment the count for x in the defaultdict d by 1, without needing to check if x already exists:________",
+      "type": "blank",
+      "answer": "d[x] += 1",
+      "explanation": "This Python code increments the value stored at key x in the defaultdict d.\nIf x is not already a key in d, defaultdict automatically initializes it to 0 (via the int factory) before the += 1 is applied, avoiding the need for a manual existence check or .get() call."
+    },
+    {
+      "question": "Create a defaultdict graph where any missing key automatically gets an empty list as its default value, useful for representing an adjacency list:________",
+      "type": "blank",
+      "answer": "graph = defaultdict(list)",
+      "explanation": "This Python code creates a defaultdict named graph, passing list as the factory function used to generate default values.\nWhen a missing key is accessed, defaultdict calls list() with no arguments, which returns an empty list [], making this a natural fit for representing an adjacency list in graph problems."
+    },
+    {
+      "question": "Add v to the adjacency list of node u in the graph defaultdict, without needing to initialize the list first:________",
+      "type": "blank",
+      "answer": "graph[u].append(v)",
+      "explanation": "This Python code appends v to the list stored at key u in the defaultdict graph.\nIf u is not already a key in graph, defaultdict automatically initializes it to an empty list before .append(v) is called, so there's no need to manually check for u's existence first."
+    },
+    {
+      "question": "Create a defaultdict groups where any missing key automatically gets an empty list as its default value, useful for grouping items:________",
+      "type": "blank",
+      "answer": "groups = defaultdict(list)",
+      "explanation": "This Python code creates a defaultdict named groups, passing list as the factory function used to generate default values.\nThis setup is commonly used for grouping problems, where items sharing the same key (such as an anagram signature or a category) need to be collected together into lists."
+    },
+    {
+      "question": "Add value to the list stored at key in the groups defaultdict, without needing to initialize the list first:________",
+      "type": "blank",
+      "answer": "groups[key].append(value)",
+      "explanation": "This Python code appends value to the list stored at key in the defaultdict groups.\nIf key is not already present in groups, defaultdict automatically initializes it to an empty list before .append(value) is called, making the grouping logic concise and free of existence checks."
+    },
+    {
+      "question": "Using a plain dictionary d instead of defaultdict, append value to the list at key, creating an empty list first if key doesn't already exist (the pattern that defaultdict is generally cleaner than):________",
+      "type": "blank",
+      "answer": "d.setdefault(key, []).append(value)",
+      "explanation": "This Python code retrieves the list stored at key in the plain dictionary d, first inserting an empty list at that key if it doesn't already exist, and then appends value to that list.\nWhile this achieves the same grouping result as a defaultdict(list), it's generally considered less clean because it repeats the [] default on every call, whereas defaultdict only needs the factory specified once at creation."
     }
   ]
 }
