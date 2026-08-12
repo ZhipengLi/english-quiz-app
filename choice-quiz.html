@@ -113,6 +113,27 @@
             cursor: pointer;
         }
 
+        .blank-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-left: 5px;
+        }
+
+        .radio-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            color: var(--font-color);
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .radio-label:hover {
+            color: var(--primary-color);
+        }
+
         .quiz-header {
             display: flex;
             justify-content: space-between;
@@ -172,10 +193,9 @@
             flex-grow: 1;
         }
 
-        /* CSS for separating the underscores */
         .spaced-underscores {
             letter-spacing: 0.25em; 
-            margin-right: -0.25em; /* Fixes extra spacing at the very end of the blank */
+            margin-right: -0.25em;
         }
 
         .action-btns {
@@ -286,13 +306,8 @@
             display: none;
         }
 
-        #feedback-container.correct {
-            border-left-color: var(--correct-color);
-        }
-
-        #feedback-container.incorrect {
-            border-left-color: var(--incorrect-color);
-        }
+        #feedback-container.correct { border-left-color: var(--correct-color); }
+        #feedback-container.incorrect { border-left-color: var(--incorrect-color); }
 
         #feedback-container p {
             font-weight: bold;
@@ -424,9 +439,7 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
 
-        .modal-overlay.visible .modal-content {
-            transform: scale(1);
-        }
+        .modal-overlay.visible .modal-content { transform: scale(1); }
 
         .modal-content h2 {
             margin-bottom: 20px;
@@ -449,9 +462,7 @@
             transition: color 0.2s;
         }
 
-        .modal-content .close-btn:hover {
-            color: var(--incorrect-color);
-        }
+        .modal-content .close-btn:hover { color: var(--incorrect-color); }
 
         .reference-content {
             background-color: #fafbfc;
@@ -496,14 +507,8 @@
             margin: -4px -8px 1em -8px; 
             transition: background-color 0.2s ease;
         }
-
-        .hint-paragraph:last-child {
-            margin-bottom: -4px;
-        }
-
-        .hint-paragraph:hover {
-            background-color: rgba(52, 152, 219, 0.1);
-        }
+        .hint-paragraph:last-child { margin-bottom: -4px; }
+        .hint-paragraph:hover { background-color: rgba(52, 152, 219, 0.1); }
 
         @media (max-width: 480px) {
             .view { padding: 20px; }
@@ -533,15 +538,27 @@
                 </label>
             </div>
 
-            <div style="margin-bottom: 25px;"> 
-                <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: var(--font-color);">
-                    <input type="checkbox" id="reverse-check"> 
-                    Generate reverse questions for 'blank' types (Two-way learning)
-                </label>
-                <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: var(--font-color); margin-left: 28px; margin-top: 10px; font-size: 0.9em;">
-                    <input type="checkbox" id="conditional-reverse-check" disabled> 
-                    Only show reverse question if answer was incorrect
-                </label>
+            <!-- Blank question configuration mode with the requested 3 options (+ Default) -->
+            <div style="margin-bottom: 25px;">
+                <p style="font-weight: 500; margin-bottom: 10px; color: var(--secondary-color);">'Blank' Type Learning Mode:</p>
+                <div class="blank-options">
+                    <label class="radio-label">
+                        <input type="radio" name="blank-mode" value="standard" checked> 
+                        Standard (One attempt per question)
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="blank-mode" value="reverse-all"> 
+                        Generate reverse questions for all questions
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="blank-mode" value="reverse-incorrect"> 
+                        Generate reverse questions for incorrect answers
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="blank-mode" value="repeat-incorrect"> 
+                        Repeat the question if the answer is incorrect
+                    </label>
+                </div>
             </div>
 
             <div class="controls">
@@ -634,9 +651,9 @@
             let currentQuestionIndex = 0;
             let score = 0;
             
-            let isReverseEnabled = false;
-            let isConditionalReverse = false;
-            let isReversedStep = false;
+            // New state variables for Blank mode configuration
+            let blankMode = 'standard'; // 'standard', 'reverse-all', 'reverse-incorrect', 'repeat-incorrect'
+            let isSubStep = false;
             let part1Correct = false;
             let part2Correct = false;
 
@@ -682,14 +699,6 @@
             const pageBgCtx = pageBgCanvas.getContext('2d');
             let bgParticles = [];
             let bgMouse = { x: -9999, y: -9999 };
-
-            const reverseCheck = document.getElementById('reverse-check');
-            const conditionalCheck = document.getElementById('conditional-reverse-check');
-
-            reverseCheck.addEventListener('change', () => {
-                conditionalCheck.disabled = !reverseCheck.checked;
-                if (!reverseCheck.checked) conditionalCheck.checked = false;
-            });
 
             const defaultQuizObject = {
               "text": "This is a sample text for the quiz. You can replace it with your own content.",
@@ -858,9 +867,10 @@
             };
 
             const getOriginalWord = () => {
-                const currentQuestion = quizData[questionOrder[currentQuestionIndex]];
-                if (!currentQuestion) return "";
-                return currentQuestion.question.replace(/_+/g, '').trim();
+                // Extracts exactly what is shown in the HTML element to pronounce text correctly
+                const textElem = document.getElementById('question-text');
+                if(!textElem) return "";
+                return textElem.textContent.replace(/_+/g, '').trim();
             };
 
             const handleSpeak = () => {
@@ -906,10 +916,12 @@
 
             const startQuiz = async () => {
                 const inputText = jsonInput.value.trim();
-                isReverseEnabled = reverseCheck.checked;
-                isConditionalReverse = conditionalCheck.checked;
                 let parsedJson;
                 let finalJsonText;
+
+                // Load the blank mode explicitly chosen
+                const blankModeElem = document.querySelector('input[name="blank-mode"]:checked');
+                blankMode = blankModeElem ? blankModeElem.value : 'standard';
 
                 startBtn.disabled = true;
                 startBtn.textContent = 'Loading...';
@@ -949,7 +961,6 @@
                                 throw new Error(`The answer for ${qIdentifier} was not found in its 'options' array.`);
                             }
                         } else if (type === 'blank') {
-                            // Auto-correct underscores to perfectly match the answer's word lengths in memory
                             const answerUnderscores = question.answer.replace(/\S/g, '_');
                             question.question = question.question.replace(/_+(?:\s+_+)*/, answerUnderscores);
                         } else {
@@ -1023,7 +1034,7 @@
                     currentQuestionIndex = 0;
                     score = 0;
                     incorrectlyAnsweredQuestions = [];
-                    isReversedStep = false;
+                    isSubStep = false;
                     part1Correct = false;
                     part2Correct = false;
                     
@@ -1059,40 +1070,42 @@
                 const originalQuestion = quizData[questionIdx];
                 let questionToDisplay = originalQuestion;
 
-                if (isReversedStep) {
-                    const originalPrompt = originalQuestion.question.replace(/_+/g, '').trim();
-                    // Generate underscores while retaining space characters for separate words.
-                    // E.g., "stamp collector" -> "_____ _________" instead of "_______________"
-                    const underscores = originalPrompt.replace(/\S/g, '_');
-                    let newQuestionText;
-                    
-                    if (originalQuestion.question.trim().startsWith('_')) {
-                        newQuestionText = `${originalQuestion.answer} ${underscores}`;
-                    } else {
-                        newQuestionText = `${underscores} ${originalQuestion.answer}`;
+                if (isSubStep) {
+                    if (blankMode === 'reverse-all' || blankMode === 'reverse-incorrect') {
+                        // Create reversed version of the blank question
+                        const originalPrompt = originalQuestion.question.replace(/_+/g, '').trim();
+                        const underscores = originalPrompt.replace(/\S/g, '_');
+                        let newQuestionText;
+                        
+                        if (originalQuestion.question.trim().startsWith('_')) {
+                            newQuestionText = `${originalQuestion.answer} ${underscores}`;
+                        } else {
+                            newQuestionText = `${underscores} ${originalQuestion.answer}`;
+                        }
+                        
+                        questionToDisplay = {
+                            ...originalQuestion,
+                            question: newQuestionText,
+                            answer: originalPrompt,
+                            explanation: originalQuestion.explanation ? `(Reverse) ${originalQuestion.explanation}` : "(Reverse Question)"
+                        };
+                    } else if (blankMode === 'repeat-incorrect') {
+                        // Same exact original text, giving them a second chance to practice
+                        questionToDisplay = {
+                            ...originalQuestion,
+                            explanation: originalQuestion.explanation ? `(Retry) ${originalQuestion.explanation}` : "(Retry Question)"
+                        };
                     }
-                    
-                    questionToDisplay = {
-                        ...originalQuestion,
-                        question: newQuestionText,
-                        answer: originalPrompt,
-                        explanation: originalQuestion.explanation ? `(Reverse) ${originalQuestion.explanation}` : "(Reverse Question)"
-                    };
                 }
 
                 const type = questionToDisplay.type || 'choice';
-
                 updateProgressBar();
                 
-                // We wrap underscores in a span so CSS letter-spacing can apply just to them
                 const tempDiv = document.createElement('div');
                 tempDiv.textContent = questionToDisplay.question;
                 let safeHtml = tempDiv.innerHTML;
 
-                // Explicitly widen spaces that exist directly between underscore blocks 
-                // Using non-breaking spaces makes it highly visible when an answer is multi-word.
                 safeHtml = safeHtml.replace(/(_+)(\s+)(?=_+)/g, '$1&nbsp;&nbsp;&nbsp;');
-
                 questionTextElement.innerHTML = safeHtml.replace(/(_+)/g, '<span class="spaced-underscores">$1</span>');
 
                 if (type === 'choice') {
@@ -1189,8 +1202,9 @@
                     feedbackContainer.classList.add('incorrect');
                 }
                 
-                if (isReverseEnabled) { 
-                    if (!isReversedStep) {
+                // Track answers separately based on mode
+                if (blankMode !== 'standard') { 
+                    if (!isSubStep) {
                         part1Correct = isCorrect;
                     } else {
                         part2Correct = isCorrect;
@@ -1213,15 +1227,27 @@
                 if (currentQuestionIndex < questionOrder.length) {
                     let nextText = 'Next Question';
                     const isLastQuestion = currentQuestionIndex === questionOrder.length - 1;
+                    const questionIdx = questionOrder[currentQuestionIndex];
+                    const currentQuestion = quizData[questionIdx];
                     
-                    if (isReverseEnabled && !isReversedStep && quizData[questionOrder[currentQuestionIndex]].type === 'blank') {
-                        let willShowReverse = true;
-                        if (isConditionalReverse && part1Correct) {
-                            willShowReverse = false;
+                    if (currentQuestion.type === 'blank' && blankMode !== 'standard' && !isSubStep) {
+                        let willShowSubStep = false;
+                        
+                        // Conditionals for triggering the sub-step flow
+                        if (blankMode === 'reverse-all') {
+                            willShowSubStep = true;
+                        } else if (blankMode === 'reverse-incorrect' && !part1Correct) {
+                            willShowSubStep = true;
+                        } else if (blankMode === 'repeat-incorrect' && !part1Correct) {
+                            willShowSubStep = true;
                         }
 
-                        if (willShowReverse) {
-                            nextText = 'Next Part (Reverse)';
+                        if (willShowSubStep) {
+                            if (blankMode === 'repeat-incorrect') {
+                                nextText = 'Retry Question';
+                            } else {
+                                nextText = 'Next Part (Reverse)';
+                            }
                         } else if (isLastQuestion) {
                             nextText = 'Finish Quiz';
                         }
@@ -1240,32 +1266,39 @@
                 const currentQuestion = quizData[questionIdx];
                 const type = currentQuestion.type || 'choice';
 
-                if (isReverseEnabled && type === 'blank') {
-                    if (!isReversedStep) {
-                        const skipReverse = isConditionalReverse && part1Correct;
+                if (type === 'blank' && blankMode !== 'standard') {
+                    if (!isSubStep) {
+                        let willShowSubStep = false;
+                        
+                        if (blankMode === 'reverse-all') willShowSubStep = true;
+                        else if (blankMode === 'reverse-incorrect' && !part1Correct) willShowSubStep = true;
+                        else if (blankMode === 'repeat-incorrect' && !part1Correct) willShowSubStep = true;
 
-                        if (!skipReverse) {
-                            isReversedStep = true;
+                        if (willShowSubStep) {
+                            isSubStep = true;
                             displayQuestion();
-                            return;
+                            return; // Halt to show the reverse/retry step
                         } else {
+                            // Conditional paths where they bypassed the sub step because they were correct
                             score++;
-                            isReversedStep = false;
+                            isSubStep = false;
                             part1Correct = false;
                             part2Correct = false;
                         }
                     } else {
-                        if (isConditionalReverse) {
+                        // Finished reviewing a Sub-step (reverse or repeat)
+                        if (blankMode === 'reverse-all') {
+                            if (part1Correct && part2Correct) score++;
+                            else incorrectlyAnsweredQuestions.push(questionIdx);
+                        } else if (blankMode === 'reverse-incorrect') {
+                            // If this triggered, they failed part1. Push to incorrect array so it can be retaken.
                             incorrectlyAnsweredQuestions.push(questionIdx);
-                        } else {
-                            if (part1Correct && part2Correct) {
-                                score++;
-                            } else {
-                                incorrectlyAnsweredQuestions.push(questionIdx);
-                            }
+                        } else if (blankMode === 'repeat-incorrect') {
+                            // Repeat step finishes. The original hit was missed, so push it to retakes
+                            incorrectlyAnsweredQuestions.push(questionIdx); 
                         }
                         
-                        isReversedStep = false;
+                        isSubStep = false;
                         part1Correct = false;
                         part2Correct = false;
                     }
@@ -1302,7 +1335,7 @@
                 incorrectlyAnsweredQuestions = [];
                 currentQuestionIndex = 0;
                 score = 0;
-                isReversedStep = false;
+                isSubStep = false;
                 part1Correct = false;
                 part2Correct = false;
                 switchView('quiz');
