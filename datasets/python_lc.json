@@ -1,0 +1,149 @@
+{
+  "text": "Python fundamentals",
+  "quiz": [
+    {
+      "question": "Check if the values associated with the keys 'A', 'B', and 'C' in the dictionary hashmap are all strictly less than the variable k:________",
+      "type": "blank",
+      "answer": "all(hashmap[c] < k for c in 'ABC')",
+      "explanation": "This Python code checks if the values associated with the keys 'A', 'B', and 'C' in the dictionary hashmap are all strictly less than the variable k.\nIt returns True if every one of those values is smaller than k, and False if even a single one is equal to or greater than k (or if it triggers a KeyError)."
+    },
+    {
+      "question": "Check if at least one element in the list nums is strictly greater than 0:________",
+      "type": "blank",
+      "answer": "any(x > 0 for x in nums)",
+      "explanation": "This Python code checks whether at least one element in the iterable nums satisfies the condition x > 0.\nIt returns True as soon as it finds one element greater than 0, and False only if none of the elements satisfy the condition."
+    },
+    {
+      "question": "Get the maximum value in the list nums:________",
+      "type": "blank",
+      "answer": "max(nums)",
+      "explanation": "This Python code returns the largest value found in the iterable nums.\nIf nums is empty, it raises a ValueError unless a default value is provided."
+    },
+    {
+      "question": "Get the minimum value in the list nums:________",
+      "type": "blank",
+      "answer": "min(nums)",
+      "explanation": "This Python code returns the smallest value found in the iterable nums.\nIf nums is empty, it raises a ValueError unless a default value is provided."
+    },
+    {
+      "question": "Combine the three lists arr1, arr2, and arr3 element-wise into tuples:________",
+      "type": "blank",
+      "answer": "zip(arr1, arr2, arr3)",
+      "explanation": "This Python code stitches together corresponding elements from arr1, arr2, and arr3 into tuples, producing an iterator of tuples like (arr1[0], arr2[0], arr3[0]), (arr1[1], arr2[1], arr3[1]), etc.\nThe resulting iterator stops as soon as the shortest input list is exhausted."
+    },
+    {
+      "question": "Remove the entry with key key from the dictionary d and return its value:________",
+      "type": "blank",
+      "answer": "d.pop(key)",
+      "explanation": "This Python code removes the key key from the dictionary d and returns the value that was associated with it.\nIf key is not found in d, it raises a KeyError unless a default value is supplied as a second argument."
+    },
+    {
+      "question": "Append x to the list stored at key k in dictionary d, creating an empty list first if k doesn't already exist:________",
+      "type": "blank",
+      "answer": "d.setdefault(k, []).append(x)",
+      "explanation": "This Python code retrieves the list stored at key k in dictionary d, first inserting an empty list at that key if it doesn't already exist, and then appends x to that list.\nIt's a common idiom for building a dictionary of lists (grouping items) without needing to check for key existence manually."
+    },
+    {
+      "question": "Represent positive infinity as a float:________",
+      "type": "blank",
+      "answer": "float('inf')",
+      "explanation": "This Python code creates a floating-point value representing positive infinity.\nIt's commonly used as an initial value when searching for a minimum, since any real number will be smaller than it."
+    },
+    {
+      "question": "Represent negative infinity as a float:________",
+      "type": "blank",
+      "answer": "float('-inf')",
+      "explanation": "This Python code creates a floating-point value representing negative infinity.\nIt's commonly used as an initial value when searching for a maximum, since any real number will be larger than it."
+    },
+    {
+      "question": "Get the ASCII/Unicode code point of the character 'a':________",
+      "type": "blank",
+      "answer": "ord('a')",
+      "explanation": "This Python code returns the integer Unicode code point corresponding to the single character 'a'.\nFor 'a', this returns 97, and it's the inverse operation of chr()."
+    },
+    {
+      "question": "Get the character corresponding to the ASCII/Unicode code point 97:________",
+      "type": "blank",
+      "answer": "chr(97)",
+      "explanation": "This Python code returns the single character whose Unicode code point equals 97.\nFor 97, this returns 'a', and it's the inverse operation of ord()."
+    },
+    {
+      "question": "Iterate over string s, getting both the index and the character at each position:________",
+      "type": "blank",
+      "answer": "for i, c in enumerate(s):",
+      "explanation": "This Python code loops through the string s, and for each iteration enumerate() yields a tuple of (index, character), which is unpacked into i and c.\nThis avoids manually tracking an index counter with range(len(s))."
+    },
+    {
+      "question": "Reverse the string s (creating a new string):________",
+      "type": "blank",
+      "answer": "s[::-1]",
+      "explanation": "This Python code uses extended slice notation with a step of -1 to produce a new string containing the characters of s in reverse order.\nThe original string s is left unmodified, since strings are immutable in Python."
+    },
+    {
+      "question": "Create a new sorted list from nums without modifying the original list:________",
+      "type": "blank",
+      "answer": "sorted_nums = sorted(nums)",
+      "explanation": "This Python code calls the built-in sorted() function on nums, which returns a new list containing the elements of nums in ascending order.\nThe original list nums remains unchanged, unlike the in-place .sort() method."
+    },
+    {
+      "question": "Sort the list nums in place (ascending order):________",
+      "type": "blank",
+      "answer": "nums.sort()",
+      "explanation": "This Python code sorts the elements of the list nums directly in ascending order, modifying nums itself.\nIt returns None, so it should not be assigned back to a variable like nums = nums.sort()."
+    },
+    {
+      "question": "Get an iterator that yields the elements of nums in reverse order without creating a new list:________",
+      "type": "blank",
+      "answer": "reversed(nums)",
+      "explanation": "This Python code returns a reverse iterator over the elements of nums, yielding them from last to first one at a time.\nUnlike nums[::-1], it does not immediately build a new list in memory, making it more memory-efficient for large sequences."
+    },
+    {
+      "question": "Create a new list containing the elements of nums in reverse order:________",
+      "type": "blank",
+      "answer": "nums[::-1]",
+      "explanation": "This Python code uses extended slice notation with a step of -1 to produce a new list with the elements of nums reversed.\nThe original list nums is left unmodified."
+    },
+    {
+      "question": "Reverse the list nums in place:________",
+      "type": "blank",
+      "answer": "nums.reverse()",
+      "explanation": "This Python code reverses the order of elements in the list nums directly, modifying nums itself without creating a new list.\nIt returns None, so it should not be assigned back to a variable like nums = nums.reverse()."
+    },
+    {
+      "question": "Create a list of length n where every element is 0:________",
+      "type": "blank",
+      "answer": "[0] * n",
+      "explanation": "This Python code uses list repetition to create a new list containing n copies of the integer 0.\nThis idiom works cleanly for immutable elements like 0, but should be avoided for mutable elements like lists, since it would repeat references to the same object."
+    },
+    {
+      "question": "Create an m×n matrix (a list of m lists, each containing n zeros):________",
+      "type": "blank",
+      "answer": "[[0] * n for _ in range(m)]",
+      "explanation": "This Python code uses a list comprehension to build m separate inner lists, each created independently by [0] * n.\nBecause each inner list is generated fresh on every iteration, the rows are independent, unlike [[0]*n]*m which would create m references to the same inner list."
+    },
+    {
+      "question": "Create a shallow copy of the list arr:________",
+      "type": "blank",
+      "answer": "arr.copy()",
+      "explanation": "This Python code returns a new list containing the same top-level elements as arr, so modifying the new list's structure won't affect arr.\nHowever, if arr contains mutable objects (like nested lists), those inner objects are still shared between the original and the copy, since it's only a shallow copy."
+    },
+    {
+      "question": "Add all the elements of other to the end of the list lst:________",
+      "type": "blank",
+      "answer": "lst.extend(other)",
+      "explanation": "This Python code appends each element of the iterable other individually onto the end of lst, modifying lst in place.\nThis differs from lst.append(other), which would add other as a single nested element rather than merging its individual items."
+    },
+    {
+      "question": "Import functions for performing binary search on a sorted list:________",
+      "type": "blank",
+      "answer": "from bisect import bisect_left, bisect_right",
+      "explanation": "This Python code imports bisect_left and bisect_right from the bisect module, which locate insertion points in a sorted list using binary search.\nbisect_left finds the leftmost position where a value could be inserted to keep the list sorted, while bisect_right finds the rightmost such position, which matters when duplicate values are present."
+    },
+    {
+      "question": "Generate a random integer between left and right, inclusive of both endpoints:________",
+      "type": "blank",
+      "answer": "random.randint(left, right)",
+      "explanation": "This Python code returns a random integer N such that left <= N <= right, with both endpoints included in the possible range.\nThis differs from random.randrange(left, right), which excludes the right endpoint."
+    }
+  ]
+}
