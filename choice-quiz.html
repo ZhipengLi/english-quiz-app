@@ -1190,7 +1190,11 @@
                 input.disabled = true;
                 submitBtn.disabled = true;
                 
-                const isCorrect = userAnswer.toLowerCase() === correctAnswer.toLowerCase();
+                // Remove spaces and convert to lowercase for comparison
+                const normalizedUserAnswer = userAnswer.toLowerCase().replace(/\s+/g, '');
+                const normalizedCorrectAnswer = correctAnswer.toLowerCase().replace(/\s+/g, '');
+
+                const isCorrect = normalizedUserAnswer === normalizedCorrectAnswer;
 
                 if (isCorrect) {
                     feedbackResult.textContent = "Correct! 🎉";
