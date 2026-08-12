@@ -306,7 +306,77 @@
       "type": "blank",
       "answer": "count.most_common(1)",
       "explanation": "This Python code returns a list containing just the one (element, count) tuple with the highest frequency in the Counter count.\nPassing an integer argument to most_common() limits the result to that many top entries, which is useful when you only need the top-k most frequent elements."
+    },
+{
+  "text": "Python fundamentals",
+  "quiz": [
+    {
+      "question": "Create an empty set and assign it to seen, something you absolutely want in your cheat sheet:________",
+      "type": "blank",
+      "answer": "seen = set()",
+      "explanation": "This Python code creates a new, empty set object and binds it to the name seen.\nSets are unordered collections of unique, hashable elements, commonly used for fast membership testing and deduplication."
+    },
+    {
+      "question": "Add x to the set seen:________",
+      "type": "blank",
+      "answer": "seen.add(x)",
+      "explanation": "This Python code inserts x into the set seen.\nIf x is already present in the set, this has no effect, since sets automatically enforce uniqueness of elements."
+    },
+    {
+      "question": "Remove x from the set seen, raising an error if x is missing:________",
+      "type": "blank",
+      "answer": "seen.remove(x)",
+      "explanation": "This Python code deletes x from the set seen.\nIf x is not present in the set, this raises a KeyError, unlike seen.discard(x) which fails silently instead."
+    },
+    {
+      "question": "Remove x from the set seen safely, without raising an error if x is missing:________",
+      "type": "blank",
+      "answer": "seen.discard(x)",
+      "explanation": "This Python code deletes x from the set seen if it's present.\nIf x is not present in the set, discard() simply does nothing rather than raising an error, unlike seen.remove(x)."
+    },
+    {
+      "question": "Check whether x is a member of the set seen:________",
+      "type": "blank",
+      "answer": "x in seen",
+      "explanation": "This Python code tests membership by checking whether x is one of the elements currently stored in seen.\nIt returns True if x is present and False otherwise, and runs in average O(1) time thanks to the set's hash table implementation."
+    },
+    {
+      "question": "Get the number of elements currently in the set seen:________",
+      "type": "blank",
+      "answer": "len(seen)",
+      "explanation": "This Python code returns the count of distinct elements currently stored in the set seen.\nSince sets automatically eliminate duplicates, len(seen) reflects the number of unique items that have been added and not removed."
+    },
+    {
+      "question": "Compute the union of sets a and b (all elements in either set):________",
+      "type": "blank",
+      "answer": "a | b",
+      "explanation": "This Python code returns a new set containing every element that appears in a, in b, or in both.\nThe | operator is equivalent to calling a.union(b)."
+    },
+    {
+      "question": "Compute the intersection of sets a and b (elements in both sets):________",
+      "type": "blank",
+      "answer": "a & b",
+      "explanation": "This Python code returns a new set containing only the elements that appear in both a and b.\nThe & operator is equivalent to calling a.intersection(b)."
+    },
+    {
+      "question": "Compute the difference of sets a and b (elements in a but not in b):________",
+      "type": "blank",
+      "answer": "a - b",
+      "explanation": "This Python code returns a new set containing the elements that are in a but not in b.\nThe - operator is equivalent to calling a.difference(b), and note that this operation is not symmetric: a - b is generally different from b - a."
+    },
+    {
+      "question": "Compute the symmetric difference of sets a and b (elements in exactly one of the sets, not both):________",
+      "type": "blank",
+      "answer": "a ^ b",
+      "explanation": "This Python code returns a new set containing elements that are in either a or b, but excludes elements present in both.\nThe ^ operator is equivalent to calling a.symmetric_difference(b)."
+    },
+    {
+      "question": "Convert the list nums into a set of its unique values:________",
+      "type": "blank",
+      "answer": "set(nums)",
+      "explanation": "This Python code constructs a new set from the iterable nums, automatically discarding any duplicate elements.\nThe resulting set contains only the distinct values from nums, in no particular order."
     }
-
+  ]
+}
   ]
 }
