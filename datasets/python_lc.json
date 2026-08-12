@@ -699,8 +699,8 @@
       "type": "blank",
       "answer": "chr(ord('a') + i)",
       "explanation": "This Python code adds i to the Unicode code point of 'a', then converts the resulting code point back into a character.\nThis is the inverse of ord(c) - ord('a'), and is commonly used to convert an array index back into its corresponding lowercase letter."
-    }，
-       {
+    },
+    {
       "question": "Append x to the end of the list arr:________",
       "type": "blank",
       "answer": "arr.append(x)",
