@@ -144,6 +144,84 @@
       "type": "blank",
       "answer": "random.randint(left, right)",
       "explanation": "This Python code returns a random integer N such that left <= N <= right, with both endpoints included in the possible range.\nThis differs from random.randrange(left, right), which excludes the right endpoint."
+    },
+    {
+      "question": "Create an empty dictionary and assign it to d:________",
+      "type": "blank",
+      "answer": "d = {}",
+      "explanation": "This Python code creates a new, empty dictionary object and binds it to the name d.\nFrom here, key-value pairs can be added to d using assignment syntax like d[key] = value."
+    },
+    {
+      "question": "Add or update the entry for key in dictionary d, setting its value to value:________",
+      "type": "blank",
+      "answer": "d[key] = value",
+      "explanation": "This Python code inserts a new key-value pair into d if key doesn't already exist, or overwrites the existing value if it does.\nDictionary keys must be hashable (e.g., strings, numbers, or tuples of immutables), while values can be any type."
+    },
+    {
+      "question": "Retrieve the value associated with key in dictionary d (raising an error if not found):________",
+      "type": "blank",
+      "answer": "d[key]",
+      "explanation": "This Python code looks up key in the dictionary d and returns its associated value.\nIf key is not present in d, this raises a KeyError, unlike d.get(key, default) which returns a fallback value instead."
+    },
+    {
+      "question": "Retrieve the value associated with key in dictionary d, returning 0 if key is not found:________",
+      "type": "blank",
+      "answer": "d.get(key, 0)",
+      "explanation": "This Python code looks up key in the dictionary d and returns its associated value if present, or returns the default value 0 if key is not found.\nThis avoids the KeyError that would be raised by d[key] when the key is missing."
+    },
+    {
+      "question": "Check whether key exists in the dictionary d:________",
+      "type": "blank",
+      "answer": "key in d",
+      "explanation": "This Python code tests membership by checking whether key is one of the keys currently stored in d.\nIt returns True if key is present and False otherwise, and runs in average O(1) time thanks to the dictionary's hash table implementation."
+    },
+    {
+      "question": "Check whether key does not exist in the dictionary d:________",
+      "type": "blank",
+      "answer": "key not in d",
+      "explanation": "This Python code tests whether key is absent from the dictionary d's set of keys.\nIt's equivalent to writing not (key in d), but the not in form is more readable and idiomatic."
+    },
+    {
+      "question": "Remove the entry for key from dictionary d without returning its value:________",
+      "type": "blank",
+      "answer": "del d[key]",
+      "explanation": "This Python code deletes the key-value pair for key from the dictionary d using the del statement.\nIf key is not present in d, this raises a KeyError; unlike d.pop(key), it does not return the removed value."
+    },
+    {
+      "question": "Remove the entry for key from dictionary d and return its value:________",
+      "type": "blank",
+      "answer": "d.pop(key)",
+      "explanation": "This Python code removes key from the dictionary d and returns the value that was associated with it.\nIf key is not found in d, it raises a KeyError unless a default value is supplied as a second argument, e.g., d.pop(key, None)."
+    },
+    {
+      "question": "Iterate over all the keys in dictionary d:________",
+      "type": "blank",
+      "answer": "for key in d:",
+      "explanation": "This Python code loops through the dictionary d, yielding each key in turn (iterating directly over a dictionary iterates over its keys).\nTo access the corresponding value inside the loop, you would use d[key]."
+    },
+    {
+      "question": "Iterate over dictionary d, getting both the key and the value at each step:________",
+      "type": "blank",
+      "answer": "for key, value in d.items():",
+      "explanation": "This Python code loops through the dictionary d using its items() method, which yields (key, value) tuples that are unpacked into key and value on each iteration.\nThis is more efficient and readable than looping over keys and then separately indexing into d for each value."
+    },
+    {
+      "question": "Iterate over just the values in dictionary d:________",
+      "type": "blank",
+      "answer": "for value in d.values():",
+      "explanation": "This Python code loops through the dictionary d using its values() method, which yields only the values, discarding the keys entirely.\nThis is useful when you only care about the stored data and don't need to know which key it came from."
+    },
+    {
+      "question": "Create an empty dictionary to be used as a frequency counter:________",
+      "type": "blank",
+      "answer": "count = {}",
+      "explanation": "This Python code creates a new, empty dictionary bound to the name count, intended to map each distinct value to how many times it occurs.\nIt's typically followed by a loop that increments the count for each value encountered."
+    },
+    {
+      "question": "Loop over each element x in nums, incrementing its count in the dictionary count by 1 (treating a missing key as starting from 0), all on a single line:________",
+      "type": "blank",
+      "answer": "for x in nums:count[x] = count.get(x, 0) + 1",
+      "explanation": "This Python code iterates over every element x in nums, and for each one looks up its current count using count.get(x, 0) (which returns 0 if x hasn't been seen before), adds 1, and stores the result back into count[x].\nWriting the loop body on the same line as the for statement is valid Python syntax as long as the body is a single simple statement, though splitting it onto an indented line below is generally considered more readable."
     }
   ]
 }
