@@ -375,8 +375,330 @@
       "type": "blank",
       "answer": "set(nums)",
       "explanation": "This Python code constructs a new set from the iterable nums, automatically discarding any duplicate elements.\nThe resulting set contains only the distinct values from nums, in no particular order."
+    }，
+        {
+      "question": "Create an empty list to be used as a stack:________",
+      "type": "blank",
+      "answer": "stack = []",
+      "explanation": "This Python code creates a new, empty list bound to the name stack.\nA plain Python list works naturally as a stack because appending and popping from the end are both O(1) operations."
+    },
+    {
+      "question": "Push x onto the stack:________",
+      "type": "blank",
+      "answer": "stack.append(x)",
+      "explanation": "This Python code adds x to the end of the list stack, which represents the top of the stack.\nBecause appending to the end of a Python list is O(1), this is the standard way to push in a stack implementation."
+    },
+    {
+      "question": "Pop the top element off the stack and assign it to x:________",
+      "type": "blank",
+      "answer": "x = stack.pop()",
+      "explanation": "This Python code removes and returns the last element of the list stack, which represents the top of the stack, binding it to x.\nWith no argument, .pop() defaults to removing the final element, which is O(1), unlike popping from the front."
+    },
+    {
+      "question": "Peek at the top element of the stack without removing it:________",
+      "type": "blank",
+      "answer": "stack[-1]",
+      "explanation": "This Python code accesses the last element of the list stack using negative indexing, without modifying the list.\nThis lets you inspect the top of the stack, which is useful in patterns like monotonic stack problems."
+    },
+    {
+      "question": "Import deque, another major omission from a basic cheat sheet, from the collections module:________",
+      "type": "blank",
+      "answer": "from collections import deque",
+      "explanation": "This Python code imports the deque (double-ended queue) class from the built-in collections module.\ndeque supports O(1) appends and pops from both ends, making it ideal for queues, unlike a plain list where popping from the front is O(n)."
+    },
+    {
+      "question": "Create an empty deque and assign it to q:________",
+      "type": "blank",
+      "answer": "q = deque()",
+      "explanation": "This Python code creates a new, empty deque object and binds it to the name q.\nFrom here, elements can be efficiently added or removed from either end using methods like append, appendleft, pop, and popleft."
+    },
+    {
+      "question": "Add x to the right end of the deque q:________",
+      "type": "blank",
+      "answer": "q.append(x)",
+      "explanation": "This Python code adds x to the right side of the deque q.\nThis is analogous to list.append(), and runs in O(1) time on a deque."
+    },
+    {
+      "question": "Remove and return the leftmost element of the deque q:________",
+      "type": "blank",
+      "answer": "q.popleft()",
+      "explanation": "This Python code removes and returns the element at the left end of the deque q.\nThis operation runs in O(1) time on a deque, unlike list.pop(0) which is O(n) on a plain list."
+    },
+    {
+      "question": "Add x to the left end of the deque q:________",
+      "type": "blank",
+      "answer": "q.appendleft(x)",
+      "explanation": "This Python code adds x to the left side of the deque q.\nThis operation runs in O(1) time on a deque, making it efficient for inserting at the front, which a plain list cannot do efficiently."
+    },
+    {
+      "question": "Remove and return the rightmost element of the deque q:________",
+      "type": "blank",
+      "answer": "q.pop()",
+      "explanation": "This Python code removes and returns the element at the right end of the deque q.\nThis mirrors list.pop(), and combined with popleft(), gives the deque efficient operations at both ends."
+    },
+    {
+      "question": "Create a deque initialized with a single element start, as the starting point for a standard BFS:________",
+      "type": "blank",
+      "answer": "q = deque([start])",
+      "explanation": "This Python code creates a deque q pre-populated with the single element start, wrapped in a list.\nThis is the typical initialization for a breadth-first search, where start is the initial node to explore from."
+    },
+    {
+      "question": "Write the loop header for a standard BFS that continues while q is non-empty, popping the next node from the left each iteration:________",
+      "type": "blank",
+      "answer": "while q: node = q.popleft()",
+      "explanation": "This Python code runs a loop as long as the deque q contains elements (an empty deque is falsy), and on each iteration removes and binds the leftmost element to node.\nThis is the standard BFS pattern: nodes are processed in the order they were discovered, since popleft() removes from the front while new nodes are typically appended to the back."
+    },
+    {
+      "question": "Import the heapq module, absolutely essential for heap operations:________",
+      "type": "blank",
+      "answer": "import heapq",
+      "explanation": "This Python code imports the built-in heapq module, which provides functions for working with heaps built on top of ordinary Python lists.\nheapq implements a binary min-heap using free functions rather than a dedicated class, operating directly on a list."
+    },
+    {
+      "question": "Create an empty list to be used as a heap:________",
+      "type": "blank",
+      "answer": "heap = []",
+      "explanation": "This Python code creates a new, empty list bound to the name heap.\nheapq functions operate directly on plain lists, maintaining the heap invariant internally rather than requiring a special heap class."
+    },
+    {
+      "question": "Push x onto the heap:________",
+      "type": "blank",
+      "answer": "heapq.heappush(heap, x)",
+      "explanation": "This Python code inserts x into the list heap while maintaining the heap invariant, in O(log n) time.\nAfter this call, heap[0] is guaranteed to still be the smallest element."
+    },
+    {
+      "question": "Pop the smallest element off the heap and assign it to x:________",
+      "type": "blank",
+      "answer": "x = heapq.heappop(heap)",
+      "explanation": "This Python code removes and returns the smallest element from the list heap, re-establishing the heap invariant afterward, in O(log n) time.\nSince Python's heapq implements a min-heap, this always returns the current minimum element."
+    },
+    {
+      "question": "Peek at the smallest element in the heap without removing it:________",
+      "type": "blank",
+      "answer": "heap[0]",
+      "explanation": "This Python code accesses the first element of the list heap, which the heap invariant guarantees is always the smallest element.\nThis is an O(1) operation and does not modify the heap."
+    },
+    {
+      "question": "Transform the list nums in place into a valid heap:________",
+      "type": "blank",
+      "answer": "heapq.heapify(nums)",
+      "explanation": "This Python code rearranges the elements of nums in place so that they satisfy the heap invariant, in O(n) time.\nThis is more efficient than pushing elements one at a time with repeated heappush() calls, which would take O(n log n)."
+    },
+    {
+      "question": "Push x onto the heap and then pop and return the smallest element, more efficiently than doing both separately:________",
+      "type": "blank",
+      "answer": "heapq.heappushpop(heap, x)",
+      "explanation": "This Python code pushes x onto heap and then pops and returns the smallest element, all in a single, more efficient operation than calling heappush() followed by heappop() separately.\nIf x turns out to be smaller than all current heap elements, this effectively returns x itself without it ever entering the heap."
+    },
+    {
+      "question": "Push the negation of x onto the heap, the classic LeetCode trick for simulating a max heap:________",
+      "type": "blank",
+      "answer": "heapq.heappush(heap, -x)",
+      "explanation": "This Python code pushes -x onto heap instead of x itself.\nSince Python's heapq is only a min-heap, negating values before pushing them is the classic trick for simulating a max-heap, since the smallest negated value corresponds to the largest original value."
+    },
+    {
+      "question": "Pop the smallest element from the heap and negate it back to get the largest original value:________",
+      "type": "blank",
+      "answer": "largest = -heapq.heappop(heap)",
+      "explanation": "This Python code pops the smallest value from heap (which is the negation of the largest original value) and negates it again to recover the true largest value, storing it in largest.\nThis completes the min-heap-as-max-heap trick that pairs with pushing negated values."
+    },
+    {
+      "question": "Push a tuple of (distance, node) onto the heap for use as a priority queue:________",
+      "type": "blank",
+      "answer": "heapq.heappush(heap, (distance, node))",
+      "explanation": "This Python code pushes the tuple (distance, node) onto heap.\nBecause Python compares tuples element by element, the heap will order entries primarily by distance, making this the standard way to implement a priority queue where distance is the priority (commonly used in Dijkstra's algorithm)."
+    },
+    {
+      "question": "Pop the entry with the smallest distance from the priority queue heap, unpacking it into distance and node:________",
+      "type": "blank",
+      "answer": "distance, node = heapq.heappop(heap)",
+      "explanation": "This Python code pops the smallest (distance, node) tuple from heap and unpacks it into the variables distance and node.\nSince tuples compare element by element, this always retrieves the entry with the currently smallest distance."
+    },
+    {
+      "question": "Sort the list nums in place (ascending order):________",
+      "type": "blank",
+      "answer": "nums.sort()",
+      "explanation": "This Python code sorts the elements of nums directly in ascending order, modifying nums itself and returning None.\nUse this when you don't need to preserve the original unsorted order of nums."
+    },
+    {
+      "question": "Create a new sorted list from nums without modifying the original list:________",
+      "type": "blank",
+      "answer": "result = sorted(nums)",
+      "explanation": "This Python code calls the built-in sorted() function on nums, returning a new list containing the elements in ascending order.\nThe original list nums remains unchanged, unlike the in-place nums.sort() method."
+    },
+    {
+      "question": "Sort the list nums in place in descending order:________",
+      "type": "blank",
+      "answer": "nums.sort(reverse=True)",
+      "explanation": "This Python code sorts nums in place, but with the reverse=True argument the resulting order is descending instead of the default ascending.\nThis modifies nums directly and returns None."
+    },
+    {
+      "question": "Sort the list intervals in place using the first element of each sub-list/tuple as the sort key:________",
+      "type": "blank",
+      "answer": "intervals.sort(key=lambda x: x[0])",
+      "explanation": "This Python code sorts intervals in place, using a lambda function as the key to extract x[0] (the first element of each item) for comparison purposes.\nThis is a very common pattern for interval-based problems, where sorting by start time is often the first step."
+    },
+    {
+      "question": "Sort the list arr in place by multiple criteria: first by x[0], then by x[1] as a tiebreaker:________",
+      "type": "blank",
+      "answer": "arr.sort(key=lambda x: (x[0], x[1]))",
+      "explanation": "This Python code sorts arr in place using a key function that returns a tuple (x[0], x[1]) for each element.\nBecause tuples compare element by element, items are primarily ordered by x[0], with x[1] used to break ties when x[0] values are equal."
+    },
+    {
+      "question": "Sort the list arr in place by two criteria: first ascending by x[0], then descending by x[1]:________",
+      "type": "blank",
+      "answer": "arr.sort(key=lambda x: (x[0], -x[1]))",
+      "explanation": "This Python code sorts arr in place using a key function returning (x[0], -x[1]).\nSince sort() defaults to ascending order, negating x[1] flips its effective ordering to descending, while x[0] remains sorted in normal ascending order, and this trick only works cleanly for numeric fields."
+    },
+    {
+      "question": "Sort the list words in place by the length of each string:________",
+      "type": "blank",
+      "answer": "words.sort(key=len)",
+      "explanation": "This Python code sorts words in place using the built-in len function as the key, so shorter strings come before longer ones.\nPassing len directly as the key (rather than a lambda) is a concise idiom when you just need to sort by a built-in function's result."
+    },
+    {
+      "question": "Import bisect_left, bisect_right, and insort from the bisect module:________",
+      "type": "blank",
+      "answer": "from bisect import bisect_left, bisect_right, insort",
+      "explanation": "This Python code imports three functions from the bisect module: bisect_left and bisect_right for finding insertion points in a sorted list via binary search, and insort for inserting a value while keeping the list sorted.\nAll three operate on lists that are already sorted, and rely on binary search for O(log n) lookup, though insertion itself is O(n) due to list shifting."
+    },
+    {
+      "question": "Find the first position in sorted list nums where a value could be inserted such that all elements before it are less than x, and assign it to i:________",
+      "type": "blank",
+      "answer": "i = bisect_left(nums, x)",
+      "explanation": "This Python code performs a binary search on the sorted list nums to find the leftmost index i where x could be inserted while keeping nums sorted.\nThis is the first position where the value at that index would be >= x, meaning any existing occurrences of x in nums would end up after the insertion point."
+    },
+    {
+      "question": "Find the first position in sorted list nums where a value could be inserted such that all elements before it are less than or equal to x, and assign it to i:________",
+      "type": "blank",
+      "answer": "i = bisect_right(nums, x)",
+      "explanation": "This Python code performs a binary search on the sorted list nums to find the rightmost index i where x could be inserted while keeping nums sorted.\nThis is the first position where the value at that index would be > x, meaning any existing occurrences of x in nums would end up before the insertion point, unlike bisect_left."
+    },
+    {
+      "question": "Insert x into the sorted list nums while maintaining sorted order:________",
+      "type": "blank",
+      "answer": "insort(nums, x)",
+      "explanation": "This Python code inserts x into nums at the correct position (found via binary search) so that nums remains sorted afterward.\nThe insertion itself takes O(n) time due to shifting elements, even though the position is found in O(log n) time."
+    },
+    {
+      "question": "Get the number of characters in the string s:________",
+      "type": "blank",
+      "answer": "len(s)",
+      "explanation": "This Python code returns the number of characters contained in the string s.\nThis is an O(1) operation, since Python strings store their length internally rather than computing it by counting."
+    },
+    {
+      "question": "Access the character at index i in the string s:________",
+      "type": "blank",
+      "answer": "s[i]",
+      "explanation": "This Python code returns the single character located at position i in the string s, using zero-based indexing.\nNegative indices count from the end of the string, so s[-1] would return the last character."
+    },
+    {
+      "question": "Get the substring of s from index i up to (but not including) index j:________",
+      "type": "blank",
+      "answer": "s[i:j]",
+      "explanation": "This Python code uses slice notation to extract a new string containing the characters of s from index i through index j-1.\nIf i or j is omitted, they default to the start or end of the string respectively, and out-of-range indices are handled gracefully without raising errors."
+    },
+    {
+      "question": "Check whether the string s begins with the substring \"abc\":________",
+      "type": "blank",
+      "answer": "s.startswith(\"abc\")",
+      "explanation": "This Python code checks whether s begins with the exact characters \"abc\" and returns True or False accordingly.\nThis is generally clearer and safer than manually slicing s[:3] == \"abc\", since it avoids potential index errors on short strings."
+    },
+    {
+      "question": "Check whether the string s ends with the substring \"abc\":________",
+      "type": "blank",
+      "answer": "s.endswith(\"abc\")",
+      "explanation": "This Python code checks whether s ends with the exact characters \"abc\" and returns True or False accordingly.\nThis is generally clearer and safer than manually slicing s[-3:] == \"abc\", since it avoids potential index errors on short strings."
+    },
+    {
+      "question": "Find the index of the first occurrence of the substring \"abc\" in the string s:________",
+      "type": "blank",
+      "answer": "s.find(\"abc\")",
+      "explanation": "This Python code searches for the first occurrence of \"abc\" within s and returns its starting index.\nIf \"abc\" is not found anywhere in s, find() returns -1 rather than raising an error, unlike the similar s.index(\"abc\") method."
+    },
+    {
+      "question": "Convert the string s to all lowercase characters:________",
+      "type": "blank",
+      "answer": "s.lower()",
+      "explanation": "This Python code returns a new string with every uppercase character in s converted to its lowercase equivalent, leaving non-letter characters unchanged.\nThe original string s is not modified, since strings in Python are immutable."
+    },
+    {
+      "question": "Convert the string s to all uppercase characters:________",
+      "type": "blank",
+      "answer": "s.upper()",
+      "explanation": "This Python code returns a new string with every lowercase character in s converted to its uppercase equivalent, leaving non-letter characters unchanged.\nThe original string s is not modified, since strings in Python are immutable."
+    },
+    {
+      "question": "Check whether every character in the string s is a digit:________",
+      "type": "blank",
+      "answer": "s.isdigit()",
+      "explanation": "This Python code returns True if s is non-empty and every character in it is a digit character, and False otherwise.\nAn empty string returns False, since there are no characters to satisfy the condition."
+    },
+    {
+      "question": "Check whether every character in the string s is an alphabetic letter:________",
+      "type": "blank",
+      "answer": "s.isalpha()",
+      "explanation": "This Python code returns True if s is non-empty and every character in it is an alphabetic letter, and False otherwise.\nCharacters like spaces, digits, or punctuation would cause this to return False."
+    },
+    {
+      "question": "Check whether every character in the string s is alphanumeric (a letter or a digit):________",
+      "type": "blank",
+      "answer": "s.isalnum()",
+      "explanation": "This Python code returns True if s is non-empty and every character in it is either a letter or a digit, and False otherwise.\nCharacters like spaces or punctuation would cause this to return False, distinguishing it from isalpha() and isdigit() individually."
+    },
+    {
+      "question": "Split the string s on whitespace into a list of words:________",
+      "type": "blank",
+      "answer": "words = s.split()",
+      "explanation": "This Python code splits s on any run of whitespace characters (spaces, tabs, newlines) and returns a list of the resulting substrings.\nCalling split() with no arguments also automatically discards leading/trailing whitespace and collapses multiple consecutive spaces, unlike splitting on a specific delimiter."
+    },
+    {
+      "question": "Split the string s on the comma character into a list of substrings:________",
+      "type": "blank",
+      "answer": "parts = s.split(',')",
+      "explanation": "This Python code splits s wherever a comma character occurs, returning a list of the substrings between commas.\nUnlike the no-argument version of split(), this does not collapse consecutive delimiters, so \"a,,b\".split(',') would produce ['a', '', 'b']."
+    },
+    {
+      "question": "Join the elements of the list chars into a single string with no separator between them:________",
+      "type": "blank",
+      "answer": "s = ''.join(chars)",
+      "explanation": "This Python code concatenates every element in the iterable chars into a single string, using an empty string as the separator between elements.\nAll elements in chars must already be strings, or this will raise a TypeError."
+    },
+    {
+      "question": "Join the elements of the list words into a single string, separated by spaces:________",
+      "type": "blank",
+      "answer": "s = ' '.join(words)",
+      "explanation": "This Python code concatenates every element in the iterable words into a single string, inserting a single space between each pair of adjacent elements.\nThis is the standard idiom for reassembling a list of words back into a sentence."
+    },
+    {
+      "question": "Replace every occurrence of \"a\" with \"b\" in the string s:________",
+      "type": "blank",
+      "answer": "s.replace(\"a\", \"b\")",
+      "explanation": "This Python code returns a new string identical to s but with every occurrence of the substring \"a\" replaced by \"b\".\nThe original string s is left unmodified, and by default all occurrences are replaced unless a third count argument limits how many replacements to make."
+    },
+    {
+      "question": "Convert the integer 123 into its string representation:________",
+      "type": "blank",
+      "answer": "str(123)",
+      "explanation": "This Python code converts the integer 123 into the string \"123\".\nThis is commonly needed when concatenating numbers with other strings, since Python doesn't implicitly convert between types in string concatenation."
+    },
+    {
+      "question": "Convert the string \"123\" into its integer representation:________",
+      "type": "blank",
+      "answer": "int(\"123\")",
+      "explanation": "This Python code parses the string \"123\" and converts it into the integer 123.\nIf the string doesn't represent a valid integer (e.g., contains letters or is empty), this raises a ValueError."
+    },
+    {
+      "question": "Compute the zero-based alphabetical position of the lowercase letter c (e.g., 'a' → 0, 'b' → 1):________",
+      "type": "blank",
+      "answer": "ord(c) - ord('a')",
+      "explanation": "This Python code subtracts the Unicode code point of 'a' from the Unicode code point of c, yielding c's position in the alphabet starting from 0.\nThis is a very common idiom for mapping lowercase letters to array indices, e.g., for a 26-element frequency array."
+    },
+    {
+      "question": "Compute the lowercase letter at zero-based alphabetical position i (e.g., i=0 → 'a', i=1 → 'b'):________",
+      "type": "blank",
+      "answer": "chr(ord('a') + i)",
+      "explanation": "This Python code adds i to the Unicode code point of 'a', then converts the resulting code point back into a character.\nThis is the inverse of ord(c) - ord('a'), and is commonly used to convert an array index back into its corresponding lowercase letter."
     }
-  ]
-}
   ]
 }
