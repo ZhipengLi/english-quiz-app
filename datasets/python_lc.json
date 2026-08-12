@@ -375,8 +375,8 @@
       "type": "blank",
       "answer": "set(nums)",
       "explanation": "This Python code constructs a new set from the iterable nums, automatically discarding any duplicate elements.\nThe resulting set contains only the distinct values from nums, in no particular order."
-    }，
-        {
+    },
+    {
       "question": "Create an empty list to be used as a stack:________",
       "type": "blank",
       "answer": "stack = []",
