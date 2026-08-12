@@ -270,6 +270,43 @@
       "type": "blank",
       "answer": "d.setdefault(key, []).append(value)",
       "explanation": "This Python code retrieves the list stored at key in the plain dictionary d, first inserting an empty list at that key if it doesn't already exist, and then appends value to that list.\nWhile this achieves the same grouping result as a defaultdict(list), it's generally considered less clean because it repeats the [] default on every call, whereas defaultdict only needs the factory specified once at creation."
+    },
+     {
+      "question": "Import Counter, very common for character/count problems, from the collections module:________",
+      "type": "blank",
+      "answer": "from collections import Counter",
+      "explanation": "This Python code imports the Counter class from the built-in collections module.\nCounter is a dictionary subclass specialized for counting hashable objects, commonly used for character or element frequency problems."
+    },
+    {
+      "question": "Create a Counter object that counts the occurrences of each element in the list nums:________",
+      "type": "blank",
+      "answer": "count = Counter(nums)",
+      "explanation": "This Python code creates a Counter from the iterable nums, automatically tallying how many times each distinct element appears.\nThe result behaves like a dictionary mapping each element to its count, but with additional convenience methods like most_common()."
+    },
+    {
+      "question": "Retrieve the count associated with x from the Counter object count:________",
+      "type": "blank",
+      "answer": "count[x]",
+      "explanation": "This Python code looks up the frequency of x in the Counter count, similar to regular dictionary indexing.\nUnlike a plain dictionary, Counter returns 0 for a missing key instead of raising a KeyError, since it inherits defaultdict-like behavior for counting."
+    },
+    {
+      "question": "Create a Counter from the string \"banana\" to see the frequency of each letter:________",
+      "type": "blank",
+      "answer": "Counter(\"banana\")",
+      "explanation": "This Python code creates a Counter by iterating over each character in the string \"banana\" and tallying occurrences.\nThe result is {'a': 3, 'n': 2, 'b': 1}, since 'a' appears 3 times, 'n' appears 2 times, and 'b' appears once."
+    },
+    {
+      "question": "Get all elements in the Counter count along with their counts, ordered from most common to least common:________",
+      "type": "blank",
+      "answer": "count.most_common()",
+      "explanation": "This Python code returns a list of (element, count) tuples from the Counter count, sorted in descending order of frequency.\nElements with equal counts appear in the order they were first encountered during counting."
+    },
+    {
+      "question": "Get only the single most common element and its count from the Counter count:________",
+      "type": "blank",
+      "answer": "count.most_common(1)",
+      "explanation": "This Python code returns a list containing just the one (element, count) tuple with the highest frequency in the Counter count.\nPassing an integer argument to most_common() limits the result to that many top entries, which is useful when you only need the top-k most frequent elements."
     }
+
   ]
 }
