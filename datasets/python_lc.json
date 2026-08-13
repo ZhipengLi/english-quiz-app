@@ -307,9 +307,6 @@
       "answer": "count.most_common(1)",
       "explanation": "This Python code returns a list containing just the one (element, count) tuple with the highest frequency in the Counter count.\nPassing an integer argument to most_common() limits the result to that many top entries, which is useful when you only need the top-k most frequent elements."
     },
-{
-  "text": "Python fundamentals",
-  "quiz": [
     {
       "question": "Create an empty set and assign it to seen, something you absolutely want in your cheat sheet:________",
       "type": "blank",
