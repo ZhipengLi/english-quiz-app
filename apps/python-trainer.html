@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In-Browser Python Validator</title>
+    <!-- Load Pyodide from CDN -->
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
+
+    <!-- CodeMirror for Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+
+    <style>
+        :root {
+            --bg-color: #f3f4f6;
+            --panel-bg: #ffffff;
+            --text-main: #333333;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --success: #16a34a;
+            --danger: #dc2626;
+            --border: #d1d5db;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .panel {
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        h1, h2 {
+            margin-top: 0;
+            color: #111827;
+        }
+
+        .problem-desc {
+            background: #f9fafb;
+            padding: 1rem;
+            border-left: 4px solid var(--accent);
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background: #f1f5f9;
+            color: #0f172a;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .editor-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        /* Specific styles for the JSON input */
+        textarea#json-input {
+            width: 100%;
+            height: 350px;
+            background-color: #ffffff;
+            color: #0f172a;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 15px;
+            padding: 1rem;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            resize: vertical;
+            outline: none;
+            box-sizing: border-box;
+            tab-size: 4;
+        }
+
+        textarea#json-input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+        }
+
+        /* CodeMirror Editor Styles */
+        .CodeMirror {
+            height: 300px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 15px;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        .CodeMirror-focused {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+        }
+
+        button {
+            align-self: flex-end;
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background-color: var(--accent-hover);
+        }
+
+        button:disabled {
+            background-color: #555;
+            cursor: not-allowed;
+            color: #999;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+
+        .btn-secondary {
+            background-color: #6b7280;
+        }
+
+        .btn-secondary:hover {
+            background-color: #4b5563;
+        }
+
+        .results {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .test-case {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            word-break: break-word;
+        }
+
+        .test-case.pass { border-left: 4px solid var(--success); }
+        .test-case.fail { border-left: 4px solid var(--danger); }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .pass .status-badge { background: rgba(76, 175, 80, 0.2); color: var(--success); }
+        .fail .status-badge { background: rgba(244, 67, 54, 0.2); color: var(--danger); }
+
+        #loading-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255, 255, 255, 0.95);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            z-index: 1000;
+            color: #333;
+            gap: 1rem;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-left-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+
+        .problem-selector {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .problem-selector select {
+            padding: 0.5rem;
+            border-radius: 4px;
+            background-color: #ffffff;
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            font-size: 1rem;
+            flex-grow: 1;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 0.5rem; }
+            .panel { padding: 1rem; }
+            button { width: 100%; align-self: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loading-overlay">
+        <div class="spinner"></div>
+        <div id="loading-text">Initializing Python WebAssembly Engine...</div>
+    </div>
+
+    <div id="start-screen" class="container">
+        <div class="panel">
+            <h1>Welcome to Python Quizzer</h1>
+            <p>Paste your JSON problem configuration below to start the quiz.</p>
+            <textarea id="json-input" style="height: 350px; margin-bottom: 1rem; font-family: monospace;" spellcheck="false">[
+    {
+        "id": "area_of_circle",
+        "title": "Area of a Circle",
+        "description": "Write a Python function named <code>calculate_area(radius)</code> that takes a radius as input and returns the area of a circle. Use <code>math.pi</code> for the calculation.",
+        "template": "import math\n\ndef calculate_area(radius):\n    # Write your code here\n    \n    pass\n",
+        "answer": "import math\n\ndef calculate_area(radius):\n    return math.pi * (radius ** 2)\n",
+        "functionName": "calculate_area",
+        "testCases": [
+            { "input": [0], "expected": 0.0 },
+            { "input": [1], "expected": 3.141592653589793 },
+            { "input": [5], "expected": 78.53981633974483 },
+            { "input": [2.5], "expected": 19.634954084936208 }
+        ]
+    },
+    {
+        "id": "reverse_string",
+        "title": "Reverse a String",
+        "description": "Write a Python function named <code>reverse_string(s)</code> that takes a string <code>s</code> and returns the reversed version of it.",
+        "template": "def reverse_string(s):\n    # Write your code here\n    \n    pass\n",
+        "answer": "def reverse_string(s):\n    return s[::-1]\n",
+        "functionName": "reverse_string",
+        "testCases": [
+            { "input": ["hello"], "expected": "olleh" },
+            { "input": ["Python WebAssembly"], "expected": "ylbmesAsbeW nohtyP" },
+            { "input": ["racecar"], "expected": "racecar" },
+            { "input": [""], "expected": "" }
+        ]
+    },
+    {
+        "id": "check_palindrome",
+        "title": "Check Palindrome",
+        "description": "Write a Python function named <code>is_palindrome(s)</code> that takes a string <code>s</code> and returns <code>True</code> if it is a palindrome (reads the same forwards and backwards) and <code>False</code> otherwise.",
+        "template": "def is_palindrome(s):\n    # Write your code here\n    \n    pass\n",
+        "answer": "def is_palindrome(s):\n    return s == s[::-1]\n",
+        "functionName": "is_palindrome",
+        "testCases": [
+            { "input": ["racecar"], "expected": true },
+            { "input": ["hello"], "expected": false },
+            { "input": ["a"], "expected": true },
+            { "input": ["Racecar"], "expected": false }
+        ]
+    },
+    {
+        "id": "numpy_mean",
+        "title": "Calculate Mean (NumPy)",
+        "description": "Write a Python function named <code>calculate_mean(arr)</code> that takes a list of numbers and returns their mean. Use the pre-loaded <code>numpy</code> library.",
+        "template": "import numpy as np\n\ndef calculate_mean(arr):\n    # Write your code here\n    \n    pass\n",
+        "answer": "import numpy as np\n\ndef calculate_mean(arr):\n    return np.mean(arr)\n",
+        "functionName": "calculate_mean",
+        "testCases": [
+            { "input": [[1, 2, 3, 4, 5]], "expected": 3.0 },
+            { "input": [[10, 20, 30]], "expected": 20.0 },
+            { "input": [[-5, 5, -10, 10]], "expected": 0.0 }
+        ]
+    }
+]</textarea>
+            <div id="json-error" style="color: var(--danger); margin-bottom: 1rem; font-weight: bold; display: none;"></div>
+            <button id="start-quiz-btn">Start Quiz</button>
+        </div>
+    </div>
+
+    <div id="quiz-screen" class="container" style="display: none;">
+        <div class="panel">
+            <h1>Python Coding Challenge</h1>
+            <div class="problem-selector">
+                <label for="problem-select"><strong>Select Problem:</strong></label>
+                <select id="problem-select">
+                    <!-- Options will be populated here -->
+                </select>
+            </div>
+            <div id="problem-desc" class="problem-desc">
+                <!-- Problem description will be populated here -->
+            </div>
+        </div>
+
+        <div class="panel editor-container">
+            <h2>Editor</h2>
+            <!-- Textarea acts as our simple code editor -->
+            <textarea id="code-editor" spellcheck="false" aria-label="Python Code Editor">
+import math
+
+def calculate_area(radius):
+    # Write your code here
+    
+    pass
+</textarea>
+            <div class="button-group">
+                <button id="show-answer-btn" class="btn-secondary" style="display: none;">Show Answer</button>
+                <button id="run-btn" disabled>Loading Engine...</button>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2>Test Results</h2>
+            <div id="results" class="results">
+                <p style="color: #888;">Run your code to see results here...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let pyodideInstance = null;
+        let currentProblemConfig = null;
+        let problems = [];
+        let codeMirrorInstance = null;
+
+        // This Python script acts as our secure testing harness. 
+        // It uses exec() with a sandboxed scope to isolate the user's code.
+        const pythonTestHarness = `
+import json
+import math
+import traceback
+import numpy as np
+
+def execute_tests(user_code, test_cases_json, func_name):
+    scope = {"math": math, "np": np} 
+    try:
+        # Execute user code to define their functions inside 'scope'
+        exec(user_code, scope)
+    except Exception as e:
+        error_msg = traceback.format_exc(limit=0).strip()
+        return json.dumps([{"type": "global", "error": f"Syntax/Compilation Error:\\n{error_msg}", "passed": False}])
+
+    if func_name not in scope:
+        return json.dumps([{"type": "global", "error": f"Function '{func_name}' not found. Did you spell it correctly?", "passed": False}])
+
+    func = scope[func_name]
+    tests = json.loads(test_cases_json)
+    results = []
+
+    for idx, t in enumerate(tests):
+        try:
+            # Unpack the inputs and call the user's function
+            res = func(*t['input'])
+            expected = t['expected']
+            
+            # Handle floating point comparisons gracefully
+            if isinstance(res, (int, float)) and isinstance(expected, (int, float)):
+                passed = math.isclose(res, expected, rel_tol=1e-5)
+            else:
+                passed = (res == expected)
+
+            results.append({
+                "type": "case",
+                "id": idx + 1,
+                "input": t['input'],
+                "expected": expected,
+                "actual": res,
+                "passed": passed
+            })
+        except Exception as e:
+            error_msg = traceback.format_exc(limit=0).strip()
+            results.append({
+                "type": "case",
+                "id": idx + 1,
+                "input": t['input'],
+                "expected": t['expected'],
+                "error": f"Runtime Error:\\n{error_msg}",
+                "passed": False
+            })
+
+    return json.dumps(results)
+`;
+
+        // Initialize Pyodide on page load
+        async function main() {
+            let autoStart = false;
+            const urlParams = new URLSearchParams(window.location.search);
+            const jsonUrl = urlParams.get('url');
+            
+            let fetchPromise = null;
+            if (jsonUrl) {
+                // Fetch the JSON in parallel with loading the Pyodide engine
+                fetchPromise = fetch(jsonUrl)
+                    .then(res => {
+                        if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
+                        return res.text();
+                    })
+                    .then(data => {
+                        document.getElementById("json-input").value = data;
+                        autoStart = true;
+                    })
+                    .catch(err => {
+                        const errorDiv = document.getElementById("json-error");
+                        errorDiv.innerText = "Failed to load JSON from URL: " + err.message;
+                        errorDiv.style.display = "block";
+                    });
+            }
+
+            try {
+                pyodideInstance = await loadPyodide();
+                
+                document.getElementById("loading-text").innerText = "Loading NumPy package (this might take a moment)...";
+                await pyodideInstance.loadPackage("numpy");
+
+                // Load our test harness into the Pyodide global environment
+                await pyodideInstance.runPythonAsync(pythonTestHarness);
+                
+                if (fetchPromise) {
+                    await fetchPromise; // Ensure fetch finishes before proceeding
+                }
+                
+                document.getElementById("loading-overlay").style.display = "none";
+                const runBtn = document.getElementById("run-btn");
+                runBtn.disabled = false;
+                runBtn.innerText = "Run & Validate";
+                console.log("Pyodide loaded successfully.");
+
+                // Automatically start the quiz if a URL was provided and successfully loaded
+                if (autoStart) {
+                    document.getElementById("start-quiz-btn").click();
+                }
+            } catch (err) {
+                document.getElementById("loading-text").innerText = "Failed to load Python Engine. Check your connection.";
+                console.error(err);
+            }
+        }
+
+        // Start Quiz Button logic
+        document.getElementById("start-quiz-btn").addEventListener("click", () => {
+            const jsonInput = document.getElementById("json-input").value;
+            const errorDiv = document.getElementById("json-error");
+            
+            try {
+                problems = JSON.parse(jsonInput);
+                
+                if (!Array.isArray(problems) || problems.length === 0) {
+                    throw new Error("JSON must be a non-empty array of problem objects.");
+                }
+
+                errorDiv.style.display = "none";
+                document.getElementById("start-screen").style.display = "none";
+                document.getElementById("quiz-screen").style.display = "flex";
+                
+                // Initialize CodeMirror instance once the quiz container is visible
+                if (!codeMirrorInstance) {
+                    codeMirrorInstance = CodeMirror.fromTextArea(document.getElementById("code-editor"), {
+                        mode: "python",
+                        lineNumbers: true,
+                        indentUnit: 4,
+                        tabSize: 4,
+                        indentWithTabs: false,
+                        extraKeys: {
+                            // Implement Pythonic tab behaviour
+                            Tab: (cm) => {
+                                if (cm.somethingSelected()) {
+                                    cm.indentSelection("add");
+                                } else {
+                                    cm.replaceSelection("    ", "end");
+                                }
+                            },
+                            "Shift-Tab": (cm) => cm.indentSelection("subtract")
+                        }
+                    });
+                }
+                
+                populateProblemDropdown();
+                loadProblem(problems[0].id);
+            } catch (err) {
+                errorDiv.innerText = "Invalid JSON format: " + err.message;
+                errorDiv.style.display = "block";
+            }
+        });
+
+        function populateProblemDropdown() {
+            const select = document.getElementById("problem-select");
+            select.innerHTML = ""; // Clear existing options if any
+            problems.forEach(problem => {
+                const option = document.createElement("option");
+                option.value = problem.id;
+                option.text = problem.title;
+                select.appendChild(option);
+            });
+
+            select.addEventListener("change", (e) => {
+                loadProblem(e.target.value);
+            });
+        }
+
+        function loadProblem(problemId) {
+            currentProblemConfig = problems.find(p => p.id === problemId);
+            
+            const descContainer = document.getElementById("problem-desc");
+            descContainer.innerHTML = `<strong>Problem: ${currentProblemConfig.title}</strong><br><br>${currentProblemConfig.description}`;
+            
+            // Set value securely in CodeMirror
+            if (codeMirrorInstance) {
+                codeMirrorInstance.setValue(currentProblemConfig.template);
+                // Refresh ensures the editor sizes properly if it was previously hidden
+                setTimeout(() => codeMirrorInstance.refresh(), 10);
+            } else {
+                const editor = document.getElementById("code-editor");
+                editor.value = currentProblemConfig.template;
+            }
+
+            const showAnswerBtn = document.getElementById("show-answer-btn");
+            if (currentProblemConfig.answer) {
+                showAnswerBtn.style.display = "inline-block";
+            } else {
+                showAnswerBtn.style.display = "none";
+            }
+
+            const resultsContainer = document.getElementById("results");
+            resultsContainer.innerHTML = '<p style="color: #888;">Run your code to see results here...</p>';
+        }
+
+        document.getElementById("show-answer-btn").addEventListener("click", () => {
+            if (currentProblemConfig && currentProblemConfig.answer) {
+                if (codeMirrorInstance) {
+                    codeMirrorInstance.setValue(currentProblemConfig.answer);
+                } else {
+                    document.getElementById("code-editor").value = currentProblemConfig.answer;
+                }
+                
+                // Clear previous results upon showing the answer
+                const resultsContainer = document.getElementById("results");
+                resultsContainer.innerHTML = '<p style="color: #888;">Run your code to see results here...</p>';
+            }
+        });
+
+        // Handle the Run button click
+        document.getElementById("run-btn").addEventListener("click", () => {
+            if (!pyodideInstance || !currentProblemConfig) return;
+            
+            const btn = document.getElementById("run-btn");
+            btn.disabled = true;
+            btn.innerText = "Running...";
+
+            // Retrieve the code from the CodeMirror instance
+            const userCode = codeMirrorInstance ? codeMirrorInstance.getValue() : document.getElementById("code-editor").value;
+            const resultsContainer = document.getElementById("results");
+            resultsContainer.innerHTML = "";
+
+            // Use a slight delay to allow the UI to update to "Running..." before blocking the main thread
+            setTimeout(() => {
+                try {
+                    // Get a reference to our Python test runner function
+                    const pyExecuteTests = pyodideInstance.globals.get('execute_tests');
+                    
+                    // Call it synchronously (since it's purely CPU bound and quick)
+                    const resultsJson = pyExecuteTests(userCode, JSON.stringify(currentProblemConfig.testCases), currentProblemConfig.functionName);
+                    const results = JSON.parse(resultsJson);
+
+                    renderResults(results, resultsContainer);
+                } catch (err) {
+                    resultsContainer.innerHTML = `<div class="test-case fail"><strong>Critical Engine Error:</strong><br>${err.message}</div>`;
+                } finally {
+                    btn.disabled = false;
+                    btn.innerText = "Run & Validate";
+                }
+            }, 50);
+        });
+
+        // Generate the UI for the test results
+        function renderResults(results, container) {
+            results.forEach(res => {
+                const div = document.createElement("div");
+                
+                if (res.type === "global") {
+                    div.className = "test-case fail";
+                    div.innerHTML = `
+                        <div><span class="status-badge">Compilation Error</span></div>
+                        <div style="color: #f44336; font-family: monospace; white-space: pre-wrap;">${res.error}</div>
+                    `;
+                } else {
+                    div.className = `test-case ${res.passed ? 'pass' : 'fail'}`;
+                    
+                    let outputHtml = res.error 
+                        ? `<div style="color: #f44336; font-family: monospace; white-space: pre-wrap;">${res.error}</div>`
+                        : `<div><strong>Actual Output:</strong> <code>${res.actual}</code></div>`;
+
+                    div.innerHTML = `
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <strong>Test Case ${res.id}</strong>
+                            <span class="status-badge">${res.passed ? 'Passed' : 'Failed'}</span>
+                        </div>
+                        <div><strong>Input:</strong> <code>(${res.input.join(', ')})</code></div>
+                        <div><strong>Expected:</strong> <code>${res.expected}</code></div>
+                        ${outputHtml}
+                    `;
+                }
+                container.appendChild(div);
+            });
+            
+            // Scroll results into view
+            container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // Boot up
+        main();
+    </script>
+</body>
+</html>
