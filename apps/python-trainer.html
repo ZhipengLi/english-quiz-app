@@ -246,63 +246,66 @@
         <div class="panel">
             <h1>Welcome to Python Quizzer</h1>
             <p>Paste your JSON problem configuration below to start the quiz.</p>
-            <textarea id="json-input" style="height: 350px; margin-bottom: 1rem; font-family: monospace;" spellcheck="false">[
-    {
-        "id": "area_of_circle",
-        "title": "Area of a Circle",
-        "description": "Write a Python function named <code>calculate_area(radius)</code> that takes a radius as input and returns the area of a circle. Use <code>math.pi</code> for the calculation.",
-        "template": "import math\n\ndef calculate_area(radius):\n    # Write your code here\n    \n    pass\n",
-        "answer": "import math\n\ndef calculate_area(radius):\n    return math.pi * (radius ** 2)\n",
-        "functionName": "calculate_area",
-        "testCases": [
-            { "input": [0], "expected": 0.0 },
-            { "input": [1], "expected": 3.141592653589793 },
-            { "input": [5], "expected": 78.53981633974483 },
-            { "input": [2.5], "expected": 19.634954084936208 }
-        ]
-    },
-    {
-        "id": "reverse_string",
-        "title": "Reverse a String",
-        "description": "Write a Python function named <code>reverse_string(s)</code> that takes a string <code>s</code> and returns the reversed version of it.",
-        "template": "def reverse_string(s):\n    # Write your code here\n    \n    pass\n",
-        "answer": "def reverse_string(s):\n    return s[::-1]\n",
-        "functionName": "reverse_string",
-        "testCases": [
-            { "input": ["hello"], "expected": "olleh" },
-            { "input": ["Python WebAssembly"], "expected": "ylbmesAsbeW nohtyP" },
-            { "input": ["racecar"], "expected": "racecar" },
-            { "input": [""], "expected": "" }
-        ]
-    },
-    {
-        "id": "check_palindrome",
-        "title": "Check Palindrome",
-        "description": "Write a Python function named <code>is_palindrome(s)</code> that takes a string <code>s</code> and returns <code>True</code> if it is a palindrome (reads the same forwards and backwards) and <code>False</code> otherwise.",
-        "template": "def is_palindrome(s):\n    # Write your code here\n    \n    pass\n",
-        "answer": "def is_palindrome(s):\n    return s == s[::-1]\n",
-        "functionName": "is_palindrome",
-        "testCases": [
-            { "input": ["racecar"], "expected": true },
-            { "input": ["hello"], "expected": false },
-            { "input": ["a"], "expected": true },
-            { "input": ["Racecar"], "expected": false }
-        ]
-    },
-    {
-        "id": "numpy_mean",
-        "title": "Calculate Mean (NumPy)",
-        "description": "Write a Python function named <code>calculate_mean(arr)</code> that takes a list of numbers and returns their mean. Use the pre-loaded <code>numpy</code> library.",
-        "template": "import numpy as np\n\ndef calculate_mean(arr):\n    # Write your code here\n    \n    pass\n",
-        "answer": "import numpy as np\n\ndef calculate_mean(arr):\n    return np.mean(arr)\n",
-        "functionName": "calculate_mean",
-        "testCases": [
-            { "input": [[1, 2, 3, 4, 5]], "expected": 3.0 },
-            { "input": [[10, 20, 30]], "expected": 20.0 },
-            { "input": [[-5, 5, -10, 10]], "expected": 0.0 }
-        ]
-    }
-]</textarea>
+            <textarea id="json-input" style="height: 350px; margin-bottom: 1rem; font-family: monospace;" spellcheck="false">{
+    "text": "Python Fundamentals",
+    "quiz": [
+        {
+            "id": "area_of_circle",
+            "title": "Area of a Circle",
+            "description": "Write a Python function named <code>calculate_area(radius)</code> that takes a radius as input and returns the area of a circle. Use <code>math.pi</code> for the calculation.",
+            "template": "import math\n\ndef calculate_area(radius):\n    # Write your code here\n    \n    pass\n",
+            "answer": "import math\n\ndef calculate_area(radius):\n    return math.pi * (radius ** 2)\n",
+            "functionName": "calculate_area",
+            "testCases": [
+                { "input": [0], "expected": 0.0 },
+                { "input": [1], "expected": 3.141592653589793 },
+                { "input": [5], "expected": 78.53981633974483 },
+                { "input": [2.5], "expected": 19.634954084936208 }
+            ]
+        },
+        {
+            "id": "reverse_string",
+            "title": "Reverse a String",
+            "description": "Write a Python function named <code>reverse_string(s)</code> that takes a string <code>s</code> and returns the reversed version of it.",
+            "template": "def reverse_string(s):\n    # Write your code here\n    \n    pass\n",
+            "answer": "def reverse_string(s):\n    return s[::-1]\n",
+            "functionName": "reverse_string",
+            "testCases": [
+                { "input": ["hello"], "expected": "olleh" },
+                { "input": ["Python WebAssembly"], "expected": "ylbmesAsbeW nohtyP" },
+                { "input": ["racecar"], "expected": "racecar" },
+                { "input": [""] , "expected": "" }
+            ]
+        },
+        {
+            "id": "check_palindrome",
+            "title": "Check Palindrome",
+            "description": "Write a Python function named <code>is_palindrome(s)</code> that takes a string <code>s</code> and returns <code>True</code> if it is a palindrome (reads the same forwards and backwards) and <code>False</code> otherwise.",
+            "template": "def is_palindrome(s):\n    # Write your code here\n    \n    pass\n",
+            "answer": "def is_palindrome(s):\n    return s == s[::-1]\n",
+            "functionName": "is_palindrome",
+            "testCases": [
+                { "input": ["racecar"], "expected": true },
+                { "input": ["hello"], "expected": false },
+                { "input": ["a"], "expected": true },
+                { "input": ["Racecar"], "expected": false }
+            ]
+        },
+        {
+            "id": "numpy_mean",
+            "title": "Calculate Mean (NumPy)",
+            "description": "Write a Python function named <code>calculate_mean(arr)</code> that takes a list of numbers and returns their mean. Use the pre-loaded <code>numpy</code> library.",
+            "template": "import numpy as np\n\ndef calculate_mean(arr):\n    # Write your code here\n    \n    pass\n",
+            "answer": "import numpy as np\n\ndef calculate_mean(arr):\n    return np.mean(arr)\n",
+            "functionName": "calculate_mean",
+            "testCases": [
+                { "input": [[1, 2, 3, 4, 5]], "expected": 3.0 },
+                { "input": [[10, 20, 30]], "expected": 20.0 },
+                { "input": [[-5, 5, -10, 10]], "expected": 0.0 }
+            ]
+        }
+    ]
+}</textarea>
             <div id="json-error" style="color: var(--danger); margin-bottom: 1rem; font-weight: bold; display: none;"></div>
             <button id="start-quiz-btn">Start Quiz</button>
         </div>
@@ -310,7 +313,7 @@
 
     <div id="quiz-screen" class="container" style="display: none;">
         <div class="panel">
-            <h1>Python Coding Challenge</h1>
+            <h1 id="quiz-main-title">Python Coding Challenge</h1>
             <div class="problem-selector">
                 <label for="problem-select"><strong>Select Problem:</strong></label>
                 <select id="problem-select">
@@ -471,10 +474,25 @@ def execute_tests(user_code, test_cases_json, func_name):
             const errorDiv = document.getElementById("json-error");
             
             try {
-                problems = JSON.parse(jsonInput);
+                const parsedData = JSON.parse(jsonInput);
                 
-                if (!Array.isArray(problems) || problems.length === 0) {
-                    throw new Error("JSON must be a non-empty array of problem objects.");
+                // Support the new object wrapper or fallback to raw array
+                if (parsedData.quiz && Array.isArray(parsedData.quiz)) {
+                    problems = parsedData.quiz;
+                } else if (Array.isArray(parsedData)) {
+                    problems = parsedData;
+                } else {
+                    throw new Error("JSON must contain a 'quiz' array of problem objects.");
+                }
+                
+                if (problems.length === 0) {
+                    throw new Error("The quiz array is empty.");
+                }
+
+                // Update the main title dynamically if "text" is provided
+                if (parsedData.text) {
+                    const titleEl = document.getElementById("quiz-main-title");
+                    if (titleEl) titleEl.innerText = parsedData.text;
                 }
 
                 errorDiv.style.display = "none";
