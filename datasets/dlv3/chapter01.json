@@ -200,18 +200,6 @@
       "explanation": "A model that learns directly from raw input to final output within a single unified system, eliminating intermediate manual processing steps. For example, an end-to-end speech recognition model takes raw audio and outputs text directly, whereas traditional systems had separate stages for acoustic modeling, language modeling, and decoding. End-to-end models are simpler to build and often outperform multi-stage pipelines, but they typically require more training data."
     },
     {
-      "question": "The ability of a method to improve as more data or compute is added is called __________.",
-      "type": "blank",
-      "answer": "Scalability",
-      "explanation": "The ability of a method to continue improving its performance as more data or computational resources are added. Scalability is one of deep learning's greatest strengths — unlike many classical methods that plateau, deep learning models tend to keep getting better with more data and bigger architectures. This property is captured by 'scaling laws,' which show predictable power-law improvements in performance as model size, data, and compute increase."
-    },
-    {
-      "question": "Running computations at the same time across hardware resources is called __________.",
-      "type": "blank",
-      "answer": "Parallelization",
-      "explanation": "Running computational tasks simultaneously across multiple hardware resources to dramatically speed up the training process. Deep learning benefits enormously from parallelization because operations like matrix multiplication can be split across thousands of GPU cores. There are two main types: data parallelism (splitting batches across devices) and model parallelism (splitting the model itself across devices), both essential for training today's largest models."
-    },
-    {
       "question": "Hardware originally designed for graphics that became crucial for deep learning computation is called a __________.",
       "type": "blank",
       "answer": "GPU",
@@ -230,12 +218,6 @@
       "explanation": "A small group of training examples processed together. Using batches is more efficient than processing one example at a time and uses less memory than processing all data at once. The batch size is an important hyperparameter — smaller batches introduce more noise into gradient estimates (which can help escape local minima), while larger batches provide more stable gradients but require more memory. Common batch sizes range from 32 to 512."
     },
     {
-      "question": "The ability of deep learning methods to handle many different types of tasks is called __________.",
-      "type": "blank",
-      "answer": "Versatility",
-      "explanation": "The ability of deep learning methods to handle many different types of tasks, including text, images, audio, and more. The same fundamental building blocks — layers, backpropagation, gradient descent — apply across all these domains. This is unlike classical machine learning, where each domain often required completely different algorithms and feature engineering approaches. The transformer architecture in particular has proven remarkably versatile, succeeding in NLP, vision, audio, and even protein folding."
-    },
-    {
       "question": "The ability to reuse trained models or learned representations across tasks is called __________.",
       "type": "blank",
       "answer": "Reusability",
@@ -246,24 +228,6 @@
       "type": "blank",
       "answer": "Foundation Models",
       "explanation": "Large models pretrained on massive datasets that can be fine-tuned or adapted to many different downstream tasks. The term was popularized by Stanford's Center for Research on Foundation Models (CRFM). Examples include GPT, BERT, and CLIP. Foundation models represent a paradigm shift — instead of training a new model for each task, you start with one powerful base model and adapt it. This raises both opportunities (efficiency, accessibility) and concerns (centralization, inherited biases)."
-    },
-    {
-      "question": "AI systems that generate new content such as text or images are called __________ __________.",
-      "type": "blank",
-      "answer": "Generative AI",
-      "explanation": "AI systems capable of generating new content — such as text, images, or music — based on statistical patterns learned from data. Generative AI is distinct from discriminative AI, which classifies or predicts labels for existing data. Major generative approaches include large language models (for text), diffusion models (for images), and GANs (generative adversarial networks). The explosion of generative AI starting around 2022 has been one of the most culturally impactful developments in AI history."
-    },
-    {
-      "question": "Conversational AI systems that respond to prompts in natural language are called __________ __________.",
-      "type": "blank",
-      "answer": "Chatbot Assistants",
-      "explanation": "Conversational AI systems that respond to user prompts in natural language, such as ChatGPT and Claude. Modern chatbot assistants are powered by large language models fine-tuned with techniques like RLHF (Reinforcement Learning from Human Feedback) to be helpful, harmless, and honest. They represent a major interface shift — instead of learning complex software, users can express intent in plain language."
-    },
-    {
-      "question": "Generating images using learned statistical patterns from data is called __________ __________.",
-      "type": "blank",
-      "answer": "Image Generation",
-      "explanation": "The technique of creating new images using statistical patterns learned from large amounts of image data. Early approaches used GANs (generative adversarial networks), but diffusion models like Stable Diffusion and DALL·E have become dominant. These models can generate photorealistic images from text descriptions, raising both creative possibilities and ethical concerns around deepfakes and copyright."
     },
     {
       "question": "Giving instructions or input text to guide a generative model is called __________.",
@@ -290,52 +254,10 @@
       "explanation": "Natural Language Processing — the research field focused on enabling computers to understand and generate human language. NLP has been transformed by deep learning, especially the transformer architecture. Classical NLP relied heavily on linguistic rules and hand-crafted features; modern NLP is dominated by pretrained language models that learn language patterns from massive text corpora. Key NLP tasks include sentiment analysis, named entity recognition, question answering, summarization, and translation."
     },
     {
-      "question": "Automatically translating text from one language to another is called __________ __________.",
-      "type": "blank",
-      "answer": "Machine Translation",
-      "explanation": "The technology of automatically translating text from one language to another. Machine translation has evolved through three major eras: rule-based (1950s–1980s), statistical (1990s–2010s), and neural (2014–present). The transformer architecture, originally introduced in the paper 'Attention Is All You Need,' was specifically designed for machine translation and has since become the backbone of most modern NLP systems."
-    },
-    {
-      "question": "Converting spoken audio into text is called __________ __________.",
-      "type": "blank",
-      "answer": "Speech Transcription",
-      "explanation": "The technology of converting spoken audio into written text, now widely used in smartphones, meeting transcription, and accessibility tools. Also called speech recognition or speech-to-text. Modern systems like OpenAI's Whisper use end-to-end deep learning to directly map audio spectrograms to text, bypassing the complex multi-stage pipelines of earlier systems. The reverse task — converting text to speech — is called speech synthesis or TTS."
-    },
-    {
       "question": "Assigning one or more labels to an image is called __________ __________.",
       "type": "blank",
       "answer": "Image Classification",
       "explanation": "The task of assigning one or more labels to an image, one of the most fundamental tasks in computer vision. The ImageNet Large Scale Visual Recognition Challenge (ILSVRC), which ran from 2010 to 2017, was a key driver of deep learning progress — AlexNet's win in 2012 is widely considered the moment deep learning went mainstream. Beyond classification, computer vision includes tasks like object detection (where are things?), segmentation (pixel-level labeling), and image generation."
-    },
-    {
-      "question": "Systems that suggest content or products to users are called __________ __________.",
-      "type": "blank",
-      "answer": "Recommender Systems",
-      "explanation": "Systems that suggest content or products to users based on their preferences and behavior, widely used on platforms like Netflix, YouTube, and Amazon. There are two main approaches: collaborative filtering (finding users with similar tastes) and content-based filtering (matching item features to user preferences). Modern recommender systems use deep learning to combine both approaches and handle massive-scale data, and they are responsible for a significant portion of user engagement on major platforms."
-    },
-    {
-      "question": "Systems that enable vehicles to perform driving tasks automatically are called __________ __________.",
-      "type": "blank",
-      "answer": "Autonomous Driving",
-      "explanation": "Systems that enable vehicles to perform driving tasks automatically, relying on sensors, cameras, and deep learning models. Autonomous driving is graded on a scale from Level 0 (no automation) to Level 5 (full automation in all conditions). Most current commercial systems operate at Level 2–3, requiring human oversight. The field combines multiple AI tasks — perception (detecting objects), prediction (anticipating movement), and planning (choosing actions) — making it one of the most complex real-world AI applications."
-    },
-    {
-      "question": "AI systems that help generate or explain code are called __________ __________.",
-      "type": "blank",
-      "answer": "Programming Assistants",
-      "explanation": "AI systems that help programmers generate, debug, or explain code, such as GitHub Copilot and Claude. They are typically powered by large language models trained on code repositories. Programming assistants represent one of the most immediately productive applications of generative AI — they can autocomplete functions, translate between languages, write tests, and explain unfamiliar codebases. They don't replace programmers but significantly accelerate development workflows."
-    },
-    {
-      "question": "Performance comparable to that of humans on a given task is called __________-__________ __________.",
-      "type": "blank",
-      "answer": "Human Level Performance",
-      "explanation": "A level of performance on a specific task that matches what humans can achieve, commonly used as a benchmark for evaluating AI capability. It's important to note that 'human-level' is task-specific — a model can surpass humans at chess while failing at basic common-sense reasoning. Also, human performance itself varies widely across individuals and conditions, so the benchmark is often defined by expert-level or average human performance depending on the context."
-    },
-    {
-      "question": "Performance exceeding that of humans on a given task is called __________ __________.",
-      "type": "blank",
-      "answer": "Superhuman Performance",
-      "explanation": "A level of performance on a specific task that surpasses what humans can achieve. Notable examples include DeepMind's AlphaGo defeating the world champion in Go, and AI systems outperforming radiologists at detecting certain cancers in medical images. However, superhuman performance in narrow tasks doesn't imply general superiority — these systems are often brittle outside their specific domain and lack the flexible, generalizable intelligence that humans possess."
     }
   ]
 }
