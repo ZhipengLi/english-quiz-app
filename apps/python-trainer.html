@@ -416,7 +416,6 @@ def execute_tests(user_code, test_cases_json, func_name):
 
         // Initialize Pyodide on page load
         async function main() {
-            let autoStart = false;
             const urlParams = new URLSearchParams(window.location.search);
             const jsonUrl = urlParams.get('url');
             
@@ -430,7 +429,6 @@ def execute_tests(user_code, test_cases_json, func_name):
                     })
                     .then(data => {
                         document.getElementById("json-input").value = data;
-                        autoStart = true;
                     })
                     .catch(err => {
                         const errorDiv = document.getElementById("json-error");
@@ -457,11 +455,6 @@ def execute_tests(user_code, test_cases_json, func_name):
                 runBtn.disabled = false;
                 runBtn.innerText = "Run & Validate";
                 console.log("Pyodide loaded successfully.");
-
-                // Automatically start the quiz if a URL was provided and successfully loaded
-                if (autoStart) {
-                    document.getElementById("start-quiz-btn").click();
-                }
             } catch (err) {
                 document.getElementById("loading-text").innerText = "Failed to load Python Engine. Check your connection.";
                 console.error(err);
