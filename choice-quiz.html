@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Quiz App</title>
+    <link id="dynamic-favicon" rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
@@ -184,7 +185,7 @@
             align-items: flex-start;
             gap: 10px;
             margin-bottom: 25px;
-            word-break: break-word; /* Added word-break to prevent long words from overflowing */
+            word-break: break-word;
         }
 
         #question-text {
@@ -192,13 +193,13 @@
             font-weight: 600;
             line-height: 1.5;
             flex-grow: 1;
-            white-space: pre-wrap; /* Allows text to wrap normally */
+            white-space: pre-wrap;
         }
 
         .spaced-underscores {
             letter-spacing: 0.25em; 
             margin-right: -0.25em;
-            word-wrap: break-word; /* Ensure the underscores can wrap */
+            word-wrap: break-word;
         }
 
         .action-btns {
@@ -541,7 +542,6 @@
                 </label>
             </div>
 
-            <!-- Blank question configuration mode with the requested 3 options (+ Default) -->
             <div style="margin-bottom: 25px;">
                 <p style="font-weight: 500; margin-bottom: 10px; color: var(--secondary-color);">'Blank' Type Learning Mode:</p>
                 <div class="blank-options">
@@ -870,7 +870,6 @@
             };
 
             const getOriginalWord = () => {
-                // Extracts exactly what is shown in the HTML element to pronounce text correctly
                 const textElem = document.getElementById('question-text');
                 if(!textElem) return "";
                 return textElem.textContent.replace(/_+/g, '').trim();
@@ -922,7 +921,6 @@
                 let parsedJson;
                 let finalJsonText;
 
-                // Load the blank mode explicitly chosen
                 const blankModeElem = document.querySelector('input[name="blank-mode"]:checked');
                 blankMode = blankModeElem ? blankModeElem.value : 'standard';
 
@@ -1075,7 +1073,6 @@
 
                 if (isSubStep) {
                     if (blankMode === 'reverse-all' || blankMode === 'reverse-incorrect') {
-                        // Create reversed version of the blank question
                         const originalPrompt = originalQuestion.question.replace(/_+/g, '').trim();
                         const underscores = originalPrompt.replace(/\S/g, '_');
                         let newQuestionText;
@@ -1093,7 +1090,6 @@
                             explanation: originalQuestion.explanation ? `(Reverse) ${originalQuestion.explanation}` : "(Reverse Question)"
                         };
                     } else if (blankMode === 'repeat-incorrect') {
-                        // Same exact original text, giving them a second chance to practice
                         questionToDisplay = {
                             ...originalQuestion,
                             explanation: originalQuestion.explanation ? `(Retry) ${originalQuestion.explanation}` : "(Retry Question)"
@@ -1193,7 +1189,6 @@
                 input.disabled = true;
                 submitBtn.disabled = true;
                 
-                // Remove spaces and convert to lowercase for comparison
                 const normalizedUserAnswer = userAnswer.toLowerCase().replace(/\s+/g, '');
                 const normalizedCorrectAnswer = correctAnswer.toLowerCase().replace(/\s+/g, '');
 
@@ -1209,7 +1204,6 @@
                     feedbackContainer.classList.add('incorrect');
                 }
                 
-                // Track answers separately based on mode
                 if (blankMode !== 'standard') { 
                     if (!isSubStep) {
                         part1Correct = isCorrect;
@@ -1240,7 +1234,6 @@
                     if (currentQuestion.type === 'blank' && blankMode !== 'standard' && !isSubStep) {
                         let willShowSubStep = false;
                         
-                        // Conditionals for triggering the sub-step flow
                         if (blankMode === 'reverse-all') {
                             willShowSubStep = true;
                         } else if (blankMode === 'reverse-incorrect' && !part1Correct) {
@@ -1284,24 +1277,20 @@
                         if (willShowSubStep) {
                             isSubStep = true;
                             displayQuestion();
-                            return; // Halt to show the reverse/retry step
+                            return; 
                         } else {
-                            // Conditional paths where they bypassed the sub step because they were correct
                             score++;
                             isSubStep = false;
                             part1Correct = false;
                             part2Correct = false;
                         }
                     } else {
-                        // Finished reviewing a Sub-step (reverse or repeat)
                         if (blankMode === 'reverse-all') {
                             if (part1Correct && part2Correct) score++;
                             else incorrectlyAnsweredQuestions.push(questionIdx);
                         } else if (blankMode === 'reverse-incorrect') {
-                            // If this triggered, they failed part1. Push to incorrect array so it can be retaken.
                             incorrectlyAnsweredQuestions.push(questionIdx);
                         } else if (blankMode === 'repeat-incorrect') {
-                            // Repeat step finishes. The original hit was missed, so push it to retakes
                             incorrectlyAnsweredQuestions.push(questionIdx); 
                         }
                         
@@ -1370,7 +1359,27 @@
                 tooltip.style.opacity = '0'; 
             };
 
+            const setupCustomFavicon = () => {
+                const urlParams = new URLSearchParams(window.location.search);
+                // Default to graduation cap (🎓) if the 'icon' URL parameter is missing
+                const iconParam = urlParams.get('icon') || '🎓'; 
+                
+                const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">${encodeURIComponent(iconParam)}</text></svg>`;
+                let faviconElement = document.getElementById('dynamic-favicon');
+                
+                // Create the link element dynamically if it doesn't exist in the HTML
+                if (!faviconElement) {
+                    faviconElement = document.createElement('link');
+                    faviconElement.id = 'dynamic-favicon';
+                    faviconElement.rel = 'icon';
+                    document.head.appendChild(faviconElement);
+                }
+                
+                faviconElement.href = `data:image/svg+xml,${svgContent}`;
+            };
+
             const initialize = async () => {
+                setupCustomFavicon();
                 const urlParams = new URLSearchParams(window.location.search);
                 const url = urlParams.get('url');
 
@@ -1394,17 +1403,17 @@
                         loadFromCookie();
                     } finally {
                         jsonInput.placeholder = 'Paste quiz JSON or URL here...';
-                        jsonInput.disabled = false;
-                        startBtn.disabled = false;
-                    }
-                } else {
-                    loadFromCookie();
+                    jsonInput.disabled = false;
+                    startBtn.disabled = false;
                 }
-            };
+            } else {
+                loadFromCookie();
+            }
+        };
 
-            resizeBackground();
-            createBackgroundParticles();
-            animateBackground();
+        resizeBackground();
+        createBackgroundParticles();
+        animateBackground();
             initialize();
 
             startBtn.addEventListener('click', startQuiz);
