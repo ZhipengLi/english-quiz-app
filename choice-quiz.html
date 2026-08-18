@@ -184,6 +184,7 @@
             align-items: flex-start;
             gap: 10px;
             margin-bottom: 25px;
+            word-break: break-word; /* Added word-break to prevent long words from overflowing */
         }
 
         #question-text {
@@ -191,11 +192,13 @@
             font-weight: 600;
             line-height: 1.5;
             flex-grow: 1;
+            white-space: pre-wrap; /* Allows text to wrap normally */
         }
 
         .spaced-underscores {
             letter-spacing: 0.25em; 
             margin-right: -0.25em;
+            word-wrap: break-word; /* Ensure the underscores can wrap */
         }
 
         .action-btns {
