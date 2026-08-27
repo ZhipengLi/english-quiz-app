@@ -380,7 +380,7 @@
 
             <form id="quiz-form">
                 <div id="options-container" class="blank-form">
-                    <input type="text" id="blank-input" placeholder="Type your answer (e.g. Fur Elise by Beethoven)" autocomplete="off" />
+                    <input type="text" id="blank-input" placeholder="Type your answer" autocomplete="off" />
                     <button type="submit" id="submit-btn" class="btn">Submit</button>
                 </div>
                 
@@ -425,7 +425,7 @@
                         "background": "The Piano Sonata No. 14 in C♯ minor, marked Quasi una fantasia, is a piano sonata by Ludwig van Beethoven. Completed in 1801 and dedicated in 1802 to his pupil, Countess Giulietta Guicciardi, it is a highly popular and beloved piece."
                     },
                     {
-                        "music": "https://upload.wikimedia.org/wikipedia/commons/b/b8/F%C3%BCr_Elise.ogg",
+                        "music": "https://archive.org/download/100ClassicalMusicMasterpieces/1810%20Beethoven-%20Fur%20Elise.mp3",
                         "answer": "Fur Elise by Beethoven"
                     }
                 ]
@@ -435,7 +435,8 @@
             let quizData = [];
             let currentIndex = 0;
             let score = 0;
-            let hasFailedCurrent = false;
+            let isRepeatAttempt = false;
+            let pendingRepeat = false;
             let incorrectQuestions = [];
 
             // DOM Elements
@@ -623,7 +624,6 @@
             };
 
             const loadQuestion = () => {
-                hasFailedCurrent = false;
                 feedbackContainer.style.display = 'none';
                 feedbackContainer.classList.remove('correct', 'incorrect');
                 feedbackBackground.style.display = 'none';
@@ -672,6 +672,8 @@
                     currentIndex = 0;
                     score = 0;
                     incorrectQuestions = [];
+                    isRepeatAttempt = false;
+                    pendingRepeat = false;
                     errorMessage.style.display = 'none';
                     switchView('quiz');
                     loadQuestion();
@@ -692,7 +694,9 @@
 
                 nextContainer.style.display = 'block';
                 
-                if (currentIndex === quizData.length - 1) {
+                if (pendingRepeat) {
+                    nextBtn.textContent = 'Retry Question';
+                } else if (currentIndex === quizData.length - 1) {
                     nextBtn.textContent = 'Finish Quiz';
                 } else {
                     nextBtn.textContent = 'Next Question';
@@ -707,12 +711,11 @@
                 const correctAnswer = normalize(current.answer);
 
                 if (userGuess === correctAnswer) {
-                    if (!hasFailedCurrent) {
+                    if (!isRepeatAttempt) {
                         score++;
                         feedbackResult.textContent = "Correct! 🎉";
                     } else {
                         feedbackResult.textContent = "Correct! 🎉 (No points awarded)";
-                        incorrectQuestions.push(current);
                     }
                     answerInput.style.borderColor = 'var(--correct-color)';
                     feedbackContainer.className = 'correct';
@@ -726,10 +729,13 @@
                     scoreText.textContent = `Score: ${score}`;
                     showNextControls();
                 } else {
-                    if (!hasFailedCurrent) {
+                    if (!isRepeatAttempt) {
                         // First incorrect attempt
-                        hasFailedCurrent = true;
-                        feedbackResult.textContent = "Incorrect! 😔 Try again or use a hint.";
+                        incorrectQuestions.push(current);
+                        pendingRepeat = true;
+                        
+                        feedbackResult.textContent = "Incorrect! 😔 Please review the correct answer before trying again.";
+                        feedbackExplanation.innerHTML = `The correct answer is: <strong>${current.answer}</strong>`;
                         answerInput.style.borderColor = 'var(--incorrect-color)';
                         feedbackContainer.className = 'incorrect';
                         
@@ -740,11 +746,10 @@
                         
                         feedbackContainer.style.display = 'block';
                         answerInput.classList.add('shake');
-                        answerInput.value = '';
                         setTimeout(() => answerInput.classList.remove('shake'), 300);
+                        showNextControls();
                     } else {
                         // Second incorrect attempt - move to next
-                        incorrectQuestions.push(current);
                         feedbackResult.textContent = "Incorrect again! 😔";
                         feedbackExplanation.innerHTML = `The correct answer was: <strong>${current.answer}</strong>`;
                         answerInput.style.borderColor = 'var(--incorrect-color)';
@@ -779,7 +784,9 @@
 
             skipBtn.addEventListener('click', () => {
                 const current = quizData[currentIndex];
-                incorrectQuestions.push(current);
+                if (!isRepeatAttempt) incorrectQuestions.push(current);
+                pendingRepeat = false;
+                
                 feedbackResult.textContent = "Skipped!";
                 feedbackExplanation.innerHTML = `The correct answer was: <strong>${current.answer}</strong>`;
                 answerInput.style.borderColor = 'var(--incorrect-color)';
@@ -795,12 +802,19 @@
             });
 
             nextBtn.addEventListener('click', () => {
-                currentIndex++;
-                if (currentIndex < quizData.length) {
+                if (pendingRepeat) {
+                    pendingRepeat = false;
+                    isRepeatAttempt = true;
                     loadQuestion();
                 } else {
-                    audioElement.pause();
-                    showSummary();
+                    currentIndex++;
+                    isRepeatAttempt = false;
+                    if (currentIndex < quizData.length) {
+                        loadQuestion();
+                    } else {
+                        audioElement.pause();
+                        showSummary();
+                    }
                 }
             });
 
@@ -834,6 +848,8 @@
                 incorrectQuestions = [];
                 currentIndex = 0;
                 score = 0;
+                isRepeatAttempt = false;
+                pendingRepeat = false;
                 switchView('quiz');
                 loadQuestion();
             });
