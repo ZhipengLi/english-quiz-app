@@ -2,403 +2,503 @@
   "quiz": [
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Pachelbel's_Canon.ogg",
-      "answer": "Canon in D by Pachelbel"
+      "answer": "Canon in D by Pachelbel",
+      "background": "巴洛克时期最著名的卡农之一，建立在反复出现的低音和声进行上，旋律层层叠加、不断展开。今天尤其常见于婚礼和仪式场合，听辨时可抓住平稳循环的和声与逐渐丰富的声部。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Toccata_et_Fugue_BWV565.ogg",
-      "answer": "Toccata and Fugue in D minor by Bach"
+      "answer": "Toccata and Fugue in D minor by Bach",
+      "background": "这首作品以阴沉、戏剧性的管风琴开场和紧随其后的赋格闻名，是大众心中“哥特式管风琴音乐”的代表。最值得注意的是开头强烈的下行音型，以及自由奔放的托卡塔与严密复调之间的对比。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/1-George_Frideric_Handel_-_Water_Music_Suite_in_F_major_(Overture)_HWV348.ogg",
-      "answer": "Water Music by Handel"
+      "answer": "Water Music by Handel",
+      "background": "亨德尔为英国王室在泰晤士河上的水上庆典创作的一组管弦乐组曲。音乐华丽、明亮、节奏鲜明，铜管和舞曲风格尤其突出，体现了巴洛克宫廷音乐的节庆气氛。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Bach%20-%20Brandenburg%20Concerto%20No.%203%20-%203.%20Allegro.ogg",
-      "answer": "Brandenburg Concerto No. 3 by Bach"
+      "answer": "Brandenburg Concerto No. 3 by Bach",
+      "background": "巴赫六首《勃兰登堡协奏曲》之一，以弦乐器群之间高速、紧密的对答著称。没有传统意义上的独奏明星，重点在三个弦乐声部群持续推动的节奏和充满活力的复调织体。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Bach%20-%20Cello%20Suite%20no.%201%20in%20G%20major,%20BWV%201007%20-%20I.%20Pr%C3%A9lude.ogg",
-      "answer": "Cello Suite No. 1 Prelude by Bach"
+      "answer": "Cello Suite No. 1 Prelude by Bach",
+      "background": "巴赫无伴奏大提琴组曲中最广为人知的篇章之一。它用连续分解和弦让一把大提琴同时暗示旋律、和声与低音，听起来既简洁又完整，是大提琴独奏曲目的象征性作品。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Johann%20Sebastian%20Bach%20-%20The%20Well-tempered%20Clavier%20-%20Book%201%20-%2002Epre%20cmaj.ogg",
-      "answer": "Well Tempered Clavier by Bach"
+      "answer": "Well Tempered Clavier by Bach",
+      "background": "《平均律钢琴曲集》包含24个大小调中的前奏曲与赋格，展示巴赫对调性与复调写作的系统探索。聆听时最重要的是感受前奏曲较自由的流动感，以及赋格主题在不同声部中的模仿与交织。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Jesu,%20Joy%20of%20Man's%20Desiring.ogg",
-      "answer": "Jesu Joy of Mans Desiring by Bach"
+      "answer": "Jesu Joy of Mans Desiring by Bach",
+      "background": "出自巴赫康塔塔《心、口、行为和生命》，以从容流动的伴奏和庄严温暖的圣咏旋律闻名。它常被改编成器乐曲，听辨时可注意平稳的三连音式运动与上方悠长歌唱性旋律。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Vivaldi_-_Four_Seasons_1_Spring_mvt_1_Allegro_-_John_Harrison_violin.oga",
-      "answer": "The Four Seasons Spring by Vivaldi"
+      "answer": "The Four Seasons Spring by Vivaldi",
+      "background": "维瓦尔第《四季》第一首协奏曲，以鸟鸣、溪流和春雷等自然意象著称，是早期标题音乐的经典。开头明亮跳跃的主题极具辨识度，小提琴独奏模拟鸟鸣是最重要的听觉线索。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Vivaldi_-_Four_Seasons_2_Summer_mvt_1_Allegro_non_molto_-_John_Harrison_violin.oga",
-      "answer": "The Four Seasons Summer by Vivaldi"
+      "answer": "The Four Seasons Summer by Vivaldi",
+      "background": "《四季》中的《夏》表现酷热、烦躁以及最后爆发的暴风雨。音乐从压抑、迟缓逐渐积蓄张力，最终进入猛烈快速的段落；聆听重点是这种由闷热不安走向风暴的戏剧变化。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Vivaldi_-_Four_Seasons_3_Autumn_mvt_1_Allegro_-_John_Harrison_violin.oga",
-      "answer": "The Four Seasons Autumn by Vivaldi"
+      "answer": "The Four Seasons Autumn by Vivaldi",
+      "background": "《四季》中的《秋》描写丰收庆典、醉酒入睡和狩猎。第一乐章尤其充满乡村舞蹈感和欢庆节奏，整体比《夏》《冬》更明朗，最容易从轻快的舞曲性与猎歌气氛辨认。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Vivaldi_-_Four_Seasons_4_Winter_mvt_1_Allegro_non_molto_-_John_Harrison_violin.oga",
-      "answer": "The Four Seasons Winter by Vivaldi"
+      "answer": "The Four Seasons Winter by Vivaldi",
+      "background": "《四季》中的《冬》用尖锐快速的小提琴音型描绘寒风、颤抖和冰面。开头短促反复的音符具有明显“发抖”感，是四季中最冷峻、最紧张，也最容易凭质感辨认的一首。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Air_(Bach).ogg",
-      "answer": "Air on the G String by Bach"
+      "answer": "Air on the G String by Bach",
+      "background": "源自巴赫第三号管弦乐组曲的慢乐章，后来因小提琴改编版而得名《G弦上的咏叹调》。旋律宁静绵长、低音稳定推进，重点是极强的歌唱性和庄严而克制的情感。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/J.S.Bach-Goldberg%20Variation%201.ogg",
-      "answer": "Goldberg Variations by Bach"
+      "answer": "Goldberg Variations by Bach",
+      "background": "巴赫晚期键盘音乐代表作，由一个咏叹调和30个变奏构成。它不是简单改变旋律，而是在相同和声基础上不断改变节奏、织体和技巧，核心魅力在于严密结构与巨大变化之间的统一。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Handel%20-%20messiah%20-%2044%20hallelujah.ogg",
-      "answer": "Messiah Hallelujah Chorus by Handel"
+      "answer": "Messiah Hallelujah Chorus by Handel",
+      "background": "亨德尔清唱剧《弥赛亚》中最著名的合唱，常在圣诞和复活节演出。反复高唱“Hallelujah”，配以强有力的合唱与管弦乐，是巴洛克宗教音乐中最具庆典性和辨识度的段落之一。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Johann%20Sebastian%20Bach%20-%20Mass%20in%20B%20minor%20-%20Agnus%20Dei.ogg",
-      "answer": "Mass in B minor by Bach"
+      "answer": "Mass in B minor by Bach",
+      "background": "巴赫规模最大的宗教声乐作品之一，把弥撒经文写成合唱、独唱与管弦乐的宏大综合体。它浓缩了巴赫复调、赋格和宗教表达的最高成就，重点在复杂结构与庄严精神性的结合。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/George%20Frideric%20Handel%20-%20Music%20for%20the%20Royal%20Fireworks%201%20(Overture).ogg",
-      "answer": "Music for the Royal Fireworks by Handel"
+      "answer": "Music for the Royal Fireworks by Handel",
+      "background": "亨德尔为1749年英国王室焰火庆典创作，原本特别强调管乐和打击乐的壮观效果。音乐雄壮、明亮、具有户外庆典气息，铜管号角式主题是最鲜明的听觉特征。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Rondo%20Alla%20Turka.ogg",
-      "answer": "Piano Sonata No. 11 Rondo Alla Turca by Mozart"
+      "answer": "Piano Sonata No. 11 Rondo Alla Turca by Mozart",
+      "background": "莫扎特第11号钢琴奏鸣曲末乐章，俗称《土耳其进行曲》。它模仿当时欧洲人想象中的奥斯曼军乐，节奏清晰、旋律俏皮，强烈的进行曲感和快速重复音让它极易辨认。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Mozart%20Piano%20Concerto%20N%2021%20in%20C%20major,%20K.%20467%20(3rd%20movement).oga",
-      "answer": "Piano Concerto No. 21 by Mozart"
+      "answer": "Piano Concerto No. 21 by Mozart",
+      "background": "莫扎特最受欢迎的钢琴协奏曲之一，以优雅、透明和歌唱性著称。第二乐章尤其因电影和流行文化而广为人知；聆听时可留意钢琴与管弦乐之间像对话一样自然、均衡的交替。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Mozart,%20The%20Marriage%20of%20Figaro%20(overture).ogg",
-      "answer": "The Marriage of Figaro Overture by Mozart"
+      "answer": "The Marriage of Figaro Overture by Mozart",
+      "background": "莫扎特歌剧《费加罗的婚礼》的序曲，没有直接引用歌剧咏叹调，却迅速建立整部作品机智、忙碌、喜剧性的气氛。极速流动的弦乐与不断推进的节奏是最明显特征。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Mozart_-_Eine_kleine_Nachtmusik_-_1._Allegro.ogg",
-      "answer": "Eine kleine Nachtmusik by Mozart"
+      "answer": "Eine kleine Nachtmusik by Mozart",
+      "background": "中文常译《小夜曲》，是莫扎特最家喻户晓的弦乐小夜曲之一。第一乐章开头强劲明快的主和弦主题几乎人人熟悉，整体体现古典主义清晰、均衡、优雅的风格。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Mozart%20Symphony%2040%20G%20minor%20-%201%20Molto%20allegro.oga",
-      "answer": "Symphony No. 40 by Mozart"
+      "answer": "Symphony No. 40 by Mozart",
+      "background": "莫扎特最著名的小调交响曲之一，第一乐章开头不断起伏的弦乐主题带有焦虑和紧迫感。它把古典主义的清晰结构与强烈情绪结合起来，是辨识“莫扎特阴暗面”的代表。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Wolfgang%20Amadeus%20Mozart%20-%20Symphony%20No.%2041%201st%20Movement%20(Jupiter),%20K.551.ogg",
-      "answer": "Symphony No. 41 Jupiter by Mozart"
+      "answer": "Symphony No. 41 Jupiter by Mozart",
+      "background": "莫扎特最后一部交响曲，因宏伟气势被后人称为《朱庇特》。终乐章把多个主题以精密复调同时结合，被视为古典交响曲结构技巧的巅峰；整体兼具明亮、威严与复杂性。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Wolfgang%20Amadeus%20Mozart%20-%20Clarinet%20Concerto%20-%202.%20Adagio.ogg",
-      "answer": "Clarinet Concerto by Mozart"
+      "answer": "Clarinet Concerto by Mozart",
+      "background": "莫扎特晚年最重要的管乐作品之一，充分展现单簧管温暖、圆润、接近人声的音色。慢乐章尤其宁静而深情，聆听重点是独奏乐器长线条旋律与透明乐队伴奏之间的平衡。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Mozart%20-%20Magic%20Flute%20Overture.ogg",
-      "answer": "The Magic Flute Overture by Mozart"
+      "answer": "The Magic Flute Overture by Mozart",
+      "background": "莫扎特歌剧《魔笛》的序曲，把庄严的和弦、带共济会象征意味的三次敲击感与活泼赋格式段落结合。它既神秘又轻快，是这部兼具童话、喜剧和启蒙思想歌剧的浓缩开场。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/PMLP02751-S002-07-Mozart%20Requiem%20Mass.ogg",
-      "answer": "Requiem by Mozart"
+      "answer": "Requiem by Mozart",
+      "background": "莫扎特生命最后阶段创作、去世时尚未完成的安魂弥撒，后来由学生续成。音乐兼具庄严、恐惧和哀悼色彩，其中《震怒之日》等段落尤其强烈，是西方宗教合唱作品的标志之一。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Beethoven-Pathetique.ogg",
-      "answer": "Pathetique Sonata by Beethoven"
+      "answer": "Pathetique Sonata by Beethoven",
+      "background": "贝多芬第8号钢琴奏鸣曲，标题《悲怆》由出版商采用并得到作曲家认可。开头缓慢、沉重的引子与随后激烈快速的主题形成巨大对比，体现贝多芬早期已非常鲜明的戏剧性。"
     },
     {
       "music": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Beethoven_Moonlight_1st_movement.ogg",
-      "answer": "Moonlight Sonata by Beethoven"
+      "answer": "Moonlight Sonata by Beethoven",
+      "background": "贝多芬第14号钢琴奏鸣曲，后人因第一乐章朦胧气氛称其《月光》。第一乐章持续三连音伴奏上漂浮着低沉旋律，真正的全曲则由沉静逐渐走向末乐章的猛烈爆发。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Beethoven_SymphonyNo.3Eroica_LudwigVanBeethoven-SymphonyNo.3InEFlatMajorEroicaOp.55-01-AllegroConBrio.ogg",
-      "answer": "Symphony No. 3 Eroica by Beethoven"
+      "answer": "Symphony No. 3 Eroica by Beethoven",
+      "background": "《英雄》交响曲通常被视为交响乐从古典主义迈向浪漫主义的重要转折点。篇幅、力度和戏剧冲突远超当时惯例，第二乐章还是著名的葬礼进行曲；它改变了人们对交响曲规模的想象。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Ludwig%20van%20Beethoven%20-%20symphony%20no.%205%20in%20c%20minor,%20op.%2067%20-%20i.%20allegro%20con%20brio.ogg",
-      "answer": "Symphony No. 5 by Beethoven"
+      "answer": "Symphony No. 5 by Beethoven",
+      "background": "贝多芬第五交响曲以“短短短长”的四音动机闻名，是古典音乐最著名的开头之一。这个极小动机贯穿全曲，并从阴暗的C小调走向胜利性的C大调，形成强烈的命运感与统一性。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Ludwig%20van%20Beethoven%20-%20symphony%20no.%206%20in%20f%20major%20'pastoral',%20op.%2068%20-%20i.%20allegro%20non%20troppo.ogg",
-      "answer": "Symphony No. 6 Pastoral by Beethoven"
+      "answer": "Symphony No. 6 Pastoral by Beethoven",
+      "background": "《田园》交响曲是贝多芬对乡村自然体验的音乐描绘，五个乐章包括溪边、雷雨和牧人感恩等场景。与第五交响曲相比，它更温和舒展，重点不是写实音效，而是“置身乡间的感受”。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Beethoven_-_Egmont_Overture,_Op._84_(Musopen_Symphony).flac",
-      "answer": "Egmont Overture by Beethoven"
+      "answer": "Egmont Overture by Beethoven",
+      "background": "为歌德悲剧《埃格蒙特》所写的配乐序曲，主题围绕压迫、斗争与最终胜利。开头沉重阴暗，结尾转为辉煌的“胜利交响”，是贝多芬以短篇幅塑造英雄叙事的典型。"
     },
     {
       "music": "https://archive.org/download/100ClassicalMusicMasterpieces/1810%20Beethoven-%20Fur%20Elise.mp3",
-      "answer": "Fur Elise by Beethoven"
+      "answer": "Fur Elise by Beethoven",
+      "background": "贝多芬最家喻户晓的钢琴小品之一，正式标题意为“致爱丽丝”。开头摇摆于半音之间的轻柔主题极具辨识度，作品在温柔主段与较活跃的插部之间反复转换。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Beethoven%20Piano%20Concerto%20No%205%20Movement%201.ogg",
-      "answer": "Emperor Concerto by Beethoven"
+      "answer": "Emperor Concerto by Beethoven",
+      "background": "贝多芬第五钢琴协奏曲，因宏伟气势被后人称为《皇帝》。作品一开始钢琴就以华丽和弦和装饰性音型加入，而非等待传统管弦乐开场，整体体现英雄式、辉煌而自信的贝多芬风格。"
     },
     {
       "music": "https://traffic.libsyn.com/gardnermuseum/schubert_op114.mp3",
-      "answer": "The Trout Quintet by Schubert"
+      "answer": "The Trout Quintet by Schubert",
+      "background": "舒伯特《鳟鱼五重奏》因第四乐章采用歌曲《鳟鱼》的旋律作变奏而得名。编制特别加入低音提琴，使整体音色轻盈透明；音乐最重要的气质是明快、亲切和室内乐式的朋友间对话。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/PDP-CH%20-%20New%20York%20Philharmonic%20-%20Arturo%20Toscanini%20-%20The%20Barber%20of%20Seville%20-%20Gioachino%20Rossini%20-%20Overture%20-%20Part%201%20-%20Electrola-ej576-42-846.flac",
-      "answer": "The Barber of Seville Overture by Rossini"
+      "answer": "The Barber of Seville Overture by Rossini",
+      "background": "罗西尼歌剧《塞维利亚的理发师》序曲，以轻快、机智和著名的“罗西尼渐强”闻名。音乐会不断重复短句，同时逐步增加音量和乐器，制造越来越兴奋、近乎喜剧失控的效果。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Schubert%20Symphony%20No.%208%20'Unfinished'%20-%201-%20Allegro%20moderato%20in%20B%20minor.ogg",
-      "answer": "Symphony No. 8 Unfinished by Schubert"
+      "answer": "Symphony No. 8 Unfinished by Schubert",
+      "background": "舒伯特只完成两个乐章，因此被称为《未完成交响曲》。第一乐章低沉的大提琴和低音提琴开场后，出现极具歌唱性的主题；它以抒情与幽暗并存的气氛成为浪漫主义交响乐经典。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Free%20Tim%20-%20Schuberts%20Ave%20Maria.ogg",
-      "answer": "Ave Maria by Schubert"
+      "answer": "Ave Maria by Schubert",
+      "background": "舒伯特这首《圣母颂》原本来自对司各特诗作的配乐，并非最初直接为拉丁祷文而写。悠长旋律带有祈祷般的宁静与虔敬感，后来成为婚礼、宗教仪式和纪念场合常见曲目。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Ode%20to%20Joy.ogg",
-      "answer": "Symphony No. 9 Ode to Joy by Beethoven"
+      "answer": "Symphony No. 9 Ode to Joy by Beethoven",
+      "background": "贝多芬第九交响曲终乐章首次在大型交响曲中加入独唱和合唱，以席勒《欢乐颂》为文本。著名主题从低声、朴素的旋律逐渐扩展成万人同歌般的宏大高潮，象征团结与博爱。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20Midsummer%20Night's%20Dream%20Op.%2061%20Overture%20(Mendelssohn)%20European%20Archive.ogg",
-      "answer": "A Midsummer Nights Dream Overture by Mendelssohn"
+      "answer": "A Midsummer Nights Dream Overture by Mendelssohn",
+      "background": "门德尔松17岁时创作的《仲夏夜之梦》序曲，是音乐史上著名的早熟杰作。轻盈快速的弦乐像精灵飞舞，铜管又能制造宫廷与戏剧感，整部作品充满莎士比亚式奇幻气氛。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Gioachino%20Rossini,%20William%20Tell%20Overture%20(military%20band%20version,%202000).ogg",
-      "answer": "William Tell Overture by Rossini"
+      "answer": "William Tell Overture by Rossini",
+      "background": "《威廉·退尔》序曲末段因飞驰般的“骑兵冲锋”音乐而闻名，常被影视和广告使用。全序曲还包含风暴和宁静田园段落，但最重要的识别点是结尾急速、昂扬的号角主题。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Revolutionary%20Etude%20Chopin%20First%20exercise%20JMC,%20Han.ogg",
-      "answer": "Revolutionary Etude by Chopin"
+      "answer": "Revolutionary Etude by Chopin",
+      "background": "肖邦为钢琴写的《革命练习曲》，相传与1830—1831年波兰十一月起义的冲击有关。左手持续高速奔跑，右手奏出激烈而悲壮的主题，是技术练习与民族情感结合的典型。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Chopin%20Nocturne%20No.%202%20in%20E%20Flat%20Major,%20Op.%209.ogg",
-      "answer": "Nocturne in E flat major by Chopin"
+      "answer": "Nocturne in E flat major by Chopin",
+      "background": "肖邦最著名的夜曲之一，旋律优雅、装饰华丽，伴奏保持柔和的分解和弦。听辨重点是右手像歌唱一样的长线条旋律，以及旋律再次出现时逐渐增加的装饰和自由处理。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Felix%20Mendelssohn%20-%20symphony%20no.%204%20in%20a%20major%20'italian',%20op.%2090%20-%20i.%20allegro%20vivace.ogg",
-      "answer": "Symphony No. 4 Italian by Mendelssohn"
+      "answer": "Symphony No. 4 Italian by Mendelssohn",
+      "background": "门德尔松第四交响曲《意大利》源于他在意大利旅行时的印象。第一乐章明亮、轻快、充满阳光感，终乐章采用萨塔雷洛舞曲节奏；它代表浪漫主义中清爽而古典的一面。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Frederic%20Chopin%20-%20Fantasy%20Impromptu%20Opus%2066.ogg",
-      "answer": "Fantaisie Impromptu by Chopin"
+      "answer": "Fantaisie Impromptu by Chopin",
+      "background": "肖邦最受欢迎的钢琴作品之一，开头右手快速流动、左手伴奏稳定，中段出现著名的抒情旋律。它的魅力在于炫技速度与梦幻歌唱性之间的鲜明转换。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Frederic%20Chopin%20-%20ballade%20no.%201%20in%20g%20minor,%20op.%2023.ogg",
-      "answer": "Ballade No. 1 by Chopin"
+      "answer": "Ballade No. 1 by Chopin",
+      "background": "肖邦四首叙事曲中的第一首，也是浪漫派钢琴文献的核心作品。音乐像没有文字的戏剧，从神秘开场逐步经历抒情、冲突和巨大高潮；重点是长篇结构中的叙事感，而不只是技巧。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Chopin%20Prelude%20Op%2028%20N%2015%20Giorgi%20Latsabidze%20performs.ogg",
-      "answer": "Prelude in D flat major Raindrop by Chopin"
+      "answer": "Prelude in D flat major Raindrop by Chopin",
+      "background": "肖邦《前奏曲》Op.28 No.15，昵称《雨滴》。中段持续重复的降A音常被联想到雨滴，外层温柔宁静，中部却转为阴暗压迫；最值得听的是同一重复音如何在不同情绪中改变意义。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/ICBSA%20Verdi%20-%20Nabucco,%20Va%20pensiero.ogg",
-      "answer": "Nabucco Chorus of the Hebrew Slaves by Verdi"
+      "answer": "Nabucco Chorus of the Hebrew Slaves by Verdi",
+      "background": "威尔第歌剧《纳布科》中著名合唱《飞吧，思想，乘着金色的翅膀》。剧中希伯来俘虏怀念故乡，旋律宽广而哀婉，后来在意大利民族记忆中具有特殊象征意义。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Latsabidze%20plays%20Polonaise%20in%20A%20flat,%20Op.%2053.ogg",
-      "answer": "Polonaise in A flat major Heroic by Chopin"
+      "answer": "Polonaise in A flat major Heroic by Chopin",
+      "background": "肖邦降A大调波兰舞曲因雄壮气势被称为《英雄》。左手著名的八度进行与坚定舞曲节奏营造出近乎凯旋的力量，是肖邦把波兰民族舞曲提升为大型音乐会作品的代表。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20Midsummer%20Night's%20Dream%20Op.%2061%20Wedding%20March%20(Mendelssohn)%20European%20Archive.ogg",
-      "answer": "Wedding March by Mendelssohn"
+      "answer": "Wedding March by Mendelssohn",
+      "background": "门德尔松为莎士比亚《仲夏夜之梦》所作配乐中的《婚礼进行曲》，今天是西式婚礼最常见音乐之一。开头铜管号角式旋律庄严而喜庆，几乎成为“婚礼入场或退场”的文化符号。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/End%20of%20cadenza%20from%20Mendelssohn%20violin%20concerto%20in%20E%20minor.ogg",
-      "answer": "Violin Concerto in E minor by Mendelssohn"
+      "answer": "Violin Concerto in E minor by Mendelssohn",
+      "background": "门德尔松小提琴协奏曲是浪漫派最重要的小提琴协奏曲之一。独奏几乎一开始就直接进入主旋律，省去传统长篇乐队引子；旋律歌唱性强、技巧自然融入音乐，是其最大特色。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Minute%20Waltz,%20by%20Chopin%20-%20Performed%20by%20Sergej%20Rachmaninoff.ogg",
-      "answer": "Minute Waltz by Chopin"
+      "answer": "Minute Waltz by Chopin",
+      "background": "肖邦《一分钟圆舞曲》并不真的要求一分钟演完，昵称主要来自轻巧迅捷的感觉。开头快速盘旋的音型像小动物追逐尾巴，音乐精致、俏皮，是肖邦小型圆舞曲中最具辨识度的一首。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Hungarian%20Rhapsody%20No%202.ogg",
-      "answer": "Hungarian Rhapsody No. 2 by Liszt"
+      "answer": "Hungarian Rhapsody No. 2 by Liszt",
+      "background": "李斯特第二号《匈牙利狂想曲》从庄重、自由的慢段逐步转向极快而炫目的舞蹈段。后半段常被动画和喜剧使用，尤其适合表现疯狂追逐；夸张的速度变化和炫技钢琴效果最关键。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Radetzky%20March.ogg",
-      "answer": "Radetzky March by Johann Strauss I"
+      "answer": "Radetzky March by Johann Strauss I",
+      "background": "老约翰·施特劳斯为拉德茨基元帅创作的进行曲，以强烈节拍和观众跟随鼓掌的传统闻名。它常作为维也纳新年音乐会返场曲，气氛直接、热烈、极具群众参与感。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Wagner%20Bridal%20Chorus.ogg",
-      "answer": "Bridal Chorus by Wagner"
+      "answer": "Bridal Chorus by Wagner",
+      "background": "瓦格纳歌剧《罗恩格林》中的《婚礼合唱》，英语世界常以“Here Comes the Bride”而闻名。它与门德尔松《婚礼进行曲》经常成对出现在西式婚礼中，是最具文化识别度的婚礼音乐之一。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Franz%20Liszt%20-%20Liebestraum,%20Ab%20Major.ogg",
-      "answer": "Liebestraum by Liszt"
+      "answer": "Liebestraum by Liszt",
+      "background": "李斯特三首《爱之梦》中最著名的第三首，以浪漫、宽广的主旋律闻名。中间经过两段华丽华彩后主题再次回归，听感像从私密抒情逐渐扩大，再重新归于柔和。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/La%20Donna%20E%20Mobile%20Rigoletto.ogg",
-      "answer": "La donna e mobile by Verdi"
+      "answer": "La donna e mobile by Verdi",
+      "background": "威尔第歌剧《弄臣》中公爵的咏叹调，标题意为“女人善变”。旋律轻快、上口，却由一个轻浮自私的人物演唱，因此音乐的迷人外表与戏剧情境中的讽刺形成鲜明反差。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Liszt-La%20Campanella-Greiss.ogg",
-      "answer": "La Campanella by Liszt"
+      "answer": "La Campanella by Liszt",
+      "background": "李斯特根据帕格尼尼小提琴主题写成的钢琴炫技名作，标题意为“小钟”。高音区不断重复的清脆音符模拟钟声，同时要求大跳、快速重复音和极高控制力，是钢琴技巧展示的象征。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Richard%20Wagner%20-%20Ride%20of%20the%20Valkyries.ogg",
-      "answer": "Ride of the Valkyries by Wagner"
+      "answer": "Ride of the Valkyries by Wagner",
+      "background": "瓦格纳歌剧《女武神》第三幕开场音乐，描绘女武神骑马穿越天空。强劲铜管主题和持续推进的节奏极具英雄与战斗感，后来在电影中大量使用，成为“史诗冲锋”音乐的典型。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Strauss,%20An%20der%20sch%C3%B6nen%20blauen%20Donau.ogg",
-      "answer": "Blue Danube Waltz by Johann Strauss II"
+      "answer": "Blue Danube Waltz by Johann Strauss II",
+      "background": "小约翰·施特劳斯最著名的圆舞曲之一，被视为维也纳音乐文化的象征。标志性的三拍子摆动并非机械均匀，而带有维也纳圆舞曲独特的呼吸和弹性；主旋律优雅开阔，极易辨认。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Grieg%20-%20Concerto%20in%20A%20minor,%201st%20movement.ogg",
-      "answer": "Piano Concerto in A minor by Grieg"
+      "answer": "Piano Concerto in A minor by Grieg",
+      "background": "格里格唯一完成的钢琴协奏曲，开头以定音鼓滚奏后钢琴猛烈下行和弦著称。作品融合浪漫派宏大气势与北欧民间色彩，第一乐章开场是最重要的识别线索。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Brahms%20-%20Schumann-Heink%20-%20Wiegenlied%20(Berceuse)%20(1915).ogg",
-      "answer": "Lullaby by Brahms"
+      "answer": "Lullaby by Brahms",
+      "background": "勃拉姆斯的《摇篮曲》原名《晚安，好梦》，旋律温柔平稳，已成为全球最著名的摇篮歌曲之一。简单摆动的节奏与舒缓旋律营造安全、安睡的感觉，其文化影响远超古典音乐圈。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Brahms%20nikisch%20hd5.ogg",
-      "answer": "Hungarian Dance No. 5 by Brahms"
+      "answer": "Hungarian Dance No. 5 by Brahms",
+      "background": "勃拉姆斯最著名的《匈牙利舞曲》之一，借鉴当时流行的匈牙利和吉普赛风格。速度经常突然放慢又加速，重音强烈、情绪火热，最有特色的是充满戏剧感的节奏伸缩。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Pyotr%20Ilyich%20Tchaikovsky%20-%20romeo%20and%20juliet-%20overture-fantasy.ogg",
-      "answer": "Romeo and Juliet Overture by Tchaikovsky"
+      "answer": "Romeo and Juliet Overture by Tchaikovsky",
+      "background": "柴可夫斯基根据莎士比亚爱情悲剧创作的幻想序曲。作品中最著名的是宽广热烈的“爱情主题”，同时还有象征家族冲突的激烈音乐；爱情与暴力的对比构成整首作品的核心。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/PhiladelphiaSymphonyOrchestra-DanseMacabre.ogg",
-      "answer": "Danse Macabre by Saint Saens"
+      "answer": "Danse Macabre by Saint Saens",
+      "background": "圣-桑的交响诗《骷髅之舞》描写午夜死神拉琴、骷髅起舞的幻想场景。木琴常被用来模仿骨头碰撞，独奏小提琴带有诡异音程，是万圣节式“优雅恐怖”古典音乐的代表。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Tchaikovsky%20-%20Piano%20Concerto%20No.%201%20(first%20movement%20cadenza).ogg",
-      "answer": "Piano Concerto No. 1 by Tchaikovsky"
+      "answer": "Piano Concerto No. 1 by Tchaikovsky",
+      "background": "柴可夫斯基第一钢琴协奏曲拥有古典音乐最著名的开场之一：强烈圆号主题上，钢琴奏出巨大和弦。奇特的是这一宏伟主题随后并不作为主主题回归；整部作品以激情、浪漫和高难技巧著称。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Habanera.ogg",
-      "answer": "Carmen Habanera by Bizet"
+      "answer": "Carmen Habanera by Bizet",
+      "background": "比才歌剧《卡门》中女主角首次登场的重要咏叹调，采用哈巴涅拉舞曲节奏。卡门唱爱情像不受驯服的鸟，低沉、性感的旋律与固定节奏体现她自由、危险而不可控制的人格。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Bizet%20-%20Carmen%20-%20Toreador%20Song%20(French,%20Musopen).ogg",
-      "answer": "Carmen Toreador Song by Bizet"
+      "answer": "Carmen Toreador Song by Bizet",
+      "background": "比才《卡门》中斗牛士埃斯卡米罗的著名咏叹调。进行曲式节奏、响亮合唱和自信旋律塑造出耀眼公众英雄形象，副歌是整部歌剧最容易识别的旋律之一。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Musopen%20-%20Morning.ogg",
-      "answer": "Peer Gynt Morning Mood by Grieg"
+      "answer": "Peer Gynt Morning Mood by Grieg",
+      "background": "格里格为易卜生戏剧《培尔·金特》创作的配乐之一，描绘清晨日出。长笛和双簧管的柔和旋律逐渐展开，音乐从安静走向明亮，是古典音乐中最典型的“清晨、大自然苏醒”意象。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Musopen%20-%20In%20the%20Hall%20Of%20The%20Mountain%20King.ogg",
-      "answer": "Peer Gynt In the Hall of the Mountain King by Grieg"
+      "answer": "Peer Gynt In the Hall of the Mountain King by Grieg",
+      "background": "同样来自《培尔·金特》，描写主人公进入山魔王宫殿后的紧张场景。一个短小主题不断重复，同时越来越快、越来越响、配器越来越厚，最终爆发，是“渐进式紧张升级”的经典范例。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Tchaikovsky%20Swan%20Lake%20Op.20%20No.10.%20Sc%C3%A8ne.ogg",
-      "answer": "Swan Lake by Tchaikovsky"
+      "answer": "Swan Lake by Tchaikovsky",
+      "background": "柴可夫斯基芭蕾《天鹅湖》以被诅咒的天鹅公主奥杰塔故事闻名。最具代表性的“天鹅主题”由双簧管奏出，优美却带悲剧色彩；整部作品把芭蕾舞与交响化音乐结合到前所未有的高度。"
     },
     {
       "music": "https://www.imslp.eu/files/imglnks/euimg/f/f3/IMSLP724772-PMLP6518-01.01._Concerto_In_D_Major,_Op._77_For_Violin_&_Orchestra-_First_Movement-_Allegro_Non_Troppo.mp3",
-      "answer": "Violin Concerto by Brahms"
+      "answer": "Violin Concerto by Brahms",
+      "background": "勃拉姆斯小提琴协奏曲是浪漫派四大经典协奏曲之一，以厚重交响性和高难独奏写作著称。它不像纯粹炫技作品，独奏小提琴必须与整个乐队平等对话，兼具力量、抒情与结构感。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Violinist%20CARRIE%20REHKOPF-TCHAIKOVSKY%20VIOLIN%20CONCERTO%203rd%20mvt.ogg",
-      "answer": "Violin Concerto by Tchaikovsky"
+      "answer": "Violin Concerto by Tchaikovsky",
+      "background": "柴可夫斯基小提琴协奏曲以极强的歌唱性、俄罗斯色彩和炫技难度著称。首演前曾被认为难以演奏，如今却是标准曲目；终乐章尤其快速、热烈，带有民间舞蹈般的推动力。"
     },
     {
       "music": "https://www.imslp.eu/files/imglnks/euimg/3/3a/IMSLP750837-PMLP4972-3No.8InGMinorOp.46No.8.mp3",
-      "answer": "Slavonic Dance No. 8 by Dvorak"
+      "answer": "Slavonic Dance No. 8 by Dvorak",
+      "background": "德沃夏克《斯拉夫舞曲》第一集中的第8首，以捷克舞蹈“富里安特”式的强烈节奏著称。重音和拍感不断变化，音乐热情、爽朗，是德沃夏克民族主义风格最直接、最有活力的例子之一。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/1812%20Overture.ogg",
-      "answer": "1812 Overture by Tchaikovsky"
+      "answer": "1812 Overture by Tchaikovsky",
+      "background": "柴可夫斯基为纪念1812年俄国抵抗拿破仑入侵而写的庆典序曲。作品以俄罗斯宗教旋律、法国《马赛曲》象征冲突，结尾常加入钟声和真炮声，是古典音乐中最壮观的胜利性结尾之一。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Alexander%20Borodin%20-%20In%20The%20Steppes%20Of%20Central%20Asia.ogg",
-      "answer": "In the Steppes of Central Asia by Borodin"
+      "answer": "In the Steppes of Central Asia by Borodin",
+      "background": "鲍罗丁的交响音画，描绘中亚草原上俄罗斯人与亚洲商队相遇。音乐以安静长音营造辽阔空间，再让不同主题逐渐并存、融合；它的魅力在于极简材料塑造出的宽广地理想象。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Brahms,%20Symphony%20No.%203%20in%20F%20Major,%20Op.%2090%20-%20I.%20Allegro%20con%20brio.ogg",
-      "answer": "Symphony No. 3 by Brahms"
+      "answer": "Symphony No. 3 by Brahms",
+      "background": "勃拉姆斯第三交响曲篇幅相对紧凑，却情感浓缩。开头常被联系到他的个人格言“自由但快乐”，全曲不像传统英雄交响曲那样以巨大胜利结束，而是罕见地在柔和中收束。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/JOHN%20MICHEL%20CELLO-SAINT%20SAENS%20CARNIVAL%20OF%20ANIMALS%20THE%20SWAN.ogg",
-      "answer": "Carnival of the Animals The Swan by Saint Saens"
+      "answer": "Carnival of the Animals The Swan by Saint Saens",
+      "background": "圣-桑《动物狂欢节》中最著名的一段，以大提琴扮演天鹅。钢琴分解和弦像水波，大提琴奏出悠长优雅的旋律；它后来成为芭蕾独舞《天鹅之死》的经典配乐。"
     },
     {
       "music": "https://www.imslp.eu/files/imglnks/euimg/1/1d/IMSLP725569-PMLP50421-02.01._Symphony_No._3_In_C_Minor_Op._78-_Allegro_Moderato_-_Presto_-_Allegro_Moderato_-_Maestoso_-_Allegro_-_Piu_Allegro_-_Molto_Allegro.mp3",
-      "answer": "Symphony No. 3 Organ Symphony by Saint Saens"
+      "answer": "Symphony No. 3 Organ Symphony by Saint Saens",
+      "background": "圣-桑第三交响曲因在关键位置加入管风琴而称《管风琴交响曲》。终乐章管风琴突然以巨大C大调和弦进入，是全曲最震撼时刻；作品把传统交响结构与宏伟音响结合得极具戏剧性。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Rimsky-Korsakov.%20Scheherazade,%20Symphonic%20Suite,%20Op.%2035%20-%2002%20The%20Story%20Of%20The%20Kalandar%20Prince.ogg",
-      "answer": "Scheherazade by Rimsky Korsakov"
+      "answer": "Scheherazade by Rimsky Korsakov",
+      "background": "里姆斯基-科萨科夫根据《一千零一夜》人物和故事意象创作的交响组曲。独奏小提琴反复代表聪慧的舍赫拉查德，乐队则描绘海洋、王子和节庆场面；华丽配器是作品最大特色。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Debussy%20-%20Arabesque%20No-1%20in%20E%20(Piano%20Performance%20by%20eld%C3%BCendes%C3%BCarez).wav",
-      "answer": "Arabesque No. 1 by Debussy"
+      "answer": "Arabesque No. 1 by Debussy",
+      "background": "德彪西早期钢琴名作，旋律轻盈、流动，和声色彩已经明显脱离传统浪漫派。它不像严格舞曲，更像不断荡漾的线条；聆听重点是细腻触键、柔和节奏和若隐若现的色彩变化。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Kevin%20MacLeod%20-%20Erik%20Satie%20Gymnopedie%20No%201.ogg",
-      "answer": "Gymnopedie No. 1 by Satie"
+      "answer": "Gymnopedie No. 1 by Satie",
+      "background": "萨蒂最著名的钢琴作品之一，标题《裸体歌舞》带有他特有的古怪幽默。音乐极慢、简洁、留白很多，重复和弦与朴素旋律营造出冷静、疏离又略带忧郁的氛围，对后世极简音乐影响很大。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Kevin%20MacLeod%20-%20Erik%20Satie%20Gymnopedie%20No%202.ogg",
-      "answer": "Gymnopedie No. 2 by Satie"
+      "answer": "Gymnopedie No. 2 by Satie",
+      "background": "《裸体歌舞》第二首比第一首更少被大众熟悉，同样采用缓慢、克制和大量留白。和声较奇异，情绪更不稳定，适合注意萨蒂如何用极少音符制造朦胧、反传统的听觉空间。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Daniel%20Bautista%20-%20Weirdos%20And%20Classics%20-%20Some%20Polovtsian%20Dances%20(Borodin).ogg",
-      "answer": "Prince Igor Polovtsian Dances by Borodin"
+      "answer": "Prince Igor Polovtsian Dances by Borodin",
+      "background": "鲍罗丁歌剧《伊戈尔王》中最著名的舞蹈场景，旋律后来被音乐剧和流行文化广泛改编。作品融合合唱、民族舞蹈节奏和浓烈东方主义色彩，最著名的抒情主题宽广而极具歌唱性。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Tchaikovsky%20-%20Dance%20of%20the%20Sugar%20Plum%20Fairy%20-%20The%20Nutcracker.ogg",
-      "answer": "The Nutcracker Suite by Tchaikovsky"
+      "answer": "The Nutcracker Suite by Tchaikovsky",
+      "background": "柴可夫斯基芭蕾《胡桃夹子》的精选组曲包含《糖梅仙子之舞》《花之圆舞曲》等名段。音乐以童话色彩和精巧配器闻名，尤其《糖梅仙子之舞》使用钢片琴，形成闪亮、梦幻的独特音色。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Antonin%20Dvorak%20-%20symphony%20no.%209%20in%20e%20minor%20'from%20the%20new%20world',%20op.%2095%20-%20iv.%20allegro%20con%20fuoco.ogg",
-      "answer": "Symphony No. 9 New World by Dvorak"
+      "answer": "Symphony No. 9 New World by Dvorak",
+      "background": "德沃夏克第九交响曲写于美国，副标题《自新大陆》。他把美国黑人灵歌、原住民音乐印象与波希米亚风格融合；第二乐章英国管主题和第四乐章强烈铜管主题都是最著名的识别点。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Tchaikovsky,%20Symphony%20No.%206%20In%20B%20Minor,%20Op.%2074,%20'Pathetique'%20-%20I.%20Adagio,%20Allegro%20Non%20Troppo.ogg",
-      "answer": "Symphony No. 6 Pathetique by Tchaikovsky"
+      "answer": "Symphony No. 6 Pathetique by Tchaikovsky",
+      "background": "柴可夫斯基最后一部交响曲，副标题《悲怆》。它最不同寻常之处是全曲不是以辉煌高潮结束，而以极慢、极暗的末乐章消逝，形成强烈悲剧感；第三乐章看似胜利却并非真正终点。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Columbia-dwx1550ix-c-wlx1289.ogg",
-      "answer": "Prelude to the Afternoon of a Faun by Debussy"
+      "answer": "Prelude to the Afternoon of a Faun by Debussy",
+      "background": "德彪西根据马拉美诗作创作的管弦乐前奏曲，常被视为现代音乐的重要起点之一。开头长笛独奏暧昧、自由，传统调性感被弱化；重点是音色、气氛和感官联想，而不是清晰的主题发展。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Dvo%C5%99%C3%A1k%20-%20Humoresque%20Op.%20101%20No.%207.ogg",
-      "answer": "Humoresque by Dvorak"
+      "answer": "Humoresque by Dvorak",
+      "background": "德沃夏克最著名的小品之一，原为钢琴曲。旋律轻松、略带怀旧，节奏具有温和摇摆感；它不像大型交响作品那样戏剧化，却以亲切、自然的歌唱性长期流行。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Elgar%3B%20Enigma%20variations,%20Theme%20IX.%20Nimrod.ogg",
-      "answer": "Enigma Variations Nimrod by Elgar"
+      "answer": "Enigma Variations Nimrod by Elgar",
+      "background": "埃尔加《谜语变奏曲》第九变奏，以好友Augustus Jaeger为人物原型，昵称《宁录》。音乐从安静缓慢逐渐扩展成庄严高潮，常用于英国纪念仪式和追悼场合，代表克制而深沉的情感。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Maurice%20Ravel%20-%20Pavane%20pour%20une%20infante%20d%C3%A9funte.ogg",
-      "answer": "Pavane for a Dead Princess by Ravel"
+      "answer": "Pavane for a Dead Princess by Ravel",
+      "background": "拉威尔这首作品标题虽是《悼念公主的帕凡舞曲》，并非为某位真实去世的公主所写，而是对古老宫廷舞蹈的想象。旋律优雅、缓慢、带淡淡怀旧感，重点在精致音色而非悲痛。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Rimsky-Korsakov%20-%20flight%20of%20the%20bumblebee.oga",
-      "answer": "Flight of the Bumblebee by Rimsky Korsakov"
+      "answer": "Flight of the Bumblebee by Rimsky Korsakov",
+      "background": "出自里姆斯基-科萨科夫歌剧《萨旦王的故事》，描写王子变成大黄蜂飞行。音乐以极高速半音阶运动制造嗡嗡飞行感，是最著名的器乐炫技曲之一，速度和连续运动就是它的核心识别点。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Pomp%20and%20circumstances%20No.%201.ogg",
-      "answer": "Pomp and Circumstance March No. 1 by Elgar"
+      "answer": "Pomp and Circumstance March No. 1 by Elgar",
+      "background": "埃尔加第一号《威风堂堂进行曲》中最著名的一首，中段宽广旋律后来成为英国爱国歌曲《希望与荣耀之地》的曲调。在美国尤其与毕业典礼紧密相连，几乎成为毕业入场音乐的代名词。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Clair%20de%20lune%20(Claude%20Debussy)%20Suite%20bergamasque.ogg",
-      "answer": "Clair de Lune by Debussy"
+      "answer": "Clair de Lune by Debussy",
+      "background": "德彪西《贝加马斯克组曲》第三乐章，标题意为“月光”。柔和和声、缓慢流动和大量音色留白营造朦胧夜色，是印象主义钢琴音乐最具代表性的作品之一。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/La%20mer%20-%20I.%20De%20l'aube%20%C3%A0%20midi%20sur%20la%20mer%20-%20Concert%20Band%20-%20United%20States%20Air%20Force%20Band.mp3",
-      "answer": "La Mer by Debussy"
+      "answer": "La Mer by Debussy",
+      "background": "德彪西的三幅交响素描，以音乐表现海洋不断变化的光线、运动和力量，而不是讲具体故事。配器极其精细，节奏和和声不断流动；重点是把乐队听成变化的“色彩与水面”。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Holst,%20The%20Planets,%20Op.%2032%20-%20I.%20Mars,%20the%20Bringer%20of%20War.ogg",
-      "answer": "The Planets Mars by Holst"
+      "answer": "The Planets Mars by Holst",
+      "background": "霍尔斯特组曲《行星》第一乐章《火星——战争使者》，采用不稳定的5拍节奏和持续重击的固定音型。它冷酷、机械、压迫，后来深刻影响电影中的战争和科幻配乐语言。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Gustav%20Holst%20-%20the%20planets,%20op.%2032%20-%20iv.%20jupiter,%20the%20bringer%20of%20jollity.ogg",
-      "answer": "The Planets Jupiter by Holst"
+      "answer": "The Planets Jupiter by Holst",
+      "background": "《行星》第四乐章《木星——欢乐使者》既有奔放、跳跃的节庆音乐，也有中段宽广庄严的著名旋律。该中段后来成为英国赞歌《I Vow to Thee, My Country》的曲调。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Edward%20Elgar%20-%20cello%20concerto%20in%20e%20minor,%20op.%2085%20-%20iv.%20allegro.ogg",
-      "answer": "Cello Concerto by Elgar"
+      "answer": "Cello Concerto by Elgar",
+      "background": "埃尔加大提琴协奏曲写于第一次世界大战后，整体内省、苍凉。开头大提琴独奏和弦后进入带叹息感的主题，与传统炫技协奏曲相比更像私人独白，因杰奎琳·杜普蕾的录音而尤其著名。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Bolero-Maurice%20Ravel-1930.ogg",
-      "answer": "Bolero by Ravel"
+      "answer": "Bolero by Ravel",
+      "background": "拉威尔《波莱罗》几乎整首建立在同一个小鼓节奏和两条反复旋律上，没有传统主题发展。真正的变化来自配器不断更换、音量持续增大，直到最后突然转调并爆发，是“渐强配器实验”的经典。"
     },
     {
       "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Orff%20-%20%C2%ABCarmina%20Burana%C2%BB%20-%20%C2%ABFortuna%20imperatrix%20mundi%C2%BB%20-%20(prime%2030%20battute).ogg",
-      "answer": "O Fortuna from Carmina Burana by Orff"
+      "answer": "O Fortuna from Carmina Burana by Orff",
+      "background": "奥尔夫清唱剧《布兰诗歌》的开头与结尾，拉丁文标题意为“命运女神”。巨大的合唱、重击式节奏和突然的强弱对比制造压倒性戏剧感，常被影视用来表现宿命、战争或史诗场面。"
     },
     {
       "music": "https://drive.google.com/uc?export=download&id=1aR2HeCEnRnMzfIop8TyVCLSH3F8xJYOe",
-      "answer": "Adagio for Strings by Barber"
+      "answer": "Adagio for Strings by Barber",
+      "background": "美国作曲家塞缪尔·巴伯1936年的弦乐作品，以缓慢上升的旋律线和持续积累的情绪张力著称。它长期用于美国国家悼念和纪念场合，音乐的核心不是复杂技巧，而是极度克制后形成的巨大悲痛感。"
     }
   ]
 }
