@@ -1,0 +1,404 @@
+{
+  "quiz": [
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Pachelbel's_Canon.ogg",
+      "answer": "Canon in D by Pachelbel"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Toccata_et_Fugue_BWV565.ogg",
+      "answer": "Toccata and Fugue in D minor by Bach"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/1-George_Frideric_Handel_-_Water_Music_Suite_in_F_major_(Overture)_HWV348.ogg",
+      "answer": "Water Music by Handel"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Bach%20-%20Brandenburg%20Concerto%20No.%203%20-%203.%20Allegro.ogg",
+      "answer": "Brandenburg Concerto No. 3 by Bach"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Bach%20-%20Cello%20Suite%20no.%201%20in%20G%20major,%20BWV%201007%20-%20I.%20Pr%C3%A9lude.ogg",
+      "answer": "Cello Suite No. 1 Prelude by Bach"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Johann%20Sebastian%20Bach%20-%20The%20Well-tempered%20Clavier%20-%20Book%201%20-%2002Epre%20cmaj.ogg",
+      "answer": "Well Tempered Clavier by Bach"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Jesu,%20Joy%20of%20Man's%20Desiring.ogg",
+      "answer": "Jesu Joy of Mans Desiring by Bach"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Vivaldi_-_Four_Seasons_1_Spring_mvt_1_Allegro_-_John_Harrison_violin.oga",
+      "answer": "The Four Seasons Spring by Vivaldi"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Vivaldi_-_Four_Seasons_2_Summer_mvt_1_Allegro_non_molto_-_John_Harrison_violin.oga",
+      "answer": "The Four Seasons Summer by Vivaldi"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Vivaldi_-_Four_Seasons_3_Autumn_mvt_1_Allegro_-_John_Harrison_violin.oga",
+      "answer": "The Four Seasons Autumn by Vivaldi"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Vivaldi_-_Four_Seasons_4_Winter_mvt_1_Allegro_non_molto_-_John_Harrison_violin.oga",
+      "answer": "The Four Seasons Winter by Vivaldi"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Air_(Bach).ogg",
+      "answer": "Air on the G String by Bach"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/J.S.Bach-Goldberg%20Variation%201.ogg",
+      "answer": "Goldberg Variations by Bach"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Handel%20-%20messiah%20-%2044%20hallelujah.ogg",
+      "answer": "Messiah Hallelujah Chorus by Handel"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Johann%20Sebastian%20Bach%20-%20Mass%20in%20B%20minor%20-%20Agnus%20Dei.ogg",
+      "answer": "Mass in B minor by Bach"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/George%20Frideric%20Handel%20-%20Music%20for%20the%20Royal%20Fireworks%201%20(Overture).ogg",
+      "answer": "Music for the Royal Fireworks by Handel"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Rondo%20Alla%20Turka.ogg",
+      "answer": "Piano Sonata No. 11 Rondo Alla Turca by Mozart"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Mozart%20Piano%20Concerto%20N%2021%20in%20C%20major,%20K.%20467%20(3rd%20movement).oga",
+      "answer": "Piano Concerto No. 21 by Mozart"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Mozart,%20The%20Marriage%20of%20Figaro%20(overture).ogg",
+      "answer": "The Marriage of Figaro Overture by Mozart"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Mozart_-_Eine_kleine_Nachtmusik_-_1._Allegro.ogg",
+      "answer": "Eine kleine Nachtmusik by Mozart"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Mozart%20Symphony%2040%20G%20minor%20-%201%20Molto%20allegro.oga",
+      "answer": "Symphony No. 40 by Mozart"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Wolfgang%20Amadeus%20Mozart%20-%20Symphony%20No.%2041%201st%20Movement%20(Jupiter),%20K.551.ogg",
+      "answer": "Symphony No. 41 Jupiter by Mozart"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Wolfgang%20Amadeus%20Mozart%20-%20Clarinet%20Concerto%20-%202.%20Adagio.ogg",
+      "answer": "Clarinet Concerto by Mozart"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Mozart%20-%20Magic%20Flute%20Overture.ogg",
+      "answer": "The Magic Flute Overture by Mozart"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/PMLP02751-S002-07-Mozart%20Requiem%20Mass.ogg",
+      "answer": "Requiem by Mozart"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Beethoven-Pathetique.ogg",
+      "answer": "Pathetique Sonata by Beethoven"
+    },
+    {
+      "music": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Beethoven_Moonlight_1st_movement.ogg",
+      "answer": "Moonlight Sonata by Beethoven"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Beethoven_SymphonyNo.3Eroica_LudwigVanBeethoven-SymphonyNo.3InEFlatMajorEroicaOp.55-01-AllegroConBrio.ogg",
+      "answer": "Symphony No. 3 Eroica by Beethoven"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Ludwig%20van%20Beethoven%20-%20symphony%20no.%205%20in%20c%20minor,%20op.%2067%20-%20i.%20allegro%20con%20brio.ogg",
+      "answer": "Symphony No. 5 by Beethoven"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Ludwig%20van%20Beethoven%20-%20symphony%20no.%206%20in%20f%20major%20'pastoral',%20op.%2068%20-%20i.%20allegro%20non%20troppo.ogg",
+      "answer": "Symphony No. 6 Pastoral by Beethoven"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Beethoven_-_Egmont_Overture,_Op._84_(Musopen_Symphony).flac",
+      "answer": "Egmont Overture by Beethoven"
+    },
+    {
+      "music": "https://archive.org/download/100ClassicalMusicMasterpieces/1810%20Beethoven-%20Fur%20Elise.mp3",
+      "answer": "Fur Elise by Beethoven"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Beethoven%20Piano%20Concerto%20No%205%20Movement%201.ogg",
+      "answer": "Emperor Concerto by Beethoven"
+    },
+    {
+      "music": "https://traffic.libsyn.com/gardnermuseum/schubert_op114.mp3",
+      "answer": "The Trout Quintet by Schubert"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/PDP-CH%20-%20New%20York%20Philharmonic%20-%20Arturo%20Toscanini%20-%20The%20Barber%20of%20Seville%20-%20Gioachino%20Rossini%20-%20Overture%20-%20Part%201%20-%20Electrola-ej576-42-846.flac",
+      "answer": "The Barber of Seville Overture by Rossini"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Schubert%20Symphony%20No.%208%20'Unfinished'%20-%201-%20Allegro%20moderato%20in%20B%20minor.ogg",
+      "answer": "Symphony No. 8 Unfinished by Schubert"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Free%20Tim%20-%20Schuberts%20Ave%20Maria.ogg",
+      "answer": "Ave Maria by Schubert"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Ode%20to%20Joy.ogg",
+      "answer": "Symphony No. 9 Ode to Joy by Beethoven"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20Midsummer%20Night's%20Dream%20Op.%2061%20Overture%20(Mendelssohn)%20European%20Archive.ogg",
+      "answer": "A Midsummer Nights Dream Overture by Mendelssohn"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Gioachino%20Rossini,%20William%20Tell%20Overture%20(military%20band%20version,%202000).ogg",
+      "answer": "William Tell Overture by Rossini"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Revolutionary%20Etude%20Chopin%20First%20exercise%20JMC,%20Han.ogg",
+      "answer": "Revolutionary Etude by Chopin"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Chopin%20Nocturne%20No.%202%20in%20E%20Flat%20Major,%20Op.%209.ogg",
+      "answer": "Nocturne in E flat major by Chopin"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Felix%20Mendelssohn%20-%20symphony%20no.%204%20in%20a%20major%20'italian',%20op.%2090%20-%20i.%20allegro%20vivace.ogg",
+      "answer": "Symphony No. 4 Italian by Mendelssohn"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Frederic%20Chopin%20-%20Fantasy%20Impromptu%20Opus%2066.ogg",
+      "answer": "Fantaisie Impromptu by Chopin"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Frederic%20Chopin%20-%20ballade%20no.%201%20in%20g%20minor,%20op.%2023.ogg",
+      "answer": "Ballade No. 1 by Chopin"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Chopin%20Prelude%20Op%2028%20N%2015%20Giorgi%20Latsabidze%20performs.ogg",
+      "answer": "Prelude in D flat major Raindrop by Chopin"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/ICBSA%20Verdi%20-%20Nabucco,%20Va%20pensiero.ogg",
+      "answer": "Nabucco Chorus of the Hebrew Slaves by Verdi"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Latsabidze%20plays%20Polonaise%20in%20A%20flat,%20Op.%2053.ogg",
+      "answer": "Polonaise in A flat major Heroic by Chopin"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20Midsummer%20Night's%20Dream%20Op.%2061%20Wedding%20March%20(Mendelssohn)%20European%20Archive.ogg",
+      "answer": "Wedding March by Mendelssohn"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/End%20of%20cadenza%20from%20Mendelssohn%20violin%20concerto%20in%20E%20minor.ogg",
+      "answer": "Violin Concerto in E minor by Mendelssohn"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Minute%20Waltz,%20by%20Chopin%20-%20Performed%20by%20Sergej%20Rachmaninoff.ogg",
+      "answer": "Minute Waltz by Chopin"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Hungarian%20Rhapsody%20No%202.ogg",
+      "answer": "Hungarian Rhapsody No. 2 by Liszt"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Radetzky%20March.ogg",
+      "answer": "Radetzky March by Johann Strauss I"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Wagner%20Bridal%20Chorus.ogg",
+      "answer": "Bridal Chorus by Wagner"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Franz%20Liszt%20-%20Liebestraum,%20Ab%20Major.ogg",
+      "answer": "Liebestraum by Liszt"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/La%20Donna%20E%20Mobile%20Rigoletto.ogg",
+      "answer": "La donna e mobile by Verdi"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Liszt-La%20Campanella-Greiss.ogg",
+      "answer": "La Campanella by Liszt"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Richard%20Wagner%20-%20Ride%20of%20the%20Valkyries.ogg",
+      "answer": "Ride of the Valkyries by Wagner"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Strauss,%20An%20der%20sch%C3%B6nen%20blauen%20Donau.ogg",
+      "answer": "Blue Danube Waltz by Johann Strauss II"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Grieg%20-%20Concerto%20in%20A%20minor,%201st%20movement.ogg",
+      "answer": "Piano Concerto in A minor by Grieg"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Brahms%20-%20Schumann-Heink%20-%20Wiegenlied%20(Berceuse)%20(1915).ogg",
+      "answer": "Lullaby by Brahms"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Brahms%20nikisch%20hd5.ogg",
+      "answer": "Hungarian Dance No. 5 by Brahms"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Pyotr%20Ilyich%20Tchaikovsky%20-%20romeo%20and%20juliet-%20overture-fantasy.ogg",
+      "answer": "Romeo and Juliet Overture by Tchaikovsky"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/PhiladelphiaSymphonyOrchestra-DanseMacabre.ogg",
+      "answer": "Danse Macabre by Saint Saens"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Tchaikovsky%20-%20Piano%20Concerto%20No.%201%20(first%20movement%20cadenza).ogg",
+      "answer": "Piano Concerto No. 1 by Tchaikovsky"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Habanera.ogg",
+      "answer": "Carmen Habanera by Bizet"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Bizet%20-%20Carmen%20-%20Toreador%20Song%20(French,%20Musopen).ogg",
+      "answer": "Carmen Toreador Song by Bizet"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Musopen%20-%20Morning.ogg",
+      "answer": "Peer Gynt Morning Mood by Grieg"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Musopen%20-%20In%20the%20Hall%20Of%20The%20Mountain%20King.ogg",
+      "answer": "Peer Gynt In the Hall of the Mountain King by Grieg"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Tchaikovsky%20Swan%20Lake%20Op.20%20No.10.%20Sc%C3%A8ne.ogg",
+      "answer": "Swan Lake by Tchaikovsky"
+    },
+    {
+      "music": "https://www.imslp.eu/files/imglnks/euimg/f/f3/IMSLP724772-PMLP6518-01.01._Concerto_In_D_Major,_Op._77_For_Violin_&_Orchestra-_First_Movement-_Allegro_Non_Troppo.mp3",
+      "answer": "Violin Concerto by Brahms"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Violinist%20CARRIE%20REHKOPF-TCHAIKOVSKY%20VIOLIN%20CONCERTO%203rd%20mvt.ogg",
+      "answer": "Violin Concerto by Tchaikovsky"
+    },
+    {
+      "music": "https://www.imslp.eu/files/imglnks/euimg/3/3a/IMSLP750837-PMLP4972-3No.8InGMinorOp.46No.8.mp3",
+      "answer": "Slavonic Dance No. 8 by Dvorak"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/1812%20Overture.ogg",
+      "answer": "1812 Overture by Tchaikovsky"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Alexander%20Borodin%20-%20In%20The%20Steppes%20Of%20Central%20Asia.ogg",
+      "answer": "In the Steppes of Central Asia by Borodin"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Brahms,%20Symphony%20No.%203%20in%20F%20Major,%20Op.%2090%20-%20I.%20Allegro%20con%20brio.ogg",
+      "answer": "Symphony No. 3 by Brahms"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/JOHN%20MICHEL%20CELLO-SAINT%20SAENS%20CARNIVAL%20OF%20ANIMALS%20THE%20SWAN.ogg",
+      "answer": "Carnival of the Animals The Swan by Saint Saens"
+    },
+    {
+      "music": "https://www.imslp.eu/files/imglnks/euimg/1/1d/IMSLP725569-PMLP50421-02.01._Symphony_No._3_In_C_Minor_Op._78-_Allegro_Moderato_-_Presto_-_Allegro_Moderato_-_Maestoso_-_Allegro_-_Piu_Allegro_-_Molto_Allegro.mp3",
+      "answer": "Symphony No. 3 Organ Symphony by Saint Saens"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Rimsky-Korsakov.%20Scheherazade,%20Symphonic%20Suite,%20Op.%2035%20-%2002%20The%20Story%20Of%20The%20Kalandar%20Prince.ogg",
+      "answer": "Scheherazade by Rimsky Korsakov"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Debussy%20-%20Arabesque%20No-1%20in%20E%20(Piano%20Performance%20by%20eld%C3%BCendes%C3%BCarez).wav",
+      "answer": "Arabesque No. 1 by Debussy"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Kevin%20MacLeod%20-%20Erik%20Satie%20Gymnopedie%20No%201.ogg",
+      "answer": "Gymnopedie No. 1 by Satie"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Kevin%20MacLeod%20-%20Erik%20Satie%20Gymnopedie%20No%202.ogg",
+      "answer": "Gymnopedie No. 2 by Satie"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Daniel%20Bautista%20-%20Weirdos%20And%20Classics%20-%20Some%20Polovtsian%20Dances%20(Borodin).ogg",
+      "answer": "Prince Igor Polovtsian Dances by Borodin"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Tchaikovsky%20-%20Dance%20of%20the%20Sugar%20Plum%20Fairy%20-%20The%20Nutcracker.ogg",
+      "answer": "The Nutcracker Suite by Tchaikovsky"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Antonin%20Dvorak%20-%20symphony%20no.%209%20in%20e%20minor%20'from%20the%20new%20world',%20op.%2095%20-%20iv.%20allegro%20con%20fuoco.ogg",
+      "answer": "Symphony No. 9 New World by Dvorak"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Tchaikovsky,%20Symphony%20No.%206%20In%20B%20Minor,%20Op.%2074,%20'Pathetique'%20-%20I.%20Adagio,%20Allegro%20Non%20Troppo.ogg",
+      "answer": "Symphony No. 6 Pathetique by Tchaikovsky"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Columbia-dwx1550ix-c-wlx1289.ogg",
+      "answer": "Prelude to the Afternoon of a Faun by Debussy"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Dvo%C5%99%C3%A1k%20-%20Humoresque%20Op.%20101%20No.%207.ogg",
+      "answer": "Humoresque by Dvorak"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Elgar%3B%20Enigma%20variations,%20Theme%20IX.%20Nimrod.ogg",
+      "answer": "Enigma Variations Nimrod by Elgar"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Maurice%20Ravel%20-%20Pavane%20pour%20une%20infante%20d%C3%A9funte.ogg",
+      "answer": "Pavane for a Dead Princess by Ravel"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Rimsky-Korsakov%20-%20flight%20of%20the%20bumblebee.oga",
+      "answer": "Flight of the Bumblebee by Rimsky Korsakov"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Pomp%20and%20circumstances%20No.%201.ogg",
+      "answer": "Pomp and Circumstance March No. 1 by Elgar"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Clair%20de%20lune%20(Claude%20Debussy)%20Suite%20bergamasque.ogg",
+      "answer": "Clair de Lune by Debussy"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/La%20mer%20-%20I.%20De%20l'aube%20%C3%A0%20midi%20sur%20la%20mer%20-%20Concert%20Band%20-%20United%20States%20Air%20Force%20Band.mp3",
+      "answer": "La Mer by Debussy"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Holst,%20The%20Planets,%20Op.%2032%20-%20I.%20Mars,%20the%20Bringer%20of%20War.ogg",
+      "answer": "The Planets Mars by Holst"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Gustav%20Holst%20-%20the%20planets,%20op.%2032%20-%20iv.%20jupiter,%20the%20bringer%20of%20jollity.ogg",
+      "answer": "The Planets Jupiter by Holst"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Edward%20Elgar%20-%20cello%20concerto%20in%20e%20minor,%20op.%2085%20-%20iv.%20allegro.ogg",
+      "answer": "Cello Concerto by Elgar"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Bolero-Maurice%20Ravel-1930.ogg",
+      "answer": "Bolero by Ravel"
+    },
+    {
+      "music": "https://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Orff%20-%20%C2%ABCarmina%20Burana%C2%BB%20-%20%C2%ABFortuna%20imperatrix%20mundi%C2%BB%20-%20(prime%2030%20battute).ogg",
+      "answer": "O Fortuna from Carmina Burana by Orff"
+    },
+    {
+      "music": "https://drive.google.com/uc?export=download&id=1aR2HeCEnRnMzfIop8TyVCLSH3F8xJYOe",
+      "answer": "Adagio for Strings by Barber"
+    }
+  ]
+}
