@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classical Music Quiz</title>
+    <link id="dynamic-favicon" rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎵</text></svg>">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --background-color: #ecf0f1;
+            --card-bg-color: #ffffff;
+            --correct-color: #27ae60;
+            --incorrect-color: #e74c3c;
+            --font-color: #34495e;
+            --border-radius: 12px;
+            --box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            min-height: 100%;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at center, #ffffff 0%, #eef4ff 55%, #dde9ff 100%);
+            color: var(--font-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        #page-bg-canvas {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0.92);
+            border-radius: var(--border-radius);
+            box-shadow: 0 18px 40px rgba(30, 41, 59, 0.12);
+            width: 100%;
+            max-width: 700px;
+            overflow: hidden;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+
+        .view {
+            padding: 30px 40px;
+            display: none;
+        }
+
+        .view.active {
+            display: block;
+        }
+
+        #setup-view h1 {
+            text-align: center;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        #setup-view p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        #json-input {
+            width: 100%;
+            height: 200px;
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            padding: 12px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+            resize: vertical;
+            background: rgba(255,255,255,0.95);
+            outline: none;
+        }
+        
+        #json-input:focus {
+            border-color: var(--primary-color);
+        }
+
+        .order-options {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .order-options label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .quiz-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        #progress-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-grow: 1;
+            min-width: 200px;
+        }
+
+        #progress-bar-container {
+            flex-grow: 1;
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+
+        #progress-bar {
+            height: 100%;
+            width: 0%;
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            transition: width 0.3s ease-in-out;
+        }
+
+        #progress-text, #score-text {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            white-space: nowrap;
+        }
+
+        .audio-wrapper {
+            margin-bottom: 25px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .audio-player {
+            width: 100%;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        #options-container.blank-form {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        #blank-input {
+            flex-grow: 1;
+            padding: 15px;
+            font-size: 1rem;
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.2s ease, transform 0.1s;
+        }
+
+        #blank-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .secondary-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            margin-bottom: 10px;
+        }
+
+        #feedback-container {
+            margin-top: 25px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            border-left: 5px solid var(--primary-color);
+            display: none;
+        }
+
+        #feedback-container.correct { border-left-color: var(--correct-color); }
+        #feedback-container.incorrect { border-left-color: var(--incorrect-color); }
+
+        #feedback-container p {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+        
+        #feedback-explanation {
+            font-style: italic;
+            color: var(--secondary-color);
+        }
+
+        #summary-view h2 {
+            text-align: center;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        #score-container {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        #score-container span {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+        }
+
+        #summary-message {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .summary-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .summary-controls .btn {
+            width: 100%;
+            max-width: 320px;
+        }
+
+        .controls {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .btn:hover:not(:disabled) {
+            background-color: #2980b9;
+        }
+
+        .btn:active:not(:disabled) {
+            transform: scale(0.98);
+        }
+
+        .btn:disabled {
+            background-color: #bdc3c7;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        .btn-secondary {
+            background-color: #7f8c8d;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+
+        .btn-secondary:hover:not(:disabled) {
+            background-color: #95a5a6;
+        }
+
+        #error-message {
+            color: var(--incorrect-color);
+            margin-top: 15px;
+            text-align: center;
+            font-weight: 600;
+            display: none;
+        }
+
+        /* Animations */
+        .shake {
+            animation: shake 0.3s;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-8px); }
+            75% { transform: translateX(8px); }
+        }
+
+        @media (max-width: 480px) {
+            .view { padding: 20px; }
+            #options-container.blank-form { flex-direction: column; align-items: stretch; }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="page-bg-canvas"></canvas>
+
+    <div class="container">
+        <!-- Setup View -->
+        <div id="setup-view" class="view active">
+            <h1>Classical Music Quiz</h1>
+            <p>Paste your quiz JSON data below to begin.</p>
+            <textarea id="json-input" spellcheck="false"></textarea>
+            
+            <div class="order-options">
+                <label>
+                    <input type="radio" name="order" value="sequence" checked> Sequential
+                </label>
+                <label>
+                    <input type="radio" name="order" value="random"> Random
+                </label>
+            </div>
+
+            <div class="controls">
+                <button id="start-btn" class="btn">Start Quiz</button>
+            </div>
+            <p id="error-message"></p>
+        </div>
+
+        <!-- Quiz View -->
+        <div id="quiz-view" class="view">
+            <div class="quiz-header"> 
+                <div id="progress-wrapper">
+                    <div id="progress-bar-container">
+                        <div id="progress-bar"></div>
+                    </div>
+                    <span id="progress-text"></span>
+                </div>
+                <span id="score-text">Score: 0</span>
+            </div>
+
+            <div class="audio-wrapper">
+                <p style="margin-bottom: 10px; font-weight: 500; color: var(--secondary-color);">What is playing?</p>
+                <audio id="audio-element" class="audio-player" controls autoplay></audio>
+            </div>
+
+            <form id="quiz-form">
+                <div id="options-container" class="blank-form">
+                    <input type="text" id="blank-input" placeholder="Type your answer (e.g. Fur Elise by Beethoven)" autocomplete="off" />
+                    <button type="submit" id="submit-btn" class="btn">Submit</button>
+                </div>
+                
+                <div class="secondary-actions">
+                    <button type="button" id="hint-btn" class="btn btn-secondary">Show Hint</button>
+                    <button type="button" id="skip-btn" class="btn btn-secondary">Skip</button>
+                </div>
+            </form>
+
+            <div id="feedback-container">
+                <p id="feedback-result"></p>
+                <span id="feedback-explanation"></span>
+            </div>
+
+            <div class="controls" id="next-container" style="display: none;">
+                <button id="next-btn" class="btn">Next Question</button>
+            </div>
+        </div>
+
+        <!-- Summary View -->
+        <div id="summary-view" class="view">
+            <h2 id="summary-title">Quiz Complete!</h2>
+            <div id="score-container"></div>
+            <p id="summary-message"></p>
+            
+            <div class="controls summary-controls">
+                <button id="retake-btn" class="btn" style="display: none;"></button>
+                <button id="restart-btn" class="btn">Start Another Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Default demo quiz payload
+            const defaultData = {
+                "quiz": [
+                    {
+                        "music": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Beethoven_Moonlight_1st_movement.ogg",
+                        "answer": "Moonlight Sonata by Beethoven"
+                    },
+                    {
+                        "music": "https://upload.wikimedia.org/wikipedia/commons/b/b8/F%C3%BCr_Elise.ogg",
+                        "answer": "Fur Elise by Beethoven"
+                    }
+                ]
+            };
+
+            // State Variables
+            let quizData = [];
+            let currentIndex = 0;
+            let score = 0;
+            let hasFailedCurrent = false;
+            let incorrectQuestions = [];
+
+            // DOM Elements
+            const views = {
+                setup: document.getElementById('setup-view'),
+                quiz: document.getElementById('quiz-view'),
+                summary: document.getElementById('summary-view'),
+            };
+
+            const jsonInput = document.getElementById('json-input');
+            const startBtn = document.getElementById('start-btn');
+            const errorMessage = document.getElementById('error-message');
+            
+            const progressBar = document.getElementById('progress-bar');
+            const progressText = document.getElementById('progress-text');
+            const scoreText = document.getElementById('score-text');
+            const audioElement = document.getElementById('audio-element');
+            const quizForm = document.getElementById('quiz-form');
+            const answerInput = document.getElementById('blank-input');
+            const submitBtn = document.getElementById('submit-btn');
+            const hintBtn = document.getElementById('hint-btn');
+            const skipBtn = document.getElementById('skip-btn');
+            
+            const feedbackContainer = document.getElementById('feedback-container');
+            const feedbackResult = document.getElementById('feedback-result');
+            const feedbackExplanation = document.getElementById('feedback-explanation');
+            const nextContainer = document.getElementById('next-container');
+            const nextBtn = document.getElementById('next-btn');
+            
+            const summaryTitle = document.getElementById('summary-title');
+            const summaryMessage = document.getElementById('summary-message');
+            const scoreContainer = document.getElementById('score-container');
+            const restartBtn = document.getElementById('restart-btn');
+            const retakeBtn = document.getElementById('retake-btn');
+
+            // --- Background Canvas Logic ---
+            const pageBgCanvas = document.getElementById('page-bg-canvas');
+            const pageBgCtx = pageBgCanvas.getContext('2d');
+            let bgParticles = [];
+            let bgMouse = { x: -9999, y: -9999 };
+
+            function resizeBackground() {
+                pageBgCanvas.width = window.innerWidth;
+                pageBgCanvas.height = window.innerHeight;
+            }
+
+            function createBackgroundParticles() {
+                const count = Math.max(90, Math.floor((window.innerWidth * window.innerHeight) / 14000));
+                bgParticles = [];
+                for (let i = 0; i < count; i++) {
+                    bgParticles.push({
+                        x: Math.random() * pageBgCanvas.width,
+                        y: Math.random() * pageBgCanvas.height,
+                        vx: (Math.random() - 0.5) * 0.8,
+                        vy: (Math.random() - 0.5) * 0.8,
+                        r: Math.random() * 2.4 + 1.2
+                    });
+                }
+            }
+
+            function animateBackground() {
+                pageBgCtx.clearRect(0, 0, pageBgCanvas.width, pageBgCanvas.height);
+
+                for (const p of bgParticles) {
+                    p.x += p.vx;
+                    p.y += p.vy;
+
+                    if (p.x < 0 || p.x > pageBgCanvas.width) p.vx *= -1;
+                    if (p.y < 0 || p.y > pageBgCanvas.height) p.vy *= -1;
+
+                    const dx = p.x - bgMouse.x;
+                    const dy = p.y - bgMouse.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < 140) {
+                        p.x += dx * 0.012;
+                        p.y += dy * 0.012;
+                    }
+
+                    pageBgCtx.beginPath();
+                    pageBgCtx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    pageBgCtx.fillStyle = "rgba(59, 130, 246, 0.50)";
+                    pageBgCtx.fill();
+
+                    pageBgCtx.beginPath();
+                    pageBgCtx.arc(p.x, p.y, p.r * 4, 0, Math.PI * 2);
+                    pageBgCtx.fillStyle = "rgba(96, 165, 250, 0.06)";
+                    pageBgCtx.fill();
+                }
+
+                for (let i = 0; i < bgParticles.length; i++) {
+                    for (let j = i + 1; j < bgParticles.length; j++) {
+                        const dx = bgParticles[i].x - bgParticles[j].x;
+                        const dy = bgParticles[i].y - bgParticles[j].y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+
+                        if (dist < 130) {
+                            pageBgCtx.beginPath();
+                            pageBgCtx.moveTo(bgParticles[i].x, bgParticles[i].y);
+                            pageBgCtx.lineTo(bgParticles[j].x, bgParticles[j].y);
+                            pageBgCtx.strokeStyle = `rgba(59, 130, 246, ${0.12 * (1 - dist / 130)})`;
+                            pageBgCtx.lineWidth = 1;
+                            pageBgCtx.stroke();
+                        }
+                    }
+                }
+                requestAnimationFrame(animateBackground);
+            }
+
+            window.addEventListener('resize', () => {
+                resizeBackground();
+                createBackgroundParticles();
+            });
+
+            window.addEventListener('mousemove', (e) => {
+                bgMouse.x = e.clientX;
+                bgMouse.y = e.clientY;
+            });
+
+            window.addEventListener('mouseleave', () => {
+                bgMouse.x = -9999;
+                bgMouse.y = -9999;
+            });
+
+            resizeBackground();
+            createBackgroundParticles();
+            animateBackground();
+
+            // --- Quiz Logic ---
+            const urlParams = new URLSearchParams(window.location.search);
+            const externalUrl = urlParams.get('url');
+
+            if (externalUrl) {
+                jsonInput.value = 'Loading quiz from URL...';
+                jsonInput.disabled = true;
+                startBtn.disabled = true;
+
+                fetch(externalUrl)
+                    .then(response => {
+                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                        return response.json();
+                    })
+                    .then(data => {
+                        jsonInput.value = JSON.stringify(data, null, 2);
+                        jsonInput.disabled = false;
+                        startBtn.disabled = false;
+                        
+                        // Automatically start the quiz when loaded via URL parameter
+                        startBtn.click();
+                    })
+                    .catch(error => {
+                        console.error("Failed to load from URL parameter:", error);
+                        errorMessage.textContent = `Error loading from URL: ${error.message}`;
+                        errorMessage.style.display = 'block';
+                        jsonInput.value = JSON.stringify(defaultData, null, 2);
+                        jsonInput.disabled = false;
+                        startBtn.disabled = false;
+                    });
+            } else {
+                jsonInput.value = JSON.stringify(defaultData, null, 2);
+            }
+
+            const switchView = (viewName) => {
+                Object.values(views).forEach(view => view.classList.remove('active'));
+                if (views[viewName]) views[viewName].classList.add('active');
+            };
+
+            const shuffleArray = (array) => {
+                const newArray = [...array];
+                for (let i = newArray.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+                }
+                return newArray;
+            };
+
+            // Normalize string for fuzzy comparison
+            function normalize(str) {
+                return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]/g, '');
+            }
+
+            const updateProgressBar = () => {
+                const progress = (currentIndex / quizData.length) * 100;
+                progressBar.style.width = `${progress}%`;
+                progressText.textContent = `${currentIndex + 1} / ${quizData.length}`;
+                scoreText.textContent = `Score: ${score}`;
+            };
+
+            const loadQuestion = () => {
+                hasFailedCurrent = false;
+                feedbackContainer.style.display = 'none';
+                feedbackContainer.classList.remove('correct', 'incorrect');
+                nextContainer.style.display = 'none';
+                answerInput.style.borderColor = '#bdc3c7';
+                
+                answerInput.value = '';
+                answerInput.disabled = false;
+                submitBtn.disabled = false;
+                hintBtn.disabled = false;
+                skipBtn.disabled = false;
+                feedbackExplanation.textContent = '';
+
+                const current = quizData[currentIndex];
+                updateProgressBar();
+
+                audioElement.src = current.music;
+                audioElement.load();
+                
+                const playPromise = audioElement.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(() => {
+                        feedbackContainer.style.display = 'block';
+                        feedbackResult.innerHTML = "<em>Autoplay prevented by browser. Please click Play manually.</em>";
+                        feedbackContainer.className = ''; 
+                    });
+                }
+                setTimeout(() => answerInput.focus(), 100);
+            };
+
+            startBtn.addEventListener('click', () => {
+                try {
+                    const parsed = JSON.parse(jsonInput.value);
+                    if (!parsed.quiz || !Array.isArray(parsed.quiz) || parsed.quiz.length === 0) {
+                        throw new Error("JSON must contain a non-empty 'quiz' array.");
+                    }
+
+                    const selectedOrder = document.querySelector('input[name="order"]:checked').value;
+                    if (selectedOrder === 'random') {
+                        quizData = shuffleArray(parsed.quiz);
+                    } else {
+                        quizData = parsed.quiz;
+                    }
+
+                    currentIndex = 0;
+                    score = 0;
+                    incorrectQuestions = [];
+                    errorMessage.style.display = 'none';
+                    switchView('quiz');
+                    loadQuestion();
+                } catch (err) {
+                    errorMessage.textContent = "Invalid JSON structure. Please check your syntax.";
+                    errorMessage.style.display = 'block';
+                }
+            });
+
+            const showNextControls = () => {
+                answerInput.disabled = true;
+                submitBtn.disabled = true;
+                hintBtn.disabled = true;
+                skipBtn.disabled = true;
+                
+                const progress = ((currentIndex + 1) / quizData.length) * 100;
+                progressBar.style.width = `${progress}%`;
+
+                nextContainer.style.display = 'block';
+                
+                if (currentIndex === quizData.length - 1) {
+                    nextBtn.textContent = 'Finish Quiz';
+                } else {
+                    nextBtn.textContent = 'Next Question';
+                }
+                nextBtn.focus();
+            };
+
+            quizForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const current = quizData[currentIndex];
+                const userGuess = normalize(answerInput.value);
+                const correctAnswer = normalize(current.answer);
+
+                if (userGuess === correctAnswer) {
+                    if (!hasFailedCurrent) {
+                        score++;
+                        feedbackResult.textContent = "Correct! 🎉";
+                    } else {
+                        feedbackResult.textContent = "Correct! 🎉 (No points awarded)";
+                        incorrectQuestions.push(current);
+                    }
+                    answerInput.style.borderColor = 'var(--correct-color)';
+                    feedbackContainer.className = 'correct';
+                    feedbackContainer.style.display = 'block';
+                    scoreText.textContent = `Score: ${score}`;
+                    showNextControls();
+                } else {
+                    if (!hasFailedCurrent) {
+                        // First incorrect attempt
+                        hasFailedCurrent = true;
+                        feedbackResult.textContent = "Incorrect! 😔 Try again or use a hint.";
+                        answerInput.style.borderColor = 'var(--incorrect-color)';
+                        feedbackContainer.className = 'incorrect';
+                        feedbackContainer.style.display = 'block';
+                        answerInput.classList.add('shake');
+                        answerInput.value = '';
+                        setTimeout(() => answerInput.classList.remove('shake'), 300);
+                    } else {
+                        // Second incorrect attempt - move to next
+                        incorrectQuestions.push(current);
+                        feedbackResult.textContent = "Incorrect again! 😔";
+                        feedbackExplanation.innerHTML = `The correct answer was: <strong>${current.answer}</strong>`;
+                        answerInput.style.borderColor = 'var(--incorrect-color)';
+                        feedbackContainer.className = 'incorrect';
+                        feedbackContainer.style.display = 'block';
+                        answerInput.classList.add('shake');
+                        setTimeout(() => answerInput.classList.remove('shake'), 300);
+                        showNextControls();
+                    }
+                }
+            });
+
+            hintBtn.addEventListener('click', () => {
+                const original = quizData[currentIndex].answer;
+                const hint = original.split(' ').map(word => {
+                    if (word.length <= 2) return word;
+                    return word[0] + '_'.repeat(word.length - 2) + word[word.length - 1];
+                }).join(' ');
+
+                feedbackContainer.className = '';
+                feedbackResult.textContent = "Hint Activated";
+                feedbackExplanation.textContent = `Answer format: ${hint}`;
+                feedbackContainer.style.display = 'block';
+                answerInput.focus();
+            });
+
+            skipBtn.addEventListener('click', () => {
+                const current = quizData[currentIndex];
+                incorrectQuestions.push(current);
+                feedbackResult.textContent = "Skipped!";
+                feedbackExplanation.innerHTML = `The correct answer was: <strong>${current.answer}</strong>`;
+                answerInput.style.borderColor = 'var(--incorrect-color)';
+                feedbackContainer.className = 'incorrect';
+                feedbackContainer.style.display = 'block';
+                showNextControls();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                currentIndex++;
+                if (currentIndex < quizData.length) {
+                    loadQuestion();
+                } else {
+                    audioElement.pause();
+                    showSummary();
+                }
+            });
+
+            const showSummary = () => {
+                scoreContainer.innerHTML = `You scored <span>${score}</span> out of ${quizData.length}.`;
+                
+                const percentage = (score / quizData.length) * 100;
+                if (percentage === 100) {
+                    summaryTitle.textContent = "Maestro Level! 🎼";
+                    summaryMessage.textContent = "Flawless recognition. You truly know your classics!";
+                } else if (percentage >= 50) {
+                    summaryTitle.textContent = "Great Job! 🎵";
+                    summaryMessage.textContent = "You have a solid ear for classical repertoire.";
+                } else {
+                    summaryTitle.textContent = "Keep Listening! 🎻";
+                    summaryMessage.textContent = "Classical music takes time to master. Keep practicing!";
+                }
+                
+                if (incorrectQuestions.length > 0) {
+                    retakeBtn.textContent = `Retake ${incorrectQuestions.length} Incorrect Question${incorrectQuestions.length > 1 ? 's' : ''}`;
+                    retakeBtn.style.display = 'block';
+                } else {
+                    retakeBtn.style.display = 'none';
+                }
+                
+                switchView('summary');
+            };
+
+            retakeBtn.addEventListener('click', () => {
+                quizData = [...incorrectQuestions];
+                incorrectQuestions = [];
+                currentIndex = 0;
+                score = 0;
+                switchView('quiz');
+                loadQuestion();
+            });
+
+            restartBtn.addEventListener('click', () => {
+                switchView('setup');
+            });
+        });
+    </script>
+</body>
+</html>
