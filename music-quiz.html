@@ -224,6 +224,16 @@
             color: var(--secondary-color);
         }
 
+        #feedback-background {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px dashed #bdc3c7;
+            font-size: 0.95rem;
+            color: var(--font-color);
+            line-height: 1.5;
+            display: none;
+        }
+
         #summary-view h2 {
             text-align: center;
             color: var(--secondary-color);
@@ -383,6 +393,7 @@
             <div id="feedback-container">
                 <p id="feedback-result"></p>
                 <span id="feedback-explanation"></span>
+                <div id="feedback-background"></div>
             </div>
 
             <div class="controls" id="next-container" style="display: none;">
@@ -410,7 +421,8 @@
                 "quiz": [
                     {
                         "music": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Beethoven_Moonlight_1st_movement.ogg",
-                        "answer": "Moonlight Sonata by Beethoven"
+                        "answer": "Moonlight Sonata by Beethoven",
+                        "background": "The Piano Sonata No. 14 in C♯ minor, marked Quasi una fantasia, is a piano sonata by Ludwig van Beethoven. Completed in 1801 and dedicated in 1802 to his pupil, Countess Giulietta Guicciardi, it is a highly popular and beloved piece."
                     },
                     {
                         "music": "https://upload.wikimedia.org/wikipedia/commons/b/b8/F%C3%BCr_Elise.ogg",
@@ -450,6 +462,7 @@
             const feedbackContainer = document.getElementById('feedback-container');
             const feedbackResult = document.getElementById('feedback-result');
             const feedbackExplanation = document.getElementById('feedback-explanation');
+            const feedbackBackground = document.getElementById('feedback-background');
             const nextContainer = document.getElementById('next-container');
             const nextBtn = document.getElementById('next-btn');
             
@@ -570,9 +583,6 @@
                         jsonInput.value = JSON.stringify(data, null, 2);
                         jsonInput.disabled = false;
                         startBtn.disabled = false;
-                        
-                        // Automatically start the quiz when loaded via URL parameter
-                        startBtn.click();
                     })
                     .catch(error => {
                         console.error("Failed to load from URL parameter:", error);
@@ -616,6 +626,8 @@
                 hasFailedCurrent = false;
                 feedbackContainer.style.display = 'none';
                 feedbackContainer.classList.remove('correct', 'incorrect');
+                feedbackBackground.style.display = 'none';
+                feedbackBackground.innerHTML = '';
                 nextContainer.style.display = 'none';
                 answerInput.style.borderColor = '#bdc3c7';
                 
@@ -704,6 +716,12 @@
                     }
                     answerInput.style.borderColor = 'var(--correct-color)';
                     feedbackContainer.className = 'correct';
+                    
+                    if (current.background) {
+                        feedbackBackground.innerHTML = `<strong>Background:</strong> ${current.background}`;
+                        feedbackBackground.style.display = 'block';
+                    }
+                    
                     feedbackContainer.style.display = 'block';
                     scoreText.textContent = `Score: ${score}`;
                     showNextControls();
@@ -714,6 +732,12 @@
                         feedbackResult.textContent = "Incorrect! 😔 Try again or use a hint.";
                         answerInput.style.borderColor = 'var(--incorrect-color)';
                         feedbackContainer.className = 'incorrect';
+                        
+                        if (current.background) {
+                            feedbackBackground.innerHTML = `<strong>Background:</strong> ${current.background}`;
+                            feedbackBackground.style.display = 'block';
+                        }
+                        
                         feedbackContainer.style.display = 'block';
                         answerInput.classList.add('shake');
                         answerInput.value = '';
@@ -725,6 +749,12 @@
                         feedbackExplanation.innerHTML = `The correct answer was: <strong>${current.answer}</strong>`;
                         answerInput.style.borderColor = 'var(--incorrect-color)';
                         feedbackContainer.className = 'incorrect';
+                        
+                        if (current.background) {
+                            feedbackBackground.innerHTML = `<strong>Background:</strong> ${current.background}`;
+                            feedbackBackground.style.display = 'block';
+                        }
+                        
                         feedbackContainer.style.display = 'block';
                         answerInput.classList.add('shake');
                         setTimeout(() => answerInput.classList.remove('shake'), 300);
@@ -754,6 +784,12 @@
                 feedbackExplanation.innerHTML = `The correct answer was: <strong>${current.answer}</strong>`;
                 answerInput.style.borderColor = 'var(--incorrect-color)';
                 feedbackContainer.className = 'incorrect';
+                
+                if (current.background) {
+                    feedbackBackground.innerHTML = `<strong>Background:</strong> ${current.background}`;
+                    feedbackBackground.style.display = 'block';
+                }
+                
                 feedbackContainer.style.display = 'block';
                 showNextControls();
             });
