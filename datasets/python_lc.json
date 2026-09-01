@@ -646,13 +646,13 @@
     {
       "question": "Split the string s on whitespace into a list of words:________",
       "type": "blank",
-      "answer": "words = s.split()",
+      "answer": "s.split()",
       "explanation": "This Python code splits s on any run of whitespace characters (spaces, tabs, newlines) and returns a list of the resulting substrings.\nCalling split() with no arguments also automatically discards leading/trailing whitespace and collapses multiple consecutive spaces, unlike splitting on a specific delimiter."
     },
     {
       "question": "Split the string s on the comma character into a list of substrings:________",
       "type": "blank",
-      "answer": "parts = s.split(',')",
+      "answer": "s.split(',')",
       "explanation": "This Python code splits s wherever a comma character occurs, returning a list of the substrings between commas.\nUnlike the no-argument version of split(), this does not collapse consecutive delimiters, so \"a,,b\".split(',') would produce ['a', '', 'b']."
     },
     {
