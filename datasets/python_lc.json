@@ -271,7 +271,7 @@
       "answer": "d.setdefault(key, []).append(value)",
       "explanation": "This Python code retrieves the list stored at key in the plain dictionary d, first inserting an empty list at that key if it doesn't already exist, and then appends value to that list.\nWhile this achieves the same grouping result as a defaultdict(list), it's generally considered less clean because it repeats the [] default on every call, whereas defaultdict only needs the factory specified once at creation."
     },
-     {
+    {
       "question": "Import Counter, very common for character/count problems, from the collections module:________",
       "type": "blank",
       "answer": "from collections import Counter",
@@ -734,6 +734,12 @@
       "explanation": "This Python code searches arr for the first occurrence of x and returns its index.\nIf x is not found anywhere in arr, this raises a ValueError."
     },
     {
+      "question": "Find the index of the first occurrence of 30 in the list arr, or return -1 if 30 is not present:________",
+      "type": "blank",
+      "answer": "idx = arr.index(30) if 30 in arr else -1",
+      "explanation": "This Python conditional expression first checks whether 30 is present in arr. If it is, arr.index(30) returns the index of its first occurrence and assigns it to idx; otherwise, idx is assigned -1.\nThe membership check avoids the ValueError that arr.index(30) would raise if 30 were absent."
+    },
+    {
       "question": "Get the number of elements in the list arr:________",
       "type": "blank",
       "answer": "len(arr)",
@@ -847,7 +853,6 @@
       "answer": "abs(x)",
       "explanation": "This Python code returns the non-negative magnitude of x, converting negative numbers to their positive equivalent and leaving non-negative numbers unchanged.\nThis works for integers, floats, and even complex numbers, where it returns the magnitude."
     },
-    {
     {
       "question": "Generate a sequence of numbers from 0 up to (but not including) n, one of the essential built-ins:________",
       "type": "blank",
