@@ -946,7 +946,7 @@
     {
       "question": "Apply the cache decorator to a recursive memoized function dfs that takes parameters i and state:________",
       "type": "blank",
-      "answer": "@cache\ndef dfs(i, state):\n    ...",
+      "answer": "@cache\ndef dfs(i, state):",
       "explanation": "This Python code decorates the function dfs with @cache, so that every unique combination of arguments (i, state) passed to dfs is computed only once and then reused on subsequent calls with the same arguments.\nThis is the standard modern idiom for top-down dynamic programming in Python, replacing manually maintained memoization dictionaries."
     },
     {
@@ -958,7 +958,7 @@
     {
       "question": "Apply lru_cache with no size limit to a recursive memoized function dfs:________",
       "type": "blank",
-      "answer": "@lru_cache(None)\ndef dfs(...):\n    ...",
+      "answer": "@lru_cache(None)\ndef dfs(...):",
       "explanation": "This Python code decorates dfs with @lru_cache(None), where passing None as maxsize removes any limit on the number of cached results, making its behavior equivalent to @cache.\nFor current Python LeetCode solutions, @cache is generally preferred as the more concise, modern equivalent when an unbounded cache is desired."
     },
     {
