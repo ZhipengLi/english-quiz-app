@@ -664,7 +664,7 @@
     {
       "question": "Join the elements of the list words into a single string, separated by spaces:________",
       "type": "blank",
-      "answer": "s = ' '.join(words)",
+      "answer": "' '.join(words)",
       "explanation": "This Python code concatenates every element in the iterable words into a single string, inserting a single space between each pair of adjacent elements.\nThis is the standard idiom for reassembling a list of words back into a sentence."
     },
     {
