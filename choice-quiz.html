@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Quiz App</title>
     <link id="dynamic-favicon" rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔠</text></svg>">
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
@@ -654,8 +655,7 @@
             let currentQuestionIndex = 0;
             let score = 0;
             
-            // New state variables for Blank mode configuration
-            let blankMode = 'standard'; // 'standard', 'reverse-all', 'reverse-incorrect', 'repeat-incorrect'
+            let blankMode = 'standard';
             let isSubStep = false;
             let part1Correct = false;
             let part2Correct = false;
@@ -738,7 +738,6 @@
             function createBackgroundParticles() {
                 const count = Math.max(90, Math.floor((window.innerWidth * window.innerHeight) / 14000));
                 bgParticles = [];
-
                 for (let i = 0; i < count; i++) {
                     bgParticles.push({
                         x: Math.random() * pageBgCanvas.width,
@@ -752,7 +751,6 @@
 
             function animateBackground() {
                 pageBgCtx.clearRect(0, 0, pageBgCanvas.width, pageBgCanvas.height);
-
                 for (const p of bgParticles) {
                     p.x += p.vx;
                     p.y += p.vy;
@@ -796,7 +794,6 @@
                         }
                     }
                 }
-
                 requestAnimationFrame(animateBackground);
             }
 
@@ -872,7 +869,8 @@
             const getOriginalWord = () => {
                 const textElem = document.getElementById('question-text');
                 if(!textElem) return "";
-                return textElem.textContent.replace(/_+/g, '').trim();
+                // FIXED: Use {2,} so single underscores from code snippets aren't stripped
+                return textElem.textContent.replace(/_{2,}/g, '').trim();
             };
 
             const handleSpeak = () => {
@@ -895,13 +893,8 @@
 
                 speakBtn.classList.add('speaking');
                 
-                utterance.onend = () => {
-                    speakBtn.classList.remove('speaking');
-                };
-
-                utterance.onerror = () => { 
-                    speakBtn.classList.remove('speaking');
-                };
+                utterance.onend = () => { speakBtn.classList.remove('speaking'); };
+                utterance.onerror = () => { speakBtn.classList.remove('speaking'); };
 
                 window.speechSynthesis.speak(utterance);
             };
@@ -963,7 +956,8 @@
                             }
                         } else if (type === 'blank') {
                             const answerUnderscores = question.answer.replace(/\S/g, '_');
-                            question.question = question.question.replace(/_+(?:\s+_+)*/, answerUnderscores);
+                            // FIXED: Use {2,} so single underscores like in bisect_left are safely ignored
+                            question.question = question.question.replace(/_{2,}(?:\s+_{2,})*/, answerUnderscores);
                         } else {
                             throw new Error(`${qIdentifier} has an invalid type: '${type}'. Must be 'choice' or 'blank'.`);
                         }
@@ -1073,11 +1067,13 @@
 
                 if (isSubStep) {
                     if (blankMode === 'reverse-all' || blankMode === 'reverse-incorrect') {
-                        const originalPrompt = originalQuestion.question.replace(/_+/g, '').trim();
+                        // FIXED: Use {2,} to ensure we only remove the actual generated blanks during reverse mode
+                        const originalPrompt = originalQuestion.question.replace(/_{2,}/g, '').trim();
                         const underscores = originalPrompt.replace(/\S/g, '_');
                         let newQuestionText;
                         
-                        if (originalQuestion.question.trim().startsWith('_')) {
+                        // FIXED: Use regex match to accurately check if the blanks are at the beginning
+                        if (originalQuestion.question.trim().match(/^_{2,}/)) {
                             newQuestionText = `${originalQuestion.answer} ${underscores}`;
                         } else {
                             newQuestionText = `${underscores} ${originalQuestion.answer}`;
@@ -1104,8 +1100,9 @@
                 tempDiv.textContent = questionToDisplay.question;
                 let safeHtml = tempDiv.innerHTML;
 
-                safeHtml = safeHtml.replace(/(_+)(\s+)(?=_+)/g, '$1&nbsp;&nbsp;&nbsp;');
-                questionTextElement.innerHTML = safeHtml.replace(/(_+)/g, '<span class="spaced-underscores">$1</span>');
+                // FIXED: Use {2,} to ensure formatting is ONLY applied to intentionally long blanks, avoiding code snippets
+                safeHtml = safeHtml.replace(/(_{2,})(\s+)(?=_{2,})/g, '$1&nbsp;&nbsp;&nbsp;');
+                questionTextElement.innerHTML = safeHtml.replace(/(_{2,})/g, '<span class="spaced-underscores">$1</span>');
 
                 if (type === 'choice') {
                     optionsContainer.classList.add('choice-options');
@@ -1361,13 +1358,11 @@
 
             const setupCustomFavicon = () => {
                 const urlParams = new URLSearchParams(window.location.search);
-                // Default to graduation cap (🎓) if the 'icon' URL parameter is missing
                 const iconParam = urlParams.get('icon') || '🎓'; 
                 
                 const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">${encodeURIComponent(iconParam)}</text></svg>`;
                 let faviconElement = document.getElementById('dynamic-favicon');
                 
-                // Create the link element dynamically if it doesn't exist in the HTML
                 if (!faviconElement) {
                     faviconElement = document.createElement('link');
                     faviconElement.id = 'dynamic-favicon';
@@ -1403,17 +1398,17 @@
                         loadFromCookie();
                     } finally {
                         jsonInput.placeholder = 'Paste quiz JSON or URL here...';
-                    jsonInput.disabled = false;
-                    startBtn.disabled = false;
+                        jsonInput.disabled = false;
+                        startBtn.disabled = false;
+                    }
+                } else {
+                    loadFromCookie();
                 }
-            } else {
-                loadFromCookie();
-            }
-        };
+            };
 
-        resizeBackground();
-        createBackgroundParticles();
-        animateBackground();
+            resizeBackground();
+            createBackgroundParticles();
+            animateBackground();
             initialize();
 
             startBtn.addEventListener('click', startQuiz);
