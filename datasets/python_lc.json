@@ -884,12 +884,6 @@
       "explanation": "This Python code takes any iterable and returns a new list containing its elements in ascending order by default.\nUnlike a list's in-place .sort() method, sorted() works on any iterable (not just lists) and always returns a new list without modifying the original."
     },
     {
-      "question": "Get an iterator that yields the elements of an iterable in reverse order, one of the essential built-ins:________",
-      "type": "blank",
-      "answer": "reversed(...)",
-      "explanation": "This Python code returns a reverse iterator over the given sequence, yielding elements from last to first.\nThis requires the input to support reverse iteration (like a list, tuple, or string), and does not create a new list immediately, unlike slicing with [::-1]."
-    },
-    {
       "question": "Compute both the quotient and remainder of dividing a by b in a single call:________",
       "type": "blank",
       "answer": "divmod(a, b)",
