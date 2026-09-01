@@ -1,0 +1,779 @@
+{
+  "text": "Common NumPy operations by category",
+  "quiz": [
+    {
+      "question": "[Setup] Import NumPy using the conventional alias np:________",
+      "type": "blank",
+      "answer": "import numpy as np",
+      "explanation": "This imports the NumPy package and binds it to the conventional short name np, which is used throughout most NumPy code."
+    },
+    {
+      "question": "[Array Creation] Create a NumPy array from the Python list [1, 2, 3]:________",
+      "type": "blank",
+      "answer": "np.array([1, 2, 3])",
+      "explanation": "np.array() converts a Python sequence into a NumPy ndarray. NumPy arrays support vectorized operations and multidimensional indexing."
+    },
+    {
+      "question": "[Array Creation] Create a 2×3 array filled with zeros:________",
+      "type": "blank",
+      "answer": "np.zeros((2, 3))",
+      "explanation": "np.zeros() creates an array of the requested shape with every element initialized to 0."
+    },
+    {
+      "question": "[Array Creation] Create a 2×3 array filled with ones:________",
+      "type": "blank",
+      "answer": "np.ones((2, 3))",
+      "explanation": "np.ones() creates an array of the requested shape with every element initialized to 1."
+    },
+    {
+      "question": "[Array Creation] Create a 2×3 array filled with the value 7:________",
+      "type": "blank",
+      "answer": "np.full((2, 3), 7)",
+      "explanation": "np.full() creates an array of the requested shape and fills every element with the supplied value."
+    },
+    {
+      "question": "[Array Creation] Allocate a 2×3 array without initializing its values:________",
+      "type": "blank",
+      "answer": "np.empty((2, 3))",
+      "explanation": "np.empty() allocates an array without setting its entries to a known value. Its initial contents are whatever data already exists in that memory."
+    },
+    {
+      "question": "[Array Creation] Create an array containing 0, 2, 4, 6, and 8:________",
+      "type": "blank",
+      "answer": "np.arange(0, 10, 2)",
+      "explanation": "np.arange(start, stop, step) works similarly to Python range(), but returns a NumPy array. The stop value is excluded."
+    },
+    {
+      "question": "[Array Creation] Create 5 evenly spaced values from 0 through 1 inclusive:________",
+      "type": "blank",
+      "answer": "np.linspace(0, 1, 5)",
+      "explanation": "np.linspace(start, stop, num) creates a fixed number of evenly spaced values and includes the endpoint by default."
+    },
+    {
+      "question": "[Array Creation] Create a 3×3 identity matrix:________",
+      "type": "blank",
+      "answer": "np.eye(3)",
+      "explanation": "np.eye(3) creates a square matrix with 1s on the main diagonal and 0s elsewhere."
+    },
+    {
+      "question": "[Array Creation] Create a 2×3 array of random floating-point values in [0, 1) using the older random API:________",
+      "type": "blank",
+      "answer": "np.random.rand(2, 3)",
+      "explanation": "np.random.rand() creates random floating-point values uniformly distributed over [0, 1). For new code, NumPy generally recommends default_rng()."
+    },
+    {
+      "question": "[Array Properties] Get the shape of array a:________",
+      "type": "blank",
+      "answer": "a.shape",
+      "explanation": "The shape attribute returns a tuple containing the length of each dimension of the array."
+    },
+    {
+      "question": "[Array Properties] Get the number of dimensions of array a:________",
+      "type": "blank",
+      "answer": "a.ndim",
+      "explanation": "The ndim attribute returns how many axes or dimensions the array has."
+    },
+    {
+      "question": "[Array Properties] Get the total number of elements in array a:________",
+      "type": "blank",
+      "answer": "a.size",
+      "explanation": "The size attribute returns the total element count across all dimensions."
+    },
+    {
+      "question": "[Array Properties] Get the element data type of array a:________",
+      "type": "blank",
+      "answer": "a.dtype",
+      "explanation": "The dtype attribute describes the NumPy data type used to store the elements."
+    },
+    {
+      "question": "[Array Properties] Get the number of bytes used by each element of array a:________",
+      "type": "blank",
+      "answer": "a.itemsize",
+      "explanation": "The itemsize attribute returns the size in bytes of one array element."
+    },
+    {
+      "question": "[Indexing & Slicing] Get the first element of one-dimensional array a:________",
+      "type": "blank",
+      "answer": "a[0]",
+      "explanation": "NumPy uses zero-based indexing, so index 0 accesses the first element."
+    },
+    {
+      "question": "[Indexing & Slicing] Get the last element of one-dimensional array a:________",
+      "type": "blank",
+      "answer": "a[-1]",
+      "explanation": "A negative index counts from the end, so -1 accesses the last element."
+    },
+    {
+      "question": "[Indexing & Slicing] Get elements at indices 1 through 3 from array a:________",
+      "type": "blank",
+      "answer": "a[1:4]",
+      "explanation": "Slice notation includes the start index and excludes the stop index."
+    },
+    {
+      "question": "[Indexing & Slicing] Get every other element from array a starting at index 0:________",
+      "type": "blank",
+      "answer": "a[::2]",
+      "explanation": "The third slice component is the step. A step of 2 selects every second element."
+    },
+    {
+      "question": "[Indexing & Slicing] Get the element at row 0, column 1 of a two-dimensional array a:________",
+      "type": "blank",
+      "answer": "a[0, 1]",
+      "explanation": "For a 2D NumPy array, a[row, column] directly indexes the requested cell."
+    },
+    {
+      "question": "[Indexing & Slicing] Get the first row of a two-dimensional array a:________",
+      "type": "blank",
+      "answer": "a[0, :]",
+      "explanation": "The colon selects all columns, so a[0, :] returns row 0."
+    },
+    {
+      "question": "[Indexing & Slicing] Get the second column of a two-dimensional array a:________",
+      "type": "blank",
+      "answer": "a[:, 1]",
+      "explanation": "The colon selects all rows, while column index 1 selects the second column."
+    },
+    {
+      "question": "[Indexing & Slicing] Get columns 1 and 2 from every row of a two-dimensional array a:________",
+      "type": "blank",
+      "answer": "a[:, 1:3]",
+      "explanation": "This selects every row and columns from index 1 up to but not including index 3."
+    },
+    {
+      "question": "[Boolean Filtering] Select only elements of array a that are greater than 10:________",
+      "type": "blank",
+      "answer": "a[a > 10]",
+      "explanation": "The expression a > 10 creates a Boolean mask, and indexing with that mask returns only elements where the mask is True."
+    },
+    {
+      "question": "[Boolean Filtering] Select elements of array a that are greater than 5 and less than 20:________",
+      "type": "blank",
+      "answer": "a[(a > 5) & (a < 20)]",
+      "explanation": "NumPy combines element-wise Boolean conditions with &, and each comparison should be wrapped in parentheses."
+    },
+    {
+      "question": "[Boolean Filtering] Select elements of array a satisfying either condition cond1 or condition cond2:________",
+      "type": "blank",
+      "answer": "a[cond1 | cond2]",
+      "explanation": "The | operator performs element-wise logical OR on Boolean arrays or masks."
+    },
+    {
+      "question": "[Boolean Filtering] Select elements of array a for which Boolean mask is False:________",
+      "type": "blank",
+      "answer": "a[~mask]",
+      "explanation": "The ~ operator negates a Boolean array element by element, turning True into False and False into True."
+    },
+    {
+      "question": "[Reshaping] Reshape array a into 2 rows and 3 columns:________",
+      "type": "blank",
+      "answer": "a.reshape(2, 3)",
+      "explanation": "reshape() changes the array's dimensional layout without changing the total number of elements."
+    },
+    {
+      "question": "[Reshaping] Return a flattened one-dimensional copy of array a:________",
+      "type": "blank",
+      "answer": "a.flatten()",
+      "explanation": "flatten() returns a new one-dimensional copy of the array, so modifying it does not modify the original array."
+    },
+    {
+      "question": "[Reshaping] Return a flattened one-dimensional view of array a when possible:________",
+      "type": "blank",
+      "answer": "a.ravel()",
+      "explanation": "ravel() returns a flattened array and uses a view when possible, which can avoid an unnecessary copy."
+    },
+    {
+      "question": "[Reshaping] Transpose array a using its shorthand attribute:________",
+      "type": "blank",
+      "answer": "a.T",
+      "explanation": "The .T attribute returns the transpose, swapping axes for a 2D matrix so rows become columns and vice versa."
+    },
+    {
+      "question": "[Reshaping] Transpose array a using a NumPy function:________",
+      "type": "blank",
+      "answer": "np.transpose(a)",
+      "explanation": "np.transpose() permutes an array's axes. With a 2D array and no explicit axes, it swaps rows and columns."
+    },
+    {
+      "question": "[Reshaping] Remove dimensions of length 1 from array a:________",
+      "type": "blank",
+      "answer": "np.squeeze(a)",
+      "explanation": "np.squeeze() removes axes whose size is 1 while leaving other dimensions unchanged."
+    },
+    {
+      "question": "[Reshaping] Add a new axis at position 0 to array a:________",
+      "type": "blank",
+      "answer": "np.expand_dims(a, axis=0)",
+      "explanation": "np.expand_dims() inserts a new dimension of size 1 at the specified axis."
+    },
+    {
+      "question": "[Reshaping] Reshape one-dimensional array a into a column vector:________",
+      "type": "blank",
+      "answer": "a.reshape(-1, 1)",
+      "explanation": "Using -1 tells NumPy to infer that dimension automatically. The result has one column and as many rows as needed."
+    },
+    {
+      "question": "[Reshaping] Reshape one-dimensional array a into a row vector:________",
+      "type": "blank",
+      "answer": "a.reshape(1, -1)",
+      "explanation": "Using -1 tells NumPy to infer the number of columns automatically, producing a single-row 2D array."
+    },
+    {
+      "question": "[Combining Arrays] Join arrays a and b along an existing axis:________",
+      "type": "blank",
+      "answer": "np.concatenate([a, b])",
+      "explanation": "np.concatenate() joins arrays along an existing axis and does not create a new stacking dimension."
+    },
+    {
+      "question": "[Combining Arrays] Stack arrays a and b along a new axis:________",
+      "type": "blank",
+      "answer": "np.stack([a, b])",
+      "explanation": "np.stack() joins arrays by creating a new axis, so the output has one more dimension than the inputs."
+    },
+    {
+      "question": "[Combining Arrays] Stack arrays a and b vertically:________",
+      "type": "blank",
+      "answer": "np.vstack([a, b])",
+      "explanation": "np.vstack() stacks arrays row-wise, which is convenient for building a taller 2D array."
+    },
+    {
+      "question": "[Combining Arrays] Stack arrays a and b horizontally:________",
+      "type": "blank",
+      "answer": "np.hstack([a, b])",
+      "explanation": "np.hstack() joins arrays horizontally; for one-dimensional inputs, it concatenates them into a longer 1D array."
+    },
+    {
+      "question": "[Splitting Arrays] Split array a into 4 equal parts:________",
+      "type": "blank",
+      "answer": "np.split(a, 4)",
+      "explanation": "np.split() divides an array into the requested number of equal pieces and raises an error if an equal split is impossible."
+    },
+    {
+      "question": "[Splitting Arrays] Split array a into 3 parts even when equal-sized parts are impossible:________",
+      "type": "blank",
+      "answer": "np.array_split(a, 3)",
+      "explanation": "np.array_split() allows uneven pieces, unlike np.split(), which requires equal division."
+    },
+    {
+      "question": "[Splitting Arrays] Split a two-dimensional array a vertically into separate row groups:________",
+      "type": "blank",
+      "answer": "np.vsplit(a, 2)",
+      "explanation": "np.vsplit() splits an array along its first axis, which corresponds to separating row groups in a 2D array."
+    },
+    {
+      "question": "[Splitting Arrays] Split a two-dimensional array a horizontally into separate column groups:________",
+      "type": "blank",
+      "answer": "np.hsplit(a, 2)",
+      "explanation": "np.hsplit() splits an array along its second axis, which corresponds to separating column groups in a 2D array."
+    },
+    {
+      "question": "[Element-wise Arithmetic] Add arrays a and b element by element:________",
+      "type": "blank",
+      "answer": "a + b",
+      "explanation": "NumPy's + operator performs element-wise addition when the array shapes are compatible."
+    },
+    {
+      "question": "[Element-wise Arithmetic] Subtract array b from array a element by element:________",
+      "type": "blank",
+      "answer": "a - b",
+      "explanation": "NumPy's - operator performs element-wise subtraction."
+    },
+    {
+      "question": "[Element-wise Arithmetic] Multiply arrays a and b element by element:________",
+      "type": "blank",
+      "answer": "a * b",
+      "explanation": "The * operator performs element-wise multiplication, not matrix multiplication."
+    },
+    {
+      "question": "[Element-wise Arithmetic] Divide array a by array b element by element:________",
+      "type": "blank",
+      "answer": "a / b",
+      "explanation": "The / operator performs element-wise division and normally produces floating-point results."
+    },
+    {
+      "question": "[Element-wise Arithmetic] Square every element in array a:________",
+      "type": "blank",
+      "answer": "a ** 2",
+      "explanation": "The ** operator applies exponentiation element by element, so each value in a is squared."
+    },
+    {
+      "question": "[Element-wise Arithmetic] Add arrays a and b using NumPy's explicit function:________",
+      "type": "blank",
+      "answer": "np.add(a, b)",
+      "explanation": "np.add() is the function form of element-wise addition and is equivalent to a + b."
+    },
+    {
+      "question": "[Element-wise Arithmetic] Subtract array b from array a using NumPy's explicit function:________",
+      "type": "blank",
+      "answer": "np.subtract(a, b)",
+      "explanation": "np.subtract() performs element-wise subtraction and is equivalent to a - b."
+    },
+    {
+      "question": "[Element-wise Arithmetic] Multiply arrays a and b using NumPy's explicit function:________",
+      "type": "blank",
+      "answer": "np.multiply(a, b)",
+      "explanation": "np.multiply() performs element-wise multiplication and is equivalent to a * b."
+    },
+    {
+      "question": "[Element-wise Arithmetic] Divide array a by array b using NumPy's explicit function:________",
+      "type": "blank",
+      "answer": "np.divide(a, b)",
+      "explanation": "np.divide() performs element-wise division and is equivalent to a / b."
+    },
+    {
+      "question": "[Element-wise Arithmetic] Raise every element of array a to the second power using a NumPy function:________",
+      "type": "blank",
+      "answer": "np.power(a, 2)",
+      "explanation": "np.power() performs element-wise exponentiation."
+    },
+    {
+      "question": "[Mathematical Functions] Compute the square root of every element in array a:________",
+      "type": "blank",
+      "answer": "np.sqrt(a)",
+      "explanation": "np.sqrt() computes element-wise square roots."
+    },
+    {
+      "question": "[Mathematical Functions] Compute e raised to each element of array a:________",
+      "type": "blank",
+      "answer": "np.exp(a)",
+      "explanation": "np.exp() computes the exponential e**x for every element."
+    },
+    {
+      "question": "[Mathematical Functions] Compute the natural logarithm of every element in array a:________",
+      "type": "blank",
+      "answer": "np.log(a)",
+      "explanation": "np.log() computes the natural logarithm element by element."
+    },
+    {
+      "question": "[Mathematical Functions] Compute the base-10 logarithm of every element in array a:________",
+      "type": "blank",
+      "answer": "np.log10(a)",
+      "explanation": "np.log10() computes the base-10 logarithm element by element."
+    },
+    {
+      "question": "[Mathematical Functions] Compute the absolute value of every element in array a:________",
+      "type": "blank",
+      "answer": "np.abs(a)",
+      "explanation": "np.abs() returns the element-wise absolute value."
+    },
+    {
+      "question": "[Mathematical Functions] Compute the sine of every element in array a:________",
+      "type": "blank",
+      "answer": "np.sin(a)",
+      "explanation": "np.sin() computes the element-wise sine, with inputs interpreted in radians."
+    },
+    {
+      "question": "[Mathematical Functions] Compute the cosine of every element in array a:________",
+      "type": "blank",
+      "answer": "np.cos(a)",
+      "explanation": "np.cos() computes the element-wise cosine, with inputs interpreted in radians."
+    },
+    {
+      "question": "[Mathematical Functions] Compute the tangent of every element in array a:________",
+      "type": "blank",
+      "answer": "np.tan(a)",
+      "explanation": "np.tan() computes the element-wise tangent, with inputs interpreted in radians."
+    },
+    {
+      "question": "[Mathematical Functions] Round every element in array a downward to the nearest integer:________",
+      "type": "blank",
+      "answer": "np.floor(a)",
+      "explanation": "np.floor() returns the greatest integer value less than or equal to each element."
+    },
+    {
+      "question": "[Mathematical Functions] Round every element in array a upward to the nearest integer:________",
+      "type": "blank",
+      "answer": "np.ceil(a)",
+      "explanation": "np.ceil() returns the smallest integer value greater than or equal to each element."
+    },
+    {
+      "question": "[Mathematical Functions] Round every element in array a to the nearest value using NumPy's rounding function:________",
+      "type": "blank",
+      "answer": "np.round(a)",
+      "explanation": "np.round() rounds array values element by element."
+    },
+    {
+      "question": "[Aggregation & Statistics] Compute the sum of all elements in array a:________",
+      "type": "blank",
+      "answer": "np.sum(a)",
+      "explanation": "np.sum() adds all elements when no axis is specified."
+    },
+    {
+      "question": "[Aggregation & Statistics] Compute the arithmetic mean of array a:________",
+      "type": "blank",
+      "answer": "np.mean(a)",
+      "explanation": "np.mean() returns the average of the array values."
+    },
+    {
+      "question": "[Aggregation & Statistics] Compute the median of array a:________",
+      "type": "blank",
+      "answer": "np.median(a)",
+      "explanation": "np.median() returns the middle value, or the average of the two middle values for an even number of items."
+    },
+    {
+      "question": "[Aggregation & Statistics] Get the minimum value in array a:________",
+      "type": "blank",
+      "answer": "np.min(a)",
+      "explanation": "np.min() returns the smallest value in the array."
+    },
+    {
+      "question": "[Aggregation & Statistics] Get the maximum value in array a:________",
+      "type": "blank",
+      "answer": "np.max(a)",
+      "explanation": "np.max() returns the largest value in the array."
+    },
+    {
+      "question": "[Aggregation & Statistics] Compute the standard deviation of array a:________",
+      "type": "blank",
+      "answer": "np.std(a)",
+      "explanation": "np.std() computes the standard deviation of the array values."
+    },
+    {
+      "question": "[Aggregation & Statistics] Compute the variance of array a:________",
+      "type": "blank",
+      "answer": "np.var(a)",
+      "explanation": "np.var() computes the variance of the array values."
+    },
+    {
+      "question": "[Aggregation & Statistics] Compute the product of all elements in array a:________",
+      "type": "blank",
+      "answer": "np.prod(a)",
+      "explanation": "np.prod() multiplies all array elements together."
+    },
+    {
+      "question": "[Aggregation & Statistics] Compute the cumulative sum of array a:________",
+      "type": "blank",
+      "answer": "np.cumsum(a)",
+      "explanation": "np.cumsum() returns running totals across the flattened array by default."
+    },
+    {
+      "question": "[Aggregation & Statistics] Compute the cumulative product of array a:________",
+      "type": "blank",
+      "answer": "np.cumprod(a)",
+      "explanation": "np.cumprod() returns running products across the flattened array by default."
+    },
+    {
+      "question": "[Aggregation & Statistics] Compute the sum of array a down the rows, producing one result per column:________",
+      "type": "blank",
+      "answer": "np.sum(a, axis=0)",
+      "explanation": "axis=0 reduces the first dimension, so for a 2D array the result contains one sum per column."
+    },
+    {
+      "question": "[Aggregation & Statistics] Compute the sum of array a across the columns, producing one result per row:________",
+      "type": "blank",
+      "answer": "np.sum(a, axis=1)",
+      "explanation": "axis=1 reduces the second dimension, so for a 2D array the result contains one sum per row."
+    },
+    {
+      "question": "[Min/Max Locations] Get the index of the smallest element in one-dimensional array a:________",
+      "type": "blank",
+      "answer": "np.argmin(a)",
+      "explanation": "np.argmin() returns the index of the minimum value. Without an axis, multidimensional arrays are treated as flattened."
+    },
+    {
+      "question": "[Min/Max Locations] Get the index of the largest element in one-dimensional array a:________",
+      "type": "blank",
+      "answer": "np.argmax(a)",
+      "explanation": "np.argmax() returns the index of the maximum value. Without an axis, multidimensional arrays are treated as flattened."
+    },
+    {
+      "question": "[Searching] Find the indices where array a is equal to 30:________",
+      "type": "blank",
+      "answer": "np.where(a == 30)",
+      "explanation": "With only a condition, np.where() returns a tuple of index arrays indicating where the condition is True."
+    },
+    {
+      "question": "[Searching] Get the one-dimensional indices where array a is greater than 20:________",
+      "type": "blank",
+      "answer": "np.where(a > 20)[0]",
+      "explanation": "For a 1D array, np.where(condition) returns a one-item tuple; indexing [0] extracts the array of matching indices."
+    },
+    {
+      "question": "[Searching] Create an array containing 1 where a is greater than 20 and 0 otherwise:________",
+      "type": "blank",
+      "answer": "np.where(a > 20, 1, 0)",
+      "explanation": "With three arguments, np.where(condition, x, y) chooses x where the condition is True and y where it is False."
+    },
+    {
+      "question": "[Searching] Get the indices of all nonzero elements in array a:________",
+      "type": "blank",
+      "answer": "np.nonzero(a)",
+      "explanation": "np.nonzero() returns a tuple of index arrays identifying every nonzero element."
+    },
+    {
+      "question": "[Condition Checks] Check whether at least one element of array a is greater than 2:________",
+      "type": "blank",
+      "answer": "np.any(a > 2)",
+      "explanation": "np.any() returns True if at least one element of the Boolean array is True."
+    },
+    {
+      "question": "[Condition Checks] Check whether every element of array a is greater than 0:________",
+      "type": "blank",
+      "answer": "np.all(a > 0)",
+      "explanation": "np.all() returns True only if every element of the Boolean array is True."
+    },
+    {
+      "question": "[Sorting] Return a sorted copy of array a:________",
+      "type": "blank",
+      "answer": "np.sort(a)",
+      "explanation": "np.sort() returns a sorted array rather than modifying a in place by default."
+    },
+    {
+      "question": "[Sorting] Return the indices that would sort array a:________",
+      "type": "blank",
+      "answer": "np.argsort(a)",
+      "explanation": "np.argsort() returns index positions in the order that would arrange the array from smallest to largest."
+    },
+    {
+      "question": "[Unique Values] Return the sorted unique values in array a:________",
+      "type": "blank",
+      "answer": "np.unique(a)",
+      "explanation": "np.unique() removes duplicate values and returns the distinct values, sorted by default."
+    },
+    {
+      "question": "[Unique Values] Get each unique value in array a together with how many times it occurs:________",
+      "type": "blank",
+      "answer": "values, counts = np.unique(a, return_counts=True)",
+      "explanation": "Setting return_counts=True returns both the unique values and a parallel array containing their occurrence counts."
+    },
+    {
+      "question": "[Set Operations] Get values that appear in both one-dimensional arrays a and b:________",
+      "type": "blank",
+      "answer": "np.intersect1d(a, b)",
+      "explanation": "np.intersect1d() returns the sorted intersection of two one-dimensional arrays."
+    },
+    {
+      "question": "[Set Operations] Get the sorted union of one-dimensional arrays a and b:________",
+      "type": "blank",
+      "answer": "np.union1d(a, b)",
+      "explanation": "np.union1d() returns the unique values appearing in either array."
+    },
+    {
+      "question": "[Set Operations] Get values that appear in array a but not in array b:________",
+      "type": "blank",
+      "answer": "np.setdiff1d(a, b)",
+      "explanation": "np.setdiff1d() returns the unique values in a that are not present in b."
+    },
+    {
+      "question": "[Set Operations] Check element by element whether values of array a appear in array b:________",
+      "type": "blank",
+      "answer": "np.isin(a, b)",
+      "explanation": "np.isin() returns a Boolean array with the same shape as a, indicating whether each element occurs in b."
+    },
+    {
+      "question": "[Set Operations] Select from array a only the values that are either 2 or 3:________",
+      "type": "blank",
+      "answer": "a[np.isin(a, [2, 3])]",
+      "explanation": "np.isin() creates the membership mask, and Boolean indexing uses that mask to filter a."
+    },
+    {
+      "question": "[Copying] Create an independent copy of NumPy array a and assign it to b:________",
+      "type": "blank",
+      "answer": "b = a.copy()",
+      "explanation": "a.copy() creates a separate array with its own data, so modifying b will not modify a."
+    },
+    {
+      "question": "[Copying] Assign array a directly to b so both names refer to the same array object:________",
+      "type": "blank",
+      "answer": "b = a",
+      "explanation": "A normal assignment does not copy a NumPy array. Both variable names reference the same underlying array object."
+    },
+    {
+      "question": "[Data Types] Convert array a to integers:________",
+      "type": "blank",
+      "answer": "a.astype(int)",
+      "explanation": "astype() returns a new array converted to the requested data type."
+    },
+    {
+      "question": "[Data Types] Convert array a to NumPy float32 values:________",
+      "type": "blank",
+      "answer": "a.astype(np.float32)",
+      "explanation": "astype(np.float32) creates a new array whose elements use 32-bit floating-point storage."
+    },
+    {
+      "question": "[Broadcasting] Add the scalar 10 to every element of array a:________",
+      "type": "blank",
+      "answer": "a + 10",
+      "explanation": "NumPy broadcasts a scalar across every element, so 10 is added element by element without an explicit loop."
+    },
+    {
+      "question": "[Broadcasting] Add one-dimensional array b to each compatible row of two-dimensional array a:________",
+      "type": "blank",
+      "answer": "a + b",
+      "explanation": "When the trailing dimensions are compatible, NumPy automatically broadcasts b across a rather than requiring manual repetition."
+    },
+    {
+      "question": "[Linear Algebra] Perform matrix multiplication of A and B using the @ operator:________",
+      "type": "blank",
+      "answer": "A @ B",
+      "explanation": "The @ operator performs matrix multiplication, unlike *, which performs element-wise multiplication."
+    },
+    {
+      "question": "[Linear Algebra] Perform matrix multiplication of A and B using a NumPy function:________",
+      "type": "blank",
+      "answer": "np.matmul(A, B)",
+      "explanation": "np.matmul() performs matrix multiplication and is the function counterpart to the @ operator."
+    },
+    {
+      "question": "[Linear Algebra] Compute the dot product of arrays a and b:________",
+      "type": "blank",
+      "answer": "np.dot(a, b)",
+      "explanation": "For one-dimensional arrays, np.dot() computes the vector dot product. Its behavior for higher-dimensional arrays differs from simple element-wise multiplication."
+    },
+    {
+      "question": "[Linear Algebra] Compute the inverse of square matrix A:________",
+      "type": "blank",
+      "answer": "np.linalg.inv(A)",
+      "explanation": "np.linalg.inv() returns the matrix inverse when A is square and nonsingular."
+    },
+    {
+      "question": "[Linear Algebra] Compute the determinant of square matrix A:________",
+      "type": "blank",
+      "answer": "np.linalg.det(A)",
+      "explanation": "np.linalg.det() computes the determinant of a square matrix."
+    },
+    {
+      "question": "[Linear Algebra] Compute the eigenvalues and eigenvectors of square matrix A:________",
+      "type": "blank",
+      "answer": "np.linalg.eig(A)",
+      "explanation": "np.linalg.eig() returns a tuple containing eigenvalues and the corresponding eigenvectors."
+    },
+    {
+      "question": "[Linear Algebra] Solve the linear system A x = b for x:________",
+      "type": "blank",
+      "answer": "np.linalg.solve(A, b)",
+      "explanation": "np.linalg.solve() directly solves a square system of linear equations and is generally preferable to explicitly computing the inverse."
+    },
+    {
+      "question": "[Linear Algebra] Compute the vector or matrix norm of a:________",
+      "type": "blank",
+      "answer": "np.linalg.norm(a)",
+      "explanation": "np.linalg.norm() computes a norm; for a 1D vector the default is the Euclidean norm."
+    },
+    {
+      "question": "[Random Numbers] Create NumPy's modern random number generator:________",
+      "type": "blank",
+      "answer": "rng = np.random.default_rng()",
+      "explanation": "default_rng() creates a Generator instance, which is the recommended modern interface for NumPy random-number generation."
+    },
+    {
+      "question": "[Random Numbers] Generate 5 random floats in [0, 1) using generator rng:________",
+      "type": "blank",
+      "answer": "rng.random(5)",
+      "explanation": "Generator.random() produces uniformly distributed floating-point values in [0, 1)."
+    },
+    {
+      "question": "[Random Numbers] Generate 5 random integers from 0 through 9 using generator rng:________",
+      "type": "blank",
+      "answer": "rng.integers(0, 10, size=5)",
+      "explanation": "Generator.integers(low, high, size) includes low and excludes high, so this produces values from 0 to 9."
+    },
+    {
+      "question": "[Random Numbers] Generate 5 values from a normal distribution with mean 0 and standard deviation 1:________",
+      "type": "blank",
+      "answer": "rng.normal(0, 1, size=5)",
+      "explanation": "Generator.normal() samples from a normal distribution with the specified mean and standard deviation."
+    },
+    {
+      "question": "[Random Numbers] Randomly choose 5 values from [1, 2, 3] using generator rng:________",
+      "type": "blank",
+      "answer": "rng.choice([1, 2, 3], size=5)",
+      "explanation": "Generator.choice() randomly samples elements from the supplied sequence."
+    },
+    {
+      "question": "[Random Numbers] Shuffle array a in place using generator rng:________",
+      "type": "blank",
+      "answer": "rng.shuffle(a)",
+      "explanation": "Generator.shuffle() randomly reorders the elements of an array in place."
+    },
+    {
+      "question": "[Random Numbers] Create a reproducible random generator using seed 42:________",
+      "type": "blank",
+      "answer": "rng = np.random.default_rng(42)",
+      "explanation": "Passing a fixed seed makes the generated pseudo-random sequence reproducible across runs with the same NumPy behavior."
+    },
+    {
+      "question": "[Missing & Invalid Values] Represent a missing floating-point value using NaN:________",
+      "type": "blank",
+      "answer": "np.nan",
+      "explanation": "np.nan is NumPy's floating-point NaN value, commonly used to represent missing or undefined numeric data."
+    },
+    {
+      "question": "[Missing & Invalid Values] Create a Boolean mask showing where array a contains NaN values:________",
+      "type": "blank",
+      "answer": "np.isnan(a)",
+      "explanation": "np.isnan() returns True for elements that are NaN and False otherwise."
+    },
+    {
+      "question": "[Missing & Invalid Values] Remove NaN values from a one-dimensional array a:________",
+      "type": "blank",
+      "answer": "a[~np.isnan(a)]",
+      "explanation": "np.isnan(a) identifies NaNs, ~ negates the mask, and Boolean indexing keeps only non-NaN values."
+    },
+    {
+      "question": "[Missing & Invalid Values] Sum array a while ignoring NaN values:________",
+      "type": "blank",
+      "answer": "np.nansum(a)",
+      "explanation": "np.nansum() computes the sum while treating NaN values as missing rather than propagating NaN."
+    },
+    {
+      "question": "[Missing & Invalid Values] Compute the mean of array a while ignoring NaN values:________",
+      "type": "blank",
+      "answer": "np.nanmean(a)",
+      "explanation": "np.nanmean() calculates the average using only non-NaN values."
+    },
+    {
+      "question": "[Missing & Invalid Values] Get the minimum value of array a while ignoring NaN values:________",
+      "type": "blank",
+      "answer": "np.nanmin(a)",
+      "explanation": "np.nanmin() returns the minimum among non-NaN values."
+    },
+    {
+      "question": "[Missing & Invalid Values] Get the maximum value of array a while ignoring NaN values:________",
+      "type": "blank",
+      "answer": "np.nanmax(a)",
+      "explanation": "np.nanmax() returns the maximum among non-NaN values."
+    },
+    {
+      "question": "[Missing & Invalid Values] Create a Boolean mask showing where array a contains positive or negative infinity:________",
+      "type": "blank",
+      "answer": "np.isinf(a)",
+      "explanation": "np.isinf() returns True for positive or negative infinity and False for finite values and NaN."
+    },
+    {
+      "question": "[Missing & Invalid Values] Create a Boolean mask showing where array a contains finite numeric values:________",
+      "type": "blank",
+      "answer": "np.isfinite(a)",
+      "explanation": "np.isfinite() returns True for values that are neither infinity nor NaN."
+    },
+    {
+      "question": "[Clipping] Limit every value of array a to the inclusive range from 0 to 50:________",
+      "type": "blank",
+      "answer": "np.clip(a, 0, 50)",
+      "explanation": "np.clip() replaces values below the lower bound with that bound and values above the upper bound with the upper bound."
+    },
+    {
+      "question": "[Adding & Removing Elements] Append the value 10 to array a and return the new array:________",
+      "type": "blank",
+      "answer": "np.append(a, 10)",
+      "explanation": "np.append() returns a new array with the added value; it does not resize the original array in place."
+    },
+    {
+      "question": "[Adding & Removing Elements] Insert the value 100 into array a at index 2 and return the new array:________",
+      "type": "blank",
+      "answer": "np.insert(a, 2, 100)",
+      "explanation": "np.insert() returns a new array with values inserted before the requested index."
+    },
+    {
+      "question": "[Adding & Removing Elements] Delete the element at index 2 from array a and return the new array:________",
+      "type": "blank",
+      "answer": "np.delete(a, 2)",
+      "explanation": "np.delete() returns a new array with the specified element or elements removed."
+    },
+    {
+      "question": "[Vectorization] Select values greater than 10 from array a and multiply those selected values by 2 without an explicit Python loop:________",
+      "type": "blank",
+      "answer": "a[a > 10] * 2",
+      "explanation": "This combines Boolean indexing and vectorized multiplication, a common NumPy pattern that avoids writing an explicit Python loop."
+    }
+  ]
+}
