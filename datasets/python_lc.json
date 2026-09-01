@@ -848,40 +848,11 @@
       "explanation": "This Python code returns the non-negative magnitude of x, converting negative numbers to their positive equivalent and leaving non-negative numbers unchanged.\nThis works for integers, floats, and even complex numbers, where it returns the magnitude."
     },
     {
-      "question": "Check if every element in an iterable satisfies a given condition, one of the essential built-ins:________",
-      "type": "blank",
-      "answer": "all(...)",
-      "explanation": "This Python code returns True if every element in the given iterable is truthy (or satisfies a condition in a generator expression), and False if even one element fails.\nAn empty iterable returns True by convention, since there are no elements to violate the condition."
-    },
-    {
-      "question": "Check if at least one element in an iterable satisfies a given condition, one of the essential built-ins:________",
-      "type": "blank",
-      "answer": "any(...)",
-      "explanation": "This Python code returns True if at least one element in the given iterable is truthy (or satisfies a condition in a generator expression), and False only if none do.\nAn empty iterable returns False by convention, since there are no elements to satisfy the condition."
-    },
-    {
-      "question": "Pair each element of an iterable with its index, one of the essential built-ins:________",
-      "type": "blank",
-      "answer": "enumerate(...)",
-      "explanation": "This Python code wraps an iterable so that iterating over it yields (index, element) tuples, starting from index 0 by default.\nThis avoids the need to manually maintain a separate counter variable alongside a for-loop."
-    },
-    {
-      "question": "Combine multiple iterables element-wise into tuples, one of the essential built-ins:________",
-      "type": "blank",
-      "answer": "zip(...)",
-      "explanation": "This Python code takes two or more iterables and pairs up their corresponding elements into tuples, stopping as soon as the shortest iterable is exhausted.\nThis is commonly used to iterate over multiple sequences in parallel."
-    },
     {
       "question": "Generate a sequence of numbers from 0 up to (but not including) n, one of the essential built-ins:________",
       "type": "blank",
       "answer": "range(n)",
       "explanation": "This Python code creates a range object representing the sequence of integers from 0 to n-1.\nrange objects are lazily evaluated and memory-efficient, generating values on demand rather than storing the full sequence."
-    },
-    {
-      "question": "Return a new sorted list from an iterable, one of the essential built-ins:________",
-      "type": "blank",
-      "answer": "sorted(...)",
-      "explanation": "This Python code takes any iterable and returns a new list containing its elements in ascending order by default.\nUnlike a list's in-place .sort() method, sorted() works on any iterable (not just lists) and always returns a new list without modifying the original."
     },
     {
       "question": "Compute both the quotient and remainder of dividing a by b in a single call:________",
