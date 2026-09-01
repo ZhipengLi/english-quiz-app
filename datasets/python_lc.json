@@ -752,6 +752,12 @@
       "explanation": "This Python code searches through arr to determine whether x is present, returning True or False.\nUnlike membership testing on a set, this runs in O(n) time in the worst case because a list has no hash-based lookup."
     },
     {
+      "question": "Check whether obj is empty or otherwise falsy (for example, None, an empty list, an empty string, or an empty tuple):________",
+      "type": "blank",
+      "answer": "if not obj:",
+      "explanation": "This Python code uses truthiness to check whether obj evaluates to False in a boolean context.\nIt is a common Pythonic pattern for checking empty containers such as [], '', (), {}, or set(), and it also matches None, 0, and False, so use a more specific check when those values must be distinguished."
+    },
+    {
       "question": "Get a slice of the list arr from index left up to (but not including) index right:________",
       "type": "blank",
       "answer": "arr[left:right]",
