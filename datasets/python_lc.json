@@ -82,7 +82,7 @@
     {
       "question": "Create a new sorted list from nums without modifying the original list:________",
       "type": "blank",
-      "answer": "sorted_nums = sorted(nums)",
+      "answer": "sorted(nums)",
       "explanation": "This Python code calls the built-in sorted() function on nums, which returns a new list containing the elements of nums in ascending order.\nThe original list nums remains unchanged, unlike the in-place .sort() method."
     },
     {
