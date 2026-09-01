@@ -932,30 +932,6 @@
       "explanation": "This Python code returns the square root of x as a floating-point number.\nIf x is negative, this raises a ValueError, since math.sqrt() does not support complex results."
     },
     {
-      "question": "Compute the integer square root of x (the floor of the exact square root) using the math module:________",
-      "type": "blank",
-      "answer": "math.isqrt(x)",
-      "explanation": "This Python code returns the largest integer whose square is less than or equal to x, computed exactly using integer arithmetic.\nUnlike math.sqrt(x), this avoids floating-point rounding errors and requires x to be a non-negative integer."
-    },
-    {
-      "question": "Compute the greatest common divisor of a and b using the math module:________",
-      "type": "blank",
-      "answer": "math.gcd(a, b)",
-      "explanation": "This Python code returns the largest positive integer that evenly divides both a and b.\nThis is commonly used in problems involving fractions, ratios, or number theory."
-    },
-    {
-      "question": "Compute the least common multiple of a and b using the math module:________",
-      "type": "blank",
-      "answer": "math.lcm(a, b)",
-      "explanation": "This Python code returns the smallest positive integer that is a multiple of both a and b.\nThis function was added in Python 3.9, and complements math.gcd() for problems involving finding common multiples."
-    },
-    {
-      "question": "Compute the number of combinations of n items taken k at a time using the math module:________",
-      "type": "blank",
-      "answer": "math.comb(n, k)",
-      "explanation": "This Python code returns the number of ways to choose k items from n items without regard to order, computed as n! / (k! * (n-k)!).\nThis is more efficient and numerically stable than manually computing factorials and dividing them."
-    },
-    {
       "question": "Compute the factorial of n using the math module:________",
       "type": "blank",
       "answer": "math.factorial(n)",
