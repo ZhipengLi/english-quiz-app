@@ -658,7 +658,7 @@
     {
       "question": "Join the elements of the list chars into a single string with no separator between them:________",
       "type": "blank",
-      "answer": "s = ''.join(chars)",
+      "answer": "''.join(chars)",
       "explanation": "This Python code concatenates every element in the iterable chars into a single string, using an empty string as the separator between elements.\nAll elements in chars must already be strings, or this will raise a TypeError."
     },
     {
