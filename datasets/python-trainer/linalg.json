@@ -1,0 +1,365 @@
+{
+  "text": "Linear Algebra Fundamentals",
+  "quiz": [
+    {
+      "question": "An ordered list of numbers used to represent a magnitude and direction or a point in a multidimensional space is called a __________.",
+      "type": "blank",
+      "answer": "vector",
+      "explanation": "A vector is an ordered collection of numbers such as [2, 3] or [1, 4, -2]. Geometrically, vectors can represent directions or points in space. In data science and machine learning, vectors commonly represent observations, features, embeddings, gradients, and model parameters."
+    },
+    {
+      "question": "Multiplying every component of a vector by a single number is called __________ multiplication.",
+      "type": "blank",
+      "answer": "scalar",
+      "explanation": "Scalar multiplication multiplies each component of a vector by the same number. For example, 3[1, 2] = [3, 6]. Geometrically, positive scalars stretch or shrink a vector while negative scalars additionally reverse its direction."
+    },
+    {
+      "question": "The operation a · b = Σ(a_i b_i), which multiplies corresponding vector components and sums them, is called the __________ product.",
+      "type": "blank",
+      "answer": "dot",
+      "explanation": "The dot product produces a scalar from two vectors. It measures how strongly two vectors point in the same direction. It is fundamental to geometry, projections, cosine similarity, neural networks, and matrix multiplication."
+    },
+    {
+      "question": "The Euclidean length of a vector, calculated as sqrt(Σx_i²), is called its __________.",
+      "type": "blank",
+      "answer": "norm",
+      "explanation": "A norm measures the magnitude or size of a vector. The most common is the L2 or Euclidean norm: ||x||₂ = sqrt(x₁² + x₂² + ...). In NumPy, np.linalg.norm(x) computes the L2 norm by default for a one-dimensional vector."
+    },
+    {
+      "question": "A vector whose norm is exactly 1 is called a __________ vector.",
+      "type": "blank",
+      "answer": "unit",
+      "explanation": "A unit vector has length 1. Dividing a nonzero vector v by its norm, v / ||v||, produces a unit vector pointing in the same direction. This operation is called normalization."
+    },
+    {
+      "question": "Two vectors whose dot product equals zero are called __________.",
+      "type": "blank",
+      "answer": "orthogonal",
+      "explanation": "Two vectors are orthogonal when a · b = 0. In ordinary Euclidean geometry, this means they are perpendicular. Orthogonality is central to projections, least squares, QR decomposition, Fourier methods, and many numerical algorithms."
+    },
+    {
+      "question": "A set of vectors that are both mutually orthogonal and individually have norm 1 is called __________.",
+      "type": "blank",
+      "answer": "orthonormal",
+      "explanation": "An orthonormal set contains vectors that are perpendicular to one another and each have unit length. Orthonormal bases are especially convenient because coordinates can be obtained using dot products and they preserve lengths and angles."
+    },
+    {
+      "question": "An expression such as c₁v₁ + c₂v₂ + ... + cₙvₙ is called a __________ combination of the vectors.",
+      "type": "blank",
+      "answer": "linear",
+      "explanation": "A linear combination is formed by multiplying vectors by scalars and adding the results. Linear combinations are the foundation of span, linear independence, basis, vector spaces, and linear transformations."
+    },
+    {
+      "question": "A rectangular arrangement of numbers organized into rows and columns is called a __________.",
+      "type": "blank",
+      "answer": "matrix",
+      "explanation": "A matrix is a two-dimensional array of numbers. Matrices can store data, represent systems of equations, and represent linear transformations such as rotation, scaling, projection, and reflection."
+    },
+    {
+      "question": "For a matrix with m rows and n columns, its dimensions are commonly written as __________.",
+      "type": "blank",
+      "answer": "m × n",
+      "explanation": "Matrix dimensions are written as rows × columns. For example, a 3 × 4 matrix has 3 rows and 4 columns. Matrix dimensions determine whether operations such as matrix multiplication are valid."
+    },
+    {
+      "question": "In the matrix product AB, the number of columns of A must equal the number of __________ of B.",
+      "type": "blank",
+      "answer": "rows",
+      "explanation": "If A has shape m × n and B has shape n × p, then AB is defined and has shape m × p. Matrix multiplication can be understood as applying one linear transformation after another."
+    },
+    {
+      "question": "The matrix formed by exchanging the rows and columns of A is called the __________ of A.",
+      "type": "blank",
+      "answer": "transpose",
+      "explanation": "The transpose of A, written Aᵀ, turns rows into columns and columns into rows. If A is m × n, then Aᵀ is n × m. Transposes appear throughout dot products, least squares, covariance matrices, and matrix decompositions."
+    },
+    {
+      "question": "The square matrix with 1s on the main diagonal and 0s elsewhere is called the __________ matrix.",
+      "type": "blank",
+      "answer": "identity",
+      "explanation": "The identity matrix I plays the same role for matrix multiplication that the number 1 plays for ordinary multiplication. For a compatible matrix A, AI = IA = A."
+    },
+    {
+      "question": "A square matrix A satisfying A = Aᵀ is called a __________ matrix.",
+      "type": "blank",
+      "answer": "symmetric",
+      "explanation": "A symmetric matrix is unchanged by transposition. Symmetric matrices have especially useful properties: their eigenvalues are real and they can be diagonalized using an orthonormal basis of eigenvectors."
+    },
+    {
+      "question": "For an invertible matrix A, the matrix satisfying AA⁻¹ = A⁻¹A = I is called its __________.",
+      "type": "blank",
+      "answer": "inverse",
+      "explanation": "The inverse matrix A⁻¹ reverses the transformation represented by A. Not every square matrix has an inverse. In numerical computing, explicitly calculating an inverse is often avoided in favor of directly solving systems using matrix decompositions."
+    },
+    {
+      "question": "A system of linear equations can be written compactly in matrix form as __________.",
+      "type": "blank",
+      "answer": "Ax = b",
+      "explanation": "The equation Ax = b represents a system of linear equations, where A contains the coefficients, x contains the unknown variables, and b contains the constants. Solving Ax = b is one of the central problems of linear algebra."
+    },
+    {
+      "question": "The algorithm that solves linear systems by performing elementary row operations is called __________ elimination.",
+      "type": "blank",
+      "answer": "Gaussian",
+      "explanation": "Gaussian elimination transforms a matrix into row-echelon form using row swaps, row scaling, and row addition. The resulting triangular structure makes the unknown variables easier to solve using back substitution."
+    },
+    {
+      "question": "A linear system that has at least one solution is called __________.",
+      "type": "blank",
+      "answer": "consistent",
+      "explanation": "A consistent linear system has either exactly one solution or infinitely many solutions. An inconsistent system has no solution, typically because the equations impose contradictory constraints."
+    },
+    {
+      "question": "The set of all possible linear combinations of a group of vectors is called their __________.",
+      "type": "blank",
+      "answer": "span",
+      "explanation": "The span of vectors consists of every vector that can be generated from their linear combinations. For example, two nonparallel vectors in R² span the entire two-dimensional plane."
+    },
+    {
+      "question": "A set of vectors is __________ independent if none of the vectors can be written as a linear combination of the others.",
+      "type": "blank",
+      "answer": "linearly",
+      "explanation": "Linear independence means the vectors contain no redundant directions. Equivalently, c₁v₁ + ... + cₙvₙ = 0 has only the trivial solution where every coefficient is zero."
+    },
+    {
+      "question": "A linearly independent set of vectors that spans a vector space is called a __________.",
+      "type": "blank",
+      "answer": "basis",
+      "explanation": "A basis is a minimal set of independent directions needed to represent every vector in a space. Every vector in the space has a unique coordinate representation relative to a chosen basis."
+    },
+    {
+      "question": "The number of vectors in any basis of a vector space is called its __________.",
+      "type": "blank",
+      "answer": "dimension",
+      "explanation": "Dimension measures the number of independent directions in a vector space. For example, R² has dimension 2 and R³ has dimension 3. More abstract vector spaces can have any finite or infinite dimension."
+    },
+    {
+      "question": "A subset of a vector space that is itself closed under vector addition and scalar multiplication is called a __________.",
+      "type": "blank",
+      "answer": "subspace",
+      "explanation": "A subspace must contain the zero vector and remain inside itself when vectors are added or multiplied by scalars. Column spaces, row spaces, and null spaces are important examples of subspaces."
+    },
+    {
+      "question": "The space spanned by the columns of a matrix A is called the __________ space of A.",
+      "type": "blank",
+      "answer": "column",
+      "explanation": "The column space of A consists of all vectors that can be written as Ax. It is therefore the set of all possible outputs of the linear transformation represented by A."
+    },
+    {
+      "question": "The set of all vectors x satisfying Ax = 0 is called the __________ space of A.",
+      "type": "blank",
+      "answer": "null",
+      "explanation": "The null space, also called the kernel, consists of all input vectors that the transformation A maps to the zero vector. Its dimension is called the nullity of A."
+    },
+    {
+      "question": "The number of linearly independent columns or rows of a matrix is called its __________.",
+      "type": "blank",
+      "answer": "rank",
+      "explanation": "Rank measures how many independent directions or independent pieces of information a matrix contains. Row rank and column rank are always equal."
+    },
+    {
+      "question": "For an m × n matrix A, the theorem rank(A) + nullity(A) = n is called the __________-__________ theorem.",
+      "type": "blank",
+      "answer": "rank-nullity",
+      "explanation": "The rank-nullity theorem states that the number of independent output directions plus the number of independent directions mapped to zero equals the dimension of the input space."
+    },
+    {
+      "question": "A function T satisfying T(u + v) = T(u) + T(v) and T(cv) = cT(v) is called a __________ transformation.",
+      "type": "blank",
+      "answer": "linear",
+      "explanation": "A linear transformation preserves vector addition and scalar multiplication. Every matrix multiplication T(x) = Ax defines a linear transformation. Scaling, rotation, reflection, and projection are common examples."
+    },
+    {
+      "question": "In the transformation T(x) = Ax, the set of all possible outputs is called the __________ or image of T.",
+      "type": "blank",
+      "answer": "range",
+      "explanation": "The range or image of a linear transformation consists of all possible outputs. For a matrix transformation T(x) = Ax, the range is exactly the column space of A."
+    },
+    {
+      "question": "In a linear transformation, the set of inputs mapped to the zero vector is called the __________.",
+      "type": "blank",
+      "answer": "kernel",
+      "explanation": "The kernel of T is the set of vectors x satisfying T(x) = 0. For T(x) = Ax, the kernel is the same as the null space of A."
+    },
+    {
+      "question": "For square matrix A, the scalar value that describes signed area or volume scaling is called the __________.",
+      "type": "blank",
+      "answer": "determinant",
+      "explanation": "The determinant measures how a linear transformation scales oriented area or volume. Its absolute value gives the scale factor, while its sign indicates whether orientation is preserved or reversed."
+    },
+    {
+      "question": "A square matrix is non-invertible exactly when its determinant equals __________.",
+      "type": "blank",
+      "answer": "0",
+      "explanation": "If det(A) = 0, the transformation collapses at least one dimension, so distinct input vectors can map to the same output. Such a matrix is called singular and cannot have an inverse."
+    },
+    {
+      "question": "A matrix with determinant zero is called a __________ matrix.",
+      "type": "blank",
+      "answer": "singular",
+      "explanation": "A singular matrix is a square matrix that does not have an inverse. Equivalent conditions include determinant zero, rank smaller than its dimension, and a nontrivial null space."
+    },
+    {
+      "question": "Finding the component of vector v that lies in the direction of vector u is called vector __________.",
+      "type": "blank",
+      "answer": "projection",
+      "explanation": "The projection of v onto u is proj_u(v) = (v · u / u · u)u. Projection is fundamental to geometry, orthogonal decomposition, least squares, regression, and dimensionality reduction."
+    },
+    {
+      "question": "The procedure that converts a linearly independent set of vectors into an orthonormal set is called the __________-__________ process.",
+      "type": "blank",
+      "answer": "Gram-Schmidt",
+      "explanation": "The Gram-Schmidt process repeatedly removes projections onto previously constructed basis vectors and then normalizes the result. It produces an orthonormal basis spanning the same space as the original vectors."
+    },
+    {
+      "question": "When Ax = b has no exact solution, finding x that minimizes ||Ax - b||² is called the __________ __________ problem.",
+      "type": "blank",
+      "answer": "least squares",
+      "explanation": "Least squares finds the vector x whose predicted output Ax is closest to b in Euclidean distance. It is the mathematical foundation of ordinary linear regression and many approximation problems."
+    },
+    {
+      "question": "In least squares, the vector b - Ax measuring the difference between the observed and predicted values is called the __________.",
+      "type": "blank",
+      "answer": "residual",
+      "explanation": "The residual represents the remaining error after fitting a model. The least-squares solution makes the squared Euclidean norm of the residual as small as possible."
+    },
+    {
+      "question": "The equations AᵀAx = Aᵀb used to derive the least-squares solution are called the __________ equations.",
+      "type": "blank",
+      "answer": "normal",
+      "explanation": "The normal equations result from requiring the least-squares residual to be orthogonal to the column space of A. Although mathematically important, numerical software often prefers QR or SVD methods because they can be more stable."
+    },
+    {
+      "question": "A nonzero vector v satisfying Av = λv is called an __________ of A.",
+      "type": "blank",
+      "answer": "eigenvector",
+      "explanation": "An eigenvector is a direction that a linear transformation does not rotate away from itself. Applying A only scales the vector, although the scaling factor may be negative or complex."
+    },
+    {
+      "question": "In the equation Av = λv, the scalar λ is called the __________.",
+      "type": "blank",
+      "answer": "eigenvalue",
+      "explanation": "The eigenvalue tells how much the corresponding eigenvector is scaled by the transformation. Eigenvalues and eigenvectors are central to dynamical systems, PCA, PageRank, differential equations, and many scientific applications."
+    },
+    {
+      "question": "The set of all eigenvectors associated with a particular eigenvalue, together with the zero vector, is called an __________.",
+      "type": "blank",
+      "answer": "eigenspace",
+      "explanation": "For eigenvalue λ, the eigenspace is the null space of A - λI. It contains every vector whose direction is preserved by A with the same scaling factor λ."
+    },
+    {
+      "question": "Writing a matrix in the form A = PDP⁻¹, where D is diagonal, is called __________.",
+      "type": "blank",
+      "answer": "diagonalization",
+      "explanation": "Diagonalization expresses a matrix using a basis of eigenvectors. The columns of P are eigenvectors and the diagonal entries of D are their eigenvalues. This representation makes operations such as computing large powers of A much easier."
+    },
+    {
+      "question": "A matrix can be diagonalized when it has enough linearly independent __________.",
+      "type": "blank",
+      "answer": "eigenvectors",
+      "explanation": "An n × n matrix is diagonalizable when it has n linearly independent eigenvectors. Those eigenvectors form a basis in which the transformation acts simply by independently scaling each coordinate."
+    },
+    {
+      "question": "The decomposition A = UΣVᵀ is called the __________ Value Decomposition.",
+      "type": "blank",
+      "answer": "Singular",
+      "explanation": "Singular Value Decomposition, or SVD, factors a matrix into orthogonal or unitary matrices U and V and a diagonal-like matrix Σ containing singular values. Unlike eigendecomposition, SVD applies to every rectangular matrix."
+    },
+    {
+      "question": "The nonnegative values appearing on the diagonal of Σ in an SVD are called __________ values.",
+      "type": "blank",
+      "answer": "singular",
+      "explanation": "Singular values measure how strongly a matrix stretches vectors along special directions. They are conventionally sorted from largest to smallest and reveal rank, conditioning, and important low-dimensional structure."
+    },
+    {
+      "question": "Approximating a matrix using only its largest singular values is called a low-__________ approximation.",
+      "type": "blank",
+      "answer": "rank",
+      "explanation": "A low-rank approximation keeps only the most important singular values and corresponding singular vectors. It is widely used in image compression, recommendation systems, noise reduction, PCA, and dimensionality reduction."
+    },
+    {
+      "question": "The generalized matrix inverse commonly computed using SVD is called the Moore-Penrose __________.",
+      "type": "blank",
+      "answer": "pseudoinverse",
+      "explanation": "The pseudoinverse extends the idea of an inverse to rectangular or singular matrices. It is useful for solving least-squares problems and minimum-norm systems when a conventional inverse does not exist."
+    },
+    {
+      "question": "The matrix factorization A = LU separates A into a lower-triangular and an upper-triangular matrix and is called __________ decomposition.",
+      "type": "blank",
+      "answer": "LU",
+      "explanation": "LU decomposition writes a matrix as the product of a lower-triangular matrix L and an upper-triangular matrix U, sometimes with an additional permutation matrix. It is commonly used to solve linear systems efficiently."
+    },
+    {
+      "question": "The decomposition A = QR, where Q has orthonormal columns and R is upper triangular, is called __________ decomposition.",
+      "type": "blank",
+      "answer": "QR",
+      "explanation": "QR decomposition separates a matrix into an orthogonal or orthonormal component Q and an upper-triangular component R. It is widely used for least-squares problems and eigenvalue algorithms."
+    },
+    {
+      "question": "For a suitable positive-definite symmetric matrix, the decomposition A = LLᵀ is called __________ decomposition.",
+      "type": "blank",
+      "answer": "Cholesky",
+      "explanation": "Cholesky decomposition factors a symmetric positive-definite matrix into a lower-triangular matrix and its transpose. It is computationally efficient and common in optimization, statistics, covariance calculations, and numerical simulation."
+    },
+    {
+      "question": "The vector norm defined as Σ|x_i| is called the __________ norm.",
+      "type": "blank",
+      "answer": "L1",
+      "explanation": "The L1 norm adds the absolute values of the vector components. It is also known as the Manhattan norm. In machine learning, L1 regularization is notable for encouraging sparse solutions."
+    },
+    {
+      "question": "The vector norm defined as sqrt(Σx_i²) is called the __________ norm.",
+      "type": "blank",
+      "answer": "L2",
+      "explanation": "The L2 norm is the ordinary Euclidean length of a vector. It is probably the most commonly encountered norm and is the default norm returned by np.linalg.norm for a one-dimensional NumPy array."
+    },
+    {
+      "question": "The vector norm defined as max(|x_i|) is called the __________ norm.",
+      "type": "blank",
+      "answer": "infinity",
+      "explanation": "The infinity norm, written ||x||∞, is the largest absolute component of a vector. It measures a vector according to its single largest coordinate."
+    },
+    {
+      "question": "The Euclidean distance between vectors a and b can be computed as __________.",
+      "type": "blank",
+      "answer": "||a - b||",
+      "explanation": "Distance between two points represented by vectors can be calculated by subtracting the vectors and taking the norm of the result. With the L2 norm, this gives ordinary Euclidean distance."
+    },
+    {
+      "question": "The similarity measure (a · b) / (||a|| ||b||), which depends on the angle rather than vector magnitude, is called __________ similarity.",
+      "type": "blank",
+      "answer": "cosine",
+      "explanation": "Cosine similarity measures directional similarity between vectors. A value near 1 means they point in similar directions, 0 means they are orthogonal, and -1 means they point in opposite directions. It is widely used for text embeddings, recommendation systems, and information retrieval."
+    },
+    {
+      "question": "Replacing a nonzero vector v with v / ||v|| is called __________.",
+      "type": "blank",
+      "answer": "normalization",
+      "explanation": "Normalization rescales a vector to have unit length while preserving its direction. This is common when comparing vectors by direction rather than magnitude."
+    },
+    {
+      "question": "Matrix multiplication AB can be interpreted geometrically as applying transformation B first and then transformation __________.",
+      "type": "blank",
+      "answer": "A",
+      "explanation": "For a vector x, ABx = A(Bx). Therefore B acts on x first, and then A acts on the result. This reversed-looking order is an important conceptual point when matrices represent transformations."
+    },
+    {
+      "question": "If the columns of a matrix contain redundant information, the matrix is said to be rank-__________.",
+      "type": "blank",
+      "answer": "deficient",
+      "explanation": "A rank-deficient matrix has rank smaller than the maximum possible rank. This means some rows or columns can be expressed as linear combinations of others, indicating redundant directions or information."
+    },
+    {
+      "question": "For an n × n matrix, having rank n is commonly called having __________ rank.",
+      "type": "blank",
+      "answer": "full",
+      "explanation": "A square matrix with full rank has n independent columns and n independent rows. It is therefore invertible, has determinant different from zero, and has only the zero vector in its null space."
+    },
+    {
+      "question": "For a square matrix A, det(A) ≠ 0, full rank, an inverse A⁻¹, and a trivial null space are all equivalent indicators that A is __________.",
+      "type": "blank",
+      "answer": "invertible",
+      "explanation": "The Invertible Matrix Theorem connects many central linear algebra concepts. For a square matrix, invertibility is equivalent to full rank, determinant nonzero, linearly independent columns, a trivial null space, and a unique solution to Ax = b for every b."
+    }
+  ]
+}
