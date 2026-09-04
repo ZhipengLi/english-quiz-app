@@ -1,435 +1,541 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { 
-  BookOpen, ZoomIn, ZoomOut, ChevronLeft, ChevronRight, 
-  Maximize, X, FileText, AlertCircle, Loader2
-} from 'lucide-react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern PDF Split Reader</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
-// Default test PDF (CORS-friendly)
-const DEFAULT_PDF = "https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf";
-
-export default function App() {
-  const [pdfJsLoaded, setPdfJsLoaded] = useState(false);
-  const [url, setUrl] = useState('');
-  const [inputUrl, setInputUrl] = useState(DEFAULT_PDF);
-  const [doc, setDoc] = useState(null);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [rendering, setRendering] = useState(false);
-
-  // Pagination & Display State
-  const [vPage, setVPage] = useState(1); // Virtual page (1 to numPages * 2)
-  const [scale, setScale] = useState(1.5);
-  const canvasRef = useRef(null);
-  const renderTaskRef = useRef(null);
-  const containerRef = useRef(null);
-
-  // Initialize URL from search params
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const urlParam = params.get('url');
-    if (urlParam) {
-      setUrl(urlParam);
-    }
-  }, []);
-
-  // Inject PDF.js dynamically
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js';
-    script.onload = () => {
-      window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-      setPdfJsLoaded(true);
-    };
-    document.body.appendChild(script);
-    return () => document.body.removeChild(script);
-  }, []);
-
-  // Load PDF Document when URL changes
-  useEffect(() => {
-    if (!url || !pdfJsLoaded) return;
-
-    let isMounted = true;
-    const loadPdf = async () => {
-      setLoading(true);
-      setError(null);
-      try {
-        const loadingTask = window.pdfjsLib.getDocument(url);
-        const pdfDoc = await loadingTask.promise;
-        if (isMounted) {
-          setDoc(pdfDoc);
-          setVPage(1);
-          setLoading(false);
-        }
-      } catch (err) {
-        if (isMounted) {
-          console.error("Error loading PDF:", err);
-          setError(err.message || "Failed to load PDF. Check CORS restrictions or URL validity.");
-          setLoading(false);
-          setDoc(null);
-        }
-      }
-    };
-
-    loadPdf();
-    return () => { isMounted = false; };
-  }, [url, pdfJsLoaded]);
-
-  // Main Canvas Rendering Logic
-  useEffect(() => {
-    if (!doc || !pdfJsLoaded) return;
-
-    let isCancelled = false;
-
-    const renderPage = async () => {
-      setRendering(true);
-      const actualPageNum = Math.ceil(vPage / 2);
-      const isTopHalf = vPage % 2 !== 0;
-
-      try {
-        const page = await doc.getPage(actualPageNum);
-        if (isCancelled) return;
-
-        const viewport = page.getViewport({ scale });
-        
-        // Overlap size: 8% of the FULL page height
-        const overlapH = viewport.height * 0.08;
-        // The total height we will draw is Half + Overlap
-        const drawH = (viewport.height / 2) + overlapH;
-
-        // 1. Render full page to offscreen canvas
-        const offCanvas = document.createElement('canvas');
-        const offCtx = offCanvas.getContext('2d');
-        offCanvas.width = viewport.width;
-        offCanvas.height = viewport.height;
-
-        if (renderTaskRef.current) {
-          renderTaskRef.current.cancel();
-        }
-
-        const renderContext = {
-          canvasContext: offCtx,
-          viewport: viewport
-        };
-
-        const renderTask = page.render(renderContext);
-        renderTaskRef.current = renderTask;
-
-        await renderTask.promise;
-        if (isCancelled) return;
-
-        // 2. Extract and draw the correct portion to the onscreen canvas
-        const onCanvas = canvasRef.current;
-        if (!onCanvas) return;
-        const onCtx = onCanvas.getContext('2d', { alpha: false });
-
-        onCanvas.width = viewport.width;
-        onCanvas.height = drawH;
-
-        // Draw background white just in case PDF is transparent
-        onCtx.fillStyle = '#ffffff';
-        onCtx.fillRect(0, 0, onCanvas.width, onCanvas.height);
-
-        if (isTopHalf) {
-          // Draw Top Half
-          onCtx.drawImage(offCanvas, 0, 0, viewport.width, drawH, 0, 0, viewport.width, drawH);
-          
-          // Draw overlapping cover (Light Mode)
-          onCtx.fillStyle = 'rgba(0, 0, 0, 0.08)';
-          onCtx.fillRect(0, drawH - overlapH, viewport.width, overlapH);
-          
-          // Draw Dashed line separator
-          onCtx.strokeStyle = 'rgba(0, 0, 0, 0.25)';
-          onCtx.lineWidth = 2;
-          onCtx.setLineDash([8, 8]);
-          onCtx.beginPath();
-          onCtx.moveTo(0, drawH - overlapH);
-          onCtx.lineTo(viewport.width, drawH - overlapH);
-          onCtx.stroke();
-          
-          // Draw indicator text
-          onCtx.fillStyle = 'rgba(0, 0, 0, 0.5)';
-          onCtx.font = `${Math.max(12, 14 * scale)}px sans-serif`;
-          onCtx.fillText("Overlap from next half", 10, drawH - overlapH + 25);
-        } else {
-          // Draw Bottom Half
-          const srcY = (viewport.height / 2) - overlapH;
-          onCtx.drawImage(offCanvas, 0, srcY, viewport.width, drawH, 0, 0, viewport.width, drawH);
-          
-          // Draw overlapping cover (Light Mode)
-          onCtx.fillStyle = 'rgba(0, 0, 0, 0.08)';
-          onCtx.fillRect(0, 0, viewport.width, overlapH);
-          
-          // Draw Dashed line separator
-          onCtx.strokeStyle = 'rgba(0, 0, 0, 0.25)';
-          onCtx.lineWidth = 2;
-          onCtx.setLineDash([8, 8]);
-          onCtx.beginPath();
-          onCtx.moveTo(0, overlapH);
-          onCtx.lineTo(viewport.width, overlapH);
-          onCtx.stroke();
-
-          // Draw indicator text
-          onCtx.fillStyle = 'rgba(0, 0, 0, 0.5)';
-          onCtx.font = `${Math.max(12, 14 * scale)}px sans-serif`;
-          onCtx.fillText("Overlap from previous half", 10, overlapH - 15);
-        }
-        
-        setRendering(false);
-      } catch (err) {
-        if (err.name !== 'RenderingCancelledException') {
-          console.error("Render error:", err);
-          setRendering(false);
-        }
-      }
-    };
-
-    renderPage();
-
-    return () => {
-      isCancelled = true;
-      if (renderTaskRef.current) {
-        renderTaskRef.current.cancel();
-      }
-    };
-  }, [doc, vPage, scale, pdfJsLoaded]);
-
-  // Keyboard navigation
-  useEffect(() => {
-    if (!doc) return;
-    const handleKeyDown = (e) => {
-      // Don't trigger if user is typing in an input
-      if (e.target.tagName === 'INPUT') return;
-
-      const totalVPages = doc.numPages * 2;
-      if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
-        e.preventDefault();
-        setVPage(prev => Math.min(prev + 1, totalVPages));
-      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-        e.preventDefault();
-        setVPage(prev => Math.max(prev - 1, 1));
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [doc]);
-
-  // Controls
-  const fitToScreen = useCallback(async () => {
-    if (!doc || !containerRef.current) return;
-    const actualPageNum = Math.ceil(vPage / 2);
-    try {
-      const page = await doc.getPage(actualPageNum);
-      const unscaledViewport = page.getViewport({ scale: 1 });
-      const overlapH = unscaledViewport.height * 0.08;
-      const unscaledDrawH = (unscaledViewport.height / 2) + overlapH;
-      
-      const containerHeight = containerRef.current.clientHeight - 40; // padding
-      const containerWidth = containerRef.current.clientWidth - 40;
-      
-      const scaleToFitHeight = containerHeight / unscaledDrawH;
-      const scaleToFitWidth = containerWidth / unscaledViewport.width;
-      
-      setScale(Math.min(scaleToFitHeight, scaleToFitWidth));
-    } catch (e) {
-      console.error(e);
-    }
-  }, [doc, vPage]);
-
-  // Handle Home Form Submit
-  const handleUrlSubmit = (e) => {
-    e.preventDefault();
-    if (inputUrl.trim()) {
-      setUrl(inputUrl.trim());
-      // Update URL silently
-      window.history.pushState({}, '', `?url=${encodeURIComponent(inputUrl.trim())}`);
-    }
-  };
-
-  const closeDoc = () => {
-    setDoc(null);
-    setUrl('');
-    window.history.pushState({}, '', window.location.pathname);
-  };
-
-  if (!url) {
-    return (
-      <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-6 text-slate-900">
-        <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 border border-slate-200">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-blue-50 text-blue-600 rounded-xl">
-              <BookOpen size={28} />
-            </div>
-            <h1 className="text-2xl font-bold">Split PDF Reader</h1>
-          </div>
-          
-          <p className="text-slate-600 mb-6 text-sm leading-relaxed">
-            Read vertically-oriented PDFs comfortably on widescreen displays. 
-            This reader automatically splits each page in half and provides contextual overlap.
-          </p>
-
-          <form onSubmit={handleUrlSubmit} className="space-y-4">
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
-                Paste PDF URL
-              </label>
-              <input
-                type="url"
-                value={inputUrl}
-                onChange={(e) => setInputUrl(e.target.value)}
-                className="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all placeholder:text-slate-400"
-                placeholder="https://example.com/document.pdf"
-                required
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
-            >
-              Open Document <ChevronRight size={18} />
-            </button>
-          </form>
-
-          <div className="mt-6 text-xs text-slate-600 bg-slate-100 p-4 rounded-lg">
-            <strong className="block text-slate-800 mb-1">Note:</strong>
-            PDFs must be hosted on servers that allow Cross-Origin Resource Sharing (CORS), or they won't load in the browser.
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className="h-screen w-screen bg-slate-200 flex flex-col text-slate-900 overflow-hidden font-sans">
-      {/* Top Navigation Bar */}
-      <div className="h-14 bg-white border-b border-slate-300 flex items-center justify-between px-4 shrink-0 shadow-sm z-10">
-        <div className="flex items-center gap-4 flex-1">
-          <button 
-            onClick={closeDoc}
-            className="p-2 hover:bg-slate-100 rounded-lg transition-colors text-slate-500 hover:text-slate-900"
-            title="Close Document"
-          >
-            <X size={20} />
-          </button>
-          <div className="h-6 w-px bg-slate-200 hidden sm:block"></div>
-          <div className="flex items-center gap-2 text-sm text-slate-700 overflow-hidden">
-            <FileText size={16} className="shrink-0 text-blue-600" />
-            <span className="truncate max-w-[150px] sm:max-w-xs font-medium">{url.split('/').pop() || 'Document'}</span>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-2 sm:gap-4 flex-1 justify-center">
-          {doc && (
-            <>
-              <button 
-                onClick={() => setVPage(p => Math.max(p - 1, 1))}
-                disabled={vPage <= 1}
-                className="p-1.5 sm:p-2 bg-slate-100 hover:bg-slate-200 text-slate-700 disabled:opacity-50 disabled:hover:bg-slate-100 rounded-lg transition-colors"
-              >
-                <ChevronLeft size={20} />
-              </button>
-              
-              <div className="flex items-center gap-2 text-sm font-medium">
-                <span className="bg-white px-3 py-1.5 rounded border border-slate-300 min-w-[3rem] text-center shadow-sm">
-                  {vPage}
-                </span>
-                <span className="text-slate-400">/</span>
-                <span className="text-slate-600">{doc.numPages * 2}</span>
-              </div>
-
-              <button 
-                onClick={() => setVPage(p => Math.min(p + 1, doc.numPages * 2))}
-                disabled={vPage >= doc.numPages * 2}
-                className="p-1.5 sm:p-2 bg-slate-100 hover:bg-slate-200 text-slate-700 disabled:opacity-50 disabled:hover:bg-slate-100 rounded-lg transition-colors"
-              >
-                <ChevronRight size={20} />
-              </button>
-            </>
-          )}
-        </div>
-
-        <div className="flex items-center justify-end gap-1 sm:gap-2 flex-1">
-          <button 
-            onClick={() => setScale(s => Math.max(s - 0.2, 0.5))}
-            className="p-2 hover:bg-slate-100 rounded-lg transition-colors text-slate-500 hover:text-slate-900"
-            title="Zoom Out"
-          >
-            <ZoomOut size={18} />
-          </button>
-          <span className="text-xs font-medium text-slate-600 w-12 text-center">
-            {Math.round(scale * 100)}%
-          </span>
-          <button 
-            onClick={() => setScale(s => Math.min(s + 0.2, 5))}
-            className="p-2 hover:bg-slate-100 rounded-lg transition-colors text-slate-500 hover:text-slate-900"
-            title="Zoom In"
-          >
-            <ZoomIn size={18} />
-          </button>
-          <div className="h-6 w-px bg-slate-200 mx-1 hidden sm:block"></div>
-          <button 
-            onClick={fitToScreen}
-            className="hidden sm:flex p-2 hover:bg-slate-100 rounded-lg transition-colors text-slate-500 hover:text-slate-900"
-            title="Fit to Screen"
-          >
-            <Maximize size={18} />
-          </button>
-        </div>
-      </div>
-
-      {/* Main Canvas Area */}
-      <div 
-        ref={containerRef}
-        className="flex-1 overflow-auto relative bg-slate-200 flex justify-center custom-scrollbar"
-      >
-        {/* Loading / Error Overlays */}
-        {loading && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-white/60 z-20 gap-4 backdrop-blur-sm">
-            <Loader2 size={40} className="text-blue-600 animate-spin" />
-            <p className="text-slate-700 font-medium">Loading Document...</p>
-          </div>
-        )}
-
-        {error && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-100 z-20 gap-4 p-6">
-            <AlertCircle size={48} className="text-red-500" />
-            <p className="text-red-600 font-medium text-center max-w-md">{error}</p>
-            <button 
-              onClick={closeDoc}
-              className="mt-4 px-6 py-2 bg-slate-200 hover:bg-slate-300 rounded-lg text-sm font-medium transition-colors text-slate-800"
-            >
-              Go Back
-            </button>
-          </div>
-        )}
-
-        <div className="py-8 px-4 relative flex flex-col items-center min-h-full">
-          {/* Canvas Wrapper for Shadow and Borders */}
-          <div className={`relative bg-white shadow-xl border border-slate-300 transition-opacity duration-300 ${rendering && !loading ? 'opacity-50' : 'opacity-100'}`}>
-            <canvas 
-              ref={canvasRef} 
-              className="block max-w-full"
-            />
-          </div>
-        </div>
-      </div>
-
-      <style dangerouslySetInnerHTML={{__html: `
+    <style>
         .custom-scrollbar::-webkit-scrollbar {
-          width: 10px;
-          height: 10px;
+            width: 10px;
+            height: 10px;
         }
         .custom-scrollbar::-webkit-scrollbar-track {
-          background: #e2e8f0; 
+            background: #e2e8f0; 
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: #cbd5e1; 
-          border-radius: 5px;
+            background: #cbd5e1; 
+            border-radius: 5px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: #94a3b8; 
+            background: #94a3b8; 
         }
-      `}} />
+        /* Utility class for hiding elements */
+        .hidden-element {
+            display: none !important;
+        }
+    </style>
+</head>
+<body class="bg-slate-200 text-slate-900 font-sans h-screen w-screen overflow-hidden">
+
+    <!-- HOME SCREEN -->
+    <div id="home-screen" class="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-6 text-slate-900 hidden-element">
+        <div class="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 border border-slate-200">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="p-3 bg-blue-50 text-blue-600 rounded-xl">
+                    <i data-lucide="book-open" class="w-7 h-7"></i>
+                </div>
+                <h1 class="text-2xl font-bold">Split PDF Reader</h1>
+            </div>
+            
+            <p class="text-slate-600 mb-6 text-sm leading-relaxed">
+                Read vertically-oriented PDFs comfortably on widescreen displays. 
+                This reader automatically splits each page in half and provides contextual overlap.
+            </p>
+
+            <form id="home-form" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-2">
+                        Paste PDF URL
+                    </label>
+                    <input
+                        type="url"
+                        id="url-input"
+                        class="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all placeholder:text-slate-400"
+                        placeholder="https://example.com/document.pdf"
+                        required
+                    />
+                </div>
+                <button
+                    type="submit"
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
+                >
+                    Open Document <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </button>
+            </form>
+
+            <div class="mt-6 text-xs text-slate-600 bg-slate-100 p-4 rounded-lg">
+                <strong class="block text-slate-800 mb-1">Note:</strong>
+                PDFs must be hosted on servers that allow Cross-Origin Resource Sharing (CORS), or they won't load in the browser.
+            </div>
+        </div>
     </div>
-  );
-}
+
+    <!-- READER SCREEN -->
+    <div id="reader-screen" class="h-full flex-col hidden-element">
+        <!-- Top Navigation Bar -->
+        <div class="h-14 bg-white border-b border-slate-300 flex items-center justify-between px-4 shrink-0 shadow-sm z-10">
+            <div class="flex items-center gap-4 flex-1">
+                <button 
+                    id="btn-close"
+                    class="p-2 hover:bg-slate-100 rounded-lg transition-colors text-slate-500 hover:text-slate-900"
+                    title="Close Document"
+                >
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+                <div class="h-6 w-px bg-slate-200 hidden sm:block"></div>
+                <div class="flex items-center gap-2 text-sm text-slate-700 overflow-hidden">
+                    <i data-lucide="file-text" class="shrink-0 w-4 h-4 text-blue-600"></i>
+                    <span id="doc-title" class="truncate max-w-[150px] sm:max-w-xs font-medium">Document</span>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2 sm:gap-4 flex-1 justify-center">
+                <button 
+                    id="btn-prev"
+                    class="p-1.5 sm:p-2 bg-slate-100 hover:bg-slate-200 text-slate-700 disabled:opacity-50 disabled:hover:bg-slate-100 rounded-lg transition-colors"
+                >
+                    <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                </button>
+                
+                <div class="flex items-center gap-2 text-sm font-medium">
+                    <span id="page-current" class="bg-white px-3 py-1.5 rounded border border-slate-300 min-w-[3rem] text-center shadow-sm">
+                        1
+                    </span>
+                    <span class="text-slate-400">/</span>
+                    <span id="page-total" class="text-slate-600">?</span>
+                </div>
+
+                <button 
+                    id="btn-next"
+                    class="p-1.5 sm:p-2 bg-slate-100 hover:bg-slate-200 text-slate-700 disabled:opacity-50 disabled:hover:bg-slate-100 rounded-lg transition-colors"
+                >
+                    <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <div class="flex items-center justify-end gap-1 sm:gap-2 flex-1">
+                <button 
+                    id="btn-zoom-out"
+                    class="p-2 hover:bg-slate-100 rounded-lg transition-colors text-slate-500 hover:text-slate-900"
+                    title="Zoom Out"
+                >
+                    <i data-lucide="zoom-out" class="w-[18px] h-[18px]"></i>
+                </button>
+                <span id="zoom-level" class="text-xs font-medium text-slate-600 w-12 text-center">
+                    150%
+                </span>
+                <button 
+                    id="btn-zoom-in"
+                    class="p-2 hover:bg-slate-100 rounded-lg transition-colors text-slate-500 hover:text-slate-900"
+                    title="Zoom In"
+                >
+                    <i data-lucide="zoom-in" class="w-[18px] h-[18px]"></i>
+                </button>
+                <div class="h-6 w-px bg-slate-200 mx-1 hidden sm:block"></div>
+                <button 
+                    id="btn-fit"
+                    class="hidden sm:flex p-2 hover:bg-slate-100 rounded-lg transition-colors text-slate-500 hover:text-slate-900"
+                    title="Fit to Screen"
+                >
+                    <i data-lucide="maximize" class="w-[18px] h-[18px]"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Canvas Area -->
+        <div id="container-ref" class="flex-1 overflow-auto relative bg-slate-200 flex justify-center custom-scrollbar">
+            
+            <!-- Loading Overlay -->
+            <div id="overlay-loading" class="absolute inset-0 flex flex-col items-center justify-center bg-white/60 z-20 gap-4 backdrop-blur-sm hidden-element">
+                <i data-lucide="loader-2" class="w-10 h-10 text-blue-600 animate-spin"></i>
+                <p class="text-slate-700 font-medium">Loading Document...</p>
+            </div>
+
+            <!-- Error Overlay -->
+            <div id="overlay-error" class="absolute inset-0 flex flex-col items-center justify-center bg-slate-100 z-20 gap-4 p-6 hidden-element">
+                <i data-lucide="alert-circle" class="w-12 h-12 text-red-500"></i>
+                <p id="error-message" class="text-red-600 font-medium text-center max-w-md">Error</p>
+                <button 
+                    id="btn-error-back"
+                    class="mt-4 px-6 py-2 bg-slate-200 hover:bg-slate-300 rounded-lg text-sm font-medium transition-colors text-slate-800"
+                >
+                    Go Back
+                </button>
+            </div>
+
+            <div class="py-8 px-4 relative flex flex-col items-center min-h-full">
+                <!-- Canvas Wrapper -->
+                <div id="canvas-wrapper" class="relative bg-white shadow-xl border border-slate-300 transition-opacity duration-300 opacity-100">
+                    <canvas id="pdf-canvas" class="block max-w-full"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize PDF.js worker
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+        // State variables
+        const state = {
+            url: '',
+            doc: null,
+            vPage: 1,
+            scale: 1.5,
+            loading: false,
+            rendering: false,
+            error: null,
+            renderTask: null
+        };
+
+        const DEFAULT_PDF = "https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf";
+
+        // DOM Elements
+        const els = {
+            homeScreen: document.getElementById('home-screen'),
+            readerScreen: document.getElementById('reader-screen'),
+            homeForm: document.getElementById('home-form'),
+            urlInput: document.getElementById('url-input'),
+            
+            // Header
+            btnClose: document.getElementById('btn-close'),
+            docTitle: document.getElementById('doc-title'),
+            btnPrev: document.getElementById('btn-prev'),
+            btnNext: document.getElementById('btn-next'),
+            pageCurrent: document.getElementById('page-current'),
+            pageTotal: document.getElementById('page-total'),
+            btnZoomOut: document.getElementById('btn-zoom-out'),
+            btnZoomIn: document.getElementById('btn-zoom-in'),
+            btnFit: document.getElementById('btn-fit'),
+            zoomLevel: document.getElementById('zoom-level'),
+            
+            // Content
+            container: document.getElementById('container-ref'),
+            canvasWrapper: document.getElementById('canvas-wrapper'),
+            canvas: document.getElementById('pdf-canvas'),
+            overlayLoading: document.getElementById('overlay-loading'),
+            overlayError: document.getElementById('overlay-error'),
+            errorMessage: document.getElementById('errorMessage'),
+            btnErrorBack: document.getElementById('btn-error-back')
+        };
+
+        // Initialize Lucide Icons
+        lucide.createIcons();
+        els.urlInput.value = DEFAULT_PDF;
+
+        // Initialize from URL params
+        const params = new URLSearchParams(window.location.search);
+        const urlParam = params.get('url');
+        if (urlParam) {
+            openDocument(urlParam);
+        } else {
+            updateUI();
+        }
+
+        // --- Core Functions ---
+
+        function updateUI() {
+            if (!state.url) {
+                els.homeScreen.classList.remove('hidden-element');
+                els.readerScreen.classList.add('hidden-element');
+                els.readerScreen.classList.remove('flex');
+            } else {
+                els.homeScreen.classList.add('hidden-element');
+                els.readerScreen.classList.remove('hidden-element');
+                els.readerScreen.classList.add('flex');
+                
+                // Update header info
+                const filename = state.url.split('/').pop() || 'Document';
+                els.docTitle.textContent = filename;
+                els.zoomLevel.textContent = `${Math.round(state.scale * 100)}%`;
+                
+                if (state.doc) {
+                    const totalVPages = state.doc.numPages * 2;
+                    els.pageCurrent.textContent = state.vPage;
+                    els.pageTotal.textContent = totalVPages;
+                    
+                    els.btnPrev.disabled = state.vPage <= 1;
+                    els.btnNext.disabled = state.vPage >= totalVPages;
+                }
+            }
+
+            // Overlays
+            if (state.loading) {
+                els.overlayLoading.classList.remove('hidden-element');
+            } else {
+                els.overlayLoading.classList.add('hidden-element');
+            }
+
+            if (state.error) {
+                els.overlayError.classList.remove('hidden-element');
+                document.getElementById('error-message').textContent = state.error;
+            } else {
+                els.overlayError.classList.add('hidden-element');
+            }
+
+            // Canvas Opacity
+            if (state.rendering && !state.loading) {
+                els.canvasWrapper.classList.add('opacity-50');
+            } else {
+                els.canvasWrapper.classList.remove('opacity-50');
+            }
+        }
+
+        async function openDocument(url) {
+            state.url = url;
+            state.doc = null;
+            state.vPage = 1;
+            state.error = null;
+            state.loading = true;
+            updateUI();
+
+            // Update URL string gracefully (fails in sandboxed environments)
+            try {
+                window.history.pushState({}, '', `?url=${encodeURIComponent(url)}`);
+            } catch (e) {
+                console.warn("URL update prevented by browser sandbox constraints.");
+            }
+
+            const getDocParams = (source) => {
+                const baseParams = {
+                    cMapUrl: 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/cmaps/',
+                    cMapPacked: true,
+                };
+                if (typeof source === 'string') {
+                    return { ...baseParams, url: source };
+                }
+                return { ...baseParams, data: source };
+            };
+
+            try {
+                // Direct Load
+                const loadingTask = window.pdfjsLib.getDocument(getDocParams(state.url));
+                state.doc = await loadingTask.promise;
+                state.loading = false;
+                updateUI();
+                renderCurrentPage();
+            } catch (err) {
+                console.error("Direct load failed:", err);
+                state.error = "Failed to load PDF. Check CORS restrictions or URL validity.";
+                state.loading = false;
+                state.doc = null;
+                updateUI();
+            }
+        }
+
+        async function renderCurrentPage() {
+            if (!state.doc) return;
+
+            state.rendering = true;
+            updateUI();
+
+            const actualPageNum = Math.ceil(state.vPage / 2);
+            const isTopHalf = state.vPage % 2 !== 0;
+
+            try {
+                const page = await state.doc.getPage(actualPageNum);
+                const viewport = page.getViewport({ scale: state.scale });
+                
+                // Overlap size: 8% of the FULL page height
+                const overlapH = viewport.height * 0.08;
+                const drawH = (viewport.height / 2) + overlapH;
+
+                // Offscreen canvas for rendering the full PDF page
+                const offCanvas = document.createElement('canvas');
+                const offCtx = offCanvas.getContext('2d');
+                offCanvas.width = viewport.width;
+                offCanvas.height = viewport.height;
+
+                if (state.renderTask) {
+                    state.renderTask.cancel();
+                }
+
+                const renderContext = {
+                    canvasContext: offCtx,
+                    viewport: viewport
+                };
+
+                state.renderTask = page.render(renderContext);
+                await state.renderTask.promise;
+
+                // Draw correctly to onscreen canvas
+                const onCanvas = els.canvas;
+                const onCtx = onCanvas.getContext('2d', { alpha: false });
+
+                onCanvas.width = viewport.width;
+                onCanvas.height = drawH;
+
+                onCtx.fillStyle = '#ffffff';
+                onCtx.fillRect(0, 0, onCanvas.width, onCanvas.height);
+
+                if (isTopHalf) {
+                    // Draw Top Half
+                    onCtx.drawImage(offCanvas, 0, 0, viewport.width, drawH, 0, 0, viewport.width, drawH);
+                    
+                    // Draw overlapping cover (Light Mode)
+                    onCtx.fillStyle = 'rgba(0, 0, 0, 0.08)';
+                    onCtx.fillRect(0, drawH - overlapH, viewport.width, overlapH);
+                    
+                    // Draw Dashed line separator
+                    onCtx.strokeStyle = 'rgba(0, 0, 0, 0.25)';
+                    onCtx.lineWidth = 2;
+                    onCtx.setLineDash([8, 8]);
+                    onCtx.beginPath();
+                    onCtx.moveTo(0, drawH - overlapH);
+                    onCtx.lineTo(viewport.width, drawH - overlapH);
+                    onCtx.stroke();
+                    
+                    // Draw indicator text
+                    onCtx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+                    onCtx.font = `${Math.max(12, 14 * state.scale)}px sans-serif`;
+                    onCtx.fillText("Overlap from next half", 10, drawH - overlapH + 25);
+                } else {
+                    // Draw Bottom Half
+                    const srcY = (viewport.height / 2) - overlapH;
+                    onCtx.drawImage(offCanvas, 0, srcY, viewport.width, drawH, 0, 0, viewport.width, drawH);
+                    
+                    // Draw overlapping cover (Light Mode)
+                    onCtx.fillStyle = 'rgba(0, 0, 0, 0.08)';
+                    onCtx.fillRect(0, 0, viewport.width, overlapH);
+                    
+                    // Draw Dashed line separator
+                    onCtx.strokeStyle = 'rgba(0, 0, 0, 0.25)';
+                    onCtx.lineWidth = 2;
+                    onCtx.setLineDash([8, 8]);
+                    onCtx.beginPath();
+                    onCtx.moveTo(0, overlapH);
+                    onCtx.lineTo(viewport.width, overlapH);
+                    onCtx.stroke();
+
+                    // Draw indicator text
+                    onCtx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+                    onCtx.font = `${Math.max(12, 14 * state.scale)}px sans-serif`;
+                    onCtx.fillText("Overlap from previous half", 10, overlapH - 15);
+                }
+
+                state.rendering = false;
+                updateUI();
+            } catch (err) {
+                if (err.name !== 'RenderingCancelledException') {
+                    console.error("Render error:", err);
+                    state.rendering = false;
+                    updateUI();
+                }
+            }
+        }
+
+        function closeDocument() {
+            state.doc = null;
+            state.url = '';
+            if (state.renderTask) {
+                state.renderTask.cancel();
+            }
+            
+            // Update URL string gracefully
+            try {
+                window.history.pushState({}, '', window.location.pathname);
+            } catch (e) {
+                console.warn("URL update prevented by browser sandbox constraints.");
+            }
+            
+            updateUI();
+        }
+
+        async function fitToScreen() {
+            if (!state.doc) return;
+            const actualPageNum = Math.ceil(state.vPage / 2);
+            try {
+                const page = await state.doc.getPage(actualPageNum);
+                const unscaledViewport = page.getViewport({ scale: 1 });
+                const overlapH = unscaledViewport.height * 0.08;
+                const unscaledDrawH = (unscaledViewport.height / 2) + overlapH;
+                
+                const containerHeight = els.container.clientHeight - 40;
+                const containerWidth = els.container.clientWidth - 40;
+                
+                const scaleToFitHeight = containerHeight / unscaledDrawH;
+                const scaleToFitWidth = containerWidth / unscaledViewport.width;
+                
+                state.scale = Math.min(scaleToFitHeight, scaleToFitWidth);
+                updateUI();
+                renderCurrentPage();
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        // --- Event Listeners ---
+
+        els.homeForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const inputVal = els.urlInput.value.trim();
+            if (inputVal) openDocument(inputVal);
+        });
+
+        els.btnClose.addEventListener('click', closeDocument);
+        els.btnErrorBack.addEventListener('click', closeDocument);
+
+        els.btnPrev.addEventListener('click', () => {
+            if (state.vPage > 1) {
+                state.vPage--;
+                updateUI();
+                renderCurrentPage();
+            }
+        });
+
+        els.btnNext.addEventListener('click', () => {
+            if (state.doc && state.vPage < state.doc.numPages * 2) {
+                state.vPage++;
+                updateUI();
+                renderCurrentPage();
+            }
+        });
+
+        els.btnZoomIn.addEventListener('click', () => {
+            state.scale = Math.min(state.scale + 0.2, 5);
+            updateUI();
+            renderCurrentPage();
+        });
+
+        els.btnZoomOut.addEventListener('click', () => {
+            state.scale = Math.max(state.scale - 0.2, 0.5);
+            updateUI();
+            renderCurrentPage();
+        });
+
+        els.btnFit.addEventListener('click', fitToScreen);
+
+        window.addEventListener('keydown', (e) => {
+            if (!state.doc || e.target.tagName === 'INPUT') return;
+            
+            const totalVPages = state.doc.numPages * 2;
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
+                e.preventDefault();
+                if (state.vPage < totalVPages) {
+                    state.vPage++;
+                    updateUI();
+                    renderCurrentPage();
+                }
+            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                e.preventDefault();
+                if (state.vPage > 1) {
+                    state.vPage--;
+                    updateUI();
+                    renderCurrentPage();
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
