@@ -29,7 +29,7 @@
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
             background: #94a3b8; 
         }
-        /* Utility class for hiding elements */
+        /* Utility class for hiding elements while avoiding Tailwind conflicts */
         .hidden-element {
             display: none !important;
         }
@@ -75,15 +75,25 @@
 
             <div class="mt-6 text-xs text-slate-600 bg-slate-100 p-4 rounded-lg">
                 <strong class="block text-slate-800 mb-1">Note:</strong>
-                PDFs must be hosted on servers that allow Cross-Origin Resource Sharing (CORS), or they won't load in the browser.
+                PDFs must be hosted on servers that allow Cross-Origin Resource Sharing (CORS), or they won't load in the browser. Standard github.com URLs are automatically converted to raw content links.
             </div>
         </div>
     </div>
 
     <!-- READER SCREEN -->
-    <div id="reader-screen" class="h-full flex-col hidden-element">
+    <div id="reader-screen" class="h-full flex-col hidden-element relative">
+        
+        <!-- Floating Show Toolbar Button -->
+        <button 
+            id="btn-show-toolbar"
+            class="absolute top-4 right-6 z-50 p-2.5 bg-white/90 backdrop-blur rounded-lg shadow-lg border border-slate-200 text-slate-600 hover:text-slate-900 transition-all hidden-element"
+            title="Show Toolbar"
+        >
+            <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+
         <!-- Top Navigation Bar -->
-        <div class="h-14 bg-white border-b border-slate-300 flex items-center justify-between px-4 shrink-0 shadow-sm z-10">
+        <div id="reader-toolbar" class="h-14 bg-white border-b border-slate-300 flex items-center justify-between px-4 shrink-0 shadow-sm z-10">
             <div class="flex items-center gap-4 flex-1">
                 <button 
                     id="btn-close"
@@ -149,6 +159,14 @@
                 >
                     <i data-lucide="maximize" class="w-[18px] h-[18px]"></i>
                 </button>
+                <div class="h-6 w-px bg-slate-200 mx-1"></div>
+                <button 
+                    id="btn-hide-toolbar"
+                    class="p-2 hover:bg-slate-100 rounded-lg transition-colors text-slate-500 hover:text-slate-900"
+                    title="Hide Toolbar"
+                >
+                    <i data-lucide="chevron-up" class="w-[18px] h-[18px]"></i>
+                </button>
             </div>
         </div>
 
@@ -195,7 +213,8 @@
             loading: false,
             rendering: false,
             error: null,
-            renderTask: null
+            renderTask: null,
+            toolbarVisible: false
         };
 
         const DEFAULT_PDF = "https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf";
@@ -207,7 +226,10 @@
             homeForm: document.getElementById('home-form'),
             urlInput: document.getElementById('url-input'),
             
-            // Header
+            // Header & Toolbar
+            readerToolbar: document.getElementById('reader-toolbar'),
+            btnShowToolbar: document.getElementById('btn-show-toolbar'),
+            btnHideToolbar: document.getElementById('btn-hide-toolbar'),
             btnClose: document.getElementById('btn-close'),
             docTitle: document.getElementById('doc-title'),
             btnPrev: document.getElementById('btn-prev'),
@@ -219,13 +241,13 @@
             btnFit: document.getElementById('btn-fit'),
             zoomLevel: document.getElementById('zoom-level'),
             
-            // Content
+            // Content Area
             container: document.getElementById('container-ref'),
             canvasWrapper: document.getElementById('canvas-wrapper'),
             canvas: document.getElementById('pdf-canvas'),
             overlayLoading: document.getElementById('overlay-loading'),
             overlayError: document.getElementById('overlay-error'),
-            errorMessage: document.getElementById('errorMessage'),
+            errorMessage: document.getElementById('error-message'),
             btnErrorBack: document.getElementById('btn-error-back')
         };
 
@@ -233,17 +255,25 @@
         lucide.createIcons();
         els.urlInput.value = DEFAULT_PDF;
 
-        // Initialize from URL params
-        const params = new URLSearchParams(window.location.search);
-        const urlParam = params.get('url');
-        if (urlParam) {
-            openDocument(urlParam);
-        } else {
-            updateUI();
+        // Helper to convert Github URLs to raw links
+        function transformGithubUrl(url) {
+            try {
+                const parsed = new URL(url);
+                if (parsed.hostname === 'github.com' || parsed.hostname === 'www.github.com') {
+                    const parts = parsed.pathname.split('/');
+                    const blobIndex = parts.indexOf('blob');
+                    if (blobIndex !== -1) {
+                        parts.splice(blobIndex, 1);
+                        return `https://raw.githubusercontent.com${parts.join('/')}`;
+                    }
+                }
+            } catch (e) {
+                // Ignore invalid URLs
+            }
+            return url;
         }
 
-        // --- Core Functions ---
-
+        // Core UI Update function
         function updateUI() {
             if (!state.url) {
                 els.homeScreen.classList.remove('hidden-element');
@@ -253,6 +283,17 @@
                 els.homeScreen.classList.add('hidden-element');
                 els.readerScreen.classList.remove('hidden-element');
                 els.readerScreen.classList.add('flex');
+                
+                // Toggle Toolbar
+                if (state.toolbarVisible) {
+                    els.readerToolbar.classList.remove('hidden-element');
+                    els.readerToolbar.classList.add('flex');
+                    els.btnShowToolbar.classList.add('hidden-element');
+                } else {
+                    els.readerToolbar.classList.add('hidden-element');
+                    els.readerToolbar.classList.remove('flex');
+                    els.btnShowToolbar.classList.remove('hidden-element');
+                }
                 
                 // Update header info
                 const filename = state.url.split('/').pop() || 'Document';
@@ -269,16 +310,17 @@
                 }
             }
 
-            // Overlays
+            // Loading state
             if (state.loading) {
                 els.overlayLoading.classList.remove('hidden-element');
             } else {
                 els.overlayLoading.classList.add('hidden-element');
             }
 
+            // Error state
             if (state.error) {
                 els.overlayError.classList.remove('hidden-element');
-                document.getElementById('error-message').textContent = state.error;
+                els.errorMessage.textContent = state.error;
             } else {
                 els.overlayError.classList.add('hidden-element');
             }
@@ -291,7 +333,10 @@
             }
         }
 
-        async function openDocument(url) {
+        // Document fetching
+        async function openDocument(inputUrl) {
+            const url = transformGithubUrl(inputUrl);
+
             state.url = url;
             state.doc = null;
             state.vPage = 1;
@@ -299,40 +344,35 @@
             state.loading = true;
             updateUI();
 
-            // Update URL string gracefully (fails in sandboxed environments)
+            // Attempt to update browser URL silently (sandboxes block this)
             try {
                 window.history.pushState({}, '', `?url=${encodeURIComponent(url)}`);
             } catch (e) {
-                console.warn("URL update prevented by browser sandbox constraints.");
+                // Ignore history API errors if running in sandboxed iframes
             }
 
-            const getDocParams = (source) => {
-                const baseParams = {
-                    cMapUrl: 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/cmaps/',
-                    cMapPacked: true,
-                };
-                if (typeof source === 'string') {
-                    return { ...baseParams, url: source };
-                }
-                return { ...baseParams, data: source };
-            };
+            const getDocParams = (sourceUrl) => ({
+                url: sourceUrl,
+                cMapUrl: 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/cmaps/',
+                cMapPacked: true,
+            });
 
             try {
-                // Direct Load
                 const loadingTask = window.pdfjsLib.getDocument(getDocParams(state.url));
                 state.doc = await loadingTask.promise;
                 state.loading = false;
                 updateUI();
                 renderCurrentPage();
             } catch (err) {
-                console.error("Direct load failed:", err);
-                state.error = "Failed to load PDF. Check CORS restrictions or URL validity.";
+                console.error("Error loading PDF:", err);
+                state.error = err.message || "Failed to load PDF. Check CORS restrictions or URL validity.";
                 state.loading = false;
                 state.doc = null;
                 updateUI();
             }
         }
 
+        // Canvas Rendering
         async function renderCurrentPage() {
             if (!state.doc) return;
 
@@ -344,13 +384,19 @@
 
             try {
                 const page = await state.doc.getPage(actualPageNum);
-                const viewport = page.getViewport({ scale: state.scale });
+                
+                // Handle high-DPI (Retina) displays for crystal clear text
+                const pixelRatio = window.devicePixelRatio || 1;
+                const renderScale = state.scale * pixelRatio;
+                
+                // Get scaled viewport for high-res rendering
+                const viewport = page.getViewport({ scale: renderScale });
                 
                 // Overlap size: 8% of the FULL page height
                 const overlapH = viewport.height * 0.08;
                 const drawH = (viewport.height / 2) + overlapH;
 
-                // Offscreen canvas for rendering the full PDF page
+                // 1. Render full page to high-res offscreen canvas
                 const offCanvas = document.createElement('canvas');
                 const offCtx = offCanvas.getContext('2d');
                 offCanvas.width = viewport.width;
@@ -368,13 +414,19 @@
                 state.renderTask = page.render(renderContext);
                 await state.renderTask.promise;
 
-                // Draw correctly to onscreen canvas
+                // 2. Extract and draw the correct portion to the onscreen canvas
                 const onCanvas = els.canvas;
                 const onCtx = onCanvas.getContext('2d', { alpha: false });
 
+                // Set actual internal dimensions for high-res drawing
                 onCanvas.width = viewport.width;
                 onCanvas.height = drawH;
+                
+                // Use CSS to scale it back down to standard logical pixels
+                onCanvas.style.width = `${viewport.width / pixelRatio}px`;
+                onCanvas.style.height = `${drawH / pixelRatio}px`;
 
+                // White background
                 onCtx.fillStyle = '#ffffff';
                 onCtx.fillRect(0, 0, onCanvas.width, onCanvas.height);
 
@@ -382,45 +434,35 @@
                     // Draw Top Half
                     onCtx.drawImage(offCanvas, 0, 0, viewport.width, drawH, 0, 0, viewport.width, drawH);
                     
-                    // Draw overlapping cover (Light Mode)
-                    onCtx.fillStyle = 'rgba(0, 0, 0, 0.08)';
+                    // Draw transparent overlap cover
+                    onCtx.fillStyle = 'rgba(0, 0, 0, 0.04)';
                     onCtx.fillRect(0, drawH - overlapH, viewport.width, overlapH);
                     
                     // Draw Dashed line separator
-                    onCtx.strokeStyle = 'rgba(0, 0, 0, 0.25)';
-                    onCtx.lineWidth = 2;
-                    onCtx.setLineDash([8, 8]);
+                    onCtx.strokeStyle = 'rgba(0, 0, 0, 0.15)';
+                    onCtx.lineWidth = 1.5 * pixelRatio;
+                    onCtx.setLineDash([8 * pixelRatio, 8 * pixelRatio]);
                     onCtx.beginPath();
                     onCtx.moveTo(0, drawH - overlapH);
                     onCtx.lineTo(viewport.width, drawH - overlapH);
                     onCtx.stroke();
-                    
-                    // Draw indicator text
-                    onCtx.fillStyle = 'rgba(0, 0, 0, 0.5)';
-                    onCtx.font = `${Math.max(12, 14 * state.scale)}px sans-serif`;
-                    onCtx.fillText("Overlap from next half", 10, drawH - overlapH + 25);
                 } else {
                     // Draw Bottom Half
                     const srcY = (viewport.height / 2) - overlapH;
                     onCtx.drawImage(offCanvas, 0, srcY, viewport.width, drawH, 0, 0, viewport.width, drawH);
                     
-                    // Draw overlapping cover (Light Mode)
-                    onCtx.fillStyle = 'rgba(0, 0, 0, 0.08)';
+                    // Draw transparent overlap cover
+                    onCtx.fillStyle = 'rgba(0, 0, 0, 0.04)';
                     onCtx.fillRect(0, 0, viewport.width, overlapH);
                     
                     // Draw Dashed line separator
-                    onCtx.strokeStyle = 'rgba(0, 0, 0, 0.25)';
-                    onCtx.lineWidth = 2;
-                    onCtx.setLineDash([8, 8]);
+                    onCtx.strokeStyle = 'rgba(0, 0, 0, 0.15)';
+                    onCtx.lineWidth = 1.5 * pixelRatio;
+                    onCtx.setLineDash([8 * pixelRatio, 8 * pixelRatio]);
                     onCtx.beginPath();
                     onCtx.moveTo(0, overlapH);
                     onCtx.lineTo(viewport.width, overlapH);
                     onCtx.stroke();
-
-                    // Draw indicator text
-                    onCtx.fillStyle = 'rgba(0, 0, 0, 0.5)';
-                    onCtx.font = `${Math.max(12, 14 * state.scale)}px sans-serif`;
-                    onCtx.fillText("Overlap from previous half", 10, overlapH - 15);
                 }
 
                 state.rendering = false;
@@ -434,20 +476,16 @@
             }
         }
 
+        // Utilities
         function closeDocument() {
             state.doc = null;
             state.url = '';
             if (state.renderTask) {
                 state.renderTask.cancel();
             }
-            
-            // Update URL string gracefully
             try {
                 window.history.pushState({}, '', window.location.pathname);
-            } catch (e) {
-                console.warn("URL update prevented by browser sandbox constraints.");
-            }
-            
+            } catch (e) {}
             updateUI();
         }
 
@@ -474,8 +512,7 @@
             }
         }
 
-        // --- Event Listeners ---
-
+        // Event Listeners
         els.homeForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const inputVal = els.urlInput.value.trim();
@@ -515,6 +552,16 @@
 
         els.btnFit.addEventListener('click', fitToScreen);
 
+        els.btnShowToolbar.addEventListener('click', () => {
+            state.toolbarVisible = true;
+            updateUI();
+        });
+
+        els.btnHideToolbar.addEventListener('click', () => {
+            state.toolbarVisible = false;
+            updateUI();
+        });
+
         window.addEventListener('keydown', (e) => {
             if (!state.doc || e.target.tagName === 'INPUT') return;
             
@@ -535,6 +582,15 @@
                 }
             }
         });
+
+        // Initialize from URL params if present
+        const params = new URLSearchParams(window.location.search);
+        const urlParam = params.get('url');
+        if (urlParam) {
+            openDocument(urlParam);
+        } else {
+            updateUI();
+        }
 
     </script>
 </body>
