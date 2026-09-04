@@ -1,467 +1,329 @@
 {
-  "text": "Attention Is All You Need — Transformer Fundamentals",
+  "text": "Attention Is All You Need — Essential Transformer Concepts",
   "quiz": [
     {
-      "question": "A machine learning task that processes ordered data such as a sentence is called __________.",
-      "type": "blank",
-      "answer": "Sequence Modeling",
-      "explanation": "Sequence modeling deals with ordered data where the position and context of each element matter. Natural-language sentences are sequences of tokens, and Transformer models are designed to learn relationships among those tokens."
-    },
-    {
-      "question": "Transforming one sequence into another, such as an English sentence into a Spanish sentence, is called __________.",
+      "question": "Transforming one sequence into another, such as translating a sentence from one language to another, is called __________.",
       "type": "blank",
       "answer": "Sequence Transduction",
-      "explanation": "Sequence transduction maps an input sequence to an output sequence. Machine translation is a classic example: the model receives a sequence in one language and produces a corresponding sequence in another language."
+      "explanation": "Sequence transduction maps an input sequence to an output sequence. Machine translation is the main sequence-transduction task studied in the paper."
     },
     {
-      "question": "The architecture in which one network processes the input and another generates the output is called __________.",
+      "question": "The architecture in which one component processes the input sequence and another generates the output sequence is called the __________.",
       "type": "blank",
       "answer": "Encoder-Decoder Architecture",
-      "explanation": "The encoder converts the source sequence into contextual representations. The decoder then uses those representations to generate the target sequence. The original Transformer keeps this overall structure while replacing recurrent layers with attention."
+      "explanation": "The encoder maps the input sequence into continuous representations. The decoder then uses those representations to generate the output sequence."
     },
     {
-      "question": "Generating an output one token at a time while conditioning each prediction on previously generated tokens is called __________.",
+      "question": "Generating output tokens one at a time while using previously generated tokens as input is called __________.",
       "type": "blank",
       "answer": "Autoregressive Generation",
-      "explanation": "In autoregressive generation, each new output token depends on the previously generated output tokens. During inference, the Transformer decoder repeatedly predicts the next token and appends it to the generated sequence."
+      "explanation": "The Transformer decoder is autoregressive. When generating a token, it can depend on previously generated tokens but not on future tokens."
     },
     {
-      "question": "Neural networks that process sequences through recurrent hidden states are called __________.",
+      "question": "The sequential mechanism used by RNNs that the Transformer removes is called __________.",
       "type": "blank",
-      "answer": "Recurrent Neural Networks",
-      "explanation": "Recurrent Neural Networks, or RNNs, process sequence positions one after another using a hidden state that depends on the previous hidden state. This sequential dependency makes training difficult to parallelize across positions."
+      "answer": "Recurrence",
+      "explanation": "RNNs compute each hidden state using the previous hidden state. The Transformer removes recurrence and instead uses attention to connect sequence positions."
     },
     {
-      "question": "The main computational limitation of RNNs that motivated the Transformer is their inherently __________ computation.",
-      "type": "blank",
-      "answer": "Sequential",
-      "explanation": "An RNN generally must compute one hidden state before the next hidden state can be calculated. This prevents all positions in a sequence from being processed simultaneously during training, unlike Transformer self-attention."
-    },
-    {
-      "question": "A neural architecture that applies filters over nearby positions and was also used for sequence modeling before Transformers is called a __________.",
-      "type": "blank",
-      "answer": "Convolutional Neural Network",
-      "explanation": "Convolutional Neural Networks can process sequence positions in parallel, but information between distant positions usually must travel through multiple convolutional layers. The Transformer instead allows direct interaction between distant positions through attention."
-    },
-    {
-      "question": "The mathematical objects used to represent token features throughout the Transformer are primarily __________.",
-      "type": "blank",
-      "answer": "Vectors",
-      "explanation": "Each token is represented as a vector containing numerical features. Collections of token vectors are arranged into matrices so that many Transformer operations can be performed efficiently using matrix multiplication."
-    },
-    {
-      "question": "The operation commonly used to measure compatibility between a Query and a Key is the __________.",
-      "type": "blank",
-      "answer": "Dot Product",
-      "explanation": "The dot product produces a scalar compatibility score between two vectors. In attention, a larger dot product between a Query and a Key generally indicates that the corresponding Value should receive more attention."
-    },
-    {
-      "question": "A learned transformation of the form XW + b is commonly called a __________.",
-      "type": "blank",
-      "answer": "Linear Transformation",
-      "explanation": "A linear layer multiplies an input by a learned weight matrix and may add a bias. Transformers use learned linear projections extensively, including the transformations that create Queries, Keys, and Values."
-    },
-    {
-      "question": "The learned vector representation assigned to a token is called an __________.",
-      "type": "blank",
-      "answer": "Embedding",
-      "explanation": "An embedding converts a discrete token ID into a continuous vector. In the original Transformer, token embeddings have the same dimensionality as the model representation, d_model."
-    },
-    {
-      "question": "The function that converts arbitrary scores into positive values that sum to 1 is called __________.",
-      "type": "blank",
-      "answer": "Softmax",
-      "explanation": "Softmax converts attention scores into normalized attention weights. Larger scores receive larger probabilities, and all resulting weights sum to 1."
-    },
-    {
-      "question": "Combining vectors by multiplying each vector by an importance coefficient and adding the results is called a __________.",
-      "type": "blank",
-      "answer": "Weighted Sum",
-      "explanation": "Attention produces its output as a weighted sum of Value vectors. The attention weights determine how much information from each Value contributes to the final representation."
-    },
-    {
-      "question": "In attention, the vector representing what the current position is searching for is called the __________.",
-      "type": "blank",
-      "answer": "Query",
-      "explanation": "A Query can be understood as the representation used to ask what information is relevant to the current token. It is compared with Keys to determine attention weights."
-    },
-    {
-      "question": "In attention, the vector used to determine whether a piece of information matches a Query is called the __________.",
-      "type": "blank",
-      "answer": "Key",
-      "explanation": "A Key is compared with a Query to produce a compatibility score. The resulting scores determine how strongly the corresponding Values should influence the attention output."
-    },
-    {
-      "question": "In attention, the vector containing the information that is actually combined into the output is called the __________.",
-      "type": "blank",
-      "answer": "Value",
-      "explanation": "After Queries are compared with Keys, softmax produces weights. Those weights are used to combine the Value vectors, so Values contain the information retrieved by the attention mechanism."
-    },
-    {
-      "question": "The mechanism that maps a Query and a set of Key-Value pairs to a weighted combination of Values is called __________.",
-      "type": "blank",
-      "answer": "Attention",
-      "explanation": "Attention determines which pieces of information are relevant to a Query. It computes compatibility scores between the Query and Keys, converts them to weights, and uses those weights to combine the Values."
-    },
-    {
-      "question": "The matrix containing compatibility scores between all Queries and all Keys is produced by __________.",
-      "type": "blank",
-      "answer": "QK^T",
-      "explanation": "When Queries and Keys are stored in matrices, multiplying Q by the transpose of K produces a matrix of pairwise compatibility scores. Each row represents how one Query relates to all Keys."
-    },
-    {
-      "question": "The attention method defined by softmax(QK^T / sqrt(d_k))V is called __________.",
-      "type": "blank",
-      "answer": "Scaled Dot-Product Attention",
-      "explanation": "Scaled Dot-Product Attention computes Query-Key dot products, scales them by the square root of the Key dimension, applies softmax, and uses the resulting weights to combine the Values."
-    },
-    {
-      "question": "In scaled dot-product attention, the Query-Key scores are divided by __________.",
-      "type": "blank",
-      "answer": "sqrt(d_k)",
-      "explanation": "The dot products are divided by the square root of the Key dimension. Without scaling, large vector dimensions can produce large dot products that push softmax toward regions with extremely small gradients."
-    },
-    {
-      "question": "Attention in which Queries, Keys, and Values all come from the same sequence is called __________.",
-      "type": "blank",
-      "answer": "Self-Attention",
-      "explanation": "Self-attention allows positions within the same sequence to interact. Each token can examine other tokens and build a contextual representation based on their relevance."
-    },
-    {
-      "question": "A token representation that incorporates information from surrounding or related tokens is called a __________.",
-      "type": "blank",
-      "answer": "Contextual Representation",
-      "explanation": "A raw embedding initially represents a token without sentence-specific context. After self-attention, the token representation incorporates information from other relevant positions, allowing the same word to have different meanings in different contexts."
-    },
-    {
-      "question": "Running several learned attention operations in parallel is called __________.",
-      "type": "blank",
-      "answer": "Multi-Head Attention",
-      "explanation": "Multi-Head Attention projects Queries, Keys, and Values into several different learned representation spaces. Each head performs attention independently, allowing the model to capture different kinds of relationships simultaneously."
-    },
-    {
-      "question": "The learned matrices that transform representations into Queries, Keys, and Values are called __________.",
-      "type": "blank",
-      "answer": "Projection Matrices",
-      "explanation": "Each attention head uses learned matrices such as W_Q, W_K, and W_V. These projections allow different heads to examine different aspects of the token representations."
-    },
-    {
-      "question": "One independent attention operation inside Multi-Head Attention is called an attention __________.",
-      "type": "blank",
-      "answer": "Head",
-      "explanation": "An attention head has its own learned Query, Key, and Value projections. Different heads can learn to focus on different positions, relationships, or representation subspaces."
-    },
-    {
-      "question": "The original Transformer base model uses __________ attention heads.",
-      "type": "blank",
-      "answer": "8",
-      "explanation": "The base Transformer uses 8 parallel attention heads. With d_model = 512, each head uses Key and Value dimensions of 64."
-    },
-    {
-      "question": "Attention in which the encoder's Queries, Keys, and Values all come from the encoder itself is called __________.",
-      "type": "blank",
-      "answer": "Encoder Self-Attention",
-      "explanation": "In encoder self-attention, Q, K, and V all come from the encoder's previous layer. Every input position can attend to every other input position."
-    },
-    {
-      "question": "Attention in the decoder that prevents positions from seeing future output tokens is called __________.",
-      "type": "blank",
-      "answer": "Masked Self-Attention",
-      "explanation": "Masked self-attention allows a decoder position to attend only to itself and earlier output positions. Future positions are hidden so the model cannot use information that would not be available during autoregressive generation."
-    },
-    {
-      "question": "Attention where Queries come from the decoder while Keys and Values come from the encoder is called __________.",
-      "type": "blank",
-      "answer": "Cross-Attention",
-      "explanation": "Cross-attention connects the decoder to the encoded source sequence. The decoder creates Queries from its current representations and uses them to retrieve relevant information from the encoder's Keys and Values."
-    },
-    {
-      "question": "Another name used in the original Transformer paper for Cross-Attention is __________.",
-      "type": "blank",
-      "answer": "Encoder-Decoder Attention",
-      "explanation": "The original paper refers to cross-attention as encoder-decoder attention. Queries are produced by the decoder, while Keys and Values are obtained from the encoder output."
-    },
-    {
-      "question": "The technique that blocks a decoder position from attending to later positions is called __________.",
-      "type": "blank",
-      "answer": "Causal Masking",
-      "explanation": "Causal masking preserves the autoregressive property. Attention scores corresponding to future positions are blocked before softmax, ensuring that predictions can depend only on earlier output tokens."
-    },
-    {
-      "question": "In the original Transformer, forbidden decoder attention scores are effectively set to __________ before softmax.",
-      "type": "blank",
-      "answer": "-Infinity",
-      "explanation": "Setting forbidden attention logits to negative infinity causes their softmax probabilities to become effectively zero. This prevents the decoder from attending to future tokens."
-    },
-    {
-      "question": "During training, moving the target sequence by one position so previous target tokens are used to predict the next token is called __________.",
-      "type": "blank",
-      "answer": "Shifted-Right Decoder Input",
-      "explanation": "The target sequence is shifted to the right before being supplied to the decoder. This allows the model to use the correct previous target tokens as inputs while learning to predict the next token."
-    },
-    {
-      "question": "The neural network applied independently to every token position after attention is called the __________.",
-      "type": "blank",
-      "answer": "Position-Wise Feed-Forward Network",
-      "explanation": "Each Transformer layer contains a Feed-Forward Network, or FFN, applied separately and identically to every position. Unlike attention, which mixes information across positions, the FFN transforms each position's features independently."
-    },
-    {
-      "question": "The activation function used between the two linear transformations in the original Transformer FFN is __________.",
-      "type": "blank",
-      "answer": "ReLU",
-      "explanation": "The original Transformer Feed-Forward Network applies one linear transformation, then ReLU, followed by another linear transformation. ReLU introduces nonlinearity into the network."
-    },
-    {
-      "question": "The original Transformer FFN expands a 512-dimensional representation to __________ dimensions before projecting it back.",
-      "type": "blank",
-      "answer": "2048",
-      "explanation": "The original base model uses d_model = 512 and d_ff = 2048. The Feed-Forward Network first expands each token representation to 2048 dimensions and then projects it back to 512."
-    },
-    {
-      "question": "Adding a sublayer's original input back to its output is called a __________.",
-      "type": "blank",
-      "answer": "Residual Connection",
-      "explanation": "A residual or skip connection computes something like x + Sublayer(x). Residual connections help information and gradients flow through deep networks and make optimization easier."
-    },
-    {
-      "question": "The normalization operation used after residual addition in the original Transformer is called __________.",
-      "type": "blank",
-      "answer": "Layer Normalization",
-      "explanation": "Layer Normalization stabilizes the scale of activations within each representation. In the original Transformer, each sublayer uses LayerNorm(x + Sublayer(x))."
-    },
-    {
-      "question": "The phrase 'Add & Norm' in the Transformer diagram refers to a residual addition followed by __________.",
-      "type": "blank",
-      "answer": "Layer Normalization",
-      "explanation": "The 'Add' represents the residual connection, where the original sublayer input is added to the sublayer output. 'Norm' represents Layer Normalization applied to that sum."
-    },
-    {
-      "question": "Because the original Transformer applies Layer Normalization after the residual addition, its architecture is known as __________.",
-      "type": "blank",
-      "answer": "Post-Norm",
-      "explanation": "The 2017 Transformer applies normalization after the residual connection. This arrangement is commonly called Post-Norm."
-    },
-    {
-      "question": "Information added to token embeddings so the Transformer can know token order is called __________.",
-      "type": "blank",
-      "answer": "Positional Encoding",
-      "explanation": "Self-attention itself does not encode sequence order. Positional encodings are added to token embeddings so the model can distinguish positions such as first, second, or tenth in the sequence."
-    },
-    {
-      "question": "The original Transformer represents positions using sine and cosine functions, a method called __________.",
-      "type": "blank",
-      "answer": "Sinusoidal Positional Encoding",
-      "explanation": "The original paper uses fixed sine and cosine functions with different frequencies to encode position. This gives the model information about where each token occurs in the sequence."
-    },
-    {
-      "question": "Before entering the first Transformer layer, token embeddings are added to __________.",
-      "type": "blank",
-      "answer": "Positional Encodings",
-      "explanation": "Token embeddings and positional encodings have the same d_model dimensionality and are added together. The resulting representation contains information about both token identity and token position."
-    },
-    {
-      "question": "Using the same parameter matrix for embeddings and the output vocabulary projection is called __________.",
-      "type": "blank",
-      "answer": "Weight Sharing",
-      "explanation": "The original Transformer shares weights between its embedding layers and the pre-softmax linear transformation. This technique is also commonly called weight tying."
-    },
-    {
-      "question": "The final decoder transformation that converts a d_model-dimensional representation into vocabulary-sized scores is called the __________.",
-      "type": "blank",
-      "answer": "Linear Output Projection",
-      "explanation": "The decoder's final hidden representation has size d_model. A learned linear transformation maps that representation into one score for every token in the output vocabulary."
-    },
-    {
-      "question": "The raw vocabulary scores produced by the final Linear layer before Softmax are called __________.",
-      "type": "blank",
-      "answer": "Logits",
-      "explanation": "Logits are unnormalized scores for possible output tokens. Softmax converts these logits into a probability distribution over the vocabulary."
-    },
-    {
-      "question": "The function applied after the final Linear layer to produce next-token probabilities is __________.",
-      "type": "blank",
-      "answer": "Softmax",
-      "explanation": "The output Softmax converts vocabulary logits into probabilities that sum to 1. These probabilities are then used to select or search for the next generated token."
-    },
-    {
-      "question": "The N× symbol beside the encoder and decoder blocks means the Transformer layers are __________.",
-      "type": "blank",
-      "answer": "Stacked",
-      "explanation": "N× indicates that the displayed Transformer layer is repeated multiple times. The output from one layer becomes the input to the next, progressively producing richer representations."
-    },
-    {
-      "question": "The original Transformer base model uses __________ encoder layers and the same number of decoder layers.",
-      "type": "blank",
-      "answer": "6",
-      "explanation": "The base Transformer has a stack of N = 6 encoder layers and N = 6 decoder layers. Each encoder layer contains self-attention and an FFN, while each decoder layer additionally contains encoder-decoder attention."
-    },
-    {
-      "question": "The symbol representing the overall hidden representation size of the Transformer is __________.",
-      "type": "blank",
-      "answer": "d_model",
-      "explanation": "d_model is the dimensionality used by embeddings and the main Transformer representations. In the original base model, d_model is 512."
-    },
-    {
-      "question": "The symbol representing the hidden dimensionality of the position-wise Feed-Forward Network is __________.",
-      "type": "blank",
-      "answer": "d_ff",
-      "explanation": "d_ff represents the inner dimensionality of the Feed-Forward Network. In the original base Transformer, d_ff is 2048."
-    },
-    {
-      "question": "The symbol representing the dimensionality of an attention Key is __________.",
-      "type": "blank",
-      "answer": "d_k",
-      "explanation": "d_k is the dimensionality of Query and Key vectors used to calculate attention compatibility. The original base Transformer uses d_k = 64 for each head."
-    },
-    {
-      "question": "The symbol representing the dimensionality of an attention Value is __________.",
-      "type": "blank",
-      "answer": "d_v",
-      "explanation": "d_v represents the dimensionality of Value vectors within each attention head. In the original base model, d_v = 64."
-    },
-    {
-      "question": "The symbol representing the number of parallel attention heads is __________.",
-      "type": "blank",
-      "answer": "h",
-      "explanation": "h denotes the number of attention heads in Multi-Head Attention. The original base Transformer uses h = 8."
-    },
-    {
-      "question": "The symbol representing the number of stacked encoder or decoder layers is __________.",
-      "type": "blank",
-      "answer": "N",
-      "explanation": "N represents the number of repeated Transformer layers. In the original architecture, N = 6 for both the encoder and decoder."
-    },
-    {
-      "question": "The ability to process many sequence positions simultaneously instead of one at a time is called __________.",
+      "question": "The ability to process many sequence positions simultaneously during training is called __________.",
       "type": "blank",
       "answer": "Parallelization",
-      "explanation": "Self-attention can process all token positions simultaneously during training. This is one of the major advantages of the Transformer compared with recurrent networks."
+      "explanation": "Unlike recurrent models, self-attention does not require processing token positions one after another during training. This allows substantially more parallel computation."
     },
     {
       "question": "Relationships between tokens that are far apart in a sequence are called __________.",
       "type": "blank",
       "answer": "Long-Range Dependencies",
-      "explanation": "Long-range dependencies occur when information from one token affects another token many positions away. Self-attention allows distant positions to interact directly."
+      "explanation": "A long-range dependency occurs when information from one position affects another distant position. Self-attention allows distant tokens to interact directly."
     },
     {
-      "question": "The subword tokenization method used for the paper's English-German translation experiment is called __________.",
-      "type": "blank",
-      "answer": "Byte-Pair Encoding",
-      "explanation": "Byte-Pair Encoding, commonly abbreviated BPE, breaks text into reusable subword units. The English-German experiment uses a shared source-target vocabulary of approximately 37,000 tokens."
-    },
-    {
-      "question": "A tokenization approach that represents words using reusable pieces smaller than complete words is called __________.",
-      "type": "blank",
-      "answer": "Subword Tokenization",
-      "explanation": "Subword tokenization represents text using pieces that may be complete words or smaller fragments. Methods such as BPE and WordPiece allow a fixed vocabulary to represent rare and previously unseen words."
-    },
-    {
-      "question": "Grouping training examples with approximately similar sequence lengths is called __________.",
-      "type": "blank",
-      "answer": "Length-Based Batching",
-      "explanation": "Sentence pairs with similar lengths can be placed in the same training batch. This reduces unnecessary padding and makes training more efficient."
-    },
-    {
-      "question": "The loss commonly used to train a next-token prediction model by penalizing low probability assigned to the correct token is __________.",
-      "type": "blank",
-      "answer": "Cross-Entropy Loss",
-      "explanation": "Cross-entropy compares the model's predicted probability distribution with the target token. Training attempts to increase the probability assigned to the correct next token."
-    },
-    {
-      "question": "The process that computes how each model parameter contributed to the loss so the parameters can be updated is called __________.",
-      "type": "blank",
-      "answer": "Backpropagation",
-      "explanation": "Backpropagation propagates gradients from the loss backward through the network. These gradients indicate how parameters such as W_Q, W_K, W_V, and FFN weights should change to improve predictions."
-    },
-    {
-      "question": "The optimizer used to train the Transformer in the original paper is __________.",
-      "type": "blank",
-      "answer": "Adam",
-      "explanation": "The original Transformer uses the Adam optimizer with beta_1 = 0.9, beta_2 = 0.98, and epsilon = 10^-9."
-    },
-    {
-      "question": "Gradually increasing the learning rate during the first portion of training is called __________.",
-      "type": "blank",
-      "answer": "Learning Rate Warmup",
-      "explanation": "The original Transformer increases the learning rate approximately linearly during its first 4,000 training steps and decreases it afterward."
-    },
-    {
-      "question": "The regularization technique that randomly removes some activations during training is called __________.",
-      "type": "blank",
-      "answer": "Dropout",
-      "explanation": "Dropout randomly removes some activations during training to reduce overfitting. The original base Transformer uses a dropout rate of 0.1."
-    },
-    {
-      "question": "The regularization technique that replaces perfectly certain one-hot targets with slightly softened target probabilities is called __________.",
-      "type": "blank",
-      "answer": "Label Smoothing",
-      "explanation": "Label smoothing discourages the model from becoming excessively confident in one output token. The original paper uses a value of 0.1 and reports that it improves accuracy and BLEU despite making perplexity worse."
-    },
-    {
-      "question": "The phase in which model parameters are learned from examples is called __________.",
-      "type": "blank",
-      "answer": "Training",
-      "explanation": "During training, source and target sequences are available, a loss is computed from model predictions, and gradients are used to update the model parameters."
-    },
-    {
-      "question": "The phase in which a trained model generates predictions without updating its parameters is called __________.",
-      "type": "blank",
-      "answer": "Inference",
-      "explanation": "During inference, model parameters are fixed. For translation, the encoder processes the source sentence and the decoder generates the target sequence autoregressively."
-    },
-    {
-      "question": "A decoding algorithm that keeps several promising output sequences at each generation step is called __________.",
-      "type": "blank",
-      "answer": "Beam Search",
-      "explanation": "Beam search explores multiple candidate translations instead of always choosing only the single most likely next token. The original Transformer translation experiments use a beam size of 4."
-    },
-    {
-      "question": "The beam-search adjustment used to prevent sequence probability from unfairly favoring particular output lengths is called a __________.",
-      "type": "blank",
-      "answer": "Length Penalty",
-      "explanation": "A length penalty adjusts beam-search scores so candidate sequences of different lengths can be compared more appropriately."
-    },
-    {
-      "question": "Combining model parameters from several saved stages near the end of training is called __________.",
-      "type": "blank",
-      "answer": "Checkpoint Averaging",
-      "explanation": "Instead of evaluating only one saved checkpoint, the paper averages several recent checkpoints. This can produce a more stable final model."
-    },
-    {
-      "question": "The primary translation-quality metric reported in the Transformer paper is __________.",
-      "type": "blank",
-      "answer": "BLEU",
-      "explanation": "BLEU is an automatic metric for machine translation that compares generated translations with reference translations. Higher BLEU scores generally indicate closer agreement with the reference translations."
-    },
-    {
-      "question": "The metric measuring how surprised a language model is by the correct sequence is called __________.",
-      "type": "blank",
-      "answer": "Perplexity",
-      "explanation": "Perplexity is derived from the probability the model assigns to observed data. Lower perplexity generally indicates that the model assigns higher probability to the correct sequence."
-    },
-    {
-      "question": "An experiment that changes or removes architectural components to measure their importance is called an __________.",
-      "type": "blank",
-      "answer": "Ablation Study",
-      "explanation": "Ablation and model-variation experiments help determine which design choices contribute to performance. The Transformer paper varies attention heads, dimensions, model size, dropout, and positional encodings."
-    },
-    {
-      "question": "The standard smaller Transformer configuration described in the paper is called the __________.",
-      "type": "blank",
-      "answer": "Base Model",
-      "explanation": "The Transformer base model uses 6 encoder and decoder layers, d_model = 512, d_ff = 2048, 8 attention heads, and approximately 65 million parameters."
-    },
-    {
-      "question": "The larger Transformer configuration used to achieve the paper's strongest translation results is called the __________.",
-      "type": "blank",
-      "answer": "Big Model",
-      "explanation": "The Transformer big model increases the model width, Feed-Forward Network size, number of attention heads, and total parameter count. It contains approximately 213 million parameters."
-    },
-    {
-      "question": "The central architectural idea of the paper is that sequence representations can be built primarily using __________ instead of recurrence or convolution.",
+      "question": "The mechanism that maps a Query and a set of Key-Value pairs to a weighted combination of Values is called __________.",
       "type": "blank",
       "answer": "Attention",
-      "explanation": "The defining contribution of the paper is the Transformer, an encoder-decoder architecture built around self-attention and Feed-Forward Networks rather than recurrent or convolutional sequence-processing layers."
+      "explanation": "Attention determines which Values are relevant to a Query. Query-Key compatibility scores are converted into weights, and those weights are used to combine the Values."
+    },
+    {
+      "question": "In attention, the vector representing what the current position is looking for is called the __________.",
+      "type": "blank",
+      "answer": "Query",
+      "explanation": "A Query represents the information a position is searching for. It is compared with Keys to determine which Values should receive more attention."
+    },
+    {
+      "question": "In attention, the vector used to determine how well information matches a Query is called the __________.",
+      "type": "blank",
+      "answer": "Key",
+      "explanation": "Each Key is compared with a Query to produce a compatibility score. Higher compatibility generally gives the corresponding Value more influence."
+    },
+    {
+      "question": "In attention, the vector containing the information that is ultimately combined into the output is called the __________.",
+      "type": "blank",
+      "answer": "Value",
+      "explanation": "The attention weights are applied to Value vectors. The weighted Values are then combined to produce the attention output."
+    },
+    {
+      "question": "The operation used to calculate compatibility between a Query and a Key in the Transformer is the __________.",
+      "type": "blank",
+      "answer": "Dot Product",
+      "explanation": "The Transformer measures Query-Key compatibility using their dot product. These scores are later scaled and normalized with softmax."
+    },
+    {
+      "question": "When all Queries and Keys are stored in matrices, the pairwise Query-Key score matrix is computed as __________.",
+      "type": "blank",
+      "answer": "QK^T",
+      "explanation": "Multiplying Q by the transpose of K produces scores between every Query and every Key. Each row describes how one Query relates to all available Keys."
+    },
+    {
+      "question": "The function that converts attention scores into normalized attention weights is __________.",
+      "type": "blank",
+      "answer": "Softmax",
+      "explanation": "Softmax converts arbitrary attention scores into positive weights that sum to 1. Larger scores receive larger weights."
+    },
+    {
+      "question": "Combining Value vectors according to their attention weights produces a __________.",
+      "type": "blank",
+      "answer": "Weighted Sum",
+      "explanation": "After softmax produces attention weights, each Value is multiplied by its weight and the results are summed. This weighted sum becomes the attention output."
+    },
+    {
+      "question": "The attention mechanism defined as softmax(QK^T / sqrt(d_k))V is called __________.",
+      "type": "blank",
+      "answer": "Scaled Dot-Product Attention",
+      "explanation": "Scaled Dot-Product Attention computes Query-Key dot products, divides them by sqrt(d_k), applies softmax, and uses the resulting weights to combine the Values."
+    },
+    {
+      "question": "In Scaled Dot-Product Attention, Query-Key dot products are divided by __________.",
+      "type": "blank",
+      "answer": "sqrt(d_k)",
+      "explanation": "As the Key dimension grows, dot products can become large. Dividing by sqrt(d_k) keeps their magnitude under control and helps prevent softmax from entering regions with very small gradients."
+    },
+    {
+      "question": "Attention in which Queries, Keys, and Values all come from the same sequence is called __________.",
+      "type": "blank",
+      "answer": "Self-Attention",
+      "explanation": "In self-attention, every position can examine other positions in the same sequence. This lets each token representation incorporate relevant context from other tokens."
+    },
+    {
+      "question": "A token representation that incorporates information from other tokens in the sequence is called a __________.",
+      "type": "blank",
+      "answer": "Contextual Representation",
+      "explanation": "Before attention, a token begins with an embedding. Self-attention mixes information from relevant tokens, producing a representation that depends on the surrounding context."
+    },
+    {
+      "question": "Performing several attention operations in parallel using different learned projections is called __________.",
+      "type": "blank",
+      "answer": "Multi-Head Attention",
+      "explanation": "Multi-Head Attention applies several attention heads in parallel. Different heads can learn to focus on different positions and different representation subspaces."
+    },
+    {
+      "question": "The learned matrices used to create different Query, Key, and Value representations are called __________.",
+      "type": "blank",
+      "answer": "Projection Matrices",
+      "explanation": "Each attention head uses learned matrices such as W_Q, W_K, and W_V to project the input representations into separate Query, Key, and Value spaces."
+    },
+    {
+      "question": "One independent attention operation within Multi-Head Attention is called an attention __________.",
+      "type": "blank",
+      "answer": "Head",
+      "explanation": "Each attention head has its own learned Query, Key, and Value projections. The outputs from all heads are concatenated and projected again."
+    },
+    {
+      "question": "The outputs of multiple attention heads are first __________ before a final learned projection.",
+      "type": "blank",
+      "answer": "Concatenated",
+      "explanation": "Multi-Head Attention runs several attention heads in parallel. Their outputs are concatenated into one representation and then transformed through another learned projection."
+    },
+    {
+      "question": "Self-attention in which Q, K, and V all come from the encoder is called __________.",
+      "type": "blank",
+      "answer": "Encoder Self-Attention",
+      "explanation": "In the encoder, Queries, Keys, and Values all come from the previous encoder layer. Every source position can attend to every source position."
+    },
+    {
+      "question": "The decoder attention mechanism that prevents a position from seeing future output positions is called __________.",
+      "type": "blank",
+      "answer": "Masked Self-Attention",
+      "explanation": "Decoder self-attention is masked so each position can use only itself and earlier output positions. This preserves autoregressive generation."
+    },
+    {
+      "question": "Attention in which Queries come from the decoder while Keys and Values come from the encoder is called __________.",
+      "type": "blank",
+      "answer": "Encoder-Decoder Attention",
+      "explanation": "Encoder-Decoder Attention connects the decoder to the source sequence. Queries come from the decoder, while Keys and Values come from the encoder output. It is commonly called cross-attention in modern terminology."
+    },
+    {
+      "question": "The technique that prevents decoder attention from accessing future output tokens is called __________.",
+      "type": "blank",
+      "answer": "Masking",
+      "explanation": "Masking removes illegal connections to future positions before softmax. This ensures that the prediction at a position depends only on previously available output tokens."
+    },
+    {
+      "question": "Forbidden future-position scores in decoder self-attention are set to __________ before softmax.",
+      "type": "blank",
+      "answer": "-Infinity",
+      "explanation": "Setting forbidden scores to negative infinity makes their softmax weights effectively zero, preventing future tokens from influencing the current prediction."
+    },
+    {
+      "question": "The neural network applied separately and identically to every sequence position after attention is called the __________.",
+      "type": "blank",
+      "answer": "Position-Wise Feed-Forward Network",
+      "explanation": "Each encoder and decoder layer contains a Feed-Forward Network applied independently to every position. Attention mixes information between positions, while the FFN transforms the features within each position."
+    },
+    {
+      "question": "The nonlinear activation used inside the original Transformer's Feed-Forward Network is __________.",
+      "type": "blank",
+      "answer": "ReLU",
+      "explanation": "The original FFN contains two linear transformations with a ReLU activation between them."
+    },
+    {
+      "question": "Adding the original sublayer input to the sublayer output is called a __________.",
+      "type": "blank",
+      "answer": "Residual Connection",
+      "explanation": "Each attention or FFN sublayer has a residual connection. The model adds the original input x to Sublayer(x), helping information and gradients flow through the deep network."
+    },
+    {
+      "question": "The normalization method used around Transformer sublayers is called __________.",
+      "type": "blank",
+      "answer": "Layer Normalization",
+      "explanation": "The original Transformer applies Layer Normalization after adding a sublayer's residual connection, expressed in the paper as LayerNorm(x + Sublayer(x))."
+    },
+    {
+      "question": "The 'Add' part of 'Add & Norm' in the Transformer diagram refers to a __________.",
+      "type": "blank",
+      "answer": "Residual Connection",
+      "explanation": "The sublayer output is added to the original sublayer input. The result is then normalized using Layer Normalization."
+    },
+    {
+      "question": "The learned vector representation used to convert a token into numerical features is called an __________.",
+      "type": "blank",
+      "answer": "Embedding",
+      "explanation": "Token IDs are discrete, so the model first converts them into learned continuous vectors called embeddings."
+    },
+    {
+      "question": "Information added to token embeddings so the Transformer can distinguish token positions is called __________.",
+      "type": "blank",
+      "answer": "Positional Encoding",
+      "explanation": "Because the Transformer contains neither recurrence nor convolution, token order is not automatically represented. Positional encodings inject information about token positions."
+    },
+    {
+      "question": "The position representation using sine and cosine functions in the original Transformer is called __________.",
+      "type": "blank",
+      "answer": "Sinusoidal Positional Encoding",
+      "explanation": "The paper uses fixed sine and cosine functions at different frequencies to construct positional encodings."
+    },
+    {
+      "question": "Before entering the encoder or decoder stack, token embeddings are added to __________.",
+      "type": "blank",
+      "answer": "Positional Encodings",
+      "explanation": "Embeddings and positional encodings have the same d_model dimensionality, so they can be added directly to form the initial sequence representations."
+    },
+    {
+      "question": "The number of repeated encoder or decoder layers is represented by __________.",
+      "type": "blank",
+      "answer": "N",
+      "explanation": "The N× notation in the Transformer diagram means the layer is repeated N times. The original base Transformer uses N = 6 for both encoder and decoder stacks."
+    },
+    {
+      "question": "The main representation dimensionality used throughout the Transformer is represented by __________.",
+      "type": "blank",
+      "answer": "d_model",
+      "explanation": "d_model is the dimensionality of embeddings and the main hidden representations. The original base Transformer uses d_model = 512."
+    },
+    {
+      "question": "The internal dimensionality of the Position-Wise Feed-Forward Network is represented by __________.",
+      "type": "blank",
+      "answer": "d_ff",
+      "explanation": "d_ff is the size of the FFN's inner layer. The original base Transformer uses d_ff = 2048."
+    },
+    {
+      "question": "The dimensionality of Query and Key vectors used by an attention head is represented by __________.",
+      "type": "blank",
+      "answer": "d_k",
+      "explanation": "d_k is the dimension used for Queries and Keys. It also appears in the scaling factor sqrt(d_k) in Scaled Dot-Product Attention."
+    },
+    {
+      "question": "The dimensionality of the Value vectors within an attention head is represented by __________.",
+      "type": "blank",
+      "answer": "d_v",
+      "explanation": "d_v specifies the dimensionality of Value vectors and therefore the output dimensionality of each individual attention head."
+    },
+    {
+      "question": "The number of parallel attention heads is represented by __________.",
+      "type": "blank",
+      "answer": "h",
+      "explanation": "h denotes the number of attention heads used in Multi-Head Attention. The original base Transformer uses 8 heads."
+    },
+    {
+      "question": "The learned transformation that converts the final decoder representation into vocabulary-level scores before Softmax is called a __________.",
+      "type": "blank",
+      "answer": "Linear Transformation",
+      "explanation": "After the decoder stack, a learned linear transformation maps the decoder representation into one score for each possible output token."
+    },
+    {
+      "question": "The final function that converts decoder vocabulary scores into next-token probabilities is __________.",
+      "type": "blank",
+      "answer": "Softmax",
+      "explanation": "The final Softmax converts vocabulary scores into a probability distribution over possible next tokens."
+    },
+    {
+      "question": "The subword tokenization technique used for the paper's English-German experiment is called __________.",
+      "type": "blank",
+      "answer": "Byte-Pair Encoding",
+      "explanation": "The English-German training data is encoded using Byte-Pair Encoding, or BPE, which represents text using reusable subword units."
+    },
+    {
+      "question": "The optimizer used to train the Transformer in the paper is __________.",
+      "type": "blank",
+      "answer": "Adam",
+      "explanation": "The authors train the Transformer using the Adam optimizer with specific beta and epsilon settings."
+    },
+    {
+      "question": "Gradually increasing the learning rate during the initial training steps is called __________.",
+      "type": "blank",
+      "answer": "Learning Rate Warmup",
+      "explanation": "The Transformer learning-rate schedule increases the learning rate during the first 4,000 warmup steps and decreases it afterward."
+    },
+    {
+      "question": "The regularization method that randomly removes some activations during training is called __________.",
+      "type": "blank",
+      "answer": "Dropout",
+      "explanation": "Dropout is applied to Transformer sublayers and to the combination of embeddings and positional encodings to help reduce overfitting."
+    },
+    {
+      "question": "The training technique that replaces perfectly certain target labels with slightly softened target distributions is called __________.",
+      "type": "blank",
+      "answer": "Label Smoothing",
+      "explanation": "The paper uses label smoothing with a value of 0.1. It makes predictions less overconfident and improves accuracy and BLEU despite worsening perplexity."
+    },
+    {
+      "question": "The phase in which model parameters are learned from source-target sentence pairs is called __________.",
+      "type": "blank",
+      "answer": "Training",
+      "explanation": "During training, the model processes known source and target sequences and updates its parameters to improve its predictions."
+    },
+    {
+      "question": "The phase in which a trained Transformer generates output tokens without updating its parameters is called __________.",
+      "type": "blank",
+      "answer": "Inference",
+      "explanation": "During inference, model parameters remain fixed. The encoder processes the input, and the decoder generates the output autoregressively one token at a time."
+    },
+    {
+      "question": "The decoding method that keeps several promising candidate output sequences instead of only one is called __________.",
+      "type": "blank",
+      "answer": "Beam Search",
+      "explanation": "Beam Search maintains several candidate sequences during generation. The paper uses beam search when evaluating its translation models."
+    },
+    {
+      "question": "The primary metric used in the paper to evaluate machine translation quality is __________.",
+      "type": "blank",
+      "answer": "BLEU",
+      "explanation": "BLEU compares generated translations with reference translations. Higher BLEU scores generally indicate better agreement with the reference translations."
+    },
+    {
+      "question": "The central architectural idea of the paper is to replace recurrence and convolution with __________.",
+      "type": "blank",
+      "answer": "Attention",
+      "explanation": "The defining idea of the Transformer is to build sequence representations using attention mechanisms rather than recurrent or convolutional sequence-processing layers."
     }
   ]
 }
