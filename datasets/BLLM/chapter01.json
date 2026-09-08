@@ -1,0 +1,127 @@
+```json
+{
+  "text": "Large Language Model Fundamentals",
+  "quiz": [
+    {
+      "question": "A deep neural network trained on massive amounts of text to understand, generate, and respond to human-like language is called a __________.",
+      "type": "blank",
+      "answer": "Large Language Model",
+      "explanation": "A Large Language Model, or LLM, is a deep neural network trained on very large collections of text. The chapter emphasizes that the word 'large' refers both to the number of trainable parameters in the model and to the enormous amount of text used for training. LLMs learn patterns involving grammar, meaning, context, and relationships between words, allowing them to perform many different language tasks rather than being designed for only one narrow application."
+    },
+    {
+      "question": "The field in which algorithms learn patterns from data instead of relying entirely on explicitly programmed rules is called __________.",
+      "type": "blank",
+      "answer": "Machine Learning",
+      "explanation": "Machine Learning is a branch of artificial intelligence in which algorithms learn from data and use what they learn to make predictions or decisions. The chapter contrasts this with manually written rule-based systems. For example, instead of explicitly programming every rule that identifies spam, a machine-learning system can study examples of spam and legitimate email and learn the patterns that distinguish them."
+    },
+    {
+      "question": "The branch of machine learning that uses multi-layer neural networks to learn complex patterns and representations is called __________.",
+      "type": "blank",
+      "answer": "Deep Learning",
+      "explanation": "Deep Learning is a subset of machine learning based on neural networks containing multiple layers. The chapter highlights an important distinction from traditional machine learning: deep-learning systems can learn useful features from data rather than requiring humans to manually specify all important features. Modern LLMs are deep-learning models because they use many neural-network layers to transform text representations and learn increasingly complex contextual patterns."
+    },
+    {
+      "question": "A computational model consisting of interconnected layers that transform numerical inputs into outputs is called a __________.",
+      "type": "blank",
+      "answer": "Neural Network",
+      "explanation": "A neural network is a mathematical model composed of layers that process numerical information. Each layer applies learned transformations to its inputs and passes the resulting representations to later layers. During training, the network adjusts its parameters to reduce prediction errors. LLMs are extremely large neural networks whose many layers collectively learn patterns in language."
+    },
+    {
+      "question": "The adjustable numerical values in a neural network that are optimized during training are called __________.",
+      "type": "blank",
+      "answer": "Parameters",
+      "explanation": "Parameters are the adjustable numerical values inside a neural network that are learned during training. They are often referred to as weights. Training repeatedly changes these values so that the model becomes better at predicting the correct output. In an LLM, learned knowledge is distributed across a huge number of parameters rather than being stored as explicit human-written rules. The chapter notes that modern LLMs may contain tens or hundreds of billions of parameters."
+    },
+    {
+      "question": "The neural-network architecture underlying most modern LLMs is called the __________.",
+      "type": "blank",
+      "answer": "Transformer",
+      "explanation": "The Transformer is a deep neural-network architecture introduced in the 2017 paper 'Attention Is All You Need.' The original transformer was developed for machine translation and consisted of an encoder and a decoder. Its defining idea is the attention mechanism, which allows the model to selectively use information from different parts of an input sequence. Modern GPT-like LLMs are built from the same fundamental transformer concepts."
+    },
+    {
+      "question": "The part of the original transformer that processes input text and produces contextual numerical representations is called the __________.",
+      "type": "blank",
+      "answer": "Encoder",
+      "explanation": "The encoder is the input-processing component of the original transformer architecture. It converts the input sequence into numerical representations that capture contextual information. In a translation system, for example, the encoder processes the sentence in the source language and creates representations that the decoder can use to generate the translation. BERT-like models are primarily based on the encoder portion of the transformer."
+    },
+    {
+      "question": "The part of the original transformer that generates an output sequence is called the __________.",
+      "type": "blank",
+      "answer": "Decoder",
+      "explanation": "The decoder is the output-generating component of the original transformer. It produces text one step at a time while using the preceding sequence as context. In the original translation architecture, the decoder also receives representations produced by the encoder. GPT simplifies the original transformer by using only decoder-style blocks, making it especially suitable for generating text through repeated next-token prediction."
+    },
+    {
+      "question": "A numerical vector representation of a token or piece of text is called an __________.",
+      "type": "blank",
+      "answer": "Embedding",
+      "explanation": "An embedding is a numerical vector used to represent text in a form that a neural network can process. Instead of operating directly on words, the model works with vectors containing many numerical dimensions. These representations allow the network to learn relationships and contextual information about tokens. As embeddings move through transformer layers, they become increasingly influenced by the surrounding context."
+    },
+    {
+      "question": "The transformer mechanism that allows tokens to weigh the importance of other tokens in the same sequence is called __________.",
+      "type": "blank",
+      "answer": "Self-Attention",
+      "explanation": "Self-attention allows the model to determine how strongly different tokens in the same sequence should influence one another. The chapter describes this as allowing the model to weigh the importance of different words or tokens relative to each other. This makes it possible to capture contextual relationships and long-range dependencies. For example, information near the beginning of a sentence can still influence how a token much later in the sentence is interpreted."
+    },
+    {
+      "question": "The process of converting raw text into smaller units that an LLM can process is called __________.",
+      "type": "blank",
+      "answer": "Tokenization",
+      "explanation": "Tokenization is the process of dividing text into units called tokens. The chapter describes tokens as the units of text that a model reads and notes that they roughly correspond to words and punctuation for introductory purposes. In practical LLM systems, tokens may also represent pieces of words. Tokenization is necessary because neural networks ultimately operate on numerical representations rather than directly on raw text."
+    },
+    {
+      "question": "The basic GPT training objective of predicting what comes after the preceding text is called __________.",
+      "type": "blank",
+      "answer": "Next-Token Prediction",
+      "explanation": "Next-token prediction is the fundamental training task behind GPT-like language models. The chapter often describes it as next-word prediction: the model looks at the preceding text and tries to predict what comes next. Despite the apparent simplicity of this objective, training on enormous amounts of text causes the model to learn syntax, semantic relationships, context, writing patterns, and many other regularities that are useful for more sophisticated language tasks."
+    },
+    {
+      "question": "A learning approach in which training targets are derived automatically from the data itself is called __________.",
+      "type": "blank",
+      "answer": "Self-Supervised Learning",
+      "explanation": "Self-supervised learning creates training targets from the structure of the original data rather than requiring humans to manually label every example. For GPT pretraining, the next token in a piece of text automatically becomes the correct target for the preceding tokens. This makes it possible to train on massive collections of ordinary text because the text effectively provides its own labels."
+    },
+    {
+      "question": "The initial large-scale training stage in which an LLM learns from a broad corpus of unlabeled text is called __________.",
+      "type": "blank",
+      "answer": "Pretraining",
+      "explanation": "Pretraining is the first major stage of creating an LLM. During this stage, the model learns from a large and diverse collection of mostly unlabeled text, typically through next-token prediction. The goal is to learn broad language patterns rather than specialize in one particular task. The resulting pretrained model can later be adapted much more efficiently to specific applications."
+    },
+    {
+      "question": "A general-purpose pretrained model that can later be adapted to many downstream tasks is called a __________.",
+      "type": "blank",
+      "answer": "Foundation Model",
+      "explanation": "A foundation model is the general-purpose model produced by large-scale pretraining. The chapter also uses the terms base model and pretrained model for this stage. Because the model has already learned broad patterns from a large corpus, it provides a foundation that can be reused for many later tasks. Developers can finetune it rather than repeating the enormously expensive pretraining process from scratch."
+    },
+    {
+      "question": "Further training a pretrained model on a smaller and more specialized dataset is called __________.",
+      "type": "blank",
+      "answer": "Finetuning",
+      "explanation": "Finetuning takes an already pretrained model and continues training it on a narrower dataset related to a particular task or domain. Pretraining provides broad language capabilities, while finetuning specializes those capabilities. The chapter discusses instruction finetuning and classification finetuning as two important examples. Because the model already has a strong foundation, finetuning generally requires far less data and computation than pretraining."
+    },
+    {
+      "question": "Finetuning a model on instruction-and-answer pairs so that it learns to respond appropriately to user requests is called __________.",
+      "type": "blank",
+      "answer": "Instruction Finetuning",
+      "explanation": "Instruction finetuning trains a pretrained LLM using examples that pair an instruction with an appropriate answer. A training example might ask the model to translate text, answer a question, or summarize a passage and then provide the desired response. This teaches the model to interpret instructions and produce useful answers rather than merely continuing arbitrary text. It is therefore an important step toward turning a base language model into an assistant."
+    },
+    {
+      "question": "A text-generation process in which previously generated output becomes part of the input used to predict the next token is called __________.",
+      "type": "blank",
+      "answer": "Autoregressive Generation",
+      "explanation": "Autoregressive generation produces text one token at a time. After the model predicts a token, that token becomes part of the sequence used to predict the next one. The process repeats until the desired output has been generated. GPT is therefore an autoregressive model: every new token depends on the sequence that precedes it, which helps maintain continuity and coherence across generated text."
+    },
+    {
+      "question": "Performing a task without being given any task-specific examples in the prompt is called __________.",
+      "type": "blank",
+      "answer": "Zero-Shot Learning",
+      "explanation": "Zero-shot learning refers to the ability of a model to perform a task without being shown an explicit example of that task in the prompt. For instance, a user might simply instruct a GPT-like model to translate a sentence, and the model may be able to perform the task based on patterns learned during pretraining. The chapter contrasts this with few-shot learning, where the prompt contains a small number of examples demonstrating the desired behavior."
+    },
+    {
+      "question": "A capability that appears even though the model was not explicitly trained for that specific task is called __________.",
+      "type": "blank",
+      "answer": "Emergent Behavior",
+      "explanation": "Emergent behavior refers to capabilities that arise from large-scale training even though those capabilities were not explicitly specified as the model's primary training objective. The chapter uses translation as an example: GPT is pretrained primarily through next-word prediction, yet it can still develop the ability to translate between languages. Exposure to enormous amounts of varied text allows patterns learned for prediction to support additional tasks such as translation, classification, and summarization."
+    }
+  ]
+}
+```
