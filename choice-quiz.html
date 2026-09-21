@@ -7,15 +7,18 @@
     <link id="dynamic-favicon" rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔠</text></svg>">
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
         :root {
             --primary-color: #3498db;
+            --primary-dark: #2980b9;
             --secondary-color: #2c3e50;
             --background-color: #ecf0f1;
             --card-bg-color: #ffffff;
             --correct-color: #27ae60;
             --incorrect-color: #e74c3c;
+            --listening-color: #8e44ad;
+            --listening-light: #f4ecf7;
             --font-color: #34495e;
             --border-radius: 12px;
             --box-shadow: 0 10px 20px rgba(0,0,0,0.1);
@@ -58,14 +61,15 @@
         .container {
             position: relative;
             z-index: 1;
-            background-color: rgba(255, 255, 255, 0.92);
+            background-color: rgba(255, 255, 255, 0.94);
             border-radius: var(--border-radius);
             box-shadow: 0 18px 40px rgba(30, 41, 59, 0.12);
             width: 100%;
-            max-width: 700px;
+            max-width: 720px;
             overflow: hidden;
-            backdrop-filter: blur(4px);
-            -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
         }
 
         .view {
@@ -90,7 +94,7 @@
 
         #json-input {
             width: 100%;
-            height: 150px;
+            height: 140px;
             border: 2px solid #bdc3c7;
             border-radius: 8px;
             padding: 10px;
@@ -106,7 +110,7 @@
             gap: 20px;
             margin-bottom: 25px;
             align-items: center;
-            flex-wrap: wrap; /* allow wrapping on small screens */
+            flex-wrap: wrap;
         }
 
         .order-options label {
@@ -135,6 +139,17 @@
 
         .radio-label:hover {
             color: var(--primary-color);
+        }
+
+        .radio-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 999px;
+            background-color: var(--listening-light);
+            color: var(--listening-color);
+            margin-left: 6px;
         }
 
         .quiz-header {
@@ -185,7 +200,7 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            gap: 10px;
+            gap: 12px;
             margin-bottom: 25px;
             word-break: break-word;
         }
@@ -196,6 +211,7 @@
             line-height: 1.5;
             flex-grow: 1;
             white-space: pre-wrap;
+            width: 100%;
         }
 
         .spaced-underscores {
@@ -208,6 +224,7 @@
             display: flex;
             gap: 5px;
             flex-shrink: 0;
+            margin-top: 2px;
         }
 
         .speak-btn, .explain-btn {
@@ -241,6 +258,144 @@
             0% { box-shadow: 0 0 0 0 rgba(39, 174, 96, 0.4); }
             70% { box-shadow: 0 0 0 10px rgba(39, 174, 96, 0); }
             100% { box-shadow: 0 0 0 0 rgba(39, 174, 96, 0); }
+        }
+
+        .listening-card {
+            background: linear-gradient(135deg, #fbfcfe 0%, #f4f7fc 100%);
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            padding: 22px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
+        }
+
+        .listening-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--listening-color);
+            background: var(--listening-light);
+            padding: 4px 12px;
+            border-radius: 999px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--listening-color);
+            display: inline-block;
+            animation: dotBlink 1.2s infinite ease-in-out;
+        }
+
+        @keyframes dotBlink {
+            0%, 100% { opacity: 0.3; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        .listening-wave-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            height: 38px;
+            margin-bottom: 12px;
+        }
+
+        .wave-bar {
+            width: 5px;
+            height: 10px;
+            background-color: var(--primary-color);
+            border-radius: 999px;
+            transition: height 0.2s ease;
+        }
+
+        .listening-wave-container.active .wave-bar {
+            animation: waveMotion 1s infinite ease-in-out;
+        }
+
+        .listening-wave-container.active .wave-bar:nth-child(1) { animation-delay: 0.1s; }
+        .listening-wave-container.active .wave-bar:nth-child(2) { animation-delay: 0.25s; }
+        .listening-wave-container.active .wave-bar:nth-child(3) { animation-delay: 0.4s; }
+        .listening-wave-container.active .wave-bar:nth-child(4) { animation-delay: 0.18s; }
+        .listening-wave-container.active .wave-bar:nth-child(5) { animation-delay: 0.32s; }
+
+        @keyframes waveMotion {
+            0%, 100% { height: 8px; background-color: var(--primary-color); }
+            50% { height: 32px; background-color: var(--listening-color); }
+        }
+
+        .listening-instruction {
+            font-size: 0.95rem;
+            color: #475569;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .listening-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .replay-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 9px 18px;
+            font-size: 0.88rem;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .replay-btn:hover {
+            background-color: #1a252f;
+            transform: translateY(-1px);
+        }
+
+        .revealed-question-box {
+            margin-top: 16px;
+            padding: 14px 18px;
+            background: #ffffff;
+            border-radius: 8px;
+            border-left: 4px solid var(--listening-color);
+            text-align: left;
+            width: 100%;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .revealed-label {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--listening-color);
+            margin-bottom: 4px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-6px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         #options-container {
@@ -354,7 +509,7 @@
 
         .summary-controls .btn {
             width: 100%;
-            max-width: 320px;
+            max-width: 340px;
         }
 
         .controls {
@@ -375,7 +530,7 @@
         }
 
         .btn:hover:not(:disabled) {
-            background-color: #2980b9;
+            background-color: var(--primary-dark);
         }
 
         .btn:active:not(:disabled) {
@@ -542,30 +697,35 @@
                 <label>
                     <input type="radio" name="order" value="random"> Random
                 </label>
-                <!-- NEW OPTION ADDED HERE -->
                 <label>
                     <input type="radio" name="order" value="reversed"> Reversed
                 </label>
             </div>
 
             <div style="margin-bottom: 25px;">
-                <p style="font-weight: 500; margin-bottom: 10px; color: var(--secondary-color);">'Blank' Type Learning Mode:</p>
+                <p style="font-weight: 500; margin-bottom: 10px; color: var(--secondary-color);">Learning & Quiz Mode:</p>
                 <div class="blank-options">
                     <label class="radio-label">
                         <input type="radio" name="blank-mode" value="standard" checked> 
-                        Standard (One attempt per question)
+                        📝 Standard (One attempt per question)
                     </label>
                     <label class="radio-label">
                         <input type="radio" name="blank-mode" value="reverse-all"> 
-                        Generate reverse questions for all questions
+                        🔀 Generate reverse questions for all questions
                     </label>
                     <label class="radio-label">
                         <input type="radio" name="blank-mode" value="reverse-incorrect"> 
-                        Generate reverse questions for incorrect answers
+                        🔁 Generate reverse questions for incorrect answers
                     </label>
                     <label class="radio-label">
                         <input type="radio" name="blank-mode" value="repeat-incorrect"> 
-                        Repeat the question if the answer is incorrect
+                        🎯 Repeat the question if the answer is incorrect
+                    </label>
+                    <!-- FIFTH OPTION: Audio Listening Mode -->
+                    <label class="radio-label">
+                        <input type="radio" name="blank-mode" value="listening"> 
+                        🎧 Listening Mode (Question hidden, auto-played audio)
+                        <span class="radio-badge">NEW</span>
                     </label>
                 </div>
             </div>
@@ -664,6 +824,7 @@
             let isSubStep = false;
             let part1Correct = false;
             let part2Correct = false;
+            let currentDisplayedQuestion = null;
 
             const views = {
                 setup: document.getElementById('setup-view'),
@@ -868,39 +1029,78 @@
                 if ('speechSynthesis' in window) {
                     window.speechSynthesis.cancel();
                     speakBtn.classList.remove('speaking');
+                    const waveEl = document.querySelector('.listening-wave-container');
+                    if (waveEl) waveEl.classList.remove('active');
                 }
             };
 
             const getOriginalWord = () => {
+                if (currentDisplayedQuestion && currentDisplayedQuestion.question) {
+                    return currentDisplayedQuestion.question.replace(/_{2,}/g, '').trim();
+                }
                 const textElem = document.getElementById('question-text');
-                if(!textElem) return "";
+                if (!textElem) return "";
                 return textElem.textContent.replace(/_{2,}/g, '').trim();
             };
 
-            const handleSpeak = () => {
+            const getCleanSpokenPrompt = (questionObj) => {
+                if (!questionObj || !questionObj.question) return "";
+                const raw = questionObj.question;
+                // If it consists solely of underscores and a word/phrase, read the phrase directly
+                const stripped = raw.replace(/_{2,}/g, '').trim();
+                if (stripped.length > 0 && stripped.length < 50 && !stripped.includes('?')) {
+                    return stripped;
+                }
+                // For sentence completions, substitute underscores with "blank"
+                return raw.replace(/_{2,}/g, ' blank ').replace(/\s+/g, ' ').trim();
+            };
+
+            const playAudio = (textToSpeak) => {
                 if (!('speechSynthesis' in window)) {
-                    alert('Text-to-speech is not supported in your browser.');
+                    showInlineError("Text-to-speech is not supported in this browser.");
                     return;
                 }
 
-                if (window.speechSynthesis.speaking) {
+                cancelSpeech();
+                if (!textToSpeak) return;
+
+                setTimeout(() => {
+                    const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                    utterance.lang = 'en-US'; 
+                    utterance.rate = 0.95;
+
+                    speakBtn.classList.add('speaking');
+                    const waveEl = document.querySelector('.listening-wave-container');
+                    if (waveEl) waveEl.classList.add('active');
+                    
+                    utterance.onend = () => { 
+                        speakBtn.classList.remove('speaking'); 
+                        if (waveEl) waveEl.classList.remove('active');
+                    };
+                    utterance.onerror = () => { 
+                        speakBtn.classList.remove('speaking'); 
+                        if (waveEl) waveEl.classList.remove('active');
+                    };
+
+                    window.speechSynthesis.speak(utterance);
+                }, 60);
+            };
+
+            const handleSpeak = () => {
+                if (window.speechSynthesis && window.speechSynthesis.speaking) {
                     cancelSpeech();
                     return;
                 }
 
-                let textToSpeak = getOriginalWord();
+                let textToSpeak = "";
+                if (currentDisplayedQuestion) {
+                    textToSpeak = getCleanSpokenPrompt(currentDisplayedQuestion);
+                } else {
+                    textToSpeak = getOriginalWord();
+                }
+
                 if (!textToSpeak) return;
-
-                const utterance = new SpeechSynthesisUtterance(textToSpeak);
-                utterance.lang = 'en-US'; 
-                utterance.rate = 1.0;
-
-                speakBtn.classList.add('speaking');
-                
-                utterance.onend = () => { speakBtn.classList.remove('speaking'); };
-                utterance.onerror = () => { speakBtn.classList.remove('speaking'); };
-
-                window.speechSynthesis.speak(utterance);
+                playAudio(textToSpeak);
             };
 
             const handleExplain = () => {
@@ -911,6 +1111,11 @@
                 const url = `https://gemini.google.com/app?prompt=如何理解记忆${encodedWord}这个英语单词?`;
                 
                 window.open(url, '_blank');
+            };
+
+            const showInlineError = (msg) => {
+                errorMessage.textContent = msg;
+                errorMessage.style.display = 'block';
             };
 
             const startQuiz = async () => {
@@ -976,7 +1181,6 @@
                         showParagraphBtn.disabled = false;
                         
                         referenceParagraphContent.innerHTML = '';
-                        
                         const paragraphs = referenceParagraph.split(/(?:\r?\n)+/);
                         
                         let translatedParagraphs = [];
@@ -985,7 +1189,6 @@
                         }
                         
                         let paragraphIndex = 0;
-                        
                         paragraphs.forEach(pText => {
                             const trimmedText = pText.trim();
                             if (!trimmedText) return; 
@@ -995,7 +1198,6 @@
                             pElement.textContent = trimmedText;
                             
                             const currentIndex = paragraphIndex;
-                            
                             let tooltipContent = '';
                             if (translatedParagraphs.length > currentIndex && translatedParagraphs[currentIndex]) {
                                 tooltipContent = translatedParagraphs[currentIndex];
@@ -1039,7 +1241,6 @@
                     questionOrder = [...Array(quizData.length).keys()];
                     const selectedOrder = document.querySelector('input[name="order"]:checked').value;
                     
-                    // NEW: logic for selecting the newly added "reversed" order option
                     if (selectedOrder === 'random') {
                         questionOrder = shuffleArray(questionOrder);
                     } else if (selectedOrder === 'reversed') {
@@ -1051,8 +1252,7 @@
                     displayQuestion();
 
                 } catch (error) {
-                    errorMessage.textContent = `Error: ${error.message}`;
-                    errorMessage.style.display = 'block';
+                    showInlineError(`Error: ${error.message}`);
                 } finally {
                     startBtn.disabled = false;
                     startBtn.textContent = 'Start Quiz';
@@ -1098,15 +1298,58 @@
                     }
                 }
 
+                currentDisplayedQuestion = questionToDisplay;
                 const type = questionToDisplay.type || 'choice';
                 updateProgressBar();
                 
                 const tempDiv = document.createElement('div');
                 tempDiv.textContent = questionToDisplay.question;
                 let safeHtml = tempDiv.innerHTML;
-
                 safeHtml = safeHtml.replace(/(_{2,})(\s+)(?=_{2,})/g, '$1&nbsp;&nbsp;&nbsp;');
-                questionTextElement.innerHTML = safeHtml.replace(/(_{2,})/g, '<span class="spaced-underscores">$1</span>');
+                const formattedQuestionHtml = safeHtml.replace(/(_{2,})/g, '<span class="spaced-underscores">$1</span>');
+
+                const speechPrompt = getCleanSpokenPrompt(questionToDisplay);
+
+                // Check if Listening Mode is enabled
+                if (blankMode === 'listening') {
+                    questionTextElement.innerHTML = `
+                        <div class="listening-card">
+                            <div class="listening-badge">
+                                <span class="pulse-dot"></span> ${isSubStep ? '🎧 Listening Mode (Second Try)' : '🎧 Listening Mode'}
+                            </div>
+                            <div class="listening-wave-container active">
+                                <span class="wave-bar"></span>
+                                <span class="wave-bar"></span>
+                                <span class="wave-bar"></span>
+                                <span class="wave-bar"></span>
+                                <span class="wave-bar"></span>
+                            </div>
+                            <p class="listening-instruction">${isSubStep ? 'Try #2: Listen carefully and answer again:' : 'Listen to the question and guess the answer:'}</p>
+                            <div class="listening-actions">
+                                <button type="button" class="replay-btn" id="replay-audio-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                                    </svg>
+                                    Replay Audio
+                                </button>
+                            </div>
+                            <div id="revealed-question-text" class="revealed-question-box" style="display: none;">
+                                <span class="revealed-label">Question Text</span>
+                                ${formattedQuestionHtml}
+                            </div>
+                        </div>
+                    `;
+
+                    document.getElementById('replay-audio-btn')?.addEventListener('click', () => {
+                        playAudio(speechPrompt);
+                    });
+
+                    // Auto play the spoken question
+                    playAudio(speechPrompt);
+                } else {
+                    questionTextElement.innerHTML = formattedQuestionHtml;
+                }
 
                 if (type === 'choice') {
                     optionsContainer.classList.add('choice-options');
@@ -1149,31 +1392,76 @@
                 }
             };
 
+            const revealQuestionIfListeningMode = () => {
+                if (blankMode === 'listening') {
+                    const revealedBox = document.getElementById('revealed-question-text');
+                    if (revealedBox) {
+                        revealedBox.style.display = 'block';
+                    }
+                }
+            };
+
             const handleOptionClick = (event) => {
-                const selectedButton = event.target;
+                const selectedButton = event.currentTarget;
                 const isCorrect = selectedButton.dataset.isCorrect === 'true';
 
                 Array.from(optionsContainer.children).forEach(btn => {
                     btn.disabled = true;
                 });
 
-                if (isCorrect) {
-                    selectedButton.classList.add('correct');
-                    feedbackResult.textContent = "Correct! 🎉";
-                    feedbackContainer.classList.add('correct');
-                    score++;
+                if (blankMode === 'listening') {
+                    if (!isSubStep) {
+                        part1Correct = isCorrect;
+                        if (isCorrect) {
+                            selectedButton.classList.add('correct');
+                            feedbackResult.textContent = "Correct! 🎉";
+                            feedbackContainer.classList.add('correct');
+                            score++;
+                            revealQuestionIfListeningMode();
+                        } else {
+                            selectedButton.classList.add('incorrect');
+                            feedbackResult.innerHTML = "Incorrect! 😔 <br><small>Listen again and take your second try!</small>";
+                            feedbackContainer.classList.add('incorrect');
+                            // Keep question hidden so they can re-listen on retry
+                        }
+                    } else {
+                        part2Correct = isCorrect;
+                        revealQuestionIfListeningMode();
+                        if (isCorrect) {
+                            selectedButton.classList.add('correct');
+                            feedbackResult.textContent = "Correct on retry! 🎉";
+                            feedbackContainer.classList.add('correct');
+                            score++;
+                        } else {
+                            selectedButton.classList.add('incorrect');
+                            const correctButton = optionsContainer.querySelector('[data-is-correct="true"]');
+                            if (correctButton) correctButton.classList.add('correct');
+                            feedbackResult.textContent = "Incorrect! 😔";
+                            feedbackContainer.classList.add('incorrect');
+                            incorrectlyAnsweredQuestions.push(questionOrder[currentQuestionIndex]);
+                        }
+                    }
                 } else {
-                    selectedButton.classList.add('incorrect');
-                    const correctButton = optionsContainer.querySelector('[data-is-correct="true"]');
-                    if (correctButton) correctButton.classList.add('correct');
-                    
-                    feedbackResult.textContent = "Incorrect! 😔";
-                    feedbackContainer.classList.add('incorrect');
-                    incorrectlyAnsweredQuestions.push(questionOrder[currentQuestionIndex]);
+                    if (isCorrect) {
+                        selectedButton.classList.add('correct');
+                        feedbackResult.textContent = "Correct! 🎉";
+                        feedbackContainer.classList.add('correct');
+                        score++;
+                    } else {
+                        selectedButton.classList.add('incorrect');
+                        const correctButton = optionsContainer.querySelector('[data-is-correct="true"]');
+                        if (correctButton) correctButton.classList.add('correct');
+                        
+                        feedbackResult.textContent = "Incorrect! 😔";
+                        feedbackContainer.classList.add('incorrect');
+                        incorrectlyAnsweredQuestions.push(questionOrder[currentQuestionIndex]);
+                    }
                 }
 
                 const questionIdx = questionOrder[currentQuestionIndex];
-                feedbackExplanation.textContent = quizData[questionIdx].explanation || "";
+                feedbackExplanation.textContent = (blankMode === 'listening' && !isSubStep && !isCorrect)
+                    ? "Audio prompt will play again on retry. Listen carefully!"
+                    : (quizData[questionIdx].explanation || "");
                 feedbackContainer.style.display = 'block';
 
                 showNextButton();
@@ -1194,13 +1482,21 @@
                 const normalizedCorrectAnswer = correctAnswer.toLowerCase().replace(/\s+/g, '');
 
                 const isCorrect = normalizedUserAnswer === normalizedCorrectAnswer;
+                const isRetryable = (blankMode === 'repeat-incorrect' || blankMode === 'listening') && !isSubStep;
 
                 if (isCorrect) {
-                    feedbackResult.textContent = "Correct! 🎉";
+                    feedbackResult.textContent = isSubStep ? "Correct on retry! 🎉" : "Correct! 🎉";
                     input.style.borderColor = 'var(--correct-color)';
                     feedbackContainer.classList.add('correct');
+                    revealQuestionIfListeningMode();
                 } else {
-                    feedbackResult.innerHTML = `Incorrect! 😔 <br><small>Correct answer: <strong>${correctAnswer}</strong></small>`;
+                    if (isRetryable) {
+                        feedbackResult.innerHTML = `Incorrect! 😔 <br><small>You have a second try. Replay audio and give it another shot!</small>`;
+                        // Keep question hidden in listening mode on the first attempt
+                    } else {
+                        revealQuestionIfListeningMode();
+                        feedbackResult.innerHTML = `Incorrect! 😔 <br><small>Correct answer: <strong>${correctAnswer}</strong></small>`;
+                    }
                     input.style.borderColor = 'var(--incorrect-color)';
                     feedbackContainer.classList.add('incorrect');
                 }
@@ -1219,7 +1515,9 @@
                     }
                 }
 
-                feedbackExplanation.textContent = currentQuestion.explanation || "";
+                feedbackExplanation.textContent = (isRetryable && !isCorrect)
+                    ? "Don't worry, listen again and submit your second attempt."
+                    : (currentQuestion.explanation || "");
                 feedbackContainer.style.display = 'block';
 
                 showNextButton();
@@ -1232,25 +1530,26 @@
                     const questionIdx = questionOrder[currentQuestionIndex];
                     const currentQuestion = quizData[questionIdx];
                     
-                    if (currentQuestion.type === 'blank' && blankMode !== 'standard' && !isSubStep) {
-                        let willShowSubStep = false;
-                        
-                        if (blankMode === 'reverse-all') {
+                    let willShowSubStep = false;
+                    if (!isSubStep) {
+                        if (blankMode === 'listening' && !part1Correct) {
                             willShowSubStep = true;
-                        } else if (blankMode === 'reverse-incorrect' && !part1Correct) {
-                            willShowSubStep = true;
-                        } else if (blankMode === 'repeat-incorrect' && !part1Correct) {
-                            willShowSubStep = true;
-                        }
-
-                        if (willShowSubStep) {
-                            if (blankMode === 'repeat-incorrect') {
-                                nextText = 'Retry Question';
-                            } else {
-                                nextText = 'Next Part (Reverse)';
+                        } else if (currentQuestion.type === 'blank' && blankMode !== 'standard') {
+                            if (blankMode === 'reverse-all') {
+                                willShowSubStep = true;
+                            } else if (blankMode === 'reverse-incorrect' && !part1Correct) {
+                                willShowSubStep = true;
+                            } else if (blankMode === 'repeat-incorrect' && !part1Correct) {
+                                willShowSubStep = true;
                             }
-                        } else if (isLastQuestion) {
-                            nextText = 'Finish Quiz';
+                        }
+                    }
+
+                    if (willShowSubStep) {
+                        if (blankMode === 'repeat-incorrect' || blankMode === 'listening') {
+                            nextText = 'Retry Question';
+                        } else {
+                            nextText = 'Next Part (Reverse)';
                         }
                     } else if (isLastQuestion) {
                         nextText = 'Finish Quiz';
@@ -1267,20 +1566,22 @@
                 const currentQuestion = quizData[questionIdx];
                 const type = currentQuestion.type || 'choice';
 
-                if (type === 'blank' && blankMode !== 'standard') {
+                const isRetryOrReverse = blankMode === 'listening' || (type === 'blank' && blankMode !== 'standard');
+
+                if (isRetryOrReverse) {
                     if (!isSubStep) {
                         let willShowSubStep = false;
                         
                         if (blankMode === 'reverse-all') willShowSubStep = true;
                         else if (blankMode === 'reverse-incorrect' && !part1Correct) willShowSubStep = true;
-                        else if (blankMode === 'repeat-incorrect' && !part1Correct) willShowSubStep = true;
+                        else if ((blankMode === 'repeat-incorrect' || blankMode === 'listening') && !part1Correct) willShowSubStep = true;
 
                         if (willShowSubStep) {
                             isSubStep = true;
                             displayQuestion();
                             return; 
                         } else {
-                            score++;
+                            if (blankMode !== 'listening') score++;
                             isSubStep = false;
                             part1Correct = false;
                             part2Correct = false;
@@ -1292,7 +1593,8 @@
                         } else if (blankMode === 'reverse-incorrect') {
                             incorrectlyAnsweredQuestions.push(questionIdx);
                         } else if (blankMode === 'repeat-incorrect') {
-                            incorrectlyAnsweredQuestions.push(questionIdx); 
+                            if (part2Correct) score++;
+                            else incorrectlyAnsweredQuestions.push(questionIdx); 
                         }
                         
                         isSubStep = false;
@@ -1397,8 +1699,7 @@
                         jsonInput.value = finalJsonText;
                     } catch (error) {
                         console.error("Failed to load from URL parameter:", error);
-                        errorMessage.textContent = `Error loading from URL: ${error.message}`;
-                        errorMessage.style.display = 'block';
+                        showInlineError(`Error loading from URL: ${error.message}`);
                         loadFromCookie();
                     } finally {
                         jsonInput.placeholder = 'Paste quiz JSON or URL here...';
