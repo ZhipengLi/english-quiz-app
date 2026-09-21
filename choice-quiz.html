@@ -1409,6 +1409,13 @@
                     btn.disabled = true;
                 });
 
+                const questionIdx = questionOrder[currentQuestionIndex];
+                const originalQuestion = quizData[questionIdx];
+                const correctAnswerText = currentDisplayedQuestion ? currentDisplayedQuestion.answer : originalQuestion.answer;
+
+                // Always reveal the question in listening mode upon answering
+                revealQuestionIfListeningMode();
+
                 if (blankMode === 'listening') {
                     if (!isSubStep) {
                         part1Correct = isCorrect;
@@ -1417,16 +1424,15 @@
                             feedbackResult.textContent = "Correct! 🎉";
                             feedbackContainer.classList.add('correct');
                             score++;
-                            revealQuestionIfListeningMode();
                         } else {
                             selectedButton.classList.add('incorrect');
-                            feedbackResult.innerHTML = "Incorrect! 😔 <br><small>Listen again and take your second try!</small>";
+                            const correctButton = optionsContainer.querySelector('[data-is-correct="true"]');
+                            if (correctButton) correctButton.classList.add('correct');
+                            feedbackResult.innerHTML = `Incorrect! 😔 <br><small>Correct answer: <strong>${correctAnswerText}</strong></small>`;
                             feedbackContainer.classList.add('incorrect');
-                            // Keep question hidden so they can re-listen on retry
                         }
                     } else {
                         part2Correct = isCorrect;
-                        revealQuestionIfListeningMode();
                         if (isCorrect) {
                             selectedButton.classList.add('correct');
                             feedbackResult.textContent = "Correct on retry! 🎉";
@@ -1436,7 +1442,7 @@
                             selectedButton.classList.add('incorrect');
                             const correctButton = optionsContainer.querySelector('[data-is-correct="true"]');
                             if (correctButton) correctButton.classList.add('correct');
-                            feedbackResult.textContent = "Incorrect! 😔";
+                            feedbackResult.innerHTML = `Incorrect! 😔 <br><small>Correct answer: <strong>${correctAnswerText}</strong></small>`;
                             feedbackContainer.classList.add('incorrect');
                             incorrectlyAnsweredQuestions.push(questionOrder[currentQuestionIndex]);
                         }
@@ -1452,16 +1458,13 @@
                         const correctButton = optionsContainer.querySelector('[data-is-correct="true"]');
                         if (correctButton) correctButton.classList.add('correct');
                         
-                        feedbackResult.textContent = "Incorrect! 😔";
+                        feedbackResult.innerHTML = `Incorrect! 😔 <br><small>Correct answer: <strong>${correctAnswerText}</strong></small>`;
                         feedbackContainer.classList.add('incorrect');
                         incorrectlyAnsweredQuestions.push(questionOrder[currentQuestionIndex]);
                     }
                 }
 
-                const questionIdx = questionOrder[currentQuestionIndex];
-                feedbackExplanation.textContent = (blankMode === 'listening' && !isSubStep && !isCorrect)
-                    ? "Audio prompt will play again on retry. Listen carefully!"
-                    : (quizData[questionIdx].explanation || "");
+                feedbackExplanation.textContent = (currentDisplayedQuestion && currentDisplayedQuestion.explanation) || originalQuestion.explanation || "";
                 feedbackContainer.style.display = 'block';
 
                 showNextButton();
@@ -1482,21 +1485,16 @@
                 const normalizedCorrectAnswer = correctAnswer.toLowerCase().replace(/\s+/g, '');
 
                 const isCorrect = normalizedUserAnswer === normalizedCorrectAnswer;
-                const isRetryable = (blankMode === 'repeat-incorrect' || blankMode === 'listening') && !isSubStep;
+
+                // Always reveal the question on answer submission
+                revealQuestionIfListeningMode();
 
                 if (isCorrect) {
                     feedbackResult.textContent = isSubStep ? "Correct on retry! 🎉" : "Correct! 🎉";
                     input.style.borderColor = 'var(--correct-color)';
                     feedbackContainer.classList.add('correct');
-                    revealQuestionIfListeningMode();
                 } else {
-                    if (isRetryable) {
-                        feedbackResult.innerHTML = `Incorrect! 😔 <br><small>You have a second try. Replay audio and give it another shot!</small>`;
-                        // Keep question hidden in listening mode on the first attempt
-                    } else {
-                        revealQuestionIfListeningMode();
-                        feedbackResult.innerHTML = `Incorrect! 😔 <br><small>Correct answer: <strong>${correctAnswer}</strong></small>`;
-                    }
+                    feedbackResult.innerHTML = `Incorrect! 😔 <br><small>Correct answer: <strong>${correctAnswer}</strong></small>`;
                     input.style.borderColor = 'var(--incorrect-color)';
                     feedbackContainer.classList.add('incorrect');
                 }
@@ -1515,9 +1513,7 @@
                     }
                 }
 
-                feedbackExplanation.textContent = (isRetryable && !isCorrect)
-                    ? "Don't worry, listen again and submit your second attempt."
-                    : (currentQuestion.explanation || "");
+                feedbackExplanation.textContent = currentQuestion.explanation || "";
                 feedbackContainer.style.display = 'block';
 
                 showNextButton();
