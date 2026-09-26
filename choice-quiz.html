@@ -208,7 +208,7 @@
         #question-text {
             font-size: 1.25rem;
             font-weight: 600;
-            line-height: 1.5;
+            line-height: 1.6;
             flex-grow: 1;
             white-space: pre-wrap;
             width: 100%;
@@ -218,6 +218,8 @@
             letter-spacing: 0.25em; 
             margin-right: -0.25em;
             word-wrap: break-word;
+            font-weight: 600;
+            display: inline-block;
         }
 
         .action-btns {
@@ -721,7 +723,6 @@
                         <input type="radio" name="blank-mode" value="repeat-incorrect"> 
                         🎯 Repeat the question if the answer is incorrect
                     </label>
-                    <!-- FIFTH OPTION: Audio Listening Mode -->
                     <label class="radio-label">
                         <input type="radio" name="blank-mode" value="listening"> 
                         🎧 Listening Mode (Question hidden, auto-played audio)
@@ -874,6 +875,12 @@
               "paragraph": "This is an optional paragraph property. It provides additional context or a specific block of text relevant to the quiz questions below. You can delete this property to see the button gray out.\n\nHere is a second paragraph. Hover over me to see the tooltip in action! It will extract the first 20 characters seamlessly.\n\nAnd finally, a third short paragraph to test the rendering.",
               "translation": "这是一个可选的段落属性。它提供了与下面测验问题相关的附加上下文或特定文本块。您可以删除此属性以看到按钮变灰。\n\n这是第二段。将鼠标悬停在我上方以查看工具提示的作用！它将无缝提取前20个字符。\n\n最后，一个用于测试渲染的第三个短段落。",
               "quiz": [
+                {
+                  "question": "_____ _ riddle",
+                  "type": "blank",
+                  "answer": "solve a",
+                  "explanation": "谜语，解谜语。Can you solve a riddle? 你能解谜语吗？ | riddle->谜（古英语rǣdels->解释），riddle->需要解释的谜（cf. read阅读=解释，riddle筛子=有洞的=谜，riddle with充满了） || 文化联想：元宵节“猜灯谜”就是中国文化里最典型的 riddle 场景，可以说 **a lantern riddle — “During the Lantern Festival, families gather beneath decorated lanterns and try to solve a lantern riddle.”**"
+                },
                 {
                   "question": "_____ _________ philatelist",
                   "type": "blank",
@@ -1036,23 +1043,23 @@
 
             const getOriginalWord = () => {
                 if (currentDisplayedQuestion && currentDisplayedQuestion.question) {
-                    return currentDisplayedQuestion.question.replace(/_{2,}/g, '').trim();
+                    return currentDisplayedQuestion.question.replace(/_+/g, '').trim();
                 }
                 const textElem = document.getElementById('question-text');
                 if (!textElem) return "";
-                return textElem.textContent.replace(/_{2,}/g, '').trim();
+                return textElem.textContent.replace(/_+/g, '').trim();
             };
 
             const getCleanSpokenPrompt = (questionObj) => {
                 if (!questionObj || !questionObj.question) return "";
                 const raw = questionObj.question;
                 // If it consists solely of underscores and a word/phrase, read the phrase directly
-                const stripped = raw.replace(/_{2,}/g, '').trim();
+                const stripped = raw.replace(/_+/g, '').trim();
                 if (stripped.length > 0 && stripped.length < 50 && !stripped.includes('?')) {
                     return stripped;
                 }
                 // For sentence completions, substitute underscores with "blank"
-                return raw.replace(/_{2,}/g, ' blank ').replace(/\s+/g, ' ').trim();
+                return raw.replace(/_+(?:\s+_+)*\s*/g, ' blank ').replace(/\s+/g, ' ').trim();
             };
 
             const playAudio = (textToSpeak) => {
@@ -1164,8 +1171,29 @@
                                 throw new Error(`The answer for ${qIdentifier} was not found in its 'options' array.`);
                             }
                         } else if (type === 'blank') {
-                            const answerUnderscores = question.answer.replace(/\S/g, '_');
-                            question.question = question.question.replace(/_{2,}(?:\s+_{2,})*/, answerUnderscores);
+                            // Compute exact underscore count for each word in answer (e.g. "solve a" -> "_____ _")
+                            const answerUnderscores = question.answer
+                                .trim()
+                                .split(/\s+/)
+                                .map(word => '_'.repeat(word.length))
+                                .join(' ');
+
+                            // Intelligently replace any underscore cluster in the question (even if glued e.g. "_____riddle")
+                            // and ensure proper spacing with adjacent words/punctuation
+                            question.question = question.question.replace(
+                                /([^\s_])?[\t ]*(_+(?:[\t ]*_+)*)[\t ]*([^\s_])?/,
+                                (match, beforeChar, underscores, afterChar) => {
+                                    let result = answerUnderscores;
+                                    if (beforeChar) {
+                                        result = beforeChar + ' ' + result;
+                                    }
+                                    if (afterChar) {
+                                        const isPunctuation = /^[.,?!;:’”")\]}]/.test(afterChar);
+                                        result = result + (isPunctuation ? '' : ' ') + afterChar;
+                                    }
+                                    return result;
+                                }
+                            );
                         } else {
                             throw new Error(`${qIdentifier} has an invalid type: '${type}'. Must be 'choice' or 'blank'.`);
                         }
@@ -1191,7 +1219,7 @@
                         let paragraphIndex = 0;
                         paragraphs.forEach(pText => {
                             const trimmedText = pText.trim();
-                            if (!trimmedText) return; 
+                            if (!trimmedText) return;
                             
                             const pElement = document.createElement('p');
                             pElement.className = 'hint-paragraph';
@@ -1274,11 +1302,11 @@
 
                 if (isSubStep) {
                     if (blankMode === 'reverse-all' || blankMode === 'reverse-incorrect') {
-                        const originalPrompt = originalQuestion.question.replace(/_{2,}/g, '').trim();
+                        const originalPrompt = originalQuestion.question.replace(/_+/g, '').trim();
                         const underscores = originalPrompt.replace(/\S/g, '_');
                         let newQuestionText;
                         
-                        if (originalQuestion.question.trim().match(/^_{2,}/)) {
+                        if (originalQuestion.question.trim().match(/^_+/)) {
                             newQuestionText = `${originalQuestion.answer} ${underscores}`;
                         } else {
                             newQuestionText = `${underscores} ${originalQuestion.answer}`;
@@ -1305,8 +1333,11 @@
                 const tempDiv = document.createElement('div');
                 tempDiv.textContent = questionToDisplay.question;
                 let safeHtml = tempDiv.innerHTML;
-                safeHtml = safeHtml.replace(/(_{2,})(\s+)(?=_{2,})/g, '$1&nbsp;&nbsp;&nbsp;');
-                const formattedQuestionHtml = safeHtml.replace(/(_{2,})/g, '<span class="spaced-underscores">$1</span>');
+
+                // Expand whitespace between adjacent underscore groups (including single underscores for words like "a")
+                safeHtml = safeHtml.replace(/(_+)(\s+)(?=_+)/g, '$1&nbsp;&nbsp;&nbsp;');
+                // Wrap all underscore sequences in spaced-underscores spans
+                const formattedQuestionHtml = safeHtml.replace(/(_+)/g, '<span class="spaced-underscores">$1</span>');
 
                 const speechPrompt = getCleanSpokenPrompt(questionToDisplay);
 
@@ -1518,7 +1549,7 @@
 
                 showNextButton();
             };
-            
+
             const showNextButton = () => { 
                 if (currentQuestionIndex < questionOrder.length) {
                     let nextText = 'Next Question';
@@ -1660,7 +1691,7 @@
 
             const setupCustomFavicon = () => {
                 const urlParams = new URLSearchParams(window.location.search);
-                const iconParam = urlParams.get('icon') || '🎓'; 
+                const iconParam = urlParams.get('icon') || '🎓';
                 
                 const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">${encodeURIComponent(iconParam)}</text></svg>`;
                 let faviconElement = document.getElementById('dynamic-favicon');
