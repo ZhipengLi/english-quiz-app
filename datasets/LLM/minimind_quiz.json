@@ -1,0 +1,743 @@
+{
+  "text": "MiniMind Source Code Learning Path",
+  "quiz": [
+    {
+      "question": "A multidimensional numerical array used as the fundamental data structure in neural-network computation is called a __________.",
+      "type": "blank",
+      "answer": "Tensor",
+      "explanation": "A Tensor is a multidimensional array similar to a NumPy ndarray. Almost every value flowing through MiniMind is represented as a PyTorch tensor, including token IDs, embeddings, hidden states, attention scores, logits, losses, and gradients. Understanding tensor dimensions is essential because most Transformer code is largely a sequence of tensor reshaping, matrix multiplication, normalization, and indexing operations."
+    },
+    {
+      "question": "The ordered list describing the size of every dimension of a tensor is called its __________.",
+      "type": "blank",
+      "answer": "Shape",
+      "explanation": "A tensor's shape describes how many elements exist along each dimension. In language models you will frequently see shapes such as (B, T), (B, T, C), or (B, H, T, D). B usually represents batch size, T sequence length, C hidden dimension, H attention heads, and D head dimension. Following these shapes line by line is one of the most effective ways to understand MiniMind source code."
+    },
+    {
+      "question": "The number of training examples processed together in one forward pass is called the __________.",
+      "type": "blank",
+      "answer": "Batch Size",
+      "explanation": "Batch Size is the number of independent training examples processed simultaneously. Token IDs commonly have shape (B, T), where B is batch size. Larger batches usually improve GPU utilization but require more memory. In distributed or gradient-accumulation training, the effective batch size may be larger than the number of examples processed in one physical forward pass."
+    },
+    {
+      "question": "The number of tokens processed for each example in a Transformer input is called the __________.",
+      "type": "blank",
+      "answer": "Sequence Length",
+      "explanation": "Sequence Length is the number of token positions in each training example. It is commonly represented by T. A token tensor may therefore have shape (B, T). Attention computation depends strongly on sequence length because standard self-attention compares token positions with one another."
+    },
+    {
+      "question": "The number of numerical features used to represent each token inside the Transformer is called the __________.",
+      "type": "blank",
+      "answer": "Hidden Dimension",
+      "explanation": "The Hidden Dimension, often called d_model or hidden_size, is the width of the Transformer representation. After embedding lookup, each token becomes a vector of this size. A hidden-state tensor therefore commonly has shape (B, T, C), where C is the hidden dimension."
+    },
+    {
+      "question": "A value learned by the neural network during training, such as an element of a weight matrix, is called a trainable __________.",
+      "type": "blank",
+      "answer": "Parameter",
+      "explanation": "Parameters are numerical values modified during training. Linear-layer weights, embedding tables, normalization scales, and many other tensors are parameters. MiniMind's model size, such as approximately 64M parameters for its small dense model, refers to the total number of these learned values."
+    },
+    {
+      "question": "The complete collection of learned numerical parameters stored by a trained neural network is commonly called its model __________.",
+      "type": "blank",
+      "answer": "Weights",
+      "explanation": "Model Weights are the learned parameter tensors saved after training. A checkpoint contains these weights and often additional training state. Loading model weights restores the learned behavior of the network."
+    },
+    {
+      "question": "The computation that transforms model inputs into predictions without yet calculating parameter updates is called the __________ pass.",
+      "type": "blank",
+      "answer": "Forward",
+      "explanation": "During the Forward Pass, token IDs pass through embeddings, Transformer blocks, normalization, and the language-model head to produce logits. Training adds loss computation and a backward pass afterward, while inference normally uses only the forward computation followed by token generation."
+    },
+    {
+      "question": "The algorithmic process that propagates derivatives from the loss backward through the network is called __________.",
+      "type": "blank",
+      "answer": "Backpropagation",
+      "explanation": "Backpropagation uses the chain rule to compute how the loss changes with respect to every trainable parameter. PyTorch autograd performs this automatically when loss.backward() is called. Understanding backpropagation conceptually is important even though MiniMind does not manually derive every gradient."
+    },
+    {
+      "question": "The derivative of the loss with respect to a model parameter is called its __________.",
+      "type": "blank",
+      "answer": "Gradient",
+      "explanation": "A Gradient indicates how changing a parameter would change the loss. Optimizers use gradients to update model weights. After backpropagation, PyTorch stores gradients for trainable parameters until they are cleared or used by the optimizer."
+    },
+    {
+      "question": "An algorithm such as AdamW that uses gradients to update model parameters is called an __________.",
+      "type": "blank",
+      "answer": "Optimizer",
+      "explanation": "An Optimizer determines how parameters are changed using their gradients. Transformer training commonly uses AdamW because it combines adaptive learning rates with decoupled weight decay. Training scripts typically perform forward pass, loss calculation, backward pass, optimizer step, and gradient reset."
+    },
+    {
+      "question": "The hyperparameter controlling the approximate magnitude of each optimization update is called the __________.",
+      "type": "blank",
+      "answer": "Learning Rate",
+      "explanation": "The Learning Rate determines how aggressively model parameters are changed during training. If it is too large, training may become unstable; if it is too small, learning may be extremely slow. Learning-rate schedules frequently change this value over the course of training."
+    },
+    {
+      "question": "A function that measures how wrong the model's predictions are is called the __________ function.",
+      "type": "blank",
+      "answer": "Loss",
+      "explanation": "The Loss Function converts model predictions and training targets into a scalar objective. Training attempts to minimize this number. For autoregressive language modeling, MiniMind primarily relies on cross-entropy loss over next-token predictions."
+    },
+    {
+      "question": "The standard classification loss used to train a language model to predict the correct next token is called __________.",
+      "type": "blank",
+      "answer": "Cross-Entropy Loss",
+      "explanation": "Cross-Entropy Loss penalizes the model when it assigns low probability to the correct target token. Because language modeling treats every vocabulary item as a possible class, cross entropy is computed from the vocabulary logits at each predicted token position."
+    },
+    {
+      "question": "The raw, unnormalized scores produced by the final neural-network layer before converting them into probabilities are called __________.",
+      "type": "blank",
+      "answer": "Logits",
+      "explanation": "Logits are the raw scores produced for every vocabulary token. If the hidden state has shape (B, T, C), the language-model head typically transforms it into logits of shape (B, T, V), where V is vocabulary size. Softmax can convert logits into probabilities."
+    },
+    {
+      "question": "The function that converts a vector of logits into a probability distribution whose values sum to one is called __________.",
+      "type": "blank",
+      "answer": "Softmax",
+      "explanation": "Softmax exponentiates and normalizes logits so that they form a probability distribution. It is used both in attention, where attention scores become weights, and in language generation, where vocabulary logits represent token probabilities."
+    },
+    {
+      "question": "A numerical representation that maps a discrete token ID to a continuous vector is called an __________.",
+      "type": "blank",
+      "answer": "Embedding",
+      "explanation": "An Embedding converts discrete token IDs into continuous vectors that the Transformer can process. If token IDs have shape (B, T), an embedding layer usually produces a tensor of shape (B, T, C). During training, the embedding vectors themselves are learned parameters."
+    },
+    {
+      "question": "The learned lookup table containing one vector for every token in the vocabulary is called the __________ matrix.",
+      "type": "blank",
+      "answer": "Embedding",
+      "explanation": "The Embedding Matrix has approximately shape (V, C), where V is vocabulary size and C is hidden dimension. Indexing this matrix by token IDs retrieves the corresponding token vectors. Some language models share this matrix with the output language-model head through weight tying."
+    },
+    {
+      "question": "The process of breaking raw text into discrete units that a language model can process is called __________.",
+      "type": "blank",
+      "answer": "Tokenization",
+      "explanation": "Tokenization converts text into a sequence of tokens and then token IDs. MiniMind includes its own tokenizer and tokenizer-training code rather than assuming that text can be fed directly into the Transformer."
+    },
+    {
+      "question": "The complete set of tokens that a tokenizer knows how to represent is called its __________.",
+      "type": "blank",
+      "answer": "Vocabulary",
+      "explanation": "The Vocabulary maps tokens to integer IDs. Vocabulary size directly determines the number of rows in the embedding table and the number of output logits produced for every token position."
+    },
+    {
+      "question": "The tokenizer algorithm that repeatedly merges frequent adjacent symbol pairs is called __________.",
+      "type": "blank",
+      "answer": "Byte Pair Encoding",
+      "explanation": "Byte Pair Encoding, or BPE, begins with small units and repeatedly merges commonly occurring adjacent pairs into larger tokens. MiniMind's updated tokenizer is based on BPE together with ByteLevel processing."
+    },
+    {
+      "question": "A tokenizer strategy that operates on byte representations so that virtually arbitrary input text can be encoded without unknown characters is called __________.",
+      "type": "blank",
+      "answer": "ByteLevel",
+      "explanation": "ByteLevel tokenization represents raw text using bytes before applying tokenization rules. This gives robust coverage over different languages and unusual characters. MiniMind's tokenizer combines BPE with ByteLevel processing."
+    },
+    {
+      "question": "Tokens such as <think>, <tool_call>, and <tool_response> that carry structural meaning rather than ordinary natural-language content are called __________.",
+      "type": "blank",
+      "answer": "Special Tokens",
+      "explanation": "Special Tokens provide explicit structure to conversations and model behavior. MiniMind reserves special tokens for reasoning and tool use so that the model can learn to distinguish normal text from control structures such as tool requests."
+    },
+    {
+      "question": "A formatting rule that converts system, user, assistant, reasoning, and tool messages into one token sequence is called a __________.",
+      "type": "blank",
+      "answer": "Chat Template",
+      "explanation": "A Chat Template converts structured conversation messages into the exact text and special-token sequence presented to the language model. The model itself only sees token IDs, so the chat template is what gives concepts such as system, user, assistant, tool calls, and thinking regions their serialized representation."
+    },
+    {
+      "question": "The neural-network architecture underlying models such as GPT, Llama, Qwen, and MiniMind is called the __________.",
+      "type": "blank",
+      "answer": "Transformer",
+      "explanation": "A Transformer processes token representations using attention and feed-forward layers. MiniMind uses a decoder-only Transformer architecture closely aligned with the modern Qwen ecosystem."
+    },
+    {
+      "question": "A Transformer architecture that contains only causal decoder blocks and generates text from left to right is called a __________ Transformer.",
+      "type": "blank",
+      "answer": "Decoder-Only",
+      "explanation": "A Decoder-Only Transformer predicts future tokens using only previous tokens as context. GPT-style language models, including MiniMind, use this structure instead of the encoder-decoder architecture originally introduced for translation."
+    },
+    {
+      "question": "A model that generates each new token conditioned on the tokens that came before it is called an __________ model.",
+      "type": "blank",
+      "answer": "Autoregressive",
+      "explanation": "An Autoregressive language model factorizes a sequence into a series of conditional next-token probabilities. During generation it predicts one token, appends that token to the context, and repeats the process."
+    },
+    {
+      "question": "The training objective in which the model predicts token t+1 using tokens up through position t is called __________ prediction.",
+      "type": "blank",
+      "answer": "Next-Token",
+      "explanation": "Next-Token Prediction is the basic objective of autoregressive language-model pretraining. Given preceding tokens, the model assigns probabilities to every possible token that could come next. Repeating this across huge text corpora teaches grammar, semantics, facts, and statistical relationships."
+    },
+    {
+      "question": "The operation that lets each token dynamically gather information from other token positions is called __________.",
+      "type": "blank",
+      "answer": "Attention",
+      "explanation": "Attention computes relationships between token representations and forms weighted combinations of information from other positions. In a decoder-only language model, causal attention ensures that a token may use earlier positions but not future positions."
+    },
+    {
+      "question": "When tokens attend to other tokens in the same sequence, the mechanism is called __________.",
+      "type": "blank",
+      "answer": "Self-Attention",
+      "explanation": "Self-Attention uses the same hidden-state sequence to produce queries, keys, and values. This allows every token to determine which previous tokens are relevant to its current representation."
+    },
+    {
+      "question": "The three projections used by attention to represent what a token is looking for, what information positions contain, and the information itself are Query, Key, and __________.",
+      "type": "blank",
+      "answer": "Value",
+      "explanation": "Attention constructs Query, Key, and Value tensors, usually abbreviated Q, K, and V. Queries are compared with keys to obtain attention scores, and those scores determine weighted combinations of values."
+    },
+    {
+      "question": "The matrix operation commonly used to compare Query vectors with Key vectors in attention is the __________ product.",
+      "type": "blank",
+      "answer": "Dot",
+      "explanation": "Scaled dot-product attention computes similarities between Query and Key vectors using matrix multiplication equivalent to dot products. Larger similarity values imply that a query should pay more attention to the corresponding key position."
+    },
+    {
+      "question": "Dividing Query-Key similarity scores by the square root of the head dimension produces __________ dot-product attention.",
+      "type": "blank",
+      "answer": "Scaled",
+      "explanation": "Scaled Dot-Product Attention divides QK^T by sqrt(d_head). Without this scaling, dot products can become very large as head dimension increases, causing softmax to become excessively sharp and making optimization less stable."
+    },
+    {
+      "question": "The mechanism that prevents a language-model token from attending to future tokens during training is called a __________ mask.",
+      "type": "blank",
+      "answer": "Causal",
+      "explanation": "A Causal Mask blocks attention from position t to positions greater than t. This preserves the autoregressive requirement that the model must predict the future without seeing it. It is often implemented by adding negative infinity to forbidden attention scores before softmax."
+    },
+    {
+      "question": "Running several independent attention mechanisms in parallel is called __________ attention.",
+      "type": "blank",
+      "answer": "Multi-Head",
+      "explanation": "Multi-Head Attention splits the hidden representation into several heads. Each head can learn different relationships among tokens. Their outputs are concatenated or rearranged and projected back into the model hidden dimension."
+    },
+    {
+      "question": "The dimensionality assigned to each individual attention head is called the __________ dimension.",
+      "type": "blank",
+      "answer": "Head",
+      "explanation": "Head Dimension is typically hidden_size divided by the number of query heads. If hidden size C is 768 and there are 8 heads, each query head may have dimension 96. Understanding this relationship is important when reading reshape and transpose operations in attention code."
+    },
+    {
+      "question": "The attention design in which multiple Query heads share fewer Key and Value heads is called __________.",
+      "type": "blank",
+      "answer": "Grouped-Query Attention",
+      "explanation": "Grouped-Query Attention, or GQA, uses more Query heads than Key/Value heads. Several Query heads share the same K and V representations. This reduces KV-cache memory and inference cost while retaining more query-head diversity than single-head multi-query attention."
+    },
+    {
+      "question": "The stored Key and Value tensors reused from previous generated tokens during autoregressive inference are called the __________.",
+      "type": "blank",
+      "answer": "KV Cache",
+      "explanation": "The KV Cache stores attention keys and values for tokens that have already been processed. During generation, the model only needs to compute K and V for the newest token instead of recomputing them for the entire previous sequence. This greatly accelerates inference."
+    },
+    {
+      "question": "The technique that encodes token position by rotating Query and Key vector components is called __________.",
+      "type": "blank",
+      "answer": "Rotary Positional Embedding",
+      "explanation": "Rotary Positional Embedding, or RoPE, injects positional information by applying position-dependent rotations to Query and Key vectors. Modern decoder-only language models frequently use RoPE instead of adding learned absolute position embeddings."
+    },
+    {
+      "question": "The RoPE hyperparameter controlling the frequency scale used by rotary positional embeddings is commonly called __________.",
+      "type": "blank",
+      "answer": "RoPE Theta",
+      "explanation": "RoPE Theta determines the base frequencies used for positional rotations. Changing it affects how positions are represented across different sequence lengths and is relevant when extending a model's usable context window."
+    },
+    {
+      "question": "The method used by MiniMind to extend RoPE-based models to longer contexts is called __________.",
+      "type": "blank",
+      "answer": "YaRN",
+      "explanation": "YaRN is a long-context extrapolation method for RoPE-based Transformer models. MiniMind supports YaRN so that a model trained with shorter contexts can be adapted to work more effectively at longer sequence lengths."
+    },
+    {
+      "question": "The normalization method used by many modern LLMs that normalizes according to the root mean square without subtracting the mean is called __________.",
+      "type": "blank",
+      "answer": "RMSNorm",
+      "explanation": "RMSNorm scales activations using their root-mean-square magnitude. Compared with LayerNorm, it omits mean subtraction and is computationally simpler. MiniMind uses RMSNorm in its Transformer architecture."
+    },
+    {
+      "question": "A Transformer design that applies normalization before the attention or feed-forward sublayer is called __________.",
+      "type": "blank",
+      "answer": "Pre-Norm",
+      "explanation": "In a Pre-Norm Transformer, normalization occurs before attention and before the feed-forward network. The sublayer result is then added through a residual connection. Pre-Norm architectures generally make deep Transformer optimization more stable."
+    },
+    {
+      "question": "A connection that adds a sublayer's input directly to its output is called a __________ connection.",
+      "type": "blank",
+      "answer": "Residual",
+      "explanation": "Residual Connections have the form x = x + f(x). They help gradients flow through deep networks and allow each Transformer block to learn modifications to an existing representation rather than reconstructing it completely from scratch."
+    },
+    {
+      "question": "The per-token neural network applied independently after attention inside a Transformer block is called the __________ network.",
+      "type": "blank",
+      "answer": "Feed-Forward",
+      "explanation": "The Feed-Forward Network, or FFN, transforms each token independently using learned linear projections and nonlinear activation or gating. Attention mixes information across positions, while the FFN performs richer nonlinear processing within each token representation."
+    },
+    {
+      "question": "The gated feed-forward activation widely used in modern LLMs and used by MiniMind is called __________.",
+      "type": "blank",
+      "answer": "SwiGLU",
+      "explanation": "SwiGLU is a gated feed-forward mechanism based on the SiLU or Swish activation. Instead of a simple Linear-Activation-Linear structure, it computes two projections and uses one to gate the other, providing strong performance in modern Transformer language models."
+    },
+    {
+      "question": "The activation function also known as Swish and used inside SwiGLU is called __________.",
+      "type": "blank",
+      "answer": "SiLU",
+      "explanation": "SiLU stands for Sigmoid Linear Unit and computes x multiplied by sigmoid(x). It provides a smooth nonlinear activation and forms the activation component of SwiGLU."
+    },
+    {
+      "question": "The linear projection that converts final hidden states into one score for every vocabulary token is called the __________ head.",
+      "type": "blank",
+      "answer": "Language Model",
+      "explanation": "The Language Model Head, often abbreviated LM head, maps hidden vectors of size C into vocabulary logits of size V. Its output therefore typically has shape (B, T, V)."
+    },
+    {
+      "question": "During language-model training, moving the target token sequence one position relative to the input so that each position predicts the following token is called label __________.",
+      "type": "blank",
+      "answer": "Shifting",
+      "explanation": "Label Shifting aligns each model output with the token that follows its input position. If the input contains tokens x0 through xN-1, predictions from earlier positions are compared with x1 through xN. This implements next-token prediction."
+    },
+    {
+      "question": "A value such as -100 used to tell cross-entropy loss that certain token positions should not contribute to the training objective is called an __________ index.",
+      "type": "blank",
+      "answer": "Ignore",
+      "explanation": "An Ignore Index marks positions that should not contribute to loss. This is useful for padding and for instruction tuning where some prompt tokens may be provided as context but only assistant-response tokens should generate training loss."
+    },
+    {
+      "question": "Randomly disabling a fraction of neural-network activations during training is called __________.",
+      "type": "blank",
+      "answer": "Dropout",
+      "explanation": "Dropout is a regularization technique that randomly zeroes some activations during training. It can reduce overfitting, although many modern large language models use relatively little dropout when trained on sufficiently large datasets."
+    },
+    {
+      "question": "Training a language model from randomly initialized parameters on a large text corpus is called __________.",
+      "type": "blank",
+      "answer": "Pretraining",
+      "explanation": "Pretraining teaches the base language model by performing next-token prediction over large amounts of text. MiniMind is specifically designed so that the complete model can be pretrained from scratch rather than merely fine-tuning an existing LLM."
+    },
+    {
+      "question": "Learning targets directly from the structure of the input data rather than requiring manually labeled examples is called __________ learning.",
+      "type": "blank",
+      "answer": "Self-Supervised",
+      "explanation": "Language-model pretraining is Self-Supervised Learning because the training labels come directly from the text itself. The next token in a sequence automatically becomes the target for the preceding context."
+    },
+    {
+      "question": "One complete pass through an entire training dataset is called an __________.",
+      "type": "blank",
+      "answer": "Epoch",
+      "explanation": "An Epoch means that the training process has consumed the full dataset once. Because datasets are divided into batches, one epoch consists of many optimizer steps."
+    },
+    {
+      "question": "One parameter-update iteration during training is commonly called a training __________.",
+      "type": "blank",
+      "answer": "Step",
+      "explanation": "A Training Step usually processes one batch or one accumulated effective batch, computes gradients, and performs an optimizer update. Training progress is frequently measured in steps because datasets and distributed configurations can make epoch definitions less convenient."
+    },
+    {
+      "question": "Performing several backward passes before making a single optimizer update is called gradient __________.",
+      "type": "blank",
+      "answer": "Accumulation",
+      "explanation": "Gradient Accumulation allows a model to simulate a larger batch size without storing that entire batch in GPU memory at once. Gradients from several micro-batches are accumulated before optimizer.step() is called."
+    },
+    {
+      "question": "Restricting gradient magnitude to prevent excessively large optimization updates is called gradient __________.",
+      "type": "blank",
+      "answer": "Clipping",
+      "explanation": "Gradient Clipping limits gradient magnitude, commonly by global norm. This can protect Transformer training from rare unstable updates or exploding gradients."
+    },
+    {
+      "question": "Using lower-precision numerical formats such as FP16 or BF16 for much of neural-network training is called __________ precision training.",
+      "type": "blank",
+      "answer": "Mixed",
+      "explanation": "Mixed Precision Training uses lower-precision arithmetic where safe while preserving higher precision where necessary. It reduces GPU memory consumption and often increases throughput. BF16 is especially popular for Transformer training on recent GPUs."
+    },
+    {
+      "question": "The process of saving model weights and training state so that training can later continue is called creating a __________.",
+      "type": "blank",
+      "answer": "Checkpoint",
+      "explanation": "A Checkpoint commonly stores model parameters, optimizer state, training progress, and sometimes learning-rate scheduler state. MiniMind supports pausing and resuming training from checkpoints."
+    },
+    {
+      "question": "Training a model on multiple GPUs where each GPU processes different data and gradients are synchronized is called __________ Data Parallel training.",
+      "type": "blank",
+      "answer": "Distributed",
+      "explanation": "Distributed Data Parallel, usually abbreviated DDP, gives each process a copy of the model and a different portion of each batch. Gradients are synchronized across processes before parameters are updated. MiniMind supports single-node multi-GPU DDP training."
+    },
+    {
+      "question": "Fine-tuning a pretrained model using instruction-response examples is called __________ Fine-Tuning.",
+      "type": "blank",
+      "answer": "Supervised",
+      "explanation": "Supervised Fine-Tuning, or SFT, trains the pretrained model on structured conversations and instruction-response examples. This teaches the model how to follow instructions, converse, reason in desired formats, and use tools."
+    },
+    {
+      "question": "The training process that specifically teaches a language model to follow natural-language requests is called __________ tuning.",
+      "type": "blank",
+      "answer": "Instruction",
+      "explanation": "Instruction Tuning is a form of supervised fine-tuning where inputs describe tasks and outputs demonstrate desired responses. It transforms a base continuation model into a more useful assistant."
+    },
+    {
+      "question": "A binary or numerical mask identifying which token positions should contribute to SFT loss is called a loss __________.",
+      "type": "blank",
+      "answer": "Mask",
+      "explanation": "A Loss Mask controls which parts of a sequence produce training loss. For example, user prompt tokens may be used as input context but excluded from the objective, while assistant response tokens are included."
+    },
+    {
+      "question": "Fine-tuning in which every trainable parameter of the original model is updated is called __________-parameter fine-tuning.",
+      "type": "blank",
+      "answer": "Full",
+      "explanation": "Full-Parameter Fine-Tuning modifies the complete model. It offers maximum flexibility but requires more optimizer memory and storage than parameter-efficient methods such as LoRA."
+    },
+    {
+      "question": "The family of methods that adapts a pretrained model while training only a small fraction of its parameters is called __________.",
+      "type": "blank",
+      "answer": "Parameter-Efficient Fine-Tuning",
+      "explanation": "Parameter-Efficient Fine-Tuning, or PEFT, keeps most base-model parameters frozen while training a relatively small set of additional or selected parameters. LoRA is one of the most widely used PEFT techniques."
+    },
+    {
+      "question": "The fine-tuning method that represents a weight update using two small low-rank matrices is called __________.",
+      "type": "blank",
+      "answer": "LoRA",
+      "explanation": "LoRA stands for Low-Rank Adaptation. Instead of modifying a large pretrained matrix W directly, LoRA learns a low-rank update typically represented as BA. Because the rank is much smaller than the original matrix dimensions, the number of trainable parameters is greatly reduced."
+    },
+    {
+      "question": "The small dimensionality controlling the size of LoRA's low-rank decomposition is called its __________.",
+      "type": "blank",
+      "answer": "Rank",
+      "explanation": "LoRA Rank determines the intermediate dimension of the low-rank update matrices. Lower ranks reduce trainable parameters and memory but may also limit adaptation capacity."
+    },
+    {
+      "question": "Training a smaller model to reproduce knowledge or behavior from a larger model is called knowledge __________.",
+      "type": "blank",
+      "answer": "Distillation",
+      "explanation": "Knowledge Distillation transfers information from a stronger Teacher Model to a smaller Student Model. MiniMind includes model-distillation support as part of its end-to-end training pipeline."
+    },
+    {
+      "question": "In knowledge distillation, the larger model providing training information is called the __________ model.",
+      "type": "blank",
+      "answer": "Teacher",
+      "explanation": "The Teacher Model generates answers, probability distributions, or other signals that the smaller student attempts to imitate. A strong teacher can transfer useful behavior that would otherwise be difficult for the student to learn directly."
+    },
+    {
+      "question": "In knowledge distillation, the smaller model learning from the teacher is called the __________ model.",
+      "type": "blank",
+      "answer": "Student",
+      "explanation": "The Student Model is optimized to reproduce useful information from the Teacher while remaining much smaller or cheaper to run."
+    },
+    {
+      "question": "Distillation in which the student only observes outputs produced by the teacher rather than internal probability distributions is called __________-box distillation.",
+      "type": "blank",
+      "answer": "Black",
+      "explanation": "Black-Box Distillation treats the teacher as an external generator. The student is trained on teacher-generated answers, making the process similar to supervised fine-tuning with synthetic data."
+    },
+    {
+      "question": "Distillation in which the student has access to the teacher's logits or probability distribution is called __________-box distillation.",
+      "type": "blank",
+      "answer": "White",
+      "explanation": "White-Box Distillation uses richer signals such as teacher logits or token probabilities. These soft distributions communicate relationships among alternative tokens that are not visible from the single correct output alone."
+    },
+    {
+      "question": "A probability distribution produced by a teacher model and used as a richer training target is called a __________ label.",
+      "type": "blank",
+      "answer": "Soft",
+      "explanation": "Soft Labels describe the teacher's probability assigned to many possible outputs instead of providing only one correct class. They reveal information such as which incorrect alternatives the teacher considers plausible."
+    },
+    {
+      "question": "The parameter used to soften or sharpen probability distributions during distillation is called __________.",
+      "type": "blank",
+      "answer": "Temperature",
+      "explanation": "Temperature rescales logits before softmax. Higher temperatures produce flatter distributions and can expose more information about the teacher's relative preferences among non-top tokens."
+    },
+    {
+      "question": "The mathematical measure frequently used to compare two probability distributions in distillation and RL alignment is called __________ divergence.",
+      "type": "blank",
+      "answer": "KL",
+      "explanation": "KL Divergence, or Kullback-Leibler Divergence, measures how one probability distribution differs from another. It can train a student to match a teacher or prevent an RL-trained policy from drifting too far from a reference model."
+    },
+    {
+      "question": "A language model whose ordinary dense feed-forward parameters participate for every token is called a __________ model.",
+      "type": "blank",
+      "answer": "Dense",
+      "explanation": "In a Dense Transformer, every token is processed by the same active feed-forward layers. MiniMind provides both a dense model and a Mixture-of-Experts variant."
+    },
+    {
+      "question": "An architecture containing several alternative feed-forward subnetworks and dynamically selecting only some of them for each token is called __________.",
+      "type": "blank",
+      "answer": "Mixture of Experts",
+      "explanation": "Mixture of Experts, or MoE, increases total model capacity by providing multiple expert networks while activating only a subset for each token. This separates total parameter count from active parameter count."
+    },
+    {
+      "question": "An individual feed-forward subnetwork inside a Mixture-of-Experts layer is called an __________.",
+      "type": "blank",
+      "answer": "Expert",
+      "explanation": "An Expert is usually an FFN-like subnetwork specializing through learned routing. Different tokens may be directed toward different experts."
+    },
+    {
+      "question": "The learned component that chooses which experts should process each token in a Mixture-of-Experts model is called the __________.",
+      "type": "blank",
+      "answer": "Router",
+      "explanation": "The Router produces routing scores over experts for every token. Those scores determine which experts are activated. Router behavior is crucial to both MoE model quality and computational efficiency."
+    },
+    {
+      "question": "Selecting only the highest-scoring k experts for each token is called __________ routing.",
+      "type": "blank",
+      "answer": "Top-k",
+      "explanation": "Top-k Routing activates only the k experts with the largest router scores. If k equals one, each token is processed by one expert. Sparse activation allows MoE models to have many total parameters without using all of them on every token."
+    },
+    {
+      "question": "The number of model parameters actually participating in computation for a particular token is called the number of __________ parameters.",
+      "type": "blank",
+      "answer": "Active",
+      "explanation": "Active Parameters distinguish sparse MoE computation from total model capacity. A model might contain roughly 198 million total parameters while activating far fewer parameters for an individual token."
+    },
+    {
+      "question": "An auxiliary objective intended to prevent an MoE router from sending nearly every token to the same expert is called a load-balancing __________.",
+      "type": "blank",
+      "answer": "Loss",
+      "explanation": "Load-Balancing Loss encourages traffic to be distributed more evenly among experts. Without balancing, some experts may become overloaded while others receive too little training."
+    },
+    {
+      "question": "Training data generated by another model instead of collected directly from humans or natural sources is called __________ data.",
+      "type": "blank",
+      "answer": "Synthetic",
+      "explanation": "Synthetic Data is frequently generated by a stronger model and then used to train a smaller model. It is important in instruction tuning, distillation, reasoning data generation, and tool-use datasets."
+    },
+    {
+      "question": "Removing duplicate examples from a training dataset is called data __________.",
+      "type": "blank",
+      "answer": "Deduplication",
+      "explanation": "Data Deduplication reduces repeated samples. Duplicate-heavy datasets can distort the training distribution, encourage memorization, and waste computation. MiniMind's pipeline explicitly includes cleaned and deduplicated datasets."
+    },
+    {
+      "question": "Learning from comparisons where one response is preferred over another is called __________ learning.",
+      "type": "blank",
+      "answer": "Preference",
+      "explanation": "Preference Learning uses relative judgments such as chosen versus rejected responses. Instead of learning only one desired answer, the model learns which of two candidate behaviors should receive greater probability."
+    },
+    {
+      "question": "In preference data, the response judged to be better is commonly called the __________ response.",
+      "type": "blank",
+      "answer": "Chosen",
+      "explanation": "The Chosen Response is the preferred answer in a preference pair. Alignment algorithms increase its relative probability compared with the rejected response."
+    },
+    {
+      "question": "In preference data, the less-preferred answer is commonly called the __________ response.",
+      "type": "blank",
+      "answer": "Rejected",
+      "explanation": "The Rejected Response is the inferior answer in a preference pair. Preference optimization attempts to increase the model's relative preference for the chosen response over this rejected example."
+    },
+    {
+      "question": "The preference-training algorithm that directly optimizes chosen versus rejected responses without training a separate reward model is called __________.",
+      "type": "blank",
+      "answer": "DPO",
+      "explanation": "Direct Preference Optimization, or DPO, converts preference learning into a direct objective involving the policy model and a fixed reference model. It avoids the full reward-model-plus-policy-gradient pipeline used by traditional RLHF approaches."
+    },
+    {
+      "question": "A frozen model used during alignment to measure how far the trainable policy has moved from its original behavior is called the __________ model.",
+      "type": "blank",
+      "answer": "Reference",
+      "explanation": "The Reference Model provides a stable baseline distribution. DPO and several reinforcement-learning objectives compare the current policy with this reference so that alignment does not cause uncontrolled deviation from the original language model."
+    },
+    {
+      "question": "A model that receives a prompt and response and produces a scalar estimate of response quality is called a __________ model.",
+      "type": "blank",
+      "answer": "Reward",
+      "explanation": "A Reward Model maps generated behavior to a numerical score. It can replace or supplement direct human feedback when reinforcement-learning algorithms need a scalar learning signal."
+    },
+    {
+      "question": "Learning by modifying behavior according to numerical rewards from interactions or generated responses is called __________ Learning.",
+      "type": "blank",
+      "answer": "Reinforcement",
+      "explanation": "Reinforcement Learning, or RL, trains a policy to maximize expected reward. In LLM training the policy is the language model and actions correspond to generated tokens or responses."
+    },
+    {
+      "question": "In reinforcement learning, the model or decision rule that determines how actions are selected is called the __________.",
+      "type": "blank",
+      "answer": "Policy",
+      "explanation": "The Policy specifies a probability distribution over actions given the current state. For a language model, the policy is the model's probability distribution over possible next tokens conditioned on the prompt and generated history."
+    },
+    {
+      "question": "The scalar feedback indicating how desirable an action or completed response was is called the __________.",
+      "type": "blank",
+      "answer": "Reward",
+      "explanation": "Reward is the numerical learning signal in reinforcement learning. In LLM training it may come from a reward model, an exact-answer checker, code execution, formatting rules, or the environment."
+    },
+    {
+      "question": "The quantity measuring how much better or worse an action performed than an expected baseline is called the __________.",
+      "type": "blank",
+      "answer": "Advantage",
+      "explanation": "Advantage estimates whether a sampled action or response was better than expected. Policy-gradient algorithms increase probabilities for positive-advantage behavior and decrease probabilities for negative-advantage behavior."
+    },
+    {
+      "question": "The learned component in actor-critic reinforcement learning that estimates expected future return is called the __________.",
+      "type": "blank",
+      "answer": "Critic",
+      "explanation": "The Critic estimates state value and helps calculate advantages. PPO implementations often train a value model or value head to serve this role."
+    },
+    {
+      "question": "The reinforcement-learning algorithm that restricts each policy update using a clipped probability-ratio objective is called __________.",
+      "type": "blank",
+      "answer": "PPO",
+      "explanation": "Proximal Policy Optimization, or PPO, compares probabilities under the current and old policies and clips excessively large changes. This makes policy-gradient training more stable than unrestricted policy updates."
+    },
+    {
+      "question": "The ratio between a token's probability under the new policy and its probability under the policy that generated the sample is called the probability __________.",
+      "type": "blank",
+      "answer": "Ratio",
+      "explanation": "The Probability Ratio is central to PPO and related objectives. Values above one indicate that the new policy assigns greater probability to the action than the old policy, while values below one indicate reduced probability."
+    },
+    {
+      "question": "Restricting a PPO probability ratio to a bounded interval around one is called __________.",
+      "type": "blank",
+      "answer": "Clipping",
+      "explanation": "PPO Clipping prevents the optimization objective from rewarding arbitrarily large policy changes. This helps maintain stable learning from data collected using an earlier version of the policy."
+    },
+    {
+      "question": "The method commonly used in PPO to estimate advantages while balancing bias and variance is called __________.",
+      "type": "blank",
+      "answer": "Generalized Advantage Estimation",
+      "explanation": "Generalized Advantage Estimation, or GAE, combines temporal-difference estimates over multiple horizons. It provides lower-variance advantage estimates than simple Monte Carlo returns while controlling bias."
+    },
+    {
+      "question": "The RL algorithm that compares several responses generated for the same prompt and computes relative advantages within that group is called __________.",
+      "type": "blank",
+      "answer": "GRPO",
+      "explanation": "Group Relative Policy Optimization, or GRPO, samples multiple candidate responses for one prompt and evaluates their rewards relative to the group. This can remove the need for a separately trained critic."
+    },
+    {
+      "question": "The additional policy-optimization algorithm implemented by MiniMind alongside PPO and GRPO is called __________.",
+      "type": "blank",
+      "answer": "CISPO",
+      "explanation": "CISPO is one of the reinforcement-learning policy optimization methods implemented natively in MiniMind. When reading its training code, the important shared ideas are policy ratios, advantages, clipping or constrained updates, and regularization against unwanted policy drift."
+    },
+    {
+      "question": "Reinforcement learning based on preference signals originally supplied by people is called __________.",
+      "type": "blank",
+      "answer": "RLHF",
+      "explanation": "RLHF stands for Reinforcement Learning from Human Feedback. Human preferences can be used to train reward models or preference objectives that align the language model with desired behavior."
+    },
+    {
+      "question": "Reinforcement learning in which AI systems provide much of the feedback instead of humans is called __________.",
+      "type": "blank",
+      "answer": "RLAIF",
+      "explanation": "RLAIF stands for Reinforcement Learning from AI Feedback. MiniMind groups algorithms such as PPO, GRPO, and CISPO into its RLAIF training pipeline where automated scoring can supply feedback."
+    },
+    {
+      "question": "Reinforcement learning that uses automatically checkable outcomes such as exact mathematical answers or passing tests is called __________.",
+      "type": "blank",
+      "answer": "RLVR",
+      "explanation": "Reinforcement Learning with Verifiable Rewards, or RLVR, relies on objective checks rather than subjective judging. Mathematical correctness, executable code tests, or environment success can provide reliable reward signals."
+    },
+    {
+      "question": "Generating one or more complete model responses under a policy so that they can later be scored and trained on is called a __________.",
+      "type": "blank",
+      "answer": "Rollout",
+      "explanation": "A Rollout is the generation phase of reinforcement learning. The policy produces actions or tokens, the resulting sequence receives reward, and those samples become training data for the policy update."
+    },
+    {
+      "question": "A complete sequence of states, actions, observations, and tool interactions produced during an RL episode is called a __________.",
+      "type": "blank",
+      "answer": "Trajectory",
+      "explanation": "A Trajectory records the entire path taken by an agent. In language-model agents it can include reasoning, tool calls, tool responses, additional reasoning, and the final answer."
+    },
+    {
+      "question": "A reward that is only available after many intermediate actions have already occurred is called a __________ reward.",
+      "type": "blank",
+      "answer": "Delayed",
+      "explanation": "Delayed Reward is common in agent training because the quality of early decisions may only become clear once the whole task succeeds or fails. This creates a credit-assignment challenge."
+    },
+    {
+      "question": "The difficulty that occurs when successful behavior receives rewards only rarely is called reward __________.",
+      "type": "blank",
+      "answer": "Sparsity",
+      "explanation": "Reward Sparsity makes reinforcement learning difficult because most generated trajectories may receive the same zero or low reward. If rewards have little variation, advantage estimates and learning signals can become very small."
+    },
+    {
+      "question": "When a model learns unintended tricks that maximize the specified reward without accomplishing the true objective, this is called reward __________.",
+      "type": "blank",
+      "answer": "Hacking",
+      "explanation": "Reward Hacking occurs when the optimization target differs from the real desired behavior. Because reinforcement learning aggressively optimizes reward, poorly designed rewards can teach undesirable shortcuts."
+    },
+    {
+      "question": "Calling external functions such as calculators, search systems, or APIs from an LLM is commonly called __________ use.",
+      "type": "blank",
+      "answer": "Tool",
+      "explanation": "Tool Use allows an LLM to perform actions or obtain information that cannot be reliably produced from its internal parameters alone. MiniMind includes tool-call tokens, SFT data for tool use, and multi-turn tool-call inference."
+    },
+    {
+      "question": "A structured description defining a callable tool's name, purpose, and arguments is called its tool __________.",
+      "type": "blank",
+      "answer": "Schema",
+      "explanation": "A Tool Schema tells the model what tools exist and which arguments each accepts. During tool calling, the model must select a tool and generate arguments matching this structure."
+    },
+    {
+      "question": "A language-model system that repeatedly decides, acts through tools, observes results, and continues until a task is complete is called an AI __________.",
+      "type": "blank",
+      "answer": "Agent",
+      "explanation": "An AI Agent extends ordinary text generation with an interaction loop. The model can reason about the current state, select actions, call tools, inspect observations, and continue until it produces a final answer or reaches a termination condition."
+    },
+    {
+      "question": "The information returned to an agent after an action or tool call is commonly called an __________.",
+      "type": "blank",
+      "answer": "Observation",
+      "explanation": "An Observation is new information received from the environment. For example, the result of a calculator call or API request becomes an observation that is appended to context before the model chooses its next action."
+    },
+    {
+      "question": "Reinforcement learning that optimizes an LLM over multi-step reasoning and tool-use trajectories is called __________ RL.",
+      "type": "blank",
+      "answer": "Agentic",
+      "explanation": "Agentic RL trains models over complete interactive trajectories rather than isolated one-turn answers. MiniMind includes a native Agentic RL training script supporting multi-turn tool-use scenarios with algorithms such as GRPO and CISPO."
+    },
+    {
+      "question": "A reward produced by whether an external action actually succeeded, rather than merely judging generated text, is called an __________-based reward.",
+      "type": "blank",
+      "answer": "Environment",
+      "explanation": "Environment-Based Rewards can be derived from actual tool execution, tests, APIs, games, simulators, or task-completion signals. These rewards are especially useful in Agentic RL because they measure whether actions worked in the world."
+    },
+    {
+      "question": "Explicit intermediate reasoning produced before a final answer is commonly called __________ of Thought.",
+      "type": "blank",
+      "answer": "Chain",
+      "explanation": "Chain of Thought, or CoT, refers to intermediate reasoning steps used before producing the final answer. MiniMind represents explicit reasoning regions using tokens such as <think>."
+    },
+    {
+      "question": "MiniMind's ability to use the same model either with or without an explicit reasoning phase is called __________ Thinking.",
+      "type": "blank",
+      "answer": "Adaptive",
+      "explanation": "Adaptive Thinking allows one model to switch between direct answering and explicit reasoning behavior. MiniMind implements this through chat templates, thinking tokens, mixed training data, and an open_thinking control rather than maintaining completely separate models."
+    },
+    {
+      "question": "A metric equal to the exponentiated average negative log-likelihood and commonly used to evaluate language models is called __________.",
+      "type": "blank",
+      "answer": "Perplexity",
+      "explanation": "Perplexity measures how uncertain a language model is when predicting a sequence. Lower perplexity generally indicates better predictive performance on the evaluated distribution, although comparisons across substantially different tokenizers can be misleading."
+    },
+    {
+      "question": "A tokenizer-independent language-model compression metric measured relative to raw bytes is called __________.",
+      "type": "blank",
+      "answer": "Bits Per Byte",
+      "explanation": "Bits Per Byte, or BPB, measures predictive coding cost relative to the original byte sequence. Because it does not depend as directly on tokenizer granularity as token-level perplexity, it can be useful when comparing models with different tokenizers."
+    },
+    {
+      "question": "The sequence of tokens that a language model can consider at one time is called its context __________.",
+      "type": "blank",
+      "answer": "Window",
+      "explanation": "The Context Window defines how much previous information can be processed simultaneously. Increasing context length increases memory and computation requirements, especially for ordinary quadratic self-attention."
+    },
+    {
+      "question": "The experimental attention family intended to reduce the quadratic sequence-length cost of ordinary self-attention is called __________ attention.",
+      "type": "blank",
+      "answer": "Linear",
+      "explanation": "Linear Attention reorganizes or approximates attention computation so that complexity can scale closer to linearly with sequence length instead of quadratically. MiniMind includes an experimental linear-attention extension."
+    },
+    {
+      "question": "A language model that generates text through an iterative corruption-and-denoising process rather than strictly left-to-right next-token generation is called a __________ language model.",
+      "type": "blank",
+      "answer": "Diffusion",
+      "explanation": "A Diffusion Language Model applies ideas from diffusion modeling to discrete or latent text generation. MiniMind includes an experimental dLM extension that provides an alternative to the standard autoregressive generation process."
+    },
+    {
+      "question": "A model capable of jointly processing more than one type of input, such as text and images, is called a __________ model.",
+      "type": "blank",
+      "answer": "Multimodal",
+      "explanation": "A Multimodal Model combines representations from different modalities such as language, vision, or audio. MiniMind's ecosystem includes vision and Omni extensions in addition to the core text language model."
+    }
+  ]
+}
