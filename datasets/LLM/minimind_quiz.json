@@ -128,7 +128,7 @@
       "explanation": "Byte Pair Encoding, or BPE, begins with small units and repeatedly merges commonly occurring adjacent pairs into larger tokens. MiniMind's updated tokenizer is based on BPE together with ByteLevel processing."
     },
     {
-      "question": "A tokenizer strategy that operates on byte representations so that virtually arbitrary input text can be encoded without unknown characters is called __________.",
+      "question": "A tokenizer strategy that operates on byte representations so that virtually arbitrary input text can be encoded without unknown characters is called __________ tokenization.",
       "type": "blank",
       "answer": "ByteLevel",
       "explanation": "ByteLevel tokenization represents raw text using bytes before applying tokenization rules. This gives robust coverage over different languages and unusual characters. MiniMind's tokenizer combines BPE with ByteLevel processing."
