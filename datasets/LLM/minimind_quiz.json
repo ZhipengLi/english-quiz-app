@@ -134,7 +134,7 @@
       "explanation": "ByteLevel tokenization represents raw text using bytes before applying tokenization rules. This gives robust coverage over different languages and unusual characters. MiniMind's tokenizer combines BPE with ByteLevel processing."
     },
     {
-      "question": "Tokens such as <think>, <tool_call>, and <tool_response> that carry structural meaning rather than ordinary natural-language content are called __________.",
+      "question": "Tokens such as <think>, <tool-call>, and <tool-response> that carry structural meaning rather than ordinary natural-language content are called __________.",
       "type": "blank",
       "answer": "Special Tokens",
       "explanation": "Special Tokens provide explicit structure to conversations and model behavior. MiniMind reserves special tokens for reasoning and tool use so that the model can learn to distinguish normal text from control structures such as tool requests."
