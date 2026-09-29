@@ -1468,7 +1468,7 @@
                             selectedButton.classList.add('correct');
                             feedbackResult.textContent = "Correct on retry! 🎉";
                             feedbackContainer.classList.add('correct');
-                            score++;
+                            // Retry does not affect score; only the first attempt counts.
                         } else {
                             selectedButton.classList.add('incorrect');
                             const correctButton = optionsContainer.querySelector('[data-is-correct="true"]');
@@ -1620,8 +1620,10 @@
                         } else if (blankMode === 'reverse-incorrect') {
                             incorrectlyAnsweredQuestions.push(questionIdx);
                         } else if (blankMode === 'repeat-incorrect') {
-                            if (part2Correct) score++;
-                            else incorrectlyAnsweredQuestions.push(questionIdx); 
+                            // The retry is for learning/practice only.
+                            // Scoring is based exclusively on the first attempt, which was incorrect
+                            // if execution reached this retry branch.
+                            incorrectlyAnsweredQuestions.push(questionIdx);
                         }
                         
                         isSubStep = false;
