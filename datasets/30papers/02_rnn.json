@@ -1,0 +1,293 @@
+{
+  "text": "The Unreasonable Effectiveness of Recurrent Neural Networks — https://karpathy.github.io/2015/05/21/rnn-effectiveness/",
+  "quiz": [
+    {
+      "question": "A neural-network architecture that maintains an internal state while processing a sequence one element at a time is called a __________.",
+      "type": "blank",
+      "answer": "Recurrent Neural Network",
+      "explanation": "A Recurrent Neural Network, or RNN, processes information sequentially while carrying an internal hidden state from one step to the next. In the article, Karpathy emphasizes that this makes RNNs fundamentally different from ordinary fixed-input, fixed-output networks: the output at one moment can depend on everything the network has processed previously. More generally, an RNN can be thought of as repeatedly executing the same learned program while updating its internal memory."
+    },
+    {
+      "question": "Data whose elements have a meaningful ordering across time or position is called __________.",
+      "type": "blank",
+      "answer": "Sequential Data",
+      "explanation": "Sequential Data consists of elements whose order matters, such as characters in text, words in sentences, audio samples, video frames, or measurements over time. The article illustrates that RNNs are naturally suited to this kind of data because the same transformation can be applied repeatedly regardless of sequence length. The meaning of the current element can depend heavily on what appeared earlier in the sequence."
+    },
+    {
+      "question": "The internal vector that carries information from previous sequence steps into the current RNN computation is called the __________.",
+      "type": "blank",
+      "answer": "Hidden State",
+      "explanation": "The Hidden State is the RNN's internal memory. At each step, the new hidden state is calculated from the previous hidden state together with the current input. In the article, this mechanism explains how the same character can lead to different predictions depending on the preceding context. Conceptually, the hidden state is a learned compressed representation of information from the sequence history that the network currently considers useful."
+    },
+    {
+      "question": "Using the same learned transformation repeatedly across different positions in a sequence is called __________.",
+      "type": "blank",
+      "answer": "Parameter Sharing",
+      "explanation": "Parameter Sharing means that an RNN uses the same weight matrices at every sequence position instead of learning a separate transformation for each position. This allows one model to process sequences of arbitrary length and greatly reduces the number of parameters required. It also encourages the network to learn reusable rules, such as how a quotation mark or bracket affects interpretation regardless of where it appears."
+    },
+    {
+      "question": "Representing an RNN as the same network copied across successive sequence positions is called __________.",
+      "type": "blank",
+      "answer": "Unrolling",
+      "explanation": "Unrolling is a conceptual way of viewing recurrent computation across time. Instead of seeing one recurrent cell repeatedly executed, we draw a copy of that cell for every time step, with the hidden state flowing between them. This makes it easier to understand how information and gradients travel through a sequence. The copies are not separate networks; they all share the same parameters."
+    },
+    {
+      "question": "The idea that training a recurrent network can be viewed as learning a stateful computational procedure is described as __________.",
+      "type": "blank",
+      "answer": "Optimization over Programs",
+      "explanation": "Karpathy makes the memorable observation that if ordinary neural-network training can be viewed as optimization over functions, recurrent-network training can be viewed as optimization over programs. An RNN repeatedly applies a learned operation while maintaining internal variables, making it resemble a small program. This viewpoint helps explain why recurrent systems can learn behaviors such as counting, remembering whether they are inside a quotation, or tracking syntactic context."
+    },
+    {
+      "question": "Processing information through a sequence of learned computational steps even when the original input itself is not sequential is called __________.",
+      "type": "blank",
+      "answer": "Sequential Processing",
+      "explanation": "Sequential Processing means solving a problem through a series of stateful steps instead of transforming the entire input at once. Karpathy points out that even images, which are fixed-size inputs, can be processed sequentially by moving attention around the image or gradually constructing an output. The important insight is that recurrence is useful not only for naturally sequential data but also whenever a task benefits from iterative computation."
+    },
+    {
+      "question": "A recurrent architecture designed to maintain information over longer periods using gated memory mechanisms is called a __________.",
+      "type": "blank",
+      "answer": "Long Short-Term Memory",
+      "explanation": "Long Short-Term Memory, or LSTM, is a type of recurrent neural network with a more sophisticated state-update mechanism than a vanilla RNN. Karpathy uses LSTMs for the experiments in the article because they generally handle learning and long-term information better. LSTMs use gates to regulate what information is stored, forgotten, and exposed, helping gradients and useful information survive across longer sequences."
+    },
+    {
+      "question": "A language model that predicts text one character at a time rather than one word or token at a time is called a __________.",
+      "type": "blank",
+      "answer": "Character-Level Language Model",
+      "explanation": "A Character-Level Language Model learns a probability distribution over the next character given the characters that came before it. The striking point of Karpathy's article is that the network is not explicitly given concepts such as words, sentences, indentation, XML tags, C syntax, or Shakespearean formatting. By solving next-character prediction, it discovers many of these structures automatically."
+    },
+    {
+      "question": "The task of estimating which symbol is likely to appear immediately after the current context is called __________.",
+      "type": "blank",
+      "answer": "Next-Character Prediction",
+      "explanation": "Next-Character Prediction is the training objective used throughout the article. Given all characters observed so far, the network assigns probabilities to possible next characters. Despite the simplicity of this objective, learning to perform it well forces the model to discover spelling, punctuation, syntax, formatting conventions, and some longer-range relationships. This illustrates a broader principle in machine learning: a simple predictive objective can encourage surprisingly rich internal representations."
+    },
+    {
+      "question": "A representation in which one position is 1 and all remaining positions are 0 is called __________.",
+      "type": "blank",
+      "answer": "One-Hot Encoding",
+      "explanation": "One-Hot Encoding represents each possible character as a vector containing a single 1 at that character's index and 0 everywhere else. Karpathy uses this simple representation when explaining the character-level RNN. One-hot vectors do not themselves encode similarity between characters; any useful relationships must be learned by the neural network."
+    },
+    {
+      "question": "The probability distribution produced over all possible next characters is commonly obtained with the __________ function.",
+      "type": "blank",
+      "answer": "Softmax",
+      "explanation": "Softmax converts a vector of arbitrary scores into a probability distribution whose values are positive and sum to one. In the article, the RNN generates scores for all possible next characters, and Softmax turns those scores into probabilities that can be used for training and sampling. Softmax is fundamental to classification and language modeling because it provides a differentiable way to represent competing alternatives."
+    },
+    {
+      "question": "The loss function commonly used to train a model to assign high probability to the correct next character is __________.",
+      "type": "blank",
+      "answer": "Cross-Entropy Loss",
+      "explanation": "Cross-Entropy Loss penalizes the model when it assigns low probability to the correct next character. Karpathy describes applying a Softmax classifier at every time step and optimizing the resulting loss. In probabilistic terms, minimizing cross-entropy is equivalent to maximizing the likelihood of the observed training sequence. This makes next-token or next-character prediction a clean probabilistic learning objective."
+    },
+    {
+      "question": "The process of computing gradients through all differentiable operations of a neural network is called __________.",
+      "type": "blank",
+      "answer": "Backpropagation",
+      "explanation": "Backpropagation uses the chain rule to determine how every parameter influenced the final loss. In the article, gradients indicate how the RNN's weight matrices should change so that correct next characters receive higher scores. Because recurrent computation is differentiable, the same general backpropagation machinery used in ordinary neural networks can train the recurrent system."
+    },
+    {
+      "question": "Applying backpropagation through the unrolled sequence of a recurrent network is called __________.",
+      "type": "blank",
+      "answer": "Backpropagation Through Time",
+      "explanation": "Backpropagation Through Time, or BPTT, treats the unrolled RNN as a deep computational graph extending across sequence positions and propagates gradients backward through those positions. This lets an error at a later character influence how earlier information should have been stored. In practice, very long sequences make unrestricted BPTT expensive and difficult, so training often limits how far gradients are propagated."
+    },
+    {
+      "question": "Limiting recurrent backpropagation to a fixed number of sequence steps is called __________.",
+      "type": "blank",
+      "answer": "Truncated Backpropagation Through Time",
+      "explanation": "Truncated Backpropagation Through Time limits gradient propagation to a manageable sequence window rather than backpropagating through an entire potentially enormous text. Karpathy mentions training with truncated BPTT over 100 characters. This is a practical compromise: the recurrent state may continue carrying information forward, while gradient computation is performed only across limited segments."
+    },
+    {
+      "question": "Updating model parameters using gradients computed from small subsets of training examples is called __________.",
+      "type": "blank",
+      "answer": "Mini-Batch Stochastic Gradient Descent",
+      "explanation": "Mini-Batch Stochastic Gradient Descent computes gradients from a subset of the data and repeatedly updates the model parameters. Karpathy uses this standard training procedure for the RNNs in the article. Mini-batches balance computational efficiency with the useful randomness of stochastic optimization and allow modern hardware to process many examples in parallel."
+    },
+    {
+      "question": "Producing new text by repeatedly drawing a character from the model's predicted probability distribution is called __________.",
+      "type": "blank",
+      "answer": "Sampling",
+      "explanation": "Sampling is how the trained character model generates text. The model predicts a probability distribution for the next character, one character is drawn from that distribution, and the sampled character is fed back into the model as the next input. Repeating this process produces arbitrarily long sequences. Importantly, generation is probabilistic rather than simply choosing the highest-probability character every time."
+    },
+    {
+      "question": "Feeding a model's generated output back as its next input during generation is called __________.",
+      "type": "blank",
+      "answer": "Autoregressive Generation",
+      "explanation": "Autoregressive Generation produces a sequence one step at a time, conditioning every new prediction on previously generated outputs. This is exactly how Karpathy's character-level model generates text. The same principle later became central to modern language models: GPT-style systems also repeatedly predict a distribution over the next token and feed the chosen token back into the model."
+    },
+    {
+      "question": "The sampling parameter that controls how sharp or flat a model's output probability distribution is called __________.",
+      "type": "blank",
+      "answer": "Temperature",
+      "explanation": "Temperature controls the randomness of sampling. Lower temperature sharpens the distribution, making high-probability characters even more likely and producing safer but more repetitive text. Higher temperature flattens the distribution, increasing diversity but also increasing mistakes. Karpathy demonstrates this tradeoff directly: extremely low temperature can trap the model in repetitive loops, while higher temperatures produce more varied but less reliable output."
+    },
+    {
+      "question": "The tradeoff in generation where safer predictions reduce variety while greater randomness increases novelty is called the __________.",
+      "type": "blank",
+      "answer": "Diversity–Quality Tradeoff",
+      "explanation": "The Diversity–Quality Tradeoff appears clearly in Karpathy's temperature experiments. Conservative sampling tends to produce syntactically safer but repetitive sequences, while more aggressive sampling generates diverse outputs at the cost of additional errors. This remains important in modern generative AI: decoding strategy can substantially change output behavior even when the underlying model is unchanged."
+    },
+    {
+      "question": "The ability of an RNN to make different predictions for the same current character depending on earlier characters demonstrates the importance of __________.",
+      "type": "blank",
+      "answer": "Context",
+      "explanation": "Context is information from earlier parts of the sequence that changes how the current element should be interpreted. Karpathy illustrates this with the letter 'l' in 'hello': one occurrence should be followed by another 'l', while another should be followed by 'o'. The current input alone cannot distinguish these situations, so the recurrent hidden state must preserve enough history to resolve them."
+    },
+    {
+      "question": "Relationships between sequence elements separated by many intervening steps are called __________.",
+      "type": "blank",
+      "answer": "Long-Term Dependencies",
+      "explanation": "Long-Term Dependencies occur when a prediction depends on information encountered many sequence steps earlier. Karpathy's examples include matching LaTeX environments, maintaining variable consistency, and tracking structures that span long sections of text. The generated samples often fail specifically when these dependencies become too long, revealing one of the major limitations of recurrent models."
+    },
+    {
+      "question": "The tendency of a recurrent model to lose information about events that occurred far earlier in the sequence is known as __________.",
+      "type": "blank",
+      "answer": "Forgetting",
+      "explanation": "Forgetting occurs when information stored in the recurrent state is no longer preserved strongly enough to influence later predictions. Karpathy shows examples where the model begins a LaTeX proof but later closes the wrong environment, suggesting that it has lost track of what was opened earlier. LSTMs reduce this problem compared with vanilla RNNs, but they do not eliminate it."
+    },
+    {
+      "question": "The ability of a neural network to discover useful internal features directly from raw training data is called __________.",
+      "type": "blank",
+      "answer": "Representation Learning",
+      "explanation": "Representation Learning means that the model learns its own useful internal features rather than relying entirely on manually engineered features. Karpathy's neuron visualizations demonstrate this dramatically: some LSTM cells spontaneously learn to track whether the model is inside a URL, quotation, or Markdown environment. Nobody explicitly programmed these concepts into the network."
+    },
+    {
+      "question": "Training an entire system directly from raw input to the desired prediction objective without manually specifying intermediate features is called __________.",
+      "type": "blank",
+      "answer": "End-to-End Learning",
+      "explanation": "End-to-End Learning allows useful intermediate representations to emerge automatically from optimization of the final objective. Karpathy highlights the quote-detection cell as an especially clean example: the model was never instructed to detect quotations, but doing so helped predict upcoming characters, so gradient descent caused a hidden unit to specialize in that function. This is one of the core ideas behind deep learning."
+    },
+    {
+      "question": "Internal neurons that appear to respond consistently to recognizable concepts such as URLs or quotation marks are called __________.",
+      "type": "blank",
+      "answer": "Interpretable Neurons",
+      "explanation": "Interpretable Neurons are hidden units whose activation correlates with concepts humans can recognize. Karpathy finds cells that activate inside URLs, Markdown links, quotation regions, or particular character sequences. These examples are striking because the behaviors were learned automatically. However, he also cautions that most representations are distributed across many dimensions, so individual-neuron interpretation should not be assumed to explain the entire network."
+    },
+    {
+      "question": "A representation in which information is encoded across many neurons rather than residing entirely in individual specialized neurons is called a __________.",
+      "type": "blank",
+      "answer": "Distributed Representation",
+      "explanation": "A Distributed Representation stores information across patterns of activity involving many neurons. Karpathy notes that although some individual LSTM cells have surprisingly interpretable functions, the hidden state is fundamentally high-dimensional and distributed. Modern neural networks rely heavily on this principle: concepts are usually not represented by one isolated neuron but by interactions among many dimensions."
+    },
+    {
+      "question": "The observation that a network first learns simple patterns such as spaces and punctuation, then words, and only later longer-range themes illustrates __________.",
+      "type": "blank",
+      "answer": "Hierarchical Learning",
+      "explanation": "Hierarchical Learning refers to progressively acquiring structure at different levels of abstraction. Karpathy's training snapshots show that the RNN first learns basic character statistics and spacing, then common short words, longer words, sentence-like syntax, and eventually broader themes and dependencies. This provides a vivid demonstration that neural networks can build more complicated patterns on top of simpler ones during training."
+    },
+    {
+      "question": "The gradual appearance of increasingly sophisticated linguistic structure as training proceeds is called __________.",
+      "type": "blank",
+      "answer": "Emergent Structure",
+      "explanation": "Emergent Structure refers to patterns appearing during learning without being explicitly programmed. Karpathy's RNN begins by producing nearly random characters, then discovers spaces, punctuation, common words, sentence structure, formatting, and longer-range patterns. The striking lesson is that these structures emerge simply because they help solve next-character prediction."
+    },
+    {
+      "question": "Learning regularities such as spelling, indentation, markup structure, and programming syntax directly from examples is called __________.",
+      "type": "blank",
+      "answer": "Statistical Pattern Learning",
+      "explanation": "Statistical Pattern Learning occurs when a model discovers recurring regularities from data rather than following hand-written rules. Karpathy shows that character-level RNNs learn recognizable English spelling, Shakespearean formatting, Wikipedia markup, LaTeX structure, and C syntax. These behaviors demonstrate how much structure can be recovered purely from statistical prediction."
+    },
+    {
+      "question": "The ability of a model trained only on characters to discover word-like and syntax-like patterns without explicit word boundaries illustrates __________.",
+      "type": "blank",
+      "answer": "Emergent Abstraction",
+      "explanation": "Emergent Abstraction means that higher-level concepts can arise from learning over lower-level inputs. The character model is never directly told what a word, sentence, quotation, URL, XML element, or C function is. Nevertheless, it develops internal behavior reflecting many of these structures because they improve next-character prediction. This is an important lesson about how neural networks can construct useful abstractions from raw data."
+    },
+    {
+      "question": "A model's ability to imitate the statistical form of training data without necessarily understanding its meaning demonstrates the distinction between __________.",
+      "type": "blank",
+      "answer": "Syntax and Semantics",
+      "explanation": "Syntax concerns structural form, while Semantics concerns meaning. Karpathy's generated Wikipedia, mathematical LaTeX, and Linux code often look remarkably authentic syntactically while containing nonsense facts, invalid mathematics, or meaningless code. The examples therefore demonstrate that mastering local and medium-range statistical structure does not imply genuine semantic understanding."
+    },
+    {
+      "question": "Producing plausible-looking but invented facts, URLs, names, or mathematical statements is called __________.",
+      "type": "blank",
+      "answer": "Hallucination",
+      "explanation": "Hallucination occurs when a generative model produces information that resembles valid data but is not grounded in reality. Karpathy explicitly points out invented URLs and fabricated Wikipedia-like facts in the RNN samples. The phenomenon remains central in modern language models: next-token prediction rewards plausible continuation, which is not automatically the same thing as factual correctness."
+    },
+    {
+      "question": "The ability to produce new examples that resemble the training distribution rather than merely reproducing exact training samples is called __________.",
+      "type": "blank",
+      "answer": "Generative Modeling",
+      "explanation": "Generative Modeling means learning enough about a data distribution to create new examples that resemble it. Karpathy's RNN produces new Shakespeare-like dialogue, invented baby names, fake Wikipedia articles, LaTeX, and Linux-style code. The model is not simply retrieving complete stored examples; it combines learned patterns probabilistically to generate new sequences."
+    },
+    {
+      "question": "The ability of a trained model to produce plausible sequences not appearing exactly in its training data is called __________.",
+      "type": "blank",
+      "answer": "Generalization",
+      "explanation": "Generalization means applying learned patterns to examples that were not explicitly present in the training set. The generated baby names provide an especially clear demonstration because most generated names do not occur in the original dataset yet still resemble plausible names. However, Karpathy also notes limits to recurrent models' ability to generalize algorithmically, distinguishing pattern imitation from robust rule-based reasoning."
+    },
+    {
+      "question": "Learning specific training patterns extremely well without necessarily discovering the correct general rule is called __________.",
+      "type": "blank",
+      "answer": "Memorization",
+      "explanation": "Memorization means retaining detailed patterns from training data without necessarily acquiring a broadly reusable underlying algorithm. Near the end of the article, Karpathy notes that RNNs can memorize sequences extremely well but may fail to generalize in the desired inductive way. The distinction between memorization and genuine rule learning remains one of the central issues in modern deep learning."
+    },
+    {
+      "question": "The ability to infer a general rule or algorithm and apply it correctly beyond familiar examples is called __________.",
+      "type": "blank",
+      "answer": "Inductive Reasoning",
+      "explanation": "Inductive Reasoning goes beyond reproducing statistical patterns and requires discovering rules that generalize systematically to new situations. Karpathy identifies this as an important limitation of conventional RNNs: they can memorize sequences impressively but do not always learn the intended algorithm. This distinction foreshadows later research on reasoning, external memory, program induction, and modern language-model generalization."
+    },
+    {
+      "question": "Increasing the number of recurrent layers so that one recurrent network processes representations produced by another is called __________.",
+      "type": "blank",
+      "answer": "Stacked RNN",
+      "explanation": "A Stacked RNN places multiple recurrent layers on top of one another. Karpathy's experiments frequently use two- or three-layer LSTMs. Lower layers process the incoming sequence and higher layers operate on learned intermediate representations. This adds representational capacity and allows different layers to potentially specialize in different levels of sequential structure."
+    },
+    {
+      "question": "A training technique that randomly disables some neural activations to reduce overfitting is called __________.",
+      "type": "blank",
+      "answer": "Dropout",
+      "explanation": "Dropout randomly removes some activations during training, preventing units from depending too heavily on particular other units and often improving generalization. Karpathy mentions using dropout between LSTM layers in his experiments. Conceptually, dropout acts as regularization by forcing the network to maintain useful representations under many slightly different internal configurations."
+    },
+    {
+      "question": "The idea that increasing model size and quality tends to reduce structural mistakes in generated sequences illustrates __________.",
+      "type": "blank",
+      "answer": "Model Capacity",
+      "explanation": "Model Capacity describes how much complexity a model can represent. Karpathy observes that larger and better models make fewer mistakes involving long-range structures such as matching environments. Increasing hidden-state size, depth, parameters, training data, and computation generally increases capacity, although capacity alone does not guarantee correct reasoning or generalization."
+    },
+    {
+      "question": "A mechanism allowing a neural network to selectively focus on particular parts of its input or memory is called __________.",
+      "type": "blank",
+      "answer": "Attention",
+      "explanation": "Attention lets a model dynamically select which information to emphasize rather than compressing everything into one fixed-size recurrent state. Karpathy describes attention as one of the most important architectural innovations emerging at the time. Attention later became the foundation of Transformer models, allowing modern language models to directly reference relevant earlier tokens instead of depending entirely on recurrent memory."
+    },
+    {
+      "question": "An attention mechanism that assigns differentiable weights to all candidate locations rather than selecting exactly one is called __________.",
+      "type": "blank",
+      "answer": "Soft Attention",
+      "explanation": "Soft Attention assigns a continuous probability-like weight to every possible item and computes a weighted combination of them. Karpathy compares it to a pointer that points partially to every memory location. Its major advantage is differentiability, which allows ordinary backpropagation, while its disadvantage is computational cost because all candidate locations must participate."
+    },
+    {
+      "question": "An attention mechanism that selects a specific location or action rather than continuously weighting every possibility is called __________.",
+      "type": "blank",
+      "answer": "Hard Attention",
+      "explanation": "Hard Attention selects a particular location instead of blending all locations together. Karpathy notes that this can be more scalable and computationally appealing than soft attention, but discrete selection is not directly differentiable. As a result, methods such as reinforcement learning or policy gradients can be used to train the selection process."
+    },
+    {
+      "question": "A neural architecture that supplements a recurrent controller with a larger external memory that can be read and written is called a __________.",
+      "type": "blank",
+      "answer": "Neural Turing Machine",
+      "explanation": "A Neural Turing Machine combines a neural controller with an external memory matrix and differentiable mechanisms for reading and writing. Karpathy discusses it as a promising direction for addressing limitations of ordinary RNNs. The architecture separates working computation from large-capacity memory, moving neural systems closer to machines that can learn algorithm-like operations over stored information."
+    },
+    {
+      "question": "Keeping large amounts of information outside the recurrent hidden state in a separately addressable storage system is called __________.",
+      "type": "blank",
+      "answer": "External Memory",
+      "explanation": "External Memory allows a neural system to maintain far more information than can conveniently fit inside its recurrent hidden vector. Karpathy points out that ordinary RNNs couple representation size with computational cost because increasing the hidden state makes every recurrent matrix multiplication more expensive. External memory allows a relatively small controller to selectively access a much larger information store."
+    },
+    {
+      "question": "The limitation in which increasing an RNN's hidden-state size also substantially increases computation at every sequence step is called __________.",
+      "type": "blank",
+      "answer": "Memory–Computation Coupling",
+      "explanation": "Memory–Computation Coupling refers to the fact that an ordinary RNN stores its working representation directly in its hidden vector, while computation uses dense transformations of that same vector. Doubling hidden size can therefore increase computation dramatically. Karpathy identifies separating large memory capacity from fixed per-step computation as an important direction for more powerful recurrent systems."
+    },
+    {
+      "question": "The surprising ability of relatively simple recurrent models trained on raw characters to learn rich structure is described in the article as the __________.",
+      "type": "blank",
+      "answer": "Unreasonable Effectiveness of RNNs",
+      "explanation": "The Unreasonable Effectiveness of RNNs is the article's central theme. A comparatively simple recurrent architecture trained with the elementary objective of predicting the next character spontaneously learns spelling, punctuation, formatting, syntax, markup conventions, programming patterns, and some long-range structure. Karpathy uses these examples to demonstrate how surprisingly powerful learned sequential representations can become when trained end to end on enough data."
+    }
+  ]
+}
