@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Audiobook Library · 有声书馆</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Georgia, 'Times New Roman', serif;
+         background: #14100c; color: #f0e6d6; min-height: 100vh; }
+  .wrap { max-width: 1020px; margin: 0 auto; padding: 48px 24px 64px; }
+  header { text-align: center; margin-bottom: 12px; }
+  h1 { font-size: 2.2rem; margin: 0 0 6px; letter-spacing: 1px; }
+  .sub { color: #b8a88f; font-size: 1rem; }
+  .stats { display: flex; justify-content: center; gap: 36px; margin: 28px 0 36px;
+           flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat b { display: block; font-size: 1.7rem; color: #f5b942; }
+  .stat span { font-size: .85rem; color: #b8a88f; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+          gap: 20px; }
+  .card { display: block; text-decoration: none; color: inherit;
+          background: #201a13; border: 1px solid #3a2f22; border-radius: 14px;
+          padding: 22px; transition: transform .15s, border-color .15s, box-shadow .15s; }
+  .card:hover { transform: translateY(-3px); border-color: #f5b942;
+                box-shadow: 0 10px 28px rgba(245,185,66,.12); }
+  .chip { display: inline-block; font-size: .75rem; font-family: system-ui, sans-serif;
+          background: #3a2f22; color: #f5b942; border-radius: 999px;
+          padding: 4px 12px; margin-bottom: 12px; letter-spacing: .5px; }
+  .card h2 { font-size: 1.25rem; margin: 0 0 10px; line-height: 1.35; }
+  .meta { font-family: system-ui, sans-serif; font-size: .85rem; color: #b8a88f; }
+  .open { display: inline-block; margin-top: 14px; font-family: system-ui, sans-serif;
+          font-size: .9rem; color: #f5b942; }
+  footer { text-align: center; margin-top: 44px; color: #8a7a62; font-size: .85rem;
+           line-height: 1.7; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>&#x1F4DA; Audiobook Library</h1>
+    <div class="sub">双语词汇故事 · 有声书馆</div>
+  </header>
+  <div class="stats">
+    <div class="stat"><b>8</b><span>books · 本书</span></div>
+    <div class="stat"><b>453</b><span>paragraphs · 段落</span></div>
+    <div class="stat"><b>3867</b><span>vocab words · 词汇</span></div>
+  </div>
+  <div class="grid">
+    <a class="card" href="the-village-that-refused-to-be-sold-audiobook.html">
+      <span class="chip">Phrases 1–500</span>
+      <h2>The Village That Refused to Be Sold</h2>
+      <div class="meta">54 paragraphs &middot; 500 vocab words</div>
+      <span class="open">Open &#8594;</span>
+    </a>
+
+    <a class="card" href="the-museum-of-tomorrow-audiobook.html">
+      <span class="chip">Phrases 501–1000</span>
+      <h2>The Museum of Tomorrow</h2>
+      <div class="meta">75 paragraphs &middot; 500 vocab words</div>
+      <span class="open">Open &#8594;</span>
+    </a>
+
+    <a class="card" href="what-the-last-ferry-carried-audiobook.html">
+      <span class="chip">Phrases 1001–1500</span>
+      <h2>What the Last Ferry Carried</h2>
+      <div class="meta">73 paragraphs &middot; 500 vocab words</div>
+      <span class="open">Open &#8594;</span>
+    </a>
+
+    <a class="card" href="notes-for-an-unrehearsed-wedding-audiobook.html">
+      <span class="chip">Phrases 1501–2000</span>
+      <h2>Notes for an Unrehearsed Wedding</h2>
+      <div class="meta">64 paragraphs &middot; 500 vocab words</div>
+      <span class="open">Open &#8594;</span>
+    </a>
+
+    <a class="card" href="hpphrases2001-2500-audiobook.html">
+      <span class="chip">Phrases 2001–2500</span>
+      <h2>Phrases 2001–2500</h2>
+      <div class="meta">46 paragraphs &middot; 500 vocab words</div>
+      <span class="open">Open &#8594;</span>
+    </a>
+
+    <a class="card" href="hpphrases2501-2867-audiobook.html">
+      <span class="chip">Phrases 2501–2867</span>
+      <h2>Phrases 2501–2867</h2>
+      <div class="meta">43 paragraphs &middot; 367 vocab words</div>
+      <span class="open">Open &#8594;</span>
+    </a>
+
+    <a class="card" href="blooms-booms-and-busts-audiobook.html">
+      <span class="chip">Audiobook</span>
+      <h2>Blooms, booms and busts</h2>
+      <div class="meta">47 paragraphs &middot; 500 vocab words</div>
+      <span class="open">Open &#8594;</span>
+    </a>
+
+    <a class="card" href="the-price-of-progress-innovation-speculation-and-social-chan-audiobook.html">
+      <span class="chip">Audiobook</span>
+      <h2>The Price of Progress: Innovation, Speculation and Social Change</h2>
+      <div class="meta">51 paragraphs &middot; 500 vocab words</div>
+      <span class="open">Open &#8594;</span>
+    </a>
+
+  </div>
+  <footer>
+    Each book saves its own reading position in this browser.<br>
+    每本书的阅读进度单独保存在浏览器中 · 新书会自动出现在这里
+  </footer>
+</div>
+</body>
+</html>
