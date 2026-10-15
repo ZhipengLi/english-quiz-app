@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sink or swim — Audiobook</title>
+<style>
+  :root {
+    --paper: #f7f4ec;
+    --ink: #2b2b26;
+    --muted: #6b665a;
+    --line: #e3dccb;
+    --accent: #b45309;
+    --karaoke-sent: rgba(251, 191, 36, 0.28);
+    --karaoke-word: #fbbf24;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: auto; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, 'Times New Roman', serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---------- Header / controls ---------- */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(247, 244, 236, 0.94);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    padding: 14px 20px 10px;
+  }
+  .bar {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 14px;
+  }
+  .book-title { margin-right: auto; min-width: 200px; }
+  .book-title h1 {
+    margin: 0;
+    font-size: 1.15rem;
+    letter-spacing: 0.02em;
+  }
+  .book-title .sub {
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-family: -apple-system, 'Segoe UI', sans-serif;
+    margin-top: 2px;
+  }
+  .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+  button, select {
+    font-family: -apple-system, 'Segoe UI', sans-serif;
+    font-size: 0.88rem;
+    border: 1px solid var(--line);
+    background: #fffdf8;
+    color: var(--ink);
+    border-radius: 10px;
+    padding: 8px 14px;
+    cursor: pointer;
+  }
+  button:hover, select:hover { border-color: #c9bfa8; }
+  button:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  #playBtn {
+    background: #1f2937;
+    color: #fdfbf5;
+    border-color: #1f2937;
+    font-weight: 600;
+    min-width: 118px;
+  }
+  #playBtn:hover { background: #111827; }
+  #playBtn.paused { background: #b45309; border-color: #b45309; }
+  select { max-width: 190px; }
+  .hint {
+    max-width: 1180px;
+    margin: 8px auto 0;
+    font-family: -apple-system, 'Segoe UI', sans-serif;
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+  .hint b { color: var(--accent); }
+  .progress-track {
+    max-width: 1180px;
+    margin: 10px auto 2px;
+    height: 5px;
+    background: #e9e2d0;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  #progressFill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #d97706, #b45309);
+    border-radius: 3px;
+    transition: width 0.4s ease;
+  }
+  .progress-meta {
+    max-width: 1180px;
+    margin: 6px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-family: -apple-system, 'Segoe UI', sans-serif;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  #jumpSel { font-size: 0.8rem; padding: 5px 8px; max-width: 320px; }
+
+  /* ---------- Book body ---------- */
+  main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 10px 20px 120px;
+  }
+  .title-block { text-align: center; padding: 34px 10px 10px; }
+  .title-block h2 { font-size: 1.9rem; margin: 0 0 8px; letter-spacing: 0.01em; }
+  .title-block .zh-title {
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    color: var(--muted);
+    font-size: 1.05rem;
+  }
+  .book-subtitle {
+    font-size: 1.02rem;
+    color: var(--muted);
+    font-style: italic;
+    margin: 0 0 10px;
+  }
+  .zh-subtitle {
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-top: 6px;
+  }
+  body.hide-zh .zh-title { display: none; }
+
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.6rem;
+    padding: 26px 6px;
+    border-bottom: 1px solid var(--line);
+  }
+  .row:last-child { border-bottom: none; }
+  .row > div { min-width: 0; }
+  .en, .zh { overflow-wrap: break-word; }
+  .para-no {
+    font-family: -apple-system, 'Segoe UI', sans-serif;
+    font-size: 0.72rem;
+    color: #a39c88;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  .en {
+    font-size: 1.12rem;
+    line-height: 1.95;
+  }
+  .zh {
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    font-size: 1.02rem;
+    line-height: 1.95;
+    color: #57534a;
+  }
+  body.hide-zh .row { grid-template-columns: minmax(0, 780px); justify-content: start; }
+  body.hide-zh .zh { display: none; }
+
+  /* ---------- Karaoke ---------- */
+  .sent {
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 2px 5px;
+    margin: -2px -5px;
+    transition: background-color 0.25s ease;
+  }
+  .sent:hover { background: rgba(0, 0, 0, 0.045); }
+  .sent.active { background: var(--karaoke-sent); }
+  .sent.active:hover { background: var(--karaoke-sent); }
+  .w { border-radius: 4px; transition: background-color 0.12s ease; }
+  .w.on {
+    background: var(--karaoke-word);
+    color: #1f2937;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .vocab { font-weight: 700; color: var(--accent); }
+
+  @media (max-width: 860px) {
+    .row { grid-template-columns: 1fr; gap: 1.2rem; }
+    body.hide-zh .row { grid-template-columns: 1fr; }
+    .zh { border-top: 1px dashed var(--line); padding-top: 1.2rem; }
+    .en { font-size: 1.06rem; }
+    .book-title h1 { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <div class="book-title">
+      <h1>Sink or swim</h1>
+      <div class="sub">English audiobook &middot; 中英双语</div>
+    </div>
+    <div class="controls">
+      <button id="playBtn" title="Start / pause reading (Space)">&#9654; Start</button>
+      <button id="restartBtn" title="Back to the beginning">&#9198; Restart</button>
+      <select id="rateSel" title="Reading speed">
+        <option value="0.75">0.75&times;</option>
+        <option value="0.85">0.85&times;</option>
+        <option value="1" selected>1&times; speed</option>
+        <option value="1.15">1.15&times;</option>
+        <option value="1.3">1.3&times;</option>
+        <option value="1.5">1.5&times;</option>
+      </select>
+      <select id="voiceSel" title="Reading voice"></select>
+      <button id="zhToggle" title="Show or hide the Chinese translation">&#30446; Hide translation</button>
+    </div>
+  </div>
+  <div class="hint">Click any English sentence to start reading from there &middot; <b>Space</b> = play / pause &middot; <b>&larr;</b> / <b>&rarr;</b> = previous / next sentence &middot; <b class="vocab">Bold amber words</b> are the vocabulary words from the story.</div>
+  <div class="progress-track"><div id="progressFill"></div></div>
+  <div class="progress-meta">
+    <span id="posLabel">Ready</span>
+    <select id="jumpSel" title="Jump to a paragraph"></select>
+  </div>
+</header>
+
+<main id="book"></main>
+
+<script>
+const DATA = [{"en": "Sink or swim", "zh": "是沉是浮"}, {"en": "Venice has outlived empires, plagues and Napoleon. Can it survive its admirers?", "zh": "威尼斯熬过了帝国的兴衰、瘟疫和拿破仑。它能否挺过爱慕者的热情？"}, {"en": "On the night of January 29th 1996 Venetians watched helplessly as La Fenice, their opera house, burned to a shell. The canals around it had been drained for dredging, so fireboats could not get close. Investigators ruled the fire (incendiary), and in 2001 two electricians, whose firm reportedly faced penalties for delays to repair work, were found (guilty) of starting it. La Fenice means the (phoenix): the company chose the name after losing an earlier theater to fire, and the house itself had already burned once, in 1836. True to its name, it rose again and reopened in December 2003. Many Venetians took that as an (augury): whatever their city loses, it somehow rebuilds.", "zh": "1996年1月29日夜里，威尼斯人眼睁睁地看着他们的歌剧院凤凰剧院被烧得只剩一具空壳。剧院周围的运河当时正抽干了水进行疏浚，消防船无法靠近。调查人员认定这场火灾属于（人为纵火的），2001年，两名电工被判（有罪），罪名正是放了这把火；据报道，他们所在的公司当时因维修工程延误而面临处罚。“Fenice”在意大利语中意为（凤凰）：剧团此前的剧院毁于火灾，因此取了这个名字，而这座剧院本身在1836年就已被烧毁过一次。正如其名，它再次浴火重生，于2003年12月重新开放。许多威尼斯人把这视为一种（预兆）：无论这座城市失去什么，它总能设法重建起来。"}, {"en": "That is the (paradox) of Venice. Over 1,600 years it has survived plague, the loss of an empire, Napoleon, the Habsburgs and, in 1966, the worst flood on record. Yet the threats it now faces are quieter and perhaps more lethal. Its people are leaving: some 175,000 lived in the historic city in 1951, and by 2025 the count had dropped below 48,000. In their place has come an (influx) of visitors so large that on busy days they can outnumber residents, while hotel and holiday-let beds in the historic center now exceed the number of people who live there.", "zh": "这正是威尼斯的（悖论）。1600年来，它挺过了瘟疫、帝国的丧失、拿破仑、哈布斯堡王朝，以及1966年那场有记录以来最严重的洪水。然而，它如今面临的威胁更为无声，或许也更为致命。它的居民正在离开：1951年，历史城区约有17.5万人居住，到2025年，这一数字已跌破4.8万。取而代之的是大批（涌入）的游客，人数之多，在繁忙的日子里甚至可能超过居民；而历史城区的酒店和度假出租屋床位，如今已多于在此居住的人口。"}, {"en": "Venice has started to fight back, and 2026 has tested how hard it is willing to push. The (novelty) of charging day-trippers to come in, first tried in 2024, has become routine: this year the charge applied on 60 days and raised more than €5m. In May voters chose a new mayor, Simone Venturini, a 38-year-old from the center-right who wants to raise it to as much as €50 on the busiest days. He and his critics agree on one thing: the city cannot afford to (dally). The (crux) is whether Venice can remain a living city rather than an exquisite museum with a turnstile.", "zh": "威尼斯已开始反击，而2026年考验了它愿意走多远。向一日游游客收取进城费这项（新鲜事物）于2024年首次试行，如今已成常态：今年共有60天收费，收入超过500万欧元。5月，选民选出了新市长西莫内·文图里尼，这位38岁的中右翼政治人物希望在最繁忙的日子把费用提高到最多50欧元。他和批评者在一点上意见一致：这座城市（拖延）不起。问题的（关键）在于，威尼斯能否继续做一座有人生活的城市，而不是一座装着旋转闸门的精美博物馆。"}, {"en": "The city was born of fear. As the Roman world crumbled in late (antiquity), people from the mainland fled the Huns, and later the Lombards, to the marshy islands of the lagoon, where horsemen could not follow. Tradition dates the founding to March 25th 421. Torcello, where a cathedral was begun in 639, was once a thriving town; today it is an almost (solitary) place, home to a handful of people. Nor was the lagoon empty before the refugees came. In 2021 researchers mapping its floor with sonar reported the remains of a Roman road, and what may have been a dock, beneath the Treporti channel, a find for underwater (archaeology) suggesting that the sea was lower in Roman times and that people lived among the (multiplicity) of sandbanks long before Venice existed.", "zh": "这座城市诞生于恐惧。（古典时代）晚期，随着罗马世界土崩瓦解，大陆上的人们为躲避匈人、后来又为躲避伦巴第人，逃到潟湖中沼泽密布的岛屿上，骑兵无法追到那里。按照传统说法，威尼斯建城于421年3月25日。托尔切洛岛于639年开始修建一座大教堂，那里曾是一座繁荣的城镇；如今却几乎成了（孤寂的）地方，只有寥寥数人居住。在难民到来之前，潟湖也并非空无一人。2021年，研究人员用声呐绘制潟湖底部地图时，报告在特雷波尔蒂水道下方发现了一条罗马道路的遗迹，以及一处可能是码头的结构。这是水下（考古学）的一项发现，表明罗马时代的海平面较低，早在威尼斯出现之前，就有人生活在（众多）的沙洲之间。"}, {"en": "What the young city lacked was prestige, so it stole some. In 828 two Venetian merchants spirited the relics of St Mark the Evangelist out of Alexandria, hiding them under a layer of pork, a (ploy) to discourage Muslim port inspectors from looking too closely. The pious (trickery) gave Venice an apostle of its own, helped (sanctify) its claims to independence from Byzantium and from competing bishoprics, and supplied the winged lion that would (embody) both saint and state for the next thousand years. The basilica built to house the relics, with domes and mosaics modeled on Byzantine churches, remains the city's showpiece.", "zh": "这座年轻的城市缺少的是威望，于是它偷来了一些。828年，两名威尼斯商人把福音书作者圣马可的遗骨从亚历山大港偷运出来，藏在一层猪肉下面，这是一个（计谋），为的是让穆斯林港口检查员不愿细看。这场虔诚的（诡计）让威尼斯拥有了一位自己的使徒，使其摆脱拜占庭及与之竞争的主教区、谋求独立的主张得以（神圣化），还带来了那头带翼的狮子，在此后一千年里，它将同时（体现）圣徒与国家。为安放遗骨而建的大教堂，其穹顶和马赛克仿照拜占庭教堂，至今仍是这座城市最引以为傲的建筑。"}, {"en": "Building a city on silt took nerve. Venetians drove millions of wooden piles, including alder, larch and oak, through the soft sediment towards the caranto, a compact layer of (clay) and sand that offers a (sturdy) footing. Oxygen-poor mud slowed the timber's decay but did not prevent it: studies have found deterioration in many surviving piles. Above them, layers of planks and stone helped (solidify) the foundations. Istrian stone, a dense white limestone brought from a (quarry) across the Adriatic, was prized for properties explained by its (petrology). Its low porosity and relative (impermeability) help slow, rather than completely stop, the upward movement of salty water by (capillary) action. Engineers who inspect the foundations today worry less about rot than about currents and boat wakes that can scour a (cavity) beneath a wall.", "zh": "在淤泥上建城需要胆量。威尼斯人把数以百万计的木桩，包括桤木、落叶松和橡木，打入松软的沉积层，直达附近的“卡兰托”地层；这是一层由（黏土）和沙子压实而成、能提供（坚固的）支撑的地层。缺氧的泥土减缓了木材腐朽，却无法完全阻止腐朽：研究发现，不少留存至今的木桩已有不同程度的损坏。其上的木板和石材层则帮助（加固）建筑地基。伊斯特拉石是一种从亚得里亚海对岸（采石场）运来的致密白色石灰岩，其（岩石学）特性解释了威尼斯人为何青睐它。较低的孔隙率与相对较强的（不透水性）能减缓盐水通过（毛细）作用向上渗入砖墙，却无法将其完全阻断。如今检查地基的工程师，担心的与其说是腐烂，不如说是水流和船只尾浪，它们可能在墙下冲刷出（空洞）。"}, {"en": "The result is a city unlike any other. The Grand Canal, its main (artery), snakes for nearly four kilometers through a cluster of 118 islands stitched together by more than 400 bridges. There are no cars or scooters on the old city's streets; even a young horse, a (filly), would struggle with the bridges and steps. Most journeys are on foot, though people with (ambulatory) impairments face real difficulties; others rely on gondolas, water taxis and the vaporetto, a (ferry) that serves as a bus. Covered passages called sotoporteghi run beneath buildings, unlike an open-sided (breezeway) connecting separate structures. In almost every square stands a carved wellhead: beneath it lay a cistern that collected rainwater and filtered it through sand to (purify) it, the city's main source of drinking water until an aqueduct from the mainland opened in 1884. Ground floors tend to be (musty), and the algae on canal steps make them treacherously (slippery).", "zh": "结果是一座独一无二的城市。大运河是它的（主动脉），蜿蜒近四公里，穿过由400多座桥梁连缀起来的118个岛屿。老城区的街道上没有汽车或踏板车；即便是一匹年轻的（小母马），也难以应付这里的桥梁和台阶。人们大多步行，但有（行走能力）障碍的人会遇到实实在在的困难；其他出行方式则包括贡多拉、水上出租车以及充当公交车的水上（渡船）。名为“索托波尔泰戈”的有顶通道从建筑物下方穿过，不同于连接两栋建筑、两侧敞开的（通风廊道）。几乎每个广场上都立着一座雕花井栏：下面是一个蓄水池，收集雨水并通过沙子过滤来（净化）它，在1884年通往大陆的引水渠开通之前，这是城里饮用水的主要来源。底层房间往往（霉味很重），运河台阶上的藻类则让台阶（滑溜）得危险。"}, {"en": "The lagoon itself is in constant (flux). Twice a day the Adriatic surges in through three inlets, and the currents (eddy) around the islands, flushing the canals. A scirocco blowing up the Adriatic, or the sea sloshing back and forth in its long basin, can (amplify) a high tide, so Venetians follow every (vagary) of the forecast. Lagoons are by nature (transitory): left alone, rivers fill them with silt or the sea swallows them. The Republic chose to keep its moat. Between the 15th and 17th centuries it dug new beds for the Brenta, the Piave and the Sile, so that each river, fed by every (tributary) in the hills, would dump its silt at an (estuary) outside the lagoon. Venice and its lagoon, in their (entirety), have been a UNESCO World Heritage site since 1987.", "zh": "潟湖本身处于不断的（变动）之中。亚得里亚海的海水每天两次从三个入海口涌入，水流在岛屿周围（打旋），冲刷着运河。沿亚得里亚海北上的西洛可风，或者在狭长海盆中来回晃荡的海水，都可能（放大）高潮，因此威尼斯人密切关注天气预报的每一次（变幻）。潟湖天生是（短暂的）：如果放任不管，河流会用淤泥把它填满，或者大海会把它吞没。共和国选择保住这条护城河。15世纪至17世纪间，它为布伦塔河、皮亚韦河和西莱河开挖了新河道，使每条河连同山中汇入的每条（支流）带来的淤泥，都在潟湖之外的（河口）倾泻入海。自1987年以来，威尼斯及其潟湖作为一个（整体）被列为联合国教科文组织世界遗产。"}, {"en": "Much of the lagoon is neither land nor water. Barene, salt marshes that flood at high tide, once covered nearly half of its 550 square kilometers; today they cover about 7%, and half of that has been rebuilt by people. Walk on one and the (spongy), (muddy) ground gives underfoot; only (hardy) plants such as glasswort and sea lavender tolerate the salt. In late summer beekeepers set up a temporary (apiary) at the marsh's edge to make a rare, faintly salty honey from the lavender's flowers. The (fecundity) of these wetlands makes the lagoon a vast (aviary) and a stopover for (migratory) birds. Flamingos began to appear in the early 2000s; in 2025 nearly 24,000 spent the winter there, a record, according to specialists in (ornithology). Boaters can (espy) them at the lagoon's (periphery), far from the crowds. An EU-funded restoration project stresses the (sensitivity) of a habitat that boat wakes and sinking land are steadily eroding.", "zh": "潟湖的大部分地方既非陆地，也非水域。“巴雷内”是涨潮时会被淹没的盐沼，曾覆盖潟湖550平方公里面积的近一半；如今只占约7%，其中一半还是人工重建的。走在上面，（松软如海绵的）、（泥泞的）地面会在脚下下陷；只有海蓬子和补血草等（顽强的）植物能耐受盐分。夏末，养蜂人会在盐沼边缘搭起临时（养蜂场），用补血草的花酿出一种略带咸味的稀有蜂蜜。这些湿地的（丰饶）使潟湖宛如一座巨大的天然（鸟类乐园），也成为（迁徙）鸟类的重要中途停歇地。火烈鸟在21世纪初开始出现；据（鸟类学）专家统计，2025年有近2.4万只在此越冬，创下纪录。乘船的人可以在远离人群的潟湖（边缘地带）（瞥见）它们。一个由欧盟资助的修复项目强调了这一栖息地的（脆弱敏感），船只尾浪和地面沉降正在不断侵蚀着它。"}, {"en": "Lagoon dwellers made their living from these waters long before tourists came. In the valli da pesca, fenced-off ponds at the lagoon's edge, families have practiced a form of fish (husbandry) for centuries, letting young bream and mullet swim in with the spring tides and trapping them when they try to head back to sea in autumn. Hunters in the same valli still lure ducks with a wooden (decoy). On the (reedy), (flaggy) banks stand casoni, thatched huts each little more than a (shanty) and (buggy) with mosquitoes in summer. Chioggia, at the lagoon's southern end, keeps one of Italy's biggest fishing fleets; on a (drizzly) winter dawn its trawlers still put out to sea, though the local (fishery), like others in the Adriatic, is under strain.", "zh": "早在游客到来之前，潟湖居民就靠这片水域谋生。在潟湖边缘用栅栏围起的养鱼塘“瓦利”里，许多家庭几百年来一直从事一种鱼类（养殖）：春天让幼小的鲷鱼和鲻鱼随潮水游进来，秋天它们想游回大海时再把它们截住。在同样的鱼塘里，猎人们至今仍用木制（诱饵）引诱野鸭。在（芦苇丛生的）、（长满鸢尾的）岸边，矗立着“卡索尼”，那是一种茅草屋，每间都比（简陋小屋）好不了多少，夏天（蚊虫成群）。位于潟湖南端的基奥贾拥有意大利最大的捕鱼船队之一；在（细雨蒙蒙的）冬日黎明，它的拖网渔船依然出海，不过当地的（渔业）和亚得里亚海其他地方一样，正面临压力。"}, {"en": "Out of these shallows grew one of the most durable states in European history. The Republic of Venice survived as a self-governing (entity) from the eighth century until 1797, and no one can (gainsay) that record. Its (singularity) fascinated political thinkers from Machiavelli to James Harrington and John Adams. Venice was not a (monarchy), though it had a doge elected for life, nor a democracy, though it had councils and votes. It was an (oligarchy), run by a couple of thousand men from noble families, and its constitution was admired more for its (consistency) than for its fairness. Admirers spun the \"myth of Venice\", a (hoary) tale of a perfectly balanced republic, mixing rule by the one, the few and the many, that seemed to (exemplify) the classical ideal of mixed government.", "zh": "从这片浅滩中，崛起了欧洲历史上最长寿的国家之一。威尼斯共和国作为一个自治的（实体），从8世纪一直延续到1797年，这一纪录无人能够（否认）。它的（独特性）令从马基雅维利到詹姆斯·哈林顿和约翰·亚当斯的政治思想家们着迷。威尼斯不是（君主制国家），尽管它有一位终身任职的总督；它也不是民主国家，尽管它有各种议会和投票。它是一个（寡头政体），由来自贵族家族的两千来名男子统治，其宪制受人推崇的是它的（一贯性），而非公平。仰慕者编织出“威尼斯神话”，这是一个（古老陈旧的）故事，讲述一个完美平衡的共和国，融合了一人、少数人和多数人的统治，似乎（例证了）古典的混合政体理想。"}, {"en": "The decisive step came in 1297, with the Serrata, or closing, of the Great Council. Membership, which had been fluid, was confined to families that had recently sat in it, and in time it became strictly (hereditary). Venice thereby created a closed (aristocracy) that would last for five centuries. Noble births and marriages were recorded in registers, later known as the Golden Book, so that only the legitimate (progeny) of noble fathers could take their seats; (genealogy) became a matter of state. The Great Council, which met in (plenary) session in a vast hall of the Doge's Palace, grew to some 2,500 members. The reform helped (stratify) society into three tiers: nobles, citizens and commoners. Visitors found the patricians (haughty) and their black gowns (stuffy), but the system kept feuding clans inside the tent.", "zh": "决定性的一步出现在1297年，即大议会的“关闭”。原本流动的议员资格被限定于近期曾在议会中任职的家族，久而久之，它变成了严格（世袭）的。威尼斯由此造就了一个封闭的（贵族阶层），并延续了五个世纪。贵族的出生和婚姻都被登记在册，这些名册后来被称为《金书》，以确保只有贵族父亲的合法（后代）才能获得议席；（家谱）成了国家大事。大议会在总督府一座宏伟的大厅里举行（全体）会议，成员增至约2500人。这项改革促使社会（分层）为三个等级：贵族、公民和平民。外国访客觉得这些贵族（傲慢），他们的黑袍也显得（古板沉闷），但这一制度让彼此争斗的家族都留在了体制之内。"}, {"en": "At the top sat the doge, a figure of great (dignity) and little power. Venetians took care never to (deify) their rulers. Each doge swore an oath, the promissione, which hedged him in more tightly with every reign: he could not open letters from foreign rulers unless councilors were present, nor own estates abroad. The aim was to rule out (autocracy). Electors tended to choose old men, partly for their (tractability), so the office became a kind of (gerontocracy); Enrico Dandolo was in his eighties when elected in 1192. Some doges were (crotchety), most were careful, and all were wise to (underplay) their influence. Behind the (formality) of ducal processions, with their gilded umbrella, silver trumpets and banners, the doge was less a prince than the Republic's grandest (lackey).", "zh": "位于顶端的是总督，一个极具（威严）却几乎没有权力的人物。威尼斯人小心翼翼，从不（神化）他们的统治者。每位总督都要宣读一份名为“就职誓约”的誓言，这份誓约一任比一任把他约束得更紧：没有顾问在场，他不能拆阅外国君主的来信，也不能在国外拥有地产。其目的是杜绝（独裁）。选举人往往挑选老人，部分原因是看中他们的（顺从易驾驭），因此总督职位形成了某种由老年人掌权的（老年统治）格局；恩里科·丹多洛在1192年当选时已年过八旬。有些总督（脾气古怪），多数谨小慎微，而且都明智地（淡化）自己的影响力。在总督出巡仪仗的（繁文缛节）背后，有镀金的华盖、银质的号角和旗帜，但总督与其说是一位君主，不如说是共和国最体面的（仆役）。"}, {"en": "Choosing a doge was a feat of constitutional engineering. Under rules adopted in 1268, 30 members of the Great Council were picked at random and cut by (lottery) to nine; the nine named 40, who were cut to 12; the 12 named 25, cut to nine; the nine named 45, cut to 11; and the 11 named the 41 who finally elected the doge. The sequence looks like (numerology) and was undeniably (unwieldy), but it had a purpose: to (outfox) any family or faction that tried to rig the outcome, and to make bribery and other (chicanery) almost impossible. While the electors deliberated, a senior councilor stood in as the late doge's (deputy). Computer scientists have since published papers analyzing the procedure.", "zh": "选举总督堪称一项宪制工程的壮举。根据1268年通过的规则，先从大议会中随机选出30名议员，再通过（抽签）减至9人；这9人提名40人，再减至12人；这12人提名25人，再减至9人；这9人提名45人，再减至11人；最后这11人提名41人，由他们最终选出总督。这一流程看起来像（数字命理学），也无疑（繁琐笨拙），但它自有其目的：（智胜）任何企图操纵选举结果的家族或派系，让贿赂和其他（诡诈手段）几乎无法得逞。在选举人商议期间，由一名资深顾问暂时充当已故总督的（代理人）。后来，计算机科学家还专门发表论文分析这一程序。"}, {"en": "Security was the job of the Council of Ten, set up in 1310 after a failed (conspiracy) led by Bajamonte Tiepolo. Meant to be temporary, it became permanent and feared, with broad (discretionary) powers, its own informers and secret trials. Stone letterboxes carved as lions' mouths invited citizens to post denunciations. Unsigned ones were supposed to be burned unless they concerned the safety of the state, a recognition of the risk of (calumny), and those who lodged malicious accusations could be punished much as if for (perjury). Rank conferred no (immunity). In 1355 the Ten tried Marino Faliero, a sitting doge who had plotted to make himself lord of the city, and showed him no (clemency): he was beheaded in his own palace. In the hall of the Great Council, where portraits of the doges line the walls, his place holds not an (effigy) but a painted black shroud.", "zh": "国家安全由十人委员会负责，它成立于1310年，起因是巴亚蒙特·蒂耶波洛领导的一场（阴谋）失败。十人委员会原本是临时机构，后来却成了常设机构，令人畏惧，拥有广泛的（自由裁量）权力、自己的线人和秘密审判。雕成狮子嘴形状的石头信箱，鼓励市民投递告发信。按规定，匿名告发信应当烧毁，除非涉及国家安全，这是考虑到（诽谤）的风险；而恶意诬告者可能受到的惩罚，几乎与（伪证罪）相当。地位高并不能带来（豁免权）。1355年，十人委员会审判了在任总督马里诺·法利耶罗，他曾密谋让自己成为这座城市的君主，十人委员会对他毫不（宽恕）：他在自己的宫殿里被斩首。在大议会大厅，历任总督的画像沿墙排列，而属于他的位置上挂的不是（人像），而是一块画出来的黑色裹尸布。"}, {"en": "Venice was devout but no (theocracy). \"Venetians first, Christians second,\" ran a local saying. When Pope Paul V placed the city under interdict in 1606, forbidding priests to say Mass, the Republic ordered its clergy to carry on as usual, and most did; to Rome this was (contumacy) of the worst sort. The Republic's champion was Paolo Sarpi, a Servite friar of (heterodox) views and formidable learning, who answered papal pamphlets with his own and accused his opponents of (sophistry). The state expelled the Jesuits, who had sided with the pope, and the quarrel was settled through French mediation a year later. Sarpi survived a stabbing by assassins in 1607 and, legend has it, quipped that he recognized the \"style\" of the Roman Curia. Venice's rulers, nearly all members of the (laity), did not need a (homily) from Rome to know where their interests lay.", "zh": "威尼斯人虔诚，但威尼斯绝非（神权政体）。当地有句俗话说：“先做威尼斯人，再做基督徒。”1606年，教宗保禄五世对这座城市颁布禁令，禁止神父主持弥撒，共和国却命令神职人员照常行事，大多数人也照做了；在罗马看来，这是最恶劣的（抗命）。共和国的捍卫者是保罗·萨尔皮，一位持（非正统的）观点、学识惊人的圣母忠仆会修士，他以自己的小册子回击教廷的小册子，并指责对手是在（诡辩）。国家驱逐了站在教宗一边的耶稣会士，一年后，这场争端经法国调停得以解决。1607年，萨尔皮遭刺客刺伤后幸存，相传他打趣说，自己认出了罗马教廷的“手笔”。威尼斯的统治者几乎全是（平信徒），他们不需要罗马的（说教）也知道自己的利益所在。"}, {"en": "Tolerance had limits. In 1516 the Senate confined the city's Jews to a small island in Cannaregio, locked at night and guarded at the community's expense: the world's first ghetto. The policy was (discriminatory), yet it also guaranteed Jews a legal place in Venice at a time when many Christian states were expelling them, and Jewish printers, doctors and merchants flourished. Greeks were allowed to build their own (orthodox) church, San Giorgio dei Greci, in the 16th century, and Armenians, Turks and Germans had their own quarters or warehouses. The Holy Office pursued (apostasy) among converts, but the Republic insisted that its own magistrates sit in on the tribunal's sessions, which kept its ardor in check. A special magistracy, created in 1537, prosecuted (blasphemy), gambling and other offenses against public morals. Outward (conformity) mattered more than private belief.", "zh": "宽容也有限度。1516年，元老院把城中的犹太人限制在卡纳雷吉欧区的一个小岛上，夜间上锁，由犹太社区出资派人看守：这就是世界上第一个犹太隔离区。这一政策带有（歧视性），但在许多基督教国家驱逐犹太人的年代，它也保障了犹太人在威尼斯的合法地位，犹太印刷商、医生和商人因而兴旺发达。16世纪，希腊人获准修建自己的（东正教）教堂，即希腊人的圣乔治教堂；亚美尼亚人、土耳其人和德意志人也都有自己的居住区或商馆。宗教裁判所追查皈依者中的（叛教）行为，但共和国坚持由自己的官员列席裁判所的审理，从而抑制了它的狂热。1537年设立的一个专门机构负责起诉（亵渎神明）、赌博和其他有伤公共风化的行为。表面上的（顺从）比私下的信仰更重要。"}, {"en": "Nobles held the top offices, but the state ran on a professional (bureaucracy). Its secretaries and clerks were drawn from the cittadini originari, a privileged order of citizens below the nobility, and a career (functionary) could spend decades in the chancery. Terms of office for nobles were short, often a year or two, and many posts ended with an audit of the holder's conduct that was rarely (perfunctory). Venice prized (probity) and had a (persnickety) devotion to paperwork as a means of (accountability). That did not make it free of graft; a state run by merchants was in part a (plutocracy), and patricians were not above bending the rules. Yet by the standards of the age the Republic's (integrity) was remarkable. Its records survive in the State Archives in a former friary at the Frari, on shelves said to stretch for some 70 kilometers. Exploring their dark, labyrinthine storerooms can feel more like (speleology) than ordinary archival research.", "zh": "贵族占据最高职位，但国家的运转依靠一支职业化的（官僚机构）。其秘书和书记员来自“原籍公民”，这是一个地位仅次于贵族的特权阶层；一名职业（公务员）可以在大法官署度过几十年。贵族的任期很短，往往只有一两年，许多职位在卸任时都要接受对任职者行为的审查，而这种审查很少（敷衍了事）。威尼斯看重（廉正），对文书工作有着（吹毛求疵）般的执着，以此作为（问责）的手段。这并不意味着它没有贪腐；一个由商人治理的国家在某种程度上就是（富豪统治），贵族们也不惮于钻规则的空子。然而，按照那个时代的标准，共和国的（正直）令人瞩目。它的档案保存在弗拉里教堂旁一座昔日修道院里的国家档案馆中，据说书架绵延约70公里。穿行于那些幽暗如迷宫的档案库房，有时感觉更像是在做（洞穴勘探），而不只是普通的历史研究。"}, {"en": "The Republic understood the value of spectacle. Every year on Ascension Day the doge was rowed out toward the Lido aboard the Bucintoro, a gilded state barge, and dropped a gold ring into the water to (signify) Venice's marriage to the sea, declaring: \"We wed thee, sea, in token of true and perpetual dominion.\" It was a (ceremony) of great (solemnity), with a playful hint of (monogamy): the Republic cast the sea itself, rather than any trading partner, as its one enduring spouse. The rite took its later form after 1177, when Venice brokered a (treaty) between Pope Alexander III and the emperor Frederick Barbarossa, who met at St Mark's to seal their (amity); the grateful pope, it is said, presented the doge with a ring. The Bucintoro was as (showy) as the occasion demanded, and the (pomposity) was the point: splendor was a tool of statecraft.", "zh": "共和国深谙排场的价值。每年耶稣升天节，总督都会乘坐一艘名为“布钦托罗”的镀金国家礼舟，被划向利多岛方向，然后把一枚金戒指投入水中，以（象征）威尼斯与大海的婚姻，并宣告：“大海啊，我们与你成婚，以此作为真正而永久统治的信物。”这是一场充满（庄严感）的（仪式），还带着几分象征性的（一夫一妻制）意味：共和国把大海本身，而不是某个贸易伙伴，当作自己唯一恒久的配偶。这一仪式在1177年之后才形成后来的样式：那一年，威尼斯促成了教宗亚历山大三世与皇帝腓特烈一世“红胡子”之间的（和约），二人在圣马可大教堂会面，以确认彼此的（和睦）；据说心怀感激的教宗赠给总督一枚戒指。“布钦托罗”与这一场合所要求的一样（华丽炫目），而这种（浮夸）正是重点所在：华美壮观本身就是治国之术的工具。"}, {"en": "The source of all this splendor was the sea. In its (heyday), in the 14th and 15th centuries, Venice ruled a maritime empire, the Stato da Mar, that stretched from Dalmatia through the Ionian islands to Crete, a (colony) it held from 1211 to 1669, and later Cyprus. A state-owned merchant (galley) might sail in an armed convoy to Alexandria, Beirut, Constantinople, Flanders or London; on its return, cargo would be unloaded at a (quay) near St Mark's or the Rialto. Pirates and enemy fleets would (harry) any ship that sailed alone, and a lone merchantman was easy (prey). Convoys, island bases and a (mighty) navy secured a commercial (hegemony) in the eastern Mediterranean, and that (supremacy) underpinned the city's astonishing (prosperity).", "zh": "这一切辉煌的源泉是大海。在14和15世纪的（鼎盛时期），威尼斯统治着一个名为“海洋领地”的海上帝国，从达尔马提亚经爱奥尼亚群岛一直延伸到克里特岛，后来又包括塞浦路斯；克里特是它从1211年统治到1669年的（殖民地）。一艘国有商用（桨帆船）可能随武装船队驶往亚历山大港、贝鲁特、君士坦丁堡、佛兰德斯或伦敦；返航后，货物便在圣马可广场或里亚尔托附近的一处（码头）卸下。海盗和敌方舰队会（袭扰）任何单独航行的船只，孤零零的商船很容易成为（猎物）。船队、岛屿基地和一支（强大的）海军，确保了威尼斯在东地中海的商业（霸权），而这种（至高地位）支撑了这座城市惊人的（繁荣）。"}, {"en": "The navy came from the Arsenal, the state shipyard, whose crenellated walls still enclose a large slice of the city. At its peak in the early 16th century it employed some 16,000 people, making it one of the biggest enterprises in pre-industrial Europe; beside it, most shipyards were (pygmy) affairs. Its (brawny) workers, the arsenalotti, built hulls frame-first, used standardized parts and moved vessels along a canal past stores of oars, ropes and rigging, a kind of assembly line centuries before Henry Ford. Cranes and (pulley) blocks hoisted masts into place. The (productivity) was startling: at full stretch the yard could turn out nearly a ship a day, and it kept a reserve of hulls (ready) to be fitted out at short notice. According to a much-repeated story, when Henry III of France visited in 1574, the arsenalotti assembled and launched a complete warship in the time it took the visiting (dignitary) to finish a banquet. Such (alacrity) underpinned Venice's naval (superiority) for centuries.", "zh": "海军出自军械库，即国营造船厂，它那带城垛的围墙至今仍圈住城市的一大片区域。16世纪初鼎盛时期，这里雇用了约1.6万人，是前工业时代欧洲最大的企业之一；相比之下，大多数造船厂都只是（小规模的）作坊。（身强力壮的）工人们被称为“阿森纳洛蒂”，他们先造骨架再造船体，使用标准化部件，并让船只沿一条运河依次经过存放船桨、绳索和索具的仓库，这比亨利·福特早了几个世纪，堪称一种流水线。起重机和（滑轮）组把桅杆吊装到位。其（生产率）令人震惊：全力开工时，船厂几乎每天能造出一艘船，还储备着一批（随时待命的）船体，可在短时间内装配出海。据一个流传甚广的故事，1574年法国国王亨利三世来访时，工人们在这位来访的（显贵）吃完一场宴会的时间里，就组装并下水了一艘完整的战船。这种（敏捷）支撑了威尼斯几个世纪的海军（优势）。"}, {"en": "The Arsenal was also an (armory) and a foundry. Its bronze cannon, the fruit of advanced (metallurgy), were among the best in Europe, and by the 16th century warships carried heavy (artillery) in their bows; at Lepanto in 1571 six Venetian galleasses, lumbering floating gun platforms, helped break the Ottoman line. Shipbuilding devoured timber, so the Republic practiced an early form of state (forestry) to guard against any (deficiency) of supply: oak woods on the Montello hill were reserved for hulls, and the beeches of the Cansiglio plateau were prized for oars.", "zh": "军械库还是一座（兵工厂）和铸造厂。它铸造的青铜大炮是先进（冶金术）的成果，堪称欧洲最好的大炮之一；到16世纪，战船船头都装载着重型（火炮）。1571年勒班陀海战中，六艘威尼斯加莱赛战船，这些笨重的海上炮台，帮助击破了奥斯曼舰队的阵线。造船需要消耗大量木材，因此共和国实行了一种早期的国家（林业管理），以防木材供应出现任何（短缺）：蒙泰洛山的橡树林专供造船体，坎西利奥高原的山毛榉则因适合做船桨而备受珍视。"}, {"en": "Venice's most notorious coup was the Fourth Crusade. In 1202 the crusaders, unable to pay for the fleet they had ordered, agreed to help the Venetians recapture Zara, a Christian city on the Dalmatian coast, and were excommunicated for it. The (wily), elderly and nearly blind Dandolo did not need to (waylay) the expedition: he helped divert it towards Constantinople, where a Byzantine pretender had promised rich rewards. In April 1204 the crusaders stormed the city and sacked it for three days, an (atrocity) the Greek world never forgave. Venice claimed \"a quarter and half a quarter\" of the Byzantine empire, plus a hoard of loot that included the four bronze horses now in St Mark's. Historians still argue over how much was Venetian (duplicity) and how much was crusading (zealotry) gone astray, but the (obloquy) has stuck, and Venetian (perfidy) became a stock theme of later histories.", "zh": "威尼斯最臭名昭著的一次得手是第四次十字军东征。1202年，十字军无力支付他们订造的船队费用，便同意帮助威尼斯人夺回达尔马提亚海岸的基督教城市扎拉，并因此被逐出教会。随后，那位（老谋深算的）、年迈且几乎失明的丹多洛甚至不必（设伏拦截）远征军：他帮助说服其首领改变航向，转赴君士坦丁堡，因为一名拜占庭皇位觊觎者许诺给予丰厚报酬。1204年4月，十字军攻破这座城市，洗劫了三天，这一（暴行）让希腊世界永远无法原谅。威尼斯得到了拜占庭帝国的“四分之一再加四分之一的一半”，外加大批战利品，其中包括如今在圣马可大教堂的四匹青铜马。历史学家至今仍在争论，这其中有多少是威尼斯人的（两面三刀），又有多少是走入歧途的十字军（狂热），但（骂名）已经洗不掉了，威尼斯人的（背信弃义）也成了后世史书的老生常谈。"}, {"en": "Above all, Venice was a market. Each merchant could become an essential (intermediary) between East and West, bringing pepper and other spices, silk and cotton from the Levant over the Alps to (purvey) these goods to German and Flemish buyers. Pepper was the (commodity) that mattered most. A (motley) crowd of Greeks, Germans, Armenians, Jews, Turks and Florentines haggled around the Rialto, where trading networks would (ramify) across three continents. The city's (affinity) with Byzantium showed in its architecture, its mosaics and its love of luxury. When Shakespeare wrote a play about (usury) and a pound of flesh, he set it in a Venice that was (proverbially) rich.", "zh": "最重要的是，威尼斯是一个市场。这里的每一位商人都可能成为东西方之间不可或缺的（中间人）：将来自黎凡特的胡椒等香料、丝绸和棉花运过阿尔卑斯山，再（供应）给德意志和佛兰德斯的买家。胡椒是最重要的（商品）。希腊人、德意志人、亚美尼亚人、犹太人、土耳其人和佛罗伦萨人组成的（形形色色的）人群，在里亚尔托一带讨价还价，从这里出发的贸易网络（分支蔓延）至三大洲。这座城市与拜占庭的（亲缘），体现在它的建筑、马赛克和对奢华的喜爱上。莎士比亚写一部关于（高利贷）和一磅肉的戏剧时，把故事放在了一个（出了名地）富有的威尼斯。"}, {"en": "Its most famous merchant was Marco Polo, who spent some two decades in Asia, much of it in the service of Kublai Khan, and came home in 1295. The book he dictated in a Genoese prison mixes eyewitness description with (hearsay) and marvels, and its geography is (sketchy) in places. Skeptics have long accused him of (mendacity), noting that he never mentions the Great Wall, tea or chopsticks. Most scholars now accept the (veracity) of his core narrative, since details of Mongol currency, salt production and revenues that he reported have proved possible to (verify) in Chinese sources.", "zh": "它最著名的商人是马可·波罗，他在亚洲度过了约二十年，其中大部分时间为忽必烈效力，1295年回到故乡。他在热那亚的监狱中口述的那本书，把亲眼所见的描述与（道听途说）和奇闻异事混杂在一起，书中的地理描述有些地方也很（粗略）。怀疑者长期指责他（说谎），指出他从未提及长城、茶叶或筷子。如今大多数学者接受他核心叙述的（真实性），因为他所记载的蒙古货币、盐业生产和税收等细节，已被证明可以在中国史料中（核实）。"}, {"en": "Venice may owe a still stranger debt to the East. Atop one of the two granite columns in the Piazzetta stands a bronze winged lion, the symbol of St Mark. In 2025 researchers at the University of Padua published an (assay) of lead isotopes in its metal, arguing that the findings were consistent with copper from China's lower Yangtze basin. Its style, from the snout to scars where horns appear to have been removed, led them tentatively to (classify) it as Tang-dynasty work, perhaps a zhenmushou, a fierce and (minatory) guardian of tombs. The resemblance, once pointed out, is (uncanny). One unproved possibility, they suggest, is that it reached Venice through Marco Polo's father and uncle in the 13th century before being refitted with a new mane. The finding was met with some (incredulity), but it gave the city's best-known emblem an unexpected (ancestry).", "zh": "威尼斯欠东方的债也许还有更离奇的一笔。小广场上两根花岗岩柱子之一的顶端，矗立着一尊青铜带翼狮子，它是圣马可的象征。2025年，帕多瓦大学的研究人员发表了一项针对其金属中铅同位素的（检测分析），认为结果与铜料产自中国长江下游流域的假说相符。从口鼻部到疑似被移除犄角后留下的痕迹，其风格使研究人员尝试将它（归类）为唐代作品，可能是一尊镇墓兽，即一种凶猛而（具有威慑性的）墓葬守护形象。经人指出之后，两者的相似程度（令人称奇）。他们还提出一个尚未证实的可能：它或许在13世纪经由马可·波罗的父亲和叔叔来到威尼斯，随后被重新装上鬃毛。这一发现引来了一些（难以置信）的反应，但它为这座城市最著名的象征增添了一段意想不到的（血统）。"}, {"en": "Venetians were (canny) with money and pioneered much of the machinery of modern finance. The gold ducat, first minted in 1284, kept its weight and gold content for five centuries and became a (monetary) standard across the Mediterranean. The colleganza, a contract in which a sleeping partner put up the capital and a traveling merchant did the work, with the two splitting the profits, was an early form of (equity) finance, and underwriters at the Rialto would (indemnify) shippers against the loss of a cargo. In 1494 Luca Pacioli, a Franciscan friar, published in Venice the first printed description of the \"Venetian method\" of bookkeeping, in which every transaction is recorded twice, as a debit and a matching credit. Its stress was on (accuracy): any (discrepancy) points to an error, and a merchant begins by taking (inventory) of everything he owns. Private banks were less reliable. After a run of (insolvency) among them, the state set up a public bank, the Banco della Piazza di Rialto, in 1587. For all their palaces, many patricians were (thrifty) in private.", "zh": "威尼斯人在金钱方面（精明），开创了现代金融的许多机制。1284年首次铸造的金杜卡特，五个世纪里一直保持着重量和含金量，成为整个地中海地区的（货币）标准。“合伙契约”由一位不出面的合伙人出资，一位远行的商人出力，双方分享利润，这是（股权）融资的早期形式；里亚尔托的承保人会为货主的货物损失提供（赔偿）。1494年，方济各会修士卢卡·帕乔利在威尼斯出版了第一部印刷版的“威尼斯记账法”说明，这种方法把每笔交易记录两次，一次记为借方，一次记为相应的贷方。它强调（准确）：任何（不符）都意味着出了错，而商人首先要对自己拥有的一切进行（盘点）。私人银行没那么可靠。在一连串的（破产）之后，国家于1587年设立了一家公共银行，即里亚尔托广场银行。尽管住着宫殿，许多贵族在私下里却很（节俭）。"}, {"en": "Diplomacy was another Venetian specialty. The Republic was among the first states to keep resident ambassadors at foreign courts, and every (emissary) was expected to report in detail; at the end of a mission he read to the Senate a relazione, a polished survey of the country he had left. Historians treasure these reports, despite their (prolixity) and (circumlocutory) style. Envoys had little (leeway): instructions came by courier, and the Senate expected to be consulted. Policy was driven by (expediency) rather than principle, which made the Republic (chary) of binding alliances and happy to (parley) with anyone, the Ottoman sultan included. Its tone was usually (conciliatory), its smiles not always free of (insincerity).", "zh": "外交是威尼斯的另一项专长。共和国是最早在外国宫廷派驻常驻大使的国家之一，每位（使节）都要详细汇报；任期结束时，他要在元老院宣读一份“述职报告”，对他刚离开的国家作一番精心润色的概述。历史学家视这些报告为珍宝，尽管它们（冗长啰嗦）、行文（迂回曲折）。使节们几乎没有（回旋余地）：指示由信使送达，元老院要求凡事请示。政策取决于（权宜之计）而非原则，这使共和国对具有约束力的联盟（小心谨慎），却乐于与任何人（谈判），奥斯曼苏丹也不例外。它的语气通常是（安抚和解的），笑容却并不总是没有（虚情假意）。"}, {"en": "On land Venice fought with hired swords. From the early 15th century it built a mainland empire, taking Padua, Vicenza, Verona, Brescia and Bergamo, and relied on (mercenary) captains, the condottieri, to (pacify) and hold them. One of them, Bartolomeo Colleoni, left money for a monument to himself; Verrocchio's bronze of him on horseback, outside the church of Santi Giovanni e Paolo, is a masterpiece of equestrian (statuary). In 1508 the pope, France, the Holy Roman Emperor and Spain formed a (confederacy), the League of Cambrai, to carve up Venice's possessions. At Agnadello in 1509 French (cavalry) and (infantry) routed the Venetian army, and for a time the Republic lost almost all its mainland territory. Shrewd diplomacy helped it (parry) the threat, as did the (fealty) of much of the rural population, and most of the lost lands were recovered. Later it would (fortify) its eastern frontier with Palmanova, a star-shaped citadel begun in 1593, and lean on (auxiliary) troops recruited in Dalmatia.", "zh": "在陆地上，威尼斯靠雇佣兵打仗。从15世纪初起，它建立了一个大陆帝国，先后夺取帕多瓦、维琴察、维罗纳、布雷西亚和贝加莫，并依靠被称为“佣兵队长”的（雇佣兵）首领来（平定）和控制这些地方。其中一位佣兵队长巴尔托洛梅奥·科莱奥尼留下一笔钱，要为自己建一座纪念碑；韦罗基奥为他创作的青铜骑马像如今立在圣若望及保禄堂外，是骑马（雕像艺术）的杰作。1508年，教宗、法国、神圣罗马帝国皇帝和西班牙结成了一个（同盟），即康布雷同盟，企图瓜分威尼斯的领地。1509年在阿尼亚德洛，法国（骑兵）和（步兵）击溃了威尼斯军队，共和国一度几乎丧失了全部大陆领土。精明的外交帮助它（抵挡）住了威胁，许多农村民众的（效忠）也起了作用，失地大部分得以收复。后来，它又修建了1593年动工的星形要塞帕尔马诺瓦，以（加固）东部边境，并倚重从达尔马提亚招募的（辅助）部队。"}, {"en": "The (palmy) days could not last. In 1498 Vasco da Gama reached India by sea, opening a route for pepper that bypassed the Levant, and the Atlantic gradually displaced the Mediterranean as the hub of world trade. The Ottomans took Cyprus in 1571 and Crete in 1669. Decline was slow, and the Republic's (complacency) is easily exaggerated; but its seaborne commerce began to (atrophy), and as trade became a (subsidiary) source of wealth, patricians turned to the land. They became a landed (gentry), draining marshes, taking an interest in (agronomy) and building villas, many of them designed by Andrea Palladio, on their mainland estates.", "zh": "（繁荣兴旺的）日子不可能长久。1498年，瓦斯科·达伽马经海路抵达印度，开辟了一条绕过黎凡特的胡椒贸易航线，大西洋逐渐取代地中海，成为世界贸易的中心。奥斯曼人于1571年夺取塞浦路斯，1669年又夺取克里特。衰落是缓慢的，共和国的（自满）也很容易被夸大；但它的海上贸易开始（萎缩），随着贸易沦为（次要的）财富来源，贵族们转向了土地。他们成了拥有土地的（乡绅），排干沼泽，钻研（农学），并在大陆的庄园里修建别墅，其中许多由安德烈亚·帕拉迪奥设计。"}, {"en": "Trade also brought disease. The Black Death reached Venice in 1348 and may have killed half its people. The rat was an unwitting (stowaway) on ships arriving from the east, and the fleas it carried helped spread the infection. Long before anyone knew what an (antibody) was, Venice built institutions to fight contagion. In 1423 it opened the world's first permanent plague hospital, the lazaretto, on an island off the Lido; another island was later set aside to isolate suspect ships, crews and cargoes, and a stay of 40 days, quaranta giorni, became (mandatory). A permanent (sanitary) magistracy followed in 1486. Medical understanding was (rudimentary): doctors blamed bad air, and the beaked plague-doctor mask, now a carnival staple, was stuffed with herbs as an (olfactory) shield. But the (celerity) with which officials shut ports and isolated the sick, and their grasp of the city's (susceptibility) as a hub of trade, set a template that public-health authorities still follow.", "zh": "贸易也带来了疾病。黑死病于1348年传到威尼斯，可能夺去了一半人口的性命。老鼠随着从东方驶来的船只悄然登岸，成了不知情的（偷渡者），而它们身上的跳蚤也助长了疫情传播。早在人们知道什么是（抗体）之前很久，威尼斯就建立了对抗传染病的机构。1423年，它在利多岛附近的一座小岛上开设了世界上第一家常设的瘟疫医院，即“拉扎雷托”；后来又专门划出另一座小岛，用于隔离可疑的船只、船员和货物，停留40天，即意大利语所说的“quaranta giorni”，成为（强制性的）规定。1486年又设立了一个常设的（卫生）管理机构。当时的医学认识还很（粗浅）：医生们把病因归咎于污浊的空气，如今已成为狂欢节常见装扮的鸟嘴瘟疫医生面具，当时里面塞满了草药，作为（嗅觉）上的防护。但官员们关闭港口、隔离病人的（迅速），以及他们对这座贸易枢纽城市（易受感染）的认识，确立了一套公共卫生部门沿用至今的模式。"}, {"en": "Plague kept returning. An outbreak in 1575-77 killed about a quarter of the population, Titian probably among them; to give thanks for its end, the Senate commissioned Palladio's church of the Redentore on the Giudecca. Every July, on the night before the third Sunday, Venetians still cross a pontoon bridge to the church and spend the evening on boats, eating, drinking and watching fireworks with a (gaiety) that makes it the city's best-loved festival. The epidemic of 1630-31, with a (mortality) of about 46,000, a third of the population, left many survivors in a state of (debility). Its memorial is the domed church of Santa Maria della Salute. Every November 21st a temporary bridge is thrown across the Grand Canal, and many a (votary) crosses it to light a candle in thanks.", "zh": "瘟疫一再卷土重来。1575至1577年的一场瘟疫夺去了约四分之一人口的生命，提香很可能也在其中；为了感谢瘟疫结束，元老院委托帕拉迪奥在朱代卡岛上修建了救主堂。每年7月第三个星期日的前一晚，威尼斯人仍会走过一座浮桥前往这座教堂，在船上度过夜晚，吃喝、观看烟花，那份（欢乐）使它成为这座城市最受喜爱的节日。1630至1631年的疫情造成约4.6万人（死亡），占人口的三分之一，许多幸存者也落得身体（虚弱）。这场疫情的纪念建筑是带穹顶的安康圣母大教堂。每年11月21日，人们会在大运河上架起一座临时桥梁，许多（虔诚信徒）走过这座桥，点燃蜡烛表达感恩。"}, {"en": "Medicine owed much to the Republic's university at Padua, where Vesalius taught anatomy and William Harvey studied. Its anatomy theater, built in 1595, is the oldest surviving permanent one, and its garden of medicinal plants, founded in 1545, is the world's oldest university garden still on its first site, a cradle of (botany). Giovanni Battista Morgagni, a professor there, published in Venice in 1761 the book that founded modern (pathology) by tying diseases to lesions in particular organs. Padua's medical students still learn (histology) and (cytology), and its biologists study everything from cell (motility) to genetics, a short walk from the hall where Galileo lectured. Venice itself was famous for theriac, a supposed cure-all compounded in public from dozens of ingredients, including viper flesh and opium; whatever (efficacy) it had owed much to the opium it contained; modern (pharmacology) offers little reason to credit the rest of the mixture.", "zh": "医学在很大程度上得益于共和国在帕多瓦的大学，维萨里曾在那里讲授解剖学，威廉·哈维也曾在那里求学。它建于1595年的解剖剧场是现存最古老的永久性解剖剧场；它建于1545年的药用植物园，是世界上仍位于原址的最古老的大学植物园，堪称（植物学）的摇篮。该校教授乔瓦尼·巴蒂斯塔·莫尔加尼于1761年在威尼斯出版了一部著作，把疾病与特定器官的病变联系起来，从而奠定了现代（病理学）的基础。帕多瓦的医学生至今仍在学习（组织学）和（细胞学），那里的生物学家研究从细胞（运动性）到遗传学的方方面面，离伽利略当年讲课的大厅只有几步之遥。威尼斯本身则以“底野迦”闻名，这是一种当众配制的所谓万灵药，由几十种成分调成，其中包括蝰蛇肉和鸦片；它若真有（疗效），主要也该归功于其中的鸦片；现代（药理学）几乎找不到理由相信其余那一大堆配料有什么神奇效果。"}, {"en": "The lagoon's islands served as the city's back rooms. San Servolo, home to Benedictine monks for centuries, became a military hospital early in the 18th century and then, for some 250 years, an asylum for the mentally ill, where the line between (sanity) and (insanity) was drawn by doctors with little grasp of (psychology) or (neurology). It closed in 1978, the year Italy's Basaglia law began to empty such institutions. The island now hosts Venice International University, an (interdisciplinary) consortium of universities from several countries, and keeps the asylum's archives.", "zh": "潟湖中的岛屿充当着这座城市的“后屋”。圣塞尔沃洛岛几个世纪以来一直是本笃会修士的居所，18世纪初成为军医院，此后约250年间又是一所精神病院；在那里，划定（神志正常）与（精神错乱）界线的，是对（心理学）或（神经病学）知之甚少的医生。1978年，意大利颁布巴萨利亚法，开始清空此类机构，这所精神病院也在那一年关闭。如今岛上设有威尼斯国际大学，这是一个由多国大学组成的（跨学科）联合体，岛上还保存着精神病院的档案。"}, {"en": "Another island holds the dead. San Michele, walled and planted with cypresses, became the city's (cemetery) in the early 19th century, after Napoleonic rules banned burials within the city; funeral processions still cross the lagoon in (mortuary) boats. The cemetery owes its (notability) partly to an international roll call of the dead: Igor Stravinsky and Sergei Diaghilev lie in its Greek section, Ezra Pound and Joseph Brodsky in the Protestant one. Brodsky, who spent his winters in Venice for 17 years, wrote about the city in prose and verse that often reads like an (elegy). Space is so tight that most graves are let for a limited term, after which the bones are moved to an ossuary; the (tranquility) of the place belies a brisk turnover.", "zh": "另一座岛屿安葬着逝者。圣米凯莱岛四周筑墙，遍植柏树，19世纪初拿破仑时期的法规禁止在城内埋葬死者后，这里便成了城市的（公墓）；送葬队伍至今仍乘（殡葬）船穿过潟湖。这座墓园的（知名度）部分源于长眠于此的国际名人：伊戈尔·斯特拉文斯基和谢尔盖·佳吉列夫葬在希腊区，埃兹拉·庞德和约瑟夫·布罗茨基则葬在新教区。布罗茨基连续17年在威尼斯过冬，他描写这座城市的散文和诗歌，读来常常像一首（挽歌）。这里空间十分紧张，大多数墓穴只租用一段有限的期限，期满后遗骨会被移入藏骨堂；此地的（宁静）掩盖了频繁的更替。"}, {"en": "By 1500 Venice had become Europe's printing capital. Aldus Manutius, who set up shop in the 1490s, published the Greek classics in scholarly editions, introduced italic type, modeled on humanist (calligraphy), and launched pocket-sized books that could (convey) the classics to anyone with a satchel. He gave the semicolon its modern form in 1496 and in 1503 printed the Greek (anthology) of epigrams; Erasmus worked in his shop. Venetian presses also produced the first complete printed Talmud and the first book of printed polyphonic music. A modern (bibliography) of the city's 16th-century output runs to many thousands of titles. The Republic's relative (liberality) toward printers, at least until the church's Index of Forbidden Books of 1559, drew authors from all over Italy. The Marciana library, built on the manuscripts bequeathed by Cardinal Bessarion in 1468, remains a great (repository) of Greek learning, and Aldus's editions are still admired for their (perspicuity).", "zh": "到1500年，威尼斯已成为欧洲的印刷之都。阿尔杜斯·马努提乌斯于15世纪90年代开业，出版了一批学术版的希腊古典著作，推出了仿照人文主义者（书法）的斜体字，还推出了口袋大小的书籍，能把古典著作（传送）到任何背着书包的人手中。他在1496年赋予分号现代的形式，1503年又印行了希腊警句诗（选集）；伊拉斯谟曾在他的印刷所工作。威尼斯的印刷所还出版了第一部完整的印刷版《塔木德》，以及第一部印刷的复调音乐集。一部现代编纂的该城16世纪出版物（书目），收录的书名多达数千种。共和国对印刷商相对（宽容），至少在1559年教会颁布《禁书目录》之前是如此，这吸引了来自意大利各地的作者。马尔恰纳图书馆以红衣主教贝萨里翁1468年遗赠的手稿为基础建立，至今仍是希腊学术的一大（宝库），而阿尔杜斯版图书至今仍因其（清晰明了）而备受赞赏。"}, {"en": "Venetian painting was a school of light and color. Giovanni Bellini, Giorgione, whose (moody) \"Tempest\" still defies interpretation, and Titian made color rather than line their first language, and the (originality) of their oil technique shaped painting for centuries. Churches commissioned altarpieces to (edify) the faithful; the state commissioned vast canvases to flatter itself. Tintoretto's \"Paradise\" in the Doge's Palace is among the largest oil paintings in the world, though its crowded heaven looks remarkably (earthly). In 1573 Paolo Veronese was summoned before the Inquisition to (testify) about a huge \"Last Supper\" he had painted for the (refectory) of the Dominican friars of Santi Giovanni e Paolo. The (inquiry) wanted to know why he had included buffoons, drunken Germans and dwarfs; such (drollery) seemed to border on (heresy). Veronese defended a painter's license to fill a canvas as he saw fit, then solved the problem by renaming the picture \"Feast in the House of Levi\".", "zh": "威尼斯画派是一个光与色的画派。乔瓦尼·贝利尼、乔尔乔内和提香把色彩而非线条当作自己的第一语言，乔尔乔内那幅（意境阴郁的）《暴风雨》至今仍令人难以解读；他们油画技法的（独创性）影响了此后几个世纪的绘画。教会委托绘制祭坛画来（教化）信众；国家则委托绘制巨幅画作来自我吹捧。丁托列托在总督府的《天堂》是世界上最大的油画之一，不过画中人头攒动的天堂看上去却出奇地（世俗）。1573年，保罗·委罗内塞被传唤到宗教裁判所，就他为圣若望及保禄堂多明我会修士（食堂）所画的一幅巨大的《最后的晚餐》（作证）。（调查）想知道他为什么画进了小丑、喝醉的德意志人和侏儒；这种（滑稽之笔）似乎近乎（异端）。委罗内塞为画家按自己的意愿填满画布的自由进行了辩护，随后把这幅画改名为《利未家的宴会》，从而解决了问题。"}, {"en": "In the 18th century Venetian art found new markets. Canaletto would (portray) the Grand Canal with almost photographic precision for British gentlemen on the Grand Tour, many of whose purchases passed through Joseph Smith, the British consul, whose own collection was later bought by George III. Giambattista Tiepolo covered ceilings from Venice to Würzburg and Madrid with frescoes that (glorify) his patrons in sunny (allegory), gods and virtues tumbling through (billowy) clouds into what looks like an (infinity) of sky. A century later J.M.W. Turner painted the city dissolving into an (unearthly) haze of light.", "zh": "18世纪，威尼斯艺术找到了新的市场。卡纳莱托以近乎照片般的精确（描绘）大运河，供进行“大旅行”的英国绅士购买，其中许多交易经由英国领事约瑟夫·史密斯之手，史密斯本人的收藏后来被乔治三世买下。詹巴蒂斯塔·提埃波罗在从威尼斯到维尔茨堡和马德里的天花板上绘满了湿壁画，用阳光明媚的（寓言）画面来（颂扬）他的赞助人，众神和美德的化身翻滚着穿过（翻腾如浪的）云层，坠入看似（无穷无尽）的天空。一个世纪后，J.M.W.透纳把这座城市画成了消融在一片（超凡脱俗的）光影迷雾中的景象。"}, {"en": "Music flourished too. In St Mark's, Giovanni Gabrieli and others wrote for choirs and instrumental ensembles placed in opposite galleries, and the (interplay) of their echoing voices, carefully managed to avoid (cacophony), made the basilica's acoustics famous. Claudio Monteverdi, the greatest (luminary) of early opera, became choirmaster of St Mark's in 1613, and in 1637 Venice opened the world's first public opera house, the Teatro San Cassiano, where anyone who bought a ticket could get in. Many more theaters soon followed.", "zh": "音乐也繁荣起来。在圣马可大教堂，乔瓦尼·加布里埃利等人为分置于两侧相对楼廊上的合唱团和器乐合奏团作曲，它们回荡的声部之间的（相互呼应）经过精心安排，避免陷入（嘈杂刺耳），使这座大教堂的音响效果闻名遐迩。早期歌剧最伟大的（泰斗）克劳迪奥·蒙特威尔第于1613年出任圣马可大教堂的乐长；1637年，威尼斯开设了世界上第一家公共歌剧院圣卡夏诺剧院，任何买票的人都可以入场。许多剧院随即接踵而至。"}, {"en": "Some of the best music was made by orphans. Venice's four ospedali, church-run hospices for the sick and the (needy), trained foundling girls as musicians, and their choirs and orchestras became a tourist attraction. Their (pedagogy) was rigorous. The best pupils, the figlie del coro, performed behind iron grilles, and visitors swooned over the (virtuosity) of young women they could hear but barely see. The ospedali were, in effect, a model for the modern music (conservatory). More than one (prodigy) emerged from behind the grilles: Anna Maria della Pietà, a violinist, was among the most admired performers in Europe.", "zh": "一些最好的音乐出自孤儿之手。威尼斯的四所“慈善院”是由教会开办、收容病人和（贫困者）的机构，它们把弃婴女孩培养成音乐家，其合唱团和管弦乐团成了吸引游客的景点。它们的（教学法）十分严格。最优秀的学生被称为“合唱团女孩”，她们在铁栅栏后面演奏，访客们只闻其声、难见其人，却为这些年轻女子的（精湛技艺）倾倒。这些慈善院实际上是现代（音乐学院）的雏形。栅栏后面走出了不止一位（神童）：小提琴家皮耶塔的安娜·玛丽亚是当时欧洲最受赞赏的演奏家之一。"}, {"en": "Their most famous teacher was Antonio Vivaldi, a red-haired priest born in Venice in 1678, who taught violin at the Pietà on and off for more than three decades. He wrote hundreds of concertos, many for the girls to play. \"The Four Seasons\", published in 1725, with its (sprightly) violins and barking dog, has a (discography) running to many hundreds of recordings. Yet Vivaldi fell out of fashion, moved to Vienna and died there in (penury) in 1741, buried in a pauper's grave after a (paltry) funeral. His music lay in (obscurity) for nearly two centuries, until caches of his manuscripts were rediscovered in the 1920s.", "zh": "她们最著名的老师是安东尼奥·维瓦尔第，一位1678年生于威尼斯的红发神父，他断断续续在皮耶塔慈善院教授小提琴三十多年。他写了数百首协奏曲，其中许多是给女孩们演奏的。1725年出版的《四季》里有（轻快活泼的）小提琴和狗叫声，其（唱片目录）收录的录音多达数百个版本。然而，维瓦尔第后来不再受追捧，移居维也纳，并于1741年在（穷困潦倒）中死在那里，经过一场（寒酸的）葬礼后被葬在一处贫民墓地。他的音乐在（默默无闻）中沉寂了将近两个世纪，直到20世纪20年代人们重新发现了他的大批手稿。"}, {"en": "La Fenice itself has known triumph and disaster. Verdi's \"Rigoletto\" had its premiere there in 1851, but the first night of \"La Traviata\" in 1853 went badly (off-key): the tenor was hoarse and the soprano was judged too robust to be dying of consumption. \"Is the fault mine or the singers'? Time will judge,\" wrote Verdi, whom the fiasco did not seem to (mortify) for long. Time did judge. The (melancholy) story of Violetta is now among the most performed operas in the world, and the house went on to stage the premieres of Stravinsky's \"The Rake's Progress\" in 1951 and Britten's \"The Turn of the Screw\" in 1954.", "zh": "凤凰剧院本身也经历过辉煌与灾难。威尔第的《弄臣》于1851年在这里首演，但1853年《茶花女》的首演之夜却严重（走调）：男高音嗓音嘶哑，女高音则被认为体态太过丰满，不像是死于肺痨的人。威尔第写道：“是我的错，还是歌手们的错？时间会作出评判。”这场惨败似乎并没有让他（难堪）太久。时间确实作出了评判。薇奥莱塔的（忧郁）故事如今是世界上上演最多的歌剧之一；后来，这座剧院又分别于1951年和1954年举行了斯特拉文斯基的《浪子的历程》和布里顿的《螺丝在拧紧》的世界首演。"}, {"en": "The city also reinvented comedy. The commedia dell'arte, with stock masks such as Pantalone, a (miserly) old Venetian merchant, and Arlecchino, his nimble servant, relied on improvisation and (bawdy) slapstick. Carlo Goldoni, a Venetian lawyer turned playwright, set out in the 1740s and 1750s to replace its (crudity) with written plays about real people, from (jolly) gondoliers to gossiping neighbors and a scheming innkeeper, full of affectionate (raillery) of Venetian manners. His (rivalry) with Count Carlo Gozzi, a defender of the old masks, became a literary war. Gozzi answered with theatrical fairy tales that mixed (fantasy) and (whimsy) with (parody) of Goldoni's realism; two of them, \"The Love for Three Oranges\" and \"Turandot\", later inspired Prokofiev and Puccini. In 1762 Goldoni, stung, left for Paris and never came back.", "zh": "这座城市还重塑了喜剧。即兴喜剧依靠即兴表演和（粗俗下流的）闹剧，有一些固定的面具角色，比如（吝啬的）威尼斯老商人潘塔洛内，以及他身手敏捷的仆人阿莱基诺。由律师转行为剧作家的威尼斯人卡洛·哥尔多尼，在18世纪40年代和50年代立志用描写真实人物的成文剧本取代即兴喜剧的（粗陋），剧中人物从（快活的）贡多拉船夫到爱嚼舌根的邻居，再到一位工于心计的旅店女老板，剧中充满了对威尼斯风俗善意的（调侃）。他与维护旧式面具喜剧的卡洛·戈齐伯爵之间的（竞争）演变成了一场文学战争。戈齐以戏剧童话作为回应，把（奇幻）和（异想天开）与对哥尔多尼现实主义的（戏仿）融为一体；其中两部作品《三个橙子的爱情》和《图兰朵》后来分别启发了普罗科菲耶夫和普契尼。1762年，备受打击的哥尔多尼前往巴黎，从此再未回来。"}, {"en": "For much of the year, it could seem, Venice was one long party. In the 18th century masks could be worn for months at a time, and the bauta, a white mask with a jutting chin worn with a black cloak and a tricorn hat, was less an (accessory) than a social institution. It conferred (anonymity), letting patricians mingle with commoners, gamble and flirt without loss of face, and the (revelry) turned the social order (topsy-turvy). Visitors came from all over Europe for the (levity) of a city that seemed to have made pleasure a public policy. In 1638 the state even opened the Ridotto, a public gaming house often described as Europe's first casino.", "zh": "一年中的大部分时间里，威尼斯似乎都在开一场漫长的派对。18世纪时，面具可以一连戴上好几个月；“包塔”是一种下巴突出的白色面具，与黑色斗篷和三角帽搭配，它与其说是一件（配饰），不如说是一种社会制度。它赋予人们（匿名性），让贵族得以与平民混在一起，赌博、调情而不失体面，这种（狂欢作乐）把社会秩序弄得（颠三倒四）。来自欧洲各地的访客纷纷前来，享受这座城市的（轻松浮华），这里似乎把享乐当成了一项公共政策。1638年，国家甚至开设了“里多托”，这是一家公共赌场，常被称为欧洲第一家赌场。"}, {"en": "After the Republic fell, carnival faded, and it lay in (dormancy) for most of two centuries. It was revived in 1979, partly to fill hotels in the dead of winter, and now draws huge crowds each year. Purists find the modern version (stagy): costumed models posing for photographers on the waterfront, jesters in (floppy) hats, (frisky) teenagers spraying one another with foam. The (spontaneity) of the old carnival, a city at play for itself, is hard to recapture when most of the crowd comes from elsewhere.", "zh": "共和国灭亡后，狂欢节日渐式微，在将近两个世纪里处于（沉寂）状态。1979年它得以复兴，部分原因是为了在隆冬时节填满酒店，如今每年都吸引大批人群。纯粹主义者觉得现代版的狂欢节（做作）：身着盛装的模特在水边为摄影师摆姿势，小丑戴着（软塌塌的）帽子，（活蹦乱跳的）青少年互相喷射泡沫。昔日狂欢节那种全城为自己而玩乐的（自发性），在大部分人群都来自外地的今天已难以重现。"}, {"en": "The age's emblem was Giacomo Casanova. Born in 1725 to a family of actors, he was thrown out of a (seminary) as a teenager, and his life became one long act of (truancy) from respectability: he was by turns a violinist, gambler, diplomat's secretary, swindler and seducer whose (virility) became legendary. In 1755 the state Inquisitors arrested him, accusing him of irreligion and of dabbling in (sorcery) and occult books, and locked him in the Leads, cells under the lead roof of the Doge's Palace, a (purgatory) of summer heat and winter cold. The next year, in a (crafty) escape, he broke through the roof with a fellow prisoner and walked out through the palace. His (autobiography), \"The Story of My Life\", written in French in old age while he was a librarian in Bohemia, is a vivid picture of 18th-century Europe, and of its author's (incorrigibility).", "zh": "那个时代的象征人物是贾科莫·卡萨诺瓦。他1725年生于一个演员家庭，十几岁时被（神学院）开除，此后他的一生就像一场从体面生活中长期（逃学）的经历：他先后当过小提琴手、赌徒、外交官秘书、骗子和诱惑者，他的（男性雄风）成了传奇。1755年，国家审讯官逮捕了他，指控他不信宗教、涉足（巫术）和神秘学书籍，并把他关进“铅顶监狱”，那是总督府铅皮屋顶下的牢房，夏天酷热、冬天严寒，堪称（炼狱）。第二年，他与一名狱友一起凿穿屋顶，穿过宫殿走了出去，完成了一次（狡猾的）越狱。他晚年在波希米亚担任图书管理员时用法语写成的（自传）《我的一生》，生动描绘了18世纪的欧洲，也生动展现了作者本人的（不可救药）。"}, {"en": "Foreign writers have long projected their dreams onto Venice. Shakespeare, who probably never visited, set two plays there; in the (tragedy) of \"Othello\", a Moorish commander in Venetian service is driven to murder by Iago's lies about his wife's (inconstancy). Lord Byron, who lived in Venice from 1816 to 1819, had the (temerity) to swim from the Lido to the far end of the Grand Canal in a race in 1818. He was also a regular visitor to the (monastery) of the Armenian Mekhitarist monks on the island of San Lazzaro, where the (unworldly) fathers taught him their language and he helped them compile a grammar. With its library of ancient manuscripts, the island remains a center of Armenian (philology).", "zh": "外国作家长期以来把他们的梦想投射到威尼斯身上。莎士比亚很可能从未到过威尼斯，却把两部戏剧的背景设在这里；在（悲剧）《奥赛罗》中，一位为威尼斯效力的摩尔人将领，因伊阿古诬陷妻子（不忠）的谎言而被逼杀人。1816年至1819年住在威尼斯的拜伦勋爵，1818年竟有（胆量）参加一场比赛，从利多岛游到大运河的另一端。他还是圣拉扎罗岛上亚美尼亚梅希塔尔派修士（修道院）的常客，那些（不谙世事的）神父教他学习他们的语言，他则帮他们编纂了一部语法书。凭借收藏古代手稿的图书馆，这座岛至今仍是亚美尼亚（语文学）研究的中心。"}, {"en": "John Ruskin's \"The Stones of Venice\", published in 1851-53, is part architectural survey and part moral (rhapsody) in praise of the Gothic. Its (expository) chapters on capitals and arches sit beside (lapidary) sentences that have lodged in the memory of generations, and an (acerbity) toward the Renaissance that later critics found excessive. Henry James, who set \"The Aspern Papers\" in the city, confessed that there seemed something impudent in trying to add anything to what had already been written about it. Every visitor since has faced the same problem: a (familiarity) born of countless images, and the (superficiality) that comes with it. Venice is a place most people feel they know before they arrive.", "zh": "约翰·罗斯金的《威尼斯之石》出版于1851至1853年，既是一部建筑调查，又是一篇赞美哥特式建筑的道德（狂想曲）。书中论述柱头和拱券的（说明性）章节，与一些（精炼隽永的）句子并列，这些句子一代又一代地留在人们的记忆中；书中还有对文艺复兴的（尖刻）态度，后来的评论家认为未免过分。亨利·詹姆斯把《阿斯彭文稿》的故事设在这座城市，他坦言，想在前人关于威尼斯的著述之外再添点什么，似乎有些冒昧。此后的每一位访客都面临同样的问题：无数图像造就的（熟悉感），以及随之而来的（肤浅）。威尼斯是一个大多数人还没到就自以为了解的地方。"}, {"en": "Venice has left its mark on the language. A common (query) from visitors is where the word ghetto comes from: the answer is the geto, the copper foundry on the site in Cannaregio where the Jews were confined in 1516; only later did the word become (derogatory). The (etymology) of quarantine is Venetian, and so is that of arsenal, borrowed via Venetian from the Arabic dar al-sina'a, or house of manufacture. The (terminology) of politics and the press owes it ballot, from the little balls used in its elections, and gazette, after a small coin once paid for a news sheet. Pantaloons are named after Pantalone, the (stingy) merchant of comedy, and ciao derives from s'ciao vostro, Venetian for \"I am your slave\". Even the word (serendipity) has a Venetian thread: Horace Walpole coined it in 1754 after a fairy tale, \"The Three Princes of Serendip\", whose Italian version was printed in Venice in 1557. A (glossary) of such borrowings would make a rich (tapestry).", "zh": "威尼斯在语言中留下了自己的印记。游客常有的一个（疑问）是，“ghetto”一词从何而来：答案是“geto”，即1516年犹太人被限制居住的卡纳雷吉欧那块地方原有的铜铸造厂；这个词后来才带上了（贬义）。“quarantine”一词的（词源）来自威尼斯，“arsenal”也是如此，它经由威尼斯方言借自阿拉伯语的“dar al-sina'a”，意为“制造之所”。政治和新闻的（术语）中，“ballot”一词源自威尼斯选举时使用的小球，“gazette”则得名于从前买一份新闻单所付的一枚小硬币。“pantaloons”以喜剧中那位（小气的）商人潘塔洛内命名，“ciao”则源自威尼斯方言“s'ciao vostro”，意思是“我是您的奴仆”。就连（意外发现珍宝的运气）这个词也与威尼斯有一丝关联：霍勒斯·沃波尔于1754年根据童话《锡兰三王子》创造了这个词，而这个童话的意大利文版于1557年在威尼斯印行。把这类借词编成一部（词汇表），定会是一幅丰富多彩的（挂毯）。"}, {"en": "Venice's other canal system is the (alimentary) one, and its (gastronomy) is shaped by the lagoon and the spice trade. The (customary) way to eat is standing up in a bacaro, a wine bar serving cicchetti, a (medley) of small snacks, with an ombra, a small glass of wine whose name, it is said, recalls the shade of the bell tower where wine sellers once kept their stalls. Sarde in saor, fried sardines marinated with onions, vinegar, pine nuts and raisins, is (zesty) and was a sailor's staple, since it keeps for days. Baccalà mantecato is dried cod beaten with olive oil until the two (emulsify) into a cream; stockfish was supposedly brought home by Pietro Querini, a merchant shipwrecked in Norway's Lofoten islands in 1432. Add a spritz, (frothy) with prosecco, and the (conviviality) and (garrulity) of a bacaro at dusk can leave a visitor pleasantly (muzzy).", "zh": "威尼斯的另一套“运河”系统是（消化）道，而它的（美食）深受潟湖和香料贸易的影响。（惯常的）吃法是站在“巴卡罗”里，这是一种供应“奇凯蒂”的小酒馆，奇凯蒂是各种小吃的（拼盘），配上一杯“翁布拉”，即一小杯葡萄酒，据说它的名字源于钟楼的阴影，从前卖酒的小贩就在那里摆摊。“酸甜沙丁鱼”是用洋葱、醋、松子和葡萄干腌制的炸沙丁鱼，味道（酸爽开胃），曾是水手的主食，因为它能保存好几天。“奶油鳕鱼”是把鳕鱼干与橄榄油一起搅打，直到两者（乳化）成奶油状；据说鳕鱼干是由商人彼得罗·奎里尼带回来的，他于1432年在挪威罗弗敦群岛遭遇海难。再来一杯加了普罗塞克起泡酒、（泡沫丰富的）斯普利兹，黄昏时巴卡罗里的（欢乐气氛）和（喋喋不休），会让访客微醺得（迷迷糊糊）。"}, {"en": "The Rialto market, trading since the 11th century, lays out a glistening (array) of lagoon fish and shellfish under the neo-Gothic loggia of the Pescheria. In spring and autumn the prized (delicacy) is moeche, small green crabs caught just as they shed their shells, then fried whole. Risi e bisi, rice with fresh peas, once served to the doge on St Mark's day, April 25th, is (starchy) comfort food; bigoli in salsa, thick whole-wheat pasta with onions and anchovies, is (homely) but (tasty); and fegato alla veneziana, calf's liver with slow-cooked onions, is rich and (earthy). Polenta, made from maize meal, appears everywhere, though served soft and white beside fish it is rarely (stodgy). Venetian (culinary) tradition prizes simplicity and freshness above all.", "zh": "里亚尔托市场自11世纪起就开始交易，在鱼市新哥特式的凉廊下，摆出（一大排）闪闪发光的潟湖鱼类和贝类。春秋两季最珍贵的（美味佳肴）是“莫埃凯”，一种在蜕壳之际捕获的小青蟹，整只油炸。“米饭豌豆”是用新鲜豌豆煮的米饭，昔日在4月25日圣马可节献给总督享用，是一道（富含淀粉的）家常慰藉菜；“酱汁粗面”是用洋葱和凤尾鱼拌的粗全麦面条，（朴素）却（美味）；“威尼斯式小牛肝”是小牛肝配慢炖洋葱，味道浓郁而（带有泥土气息）。用玉米粉做的玉米糊随处可见，不过与鱼一起上桌的软白玉米糊很少会（油腻难消化）。威尼斯的（烹饪）传统最看重简单和新鲜。"}, {"en": "Venice may even have given Western Europe the fork. Around 1004 a Byzantine princess who married a doge's son scandalized churchmen by eating with a small golden fork instead of her fingers, and it took centuries for such (cutlery) to catch on north of the Alps. The city's modern (gustatory) creations are less ancient. The bar that Giuseppe Cipriani opened near St Mark's in 1931 claims to have created both the Bellini, a (perky) cocktail of white-peach purée and prosecco, and beef carpaccio, named after a Venetian painter; its (crockery) and its waiters' white jackets have barely changed in decades. At carnival time bakeries sell frittelle, (fluffy) fried dough balls filled with cream or zabaglione, and galani, (dainty) ribbons of fried (pastry) dusted with sugar. Eat too many and they begin to (cloy).", "zh": "威尼斯甚至可能把叉子带给了西欧。约1004年，一位嫁给总督之子的拜占庭公主用一把小金叉而不是手指进食，令教士们大为震惊，而这类（餐具）过了几个世纪才在阿尔卑斯山以北流行起来。这座城市现代的（味觉）创造则没那么古老。朱塞佩·奇普里亚尼1931年在圣马可广场附近开的那家酒吧，声称自己创造了贝利尼鸡尾酒——一种由白桃果泥和普罗塞克起泡酒调制的（清爽活泼的）饮品——还创造了以一位威尼斯画家命名的生牛肉片“卡尔帕乔”；几十年来，它的（陶瓷餐具）和侍者的白色外套几乎没有变过。狂欢节期间，面包房出售“弗里泰莱”，一种夹着奶油或萨巴雍蛋酒酱的（松软）炸面团，以及“加拉尼”，一种撒着糖粉的（精巧）炸（酥皮点心）条。吃多了就会（腻）。"}, {"en": "Venice is a city of museums, some of them unexpected. In the Fondaco dei Turchi, a 13th-century palace on the Grand Canal that once served as the Ottoman merchants' warehouse, the Natural History Museum displays the skeleton of Ouranosaurus, a sail-backed dinosaur found in the Sahara in the 1970s by an expedition led by Giancarlo Ligabue, a Venetian businessman. After a long overhaul the once (fusty) museum now mixes (paleontology) with (ethnology), and its cabinet of curiosities holds a (miscellany) of (sundry) objects, from shells to (pottery), gathered by Venetian collectors.", "zh": "威尼斯是一座博物馆之城，其中一些出人意料。大运河畔的土耳其商馆是一座13世纪的宫殿，曾被用作奥斯曼商人的货栈，如今里面的自然历史博物馆展出了一具豪勇龙骨架，这种背上长着帆状脊的恐龙，是20世纪70年代由威尼斯商人詹卡洛·利加布埃率领的探险队在撒哈拉沙漠发现的。经过长时间的翻修，这座一度（陈旧过时）的博物馆如今把（古生物学）与（民族学）结合起来，它的珍奇柜里收藏着威尼斯收藏家搜集的（各式各样的）物品，从贝壳到（陶器），堪称一个（大杂烩）。"}, {"en": "Venice was a city of science, too. On August 21st 1609 Galileo Galilei, then a professor at Padua, climbed the bell tower of St Mark's with a group of noblemen to demonstrate a telescope that could (magnify) distant objects, letting them (descry) ships hours before they could be seen with the naked eye. For a day the tower became an (observatory); the Senate rewarded Galileo with tenure for life and a higher salary. A few months later, in Padua, his telescope let him make out the moons of Jupiter, a feat of (acuity) that helped upend astronomy. Across the square, the clock tower completed in 1499 is a marvel of Renaissance (horology): its blue-and-gold dial shows the hours, the phases of the moon and the zodiac, a reminder that (astrology) and astronomy had not yet parted ways.", "zh": "威尼斯也是一座科学之城。1609年8月21日，时任帕多瓦大学教授的伽利略·伽利莱与一群贵族登上圣马可钟楼，演示一架能（放大）远处物体的望远镜，让他们比肉眼早几个小时（远远看到）海上的船只。那一天，钟楼变成了一座（天文台）；元老院给予伽利略终身教职，并提高了他的薪水。几个月后，他在帕多瓦用望远镜看清了木星的卫星，这一（敏锐）的观测壮举帮助颠覆了天文学。广场对面于1499年建成的钟塔，是文艺复兴时期（钟表学）的杰作：它那蓝金两色的表盘显示时辰、月相和黄道十二宫，提醒人们当时（占星术）与天文学尚未分道扬镳。"}, {"en": "The city's most famous industry was glass. In 1291 the government moved the furnaces to Murano, partly to reduce the risk of fire and partly, it is often said, to keep watch over the glassmakers, who were forbidden to leave the Republic lest they (betray) its trade secrets. Their techniques remained (proprietary), guarded with jealous care. In furnaces lined with (refractory) bricks, hot enough to (liquefy) a batch of sand and soda ash, they learned to (vitrify) mixtures that yielded cristallo, a glass of unprecedented (purity), as clear as rock crystal, and lattimo, a milk-white glass whose (opacity) imitated porcelain. The Republic encouraged such (ingenuity): a law of 1474 offered ten years' protection to anyone who devised a new and useful machine, one of the earliest patent systems in the world. When France's Colbert lured Venetian mirror-makers to Paris in 1665, the Republic's agents reportedly tried to coax them home, and two of the workers later died in suspicious circumstances. Murano's (wizardry) was too valuable to share.", "zh": "这座城市最著名的产业是玻璃。1291年，政府把熔炉迁到穆拉诺岛，一方面是为了降低火灾风险，另一方面，人们常说，也是为了看住玻璃工匠：他们被禁止离开共和国，以免（泄露）其商业机密。这些技艺始终属于（专有的）技术，受到严格保密和保护。在用（耐火）砖砌成的熔炉里，温度高到足以（熔化）一炉沙子和纯碱，工匠们学会把各种配料（玻璃化），制成了“水晶玻璃”和“乳白玻璃”：前者（纯净度）前所未有，清澈如水晶；后者呈乳白色，其（不透明）的质感模仿瓷器。共和国鼓励这种（独创才智）：1474年的一项法律规定，任何人发明新的实用机械都可获得十年保护，这是世界上最早的专利制度之一。1665年，法国的柯尔贝尔把威尼斯的制镜工匠引诱到巴黎，据报道，共和国的特工曾试图劝他们回国，后来其中两名工匠死得蹊跷。穆拉诺的（神奇技艺）太宝贵了，不能与人分享。"}, {"en": "Today Murano is fighting for survival. When gas prices soared in 2022, several of its furnaces, which normally burn day and night, shut down or cut production. Cheap imitations are a bigger long-term threat. Shops near St Mark's sell (ersatz) Murano trinkets made in Asia, some sellers (falsify) their origin, and the (trumpery) is not always (readily) distinguishable from the real thing. A regional trademark, Vetro Artistico Murano, serves as a (warranty) of origin and helps buyers spot a (forgery). In 2020 UNESCO added the art of glass beads, shared by Italy and France, to its list of living cultural heritage, acknowledging the (intangibility) of skills handed down from master to apprentice.", "zh": "如今，穆拉诺正在为生存而奋斗。2022年天然气价格飙升时，岛上几座通常日夜不熄的熔炉停产或减产。从长远看，廉价仿制品是更大的威胁。圣马可广场附近的商店出售在亚洲制造的（冒牌）穆拉诺小饰品，一些卖家还（伪造）产地，这些（华而不实的廉价货）并不总能（轻易地）与真品区分开来。一个地区性商标“穆拉诺艺术玻璃”可作为产地的（保证），帮助买家识别（赝品）。2020年，联合国教科文组织把意大利和法国共有的玻璃珠艺术列入其活态文化遗产名录，承认了由师傅传给学徒的技艺所具有的（非物质性）。"}, {"en": "Burano, a fishing island famous for houses painted in every shade from (rosy) pink to cobalt blue, has a (complementary) specialty: needle lace. Its punto in aria, or \"stitches in the air\", demanded extraordinary (dexterity) and (sedulity); a single collar could take months, and the (intricacy) of the finest pieces made them status symbols in the courts of Europe. By the 19th century the trade had nearly died out, until the opening of a lace school in 1872 helped revive it. Few young women now take up the (drudgery), and the (artistry) survives mainly among elderly lacemakers and in a museum.", "zh": "布拉诺是一座渔岛，以涂成从（玫瑰般的）粉色到钴蓝色等各种颜色的房屋而闻名，它有一项与穆拉诺（相得益彰的）特产：针绣蕾丝。它的“空中针法”需要非凡的（灵巧）和（勤勉）；一条衣领可能要花几个月才能完成，最精美作品的（繁复精细）使之成为欧洲各国宫廷中的身份象征。到19世纪，这门手艺几乎消亡，直到1872年开办的一所蕾丝学校使之复兴。如今很少有年轻女性愿意从事这份（苦差事），这门（艺术技巧）主要靠年迈的蕾丝女工和一座博物馆得以留存。"}, {"en": "The gondola is the city's emblem. About 11 meters long and built from eight kinds of wood in some 280 pieces, it is asymmetrical, its left side wider than its right, so that a single oarsman standing at the stern can row it in a straight line; the (anomaly) is deliberate. Building one in a squero, a traditional boatyard, takes weeks of (finicky) (carpentry). Gondolas are black, supposedly because sumptuary laws imposed (sobriety) on nobles who liked to outdo one another. The oarsmen form a proud (fraternity) of a few hundred licensed gondoliers, (natty) in striped shirts and straw boaters; the first woman passed the exam only in 2010. Rides are pricey: the city's regulated fare is €90 for a 30-minute daytime trip, or €110 after 7pm for 35 minutes. A (gratuity) is voluntary, not an official charge, and those who pay extra for a serenade may hear a (corny) (ditty) from a singer on a neighboring boat.", "zh": "贡多拉是这座城市的象征。它长约11米，由八种木材的约280个部件制成，船身左右不对称，左侧比右侧宽，这样站在船尾的一名船夫就能把船划成直线；这种（反常）是有意为之。在传统船坞“斯奎罗”里造一艘贡多拉，需要几周（一丝不苟的）（木工活）。贡多拉都是黑色的，据说是因为禁奢法令要求那些喜欢互相攀比的贵族保持（朴素）。船夫们组成了一个由几百名持证贡多拉船夫构成、引以为傲的（兄弟会），他们身穿条纹衫、头戴草帽，（衣着时髦）。乘船价格不菲：市政府规定的白天票价是30分钟90欧元，晚上7点以后则是35分钟110欧元。（小费）完全出于自愿，并非官方收费项目；额外付钱听小夜曲的人，则可能听到邻船歌手唱上一首（老套的）（小曲）。"}, {"en": "Rowing remains a passion. On the first Sunday of September the Regata Storica opens with a parade of historical boats on the Grand Canal, a (choreography) of oars and costumes, followed by races in which pairs of (stocky), powerful rowers (jockey) for position on the turns. Spectators lean from balconies and pack the banks, their (lusty) cheering rising as the boats near the finish, while the television commentator's (husky) voice strains through the race (commentary), turning (raspy) at the finish.", "zh": "划船依然是威尼斯人的热爱。每年9月的第一个星期日，历史赛船会以大运河上的历史船只巡游拉开序幕，那是一场船桨与服饰的（编舞），随后是比赛：（矮壮的）、强健的桨手两人一组，在转弯处（争抢）位置。观众从阳台上探出身子，挤满两岸，随着船只接近终点，他们（热烈的）欢呼声越来越高，而电视解说员那（低沉浑厚的）嗓音，也随着赛况（解说）进入高潮而变得（沙哑刺耳）。"}, {"en": "No one would have mistaken the Republic for a (gynaecocracy). Women were barred from office, and patrician families, to keep their (patrimony) intact, often let only one son marry; the others remained bachelors, not because of (misogamy), an aversion to marriage, but as a form of estate planning. Marriage portions were the bigger problem. As the price of a good match soared, despite laws capping the (dowry), many fathers sent daughters to convents instead, and by the 17th century a large share of patrician women were nuns, many of them (involuntary) ones. One of them, Arcangela Tarabotti, wrote a (feisty) attack on the practice, \"Paternal Tyranny\". Other Venetian women argued for something closer to (parity): Moderata Fonte's \"The Worth of Women\" and Lucrezia Marinella's \"The Nobility and Excellence of Women\" both appeared in 1600, and in 1678 Elena Cornaro Piscopia, a Venetian noblewoman, became the first woman known to have received a university doctorate, at Padua. At home, many a household was in practice a (matriarchy).", "zh": "谁也不会把共和国误认为（女性统治）。女性被禁止担任公职，贵族家庭为了保全（祖传家产），往往只让一个儿子结婚；其他儿子终身未娶，并非因为（厌恶婚姻），而是出于保全家产的安排。陪嫁才是更大的问题。尽管法律对（嫁妆）设定了上限，但随着好姻缘的价码飙升，许多父亲转而把女儿送进修道院；到17世纪，很大一部分贵族女性成了修女，其中许多是（非自愿的）。其中一位修女阿尔坎杰拉·塔拉博蒂写了一篇（火药味十足的）抨击文章《父权暴政》，痛斥这种做法。另一些威尼斯女性则主张某种更接近（平等）的地位：莫德拉塔·丰特的《女性的价值》和卢克雷齐娅·马里内拉的《女性的高贵与卓越》都在1600年问世；1678年，威尼斯贵族女子埃莱娜·科尔纳罗·皮斯科皮亚在帕多瓦大学获得博士学位，成为已知第一位获得大学博士学位的女性。在家里，许多家庭实际上是（母权制）。"}, {"en": "Venice was also famous for its courtesans. A 16th-century catalog listed the most (comely) of them, with addresses and fees, for the convenience of visitors. The grandest were cultivated women. Veronica Franco, a poet whose verse could be (racy), entertained Henry III of France during his visit in 1574, sent a volume of her letters to Montaigne and in 1580 beat charges of witchcraft before the Inquisition. Courtesans' (satiny) gowns and jewels clashed with the city's sumptuary laws, enforced by magistrates charged with curbing (finery) and (vanity) in the name of (austerity). Moralists saw a den of (iniquity); a top courtesan might maintain several patrons at once, an arrangement unlike legal (polyandry), but one that scandalized defenders of conventional marriage. The (seamy) side was real enough: most prostitutes were poor, and disease was rife.", "zh": "威尼斯还以交际花闻名。一份16世纪的名册列出了其中最（貌美的）几位，附上地址和价钱，以方便访客。地位最高的交际花是有教养的女性。诗人维罗妮卡·弗兰科的诗句有时相当（香艳），1574年法国国王亨利三世来访时曾由她接待，她还把一卷书信集寄给了蒙田，并在1580年于宗教裁判所洗清了巫术指控。交际花们（缎子般光滑的）长裙和珠宝，与这座城市的禁奢法令相抵触；负责执行这些法令的官员以（节俭朴素）为名，遏制（华服盛装）和（虚荣）。卫道士们视之为（罪恶）的渊薮；顶级交际花可能同时拥有几位恩主，这与法律意义上的（一妻多夫）并不相同，却足以令传统婚姻观念的维护者侧目。（阴暗污秽的）一面也真实存在：大多数妓女贫穷，疾病肆虐。"}, {"en": "The 18th century is often (unjustly) written off as an age of decadence. True, the Republic had begun to (ossify): it stayed neutral in Europe's wars, its navy shrank, and its offices passed among a dwindling pool of noble families. Fashionable life revolved around the cicisbeo, a (dandy) who escorted a married woman in public, a role that could be innocent or (smarmy). Preachers railed against (depravity), and some palaces grew (frowzy) as the families who owned them got poorer. Yet this was also the age of Vivaldi, Tiepolo, Canaletto, Goldoni and Casanova; (mediocrity) it was not.", "zh": "18世纪常被（不公正地）贬为一个颓废的时代。诚然，共和国已开始（僵化）：它在欧洲的战争中保持中立，海军日益萎缩，官职只在日渐减少的几个贵族家族之间流转。时髦生活围绕着“骑士侍从”展开，这是一种在公开场合陪伴已婚女子的（花花公子），这一角色可能清白无辜，也可能（油腔滑调）。传教士们痛斥（堕落），而一些宫殿随着主人家道中落而变得（破败邋遢）。然而，这也是维瓦尔第、提埃波罗、卡纳莱托、哥尔多尼和卡萨诺瓦的时代；它绝不（平庸）。"}, {"en": "The end, when it came, was abrupt. In 1797 Napoleon Bonaparte, fresh from conquering northern Italy, sent the Republic a (peremptory) ultimatum and declared that he would be \"an Attila to the Venetian state\". On May 12th the Great Council, short of a quorum, voted to (nullify) its own authority and hand power to a pro-French committee. The last doge, Ludovico Manin, took off his ducal cap and handed it to his servant, saying he would not need it again. After 1,100 years Venetian (sovereignty) ended in (ignominy). Many a local (toady) found a place in the new regime, and in June its leaders added the (effrontery) of burning the Golden Book and the doge's insignia at the foot of a \"tree of liberty\" in St Mark's Square.", "zh": "末日来临时十分突然。1797年，刚刚征服意大利北部的拿破仑·波拿巴向共和国发出（不容分说的）最后通牒，宣称他将成为“威尼斯国家的阿提拉”。5月12日，人数不足法定数的大议会投票（废除）了自身的权力，把政权交给一个亲法委员会。末代总督卢多维科·马宁摘下总督帽交给仆人，说他再也用不着它了。经过1100年，威尼斯的（主权）在（耻辱）中终结。许多当地的（马屁精）在新政权中谋得了位置；6月，新政权的领导人更是（厚颜无耻）地在圣马可广场的一棵“自由之树”下焚烧了《金书》和总督的徽章。"}, {"en": "The French took what they could carry. Under terms dictated in Milan in May 1797, Venice paid a heavy (indemnity) in cash, ships, paintings and manuscripts; the bronze horses of St Mark's and the winged lion went to Paris, where they stayed in French (custody) until 1815. In October, at Campo Formio, Napoleon traded Venice to Austria, whose envoy was a willing (signatory), and both sides hurried to (ratify) the deal. Before handing over the city, French troops stripped the gold from the Bucintoro and burned it. When the French returned, from 1806 to 1814, they suppressed churches and convents and demolished the Republic's great public (granary), the Granai di Terranova, to make room for a garden.", "zh": "法国人能拿走的都拿走了。根据1797年5月在米兰强加的条款，威尼斯以现金、船只、绘画和手稿的形式支付了一大笔（赔款）；圣马可的青铜马和带翼狮子被运往巴黎，在法国的（保管）下一直待到1815年。10月，拿破仑在坎波福尔米奥把威尼斯让给奥地利，奥地利的使节是一位乐意的（签署方），双方都急于（批准）这笔交易。在移交这座城市之前，法国军队剥下了“布钦托罗”上的黄金，然后把它付之一炬。1806年至1814年法国人卷土重来时，他们撤销了一批教堂和修道院，并拆除了共和国巨大的公共（粮仓）“特拉诺瓦粮仓”，为修建一座花园腾出地方。"}, {"en": "Austrian rule was (reactionary), but it brought the railway bridge to the mainland, opened in 1846. In 1848, as revolution swept Europe, Venetians led by Daniele Manin, a lawyer, threw out the Austrians and proclaimed the Republic of San Marco. The (scrappy) new state held out for 17 months with remarkable (tenacity) and (obstinacy), even as cholera and hunger spread. In August 1849 the besiegers tried something new, launching some 200 unmanned paper balloons, each carrying a bomb on a time fuse, in what is often called the first air raid in history. But the weather turned (windy) and changeable, and many balloons drifted back over Austrian lines. Venice surrendered later that month; Austria granted an (amnesty) to most of the rebels but sent Manin and other leaders into exile. The period has a footnote in (philately), too: Lombardy-Venetia, Austria's Italian province, issued its first postage stamps in 1850.", "zh": "奥地利的统治是（反动的），但它带来了1846年通车的连接大陆的铁路桥。1848年，革命席卷欧洲，威尼斯人在律师达尼埃莱·马宁的领导下赶走了奥地利人，宣布成立圣马可共和国。这个（好斗不屈的）新国家以非凡的（坚韧）和（倔强）坚持了17个月，即便霍乱和饥饿蔓延也不屈服。1849年8月，围城者尝试了一种新手段，放出约200个无人驾驶的纸气球，每个都携带一枚装有定时引信的炸弹，这常被称为历史上第一次空袭。但天气转为（大风）且变幻不定，许多气球飘回了奥地利阵地上空。威尼斯在当月晚些时候投降；奥地利对大多数起义者实行了（大赦），但把马宁和其他领导人流放出境。这段时期在（集邮）史上也留下一笔：奥地利在意大利的伦巴第-威尼西亚王国于1850年发行了第一批邮票。"}, {"en": "Under Italian rule, which began in 1866, the city suffered a different kind of shock. On the morning of July 14th 1902 the (lofty) campanile of St Mark's, nearly 99 meters tall, cracked and collapsed into a heap of rubble. According to a much-retold tale, the only (casualty) was the custodian's cat. The city resolved to rebuild it \"where it was and how it was\", and proceeded (gingerly); the new tower was inaugurated on April 25th 1912. Purists still debate the (authenticity) of such copies. The Venice Charter of 1964, an international attempt to (codify) the principles of restoration, frowns on reconstruction and insists that repairs be distinguishable from the old fabric.", "zh": "1866年起归属意大利统治后，这座城市遭受了另一种冲击。1902年7月14日上午，近99米高、（高耸入云的）圣马可钟楼开裂坍塌，化为一堆瓦砾。据一则广为流传的故事，唯一的（遇难者）是看守人的猫。市政府决心“在原址、按原样”重建，并（小心翼翼地）推进；新钟楼于1912年4月25日落成。纯粹主义者至今仍在争论这类复制品的（真实性）。1964年的《威尼斯宪章》是一次试图把修复原则（编纂成文）的国际努力，它不赞成重建，并坚持修补之处须与原有部分区分开来。"}, {"en": "The 20th century pulled Venice toward the mainland. From 1917 an industrial port grew at Marghera, across the lagoon, with shipyards, chemical plants and an oil (refinery), and in 1933 a road bridge linked the city to the mainland for the first time. The (incongruity) of chimneys smoking within sight of St Mark's did not trouble planners, who saw jobs. Generations of Venetians moved to Mestre and Marghera, which offered modern flats in place of damp palaces, and (dreary) dormitory suburbs spread. When heavy industry declined from the 1980s, (redundancy) followed for thousands of workers. Meanwhile the city's cultural brand flourished: the Biennale had been founded in 1895, and in 1932 it added a film festival on the Lido, the oldest in the world.", "zh": "20世纪把威尼斯拉向了大陆。从1917年起，潟湖对岸的马格拉发展起一个工业港，有造船厂、化工厂和一座（炼油厂），1933年，一座公路桥首次把这座城市与大陆连接起来。在望得见圣马可的地方烟囱冒着烟，这种（不协调）并没有困扰规划者，他们看到的是就业机会。一代又一代威尼斯人搬到了梅斯特雷和马格拉，那里有现代化的公寓，而不是潮湿的宫殿，（沉闷单调的）卧城郊区不断蔓延。20世纪80年代起重工业衰落，数以千计的工人随之遭到（裁员）。与此同时，这座城市的文化品牌蓬勃发展：双年展早在1895年就已创办，1932年又在利多岛增设了一个电影节，那是世界上最古老的电影节。"}, {"en": "Then came the flood. On November 4th 1966 a storm surge driven by the scirocco pushed the tide to 194cm above the reference level, the highest on record, and the sea broke through the defensive walls on the Lido. For more than a day much of the city was cut off and without power, and the (emergency) revealed how exposed it was to the (fury) of the Adriatic. On the same day the Arno flooded Florence. The double (calamity) stirred the world's (magnanimity): UNESCO launched an international campaign, and private committees in Britain, America and elsewhere raised money, a (generosity) that has paid for the restoration of hundreds of churches and works of art. The shock was (salutary), and the committees' work has often been (exemplary). Italy's own response was (dilatory): a special law for Venice was passed in 1973, but construction of mobile flood barriers did not begin until 2003.", "zh": "接着，洪水来了。1966年11月4日，西洛可风驱动的风暴潮把潮位推高到基准面以上194厘米，创下有记录以来的最高值，海水冲破了利多岛上的防波堤。一天多的时间里，城市大部分地区与外界隔绝、断电，这场（紧急状况）暴露出它在亚得里亚海的（狂暴）面前是多么不堪一击。同一天，阿尔诺河淹没了佛罗伦萨。这场双重（灾难）激起了全世界的（宽宏大度）：联合国教科文组织发起了一场国际运动，英国、美国等地的民间委员会纷纷筹款，这份（慷慨）资助了数以百计的教堂和艺术品的修复。这次冲击是（有益的），这些委员会的工作也常常堪称（典范）。意大利自己的反应却（拖拖拉拉）：1973年通过了一部威尼斯特别法，但可移动防洪闸直到2003年才开工建设。"}, {"en": "The quieter crisis is one of (demography). The historic city's population has fallen almost every year since the 1950s, on a (trajectory) of roughly 1,000 fewer residents a year in recent times. Those who remain are old: Venice could serve as a case study in (gerontology), with far more funerals than christenings and a (paucity) of children that has closed schools. Each family that leaves weakens the (viability) of the shops, doctors and services that make daily life possible. When the last baker or hardware store goes, every (amenity) has to be fetched from the mainland, and the (vibrancy) of a neighborhood drains away.", "zh": "更无声的危机是（人口结构）的危机。自20世纪50年代以来，历史城区的人口几乎年年减少，近年来的（轨迹）是每年大约减少1000名居民。留下来的人都上了年纪：威尼斯可以作为（老年学）的研究案例，葬礼远多于洗礼，儿童的（稀少）已导致学校关闭。每离开一个家庭，就削弱了那些维持日常生活的商店、医生和服务的（生存能力）。当最后一家面包店或五金店关门时，每一样（生活便利设施）都得去大陆上获取，一个街区的（活力）也随之流失。"}, {"en": "Residents have turned (advocacy) into an art. In 2009 a group of them staged a mock funeral for the city, carrying a coffin through the canals and delivering a (eulogy) for a Venice they said was dying. An electronic counter in a pharmacy window near the Rialto tracks the shrinking population. Activists organize protests, run housing campaigns and show (solidarity) with neighbors facing eviction. Many are (weary) of being told that their city is a museum, and some are frankly (grumpy) about the crowds.", "zh": "居民们把（维权倡导）变成了一门艺术。2009年，一群居民为这座城市举行了一场模拟葬礼，抬着一口棺材穿过运河，为他们所说的正在死去的威尼斯致（悼词）。里亚尔托附近一家药店的橱窗里，有一个电子计数器记录着不断减少的人口。社会活动人士组织抗议、开展住房运动，并与面临被驱逐的邻居们（团结一致）。许多人（厌倦）了别人说他们的城市是一座博物馆，有些人对拥挤的人群更是毫不掩饰地表现得（脾气暴躁）。"}, {"en": "The main culprit is housing. Venice cannot grow: there is no new land, and the (inelasticity) of supply means that every flat turned into a holiday let is a flat lost to residents. In 2023 the number of tourist beds in the historic center overtook the number of residents for the first time. The (voracity) of the short-let market, which pays owners far more than a local tenant could, has created a (scarcity) of long-term rentals and a widening (disparity) between rents and local wages. Young Venetians call it an (inequity) that pushes them across the bridge to Mestre.", "zh": "罪魁祸首是住房。威尼斯无法扩张：没有新的土地，供给的（缺乏弹性）意味着，每一套被改成度假出租屋的公寓，都是居民失去的一套公寓。2023年，历史城区的游客床位数首次超过居民人数。短租市场的（贪婪）让房东赚到的钱远远超过本地租客所能支付的，这造成了长期租房的（短缺），以及房租与本地工资之间不断扩大的（差距）。威尼斯年轻人称之为一种（不公），正把他们推过大桥，赶到梅斯特雷。"}, {"en": "Regulation has been weak. In 2022 parliament gave Venice the power to limit short-term lets in the historic center, but the city was slow to use it; critics blame (leniency) toward landlords, many of whom vote, and an (allergy) to anything that might deter visitors. Policy has often been (contradictory): the city welcomed new hotels even as it lamented the loss of residents. OCIO, a residents' group that acts as a (gadfly) on housing, has documented how many homes sit empty or serve only tourists. The issue is (thorny) because many Venetians who have moved away still own flats in the city and let them out, so politicians' (timidity) is not hard to understand.", "zh": "监管一直软弱无力。2022年，议会授权威尼斯限制历史城区的短期出租，但市政府迟迟没有动用这一权力；批评者指责它对房东过于（宽大），而许多房东都有选票，还指责它对任何可能吓跑游客的举措都有（过敏般的抵触）。政策常常（自相矛盾）：市政府一边哀叹居民流失，一边又欢迎新酒店进驻。居民团体OCIO在住房问题上扮演着（牛虻）的角色，它记录了有多少住房空置或只供游客使用。这个问题很（棘手），因为许多已经搬走的威尼斯人在城里仍有公寓并把它们出租，所以政客们的（畏首畏尾）也就不难理解了。"}, {"en": "Then there are the visitors. Estimates of their number vary wildly, from about 20m a year to 30m or more, since day-trippers were not counted until recently, but all agree that the total grew (exponentially) once cheap flights, cruise ships and short lets arrived. Most follow the same (itinerary): the train or bus to the edge of town, the walk to the Rialto, the (obligatory) selfie on the bridge, a (cursory) look at St Mark's, perhaps a gondola ride, then back. Few (stray) far from the main routes. Monuments are photographed (perfunctorily), and the summer (hyperactivity) around the Rialto, with its (pesky) touts and selfie sticks, is a world away from quiet backwaters a few hundred meters off.", "zh": "然后是游客。对游客人数的估计相差悬殊，从每年约2000万到3000万甚至更多，因为直到最近才开始统计一日游游客，但所有人都同意，随着廉价航班、邮轮和短租的出现，游客总数呈（指数级）增长。大多数人走的是同一条（路线）：乘火车或巴士到城边，步行到里亚尔托，在桥上拍一张（必不可少的）自拍，（匆匆）看一眼圣马可，或许再坐一趟贡多拉，然后返回。很少有人（偏离）主要路线走得很远。名胜古迹只被（敷衍地）拍几张照片，夏天里亚尔托周边的（过度喧闹），还有（讨厌的）揽客者和自拍杆，与几百米外宁静的僻静水巷判若两个世界。"}, {"en": "Tourism pays the bills: hotels, restaurants, gondolas and countless (ancillary) businesses depend on it. But it also threatens to (stultify) the city. Shops that once sold bread, shoes or hardware now sell masks, magnets and (tawdry) trinkets, and the (homogeneity) of the busiest lanes, lined with stall after (tatty) stall, breeds a kind of (monotony). Crowds (annoy) residents trying to get to work, and the (antipathy) runs both ways. Graffiti telling tourists to go home reveal a growing (animosity), though most Venetians know that without visitors their city would be broke.", "zh": "旅游业支付着账单：酒店、餐馆、贡多拉以及无数（附属）行业都依赖它。但它也可能让这座城市（变得呆滞无生气）。曾经卖面包、鞋子或五金的商店，如今卖的是面具、冰箱贴和（俗气的）小饰品；最繁忙的街巷两旁一个接一个都是（破旧）的货摊，这种（千篇一律）造成了一种（单调乏味）。人群（惹恼）了赶着上班的居民，而这种（反感）是双向的。叫游客回家的涂鸦，显示出日益增长的（敌意），尽管大多数威尼斯人知道，没有游客，他们的城市就会破产。"}, {"en": "Nothing symbolized the strain better than cruise ships. For years vessels of 100,000 tons or more sailed with apparent (impunity) up the Giudecca canal, in the (vicinity) of St Mark's, towering over the domes and sending thousands of passengers down the (gangway) for a few hours ashore. Residents would (decry) fumes that (sully) the air and the destructive wakes created by the vessels' (velocity) through narrow channels. After years of protests, and many an (entreaty) from UNESCO, which threatened to put Venice on its list of endangered sites, the government banned large ships from the Giudecca canal and St Mark's basin from August 2021 and set aside (compensatory) aid for firms that lost business. Many cruise lines now call at Trieste or Ravenna, or at the industrial docks of Marghera.", "zh": "没有什么比邮轮更能象征这种压力了。多年来，10万吨以上的巨轮显然可以（不受惩罚）地驶入朱代卡运河，在圣马可的（附近）航行，高耸于教堂穹顶之上，把成千上万的乘客经（舷梯）送上岸游玩几个小时。居民们（谴责）巨轮排放的废气（污染）空气，也指责船只以一定（航速）驶过狭窄水道时掀起的尾浪会破坏堤岸。经过多年抗议，加上联合国教科文组织的多次（恳求），它曾威胁要把威尼斯列入濒危遗产名录，政府终于从2021年8月起禁止大型船只驶入朱代卡运河和圣马可湾，并拨出（补偿性）援助，用于帮助因此失去生意的企业。许多邮轮公司如今停靠的里雅斯特或拉文纳，或者马格拉的工业码头。"}, {"en": "The city has also tried to legislate manners. Its police regulations (expressly) forbid swimming in the canals, cycling, picnicking on monuments and wandering around bare-chested, and offenders face fines that can run to hundreds of euros. Officials frame the rules as matters of (decency) and (propriety); critics call them (petty), and some, such as bans on sitting on bridges and steps, seem aimed as much at (vagrancy) as at tourist (delinquency). Some behavior is undeniably (unseemly): visitors have been caught diving off bridges and riding motorized surfboards down the Grand Canal. The (fatuity) of such stunts tests the (civility) of even patient Venetians.", "zh": "这座城市还试图为礼仪立法。它的治安条例（明确）禁止在运河里游泳、骑自行车、在古迹上野餐以及光着膀子四处闲逛，违者可被处以高达数百欧元的罚款。官员们把这些规定说成是关乎（体面）和（得体）的问题；批评者则说它们（小题大做），其中一些规定，比如禁止坐在桥上和台阶上，似乎既针对游客的（不法行为），也同样针对（流浪）。有些行为无疑（有失体统）：曾有游客被抓到从桥上跳水，或者踩着电动冲浪板在大运河上飞驰。这类噱头的（愚蠢）考验着即便是最有耐心的威尼斯人的（礼貌）。"}, {"en": "Since August 2024 tour groups have been capped at 25 people, and the guides who (accompany) them may no longer use loudspeakers; those who fail to (comply) risk fines of up to €500. A (snappy) campaign, #EnjoyRespectVenezia, urges visitors to behave. Feeding the (mangy) pigeons of St Mark's Square has been banned since 2008, partly because (veterinary) experts warn that the birds spread disease and partly because their droppings eat into stone. Some visitors find all this (prissy), and the city a (killjoy). Most Venetians simply wish there were fewer people to apply the rules to.", "zh": "自2024年8月起，旅游团人数上限为25人，（陪同）他们的导游不得再使用扩音器；不（遵守）规定者可被罚款最高500欧元。一项名为“#EnjoyRespectVenezia”的（简洁醒目的）宣传活动敦促游客守规矩。自2008年起，在圣马可广场喂那些（脏兮兮生癞的）鸽子已被禁止，部分原因是（兽医）专家警告这些鸟会传播疾病，部分原因是它们的粪便会腐蚀石头。一些游客觉得这一切（过分拘谨），觉得这座城市是个（扫兴的人）。大多数威尼斯人只是希望需要遵守这些规定的人能少一些。"}, {"en": "The boldest experiment is the day-tripper fee. Introduced as a trial on 29 days in 2024, when it raised €2.2m from about 450,000 visitors, the (levy) was extended to 54 days in 2025 and to 60 this year, between April 3rd and July 26th, from 8:30am to 4pm. Booking is (compulsory) for day visitors to the historic center, who must show a QR pass at checkpoints; residents of the Veneto, overnight guests, students, workers and children under 14 are exempt. This year's (tally) was more than 650,000 paid vouchers and over €5m in revenue, money that supporters say can help (defray) the cost of cleaning and policing a city built for far fewer people. Officials say (preliminary) data show less crowding on the busiest days than in previous years. The price of (entry) is €5 for those who book at least four days ahead and €10 for later bookings.", "zh": "最大胆的试验是一日游游客费。这项（收费）于2024年在29天里试行，从约45万名游客那里筹得220万欧元，2025年扩大到54天，今年又扩大到60天，时间为4月3日至7月26日之间，每天上午8点半至下午4点。前往历史城区的一日游游客必须预约，这是（强制性的），并须在检查站出示二维码通行证；威尼托大区居民、过夜游客、学生、上班族和14岁以下儿童可获豁免。今年的（统计数字）是超过65万张付费凭证、逾500万欧元收入，支持者说，这笔钱可以帮助（支付）一座为少得多的人口而建的城市的清洁和治安费用。官员们说，（初步）数据显示，最繁忙日子的拥挤程度低于往年。（入城）价格为：提前至少四天预约者5欧元，较晚预约者10欧元。"}, {"en": "Critics say the effect has been (nugatory). A (measly) €5 or €10 is unlikely to deter someone who has already paid for a flight; in the first 42 days of this year about 268,000 tickets were sold at the €10 rate and 245,000 at €5, and there is no cap on how many may come. Some suspect the motive is chiefly (pecuniary). Mr Venturini wants to raise the price to between €30 and €50 on peak days, which would require Rome to lift the (statutory) ceiling set by national law. A (balky) coalition government may not agree.", "zh": "批评者说，这项收费的效果（微不足道）。（区区）5欧元或10欧元，不太可能吓退已经买了机票的人；今年头42天，按10欧元价格售出的门票约26.8万张，按5欧元售出的约24.5万张，而且对来访人数没有上限。有人怀疑，其动机主要是（金钱上的）。文图里尼先生希望在高峰日把价格提高到30至50欧元，这需要罗马方面取消国家法律规定的（法定）上限。一个（不愿配合的）联合政府未必会同意。"}, {"en": "Tourism of the most (splashy) kind arrived in June 2025, when Jeff Bezos, the founder of Amazon, married Lauren Sánchez in Venice in front of some 200 guests, among them Oprah Winfrey, Kim Kardashian and Tom Brady. The couple were (coy) about the venues, while (peery) photographers scanned each arriving water taxi for celebrities. The media (frenzy), the (flaunty) display of wealth and the parade of (celebrity) guests angered activists, who formed a group called No Space for Bezos and held a protest (rally); Greenpeace unfurled a banner in St Mark's Square reading \"If you can rent Venice for your wedding you can pay more tax\". The couple asked guests not to bring gifts and promised donations to Venetian (charity) instead, and the mayor welcomed them. Whether such events are an asset or a (liability) for a fragile city is something Venetians still argue about.", "zh": "最（招摇）的一类旅游在2025年6月到来：亚马逊创始人杰夫·贝索斯在威尼斯迎娶劳伦·桑切斯，约200名宾客到场，其中包括奥普拉·温弗瑞、金·卡戴珊和汤姆·布雷迪。新人对婚礼场地（讳莫如深），（好奇窥探的）摄影师则紧盯每一艘驶来的水上出租车，搜寻名流的身影。媒体的（狂热）、（炫耀的）财富排场以及（名流）宾客的阵仗，激怒了社会活动人士，他们组成了一个名为“贝索斯没有立足之地”的团体，并举行了抗议（集会）；绿色和平组织在圣马可广场展开一条横幅，上面写着：“如果你能租下威尼斯办婚礼，你就能多交点税。”这对新人请宾客不要带礼物，并承诺向威尼斯的（慈善事业）捐款，市长也对他们表示欢迎。这类活动对一座脆弱的城市究竟是资产还是（负担），威尼斯人至今仍在争论。"}, {"en": "The sea remains the biggest threat, and Venice's answer is MOSE, a system of 78 hollow steel gates set into the seabed at the lagoon's three inlets. Normally the gates lie (stationary), filled with water, on the floor of the channels; when a high tide is forecast, compressed air is pumped in and they rise to seal off the lagoon from the Adriatic. The (enormity) of the project is matched by its cost, about €5.5bn, some €1.3bn more than first planned. It was (tardy), too: begun in 2003, it was first raised in October 2020, and critics inclined to (naysay) any engineering fix had long dismissed it as a (folly). Since then it has done its job. By early 2025 it had been raised nearly 100 times, sparing St Mark's and much of the city from repeated flooding, which has gone some way to (allay) fears.", "zh": "大海仍是最大的威胁，而威尼斯的应对之策是“摩西”系统，即在潟湖三个入海口的海床上安装的78道空心钢闸门。平时，闸门灌满海水，（静止）地躺在水道底部；一旦预报有高潮，就向闸门内泵入压缩空气，闸门随之升起，把潟湖与亚得里亚海隔开。这项工程的（浩大）与其造价相当，约55亿欧元，比最初计划多出约13亿欧元。它也（姗姗来迟）：2003年动工，直到2020年10月才首次升起；那些倾向于对任何工程方案都（唱反调）的批评者，长期以来一直斥之为（愚蠢之举）。此后，它发挥了作用。到2025年初，闸门已升起近100次，使圣马可广场和城市大部分地区免于一再被淹，这在一定程度上（缓解）了人们的担忧。"}, {"en": "Its history is less inspiring. In 2014 prosecutors uncovered a web of bribes around the consortium building the barrier, and 35 people were arrested, among them politicians, businessmen and officials; investigators alleged that millions of euros of public money had been diverted, some of it to political parties. The (skullduggery) took years to unravel in the courts, and the (complicity) of officials who were supposed to be supervising the project made the (sleazy) affair all the more shocking. The state put the consortium under special administration in an attempt to (rectify) matters.", "zh": "它的历史就没那么鼓舞人心了。2014年，检察官揭露了围绕承建这道屏障的财团的一张贿赂网，35人被捕，其中有政客、商人和官员；调查人员指控，数以百万计的欧元公款被挪用，其中一部分流向了政党。法院花了好几年才理清这些（阴谋诡计），而本应监督该项目的官员们的（同谋），让这桩（肮脏的）丑闻更加令人震惊。国家对该财团实行了特别管理，试图（纠正）局面。"}, {"en": "Nor is MOSE a permanent solution. It is normally raised only for tides forecast to exceed about 110cm, so lesser floods still lap St Mark's Square, the lowest part of the city; a glass barrier now shields the basilica's porch. Officials (downplay) the problem, but the system has yet to reach (maturity): its operating rules remain (provisory), subject to revision as experience accumulates, and the (fallibility) of forecasts forces (anticipatory) decisions hours ahead, sometimes for tides that never arrive. Every closure also shuts the port, a (quandary) for a city that needs both trade and protection. As seas rise, closures will become more frequent; one hydrologist reckons the gates may one day need raising on 260 days a year. A lagoon cut off from the sea that often would begin to (putrefy), putting its ecology in (jeopardy).", "zh": "“摩西”也不是一劳永逸的解决方案。通常只有预报潮位超过约110厘米时才会升起闸门，因此较小的洪水仍会漫上城中地势最低的圣马可广场；如今，一道玻璃屏障保护着大教堂的门廊。官员们（轻描淡写）这一问题，但该系统尚未（成熟）：其操作规程仍属可根据经验修订的（暂行规定），而预报本身的（不完全可靠）又迫使人们提前数小时作出（预判性的）决定，有时预报的高潮根本没有来。每次关闭闸门还会封闭港口，这让一座既需要贸易又需要保护的城市陷入（两难）。随着海平面上升，关闭将越来越频繁；一位水文学家估计，有朝一日闸门可能每年需要升起260天。潟湖如果如此频繁地与大海隔绝，就会开始（腐败发臭），使其生态陷入（危险）。"}, {"en": "The (meteorology) is moving against Venice. Average sea levels at the city are the highest on record, and tides above 80cm, enough to wet the lowest pavements, have risen from about 75 a year in the early 2000s to around 125. Warmer seas may (intensify) the storms that drive water up the Adriatic. Extremes cut both ways: in a cold spell in February 2012 parts of the lagoon froze, a rare (frigidity), while droughts have left some canals almost dry at low tide. Even allowing for the (generality) of long-range climate models, which cannot predict every local tide, the city's (propensity) to flood is likely to grow; the one (certainty) is that the sea will rise. Venetians meet each acqua alta with practiced (equanimity), pulling on rubber boots and walking along raised boardwalks. But they know the (futility) of resisting the Adriatic forever, and how (puny) human defenses can look against it.", "zh": "（气象）形势正朝着不利于威尼斯的方向发展。威尼斯的平均海平面处于有记录以来的最高水平；足以打湿最低处路面的80厘米以上潮位，已从21世纪初的每年约75次增加到约125次。变暖的海洋可能会（加剧）把海水推向亚得里亚海北端的风暴。极端天气两头都有：2012年2月的一次寒潮中，潟湖部分水面结冰，这是罕见的（严寒）；而干旱则使一些运河在低潮时几乎干涸。即便考虑到长期气候模型具有一定的（概括性）、无法预测每次局部潮汐，这座城市的（洪涝倾向）也很可能日益加重；唯一（确定无疑的事）是海平面会上升。威尼斯人以惯常的（泰然自若）面对每一次“高水位”，穿上胶靴，走在架高的木板道上。但他们知道，永远抵御亚得里亚海是（徒劳）的，也知道人类的防御工事在它面前会显得多么（渺小）。"}, {"en": "Politics will decide how Venice responds. In May Mr Venturini won 51.02% of the vote in the first round, against 39.20% for Andrea Martella of the center-left Democratic Party, extending the (ascendancy) of the center-right after 11 years under Luigi Brugnaro, a businessman whose right-hand man he had been. His (candidacy) rested on continuity and security, promising more police patrols and more cameras. His (oratory) is brisk rather than soaring, and his stated (priority) is to control tourism and keep residents. Critics, (leery) of a man who handled tourism and housing for his predecessor, doubt that he will break with the past. Venice's political (polarity), though, is less left versus right than island versus mainland.", "zh": "威尼斯如何应对，将由政治来决定。2026年5月，文图里尼先生在第一轮投票中以51.02%的得票率胜出，中左翼民主党的安德烈亚·马尔泰拉获得39.20%；这延续了中右翼的（优势地位），此前商人路易吉·布鲁尼亚罗已执政11年，而文图里尼曾是他的得力助手。他的（竞选）主打延续性和治安，承诺增加警察巡逻和监控摄像头。他的（演说）干脆利落而非慷慨激昂，他宣称的（首要任务）是控制旅游业、留住居民。批评者对这位曾为前任主管旅游和住房事务的人（心存疑虑），怀疑他不会与过去决裂。不过，威尼斯政治的（两极分化）与其说是左与右之争，不如说是岛屿与大陆之争。"}, {"en": "The (municipality) of Venice includes Mestre, its (dowdy) mainland twin, where most voters live, and islanders complain that their concerns are outvoted. Five referendums have been held on splitting the two: three were rejected outright, and two, in 2003 and 2019, failed for lack of turnout. The question of (autonomy) remains (touchy). Mainlanders accuse islanders of (insularity); islanders accuse City Hall of paying only (desultory) attention to their problems.", "zh": "威尼斯（市）包括其大陆上（土里土气的）孪生城市梅斯特雷，大多数选民住在那里，岛上居民抱怨他们的诉求总是在投票中被压倒。关于将两地分开的公投已经举行过五次：三次被直接否决，另外两次，即2003年和2019年的公投，因投票率不足而无效。（自治）问题至今仍很（敏感）。大陆居民指责岛民（狭隘封闭）；岛民则指责市政厅对他们的问题（漫不经心）。"}, {"en": "Culture has had its own dramas. In September 2025 La Fenice named Beatrice Venezi, a young conductor with a (savvy) media presence and a former adviser to the culture ministry, as its music director from October 2026. Many of the theater's musicians questioned her experience and accused the management of political (partiality); the (acrimony) lasted for months, with protests at concerts, including the New Year's gala. In April 2026, after she told an Argentine newspaper that orchestra posts were handed down \"practically from father to son\", the theater's superintendent canceled all future collaborations with her. The unions met her remark with (contumely), calling it untrue and offensive; she asked the theater to (clarify) its reasons and complained that she had been defamed. Commentators continued to (pillory) both sides, and her supporters saw a campaign to (vilify) her. A single (infelicity) cost her the post before she had started, and La Fenice now needs, in effect, an (understudy) on the podium.", "zh": "文化界也有自己的戏剧。2025年9月，凤凰剧院任命年轻指挥家贝娅特丽丝·韦内齐为音乐总监，任期自2026年10月起；她在媒体上的形象（精明老练），曾担任文化部顾问。剧院的许多乐师质疑她的经验，指责管理层带有政治（偏袒）；这场（激烈争执）持续了数月，音乐会上抗议不断，包括新年音乐会。2026年4月，她对一家阿根廷报纸说，乐团的职位“几乎是父传子”，此后剧院总监取消了今后与她的一切合作。工会以（轻蔑辱骂）回应她的言论，称其不实且具有冒犯性；她则要求剧院（澄清）理由，并抱怨自己遭到了诋毁。评论人士继续（抨击）双方，她的支持者则认为有人在发动一场（中伤）她的运动。一次（措辞不当）让她在上任之前就丢掉了职位，凤凰剧院如今实际上需要一位登上指挥台的（替补）。"}, {"en": "The Biennale has had a rougher year. Koyo Kouoh, the first African woman chosen to curate its main art exhibition, died in May 2025, an (untimely) loss a year before the opening; five co-curators completed her show, \"In Minor Keys\", with some 110 participants. Then, days before it opened in May 2026, the jury resigned amid a row over the participation of Russia and Israel, whose leaders face arrest warrants from the International Criminal Court. With no jury, the prizes will be decided by a public vote, Eurovision-style, and protesters clashed with police on the eve of the opening. The air of (anarchy) strained the Biennale's tradition of (comity) among nations.", "zh": "双年展的这一年则更为坎坷。科约·库奥是首位被选中策划其主题艺术展的非洲女性，她于2025年5月去世，距开幕只有一年，实属（过早）离世；五位联合策展人完成了她的展览《小调之中》，参展者约110位。随后，在2026年5月开幕前几天，评审团因俄罗斯和以色列参展引发的争议而集体辞职，这两国的领导人都面临国际刑事法院的逮捕令。由于没有评审团，奖项将仿照欧洲歌唱大赛的方式由公众投票决定；开幕前夕，抗议者与警察发生了冲突。这种（无政府状态）般的气氛，令双年展各国之间（相互礼让）的传统承受了压力。"}, {"en": "The film festival on the Lido had a calmer time of it. Amid the usual (puffery), (glossy) premieres and (brassy) publicity, Hollywood (royalty) and (willowy) models paraded along the red carpet before photographers in a state of high (excitability). The Golden Lion, awarded in September by a jury led by Maggie Gyllenhaal, went to \"Woman Unknown\", May el-Toukhy's (timely) drama about a young Danish woman who marries her wealthy employer while hiding a wartime affair with a German soldier.", "zh": "利多岛上的电影节则平静得多。在惯常的（吹捧）、（光鲜亮丽的）首映和（张扬喧闹的）宣传之中，好莱坞（皇族般的巨星）和（身材修长的）模特们走过红毯，摄影师们则处于高度（兴奋）状态。9月，由玛吉·吉伦哈尔领衔的评审团把金狮奖颁给了梅·埃尔-图希的《无名女子》，这部（适逢其时的）剧情片讲述一位年轻的丹麦女子嫁给富有的雇主，同时隐瞒了自己战时与一名德国士兵的恋情。"}, {"en": "What would save Venice? It is a (fallacy) to think tourism can simply be switched off: its (indispensability) to the local economy makes any such hope (illusory). But the (prophecy) of a city without residents need not come true. Ideas abound: a (subsidy) for young families who rent or buy in the historic center; firm caps on short-term lets; incentives for universities, research institutes and remote workers to settle on the islands. Some have begun to (fructify): Ca' Foscari and IUAV, the city's universities, bring thousands of students into town, and a scheme called Venywhere has courted remote workers. The most (visionary) proposals treat Venice as a laboratory for adapting cities to rising seas, an (analogy) that draws scientists and engineers to many a (colloquy) on the lagoon.", "zh": "什么能拯救威尼斯？认为可以简单地把旅游业“关掉”是一种（谬论）：旅游业对当地经济的（不可或缺），使任何此类希望都成了（虚幻的）泡影。但一座没有居民的城市这一（预言）不一定会成真。各种设想层出不穷：为在历史城区租房或买房的年轻家庭提供（补贴）；严格限制短期出租；鼓励大学、研究机构和远程工作者到岛上定居。其中一些已开始（结出成果）：该市的大学威尼斯大学和威尼斯建筑大学把数以千计的学生带进城里，一个名为“Venywhere”的计划也一直在吸引远程工作者。最（富有远见的）提议把威尼斯视为让城市适应海平面上升的实验室，这一（类比）吸引着科学家和工程师们前来潟湖参加一场又一场（学术研讨会）。"}, {"en": "Venice has long been a (canary) in the coal mine: for the perils of mass tourism, for the threat of rising seas, for what happens when a city turns into a stage set. Its (obituary) has been written many times, by poets, travelers and countless journalists, and each (valedictory) has proved premature. The lesson of its history is not despair but (humility): a city built on wooden piles in a lagoon has survived for 1,600 years by adapting, and it can adapt again. If it fails, it will be a (cautionary) tale for every place that is loved to death. If it succeeds, La Fenice will not be the only thing in Venice to have risen from the ashes.", "zh": "长期以来，威尼斯一直是煤矿里的（金丝雀）：它预警着大众旅游的危害、海平面上升的威胁，以及一座城市变成舞台布景后会发生什么。它的（讣告）已被诗人、旅行者和无数记者写过许多次，而每一篇（告别辞）都被证明为时过早。它的历史给人的教训不是绝望，而是（谦卑）：一座建在潟湖木桩上的城市靠着适应变化存续了1600年，它还能再次适应。如果失败，它将成为每一个被爱到窒息的地方的（警世）故事。如果成功，凤凰剧院就不会是威尼斯唯一一个浴火重生的事物。"}];
+const HAS_TITLE = true;
+const SUBTITLE_EN = "";
+const SUBTITLE_ZH = "";
+
+/* ================= Reading state ================= */
+const S = {
+  p: 0, s: 0,            // paragraph / sentence position
+  playing: false,
+  gen: 0,                // generation counter guards stale utterance callbacks
+  rate: 1,
+  voice: null,
+  showZh: true,
+  activeEl: null,
+  activeWordEl: null
+};
+
+/* ================= Text processing ================= */
+function stripParens(t) { return t.replace(/\(([^)]*)\)/g, '$1'); }
+
+function splitSentences(text) {
+  const parts = text.match(/[^.!?]+[.!?]["\u201d']?|[^.!?]+$/g);
+  return (parts || [text]).map(s => s.trim()).filter(Boolean);
+}
+
+// sentences[paraIdx] = [{ raw, plain }]
+const sentences = DATA.map(d => {
+  const out = [];
+  for (const raw of splitSentences(d.en)) {
+    out.push({ raw, plain: stripParens(raw) });
+  }
+  return out;
+});
+const TOTAL_SENTS = sentences.reduce((a, b) => a + b.length, 0);
+
+/* ================= Rendering ================= */
+const bookEl = document.getElementById('book');
+const sentEls = [];   // sentEls[p][s] = { el, words:[{el,start,end}] }
+
+function buildWords(sentSpan, raw) {
+  // Builds karaoke word spans from the raw sentence, keeping the (vocab)
+  // parentheses visible. `spoken` tracks character offsets in the
+  // parenthesis-free text that is actually sent to speech synthesis, so
+  // boundary-event charIndex values keep mapping to the right word.
+  const words = [];
+  let spoken = '';
+  const emitPlain = text => {
+    const parts = text.split(/(\s+)/);
+    for (const part of parts) {
+      if (part === '') continue;
+      if (/^\s+$/.test(part)) {
+        sentSpan.appendChild(document.createTextNode(part));
+        spoken += part;
+        continue;
+      }
+      const w = document.createElement('span');
+      w.className = 'w';
+      w.textContent = part;
+      sentSpan.appendChild(w);
+      words.push({ el: w, start: spoken.length, end: spoken.length + part.length });
+      spoken += part;
+    }
+  };
+  const re = /\([^)]*\)/g;
+  let last = 0, m;
+  while ((m = re.exec(raw)) !== null) {
+    emitPlain(raw.slice(last, m.index));
+    const inner = m[0].slice(1, -1);
+    sentSpan.appendChild(document.createTextNode('('));
+    const w = document.createElement('span');
+    w.className = 'w vocab';
+    w.textContent = inner;
+    sentSpan.appendChild(w);
+    words.push({ el: w, start: spoken.length, end: spoken.length + inner.length });
+    spoken += inner;
+    sentSpan.appendChild(document.createTextNode(')'));
+    last = m.index + m[0].length;
+  }
+  emitPlain(raw.slice(last));
+  return words;
+}
+
+function makeSentSpan(p, s, obj) {
+  const sp = document.createElement('span');
+  sp.className = 'sent';
+  const words = buildWords(sp, obj.raw);
+  sp.appendChild(document.createTextNode(' '));
+  sp.addEventListener('click', () => jumpTo(p, s));
+  return { el: sp, words };
+}
+
+// Title block (paragraph 0), only when the file provides a title paragraph
+if (HAS_TITLE) (function renderTitle() {
+  const t = DATA[0];
+  const div = document.createElement('div');
+  div.className = 'title-block';
+  const h2 = document.createElement('h2');
+  sentEls[0] = [];
+  sentences[0].forEach((obj, s) => {
+    const r = makeSentSpan(0, s, obj);
+    sentEls[0].push(r);
+    h2.appendChild(r.el);
+  });
+  div.appendChild(h2);
+  if (typeof SUBTITLE_EN !== 'undefined' && SUBTITLE_EN) {
+    const sub = document.createElement('div');
+    sub.className = 'book-subtitle';
+    sub.textContent = SUBTITLE_EN;
+    div.appendChild(sub);
+  }
+  const zh = document.createElement('div');
+  zh.className = 'zh-title';
+  zh.textContent = t.zh;
+  div.appendChild(zh);
+  if (typeof SUBTITLE_ZH !== 'undefined' && SUBTITLE_ZH) {
+    const subZh = document.createElement('div');
+    subZh.className = 'zh-subtitle';
+    subZh.textContent = SUBTITLE_ZH;
+    div.appendChild(subZh);
+  }
+  bookEl.appendChild(div);
+})();
+
+// Paragraph rows. When the file has a title paragraph it is DATA[0] and rows
+// start at 1; otherwise every paragraph is a content row starting at 0.
+const jumpSel = document.getElementById('jumpSel');
+const FIRST_P = HAS_TITLE ? 1 : 0;
+const paraNum = p => HAS_TITLE ? p : p + 1;  // DATA index -> displayed paragraph number
+DATA.slice(FIRST_P).forEach((d, i) => {
+  const p = FIRST_P + i;
+  const row = document.createElement('div');
+  row.className = 'row';
+
+  const enCol = document.createElement('div');
+  const no = document.createElement('div');
+  no.className = 'para-no';
+  no.textContent = 'Paragraph ' + paraNum(p);
+  enCol.appendChild(no);
+  const enDiv = document.createElement('div');
+  enDiv.className = 'en';
+  sentEls[p] = [];
+  sentences[p].forEach((obj, s) => {
+    const r = makeSentSpan(p, s, obj);
+    sentEls[p].push(r);
+    enDiv.appendChild(r.el);
+  });
+  enCol.appendChild(enDiv);
+
+  const zhCol = document.createElement('div');
+  const zhDiv = document.createElement('div');
+  zhDiv.className = 'zh';
+  zhDiv.textContent = d.zh;
+  zhCol.appendChild(zhDiv);
+
+  row.appendChild(enCol);
+  row.appendChild(zhCol);
+  bookEl.appendChild(row);
+
+  const opt = document.createElement('option');
+  opt.value = p;
+  opt.textContent = '¶' + paraNum(p) + ' — ' + stripParens(sentences[p][0].plain).slice(0, 42) + '…';
+  jumpSel.appendChild(opt);
+});
+
+/* ================= Speech engine ================= */
+function pickVoice() {
+  const sel = document.getElementById('voiceSel');
+  const all = speechSynthesis.getVoices().filter(v => v.lang && v.lang.toLowerCase().startsWith('en'));
+  sel.innerHTML = '';
+  // Prefer en-US, then other en voices
+  all.sort((a, b) => {
+    const au = a.lang.toLowerCase().startsWith('en-us') ? 0 : 1;
+    const bu = b.lang.toLowerCase().startsWith('en-us') ? 0 : 1;
+    return au - bu;
+  });
+  const seen = new Set();
+  for (const v of all) {
+    if (seen.has(v.voiceURI)) continue;
+    seen.add(v.voiceURI);
+    const o = document.createElement('option');
+    o.value = v.voiceURI;
+    o.textContent = v.name + ' (' + v.lang + ')';
+    sel.appendChild(o);
+  }
+  const saved = S.voiceURI;
+  let chosen = all.find(v => v.voiceURI === saved)
+    || all.find(v => /microsoft/i.test(v.name) && /en[-_]us/i.test(v.lang))
+    || all.find(v => /microsoft/i.test(v.name))
+    || all.find(v => /google us english/i.test(v.name))
+    || all[0] || null;
+  if (chosen) {
+    sel.value = chosen.voiceURI;
+    S.voice = chosen;
+    S.voiceURI = chosen.voiceURI;
+  }
+}
+if ('speechSynthesis' in window) {
+  speechSynthesis.onvoiceschanged = pickVoice;
+  document.getElementById('voiceSel').addEventListener('change', e => {
+    const v = speechSynthesis.getVoices().find(x => x.voiceURI === e.target.value) || null;
+    S.voice = v; S.voiceURI = v ? v.voiceURI : null;
+    saveState();
+    if (S.playing) restartSentence();
+  });
+}
+
+function setActiveSentence(p, s, scroll) {
+  if (S.activeEl) S.activeEl.classList.remove('active');
+  if (S.activeWordEl) { S.activeWordEl.classList.remove('on'); S.activeWordEl = null; }
+  const r = sentEls[p][s];
+  S.activeEl = r.el;
+  r.el.classList.add('active');
+  if (scroll !== false) r.el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  updateProgress();
+  saveState();
+}
+
+function highlightWord(p, s, charIndex) {
+  const words = sentEls[p][s].words;
+  let best = null;
+  for (const w of words) {
+    if (w.start <= charIndex) best = w;
+    else break;
+  }
+  if (best && best.el !== S.activeWordEl) {
+    if (S.activeWordEl) S.activeWordEl.classList.remove('on');
+    best.el.classList.add('on');
+    S.activeWordEl = best.el;
+  }
+}
+
+function advance() {
+  S.s++;
+  if (S.s >= sentences[S.p].length) { S.p++; S.s = 0; }
+  if (S.p >= sentences.length) { finishReading(); return false; }
+  return true;
+}
+
+function speakSentence() {
+  if (!S.playing) return;
+  const gen = S.gen, p = S.p, s = S.s;
+  const text = sentences[p][s].plain;
+  const utt = new SpeechSynthesisUtterance(text);
+  utt.rate = S.rate;
+  if (S.voice) utt.voice = S.voice;
+  utt.lang = (S.voice && S.voice.lang) || 'en-US';
+  utt.onstart = () => { if (gen === S.gen && S.playing) setActiveSentence(p, s); };
+  utt.onboundary = e => {
+    if (gen === S.gen && S.playing && e.name === 'word') highlightWord(p, s, e.charIndex);
+  };
+  utt.onend = () => {
+    if (gen !== S.gen || !S.playing) return;
+    if (advance()) speakSentence();
+  };
+  utt.onerror = () => {
+    if (gen !== S.gen || !S.playing) return;
+    if (advance()) speakSentence();  // skip a sentence that failed
+  };
+  speechSynthesis.speak(utt);
+}
+
+function restartSentence() {
+  S.gen++;
+  speechSynthesis.cancel();
+  // cancel() is async; give it a tick before speaking
+  setTimeout(() => { if (S.playing) speakSentence(); }, 60);
+}
+
+function updatePlayBtn() {
+  const b = document.getElementById('playBtn');
+  if (S.playing) { b.innerHTML = '&#10074;&#10074; Pause'; b.classList.remove('paused'); }
+  else { b.innerHTML = '&#9654; ' + (S.p === 0 && S.s === 0 && !S.activeEl ? 'Start' : 'Resume'); b.classList.add('paused'); }
+}
+
+function play() {
+  if (!('speechSynthesis' in window)) { alert('Sorry, this browser does not support speech synthesis.'); return; }
+  if (S.playing) { pause(); return; }
+  S.playing = true;
+  S.gen++;
+  updatePlayBtn();
+  const start = () => speakSentence();
+  if (speechSynthesis.speaking || speechSynthesis.pending) {
+    speechSynthesis.cancel();
+    setTimeout(() => { if (S.playing) start(); }, 80);
+  } else {
+    start();
+  }
+}
+
+function pause() {
+  S.playing = false;
+  S.gen++;
+  speechSynthesis.cancel();
+  updatePlayBtn();
+  saveState();
+}
+
+function finishReading() {
+  S.playing = false;
+  S.gen++;
+  speechSynthesis.cancel();
+  S.p = 0; S.s = 0;
+  if (S.activeEl) { S.activeEl.classList.remove('active'); S.activeEl = null; }
+  updatePlayBtn();
+  updateProgress();
+  saveState();
+}
+
+function jumpTo(p, s) {
+  S.p = p; S.s = s;
+  setActiveSentence(p, s);
+  if (S.playing) restartSentence();
+}
+
+function stepSentence(dir) {
+  // dir: -1 = back one sentence, +1 = forward one sentence
+  let p = S.p, s = S.s + dir;
+  if (s < 0) {
+    p--;
+    if (p < 0) return;
+    s = sentences[p].length - 1;
+  } else if (s >= sentences[p].length) {
+    p++;
+    if (p >= sentences.length) return;
+    s = 0;
+  }
+  S.p = p; S.s = s;
+  setActiveSentence(p, s);
+  if (S.playing) restartSentence();
+}
+
+/* ================= Progress & persistence ================= */
+function updateProgress() {
+  let done = 0;
+  for (let p = 0; p < S.p; p++) done += sentences[p].length;
+  done += S.s;
+  const pct = TOTAL_SENTS ? (done / TOTAL_SENTS) * 100 : 0;
+  document.getElementById('progressFill').style.width = pct.toFixed(1) + '%';
+  const totalParas = HAS_TITLE ? sentences.length - 1 : sentences.length;
+  const label = (HAS_TITLE && S.p === 0) ? 'Title' : ('Paragraph ' + paraNum(S.p) + ' of ' + totalParas);
+  document.getElementById('posLabel').textContent =
+    label + ' · sentence ' + (S.s + 1) + ' of ' + sentences[S.p].length +
+    ' · ' + Math.round(pct) + '%';
+  const js = document.getElementById('jumpSel');
+  if (!HAS_TITLE || S.p > 0) js.value = String(S.p);
+}
+
+const LS_KEY = 'audiobook-sink-or-swim-v1';
+const LS_OLD_KEY = 'audiobook-sink-or-swim-v0';
+function saveState() {
+  try {
+    localStorage.setItem(LS_KEY, JSON.stringify({
+      p: S.p, s: S.s, rate: S.rate, voiceURI: S.voiceURI, showZh: S.showZh
+    }));
+  } catch (e) {}
+}
+function loadState() {
+  try {
+    let d = JSON.parse(localStorage.getItem(LS_KEY) || 'null');
+    if (!d) {
+      // Migrate from v1: keep position and settings, but drop the saved voice
+      // so the new Microsoft-first default applies.
+      const old = JSON.parse(localStorage.getItem(LS_OLD_KEY) || 'null');
+      if (old) {
+        d = { p: old.p, s: old.s, rate: old.rate, showZh: old.showZh };
+        localStorage.removeItem(LS_OLD_KEY);
+      }
+    }
+    d = d || {};
+    if (typeof d.p === 'number' && d.p < sentences.length) { S.p = d.p; S.s = Math.min(d.s || 0, sentences[d.p].length - 1); }
+    if (d.rate) { S.rate = d.rate; document.getElementById('rateSel').value = String(d.rate); }
+    if (d.voiceURI) S.voiceURI = d.voiceURI;
+    if (d.showZh === false) toggleZh(false);
+  } catch (e) {}
+}
+
+/* ================= UI wiring ================= */
+function toggleZh(show) {
+  S.showZh = show;
+  document.body.classList.toggle('hide-zh', !show);
+  document.getElementById('zhToggle').innerHTML = show ? '&#30446; Hide translation' : '&#30446; Show translation';
+  saveState();
+}
+document.getElementById('zhToggle').addEventListener('click', () => toggleZh(!S.showZh));
+document.getElementById('playBtn').addEventListener('click', play);
+document.getElementById('restartBtn').addEventListener('click', () => {
+  const wasPlaying = S.playing;
+  S.gen++;
+  speechSynthesis.cancel();
+  S.p = 0; S.s = 0;
+  setActiveSentence(0, 0);
+  if (wasPlaying) setTimeout(() => { if (S.playing) speakSentence(); }, 60);
+  else { pause(); }
+});
+document.getElementById('rateSel').addEventListener('change', e => {
+  S.rate = parseFloat(e.target.value);
+  saveState();
+  if (S.playing) restartSentence();
+});
+jumpSel.addEventListener('change', e => {
+  const p = parseInt(e.target.value, 10);
+  if (!isNaN(p)) jumpTo(p, 0);
+});
+document.addEventListener('keydown', e => {
+  const tag = document.activeElement ? document.activeElement.tagName : '';
+  const inField = /INPUT|SELECT|TEXTAREA/.test(tag);
+  if (e.code === 'Space' && !inField && tag !== 'BUTTON') {
+    e.preventDefault();
+    play();
+  } else if ((e.code === 'ArrowLeft' || e.code === 'ArrowRight') && !inField) {
+    // Arrow keys are safe to handle even with a focused button (they don't activate it)
+    e.preventDefault();
+    stepSentence(e.code === 'ArrowLeft' ? -1 : 1);
+  }
+});
+window.addEventListener('beforeunload', saveState);
+
+/* ================= Init ================= */
+loadState();
+if ('speechSynthesis' in window) pickVoice();
+updatePlayBtn();
+updateProgress();
+if (S.p > 0 || S.s > 0) setActiveSentence(S.p, S.s, false);
+</script>
+</body>
+</html>
