@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grandeur and gloom — Audiobook</title>
+<style>
+  :root {
+    --paper: #f7f4ec;
+    --ink: #2b2b26;
+    --muted: #6b665a;
+    --line: #e3dccb;
+    --accent: #b45309;
+    --karaoke-sent: rgba(251, 191, 36, 0.28);
+    --karaoke-word: #fbbf24;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: auto; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, 'Times New Roman', serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---------- Header / controls ---------- */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(247, 244, 236, 0.94);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    padding: 14px 20px 10px;
+  }
+  .bar {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 14px;
+  }
+  .book-title { margin-right: auto; min-width: 200px; }
+  .book-title h1 {
+    margin: 0;
+    font-size: 1.15rem;
+    letter-spacing: 0.02em;
+  }
+  .book-title .sub {
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-family: -apple-system, 'Segoe UI', sans-serif;
+    margin-top: 2px;
+  }
+  .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+  button, select {
+    font-family: -apple-system, 'Segoe UI', sans-serif;
+    font-size: 0.88rem;
+    border: 1px solid var(--line);
+    background: #fffdf8;
+    color: var(--ink);
+    border-radius: 10px;
+    padding: 8px 14px;
+    cursor: pointer;
+  }
+  button:hover, select:hover { border-color: #c9bfa8; }
+  button:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  #playBtn {
+    background: #1f2937;
+    color: #fdfbf5;
+    border-color: #1f2937;
+    font-weight: 600;
+    min-width: 118px;
+  }
+  #playBtn:hover { background: #111827; }
+  #playBtn.paused { background: #b45309; border-color: #b45309; }
+  select { max-width: 190px; }
+  .hint {
+    max-width: 1180px;
+    margin: 8px auto 0;
+    font-family: -apple-system, 'Segoe UI', sans-serif;
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+  .hint b { color: var(--accent); }
+  .progress-track {
+    max-width: 1180px;
+    margin: 10px auto 2px;
+    height: 5px;
+    background: #e9e2d0;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  #progressFill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #d97706, #b45309);
+    border-radius: 3px;
+    transition: width 0.4s ease;
+  }
+  .progress-meta {
+    max-width: 1180px;
+    margin: 6px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-family: -apple-system, 'Segoe UI', sans-serif;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  #jumpSel { font-size: 0.8rem; padding: 5px 8px; max-width: 320px; }
+
+  /* ---------- Book body ---------- */
+  main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 10px 20px 120px;
+  }
+  .title-block { text-align: center; padding: 34px 10px 10px; }
+  .title-block h2 { font-size: 1.9rem; margin: 0 0 8px; letter-spacing: 0.01em; }
+  .title-block .zh-title {
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    color: var(--muted);
+    font-size: 1.05rem;
+  }
+  .book-subtitle {
+    font-size: 1.02rem;
+    color: var(--muted);
+    font-style: italic;
+    margin: 0 0 10px;
+  }
+  .zh-subtitle {
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-top: 6px;
+  }
+  body.hide-zh .zh-title { display: none; }
+
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.6rem;
+    padding: 26px 6px;
+    border-bottom: 1px solid var(--line);
+  }
+  .row:last-child { border-bottom: none; }
+  .row > div { min-width: 0; }
+  .en, .zh { overflow-wrap: break-word; }
+  .para-no {
+    font-family: -apple-system, 'Segoe UI', sans-serif;
+    font-size: 0.72rem;
+    color: #a39c88;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  .en {
+    font-size: 1.12rem;
+    line-height: 1.95;
+  }
+  .zh {
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    font-size: 1.02rem;
+    line-height: 1.95;
+    color: #57534a;
+  }
+  body.hide-zh .row { grid-template-columns: minmax(0, 780px); justify-content: start; }
+  body.hide-zh .zh { display: none; }
+
+  /* ---------- Karaoke ---------- */
+  .sent {
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 2px 5px;
+    margin: -2px -5px;
+    transition: background-color 0.25s ease;
+  }
+  .sent:hover { background: rgba(0, 0, 0, 0.045); }
+  .sent.active { background: var(--karaoke-sent); }
+  .sent.active:hover { background: var(--karaoke-sent); }
+  .w { border-radius: 4px; transition: background-color 0.12s ease; }
+  .w.on {
+    background: var(--karaoke-word);
+    color: #1f2937;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .vocab { font-weight: 700; color: var(--accent); }
+
+  @media (max-width: 860px) {
+    .row { grid-template-columns: 1fr; gap: 1.2rem; }
+    body.hide-zh .row { grid-template-columns: 1fr; }
+    .zh { border-top: 1px dashed var(--line); padding-top: 1.2rem; }
+    .en { font-size: 1.06rem; }
+    .book-title h1 { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <div class="book-title">
+      <h1>Grandeur and gloom</h1>
+      <div class="sub">English audiobook &middot; 中英双语</div>
+    </div>
+    <div class="controls">
+      <button id="playBtn" title="Start / pause reading (Space)">&#9654; Start</button>
+      <button id="restartBtn" title="Back to the beginning">&#9198; Restart</button>
+      <select id="rateSel" title="Reading speed">
+        <option value="0.75">0.75&times;</option>
+        <option value="0.85">0.85&times;</option>
+        <option value="1" selected>1&times; speed</option>
+        <option value="1.15">1.15&times;</option>
+        <option value="1.3">1.3&times;</option>
+        <option value="1.5">1.5&times;</option>
+      </select>
+      <select id="voiceSel" title="Reading voice"></select>
+      <button id="zhToggle" title="Show or hide the Chinese translation">&#30446; Hide translation</button>
+    </div>
+  </div>
+  <div class="hint">Click any English sentence to start reading from there &middot; <b>Space</b> = play / pause &middot; <b>&larr;</b> / <b>&rarr;</b> = previous / next sentence &middot; <b class="vocab">Bold amber words</b> are the vocabulary words from the story.</div>
+  <div class="progress-track"><div id="progressFill"></div></div>
+  <div class="progress-meta">
+    <span id="posLabel">Ready</span>
+    <select id="jumpSel" title="Jump to a paragraph"></select>
+  </div>
+</header>
+
+<main id="book"></main>
+
+<script>
+const DATA = [{"en": "Grandeur and gloom", "zh": "荣光与阴郁"}, {"en": "France is rich, clever and beautiful. So why are the French so miserable?", "zh": "法国富有、聪慧又美丽。那么，法国人为何如此闷闷不乐？"}, {"en": "On the morning of October 19th 2025 four men in high-visibility vests parked a truck with a mechanical lift beneath the Louvre's Apollo Gallery, rode it up to a balcony overlooking the Seine and cut through a window. Their (subterfuge), dressing as workmen, fooled passers-by. Inside, they smashed two display cases with disc cutters and grabbed eight pieces of the French crown jewels, worth some €88m, among them an emerald-and-diamond necklace that Napoleon gave his second wife, and tiaras and brooches whose gold settings are as fine as (filigree). In less than eight minutes they were gone on scooters. In their haste, or through sheer (inadvertence), they dropped the crown of Empress Eugénie, which was found damaged nearby. The thieves managed to (abscond) with the rest. Police later managed to (apprehend) several suspects, including a woman accused of being an (accomplice), but nearly a year on the jewels are still missing, perhaps hidden in a (cache) somewhere, perhaps already broken up and sold.", "zh": "2025年10月19日上午，四名身穿高可见度背心的男子把一辆带机械升降台的卡车停在卢浮宫阿波罗长廊下方，乘升降台登上俯瞰塞纳河的一处阳台，切开了一扇窗户。他们装扮成工人，这一（伪装诡计）骗过了路人。进入室内后，他们用切割机砸开两个展柜，抢走了八件法国王室珠宝，价值约8800万欧元，其中包括拿破仑送给第二任妻子的一条祖母绿钻石项链，以及几顶冠冕和几枚胸针，其黄金镶座精细得如同（金银丝细工）。不到八分钟，他们就骑着摩托车扬长而去。也许是因为匆忙，也许纯属（疏忽），他们掉落了欧仁妮皇后的王冠，王冠在附近被找到时已经受损。窃贼带着其余珠宝成功（潜逃）。警方后来（逮捕）了几名嫌疑人，其中包括一名被控为（同谋）的女子，但近一年过去了，珠宝仍下落不明，也许被藏在某个（隐秘藏匿处），也许早已被拆散卖掉。"}, {"en": "The heist laid bare a (slipshod) approach to security at the world's most visited museum. The museum's director, Laurence des Cars, admitted that the only camera covering that stretch of outer wall pointed the wrong way, an (inexplicable) gap at a museum that draws some 9m visitors a year, and a parliamentary (probe) blamed \"systemic failures\". Critics alleged (negligence). Ms des Cars had warned months earlier of outdated equipment and a (maintenance) backlog; she resigned in February. Her successor, Christophe Leribault, reopened the Apollo Gallery in July, without the jewels. Some see in the affair a parable of the French state: grand ambitions, such as Mr Macron's plan for a new (entrance) beside the Louvre's east (colonnade) by 2031, coupled with (ineptitude) in the basics.", "zh": "这起盗窃案暴露出世界上参观人数最多的博物馆在安保上的（马虎草率）。博物馆馆长洛朗丝·德卡尔承认，覆盖那段外墙的唯一一台摄像头朝向了错误的方向，对于一座每年吸引约900万游客的博物馆来说，这是一个（令人费解的）漏洞；一项议会（调查）则将其归咎于“系统性失误”。批评者指责博物馆（玩忽职守）。德卡尔女士几个月前曾警告设备陈旧、（维护保养）工作积压；她于今年2月辞职。她的继任者克里斯托夫·勒里博于7月重新开放了阿波罗长廊，只是珠宝已不在其中。有人从这件事中看到了法国这个国家的缩影：宏大的雄心，比如马克龙先生计划到2031年在卢浮宫东侧（柱廊）旁修建一个新（入口），却与基本事务上的（无能低效）相伴而生。"}, {"en": "The episode brought a kind of political (jaundice) to the fore: even the nation's grandest institutions began to look sickly to critics. France is among the world's richest, healthiest and most visited countries, yet its people rank among the gloomiest in Europe; surveys routinely (evince) deep pessimism about the country's direction. Bookshops are full of déclinisme, a genre that repeats the same (dirge): France is sliding inexorably downhill. The (lassitude) is partly (explicable): growth is feeble, the public finances are a mess and politics has been in a state of (incertitude) since 2024. But the gloom also seems lodged deep in the national (psyche), an (irradicable) habit of grumbling that coexists with a fierce attachment to the French way of life. Low (morale) is not harmless: it feeds the anger on which populists thrive.", "zh": "这起事件凸显出某种政治性的（愤世偏见）：在批评者眼里，连国家最壮丽的机构也显得病态。法国是世界上最富裕、最健康、游客最多的国家之一，但法国人却位列欧洲最悲观的民众之列；调查经常（表明）他们对国家走向深感悲观。书店里摆满了“衰落论”著作，这类作品反复唱着同一首（挽歌）：法国正不可阻挡地走下坡路。这种（倦怠）在一定程度上是（可以解释的）：经济增长乏力，公共财政一团糟，自2024年以来政治一直处于（不确定状态）。但这种阴郁似乎也深植于民族（心理）之中，是一种（根深蒂固的）爱发牢骚的习惯，与人们对法式生活方式的强烈依恋并存。低落的（士气）并非无害：它助长了民粹主义者赖以壮大的愤怒。"}, {"en": "Emmanuel Macron, whose second and last term ends in May 2027, continues to (preside) over a political system in which a hung parliament makes (governance) a daily struggle. Since the snap election of 2024 three prime ministers have come and gone; the fourth, Sébastien Lecornu, has held on for more than a year, outwardly (imperturbable) in a job widely regarded as a poisoned (chalice). His cabinet's budget for 2027 promises €54bn of savings and tax measures to cut the deficit from 5.4% of GDP to 5%. Every (pledge) to fix the public finances sounds like a (bromide) to voters who have heard it before, and speculation is (rife) that he too could fall. Polls, the best (gauge) available, suggest that the hard-right National Rally is the favorite to win the presidency next spring.", "zh": "埃马纽埃尔·马克龙的第二个也是最后一个任期将于2027年5月结束，他继续（主导）着一个政治体制，但悬峙议会让（治理）成了每天的艰难任务。自2024年提前大选以来，已有三位总理来了又走；第四位总理塞巴斯蒂安·勒科尔尼已经坚持了一年多，尽管总理一职被视为一只盛着毒酒的（圣杯），他表面上仍（泰然自若）。他的内阁提出的2027年预算承诺通过540亿欧元的节支和税收措施，把赤字从占国内生产总值的5.4%降至5%。每一项整顿公共财政的（承诺），在早已听过类似说法的选民耳中都像是（陈词滥调），外界也（盛行）猜测他同样可能倒台。作为现有最好的（衡量标准），民调显示，强硬右翼的国民联盟有望在明年春天赢得总统大位。"}, {"en": "The French like to date their national story to the Gauls, the Celtic tribes whom Julius Caesar conquered. In 52BC Caesar's legions moved to (besiege) Vercingetorix at Alesia, building two rings of ramparts around the hilltop town; the Gaulish chief surrendered and was later executed in Rome. Romans thought the Gauls (savage). Two millennia later the defeat was turned into a source of pride by Asterix, a comic-book hero created in 1959 whose village, ringed by a wooden (stockade), holds out against the Roman empire thanks to a magic potion. The books scarcely need a (foreword): their familiar opening declares that all of Gaul is occupied by the Romans, except for one small village of indomitable Gauls. The books have sold nearly 400m copies, and many French readers see something of themselves in the villagers' defiance.", "zh": "法国人喜欢把自己的民族故事追溯到高卢人，即被尤利乌斯·恺撒征服的那些凯尔特部落。公元前52年，恺撒的军团进抵阿莱西亚，准备（围困）维钦托利，并在这座山顶城镇周围修筑了两道壁垒；这位高卢首领投降，后来在罗马被处决。罗马人认为高卢人（野蛮）。两千年后，这场失败被一位1959年诞生的漫画英雄阿斯特里克斯变成了骄傲之源：他的村庄四周围着一道木制（栅栏），靠着一种神奇药水抵抗着罗马帝国。这些漫画几乎无须（前言）：熟悉的开场白已经说明，整个高卢都被罗马人占领了，只有一个不屈的高卢人村庄例外。这套漫画已售出近4亿册，许多法国人在那些桀骜不驯的村民身上看到了自己的影子。"}, {"en": "The Franks gave the country its name, and the Capetian kings gave it its shape. From 987, when Hugh Capet was crowned, a single (lineage) and its offshoots ruled France, with interruptions, until 1848. Medieval France was a land of vassals who paid (homage) to their lords, of soaring Gothic cathedrals and of learning: Gerbert of Aurillac, a monk from the Auvergne who became Pope Sylvester II in 999, helped bring the abacus and the (astrolabe) from the Islamic world to Latin Europe. Louis IX, later canonized as Saint Louis, led two expeditions, to Egypt and to Tunis, and died of illness in Tunis in 1270 while on (crusade).", "zh": "法兰克人给了这个国家名字，卡佩王朝的国王们则塑造了它的版图。从987年于格·卡佩加冕起，一个（世系）及其旁支统治法国，其间虽有中断，一直延续到1848年。中世纪的法国是一个诸侯向领主行（臣服礼）的国度，也是高耸的哥特式大教堂和学术之地：出身奥弗涅的修士热尔贝·德·欧里亚克于999年成为教宗西尔维斯特二世，他帮助把算盘和（星盘）从伊斯兰世界引入拉丁欧洲。路易九世后来被封为圣路易，他率领了两次远征，分别前往埃及和突尼斯，1270年在（十字军东征）途中病逝于突尼斯。"}, {"en": "From the same era comes the Bayeux Tapestry, which is in fact an embroidery: some 70 meters of linen on which colored woolen threads (interlace) to tell the story of William of Normandy's conquest of England in 1066. In one scene Harold, the future English king, drags Norman soldiers from quicksand as the army tries to (ford) a river near Mont-Saint-Michel; in another, a Norman knight gallops into battle with a (lance) raised. Since September it has been on show at the British Museum, its first visit to England since it was made nearly 1,000 years ago, under a deal struck by Mr Macron and Sir Keir Starmer during a state visit to Britain in 2025 that was meant to (mend) relations frayed by Brexit. The two old rivals are on more (amicable) terms than they have been for years.", "zh": "同一时代还留下了贝叶挂毯，它实际上是一件刺绣：约70米长的亚麻布上，彩色毛线相互（交织），讲述了1066年诺曼底公爵威廉征服英格兰的故事。在其中一个场景里，后来成为英格兰国王的哈罗德在大军试图（涉水渡过）圣米歇尔山附近一条河流时，把诺曼士兵从流沙中拖出来；在另一处场景中，一名诺曼骑士高举（长矛），策马冲向战场。自9月起，它在大英博物馆展出，这是它自近千年前制成以来首次回到英格兰；这源于马克龙先生与基尔·斯塔默爵士在2025年对英国进行国事访问期间达成的一项协议，旨在（修补）因英国脱欧而受损的关系。这两个宿敌如今的关系比多年来任何时候都更为（友好）。"}, {"en": "Modern France was built by strong ministers. Cardinal Richelieu, Louis XIII's chief minister from 1624 to 1642, crushed the Huguenot stronghold of La Rochelle, used the threat of the scaffold to (coerce) unruly nobles, and founded the Académie française in 1635, putting literature under royal (patronage). His closest adviser, a Capuchin friar called Father Joseph, gave the world the phrase \"gray (eminence)\", for the power behind the throne.", "zh": "现代法国是由强势的大臣们缔造的。黎塞留枢机主教在1624年至1642年间担任路易十三的首席大臣，他攻克了胡格诺派的据点拉罗谢尔，以上刑场相威胁来（胁迫）桀骜不驯的贵族，并于1635年创立了法兰西学术院，把文学置于王室的（赞助）之下。他最亲密的顾问是一位名叫约瑟夫神父的嘉布遣会修士，世界由此有了“灰衣（主教）”这个说法，用来指幕后掌权者。"}, {"en": "Under Louis XIV, who reigned for 72 years until 1715, French power reached its (apogee). The Sun King was no (niggard): he was willing to (expend) vast sums on wars and on Versailles, the palace to which he moved his court in 1682. Its (extravagance) was a tool of control. Nobles who might otherwise have plotted in the provinces competed instead for the honor of handing the king his shirt at the (levee), the elaborate ceremony of his rising each morning, and for other chances to show (obeisance). Fashion followed the monarch: as his hair thinned he took to wearing wigs, and courtiers adopted the towering periwig. The English word (toupee) comes from the French toupet, a tuft of hair.", "zh": "在统治了72年、直至1715年去世的路易十四治下，法国的国力达到了（顶峰）。这位太阳王绝不是（吝啬鬼）：他愿意在战争和凡尔赛宫上（花费）巨资，并于1682年把宫廷迁到了那里。凡尔赛宫的（奢靡）是一种控制手段。原本可能在外省密谋作乱的贵族们，转而争相获得在（起床礼）上为国王递衬衫的荣耀，那是国王每天早晨起床时的繁复仪式；他们还争取其他表示（恭顺）的机会。时尚追随君主：随着头发日渐稀疏，他开始戴假发，廷臣们也纷纷戴上高耸的假发。英语中的（局部假发）一词来自法语的“toupet”，意为一簇头发。"}, {"en": "Versailles itself was born of royal pique. In 1661 Nicolas Fouquet, appointed to (superintend) the kingdom's finances, threw a lavish party at his new château of Vaux-le-Vicomte. It was a mistake to (upstage) a young king: within weeks Fouquet was arrested, and Louis hired his architect, his painter and his gardener, André Le Nôtre, to build something grander. Le Nôtre's gardens are a triumph of (artifice), with clipped yews, geometric parterres and fountains fed by a vast hydraulic system; water leaps from every bronze (orifice) and tumbles down a stepped (cascade). Courtiers danced at balls and the occasional (masquerade) while the treasury emptied.", "zh": "凡尔赛宫本身源于一位国王的恼怒。1661年，受命（主管）王国财政的尼古拉·富凯在他新建的沃子爵城堡举办了一场奢华的宴会。在年轻的国王面前（抢风头）是个错误：几周之内富凯就被逮捕，路易则雇用了他的建筑师、他的画家和他的园艺师安德烈·勒诺特尔，去建造更宏伟的东西。勒诺特尔设计的园林是（人工雕琢）的杰作，有修剪整齐的紫杉、几何图案的花坛和由庞大水利系统供水的喷泉；水从每一个青铜（喷口）中喷涌而出，顺着阶梯状的（瀑布）倾泻而下。在国库日益空虚之际，廷臣们在舞会和不时举行的（化装舞会）上翩翩起舞。"}, {"en": "Louis's piety had a darker side. In 1598 his grandfather, Henry IV, had ended decades of religious war with the Edict of Nantes, which gave Protestants a measure of (tolerance) and was declared \"perpetual and (irrevocable)\". In 1685 Louis chose to (rescind) it. Some 200,000 Huguenots fled to England, the Netherlands, Prussia and beyond, taking with them their skills as weavers, goldsmiths and bankers. They gave English a new word: (refugee), from the French réfugié.", "zh": "路易的虔诚也有阴暗的一面。1598年，他的祖父亨利四世以《南特敕令》结束了数十年的宗教战争，该敕令给予新教徒一定程度的（宽容），并被宣布为“永久且（不可撤销的）”。1685年，路易选择（废除）了它。约20万胡格诺派教徒逃往英格兰、荷兰、普鲁士等地，带走了他们作为织工、金匠和银行家的技能。他们给英语带来了一个新词：（难民），源自法语的“réfugié”。"}, {"en": "France also gave Europe its intellectual style. René Descartes sought (certitude) by doubting everything except his own thinking, and in the 18th century the Enlightenment flowered in the Parisian salons, where hostesses would (regale) guests with dinner and debate. Wit was the currency: quick (repartee), gentle (badinage) and the polished mockery the French call (persiflage). Provincial (gaucherie) was mercilessly mocked. Voltaire, whose (impertinence) earned him spells in the Bastille and in exile, ended his life as the (sage) of Ferney, receiving pilgrims at his estate near the Swiss border. Diderot's Encyclopédie set out to gather all human learning; it had a (profound) influence on the revolutionaries who followed.", "zh": "法国还赋予了欧洲一种知识风格。勒内·笛卡尔通过怀疑一切、唯独不怀疑自己的思考来寻求（确定性）；18世纪，启蒙运动在巴黎的沙龙里蓬勃发展，女主人们在那里以晚宴和辩论（款待）宾客。机智是通行的货币：敏捷的（应对妙语）、轻松的（打趣），以及法国人称为（揶揄）的那种优雅的嘲讽。外省人的（粗鄙失礼）会遭到无情的嘲笑。伏尔泰的（放肆无礼）曾让他几度身陷巴士底狱、被迫流亡，他晚年成为费尔内的（圣贤），在瑞士边境附近的庄园里接待前来朝圣的人。狄德罗的《百科全书》立志汇集人类的全部学问；它对后来的革命者产生了（深远的）影响。"}, {"en": "By the 1780s the treasury was broke again, partly from financing America's war of independence. Louis XVI, a shy and (gauche) man ill-suited to crisis, had to (convoke) the Estates-General for the first time since 1614. Events soon escaped his control. On July 14th 1789 a (multitude) of Parisians stormed the Bastille; on the night of August 4th the National Assembly voted at a stroke to abolish aristocratic (privilege). Weeks later it adopted the Declaration of the Rights of Man and of the Citizen, which proclaimed \"natural, (inalienable) and sacred\" rights and called property an \"(inviolable) and sacred\" right. The (populace) of Paris would repeatedly push the revolution further than its leaders intended.", "zh": "到18世纪80年代，国库再次空空如也，部分原因是资助了美国独立战争。路易十六生性腼腆、（举止笨拙），不善应对危机，他不得不（召集）三级会议，这是自1614年以来的第一次。事态很快就失控了。1789年7月14日，（大批）巴黎人攻占了巴士底狱；8月4日夜间，国民议会投票决定一举废除贵族享有的（特权）。几周后，它通过了《人权和公民权宣言》，宣告了“自然的、（不可剥夺的）和神圣的”权利，并称财产权是“（不可侵犯的）神圣权利”。巴黎的（民众）一再把革命推向超出其领导人本意的方向。"}, {"en": "The revolution invented much of modern politics, including its vocabulary: in the Assembly of 1789 supporters of the king sat on the right of the chamber and radicals on the left. It also devoured its own. During the Terror of 1793-94 some 17,000 people were sent to the guillotine after official trials and many more were killed without them, and each (purge) bred new enemies. The revolutionaries tried to (expunge) the old order altogether, replacing the Christian calendar with one that began in 1792 and renaming the months after the weather. In 1794 the Convention abolished slavery in the colonies, freeing hundreds of thousands from (bondage); Napoleon restored it in 1802, and it was not abolished for good until 1848.", "zh": "法国大革命发明了现代政治的许多东西，包括它的词汇：在1789年的议会里，国王的支持者坐在会场右侧，激进派坐在左侧。革命也吞噬了自己的孩子。在1793至1794年的恐怖统治期间，约1.7万人经正式审判后被送上断头台，未经审判就被杀害的人更多，而每一次（清洗）都会催生新的敌人。革命者试图彻底（抹除）旧秩序，用一部始于1792年的新历法取代基督教历法，并按照天气给月份重新命名。1794年，国民公会废除了殖民地的奴隶制，使数十万人摆脱了（奴役）；拿破仑于1802年恢复了奴隶制，直到1848年它才被彻底废除。"}, {"en": "Napoleon Bonaparte, who seized power in 1799 and crowned himself emperor in 1804, ruled by (decree) and left institutions that still stand: the prefects, the lycées and the Civil Code of 1804, the foundation of French (jurisprudence) and a model for legal systems from Belgium to Louisiana. He also had the eye of a (magpie) for art. His armies' (pillage) of Italy and the Low Countries filled the Louvre, briefly renamed the Musée Napoléon. His expedition to Egypt gave birth to Egyptology: the Rosetta Stone, found by French soldiers in 1799, later let Jean-François Champollion learn to read and (transcribe) hieroglyphs, though the British had seized the stone itself. His wars ended in a (hemorrhage) of lives, culminating in the retreat from Moscow in 1812, which destroyed most of the Grande Armée.", "zh": "拿破仑·波拿巴于1799年夺取政权，1804年自行加冕为皇帝，他以（法令）治国，留下了至今仍在运作的制度：省长制度、公立高中，以及1804年的《民法典》。《民法典》是法国（法学）的基础，也是从比利时到路易斯安那等地法律体系的范本。他对艺术也有着（喜鹊）般见了珍宝就想收入囊中的眼光。他的军队对意大利和低地国家的（掠夺）填满了卢浮宫，卢浮宫一度更名为拿破仑博物馆。他的埃及远征催生了埃及学：1799年法国士兵发现的罗塞塔石碑，后来让让-弗朗索瓦·商博良学会了解读并（转写）象形文字，尽管石碑本身已被英国人夺走。他的战争最终导致了生命的大量（流失），1812年从莫斯科撤退时达到顶点，大军团的大部分人马就此覆灭。"}, {"en": "The revolutionaries' most universal export was the metric system. In 1791 the Academy of Sciences defined the meter as one ten-millionth of the distance from the North Pole to the equator, a quarter of the earth's meridian (circumference). Two astronomers, Jean-Baptiste Delambre and Pierre Méchain, spent six years measuring the meridian between Dunkirk and Barcelona, fixing each degree of (latitude) with painstaking (exactitude). The new units were meant to (supersede) hundreds of regional measures, and temperature came to be measured on a (centigrade) scale, as the French called the hundred-degree scale devised by a Swede, Anders Celsius. Today the metric system is recognized worldwide, including in America, Liberia and Myanmar; what differs is whether its use is mandatory or voluntary.", "zh": "革命者最具普世性的出口品是公制。1791年，科学院将米定义为从北极到赤道距离的一千万分之一，即地球子午线（周长）的四分之一。两位天文学家让-巴蒂斯特·德朗布尔和皮埃尔·梅尚花了六年时间测量敦刻尔克与巴塞罗那之间的子午线，以极高的（精确度）测定各处的（纬度）。新单位旨在（取代）数以百计的地区性度量单位；温度后来也以（百分度）为单位来衡量，这是法国人对瑞典人安德斯·摄尔修斯发明的百度温标的叫法。如今，包括美国、利比里亚和缅甸在内的所有国家都已认可国际单位制；各国之间的区别在于使用公制是强制性的还是自愿的。"}, {"en": "The Paris that visitors love is largely the work of Baron Haussmann, whom Napoleon III appointed in 1853 to rebuild the capital. Haussmann bulldozed medieval slums to cut broad boulevards, partly to make it harder for insurgents to throw up barricades, and in doing so managed to (displace) tens of thousands of poor Parisians to the edges of the city. In their place rose apartment buildings of cream-colored limestone, each uniform (facade) crowned by a carved (cornice) and lined with wrought-iron balconies. Beneath them engineers dug a network of sewers and (drainage) channels that still works today.", "zh": "游客们喜爱的巴黎，很大程度上出自奥斯曼男爵之手，拿破仑三世于1853年任命他重建首都。奥斯曼推平了中世纪的贫民窟，开辟出宽阔的林荫大道，部分目的是让暴动者更难筑起街垒，在此过程中，他使数以万计的巴黎穷人（流离失所），被迫迁往城市边缘。取而代之的是一栋栋奶油色石灰岩公寓楼，每栋楼齐整划一的（立面）都以雕花（檐口）收顶，并配有锻铁阳台。在它们下方，工程师们挖掘出一套下水道和（排水）渠网络，至今仍在运作。"}, {"en": "The Second Empire ended in humiliation. In 1870 Prussian armies routed the French at Sedan, captured the emperor and began to (descend) on Paris, which endured a four-month (siege) during which hungry Parisians ate rats and the zoo's two elephants. The peace terms forced France to (cede) Alsace and much of Lorraine to the new German empire, and a thirst for (vengeance) shaped French politics until 1914. Paris itself rose in revolt. In May 1871 troops crushed the Commune, and a (fusillade) at a wall in Père Lachaise cemetery killed 147 of its last defenders.", "zh": "第二帝国以屈辱告终。1870年，普鲁士军队在色当击溃法军，俘虏了皇帝，随后开始（大举压向）巴黎，巴黎经受了长达四个月的（围城），饥饿的巴黎人吃老鼠，还吃掉了动物园的两头大象。和约迫使法国把阿尔萨斯和洛林的大部分地区（割让）给新成立的德意志帝国，对（复仇）的渴望主导了法国政治，直到1914年。巴黎本身也发生了起义。1871年5月，军队镇压了巴黎公社，在拉雪兹神父公墓的一堵墙前，一阵（齐射）杀死了公社最后的147名捍卫者。"}, {"en": "The Third Republic, which lasted until 1940, survived a scandal that threatened to (rend) the country in two. In 1894 Alfred Dreyfus, a Jewish army captain, was convicted of (espionage) for Germany on the strength of a (falsehood): the incriminating memo had been written by another officer, Ferdinand Esterhazy. Antisemitic (prejudice) did the rest. Even when evidence of his (innocence) emerged, the army refused to admit its error, and officers who tried to (adduce) it were persecuted. In 1898 Émile Zola published \"J'accuse\", an open letter that made the affair a test of the nation's (conscience). Dreyfus was not fully exonerated until 1906.", "zh": "一直延续到1940年的第三共和国，挺过了一桩险些把国家（撕裂）成两半的丑闻。1894年，犹太裔陆军上尉阿尔弗雷德·德雷福斯因一个（谎言）被判为德国从事（间谍活动）：那份定罪的备忘录其实出自另一名军官费迪南·埃斯特哈齐之手。反犹（偏见）做了其余的事。即使证明他（清白）的证据浮出水面，军方仍拒绝承认错误，试图（提出）这些证据的军官遭到了迫害。1898年，埃米尔·左拉发表公开信《我控诉》，使这一事件成为对国家（良知）的考验。直到1906年，德雷福斯才被完全平反。"}, {"en": "France was a scientific powerhouse. Louis Pasteur, an (indefatigable) chemist, showed that fermentation and many diseases were caused by micro-organisms and gave his name to the heating process that makes milk and wine less (perishable). In 1885 his colleague Dr Jacques-Joseph Grancher used a (syringe) to administer Pasteur's experimental rabies vaccine to nine-year-old Joseph Meister, who had been bitten by a rabid dog; the boy survived. The word (microbe) was coined by a French surgeon in 1878, and Pasteur's work also helped popularize antiseptic precautions, including the use of a (germicide) in surgery. Paul Broca located a center of speech in the brain's frontal (lobe) in 1861. Marie Curie, a Polish-born physicist, won science's highest (accolade) twice, sharing the Nobel prize for physics in 1903 and winning the chemistry prize alone in 1911; her (persistence) in extracting radium from tons of ore became legendary.", "zh": "法国曾是一个科学强国。（不知疲倦的）化学家路易·巴斯德证明了发酵和许多疾病是由微生物引起的，以他名字命名的加热工艺也让牛奶和葡萄酒不那么（易腐坏）。1885年，他的同事雅克-约瑟夫·格朗谢医生用（注射器）为九岁的约瑟夫·梅斯特接种巴斯德研制的实验性狂犬病疫苗；男孩此前曾被疯狗咬伤，最终幸存。（微生物）一词是一位法国外科医生在1878年创造的，巴斯德的研究也推动了外科手术中防腐措施的普及，包括使用（杀菌剂）。1861年，保罗·布罗卡在大脑额（叶）中找到了一个语言中枢。出生于波兰的物理学家玛丽·居里两度获得科学界最高（荣誉）：1903年与他人分享诺贝尔物理学奖，1911年又独自获得诺贝尔化学奖；她从数吨矿石中提炼镭的（坚持不懈）成了传奇。"}, {"en": "The decades before 1914, later dubbed the Belle Époque, were a time of (exuberance). Gustave Eiffel's tower, an iron (lattice) put up for the world's fair of 1889 and mocked by many artists of the day, became the city's emblem. Electric light gave the boulevards a new (incandescence), cabarets such as the Moulin Rouge, which opened the same year, filled with (jocund) crowds, and art nouveau brought a (florescence) of decorative art, from Hector Guimard's metro stations to the glassware of René Lalique, prized for its milky (opalescence). Moralists saw only (decadence).", "zh": "1914年之前的几十年后来被称为“美好年代”，那是一个（生机勃发）的时代。古斯塔夫·埃菲尔设计的铁塔是为1889年世界博览会建造的铁制（格构）结构，当时遭到许多艺术家的嘲笑，后来却成了这座城市的象征。电灯给林荫大道带来了新的（光辉），同年开业的红磨坊等歌舞厅里挤满了（欢快的）人群，新艺术运动则带来了装饰艺术的（繁盛），从赫克托·吉马尔设计的地铁站，到以乳白色（乳光）而备受珍视的勒内·拉利克玻璃器皿。卫道士们看到的只有（颓废）。"}, {"en": "Paris was also the capital of modern art. In 1874 a group of painters spurned by the official Salon put on their own exhibition; a critic mocked Claude Monet's \"Impression, Sunrise\", and the name Impressionism stuck. Monet and his friends tried to capture the (transience) of light: the (iridescence) of water, the shifting colors of (foliage) at Giverny, where he spent his last decades painting water lilies. The term (avant-garde), originally the vanguard of an army, came to mean artists who sought to (transcend) convention. In 1912 Pablo Picasso and Georges Braque, working in Paris, began gluing newspaper, wallpaper and oilcloth onto their canvases; the technique was called (collage), from the French coller, to glue.", "zh": "巴黎也是现代艺术之都。1874年，一群受到官方沙龙冷落的画家自办了一场展览；一位评论家嘲讽克劳德·莫奈的《印象·日出》，“印象派”这个名称由此流传下来。莫奈和他的朋友们试图捕捉光线的（转瞬即逝）：水面的（虹彩），吉维尼园中（枝叶）变幻的色彩，他在那里度过了人生最后的几十年，一直在画睡莲。（先锋派）一词原指军队的前卫部队，后来用来指那些力图（超越）传统的艺术家。1912年，在巴黎工作的巴勃罗·毕加索和乔治·布拉克开始把报纸、墙纸和油布粘贴到画布上；这种技法被称为（拼贴），源自法语的“coller”，意为粘贴。"}, {"en": "The French claim cinema, too. On December 28th 1895 the Lumière brothers held the first public screening of projected films for a paying audience, in a Paris café. Thomas Edison's earlier Kinetoscope let only one viewer at a time peer into a box. Its (antecedence) is clear; what the French celebrate is the Lumières' breakthrough in projecting moving pictures to a gathered audience. Georges Méliès pioneered special effects by learning to stop the camera and (splice) film. The Cannes festival, first held in 1946, became the industry's grandest showcase; Brigitte Bardot's (pulchritude) made it a magnet for photographers in the 1950s, and New Wave directors such as Jean-Luc Godard broke the rules of continuity with jump cuts and jarring (montage). France still has an (estimable) film industry, protected by quotas and subsidies. It also pioneered photojournalism: Henri Cartier-Bresson, a co-founder of the Magnum agency, defined the art of (reportage).", "zh": "法国人也宣称电影是他们的发明。1895年12月28日，卢米埃尔兄弟在巴黎的一家咖啡馆里，首次面向付费观众公开放映了投影电影。托马斯·爱迪生更早的活动电影视镜一次只能让一名观众凑近箱子观看。它在时间上的（先行性）毋庸置疑；法国人所强调的，是卢米埃尔兄弟让聚集在一起的观众共同观看电影投影的突破。乔治·梅里爱学会了停机拍摄和（剪接）胶片，开创了特效。1946年首次举办的戛纳电影节成为电影业最盛大的展示舞台；碧姬·芭铎的（美貌）在20世纪50年代让它成为摄影师趋之若鹜的地方，而让-吕克·戈达尔等新浪潮导演则用跳切和突兀的（蒙太奇）打破了连贯性的规则。法国至今仍拥有一个（令人尊敬的）电影业，受到配额和补贴的保护。它还开创了新闻摄影：玛格南图片社的联合创始人亨利·卡蒂埃-布列松定义了（新闻纪实）的艺术。"}, {"en": "Its literature is a national treasure. Molière mocked (avarice) in \"The Miser\" in 1668. Victor Hugo's (preface) to his play \"Cromwell\", in 1827, served as a manifesto for Romanticism, and \"Les Misérables\" made the (indigence) of the Parisian poor, and the (insolence) of a street urchin called Gavroche, part of the world's imagination. Arthur Rimbaud wrote his most dazzling verse as a teenage (vagabond) before abandoning poetry at 20. Marcel Proust, who wrote much of \"In Search of Lost Time\" in the (solitude) of a cork-lined bedroom, showed how the taste of a madeleine dipped in tea can (evoke) an entire childhood.", "zh": "法国文学是一笔国家财富。1668年，莫里哀在《吝啬鬼》中嘲讽了（贪婪）。1827年，维克多·雨果为他的剧作《克伦威尔》所写的（序言）成了浪漫主义的宣言；《悲惨世界》则让巴黎穷人的（贫困）和街头顽童伽弗洛什的（无礼）深入世人的想象。阿蒂尔·兰波在十几岁当（流浪者）时写下了他最耀眼的诗篇，20岁时便放弃了诗歌。马塞尔·普鲁斯特在一间四壁贴着软木的卧室的（孤寂）中写下了《追忆似水年华》的大部分内容，他描写了一块浸在茶里的玛德琳蛋糕的滋味如何（唤起）整个童年。"}, {"en": "The French defend their language jealously. The Académie française, whose 40 members are known as \"immortals\", has spent nearly four centuries compiling a dictionary; the ninth edition, begun in 1935, was completed only in 2024. Its members (reprehend) the spread of English terms and propose French substitutes, such as courriel for email, that few people use, and a law of 1994 requires French in advertising and at work. Yet the academy may (emend) the wording of its dictionary without changing everyday (parlance), which young people pepper with English. The (cadence) of French, its (nuance) and its fondness for the elided (apostrophe), as in l'État, remain part of the national identity, and no grammar book can (abridge) its subtleties into a few rules.", "zh": "法国人极力捍卫自己的语言。法兰西学术院的40名院士被称为“不朽者”，他们花了近四个世纪编纂一部词典；第九版始于1935年，直到2024年才完成。院士们（谴责）英语词汇的蔓延，并提出法语替代词，比如用“courriel”代替“email”，但很少有人使用；1994年的一项法律规定，广告和工作场所必须使用法语。然而，学术院可以（校订）自己的词典措辞，却无法改变人们的日常（用语）；年轻人仍常常在法语中夹杂英语词汇。法语的（抑扬顿挫）、它的（细微差别）以及它对省略（撇号）的偏爱，比如“l'État”，依然是民族身份的一部分，没有哪本语法书能把它的微妙之处（删节）成几条规则。"}, {"en": "Nothing is more French than food. In 2010 UNESCO chose to (inscribe) the \"gastronomic meal of the French\" on its list of intangible heritage, and in 2022 it added the baguette, the (quintessence) of everyday French (sustenance). The French spend more than two hours a day eating and drinking, more than people in almost any other rich country, and (convenience) food has made slower inroads than elsewhere. A formal meal proceeds from apéritif to (entrée), which in France means the starter rather than the main course, and on through cheese and dessert. The country of Rabelais, whose (rotund) giants Gargantua and Pantagruel ate prodigiously, still celebrates the (gourmand). Since 2016 big supermarkets have been barred from destroying unsold food; they must donate what they would otherwise (discard).", "zh": "没有什么比食物更具法国特色了。2010年，联合国教科文组织决定把“法国美食大餐”（列入）其非物质文化遗产名录，2022年又将法棍列入名录；它堪称法国人日常（食粮）的（精髓）。法国人每天花两个多小时吃喝，几乎超过任何其他富裕国家的人，（方便）食品在这里的推进也比别处缓慢。一顿正式的餐食从开胃酒开始，接着是（头盘），在法国这个词指的是开胃菜而不是主菜，然后依次是奶酪和甜点。在拉伯雷的国度里，他笔下那两个（圆胖的）巨人卡冈都亚和庞大固埃食量惊人，这里至今仍推崇（美食家）。自2016年起，大型超市被禁止销毁未售出的食品；它们必须把原本要（丢弃）的东西捐出去。"}, {"en": "Cheese is a national obsession. \"How can anyone run a country that has 246 varieties of cheese?\" is a quip most people (ascribe) to Charles de Gaulle. Today France makes well over 1,000, from soft cheeses whose (curd) is still ladled by hand into molds to great wheels made in mountain dairies, a (plenitude) that delights any cheese (fiend). Other pleasures are more controversial: foie gras is made by force-feeding ducks and geese to (distend) their livers, and the beans in cassoulet are notorious for causing (flatulence).", "zh": "奶酪是一种全民痴迷。“一个有246种奶酪的国家，谁能治理得了？”大多数人把这句俏皮话（归于）夏尔·戴高乐。如今法国生产的奶酪远超1000种，从（凝乳）仍用勺子手工舀入模具的软奶酪，到山区乳品厂制作的巨大圆轮奶酪，如此（丰富），足以让任何奶酪（狂热爱好者）心花怒放。其他美食则更具争议：鹅肝是通过强行喂食鸭和鹅、使其肝脏（膨胀）而制成的，而卡酥来砂锅里的豆子则以引起（胀气）而臭名昭著。"}, {"en": "The French sweet tooth is (insatiable). Children grow up breakfasting on bread with butter and jam, or on a croissant, rather than (porridge), and every region has its specialty: the calissons of Aix-en-Provence, made from ground (almond) paste and candied melon, the macarons of Paris, the buttery kouign-amann of Brittany. Pastry chefs are treated as artists, and the French (indulge) daily, apparently without the obesity rates of America or Britain.", "zh": "法国人对甜食的喜爱（永不满足）。孩子们从小早餐吃的是涂黄油和果酱的面包或者羊角面包，而不是（燕麦粥），每个地区都有自己的特产：普罗旺斯地区艾克斯的卡里松杏仁糖，由（杏仁）磨成的膏和蜜饯甜瓜制成；巴黎的马卡龙；布列塔尼黄油味浓郁的焦糖奶油酥。糕点师被当作艺术家看待，法国人每天都（纵情享受）甜食，却似乎没有美国或英国那样的肥胖率。"}, {"en": "Wine is in crisis. The French (imbibe) far less than they used to: consumption per head has fallen by about two-thirds since the 1960s, and in 2025 they drank a greater volume of beer than wine. A (carafe) of red at lunch is no longer routine. Unsold stocks have piled up, especially of red Bordeaux, and growers who (tend) vineyards that have become (nonviable) are being paid €4,000 a hectare to rip out their vines; nearly 28,000 hectares are being uprooted this year. The (rubicund) winemaker is becoming an endangered species. Yet France still makes a (plentitude) of wines, more varied than any other country's, and its growers have long been innovators: one of the first effective sprays against disease, a copper-and-lime (fungicide) known as Bordeaux mixture, was discovered in 1885.", "zh": "葡萄酒正陷入危机。法国人（饮用）的葡萄酒比过去少得多：自20世纪60年代以来，人均消费量下降了约三分之二，按饮料的体积计算，2025年他们喝的啤酒已超过葡萄酒。午餐时来一（分酒壶）红酒已不再是惯例。未售出的库存不断堆积，尤其是波尔多红酒；那些（照料）已变得（难以为继）的葡萄园的种植者，每拔除一公顷葡萄藤可获得4000欧元补偿；今年将有近2.8万公顷葡萄园被铲除。（面色红润的）酿酒人正成为濒危物种。然而，法国仍酿造（大量）葡萄酒，种类之丰富胜过任何其他国家，而且它的种植者长期以来一直是创新者：最早有效防治病害的喷剂之一，即被称为“波尔多液”的铜石灰（杀真菌剂），就是在1885年发现的。"}, {"en": "Champagne is faring better. Its vines grow on (friable) chalk that holds water and warmth. Legend credits Dom Pérignon, a 17th-century monk, with making wine (effervesce), though he in fact tried to stop the bubbles. The region shipped some 270m bottles in 2024, down from a peak of 339m in 2007, and even its sales (plunge) when consumers feel poor. Younger French drinkers prefer to (slake) their thirst with beer, cocktails or alcohol-free drinks; wine, once an everyday (beverage), is becoming one for special occasions.", "zh": "香槟的境况要好一些。那里的葡萄藤生长在（易碎的）白垩土上，这种土壤能保持水分和热量。传说17世纪的修士唐·培里侬让葡萄酒（冒出气泡），但实际上他曾试图阻止气泡产生。2024年，香槟产区的出货量约为2.7亿瓶，低于2007年3.39亿瓶的峰值；而当消费者感到手头拮据时，就连香槟的销量也会（暴跌）。年轻一代的法国人更喜欢用啤酒、鸡尾酒或无酒精饮料来（解渴）；葡萄酒曾是日常（饮品），如今正变成特殊场合才喝的东西。"}, {"en": "Paris has dictated the world's (wardrobe) for centuries. Lyon's silk weavers made the (brocade) that dressed Europe's courts, and in 1804 Joseph-Marie Jacquard patented a loom that used punched cards to lift each warp thread by its own (cord), a forerunner of computer programming. Couturiers set the (caprice) of each season. Paul Poiret freed women from corsets designed to (constringe) the waist; Coco Chanel dressed them in jersey and in 1921 launched No. 5, the most famous (fragrance) ever made; and Christian Dior's New Look of 1947 brought the cinched waist back. Luxury is no (niche): LVMH and Hermès are among Europe's most valuable companies, and their (impeccable) handbags, scents and champagnes rank among France's biggest exports.", "zh": "几个世纪以来，巴黎一直主宰着世界的（衣橱）。里昂的丝织工织出的（锦缎）装扮了欧洲各国的宫廷；1804年，约瑟夫-玛丽·雅卡尔为一种织布机申请了专利，它用穿孔卡片控制每一根经线各自的提（绳），堪称计算机编程的先驱。高级时装设计师决定着每一季的（善变潮流）。保罗·普瓦雷让女性摆脱了旨在（束紧）腰身的紧身胸衣；可可·香奈儿让她们穿上针织面料，并在1921年推出了有史以来最著名的（香水）香奈儿5号；克里斯汀·迪奥1947年的“新风貌”又让束腰回归。奢侈品绝非（小众市场）：路威酩轩和爱马仕跻身欧洲市值最高的公司之列，它们（无可挑剔的）手袋、香水和香槟是法国最大宗的出口商品之一。"}, {"en": "No (edifice) better symbolizes France's ability to recover from disaster than Notre-Dame. On April 15th 2019 fire broke out in the cathedral's roof, a forest of medieval oak beams that proved highly (flammable); as smoke began to (wreathe) its towers, millions watched the spire collapse. Many felt the blaze as a (sacrilege). The stone vaults, being (nonflammable), largely held, and firefighters managed to (salvage) the relics and much of the art. The (munificence) of donors, who promised some €846m between them, paid for a rebuilding completed in just five years. The cathedral reopened in December 2024, and its new spire, a replica of the 19th-century one, once again rises to (pierce) the Paris sky. That the old building could (withstand) the inferno at all is a tribute to its medieval masons.", "zh": "没有哪座（大型建筑）比巴黎圣母院更能象征法国从灾难中恢复的能力。2019年4月15日，大教堂的屋顶起火，那片由中世纪橡木梁构成的“森林”结果极其（易燃）；当浓烟开始（缭绕）钟楼时，数百万人眼睁睁看着尖塔倒塌。许多人觉得这场大火是一种（亵渎）。石砌拱顶（不可燃），基本挺住了，消防员们设法（抢救）出了圣物和大部分艺术品。捐赠者们（慷慨解囊），共承诺捐款约8.46亿欧元，资助了仅用五年就完成的重建。大教堂于2024年12月重新开放，仿照19世纪尖塔建造的新尖塔再次拔地而起，（刺破）巴黎的天空。这座古老的建筑竟能（经受住）这场烈火，这是对其中世纪石匠的最好褒奖。"}, {"en": "Its music has a distinctive voice. François Couperin wrote the textbook on playing the (harpsichord), and Jean-Philippe Rameau's treatise of 1722 laid out a theory of harmony grounded in (consonance) that musicians still study. Claude Debussy's orchestral (prelude) of 1894, inspired by a poem by Stéphane Mallarmé, opened the door to musical modernism with its (ineffable) shimmer. The Paris Opera Ballet, the world's oldest national ballet company, trains (lithe) dancers from childhood. And every generation of chanson has its (bard), from Édith Piaf to Georges Brassens and Charles Aznavour.", "zh": "法国音乐有着独特的声音。弗朗索瓦·库普兰写下了演奏（羽管键琴）的教科书，让-菲利普·拉莫1722年的论著阐述了一套以（协和音）为基础的和声理论，音乐家们至今仍在研习。克劳德·德彪西1894年受斯特凡·马拉美的一首诗启发创作的管弦乐（前奏曲），以其（难以言喻的）微光为音乐现代主义开启了大门。世界上历史最悠久的国家芭蕾舞团巴黎歌剧院芭蕾舞团，从童年起就培养（身姿轻盈的）舞者。法国香颂也代代有自己的（吟游歌手），从伊迪丝·琵雅芙到乔治·布拉森斯与夏尔·阿兹纳武尔。"}, {"en": "The first world war left (ineffaceable) scars. Some 1.4m French soldiers died. At Verdun in 1916 the poilus, the (haggard) infantrymen of the trenches, endured months of German artillery (barrage), and their (fortitude) became a national legend. A year later a failed offensive along the Chemin des Dames (ridge) provoked mutinies. The (armistice), signed in a railway carriage at Compiègne, took effect on November 11th 1918, and at the peace (conference) in Paris the next year France pressed for harsh terms on Germany. In parts of the north and east, farmers still turn up unexploded (ordnance) as they plow; bomb-disposal teams collect hundreds of tons of it each year, and some battlefields are so contaminated that not a single (sod) has been turned since.", "zh": "第一次世界大战留下了（无法磨灭的）伤痕。约140万法国士兵阵亡。1916年在凡尔登，被称为“poilus”的那些战壕里（形容憔悴的）步兵，忍受了德军长达数月的炮火（轰击），他们的（坚韧）成了民族传奇。一年后，沿贵妇小径（山脊）发动的一次失败攻势引发了兵变。（停战协定）在贡比涅的一节火车车厢里签署，于1918年11月11日生效；次年在巴黎举行的和平（会议）上，法国坚持对德国施加严苛的条件。在北部和东部的一些地方，农民耕地时仍会翻出未爆的（弹药）；排弹小组每年要收集数百吨，有些战场污染严重，至今连一块（草皮）都没有翻动过。"}, {"en": "The second world war brought a deeper shame. In 1940 a (purblind) high command, prepared for a rerun of 1914, was routed in six weeks. Marshal Philippe Pétain, the hero of Verdun, then 84 and in his (dotage), sued for peace and set up a collaborationist regime at Vichy, to which most of the political class swore (allegiance). Its (complaisance) toward the occupiers often went beyond what they demanded. In July 1942 French police rounded up more than 13,000 Jews in Paris, thousands of them children, and held many of them in a cycling stadium before they were deported; some 76,000 Jews were deported from France in all, and few returned. Many a (dastard) was happy to (denounce) neighbors. For decades the state tried to (efface) its responsibility. Only in 1995 did Jacques Chirac acknowledge France's part in what he called an irreparable act, a crime many regard as (inexpiable); his words came as a relief to those who had long felt (repugnance) at the official silence.", "zh": "第二次世界大战带来了更深的耻辱。1940年，（目光短浅的）最高统帅部还在准备重演1914年的那一仗，结果六周之内就被击溃。凡尔登英雄菲利普·贝当元帅当时已84岁，正值（老迈昏聩）之年，他向德国求和，并在维希建立了一个通敌政权，大多数政界人士都宣誓向它（效忠）。它对占领者的（谄媚顺从）往往超出了对方的要求。1942年7月，法国警察在巴黎围捕了1.3万多名犹太人，其中数千人是儿童，许多人在被驱逐出境前被关押在一座自行车赛场里；法国总共有约7.6万名犹太人被驱逐出境，生还者寥寥无几。许多（卑鄙懦夫）乐于（告发）邻居。几十年来，国家一直试图（抹去）自己的责任。直到1995年，雅克·希拉克才承认法国参与了他所说的“不可挽回的行为”，许多人认为那是一桩（无法赎清的）罪行；对于那些长期对官方沉默感到（厌恶）的人来说，他的话令人如释重负。"}, {"en": "Others saved the nation's honor. Charles de Gaulle, a little-known general, broadcast from London on June 18th 1940, urging the French to fight on, and the Resistance showed real (hardihood), though fewer joined it than later legend implied. When Paris was liberated in August 1944 crowds poured into the streets to (rejoice), and their (gratitude) to the Allied soldiers was genuine. One lasting reform came out of the war: an (ordinance) issued by de Gaulle's provisional authorities in Algiers in April 1944 gave French women (suffrage). They voted for the first time in 1945, nearly a century after men.", "zh": "另一些人挽救了民族的荣誉。名不见经传的将军夏尔·戴高乐于1940年6月18日在伦敦发表广播讲话，敦促法国人继续战斗；抵抗运动表现出了真正的（勇气），尽管加入其中的人比后来的传说所暗示的要少。1944年8月巴黎解放时，人群涌上街头（欢庆），他们对盟军士兵的（感激）发自内心。战争带来了一项持久的改革：1944年4月，戴高乐设在阿尔及尔的临时当局颁布了一项（政令），赋予法国女性（选举权）。她们在1945年首次投票，比男性晚了将近一个世纪。"}, {"en": "De Gaulle remains the towering (personage) of modern French history. His (prescience) was evident early: in the 1930s he urged France to build a professional army of tanks, advice his superiors ignored, to their cost, in 1940. His (rectitude) and (unimpeachable) patriotism commanded (deference) even from opponents, and his (orotund) speeches, full of \"a certain idea of France\", combined grandeur with real (eloquence). He founded the Fifth Republic in 1958, amid the crisis over Algeria, and ran it until he resigned in 1969, a year after the student revolt of May 1968.", "zh": "戴高乐至今仍是法国现代史上最伟岸的（人物）。他的（先见之明）很早就显露出来：20世纪30年代，他敦促法国建立一支职业化的坦克部队，他的上级没有理会这一建议，结果在1940年付出了代价。他的（正直）和（无可指摘的）爱国精神，甚至赢得了对手的（敬重）；他那些（雄浑庄重的）演讲充满了“对法国的某种理念”，把恢宏气度与真正的（雄辩）融为一体。他于1958年在阿尔及利亚危机中创建了第五共和国，并一直执掌到1969年辞职，那是1968年五月学生运动后的第二年。"}, {"en": "The constitution of 1958 gives the president sweeping powers. He appoints the prime minister, can dissolve the National Assembly and runs foreign and defense policy, and article 49.3 lets the cabinet force a budget through without a vote unless parliament topples it. Its authors sought to (circumscribe) a parliament they blamed for the chaos of the Fourth Republic, under which cabinets fell every few months, and for decades the prime minister was little more than an (appendage) of the Élysée, backed by a (pliable) majority. The text has proved (malleable): parliament has voted to (amend) it more than 20 times, most recently in 2024, when France became the first country to enshrine the freedom to have an abortion in its constitution.", "zh": "1958年宪法赋予总统广泛的权力。他任命总理，可以解散国民议会，主导外交和国防政策；宪法第49条第3款允许内阁不经表决强行通过预算，除非议会将其推翻。宪法起草者们试图（限制）议会的权力，他们把第四共和国的混乱归咎于议会，当时内阁每隔几个月就要倒台一次；几十年来，总理不过是爱丽舍宫的（附属品），背后有一个（顺从听话的）多数派撑腰。这部宪法已被证明（富于弹性）：议会已投票（修改）宪法20多次，最近一次是在2024年，法国由此成为第一个将堕胎自由写入宪法的国家。"}, {"en": "France's colonial past still shapes its relations with Africa. Algeria, conquered from 1830 and annexed as part of France itself, won independence in 1962 after a war in which the two sides' aims proved (irreconcilable) and hundreds of thousands died. Across west and central Africa, France kept close ties with former colonies long after their release from colonial (tutelage). That influence is fading. In 2013 French troops drove jihadists out of Timbuktu, with its (adobe) mosques, but juntas in Mali, Burkina Faso and Niger later expelled them, accusing France of trying to keep the region under its (yoke), and by 2025 French bases in Chad and Senegal had also closed. Relations with Algeria soured after Mr Macron backed Morocco's position on Western Sahara in 2024, which Algeria took as a cause for (umbrage), and the jailing there of Boualem Sansal, a French-Algerian novelist, did more to (estrange) the two; he was freed in November 2025 after Germany's president chose to (intercede) on his behalf. Much of the rancor is (traceable) to the unhealed wounds of the war of independence.", "zh": "法国的殖民历史至今仍影响着它与非洲的关系。阿尔及利亚自1830年起被征服，并被并入法国本土，1962年经过一场战争赢得独立；在那场战争中，双方的目标被证明（不可调和），数十万人丧生。在西非和中非，法国在前殖民地摆脱殖民（监护）后很久，仍与它们保持着密切联系。这种影响力正在消退。2013年，法国军队把圣战分子赶出了拥有（土坯）清真寺的廷巴克图，但马里、布基纳法索和尼日尔的军政府后来驱逐了法军，指责法国企图把该地区置于其（枷锁）之下；到2025年，法国在乍得和塞内加尔的基地也已关闭。2024年马克龙先生支持摩洛哥在西撒哈拉问题上的立场，阿尔及利亚对此深感（不满），两国关系随之恶化；法裔阿尔及利亚小说家布阿莱姆·桑萨尔在阿尔及利亚入狱一事，更让两国（疏远）；2025年11月，在德国总统出面（说情）后，他获释。许多积怨都可以（追溯）到独立战争留下的未愈合的伤口。"}, {"en": "France is also a global presence thanks to its overseas territories, home to some 2.8m people, which stretch from the Caribbean to the Indian Ocean and the Pacific and give it one of the world's largest maritime zones. Réunion grows vanilla, the long black (pod) of a climbing orchid; French Guiana hosts Europe's spaceport. Not all who (reside) there want to remain French. New Caledonia, a nickel-rich Pacific archipelago, voted three times against independence between 2018 and 2021, but in 2024 riots by pro-independence Kanaks left 14 people dead, and the debate over whether to (secede) is far from settled.", "zh": "法国凭借其海外领土也成为一种全球性的存在。这些领土居住着约280万人，从加勒比海一直延伸到印度洋和太平洋，使法国拥有世界上面积最大的海洋区域之一。留尼汪岛出产香草，那是一种攀缘兰花长长的黑色（豆荚）；法属圭亚那则是欧洲航天发射场的所在地。并非所有（居住）在那里的人都想继续做法国人。新喀里多尼亚是一个富产镍矿的太平洋群岛，曾在2018年至2021年间三次投票否决独立，但2024年支持独立的卡纳克人发动骚乱，造成14人死亡，关于是否（脱离）法国的争论远未平息。"}, {"en": "France remains an engineering power. Its high-speed TGV trains, introduced in 1981, (glide) across the countryside at up to 320km an hour, and in 2007 a modified train set a world speed record on rails of 574.8km an hour; a steel (flange) on each wheel keeps them on the track. From Kourou, in French Guiana, Ariane rockets hurl satellites into elongated transfer orbits whose (perigee) lies a few hundred kilometers above the earth. The national space agency, CNES, helps (oversee) a European launch industry that the new Ariane 6, first flown in 2024, is meant to keep competitive against SpaceX.", "zh": "法国依然是一个工程强国。1981年投入运营的TGV高速列车以最高每小时320公里的速度平稳地（滑行）穿过乡间；2007年，一列经过改装的列车创下了每小时574.8公里的轮轨列车世界速度纪录；每个车轮上的钢制（轮缘）使列车保持在轨道上。阿丽亚娜火箭从法属圭亚那的库鲁发射，把卫星送入狭长的转移轨道，其（近地点）位于地面以上几百公里处。法国国家航天机构国家空间研究中心协助（监管）欧洲的发射产业，而2024年首飞的新型阿丽亚娜6号火箭，正是为了让这一产业在与SpaceX的较量中保持竞争力。"}, {"en": "Nuclear power, a legacy of the 1970s, when the oil shocks prompted a crash program of reactor building, still generates about two-thirds of France's electricity and helps (undergird) its claim to cheap, low-carbon energy. The industry's safety record is good, with no (untoward) accident remotely on the scale of Chernobyl or Fukushima, and reactors are designed with (fail-safe) systems that shut them down automatically. But building new ones has proved painful: the reactor at Flamanville, in Normandy, connected to the grid in December 2024, a dozen years late and at roughly four times its original budget. And in hot summers some plants must cut output because the river water they (discharge) after cooling would grow too warm for fish.", "zh": "核电是20世纪70年代留下的遗产，当时石油危机促使法国启动了一项突击建设反应堆的计划。如今核电仍提供法国约三分之二的电力，有助于（支撑）法国拥有廉价低碳能源的说法。这个行业的安全记录良好，从未发生过规模哪怕稍稍接近切尔诺贝利或福岛的（意外）事故，反应堆还配备了能够自动停堆的（故障安全）系统。但新建反应堆的过程却十分痛苦：位于诺曼底的弗拉芒维尔反应堆于2024年12月并网发电，比计划晚了十二年，成本约为最初预算的四倍。而在炎热的夏季，一些核电站不得不减少发电量，因为它们冷却后（排放）的河水会变得太热，危及鱼类。"}, {"en": "Older industries have fared worse. Lorraine once mined a rich (lode) of iron ore, and its steel towns roared; the last iron mine closed in 1997, and the last blast (furnace) at Florange went cold in the early 2010s, leaving a (moribund) rust belt. Manufacturing has shrunk to about a tenth of GDP. France had its industrial pioneers. In the 1780s Honoré Blanc, a gunsmith, showed visitors, including Thomas Jefferson, muskets made with (interchangeable) parts, a technique later perfected in America; and Michelin, founded in 1889, still makes tires in Clermont-Ferrand, using machines that (extrude) rubber into treads. Workshops still turn steel on the (lathe) in industrial valleys from the Jura to the Alps. Yet France banned fracking in 2011, the first country to do so, ruling out any (shale) gas boom.", "zh": "传统工业的境况则更糟。洛林地区曾开采一条富饶的铁（矿脉），那里的钢铁城镇一度喧腾兴旺；最后一座铁矿于1997年关闭，弗洛朗日的最后一座高（炉）在2010年代初熄火，留下一片（奄奄一息的）锈带。制造业已萎缩至国内生产总值的十分之一左右。法国也曾有过自己的工业先驱。18世纪80年代，枪匠奥诺雷·布朗向包括托马斯·杰斐逊在内的来访者展示了用（可互换的）零件制造的火枪，这项技术后来在美国得到完善；1889年创立的米其林至今仍在克莱蒙费朗生产轮胎，用机器把橡胶（挤压成型）为胎面。从汝拉山到阿尔卑斯山的工业山谷里，作坊至今仍在用（车床）加工钢材。然而，法国在2011年禁止了水力压裂法，成为第一个这样做的国家，从而排除了任何（页岩）气热潮的可能。"}, {"en": "France is the EU's biggest farming nation, and the (fecund) plains of the Beauce and Picardy grow wheat, sugar beet and rapeseed on an industrial scale. Its farmers depend heavily on chemicals of every kind, from glyphosate, the world's most widely used (herbicide), to neonicotinoids. In 2025 parliament passed a bill, backed by the big farm unions, that would have reauthorized acetamiprid, an (insecticide) banned since 2018, for growers of sugar beet and hazelnuts. A petition against it gathered more than 2m signatures, a record, and in August the Constitutional Council struck the provision down, citing the right to a healthy environment enshrined in the constitution, a sharp (rebuke) to lawmakers. Farmers retort that every new curb on (pesticide) use raises the cost of everything they (produce).", "zh": "法国是欧盟最大的农业国，博斯和皮卡第（肥沃的）平原以工业化规模种植小麦、甜菜和油菜籽。法国农民严重依赖各种化学品，从世界上使用最广泛的（除草剂）草甘膦，到新烟碱类农药。2025年，议会通过了一项得到大型农会支持的法案，该法案本将为甜菜和榛子种植者重新批准使用自2018年起被禁的（杀虫剂）啶虫脒。一份反对该法案的请愿书征集到200多万个签名，创下纪录；8月，宪法委员会援引宪法所载的享有健康环境的权利，否决了这一条款，这是对立法者的严厉（斥责）。农民们反驳说，每一项限制（农药）使用的新规定，都会抬高他们所（生产）的一切产品的成本。"}, {"en": "Farm anger runs deep. Many small farmers earn a (pittance) for long hours, and they will not (countenance) competition from South American beef and poultry raised under laxer rules. In January 2026, as EU member states approved a trade deal with the Mercosur bloc over French objections, hundreds of tractors rolled into Paris and farmers mounted a (blockade) of roads and ports from Le Havre to Bayonne. Every cattle farmer fears for the future of his (herd). The agriculture minister promised €300m in aid, but such gestures rarely (assuage) farmers for long, and successive ministers have chosen to (accede) to their demands rather than face down the tractors.", "zh": "农民的愤怒由来已久。许多小农长时间劳作，却只能挣到（微薄的收入），他们绝不（容忍）来自南美、在更宽松规则下饲养的牛肉和禽肉与之竞争。2026年1月，欧盟成员国不顾法国反对，批准了与南方共同市场集团的贸易协定，数百辆拖拉机开进巴黎，农民们对从勒阿弗尔到巴约讷的道路和港口实施了（封锁）。每个养牛户都在为自己（牛群）的未来忧心忡忡。农业部长承诺提供3亿欧元援助，但这类姿态很少能长久地（安抚）农民，历任部长都选择（答应）他们的要求，而不是与拖拉机正面对抗。"}, {"en": "Agriculture weighs more in the national imagination than in the economy. In 1900 roughly two in five French workers toiled on the land, many in near-(subsistence) conditions, swinging a (scythe) at harvest time; today fewer than one in 30 do. Yet every February the Paris agricultural show draws some 600,000 visitors, and presidents are expected to spend hours touring it. Jacques Chirac, whose (bonhomie) among the cows was legendary, mastered the ritual; Mr Macron was jeered there in 2024. Keeping small farms (viable) is a matter of national identity as much as economics.", "zh": "农业在民族想象中的分量比在经济中更重。1900年，大约五分之二的法国劳动者在土地上辛苦劳作，许多人处于近乎（勉强糊口）的境地，收获时节挥舞着（长柄镰刀）；如今这一比例已不到三十分之一。然而每年2月，巴黎农业博览会都会吸引约60万名参观者，总统们也被期望花上数小时参观。雅克·希拉克在牛群中间的（亲切随和）堪称传奇，他把这一仪式驾驭得炉火纯青；马克龙先生2024年在那里却遭到嘘声。让小农场保持（可以存续）既是经济问题，也关乎民族认同。"}, {"en": "Few countries pack so much landscape inside one border. In the Alps, Mont Blanc's glaciers are retreating fast. Climbers must watch for every hidden (crevice), and the authorities have had to take (cognizance) of the growing risk of rockfalls and of an (avalanche) on slopes that were once frozen solid. In Provence the mistral, a cold north wind, can blow at (gale) force for days. The forest of Fontainebleau, where 19th-century painters set up their easels in every (glade), still draws Parisians at weekends, while in 2022 wildfires helped (denude) some 30,000 hectares of pine forest in the Gironde. The Canal du Midi, completed in 1681 to link the Atlantic with the Mediterranean, still lifts boats through its locks, each (sluice) gate a monument to 17th-century engineering.", "zh": "很少有国家能在一国疆界之内容纳如此多样的地貌。在阿尔卑斯山，勃朗峰的冰川正在迅速退缩。登山者必须提防每一道隐藏的（岩石裂隙），当局也不得不（注意到）落石以及（雪崩）的风险正在不断增加，而这些山坡过去曾是冻得严严实实的。在普罗旺斯，被称为密史脱拉风的寒冷北风能以（大风）级的风力一连刮上好几天。19世纪的画家们曾在枫丹白露森林的每一片（林间空地）支起画架，如今这里仍吸引着巴黎人周末前往；而在2022年，山火使吉伦特省约3万公顷松林（变得光秃）。1681年完工、连通大西洋与地中海的米迪运河，至今仍通过船闸提升船只，每一道（水闸）闸门都是17世纪工程技术的丰碑。"}, {"en": "The coasts are just as varied. In Brittany, waves and wind (abrade) the pink granite of the northern shore into strange shapes, and fishermen haul up crabs and lobsters whose (carapace) turns red in the pot. At Mont-Saint-Michel the tide has an (amplitude) of up to 14 meters, one of the largest in Europe, and comes in, it is said, as fast as a galloping horse. Sailors in the Vendée Globe, a single-handed race around the world, set out from Les Sables-d'Olonne; on any boat the (leeward) side is where seasick crew are told to lean. Salt air can (corrode) seaside buildings, and storms can (ravage) low-lying coasts: in 2010 storm Xynthia killed 47 people on the Atlantic coast.", "zh": "海岸线同样千姿百态。在布列塔尼，海浪和风把北部海岸的粉红色花岗岩（磨蚀）成奇形怪状，渔民们捞起螃蟹和龙虾，它们的（甲壳）一下锅就会变红。在圣米歇尔山，潮汐的（潮差）可达14米，位居欧洲前列，据说涨潮的速度快如奔马。参加旺代环球帆船赛这项单人环球航海比赛的水手们从莱萨布勒-多洛讷出发；在任何船上，晕船的船员都会被叫到（背风）一侧去靠着船舷。咸湿的海风会（腐蚀）海滨建筑，风暴则可能（肆虐）低洼海岸：2010年，风暴“辛西娅”在大西洋沿岸造成47人死亡。"}, {"en": "Paris dominates France as few capitals dominate their countries. From the (vantage) of the provinces its (arrogance) is legendary, and provincials resent the way Parisians (condescend) to them. In March 2026 the city's voters chose Emmanuel Grégoire, an (affable) Socialist and former deputy to Anne Hidalgo, as mayor, with 50.52% of the second-round vote against 41.52% for Rachida Dati of the right. Ms Hidalgo's legacy is visible everywhere: cycle lanes have replaced traffic lanes, and since 2025 Parisians have been able to (wade) and swim in the Seine for the first time in a century. But the capital is ever less (affordable): few families of modest means can take on a (mortgage) big enough to buy a flat inside the city limits.", "zh": "巴黎对法国的主导地位，很少有其他首都能与之相比。从外省的（视角）看，巴黎的（傲慢）是出了名的，外省人对巴黎人（居高临下）对待他们的方式心怀不满。2026年3月，巴黎选民选出（和蔼可亲的）社会党人、安妮·伊达尔戈的前副手埃马纽埃尔·格雷瓜尔为市长，他在第二轮投票中获得50.52%的选票，右翼的拉希达·达蒂获得41.52%。伊达尔戈女士的遗产随处可见：自行车道取代了机动车道，自2025年起，巴黎人一个世纪以来首次可以在塞纳河里（蹚水）和游泳。但这座首都的生活越来越不（实惠）：收入一般的家庭很少能背负足够大的（抵押贷款），在市区范围内买一套公寓。"}, {"en": "For visitors, Paris remains a performance of studied (nonchalance). Café-goers (lounge) for hours on a (terrace) over a single coffee, savoring an (ambience) that no amount of tourism seems to spoil, and the effortless chic of the Parisian woman is a marketing (cliché) the world cannot get enough of. The famous Parisian (insouciance) can sour into rudeness, and waiters have a reputation for being (disagreeable). Japanese psychiatrists even coined a term, \"Paris syndrome\", for visitors so disappointed by the gap between dream and reality that they fall ill. Visitors discover the city's real life in an (interstice) between grand monuments: a courtyard, a market or a narrow street.", "zh": "对游客来说，巴黎依然是一场刻意为之的（漫不经心）的表演。咖啡馆的常客们点上一杯咖啡，就能在（露天座）上（闲坐）好几个小时，品味着一种无论多少游客都似乎破坏不了的（氛围）；巴黎女人那种毫不费力的时髦，则是一个让全世界百看不厌的营销（套路）。著名的巴黎式（无忧无虑）可能会变味成粗鲁，侍者们也以（难相处）著称。日本精神科医生甚至创造了一个术语“巴黎综合征”，用来形容那些因梦想与现实之间的落差而大失所望、以至于生病的游客。游客会在宏伟纪念建筑之间的一处（缝隙）中发现真正的巴黎：那可能是一座庭院、一处市场，或是一条窄街。"}, {"en": "France is the world's most visited country, drawing a record 100m foreign tourists in 2024. They come for the (agreeable) climate, the food and the sheer variety of every (locale), from the palm-shaded seafront (promenade) at Nice, each (frond) swaying in the breeze, to the châteaux of the Loire. Many (splurge) on luxury; some complain that Parisian restaurants (fleece) them. Disneyland Paris, a (pastiche) of fairy-tale Europe built east of the capital in 1992, draws more visits than the Louvre.", "zh": "法国是世界上接待游客最多的国家，2024年吸引了创纪录的1亿外国游客。他们为（宜人的）气候、美食以及每一个（地方）的丰富多样而来，从尼斯棕榈树荫下的海滨（步道）、在微风中摇曳的每一片棕榈（叶），到卢瓦尔河谷的城堡。许多人在奢侈品上（挥金如土）；也有人抱怨巴黎的餐馆（宰客）。1992年建于首都以东的巴黎迪士尼乐园是一个童话欧洲的（仿作），它吸引的游客比卢浮宫还多。"}, {"en": "In the summer of 2024 the country briefly forgot its gloom. The Paris Olympics opened with a boat parade along the Seine and a ceremony that was an (ode) to French history and culture, ending in a (finale) with Céline Dion singing from the Eiffel Tower. For two weeks the city seemed to (exude) joy. Crowds cheering Léon Marchand, a swimmer who won four golds, appeared to be in a (trance), and the (ebullience) of the Paralympics that followed surprised the skeptics. But the sporting (jamboree) proved a mere (interlude): weeks earlier Mr Macron had called the snap election that would throw politics into turmoil.", "zh": "2024年夏天，这个国家曾短暂地忘却了它的阴郁。巴黎奥运会以沿塞纳河的船队巡游和一场堪称法国历史与文化之（颂歌）的开幕式揭幕，最后以席琳·迪翁在埃菲尔铁塔上献唱的（压轴表演）收尾。整整两周，这座城市似乎都在（洋溢）着欢乐。为夺得四枚金牌的游泳运动员莱昂·马尔尚欢呼的人群仿佛进入了（恍惚出神）的状态，随后残奥会的（热烈气氛）也让怀疑者们感到意外。但这场体育（盛会）不过是一段（插曲）：几周前，马克龙先生宣布提前举行大选，这场选举将把政局抛入动荡之中。"}, {"en": "Every July the country has another sporting ritual. Since 1903 the Tour de France has crossed the country; before the riders arrive, a (cavalcade) of advertising floats hurls sweets and caps at roadside crowds, and every (devotee) of cycling knows the climbs of the Alps and Pyrenees by heart. Riders (vie) for the yellow jersey over three weeks, hurtling down mountain passes at speeds that would make every (spoke) of an ordinary bicycle shudder. Yet no Frenchman has won since Bernard Hinault in 1985; this year Tadej Pogačar, a Slovenian, took his fifth title. Each summer French hopes (commence) afresh on the opening day and usually fade in the mountains.", "zh": "每年7月，这个国家还有另一项体育仪式。自1903年以来，环法自行车赛一直在全国各地穿行；在车手们到来之前，一支由广告彩车组成的（车队）会向路边人群抛撒糖果和帽子，每一位自行车运动的（爱好者）都对阿尔卑斯山和比利牛斯山的爬坡路段了如指掌。车手们在三周的赛程里（角逐）黄色领骑衫，以足以让普通自行车每一根（辐条）都为之颤抖的速度冲下山口。然而，自1985年贝尔纳·伊诺夺冠以来，再没有法国人赢过；今年，斯洛文尼亚人塔德伊·波加查第五次夺冠。每年夏天，法国人的希望都在开幕日重新（开始），又往往在山区赛段中破灭。"}, {"en": "The French economy is stronger than the gloom suggests, and its record can (confound) the pessimists. The old (canard) that the French are lazy does not survive scrutiny: output per hour worked is among the highest in Europe, close to Germany's and not far behind America's, so France is no (sluggard), even if a 35-hour week and five weeks of paid holiday mean that the French work fewer hours over a year. Few (begrudge) them their long lunches. The figures (belie) the national stereotype, and they do not (jibe) with the bleak picture painted by voters either, though there is wide (variance) between booming regions such as Paris, Lyon and Toulouse and the struggling north-east.", "zh": "法国经济比这种阴郁情绪所暗示的要强劲，它的表现足以让悲观者（困惑不解）。认为法国人懒惰的老（谣言）经不起推敲：法国每小时工作的产出位居欧洲前列，接近德国，也不比美国落后多少，所以法国绝非（懒汉），尽管每周35小时工作制和五周带薪假期意味着法国人一年下来的工作时间较短。很少有人（眼红）他们悠长的午餐时间。这些数据与这种民族刻板印象（相悖），也无法与选民所描绘的黯淡图景（吻合），尽管巴黎、里昂和图卢兹等繁荣地区与陷入困境的东北部之间存在很大的（差异）。"}, {"en": "Still, growth is likely to (plod) along at about 0.5% this year, and unemployment has crept up to 8.3%, its highest since 2020. Full employment, which Mr Macron once promised, looks like a (mirage). Worried about the future, French households (hoard) their money, saving around 18% of their income. One reform has worked: generous subsidies for firms that take on an (apprentice) have pushed the number of young people signing up for such contracts each year to nearly 900,000, from under 300,000 in 2017, an (appreciable) achievement.", "zh": "尽管如此，今年的经济增长可能仍将以0.5%左右的速度（缓慢前行），失业率已攀升至8.3%，为2020年以来的最高水平。马克龙先生曾经承诺的充分就业看起来像是（海市蜃楼）。由于担心未来，法国家庭（囤积）钱财，储蓄约占收入的18%。有一项改革取得了成效：对招收（学徒）的企业给予慷慨补贴，使每年签订这类合同的年轻人数量从2017年的不到30万增加到近90万，这是一项（可观的）成就。"}, {"en": "The state looms over all of this. Public spending amounts to about 57% of GDP, the largest (slice) of any big economy, and taxes are among the highest. The French expect the state to (guarantee) everything from health care and pensions to a decent minimum (wage), currently about €1,800 a month before tax. Over five decades the state has continued to (expand), and critics describe the state's (intumescence), an almost pathological swelling of bureaucracy and spending, as the root of France's malaise. Its defenders reply that it explains why France has less inequality than most rich countries, and why its (affluence) is widely shared.", "zh": "国家的影子笼罩着这一切。公共支出约占国内生产总值的57%，在所有大型经济体中这一（占比）最高，税负也位居最高之列。法国人期望国家（保障）一切，从医疗、养老金到体面的最低（工资），目前税前约为每月1800欧元。五十年来，国家不断（扩张），批评者认为国家机器的（病态膨胀）——官僚机构与公共开支近乎失控地增长——正是法国痼疾的根源。捍卫者则回应说，正因为如此，法国的不平等程度才低于大多数富裕国家，它的（富裕）也才得以广泛共享。"}, {"en": "For decades the state was run by graduates of the École nationale d'administration, founded in 1945 to train a meritocratic elite. Four presidents, including Mr Macron, were énarques. The school rarely turned out a (dullard), and its technocrats' (competence) was widely admired abroad. But critics saw a (hidebound) caste, (impermeable) to outsiders and to new ideas. Mr Macron announced in 2021 that the school would be replaced; the new National Institute of Public Service, or INSP, opened on January 1st 2022, in an attempt to broaden recruitment.", "zh": "几十年来，掌管国家的是国家行政学院的毕业生，这所学院创立于1945年，旨在培养一个以才能取胜的精英阶层。包括马克龙先生在内的四位总统都是被称为“énarques”的该校毕业生。这所学校鲜少培养出（庸才），它培养的技术官僚的（能力）在国外广受赞赏。但批评者认为这是一个（墨守成规的）特权阶层，对外人和新思想都（难以渗透）。马克龙先生于2021年宣布改革；2022年1月1日，新的国家公共服务学院INSP正式取代ENA，目标之一是拓宽高级公务员的选拔渠道。"}, {"en": "French bureaucracy is legendary. Foreigners struggle to (comprehend) its forms; the labor code alone runs to thousands of pages of legal (verbiage), and laws fall into (desuetude) without ever being repealed. Officials work with real (diligence), but entrepreneurs complain that red tape can (retard) investment, and successive cabinets have promised to simplify it. In practice, the French often get by thanks to the willingness of a sympathetic official to (bend) the rules.", "zh": "法国的官僚主义是出了名的。外国人很难（理解）它的各种表格；仅劳动法典就有数千页（冗长晦涩的法律文字），许多法律从未被废除，却早已（废弃不用）。官员们工作确实（勤勉），但企业家抱怨繁文缛节会（阻碍）投资，历届内阁都承诺要简化手续。实际上，法国人往往要靠某位通情达理的官员愿意（变通）规则才能把事情办成。"}, {"en": "The health system, founded in 1945, offers universal coverage, and the French are (hale): women can expect to live to nearly 86, one of the longest lifespans in Europe. Researchers long puzzled over a \"French paradox\": a diet rich in butter and cheese, every (calorie) of it savored, yet relatively few heart attacks caused by fats that (occlude) the arteries. The state shows touching (solicitude) for its patients; doctors can even prescribe spa cures, letting patients (convalesce) at towns such as Vichy, paid for by the taxpayer. But nearly a quarter of adults still (inhale) cigarette smoke every day, and rural \"medical deserts\" have too few doctors. A scandal over Mediator, a diabetes pill widely prescribed as a slimming aid, exposed lax regulators and corporate (malpractice) in the 2010s. The system remains (serviceable) but strained.", "zh": "创建于1945年的医疗体系提供全民覆盖，法国人身体（硬朗）：女性的预期寿命接近86岁，位居欧洲最长之列。研究人员长期以来一直对“法国悖论”感到困惑：饮食富含黄油和奶酪，每一（卡路里）都细细品味，但由脂肪（堵塞）动脉引发的心脏病却相对较少。国家对病人表现出令人感动的（关怀）；医生甚至可以开出温泉疗养处方，让病人在维希等城镇（康复休养），费用由纳税人承担。但近四分之一的成年人仍每天（吸入）香烟烟雾，农村的“医疗荒漠”医生太少。2010年代，一种被广泛当作减肥药开具的糖尿病药物“美蒂拓”引发丑闻，暴露出监管机构的松懈和企业的（不当行为）。这一体系仍然（尚可运转），但已捉襟见肘。"}, {"en": "Protest is a national sport. Strikes are (commonplace), and France loses more working days to them than almost any other rich country; transport can (grind) to a halt for weeks. In 2018 opposition to higher fuel taxes struck a (chord) with rural drivers, who donned yellow vests and occupied roundabouts across the country, and some among them went on to (deface) the Arc de Triomphe. Their (grievance) was the cost of living and the contempt they felt from Paris. In 2023 millions marched against a pension reform. The (incidence) of strikes has fallen since the 1970s, but the habit of taking to the streets endures.", "zh": "抗议是一项全民运动。罢工（司空见惯），法国因罢工损失的工作日几乎比任何其他富裕国家都多；交通可能一连数周（陷入停摆）。2018年，反对提高燃油税的诉求在乡村司机中引起了（共鸣），他们纷纷穿上黄背心，占据全国各地的环岛，其中一些人后来还（涂毁）了凯旋门。他们的（不满）在于生活成本，以及他们感受到的来自巴黎的蔑视。2023年，数百万人上街游行反对养老金改革。自20世纪70年代以来，罢工的（发生率）已有所下降，但上街抗议的习惯延续至今。"}, {"en": "Mr Macron embodies many of the country's contradictions. A former investment banker and a political (novice) when he won the presidency in 2017, aged 39, he promised to break the mold of left and right. He was quick to (ensconce) himself in the Élysée, where he ruled from above in a style he himself called \"Jupiterian\", surrounded by a small (coterie) of technocrats; critics say he never learned to (unbend). His (entourage) has changed often, his habits less so. A weakness for the cutting (gibe), such as telling an unemployed gardener in 2018 that he need only cross the street to find a job, has made him widely disliked. Opponents (deride) him as the \"president of the rich\"; supporters (allude) to his reforms of the labor market and of taxes on capital, which helped unemployment fall to its lowest in 15 years before the recent rise. Every (gaffe) is replayed endlessly online.", "zh": "马克龙先生体现了这个国家的诸多矛盾。他曾是投资银行家，2017年以39岁之龄赢得总统大位时还是一个政治（新手），他承诺打破左右之分的旧格局。他很快就在爱丽舍宫（安顿）下来，以一种他自称为“朱庇特式”的风格居高临下地施政，身边围绕着一个由技术官僚组成的小（圈子）；批评者说，他始终没有学会（放下架子）。他的（随从班底）屡次更换，他的习惯却没怎么变。他喜欢说尖刻的（挖苦话），比如2018年对一名失业园丁说，他只需过个马路就能找到工作，这让他广受厌恶。反对者（嘲笑）他是“富人的总统”；支持者则（提到）他对劳动力市场和资本税的改革，这些改革帮助失业率在近来回升之前降到了15年来的最低点。他的每一次（失言）都在网上被反复播放。"}, {"en": "His biggest gamble backfired. In 2022 he warned the French that the era of (abundance) was over. Two years later, after his party was trounced by the National Rally in the European elections of June 2024, he dissolved the National Assembly, a decision that even his allies saw as a needless (hazard). The snap election yielded a (hodgepodge): a left-wing alliance won the most seats, Mr Macron's centrists came second and the hard right third, although the National Rally became the largest single party, and no group came anywhere near a majority. The result has been legislative (blockage). Mr Macron's claim that the dissolution would bring \"clarification\" now rings like an empty (platitude).", "zh": "他最大的一次豪赌适得其反。2022年，他警告法国人，（富足）的时代已经结束。两年后，在2024年6月的欧洲议会选举中，他的政党被国民联盟击败，随后他解散了国民议会，就连他的盟友也认为这一决定是不必要的（冒险）。提前大选产生了一个（大杂烩）：左翼联盟赢得最多席位，马克龙先生的中间派位居第二，强硬右翼位居第三，尽管国民联盟成了议会第一大党，但没有任何一个阵营接近过半数。结果是立法陷入（梗阻）。马克龙先生声称解散议会将带来“澄清”，如今听来就像一句空洞的（老生常谈）。"}, {"en": "Since then nothing has been (straightforward). Michel Barnier's cabinet was toppled in December 2024 by a no-confidence vote, the first to succeed since 1962; François Bayrou lost a confidence vote in September 2025; and Mr Lecornu resigned after less than a month, only to be reappointed four days later. Debates in the chamber often look like a (charade): deputies (grandstand) for the cameras, every (blowhard) has a microphone, and sessions on the budget dissolve into (petulance), procedural tricks and thousands of proposed changes. Opposition parties can (stymie) almost any bill, and keeping even a (semblance) of order is a daily struggle for the Assembly's speaker.", "zh": "从那以后，一切都不再（简单直接）。米歇尔·巴尼耶的内阁于2024年12月因不信任投票而倒台，这是自1962年以来首次成功的不信任投票；弗朗索瓦·贝鲁于2025年9月在信任投票中落败；勒科尔尼先生上任不到一个月便辞职，四天后却又被重新任命。议会里的辩论常常像一场（闹剧）：议员们对着镜头（哗众取宠），每个（夸夸其谈者）都有麦克风，有关预算的会议沦为一片（任性赌气）、程序花招和数以千计的修改提案。反对党几乎可以（阻挠）任何法案，就连维持一点秩序的（表象），对议长来说都是每天的挣扎。"}, {"en": "To survive, Mr Lecornu has had to buy peace. In October 2025 he offered the Socialists a (truce): the pension reform of 2023, which raised the retirement age from 62 to 64 and was forced through parliament without a vote, would be held in (abeyance) until after the presidential election. Parliament voted for the suspension in November 2025, and the Socialists, (amenable) for once, chose to (acquiesce) rather than topple him. Much of the deal-making happened (offstage), in late-night talks at Matignon, the prime minister's office. Critics call the approach (haphazard) policymaking, and business leaders fear that the next president will (renege) on reforms they had counted on.", "zh": "为了生存，勒科尔尼先生不得不花钱买和平。2025年10月，他向社会党人提出（休战）：2023年的养老金改革将退休年龄从62岁提高到64岁，并未经表决就在议会强行通过，如今这项改革将被（暂缓执行），直到总统选举之后。议会于2025年11月投票通过暂停改革，社会党人难得一次（通情达理），选择了（默许）而不是推翻他。许多交易是在（幕后）达成的，即在总理府马提尼翁宫的深夜谈判中。批评者称这种做法是（随意拼凑的）政策制定，企业领袖们则担心下一任总统会（背弃）他们曾指望的改革。"}, {"en": "The 2027 budget, presented on October 1st, is a pre-election exercise in fiscal (penance). It would freeze civil servants' pay, limit increases in many pensions, hold payments under the housing (allowance) scheme steady, raise taxes on motorway and airport operators and keep a (surcharge) on big companies' profits, though at a lower rate. Ministers insist there will be no (hike) in income tax. Few economists (pretend) that this will do much to stabilize the debt: the High Council of Public Finances called the growth forecast optimistic, and some of the promised savings may prove (inappreciable).", "zh": "10月1日提交的2027年预算是一次选举前的财政（苦修）。该预算拟冻结公务员工资，限制许多养老金的涨幅，维持（住房补贴）计划的发放标准不变，提高对高速公路和机场运营商的税收，同时保留对大公司利润征收的（附加税），只是税率有所降低。部长们坚称不会（上调）所得税。很少有经济学家（假装）相信这能在很大程度上稳定债务：公共财政高级委员会称增长预测过于乐观，一些承诺的节支可能（微不足道）。"}, {"en": "The (magnitude) of the problem is plain. Public debt reached €3.6trn, or 119% of GDP, in the middle of 2026, a ratio last seen just after the second world war. France has not run a budget surplus since 1974. Interest payments of about €79bn this year are forecast to rise to €91bn in 2027, and each year's deficit will (compound) the burden. In 2025 two rating agencies downgraded France to A+, judging its finances (unsound). No crisis seems to (impend) just yet, but investors (brace) for a (spike) in borrowing costs whenever the cabinet wobbles. France is not on the edge of a (precipice), but its current path is not (tenable) for long.", "zh": "问题的（严重程度）显而易见。2026年年中，公共债务达到3.6万亿欧元，相当于国内生产总值的119%，这一比例上一次出现还是在第二次世界大战刚结束时。法国自1974年以来就再未实现过预算盈余。今年约790亿欧元的利息支出预计将在2027年增至910亿欧元，每年的赤字都会（加重）这一负担。2025年，两家评级机构将法国的评级下调至A+，认为其财政状况（不稳健）。眼下似乎还没有危机（迫在眉睫），但每当内阁出现动摇，投资者就会（做好准备）迎接借贷成本的（飙升）。法国并没有站在（悬崖）边缘，但它当前的财政路线长期来看并不（可持续）。"}, {"en": "How did France get here? Part of the answer is a (blithe) assumption that a big, rich country with a deep pool of domestic savings can borrow indefinitely. Promises of (prudence) are made every autumn and broken by spring. In 2024 the deficit came in at 5.8% of GDP instead of the 4.4% planned, a (slippage) caused largely by tax revenues that fell short; officials blamed a (leakage) of receipts that their models had failed to foresee. Each new cabinet has been tempted to (backslide) as soon as the markets calmed. So far investors have shown (forbearance), but a country that owes this much is not easily (extricable) from its predicament.", "zh": "法国是怎么走到这一步的？部分原因在于一种（漫不经心的）假设：一个拥有大量国内储蓄的富裕大国可以无限期地借债。每年秋天都会做出（审慎）理财的承诺，到春天就被打破。2024年，赤字占国内生产总值的5.8%，而非计划中的4.4%，这一（偏差）主要是由于税收收入不足；官员们将其归咎于他们的模型未能预见的收入（流失）。每一届新内阁都会在市场平静下来后忍不住（故态复萌）。到目前为止，投资者一直表现出（宽容），但这样一个负债累累的国家，很难从自己的困境中轻易（脱身）。"}, {"en": "Europe adds pressure. In 2024 the European Commission opened an excessive-deficit procedure against France, a formal (prod) to put its finances in order. Among the euro area's big economies France has become the (laggard): only Greece and Italy carry heavier debts relative to output, and Italy's deficit is now smaller. French politicians (chafe) at the rules, which France did much to write, and many treat them with (disregard). Full (compliance) has rarely been a priority in Paris.", "zh": "欧洲又增添了压力。2024年，欧盟委员会对法国启动了过度赤字程序，这是一种正式的（督促），要求法国整顿财政。在欧元区各大经济体中，法国已成为（落后者）：只有希腊和意大利的债务占产出的比例比法国更高，而意大利的赤字如今已比法国小。法国政界人士对这些规则（恼火），尽管这些规则在很大程度上是法国参与制定的，许多人对它们（置若罔闻）。完全（遵守）规则在巴黎很少是优先事项。"}, {"en": "Yet France remains the EU's engine of ideas. Mr Macron has called for European \"strategic autonomy\" and for joint borrowing, and France sees itself as a (counterbalance) to American and Chinese power. The French have always felt some (ambivalence) toward the union; in 2005 they voted down a proposed European constitution. Their interests often (diverge) from Germany's, on trade, nuclear power and fiscal rules, and Paris likes to (hedge) its bets between Washington and a more independent Europe. But no French leader has dared to stop trying to (embrace) the European project, not even Marine Le Pen, who has dropped her old call for leaving the euro.", "zh": "然而，法国仍是欧盟的思想引擎。马克龙先生呼吁欧洲实现“战略自主”并进行联合借款，法国自视为制衡美国和中国力量的（砝码）。法国人对欧盟一直怀有某种（矛盾心理）；2005年，他们投票否决了拟议中的欧洲宪法。在贸易、核电和财政规则等问题上，他们的利益常常与德国（相左），巴黎也喜欢在华盛顿和一个更加独立的欧洲之间（两面下注）。但没有哪位法国领导人敢于不再（拥抱）欧洲计划，就连已放弃脱离欧元这一旧主张的玛丽娜·勒庞也不例外。"}, {"en": "The rise of the National Rally is the story of French politics this century. It was founded in 1972 as the National Front by Jean-Marie Le Pen, a former paratrooper whose repeated antisemitic remarks kept it on the (fringe). His daughter Marine, who took over in 2011, set out to show that the party was not (irredeemable): she expelled her father in 2015 after a bitter (feud), renamed the party and softened its image. Many an old (diehard) grumbled, but the strategy worked. In 2024 even Éric Ciotti, then leader of the mainstream right-wing Republicans, turned (renegade) by allying with it.", "zh": "国民联盟的崛起是本世纪法国政治的主线。它的前身国民阵线由前伞兵让-玛丽·勒庞于1972年创立，他屡次发表反犹言论，使该党长期处于政治（边缘）。2011年接掌该党的女儿玛丽娜着手证明这个党并非（无可救药）：经过一场激烈的（争斗），她于2015年把父亲开除出党，并为该党更名、软化其形象。许多老（死硬派）对此怨声载道，但这一策略奏效了。2024年，就连当时主流右翼共和党的领袖埃里克·西奥蒂也与之结盟，成了（叛徒）。"}, {"en": "Today the party leads every poll. Ms Le Pen scores between 31% and 36% in the first round, far ahead of any rival, and her protégé, Jordan Bardella, born in 1995, does as well or better. Its voters (loathe) the Parisian elite; worries about immigration, crime and the cost of living (stoke) their anger, and many see a vote for the party as (revenge) on politicians who have ignored them. Every scandal in the mainstream lends (credence) to its claim to be the only party untainted by power. Few expected the hard right to (resurge) so strongly after Jacques Chirac crushed Jean-Marie Le Pen with 82% of the vote in the presidential run-off of 2002.", "zh": "如今，该党在每一项民调中都处于领先地位。勒庞女士在第一轮中的得票率在31%到36%之间，远远领先于任何对手，她的门生、1995年出生的若尔当·巴尔代拉的表现与她相当甚至更好。该党的选民（憎恶）巴黎精英；对移民、犯罪和生活成本的担忧（煽起）了他们的愤怒，许多人把投票给该党视为对无视他们的政客的（报复）。主流政党的每一桩丑闻，都让该党自称是唯一未被权力玷污的政党的说法更加（可信）。2002年总统选举决选中，雅克·希拉克以82%的得票率大胜让-玛丽·勒庞，此后很少有人预料到强硬右翼会如此强势地（卷土重来）。"}, {"en": "The party's own record is not entirely (aboveboard). In March 2025 a Paris court convicted Ms Le Pen and other party figures of using money from the European Parliament to pay staff who in fact worked for the party, a scheme the judges said was designed to (defraud) the parliament, and barred her from running for office with immediate effect. Prosecutors had argued that the party chose to (infringe) the parliament's rules for years, and her supporters went on to (traduce) the judges as political activists. In July 2026 an appeal court upheld her conviction for (malfeasance) but shortened the ban, so that it will not (preclude) a presidential run; she has appealed again, to France's highest court. Nor is she alone in the dock. Nicolas Sarkozy, a former president, was convicted of trying to (bribe) a judge with the promise of a plum job in exchange for inside information, and he spent three weeks in prison in late 2025 after a separate conviction for conspiring to obtain campaign money from Libya, which he denies; an appeal verdict is due on November 30th. Voters across the spectrum have grown cynical about political (turpitude).", "zh": "该党自身的记录也并非完全（光明磊落）。2025年3月，巴黎一家法院判定勒庞女士和其他党内人物挪用欧洲议会的资金，为实际上为该党工作的人员支付薪水，法官们称这一计划旨在（诈骗）欧洲议会，并禁止她参选公职，立即生效。检方此前指控该党多年来一直故意（违反）欧洲议会的规定，她的支持者随后（诋毁）法官是政治活动人士。2026年7月，上诉法院维持了对她（不法行为）的定罪，但缩短了禁令期限，使其不会（妨碍）她参加总统竞选；她已再次向法国最高法院上诉。她也不是唯一身陷官司的人。前总统尼古拉·萨科齐被判企图以一份美差为诱饵（贿赂）一名法官，换取内部消息；2025年末，他因另一项共谋从利比亚获取竞选资金的定罪在狱中度过了三周，他本人否认这项指控；上诉判决将于11月30日宣布。各个政治派别的选民都对政治（堕落）变得愤世嫉俗。"}, {"en": "The left is divided. In 2024 its parties managed to (coalesce) into a New Popular Front to fight the snap election, but the alliance soon fell apart. Its biggest force, France Unbowed, is led by Jean-Luc Mélenchon, a (firebrand) given to the (tirade) who polls around 15%, and moderates such as Raphaël Glucksmann refuse to back him. The old (cleavage) between left and right, born in the Assembly of 1789, has given way to a three-way split between the hard left, a battered center and the hard right.", "zh": "左翼四分五裂。2024年，左翼各党设法（联合）组成新人民阵线参加提前大选，但这一联盟很快就分崩离析。其中最大的力量“不屈法国”由让-吕克·梅朗雄领导，他是一个惯于发表（激烈长篇演说）的（煽动家），民调支持率约为15%，拉斐尔·格鲁克斯曼等温和派人士拒绝支持他。诞生于1789年国民议会的古老的左右（分野），已让位于极左、遭受重创的中间派和强硬右翼之间的三足鼎立。"}, {"en": "Religion is another fault line. A law of 1905 separated church and state, and laïcité, a strict form of secularism, is meant to (safeguard) both freedom of belief and civic (concord) by keeping religion out of public institutions. In practice the debate has come to focus on Islam, the faith of perhaps 5m-6m French people. Since 2004 the law has sought to (exclude) conspicuous religious symbols, including the Muslim headscarf, from state schools, and in 2010 parliament chose to (proscribe) face-covering veils in public. Rules (applicable) to civil servants are stricter still. Many Muslims feel that such measures (impinge) on their religious (observance); the state insists that all must (abide) by the same rules.", "zh": "宗教是另一条断层线。1905年的一项法律实行政教分离，而被称为“laïcité”的严格世俗主义原则，旨在通过把宗教排除在公共机构之外，来（保障）信仰自由和公民之间的（和睦）。实际上，这场辩论已逐渐聚焦于伊斯兰教，这是大约五六百万法国人的信仰。自2004年以来，法律力图把包括穆斯林头巾在内的醒目宗教标志（排除）在公立学校之外；2010年，议会决定在公共场所（禁止）遮面面纱。（适用于）公务员的规定更为严格。许多穆斯林觉得这些措施（侵犯）了他们的宗教（奉行）；国家则坚持所有人都必须（遵守）同样的规则。"}, {"en": "Immigration fuels the hard right's rise. More than a tenth of the population was born abroad, many in former colonies in north and west Africa, and even a regular (remittance) can help keep a family back home afloat. Many of their children and grandchildren grow up in the banlieues, suburban housing estates where unemployment is high and where riots erupted in 2005 and again in 2023, after police shot a teenager. Drug trafficking has become a (scourge) in parts of Marseille, and jihadist terrorism, which killed more than 230 people in 2015-16, remains a (menace). The hard right argues that Europe's borders are far too (permeable).", "zh": "移民问题助长了强硬右翼的崛起。超过十分之一的人口出生在国外，其中许多人来自北非和西非的前殖民地，他们定期汇回的一笔（汇款），就可能帮助家乡的一户人家维持生计。他们的许多子孙在“banlieues”长大，即失业率高企的郊区住宅区；2005年那里曾爆发骚乱，2023年警察枪杀一名少年后骚乱再起。毒品走私已成为马赛部分地区的（祸害），2015年至2016年间造成230多人死亡的圣战恐怖主义仍是一大（威胁）。强硬右翼认为，欧洲的边界太容易（渗透）了。"}, {"en": "Some French attitudes surprise outsiders. Politicians' private lives have long been treated as private: François Mitterrand's second family was an open secret among journalists for years, and when a magazine exposed François Hollande's (dalliance) with an actress in 2014, many voters shrugged. Few French voters wish to play the (prude), and the state is reluctant to (obtrude) into the bedroom. Yet French manners are more formal than Anglo-Saxon ones: strangers are greeted with \"bonjour\" and addressed as vous. The French can seem reserved at first, but they are (sociable) and (amiable) once the ice is broken.", "zh": "法国人的一些态度令外人吃惊。政客的私生活长期以来被视为私事：弗朗索瓦·密特朗的第二个家庭多年来在记者圈里是公开的秘密；2014年一家杂志曝光弗朗索瓦·奥朗德与一名女演员的（私情）时，许多选民只是耸耸肩。很少有法国选民愿意扮演（拘谨守旧者），国家也不愿（干涉）私人卧室里的事。不过，法国人的礼节比盎格鲁-撒克逊人更正式：对陌生人要说“bonjour”问好，并以“vous”相称。法国人起初可能显得拘谨，但一旦打破僵局，他们就既（爱交际）又（友善）。"}, {"en": "In foreign affairs France punches above its weight. Since Brexit it has been the EU's only nuclear power and its only permanent member of the UN Security Council, and in 2025 Mr Macron offered to discuss how its nuclear deterrent might (extend) protection to European allies. Russian (belligerence) has made higher military spending politically (justifiable), even amid budget cuts. France has taken a hawkish (stance) on Ukraine, helping to (forge), with Britain, a group of willing countries ready to back any ceasefire, and it has invested in (reconnaissance) satellites and drones. It also accuses Russia of (interference) in its elections and of spreading disinformation in Africa.", "zh": "在外交事务上，法国的影响力超出了它的分量。英国脱欧后，法国成为欧盟唯一的核大国，也是欧盟唯一的联合国安理会常任理事国；2025年，马克龙先生提出可以讨论法国的核威慑如何把保护（延伸）到欧洲盟友。俄罗斯的（好战）使提高军费开支在政治上变得（合情合理），即便是在预算削减之际。法国在乌克兰问题上采取了鹰派（立场），与英国一道帮助（缔造）了一个准备支持任何停火的“意愿联盟”，并投资于（侦察）卫星和无人机。它还指责俄罗斯（干预）其选举，并在非洲散布虚假信息。"}, {"en": "France likes to think of its role in the world as a matter of (prestige) as much as power. The Paris climate (accord) of 2015, negotiated under French leadership and hailed as an (auspice) of greater international co-operation, remains its proudest diplomatic achievement, and in September 2025 Mr Macron recognized a Palestinian state at the UN. France has begun returning looted African treasures, examining the (provenance) of objects in its museums; in 2021 it handed 26 royal artifacts back to Benin. But French diplomats know that their country's (puissance) has limits. In the Sahel its influence has collapsed, and in the Middle East its voice carries less weight than it once did. Critics see in the constant summitry a (pretence) of great-power status that masks growing (impuissance). Mr Macron's admirers retort that France's (relevance) comes from its ideas, not its size.", "zh": "法国喜欢把自己在世界上的角色视为一个关乎（威望）也关乎实力的问题。2015年在法国推动下达成的巴黎气候（协定），曾被誉为国际合作前景向好的一个（吉兆），至今仍是法国最引以为傲的外交成就；2025年9月，马克龙先生在联合国承认了巴勒斯坦国。法国已开始归还被掠夺的非洲珍宝，审查其博物馆中藏品的（来源）；2021年，它将26件王室文物归还贝宁。但法国外交官们知道，他们国家的（实力）是有限的。在萨赫勒地区，法国的影响力已经崩塌；在中东，它的声音也不如从前那样有分量。批评者认为，频繁举行的峰会不过是大国地位的（假象），掩盖了日益加剧的（无力）。马克龙先生的崇拜者则反驳说，法国的（重要性）来自它的思想，而不是它的体量。"}, {"en": "The presidential election next April will (hinge) on whether the mainstream can unite behind a single candidate. Édouard Philippe, a former prime minister, is the (presumable) beneficiary of any agreement to unite the center, and polls above 20%, but he faces rivals from his own camp, and the right and left are split. Much is at (stake). A victory for the hard right would be a (consequence) of decades of disappointment, and its program, which promises to curb immigration and lower the retirement age, does not (bode) well for the public finances. Those tensions (forebode) a clash with Brussels and the markets, some say; others think the party would moderate in office, as Giorgia Meloni's did in Italy. For many voters the (choice) may come down to the lesser of two evils. Predicting French politics even six months out is a fool's (errand).", "zh": "明年4月的总统选举将（取决于）主流政党能否团结在一位候选人身后。如果中间派就共同候选人达成协议，前总理爱德华·菲利普可以被视为（有理由推定的）受益者；他的民调支持率超过20%，但他面临来自本阵营的对手，而左右两翼也都四分五裂。此次选举（利害）重大。强硬右翼若获胜，将是数十年失望的（结果），而它的纲领承诺限制移民、降低退休年龄，这对公共财政而言并不（预示）着什么好事。有人认为，这些紧张局势（预示）着法国将与布鲁塞尔及金融市场发生冲突；另一些人则认为该党执政后会变得温和，就像焦尔吉娅·梅洛尼的政党在意大利那样。对许多选民来说，这一（选择）可能归结为两害相权取其轻。哪怕只提前半年预测法国政局，也是一桩徒劳的（差事）。"}, {"en": "It would take the (clairvoyance) of Nostradamus, whose prophecies were published in 1555, to say how it all ends. Nobody has (foreknowledge) of what a hard-right presidency would bring, and it is hard to (envisage) a new leader able to unite a fractured country. Yet the present mood need not (presage) decline. France has survived every (vicissitude), from the Hundred Years' War to the Occupation, and has a habit of reinventing itself, from the Fifth Republic to the rebuilt Notre-Dame. The old (adage) still holds: the more things change, the more they stay the same. None of its problems is (irremediable). In the closing scene of Edmond Rostand's \"Cyrano de Bergerac\", the dying hero declares that one thing at least will go with him to heaven unstained: his (panache). France still has plenty of it.", "zh": "要说清这一切将如何收场，恐怕需要诺查丹玛斯那样的（预知未来的能力），他的预言集出版于1555年。至于强硬右翼总统上台后会带来什么，谁也没有（确切的预知），也很难（设想）出一位能够团结这个四分五裂的国家的新领导人。然而，眼下的情绪未必（预兆）着衰落。从百年战争到德占时期，法国挺过了每一次（变迁沧桑），而且它有自我重塑的习惯，从第五共和国到重建的巴黎圣母院皆是如此。那句古老的（格言）依然适用：万变不离其宗。它的问题没有一个是（无可挽回的）。在埃德蒙·罗斯丹的《西哈诺·德·贝热拉克》的最后一幕中，垂死的主人公宣称，至少有一样东西将洁白无瑕地随他升入天堂：他的（潇洒气概）。法国依然不乏这种豪迈而独特的风采。"}];
+const HAS_TITLE = true;
+const SUBTITLE_EN = "";
+const SUBTITLE_ZH = "";
+
+/* ================= Reading state ================= */
+const S = {
+  p: 0, s: 0,            // paragraph / sentence position
+  playing: false,
+  gen: 0,                // generation counter guards stale utterance callbacks
+  rate: 1,
+  voice: null,
+  showZh: true,
+  activeEl: null,
+  activeWordEl: null
+};
+
+/* ================= Text processing ================= */
+function stripParens(t) { return t.replace(/\(([^)]*)\)/g, '$1'); }
+
+function splitSentences(text) {
+  const parts = text.match(/[^.!?]+[.!?]["\u201d']?|[^.!?]+$/g);
+  return (parts || [text]).map(s => s.trim()).filter(Boolean);
+}
+
+// sentences[paraIdx] = [{ raw, plain }]
+const sentences = DATA.map(d => {
+  const out = [];
+  for (const raw of splitSentences(d.en)) {
+    out.push({ raw, plain: stripParens(raw) });
+  }
+  return out;
+});
+const TOTAL_SENTS = sentences.reduce((a, b) => a + b.length, 0);
+
+/* ================= Rendering ================= */
+const bookEl = document.getElementById('book');
+const sentEls = [];   // sentEls[p][s] = { el, words:[{el,start,end}] }
+
+function buildWords(sentSpan, raw) {
+  // Builds karaoke word spans from the raw sentence, keeping the (vocab)
+  // parentheses visible. `spoken` tracks character offsets in the
+  // parenthesis-free text that is actually sent to speech synthesis, so
+  // boundary-event charIndex values keep mapping to the right word.
+  const words = [];
+  let spoken = '';
+  const emitPlain = text => {
+    const parts = text.split(/(\s+)/);
+    for (const part of parts) {
+      if (part === '') continue;
+      if (/^\s+$/.test(part)) {
+        sentSpan.appendChild(document.createTextNode(part));
+        spoken += part;
+        continue;
+      }
+      const w = document.createElement('span');
+      w.className = 'w';
+      w.textContent = part;
+      sentSpan.appendChild(w);
+      words.push({ el: w, start: spoken.length, end: spoken.length + part.length });
+      spoken += part;
+    }
+  };
+  const re = /\([^)]*\)/g;
+  let last = 0, m;
+  while ((m = re.exec(raw)) !== null) {
+    emitPlain(raw.slice(last, m.index));
+    const inner = m[0].slice(1, -1);
+    sentSpan.appendChild(document.createTextNode('('));
+    const w = document.createElement('span');
+    w.className = 'w vocab';
+    w.textContent = inner;
+    sentSpan.appendChild(w);
+    words.push({ el: w, start: spoken.length, end: spoken.length + inner.length });
+    spoken += inner;
+    sentSpan.appendChild(document.createTextNode(')'));
+    last = m.index + m[0].length;
+  }
+  emitPlain(raw.slice(last));
+  return words;
+}
+
+function makeSentSpan(p, s, obj) {
+  const sp = document.createElement('span');
+  sp.className = 'sent';
+  const words = buildWords(sp, obj.raw);
+  sp.appendChild(document.createTextNode(' '));
+  sp.addEventListener('click', () => jumpTo(p, s));
+  return { el: sp, words };
+}
+
+// Title block (paragraph 0), only when the file provides a title paragraph
+if (HAS_TITLE) (function renderTitle() {
+  const t = DATA[0];
+  const div = document.createElement('div');
+  div.className = 'title-block';
+  const h2 = document.createElement('h2');
+  sentEls[0] = [];
+  sentences[0].forEach((obj, s) => {
+    const r = makeSentSpan(0, s, obj);
+    sentEls[0].push(r);
+    h2.appendChild(r.el);
+  });
+  div.appendChild(h2);
+  if (typeof SUBTITLE_EN !== 'undefined' && SUBTITLE_EN) {
+    const sub = document.createElement('div');
+    sub.className = 'book-subtitle';
+    sub.textContent = SUBTITLE_EN;
+    div.appendChild(sub);
+  }
+  const zh = document.createElement('div');
+  zh.className = 'zh-title';
+  zh.textContent = t.zh;
+  div.appendChild(zh);
+  if (typeof SUBTITLE_ZH !== 'undefined' && SUBTITLE_ZH) {
+    const subZh = document.createElement('div');
+    subZh.className = 'zh-subtitle';
+    subZh.textContent = SUBTITLE_ZH;
+    div.appendChild(subZh);
+  }
+  bookEl.appendChild(div);
+})();
+
+// Paragraph rows. When the file has a title paragraph it is DATA[0] and rows
+// start at 1; otherwise every paragraph is a content row starting at 0.
+const jumpSel = document.getElementById('jumpSel');
+const FIRST_P = HAS_TITLE ? 1 : 0;
+const paraNum = p => HAS_TITLE ? p : p + 1;  // DATA index -> displayed paragraph number
+DATA.slice(FIRST_P).forEach((d, i) => {
+  const p = FIRST_P + i;
+  const row = document.createElement('div');
+  row.className = 'row';
+
+  const enCol = document.createElement('div');
+  const no = document.createElement('div');
+  no.className = 'para-no';
+  no.textContent = 'Paragraph ' + paraNum(p);
+  enCol.appendChild(no);
+  const enDiv = document.createElement('div');
+  enDiv.className = 'en';
+  sentEls[p] = [];
+  sentences[p].forEach((obj, s) => {
+    const r = makeSentSpan(p, s, obj);
+    sentEls[p].push(r);
+    enDiv.appendChild(r.el);
+  });
+  enCol.appendChild(enDiv);
+
+  const zhCol = document.createElement('div');
+  const zhDiv = document.createElement('div');
+  zhDiv.className = 'zh';
+  zhDiv.textContent = d.zh;
+  zhCol.appendChild(zhDiv);
+
+  row.appendChild(enCol);
+  row.appendChild(zhCol);
+  bookEl.appendChild(row);
+
+  const opt = document.createElement('option');
+  opt.value = p;
+  opt.textContent = '¶' + paraNum(p) + ' — ' + stripParens(sentences[p][0].plain).slice(0, 42) + '…';
+  jumpSel.appendChild(opt);
+});
+
+/* ================= Speech engine ================= */
+function pickVoice() {
+  const sel = document.getElementById('voiceSel');
+  const all = speechSynthesis.getVoices().filter(v => v.lang && v.lang.toLowerCase().startsWith('en'));
+  sel.innerHTML = '';
+  // Prefer en-US, then other en voices
+  all.sort((a, b) => {
+    const au = a.lang.toLowerCase().startsWith('en-us') ? 0 : 1;
+    const bu = b.lang.toLowerCase().startsWith('en-us') ? 0 : 1;
+    return au - bu;
+  });
+  const seen = new Set();
+  for (const v of all) {
+    if (seen.has(v.voiceURI)) continue;
+    seen.add(v.voiceURI);
+    const o = document.createElement('option');
+    o.value = v.voiceURI;
+    o.textContent = v.name + ' (' + v.lang + ')';
+    sel.appendChild(o);
+  }
+  const saved = S.voiceURI;
+  let chosen = all.find(v => v.voiceURI === saved)
+    || all.find(v => /microsoft/i.test(v.name) && /en[-_]us/i.test(v.lang))
+    || all.find(v => /microsoft/i.test(v.name))
+    || all.find(v => /google us english/i.test(v.name))
+    || all[0] || null;
+  if (chosen) {
+    sel.value = chosen.voiceURI;
+    S.voice = chosen;
+    S.voiceURI = chosen.voiceURI;
+  }
+}
+if ('speechSynthesis' in window) {
+  speechSynthesis.onvoiceschanged = pickVoice;
+  document.getElementById('voiceSel').addEventListener('change', e => {
+    const v = speechSynthesis.getVoices().find(x => x.voiceURI === e.target.value) || null;
+    S.voice = v; S.voiceURI = v ? v.voiceURI : null;
+    saveState();
+    if (S.playing) restartSentence();
+  });
+}
+
+function setActiveSentence(p, s, scroll) {
+  if (S.activeEl) S.activeEl.classList.remove('active');
+  if (S.activeWordEl) { S.activeWordEl.classList.remove('on'); S.activeWordEl = null; }
+  const r = sentEls[p][s];
+  S.activeEl = r.el;
+  r.el.classList.add('active');
+  if (scroll !== false) r.el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  updateProgress();
+  saveState();
+}
+
+function highlightWord(p, s, charIndex) {
+  const words = sentEls[p][s].words;
+  let best = null;
+  for (const w of words) {
+    if (w.start <= charIndex) best = w;
+    else break;
+  }
+  if (best && best.el !== S.activeWordEl) {
+    if (S.activeWordEl) S.activeWordEl.classList.remove('on');
+    best.el.classList.add('on');
+    S.activeWordEl = best.el;
+  }
+}
+
+function advance() {
+  S.s++;
+  if (S.s >= sentences[S.p].length) { S.p++; S.s = 0; }
+  if (S.p >= sentences.length) { finishReading(); return false; }
+  return true;
+}
+
+function speakSentence() {
+  if (!S.playing) return;
+  const gen = S.gen, p = S.p, s = S.s;
+  const text = sentences[p][s].plain;
+  const utt = new SpeechSynthesisUtterance(text);
+  utt.rate = S.rate;
+  if (S.voice) utt.voice = S.voice;
+  utt.lang = (S.voice && S.voice.lang) || 'en-US';
+  utt.onstart = () => { if (gen === S.gen && S.playing) setActiveSentence(p, s); };
+  utt.onboundary = e => {
+    if (gen === S.gen && S.playing && e.name === 'word') highlightWord(p, s, e.charIndex);
+  };
+  utt.onend = () => {
+    if (gen !== S.gen || !S.playing) return;
+    if (advance()) speakSentence();
+  };
+  utt.onerror = () => {
+    if (gen !== S.gen || !S.playing) return;
+    if (advance()) speakSentence();  // skip a sentence that failed
+  };
+  speechSynthesis.speak(utt);
+}
+
+function restartSentence() {
+  S.gen++;
+  speechSynthesis.cancel();
+  // cancel() is async; give it a tick before speaking
+  setTimeout(() => { if (S.playing) speakSentence(); }, 60);
+}
+
+function updatePlayBtn() {
+  const b = document.getElementById('playBtn');
+  if (S.playing) { b.innerHTML = '&#10074;&#10074; Pause'; b.classList.remove('paused'); }
+  else { b.innerHTML = '&#9654; ' + (S.p === 0 && S.s === 0 && !S.activeEl ? 'Start' : 'Resume'); b.classList.add('paused'); }
+}
+
+function play() {
+  if (!('speechSynthesis' in window)) { alert('Sorry, this browser does not support speech synthesis.'); return; }
+  if (S.playing) { pause(); return; }
+  S.playing = true;
+  S.gen++;
+  updatePlayBtn();
+  const start = () => speakSentence();
+  if (speechSynthesis.speaking || speechSynthesis.pending) {
+    speechSynthesis.cancel();
+    setTimeout(() => { if (S.playing) start(); }, 80);
+  } else {
+    start();
+  }
+}
+
+function pause() {
+  S.playing = false;
+  S.gen++;
+  speechSynthesis.cancel();
+  updatePlayBtn();
+  saveState();
+}
+
+function finishReading() {
+  S.playing = false;
+  S.gen++;
+  speechSynthesis.cancel();
+  S.p = 0; S.s = 0;
+  if (S.activeEl) { S.activeEl.classList.remove('active'); S.activeEl = null; }
+  updatePlayBtn();
+  updateProgress();
+  saveState();
+}
+
+function jumpTo(p, s) {
+  S.p = p; S.s = s;
+  setActiveSentence(p, s);
+  if (S.playing) restartSentence();
+}
+
+function stepSentence(dir) {
+  // dir: -1 = back one sentence, +1 = forward one sentence
+  let p = S.p, s = S.s + dir;
+  if (s < 0) {
+    p--;
+    if (p < 0) return;
+    s = sentences[p].length - 1;
+  } else if (s >= sentences[p].length) {
+    p++;
+    if (p >= sentences.length) return;
+    s = 0;
+  }
+  S.p = p; S.s = s;
+  setActiveSentence(p, s);
+  if (S.playing) restartSentence();
+}
+
+/* ================= Progress & persistence ================= */
+function updateProgress() {
+  let done = 0;
+  for (let p = 0; p < S.p; p++) done += sentences[p].length;
+  done += S.s;
+  const pct = TOTAL_SENTS ? (done / TOTAL_SENTS) * 100 : 0;
+  document.getElementById('progressFill').style.width = pct.toFixed(1) + '%';
+  const totalParas = HAS_TITLE ? sentences.length - 1 : sentences.length;
+  const label = (HAS_TITLE && S.p === 0) ? 'Title' : ('Paragraph ' + paraNum(S.p) + ' of ' + totalParas);
+  document.getElementById('posLabel').textContent =
+    label + ' · sentence ' + (S.s + 1) + ' of ' + sentences[S.p].length +
+    ' · ' + Math.round(pct) + '%';
+  const js = document.getElementById('jumpSel');
+  if (!HAS_TITLE || S.p > 0) js.value = String(S.p);
+}
+
+const LS_KEY = 'audiobook-grandeur-and-gloom-v1';
+const LS_OLD_KEY = 'audiobook-grandeur-and-gloom-v0';
+function saveState() {
+  try {
+    localStorage.setItem(LS_KEY, JSON.stringify({
+      p: S.p, s: S.s, rate: S.rate, voiceURI: S.voiceURI, showZh: S.showZh
+    }));
+  } catch (e) {}
+}
+function loadState() {
+  try {
+    let d = JSON.parse(localStorage.getItem(LS_KEY) || 'null');
+    if (!d) {
+      // Migrate from v1: keep position and settings, but drop the saved voice
+      // so the new Microsoft-first default applies.
+      const old = JSON.parse(localStorage.getItem(LS_OLD_KEY) || 'null');
+      if (old) {
+        d = { p: old.p, s: old.s, rate: old.rate, showZh: old.showZh };
+        localStorage.removeItem(LS_OLD_KEY);
+      }
+    }
+    d = d || {};
+    if (typeof d.p === 'number' && d.p < sentences.length) { S.p = d.p; S.s = Math.min(d.s || 0, sentences[d.p].length - 1); }
+    if (d.rate) { S.rate = d.rate; document.getElementById('rateSel').value = String(d.rate); }
+    if (d.voiceURI) S.voiceURI = d.voiceURI;
+    if (d.showZh === false) toggleZh(false);
+  } catch (e) {}
+}
+
+/* ================= UI wiring ================= */
+function toggleZh(show) {
+  S.showZh = show;
+  document.body.classList.toggle('hide-zh', !show);
+  document.getElementById('zhToggle').innerHTML = show ? '&#30446; Hide translation' : '&#30446; Show translation';
+  saveState();
+}
+document.getElementById('zhToggle').addEventListener('click', () => toggleZh(!S.showZh));
+document.getElementById('playBtn').addEventListener('click', play);
+document.getElementById('restartBtn').addEventListener('click', () => {
+  const wasPlaying = S.playing;
+  S.gen++;
+  speechSynthesis.cancel();
+  S.p = 0; S.s = 0;
+  setActiveSentence(0, 0);
+  if (wasPlaying) setTimeout(() => { if (S.playing) speakSentence(); }, 60);
+  else { pause(); }
+});
+document.getElementById('rateSel').addEventListener('change', e => {
+  S.rate = parseFloat(e.target.value);
+  saveState();
+  if (S.playing) restartSentence();
+});
+jumpSel.addEventListener('change', e => {
+  const p = parseInt(e.target.value, 10);
+  if (!isNaN(p)) jumpTo(p, 0);
+});
+document.addEventListener('keydown', e => {
+  const tag = document.activeElement ? document.activeElement.tagName : '';
+  const inField = /INPUT|SELECT|TEXTAREA/.test(tag);
+  if (e.code === 'Space' && !inField && tag !== 'BUTTON') {
+    e.preventDefault();
+    play();
+  } else if ((e.code === 'ArrowLeft' || e.code === 'ArrowRight') && !inField) {
+    // Arrow keys are safe to handle even with a focused button (they don't activate it)
+    e.preventDefault();
+    stepSentence(e.code === 'ArrowLeft' ? -1 : 1);
+  }
+});
+window.addEventListener('beforeunload', saveState);
+
+/* ================= Init ================= */
+loadState();
+if ('speechSynthesis' in window) pickVoice();
+updatePlayBtn();
+updateProgress();
+if (S.p > 0 || S.s > 0) setActiveSentence(S.p, S.s, false);
+</script>
+</body>
+</html>
