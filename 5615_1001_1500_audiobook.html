@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The land of the rising yield — Audiobook</title>
+<style>
+  :root {
+    --paper: #f7f4ec;
+    --ink: #2b2b26;
+    --muted: #6b665a;
+    --line: #e3dccb;
+    --accent: #b45309;
+    --karaoke-sent: rgba(251, 191, 36, 0.28);
+    --karaoke-word: #fbbf24;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: auto; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, 'Times New Roman', serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---------- Header / controls ---------- */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(247, 244, 236, 0.94);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    padding: 14px 20px 10px;
+  }
+  .bar {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 14px;
+  }
+  .book-title { margin-right: auto; min-width: 200px; }
+  .book-title h1 {
+    margin: 0;
+    font-size: 1.15rem;
+    letter-spacing: 0.02em;
+  }
+  .book-title .sub {
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-family: -apple-system, 'Segoe UI', sans-serif;
+    margin-top: 2px;
+  }
+  .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+  button, select {
+    font-family: -apple-system, 'Segoe UI', sans-serif;
+    font-size: 0.88rem;
+    border: 1px solid var(--line);
+    background: #fffdf8;
+    color: var(--ink);
+    border-radius: 10px;
+    padding: 8px 14px;
+    cursor: pointer;
+  }
+  button:hover, select:hover { border-color: #c9bfa8; }
+  button:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  #playBtn {
+    background: #1f2937;
+    color: #fdfbf5;
+    border-color: #1f2937;
+    font-weight: 600;
+    min-width: 118px;
+  }
+  #playBtn:hover { background: #111827; }
+  #playBtn.paused { background: #b45309; border-color: #b45309; }
+  select { max-width: 190px; }
+  .hint {
+    max-width: 1180px;
+    margin: 8px auto 0;
+    font-family: -apple-system, 'Segoe UI', sans-serif;
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+  .hint b { color: var(--accent); }
+  .progress-track {
+    max-width: 1180px;
+    margin: 10px auto 2px;
+    height: 5px;
+    background: #e9e2d0;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  #progressFill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #d97706, #b45309);
+    border-radius: 3px;
+    transition: width 0.4s ease;
+  }
+  .progress-meta {
+    max-width: 1180px;
+    margin: 6px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-family: -apple-system, 'Segoe UI', sans-serif;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  #jumpSel { font-size: 0.8rem; padding: 5px 8px; max-width: 320px; }
+
+  /* ---------- Book body ---------- */
+  main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 10px 20px 120px;
+  }
+  .title-block { text-align: center; padding: 34px 10px 10px; }
+  .title-block h2 { font-size: 1.9rem; margin: 0 0 8px; letter-spacing: 0.01em; }
+  .title-block .zh-title {
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    color: var(--muted);
+    font-size: 1.05rem;
+  }
+  .book-subtitle {
+    font-size: 1.02rem;
+    color: var(--muted);
+    font-style: italic;
+    margin: 0 0 10px;
+  }
+  .zh-subtitle {
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-top: 6px;
+  }
+  body.hide-zh .zh-title { display: none; }
+
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.6rem;
+    padding: 26px 6px;
+    border-bottom: 1px solid var(--line);
+  }
+  .row:last-child { border-bottom: none; }
+  .row > div { min-width: 0; }
+  .en, .zh { overflow-wrap: break-word; }
+  .para-no {
+    font-family: -apple-system, 'Segoe UI', sans-serif;
+    font-size: 0.72rem;
+    color: #a39c88;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  .en {
+    font-size: 1.12rem;
+    line-height: 1.95;
+  }
+  .zh {
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    font-size: 1.02rem;
+    line-height: 1.95;
+    color: #57534a;
+  }
+  body.hide-zh .row { grid-template-columns: minmax(0, 780px); justify-content: start; }
+  body.hide-zh .zh { display: none; }
+
+  /* ---------- Karaoke ---------- */
+  .sent {
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 2px 5px;
+    margin: -2px -5px;
+    transition: background-color 0.25s ease;
+  }
+  .sent:hover { background: rgba(0, 0, 0, 0.045); }
+  .sent.active { background: var(--karaoke-sent); }
+  .sent.active:hover { background: var(--karaoke-sent); }
+  .w { border-radius: 4px; transition: background-color 0.12s ease; }
+  .w.on {
+    background: var(--karaoke-word);
+    color: #1f2937;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .vocab { font-weight: 700; color: var(--accent); }
+
+  @media (max-width: 860px) {
+    .row { grid-template-columns: 1fr; gap: 1.2rem; }
+    body.hide-zh .row { grid-template-columns: 1fr; }
+    .zh { border-top: 1px dashed var(--line); padding-top: 1.2rem; }
+    .en { font-size: 1.06rem; }
+    .book-title h1 { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <div class="book-title">
+      <h1>The land of the rising yield</h1>
+      <div class="sub">English audiobook &middot; 中英双语</div>
+    </div>
+    <div class="controls">
+      <button id="playBtn" title="Start / pause reading (Space)">&#9654; Start</button>
+      <button id="restartBtn" title="Back to the beginning">&#9198; Restart</button>
+      <select id="rateSel" title="Reading speed">
+        <option value="0.75">0.75&times;</option>
+        <option value="0.85">0.85&times;</option>
+        <option value="1" selected>1&times; speed</option>
+        <option value="1.15">1.15&times;</option>
+        <option value="1.3">1.3&times;</option>
+        <option value="1.5">1.5&times;</option>
+      </select>
+      <select id="voiceSel" title="Reading voice"></select>
+      <button id="zhToggle" title="Show or hide the Chinese translation">&#30446; Hide translation</button>
+    </div>
+  </div>
+  <div class="hint">Click any English sentence to start reading from there &middot; <b>Space</b> = play / pause &middot; <b>&larr;</b> / <b>&rarr;</b> = previous / next sentence &middot; <b class="vocab">Bold amber words</b> are the vocabulary words from the story.</div>
+  <div class="progress-track"><div id="progressFill"></div></div>
+  <div class="progress-meta">
+    <span id="posLabel">Ready</span>
+    <select id="jumpSel" title="Jump to a paragraph"></select>
+  </div>
+</header>
+
+<main id="book"></main>
+
+<script>
+const DATA = [{"en": "The land of the rising yield", "zh": "收益率上升之国"}, {"en": "Japan is aging, shrinking and deep in debt. It is also safer, cleverer and more resilient than its doom-mongers allow", "zh": "日本日益老龄化，人口萎缩，债台高筑。但它也比唱衰者所承认的更安全、更聪明、更有韧性"}, {"en": "One morning in October 2025 a black bear walked through the main entrance of a supermarket in Numata, a town in Gunma prefecture north of Tokyo, and attacked two shoppers. The (bizarre) episode made news around the world, but it was no fluke: (ursine) intrusions have become alarmingly frequent. In the year to March 2026 bears attacked 238 people in Japan and killed a record 13; sightings more than doubled, to over 50,000. Riot police were authorized to use a (rifle) to shoot dangerous bears, and soldiers were sent to Akita, in the north, to help set traps. Bears now (lope) along suburban streets, wander into schoolyards and doze in garages. The danger they (pose) has grown more acute. The reason for it is not new.", "zh": "2025年10月的一个早晨，一头黑熊从正门走进东京以北群马县沼田市的一家超市，袭击了两名顾客。这桩（离奇的）事件引起了全世界的关注，但它绝非偶然：（熊的）入侵事件已经频繁得令人担忧。在截至2026年3月的一年里，日本有238人遭熊袭击，13人丧生，创下纪录；目击次数增加了一倍多，超过5万次。防暴警察获准使用（步枪）射杀有危险的熊，士兵也被派往北部的秋田县协助设置陷阱。如今，熊会沿着郊区街道（大步慢跑），闯进校园，在车库里打盹。它们（构成）的威胁日益严峻，但背后的原因并不新鲜。"}, {"en": "The bears have been emboldened by Japan's demographic retreat. As villages empty, farmland once worked with a (hoe) reverts to scrub, and untended persimmon and chestnut trees offer easy meals. In autumns when the beechnut crop fails, hungry animals come down from (sere) hillsides into towns that no longer have the people to deter them. Hunters, the bears' only real predators, are vanishing too: more than half of those who still hold a hunting (license) are over 60. Once a rare sight, the bear has become the (bane) of rural Japan, and a measure of its faltering (pulse).", "zh": "熊之所以胆子越来越大，是因为日本人口在收缩。随着村庄人去屋空，曾经用（锄头）耕作的农田重新长满灌木，无人照料的柿子树和栗子树为熊提供了现成的食物。在山毛榉果实歉收的秋天，饥饿的熊从（枯黄的）山坡下到镇上，而这些镇子已没有足够的人来驱赶它们。熊唯一真正的天敌——猎人——也在消失：仍持有狩猎（执照）的人中，一半以上年过六十。熊曾经难得一见，如今已成为日本农村的（祸根），也成了衡量农村（脉搏）日渐微弱的一把尺子。"}, {"en": "It would be (facile) to read the bears as an allegory of national (decline). Japan remains the world's fifth-biggest economy and an (immense) store of capital, technology and soft power. Its streets are safe, its trains run to the second and its people live longer than almost anyone else. But it is also the first big country to grow old and then shrink, and what happens here may (prefigure) the fate of South Korea, China and much of Europe. That makes this a (juncture) worth watching. After decades of deflation, prices and interest rates are rising; a hard-charging leader has won the biggest landslide in postwar history; and the neighborhood is growing more dangerous. How Japan copes, and how much more it can (endure), matters well beyond its shores.", "zh": "把这些熊解读为国家（衰落）的寓言未免（肤浅）。日本仍是世界第五大经济体，是资本、技术和软实力的（巨大）宝库。它的街道安全，火车精确到秒，国民几乎比任何其他国家的人都长寿。但它也是第一个先变老、后萎缩的大国，这里发生的一切可能（预示）着韩国、中国和欧洲大部分地区的命运。这使得眼下成为一个值得关注的（关键时刻）。经历了数十年通缩之后，物价和利率正在上升；一位作风强硬的领导人赢得了战后历史上最大的压倒性胜利；周边局势也日益危险。日本如何应对，以及它还能（承受）多少，其影响远远超出它的国界。"}, {"en": "That leader is Sanae Takaichi, who in October 2025 became Japan's first female head of government, a (milestone) in a country that ranks near the bottom of the rich world for women in politics. A former television presenter from Nara who once played the drums in a heavy-metal band, she was a protégé of Shinzo Abe, the nationalist who led Japan for most of the decade before his assassination in 2022, and she has claimed his (mantle). She is a (doctrinaire) conservative: hawkish on China, wary of immigration, attached to male-only imperial succession and a fan of Margaret Thatcher. To (paraphrase) her heroine, this lady is not for turning. Her path to power was bumpy. Komeito, a Buddhist-backed party that had propped up the ruling LDP for 26 years, walked out of the coalition within days of her election as party leader, and she had to cobble together a pact with Ishin, a populist outfit from Osaka.", "zh": "这位领导人就是高市早苗。2025年10月，她成为日本首位女性政府首脑；在一个女性参政程度在富裕国家中几近垫底的国家，这是一座（里程碑）。她来自奈良，当过电视节目主持人，还曾在一支重金属乐队里打鼓。她是安倍晋三的门生——这位民族主义者在2022年遇刺身亡之前的十年里，大部分时间执掌日本——她也自认继承了安倍的（衣钵）。她是一位（教条的）保守派：对华强硬，对移民心存戒备，坚持皇位只能由男性继承，还是玛格丽特·撒切尔的拥趸。（套用）她所崇拜的这位女英雄的名言：这位女士绝不回头。她的掌权之路并不平坦。公明党是一个有佛教背景的政党，26年来一直为执政的自民党撑腰，却在她当选党首后几天内就退出了联合执政，她不得不与来自大阪的民粹主义政党维新会拼凑出一项协议。"}, {"en": "Then came her (gamble). In January, riding high in the polls, she judged the moment (opportune) and called a snap election for February 8th, after the shortest campaign in postwar history. There was not much (suspense). The LDP won 316 of the 465 seats in the lower house of the (legislature), more than any single party since the war and over two-thirds of the chamber on its own. It won so many proportional-representation votes that it ran out of candidates and had to hand 14 seats to other parties. The Diet was quick to (convene) later that month, and it re-elected her with 354 votes. She has proved a (redoubtable) campaigner, especially among young voters, who like her blunt talk.", "zh": "接着，她下了一场（赌注）。今年1月，趁着民调高企，她判断时机（恰当），宣布于2月8日举行提前大选，竞选期之短为战后之最。选举结果几乎没有（悬念）。自民党在（立法机构）下院465个席位中赢得316席，是战后任何单一政党赢得的最多席位，仅凭一党之力就占据了三分之二以上的议席。它在比例代表制中得票太多，以至于候选人不够用，只好把14个席位让给其他政党。当月晚些时候，国会很快（召开）会议，并以354票再次选举她为首相。事实证明，她是一位（令人敬畏的）竞选者，尤其受年轻选民欢迎，他们喜欢她直言不讳。"}, {"en": "With that majority she has pressed ahead with a nationalist agenda. A law passed in July makes it a crime to (defile) the Hinomaru, the national flag, in public in a way that provokes \"extreme disgust\", punishable by up to two years in prison. Its (ostensible) aim is to protect national dignity; constitutional scholars find its vague wording (exceptionable) and fear it could be turned against protesters. Ms Takaichi's answers in parliament are seldom (anodyne), which delights her fans and has landed her in trouble with China. Her approval rating, above 70% in her first months, slipped to 49% in a Jiji Press poll in July, evidence of growing (ire) among older voters, whose support fell most sharply.", "zh": "凭借这一多数优势，她大力推行民族主义议程。今年7月通过的一项法律规定，在公共场合以引起“极度厌恶”的方式（玷污）国旗“日之丸”属于犯罪，最高可判处两年监禁。这项法律（表面上的）目的是维护国家尊严；宪法学者则认为其措辞含糊、（有可指摘之处），担心它可能被用来对付抗议者。高市女士在国会的答辩很少（平淡无奇），这让她的支持者拍手叫好，也让她惹上了与中国的麻烦。她的支持率在上任头几个月超过70%，在7月份时事通讯社的一项民调中降至49%，这表明年长选民的（不满）日益加剧，他们的支持率下降得最为明显。"}, {"en": "Her party has governed Japan almost without interruption since 1955, losing power only twice, briefly. Its internal politics were long a (byzantine) contest between factions, in which money and power continued to (intertwine) and cash was the (grease) that kept the machine running. In 2023 it emerged that several factions had failed to (disclose) kickbacks from fund-raising parties, hundreds of millions of yen kept off the books. Faction bosses who testified before the Diet's ethics council, where witnesses are not under oath and so cannot (perjure) themselves, professed ignorance; few showed much (scruple). Most factions were disbanded. The scandal helped bring down Fumio Kishida and hobbled his successor, Shigeru Ishiba, a (saturnine) defense wonk under whom the ruling coalition lost its majorities in both houses. Yet voters seem willing to (condone) a good deal: 41 of the 43 candidates tarred by the scandal who ran in February won. Critics call the party (incorrigible); its supporters call it the only grown-up in the room.", "zh": "她所在的政党自1955年以来几乎不间断地执掌日本，只有两次短暂失去政权。长期以来，自民党内部政治是派系之间（错综复杂的）较量，金钱与权力不断（交织），现金则是维持这台机器运转的（润滑油）。2023年，人们发现几个派系未能（披露）从筹款聚会中获得的回扣，数亿日元未记入账簿。在国会政治伦理审查会上作证的派系头目们——证人在那里无需宣誓，因此也不可能（作伪证）——都声称毫不知情，几乎没人表现出多少（道德顾忌）。大多数派系随后解散。这桩丑闻帮助赶走了岸田文雄，也拖累了他的继任者石破茂——一位（阴郁的）国防政策专家，在他任内，执政联盟在参众两院都失去了多数席位。然而，选民似乎愿意（宽恕）很多事情：在2月参选的43名受丑闻牵连的候选人中，有41人当选。批评者称这个党（积习难改）；支持者则称它是屋里唯一的成年人。"}, {"en": "The LDP's dominance masks a churning electorate. Sanseito, a populist party whose slogan is \"Japanese First\", surged in the upper-house election of July 2025 and took 15 lower-house seats in February. Its (voluble) leader, Sohei Kamiya, built a following on YouTube by mixing complaints about foreigners with anti-vaccine (twaddle) that mainstream politicians dismiss as (asinine). His message travels fast among (impressionable) young voters who get their news from short videos rather than from the big national dailies, which for decades rarely gave reporters a (byline). On the internet anyone can (opine); some use the freedom to (defame) rivals, and in 2022 parliament stiffened the penalty for insults, with abuse on the web in mind.", "zh": "自民党的主导地位掩盖了一个动荡不定的选民群体。参政党是一个以“日本人优先”为口号的民粹主义政党，在2025年7月的参院选举中异军突起，并在2月的众院选举中赢得15席。它（能说会道的）党首神谷宗币在视频网站上积累了一批追随者，他把对外国人的抱怨与反疫苗的（胡言乱语）混在一起，主流政界人士则斥之为（愚蠢）之言。他的信息在（易受影响的）年轻选民中迅速传播，这些人从短视频而非全国性大报获取新闻，而这些大报几十年来很少给记者（署名）。在互联网上，任何人都可以（发表意见）；有些人利用这种自由（诽谤）对手，2022年，国会考虑到网络上的谩骂，加重了对侮辱罪的处罚。"}, {"en": "The opposition is in a (muddle). In January the Constitutional Democratic Party, the biggest opposition group, merged with Komeito to form the Centrist Reform Alliance, a marriage of convenience that ended in (discomfiture): it won 49 seats, down from the 172 its components had held, and both co-leaders quit. The Democratic Party for the People, a centrist outfit popular with young workers, refused to join the government. Rivals (footle) over tax-cut gimmicks and (jejune) slogans, and debates in parliament are often (sterile). With two-thirds of the lower house, the LDP can override the upper chamber, where the ruling bloc lacks a reliable majority, so it has scant need to (compromise) at all.", "zh": "在野党则（一团混乱）。今年1月，最大在野党立宪民主党与公明党合并，组建了中道改革联合，这桩权宜婚姻以（狼狈收场）告终：它只赢得49席，而两党此前合计拥有172席，两位联合党首双双辞职。国民民主党是一个受年轻上班族欢迎的中间派政党，它拒绝加入政府。各个对手围绕减税噱头和（幼稚的）口号（瞎折腾），国会里的辩论往往（毫无成效）。由于在众院拥有三分之二的席位，自民党可以推翻参院的决定，而执政阵营在参院并没有可靠的多数，所以自民党几乎没有必要（妥协）。"}, {"en": "Parliament itself, housed in a granite-and-(marble) pile completed in 1936, can seem a (pantomime). Ministers read out answers drafted overnight by bureaucrats; sessions are (interminable); members (heckle), sometimes wittily and often in a (puerile) or sexist way. Tempers occasionally snap. In 1953 Shigeru Yoshida, then running the country, muttered \"bakayaro\", roughly \"(imbecile)\", at an opposition member; the outburst led to a no-confidence vote and an election. Majorities can end a debate by (cloture), so opposition parties devised a slyer weapon, the \"ox walk\": shuffling to the ballot box at a (bovine) pace. In 1992 one such vote reportedly took some 13 hours.", "zh": "国会本身坐落于一座1936年落成的花岗岩和（大理石）建筑里，看起来常常像一出（滑稽闹剧）。大臣们宣读官僚连夜起草的答辩稿；会议（没完没了）；议员们（起哄），有时机智风趣，更多时候则（幼稚）或带有性别歧视。人们偶尔也会发火。1953年，时任日本领导人的吉田茂冲一名在野党议员嘟囔了一句“马鹿野郎”，大意是“（蠢货）”；这句脱口而出的话引发了一场不信任投票和一次大选。多数派可以动用（终结辩论程序）来结束讨论，于是在野党想出了一种更狡猾的武器——“牛步战术”：以（牛一般的）速度慢吞吞地走向投票箱。据报道，1992年有一次这样的投票花了约13个小时。"}, {"en": "Behind the politicians stand the mandarins of Kasumigaseki, the district of ministries in central Tokyo. They are clever, overworked and, by international standards, largely (incorruptible), though they draft laws in (verbose) and often (impenetrable) language that is scarcely (comprehensible) to outsiders. On retirement many glide into a (sinecure) at a company or agency they once oversaw, a practice known as amakudari, or \"descent from heaven\". Paperwork remains (cumbersome). A carved seal, the hanko, long counted for more than a (signature), and the (facsimile) machine survived in offices well into the 2020s; a Digital Agency set up in 2021 has been trying to kill both.", "zh": "政客背后站着霞关的官僚——霞关是东京市中心各部委所在的街区。他们聪明、过劳，以国际标准衡量大体上（廉洁奉公），但他们起草法律时用的是（冗长的）、往往（晦涩难懂的）语言，外人几乎无法（理解）。许多人退休后会到自己曾经监管的公司或机构里谋得一份（闲差），这种做法被称为“天下”，即“从天而降”。文书工作依然（繁琐）。长期以来，一枚雕刻的印章——“判子”——比（签名）更管用，（传真）机在办公室里一直存活到2020年代；2021年成立的数字厅一直在努力消灭这两样东西。"}, {"en": "Above it all sits the world's oldest hereditary monarchy. Emperor Naruhito, the 126th occupant of the Chrysanthemum (throne) by traditional reckoning, succeeded his father in 2019 after the first abdication in two centuries. The institution survived the defeat of 1945, and unlike the French, the Japanese never sent a monarch to the (guillotine). But it paid a price: in 1946 Hirohito renounced the notion that he was (divine). Today the emperor is the \"symbol of the state\" and has no political power, and most Japanese (revere) the imperial couple as models of quiet duty.", "zh": "凌驾于这一切之上的是世界上最古老的世袭君主制。按照传统算法，德仁天皇是第126位登上菊花（皇位）的人，他于2019年在两个世纪以来的首次退位后继承了父亲的位子。这一制度挺过了1945年的战败，而且与法国人不同，日本人从未把君主送上（断头台）。但它也付出了代价：1946年，裕仁宣布放弃自己（神圣）的地位。如今，天皇是“国家的象征”，没有任何政治权力，大多数日本人（崇敬）天皇夫妇，视其为默默尽责的楷模。"}, {"en": "The trouble is the succession. Under a law of 1947 only men descended through their fathers from an emperor are (eligible) to reign; women are (ineligible), and until now they lost their royal status on marriage. That leaves just three heirs: the emperor's brother, Crown Prince Akishino, who is 60; Akishino's son, Prince Hisahito, who held his coming-of-age ceremony last year; and the emperor's uncle, Prince Hitachi, who is 90. Polls show that most Japanese would happily accept an empress, and many would like it to be Princess Aiko, the emperor's (personable) only child. Traditionalists, Ms Takaichi among them, insist on an unbroken chain of male descent going back 2,600 years; some even talk of preserving the Y (chromosome) of the first emperor, a ruler most historians regard as mythical.", "zh": "问题出在继承上。根据1947年的一部法律，只有父系血统可追溯至某位天皇的男性才（有资格）继位；女性（没有资格），而且直到现在，她们一结婚就会失去皇族身份。这样一来，继承人只剩下三位：天皇的弟弟、60岁的皇嗣秋筱宫；秋筱宫的儿子悠仁亲王，他去年举行了成年礼；以及天皇的叔叔、90岁的常陆宫。民调显示，大多数日本人乐于接受一位女天皇，许多人希望这个人是天皇（和蔼可亲的）独生女爱子公主。包括高市女士在内的传统派坚持一条可上溯2600年、从未中断的男系传承链；有些人甚至谈到要保存第一代天皇的Y（染色体），而大多数历史学家认为这位统治者只是神话人物。"}, {"en": "In July the Diet passed the first substantive change to the Imperial House Law since 1947, and it takes effect on October 24th. It scraps the (stricture) that princesses must leave the family when they marry, though their husbands and children will remain commoners, and it lets the family adopt men descended through the male side from 11 branches that were cut loose in 1947; the adoptees cannot reign, but their sons could. Letting princesses stay seems (unexceptionable). Bringing in distant cousins who have lived as ordinary citizens for eight decades is more contentious, and the question most Japanese think (germane), whether a woman may reign, was left untouched. Without some change, though, the problem of the succession would soon have become (insoluble).", "zh": "今年7月，国会通过了自1947年以来对《皇室典范》的首次实质性修改，修改将于10月24日生效。它废除了公主结婚后必须离开皇室的（限制），不过她们的丈夫和子女仍是平民；它还允许皇室收养1947年脱离皇籍的11个旁支中的男系男性后代；被收养者本人不能继位，但他们的儿子可以。让公主们留在皇室，似乎（无可非议）。把那些以普通公民身份生活了八十年的远房亲戚接进来则更具争议，而大多数日本人认为最（切题）的问题——女性能否继位——却未被触及。不过，如果不做任何改变，继承问题很快就会变得（无法解决）。"}, {"en": "The monarchy is wrapped in (arcane) ritual. In the Daijosai, a night-long rite held after Naruhito became emperor, he dressed in white silk (vesture) to (commune) with the sun goddess, Amaterasu, from whom the imperial family claims descent. Much of this is (lore) rather than history, and the Imperial Household Agency seems keen to keep it that way. It generally bars excavations at the vast keyhole tombs it classes as imperial mausoleums, preventing researchers from seeking to (exhume) human remains to test their theories. Some tomb complexes cover more ground than Egypt's Great Pyramid, and scholars suspect that several have been misattributed.", "zh": "君主制被（神秘难解的）仪式所包裹。在德仁成为天皇后举行的通宵仪式大尝祭中，他身着白色丝绸（祭服），与天照大神（交流）——皇室自称是这位太阳女神的后裔。这些大多是（传说）而非历史，宫内厅似乎也乐于维持这种状态。宫内厅通常禁止在它认定为皇陵的巨大锁孔形古坟中进行考古发掘，因此研究人员无法尝试（掘出遗骸）来检验自己的推测。有些古坟群的占地面积超过埃及大金字塔，学者则怀疑其中若干墓主的身份被认错了。"}, {"en": "Japan's beginnings are (obscure). People began to (settle) the archipelago at least 30,000 years ago; the Jomon hunter-gatherers who followed made some of the world's oldest pottery, and rice farming arrived from the Asian mainland around 1,000 BC. Around the 5th and 6th centuries AD, Chinese characters, Buddhism and Chinese ideas of government arrived by way of Korea. The Japanese proved (adaptable) borrowers, taking what they wanted and remaking it. Buddhism did not supplant the worship of native spirits, or kami; for more than a thousand years the two would (commingle), with Buddhist temples and kami sanctuaries often sharing the same grounds.", "zh": "日本的起源（模糊不清）。至少3万年前，人类就开始在这片群岛上（定居）；随后的绳文狩猎采集者制作出了世界上最古老的一批陶器，稻作农业则在公元前1000年左右从亚洲大陆传入。公元5、6世纪前后，汉字、佛教和中国的治国理念经由朝鲜半岛传入。日本人证明自己是（善于变通的）借鉴者，取其所需，再加以改造。佛教并没有取代对本土神灵即“神”的崇拜；一千多年来，两者（交融）在一起，佛寺与神社常常共用同一片场地。"}, {"en": "The court of the Heian period, from 794 to 1185, produced one of the world's first novels. \"The Tale of Genji\", written around 1008 by Murasaki Shikibu, a lady-in-waiting, is a sprawling work of (prose) about love and loss at court; Sei Shonagon's \"Pillow Book\" is a catalog of witty lists. Classical waka follows patterns of Japanese sound units, or morae, rather than chasing (rhyme). Much was copied in flowing cursive, its strokes running together much as letters do in a typographic (ligature), leaving the originals all but (illegible) to untrained eyes; even in print the classical language is hardly (intelligible) to most Japanese without a translation.", "zh": "从794年延续到1185年的平安时代，其宫廷孕育了世界上最早的小说之一。女官紫式部在1008年前后写成的《源氏物语》，是一部描写宫廷爱恨离别的鸿篇（散文）巨著；清少纳言的《枕草子》则是一部妙趣横生的清单汇编。古典和歌讲究日语音拍的节奏，而不追求（押韵）。许多作品以流畅的草书抄写，笔画彼此相连，仿佛排版中的（连字），令未经训练的现代读者几乎（难以辨认）原稿；即便印成铅字，古典日语对大多数日本人来说，没有译文也很难（读懂）。"}, {"en": "From the 12th century power passed to warriors. The samurai became the (archetype) of the (virile) fighting man, with a code of loyalty later romanticized as bushido, and a sword forged with a hard cutting edge and a softer, (ductile) core. Their greatest test came when Mongol fleets attacked in 1274 and 1281. Japanese defenders managed to (repulse) both invasions, the second with the help of a (cyclone) that wrecked the invaders' fleet: the original kamikaze, or \"wind of the gods\". Later centuries brought (internecine) strife, culminating in the Sengoku, or \"warring states\", era of the 15th and 16th centuries, when rival lords fought over a fragmented country.", "zh": "从12世纪起，权力转移到武士手中。武士成了（阳刚的）战士的（原型），他们有一套后来被浪漫化为“武士道”的忠诚准则，他们的刀刃口坚硬，刀芯较软而富有（延展性）。他们最大的考验来自1274年和1281年蒙古舰队的两次进攻。日本守军成功（击退）了两次入侵，第二次还得益于一场摧毁入侵舰队的（气旋）：这就是最早的“神风”，即“众神之风”。此后的几个世纪带来了（自相残杀的）纷争，在15、16世纪的“战国”时代达到顶点，各路诸侯为争夺一个四分五裂的国家而混战。"}, {"en": "Three warlords stitched it back together. Oda Nobunaga moved in 1573 to (depose) the last Ashikaga shogun. Toyotomi Hideyoshi, a foot-soldier's son who rose by (guile) as much as by force, twice invaded Korea in the 1590s. Tokugawa Ieyasu won the battle of Sekigahara in 1600 and received (investiture) as shogun from the emperor in 1603, founding a dynasty that ruled for two and a half centuries. Japan was then a rich prize: its silver (ore) made it, by some estimates, the source of about a third of the world's silver output, which drew Portuguese traders and, with them, missionaries.", "zh": "三位军阀把国家重新缝合起来。织田信长于1573年出手（废黜）了最后一位足利将军。足轻之子丰臣秀吉凭借（诡计）和武力崛起，在16世纪90年代两次入侵朝鲜。德川家康在1600年赢得关原之战，1603年接受天皇的（册封）成为将军，建立了一个统治两个半世纪的王朝。当时的日本是一块肥肉：据一些估计，它的银（矿石）使它产出了全世界约三分之一的白银，这吸引了葡萄牙商人，传教士也随之而来。"}, {"en": "Francis Xavier, a Jesuit, landed in 1549, and his successors made perhaps 300,000 Christians, teaching one gospel (parable) after another in translation. Japan's rulers came to see the faith as a (tare) among the wheat, a weed that did the bidding of foreign powers. Hideyoshi had 26 Christians crucified in Nagasaki in 1597; the Tokugawa banned the religion in 1614, and after a largely Christian peasant rebellion at Shimabara in 1637-38 they expelled the Portuguese. Suspects were made to tread on images of Christ to (abjure) their faith. Some families kept praying in secret for more than two centuries. These \"hidden Christians\" handed down their (clandestine) prayers by word of mouth, mixing Latin and Portuguese fragments of (scripture) that, over the generations, they no longer understood.", "zh": "耶稣会士方济各·沙勿略于1549年登陆日本，他的后继者们使约30万人皈依基督教，逐篇讲解译成日语的福音书（寓言）来传教。日本统治者逐渐把这种信仰视为麦田里的（稗子），一种替外国势力效劳的杂草。1597年，秀吉下令在长崎将26名基督徒钉死在十字架上；德川幕府于1614年禁止了这一宗教，在1637至1638年以基督徒为主的岛原农民起义之后，又驱逐了葡萄牙人。嫌疑人被迫踩踏基督像，以示（弃绝）信仰。一些家庭秘密祈祷了两个多世纪。这些“隐匿的基督徒”口耳相传他们（秘密的）祷文，其中混杂着拉丁语和葡萄牙语的（经文）片段，世代相传之后，他们已不再明白其中的意思。"}, {"en": "From 1639 the shogunate sought to (immure) Japan within a regime later called sakoku, or \"locked country\", a kind of national (quarantine) that lasted until the 1850s. Japanese were forbidden to travel abroad on pain of death. Trade was restricted rather than abolished: Chinese and Dutch merchants traded through Nagasaki, the Dutch from Dejima, a fan-like artificial island in the harbor, an (enclosure) of about a hectare and a half. Other regulated links ran through Tsushima to Korea, Satsuma to Ryukyu and Matsumae to the Ainu in the north. Foreign vessels that tried to (interlope) were turned away or fired upon. Yet knowledge seeped in. Scholars of rangaku, or \"Dutch learning\", pored over imported books on anatomy and used a Dutch (microscope) to examine specimens.", "zh": "从1639年起，幕府试图通过后来被称为“锁国”的体制将日本（封闭禁锢）起来；这种近乎全国性的（隔离）限制一直持续到19世纪50年代。日本人出国会被处以死刑。贸易受到严格限制，却并未彻底中断：中国和荷兰商人通过长崎往来，荷兰商人主要在港内一座扇形人工岛出岛活动，那里是一块约一公顷半的（围地）。其他受管制的往来还包括对马藩与朝鲜、萨摩藩与琉球以及松前藩与北方阿伊努人的贸易。试图（擅闯）的外国船只会被驱离或遭到炮击。然而，知识还是渗透了进来。“兰学”即“荷兰学问”的学者们钻研进口的解剖学书籍，并用荷兰传来的（显微镜）观察标本。"}, {"en": "Inside its walls Tokugawa Japan was peaceful and, for long stretches, prosperous. Edo, today's Tokyo, had perhaps a million people by the early 18th century, making it one of the biggest cities on earth, and it was remarkably clean, because night soil was collected and sold to farmers as (manure). But the regime's finances were rickety. Short of money, the shogunate repeatedly chose to (debase) the coinage. Samurai living on fixed rice stipends grew poorer, while traders and moneylenders piled up (lucre) that the warrior class affected to despise. Crop failures brought (famine): in the 1780s hunger killed hundreds of thousands and sparked riots in the cities.", "zh": "在锁国的围墙之内，德川时代的日本太平无事，而且在很长时间里繁荣富庶。江户即今天的东京，到18世纪初可能已有百万人口，是世界上最大的城市之一，而且非常干净，因为粪便被收集起来卖给农民作（肥料）。但幕府的财政捉襟见肘。由于缺钱，幕府一再选择让货币（贬值）。靠固定禄米生活的武士越来越穷，而商人和放贷者则积攒起武士阶层装作不屑一顾的（钱财）。歉收带来了（饥荒）：18世纪80年代，饥饿夺去了数十万人的生命，并在城市中引发了暴乱。"}, {"en": "It was also a time of extraordinary creativity. The pleasure quarters of Edo and Osaka gave rise to the \"floating world\" of woodblock prints, kabuki theater and the racy stories of Ihara Saikaku, whose \"Life of an Amorous Man\", published in 1682, follows a (libertine) through thousands of affairs. Kabuki actors performed in lavish (costume) and makeup, and theatergoers loved tales of revenge and ghosts, such as the (macabre) \"Yotsuya Kaidan\" of 1825. Women of fashion wore ever wider obi, a broad sash used to (girdle) the kimono. And around 1831 Katsushika Hokusai used Prussian blue, a pigment newly imported from Europe, to paint the (azure) curl of \"The Great Wave off Kanagawa\", perhaps the most famous image in Asian art.", "zh": "那也是一个创造力非凡的时代。江户和大阪的花街柳巷孕育了“浮世”：木版画、歌舞伎戏剧，以及井原西鹤的风流故事——他1682年出版的《好色一代男》讲述了一个（浪荡子）的数千段风流韵事。歌舞伎演员身着华丽的（戏服）、浓妆登台，观众喜爱复仇和鬼怪故事，比如1825年（阴森恐怖的）《四谷怪谈》。时髦女性所系的“带”越来越宽，这是一条用来（束住）和服的宽腰带。1831年前后，葛饰北斋用刚从欧洲进口的颜料普鲁士蓝，画出了《神奈川冲浪里》中（蔚蓝）的浪卷，这或许是亚洲艺术中最著名的图像。"}, {"en": "The seclusion ended at gunpoint. In 1853 Commodore Matthew Perry of the American navy steamed into Edo Bay with four black-hulled vessels and demanded that Japan open its harbors; he returned the next year with more. His expedition included a photographer who made a (daguerreotype), among the earliest photographs taken in Japan. One Japanese woodblock (caricature) depicted Perry as a hairy, goblin-like barbarian with a hooked, (aquiline) nose. Treaties extracted from the shogunate in the following years, which fixed low tariffs and exempted foreigners from Japanese courts, seemed intended to (shackle) Japan, just as Western powers were already hobbling China.", "zh": "闭关锁国在枪口下结束。1853年，美国海军准将马修·佩里率四艘黑色船体的舰船驶入江户湾，要求日本开放港口；次年，他带着更多舰船卷土重来。他的远征队中有一名摄影师，他拍摄了一幅（银版照片），属于日本最早的一批摄影作品。一幅日本木版（讽刺画）把佩里描绘成毛发浓密、长着（鹰钩状的）鼻子的妖怪般的蛮夷。此后几年间从幕府手中榨取的条约规定了低关税，并让外国人免受日本法庭管辖，似乎意在（束缚）日本，正如西方列强当时已在牵制中国一样。"}, {"en": "In 1868 a band of samurai reformers overthrew the shogunate in the name of the teenage Emperor Meiji, and the country began to (metamorphose) at astonishing speed. Within a decade the samurai class had been abolished, a national army of draftees created, railways laid and a modern bureaucracy founded. Officials swapped kimonos for Western (attire). A new peerage was invented to (ennoble) loyal statesmen and former lords. Fukuzawa Yukichi, whose influential (treatise) on learning helped make him a bestselling author, urged Japanese to learn from the West; his face adorned the ¥10,000 bill until 2024. The new state also pried Buddhism apart from Shinto, which it promoted as a creed of emperor-worship.", "zh": "1868年，一批武士改革者以少年明治天皇的名义推翻了幕府，国家开始以惊人的速度（脱胎换骨）。不到十年，武士阶层被废除，一支由征召兵组成的国家军队建立起来，铁路铺设起来，现代官僚体系也得以创立。官员们脱下和服，换上西式（服装）。新设立的华族制度被用来（封授爵位），对象是忠诚的政治家和旧日的大名。福泽谕吉关于学问的（论著）影响广泛，使他成为畅销书作家；他敦促日本人向西方学习；直到2024年，他的头像一直印在一万日元纸币上。新政府还把佛教与神道强行分开，并把神道作为崇拜天皇的信条加以推广。"}, {"en": "Industrial muscle brought imperial ambition. Japan defeated China in 1895 and Russia in 1905, the first victory of an Asian power over a European one in modern times, then annexed Korea in 1910 and seized Manchuria in 1931. Full-scale war with China followed in 1937. When Nanjing fell that December, Japanese troops murdered tens of thousands of prisoners and civilians and raped many women in a (massacre) whose scale is still argued over. Unit 731, a germ-warfare outfit in Manchuria, carried out (vile) experiments on prisoners. It was an (ignoble) chapter, and the (execrable) abuse of \"comfort women\", forced into military brothels, still poisons relations with South Korea.", "zh": "工业实力催生了帝国野心。日本在1895年打败中国，1905年打败俄国——这是近代以来亚洲国家首次战胜欧洲国家——随后于1910年吞并朝鲜，1931年占领满洲。1937年，全面侵华战争爆发。那年12月南京陷落时，日军杀害了数以万计的俘虏和平民，并强奸了大批妇女，这场（大屠杀）的规模至今仍有争议。驻满洲的细菌战部队731部队对囚犯进行了（卑劣的）实验。那是（不光彩的）一页，而对被强征进军队妓院的“慰安妇”的（令人憎恶的）虐待，至今仍在毒害日本与韩国的关系。"}, {"en": "The attack on Pearl Harbor in December 1941 brought America into the war and, ultimately, catastrophe. Of some 2.3m Japanese military dead, by some estimates more than half succumbed not to bullets but to starvation and disease, including malaria and (gangrene), in the jungles of New Guinea, Burma and the Pacific islands. In March 1945 American bombers set fire to Tokyo, a city of (combustible) wooden houses, killing some 100,000 people in a single night. In August atomic bombs obliterated Hiroshima and Nagasaki; the skeletal (dome) of Hiroshima's former industrial exhibition hall still stands as a memorial. Hirohito, whom many historians regard as (culpable) for the war, was spared prosecution by the American occupiers, who found him useful.", "zh": "1941年12月对珍珠港的袭击把美国卷入战争，并最终带来了灾难。在大约230万名日本军人死者中，据一些估计，一半以上不是死于枪弹，而是死于饥饿和疾病，包括新几内亚、缅甸和太平洋岛屿丛林中的疟疾和（坏疽）。1945年3月，美国轰炸机放火焚烧东京这座满是（易燃的）木屋的城市，一夜之间约10万人丧生。8月，原子弹摧毁了广岛和长崎；广岛原产业奖励馆只剩骨架的（圆顶）至今仍矗立着，作为纪念。许多历史学家认为裕仁对战争负有（罪责），他却因美国占领者认为他有用而免于起诉。"}, {"en": "The war has left an (indelible) mark on Japan's relations with its neighbors. Japanese leaders have apologized many times, most memorably in 1995, when Tomiichi Murayama, a Socialist, expressed his \"heartfelt apology\" for colonial rule and aggression. Yet many Chinese and Koreans question whether Japan has done enough to (atone). It is (undisputable) that some nationalists would like to (erase) the darker chapters from school textbooks. And then there is Yasukuni, a Shinto sanctuary in Tokyo whose priests (enshrine) the spirits of some 2.5m war dead, including 14 Class-A war criminals added in 1978. Beijing and Seoul (deplore) visits by politicians as (reprehensible). Ms Takaichi used to go regularly; as head of government she has stayed away and sent ritual offerings instead, though her defense minister went on August 15th, the anniversary of the surrender, when her own speech made no mention of remorse.", "zh": "战争在日本与邻国的关系上留下了（不可磨灭的）印记。日本领导人曾多次道歉，最令人难忘的是1995年，社会党人村山富市对殖民统治和侵略表达了“由衷的歉意”。然而，许多中国人和韩国人质疑日本是否已经做了足够的事来（赎罪）。有一点（无可争辩）：一些民族主义者想把那些更黑暗的篇章从学校教科书中（抹去）。还有位于东京的靖国神社，神职人员在此（供奉）约250万名战死者的亡灵，其中包括1978年被合祀的14名甲级战犯。北京和首尔（痛斥）政客参拜靖国神社，认为此举（应受谴责）。高市女士过去经常参拜；成为政府首脑后，她一直没有前往，而是改为献上供品，不过她的防卫大臣在8月15日即投降纪念日去参拜了，而她本人当天的讲话只字未提反省。"}, {"en": "The American occupation, from 1945 to 1952, remade the country. A constitution drafted by General Douglas MacArthur's staff in about a week came into force in 1947; its Article 9 renounces war, a (principle) to which many Japanese remain devoted. Land reform broke the power of landlords, and the zaibatsu conglomerates were partly broken up. Shigeru Yoshida, who led Japan for most of the period between 1946 and 1954, set the (doctrine) that would guide it for decades: rely on America for defense and concentrate on getting rich. Critics on the right called this (servile); critics on the left said Japan ceased to (adhere) to Article 9 once it had armed forces.", "zh": "1945年至1952年的美国占领重塑了这个国家。道格拉斯·麦克阿瑟将军的幕僚用大约一周时间起草的宪法于1947年生效；其第九条宣布放弃战争，许多日本人至今仍信守这一（原则）。土地改革打破了地主的势力，财阀也被部分拆分。1946年至1954年间大部分时间执掌日本的吉田茂，确立了一套指导日本数十年的（方针）：防务依靠美国，专心致富。右翼批评者称之为（奴颜婢膝）；左翼批评者则说，日本一旦拥有武装力量，就不再（遵守）第九条了。"}, {"en": "Getting rich is what it did. Between the mid-1950s and 1973 the economy grew by around 9% a year. The Tokyo Olympics of 1964 showcased the first bullet train. Japanese firms conquered world markets for steel, cars and electronics; Sony's Walkman, launched in 1979, made music (portable). By the 1980s Japan Inc seemed (invulnerable), and many Americans feared that it would (outshine) them. Trade friction was (considerable): in 1987 a group of congressmen smashed a Toshiba radio with sledgehammers on Capitol Hill.", "zh": "日本确实富了起来。从20世纪50年代中期到1973年，经济年均增长约9%。1964年东京奥运会展示了第一列子弹头列车。日本企业征服了全球钢铁、汽车和电子产品市场；1979年推出的索尼随身听让音乐变得（便于携带）。到20世纪80年代，“日本株式会社”似乎（无懈可击），许多美国人担心日本会（胜过）他们。贸易摩擦（相当激烈）：1987年，一群美国国会议员在国会山用大锤砸烂了一台东芝收音机。"}, {"en": "Then came the bubble. Cheap money in the late 1980s made loans easily (obtainable) and speculation (febrile). At the (acme) of the frenzy the grounds of the Imperial Palace in Tokyo were said to be worth more than all the real estate in California, and on December 29th 1989 the Nikkei 225 stock index ended the day at 38,916, a level it would not regain for 34 years. Valuations were (implausible) and building projects (grandiose). Japanese buyers splurged on Western art. In 1990 Ryoei Saito, a paper magnate, paid $82.5m for van Gogh's \"Portrait of Dr Gachet\" and was reported to have said that he would like it burned on his funeral (pyre), a remark that the art world found (philistine).", "zh": "接着，泡沫来了。20世纪80年代末的廉价资金使贷款（唾手可得），投机（狂热）。在狂潮的（顶峰），据说东京皇居的地皮比整个加利福尼亚州的房地产还值钱；1989年12月29日，日经225股票指数收于38916点，此后34年都未能重回这一水平。估值（令人难以置信），建筑项目（浮夸）。日本买家大肆购买西方艺术品。1990年，造纸业大亨齐藤了英花8250万美元买下梵高的《加歇医生的肖像》，据报道他曾说希望死后把这幅画放在火葬（柴堆）上一起烧掉，艺术界认为这番话（庸俗不堪）。"}, {"en": "The crash that followed did not wreck the economy so much as sap it. Banks, reluctant to (foreclose) on borrowers and admit their losses, kept insolvent \"zombie\" firms alive, each living off cheap loans like a (vampire) and draining the lifeblood of healthier rivals. Deflation set in, growth slowed to a crawl and the stockmarket stayed (comatose). For two decades the country seemed to (bumble) along in a (mire) of falling prices and rising debt, as one leader after another came and went. The \"lost decades\" were not a catastrophe: unemployment stayed low and living standards high. But they bred a (malaise), an (impalpable) loss of confidence, and an aversion to risk that would (enfeeble) firms and households alike.", "zh": "随后的崩盘与其说摧毁了经济，不如说耗尽了它的元气。银行不愿（收回抵押品）、不愿承认损失，于是让资不抵债的“僵尸”企业苟延残喘，每一家都像（吸血鬼）一样靠廉价贷款度日，吸干更健康的竞争对手的血。通缩随之而来，增长慢如蜗牛，股市一直（昏迷不醒）。二十年来，领导人走马灯似的上台下台，这个国家似乎在物价下跌、债务上升的（泥潭）中（跌跌撞撞）前行。“失去的几十年”并非一场灾难：失业率一直很低，生活水平一直很高。但它们滋生了一种（萎靡不振）的情绪，一种（难以名状的）信心丧失，以及一种厌恶风险的心态，这种心态将（削弱）企业和家庭。"}, {"en": "Shinzo Abe tried to shock the country out of its torpor after he returned to power in 2012. Under \"Abenomics\" the Bank of Japan, which sets monetary policy and also helps (supervise) banks, bought government bonds on a vast scale, pushed short-term interest rates below zero in 2016 and capped long-term yields. It worked only partly. Not until March 2024 did the BoJ judge it safe to end negative rates. Since then it has raised its policy rate step by step, to 1.25% in September, the highest since 1995; two of the nine board members thought the latest move (premature). Kazuo Ueda, the (unflappable) academic who runs the bank, says his aim is to (ensure) that inflation stays near 2% for good. He knows that central bankers are (fallible): a rise in July 2024 helped to (convulse) markets, and the Nikkei fell by 12% in a single day.", "zh": "2012年重新执政后，安倍晋三试图把国家从萎靡中唤醒。在“安倍经济学”下，负责制定货币政策并协助（监管）银行的日本银行大规模购买国债，于2016年把短期利率压到零以下，并为长期收益率设定上限。效果只是部分显现。直到2024年3月，日本银行才判断可以安全地结束负利率。此后它逐步加息，9月升至1.25%，为1995年以来的最高水平；九名政策委员会委员中有两人认为最近一次加息（为时过早）。执掌日本银行的学者植田和男（处变不惊），他说自己的目标是（确保）通胀持久地保持在2%左右。他知道央行官员也（难免犯错）：2024年7月的一次加息助推了市场（剧烈震荡），日经指数在一天之内暴跌12%。"}, {"en": "Inflation is back, and voters notice. Prices began rising in 2022, pushed up by a weak yen and dear energy. Rice, a political commodity, roughly doubled in price; in January 2026 a 5kg bag cost a record ¥4,416 on average. That is a touchy matter in a country where, in 1918, soaring rice prices brought an angry (rabble) onto the streets in riots that toppled a cabinet. Squeezed households now (scrape) by as their (disposable) incomes lag behind. Energy subsidies have helped to (tame) the overall numbers: core inflation was 1.7% in August, below the BoJ's target for the eighth month running. But food prices are still rising briskly, and unions won pay rises averaging 5.01% in this spring's wage talks, the third year in a row above 5%. Policymakers hope they have at last managed to (exorcise) deflation; the fear is that the economy could (relapse) if wages stall.", "zh": "通胀回来了，选民也察觉到了。物价自2022年开始上涨，推手是疲软的日元和昂贵的能源。大米是一种政治商品，价格大约翻了一番；2026年1月，一袋5公斤大米的平均价格达到创纪录的4416日元。这在日本是个敏感问题：1918年，飙升的米价曾让愤怒的（暴民）走上街头，引发的骚乱推翻了一届内阁。手头拮据的家庭如今（勉强度日），因为他们的（可支配）收入跟不上物价。能源补贴帮助（抑制）了总体数据：8月份核心通胀率为1.7%，已连续第八个月低于日本银行的目标。但食品价格仍在快速上涨，工会在今年春季的劳资谈判中争取到平均5.01%的加薪，这是连续第三年超过5%。决策者希望他们终于（驱除）了通缩；令人担心的是，如果工资停滞，经济可能会（再度陷入）通缩。"}, {"en": "The weak yen is a mixed blessing. A rate of around 160 to the dollar is (favorable) for exporters and tourists but painful for households that pay for imported food and fuel. After weeks of (terse) warnings, the finance ministry began to (intervene) in late April, when the yen breached 160, but its yen-buying at first proved (futile). In late July, with the currency at its weakest in four decades, at nearly 163 to the dollar, Tokyo struck again, this time with the backing of the American Treasury, which Japan had taken care to (apprise) of its plans. Scott Bessent, the treasury secretary, publicly cheered the move. American involvement made the threat of further action more (credible), and the yen rallied by about 4%.", "zh": "日元疲软是一件喜忧参半的事。1美元兑160日元左右的汇率对出口商和游客（有利），但对需要支付进口食品和燃料的家庭来说却很痛苦。在几周的（简短生硬的）警告之后，财务省于4月下旬日元跌破160时开始（干预），但它买入日元的努力起初被证明（徒劳）。7月下旬，日元跌至四十年来的最弱水平，接近1美元兑163日元，东京再次出手，这次得到了美国财政部的支持——日本事先特意向美方（通报）了计划。美国财政部长斯科特·贝森特公开为此叫好。美国的参与使进一步行动的威胁更加（可信），日元随即反弹约4%。"}, {"en": "The bond market matters even more. For years the BoJ held yields near zero by hoovering up government bonds, and it still owns nearly half of them. Since it began to taper its buying in 2024, yields have climbed: on September 24th the ten-year yield reached 3.06%, the highest since 1996. Japan has become the land of the rising yield. Markets have grown (labile), and estimates of the BoJ's paper losses on its bond holdings are (imprecise) but large. Higher yields could (undermine) the state's finances. And because Japanese savers hold vast sums abroad, a rush to bring money home could (unsettle) bond markets from New York to London and cause others to (buckle).", "zh": "债券市场更为重要。多年来，日本银行通过大量吸纳国债把收益率压在零附近，至今仍持有近一半的国债。自2024年开始缩减购债以来，收益率不断攀升：9月24日，十年期国债收益率达到3.06%，为1996年以来的最高水平。日本已成为“收益率上升之国”。市场变得（反复无常），对日本银行所持债券账面损失的估计（不精确），但数额巨大。更高的收益率可能（削弱）国家财政。而且由于日本储户在海外持有巨额资金，资金一旦大举回流，可能（扰乱）从纽约到伦敦的债券市场，并导致其他市场（崩溃）。"}, {"en": "That is because the state is so deeply in hock. Japan's gross public debt is more than twice the size of its GDP, the highest ratio in the rich world. Ministries have asked for a record ¥143trn for the fiscal year starting in April 2027, an (elephantine) budget swollen by interest payments, defense and welfare (expenditure) on an aging population. The (irreducible) core of the problem is demographic: fewer workers must support more pensioners. The obvious fixes, from higher taxes to smaller benefits and later retirement, are (unpalatable) to voters. Inflation has helped, by swelling nominal GDP faster than the debt and making the ratio look more (tractable) than at any time in a decade. But that relief depends on interest rates staying below growth.", "zh": "这是因为国家负债累累。日本的公共债务总额是其GDP的两倍多，在富裕国家中比例最高。各部委为2027年4月开始的财年申请了创纪录的143万亿日元预算，这是一份（庞大的）预算，因利息支付、国防以及老龄化人口的福利（开支）而膨胀。问题（无法再简化的）核心在于人口：更少的劳动者必须供养更多的领取养老金者。从加税、削减福利到推迟退休，这些显而易见的办法都让选民（难以接受）。通胀起到了帮助作用，它使名义GDP的增长快于债务，从而让债务比率看起来比十年来任何时候都更（易于处理）。但这种缓解有赖于利率保持在增长率之下。"}, {"en": "Ms Takaichi's (impulse) is to spend. Within weeks of taking office she unveiled a big stimulus package, scrapped a decades-old surcharge on gasoline and expanded subsidies for electricity and gas. She promises \"responsible and proactive\" public finances. The (charitable) reading is that Japan needs to spend on defense, chips and energy, and that voters want (tangible) relief from rising prices. Skeptics see a (reprise) of Abenomics, minus the reforms that were supposed to accompany it.", "zh": "高市女士的（冲动）是花钱。上任几周内，她就推出了一揽子大规模经济刺激计划，取消了一项实施数十年的汽油附加税，并扩大了电费和燃气补贴。她承诺实行“负责任的积极”财政政策。（宽厚的）解读是，日本需要在国防、芯片和能源上花钱，而选民希望从物价上涨中得到（实实在在的）缓解。怀疑者则认为这是安倍经济学的（翻版），只是少了本应与之配套的改革。"}, {"en": "She also wants to tax less. Her flagship policy is a cut in the consumption tax on food from 8% to 1% for two years from April 2027, with cash handouts to make up the difference for poorer households. Her cabinet has endorsed an (outline) of the plan, and she insists it will be paid for without new deficit-financing bonds. Economists question whether it is (sensible): a cut in food taxes helps the rich as well as the poor, and a more (commonsense) approach would target help at those who need it. Many also suspect that the cut, once in place, will never be allowed to (expire). Is it (sane), they ask, for the most indebted country in the rich world to cut taxes just as its borrowing costs are rising?", "zh": "她还想减税。她的旗舰政策是从2027年4月起，把食品消费税从8%降到1%，为期两年，同时向较贫困家庭发放现金以弥补差额。她的内阁已批准了这一计划的（纲要），她坚称不会为此发行新的赤字国债。经济学家质疑这是否（明智）：降低食品税对富人和穷人同样有利，更（合乎常理）的做法是把援助集中给真正需要的人。许多人还怀疑，减税一旦实施，就永远不会被允许（到期终止）。他们问道：富裕国家中负债最重的国家，偏偏在借贷成本上升之际减税，这样做是否（理智）？"}, {"en": "So far bond buyers have remained fairly (sanguine). The (premise) of Japan's fiscal resilience is that the country has (ample) domestic savings and that almost 90% of its government debt is held at home, much of it by the central bank, commercial banks and pension funds. A sudden British-style crisis, like the one that felled Liz Truss in 2022, therefore seems less (plausible) in Japan. The (ponderable) costs of higher yields can be calculated: each percentage-point rise eventually adds trillions of yen to annual interest bills. The (imponderable) is confidence. If domestic buyers began to lose faith in the state's commitment to fiscal prudence, the reckoning could come suddenly.", "zh": "到目前为止，债券买家一直相当（乐观）。日本财政韧性的（前提）是，该国拥有（充裕的）国内储蓄，近90%的政府债务由国内持有，其中大部分由央行、商业银行和养老基金持有。因此，像2022年令莉兹·特拉斯下台那样的英国式突发危机，在日本似乎不太（可能）发生。更高收益率（可以衡量的）成本是能够计算的：利率每上升一个百分点，最终都会使每年的利息支出增加数万亿日元。（难以估量的）则是信心。如果国内买家开始对国家坚守财政审慎的承诺失去信心，清算时刻可能会突然到来。"}, {"en": "Corporate Japan, by contrast, has been quietly transformed. Pressed by the Tokyo Stock Exchange, which in 2023 told firms trading below book value to explain how they would do better, companies have unwound cross-shareholdings, raised dividends and bought back record amounts of their own stock. Activist funds, once shunned, are now part of the scenery. The five big trading houses, (mercantile) giants that deal in everything from grain to gas, attracted Warren Buffett, who began buying stakes in them in 2019. Reforms have helped to (lure) foreign money back; firms have become more (nimble), and in June the Nikkei finished a day above 72,000 for the first time, nearly double its bubble-era peak.", "zh": "相比之下，日本企业已悄然转型。东京证券交易所在2023年要求股价低于账面价值的公司说明将如何改进，在其压力下，企业纷纷解除交叉持股、提高股息，并以创纪录的规模回购股票。曾经被避之不及的激进投资基金，如今已司空见惯。五大综合商社是从谷物到天然气无所不包的（商贸）巨头，它们吸引了沃伦·巴菲特，他从2019年开始买入这些公司的股份。改革帮助日本重新（吸引）外国资金，企业也变得更加（灵活），日经指数在6月首次收于72000点以上，几乎是泡沫时期峰值的两倍。"}, {"en": "Deals that would once have been unthinkable now happen. Nippon Steel bought US Steel for $14.9bn in June 2025 after a bruising political fight in Washington, conceding a \"golden share\" to the American government. Sony carried out the (divestiture) of its financial arm, listing it separately in 2025, to focus on entertainment. Conglomerates that once sought to (subsume) every kind of business under one roof are slimming down. In 2025 Seven & i, the owner of 7-Eleven, saw off a takeover bid from Couche-Tard, a Canadian rival, but only after months of public wrangling.", "zh": "过去难以想象的交易如今也会发生。2025年6月，日本制铁在华盛顿经历了一场激烈的政治斗争后，以149亿美元收购了美国钢铁公司，并向美国政府让出了一股“黄金股”。索尼完成了其金融部门的（剥离），于2025年让其单独上市，以便专注于娱乐业务。曾经试图把各种业务（纳入）一个屋檐下的企业集团正在瘦身。2025年，7-Eleven的母公司柒和伊控股挡住了加拿大竞争对手库什塔尔的收购要约，但那是在几个月的公开拉锯之后。"}, {"en": "Carmaking remains the backbone of industry. Toyota, which sold more vehicles than any other carmaker for a sixth year running in 2025, still makes the hybrids that rivals scorned, and its factories (assemble) cars with legendary efficiency, every bolt and (axle) arriving just in time. Mazda's MX-5 is the best-selling two-seat (convertible) in history; Toyota's Century, a hand-built (limousine), ferries emperors and party bosses. Nissan, by contrast, is a (debacle). Merger talks with Honda collapsed in 2025, and it is shutting plants. Its former boss, Carlos Ghosn, fled Japan in 2019 while awaiting trial, smuggled onto a private jet in a large box in the (guise) of concert equipment.", "zh": "汽车制造业仍是工业的支柱。丰田在2025年连续第六年成为全球销量最大的汽车制造商，至今仍在生产曾遭对手嘲笑的混合动力汽车，它的工厂以传奇般的效率（组装）汽车，每一颗螺栓和每一根（车轴）都准时送达。马自达MX-5是史上最畅销的双座（敞篷车）；丰田世纪是一款手工打造的（豪华轿车），接送天皇和政党大佬。相比之下，日产则是一场（惨败）。它与本田的合并谈判于2025年破裂，如今正在关闭工厂。其前老板卡洛斯·戈恩于2019年在候审期间逃离日本，他藏身于一个以音乐会设备为（伪装）的大箱子里，被偷运上一架私人飞机。"}, {"en": "Further down the corporate food chain, Japan's millions of small firms face a different threat: extinction by old age. Many owners are in their 70s and have no successor, and profitable businesses are shutting simply because nobody will take them over. Labor shortages make expansion hard, and the paperwork that comes with subsidies and permits is (irksome). The government is trying to scrap (otiose) rules and encourage mergers, but the biggest (obstacle) is attitudinal: owners are reluctant to sell to outsiders.", "zh": "再往企业食物链的下游看，日本数以百万计的小企业面临着另一种威胁：因老龄而消亡。许多企业主已年过七十却没有接班人，盈利的企业仅仅因为无人接手而关门。劳动力短缺使扩张困难重重，伴随补贴和许可证而来的文书工作令人（厌烦）。政府正试图废除（多余的）规定、鼓励合并，但最大的（障碍）在于观念：企业主不愿把公司卖给外人。"}, {"en": "In technology Japan is trying to win back lost ground. In the late 1980s its firms made about half the world's semiconductors; today they make a sliver. Rapidus, a chipmaker backed by billions of dollars in state subsidies, built a plant in Chitose, in Hokkaido, made its first 2-nanometer (prototype) chips in 2025 and aims for mass production in 2027. TSMC, Taiwan's giant, opened a plant in Kumamoto with much (fanfare) in 2024. Japan's real strength lies further up the supply chain, in materials and equipment. Its firms dominate the market for photoresists, chemicals that become (soluble), or cease to be, where light strikes them, allowing circuits to be etched onto silicon: a niche that rests on decades of accumulated (expertise).", "zh": "在科技领域，日本正努力收复失地。20世纪80年代末，日本企业生产了全世界约一半的半导体；如今它们只占很小一部分。获得数十亿美元国家补贴支持的芯片制造商拉皮达斯在北海道千岁市建了一座工厂，于2025年制造出首批2纳米（原型）芯片，目标是在2027年实现量产。台湾巨头台积电于2024年在熊本开设工厂，场面（大张旗鼓）。日本真正的优势在于供应链上游的材料和设备。日本企业主导着光刻胶市场——光刻胶是一种化学品，光照之处会变得（可溶）或不再可溶，从而使电路得以刻蚀在硅片上：这一利基市场依托的是数十年积累的（专业知识）。"}, {"en": "Japanese firms such as Fanuc and Yaskawa build many of the world's industrial robots, increasingly fitted with (prehensile) grippers and (tactile) skins that let them handle delicate objects. Toray makes carbon fiber of extraordinary (tensile) strength for aircraft such as Boeing's 787. Japanese companies also supply the (membrane) technology used in water-purification systems around the world, along with a large share of the world's cameras: lenses with a wide (aperture) from Canon, Nikon and Fujifilm, and image chips from Sony that are (compatible) with smartphones of almost every brand.", "zh": "发那科和安川电机等日本企业制造了全世界许多工业机器人，这些机器人越来越多地配备（能抓握的）机械手和（有触觉的）皮肤，使它们能够拿取精细物品。东丽为波音787等飞机生产具有非凡（抗拉）强度的碳纤维。日本企业还向全球净水系统供应（膜）技术，也生产世界上很大一部分相机：佳能、尼康和富士胶片生产的大（光圈）镜头，还有索尼的图像芯片，几乎与所有品牌的智能手机都（兼容）。"}, {"en": "Japanese science remains of high (calibre). On October 7th Kenso Soai shared this year's Nobel prize in chemistry with Henri Kagan of France for work showing how reactions can be steered to produce one mirror-image form of a (molecule) rather than the other, which matters for making drugs. Last year Shimon Sakaguchi won the prize for medicine for discovering the regulatory T cells that restrain the immune system, and Susumu Kitagawa shared the chemistry prize for building porous crystals that can trap gases. Japan's record is (notable): it has more Nobel science laureates than any other Asian country. It also has its eccentrics. Shinichi Mochizuki, a mathematician at Kyoto University, claims to have proved the abc (conjecture), which concerns coprime positive integers a, b and c satisfying a+b=c. Every integer greater than one is (factorable) into (prime) numbers; the conjecture instead relates the size of c to the product of the distinct prime factors of abc. His proof runs to some 500 pages and is so (indecipherable) that few mathematicians accept it.", "zh": "日本科学的（水准）依然很高。10月7日，硖合宪三与法国的亨利·卡冈分享了今年的诺贝尔化学奖，他们的研究表明，可以引导化学反应只生成某种（分子）的一种镜像形态而非另一种，这对制药至关重要。去年，坂口志文因发现抑制免疫系统的调节性T细胞而获得诺贝尔生理学或医学奖，北川进则因构建能够捕获气体的多孔晶体而分享了化学奖。日本的纪录（引人注目）：它的诺贝尔科学奖得主比任何其他亚洲国家都多。它也有自己的怪才。京都大学数学家望月新一声称证明了abc（猜想），它研究的是互素正整数a、b、c满足a+b=c时的数量关系。每个大于1的正整数都（可以分解）成（素数）的乘积；该猜想真正关心的是c的大小与abc的不同素因数之积的关系。他提出的证明长约500页，极其（晦涩难解），至今未获多数数学家认可。"}, {"en": "Biology is another strength. In 2012 Shinya Yamanaka won a Nobel prize for showing how to turn adult cells back into stem cells, and Japan has become a testbed for therapies built on his work. In 2021 it became the first country to sell food whose (genome) had been edited: a tomato rich in GABA, a compound said to lower blood pressure. Researchers (recombine) DNA to breed crops for a hotter climate. Not every postwar project has aged well. Cedar and cypress were planted across the country after the war; every spring their pollen goes (airborne), roughly 40% of Japanese suffer from hay fever, and sales of (antihistamine) pills boom. Older cedars survive in purer settings, such as Yakushima, a southern island that UNESCO has named a (biosphere) reserve.", "zh": "生物学是日本的另一项强项。2012年，山中伸弥因展示如何把成体细胞逆转为干细胞而获得诺贝尔奖，日本已成为基于他研究成果的各种疗法的试验场。2021年，日本成为第一个销售（基因组）经过编辑的食品的国家：一种富含GABA的番茄，据说GABA这种化合物能降低血压。研究人员通过（重组）DNA来培育适应更炎热气候的作物。并非每一个战后项目都经得起时间考验。战后全国各地种植了杉树和柏树；每年春天，它们的花粉（随风飘散），大约40%的日本人患有花粉症，（抗组胺）药片的销量随之激增。更古老的杉树则在更原始的环境中存活下来，比如被联合国教科文组织列为（生物圈）保护区的南方岛屿屋久岛。"}, {"en": "Energy is Japan's chronic weakness, and Fukushima its scar. On March 11th 2011 a magnitude-9 earthquake and the tsunami that followed killed nearly 20,000 people and caused meltdowns at the Fukushima Daiichi nuclear plant. Few if any deaths have been attributed directly to radiation (exposure), but some 160,000 people fled or were evacuated. Since 2023 the plant's operator has been releasing processed water that still contains tritium, a mildly radioactive (isotope) of hydrogen, into the Pacific. Monitoring has found concentrations far below international limits, data that most scientists regard as (incontrovertible). China nonetheless banned Japanese seafood, eased the ban in 2025 and restored it in November amid a diplomatic row, turning a food (scare) into a weapon.", "zh": "能源是日本的长期软肋，福岛则是它的伤疤。2011年3月11日，一场9级地震及随后的海啸造成近2万人死亡，并导致福岛第一核电站堆芯熔毁。几乎没有死亡被直接归因于辐射（暴露），但约16万人逃离或被疏散。自2023年起，核电站运营方一直在向太平洋排放经过处理的水，其中仍含有氚——氢的一种弱放射性（同位素）。监测发现其浓度远低于国际限值，大多数科学家认为这些数据（无可辩驳）。尽管如此，中国还是禁止了日本海产品进口，2025年放宽了禁令，又在11月的一场外交风波中恢复了禁令，把一场食品（恐慌）变成了武器。"}, {"en": "After 2011 every reactor was shut down. Restarts have been slow, but in April Tokyo Electric Power returned a reactor at Kashiwazaki-Kariwa, the world's biggest nuclear plant by capacity, to commercial operation, its first since the disaster. Japan still has nowhere to (dispose) of high-level waste permanently, and it holds some 44 tons of plutonium, (fissile) material that worries arms-control specialists. Yet the case for nuclear power has grown stronger. When war with Iran shut the Strait of Hormuz in March, Japan, which imports almost all of its oil, released 80m barrels from its strategic reserves; a long blockade could (cripple) an economy so dependent on Middle Eastern crude. Whether energy independence is (feasible) is unclear. Some hope lies in perovskite solar cells, which can be printed on flexible film and need (iodine), of which Japan is the world's second-biggest producer.", "zh": "2011年后，所有反应堆都被关停。重启进展缓慢，但今年4月，东京电力公司让世界装机容量最大的核电站柏崎刈羽的一座反应堆恢复商业运行，这是它自那场灾难以来的首次。日本至今仍没有地方可以永久（处置）高放射性废物，它还持有约44吨钚，这种（易裂变的）材料令军控专家忧心忡忡。然而，发展核电的理由变得更加充分了。今年3月，与伊朗的战争导致霍尔木兹海峡关闭，几乎所有石油都依赖进口的日本从其战略储备中释放了8000万桶原油；长期封锁可能会（重创）一个如此依赖中东原油的经济体。能源独立是否（可行）尚不清楚。一部分希望寄托在钙钛矿太阳能电池上，这种电池可以印刷在柔性薄膜上，需要用到（碘），而日本是世界第二大碘生产国。"}, {"en": "Few rich countries are as (vulnerable) to nature. Japan sits where four tectonic plates meet and suffers about a fifth of the world's strongest earthquakes. In 1923 the Great Kanto earthquake and the fires that followed killed some 105,000 people; wooden houses proved all too (destructible). In 1995 an earthquake turned much of Kobe to (rubble), and on New Year's Day 2024 another flattened towns on the Noto peninsula. The emperor and empress visit stricken areas to (condole) with survivors, who are famed for their (composure). Schoolchildren (rehearse) evacuation drills, local governments stock shelters, and when disaster strikes, neighbors (improvise) the rest. The government warns that a megaquake in the Nankai Trough, off the Pacific coast, could kill up to 298,000 people.", "zh": "很少有富裕国家像日本这样（易受）大自然的伤害。日本位于四个构造板块交汇处，全世界最强烈的地震约有五分之一发生在这里。1923年，关东大地震及随后的大火造成约10.5万人死亡；木结构房屋被证明太（容易摧毁）。1995年，一场地震使神户大部分地区沦为（瓦砾），2024年元旦，另一场地震夷平了能登半岛上的城镇。天皇和皇后前往受灾地区（慰问）幸存者，这些幸存者以（镇定）著称。学童们（演练）疏散，地方政府为避难所储备物资，灾难来临时，邻里们（临机应变）应付其余的一切。政府警告说，太平洋沿岸南海海槽的一场特大地震可能造成多达29.8万人死亡。"}, {"en": "The land that breeds such hazards is also astonishingly varied. Japan comprises 14,125 islands, according to a recount in 2023. About three-quarters of the land is mountainous; less than a third is (habitable), and just over a tenth is (arable), though the volcanic soils are (fertile). Mount Fuji, a near-perfect (cone) 3,776 meters high that last erupted in 1707, is (sublime) from a distance and crowded on its slopes in summer. Elsewhere a wind-sculpted sand (dune) rises in Tottori; a (limestone) plateau at Akiyoshidai is honeycombed with caves, and coral reefs fringe Okinawa.", "zh": "孕育这些灾害的土地也极其多样。根据2023年的重新统计，日本由14125个岛屿组成。约四分之三的国土是山地；不到三分之一的土地（适宜居住），略多于十分之一的土地（可耕种），不过火山土壤很（肥沃）。富士山是一座近乎完美的（圆锥）形火山，海拔3776米，最近一次喷发是在1707年，远观（壮美），夏天山坡上却人满为患。此外，鸟取耸立着一座随风变形的沙（丘），秋吉台的（石灰岩）高原遍布洞穴，冲绳近海则有珊瑚礁。"}, {"en": "The climate is anything but (equable): summers are sticky, winters snowy in the north and west, and the Japanese are connoisseurs of every shift between them. Television forecasters track the cherry blossom's progress up the archipelago each spring, when the uguisu, a small olive songbird, begins to (warble) in the woods. In June hydrangeas bloom in every shade from (heliotrope) to blue, and in autumn crowds flock to see the leaves of the (maple) turn crimson. In winter, when the trees are (bare), (frolicsome) snow monkeys play and soak in the hot springs of Jigokudani, and families (snuggle) under the kotatsu, a low table with a heater beneath it and a quilt draped over the top.", "zh": "这里的气候绝非（温和宜人）：夏天闷热，北部和西部冬季多雪，日本人对两季之间的每一点变化都了如指掌。每年春天，电视台的预报员追踪樱花在列岛上由南向北的开花进程，这时，一种叫做树莺的橄榄色小鸣禽开始在林中（啭鸣）。6月，绣球花盛开，颜色从（淡紫）到蓝色不一而足；秋天，人们成群结队去欣赏（枫树）的叶片染成深红色。冬天树木变得（光秃秃）时，地狱谷那些（活泼嬉闹的）雪猴在温泉中玩耍、泡澡，一家人则（依偎）在被炉里——那是一种下面装有取暖器、上面盖着被子的矮桌。"}, {"en": "It is the people who are disappearing. Just 671,236 babies were born to Japanese parents in Japan in 2025, the fewest since records began in 1899 and the tenth record low in a row. The average number of children a woman can expect to have fell to 1.14, and births are falling about 15 years faster than official forecasts assumed. The census of October 2025 counted 123m people, 3.1m fewer than five years earlier, the biggest drop on record. The arithmetic is (inexorable) and the long-term outlook (dire): on current trends the population will fall below 100m in the 2050s. Why the Japanese have so few children is less of a (riddle) than it seems.", "zh": "正在消失的是人口。2025年，日本国内日本籍父母所生的婴儿仅有671236人，为1899年有记录以来最少，并连续第十年创下新低。每名女性预期生育子女的平均数降至1.14，出生人数的下降速度比官方预测快了约15年。2025年10月的人口普查统计出1.23亿人，比五年前减少310万，降幅创历史纪录。这笔算术（无情难逆），长期前景（严峻）：按照目前的趋势，人口将在21世纪50年代跌破1亿。日本人为何生育这么少，这个（谜）其实并不像看上去那么难解。"}, {"en": "Nearly all Japanese babies are born to married couples, so fewer weddings mean fewer births, and marriage is going out of fashion. Many young people say they cannot afford it; others balk at the expectations it brings. Women in particular are rejecting the old ideal of the (demure) housewife. As recently as the 1980s unmarried women over 25 were compared to Christmas cakes, unsellable after the 25th. The notion that a woman's (nubile) years end so early now sounds absurd, but long hours and rigid gender roles still make marriage a bad deal for many. Young men, for their part, have been mocked as \"herbivores\" uninterested in courtship. The Tokyo metropolitan government now tries to (inveigle) singles into matrimony with an official dating app.", "zh": "几乎所有日本婴儿都是已婚夫妇所生，因此结婚的人越少，出生的人就越少，而婚姻正在过时。许多年轻人说他们负担不起婚姻；另一些人则对婚姻带来的种种期望望而却步。女性尤其在摒弃（娴静端庄的）家庭主妇这一旧理想。就在20世纪80年代，超过25岁的未婚女性还被比作圣诞蛋糕——过了25号就卖不出去。认为女性（适婚的）年华这么早就结束的观念，如今听来荒谬，但漫长的工作时间和僵化的性别角色，仍使婚姻对许多人来说是一笔不划算的交易。年轻男性则被嘲讽为对追求异性不感兴趣的“草食男”。东京都政府如今试图用一款官方约会应用程序把单身者（诱入）婚姻殿堂。"}, {"en": "Meanwhile the population is aging at an (ineluctable) pace. Nearly 30% of Japanese are 65 or older, and in September the health ministry counted 107,677 people aged 100 or more, almost 90% of them women: the 56th annual record in a row. Around one in eight older people has dementia; the old Japanese term was officially replaced in 2004 because it was demeaning; to label a patient (senile) now sounds equally disparaging. The walking (cane) is a familiar sight, and shops stock adult diapers and (denture) adhesive in bulk. Politicians, who know that older people vote, (coddle) pensioners; younger Japanese complain that \"silver democracy\" works to (disfranchise) them.", "zh": "与此同时，人口正以（无法避免的）速度老龄化。近30%的日本人年龄在65岁及以上；9月，厚生劳动省统计出年龄在100岁及以上的人有107677人，其中近90%是女性，这是连续第56年创下纪录。大约八分之一的老年人患有痴呆症；过去日本使用的病症名称带有贬义，已于2004年被官方弃用；如今把患者称作（老糊涂的）同样有贬损意味。（拐杖）在街头已司空见惯，商店则成批备有成人纸尿裤和（假牙）粘合剂。政客们知道老年人会去投票，因此（溺爱）领取养老金者；年轻的日本人抱怨“银发民主”在（剥夺）他们的权利。"}, {"en": "As villages (dwindle), Japan is filling up with empty houses: some 9m, or about one in seven homes, stood vacant in 2023. Some (ramshackle) farmhouses sell for almost nothing; foreigners snap them up, slap on (spackle) and fresh paint and turn them into guesthouses. Rural schools face (closure) at a rate of hundreds a year, and entire hamlets face (erasure) from the map. Loneliness is a growing problem. In 2025 the police reported that 76,941 people had died alone at home, and that 22,222 had lain undiscovered for more than eight days, long enough for bodies to (decompose). Specialist cleaners now make a living from clearing the (noisome) apartments left behind.", "zh": "随着村庄（日渐萎缩），日本到处都是空房子：2023年约有900万套住宅空置，约占住宅总数的七分之一。一些（摇摇欲坠的）农舍几乎白送；外国人把它们抢购下来，抹上（腻子）、刷上新漆，改造成民宿。农村学校正以每年数百所的速度（关闭），整个村落面临从地图上被（抹除）的命运。孤独是一个日益严重的问题。2025年，警方报告称，有76941人在家中孤独死去，其中22222人死后超过八天才被发现，时间长到足以让尸体（腐烂）。如今有专门的清洁工靠清理死者留下的（恶臭难闻的）公寓谋生。"}, {"en": "Work has changed less than the workforce. The salaryman, the (epitome) of postwar Japan, still exists: hired straight out of university, promised lifetime (tenure) and promoted by seniority. University entrance exams can seem to (predestine) careers. Each spring, ranks of graduates in identical black suits submit a (résumé), often handwritten and with a photo attached. Offices are open-plan, without a (cubicle) in sight; desks are pushed together in islands, with the boss at the head. A (docile) workforce once accepted brutal hours. Long meetings still (bore) everyone, and workers take only about two-thirds of their paid leave; unused days are lost to (forfeiture) after two years.", "zh": "工作的变化比劳动力的变化要小。工薪族是战后日本的（缩影），这类人如今依然存在：大学一毕业就被录用，获得终身（雇佣）的承诺，按资历晋升。大学入学考试似乎可以（预先决定）一个人的职业生涯。每年春天，成群结队、身穿同样黑色西装的毕业生各自递交一份（简历），通常亲笔填写，还附有照片。办公室是开放式的，看不到一个（隔间）；办公桌拼成一个个“岛”，上司坐在岛头。（温顺的）劳动力曾经忍受残酷的工作时长。冗长的会议仍让每个人（感到无聊），劳动者只休了大约三分之二的带薪假，未休的假期两年后即告（作废）。"}, {"en": "Women are working in greater numbers than ever: about three-quarters of those aged 15 to 64 now have jobs, a higher share than in America. But more than half of working women are in part-time or temporary posts, often regarded as (dispensable). Long hours make careers (incompatible) with motherhood, and wives still do most of the housework, every (chore) from cooking to caring for elderly parents-in-law. Relatively few women (aspire) to management, and those who do complain that male colleagues (belittle) them. Japan ranked 117th in the World Economic Forum's latest gender-gap index, the lowest in the G7, despite having a woman in charge; Ms Takaichi appointed Japan's first female finance minister, Satsuki Katayama, but only one other woman to her cabinet.", "zh": "工作的女性人数比以往任何时候都多：15至64岁的女性中约有四分之三有工作，比例高于美国。但一半以上的在职女性从事兼职或临时工作，往往被视为（可有可无的）。漫长的工作时间使职业生涯与母亲的身份（互不相容），妻子仍承担着大部分家务，从做饭到照顾年迈的公婆，每一件（杂务）都落在她们身上。（渴望）进入管理层的女性相对较少，而那些有此志向的女性则抱怨男同事（轻视）她们。在世界经济论坛最新的性别差距指数中，日本排名第117位，是七国集团中最低的，尽管日本有一位女性掌权；高市女士任命了日本首位女性财务大臣片山皋月，但内阁中只有另一位女性。"}, {"en": "Immigration is quietly filling the gaps. Foreign residents reached a record 4.1m at the end of 2025, up by almost 10% in a year, though they still make up only about 3% of the population. Vietnamese, Nepalese and Indonesian staff run convenience stores and care homes; the Chinese remain the biggest group. Employers in farming, construction and nursing recruit workers from across Asia. Many came under a \"technical intern\" program, nominally meant to pass on skills, which critics condemned as (inhumane) because interns could not change employers; from 2027 it is to be replaced by a scheme that lets workers switch jobs. For those who want to stay, the (hassle) of visa renewals and the difficulty of registering a (domicile) or renting an apartment remain a deterrent.", "zh": "移民正在悄然填补空缺。截至2025年底，外国居民人数达到创纪录的410万，一年内增长近10%，不过他们仍只占总人口的约3%。越南、尼泊尔和印度尼西亚籍员工撑起了便利店和养老院；中国人仍是最大的群体。农业、建筑业和护理业的雇主从亚洲各地招募工人。许多人是通过“技能实习”项目来到日本的，该项目名义上旨在传授技能，批评者谴责它（不人道），因为实习生不能更换雇主；从2027年起，它将被一项允许工人换工作的新制度取代。对于那些想留下来的人来说，签证续签的（麻烦），以及登记（住所）和租房的困难，仍然令人望而却步。"}, {"en": "Yet the backlash is growing. Sanseito portrays many newcomers as (undesirable), and street rallies against Kurdish asylum-seekers in Kawaguchi, near Tokyo, have featured (detestable) slurs. Ms Takaichi has tightened the rules: revised permanent-residency guidelines now consider Japanese-language proficiency, generally at B1 level or above, with exemptions in some cases; the residence period required for citizenship has been lengthened, and a cap of 1.23m has been set on some categories of foreign worker. A proposal to restrict the foreign (purchase) of land and housing has been shelved for now. The irony is that Japan was itself a country of emigrants. From 1885 tens of thousands of Japanese went to work on Hawaii's sugar plantations under contracts akin to (indenture), and many more later went to Brazil.", "zh": "然而，反弹正在加剧。参政党把许多新移民描绘成（不受欢迎的）人，在东京附近的川口市，针对库尔德寻求庇护者的街头集会上充斥着（可憎的）辱骂。高市女士收紧了规定：修订后的永久居留申请指南如今把日语能力纳入考量，通常参考B1或更高水平，但部分申请人可以豁免；入籍所需的居留期限也被延长，某些类别的外国劳动者人数被设定了123万的上限。一项限制外国人（购买）土地和住房的提案暂时被搁置。具有讽刺意味的是，日本本身曾是一个移民输出国。从1885年起，成千上万的日本人根据近乎（契约奴役）的合同前往夏威夷的甘蔗种植园劳作，后来又有更多人去了巴西。"}, {"en": "For all its anxieties, Japan remains astonishingly safe and orderly. Its murder rate is among the lowest in the world, (juvenile) crime is a fraction of what it was in the 1980s, and children ride the subway alone. Lost wallets are routinely handed in to the police with the cash intact. Trains are (precise): in 2017 a railway company apologized because one of its trains had left 20 seconds early. Stations are (shipshape) and streets (pristine), even though a public trash (receptacle) is hard to find; many were removed after a sarin gas attack on the Tokyo subway in 1995, so people carry their rubbish home and sort it according to a (rigmarole) of local rules. Smoking while walking is (finable) in many Tokyo wards, and every platform echoes with (monotone) recorded announcements.", "zh": "尽管有种种焦虑，日本依然安全有序得惊人。它的谋杀率位居世界最低之列，（青少年）犯罪只有20世纪80年代的一小部分，孩子们独自乘坐地铁。丢失的钱包通常会被原封不动地交到警察手中，连现金都不少。火车（分秒不差）：2017年，一家铁路公司因一列火车提前20秒发车而道歉。车站（整洁有序），街道（一尘不染），尽管很难找到公共垃圾（容器）——1995年东京地铁沙林毒气袭击事件后，许多垃圾桶被撤走——因此人们把垃圾带回家，按照当地一套（繁琐复杂）的规则分类。在东京的许多区，边走边吸烟是（可处以罚款的）行为，每个站台都回荡着（单调）的录音广播。"}, {"en": "Social life runs on elaborate courtesy. A bow is the essential (gesture): the deeper it goes, the more one is willing to (abase) oneself, culminating in dogeza, kneeling with the forehead on the floor. Children learn early to (attune) themselves to the group; as the saying goes, the nail that sticks out gets hammered down. People are expected to distinguish honne, their true feelings, from tatemae, the face they show the world, and to (dissemble) when candor would disturb the peace. Visitors find shopkeepers and innkeepers (hospitable) to a fault. Loyalty is prized above almost every other virtue: a bronze of Hachiko, an Akita dog who waited at Shibuya station for nine years after his master's death, celebrates a (canine) devotion that the Japanese hold up as a model. Every nation has a characteristic (foible); Japan's is perhaps a horror of making a fuss.", "zh": "社会生活依靠繁复的礼节运转。鞠躬是最基本的（姿态）：鞠躬越深，就越表示愿意（贬低）自己，极致便是“土下座”，即跪地叩首。孩子们从小就学会让自己（适应）集体；正如俗话所说，出头的钉子会被敲下去。人们被期望区分“本音”即真实想法与“建前”即示人的面孔，并在直言会扰乱和谐时（掩饰）真情。游客们发现店主和旅馆老板（热情好客）得无以复加。忠诚被视为几乎高于一切的美德：涩谷车站的忠犬八公铜像纪念着一种（犬类的）忠诚——这只秋田犬在主人死后在车站等了九年——日本人把它奉为楷模。每个民族都有一种典型的（小毛病）；日本人的毛病或许是过分害怕给人添麻烦。"}, {"en": "The justice system is harsher than the country's gentle image suggests. Prosecutors win more than 99% of the cases that come to trial, partly because suspects can be held for weeks and questioned without a lawyer present, a practice that critics call \"hostage justice\". Japan is one of the few rich democracies that still executes murderers, and it uses the (noose); inmates learn of their hanging only hours beforehand, a practice that rights groups call (unconscionable). The government insists the system is (humane), and polls suggest that most Japanese support it. Fraudsters, meanwhile, prey on the old. Gangs phone pensioners pretending to be a son or nephew in trouble, (dupe) them into handing over cash and (swindle) them out of tens of billions of yen a year, crimes that the public finds especially (contemptible). Drug laws are tough, and death by (overdose) is far rarer than in America.", "zh": "司法制度比这个国家温和的形象所显示的更严厉。检察官在提起公诉的案件中胜诉率超过99%，部分原因是嫌疑人可能被羁押数周，在没有律师在场的情况下接受讯问，批评者称这种做法为“人质司法”。日本是少数仍处决杀人犯的富裕民主国家之一，而且使用（绞索）；死囚只在行刑前几个小时才得知自己将被绞死，人权组织称这种做法（违背良知）。政府坚称这一制度（人道），民调也显示大多数日本人支持死刑。与此同时，诈骗分子把目标对准老年人。犯罪团伙给领取养老金的老人打电话，冒充遇到麻烦的儿子或侄子，（哄骗）他们交出现金，每年从他们手中（诈取）数百亿日元，公众认为这类罪行尤其（可鄙）。日本的毒品法律十分严厉，死于（服药过量）的情况远比美国罕见。"}, {"en": "The Japanese live longer than almost anyone else: women can expect to reach 87. Their food helps: fewer than one in 20 adults is (obese), and under a health-screening programme introduced in 2008, insurers arrange waist measurements and other checks for members aged 40 to 74. So does (hygiene): the Japanese wore masks long before covid, and many still do in winter, when the old are most (susceptible) to flu. Millions drink Yakult, a probiotic drink invented in 1935 for the health of the (intestine), and pensioners (recline) in hot springs said to soothe every ailment. Medical care is cheap and plentiful, if hurried: patients see a physician about a dozen times a year, and a hurried consultation may involve little more than a quick examination with a (stethoscope) and a prescription. Many Japanese also believe that temperament depends on blood group, which is set by antigens on the surface of each red (corpuscle); there is no evidence for it, but dating sites still ask.", "zh": "日本人几乎比任何人都长寿：女性预期寿命可达87岁。饮食功不可没：成年人中（肥胖）者不到二十分之一，2008年起实行的特定健康检查制度，要求医疗保险机构为40至74岁的参保者安排腰围等指标的检查。（卫生）习惯也有帮助：早在新冠疫情之前日本人就戴口罩，许多人在冬季仍然戴着，因为那时老年人最（容易感染）流感。数以百万计的人饮用养乐多，这种益生菌饮料于1935年问世，旨在促进（肠道）健康；领取养老金的老人们（斜倚）在据说能舒缓百病的温泉里。医疗费用低廉、资源充足，只是有些仓促：病人每年看医生十来次，一次匆忙的门诊可能只有片刻的（听诊器）听诊，外加一张处方。许多日本人还相信性情取决于血型，而血型由每个红（血球）表面的抗原决定；这种说法毫无根据，但交友网站仍会询问血型。"}, {"en": "Foreigners, at any rate, cannot get enough of the place. A record 42.7m visitors arrived in 2025, spending ¥9.5trn. Many regard Japan as the most (desirable) place on earth to visit. Kyoto's temples and Tokyo's neon continue to (beguile), and first-timers stand (agape) at the Shibuya scramble crossing, a (kaleidoscope) of as many as 3,000 pedestrians at a time. A glossy travel (brochure) will sell Okinawa's (turquoise) seas as well as Hokkaido's powder snow, which has drawn an Australian skiing (clientele) to Niseko for years.", "zh": "不管怎样，外国人对日本百看不厌。2025年，创纪录的4270万游客来到日本，消费9.5万亿日元。许多人认为日本是世界上最（令人向往）的旅游地。京都的寺庙和东京的霓虹灯依然令人（着迷），初来乍到的游客站在涩谷十字路口（目瞪口呆），那里同一时间有多达3000名行人穿行，宛如一只（万花筒）。一份光鲜的旅游（宣传册）既会推销冲绳（碧绿）的海水，也会推销北海道的粉雪，后者多年来吸引了一批澳大利亚滑雪（客群）前往二世古。"}, {"en": "Locals are less (blasé). In Kyoto residents (gripe) that buses are too crowded to board and that tourists chase geisha down the alleys of Gion. Social-media (overexposure) has made once-quiet spots newly (accessible) to the masses: one town near Mount Fuji put up a black screen to hide the view of the mountain behind a convenience store after crowds of photographers trespassed. Rules on rubbish and etiquette (baffle) many visitors, though touts rarely (importune) them. The government tripled the departure tax to ¥3,000 in July, and still aims for 60m visitors a year by 2030. Ironically, the one big market that has shrunk is China: arrivals from the mainland have roughly halved since Beijing advised its citizens to avoid Japan last November.", "zh": "当地人可没那么（无动于衷）。在京都，居民们（抱怨）公交车太挤上不去，游客在祇园的小巷里追逐艺伎。社交媒体上的（过度曝光）让曾经清静的地方如今大众也（可以到达）：富士山附近的一个小镇在一家便利店后面竖起一道黑色屏障，挡住富士山的景观，起因是成群的摄影者擅自闯入。关于垃圾和礼仪的规定让许多游客（困惑），不过很少有拉客的人来（纠缠）他们。政府在7月把出境税提高到原来的三倍，达到3000日元，并且仍计划到2030年每年接待6000万游客。具有讽刺意味的是，唯一萎缩的大市场是中国：自北京去年11月建议本国公民避免前往日本以来，来自中国大陆的游客大约减少了一半。"}, {"en": "Many come for the food. In 2013 UNESCO added washoku, traditional Japanese (cuisine), to its list of (intangible) heritage. Rice has been the (staple) for millennia, and the flavors are (subtle): a good dashi broth, made from kelp and dried bonito, is prized for umami, the savory \"fifth taste\" identified by Kikunae Ikeda, a chemist, in 1908. His discovery gave rise to the Ajinomoto brand: each white (granule) of its seasoning contains monosodium glutamate. Tokyo has long had more Michelin-starred restaurants than Paris, and an (epicure) might fly in to eat (delectable) morsels at a counter with eight seats.", "zh": "许多人是为了美食而来。2013年，联合国教科文组织把日本传统（烹饪）“和食”列入其（非物质）文化遗产名录。几千年来，大米一直是日本人的（主食），味道则（清淡微妙）：一碗好的出汁由海带和鲣鱼干熬制，以鲜味著称，鲜味是化学家池田菊苗在1908年发现的“第五种味道”。他的发现催生了味之素品牌：这种调味料的每一粒白色（颗粒）都含有谷氨酸钠。东京米其林星级餐厅的数量长期多于巴黎，一位（美食家）甚至可能专程飞来，在只有八个座位的柜台前品尝（美味可口的）佳肴。"}, {"en": "Above all, Japan eats from the sea. At the first auction of 2026 at Tokyo's Toyosu market, a bluefin tuna caught off Oma, near the northern (cape) of Honshu, sold for a record ¥510m. Some hungry diners (guttle) sushi at conveyor-belt restaurants; others linger over salmon (roe) and sea urchin. Fishing fleets still haul in sardines and mackerel using a vast purse (seine). Almost anything (comestible) that swims ends up on a plate. But (marine) stocks are under strain, none more so than eels. The Japanese eel spawns near the Mariana Islands, and its (motile) larvae drift thousands of kilometers to East Asian rivers; the species is endangered, yet last year Japan helped defeat a proposal to curb the international trade in eels.", "zh": "最重要的是，日本人靠海吃海。在东京丰洲市场2026年的首场拍卖会上，一条在本州北端（岬角）附近的大间海域捕获的蓝鳍金枪鱼，以创纪录的5.1亿日元成交。有些饥肠辘辘的食客在回转寿司店（狼吞虎咽）地吃寿司，另一些人则细细品尝三文鱼（鱼子）和海胆。捕鱼船队仍用一张巨大的（围网）捕捞沙丁鱼和鲭鱼。几乎任何（可食用的）水中生物最后都会被端上餐桌。但（海洋）资源正承受压力，鳗鱼尤甚。日本鳗鲡在马里亚纳群岛附近产卵，其（能游动的）幼体漂流数千公里到达东亚的河流；这一物种已濒临灭绝，然而去年日本却帮助否决了一项限制鳗鱼国际贸易的提案。"}, {"en": "Everyday food is just as serious. Salarymen (gobble) bowls of ramen at counters, and the richest broths are (porcine): tonkotsu, made by boiling pork bones for hours. Yakitori bars grill chicken skin, hearts and (gristle) over binchotan, a dense charcoal that is hard to (kindle) but burns hot for hours. Tofu is made by causing soy milk to (curdle) with nigari, a seawater extract. The (humble) onigiri, a triangle of rice wrapped in seaweed, is sold by the billion at convenience stores. Older Japanese remember postwar school lunches of bread rolls smeared with (margarine), a legacy of American food aid. And outside many restaurants stands a ceramic tanuki, a raccoon dog with a straw hat and a flask of sake: the Japanese answer to the garden (gnome).", "zh": "日常饮食同样讲究。工薪族在柜台前（狼吞虎咽）地吃拉面，而最浓郁的汤底是（猪骨熬制的）：豚骨汤是用猪骨熬煮数小时而成。烤鸡串店在备长炭上烤鸡皮、鸡心和（软骨），这种致密的木炭很难（点燃），但能持续高温燃烧数小时。豆腐是用一种名为盐卤的海水提取物使豆浆（凝结）而成。（不起眼的）饭团是一种用海苔包裹的三角形米饭团，在便利店里一卖就是数十亿个。年长的日本人还记得战后学校午餐里涂着（人造黄油）的面包卷，那是美国粮食援助留下的遗产。许多餐馆门外都立着一只陶瓷狸猫，头戴草帽，手提一壶清酒：这是日本版的花园（地精）。"}, {"en": "To wash it all down there is sake, brewed by a process in which koji mold produces an (enzyme) that breaks rice starch into (glucose), which yeast then turns into alcohol. Yet sake consumption has fallen by about three-quarters since its peak in 1973, as drinkers switched to beer, wine and highballs of whisky and soda; Japanese whisky now wins international prizes. Office drinking parties, where colleagues (guzzle) beer and junior staff refill the boss's glass, are less obligatory than they were, and the young (tipple) less than their parents did. The government collects (excise) on every can, and Japan's nearly 4m vending machines sell hot coffee and bottled water at every corner, though tap water everywhere is (potable).", "zh": "佐餐的是清酒。酿造清酒时，曲霉产生一种（酶），把大米淀粉分解成（葡萄糖），再由酵母转化为酒精。然而，自1973年达到顶峰以来，清酒消费量已下降约四分之三，因为饮酒者转向了啤酒、葡萄酒和兑苏打水的威士忌嗨棒；日本威士忌如今屡获国际大奖。在公司聚餐上，同事们（大口灌下）啤酒，下属给上司斟酒，这类聚会已不像从前那样非去不可，年轻人也比父母那一代（小酌）得少。政府对每一罐酒都征收（货物税），日本近400万台自动售货机在街头巷尾出售热咖啡和瓶装水，不过各地的自来水都（可以直接饮用）。"}, {"en": "Religion in Japan is more about practice than belief. Shinto has no founder and no creed; many kami are not imagined as remote, (ultramundane) beings but as spirits present in mountains, trees, rocks and the lives of ancestors. The country has roughly 80,000 Shinto sites; almost every community has a (shrine). At the entrance worshipers (rinse) their hands and mouths at a water basin before praying; many sanctuaries have roofs of cypress-bark (shingle), and those dedicated to Inari, the deity of rice, are guarded by pairs of (vulpine) messengers carved in granite. In legend, foxes can bewitch people. At New Year households hang decorations of (pine) and bamboo by their doors, and millions troop to the sanctuaries to pray for luck.", "zh": "日本的宗教更注重实践而非信仰。神道没有创始人，也没有教义；许多“神”并非遥远的（超越现世的）存在，而被认为栖身于山川、树木、岩石，以及与祖先有关的记忆和仪式之中。日本大约有8万处神道场所，几乎每个社区都有一座（神社）。在入口处，参拜者先在水池边（漱洗）双手和口，然后才去祈祷；许多神社的屋顶用桧树皮（屋面板）铺成，供奉稻米之神稻荷的神社，则由成对的花岗岩雕成的（狐狸）使者守护。传说狐狸能迷惑人心。新年时，家家户户在门口挂上（松枝）和竹子做的装饰，数百万人涌向神社祈求好运。"}, {"en": "Buddhism has some 77,000 temples. At Senso-ji in Tokyo, visitors waft (incense) smoke over themselves in the hope of good health. The bronze Great Buddha at Todai-ji in Nara, cast in the 8th century, sits before a gilded (aureole) studded with smaller Buddhas. Pagodas rise in tiers to a bronze (spire), and at Horyu-ji, also near Nara, a cloistered (quadrangle) holds what are thought to be the world's oldest wooden buildings; Ms Takaichi took South Korea's president there in January. Zen, which prizes (discipline) and the direct transmission of insight from master to (disciple), gave Japan its tea ceremony and the raked-gravel gardens, (serene) and austere, of temples such as Kyoto's Ryoan-ji.", "zh": "日本约有7.7万座佛寺。在东京的浅草寺，参拜者把（香）烟扇到自己身上，祈求身体健康。奈良东大寺的青铜大佛铸于8世纪，坐在一个镶嵌着众多小佛像的镀金（背光）之前。佛塔层层叠起，顶端是青铜（尖顶）；同样在奈良附近的法隆寺，一座回廊环绕的（四方院落）中矗立着据认为是世界上最古老的木结构建筑；今年1月，高市女士曾带韩国总统前去参观。禅宗注重（修行）以及从师父到（弟子）的以心传心，它为日本带来了茶道，以及京都龙安寺等寺院里那些（宁静）而简朴的枯山水庭园。"}, {"en": "Most Japanese say they are not religious, yet they happily mix faiths. They are said to be born Shinto, marry Christian and die Buddhist. Although fewer than 1% of Japanese are Christians, many couples marry in wedding chapels topped with a (steeple), where the \"priest\" is sometimes a foreigner without holy orders hired for his looks: a harmless (imposture) that few guests mind. Christmas Eve is a romantic occasion for couples, and many families eat fried chicken from KFC at Christmas, thanks to a marketing campaign launched in 1974. The sacred and the (profane) sit easily together.", "zh": "大多数日本人说自己不信教，但他们乐于把各种信仰混在一起。据说日本人出生时信神道，结婚时信基督教，死时信佛教。虽然基督徒在日本人中不到1%，许多新人却在顶上有（教堂尖塔）的婚礼教堂举行婚礼，而“牧师”有时是一位没有圣职、因长相而被雇来的外国人：这是一种无伤大雅的（冒名顶替），宾客们也很少在意。平安夜是情侣们的浪漫时刻，许多家庭在圣诞节吃肯德基炸鸡，这要归功于1974年发起的一场营销活动。神圣与（世俗）相安无事。"}, {"en": "The traditional performing arts survive with state help. Gagaku, the music of the imperial court, is often described as the oldest orchestral (ensemble) tradition still played anywhere, dating back more than 1,000 years. Noh, codified by Zeami in the 14th and 15th centuries, unfolds at a glacial pace behind wooden masks. Kabuki's (repertoire) of revenge tragedies and domestic dramas is performed by all-male casts, in which specialist actors called onnagata play women with (lissome) grace. The shamisen, a three-stringed lute, gives much of this music its twanging (timbre).", "zh": "传统表演艺术靠国家扶持得以延续。雅乐是日本皇室的宫廷音乐，常被称为世界上仍在演奏的最古老的管弦乐（合奏）传统，可追溯到一千多年前。能乐由世阿弥在14至15世纪定型，在木制面具之后以冰川般缓慢的节奏展开。歌舞伎的（保留剧目）包括复仇悲剧和家庭剧，全部由男性演员演出，其中被称为“女形”的专职演员以（婀娜轻盈的）姿态扮演女性。三味线是一种三弦琴，这类音乐那种铮铮作响的（音色）大多来自于它。"}, {"en": "Crafts are a national obsession. Bonsai is (horticulture) in (miniature), with trees trained for decades, even centuries, to stay knee-high. Netsuke, toggles carved from ivory or boxwood, were made for their owners to (fondle); carvers would (incise) details as delicate as a cat's whiskers. Traditional rooms are measured in tatami mats, each a (rectangle) roughly twice as long as it is wide. Their shoji are translucent sliding paper screens that admit daylight without a glass (pane). Modern artists keep the obsession with detail. Yayoi Kusama, now in her 90s, has spent decades covering canvases, pumpkins and entire rooms with dots, as if to (stipple) the world itself.", "zh": "手工艺是一种全民痴迷。盆栽是（微缩）的（园艺），树木经过数十年乃至数百年的修剪，始终只有齐膝高。根付是用象牙或黄杨木雕刻的坠饰，制作出来就是供主人（把玩）的；雕刻师会（刻）出细如猫须的细节。传统房间以榻榻米计算面积，每张榻榻米都是长约为宽两倍的（长方形）。屋内的障子是透光的纸质推拉屏风，无须安装玻璃（窗格），也能让日光透进来。现代艺术家延续了对细节的执着。如今已九十多岁的草间弥生数十年来用圆点覆盖画布、南瓜乃至整个房间，仿佛要把整个世界都（点画）一遍。"}, {"en": "Literature thrives. Natsume Soseki's \"I Am a Cat\", published in 1905-06, is narrated by a nameless (feline) who observes his owner's household with the disdain of a (misanthrope). Yasunari Kawabata and Kenzaburo Oe won Nobel prizes for literature; Haruki Murakami, who ran a jazz bar before turning to fiction, is a perennial contender. Millions of amateurs still (compose) haiku, which (condense) a moment into 17 Japanese sound units, or morae, conventionally arranged 5-7-5, and (juxtapose) two images rather than draw an explicit (simile). Manga sells in staggering quantities. Commuters used to (riffle) through weekly anthologies in convenience stores, and the secondhand bookshops of Jimbocho in Tokyo, well over 100 of them, are a (bibliophile)'s paradise.", "zh": "文学蓬勃发展。夏目漱石出版于1905至1906年的《我是猫》，由一只无名的（猫）讲述，它带着一个（厌恶人类者）般的轻蔑观察主人一家。川端康成和大江健三郎获得了诺贝尔文学奖；村上春树在转向小说创作之前开过一家爵士酒吧，是诺奖的常年热门人选。数以百万计的业余爱好者仍在（创作）俳句，传统俳句把一个瞬间（浓缩）进17个日语音拍，通常按5-7-5排列，再（并置）两个意象，而不用直白的（明喻）。漫画销量惊人。通勤者过去常在便利店里（翻阅）漫画周刊，而东京神保町的旧书店多达一百多家，是（爱书人）的天堂。"}, {"en": "On screen Japan's reach is global. \"Godzilla\", a monster spawned by nuclear tests, had its (premiere) in 1954; \"Godzilla Minus One\" won an Oscar for visual effects in 2024. Studio Ghibli's films, (wholesome) and strange, have won two Oscars for best animated feature. Anime was long dismissed abroad as (infantile), but \"Demon Slayer: Infinity Castle\", released in 2025, took more than ¥100bn at the global box office, a record for a Japanese film. Studios (transpose) hit manga to the screen; animators may (tousle) a hero's hair in a fight scene and give him a gravity-defying sword, while fans buy a plastic (figurine) of a favourite character in Akihabara. The appetite seems (irrepressible).", "zh": "在银幕上，日本的影响力遍及全球。《哥斯拉》讲述了一头因核试验而诞生的怪兽，于1954年（首映）；《哥斯拉-1.0》于2024年获得奥斯卡最佳视觉效果奖。吉卜力工作室的电影（健康向上）而又奇特，两度获得奥斯卡最佳动画长片奖。动画在国外长期被视为（幼稚）的东西，但2025年上映的《鬼灭之刃：无限城篇》全球票房超过1000亿日元，创下日本电影的纪录。制片厂将热门漫画（改编）搬上银幕；动画师可能在打斗场景中把英雄的头发（弄得蓬乱），再让他挥舞仿佛不受重力影响的巨剑；粉丝则会在秋叶原买一尊心爱角色的塑料（手办）。这股热潮似乎（势不可挡）。"}, {"en": "Nintendo, which began in 1889 as a maker of playing cards, remains the world's most beloved games company. The Switch 2 sold 23.7m units in its first 13 months, making it the fastest-selling (console) in the firm's history. Shigeru Miyamoto's (inimitable) creations, Mario and Zelda among them, have entertained three generations. Pokémon, the highest-grossing media empire on earth, seems (inexhaustible); in 2016 \"Pokémon Go\" used phone cameras to (superimpose) cartoon monsters on real streets, sending millions wandering about in search of them.", "zh": "任天堂于1889年以生产纸牌起家，至今仍是世界上最受喜爱的游戏公司。Switch 2在头13个月售出2370万台，成为该公司史上销售最快的（游戏机）。宫本茂（无可模仿的）作品——马里奥和塞尔达等——已经陪伴了三代人。宝可梦是全球收入最高的媒体帝国，似乎（取之不尽）；2016年，《宝可梦GO》利用手机摄像头把卡通怪兽（叠加）在真实的街道上，让数以百万计的人四处游荡寻找它们。"}, {"en": "Then there is kawaii, the cult of cuteness. Hello Kitty, a (winsome) cat with no mouth, has been a global brand since 1974. Almost every prefecture has a mascot; Kumamon, a blushing black bear, has helped to (advertise) Kumamoto so successfully that goods bearing his face sell billions of yen a year. Customers pay by the hour to (cuddle) cats in cat cafés; teenagers encrust their phones with one glittering (rhinestone) after another, and nail artists decorate every finger from (cuticle) to tip. Fans (adore) it all, without a trace of irony.", "zh": "还有“卡哇伊”，即对可爱的崇拜。凯蒂猫是一只没有嘴巴、（惹人喜爱的）猫，自1974年以来一直是全球品牌。几乎每个县都有吉祥物；熊本熊是一只脸颊泛红的黑熊，它为熊本县所做的（宣传）如此成功，以至于印有它头像的商品每年销售额达数十亿日元。顾客按小时付费，在猫咖啡馆里（搂抱）猫咪；青少年给手机一颗接一颗地贴上闪亮的（水钻），美甲师则把每根手指从（指甲表皮）到指尖都装饰一番。粉丝们（热爱）这一切，没有丝毫反讽之意。"}, {"en": "Music is everywhere. Karaoke, invented in Japan in the early 1970s, is sung in soundproofed booths where a (tambourine) and maracas are standard issue. Idol groups churn out (saccharine) pop; older listeners prefer enka, (lachrymose) ballads of lost love and distant hometowns. Jazz arrived in the 1920s, starting with (ragtime), and the country still has hundreds of jazz cafés where patrons sit in rapt silence and a whispered remark is (audible) across the room. Children learn to read music early; the black symbols of sheet music are known in Japanese as \"otamajakushi\", a word meaning (tadpole).", "zh": "音乐无处不在。卡拉OK于20世纪70年代初在日本发明，人们在隔音包厢里唱歌，（铃鼓）和沙锤是标准配置。偶像团体批量生产（甜腻的）流行歌曲；年长的听众则偏爱演歌，那是一种吟唱逝去爱情和遥远故乡的（伤感）民谣。爵士乐于20世纪20年代传入日本，始于（拉格泰姆），如今日本仍有数百家爵士咖啡馆，顾客们屏息静听，一句耳语在房间另一头都（听得见）。孩子们很早就学习识谱；乐谱上那些黑色符号在日语里被称为“御玉杓子”，其字面意思是（蝌蚪）。"}, {"en": "Laughter is big business. Yoshimoto Kogyo, an Osaka agency, manages thousands of comics. In manzai, a double act, one partner says something absurd and the other whacks him on the head, a (jape) repeated endlessly on television. Variety shows (tease) their guests mercilessly. Naomi Watanabe, a (comedienne) famous for her Beyoncé routines, became a fashion icon with millions of followers on Instagram. Political (satire), by contrast, is rare on mainstream television, which is wary of offending the powerful.", "zh": "搞笑是一门大生意。大阪的吉本兴业旗下有数千名喜剧艺人。在漫才这种双人表演中，一人说出荒唐话，另一人就敲他的脑袋，这种（玩笑）在电视上没完没了地重复。综艺节目毫不留情地（取笑）嘉宾。渡边直美是一位以模仿碧昂丝闻名的（女喜剧演员），她成了时尚偶像，在照片社交平台上拥有数百万粉丝。相比之下，政治（讽刺）在主流电视上很少见，因为电视台不愿得罪权贵。"}, {"en": "Japan's sporting heroes are its best ambassadors. Shohei Ohtani, a (versatile) star who both pitches and hits for the Los Angeles Dodgers, has won four most-valuable-player awards and is the (cynosure) of all eyes at every ballpark he visits; his genius is (indubitable). The Dodgers won the 2025 World Series with Yoshinobu Yamamoto, another Japanese pitcher, named its most valuable player, and Ichiro Suzuki became the first Japanese player inducted into the Hall of Fame at Cooperstown. At home, high-school players at the Koshien tournament bow to the (umpire) before every game, and the (score) matters less than the effort. Sumo, the national sport, pits wrestlers of vast (stature) against each other inside a circular ring marked out on a raised clay (square), which they ritually purify by tossing handfuls of (coarse) salt.", "zh": "日本的体育英雄是它最好的使节。大谷翔平是一位（多才多艺）的球星，在洛杉矶道奇队既投球又击球，已四度获得最有价值球员奖，走到哪个球场都是（众人瞩目的焦点）；他的天赋（毋庸置疑）。道奇队赢得了2025年世界大赛，另一位日本投手山本由伸被评为最有价值球员；铃木一朗则成为首位入选库珀斯敦名人堂的日本球员。在国内，参加甲子园大赛的高中球员每场比赛前都要向（裁判）鞠躬，（比分）不如拼搏精神重要。相扑是日本的国技，（身材）魁梧的力士在高起的黏土（方台）上、由稻草俵围成的圆形土俵内角力；他们抛撒大把（粗）盐来净化赛场。"}, {"en": "Japanese (equine) breeding has become world-class. Almond Eye, a (mare), won nine top-level races, including the Japan Cup twice. In November 2025 Forever Young, a (mettlesome) colt with a Japanese jockey in the (saddle), became the first Japanese-trained horse to win the Breeders' Cup Classic in America. At the rugby World Cup it hosted in 2019, Japan beat Ireland and Scotland with relentless defense, every (tackle) cheered by a country new to the game. In football, Japan reached the round of 32 at this summer's World Cup in the western (hemisphere) before losing 2-1 to Brazil; the (pinnacle) remains out of reach.", "zh": "日本的（马匹）育种已达到世界一流水平。（母马）杏仁眼赢得了九场顶级赛事，其中包括两次日本杯。2025年11月，（勇猛的）赛驹“永远年轻”由一位日本骑师（执鞍），成为首匹赢得美国育马者杯经典赛的日本调教马。在2019年主办的橄榄球世界杯上，日本队以顽强的防守击败了爱尔兰和苏格兰，每一次（擒抱）都赢得了这个刚接触这项运动的国家的欢呼。足球方面，日本在今年夏天于西（半球）举行的世界杯上打进32强，随后以1比2负于巴西；（巅峰）依然遥不可及。"}, {"en": "Its diplomats and soldiers face harder contests. Article 9 bans armed forces, yet Japan has fielded the Self-Defense Forces since 1954; pacifists argue that they (contravene) the constitution, and the Supreme Court has avoided ruling on the matter. Shinzo Abe reinterpreted the constitution in 2014 to allow Japan to come to the aid of allies under attack. Ms Takaichi has gone further. Defense spending, including related outlays, reached about 2% of GDP in the fiscal year to March 2026, two years ahead of schedule, and the defense ministry has requested a record ¥8.9trn for next year, with money for long-range drones and missiles that can be launched from under the sea. By the end of this year she intends to (revise) the country's three main strategy documents and adopt a more muscular (posture). America, which keeps some 54,000 troops in Japan, many stationed at a military (base), wants it to spend 3.5% of GDP. Planners fret about the (maritime) threat from China and about the possibility that China, Russia and North Korea might (conspire) against Japan; the aim is to (secure) the sea lanes on which the country depends.", "zh": "日本的外交官和士兵面临着更艰难的较量。宪法第九条禁止拥有武装力量，然而日本自1954年起就组建了自卫队；和平主义者认为自卫队（违反）宪法，而最高法院一直回避就此作出裁决。安倍晋三在2014年重新解释宪法，允许日本援助遭受攻击的盟友。高市女士走得更远。包括相关支出在内的防卫开支在截至2026年3月的财年中达到GDP的约2%，比计划提前两年；防卫省为下一财年申请了创纪录的8.9万亿日元，用于远程无人机和可从水下发射的导弹。她打算在今年年底前（修订）国家三份主要战略文件，采取更强硬的（姿态）。美国在日本部署约5.4万名士兵，其中不少驻扎在军事（基地）；美方希望日本把防卫开支提高到GDP的3.5%。规划者们担心来自中国的（海上）威胁，也担心中国、俄罗斯和朝鲜可能联手（密谋）对付日本；目标是（确保）国家赖以生存的海上通道的安全。"}, {"en": "China is the biggest worry, and Ms Takaichi has made relations worse. On November 7th 2025 she told parliament that a Chinese attack on Taiwan involving naval forces could constitute a \"survival-threatening situation\" that would let Japan fight alongside America. Previous leaders had kept such scenarios deliberately vague. Beijing was quick to (bridle). China's consul-general in Osaka posted on X that \"that dirty neck\" should be cut off, a piece of (bellicose) (hyperbole) that he later took down. Beijing went on to (chastise) Tokyo through every channel: it advised Chinese citizens not to visit Japan, restored its ban on Japanese seafood, canceled films and concerts and, in January, began to (impose) curbs on exports of rare earths and dual-use goods to Japan.", "zh": "中国是最大的隐忧，而高市女士让两国关系变得更糟。2025年11月7日，她在国会表示，如果中国动用海军力量攻打台湾，可能构成“存亡危机事态”，使日本可以与美国并肩作战。前几任领导人都刻意对这类情形含糊其辞。北京很快就（勃然大怒）。中国驻大阪总领事在社交平台上发帖称，应该把“那肮脏的脖子”砍掉，这番（好战的）（夸张言辞）后来被他撤下。北京随后通过各种渠道（训斥）东京：建议中国公民不要前往日本，恢复对日本海产品的禁令，取消电影上映和演唱会，并在1月开始对日本（实施）稀土和军民两用物项出口管制。"}, {"en": "The costs are real. Chinese tourist arrivals have roughly halved, the pandas at Ueno Zoo were sent back to China in January, and in December Chinese fighter jets locked their fire-control radar onto Japanese planes. Ms Takaichi refuses to retract her remarks; to (appease) Beijing now would (enflame) her nationalist supporters. China's foreign minister, Wang Yi, suggested earlier this month that she find a way to end the row, a hint that Beijing, too, may want a way out. Chinese diplomacy is not short of (wile), and the Taiwan question is (intractable). But trade between the two countries is worth around $300bn a year, which gives both sides reason to think the relationship is (reparable), if (fragile).", "zh": "代价是实实在在的。中国游客人数大约减少了一半，上野动物园的大熊猫于今年1月被送回中国，去年12月中国战斗机还用火控雷达锁定了日本飞机。高市女士拒绝收回她的言论；现在去（安抚）北京会（激怒）她的民族主义支持者。本月早些时候，中国外长王毅建议她想办法平息这场争端，这暗示北京或许也想找个台阶下。中国外交从不缺少（计谋），台湾问题则（难以解决）。但两国贸易额每年约3000亿美元，这让双方都有理由认为两国关系虽然（脆弱），却（可以修复）。"}, {"en": "America remains Japan's essential ally, if a more transactional one. When Donald Trump visited Tokyo in October 2025, Ms Takaichi heaped (fulsome) praise on him. A trade deal struck that year capped American tariffs on most Japanese goods at 15% in return for a promise of $550bn in Japanese-backed financing for projects in America, and this summer the American Treasury joined Japan in buying yen. Officials in Washington regularly (assure) Tokyo that the alliance is solid, and Japan casts itself as a (counterpoise) to China in Asia. But nobody can be certain that a future American president would (interpose) American forces between Japan and an attacker.", "zh": "美国仍是日本不可或缺的盟友，尽管这个盟友变得更讲究交易。2025年10月唐纳德·特朗普访问东京时，高市女士对他极尽（溢美）之词。那年达成的贸易协议把美国对大多数日本商品征收的关税上限定为15%，换取日本承诺为美国的项目提供5500亿美元的融资；今年夏天，美国财政部还与日本一起买入日元。华盛顿的官员经常向东京（保证）同盟关系牢不可破，日本也把自己定位为亚洲制衡中国的（砝码）。但谁也无法确定，未来的美国总统是否会把美军（介入）于日本与进攻者之间。"}, {"en": "Relations with South Korea have improved. Lee Jae-myung, a left-wing president who once railed against Japan, has embraced (shuttle) diplomacy; when he visited Nara in January, he and Ms Takaichi ended their summit by drumming together to K-pop hits, an (overture) that seemed (genuine). History still has the power to (rankle). Quarrels over (recompense) for Koreans forced to work for Japanese firms in wartime, and over the \"comfort women\", flare up periodically, and the two countries have yet to (reconcile) their accounts of the past. Each summit helps to (suture) old wounds; none has yet healed them.", "zh": "日本与韩国的关系有所改善。李在明是一位曾经抨击日本的左翼总统，如今却欣然接受（穿梭）外交；今年1月他访问奈良时，与高市女士以随着韩国流行歌曲一起打鼓结束了峰会，这一（友好姿态）看起来是（真诚的）。历史仍有能力（激起怨恨）。围绕战时被强征为日本企业劳动的韩国人的（赔偿）问题以及“慰安妇”问题的争吵不时爆发，两国对过去的叙述仍未能（调和）。每一次峰会都有助于（缝合）旧伤口；但还没有哪一次能让伤口愈合。"}, {"en": "Japan's problems are daunting but not (insuperable). It has shown its (mettle) before: after the Meiji upheaval, after defeat in 1945, after the tsunami of 2011. Its experience with a shrinking, aging population will be a (touchstone) for the many countries that follow, and in Japan the world can (glimpse) its own future. There is no point in nostalgia, and the Japanese do not (repine) for the bubble years. A better guide is kintsugi, the old craft of mending broken pottery with lacquer and gold, so that each (fracture) becomes part of an object's beauty rather than a flaw to hide. The bears may be coming down from the hills. The country they are wandering into is still worth watching.", "zh": "日本的问题令人生畏，但并非（不可逾越）。它以前就展现过自己的（勇气）：明治剧变之后，1945年战败之后，2011年海啸之后。它在人口萎缩和老龄化方面的经验，将成为众多后来者的（试金石），世界可以在日本（瞥见）自己的未来。怀旧毫无意义，日本人也并不（惋惜）泡沫年代。更好的指引是金缮——一种用漆和金修补破碎陶器的古老工艺，让每一道（裂缝）都成为器物之美的一部分，而不是需要掩藏的瑕疵。熊或许正从山上下来。它们闯入的这个国家，仍然值得关注。"}];
+const HAS_TITLE = true;
+const SUBTITLE_EN = "";
+const SUBTITLE_ZH = "";
+
+/* ================= Reading state ================= */
+const S = {
+  p: 0, s: 0,            // paragraph / sentence position
+  playing: false,
+  gen: 0,                // generation counter guards stale utterance callbacks
+  rate: 1,
+  voice: null,
+  showZh: true,
+  activeEl: null,
+  activeWordEl: null
+};
+
+/* ================= Text processing ================= */
+function stripParens(t) { return t.replace(/\(([^)]*)\)/g, '$1'); }
+
+function splitSentences(text) {
+  const parts = text.match(/[^.!?]+[.!?]["\u201d']?|[^.!?]+$/g);
+  return (parts || [text]).map(s => s.trim()).filter(Boolean);
+}
+
+// sentences[paraIdx] = [{ raw, plain }]
+const sentences = DATA.map(d => {
+  const out = [];
+  for (const raw of splitSentences(d.en)) {
+    out.push({ raw, plain: stripParens(raw) });
+  }
+  return out;
+});
+const TOTAL_SENTS = sentences.reduce((a, b) => a + b.length, 0);
+
+/* ================= Rendering ================= */
+const bookEl = document.getElementById('book');
+const sentEls = [];   // sentEls[p][s] = { el, words:[{el,start,end}] }
+
+function buildWords(sentSpan, raw) {
+  // Builds karaoke word spans from the raw sentence, keeping the (vocab)
+  // parentheses visible. `spoken` tracks character offsets in the
+  // parenthesis-free text that is actually sent to speech synthesis, so
+  // boundary-event charIndex values keep mapping to the right word.
+  const words = [];
+  let spoken = '';
+  const emitPlain = text => {
+    const parts = text.split(/(\s+)/);
+    for (const part of parts) {
+      if (part === '') continue;
+      if (/^\s+$/.test(part)) {
+        sentSpan.appendChild(document.createTextNode(part));
+        spoken += part;
+        continue;
+      }
+      const w = document.createElement('span');
+      w.className = 'w';
+      w.textContent = part;
+      sentSpan.appendChild(w);
+      words.push({ el: w, start: spoken.length, end: spoken.length + part.length });
+      spoken += part;
+    }
+  };
+  const re = /\([^)]*\)/g;
+  let last = 0, m;
+  while ((m = re.exec(raw)) !== null) {
+    emitPlain(raw.slice(last, m.index));
+    const inner = m[0].slice(1, -1);
+    sentSpan.appendChild(document.createTextNode('('));
+    const w = document.createElement('span');
+    w.className = 'w vocab';
+    w.textContent = inner;
+    sentSpan.appendChild(w);
+    words.push({ el: w, start: spoken.length, end: spoken.length + inner.length });
+    spoken += inner;
+    sentSpan.appendChild(document.createTextNode(')'));
+    last = m.index + m[0].length;
+  }
+  emitPlain(raw.slice(last));
+  return words;
+}
+
+function makeSentSpan(p, s, obj) {
+  const sp = document.createElement('span');
+  sp.className = 'sent';
+  const words = buildWords(sp, obj.raw);
+  sp.appendChild(document.createTextNode(' '));
+  sp.addEventListener('click', () => jumpTo(p, s));
+  return { el: sp, words };
+}
+
+// Title block (paragraph 0), only when the file provides a title paragraph
+if (HAS_TITLE) (function renderTitle() {
+  const t = DATA[0];
+  const div = document.createElement('div');
+  div.className = 'title-block';
+  const h2 = document.createElement('h2');
+  sentEls[0] = [];
+  sentences[0].forEach((obj, s) => {
+    const r = makeSentSpan(0, s, obj);
+    sentEls[0].push(r);
+    h2.appendChild(r.el);
+  });
+  div.appendChild(h2);
+  if (typeof SUBTITLE_EN !== 'undefined' && SUBTITLE_EN) {
+    const sub = document.createElement('div');
+    sub.className = 'book-subtitle';
+    sub.textContent = SUBTITLE_EN;
+    div.appendChild(sub);
+  }
+  const zh = document.createElement('div');
+  zh.className = 'zh-title';
+  zh.textContent = t.zh;
+  div.appendChild(zh);
+  if (typeof SUBTITLE_ZH !== 'undefined' && SUBTITLE_ZH) {
+    const subZh = document.createElement('div');
+    subZh.className = 'zh-subtitle';
+    subZh.textContent = SUBTITLE_ZH;
+    div.appendChild(subZh);
+  }
+  bookEl.appendChild(div);
+})();
+
+// Paragraph rows. When the file has a title paragraph it is DATA[0] and rows
+// start at 1; otherwise every paragraph is a content row starting at 0.
+const jumpSel = document.getElementById('jumpSel');
+const FIRST_P = HAS_TITLE ? 1 : 0;
+const paraNum = p => HAS_TITLE ? p : p + 1;  // DATA index -> displayed paragraph number
+DATA.slice(FIRST_P).forEach((d, i) => {
+  const p = FIRST_P + i;
+  const row = document.createElement('div');
+  row.className = 'row';
+
+  const enCol = document.createElement('div');
+  const no = document.createElement('div');
+  no.className = 'para-no';
+  no.textContent = 'Paragraph ' + paraNum(p);
+  enCol.appendChild(no);
+  const enDiv = document.createElement('div');
+  enDiv.className = 'en';
+  sentEls[p] = [];
+  sentences[p].forEach((obj, s) => {
+    const r = makeSentSpan(p, s, obj);
+    sentEls[p].push(r);
+    enDiv.appendChild(r.el);
+  });
+  enCol.appendChild(enDiv);
+
+  const zhCol = document.createElement('div');
+  const zhDiv = document.createElement('div');
+  zhDiv.className = 'zh';
+  zhDiv.textContent = d.zh;
+  zhCol.appendChild(zhDiv);
+
+  row.appendChild(enCol);
+  row.appendChild(zhCol);
+  bookEl.appendChild(row);
+
+  const opt = document.createElement('option');
+  opt.value = p;
+  opt.textContent = '¶' + paraNum(p) + ' — ' + stripParens(sentences[p][0].plain).slice(0, 42) + '…';
+  jumpSel.appendChild(opt);
+});
+
+/* ================= Speech engine ================= */
+function pickVoice() {
+  const sel = document.getElementById('voiceSel');
+  const all = speechSynthesis.getVoices().filter(v => v.lang && v.lang.toLowerCase().startsWith('en'));
+  sel.innerHTML = '';
+  // Prefer en-US, then other en voices
+  all.sort((a, b) => {
+    const au = a.lang.toLowerCase().startsWith('en-us') ? 0 : 1;
+    const bu = b.lang.toLowerCase().startsWith('en-us') ? 0 : 1;
+    return au - bu;
+  });
+  const seen = new Set();
+  for (const v of all) {
+    if (seen.has(v.voiceURI)) continue;
+    seen.add(v.voiceURI);
+    const o = document.createElement('option');
+    o.value = v.voiceURI;
+    o.textContent = v.name + ' (' + v.lang + ')';
+    sel.appendChild(o);
+  }
+  const saved = S.voiceURI;
+  let chosen = all.find(v => v.voiceURI === saved)
+    || all.find(v => /microsoft/i.test(v.name) && /en[-_]us/i.test(v.lang))
+    || all.find(v => /microsoft/i.test(v.name))
+    || all.find(v => /google us english/i.test(v.name))
+    || all[0] || null;
+  if (chosen) {
+    sel.value = chosen.voiceURI;
+    S.voice = chosen;
+    S.voiceURI = chosen.voiceURI;
+  }
+}
+if ('speechSynthesis' in window) {
+  speechSynthesis.onvoiceschanged = pickVoice;
+  document.getElementById('voiceSel').addEventListener('change', e => {
+    const v = speechSynthesis.getVoices().find(x => x.voiceURI === e.target.value) || null;
+    S.voice = v; S.voiceURI = v ? v.voiceURI : null;
+    saveState();
+    if (S.playing) restartSentence();
+  });
+}
+
+function setActiveSentence(p, s, scroll) {
+  if (S.activeEl) S.activeEl.classList.remove('active');
+  if (S.activeWordEl) { S.activeWordEl.classList.remove('on'); S.activeWordEl = null; }
+  const r = sentEls[p][s];
+  S.activeEl = r.el;
+  r.el.classList.add('active');
+  if (scroll !== false) r.el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  updateProgress();
+  saveState();
+}
+
+function highlightWord(p, s, charIndex) {
+  const words = sentEls[p][s].words;
+  let best = null;
+  for (const w of words) {
+    if (w.start <= charIndex) best = w;
+    else break;
+  }
+  if (best && best.el !== S.activeWordEl) {
+    if (S.activeWordEl) S.activeWordEl.classList.remove('on');
+    best.el.classList.add('on');
+    S.activeWordEl = best.el;
+  }
+}
+
+function advance() {
+  S.s++;
+  if (S.s >= sentences[S.p].length) { S.p++; S.s = 0; }
+  if (S.p >= sentences.length) { finishReading(); return false; }
+  return true;
+}
+
+function speakSentence() {
+  if (!S.playing) return;
+  const gen = S.gen, p = S.p, s = S.s;
+  const text = sentences[p][s].plain;
+  const utt = new SpeechSynthesisUtterance(text);
+  utt.rate = S.rate;
+  if (S.voice) utt.voice = S.voice;
+  utt.lang = (S.voice && S.voice.lang) || 'en-US';
+  utt.onstart = () => { if (gen === S.gen && S.playing) setActiveSentence(p, s); };
+  utt.onboundary = e => {
+    if (gen === S.gen && S.playing && e.name === 'word') highlightWord(p, s, e.charIndex);
+  };
+  utt.onend = () => {
+    if (gen !== S.gen || !S.playing) return;
+    if (advance()) speakSentence();
+  };
+  utt.onerror = () => {
+    if (gen !== S.gen || !S.playing) return;
+    if (advance()) speakSentence();  // skip a sentence that failed
+  };
+  speechSynthesis.speak(utt);
+}
+
+function restartSentence() {
+  S.gen++;
+  speechSynthesis.cancel();
+  // cancel() is async; give it a tick before speaking
+  setTimeout(() => { if (S.playing) speakSentence(); }, 60);
+}
+
+function updatePlayBtn() {
+  const b = document.getElementById('playBtn');
+  if (S.playing) { b.innerHTML = '&#10074;&#10074; Pause'; b.classList.remove('paused'); }
+  else { b.innerHTML = '&#9654; ' + (S.p === 0 && S.s === 0 && !S.activeEl ? 'Start' : 'Resume'); b.classList.add('paused'); }
+}
+
+function play() {
+  if (!('speechSynthesis' in window)) { alert('Sorry, this browser does not support speech synthesis.'); return; }
+  if (S.playing) { pause(); return; }
+  S.playing = true;
+  S.gen++;
+  updatePlayBtn();
+  const start = () => speakSentence();
+  if (speechSynthesis.speaking || speechSynthesis.pending) {
+    speechSynthesis.cancel();
+    setTimeout(() => { if (S.playing) start(); }, 80);
+  } else {
+    start();
+  }
+}
+
+function pause() {
+  S.playing = false;
+  S.gen++;
+  speechSynthesis.cancel();
+  updatePlayBtn();
+  saveState();
+}
+
+function finishReading() {
+  S.playing = false;
+  S.gen++;
+  speechSynthesis.cancel();
+  S.p = 0; S.s = 0;
+  if (S.activeEl) { S.activeEl.classList.remove('active'); S.activeEl = null; }
+  updatePlayBtn();
+  updateProgress();
+  saveState();
+}
+
+function jumpTo(p, s) {
+  S.p = p; S.s = s;
+  setActiveSentence(p, s);
+  if (S.playing) restartSentence();
+}
+
+function stepSentence(dir) {
+  // dir: -1 = back one sentence, +1 = forward one sentence
+  let p = S.p, s = S.s + dir;
+  if (s < 0) {
+    p--;
+    if (p < 0) return;
+    s = sentences[p].length - 1;
+  } else if (s >= sentences[p].length) {
+    p++;
+    if (p >= sentences.length) return;
+    s = 0;
+  }
+  S.p = p; S.s = s;
+  setActiveSentence(p, s);
+  if (S.playing) restartSentence();
+}
+
+/* ================= Progress & persistence ================= */
+function updateProgress() {
+  let done = 0;
+  for (let p = 0; p < S.p; p++) done += sentences[p].length;
+  done += S.s;
+  const pct = TOTAL_SENTS ? (done / TOTAL_SENTS) * 100 : 0;
+  document.getElementById('progressFill').style.width = pct.toFixed(1) + '%';
+  const totalParas = HAS_TITLE ? sentences.length - 1 : sentences.length;
+  const label = (HAS_TITLE && S.p === 0) ? 'Title' : ('Paragraph ' + paraNum(S.p) + ' of ' + totalParas);
+  document.getElementById('posLabel').textContent =
+    label + ' · sentence ' + (S.s + 1) + ' of ' + sentences[S.p].length +
+    ' · ' + Math.round(pct) + '%';
+  const js = document.getElementById('jumpSel');
+  if (!HAS_TITLE || S.p > 0) js.value = String(S.p);
+}
+
+const LS_KEY = 'audiobook-the-land-of-the-rising-yield-v1';
+const LS_OLD_KEY = 'audiobook-the-land-of-the-rising-yield-v0';
+function saveState() {
+  try {
+    localStorage.setItem(LS_KEY, JSON.stringify({
+      p: S.p, s: S.s, rate: S.rate, voiceURI: S.voiceURI, showZh: S.showZh
+    }));
+  } catch (e) {}
+}
+function loadState() {
+  try {
+    let d = JSON.parse(localStorage.getItem(LS_KEY) || 'null');
+    if (!d) {
+      // Migrate from v1: keep position and settings, but drop the saved voice
+      // so the new Microsoft-first default applies.
+      const old = JSON.parse(localStorage.getItem(LS_OLD_KEY) || 'null');
+      if (old) {
+        d = { p: old.p, s: old.s, rate: old.rate, showZh: old.showZh };
+        localStorage.removeItem(LS_OLD_KEY);
+      }
+    }
+    d = d || {};
+    if (typeof d.p === 'number' && d.p < sentences.length) { S.p = d.p; S.s = Math.min(d.s || 0, sentences[d.p].length - 1); }
+    if (d.rate) { S.rate = d.rate; document.getElementById('rateSel').value = String(d.rate); }
+    if (d.voiceURI) S.voiceURI = d.voiceURI;
+    if (d.showZh === false) toggleZh(false);
+  } catch (e) {}
+}
+
+/* ================= UI wiring ================= */
+function toggleZh(show) {
+  S.showZh = show;
+  document.body.classList.toggle('hide-zh', !show);
+  document.getElementById('zhToggle').innerHTML = show ? '&#30446; Hide translation' : '&#30446; Show translation';
+  saveState();
+}
+document.getElementById('zhToggle').addEventListener('click', () => toggleZh(!S.showZh));
+document.getElementById('playBtn').addEventListener('click', play);
+document.getElementById('restartBtn').addEventListener('click', () => {
+  const wasPlaying = S.playing;
+  S.gen++;
+  speechSynthesis.cancel();
+  S.p = 0; S.s = 0;
+  setActiveSentence(0, 0);
+  if (wasPlaying) setTimeout(() => { if (S.playing) speakSentence(); }, 60);
+  else { pause(); }
+});
+document.getElementById('rateSel').addEventListener('change', e => {
+  S.rate = parseFloat(e.target.value);
+  saveState();
+  if (S.playing) restartSentence();
+});
+jumpSel.addEventListener('change', e => {
+  const p = parseInt(e.target.value, 10);
+  if (!isNaN(p)) jumpTo(p, 0);
+});
+document.addEventListener('keydown', e => {
+  const tag = document.activeElement ? document.activeElement.tagName : '';
+  const inField = /INPUT|SELECT|TEXTAREA/.test(tag);
+  if (e.code === 'Space' && !inField && tag !== 'BUTTON') {
+    e.preventDefault();
+    play();
+  } else if ((e.code === 'ArrowLeft' || e.code === 'ArrowRight') && !inField) {
+    // Arrow keys are safe to handle even with a focused button (they don't activate it)
+    e.preventDefault();
+    stepSentence(e.code === 'ArrowLeft' ? -1 : 1);
+  }
+});
+window.addEventListener('beforeunload', saveState);
+
+/* ================= Init ================= */
+loadState();
+if ('speechSynthesis' in window) pickVoice();
+updatePlayBtn();
+updateProgress();
+if (S.p > 0 || S.s > 0) setActiveSentence(S.p, S.s, false);
+</script>
+</body>
+</html>
