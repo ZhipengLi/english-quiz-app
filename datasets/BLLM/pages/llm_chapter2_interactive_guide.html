@@ -1,0 +1,803 @@
+<!doctype html>
+<html lang="en" data-theme="reading">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="An offline, interactive, conversation-based guide to Chapter 2 of Build a Large Language Model (From Scratch).">
+<title>Working with Text Data — Interactive Chapter 2</title>
+<style>
+:root { --font-size:20px; --round:21px; font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; text-rendering:optimizeLegibility; }
+html[data-theme="reading"] {color-scheme:light; --page:#f6f0e4; --panel:#f0e8d8; --panel2:#eae0cd; --paper:#fffcf5; --student:#dcece4; --ink:#302d28; --muted:#716a5e; --line:#d9cebb; --brand:#256b63; --brand-ink:#fff; --accent:#995e20; --code:#292b31; --code-ink:#f0f0ee; --hover:#e9dfce; --shadow:0 15px 45px #4d3f2922; --highlight:#fff0bd; }
+html[data-theme="light"] {color-scheme:light; --page:#f5f7fa; --panel:#eaf0f5; --panel2:#e1eaf1; --paper:#fff; --student:#e1eefc; --ink:#182d3a; --muted:#637583; --line:#d5e0e7; --brand:#215b9b; --brand-ink:#fff; --accent:#835e0d; --code:#1c2838; --code-ink:#f0f6fc; --hover:#e1eaf1; --shadow:0 15px 45px #2442591c; --highlight:#fff1b4; }
+html[data-theme="dark"] {color-scheme:dark; --page:#101720; --panel:#18222e; --panel2:#202e3c; --paper:#222f3d; --student:#214842; --ink:#eaf1f4; --muted:#a7b9c4; --line:#344555; --brand:#86cfc0; --brand-ink:#0a221e; --accent:#edbe77; --code:#0d141e; --code-ink:#e4e9fa; --hover:#293a49; --shadow:0 15px 45px #0005; --highlight:#514626; }
+*{box-sizing:border-box} html,body{height:100%;margin:0} body{background:var(--page);color:var(--ink);overflow:hidden} button,input{font:inherit} button{cursor:pointer} button:disabled{opacity:.4;cursor:default} button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--brand);outline-offset:3px} a{color:var(--brand)} ::selection{background:var(--highlight)}
+.app{display:flex;width:100%;height:100dvh;min-height:420px} .sidebar{width:294px;flex:0 0 294px;background:var(--panel);border-right:1px solid var(--line);display:flex;flex-direction:column;min-height:0;padding:30px 18px 20px;z-index:8}.logo-row{display:flex;align-items:center;gap:11px;padding:0 12px 13px}.logo{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:var(--brand);color:var(--brand-ink);font-size:21px;font-weight:750}.eyebrow{font-size:11px;font-weight:800;letter-spacing:2px;color:var(--accent);text-transform:uppercase}.logo-caption{font-size:16px;font-weight:740;line-height:1.2}.side-title{font-family:Georgia,Cambria,serif;font-weight:720;font-size:29px;letter-spacing:-.8px;line-height:1.18;margin:16px 12px 6px}.side-desc{font-size:13px;line-height:1.5;margin:0 12px 17px;color:var(--muted)}.side-label{font-size:11px;text-transform:uppercase;letter-spacing:1.4px;color:var(--muted);font-weight:800;margin:10px 12px}.section-nav{overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;padding:0 0 12px}.section-item{width:100%;display:flex;gap:11px;align-items:center;min-height:59px;background:transparent;border:1px solid transparent;border-radius:13px;color:var(--muted);text-align:left;padding:9px 10px;margin:3px 0}.section-item:hover{background:var(--hover)}.section-item.active{color:var(--ink);background:var(--paper);border-color:var(--line);box-shadow:0 3px 13px #00000009}.section-item.complete .section-index{color:var(--brand)}.section-index{flex:0 0 26px;display:grid;place-items:center;font-size:12px;color:var(--muted);font-weight:800}.section-copy{min-width:0;flex:1}.section-name{font-size:13px;font-weight:720;line-height:1.32}.section-page{font-size:11px;color:var(--muted);margin-top:2px}.section-trail{height:3px;background:var(--panel2);border-radius:4px;overflow:hidden;margin-top:7px}.section-trail>i{display:block;height:100%;background:var(--brand);transition:width .25s}.side-bottom{border-top:1px solid var(--line);padding:16px 9px 0;margin-top:auto}.small-line{font-size:12px;color:var(--muted);line-height:1.45}.side-actions{display:flex;gap:9px;margin-top:12px}.text-btn{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:10px;padding:10px 12px;font-size:12px;font-weight:740}.text-btn:hover{background:var(--hover)}
+.main{flex:1;min-width:0;display:flex;flex-direction:column}.topbar{background:var(--page);border-bottom:1px solid var(--line);padding:17px clamp(18px,4vw,48px) 14px;display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:93px}.top-title{min-width:0;display:flex;gap:13px;align-items:center}.title-stack{min-width:0}.top-overline{text-transform:uppercase;font-size:11px;letter-spacing:1.4px;color:var(--accent);font-weight:800;margin-bottom:4px}.chapter-label{font-size:19px;font-weight:780;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.subline{font-size:12px;color:var(--muted);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.controls{display:flex;align-items:center;gap:11px;flex-wrap:wrap;justify-content:flex-end}.theme-picker{display:flex;gap:3px;background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:3px}.theme-picker button{border:0;background:transparent;color:var(--muted);border-radius:8px;padding:8px 11px;font-size:12px;font-weight:730}.theme-picker button[aria-pressed="true"]{background:var(--paper);color:var(--ink);box-shadow:0 1px 4px #00000012}.font-picker{display:flex;align-items:center;gap:1px;border:1px solid var(--line);border-radius:10px;overflow:hidden}.icon-btn{height:36px;min-width:36px;border:0;color:var(--ink);background:transparent;display:grid;place-items:center;font-weight:750;font-size:17px}.icon-btn:hover:not(:disabled){background:var(--hover)}.font-label{font-size:12px;font-weight:750;width:38px;text-align:center;font-variant-numeric:tabular-nums}.menu-trigger{display:none}.ghost-button{background:var(--paper);border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:9px 13px;font-size:12px;font-weight:720}.ghost-button:hover{background:var(--hover)}
+.progress-track{height:4px;background:var(--panel2);flex-shrink:0}.progress-fill{height:100%;width:0;background:var(--brand);transition:width .23s ease}.conversation-wrap{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scroll-padding:24px}.conversation{max-width:880px;min-height:100%;margin:0 auto;padding:26px 35px 64px;display:flex;flex-direction:column;gap:17px}.section-divider{display:flex;gap:13px;align-items:center;margin:32px 0 11px;padding-left:5px}.section-divider:first-child{margin-top:13px}.section-divider .section-mark{display:grid;place-items:center;flex:0 0 40px;height:40px;border-radius:13px;background:var(--brand);color:var(--brand-ink);font-size:13px;font-weight:850}.section-heading{font-family:Georgia,Cambria,serif;font-size:23px;font-weight:740;line-height:1.17}.section-details{font-size:12px;color:var(--muted);margin-top:4px}.message{display:flex;gap:10px;align-items:flex-end;max-width:100%}.message.student{justify-content:flex-end}.bubble-wrap{max-width:min(86%,720px);min-width:0}.message.student .bubble-wrap{max-width:min(77%,660px)}.message.attachment .bubble-wrap,.message.quiz-step .bubble-wrap,.message.complete-step .bubble-wrap{max-width:min(96%,790px);width:100%}.who{font-size:11px;letter-spacing:.55px;text-transform:uppercase;color:var(--muted);font-weight:800;margin:0 12px 6px}.student .who{text-align:right}.bubble{background:var(--paper);border:1px solid var(--line);border-radius:19px 19px 19px 6px;padding:14px 18px;font-size:var(--font-size);line-height:1.55;overflow-wrap:anywhere;box-shadow:0 2px 6px #00000005}.student .bubble{background:var(--student);border-radius:19px 19px 6px 19px}.message.current .bubble{box-shadow:0 0 0 2px color-mix(in srgb,var(--brand) 16%,transparent),0 2px 8px #00000008}.avatar{display:grid;place-items:center;width:29px;height:29px;flex:0 0 29px;border-radius:50%;font-size:12px;font-weight:840;border:1px solid var(--line);background:var(--panel2);color:var(--ink);margin-bottom:2px}.student .avatar{background:var(--brand);color:var(--brand-ink);border-color:transparent}.gloss-term{border:0;border-bottom:1px dashed var(--brand);background:transparent;color:inherit;display:inline;padding:0;line-height:inherit;text-decoration:none;text-underline-offset:3px;font-size:inherit;font-weight:inherit;cursor:help}.gloss-term:hover,.gloss-term:focus-visible{background:var(--highlight);border-radius:2px}.bubble p{margin:0}.bubble p+p{margin-top:12px}.attachment-label{display:flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:1.2px;font-size:11px;color:var(--accent);font-weight:820}.paperclip{font-size:18px}.attachment-title{font-weight:770;font-size:18px;margin:8px 0 4px}.attachment-desc{font-size:13px;color:var(--muted);line-height:1.5;margin-bottom:13px}.board{border:1px solid var(--line);background:var(--page);border-radius:14px;padding:16px;overflow-x:auto;max-width:100%;scrollbar-width:thin}.board-inner{min-width:600px}.board-canvas{max-width:100%}.board-footnote{font-size:12px;line-height:1.5;color:var(--muted);margin-top:12px}.attachment-actions{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:12px}.attachment-source{font-size:11px;color:var(--muted);max-width:62%;line-height:1.35}.expand-btn{background:transparent;color:var(--brand);border:1px solid var(--line);border-radius:9px;font-size:12px;font-weight:800;padding:9px 12px}.expand-btn:hover{background:var(--hover)}
+.diagram-row{display:flex;align-items:center;gap:11px;justify-content:center}.diagram-box{flex:1;min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:11px;padding:15px 12px;text-align:center}.diagram-box.good{background:var(--student);border-color:var(--brand)}.diagram-box .box-h{font-size:15px;font-weight:820}.diagram-box .box-p{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.4}.diagram-arrow{color:var(--brand);font-weight:850;font-size:24px;flex:0 0 22px;text-align:center}.diagram-eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:1.3px;color:var(--accent);font-weight:830;margin-bottom:8px}.taxonomy{padding:8px;background:var(--panel2);border:1px solid var(--line);border-radius:15px}.taxonomy .nest{border-radius:11px;padding:13px;border:1px solid var(--line);margin-top:11px;background:var(--panel);font-weight:790;font-size:14px}.taxonomy .nest .nest{margin-left:30px;background:var(--paper)}.taxonomy .nest .nest .nest{background:var(--student)}.taxonomy .nest .nest .nest .nest{background:var(--brand);color:var(--brand-ink)}.micro-note{font-size:12px;color:var(--muted);margin:12px 5px 2px;line-height:1.5}.micro-note strong{color:var(--ink)}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:13px}.comparison-panel{padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}.comparison-panel h4{font-size:14px;margin:0 0 9px}.comparison-panel .example{background:var(--panel);border-radius:8px;padding:11px;font-size:14px;line-height:1.5;min-height:78px}.comparison-panel .small{font-size:12px;color:var(--muted);line-height:1.5;margin:8px 0 0}.term-highlight{padding:2px 5px;background:var(--student);border-radius:4px;font-weight:750}.color-code{color:var(--brand);font-weight:750}.table-wrap{overflow-x:auto}.board-table{border-collapse:collapse;width:100%;font-size:13px;white-space:nowrap}.board-table th{text-align:left;color:var(--muted);font-size:11px;letter-spacing:.2px}.board-table td,.board-table th{padding:10px 8px;border-bottom:1px solid var(--line)}.board-table td:last-child,.board-table th:last-child{text-align:right}.bar-track{width:130px;height:11px;border-radius:15px;background:var(--panel2);overflow:hidden}.bar-fill{height:100%;border-radius:15px;background:var(--brand)}.num{font-variant-numeric:tabular-nums}.metric-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:13px}.metric{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px}.metric b{font-size:21px;display:block;color:var(--brand)}.metric span{font-size:11px;color:var(--muted);line-height:1.4;display:block;margin-top:4px}.tag{display:inline-block;border:1px solid var(--line);background:var(--paper);padding:5px 9px;border-radius:99px;font-size:12px;margin:3px 4px 3px 0;font-weight:680}.tag.active{background:var(--student);border-color:var(--brand)}.code-card{border-radius:11px;background:var(--code);color:var(--code-ink);overflow:hidden}.code-title{display:flex;justify-content:space-between;gap:10px;align-items:center;background:#88888817;border-bottom:1px solid #aaaaaa33;font-size:11px;letter-spacing:.7px;padding:10px 13px}.code-card pre{font:13px/1.7 ui-monospace,SFMono-Regular,Consolas,Monaco,monospace;margin:0;padding:15px;white-space:pre;overflow-x:auto;tab-size:2}.run-code{border:1px solid #ffffff33;color:var(--code-ink);background:#ffffff16;border-radius:6px;padding:4px 8px;font-size:11px}.run-code:hover{background:#ffffff30}.output-console{white-space:pre-wrap;background:var(--panel);border-radius:8px;padding:12px;margin-top:10px;color:var(--ink);font:12px/1.55 ui-monospace,monospace}.example-row{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-bottom:13px}.demo-action{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:9px;padding:8px 10px;font-size:12px;font-weight:720}.demo-action:hover{background:var(--hover)}.demo-action.primary{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}.demo-caption{font-size:12px;color:var(--muted);line-height:1.5}.prob-row{display:grid;grid-template-columns:88px 1fr 47px;gap:9px;align-items:center;font-size:13px;margin:9px 0}.prob-track{height:12px;background:var(--panel2);border-radius:12px;overflow:hidden}.prob-fill{height:100%;background:var(--brand);border-radius:12px}.outcome{padding:10px 12px;background:var(--student);border:1px solid var(--line);border-radius:10px;margin-top:13px;font-size:14px}.tokens{display:flex;flex-wrap:wrap;gap:5px;padding:10px 0}.token{padding:6px 9px;background:var(--paper);border:1px solid var(--line);border-radius:7px;font:13px ui-monospace,monospace}.token.target{border-color:var(--brand);background:var(--student)}.focus-weights{display:grid;grid-template-columns:95px 1fr 44px;gap:8px;align-items:center;margin:9px 0;font-size:13px}.prompt-example{font:13px/1.7 ui-monospace,monospace;background:var(--paper);border:1px solid var(--line);padding:12px;border-radius:8px;white-space:pre-wrap}
+.quiz-kicker{color:var(--accent);font-size:11px;font-weight:830;letter-spacing:1.5px;text-transform:uppercase}.quiz-q{font-size:19px;font-weight:765;line-height:1.42;margin:9px 0 16px}.option-list{display:grid;gap:9px}.quiz-opt{width:100%;display:flex;align-items:flex-start;gap:11px;text-align:left;padding:12px 13px;background:var(--page);border:1px solid var(--line);border-radius:11px;color:var(--ink);font-size:15px;line-height:1.45}.quiz-opt:not(:disabled):hover{border-color:var(--brand);background:var(--hover)}.quiz-opt:disabled{opacity:1;cursor:default}.option-letter{flex:0 0 26px;height:26px;display:grid;place-items:center;border-radius:7px;background:var(--panel2);color:var(--muted);font-size:12px;font-weight:820}.quiz-opt.answer-correct{background:var(--student);border-color:var(--brand)}.quiz-opt.answer-selected-wrong{background:color-mix(in srgb,#b75a4d 8%,var(--paper));border-color:#c48475}.quiz-opt.answer-correct .option-letter{background:var(--brand);color:var(--brand-ink)}.quiz-feedback{margin-top:15px;padding:14px;border-radius:11px;background:var(--panel);border:1px solid var(--line);font-size:14px;line-height:1.55}.feedback-title{font-weight:830;margin-bottom:7px}.feedback-title.correct{color:var(--brand)}.feedback-title.wrong{color:#b56855}.feedback-why{margin-top:9px;padding-top:9px;border-top:1px solid var(--line);color:var(--muted)}.skip-line{font-size:12px;color:var(--muted);margin-top:12px}.end-card{text-align:center}.end-medallion{width:58px;height:58px;display:grid;place-items:center;border-radius:18px;background:var(--student);color:var(--brand);margin:0 auto 11px;font-size:26px}.end-card h3{font:750 25px Georgia,Cambria,serif;margin:7px 0 9px}.end-card p{font-size:15px;line-height:1.6;color:var(--muted)}.end-stats{display:flex;gap:13px;justify-content:center;flex-wrap:wrap;margin:18px 0}.end-stats span{padding:9px 12px;background:var(--page);border:1px solid var(--line);border-radius:10px;font-size:13px}
+.footer{background:var(--page);border-top:1px solid var(--line);padding:16px clamp(18px,4vw,48px) max(16px,env(safe-area-inset-bottom));display:flex;align-items:center;justify-content:space-between;gap:12px}.nav-status{min-width:0;display:flex;flex-direction:column;gap:3px}.nav-status .counter{font-weight:780;font-size:13px;font-variant-numeric:tabular-nums}.nav-status .tip{font-size:11px;color:var(--muted)}.nav-buttons{display:flex;gap:10px}.nav-btn{font-size:14px;border-radius:12px;min-height:46px;padding:12px 22px;font-weight:800;border:1px solid var(--line);background:var(--paper);color:var(--ink)}.nav-btn:hover:not(:disabled){background:var(--hover)}.nav-btn.next{background:var(--brand);color:var(--brand-ink);border-color:var(--brand);min-width:132px}.nav-btn.next:hover:not(:disabled){filter:brightness(1.06)}
+.tooltip{position:fixed;z-index:40;width:min(350px,calc(100vw - 24px));background:var(--paper);border:1px solid var(--brand);border-radius:13px;box-shadow:var(--shadow);padding:13px 15px;pointer-events:auto;font-size:14px;line-height:1.5;color:var(--ink)}.tooltip[hidden]{display:none}.tooltip .tooltip-name{font-weight:850;margin-bottom:4px;font-size:14px}.tooltip .tooltip-description{color:var(--muted);font-size:13px}.tooltip .tooltip-hint{font-size:10px;color:var(--muted);margin-top:8px}.modal{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:18px;box-shadow:var(--shadow);padding:0;width:min(710px,calc(100vw - 22px));max-height:min(85dvh,900px)}.modal::backdrop{background:#10151dc2;backdrop-filter:blur(3px)}.modal.viewer{width:min(1040px,calc(100vw - 20px));max-height:90dvh}.modal-head{padding:20px 23px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:15px}.modal-head h2{font:750 23px Georgia,Cambria,serif;margin:0}.modal-head p{font-size:12px;color:var(--muted);margin:5px 0 0}.close-btn{height:36px;min-width:36px;border:1px solid var(--line);border-radius:10px;background:var(--page);color:var(--ink);font-size:19px;font-weight:650}.close-btn:hover{background:var(--hover)}.modal-body{padding:20px 23px;overflow:auto;max-height:calc(86dvh - 95px)}.viewer .modal-body{max-height:calc(90dvh - 100px)}.viewer .board{border:0;padding:0;background:transparent}.viewer .board-inner{min-width:650px}.gloss-search{width:100%;border:1px solid var(--line);border-radius:10px;padding:13px 14px;background:var(--page);color:var(--ink);font-size:15px;margin-bottom:13px}.gloss-entry{padding:12px 2px;border-bottom:1px solid var(--line)}.gloss-entry b{font-size:14px}.gloss-entry p{font-size:13px;color:var(--muted);line-height:1.55;margin:5px 0 0}.gloss-count{font-size:12px;color:var(--muted);margin-bottom:8px}.scrim{display:none}
+@media (max-width:1120px){.sidebar{width:250px;flex-basis:250px}.side-title{font-size:25px}.topbar{padding-left:23px;padding-right:23px}.top-overline{display:none}.chapter-label{font-size:16px}.controls{gap:7px}.conversation{padding-left:20px;padding-right:20px}}
+@media (max-width:810px){.sidebar{position:fixed;left:0;top:0;bottom:0;width:min(312px,85vw);transform:translateX(-103%);transition:transform .2s ease;box-shadow:var(--shadow)}.sidebar.open{transform:translateX(0)}.scrim.open{display:block;position:fixed;inset:0;background:#0007;z-index:7}.menu-trigger{display:grid;flex:0 0 37px;height:37px;border-radius:10px;border:1px solid var(--line);background:var(--paper);color:var(--ink);place-items:center;font-size:21px}.topbar{min-height:69px;padding:12px 16px}.top-title{gap:8px}.subline{display:none}.chapter-label{font-size:15px}.ghost-button{padding:9px 10px}.theme-picker button{padding:7px 8px}.font-picker .icon-btn{min-width:31px;height:33px}.font-label{width:30px}.conversation{padding:18px 16px 55px;gap:15px}.footer{padding:11px 15px max(11px,env(safe-area-inset-bottom))}.section-divider{margin-top:22px}}
+@media (max-width:530px){.topbar{gap:5px;padding:9px 10px;min-height:62px}.menu-trigger{width:34px;height:34px;flex-basis:34px}.chapter-label{font-size:13px;max-width:104px}.controls{gap:5px;flex-wrap:nowrap}.theme-picker{gap:0;padding:2px}.theme-picker button{font-size:10px;padding:7px 6px}.font-picker .icon-btn{min-width:26px;height:30px;font-size:14px}.font-label{font-size:10px;width:21px}.ghost-button{font-size:0;padding:6px 7px;height:34px}.ghost-button::after{content:"⌕";font-size:18px}.top-overline{display:none}.conversation{padding:10px 11px 45px;gap:15px}.section-heading{font-size:20px}.section-divider .section-mark{flex-basis:33px;height:33px;font-size:11px}.bubble-wrap{max-width:calc(100% - 37px)}.message.student .bubble-wrap{max-width:calc(89% - 24px)}.message.attachment .bubble-wrap,.message.quiz-step .bubble-wrap,.message.complete-step .bubble-wrap{max-width:calc(100% - 34px)}.message{gap:5px}.bubble{padding:11px 13px;border-radius:17px 17px 17px 6px}.student .bubble{border-radius:17px 17px 6px 17px}.avatar{width:26px;height:26px;flex-basis:26px;font-size:11px}.who{font-size:10px}.board{padding:11px}.attachment-title{font-size:17px}.quiz-opt{font-size:14px}.quiz-q{font-size:18px}.nav-status .tip{display:none}.nav-status .counter{font-size:11px}.nav-btn{padding:10px 16px;min-height:44px}.nav-btn.next{min-width:102px}.footer{gap:3px}.nav-buttons{gap:6px}.modal-head{padding:16px}.modal-body{padding:14px}.tooltip{font-size:13px}.side-title{font-size:26px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+
+/* Chapter 2: responsive whiteboards and touch-friendly demonstrations. */
+.nav-btn.next:hover:not(:disabled){background:var(--brand);color:var(--brand-ink);filter:brightness(1.08)}
+.board-inner{min-width:0}.board{overflow-x:auto}
+.demo-label{font-size:13px;font-weight:800;display:block;margin:12px 0 6px}
+.demo-input{width:100%;max-width:100%;border-radius:11px;background:var(--paper);color:var(--ink);border:1px solid var(--line);padding:12px 13px;font-size:16px;line-height:1.5}
+.demo-input:focus-visible{outline:2px solid var(--brand)}
+.matrix{font-variant-numeric:tabular-nums}.matrix .picked td{background:var(--student)}
+.matrix td,.matrix th{text-align:left!important}.matrix td{padding:6px 9px}
+.matrix .demo-action{padding:5px 8px;min-height:30px}
+.plot{position:relative;border:1px solid var(--line);background:var(--paper);border-radius:12px;height:245px;overflow:hidden}
+.plot-axis{position:absolute;background:var(--line)}.plot-x{height:1px;left:7%;right:7%;top:89%}.plot-y{width:1px;top:7%;bottom:11%;left:8%}
+.plot-point{position:absolute;display:flex;gap:4px;align-items:center;transform:translate(-15%,-50%);font-size:12px;font-weight:750}
+.plot-point i{width:9px;height:9px;border-radius:50%;background:var(--brand);display:block}.plot-point.place i{background:#b37c36}.plot-point.adj i{background:#8e75b9}
+.bpe-line{display:flex;align-items:center;gap:12px;padding:6px 0;border-bottom:1px dashed var(--line)}.bpe-line>.demo-caption{flex:0 0 67px}
+.position-sum{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:9px;margin:12px 0}
+.vector-number{font-size:13px!important;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;line-height:1.5;overflow-wrap:anywhere}
+.token-ids{display:flex;gap:7px;flex-wrap:wrap;margin:8px 0}.token-ids span{font:700 13px ui-monospace,Consolas,monospace;background:var(--paper);border:1px solid var(--line);border-radius:7px;padding:6px 9px}
+.tokens{flex-wrap:wrap}.token.is-input{background:var(--student);border-color:var(--brand)}
+.python-code{max-height:440px;overflow:auto;tab-size:4;white-space:pre;font-size:12px;line-height:1.56}.code-title{gap:12px}.code-title span{min-width:0}
+@media(max-width:610px){
+  .board .diagram-row{flex-wrap:wrap;gap:6px}.board .diagram-row>.diagram-box{min-width:45%}.board .diagram-row>.diagram-arrow{flex:0 0 auto}
+  .board .two-col{grid-template-columns:1fr}.board .diagram-box .box-h{font-size:14px}
+  .position-sum{grid-template-columns:1fr}.position-sum .diagram-arrow{transform:rotate(90deg);font-size:18px}
+  .board .example-row{flex-wrap:wrap}.board .demo-action{white-space:normal}.bpe-line{gap:6px}
+  .plot{height:225px}.plot-point{font-size:10px}.board-table{font-size:11px}
+  .python-code{font-size:11px}
+}
+</style>
+</head>
+<body>
+<div id="scrim" class="scrim"></div>
+<div class="app">
+  <aside class="sidebar" id="sidebar" aria-label="Chapter sections">
+    <div class="logo-row"><div class="logo" aria-hidden="true">∑</div><div><div class="eyebrow">A learning conversation</div><div class="logo-caption">Field Notes</div></div></div>
+    <div class="side-title">Inside the<br>language model</div>
+    <p class="side-desc">Chapter 02 · Working with Text Data</p>
+    <div class="side-label">Your journey</div>
+    <nav id="sectionNav" class="section-nav" aria-label="Jump to a section"></nav>
+    <div class="side-bottom">
+      <div class="small-line" id="sideStatus">Your place is saved on this device.</div>
+      <div class="side-actions"><button class="text-btn" id="sidebarGlossary">Glossary ↗</button><button class="text-btn" id="resetBtn">Start over</button></div>
+    </div>
+  </aside>
+  <main class="main" id="main">
+    <header class="topbar">
+      <div class="top-title"><button class="menu-trigger" id="menuBtn" aria-label="Open section menu" aria-expanded="false">☰</button><div class="title-stack"><div class="top-overline">Build a Large Language Model · Chapter 2</div><div class="chapter-label" id="activeSectionTitle">The beginning</div><div class="subline" id="activeSectionSubtitle">A question-led introduction · Original teaching dialogue</div></div></div>
+      <div class="controls">
+        <div class="theme-picker" role="group" aria-label="Color theme"><button data-theme-choice="reading" aria-pressed="true">Reading</button><button data-theme-choice="light" aria-pressed="false">Light</button><button data-theme-choice="dark" aria-pressed="false">Dark</button></div>
+        <div class="font-picker" role="group" aria-label="Text size"><button class="icon-btn" id="smallerText" aria-label="Decrease text size">A−</button><span class="font-label" id="fontValue">20</span><button class="icon-btn" id="largerText" aria-label="Increase text size">A+</button></div>
+        <button class="ghost-button" id="glossaryBtn" aria-label="Open searchable glossary">Glossary</button>
+      </div>
+    </header>
+    <div class="progress-track" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressTrack"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="conversation-wrap" id="conversationWrap" tabindex="-1"><div class="conversation" id="conversation" aria-label="Learning conversation"></div></div>
+    <footer class="footer"><div class="nav-status"><div class="counter" id="positionLabel">Message 1</div><div class="tip" id="scoreLabel">Space / → to continue · ← to go back</div></div><div class="nav-buttons"><button class="nav-btn" id="backBtn">← Back</button><button class="nav-btn next" id="nextBtn">Next →</button></div></footer>
+  </main>
+</div>
+<div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+<dialog class="modal" id="glossaryModal" aria-labelledby="glossaryTitle"><div class="modal-head"><div><h2 id="glossaryTitle">Glossary</h2><p>Select an underlined term in the conversation, or search here.</p></div><button class="close-btn" id="closeGlossary" aria-label="Close glossary">×</button></div><div class="modal-body"><input class="gloss-search" id="glossarySearch" type="search" placeholder="Search for a concept…" aria-label="Search the glossary"><div id="glossaryEntries"></div></div></dialog>
+<dialog class="modal viewer" id="viewerModal" aria-labelledby="viewerTitle"><div class="modal-head"><div><h2 id="viewerTitle">Whiteboard</h2><p id="viewerSubtitle"></p></div><button class="close-btn" id="closeViewer" aria-label="Close whiteboard">×</button></div><div class="modal-body" id="viewerBody"></div></dialog>
+<script>
+'use strict';
+// All guide content, visuals, data, and interactive logic live in this file.
+// The source chapter contains Python examples, reproduced here with teaching comments.
+// Interactive demos are original browser-based teaching approximations, not GPT-2 inference.
+const T=text=>({type:'message',who:'teacher',text});
+const S=text=>({type:'message',who:'student',text});
+const A=(kind,title,description,source)=>({type:'attachment',who:'teacher',kind,title,description,source});
+const Q=(question,options,correct,explanation)=>({type:'quiz',who:'teacher',question,options:options.map(([text,why])=>({text,why})),correct,explanation});
+const sections = [
+ {id:'vectors',title:'Why text needs embeddings',pages:'pp. 19–22 · §2.1',items:[
+   T(`Suppose you want a neural network to read this sentence: "The bird flies." Can we give it the raw letters and expect it to do arithmetic?`),
+   S(`Not directly. The model needs numbers, not letters.`),
+   T(`Correct. A model performs numerical operations. We must convert text into numerical representations before the main network can use it.`),
+   S(`Why not give each word an integer, like bird = 7 and dog = 8?`),
+   T(`An integer can identify a word, but it does not show what the word means. The numbers 7 and 8 do not imply that two words have similar meanings.`),
+   T(`An embedding represents a token with a vector: an ordered list of numbers. For example, [0.3, −0.5, 1.2] is a vector with three dimensions.`),
+   A('flow','The data preparation path','See how text becomes token IDs, vectors, and finally model input.','Figure 2.19 · p. 58; overview in §2.1'),
+   S(`Could a vector for "eagle" end up near a vector for "duck"?`),
+   T(`Yes. The chapter shows a 2D Word2Vec example where birds cluster in a vector space. Such plots help us picture related representations. Real language models can use hundreds or thousands of dimensions.`),
+   A('clusters','Related words in vector space','A schematic of the birds, places, and adjectives shown in the chapter.','Figure 2.3 · p. 21; original schematic, not measured data'),
+   S(`Does GPT always use Word2Vec to create those vectors?`),
+   T(`No. GPT-like models normally learn their own token embedding matrix during training. In a small GPT-2 model, the embedding dimension is 768. GPT-3 with 175 billion parameters uses 12,288 dimensions.`),
+   T(`The main point: a token ID selects a vector; the vector is what the neural network processes. We will write that lookup in section 2.7.`),
+   Q(`A developer assigns "cat" ID 2 and "tiger" ID 3. Why does this not, by itself, make them semantically close?`,[
+     [`IDs name tokens, not distances between words.`,`Token IDs are labels. Their numerical proximity does not encode semantic similarity.`],
+     [`Consecutive IDs always refer to related word classes.`,`Vocabulary IDs can be assigned by order, not by semantic relationships.`],
+     [`Any integer is already a learned embedding vector.`,`An ID is one index. An embedding is a vector selected or computed for that ID.`],
+     [`The model computes cosine similarity between ID labels.`,`The chapter uses vector embeddings, not bare vocabulary indices, as neural-network inputs.`]
+   ],0,`An ID only names a token. The embedding matrix provides learned numerical values that can carry useful relationships.`),
+   Q(`An embedding layer maps 50,000 token IDs into 256-dimensional vectors. What is the weight matrix shape?`,[
+     [`50,000 rows by 256 columns.`,`There is one row per token ID and one column per embedding dimension.`],
+     [`256 rows by 50,000 columns.`,`That swaps the roles of vocabulary size and embedding dimension.`],
+     [`50,000 rows by 50,000 columns.`,`This would give each token 50,000 dimensions, not 256.`],
+     [`256 rows by 256 columns.`,`That omits most of the vocabulary entries.`]
+   ],0,`An embedding table has shape (vocabulary size, embedding dimension). Each valid token ID selects one row.`)
+ ]},
+ {id:'split',title:'Split raw text into tokens',pages:'pp. 22–27 · §2.2',items:[
+   T(`Now we have raw text: "Hello, world. Is this-- a test?" Where would you split it?`),
+   S(`At spaces. I would also separate commas, periods, and the question mark.`),
+   T(`That's a good start. Splitting only on spaces leaves "Hello," and "world." joined to punctuation. The chapter uses a regular expression to separate punctuation too.`),
+   S(`Why keep punctuation as its own token?`),
+   T(`Punctuation is part of language structure. A model can learn where sentences end or how questions are written. The simple demonstration treats each punctuation mark as a separate token.`),
+   A('split-demo','Try a simple tokenizer','Edit the sentence and see how the chapter-style regular expression splits it. This is a working JavaScript demonstration of the simple rule.','Listing 2.1 and §2.2 · pp. 23–27'),
+   S(`Should I turn every word into lowercase letters first?`),
+   T(`Not here. The chapter keeps uppercase and lowercase letters. Capital letters can help distinguish names and preserve the form of the text.`),
+   T(`For the public-domain story The Verdict by Edith Wharton, the chapter reports 20,479 characters and 4,690 tokens with this simple punctuation-based approach.`),
+   S(`Can I download the same story and run the Python examples?`),
+   T(`Yes. The chapter links to a public-domain edition on Wikisource and a text file in the book’s GitHub repository.`),
+   A('source-links','Text file and example code','These external links help you reproduce the chapter’s Python code. They require internet access.','§2.2 · p. 23; book-supplied links'),
+   A('regex-code','Python: tokenize with re.split','The chapter’s example separates punctuation and removes whitespace-only pieces. Comments explain each line.','Adapted from §2.2 · pp. 24–26'),
+   S(`If we remove spaces, can we always rebuild the exact original sentence?`),
+   T(`No. A simple decoder may restore readable text but can lose exact spacing. The chapter removes whitespace for clarity, then switches to GPT-2 BPE, which preserves more detail.`),
+   Q(`With the chapter’s punctuation-and-whitespace rule, how many tokens are in "Hi, Bob!"?`,[
+     [`Four: Hi, comma, Bob, exclamation.`,`Spaces disappear; each word and punctuation mark remains a token.`],
+     [`Two: Hi, and Bob! as one piece.`,`That would happen only with a whitespace-only split, not this rule.`],
+     [`Three: Hi, comma, and Bob! together.`,`The exclamation mark is separated from Bob.`],
+     [`Five: one entry for the separating space.`,`The chapter removes whitespace-only tokens in this demonstration.`]
+   ],0,`The output is ["Hi", ",", "Bob", "!"]. This simple tokenizer drops whitespace-only pieces.`),
+   Q(`Why is lowercasing all words not the best choice for the demonstration in §2.2?`,[
+     [`Case helps identify names and preserve sentence structure.`,`The chapter keeps capitalization because it can provide useful signals.`],
+     [`Only lowercase tokens can be assigned numeric IDs.`,`Both uppercase and lowercase tokens can appear in a vocabulary.`],
+     [`Regular expressions cannot split uppercase strings.`,`The regular expression works with uppercase and lowercase text.`],
+     [`An embedding layer requires every input word uppercase.`,`An embedding layer receives IDs, not raw uppercase or lowercase words.`]
+   ],0,`Capitalization can matter. The chapter retains it when splitting the source story.`)
+ ]},
+ {id:'vocab',title:'Vocabulary, token IDs, and round trips',pages:'pp. 27–33 · §2.3',items:[
+   T(`After splitting text, what must we do before an embedding layer can use it?`),
+   S(`Map each unique token to an integer ID.`),
+   T(`Exactly. A vocabulary records the mapping. The chapter builds one from sorted unique tokens in the training text.`),
+   S(`If the word "the" appears 100 times, do we create 100 vocabulary entries?`),
+   T(`No. The vocabulary has one entry for each distinct token. The input can contain the same token ID many times.`),
+   A('vocab-demo','Encode and decode a sentence','Use a small demonstration vocabulary and inspect both token IDs and recovered text.','Figures 2.6–2.8 · pp. 28–32'),
+   T(`What do the names encode and decode mean?`),
+   S(`Encode changes text into token IDs. Decode changes token IDs back into text.`),
+   T(`Yes. SimpleTokenizerV1 uses a word-to-integer dictionary for encoding. It also builds an integer-to-word dictionary for decoding.`),
+   A('v1-code','Python: SimpleTokenizerV1','The main encode/decode methods from the chapter. The code uses a vocabulary built from the story.','Listing 2.3 · p. 31; with teaching comments'),
+   S(`Can that tokenizer read any sentence I type?`),
+   T(`Not yet. The chapter tries "Hello, do you like tea?" and gets KeyError: 'Hello'. The word was not in its vocabulary.`),
+   T(`This is an out-of-vocabulary problem. The next section adds special tokens to handle it.`),
+   Q(`A vocabulary contains one entry for "bird". A sentence contains "bird" three times. How many IDs appear for "bird" in its encoded sequence?`,[
+     [`Three copies of the same ID.`,`A vocabulary has one mapping, but each token occurrence produces an ID in the sequence.`],
+     [`One ID, because repeats disappear.`,`Encoding preserves the occurrences and order of the input tokens.`],
+     [`Three different IDs for the three positions.`,`The same token maps to the same ID under a fixed vocabulary.`],
+     [`Zero IDs unless the tokenizer sees a new word.`,`Known words use their existing ID even when repeated.`]
+   ],0,`The vocabulary stores one mapping. The encoded sequence stores each occurrence, in its original order.`),
+   Q(`Why does SimpleTokenizerV1 raise KeyError for a word absent from its training vocabulary?`,[
+     [`The dictionary has no numeric mapping for that token.`,`The code indexes self.str_to_int[s] directly, so an unseen key raises an error.`],
+     [`The decoder has already removed the word.`,`The error occurs during encoding, before decoding can take place.`],
+     [`The input sentence contains too many punctuation marks.`,`Unknown words, not punctuation count, cause this specific error.`],
+     [`The embedding dimensions were not set to 768.`,`This tokenizer never reaches the embedding lookup in the failing example.`]
+   ],0,`SimpleTokenizerV1 uses direct dictionary lookup. It has no rule for unseen words.`)
+ ]},
+ {id:'special',title:'Special tokens and document boundaries',pages:'pp. 33–38 · §2.4',items:[
+   T(`We have a new word that is not in the vocabulary. What could the tokenizer do besides stopping with an error?`),
+   S(`Replace the word with a special marker for "unknown."`),
+   T(`Correct. SimpleTokenizerV2 uses <|unk|> when a token is absent from its vocabulary.`),
+   S(`Will decoding <|unk|> restore the original unknown word?`),
+   T(`No. Once several different unknown words all become <|unk|>, the tokenizer cannot tell which word each marker replaced.`),
+   T(`Now imagine we join two unrelated books into one training stream. How could we mark the point where one book ends?`),
+   S(`Insert a boundary marker between them.`),
+   T(`Exactly. The chapter uses <|endoftext|> to separate unrelated text sources. It also describes beginning-of-sequence, end-of-sequence, and padding tokens used in some systems.`),
+   A('special-demo','See special tokens in context','Compare unknown-word substitution with a document boundary.','Figures 2.9–2.10 · pp. 34–35'),
+   A('v2-code','Python: SimpleTokenizerV2','Add <|unk|> and <|endoftext|> to the vocabulary, then replace unknown tokens.','Listing 2.4 · p. 36; teaching comments'),
+   S(`Does GPT-2 really need <|unk|>?`),
+   T(`No. The chapter says GPT-2 uses BPE to break unfamiliar words into smaller pieces. That avoids the unknown-word marker used in this simple example.`),
+   T(`A note about the PDF: the page 28 vocabulary count is printed as 1,130, but the later example uses 1,159 before special tokens and 1,161 after adding two. The numbers conflict in this edition.`),
+   Q(`A tokenizer converts both "Zorpla" and "Mivlex" to <|unk|>. What happens when it decodes those IDs?`,[
+     [`Both return the same marker, so the original words are lost.`,`Replacing distinct strings with one special token is lossy.`],
+     [`It reconstructs each original word without extra data.`,`One shared marker contains no record of which original string appeared.`],
+     [`The special tokens turn into a learned 256D vector.`,`An embedding lookup is different from reconstructing original strings.`],
+     [`The decoder joins both words into one longer token.`,`The mapping does not preserve the unknown strings to join.`]
+   ],0,`<|unk|> lets the model proceed, but that simple encoding cannot exactly restore the original unknown words.`),
+   Q(`Two unrelated documents are concatenated for pretraining. Which marker serves the purpose described in §2.4?`,[
+     [`<|endoftext|> placed at their boundary.`,`The marker tells the model that one text source ended and another began.`],
+     [`<|unk|> placed before every known word.`,`Unknown markers are for missing vocabulary entries, not boundaries.`],
+     [`The same ordinary comma after each paragraph.`,`Punctuation alone is not the dedicated marker discussed in the chapter.`],
+     [`The first token ID repeated in every document.`,`Repeating a normal vocabulary token does not mark document separation.`]
+   ],0,`<|endoftext|> is the chapter’s boundary marker. Its purpose differs from handling unknown words.`)
+ ]},
+ {id:'bpe',title:'Byte pair encoding (BPE)',pages:'pp. 38–40 · §2.5',items:[
+   T(`The unknown-token fix works, but it loses information. Could a tokenizer keep the letters of a new word instead?`),
+   S(`Maybe it could split an unknown word into smaller known pieces.`),
+   T(`Absolutely. Byte pair encoding, or BPE, can represent unfamiliar text with subword units. The chapter uses the GPT-2 encoding from the tiktoken library.`),
+   S(`Why is it called "pair encoding"?`),
+   T(`The basic training idea starts with small units and merges frequently occurring adjacent pairs. Repeating merges builds useful subwords. The chapter gives this high-level idea rather than a complete BPE implementation.`),
+   A('bpe-toy','Merge frequent pairs — a toy BPE trainer','Step through character-pair merges in a tiny made-up corpus. This is not the exact GPT-2 tokenizer.','Conceptual extension of §2.5 · pp. 38–40'),
+   S(`Would the algorithm run until no two characters ever form a pair again?`),
+   T(`No. A real BPE trainer usually stops after its target merge count or vocabulary size. The chapter also mentions a frequency cutoff. It does not wait for every pair to become unique.`),
+   T(`In the book, the GPT-2 tokenizer has 50,257 token IDs. The special <|endoftext|> token has ID 50,256.`),
+   A('bpe-code','Python: use the GPT-2 BPE tokenizer','Code from §2.5, with the special token allowed explicitly. It requires tiktoken when run in Python; this guide stays offline.','§2.5 · pp. 38–39'),
+   S(`If I enter "someunknownPlace", will GPT-2 simply print <|unk|>?`),
+   T(`No. It can split the word into known subword or byte-level units and reconstruct it on decode. The chapter demonstrates this with tiktoken.`),
+   T(`Important distinction: the interactive merge demo teaches the core principle. It does not claim to produce GPT-2 token IDs. The real token IDs depend on the trained GPT-2 vocabulary and merge rules.`),
+   Q(`A BPE tokenizer receives a word that is not a full entry in its vocabulary. What best explains how it can still encode it?`,[
+     [`It represents the word using smaller supported units.`,`Known subwords and byte-level units let the GPT-2 style tokenizer handle new strings.`],
+     [`It always maps the full word to the same <|unk|> ID.`,`The BPE tokenizer in the chapter avoids an unknown-word marker.`],
+     [`It must retrain its vocabulary before any decoding.`,`The trained vocabulary and merges handle new text at inference time.`],
+     [`It discards characters until a known whole word remains.`,`BPE keeps enough information to reconstruct the input rather than simply deleting it.`]
+   ],0,`BPE can encode an unseen full word as smaller supported units. GPT-2 can decode those units back into the original text.`),
+   Q(`When should a toy BPE trainer stop merging frequent pairs?`,[
+     [`After the preset merge count or vocabulary size is reached.`,`Training can stop by a specified merge count, vocabulary size, or frequency criterion.`],
+     [`Only when every pair occurs exactly one time.`,`There is no requirement to eliminate all repeated adjacent pairs.`],
+     [`Immediately after a pair appears twice in the data.`,`A frequent pair is normally a candidate to merge, not a reason to stop.`],
+     [`Only when every word becomes one unique token.`,`The algorithm can keep many words as sequences of smaller tokens.`]
+   ],0,`BPE builds a finite vocabulary with a merge budget or another stopping rule. Frequency guides which pairs are merged.`)
+ ]},
+ {id:'windows',title:'Sliding windows and data loaders',pages:'pp. 41–49 · §2.6',items:[
+   T(`We now have a long list of token IDs. To teach a GPT model to predict the next token, what should we use as its target?`),
+   S(`The following token in the original text.`),
+   T(`Correct. If the input is [290, 4920, 2241, 287], the matching targets are [4920, 2241, 287, 257]. The targets are shifted one position to the left.`),
+   A('shift-pairs','Input IDs and their targets','The four-token example printed in the PDF, with the exact target shift.','§2.6 · p. 42'),
+   S(`Does each input window teach only one prediction?`),
+   T(`No. During training, a GPT model can predict the next token at every position in the window. Each input token position has a corresponding next-token target.`),
+   T(`What should happen when the text is longer than the model’s context window?`),
+   S(`Take one part of the text, then slide the window to read the next part.`),
+   T(`Yes. We set max_length to the number of input tokens and stride to how far the next window starts from the current one.`),
+   A('window-demo','Change window size and stride','Choose presets and move through windows. Inspect overlaps and one-position target shifts.','Figures 2.13–2.14 · pp. 44–48'),
+   S(`If max_length is 4 and stride is 1, do neighboring windows overlap?`),
+   T(`They overlap by three input tokens. If the stride is 4, the input windows do not overlap. Smaller strides create more examples, but they can add redundant training data.`),
+   A('dataset-code','Python: GPTDatasetV1','The chapter’s Dataset builds input/target tensors using max_length and stride.','Listing 2.5 · p. 45'),
+   S(`How do several windows become a batch?`),
+   T(`PyTorch DataLoader groups examples into tensors. For a batch size of 8 and window length of 4, the input tensor and target tensor each have shape (8, 4).`),
+   A('dataloader-code','Python: create_dataloader_v1','Build batches and see the shape. One duplicate line in the printed PDF is omitted explicitly.','Listing 2.6 · p. 46; duplicate removed to make code runnable'),
+   S(`Why does the code have shuffle and drop_last options?`),
+   T(`Shuffle changes the order of training windows. drop_last=True removes an incomplete final batch. The chapter says this helps avoid variation in batch size during training.`),
+   Q(`For token IDs [10,20,30,40,50,60], what are the targets for the input window [20,30,40]?`,[
+     [`[30,40,50].`,`The target sequence starts one token after the input sequence and has the same length.`],
+     [`[10,20,30].`,`That looks backward. Every target must be the following token.`],
+     [`[20,30,40].`,`The target tensor is not an exact copy of the input tensor.`],
+     [`[40,50,60].`,`That sequence skips an extra token position at the beginning.`]
+   ],0,`For input starting at index 1, the targets start at index 2 and keep the same window length.`),
+   Q(`You set max_length=4 and stride=2 on a long token list. How do consecutive input windows relate?`,[
+     [`They share two input tokens.`,`Window starts shift by 2, so two of each four tokens overlap.`],
+     [`They share no input tokens.`,`No overlap would require a stride of at least 4.`],
+     [`Each window receives two extra target tokens.`,`The target has the same number of tokens as the input.`],
+     [`The first window has length two, the next four.`,`max_length remains 4 for all full windows.`]
+   ],0,`The overlap is max_length − stride when stride is smaller than max_length: 4 − 2 = 2.`)
+ ]},
+ {id:'lookup',title:'Create token embeddings in PyTorch',pages:'pp. 49–53 · §2.7',items:[
+   T(`We have a batch of token IDs. Does the embedding layer do arithmetic on the ID itself to find meaning?`),
+   S(`I think it uses each ID as an address in a table of vectors.`),
+   T(`Exactly. An embedding layer contains one row per vocabulary token. The token ID selects that row.`),
+   T(`For example, torch.nn.Embedding(6, 3) creates a learnable matrix of shape (6, 3). There are six tokens and three numbers per token.`),
+   A('embed-demo','Select an embedding row','Click a token ID to find its exact vector from the book’s small PyTorch example.','§2.7 · pp. 51–53, manual_seed(123)'),
+   S(`If the token ID is 3, why does it return the fourth row?`),
+   T(`Python uses zero-based indices. Row 0 belongs to token ID 0, so ID 3 selects row 3, the fourth row.`),
+   A('embed-code','Python: token embeddings','Create a 6×3 embedding matrix, then look up IDs [2,3,5,1]. The output shape is 4×3.','§2.7 · pp. 50–52'),
+   S(`Are those numbers already meaningful when the layer is created?`),
+   T(`No. The chapter initializes the embedding weights with random values. Training updates them using backpropagation.`),
+   S(`Could I get the same result with one-hot vectors and matrix multiplication?`),
+   T(`Yes. The book notes that an embedding lookup is equivalent to a one-hot vector times the weight matrix, but lookup is more efficient.`),
+   Q(`A weight matrix has shape (6, 3). What shape results when you look up four token IDs?`,[
+     [`A tensor with shape (4, 3).`,`Each of the four IDs retrieves one three-dimensional row.`],
+     [`(6, 4), one row per vocabulary entry.`,`The output uses input IDs as its first dimension, not the full vocabulary.`],
+     [`(3, 6), the transposed table shape.`,`The returned vectors are not a transposed weight matrix.`],
+     [`(4,), one scalar for each token.`,`The output keeps all three embedding dimensions for each ID.`]
+   ],0,`Four lookups of three-dimensional vectors produce a tensor with shape (4, 3).`),
+   Q(`A randomly initialized embedding table is created before GPT pretraining. What changes during training?`,[
+     [`The embedding weights are optimized with model weights.`,`The lookup table starts random and participates in learning.`],
+     [`Each token ID is renamed after every step.`,`The chapter trains embedding values, not the identity of each token ID.`],
+     [`Each input word is forced to become one-hot forever.`,`One-hot vectors can explain lookup but are not the learned embedding vectors.`],
+     [`The vocabulary grows by one new token each step.`,`The example uses a fixed tokenizer vocabulary during embedding training.`]
+   ],0,`Embedding values are model parameters. They can be adjusted through backpropagation during training.`)
+ ]},
+ {id:'position',title:'Add information about token order',pages:'pp. 53–58 · §2.8',items:[
+   T(`Imagine the token "dog" appears at positions 0 and 3. Will one embedding lookup give two different vectors?`),
+   S(`No. The same token ID selects the same embedding row both times.`),
+   T(`Correct. The token embedding alone does not tell the network where the word appears. Attention also needs order information.`),
+   S(`How does GPT add that information?`),
+   T(`For each position, GPT uses a learnable positional embedding vector. It adds that vector to the token embedding at the same position.`),
+   A('position-demo','Token vector + position vector','Compare the same token at two positions and see why the input vectors can differ. Values are invented for illustration.','Figure 2.18 · p. 55; original numerical example'),
+   T(`The chapter also describes relative positional methods. They emphasize the distance between tokens rather than only each token’s absolute index.`),
+   S(`What shape must the positional vectors have for addition to work?`),
+   T(`The same last dimension as the token embeddings. If token embeddings have 256 dimensions, each position vector must also have 256 dimensions.`),
+   A('pos-code','Python: build input_embeddings','The full code path from token IDs of shape (8,4) to final embeddings of shape (8,4,256).','§2.8 · pp. 55–57'),
+   S(`Does adding (4,256) to (8,4,256) cause a dimension error?`),
+   T(`No. PyTorch broadcasts the (4,256) position matrix over the 8 examples in the batch. The result keeps shape (8,4,256).`),
+   T(`One limit: the position table in this example has context_length rows. Input sequences longer than that supported context need to be shortened or handled with another method.`),
+   Q(`Token embeddings have shape (8, 4, 256). Positional embeddings have shape (4, 256). What is the sum’s shape?`,[
+     [`(8, 4, 256), from broadcasting position vectors.`,`The same four position vectors are added to each of the eight batch entries.`],
+     [`(12, 256), by adding sequence lengths together.`,`Elementwise addition does not concatenate the batch and sequence axes.`],
+     [`(8, 256), because positions are removed.`,`There is still one embedding for each of the four input positions.`],
+     [`(4, 4, 256), because batch size is halved.`,`Nothing in addition changes the batch size from eight to four.`]
+   ],0,`The (4,256) array matches the final two dimensions, so it broadcasts across 8 samples.`),
+   Q(`Two instances of token ID 5 appear at different positions in one input. What does GPT’s embedding sum do?`,[
+     [`Different position vectors can change the final sums.`,`The token lookup is identical, but the position-specific addition can differ.`],
+     [`It changes the vocabulary ID for the second occurrence.`,`The tokenizer returns the same ID for the same token.`],
+     [`It always makes both final vectors exactly equal.`,`Position-specific values can make the final vectors different.`],
+     [`It discards the shared token embedding after adding positions.`,`Both token and position information contribute to the sum.`]
+   ],0,`Each input vector is token_embedding[token_id] + positional_embedding[position].`)
+ ]},
+ {id:'wrap',title:'The complete text-to-vector pipeline',pages:'pp. 58–59 · §2.9',items:[
+   T(`We began with raw text. Can you describe every preparation step before the GPT network sees the input?`),
+   S(`Split text into tokens. Convert tokens into IDs. Make input and target windows. Look up token vectors. Add positional vectors.`),
+   T(`Exactly. That is the chain the chapter builds. The target IDs remain integers for training. The model’s input uses vectors with both token and position information.`),
+   A('flow','One pipeline, start to finish','Review the stages as one connected system, with tensor shapes.','Figure 2.19 · p. 58'),
+   S(`Does this chapter already train a complete language model?`),
+   T(`No. It prepares data and constructs embedding inputs. Attention, the GPT network, and the training loop come in later chapters.`),
+   T(`Let's check a small shape example: 8 sequences, 4 tokens each, 256 values per token. What shape enters the model?`),
+   S(`(8, 4, 256). There are 8 examples, 4 token positions, and 256 values per position.`),
+   T(`Correct. One subtle point: this is the input to the main LLM layers, not the final output text. A later model stage predicts token IDs, then decoding turns those IDs back into readable text.`),
+   S(`What should I practice before Chapter 3?`),
+   T(`Try the Python tokenizer, change max_length and stride, then print the tensors’ shapes. Be sure you can explain why targets shift by one position.`),
+   A('pipeline-code','Minimal shape check','A short, runnable Python example after you install torch. It checks the final addition and tensor shapes.','Teaching example based on §2.7–2.8 · pp. 51–57'),
+   Q(`A loader returns input token IDs with shape (2, 5). An embedding table has 64 dimensions. What is the token embedding output shape?`,[
+     [`(2, 5, 64), one vector per ID in each sample.`,`The two input dimensions remain, and a 64-dimensional embedding axis is added.`],
+     [`(2, 64), because the token axis is summed.`,`Lookup does not pool the five token embeddings into one vector.`],
+     [`(5, 2, 64), because vocabulary IDs are sorted.`,`A lookup does not swap batch and position axes.`],
+     [`(64, 2, 5), because dimensions come first.`,`PyTorch adds embedding dimension to the end of the input shape.`]
+   ],0,`Embedding lookup maps input shape (B,T) to (B,T,D). Here B=2, T=5, D=64.`),
+   Q(`What must still happen after Chapter 2 before the system can actually generate useful text?`,[
+     [`Build the GPT network and train it on next-token targets.`,`The chapter prepares vectors and target IDs but does not yet implement a trained GPT model.`],
+     [`Only decode the input IDs with the same vocabulary.`,`Decoding inputs can restore old text, but it does not train a generator.`],
+     [`Replace all positional embeddings with raw characters.`,`The chapter uses positional vectors to add order information, not raw letters.`],
+     [`Sort the token IDs before feeding them to the model.`,`Sorting would destroy the order that the model must learn from.`]
+   ],0,`This chapter completes data preparation. Building the attention network and training it are later steps.`)
+ ]}
+];
+
+// The last step is intentionally after the final optional quiz, so Next can skip that quiz too.
+sections[sections.length-1].items.push({type:'finish',who:'teacher'});
+
+const glossary = [
+ {id:'llm',name:'Large language model (LLM)',aliases:['large language model','LLM','LLMs'],def:'A model trained on text to predict and produce language. This chapter prepares the input for GPT-like LLMs.'},
+ {id:'network',name:'Neural network',aliases:['neural network','neural networks'],def:'A computational model with adjustable numerical weights, arranged in layers.'},
+ {id:'embedding',name:'Embedding',aliases:['embedding','embeddings'],def:'A continuous vector of numbers used to represent a token or another type of data.'},
+ {id:'vector',name:'Vector',aliases:['vector','vectors'],def:'An ordered list of numbers, such as [0.2, −0.1, 0.6]. Each number is a dimension.'},
+ {id:'dimension',name:'Dimension',aliases:['dimension','dimensions','dimensional'],def:'One component of a numerical vector. A 256-dimensional embedding has 256 numeric components.'},
+ {id:'word2vec',name:'Word2Vec',aliases:['Word2Vec'],def:'An earlier method that learns word vectors from nearby-word patterns. Similar words often end up near one another.'},
+ {id:'space',name:'Vector space',aliases:['vector space'],def:'A system for representing things as points identified by several numerical coordinates.'},
+ {id:'tensor',name:'Tensor',aliases:['tensor','tensors'],def:'A multidimensional array. A batch of 8 sequences with 4 IDs each has a token ID tensor with shape (8,4).'},
+ {id:'token',name:'Token',aliases:['token','tokens'],def:'A piece of text defined by a tokenizer. It can be a full word, subword, punctuation mark, or smaller unit.'},
+ {id:'tokenize',name:'Tokenization',aliases:['tokenization','tokenize','tokenizing','tokenizer','tokenizers'],def:'Splitting text into units and usually mapping them to numeric token IDs.'},
+ {id:'regular',name:'Regular expression',aliases:['regular expression','regular expressions','regex'],def:'A pattern that describes characters to match or split in text. Python uses the re module for these examples.'},
+ {id:'preprocess',name:'Preprocessing',aliases:['preprocessing','preprocess'],def:'Steps applied to data before it enters the model, such as tokenization, ID mapping, and sampling.'},
+ {id:'vocab',name:'Vocabulary',aliases:['vocabulary'],def:'The set of unique supported tokens plus a mapping from each token to a numeric ID.'},
+ {id:'id',name:'Token ID',aliases:['token IDs','token ID','token ids'],def:'An integer assigned to a token by the vocabulary. The number is an index, not a semantic vector.'},
+ {id:'encode',name:'Encode',aliases:['encoding','encode','encoded'],def:'Convert raw text into token IDs, using a tokenizer and its vocabulary.'},
+ {id:'decode',name:'Decode',aliases:['decoding','decode','decoded'],def:'Convert a sequence of token IDs back to text using the tokenizer’s reverse mapping or byte rules.'},
+ {id:'unknown',name:'Unknown token',aliases:['unknown token','unknown-word marker','out-of-vocabulary'],def:'A special fallback marker such as <|unk|> in a simple word-based tokenizer. It loses the exact original unknown word.'},
+ {id:'special',name:'Special token',aliases:['special token','special tokens'],def:'A marker that carries structure or control information, such as <|endoftext|>, padding, or the start of a sequence.'},
+ {id:'endoftext',name:'End-of-text marker',aliases:['end-of-text token','document boundary','boundary marker'],def:'<|endoftext|> indicates a text boundary in the examples. The GPT-2 tokenizer assigns it ID 50256.'},
+ {id:'pad',name:'Padding',aliases:['padding','PAD'],def:'Extra tokens used to give sequences equal length in a batch. A mask can prevent the model from attending to padding.'},
+ {id:'bpe',name:'Byte pair encoding (BPE)',aliases:['byte pair encoding','BPE'],def:'A tokenizer design that builds useful subword pieces by merging frequent adjacent units. GPT-2 uses a byte-level form.'},
+ {id:'subword',name:'Subword',aliases:['subword','subwords'],def:'A part of a word that can be a token, such as a frequent letter group. It helps represent unfamiliar words.'},
+ {id:'merge',name:'Merge',aliases:['merge','merges','merging'],def:'In BPE training, combine a selected frequent pair of adjacent units into one new unit.'},
+ {id:'tiktoken',name:'tiktoken',aliases:['tiktoken'],def:'A tokenizer library used by the book to load the GPT-2 BPE tokenizer in Python.'},
+ {id:'window',name:'Sliding window',aliases:['sliding window','window','windows'],def:'A fixed-length segment of a long token sequence. Move it by a chosen stride to create multiple training examples.'},
+ {id:'context',name:'Context length',aliases:['context_length','context length','context size'],def:'The number of token positions available to the model in one sequence.'},
+ {id:'maxlen',name:'max_length',aliases:['max_length'],def:'In the book’s dataset, the number of input token IDs in each training window.'},
+ {id:'stride',name:'Stride',aliases:['stride'],def:'The number of token positions to shift the starting index of a sliding window.'},
+ {id:'input',name:'Input-target pair',aliases:['input-target','target','targets'],def:'An input context and its correct next-token sequence. Targets are the input shifted one position forward in the source.'},
+ {id:'batch',name:'Batch',aliases:['batch','batches','batch size'],def:'A group of examples processed together. A batch of 8 windows of length 4 has token ID shape (8,4).'},
+ {id:'dataset',name:'PyTorch Dataset',aliases:['Dataset','datasets','dataset'],def:'A collection object that supplies individual input-target examples, using __len__ and __getitem__ in PyTorch.'},
+ {id:'loader',name:'DataLoader',aliases:['DataLoader','data loader','dataloader'],def:'A PyTorch class that reads samples from a Dataset and groups them into batches, with optional shuffling.'},
+ {id:'shuffle',name:'Shuffle',aliases:['shuffle','shuffling'],def:'Change the order of training examples. It does not reorder the tokens inside an example.'},
+ {id:'drop',name:'drop_last',aliases:['drop_last'],def:'A DataLoader option that removes the final batch when it contains fewer examples than batch_size.'},
+ {id:'lookup',name:'Embedding lookup',aliases:['lookup','look-up','embedding layer','embedding table'],def:'Use a token ID as a row index in a learnable weight matrix, returning that token’s vector.'},
+ {id:'weights',name:'Weights',aliases:['weight','weights','parameters'],def:'Numbers in the model that training changes, including the embedding table values.'},
+ {id:'onehot',name:'One-hot',aliases:['one-hot'],def:'A vector with one component equal to 1 and all others 0. Multiplying it by a weight matrix selects a row.'},
+ {id:'backprop',name:'Backpropagation',aliases:['backpropagation'],def:'The method used to compute how the loss changes with model parameters so training can update them.'},
+ {id:'gradient',name:'Gradient',aliases:['gradient','gradients'],def:'Numbers that show how changes in model weights would affect the loss. Chapter 2 mentions backpropagation but does not derive gradient math.'},
+ {id:'pos',name:'Positional embedding',aliases:['positional embedding','positional embeddings','position vector'],def:'A learned vector associated with a position in the sequence. GPT in the book adds it to a token vector.'},
+ {id:'absolute',name:'Absolute position',aliases:['absolute position','absolute positional'],def:'A specific token index, such as 0, 1, or 2. One vector is learned for each supported position.'},
+ {id:'relative',name:'Relative position',aliases:['relative position','relative positional'],def:'The distance or direction between token positions, instead of just an absolute sequence index.'},
+ {id:'broadcast',name:'Broadcasting',aliases:['broadcast','broadcasts','broadcasting'],def:'A tensor operation that applies a smaller shape across a matching larger shape, such as (4,256) added to each of 8 batches.'},
+ {id:'training',name:'Pretraining',aliases:['pretraining','pretrain'],def:'Initial model training on large text collections. For GPT, the target is the next token in the original text.'},
+ {id:'causal',name:'Self-attention',aliases:['self-attention','attention'],def:'A transformer operation that relates tokens. Position information helps attention process token order. Its implementation begins in Chapter 3.'},
+ {id:'loss',name:'Loss',aliases:['loss'],def:'A measure of prediction error used to guide training. This chapter does not build the training loop.'},
+ {id:'shape',name:'Shape',aliases:['shape'],def:'The size of each tensor axis. For example, (8,4,256) means batch size 8, sequence length 4, embedding dimension 256.'},
+];
+
+const glossaryById=Object.fromEntries(glossary.map(g=>[g.id,g]));
+const aliasToGlossary=new Map();
+for(const g of glossary)for(const alias of g.aliases)aliasToGlossary.set(alias.toLowerCase(),g);
+const allAliases=[...aliasToGlossary.keys()].sort((a,b)=>b.length-a.length);
+const escapedAlias=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+const termRegex=new RegExp('(?<![A-Za-z0-9_])('+allAliases.map(escapedAlias).join('|')+')(?![A-Za-z0-9_])','gi');
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function glossify(s){
+  termRegex.lastIndex=0;let out='',prev=0;
+  for(const match of String(s).matchAll(termRegex)){
+    const at=match.index,word=match[0],g=aliasToGlossary.get(word.toLowerCase());
+    out+=esc(s.slice(prev,at));out+=g?`<button type="button" class="gloss-term" data-term="${g.id}" aria-label="Define ${esc(word)}">${esc(word)}</button>`:esc(word);prev=at+word.length;
+  }
+  return out+esc(s.slice(prev));
+}
+// Flatten conversation into individually navigable steps.
+const steps=[];
+sections.forEach((section,si)=>{
+  section.start=steps.length;
+  section.items.forEach((item,local)=>steps.push({...item,section:si,local,global:steps.length,id:`s${si}-m${local}`}));
+  section.end=steps.length-1;
+});
+const QUIZZES=steps.filter(x=>x.type==='quiz');
+function shuffle(arr){const result=[...arr];for(let i=result.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[result[i],result[j]]=[result[j],result[i]];}return result;}
+// Option order is randomized once per page load, but remains stable in this session.
+const quizOrder=Object.fromEntries(QUIZZES.map(q=>[q.id,shuffle([0,1,2,3])]));
+const quizAnswers={}; // intentionally session-only, so revisiting a quiz keeps its feedback
+const codeSamples = {
+ 'regex-code':String.raw`import re
+
+text = "Hello, world. Is this-- a test?"
+
+# Split on punctuation, a double dash, or whitespace.
+parts = re.split(r"([,.:;?_!\"()']|--|\s)", text)
+
+# Keep nonempty text and punctuation; remove spaces.
+tokens = [part.strip() for part in parts if part.strip()]
+print(tokens)
+# ['Hello', ',', 'world', '.', 'Is', 'this', '--', 'a', 'test', '?']`,
+ 'v1-code':String.raw`import re
+
+class SimpleTokenizerV1:
+    def __init__(self, vocab):
+        self.str_to_int = vocab  # Token string -> integer ID.
+        self.int_to_str = {i: s for s, i in vocab.items()}
+
+    def encode(self, text):
+        # This simple split drops whitespace-only pieces.
+        pieces = re.split(r"([,.?_!\"()']|--|\s)", text)
+        pieces = [p.strip() for p in pieces if p.strip()]
+        # Raises KeyError for a token absent from vocab.
+        return [self.str_to_int[p] for p in pieces]
+
+    def decode(self, ids):
+        # Join recovered tokens, then remove spaces before punctuation.
+        text = " ".join(self.int_to_str[i] for i in ids)
+        return re.sub(r"\s+([,.?!\"()'])", r"\1", text)
+
+# Build vocab first from the training tokens:
+# all_words = sorted(set(preprocessed))
+# vocab = {token: i for i, token in enumerate(all_words)}
+# tokenizer = SimpleTokenizerV1(vocab)`,
+ 'v2-code':String.raw`import re
+
+# Start with the token list built from The Verdict.
+all_tokens = sorted(set(preprocessed))
+all_tokens.extend(["<|endoftext|>", "<|unk|>"])
+vocab = {token: i for i, token in enumerate(all_tokens)}
+
+class SimpleTokenizerV2:
+    def __init__(self, vocab):
+        self.str_to_int = vocab
+        self.int_to_str = {i: s for s, i in vocab.items()}
+
+    def encode(self, text):
+        pieces = re.split(r"([,.?_!\"()']|--|\s)", text)
+        pieces = [p.strip() for p in pieces if p.strip()]
+        # Keep a known token, otherwise use one fallback marker.
+        pieces = [p if p in self.str_to_int else "<|unk|>"
+                  for p in pieces]
+        return [self.str_to_int[p] for p in pieces]
+
+    def decode(self, ids):
+        text = " ".join(self.int_to_str[i] for i in ids)
+        return re.sub(r"\s+([,.?!\"()'])", r"\1", text)
+
+# An unfamiliar word decodes as <|unk|>, not the original word.`,
+ 'bpe-code':String.raw`# Requires: pip install tiktoken
+import tiktoken
+
+tokenizer = tiktoken.get_encoding("gpt2")
+text = "Hello, do you like tea? <|endoftext|> In the sunlit terraces."
+
+# Tell the tokenizer that this control token is allowed.
+ids = tokenizer.encode(text, allowed_special={"<|endoftext|>"})
+print(ids)                    # Numeric GPT-2 token IDs.
+print(tokenizer.decode(ids))  # Restores the full original text.
+
+# Inspect a word that is not a full-vocabulary token.
+ids = tokenizer.encode("Akwirw ier")
+print(ids)
+print([tokenizer.decode([i]) for i in ids])`,
+ 'dataset-code':String.raw`import torch
+from torch.utils.data import Dataset
+
+class GPTDatasetV1(Dataset):
+    def __init__(self, txt, tokenizer, max_length, stride):
+        self.input_ids = []     # Each item has shape (max_length,).
+        self.target_ids = []    # Targets are one step ahead.
+        token_ids = tokenizer.encode(txt)
+
+        # Leave one token after each full input window for a target.
+        for i in range(0, len(token_ids) - max_length, stride):
+            x = token_ids[i : i + max_length]
+            y = token_ids[i + 1 : i + max_length + 1]
+            self.input_ids.append(torch.tensor(x))
+            self.target_ids.append(torch.tensor(y))
+
+    def __len__(self):
+        return len(self.input_ids)
+
+    def __getitem__(self, index):
+        return self.input_ids[index], self.target_ids[index]`,
+ 'dataloader-code':String.raw`import tiktoken
+from torch.utils.data import DataLoader
+
+# Requires the GPTDatasetV1 class from the previous whiteboard.
+def create_dataloader_v1(txt, batch_size=4, max_length=256,
+                         stride=128, shuffle=True,
+                         drop_last=True, num_workers=0):
+    tokenizer = tiktoken.get_encoding("gpt2")
+    dataset = GPTDatasetV1(txt, tokenizer, max_length, stride)
+    dataloader = DataLoader(
+        dataset,
+        batch_size=batch_size,
+        shuffle=shuffle,
+        drop_last=drop_last,  # Omit a short final batch.
+        num_workers=num_workers,
+    )
+    return dataloader
+
+# Read the book's data file before calling:
+# raw_text = open("the-verdict.txt", encoding="utf-8").read()
+loader = create_dataloader_v1(raw_text, batch_size=8,
+                              max_length=4, stride=4, shuffle=False)
+inputs, targets = next(iter(loader))
+print(inputs.shape, targets.shape)  # (8,4), (8,4)
+
+# Note: the printed PDF repeats 'dataloader = DataLoader('.
+# This executable display removes that duplicate and forwards
+# num_workers instead of hard-coding 0.`,
+ 'embed-code':String.raw`import torch
+
+# One embedding row for each of 6 vocabulary entries.
+vocab_size, output_dim = 6, 3
+torch.manual_seed(123)
+layer = torch.nn.Embedding(vocab_size, output_dim)
+
+# Four token IDs; each selects one row of the weight matrix.
+ids = torch.tensor([2, 3, 5, 1])  # Shape: (4,)
+print(layer.weight.shape)           # torch.Size([6, 3])
+print(layer(torch.tensor([3])))     # Row 3, shape: (1,3)
+print(layer(ids).shape)             # torch.Size([4,3])
+
+# This is a learnable table. Its weights start at random values.`,
+ 'pos-code':String.raw`import torch
+
+# Assume: a loader from §2.6 already produced 8 × 4 token IDs.
+inputs, targets = next(iter(loader))  # inputs.shape: (8,4)
+
+vocab_size, output_dim = 50257, 256
+max_length = 4
+
+token_table = torch.nn.Embedding(vocab_size, output_dim)
+position_table = torch.nn.Embedding(max_length, output_dim)
+
+token_embeddings = token_table(inputs)          # (8,4,256)
+positions = torch.arange(max_length)           # (4,)
+pos_embeddings = position_table(positions)     # (4,256)
+
+# PyTorch repeats (broadcasts) position vectors over the batch.
+input_embeddings = token_embeddings + pos_embeddings
+print(input_embeddings.shape)                   # (8,4,256)`,
+ 'pipeline-code':String.raw`import torch
+
+# Self-contained shape demonstration; uses invented token IDs.
+B, T, D = 8, 4, 256
+vocab_size = 50257
+input_ids = torch.randint(0, vocab_size, (B, T))  # (8,4)
+
+token_layer = torch.nn.Embedding(vocab_size, D)
+position_layer = torch.nn.Embedding(T, D)
+
+token_vectors = token_layer(input_ids)         # (8,4,256)
+position_vectors = position_layer(torch.arange(T)) # (4,256)
+model_input = token_vectors + position_vectors # (8,4,256)
+
+print(input_ids.shape)     # torch.Size([8,4])
+print(model_input.shape)   # torch.Size([8,4,256])
+# Next chapters implement the GPT network that reads model_input.`
+};
+function codeBoard(kind){
+ const code=codeSamples[kind];
+ return `<div class="board-inner" data-board-demo="${kind}"><div class="code-card"><div class="code-title"><span>PYTHON · ${kind==='pipeline-code'?'self-contained demonstration':'teaching example'}</span><button class="run-code" data-copy-code="${kind}" aria-label="Copy Python code">Copy Python</button></div><pre class="python-code">${esc(code)}</pre></div><p class="micro-note">Copy this code into a Python environment to run it. Python / PyTorch / tiktoken are not executed by this offline HTML guide.</p></div>`;
+}
+function simpleTokens(text){return text.split(/([,.:;?_!"()']|--|\s)/g).map(x=>x.trim()).filter(Boolean);}
+function tokenPills(tokens){return tokens.map(t=>`<span class="token">${esc(t)}</span>`).join('')||'<span class="demo-caption">No tokens yet</span>';}
+const toyVocab = {'The':0,'dog':1,'chased':2,'the':3,'ball':4,'.':5};
+const embedWeight = [
+ [0.3374,-0.1778,-0.1690], [0.9178,1.5810,1.3010],
+ [1.2753,-0.2010,-0.1606],[-0.4015,0.9666,-1.1481],
+ [-1.1589,0.3255,-0.6315],[-2.8400,-0.7849,-1.4096]
+];
+const demoState={splitText:'Hello, world. Is this-- a test?',vocabText:'The dog chased the ball.',bpeStep:0,windowPreset:0,windowIndex:0,embedId:3,position:0};
+function getToyBPE(step){
+ const original=['low','lower','lowest','low'];
+ let words=original.map(w=>Array.from(w));let merges=[];
+ for(let iteration=0;iteration<step;iteration++){
+  const counts=new Map();words.forEach(tokens=>tokens.slice(0,-1).forEach((tok,i)=>{const key=tok+'\u241f'+tokens[i+1];counts.set(key,(counts.get(key)||0)+1);}));
+  const pairs=[...counts.entries()].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0]));
+  if(!pairs.length||pairs[0][1]<2)break;
+  const [key,count]=pairs[0], [a,b]=key.split('\u241f');merges.push({a,b,count});
+  words=words.map(tokens=>{const out=[];for(let i=0;i<tokens.length;i++){if(tokens[i]===a&&tokens[i+1]===b){out.push(a+b);i++;}else out.push(tokens[i]);}return out;});
+ }
+ const counts=new Map();words.forEach(tokens=>tokens.slice(0,-1).forEach((tok,i)=>{const key=tok+'\u241f'+tokens[i+1];counts.set(key,(counts.get(key)||0)+1);}));
+ const candidate=[...counts.entries()].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0]))[0];
+ return {words,merges,candidate};
+}
+function boardHTML(kind){
+ if(Object.hasOwn(codeSamples,kind))return codeBoard(kind);
+ switch(kind){
+  case 'flow':return `<div class="board-inner" data-board-demo="flow"><div class="diagram-row"><div class="diagram-box"><div class="diagram-eyebrow">1 · Raw text</div><div class="box-h">The dog runs.</div></div><span class="diagram-arrow">→</span><div class="diagram-box"><div class="diagram-eyebrow">2 · Tokens</div><div class="box-h">The | dog | runs | .</div></div><span class="diagram-arrow">→</span><div class="diagram-box"><div class="diagram-eyebrow">3 · IDs</div><div class="box-h">[2, 7, 9, 1]</div></div></div><div class="diagram-row" style="margin-top:13px"><div class="diagram-box"><div class="diagram-eyebrow">Sampling</div><div class="box-h">Input windows</div><div class="box-p">and shifted targets</div></div><span class="diagram-arrow">→</span><div class="diagram-box good"><div class="diagram-eyebrow">Token lookup + positions</div><div class="box-h">(B, T, D) vectors</div><div class="box-p">Input to the GPT network</div></div></div><p class="micro-note">IDs in the first row are <strong>illustrative</strong>; they are not GPT-2 vocabulary IDs. B = batch size, T = token positions, D = embedding dimensions.</p></div>`;
+  case 'source-links':return `<div class="board-inner" data-board-demo="source-links"><div class="comparison-panel"><h4>Read the text</h4><p class="small"><a href="https://en.wikisource.org/wiki/The_Verdict" target="_blank" rel="noopener noreferrer">The Verdict on Wikisource ↗</a> — the public-domain story used in the chapter.</p></div><div class="comparison-panel" style="margin-top:12px"><h4>Get the data and sample code</h4><p class="small"><a href="https://github.com/rasbt/LLMs-from-scratch/tree/main/ch02/01_main-chapter-code" target="_blank" rel="noopener noreferrer">Chapter 2 repository folder ↗</a> — find <code>the-verdict.txt</code> and chapter code there.</p></div><p class="micro-note">The learning guide remains usable offline. These optional external resources require an internet connection.</p></div>`;
+  case 'clusters':return `<div class="board-inner" data-board-demo="clusters"><div class="plot"><div class="plot-axis plot-x"></div><div class="plot-axis plot-y"></div>${[['eagle',20,16,'bird'],['duck',38,12,'bird'],['goose',29,33,'bird'],['London',62,65,'place'],['Berlin',78,59,'place'],['Germany',72,75,'place'],['long',17,73,'adj'],['longer',34,70,'adj'],['longest',45,86,'adj']].map(([w,x,y,c])=>`<div class="plot-point ${c}" style="left:${x}%;top:${y}%"><i></i><span>${w}</span></div>`).join('')}</div><p class="micro-note">Schematic based on figure 2.3. The positions are invented for this illustration; distances are not measured model outputs. Real embedding spaces can have thousands of dimensions.</p></div>`;
+  case 'split-demo':return `<div class="board-inner" data-board-demo="split-demo"><label class="demo-label" for="splitInput">Write a short sentence</label><input id="splitInput" class="demo-input" data-demo-input="split" type="text" spellcheck="false" value="${esc(demoState.splitText)}" maxlength="240"/><div class="demo-caption" style="margin-top:13px">Tokens · <span class="split-count">${simpleTokens(demoState.splitText).length}</span></div><div class="tokens token-preview" data-live="split">${tokenPills(simpleTokens(demoState.splitText))}</div><p class="micro-note">Uses a chapter-style regex to split punctuation, double dashes, and whitespace. Spaces are removed. This is <strong>not</strong> GPT-2 BPE.</p></div>`;
+  case 'vocab-demo':{
+   const ts=simpleTokens(demoState.vocabText), ids=ts.map(t=>Object.hasOwn(toyVocab,t)?toyVocab[t]:'UNKNOWN');
+   const rebuilt=ts.map(t=>Object.hasOwn(toyVocab,t)?t:'<|unk|>').join(' ').replace(/\s+([,.?!])/g,'$1');
+   return `<div class="board-inner" data-board-demo="vocab-demo"><div class="tokens">${Object.entries(toyVocab).map(([t,id])=>`<span class="token mapping">${esc(t)} <b>→ ${id}</b></span>`).join('')}</div><label class="demo-label" for="vocabInput">Try a sentence using this toy vocabulary</label><input id="vocabInput" class="demo-input" data-demo-input="vocab" type="text" spellcheck="false" value="${esc(demoState.vocabText)}" maxlength="160"/><div class="vocab-live" data-live="vocab"><div class="demo-caption">Token IDs</div><div class="token-ids">${ids.map(i=>`<span>${esc(i)}</span>`).join('')}</div><div class="demo-caption" style="margin-top:13px">Decoded text (unknown tokens shown as markers for this demonstration)</div><div class="outcome">${esc(rebuilt)}</div></div><p class="micro-note">This teaching vocabulary is created for the whiteboard. The chapter creates its real vocabulary from all unique tokens in The Verdict.</p></div>`;
+  }
+  case 'special-demo':return `<div class="board-inner" data-board-demo="special-demo"><div class="comparison-panel"><h4>Unknown word in SimpleTokenizerV2</h4><div class="tokens"><span class="token">Hello</span><span class="token">,</span><span class="token">do</span><span class="token">you</span><span class="token">like</span><span class="token">tea</span><span class="token">?</span></div><div class="outcome">First token → <strong>&lt;|unk|&gt;</strong> (ID 1160 in the book’s example)</div></div><div class="comparison-panel" style="margin-top:12px"><h4>Two unrelated documents</h4><div class="tokens"><span class="token">Text A</span><span class="token special">&lt;|endoftext|&gt;</span><span class="token">Text B</span></div><div class="demo-caption" style="margin-top:7px">Boundary marker ID: 1159 in the book’s V2 example; 50256 in GPT-2.</div></div><p class="micro-note">Vocabulary counts conflict between pp. 28 and 35 of this PDF. The IDs above follow the later V2 example.</p></div>`;
+  case 'bpe-toy':{
+   const {words,merges,candidate}=getToyBPE(demoState.bpeStep);
+   const next=candidate&&candidate[1]>=2;const pair=next?candidate[0].split('\u241f'):null;
+   return `<div class="board-inner" data-board-demo="bpe-toy"><div class="diagram-eyebrow">Toy training corpus: low · lower · lowest · low</div>${words.map((word,i)=>`<div class="bpe-line"><span class="demo-caption">${['low','lower','lowest','low'][i]}</span><div class="tokens">${word.map(t=>`<span class="token">${esc(t)}</span>`).join('')}</div></div>`).join('')}<div class="outcome" style="margin-top:12px"><strong>${demoState.bpeStep} merge${demoState.bpeStep===1?'':'s'} applied.</strong> ${next?`Next frequent pair: <b>${esc(pair[0])} + ${esc(pair[1])}</b> (${candidate[1]} appearances).`:'No adjacent pair appears twice; this toy demonstration has no next frequent pair.'}</div><div class="example-row" style="margin-top:12px"><button class="demo-action" data-demo-action="bpe-back" ${demoState.bpeStep===0?'disabled':''}>← Undo merge</button><button class="demo-action primary" data-demo-action="bpe-next" ${next?'':'disabled'}>Merge next pair →</button></div><p class="micro-note">This small character-level trainer counts adjacent pairs and merges the most common one. Ties use alphabetical order. Real GPT-2 uses a trained byte-level BPE vocabulary and preset merge rules; <strong>the pieces here are not GPT-2 tokens.</strong></p></div>`;
+  }
+  case 'shift-pairs':return `<div class="board-inner" data-board-demo="shift-pairs"><div class="two-col"><div class="comparison-panel"><h4>Inputs x</h4><div class="tokens">${[290,4920,2241,287].map(n=>`<span class="token">${n}</span>`).join('')}</div></div><div class="comparison-panel"><h4>Targets y</h4><div class="tokens">${[4920,2241,287,257].map(n=>`<span class="token target">${n}</span>`).join('')}</div></div></div><div class="diagram-eyebrow" style="margin-top:16px">Next-token relationships</div><div class="tokens">${[[290,4920],[4920,2241],[2241,287],[287,257]].map(([a,b])=>`<span class="token mapping">${a} <strong>→ ${b}</strong></span>`).join('')}</div><p class="micro-note">These IDs are from §2.6, p. 42, after skipping the first 50 GPT-2 tokens of The Verdict. Training can learn all four target positions in this window.</p></div>`;
+  case 'window-demo':{
+   const tokens=['The','cat','sat','on','the','mat','and','then','slept','near','me','today'];
+   const presets=[[4,1],[4,4],[6,2]],p=presets[demoState.windowPreset], [len,stride]=p,starts=[];
+   for(let i=0;i<tokens.length-len;i+=stride)starts.push(i);
+   const j=Math.min(demoState.windowIndex,starts.length-1),start=starts[j];
+   return `<div class="board-inner" data-board-demo="window-demo"><div class="example-row"><span class="demo-caption">Window preset:</span>${presets.map(([l,s],i)=>`<button class="demo-action ${i===demoState.windowPreset?'primary':''}" data-demo-action="window-preset-${i}">length ${l}, stride ${s}</button>`).join('')}</div><div class="tokens" style="margin:14px 0">${tokens.map((t,k)=>`<span class="token ${k>=start&&k<start+len?'is-input':''} ${k===start+len?'target':''}">${esc(t)}</span>`).join('')}</div><div class="two-col"><div class="comparison-panel"><h4>Input x · ${len} tokens</h4><div class="tokens">${tokens.slice(start,start+len).map(t=>`<span class="token">${esc(t)}</span>`).join('')}</div></div><div class="comparison-panel"><h4>Target y · shifted by 1</h4><div class="tokens">${tokens.slice(start+1,start+len+1).map(t=>`<span class="token target">${esc(t)}</span>`).join('')}</div></div></div><div class="example-row" style="margin-top:13px"><button class="demo-action" data-demo-action="window-back" ${j===0?'disabled':''}>← Previous</button><button class="demo-action primary" data-demo-action="window-next" ${j>=starts.length-1?'disabled':''}>Next window →</button><span class="demo-caption">Window ${j+1}/${starts.length} · start index ${start}</span></div><p class="micro-note">Window starts follow <strong>range(0, N − max_length, stride)</strong> from listing 2.5. Each input window leaves room for one next-token target. With stride less than length, input windows overlap.</p></div>`;
+  }
+  case 'embed-demo':{
+   const i=demoState.embedId;
+   return `<div class="board-inner" data-board-demo="embed-demo"><div class="diagram-eyebrow">PyTorch embedding table · 6 rows × 3 columns</div><div class="table-wrap"><table class="board-table matrix"><thead><tr><th>Token ID</th><th>Dimension 0</th><th>Dimension 1</th><th>Dimension 2</th><th>Select</th></tr></thead><tbody>${embedWeight.map((v,j)=>`<tr class="${i===j?'picked':''}"><td><b>${j}</b></td>${v.map(x=>`<td>${x.toFixed(4)}</td>`).join('')}<td><button class="demo-action ${i===j?'primary':''}" data-demo-action="embed-${j}" aria-label="Select token ID ${j}">${i===j?'Selected':'View'}</button></td></tr>`).join('')}</tbody></table></div><div class="outcome" style="margin-top:12px">Embedding for token ID <strong>${i}</strong>: [${embedWeight[i].map(x=>x.toFixed(4)).join(', ')}]</div><p class="micro-note">The numbers are printed in the PDF for torch.manual_seed(123), §2.7. Token ID 3 selects the fourth row because the first row is index 0.</p></div>`;
+  }
+  case 'position-demo':{
+   const tv=embedWeight[5],positions=[[.1000,.0000,-.1000],[-.2000,.2000,.0500]],q=demoState.position,pv=positions[q],sum=tv.map((x,i)=>x+pv[i]);
+   const vec=v=>'['+v.map(x=>x.toFixed(4)).join(', ')+']';
+   return `<div class="board-inner" data-board-demo="position-demo"><div class="example-row"><span class="demo-caption">Token ID 5 at position:</span><button class="demo-action ${q===0?'primary':''}" data-demo-action="position-0">0</button><button class="demo-action ${q===1?'primary':''}" data-demo-action="position-1">2</button></div><div class="position-sum"><div class="diagram-box"><div class="diagram-eyebrow">Token vector · same both times</div><div class="box-h vector-number">${vec(tv)}</div></div><div class="diagram-arrow">+</div><div class="diagram-box"><div class="diagram-eyebrow">Position ${q===0?'0':'2'} vector</div><div class="box-h vector-number">${vec(pv)}</div></div><div class="diagram-arrow">=</div><div class="diagram-box good"><div class="diagram-eyebrow">Input vector</div><div class="box-h vector-number">${vec(sum)}</div></div></div><p class="micro-note">Token values use row 5 from the book’s small embedding table. <strong>Position values are invented for demonstration.</strong> Both vectors must have the same dimension to add them component by component.</p></div>`;
+  }
+  default:return `<div class="board-inner">Whiteboard not found.</div>`;
+ }
+}
+function refreshDemo(kind){
+ document.querySelectorAll('[data-board-demo="'+kind+'"]').forEach(old=>{
+  const wrapper=document.createElement('div');wrapper.innerHTML=boardHTML(kind);old.replaceWith(wrapper.firstElementChild);
+ });
+}
+function renderLiveVocab(){
+ const ts=simpleTokens(demoState.vocabText),ids=ts.map(t=>Object.hasOwn(toyVocab,t)?toyVocab[t]:'UNKNOWN');
+ const text=ts.map(t=>Object.hasOwn(toyVocab,t)?t:'<|unk|>').join(' ').replace(/\s+([,.?!])/g,'$1');
+ document.querySelectorAll('[data-live="vocab"]').forEach(el=>el.innerHTML=`<div class="demo-caption">Token IDs</div><div class="token-ids">${ids.map(id=>`<span>${esc(id)}</span>`).join('')||'<span>Empty</span>'}</div><div class="demo-caption" style="margin-top:13px">Decoded text</div><div class="outcome">${esc(text)}</div>`);
+}
+function handleDemo(action){
+ let kind=null;
+ if(action==='bpe-next'||action==='bpe-back'){demoState.bpeStep=Math.max(0,Math.min(20,demoState.bpeStep+(action==='bpe-next'?1:-1)));kind='bpe-toy';}
+ else if(action.startsWith('window-preset-')){demoState.windowPreset=Number(action.split('-').at(-1));demoState.windowIndex=0;kind='window-demo';}
+ else if(action==='window-back'||action==='window-next'){
+  const [len,stride]=[[4,1],[4,4],[6,2]][demoState.windowPreset];let count=0;
+  for(let i=0;i<12-len;i+=stride)count++;
+  demoState.windowIndex=Math.min(count-1,Math.max(0,demoState.windowIndex+(action==='window-next'?1:-1)));kind='window-demo';
+ } else if(action.startsWith('embed-')){demoState.embedId=Number(action.split('-')[1]);kind='embed-demo';}
+ else if(action.startsWith('position-')){demoState.position=Number(action.split('-')[1]);kind='position-demo';}
+ if(kind)refreshDemo(kind);
+}
+
+const storageKey='llm-ch2-dialogue-v1';let saved={};
+try{saved=JSON.parse(localStorage.getItem(storageKey)||'{}')||{}}catch{}
+let cursor=Number.isInteger(saved.cursor)?Math.max(0,Math.min(steps.length-1,saved.cursor)):0;
+let theme=['reading','light','dark'].includes(saved.theme)?saved.theme:'reading';
+let font=Number.isFinite(saved.font)?Math.max(16,Math.min(28,Math.round(saved.font/2)*2)):20;
+const E=id=>document.getElementById(id),timeline=E('conversation'),scroller=E('conversationWrap');
+function persist(){try{localStorage.setItem(storageKey,JSON.stringify({cursor,theme,font}))}catch{}}
+function setTheme(next){theme=next;document.documentElement.dataset.theme=theme;document.querySelectorAll('[data-theme-choice]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.themeChoice===theme)));persist();if(!E('tooltip').hidden)hideTooltip();}
+function setFont(next){font=Math.min(28,Math.max(16,next));document.documentElement.style.setProperty('--font-size',font+'px');E('fontValue').textContent=font;E('smallerText').disabled=font<=16;E('largerText').disabled=font>=28;persist();}
+function messageHTML(step,isCurrent){
+ const student=step.who==='student';let inside='';
+ if(step.type==='message')inside=`<div class="bubble">${glossify(step.text)}</div>`;
+ if(step.type==='attachment')inside=`<div class="bubble"><div class="attachment-label"><span class="paperclip">▤</span> Teacher's whiteboard</div><div class="attachment-title">${esc(step.title)}</div><div class="attachment-desc">${esc(step.description)}</div><div class="board">${boardHTML(step.kind)}</div><div class="attachment-actions"><div class="attachment-source">${esc(step.source)}</div><button class="expand-btn" data-view-board="${esc(step.kind)}" data-board-title="${esc(step.title)}" data-board-source="${esc(step.source)}">Expand ↗</button></div></div>`;
+ if(step.type==='quiz'){
+  const answer=quizAnswers[step.id];const order=quizOrder[step.id];
+  inside=`<div class="bubble"><div class="quiz-kicker">Optional knowledge check · ${sections[step.section].title}</div><div class="quiz-q">${glossify(step.question)}</div><div class="option-list">${order.map((original,j)=>{
+   const o=step.options[original];const answered=answer!==undefined;
+   const cls=answered?(original===step.correct?'answer-correct':original===answer?'answer-selected-wrong':''):'';
+   return `<button class="quiz-opt ${cls}" data-quiz="${step.id}" data-opt="${original}" ${answered?'disabled':''} aria-label="Option ${'ABCD'[j]}: ${esc(o.text)}"><span class="option-letter">${'ABCD'[j]}</span><span>${esc(o.text)}</span></button>`;
+  }).join('')}</div>${answer===undefined?`<div class="skip-line">This quiz is optional. Choose one answer for instant feedback, or press Next to skip it.</div>`:`<div class="quiz-feedback" role="status"><div class="feedback-title ${answer===step.correct?'correct':'wrong'}">${answer===step.correct?'✓ Correct answer':'Review the answer'}</div><div><strong>Correct:</strong> ${esc(step.options[step.correct].text)}</div><div style="margin-top:7px">${glossify(step.explanation)}</div>${answer===step.correct?'':`<div class="feedback-why"><strong>Why your answer was not correct:</strong> ${glossify(step.options[answer].why)}</div>`}</div>`}</div>`;
+ }
+ if(step.type==='finish'){
+  const answered=QUIZZES.filter(q=>quizAnswers[q.id]!==undefined),correct=answered.filter(q=>quizAnswers[q.id]===q.correct).length;
+  inside=`<div class="bubble end-card"><div class="end-medallion">✦</div><div class="quiz-kicker">End of chapter two</div><h3>You reached the final page.</h3><p>You followed the full path from raw text through tokenization, vocabulary IDs, sliding windows, embedding lookup, and positional embeddings. You can now build the attention layers in Chapter 3.</p><div class="end-stats"><span><strong>${sections.length}</strong> sections visited</span><span><strong>${correct}/${answered.length}</strong> quizzes correct</span><span><strong>${QUIZZES.length-answered.length}</strong> optional quizzes skipped</span></div><button class="expand-btn" data-restart="true">Read from the beginning ↺</button></div>`;
+ }
+ return `<article class="message ${student?'student':'teacher'} ${step.type==='attachment'?'attachment':''} ${step.type==='quiz'?'quiz-step':''} ${step.type==='finish'?'complete-step':''} ${isCurrent?'current':''}" data-step="${step.global}" ${isCurrent?'aria-live="polite"':''}>${student?'':`<div class="avatar" aria-hidden="true">T</div>`}<div class="bubble-wrap"><div class="who">${student?'Student':'Teacher'}</div>${inside}</div>${student?`<div class="avatar" aria-hidden="true">S</div>`:''}</article>`;
+}
+function updateSidebar(){
+ let html='';for(let si=0;si<sections.length;si++){
+   const s=sections[si],done=Math.max(0,Math.min(s.items.length,cursor-s.start+1)),percent=Math.round(done/s.items.length*100);
+   html+=`<button class="section-item ${si===steps[cursor].section?'active':''} ${percent===100?'complete':''}" data-section="${si}" ${si===steps[cursor].section?'aria-current="step"':''}><div class="section-index">${percent===100?'✓':String(si+1).padStart(2,'0')}</div><div class="section-copy"><div class="section-name">${esc(s.title)}</div><div class="section-page">${esc(s.pages)}</div><div class="section-trail"><i style="width:${percent}%"></i></div></div></button>`;
+ }
+ E('sectionNav').innerHTML=html;
+ E('sideStatus').textContent=`${Math.round((cursor+1)/steps.length*100)}% of the conversation revealed · Saved locally`;
+}
+function render(scroll=true){
+ const current=steps[cursor];let html='';
+ for(let i=0;i<=cursor;i++){
+  const step=steps[i];if(step.global===sections[step.section].start){const s=sections[step.section];html+=`<div class="section-divider"><div class="section-mark">${String(step.section+1).padStart(2,'0')}</div><div><div class="section-heading">${esc(s.title)}</div><div class="section-details">Source: Chapter 2 · ${esc(s.pages)}</div></div></div>`;}
+  html+=messageHTML(step,i===cursor);
+ }
+ timeline.innerHTML=html;
+ E('activeSectionTitle').textContent=sections[current.section].title;
+ E('activeSectionSubtitle').textContent=`Source: Chapter 2 · ${sections[current.section].pages}`;
+ const percent=(cursor+1)/steps.length*100;
+ E('progressFill').style.width=percent.toFixed(2)+'%';
+ E('progressTrack').setAttribute('aria-valuenow',String(Math.round(percent)));
+ E('positionLabel').textContent=`Step ${cursor+1} of ${steps.length} · ${Math.round(percent)}%`;
+ const answered=QUIZZES.filter(q=>quizAnswers[q.id]!==undefined),correct=answered.filter(q=>quizAnswers[q.id]===q.correct).length;
+ E('scoreLabel').textContent=answered.length?`${correct} correct · ${answered.length} answered · Space / → next`:'Space / → next · ← back';
+ E('backBtn').disabled=cursor===0;
+ E('nextBtn').disabled=cursor===steps.length-1;
+ E('nextBtn').textContent=cursor===steps.length-1?'Finished ✓':current.type==='quiz'&&quizAnswers[current.id]===undefined?'Skip quiz →':'Next →';
+ updateSidebar();persist();hideTooltip();
+ if(scroll){const target=timeline.querySelector('.message.current');if(target){const tall=target.offsetHeight>scroller.clientHeight*.72;target.scrollIntoView({block:tall?'start':'end',behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});}}
+}
+function goTo(index){if(index<0||index>=steps.length)return;cursor=index;closeMenu();render(true);}
+const back=()=>goTo(cursor-1),next=()=>goTo(cursor+1);
+function closeMenu(){E('sidebar').classList.remove('open');E('scrim').classList.remove('open');E('menuBtn').setAttribute('aria-expanded','false');}
+function openMenu(){E('sidebar').classList.add('open');E('scrim').classList.add('open');E('menuBtn').setAttribute('aria-expanded','true');}
+function reset(){if(confirm('Restart Chapter 2? This resets your reading position and quiz answers. Your theme and text size will stay the same.')){cursor=0;for(const k in quizAnswers)delete quizAnswers[k];demoState.bpeStep=0;demoState.windowIndex=0;render(true);}}
+function renderGlossary(){const query=E('glossarySearch').value.trim().toLowerCase();const matches=glossary.filter(g=>[g.name,g.def,...g.aliases].some(x=>x.toLowerCase().includes(query))).sort((a,b)=>a.name.localeCompare(b.name));E('glossaryEntries').innerHTML=`<div class="gloss-count">${matches.length} ${matches.length===1?'entry':'entries'}</div>${matches.map(g=>`<div class="gloss-entry"><b>${esc(g.name)}</b><p>${esc(g.def)}</p></div>`).join('')||'<p class="small-line">No matching entries. Try a shorter term.</p>'}`;}
+function openGlossary(){closeMenu();hideTooltip();E('glossarySearch').value='';renderGlossary();E('glossaryModal').showModal();E('glossarySearch').focus();}
+function openViewer(kind,title,source){hideTooltip();E('viewerTitle').textContent=title;E('viewerSubtitle').textContent=source;E('viewerBody').innerHTML=`<div class="board"><div class="board-canvas">${boardHTML(kind)}</div></div>`;E('viewerModal').showModal();}
+let tooltipAnchor=null,hoverTimer=null;
+function hideTooltip(){clearTimeout(hoverTimer);E('tooltip').hidden=true;tooltipAnchor=null;}
+function showTooltip(anchor){const g=glossaryById[anchor.dataset.term];if(!g)return;clearTimeout(hoverTimer);tooltipAnchor=anchor;const tip=E('tooltip');tip.innerHTML=`<div class="tooltip-name">${esc(g.name)}</div><div class="tooltip-description">${esc(g.def)}</div><div class="tooltip-hint">Press Esc or tap outside to close</div>`;tip.hidden=false;tip.style.left='12px';tip.style.top='12px';
+ const box=anchor.getBoundingClientRect(),w=tip.offsetWidth,h=tip.offsetHeight,margin=12;
+ const left=Math.max(margin,Math.min(window.innerWidth-w-margin,box.left));
+ let top=box.bottom+10;if(top+h>window.innerHeight-margin)top=box.top-h-10;
+ top=Math.max(margin,Math.min(window.innerHeight-h-margin,top));tip.style.left=left+'px';tip.style.top=top+'px';
+}
+E('backBtn').addEventListener('click',back);E('nextBtn').addEventListener('click',next);
+E('menuBtn').addEventListener('click',()=>E('sidebar').classList.contains('open')?closeMenu():openMenu());E('scrim').addEventListener('click',closeMenu);
+E('glossaryBtn').addEventListener('click',openGlossary);E('sidebarGlossary').addEventListener('click',openGlossary);E('closeGlossary').addEventListener('click',()=>E('glossaryModal').close());E('closeViewer').addEventListener('click',()=>E('viewerModal').close());
+E('glossarySearch').addEventListener('input',renderGlossary);
+E('resetBtn').addEventListener('click',reset);
+E('smallerText').addEventListener('click',()=>setFont(font-2));E('largerText').addEventListener('click',()=>setFont(font+2));
+document.querySelectorAll('[data-theme-choice]').forEach(b=>b.addEventListener('click',()=>setTheme(b.dataset.themeChoice)));
+E('sectionNav').addEventListener('click',e=>{const b=e.target.closest('[data-section]');if(b)goTo(sections[Number(b.dataset.section)].start);});
+function fallbackCopy(value,done,button){const el=document.createElement('textarea');el.value=value;el.style.cssText='position:fixed;top:-9999px;left:-9999px';document.body.appendChild(el);el.focus();el.select();let ok=false;try{ok=document.execCommand('copy');}catch{}el.remove();if(ok)done();else if(button){const pre=button.closest('.code-card')?.querySelector('pre');if(pre){const range=document.createRange();range.selectNodeContents(pre);const sel=window.getSelection();sel.removeAllRanges();sel.addRange(range);}button.textContent='Selected — press Ctrl/Cmd+C';}}
+document.addEventListener('input',e=>{const el=e.target.closest('[data-demo-input]');if(!el)return; if(el.dataset.demoInput==='split'){demoState.splitText=el.value;document.querySelectorAll('[data-live="split"]').forEach(p=>p.innerHTML=tokenPills(simpleTokens(el.value)));document.querySelectorAll('.split-count').forEach(p=>p.textContent=String(simpleTokens(el.value).length));}else if(el.dataset.demoInput==='vocab'){demoState.vocabText=el.value;renderLiveVocab();}});
+document.addEventListener('click',e=>{
+ const term=e.target.closest('.gloss-term');if(term){e.stopPropagation();showTooltip(term);return;}
+ const quizBtn=e.target.closest('[data-quiz]');if(quizBtn){const id=quizBtn.dataset.quiz;if(quizAnswers[id]===undefined){quizAnswers[id]=Number(quizBtn.dataset.opt);const y=scroller.scrollTop;render(false);scroller.scrollTop=y;const feedback=timeline.querySelector('.message.current .quiz-feedback');if(feedback)feedback.scrollIntoView({block:'nearest',behavior:'smooth'});}return;}
+ const expand=e.target.closest('[data-view-board]');if(expand){openViewer(expand.dataset.viewBoard,expand.dataset.boardTitle,expand.dataset.boardSource);return;}
+ const copy=e.target.closest('[data-copy-code]');if(copy){const code=codeSamples[copy.dataset.copyCode];if(code){const original=copy.textContent;const done=()=>{copy.textContent='Copied ✓';setTimeout(()=>{if(copy.isConnected)copy.textContent=original;},1700);}; if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(code).then(done,()=>fallbackCopy(code,done,copy));}else fallbackCopy(code,done,copy);}return;}
+ const demo=e.target.closest('[data-demo-action]');if(demo){handleDemo(demo.dataset.demoAction);return;}
+ if(e.target.closest('[data-restart]')){reset();return;}
+ if(!e.target.closest('#tooltip')&&!E('tooltip').hidden)hideTooltip();
+});
+document.addEventListener('pointerover',e=>{const term=e.target.closest('.gloss-term');if(term&&e.pointerType==='mouse'&&term!==tooltipAnchor)showTooltip(term);});
+document.addEventListener('pointerout',e=>{const term=e.target.closest('.gloss-term');if(term&&e.pointerType==='mouse'&&tooltipAnchor===term){clearTimeout(hoverTimer);hoverTimer=setTimeout(()=>{if(!E('tooltip').matches(':hover'))hideTooltip();},180);}});
+E('tooltip').addEventListener('pointerenter',()=>clearTimeout(hoverTimer));E('tooltip').addEventListener('pointerleave',hideTooltip);
+document.addEventListener('focusin',e=>{const term=e.target.closest('.gloss-term');if(term)showTooltip(term);else if(tooltipAnchor&&!E('tooltip').contains(e.target))hideTooltip();});
+document.addEventListener('keydown',e=>{
+ if(e.key==='Escape'){hideTooltip();if(E('viewerModal').open)E('viewerModal').close();if(E('glossaryModal').open)E('glossaryModal').close();if(E('sidebar').classList.contains('open'))closeMenu();return;}
+ if(E('glossaryModal').open||E('viewerModal').open)return;
+ if(e.ctrlKey||e.altKey||e.metaKey||e.shiftKey)return;
+ const active=e.target,tag=active.tagName;
+ if(['BUTTON','INPUT','TEXTAREA','SELECT','A','SUMMARY'].includes(tag)||active.isContentEditable||active.closest('[role="dialog"]'))return;
+ if(e.key===' '||e.code==='Space'||e.key==='ArrowRight'){e.preventDefault();next();}
+ else if(e.key==='ArrowLeft'){e.preventDefault();back();}
+});
+for(const id of ['glossaryModal','viewerModal']){
+ const el=E(id);el.addEventListener('click',e=>{if(e.target===el){const r=el.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)el.close();}});
+}
+scroller.addEventListener('scroll',hideTooltip,{passive:true});window.addEventListener('resize',hideTooltip,{passive:true});
+setTheme(theme);setFont(font);render(false);
+requestAnimationFrame(()=>{const step=timeline.querySelector('.message.current');if(step)step.scrollIntoView({block:step.offsetHeight>scroller.clientHeight*.72?'start':'end',behavior:'instant'});});
+// Public read-only counters support basic smoke tests in a local browser console.
+Object.defineProperty(window,'guideInfo',{get:()=>({sections:sections.length,steps:steps.length,quizzes:QUIZZES.length,cursor,theme,font,answered:Object.keys(quizAnswers).length})});
+</script>
+</body>
+</html>
