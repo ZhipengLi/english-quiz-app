@@ -1020,12 +1020,22 @@
              * Render the sorted HTML files into the DOM
              */
             renderFiles() {
+                const pagesSection = document.getElementById('pagesSection');
                 const container = document.getElementById('filesContainer');
                 const emptyState = document.getElementById('emptyState');
                 const countSummary = document.getElementById('fileCountSummary');
 
                 const total = this.state.allFiles.length;
                 const showing = this.state.filteredFiles.length;
+                const hasQuizzes = this.state.allQuizzes.length > 0;
+
+                // If `pages/` folder is missing/empty but `quiz/` folder has files, hide the HTML Pages section cleanly
+                if (total === 0 && hasQuizzes) {
+                    pagesSection.classList.add('hidden');
+                    return;
+                }
+
+                pagesSection.classList.remove('hidden');
 
                 countSummary.textContent = this.state.searchQuery
                     ? `Showing ${showing} of ${total} HTML file${total === 1 ? '' : 's'}`
@@ -1040,8 +1050,8 @@
                         );
                     } else {
                         this.renderEmptyState(
-                            `No .html files found in "${this.state.config.folder}/"`,
-                            `Add .html files to the "${this.state.config.folder}" folder at the same level as this page.`
+                            `No .html files or quizzes found`,
+                            `Add .html files to "${this.state.config.folder}/" or .json files to "${this.state.config.quizFolder}/" at the same level as this page.`
                         );
                     }
                     return;
@@ -1168,6 +1178,7 @@
 
                 const total = this.state.allQuizzes.length;
                 const showing = this.state.filteredQuizzes.length;
+                const hasPages = this.state.allFiles.length > 0;
 
                 // Hide the entire quiz section if no quiz folder / .json files exist
                 if (total === 0) {
@@ -1176,6 +1187,12 @@
                 }
 
                 section.classList.remove('hidden');
+                // Only show the top divider border if the HTML Pages section is also visible above it
+                if (hasPages) {
+                    section.className = 'space-y-3 pt-4 border-t border-slate-200/80 dark:border-slate-800/80';
+                } else {
+                    section.className = 'space-y-3';
+                }
 
                 countSummary.textContent = this.state.searchQuery
                     ? `Showing ${showing} of ${total} quiz${total === 1 ? '' : 'zes'}`
@@ -1278,6 +1295,18 @@
                         </a>`;
                     }
                 }).join('');
+            },
+
+            /**
+             * Handle clicking on an HTML file card/row
+             */
+            handleFileClick(event, fileName) {
+                if (this.state.navMode === 'preview' || this.state.isDemoMode) {
+                    event.preventDefault();
+                    this.showViewerForFile(fileName);
+                    return false;
+                }
+                return true;
             },
 
             openInViewer(event, fileName) {
@@ -1450,7 +1479,7 @@
                     quizSection.classList.add('hidden');
                 } else {
                     loadingState.classList.add('hidden');
-                    pagesSection.classList.remove('hidden');
+                    // Visibility of pagesSection and quizSection is managed by renderFiles() and renderQuizzes()
                 }
             },
 
