@@ -85,7 +85,7 @@
                         </span>
                     </div>
                     <p id="subHeaderSource" class="text-xs text-slate-500 dark:text-slate-400 font-mono truncate">
-                        ./pages/*.html
+                        ./pages/*.html &bull; ./quiz/*.json
                     </p>
                 </div>
             </div>
@@ -145,7 +145,7 @@
                                 Sandbox Preview Mode Active
                             </h2>
                             <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-0.5 leading-relaxed">
-                                Since this page isn't currently hosted on a live <code class="font-mono text-xs px-1.5 py-0.5 rounded bg-slate-200 dark:bg-slate-800">*.github.io</code> URL, sample HTML files from <code class="font-mono text-xs px-1.5 py-0.5 rounded bg-slate-200 dark:bg-slate-800">pages/</code> are shown below. Once pushed to GitHub Pages, it will automatically scan your repository's <code class="font-mono text-xs">pages</code> folder!
+                                Since this page isn't currently hosted on a live <code class="font-mono text-xs px-1.5 py-0.5 rounded bg-slate-200 dark:bg-slate-800">*.github.io</code> URL, sample HTML files from <code class="font-mono text-xs px-1.5 py-0.5 rounded bg-slate-200 dark:bg-slate-800">pages/</code> and sample JSON quizzes from <code class="font-mono text-xs px-1.5 py-0.5 rounded bg-slate-200 dark:bg-slate-800">quiz/</code> are shown below. Once pushed to GitHub Pages, it will automatically scan your repository's <code class="font-mono text-xs">pages</code> and <code class="font-mono text-xs">quiz</code> folders!
                             </p>
                         </div>
                     </div>
@@ -166,7 +166,7 @@
                         type="text" 
                         id="searchInput" 
                         oninput="app.handleSearch(this.value)"
-                        placeholder="Filter HTML files by name..." 
+                        placeholder="Filter HTML pages or JSON quizzes by name..." 
                         class="w-full pl-11 pr-9 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
                     >
                     <button id="clearSearchBtn" onclick="app.clearSearch()" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-1">
@@ -207,14 +207,6 @@
                 </div>
             </div>
 
-            <!-- Directory Meta Summary Bar -->
-            <div class="flex items-center justify-between px-1 text-xs text-slate-500 dark:text-slate-400">
-                <div class="flex items-center gap-2">
-                    <span>Folder: <strong id="folderPathDisplay" class="font-mono text-slate-700 dark:text-slate-300">./pages/</strong></span>
-                </div>
-                <span id="fileCountSummary">Loading files...</span>
-            </div>
-
             <!-- Loading Skeleton State -->
             <div id="loadingState" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div class="h-28 rounded-2xl bg-slate-200/70 dark:bg-slate-800/50 animate-pulse-subtle p-4 flex flex-col justify-between">
@@ -249,29 +241,61 @@
                 </div>
             </div>
 
-            <!-- Error / Empty State -->
-            <div id="emptyState" class="hidden flex-1 flex flex-col items-center justify-center text-center py-12 px-4 bg-white dark:bg-slate-900 rounded-2xl border border-dashed border-slate-300 dark:border-slate-800">
-                <div class="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-                    </svg>
+            <!-- SECTION 1: HTML PAGES -->
+            <section id="pagesSection" class="space-y-3">
+                <div class="flex items-center justify-between px-1">
+                    <div class="flex items-center gap-2.5">
+                        <span class="w-7 h-7 rounded-lg bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center text-sm select-none">📄</span>
+                        <h2 class="text-sm sm:text-base font-bold text-slate-900 dark:text-white tracking-tight">HTML Pages</h2>
+                        <span id="folderPathDisplay" class="font-mono text-xs px-2 py-0.5 rounded-md bg-slate-200/70 dark:bg-slate-800 text-slate-600 dark:text-slate-300">./pages/</span>
+                    </div>
+                    <span id="fileCountSummary" class="text-xs text-slate-500 dark:text-slate-400">Loading files...</span>
                 </div>
-                <h3 id="emptyStateTitle" class="text-base font-semibold text-slate-900 dark:text-white">No HTML files found</h3>
-                <p id="emptyStateDesc" class="text-sm text-slate-500 dark:text-slate-400 max-w-md mt-1">
-                    Make sure you have a folder named <code class="font-mono text-xs px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800">pages</code> at the same level as this <code class="font-mono text-xs px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800">index.html</code> containing <code class="font-mono text-xs">.html</code> files.
-                </p>
-                <div class="mt-5 flex flex-wrap items-center justify-center gap-3">
-                    <button onclick="app.toggleSettingsModal(true)" class="px-4 py-2 rounded-xl text-xs font-semibold bg-brand-600 hover:bg-brand-500 text-white transition-colors">
-                        Configure GitHub Repository
-                    </button>
-                    <button onclick="app.loadDemoPages()" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition-colors">
-                        Load Demo Pages
-                    </button>
-                </div>
-            </div>
 
-            <!-- File List Container -->
-            <div id="filesContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+                <!-- Error / Empty State for HTML Pages -->
+                <div id="emptyState" class="hidden flex-col items-center justify-center text-center py-10 px-4 bg-white dark:bg-slate-900 rounded-2xl border border-dashed border-slate-300 dark:border-slate-800">
+                    <div class="w-12 h-12 rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <h3 id="emptyStateTitle" class="text-sm font-semibold text-slate-900 dark:text-white">No HTML files found</h3>
+                    <p id="emptyStateDesc" class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 max-w-md mt-1">
+                        Make sure you have a folder named <code class="font-mono text-xs px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800">pages</code> at the same level as this <code class="font-mono text-xs px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800">index.html</code> containing <code class="font-mono text-xs">.html</code> files.
+                    </p>
+                    <div class="mt-4 flex flex-wrap items-center justify-center gap-3">
+                        <button onclick="app.toggleSettingsModal(true)" class="px-4 py-2 rounded-xl text-xs font-semibold bg-brand-600 hover:bg-brand-500 text-white transition-colors">
+                            Configure GitHub Repository
+                        </button>
+                        <button onclick="app.loadDemoPages()" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition-colors">
+                            Load Demo Data
+                        </button>
+                    </div>
+                </div>
+
+                <!-- File List Container -->
+                <div id="filesContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+            </section>
+
+            <!-- SECTION 2: QUIZZES (JSON FILES IN ./quiz) -->
+            <section id="quizSection" class="hidden space-y-3 pt-4 border-t border-slate-200/80 dark:border-slate-800/80">
+                <div class="flex items-center justify-between px-1">
+                    <div class="flex items-center gap-2.5">
+                        <span class="w-7 h-7 rounded-lg bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center text-sm select-none">🧠</span>
+                        <h2 class="text-sm sm:text-base font-bold text-slate-900 dark:text-white tracking-tight">Interactive Quizzes</h2>
+                        <span id="quizFolderPathDisplay" class="font-mono text-xs px-2 py-0.5 rounded-md bg-purple-500/10 text-purple-700 dark:text-purple-300 border border-purple-500/20">./quiz/</span>
+                    </div>
+                    <span id="quizCountSummary" class="text-xs text-slate-500 dark:text-slate-400">0 quizzes</span>
+                </div>
+
+                <!-- Empty Search State for Quizzes -->
+                <div id="quizEmptyState" class="hidden flex-col items-center justify-center text-center py-8 px-4 bg-white dark:bg-slate-900 rounded-2xl border border-dashed border-slate-300 dark:border-slate-800">
+                    <p id="quizEmptyStateDesc" class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">No matching quiz files found.</p>
+                </div>
+
+                <!-- Quiz List Container -->
+                <div id="quizzesContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+            </section>
 
         </div>
 
@@ -335,7 +359,7 @@
                     </div>
                     <div>
                         <h3 class="text-base font-bold text-slate-900 dark:text-white">GitHub Pages Discovery Setup</h3>
-                        <p class="text-xs text-slate-500 dark:text-slate-400">How this SPA finds all <code class="font-mono">.html</code> files in <code class="font-mono">pages/</code></p>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">How this SPA finds all <code class="font-mono">.html</code> files in <code class="font-mono">pages/</code> &amp; <code class="font-mono">.json</code> files in <code class="font-mono">quiz/</code></p>
                     </div>
                 </div>
                 <button onclick="app.toggleSettingsModal(false)" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
@@ -366,13 +390,18 @@
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
-                        <label class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Target Folder Name</label>
+                        <label class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Pages Folder Name</label>
                         <input type="text" id="cfgFolder" placeholder="pages" value="pages" class="w-full px-3 py-2 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-brand-500">
                     </div>
                     <div>
-                        <label class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Branch (Optional)</label>
-                        <input type="text" id="cfgBranch" placeholder="Auto (main / gh-pages)" class="w-full px-3 py-2 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-brand-500">
+                        <label class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Quiz Folder Name</label>
+                        <input type="text" id="cfgQuizFolder" placeholder="quiz" value="quiz" class="w-full px-3 py-2 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-brand-500">
                     </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Branch (Optional)</label>
+                    <input type="text" id="cfgBranch" placeholder="Auto (main / gh-pages)" class="w-full px-3 py-2 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-brand-500">
                 </div>
             </div>
 
@@ -424,8 +453,16 @@
             owner: '',        // Leave empty for auto-detect from *.github.io, or set e.g. 'octocat'
             repo: '',         // Leave empty for auto-detect, or set e.g. 'my-repo'
             branch: '',       // Leave empty to use default branch, or set e.g. 'main' or 'gh-pages'
-            folder: 'pages'   // Folder at the same level as this HTML file
+            folder: 'pages',  // HTML folder at the same level as this HTML file
+            quizFolder: 'quiz'// Quiz JSON folder at the same level as the pages folder
         };
+
+        /**
+         * Fixed URL prefix for constructing quiz links.
+         * Final link format:
+         * https://zhipengli.github.io/english-quiz-app/choice-quiz.html?url=https://raw.githubusercontent.com/ZhipengLi/english-quiz-app/refs/heads/main/<quizFolder>/<filename>.json
+         */
+        const QUIZ_URL_PREFIX = 'https://zhipengli.github.io/english-quiz-app/choice-quiz.html?url=https://raw.githubusercontent.com/ZhipengLi/english-quiz-app/refs/heads/main/';
 
         /**
          * Sample mock HTML pages shown when previewing locally or in a sandbox
@@ -470,10 +507,38 @@
             }
         ];
 
+        /**
+         * Sample mock JSON quiz files shown in Sandbox Preview Mode
+         */
+        const DEMO_QUIZ_FILES = [
+            {
+                name: 'deeplearningwithpythonv3chapter01.json',
+                size: 14520,
+                isDemo: true
+            },
+            {
+                name: 'deeplearningwithpythonv3chapter02.json',
+                size: 18340,
+                isDemo: true
+            },
+            {
+                name: 'machine-learning-fundamentals.json',
+                size: 9640,
+                isDemo: true
+            },
+            {
+                name: 'neural-networks-basics.json',
+                size: 11200,
+                isDemo: true
+            }
+        ];
+
         const app = {
             state: {
                 allFiles: [],          // Sorted list of .html file objects
-                filteredFiles: [],     // Search-filtered list
+                filteredFiles: [],     // Search-filtered HTML list
+                allQuizzes: [],        // Sorted list of .json quiz objects
+                filteredQuizzes: [],   // Search-filtered quiz list
                 searchQuery: '',
                 viewLayout: 'grid',    // 'grid' | 'list'
                 navMode: 'direct',     // 'direct' (standard link navigation) | 'preview' (SPA iframe viewer)
@@ -485,6 +550,7 @@
                     repo: '',
                     branch: '',
                     folder: 'pages',
+                    quizFolder: 'quiz',
                     subPath: ''        // Directory path if SPA is hosted in a subfolder
                 }
             },
@@ -551,6 +617,7 @@
                                 repo: savedCfg.repo.trim(),
                                 branch: (savedCfg.branch || '').trim(),
                                 folder: (savedCfg.folder || 'pages').replace(/^\/+|\/+$/g, ''),
+                                quizFolder: (savedCfg.quizFolder || 'quiz').replace(/^\/+|\/+$/g, ''),
                                 subPath: ''
                             };
                             this.populateSettingsInputs();
@@ -568,6 +635,7 @@
                         repo: DEFAULT_GITHUB_CONFIG.repo.trim(),
                         branch: (DEFAULT_GITHUB_CONFIG.branch || '').trim(),
                         folder: (DEFAULT_GITHUB_CONFIG.folder || 'pages').replace(/^\/+|\/+$/g, ''),
+                        quizFolder: (DEFAULT_GITHUB_CONFIG.quizFolder || 'quiz').replace(/^\/+|\/+$/g, ''),
                         subPath: ''
                     };
                     this.populateSettingsInputs();
@@ -604,6 +672,7 @@
                         repo,
                         branch: '',
                         folder: DEFAULT_GITHUB_CONFIG.folder || 'pages',
+                        quizFolder: DEFAULT_GITHUB_CONFIG.quizFolder || 'quiz',
                         subPath
                     };
                 } else {
@@ -613,6 +682,7 @@
                         repo: '',
                         branch: '',
                         folder: DEFAULT_GITHUB_CONFIG.folder || 'pages',
+                        quizFolder: DEFAULT_GITHUB_CONFIG.quizFolder || 'quiz',
                         subPath: ''
                     };
                 }
@@ -621,50 +691,100 @@
             },
 
             populateSettingsInputs() {
-                const { owner, repo, branch, folder } = this.state.config;
+                const { owner, repo, branch, folder, quizFolder } = this.state.config;
                 document.getElementById('cfgOwner').value = owner || '';
                 document.getElementById('cfgRepo').value = repo || '';
                 document.getElementById('cfgBranch').value = branch || '';
                 document.getElementById('cfgFolder').value = folder || 'pages';
+                document.getElementById('cfgQuizFolder').value = quizFolder || 'quiz';
             },
 
             /**
-             * Fetch all .html files from the sibling `pages` folder using a 3-tier strategy:
-             * Strategy 1: GitHub REST API (automatic on *.github.io or when configured)
-             * Strategy 2: Local directory index / optional `pages/manifest.json` fallback
-             * Strategy 3: Demo fallback when previewing in an isolated sandbox
+             * Build the full quiz URL from the relative quiz file path (e.g. `quiz/chapter01.json`)
+             */
+            buildQuizLink(relativeQuizPath) {
+                const cleanPath = relativeQuizPath.replace(/^\/+/, '');
+                return `${QUIZ_URL_PREFIX}${cleanPath}`;
+            },
+
+            /**
+             * Fetch all .html files from `pages/` and all .json files from `quiz/`
              */
             async loadPages() {
                 this.setLoadingUI(true);
                 const refreshIcon = document.getElementById('refreshIcon');
                 refreshIcon.classList.add('animate-spin');
 
-                const { owner, repo, branch, folder, subPath } = this.state.config;
-                const relativeFolder = `./${folder}`;
-                document.getElementById('folderPathDisplay').textContent = `${relativeFolder}/`;
+                const { owner, repo, branch, folder, quizFolder, subPath } = this.state.config;
+                document.getElementById('folderPathDisplay').textContent = `./${folder}/`;
+                document.getElementById('quizFolderPathDisplay').textContent = `./${quizFolder}/`;
 
                 let discoveredFiles = null;
+                let discoveredQuizzes = null;
                 let sourceDescription = '';
                 this.state.isDemoMode = false;
 
                 try {
                     // STRATEGY 1: GitHub Repository Contents API
                     if (owner && repo) {
-                        discoveredFiles = await this.fetchFromGitHubAPI(owner, repo, folder, subPath, branch);
-                        sourceDescription = `github:${owner}/${repo}/${subPath ? subPath + '/' : ''}${folder}`;
+                        const [pagesRes, quizRes] = await Promise.allSettled([
+                            this.fetchFromGitHubAPI(owner, repo, folder, subPath, branch, /\.html?$/i),
+                            this.fetchFromGitHubAPI(owner, repo, quizFolder, subPath, branch, /\.json$/i)
+                        ]);
+
+                        if (pagesRes.status === 'fulfilled' && pagesRes.value) {
+                            discoveredFiles = pagesRes.value;
+                        }
+                        if (quizRes.status === 'fulfilled' && quizRes.value) {
+                            discoveredQuizzes = quizRes.value
+                                .filter(item => item.name.toLowerCase() !== 'manifest.json')
+                                .map(item => {
+                                    const relPath = subPath ? `${subPath}/${quizFolder}/${item.name}` : `${quizFolder}/${item.name}`;
+                                    return {
+                                        ...item,
+                                        path: relPath,
+                                        url: this.buildQuizLink(relPath)
+                                    };
+                                });
+                        }
+
+                        if (!discoveredFiles && !discoveredQuizzes && pagesRes.status === 'rejected') {
+                            throw pagesRes.reason;
+                        }
+
+                        sourceDescription = `github:${owner}/${repo}/${subPath ? subPath + '/' : ''}{${folder},${quizFolder}}`;
                     }
 
-                    // STRATEGY 2: Try probing `./pages/` directly (works on local live servers or custom domains with directory listing / manifest.json)
-                    if (!discoveredFiles) {
-                        const localResult = await this.fetchFromRelativeFolder(folder);
-                        if (localResult && localResult.length > 0) {
-                            discoveredFiles = localResult;
+                    // STRATEGY 2: Try probing `./pages/` and `./quiz/` directly (works on local live servers or custom domains)
+                    if (!discoveredFiles && !discoveredQuizzes) {
+                        const [localPages, localQuizzes] = await Promise.all([
+                            this.fetchFromRelativeFolder(folder, /\.html?$/i),
+                            this.fetchFromRelativeFolder(quizFolder, /\.json$/i)
+                        ]);
+
+                        if (localPages && localPages.length > 0) {
+                            discoveredFiles = localPages;
                             sourceDescription = `./${folder}/ (Direct Discovery)`;
+                        }
+                        if (localQuizzes && localQuizzes.length > 0) {
+                            discoveredQuizzes = localQuizzes
+                                .filter(item => item.name.toLowerCase() !== 'manifest.json')
+                                .map(item => {
+                                    const relPath = `${quizFolder}/${item.name}`;
+                                    return {
+                                        ...item,
+                                        path: relPath,
+                                        url: this.buildQuizLink(relPath)
+                                    };
+                                });
+                            if (!sourceDescription) {
+                                sourceDescription = `./${quizFolder}/ (Direct Discovery)`;
+                            }
                         }
                     }
 
-                    // STRATEGY 3: Fallback to interactive demo pages if running inside a preview sandbox
-                    if (!discoveredFiles) {
+                    // STRATEGY 3: Fallback to interactive demo pages & quizzes if running inside a preview sandbox
+                    if (!discoveredFiles && !discoveredQuizzes) {
                         this.state.isDemoMode = true;
                         discoveredFiles = DEMO_HTML_FILES.map(file => ({
                             name: file.name,
@@ -674,11 +794,22 @@
                             isDemo: true,
                             demoContent: file.demoContent
                         }));
-                        sourceDescription = `./${folder}/*.html (Preview Mode)`;
+                        discoveredQuizzes = DEMO_QUIZ_FILES.map(q => {
+                            const relPath = `${quizFolder}/${q.name}`;
+                            return {
+                                name: q.name,
+                                path: relPath,
+                                url: this.buildQuizLink(relPath),
+                                size: q.size,
+                                isDemo: true
+                            };
+                        });
+                        sourceDescription = `./${folder}/*.html • ./${quizFolder}/*.json (Preview Mode)`;
                     }
 
-                    // Strictly sort all .html files by name in ascending order (A -> Z)
-                    this.state.allFiles = this.sortHtmlFilesAscending(discoveredFiles);
+                    // Strictly sort all .html files and .json quizzes by name in ascending order (A -> Z)
+                    this.state.allFiles = this.sortHtmlFilesAscending(discoveredFiles || []);
+                    this.state.allQuizzes = this.sortHtmlFilesAscending(discoveredQuizzes || []);
                     this.state.sourceLabel = sourceDescription;
 
                     this.updateHeaderIndicators();
@@ -689,6 +820,9 @@
                     console.error('Error loading pages directory:', error);
                     this.state.allFiles = [];
                     this.state.filteredFiles = [];
+                    this.state.allQuizzes = [];
+                    this.state.filteredQuizzes = [];
+                    this.renderQuizzes();
                     this.renderEmptyState(
                         'Unable to Load Directory',
                         error.message || `Could not find folder "${folder}" in ${owner}/${repo}. Verify the folder exists at the same level as this page.`
@@ -700,11 +834,11 @@
             },
 
             /**
-             * Query GitHub Contents API for the `pages` folder at the same level as this page.
+             * Query GitHub Contents API for a target folder (`pages` or `quiz`) at the same level as this page.
              * Automatically falls back across common GitHub Pages branches (`gh-pages`, `main`, `master`)
              * and root vs `docs/` publishing folders if needed.
              */
-            async fetchFromGitHubAPI(owner, repo, folder, subPath, preferredBranch) {
+            async fetchFromGitHubAPI(owner, repo, folder, subPath, preferredBranch, extRegex = /\.html?$/i) {
                 const basePath = subPath ? `${subPath}/${folder}` : folder;
                 const candidatePaths = [basePath];
                 // Also support repositories that publish GitHub Pages from the `/docs` folder
@@ -731,12 +865,12 @@
                             if (response.ok) {
                                 const items = await response.json();
                                 if (Array.isArray(items)) {
-                                    // Filter only `.html` or `.htm` files
+                                    // Filter files matching the extension regex
                                     return items
-                                        .filter(item => item.type === 'file' && /\.html?$/i.test(item.name))
+                                        .filter(item => item.type === 'file' && extRegex.test(item.name))
                                         .map(item => ({
                                             name: item.name,
-                                            // Relative link at the same level of this page: `pages/filename.html`
+                                            // Relative link at the same level of this page
                                             path: `${folder}/${encodeURIComponent(item.name)}`,
                                             url: `${folder}/${encodeURIComponent(item.name)}`,
                                             downloadUrl: item.download_url,
@@ -762,11 +896,11 @@
 
             /**
              * Fallback discovery for custom domains or local static web servers:
-             * 1. Checks if `pages/manifest.json` exists (array of filenames)
-             * 2. Or parses an auto-generated directory listing HTML from `./pages/`
+             * 1. Checks if `<folder>/manifest.json` exists (array of filenames)
+             * 2. Or parses an auto-generated directory listing HTML from `./<folder>/`
              */
-            async fetchFromRelativeFolder(folder) {
-                // 1. Check optional `pages/manifest.json`
+            async fetchFromRelativeFolder(folder, extRegex = /\.html?$/i) {
+                // 1. Check optional `<folder>/manifest.json`
                 try {
                     const manifestRes = await fetch(`./${folder}/manifest.json`, { cache: 'no-store' });
                     if (manifestRes.ok) {
@@ -774,7 +908,7 @@
                         if (Array.isArray(list)) {
                             return list
                                 .map(entry => typeof entry === 'string' ? entry : entry.name)
-                                .filter(name => Boolean(name) && /\.html?$/i.test(name))
+                                .filter(name => Boolean(name) && name.toLowerCase() !== 'manifest.json' && extRegex.test(name))
                                 .map(name => ({
                                     name,
                                     path: `${folder}/${name}`,
@@ -787,7 +921,7 @@
                     // Ignore and try directory listing next
                 }
 
-                // 2. Check if local server provides a directory index at `./pages/`
+                // 2. Check if local server provides a directory index at `./<folder>/`
                 try {
                     const dirRes = await fetch(`./${folder}/`, { cache: 'no-store' });
                     if (dirRes.ok) {
@@ -797,7 +931,7 @@
                             const parser = new DOMParser();
                             const doc = parser.parseFromString(htmlText, 'text/html');
                             const links = Array.from(doc.querySelectorAll('a'));
-                            const htmlFiles = [];
+                            const matchedFiles = [];
 
                             for (const a of links) {
                                 const href = a.getAttribute('href') || '';
@@ -805,8 +939,8 @@
                                 const cleanHref = decodeURIComponent(href.split('?')[0].split('#')[0]);
                                 const parts = cleanHref.split('/').filter(Boolean);
                                 const fileName = parts[parts.length - 1];
-                                if (fileName && /\.html?$/i.test(fileName)) {
-                                    htmlFiles.push({
+                                if (fileName && fileName.toLowerCase() !== 'manifest.json' && extRegex.test(fileName)) {
+                                    matchedFiles.push({
                                         name: fileName,
                                         path: `${folder}/${fileName}`,
                                         url: `${folder}/${fileName}`,
@@ -815,10 +949,10 @@
                                 }
                             }
 
-                            if (htmlFiles.length > 0) {
+                            if (matchedFiles.length > 0) {
                                 // Deduplicate by filename
                                 const uniqueMap = new Map();
-                                htmlFiles.forEach(f => uniqueMap.set(f.name, f));
+                                matchedFiles.forEach(f => uniqueMap.set(f.name, f));
                                 return Array.from(uniqueMap.values());
                             }
                         }
@@ -867,25 +1001,41 @@
                 const q = this.state.searchQuery;
                 if (!q) {
                     this.state.filteredFiles = [...this.state.allFiles];
+                    this.state.filteredQuizzes = [...this.state.allQuizzes];
                 } else {
                     this.state.filteredFiles = this.state.allFiles.filter(file =>
                         file.name.toLowerCase().includes(q) ||
                         this.formatPrettyTitle(file.name).toLowerCase().includes(q)
                     );
+                    this.state.filteredQuizzes = this.state.allQuizzes.filter(quiz =>
+                        quiz.name.toLowerCase().includes(q) ||
+                        this.formatPrettyTitle(quiz.name).toLowerCase().includes(q)
+                    );
                 }
                 this.renderFiles();
+                this.renderQuizzes();
             },
 
             /**
              * Render the sorted HTML files into the DOM
              */
             renderFiles() {
+                const pagesSection = document.getElementById('pagesSection');
                 const container = document.getElementById('filesContainer');
                 const emptyState = document.getElementById('emptyState');
                 const countSummary = document.getElementById('fileCountSummary');
 
                 const total = this.state.allFiles.length;
                 const showing = this.state.filteredFiles.length;
+                const hasQuizzes = this.state.allQuizzes.length > 0;
+
+                // If `pages/` folder is missing/empty but `quiz/` folder has files, hide the HTML Pages section cleanly
+                if (total === 0 && hasQuizzes) {
+                    pagesSection.classList.add('hidden');
+                    return;
+                }
+
+                pagesSection.classList.remove('hidden');
 
                 countSummary.textContent = this.state.searchQuery
                     ? `Showing ${showing} of ${total} HTML file${total === 1 ? '' : 's'}`
@@ -900,8 +1050,8 @@
                         );
                     } else {
                         this.renderEmptyState(
-                            `No .html files found in "${this.state.config.folder}/"`,
-                            `Add .html files to the "${this.state.config.folder}" folder at the same level as this page.`
+                            `No .html files or quizzes found`,
+                            `Add .html files to "${this.state.config.folder}/" or .json files to "${this.state.config.quizFolder}/" at the same level as this page.`
                         );
                     }
                     return;
@@ -1017,22 +1167,145 @@
             },
 
             /**
-             * Handle clicking a file link:
-             * - If `navMode === 'direct'` (and not a synthetic demo file), allow native browser navigation to `pages/<file>.html`.
-             * - If `navMode === 'preview'` or running in sandbox demo mode, open inside the in-app viewer.
+             * Render the separate Interactive Quizzes section from the `quiz/` folder in ascending order
+             */
+            renderQuizzes() {
+                const section = document.getElementById('quizSection');
+                const container = document.getElementById('quizzesContainer');
+                const emptyState = document.getElementById('quizEmptyState');
+                const emptyDesc = document.getElementById('quizEmptyStateDesc');
+                const countSummary = document.getElementById('quizCountSummary');
+
+                const total = this.state.allQuizzes.length;
+                const showing = this.state.filteredQuizzes.length;
+                const hasPages = this.state.allFiles.length > 0;
+
+                // Hide the entire quiz section if no quiz folder / .json files exist
+                if (total === 0) {
+                    section.classList.add('hidden');
+                    return;
+                }
+
+                section.classList.remove('hidden');
+                // Only show the top divider border if the HTML Pages section is also visible above it
+                if (hasPages) {
+                    section.className = 'space-y-3 pt-4 border-t border-slate-200/80 dark:border-slate-800/80';
+                } else {
+                    section.className = 'space-y-3';
+                }
+
+                countSummary.textContent = this.state.searchQuery
+                    ? `Showing ${showing} of ${total} quiz${total === 1 ? '' : 'zes'}`
+                    : `${total} quiz file${total === 1 ? '' : 's'} (Sorted A–Z)`;
+
+                if (showing === 0) {
+                    container.classList.add('hidden');
+                    emptyDesc.textContent = `No quiz files in "${this.state.config.quizFolder}/" matched "${this.state.searchQuery}".`;
+                    emptyState.classList.remove('hidden');
+                    emptyState.classList.add('flex');
+                    return;
+                }
+
+                emptyState.classList.add('hidden');
+                emptyState.classList.remove('flex');
+                container.classList.remove('hidden');
+
+                if (this.state.viewLayout === 'grid') {
+                    container.className = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4';
+                } else {
+                    container.className = 'flex flex-col space-y-2.5';
+                }
+
+                container.innerHTML = this.state.filteredQuizzes.map((quiz, idx) => {
+                    const prettyTitle = this.formatPrettyTitle(quiz.name);
+                    const fileSizeText = quiz.size ? this.formatBytes(quiz.size) : 'Quiz JSON';
+                    const orderNumber = String(idx + 1).padStart(2, '0');
+                    const safeName = this.escapeHtml(quiz.name);
+                    const safePath = this.escapeHtml(quiz.path);
+                    const safeHref = this.escapeHtml(quiz.url);
+
+                    if (this.state.viewLayout === 'grid') {
+                        return `
+                        <a href="${safeHref}"
+                           class="group relative bg-white dark:bg-slate-900 rounded-2xl p-4 sm:p-5 border border-slate-200 dark:border-slate-800 hover:border-purple-500 dark:hover:border-purple-500 shadow-sm hover:shadow-md hover:shadow-purple-500/5 transition-all duration-200 flex flex-col justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            
+                            <div class="flex items-start justify-between gap-3">
+                                <div class="flex items-start gap-3.5 min-w-0">
+                                    <!-- Quiz Icon Badge -->
+                                    <div class="w-11 h-11 rounded-xl bg-purple-50 dark:bg-purple-950/60 border border-purple-100 dark:border-purple-900/60 flex items-center justify-center text-purple-600 dark:text-purple-400 shrink-0 group-hover:scale-105 group-hover:bg-purple-600 group-hover:text-white transition-all duration-200 text-lg select-none">
+                                        🧠
+                                    </div>
+                                    <div class="min-w-0 flex-1">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-[11px] font-mono font-semibold text-slate-400 dark:text-slate-500">#${orderNumber}</span>
+                                            <span class="text-xs font-medium text-purple-600 dark:text-purple-400 truncate">${this.escapeHtml(prettyTitle)}</span>
+                                        </div>
+                                        <!-- Exact ascending JSON filename -->
+                                        <h3 class="font-mono font-semibold text-sm sm:text-base text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors truncate mt-0.5" title="${safeName}">
+                                            ${safeName}
+                                        </h3>
+                                    </div>
+                                </div>
+
+                                <span class="px-2 py-1 rounded-lg text-[11px] font-semibold bg-purple-50 dark:bg-purple-950/80 text-purple-600 dark:text-purple-300 border border-purple-200/60 dark:border-purple-800/60 shrink-0">
+                                    Start Quiz
+                                </span>
+                            </div>
+
+                            <div class="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-slate-800/80 text-xs text-slate-500 dark:text-slate-400">
+                                <span class="font-mono truncate" title="${safePath}">${safePath}</span>
+                                <div class="flex items-center gap-1.5 shrink-0 font-medium text-slate-600 dark:text-slate-300 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                                    <span>${fileSizeText}</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>`;
+                    } else {
+                        // Compact Mobile-Friendly List Item for Quiz
+                        return `
+                        <a href="${safeHref}"
+                           class="group bg-white dark:bg-slate-900 rounded-xl px-4 py-3.5 border border-slate-200 dark:border-slate-800 hover:border-purple-500 dark:hover:border-purple-500 shadow-sm transition-all flex items-center justify-between gap-3 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            
+                            <div class="flex items-center gap-3.5 min-w-0">
+                                <span class="text-xs font-mono font-semibold text-slate-400 dark:text-slate-500 w-6 shrink-0">#${orderNumber}</span>
+                                <div class="w-9 h-9 rounded-lg bg-purple-50 dark:bg-purple-950/60 flex items-center justify-center text-purple-600 dark:text-purple-400 shrink-0 group-hover:bg-purple-600 group-hover:text-white transition-colors text-base select-none">
+                                    🧠
+                                </div>
+                                <div class="min-w-0">
+                                    <h3 class="font-mono font-semibold text-sm sm:text-base text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 truncate">
+                                        ${safeName}
+                                    </h3>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400 truncate">
+                                        ${this.escapeHtml(prettyTitle)} &bull; ${safePath}
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-2.5 shrink-0">
+                                <span class="hidden sm:inline-block text-xs text-slate-400 font-mono">${fileSizeText}</span>
+                                <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-purple-50 dark:bg-purple-950/80 text-purple-600 dark:text-purple-300 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                                    Start Quiz
+                                </span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-400 group-hover:text-purple-500 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </a>`;
+                    }
+                }).join('');
+            },
+
+            /**
+             * Handle clicking on an HTML file card/row
              */
             handleFileClick(event, fileName) {
-                const file = this.state.allFiles.find(f => f.name === fileName);
-                if (!file) return true;
-
-                // If user is in Sandbox Demo Mode or chose SPA Preview Mode, open inside SPA viewer
-                if (file.isDemo || this.state.navMode === 'preview') {
+                if (this.state.navMode === 'preview' || this.state.isDemoMode) {
                     event.preventDefault();
                     this.showViewerForFile(fileName);
                     return false;
                 }
-
-                // Otherwise allow default `<a href="pages/filename.html">` navigation
                 return true;
             },
 
@@ -1171,9 +1444,9 @@
                     listBtn.className = 'p-1.5 rounded-lg bg-white dark:bg-slate-900 text-brand-600 dark:text-brand-400 shadow-sm transition-all';
                     gridBtn.className = 'p-1.5 rounded-lg text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 transition-all';
                 }
-
-                if (this.state.allFiles.length > 0) {
+                if (this.state.allFiles.length > 0 || this.state.allQuizzes.length > 0) {
                     this.renderFiles();
+                    this.renderQuizzes();
                 }
             },
 
@@ -1197,15 +1470,16 @@
 
             setLoadingUI(isLoading) {
                 const loadingState = document.getElementById('loadingState');
-                const filesContainer = document.getElementById('filesContainer');
-                const emptyState = document.getElementById('emptyState');
+                const pagesSection = document.getElementById('pagesSection');
+                const quizSection = document.getElementById('quizSection');
 
                 if (isLoading) {
                     loadingState.classList.remove('hidden');
-                    filesContainer.classList.add('hidden');
-                    emptyState.classList.add('hidden');
+                    pagesSection.classList.add('hidden');
+                    quizSection.classList.add('hidden');
                 } else {
                     loadingState.classList.add('hidden');
+                    // Visibility of pagesSection and quizSection is managed by renderFiles() and renderQuizzes()
                 }
             },
 
@@ -1214,11 +1488,13 @@
                 document.getElementById('emptyStateTitle').textContent = title;
                 document.getElementById('emptyStateDesc').textContent = description;
                 emptyState.classList.remove('hidden');
+                emptyState.classList.add('flex');
             },
 
             loadDemoPages() {
                 this.state.isDemoMode = true;
                 const folder = this.state.config.folder || 'pages';
+                const quizFolder = this.state.config.quizFolder || 'quiz';
                 const demoList = DEMO_HTML_FILES.map(file => ({
                     name: file.name,
                     path: `${folder}/${file.name}`,
@@ -1227,11 +1503,22 @@
                     isDemo: true,
                     demoContent: file.demoContent
                 }));
+                const demoQuizList = DEMO_QUIZ_FILES.map(q => {
+                    const relPath = `${quizFolder}/${q.name}`;
+                    return {
+                        name: q.name,
+                        path: relPath,
+                        url: this.buildQuizLink(relPath),
+                        size: q.size,
+                        isDemo: true
+                    };
+                });
                 this.state.allFiles = this.sortHtmlFilesAscending(demoList);
-                this.state.sourceLabel = `./${folder}/*.html (Preview Mode)`;
+                this.state.allQuizzes = this.sortHtmlFilesAscending(demoQuizList);
+                this.state.sourceLabel = `./${folder}/*.html • ./${quizFolder}/*.json (Preview Mode)`;
                 this.updateHeaderIndicators();
                 this.applySearchFilter();
-                this.showToast('Loaded sample HTML pages in ascending order');
+                this.showToast('Loaded sample HTML pages and JSON quizzes in ascending order');
             },
 
             toggleSettingsModal(show) {
@@ -1250,12 +1537,14 @@
                 const owner = document.getElementById('cfgOwner').value.trim();
                 const repo = document.getElementById('cfgRepo').value.trim();
                 const folder = (document.getElementById('cfgFolder').value.trim() || 'pages').replace(/^\/+|\/+$/g, '');
+                const quizFolder = (document.getElementById('cfgQuizFolder').value.trim() || 'quiz').replace(/^\/+|\/+$/g, '');
                 const branch = document.getElementById('cfgBranch').value.trim();
 
                 this.state.config = {
                     owner,
                     repo,
                     folder,
+                    quizFolder,
                     branch,
                     subPath: ''
                 };
@@ -1282,11 +1571,11 @@
             },
 
             /**
-             * Convert a raw filename like `01-getting-started.html` into `01 Getting Started`
+             * Convert a raw filename like `01-getting-started.html` or `chapter01.json` into `01 Getting Started`
              */
             formatPrettyTitle(filename) {
                 return filename
-                    .replace(/\.html?$/i, '')
+                    .replace(/\.(html?|json)$/i, '')
                     .replace(/[-_]+/g, ' ')
                     .replace(/\b\w/g, char => char.toUpperCase());
             },
