@@ -1,0 +1,1072 @@
+<!doctype html>
+<html lang="en" data-theme="reading">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="An offline, interactive, conversation-based guide to Chapter 4 of Build a Large Language Model (From Scratch).">
+<title>Implementing a GPT Model — Interactive Chapter 4</title>
+<style>
+:root { --font-size:20px; --round:21px; font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; text-rendering:optimizeLegibility; }
+html[data-theme="reading"] {color-scheme:light; --page:#f6f0e4; --panel:#f0e8d8; --panel2:#eae0cd; --paper:#fffcf5; --student:#dcece4; --ink:#302d28; --muted:#716a5e; --line:#d9cebb; --brand:#256b63; --brand-ink:#fff; --accent:#995e20; --code:#292b31; --code-ink:#f0f0ee; --hover:#e9dfce; --shadow:0 15px 45px #4d3f2922; --highlight:#fff0bd; }
+html[data-theme="light"] {color-scheme:light; --page:#f5f7fa; --panel:#eaf0f5; --panel2:#e1eaf1; --paper:#fff; --student:#e1eefc; --ink:#182d3a; --muted:#637583; --line:#d5e0e7; --brand:#215b9b; --brand-ink:#fff; --accent:#835e0d; --code:#1c2838; --code-ink:#f0f6fc; --hover:#e1eaf1; --shadow:0 15px 45px #2442591c; --highlight:#fff1b4; }
+html[data-theme="dark"] {color-scheme:dark; --page:#101720; --panel:#18222e; --panel2:#202e3c; --paper:#222f3d; --student:#214842; --ink:#eaf1f4; --muted:#a7b9c4; --line:#344555; --brand:#86cfc0; --brand-ink:#0a221e; --accent:#edbe77; --code:#0d141e; --code-ink:#e4e9fa; --hover:#293a49; --shadow:0 15px 45px #0005; --highlight:#514626; }
+*{box-sizing:border-box} html,body{height:100%;margin:0} body{background:var(--page);color:var(--ink);overflow:hidden} button,input{font:inherit} button{cursor:pointer} button:disabled{opacity:.4;cursor:default} button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--brand);outline-offset:3px} a{color:var(--brand)} ::selection{background:var(--highlight)}
+.app{display:flex;width:100%;height:100dvh;min-height:420px} .sidebar{width:294px;flex:0 0 294px;background:var(--panel);border-right:1px solid var(--line);display:flex;flex-direction:column;min-height:0;padding:30px 18px 20px;z-index:8}.logo-row{display:flex;align-items:center;gap:11px;padding:0 12px 13px}.logo{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:var(--brand);color:var(--brand-ink);font-size:21px;font-weight:750}.eyebrow{font-size:11px;font-weight:800;letter-spacing:2px;color:var(--accent);text-transform:uppercase}.logo-caption{font-size:16px;font-weight:740;line-height:1.2}.side-title{font-family:Georgia,Cambria,serif;font-weight:720;font-size:29px;letter-spacing:-.8px;line-height:1.18;margin:16px 12px 6px}.side-desc{font-size:13px;line-height:1.5;margin:0 12px 17px;color:var(--muted)}.side-label{font-size:11px;text-transform:uppercase;letter-spacing:1.4px;color:var(--muted);font-weight:800;margin:10px 12px}.section-nav{overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;padding:0 0 12px}.section-item{width:100%;display:flex;gap:11px;align-items:center;min-height:59px;background:transparent;border:1px solid transparent;border-radius:13px;color:var(--muted);text-align:left;padding:9px 10px;margin:3px 0}.section-item:hover{background:var(--hover)}.section-item.active{color:var(--ink);background:var(--paper);border-color:var(--line);box-shadow:0 3px 13px #00000009}.section-item.complete .section-index{color:var(--brand)}.section-index{flex:0 0 26px;display:grid;place-items:center;font-size:12px;color:var(--muted);font-weight:800}.section-copy{min-width:0;flex:1}.section-name{font-size:13px;font-weight:720;line-height:1.32}.section-page{font-size:11px;color:var(--muted);margin-top:2px}.section-trail{height:3px;background:var(--panel2);border-radius:4px;overflow:hidden;margin-top:7px}.section-trail>i{display:block;height:100%;background:var(--brand);transition:width .25s}.side-bottom{border-top:1px solid var(--line);padding:16px 9px 0;margin-top:auto}.small-line{font-size:12px;color:var(--muted);line-height:1.45}.side-actions{display:flex;gap:9px;margin-top:12px}.text-btn{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:10px;padding:10px 12px;font-size:12px;font-weight:740}.text-btn:hover{background:var(--hover)}
+.main{flex:1;min-width:0;display:flex;flex-direction:column}.topbar{background:var(--page);border-bottom:1px solid var(--line);padding:17px clamp(18px,4vw,48px) 14px;display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:93px}.top-title{min-width:0;display:flex;gap:13px;align-items:center}.title-stack{min-width:0}.top-overline{text-transform:uppercase;font-size:11px;letter-spacing:1.4px;color:var(--accent);font-weight:800;margin-bottom:4px}.chapter-label{font-size:19px;font-weight:780;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.subline{font-size:12px;color:var(--muted);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.controls{display:flex;align-items:center;gap:11px;flex-wrap:wrap;justify-content:flex-end}.theme-picker{display:flex;gap:3px;background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:3px}.theme-picker button{border:0;background:transparent;color:var(--muted);border-radius:8px;padding:8px 11px;font-size:12px;font-weight:730}.theme-picker button[aria-pressed="true"]{background:var(--paper);color:var(--ink);box-shadow:0 1px 4px #00000012}.font-picker{display:flex;align-items:center;gap:1px;border:1px solid var(--line);border-radius:10px;overflow:hidden}.icon-btn{height:36px;min-width:36px;border:0;color:var(--ink);background:transparent;display:grid;place-items:center;font-weight:750;font-size:17px}.icon-btn:hover:not(:disabled){background:var(--hover)}.font-label{font-size:12px;font-weight:750;width:38px;text-align:center;font-variant-numeric:tabular-nums}.menu-trigger{display:none}.ghost-button{background:var(--paper);border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:9px 13px;font-size:12px;font-weight:720}.ghost-button:hover{background:var(--hover)}
+.progress-track{height:4px;background:var(--panel2);flex-shrink:0}.progress-fill{height:100%;width:0;background:var(--brand);transition:width .23s ease}.conversation-wrap{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scroll-padding:24px}.conversation{max-width:880px;min-height:100%;margin:0 auto;padding:26px 35px 64px;display:flex;flex-direction:column;gap:17px}.section-divider{display:flex;gap:13px;align-items:center;margin:32px 0 11px;padding-left:5px}.section-divider:first-child{margin-top:13px}.section-divider .section-mark{display:grid;place-items:center;flex:0 0 40px;height:40px;border-radius:13px;background:var(--brand);color:var(--brand-ink);font-size:13px;font-weight:850}.section-heading{font-family:Georgia,Cambria,serif;font-size:23px;font-weight:740;line-height:1.17}.section-details{font-size:12px;color:var(--muted);margin-top:4px}.message{display:flex;gap:10px;align-items:flex-end;max-width:100%}.message.student{justify-content:flex-end}.bubble-wrap{max-width:min(86%,720px);min-width:0}.message.student .bubble-wrap{max-width:min(77%,660px)}.message.attachment .bubble-wrap,.message.quiz-step .bubble-wrap,.message.complete-step .bubble-wrap{max-width:min(96%,790px);width:100%}.who{font-size:11px;letter-spacing:.55px;text-transform:uppercase;color:var(--muted);font-weight:800;margin:0 12px 6px}.student .who{text-align:right}.bubble{background:var(--paper);border:1px solid var(--line);border-radius:19px 19px 19px 6px;padding:14px 18px;font-size:var(--font-size);line-height:1.55;overflow-wrap:anywhere;box-shadow:0 2px 6px #00000005}.student .bubble{background:var(--student);border-radius:19px 19px 6px 19px}.message.current .bubble{box-shadow:0 0 0 2px color-mix(in srgb,var(--brand) 16%,transparent),0 2px 8px #00000008}.avatar{display:grid;place-items:center;width:29px;height:29px;flex:0 0 29px;border-radius:50%;font-size:12px;font-weight:840;border:1px solid var(--line);background:var(--panel2);color:var(--ink);margin-bottom:2px}.student .avatar{background:var(--brand);color:var(--brand-ink);border-color:transparent}.gloss-term{border:0;border-bottom:1px dashed var(--brand);background:transparent;color:inherit;display:inline;padding:0;line-height:inherit;text-decoration:none;text-underline-offset:3px;font-size:inherit;font-weight:inherit;cursor:help}.gloss-term:hover,.gloss-term:focus-visible{background:var(--highlight);border-radius:2px}.bubble p{margin:0}.bubble p+p{margin-top:12px}.attachment-label{display:flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:1.2px;font-size:11px;color:var(--accent);font-weight:820}.paperclip{font-size:18px}.attachment-title{font-weight:770;font-size:18px;margin:8px 0 4px}.attachment-desc{font-size:13px;color:var(--muted);line-height:1.5;margin-bottom:13px}.board{border:1px solid var(--line);background:var(--page);border-radius:14px;padding:16px;overflow-x:auto;max-width:100%;scrollbar-width:thin}.board-inner{min-width:600px}.board-canvas{max-width:100%}.board-footnote{font-size:12px;line-height:1.5;color:var(--muted);margin-top:12px}.attachment-actions{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:12px}.attachment-source{font-size:11px;color:var(--muted);max-width:62%;line-height:1.35}.expand-btn{background:transparent;color:var(--brand);border:1px solid var(--line);border-radius:9px;font-size:12px;font-weight:800;padding:9px 12px}.expand-btn:hover{background:var(--hover)}
+.diagram-row{display:flex;align-items:center;gap:11px;justify-content:center}.diagram-box{flex:1;min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:11px;padding:15px 12px;text-align:center}.diagram-box.good{background:var(--student);border-color:var(--brand)}.diagram-box .box-h{font-size:15px;font-weight:820}.diagram-box .box-p{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.4}.diagram-arrow{color:var(--brand);font-weight:850;font-size:24px;flex:0 0 22px;text-align:center}.diagram-eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:1.3px;color:var(--accent);font-weight:830;margin-bottom:8px}.taxonomy{padding:8px;background:var(--panel2);border:1px solid var(--line);border-radius:15px}.taxonomy .nest{border-radius:11px;padding:13px;border:1px solid var(--line);margin-top:11px;background:var(--panel);font-weight:790;font-size:14px}.taxonomy .nest .nest{margin-left:30px;background:var(--paper)}.taxonomy .nest .nest .nest{background:var(--student)}.taxonomy .nest .nest .nest .nest{background:var(--brand);color:var(--brand-ink)}.micro-note{font-size:12px;color:var(--muted);margin:12px 5px 2px;line-height:1.5}.micro-note strong{color:var(--ink)}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:13px}.comparison-panel{padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}.comparison-panel h4{font-size:14px;margin:0 0 9px}.comparison-panel .example{background:var(--panel);border-radius:8px;padding:11px;font-size:14px;line-height:1.5;min-height:78px}.comparison-panel .small{font-size:12px;color:var(--muted);line-height:1.5;margin:8px 0 0}.term-highlight{padding:2px 5px;background:var(--student);border-radius:4px;font-weight:750}.color-code{color:var(--brand);font-weight:750}.table-wrap{overflow-x:auto}.board-table{border-collapse:collapse;width:100%;font-size:13px;white-space:nowrap}.board-table th{text-align:left;color:var(--muted);font-size:11px;letter-spacing:.2px}.board-table td,.board-table th{padding:10px 8px;border-bottom:1px solid var(--line)}.board-table td:last-child,.board-table th:last-child{text-align:right}.bar-track{width:130px;height:11px;border-radius:15px;background:var(--panel2);overflow:hidden}.bar-fill{height:100%;border-radius:15px;background:var(--brand)}.num{font-variant-numeric:tabular-nums}.metric-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:13px}.metric{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px}.metric b{font-size:21px;display:block;color:var(--brand)}.metric span{font-size:11px;color:var(--muted);line-height:1.4;display:block;margin-top:4px}.tag{display:inline-block;border:1px solid var(--line);background:var(--paper);padding:5px 9px;border-radius:99px;font-size:12px;margin:3px 4px 3px 0;font-weight:680}.tag.active{background:var(--student);border-color:var(--brand)}.code-card{border-radius:11px;background:var(--code);color:var(--code-ink);overflow:hidden}.code-title{display:flex;justify-content:space-between;gap:10px;align-items:center;background:#88888817;border-bottom:1px solid #aaaaaa33;font-size:11px;letter-spacing:.7px;padding:10px 13px}.code-card pre{font:13px/1.7 ui-monospace,SFMono-Regular,Consolas,Monaco,monospace;margin:0;padding:15px;white-space:pre;overflow-x:auto;tab-size:2}.run-code{border:1px solid #ffffff33;color:var(--code-ink);background:#ffffff16;border-radius:6px;padding:4px 8px;font-size:11px}.run-code:hover{background:#ffffff30}.output-console{white-space:pre-wrap;background:var(--panel);border-radius:8px;padding:12px;margin-top:10px;color:var(--ink);font:12px/1.55 ui-monospace,monospace}.example-row{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-bottom:13px}.demo-action{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:9px;padding:8px 10px;font-size:12px;font-weight:720}.demo-action:hover{background:var(--hover)}.demo-action.primary{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}.demo-caption{font-size:12px;color:var(--muted);line-height:1.5}.prob-row{display:grid;grid-template-columns:88px 1fr 47px;gap:9px;align-items:center;font-size:13px;margin:9px 0}.prob-track{height:12px;background:var(--panel2);border-radius:12px;overflow:hidden}.prob-fill{height:100%;background:var(--brand);border-radius:12px}.outcome{padding:10px 12px;background:var(--student);border:1px solid var(--line);border-radius:10px;margin-top:13px;font-size:14px}.tokens{display:flex;flex-wrap:wrap;gap:5px;padding:10px 0}.token{padding:6px 9px;background:var(--paper);border:1px solid var(--line);border-radius:7px;font:13px ui-monospace,monospace}.token.target{border-color:var(--brand);background:var(--student)}.focus-weights{display:grid;grid-template-columns:95px 1fr 44px;gap:8px;align-items:center;margin:9px 0;font-size:13px}.prompt-example{font:13px/1.7 ui-monospace,monospace;background:var(--paper);border:1px solid var(--line);padding:12px;border-radius:8px;white-space:pre-wrap}
+.quiz-kicker{color:var(--accent);font-size:11px;font-weight:830;letter-spacing:1.5px;text-transform:uppercase}.quiz-q{font-size:19px;font-weight:765;line-height:1.42;margin:9px 0 16px}.option-list{display:grid;gap:9px}.quiz-opt{width:100%;display:flex;align-items:flex-start;gap:11px;text-align:left;padding:12px 13px;background:var(--page);border:1px solid var(--line);border-radius:11px;color:var(--ink);font-size:15px;line-height:1.45}.quiz-opt:not(:disabled):hover{border-color:var(--brand);background:var(--hover)}.quiz-opt:disabled{opacity:1;cursor:default}.option-letter{flex:0 0 26px;height:26px;display:grid;place-items:center;border-radius:7px;background:var(--panel2);color:var(--muted);font-size:12px;font-weight:820}.quiz-opt.answer-correct{background:var(--student);border-color:var(--brand)}.quiz-opt.answer-selected-wrong{background:color-mix(in srgb,#b75a4d 8%,var(--paper));border-color:#c48475}.quiz-opt.answer-correct .option-letter{background:var(--brand);color:var(--brand-ink)}.quiz-feedback{margin-top:15px;padding:14px;border-radius:11px;background:var(--panel);border:1px solid var(--line);font-size:14px;line-height:1.55}.feedback-title{font-weight:830;margin-bottom:7px}.feedback-title.correct{color:var(--brand)}.feedback-title.wrong{color:#b56855}.feedback-why{margin-top:9px;padding-top:9px;border-top:1px solid var(--line);color:var(--muted)}.skip-line{font-size:12px;color:var(--muted);margin-top:12px}.end-card{text-align:center}.end-medallion{width:58px;height:58px;display:grid;place-items:center;border-radius:18px;background:var(--student);color:var(--brand);margin:0 auto 11px;font-size:26px}.end-card h3{font:750 25px Georgia,Cambria,serif;margin:7px 0 9px}.end-card p{font-size:15px;line-height:1.6;color:var(--muted)}.end-stats{display:flex;gap:13px;justify-content:center;flex-wrap:wrap;margin:18px 0}.end-stats span{padding:9px 12px;background:var(--page);border:1px solid var(--line);border-radius:10px;font-size:13px}
+.footer{background:var(--page);border-top:1px solid var(--line);padding:16px clamp(18px,4vw,48px) max(16px,env(safe-area-inset-bottom));display:flex;align-items:center;justify-content:space-between;gap:12px}.nav-status{min-width:0;display:flex;flex-direction:column;gap:3px}.nav-status .counter{font-weight:780;font-size:13px;font-variant-numeric:tabular-nums}.nav-status .tip{font-size:11px;color:var(--muted)}.nav-buttons{display:flex;gap:10px}.nav-btn{font-size:14px;border-radius:12px;min-height:46px;padding:12px 22px;font-weight:800;border:1px solid var(--line);background:var(--paper);color:var(--ink)}.nav-btn:hover:not(:disabled){background:var(--hover)}.nav-btn.next{background:var(--brand);color:var(--brand-ink);border-color:var(--brand);min-width:132px}.nav-btn.next:hover:not(:disabled){filter:brightness(1.06)}
+.tooltip{position:fixed;z-index:40;width:min(350px,calc(100vw - 24px));background:var(--paper);border:1px solid var(--brand);border-radius:13px;box-shadow:var(--shadow);padding:13px 15px;pointer-events:auto;font-size:14px;line-height:1.5;color:var(--ink)}.tooltip[hidden]{display:none}.tooltip .tooltip-name{font-weight:850;margin-bottom:4px;font-size:14px}.tooltip .tooltip-description{color:var(--muted);font-size:13px}.tooltip .tooltip-hint{font-size:10px;color:var(--muted);margin-top:8px}.modal{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:18px;box-shadow:var(--shadow);padding:0;width:min(710px,calc(100vw - 22px));max-height:min(85dvh,900px)}.modal::backdrop{background:#10151dc2;backdrop-filter:blur(3px)}.modal.viewer{width:min(1040px,calc(100vw - 20px));max-height:90dvh}.modal-head{padding:20px 23px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:15px}.modal-head h2{font:750 23px Georgia,Cambria,serif;margin:0}.modal-head p{font-size:12px;color:var(--muted);margin:5px 0 0}.close-btn{height:36px;min-width:36px;border:1px solid var(--line);border-radius:10px;background:var(--page);color:var(--ink);font-size:19px;font-weight:650}.close-btn:hover{background:var(--hover)}.modal-body{padding:20px 23px;overflow:auto;max-height:calc(86dvh - 95px)}.viewer .modal-body{max-height:calc(90dvh - 100px)}.viewer .board{border:0;padding:0;background:transparent}.viewer .board-inner{min-width:650px}.gloss-search{width:100%;border:1px solid var(--line);border-radius:10px;padding:13px 14px;background:var(--page);color:var(--ink);font-size:15px;margin-bottom:13px}.gloss-entry{padding:12px 2px;border-bottom:1px solid var(--line)}.gloss-entry b{font-size:14px}.gloss-entry p{font-size:13px;color:var(--muted);line-height:1.55;margin:5px 0 0}.gloss-count{font-size:12px;color:var(--muted);margin-bottom:8px}.scrim{display:none}
+@media (max-width:1120px){.sidebar{width:250px;flex-basis:250px}.side-title{font-size:25px}.topbar{padding-left:23px;padding-right:23px}.top-overline{display:none}.chapter-label{font-size:16px}.controls{gap:7px}.conversation{padding-left:20px;padding-right:20px}}
+@media (max-width:810px){.sidebar{position:fixed;left:0;top:0;bottom:0;width:min(312px,85vw);transform:translateX(-103%);transition:transform .2s ease;box-shadow:var(--shadow)}.sidebar.open{transform:translateX(0)}.scrim.open{display:block;position:fixed;inset:0;background:#0007;z-index:7}.menu-trigger{display:grid;flex:0 0 37px;height:37px;border-radius:10px;border:1px solid var(--line);background:var(--paper);color:var(--ink);place-items:center;font-size:21px}.topbar{min-height:69px;padding:12px 16px}.top-title{gap:8px}.subline{display:none}.chapter-label{font-size:15px}.ghost-button{padding:9px 10px}.theme-picker button{padding:7px 8px}.font-picker .icon-btn{min-width:31px;height:33px}.font-label{width:30px}.conversation{padding:18px 16px 55px;gap:15px}.footer{padding:11px 15px max(11px,env(safe-area-inset-bottom))}.section-divider{margin-top:22px}}
+@media (max-width:530px){.topbar{gap:5px;padding:9px 10px;min-height:62px}.menu-trigger{width:34px;height:34px;flex-basis:34px}.chapter-label{font-size:13px;max-width:104px}.controls{gap:5px;flex-wrap:nowrap}.theme-picker{gap:0;padding:2px}.theme-picker button{font-size:10px;padding:7px 6px}.font-picker .icon-btn{min-width:26px;height:30px;font-size:14px}.font-label{font-size:10px;width:21px}.ghost-button{font-size:0;padding:6px 7px;height:34px}.ghost-button::after{content:"⌕";font-size:18px}.top-overline{display:none}.conversation{padding:10px 11px 45px;gap:15px}.section-heading{font-size:20px}.section-divider .section-mark{flex-basis:33px;height:33px;font-size:11px}.bubble-wrap{max-width:calc(100% - 37px)}.message.student .bubble-wrap{max-width:calc(89% - 24px)}.message.attachment .bubble-wrap,.message.quiz-step .bubble-wrap,.message.complete-step .bubble-wrap{max-width:calc(100% - 34px)}.message{gap:5px}.bubble{padding:11px 13px;border-radius:17px 17px 17px 6px}.student .bubble{border-radius:17px 17px 6px 17px}.avatar{width:26px;height:26px;flex-basis:26px;font-size:11px}.who{font-size:10px}.board{padding:11px}.attachment-title{font-size:17px}.quiz-opt{font-size:14px}.quiz-q{font-size:18px}.nav-status .tip{display:none}.nav-status .counter{font-size:11px}.nav-btn{padding:10px 16px;min-height:44px}.nav-btn.next{min-width:102px}.footer{gap:3px}.nav-buttons{gap:6px}.modal-head{padding:16px}.modal-body{padding:14px}.tooltip{font-size:13px}.side-title{font-size:26px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+
+/* Chapter 2: responsive whiteboards and touch-friendly demonstrations. */
+.nav-btn.next:hover:not(:disabled){background:var(--brand);color:var(--brand-ink);filter:brightness(1.08)}
+.board-inner{min-width:0}.board{overflow-x:auto}
+.demo-label{font-size:13px;font-weight:800;display:block;margin:12px 0 6px}
+.demo-input{width:100%;max-width:100%;border-radius:11px;background:var(--paper);color:var(--ink);border:1px solid var(--line);padding:12px 13px;font-size:16px;line-height:1.5}
+.demo-input:focus-visible{outline:2px solid var(--brand)}
+.matrix{font-variant-numeric:tabular-nums}.matrix .picked td{background:var(--student)}
+.matrix td,.matrix th{text-align:left!important}.matrix td{padding:6px 9px}
+.matrix .demo-action{padding:5px 8px;min-height:30px}
+.plot{position:relative;border:1px solid var(--line);background:var(--paper);border-radius:12px;height:245px;overflow:hidden}
+.plot-axis{position:absolute;background:var(--line)}.plot-x{height:1px;left:7%;right:7%;top:89%}.plot-y{width:1px;top:7%;bottom:11%;left:8%}
+.plot-point{position:absolute;display:flex;gap:4px;align-items:center;transform:translate(-15%,-50%);font-size:12px;font-weight:750}
+.plot-point i{width:9px;height:9px;border-radius:50%;background:var(--brand);display:block}.plot-point.place i{background:#b37c36}.plot-point.adj i{background:#8e75b9}
+.bpe-line{display:flex;align-items:center;gap:12px;padding:6px 0;border-bottom:1px dashed var(--line)}.bpe-line>.demo-caption{flex:0 0 67px}
+.position-sum{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:9px;margin:12px 0}
+.vector-number{font-size:13px!important;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;line-height:1.5;overflow-wrap:anywhere}
+.token-ids{display:flex;gap:7px;flex-wrap:wrap;margin:8px 0}.token-ids span{font:700 13px ui-monospace,Consolas,monospace;background:var(--paper);border:1px solid var(--line);border-radius:7px;padding:6px 9px}
+.tokens{flex-wrap:wrap}.token.is-input{background:var(--student);border-color:var(--brand)}
+.python-code{max-height:440px;overflow:auto;tab-size:4;white-space:pre;font-size:12px;line-height:1.56}.code-title{gap:12px}.code-title span{min-width:0}
+@media(max-width:610px){
+  .board .diagram-row{flex-wrap:wrap;gap:6px}.board .diagram-row>.diagram-box{min-width:45%}.board .diagram-row>.diagram-arrow{flex:0 0 auto}
+  .board .two-col{grid-template-columns:1fr}.board .diagram-box .box-h{font-size:14px}
+  .position-sum{grid-template-columns:1fr}.position-sum .diagram-arrow{transform:rotate(90deg);font-size:18px}
+  .board .example-row{flex-wrap:wrap}.board .demo-action{white-space:normal}.bpe-line{gap:6px}
+  .plot{height:225px}.plot-point{font-size:10px}.board-table{font-size:11px}
+  .python-code{font-size:11px}
+}
+/* Chapter 3: high-contrast math boards, responsive attention matrices, and touch targets. */
+.nav-btn.next:hover:not(:disabled){background:var(--brand);color:var(--brand-ink);filter:brightness(1.07)}
+.board-inner{min-width:0}.board{overflow-x:auto}.board h4{font-size:14px;margin:0 0 8px}
+.formula{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 14px;text-align:center;font:750 17px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:normal;overflow-wrap:anywhere;margin:10px 0}
+.formula small{font-size:11px;display:block;color:var(--muted);font-family:inherit;font-weight:450}
+.hints{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:10px 0}.hint-pill{font-size:11px;padding:5px 8px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--muted)}
+.step-badge{background:var(--brand);color:var(--brand-ink);font-size:11px;border-radius:99px;padding:5px 9px;font-weight:800;display:inline-block}
+.attn-table{border-collapse:separate;border-spacing:3px;width:100%;font:600 12px ui-monospace,monospace;table-layout:fixed;margin-top:9px;min-width:330px}
+.attn-table th{font:800 10px/1.25 ui-sans-serif,system-ui,sans-serif;color:var(--muted);text-align:center;padding:7px 1px;overflow:hidden;text-overflow:ellipsis}
+.attn-table .row-button{font-size:10px;max-width:50px;min-width:0;padding:7px 3px;width:100%;white-space:normal;border:1px solid var(--line);border-radius:7px;background:var(--paper);color:var(--ink);font-weight:800}
+.attn-table .row-button.is-active{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+.attn-cell{padding:8px 1px;border:1px solid var(--line);text-align:center;background:var(--paper);border-radius:6px;transition:background .15s;white-space:nowrap}
+.attn-cell.selected{border-color:var(--brand);border-width:2px;padding:7px 0}.attn-cell.forbidden{background:var(--panel2);color:var(--muted)}
+.board .pick-btn{font-size:12px;padding:8px 10px;margin:3px 4px 3px 0;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:9px;font-weight:750}.board .pick-btn[aria-pressed="true"]{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+.board-select{background:var(--paper);color:var(--ink);border:1px solid var(--line);padding:9px 11px;border-radius:9px;font:700 13px ui-sans-serif,system-ui,sans-serif;max-width:150px}
+.math-row{display:flex;align-items:stretch;gap:8px;margin:8px 0;flex-wrap:wrap}.math-box{min-width:118px;flex:1;padding:11px;background:var(--paper);border:1px solid var(--line);border-radius:11px;text-align:center}.math-box strong{display:block;font:760 14px/1.5 ui-monospace,Consolas,monospace}.math-box span{color:var(--muted);font-size:11px;display:block;margin-top:5px}
+.math-arrow{display:grid;place-items:center;color:var(--brand);font-size:20px;font-weight:750}
+.shape-grid{display:flex;gap:9px;flex-wrap:wrap;align-items:stretch}.shape-cell{background:var(--paper);border:1px solid var(--line);padding:12px;border-radius:10px;flex:1;min-width:116px}.shape-cell strong{font:800 13px ui-monospace,Consolas,monospace;display:block}.shape-cell span{font-size:11px;color:var(--muted);line-height:1.5;display:block;margin-top:6px}
+.demo-kicker{font-size:11px;color:var(--accent);font-weight:840;letter-spacing:.9px;text-transform:uppercase;margin:10px 0 8px}
+.prob-row{grid-template-columns:74px 1fr 52px}.prob-fill{transition:width .16s}
+.python-code{max-height:520px;overflow:auto;white-space:pre;tab-size:4;font-size:12px;line-height:1.56}.code-title span{min-width:0}.code-card pre{font-family:ui-monospace,SFMono-Regular,Consolas,Monaco,monospace}
+.board .two-col{grid-template-columns:repeat(2,minmax(0,1fr))}.break-list{font-size:13px;line-height:1.6;color:var(--muted);margin:10px 0}
+.board-caption{font-size:12px;color:var(--muted);line-height:1.5;margin-top:12px}.board-note{border-left:3px solid var(--brand);background:var(--panel);border-radius:7px;padding:9px 12px;font-size:13px;line-height:1.5;margin-top:11px}
+@media(max-width:610px){.board .two-col{grid-template-columns:1fr}.attn-table{font-size:10px;min-width:290px}.attn-table th{font-size:9px}.attn-cell{padding:8px 0}.attn-cell.selected{padding:7px 0}.board{padding:9px}.math-box{min-width:106px}.formula{font-size:14px}.math-arrow{display:none}.python-code{font-size:11px}}
+@media(max-width:530px){.topbar{min-height:51px;padding:7px 9px}.title-stack{display:none}.top-title{flex:none}.controls{flex:1;justify-content:flex-end}}
+
+/* Chapter 4 diagrams and interactive plots. */
+.token-strip{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 13px;padding:10px;background:var(--paper);border:1px solid var(--line);border-radius:10px}
+.token-ids-item{padding:7px 9px;border-radius:8px;border:1px solid var(--line);background:var(--panel);font:720 13px ui-monospace,Consolas,monospace}
+.token-ids-item.em{border-color:var(--brand);background:var(--student)}
+.plot-svg-wrap{background:var(--paper);border:1px solid var(--line);border-radius:11px;overflow:hidden}
+.example-row{margin:8px 0;display:flex;flex-wrap:wrap;align-items:center;gap:3px;color:var(--muted);font-size:13px}
+.prob-row{display:grid;align-items:center;gap:8px;margin:7px 0}
+.prob-row .num{font-variant-numeric:tabular-nums;text-align:right;font-size:12px}
+.board-table th{text-align:left;color:var(--muted);font-size:12px;padding:9px 7px;border-bottom:2px solid var(--line)}
+@media(max-width:530px){.shape-cell{min-width:104px}.board .pick-btn{padding:7px 8px;font-size:11px}.prob-row{grid-template-columns:60px 1fr 60px !important}.prob-row>span{font-size:11px}}
+</style>
+</head>
+<body>
+<div id="scrim" class="scrim"></div>
+<div class="app">
+  <aside class="sidebar" id="sidebar" aria-label="Chapter sections">
+    <div class="logo-row"><div class="logo" aria-hidden="true">∑</div><div><div class="eyebrow">A learning conversation</div><div class="logo-caption">Field Notes</div></div></div>
+    <div class="side-title">Inside the<br>language model</div>
+    <p class="side-desc">Chapter 04 · Implementing a GPT Model</p>
+    <div class="side-label">Your journey</div>
+    <nav id="sectionNav" class="section-nav" aria-label="Jump to a section"></nav>
+    <div class="side-bottom">
+      <div class="small-line" id="sideStatus">Your place is saved on this device.</div>
+      <div class="side-actions"><button class="text-btn" id="sidebarGlossary">Glossary ↗</button><button class="text-btn" id="resetBtn">Start over</button></div>
+    </div>
+  </aside>
+  <main class="main" id="main">
+    <header class="topbar">
+      <div class="top-title"><button class="menu-trigger" id="menuBtn" aria-label="Open section menu" aria-expanded="false">☰</button><div class="title-stack"><div class="top-overline">Build a Large Language Model · Chapter 4</div><div class="chapter-label" id="activeSectionTitle">The beginning</div><div class="subline" id="activeSectionSubtitle">A question-led introduction · Original teaching dialogue</div></div></div>
+      <div class="controls">
+        <div class="theme-picker" role="group" aria-label="Color theme"><button data-theme-choice="reading" aria-pressed="true">Reading</button><button data-theme-choice="light" aria-pressed="false">Light</button><button data-theme-choice="dark" aria-pressed="false">Dark</button></div>
+        <div class="font-picker" role="group" aria-label="Text size"><button class="icon-btn" id="smallerText" aria-label="Decrease text size">A−</button><span class="font-label" id="fontValue">20</span><button class="icon-btn" id="largerText" aria-label="Increase text size">A+</button></div>
+        <button class="ghost-button" id="glossaryBtn" aria-label="Open searchable glossary">Glossary</button>
+      </div>
+    </header>
+    <div class="progress-track" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressTrack"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="conversation-wrap" id="conversationWrap" tabindex="-1"><div class="conversation" id="conversation" aria-label="Learning conversation"></div></div>
+    <footer class="footer"><div class="nav-status"><div class="counter" id="positionLabel">Message 1</div><div class="tip" id="scoreLabel">Space / → to continue · ← to go back</div></div><div class="nav-buttons"><button class="nav-btn" id="backBtn">← Back</button><button class="nav-btn next" id="nextBtn">Next →</button></div></footer>
+  </main>
+</div>
+<div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+<dialog class="modal" id="glossaryModal" aria-labelledby="glossaryTitle"><div class="modal-head"><div><h2 id="glossaryTitle">Glossary</h2><p>Select an underlined term in the conversation, or search here.</p></div><button class="close-btn" id="closeGlossary" aria-label="Close glossary">×</button></div><div class="modal-body"><input class="gloss-search" id="glossarySearch" type="search" placeholder="Search for a concept…" aria-label="Search the glossary"><div id="glossaryEntries"></div></div></dialog>
+<dialog class="modal viewer" id="viewerModal" aria-labelledby="viewerTitle"><div class="modal-head"><div><h2 id="viewerTitle">Whiteboard</h2><p id="viewerSubtitle"></p></div><button class="close-btn" id="closeViewer" aria-label="Close whiteboard">×</button></div><div class="modal-body" id="viewerBody"></div></dialog>
+<script>
+'use strict';
+// Original Chapter 4 teaching dialogue; Chapter 3 is used only for the attention code.
+const T=text=>({type:'message',who:'teacher',text});
+const S=text=>({type:'message',who:'student',text});
+const A=(kind,title,description,source)=>({type:'attachment',who:'teacher',kind,title,description,source});
+const Q=(question,options,correct,explanation)=>({type:'quiz',who:'teacher',question,options:options.map(([text,why])=>({text,why})),correct,explanation});
+const sections=[
+ {id:'blueprint',title:'The GPT blueprint',pages:'pp. 110–113 · §4.1',items:[
+  T(`Chapter 3 gave us multi-head attention. Is that enough to build a text-generating GPT model?`),
+  S(`I think we still need token embeddings and a layer that chooses the next token.`),
+  T(`Correct. We also need layer normalization, a feed-forward network, residual connections, and repeated transformer blocks.`),
+  A('gpt-map','A map of the complete GPT model','See where Chapter 2 and Chapter 3 fit into the new model.','Figure 4.2 · p. 111; original diagram'),
+  S(`It looks like we repeat the same block many times. Is that why the model is large?`),
+  T(`Yes, that’s right. Repeating blocks adds learned parameters and lets the network transform the token representations in stages.`),
+  T(`The chapter builds a model like GPT-2 small. It uses a 50,257-token vocabulary, a context length of 1,024 tokens, and 768 features per token.`),
+  T(`It has 12 attention heads in each block and 12 transformer blocks. The chapter calls its configuration GPT_CONFIG_124M.`),
+  A('config-board','GPT-2 small: configuration and meanings','Connect each configuration key to the part of the model it controls.','§4.1 · pp. 112–113; code-based display'),
+  S(`Does 12 heads mean 12 transformer blocks?`),
+  T(`No. Heads are parallel attention parts inside one block. Blocks are layers stacked in sequence. Here both counts happen to equal 12.`),
+  S(`What is qkv_bias=False?`),
+  T(`It turns off optional bias vectors in the query, key, and value linear projections. This chapter uses that setting. The weight matrices still learn.`),
+  A('code-config','Python: a small GPT configuration','The complete settings used throughout Chapter 4, with short comments.','§4.1 · p. 112'),
+  Q(`A GPT has 12 transformer blocks and 12 heads per block. Which interpretation is correct?`,[
+   [`It has one block that contains 144 heads.`,`The chapter specifies 12 separate blocks, each with 12 heads.`],
+   [`It has 12 blocks, each with 12 attention heads.`,`The head count applies within each block. The layer count tells us how many blocks to stack.`],
+   [`It has 12 blocks, each with one attention head.`,`The n_heads setting is 12, not 1.`],
+   [`It has 12 token positions and 12 attention heads.`,`Context length is 1,024; n_layers is 12.`]
+  ],1,`n_heads controls parallel attention paths inside a block. n_layers controls the number of repeated blocks.`),
+  Q(`What changes when we increase n_layers from 12 to 24 but keep emb_dim and n_heads fixed?`,[
+   [`Each token vector doubles its feature count.`,`Token feature width remains emb_dim.`],
+   [`Each attention head receives twice as many features.`,`Per-head width remains emb_dim / n_heads.`],
+   [`The vocabulary doubles because more blocks are present.`,`Vocabulary size is controlled by vocab_size.`],
+   [`The model applies twice as many transformer blocks.`,`The stack gains depth, but each block keeps the same configured width and number of heads.`]
+  ],3,`n_layers changes depth. It does not directly change feature width, vocabulary size, or heads per block.`)
+ ]},
+ {id:'backbone',title:'Follow token IDs through GPT',pages:'pp. 113–118 · §4.1',items:[
+  T(`Suppose our batch has two sentences. Each sentence contains four tokens. What shape do the token IDs have?`),
+  S(`Two rows and four token IDs per row. So (2,4).`),
+  T(`Absolutely. The model receives integers, not raw text. The token embedding layer converts each integer to a 768-dimensional vector.`),
+  S(`Then positional embeddings also give a vector for each token position?`),
+  T(`Yes. Each position gets a learned position vector with the same width. GPT adds its token and position vectors before the transformer blocks.`),
+  A('tensor-flow','Live shape explorer: IDs to logits','Change batch size and sequence length. Follow the exact tensor dimensions.','Figure 4.4 · p. 116; interactive shape model'),
+  S(`Why does the last layer produce 50,257 numbers instead of 768?`),
+  T(`Those numbers are logits: one unnormalized score for every token in the vocabulary. For two sequences of four tokens, the output shape is (2,4,50257).`),
+  T(`The chapter first uses DummyGPTModel. Its transformer blocks and layer normalization do nothing yet. That makes it easier to see the architecture before implementing each part.`),
+  A('code-dummy','Python: the placeholder GPT backbone','Read the input-to-output flow without the internal transformer calculations.','Listing 4.1 · pp. 114–115; commented code'),
+  S(`Does DummyGPTModel already know language because it returns logits?`),
+  T(`No. It returns numbers, but the weights are random. Structure is not knowledge. Training will adjust the weights in Chapter 5.`),
+  S(`Are all logits used to generate the next token?`),
+  T(`The forward pass returns logits at every input position. For simple next-token generation, we use only the logits at the last position.`),
+  Q(`An input batch has shape (3,7), emb_dim=768, and vocab_size=50257. What shape does GPTModel return?`,[
+   [`(3, 7, 768), because the transformer blocks keep width.`,`That is the hidden representation before the output head.`],
+   [`(3, 50257), because only the final token is predicted.`,`The model forward pass returns logits for all seven positions.`],
+   [`(3, 7, 50257), one vocabulary score vector per position.`,`The output head converts each token representation into vocabulary logits.`],
+   [`(7, 3, 50257), with the sequence axis first.`,`The chapter keeps batch size as the first dimension.`]
+  ],2,`The last linear head maps hidden width 768 to vocabulary width 50,257 at each of the 3×7 token positions.`),
+  Q(`The model has token embeddings of shape (2,4,768). Which positional embedding shape can be added to them by broadcasting?`,[
+   [`(4,768), one position vector for each of four token positions.`,`PyTorch broadcasts this position table across both batch items.`],
+   [`(2,4), one number for every token ID.`,`This lacks the 768-feature axis; dimensions are not aligned for the intended addition.`],
+   [`(768,4), a feature-first matrix.`,`The last two dimensions do not match (4,768).`],
+   [`(2,768,4), with feature and position axes reversed.`,`The axes would not match the token embedding tensor.`]
+  ],0,`(B,T,D) + (T,D) → (B,T,D). The same position vector is added to every sequence in the batch.`)
+ ]},
+ {id:'layernorm',title:'Keep activations under control',pages:'pp. 118–125 · §4.2',items:[
+  T(`Why might a deep network have trouble learning when layer outputs change scale from one layer to another?`),
+  S(`Large or small values might make weight updates unstable.`),
+  T(`Correct. The chapter introduces layer normalization. It centers and rescales values along the feature axis of each token.`),
+  T(`For one token vector x, we compute its mean μ and variance σ². Then we normalize each feature with (x−μ)/√(σ²+ε).`),
+  A('norm-demo','Interactive layer normalization','Switch the input vector and inspect its mean, variance, and normalized features.','Figures 4.5–4.6 · pp. 119–123; chapter-based numerical demo'),
+  S(`Is that the same as normalizing the entire batch to one mean?`),
+  T(`No. Layer normalization computes its statistics for each token’s feature vector. Batch normalization uses statistics across examples instead.`),
+  S(`Why does the code use dim=-1?`),
+  T(`That means the last axis. For tensors with shape (batch, tokens, embedding), the last axis contains the embedding features.`),
+  T(`The real LayerNorm class uses unbiased=False for variance. It divides the squared-deviation sum by n, not n−1. It also adds ε=0.00001 to avoid division by zero.`),
+  S(`Is the normalized output always mean zero and variance one?`),
+  T(`Before the learned scale and shift, the ideal normalized values have zero mean and near-unit variance. The ε term changes this slightly. After training changes scale and shift, the final values need not have exactly those statistics.`),
+  A('norm-formula','Why ε, scale, and shift matter','See the two learned vectors γ and β and the numerical safety term.','Listing 4.2 · p. 123; explanatory diagram'),
+  A('code-layernorm','Python: LayerNorm from scratch','The chapter’s core calculation, with explicit tensor-shape comments.','Listing 4.2 · p. 123; commented code'),
+  Q(`A tensor x has shape (2,4,768). What does x.mean(dim=-1, keepdim=True) return?`,[
+   [`(1,4,768), since the batch axis is averaged.`,`dim=-1 refers to the final 768-feature dimension.`],
+   [`(2,4,1), a separate feature mean for each token.`,`The feature axis shrinks to length one, while the batch and token axes remain.`],
+   [`(2,1,768), with tokens averaged instead of features.`,`This would mean dim=1, not dim=-1.`],
+   [`(2,4), with the last axis removed despite keepdim=True.`,`keepdim=True preserves the reduced axis as size one.`]
+  ],1,`The mean has one value for each (batch,token) pair. keepdim=True keeps the final feature axis for broadcasting.`),
+  Q(`Why does LayerNorm set unbiased=False for its variance calculation?`,[
+   [`To divide by n and match this GPT-2-compatible implementation.`,`The chapter chooses population variance for compatibility with the original GPT-2 setup.`],
+   [`To divide by n−1 and correct small-sample bias.`,`unbiased=False removes, rather than applies, Bessel’s correction.`],
+   [`To skip variance and normalize only the mean.`,`Variance remains essential to normalization.`],
+   [`To stop gradients from passing through normalization.`,`The variance flag does not disable autograd.`]
+  ],0,`unbiased=False uses the n denominator. The chapter says this choice helps match GPT-2 layer normalization.`)
+ ]},
+ {id:'gelu',title:'GELU: a smooth activation',pages:'pp. 125–127 · §4.3',items:[
+  T(`A linear layer can mix features. Why add a non-linear activation function after it?`),
+  S(`Otherwise many linear layers would still act like one linear transformation.`),
+  T(`Yes, that’s right. A non-linearity lets the network represent more complex functions.`),
+  S(`Chapter 4 compares ReLU and GELU. What is the difference?`),
+  T(`ReLU sets every negative input to zero. GELU changes values smoothly. Its negative inputs can produce small negative outputs.`),
+  A('gelu-demo','Interactive GELU versus ReLU plot','Select an x value and compare the two functions. The curve follows the chapter’s GELU approximation.','Figure 4.8 · pp. 125–127; interactive visualization'),
+  T(`The exact GELU formula is x·Φ(x), where Φ is the standard normal cumulative distribution function. GPT-2 uses a fast tanh approximation.`),
+  S(`Is GELU just a smooth version of max(0,x)?`),
+  T(`That is a useful picture, but it is not exactly ReLU. GELU uses a probability-based gate. It can be slightly negative, and its response is smooth.`),
+  A('gelu-equation','The GELU approximation','Follow the tanh formula implemented in the chapter.','§4.3 · p. 125; equation from the chapter'),
+  A('code-gelu','Python: implement GELU','A short nn.Module implementing the chapter’s tanh approximation.','Listing 4.3 · p. 126; commented code'),
+  S(`Why does it matter that GELU has a gradient for some negative inputs?`),
+  T(`It gives the optimizer a way to adjust weights in places where ReLU would have zero derivative. That can help in some deep networks.`),
+  Q(`For x = −1, which behavior matches the two activations?`,[
+   [`ReLU gives −1; GELU gives 0.`,`ReLU clips negative inputs to zero, not to the original negative value.`],
+   [`Both activations give exactly 0.`,`The chapter’s GELU approximation has a small negative output at x=−1.`],
+   [`ReLU gives 0; GELU gives a small negative value.`,`ReLU clips to zero, while GELU transitions smoothly through negative inputs.`],
+   [`Both activations return −1 because neither clips.`,`ReLU never returns negative output.`]
+  ],2,`ReLU(−1)=0. GELU(−1) is approximately −0.159 using the formula in this chapter.`),
+  Q(`Which statement about the GELU function used here is accurate?`,[
+   [`It is a trainable embedding table for token IDs.`,`GELU is an activation function, not a lookup table.`],
+   [`It is smooth and can pass small negative outputs.`,`Unlike ReLU, GELU changes smoothly and does not simply remove all negative values.`],
+   [`It outputs probabilities that always sum to one.`,`That describes softmax across a vector, not GELU element by element.`],
+   [`It changes each token vector from 768 to 3,072 features.`,`The preceding linear layer changes the width; GELU preserves it.`]
+  ],1,`GELU acts on each scalar independently. Its input and output tensor shapes stay the same.`)
+ ]},
+ {id:'ffn',title:'Expand and compress with a feed-forward network',pages:'pp. 127–130 · §4.3',items:[
+  T(`Attention lets tokens exchange information. What can the model do to transform each token’s own features afterward?`),
+  S(`Use another neural network on each token separately.`),
+  T(`Correct. GPT uses a position-wise feed-forward network (FFN). The same FFN weights process each token position independently.`),
+  T(`For the 768-feature GPT-2 small setting, its first linear layer expands 768 to 3,072 features. GELU adds non-linearity. A second linear layer returns 3,072 to 768.`),
+  A('ffn-demo','Explore the 4× expansion','Change embedding width and inspect tensor shapes and parameter counts.','Figures 4.9–4.10 · pp. 128–129; interactive calculation'),
+  S(`Why expand the feature count only to shrink it right away?`),
+  T(`The wider intermediate space lets the network create many feature combinations. GELU then applies a non-linear change before the projection back to the original width.`),
+  A('code-ffn','Python: FeedForward','The two nn.Linear layers and GELU, with each shape written in the comments.','Listing 4.4 · p. 127; commented code'),
+  S(`Does every token use a different FFN?`),
+  T(`No. Within one transformer block, all token positions share the same FFN parameters. Different transformer blocks have their own parameters.`),
+  S(`If my input tensor is (2,3,768), is the FFN output (2,3,3072)?`),
+  T(`Not the final output. That is the hidden intermediate shape. The second linear layer restores the output to (2,3,768).`),
+  Q(`What is the exact sequence of feature widths for a Chapter 4 FFN with emb_dim=768?`,[
+   [`768 → 768 → 3072, with expansion at the end.`,`The second linear layer contracts the vector back to 768.`],
+   [`768 → 3072 → 768, with GELU between linear layers.`,`The feed-forward hidden width is four times the embedding width.`],
+   [`768 → 384 → 768, with a narrower bottleneck.`,`The chapter uses a 4× expansion, not a 2× reduction.`],
+   [`768 → 50257 → 768, through vocabulary logits.`,`Vocabulary projection belongs to the GPT output head, not the FFN.`]
+  ],1,`First nn.Linear(768,3072), then GELU, then nn.Linear(3072,768).`),
+  Q(`A batch has 2 sequences, each with 5 tokens, and emb_dim=256. What is the FFN hidden tensor shape?`,[
+   [`(2, 1024, 5), because the token and feature axes swap.`,`The FFN does not reorder axes.`],
+   [`(2, 5, 256), because the width never changes internally.`,`That is the FFN input and final output, not the hidden layer.`],
+   [`(5, 2, 1024), because tokens are now the first axis.`,`The batch and token axes keep their original order.`],
+   [`(2, 5, 1024), because only the feature width expands.`,`4×256=1024. Batch size and token count remain 2 and 5.`]
+  ],3,`The FFN changes the last axis only, so the hidden tensor is (B,T,4D).`)
+ ]},
+ {id:'shortcuts',title:'Residual connections carry information',pages:'pp. 130–134 · §4.4',items:[
+  T(`What happens to gradients when we train a very deep network?`),
+  S(`They might become very small by the time they reach the early layers.`),
+  T(`Yes. The chapter calls this the vanishing-gradient problem. Very small gradients can make early weights hard to train.`),
+  T(`A residual, or shortcut, connection adds a layer’s input back to its output: y = x + F(x). This creates a shorter path for both information and gradients.`),
+  A('residual-demo','With and without shortcuts','Compare the layer-gradient magnitudes reported in the book’s example.','Figure 4.12 · pp. 131–134; numerical comparison'),
+  S(`Does a shortcut mean the network ignores F(x)?`),
+  T(`No. The output still contains F(x). The shortcut adds x instead of replacing F(x). The network can learn a useful change to the input.`),
+  S(`Why must x and F(x) have the same shape?`),
+  T(`Because the code adds them element by element. If their dimensions differ, we need a suitable projection or we must skip that addition.`),
+  A('code-residual','Python: inspect gradient flow','A five-layer example with optional residual connections and gradient measurements.','Listings 4.5 and following example · pp. 132–134; commented code'),
+  T(`The book’s experiment shows a first-layer mean absolute gradient near 0.000202 without shortcuts. With shortcuts, it is about 0.222 for the same initialization seed.`),
+  S(`Does that prove residual connections always increase gradients?`),
+  T(`No. It is an illustrative result, not a universal guarantee. The important idea is that identity paths often make gradients propagate more reliably.`),
+  Q(`A layer receives shape (2,4,768) and returns shape (2,4,768). What makes y=x+F(x) valid?`,[
+   [`Both terms have the same shape for elementwise addition.`,`The residual path can add the input and transformed output feature by feature.`],
+   [`Each output feature is larger than its input feature.`,`Elementwise addition can make values increase or decrease; matching shapes is what matters.`],
+   [`Both terms must come from the same linear layer.`,`The identity x and transformation F(x) need not originate in the same layer.`],
+   [`The model must use an exactly zero dropout rate.`,`Dropout can be used on F(x) before the addition.`]
+  ],0,`Residual addition requires matching shapes (or compatible broadcasting in general). The GPT block deliberately keeps the same shape.`),
+  Q(`Which statement best explains why residual connections help gradient flow?`,[
+   [`They remove the need to calculate loss during training.`,`The model still needs a loss and backpropagation.`],
+   [`They replace every trainable matrix with the identity matrix.`,`Trainable transformations remain present inside F(x).`],
+   [`They add a direct path that bypasses a transformation.`,`The derivative includes a contribution from the identity path, which can help gradients propagate.`],
+   [`They prevent all gradients from ever becoming large.`,`Shortcuts help train deep networks, but do not guarantee a bound on all gradients.`]
+  ],2,`For y=x+F(x), the derivative includes an identity contribution as well as the derivative of F(x).`)
+ ]},
+ {id:'block',title:'Assemble one transformer block',pages:'pp. 135–138 · §4.5',items:[
+  T(`We have multi-head attention, normalization, GELU, FFNs, and shortcuts. How do they fit inside one transformer block?`),
+  S(`Maybe attention first, then the feed-forward network, with shortcuts around both.`),
+  T(`Correct. In this chapter, each branch begins with layer normalization. Then it applies a transformation, dropout, and a shortcut addition.`),
+  A('block-demo','Walk through one transformer block','Select a stage and see the attention and FFN residual paths.','Figure 4.13 · pp. 135–137; interactive process diagram'),
+  T(`The first branch computes x₁ = x + Dropout(Attention(LayerNorm(x))). Then the second computes y = x₁ + Dropout(FFN(LayerNorm(x₁))).`),
+  S(`Why normalize before attention rather than after the shortcut?`),
+  T(`This is a pre-layer-normalization design. The book contrasts it with older post-normalization transformers. Pre-normalization often makes deep-network training easier.`),
+  S(`Do attention and the FFN both mix information across different token positions?`),
+  T(`Not in the same way. Causal attention combines information from allowed earlier positions. The FFN changes features at each position without mixing token positions.`),
+  A('code-block','Python: TransformerBlock','Two LayerNorm modules, masked multi-head attention, an FFN, and two skip paths.','Listing 4.6 · pp. 136–137; commented code'),
+  S(`If attention changes the meaning of a vector, why does the block preserve its shape?`),
+  T(`The model changes vector values, not the number of tokens or embedding features. This lets many blocks stack without extra shape conversions.`),
+  T(`The chapter verifies this with a (2,4,768) input and a (2,4,768) output from one block.`),
+  Q(`Which sequence matches the first branch in Chapter 4’s TransformerBlock?`,[
+   [`Attention → add shortcut → LayerNorm → dropout.`,`The book applies the first normalization before attention, not after the shortcut.`],
+   [`LayerNorm → attention → dropout → add shortcut.`,`This is the pre-normalization attention branch.`],
+   [`GELU → attention → output head → add shortcut.`,`GELU is in the FFN, and the output head is outside the block.`],
+   [`Tokenize → positional embedding → softmax → add shortcut.`,`Tokenization and positional embeddings happen outside a transformer block.`]
+  ],1,`The code saves shortcut=x, normalizes, applies attention and dropout, then adds the saved shortcut.`),
+  Q(`An input block tensor has shape (B,T,768). Which operation directly mixes data across token positions?`,[
+   [`The LayerNorm feature mean calculated at each position.`,`LayerNorm operates over the 768 features within each token.`],
+   [`The GELU scalar function applied feature by feature.`,`GELU is elementwise.`],
+   [`The position-wise FFN with shared parameters.`,`The FFN is applied independently at each token position.`],
+   [`The masked multi-head self-attention operation.`,`Attention forms context vectors by combining earlier values at different token positions.`]
+  ],3,`Attention is the cross-position mixing operation in the block. The FFN transforms features at each position.`)
+ ]},
+ {id:'assembly',title:'Build the complete GPT model',pages:'pp. 138–142 · §4.6',items:[
+  T(`If one transformer block keeps the shape (B,T,768), what happens when we stack 12 blocks?`),
+  S(`The shape stays the same, but the vector content changes at each block.`),
+  T(`Absolutely. The 12 blocks produce progressively updated context representations while keeping the input and output widths compatible.`),
+  A('gpt-model-demo','Expand the full GPT stack','Follow the path from integer token IDs to 50,257-dimensional output logits.','Figure 4.15 · pp. 139–141; interactive model map'),
+  T(`The GPTModel class combines token embeddings, positional embeddings, dropout, repeated TransformerBlock modules, final LayerNorm, and a linear output head.`),
+  S(`The configuration uses one drop_rate value. Does that rate control every dropout layer?`),
+  T(`Yes. The chapter uses it in three places: after adding input embeddings, on attention weights, and after each attention or FFN branch before its shortcut addition. Exercise 4.3 asks you to give these places separate rates.`),
+  A('code-gpt','Python: the GPTModel class','The complete GPT architecture, built from the modules introduced earlier.','Listing 4.7 · p. 140; runnable with companion examples'),
+  S(`What is the final LayerNorm for if each transformer block already has normalization?`),
+  T(`It normalizes the representation after the full stack and before the vocabulary projection. The chapter includes it as part of this GPT-2-style architecture.`),
+  S(`How does the final linear layer know which word to output?`),
+  T(`It does not output a word directly. It calculates a logit for every vocabulary token at each position. A later decoding step chooses an ID and converts that ID back into text.`),
+  T(`The chapter feeds two four-token sequences to this model. The output has shape (2,4,50257), just like the placeholder model—but now real transformer blocks do the processing.`),
+  S(`So the same output shape does not prove both models are equally capable?`),
+  T(`Correct. The shape tells us the interface. It says nothing about whether the weights have learned useful language patterns.`),
+  A('code-all','Python: complete small GPT, in one script','Includes the Chapter 3 attention module and Chapter 4 layers; use a tiny configuration to test locally.','Combined educational implementation from Listings 3.5 and 4.2–4.8'),
+  Q(`Which component maps a hidden vector of length 768 to 50,257 vocabulary logits?`,[
+   [`The output head, nn.Linear(768,50257).`,`This projects each final hidden vector into vocabulary score space.`],
+   [`The token embedding lookup, nn.Embedding(50257,768).`,`Token embeddings map integer token IDs into hidden feature space, the opposite direction.`],
+   [`The positional embedding lookup, nn.Embedding(1024,768).`,`Positional embeddings add order information but do not score vocabulary items.`],
+   [`The GELU activation, applied to 768 features.`,`GELU acts elementwise and does not change the feature width.`]
+  ],0,`The final linear output head returns one logit per vocabulary entry for each input position.`),
+  Q(`What can we conclude if the dummy and complete GPT models both return tensors shaped (2,4,50257)?`,[
+   [`They have identical learned parameters.`,`Their internal modules and parameter counts differ.`],
+   [`They must predict exactly the same token IDs.`,`Output tensor shape does not determine its numerical values.`],
+   [`They share an output interface, not necessarily behavior.`,`Both map two four-token inputs to vocabulary logits, but their internals are different.`],
+   [`They have both completed language-model training.`,`Neither architecture is trained merely by performing a forward pass.`]
+  ],2,`Output shape describes the interface. It does not measure what the model has learned.`)
+ ]},
+ {id:'parameters',title:'Count parameters and memory',pages:'pp. 142–145 · §4.6',items:[
+  T(`The chapter calls its model GPT-2 small with 124 million parameters. Why does its code count about 163 million parameters?`),
+  S(`Maybe some matrices are counted twice, or the output layer is separate?`),
+  T(`The second idea is correct. The chapter’s GPTModel has separate token embedding and output weights. The original GPT-2 shares them through weight tying.`),
+  T(`The token embedding weight and output head weight each have shape (50257,768). Each matrix contains 38,597,376 numbers.`),
+  A('params-demo','Interactive parameter and memory calculator','Switch GPT-2 sizes, weight tying, and numeric precision. Each count comes from module dimensions.','§4.6 · pp. 142–144; formula-based model calculator'),
+  S(`So removing one copy reduces 163,009,536 to 124,412,160?`),
+  T(`Yes, that’s right. The saved 38,597,376 parameters are exactly the second copy of the vocabulary-sized weight matrix.`),
+  S(`Does removing a separate output matrix mean GPT can no longer score the vocabulary?`),
+  T(`No. With weight tying, the output projection uses the token embedding matrix again. The output logits still have one value per vocabulary item.`),
+  T(`The chapter reports 621.83 MiB for 163,009,536 float32 parameters. That counts parameter storage only, not activations or optimizer state.`),
+  A('param-breakdown','Where the parameters live','Compare embedding tables, one attention module, one FFN, and the block stack.','§4.6 · pp. 142–144; derived from Listings 4.4, 4.6, and 4.7'),
+  S(`Could I reduce parameter memory by using 16-bit numbers?`),
+  T(`For parameter storage alone, two bytes per element take half as much memory as four-byte float32 values. Training memory also depends on gradients, optimizer states, and activations.`),
+  A('code-count','Python: count parameters and bytes','Inspect the model count and estimate float32 parameter storage.','§4.6 · pp. 142–144; commented code'),
+  Q(`A token embedding table has shape (50257,768). How many trainable numbers are in it?`,[
+   [`38,597,376, from 50,257 rows times 768 columns.`,`This is the weight-matrix parameter count, ignoring any other model layers.`],
+   [`50,257, from one learned scalar for each token.`,`Each token owns a 768-dimensional vector.`],
+   [`768, from one vector shared by the full vocabulary.`,`The table has 50,257 distinct embedding rows.`],
+   [`124,412,160, the total tied GPT-2-small model size.`,`That count includes the full architecture, not just the token embedding table.`]
+  ],0,`50,257 × 768 = 38,597,376. Weight tying allows GPT-2 to reuse this table at the output.`),
+  Q(`A 163,009,536-parameter model stores each parameter in float32. What is its parameter-only size?`,[
+   [`About 163 MiB, with one byte per parameter.`,`Float32 uses four bytes, not one.`],
+   [`About 622 MiB, with four bytes per parameter.`,`163,009,536 × 4 / 1,048,576 ≈ 621.83 MiB.`],
+   [`About 311 MiB, with eight bytes per parameter.`,`Eight-byte float64 would instead use roughly 1,244 MiB.`],
+   [`About 1,244 MiB, with two bytes per parameter.`,`Two-byte storage uses roughly 311 MiB.`]
+  ],1,`The chapter's 621.83 “MB” figure divides by 1024², so its numerical unit is actually MiB. This is parameter memory only.`)
+ ]},
+ {id:'generation',title:'Generate text one token at a time',pages:'pp. 145–150 · §4.7',items:[
+  T(`A forward pass returns logits for every position. Which part do we use to generate the next token?`),
+  S(`The logits for the last input token, because we need the next token after the full context.`),
+  T(`Correct. The code selects logits[:, −1, :]. This gives one vocabulary score vector per sequence in the batch.`),
+  T(`It applies softmax to turn logits into probabilities. Then argmax picks the index of the highest probability. This is greedy decoding.`),
+  A('generation-demo','Interactive next-token generator','A toy model illustrates logits, softmax, argmax, context cropping, and appending tokens. No trained model is loaded.','Figures 4.16–4.18 · pp. 145–148; illustrative simulation'),
+  S(`Do we really need softmax if we only want the largest value?`),
+  T(`No. Softmax preserves order, so argmax(logits) gives the same ID. The chapter keeps softmax to show the probability interpretation.`),
+  S(`Why does the code crop idx to its last context_size tokens?`),
+  T(`The model has a maximum supported context length. Cropping limits the tokens fed back into the next forward pass, although the generated output list still grows.`),
+  A('code-generate','Python: generate_text_simple','Follow the exact shapes for last-position logits, argmax, and appended IDs.','Listing 4.8 · p. 147; commented code'),
+  T(`During generation we use model.eval() to disable dropout and torch.no_grad() so that PyTorch does not build training gradients.`),
+  S(`The PDF shows a nice sentence in the figure. Will our random GPT produce that sentence?`),
+  T(`No. That diagram shows the process, not the random model’s actual words. The real untrained model in the chapter outputs incoherent text. Language training comes next.`),
+  T(`After six steps, the initial four-token prompt becomes ten token IDs. The tokenizer decodes these IDs into readable characters.`),
+  A('generation-shapes','One decoding iteration: tensor shapes','Track (B,T,V) → (B,V) → (B,1) → (B,T+1).','Listing 4.8 · pp. 147–148; original shape diagram'),
+  Q(`A model returns logits shaped (2,5,50257). What is the shape of logits[:,−1,:]?`,[
+   [`(2,5), because we keep the sequence axis.`,`The last axis is vocabulary size, not the number of input positions.`],
+   [`(5,50257), because the batch axis is removed.`,`Selecting the last position does not remove the batch axis.`],
+   [`(2,50257), one score vector per sequence.`,`The position axis is indexed out; batch and vocabulary axes remain.`],
+   [`(2,1), because argmax has already selected an ID.`,`Indexing the last position happens before argmax.`]
+  ],2,`The last-position slice removes T and preserves B and V. Argmax with keepdim=True later returns (B,1).`),
+  Q(`Why does Chapter 4's freshly initialized GPT generate incoherent words?`,[
+   [`The model uses a 50,257-token vocabulary that cannot represent text.`,`The tokenizer can represent the example prompt and output IDs.`],
+   [`The model has random weights and has not learned patterns yet.`,`The architecture runs, but Chapter 5 must train its parameters to make useful predictions.`],
+   [`Argmax prevents the model from producing grammatical sentences.`,`A trained model can produce coherent text with greedy decoding.`],
+   [`Calling model.eval() deletes the learned model parameters.`,`eval() changes training/inference behavior such as dropout; it does not delete weights.`]
+  ],1,`The code establishes a working model and generation loop. Coherent language requires learned weights.`)
+ ]}
+];
+// A completion step comes after the final optional quiz. Skipping that quiz never blocks progress.
+sections[sections.length-1].items.push({type:'finish',who:'teacher'});
+
+const glossary=[
+ {id:'llm',name:'Large language model (LLM)',aliases:['large language model','LLM','LLMs'],def:'A neural network trained to work with token sequences. This chapter builds a GPT-like LLM architecture.'},
+ {id:'gpt',name:'GPT',aliases:['GPTModel','GPT-2','GPT','GPT_CONFIG_124M'],def:'Generative Pretrained Transformer. Chapter 4 assembles an autoregressive, decoder-only model similar to GPT-2.'},
+ {id:'transformer',name:'Transformer',aliases:['transformer','transformer blocks','transformer block','TransformerBlock'],def:'A reusable network block combining attention and a position-wise feed-forward network with normalization and shortcuts.'},
+ {id:'attention',name:'Multi-head attention',aliases:['multi-head attention','self-attention','attention heads','attention head'],def:'An operation that lets a token combine information from other allowed tokens using several sets of query, key, and value projections.'},
+ {id:'causal',name:'Causal mask',aliases:['causal mask','masked attention','causal attention'],def:'A rule that stops a token from attending to positions after it. GPT predicts future tokens using previous context.'},
+ {id:'token',name:'Token',aliases:['token','tokens','token IDs','token ID'],def:'A text unit such as a word part or punctuation. The tokenizer maps tokens to integer IDs.'},
+ {id:'tokenizer',name:'Tokenizer',aliases:['tokenizer','tokenize','tokenization'],def:'A process that converts text into token IDs or converts token IDs back into text.'},
+ {id:'vocab',name:'Vocabulary',aliases:['vocabulary','vocab_size'],def:'The collection of token IDs recognized by the model. GPT-2 uses 50,257 entries.'},
+ {id:'embedding',name:'Token embedding',aliases:['token embeddings','token embedding','embedding layer','embeddings','embedding'],def:'A learned numeric vector looked up for each token ID. In GPT-2 small the vector has 768 features.'},
+ {id:'position',name:'Positional embedding',aliases:['positional embeddings','positional embedding','position vector','position vectors'],def:'A learned vector that marks a token’s position in the input. It is added to the token embedding.'},
+ {id:'context',name:'Context length',aliases:['context length','context_size','context_length'],def:'The maximum number of input tokens a model can process in a forward pass in this chapter; the setting is 1,024.'},
+ {id:'batch',name:'Batch',aliases:['batch size','batch','batches'],def:'A group of input sequences processed together. A batch axis is usually first in the tensor shape.'},
+ {id:'sequence',name:'Sequence',aliases:['sequence length','sequence','sequences'],def:'An ordered list of tokens. T in a tensor shape means the number of token positions.'},
+ {id:'feature',name:'Feature',aliases:['feature dimension','feature dimensions','features','feature'],def:'One numeric component of a token vector. The embedding dimension counts its features.'},
+ {id:'tensor',name:'Tensor',aliases:['tensors','tensor'],def:'A multi-dimensional numerical array. A typical GPT hidden tensor has shape (batch, tokens, features).'},
+ {id:'shape',name:'Tensor shape',aliases:['shape','shapes'],def:'The size of each axis in a tensor. For example (2,4,768) means 2 sequences, 4 tokens, 768 features per token.'},
+ {id:'matmul',name:'Matrix multiplication',aliases:['matrix multiplication','matrix','matrices'],def:'A numerical operation combining rows and columns. nn.Linear applies matrix multiplication plus an optional bias.'},
+ {id:'parameter',name:'Trainable parameter',aliases:['trainable parameters','trainable parameter','parameters','parameter'],def:'A number in the model that learning can update. A 768×768 weight matrix has 589,824 numbers.'},
+ {id:'bias',name:'Bias vector',aliases:['bias vector','bias'],def:'An optional learned vector added after the matrix multiplication in a linear layer.'},
+ {id:'qkv',name:'Query, key, and value',aliases:['query, key, and value','query','keys','key','values','value','QKV'],def:'Three projected representations used by attention: queries match keys; the resulting weights combine values.'},
+ {id:'layernorm',name:'Layer normalization',aliases:['layer normalization','LayerNorm','pre-layer-normalization','post-normalization'],def:'Normalize across a token’s features, then apply learned scale and shift. The chapter uses this before both branches of each transformer block.'},
+ {id:'activation',name:'Activation',aliases:['activations','activation function','activation'],def:'The output of a neural network layer, or a nonlinear function applied to such values.'},
+ {id:'mean',name:'Mean',aliases:['mean'],def:'The arithmetic average. Subtracting the mean centers a vector around zero.'},
+ {id:'variance',name:'Variance',aliases:['variance'],def:'The mean squared distance of values from their mean. In this LayerNorm implementation, it uses the n denominator.'},
+ {id:'eps',name:'Epsilon (ε)',aliases:['epsilon','ε'],def:'A small positive value added inside the denominator to prevent division by zero. The chapter uses 1e-5.'},
+ {id:'unbiased',name:'unbiased=False',aliases:['unbiased=False','Bessel’s correction'],def:'For torch.var, unbiased=False calculates variance by dividing by n instead of n−1, matching this GPT-2 implementation.'},
+ {id:'broadcast',name:'Broadcasting',aliases:['broadcast','broadcasting'],def:'An array rule that repeats smaller arrays across matching larger dimensions during operations.'},
+ {id:'keepdim',name:'keepdim=True',aliases:['keepdim=True','keepdim'],def:'Keeps a reduced tensor axis as size 1, so the result can broadcast back to the input.'},
+ {id:'dim',name:'dim=-1',aliases:['dim=-1'],def:'An axis parameter that means “use the last dimension.” In GPT hidden tensors, that is the feature axis.'},
+ {id:'scale',name:'Scale (γ)',aliases:['scale and shift','scale','gamma'],def:'A learned multiplier applied after normalization; initialized to 1 for each feature.'},
+ {id:'shift',name:'Shift (β)',aliases:['shift','beta'],def:'A learned addition applied after normalization; initialized to 0 for each feature.'},
+ {id:'gradient',name:'Gradient',aliases:['gradients','gradient'],def:'A value that shows how a small parameter change affects the loss. Backpropagation uses gradients to train a model.'},
+ {id:'vanish',name:'Vanishing gradient',aliases:['vanishing-gradient problem','vanishing gradient'],def:'An issue where gradients reaching early layers become extremely small, which makes learning difficult.'},
+ {id:'backprop',name:'Backpropagation',aliases:['backpropagation','backward pass','backward()'],def:'The process that computes gradients from the loss back through the network.'},
+ {id:'loss',name:'Loss function',aliases:['loss function','loss'],def:'A number measuring prediction error. A training method adjusts model parameters to reduce it.'},
+ {id:'relu',name:'ReLU',aliases:['ReLU'],def:'Rectified Linear Unit: ReLU(x)=max(0,x). Every negative input becomes zero.'},
+ {id:'gelu',name:'GELU',aliases:['GELU'],def:'Gaussian Error Linear Unit: a smooth activation approximated with tanh in GPT-2. It can output small negative values.'},
+ {id:'tanh',name:'tanh',aliases:['tanh'],def:'Hyperbolic tangent. The chapter uses it inside an efficient approximation to GELU.'},
+ {id:'nonlinear',name:'Non-linearity',aliases:['non-linearity','nonlinear','non-linear'],def:'A transformation that cannot be represented by one linear matrix operation; lets a model represent more complex patterns.'},
+ {id:'ffn',name:'Feed-forward network (FFN)',aliases:['feed-forward network','feed-forward','FeedForward','FFN'],def:'A two-linear-layer network with GELU between them. It acts independently on each token position and uses an inner width of 4×emb_dim.'},
+ {id:'linear',name:'Linear layer',aliases:['linear layer','Linear'],def:'A learned matrix operation with optional bias. It can change the number of features in each token vector.'},
+ {id:'shortcut',name:'Residual connection',aliases:['residual connections','residual connection','shortcut connections','shortcut connection','shortcuts','shortcut','skip connection'],def:'Adds the input x to a transformed result F(x). The identity route helps information and gradients travel through deep stacks.'},
+ {id:'identity',name:'Identity path',aliases:['identity path','identity'],def:'An unmodified copy of x passed around a module. It contributes directly to the residual sum x+F(x).'},
+ {id:'dropout',name:'Dropout',aliases:['dropout','drop_rate'],def:'A regularization method that randomly drops some activations during training. It is disabled for normal inference.'},
+ {id:'preln',name:'Pre-layer normalization',aliases:['Pre-LayerNorm','pre-normalization'],def:'A transformer design that normalizes x before attention and before the FFN. Chapter 4 uses this approach.'},
+ {id:'output',name:'Output head',aliases:['output head','out_head','output layer'],def:'The final linear map from hidden width to vocabulary width. It returns logits, one score for each vocabulary token.'},
+ {id:'logits',name:'Logits',aliases:['logits','logit'],def:'Raw output scores for possible next tokens. Softmax can turn them into a probability distribution.'},
+ {id:'softmax',name:'Softmax',aliases:['softmax'],def:'A function that converts a score vector into positive weights that sum to 1. It preserves the order of scores.'},
+ {id:'prob',name:'Probability',aliases:['probabilities','probability distribution','probability'],def:'A nonnegative likelihood value. The probabilities over all next-token choices sum to 1.'},
+ {id:'argmax',name:'argmax',aliases:['argmax'],def:'An operation that returns the index of the largest number along a specified axis.'},
+ {id:'greedy',name:'Greedy decoding',aliases:['greedy decoding'],def:'Generate the next token by always choosing the highest-scoring vocabulary ID.'},
+ {id:'autoregressive',name:'Autoregressive generation',aliases:['autoregressive'],def:'Produce a new token and append it to the existing context, then repeat.'},
+ {id:'inference',name:'Inference',aliases:['inference','model.eval()','torch.no_grad()'],def:'Using model weights to make outputs without updating parameters. The chapter disables dropout and gradient tracking during text generation.'},
+ {id:'weighttie',name:'Weight tying',aliases:['weight tying','tied weights'],def:'Reuse one matrix for both token embeddings and output vocabulary scoring instead of keeping two separate copies.'},
+ {id:'float32',name:'float32',aliases:['float32','32-bit float'],def:'A common numeric storage format using four bytes per value.'},
+ {id:'float16',name:'float16',aliases:['float16','16-bit'],def:'A numeric format using two bytes per value; reduced-precision training also has other numerical and memory considerations.'},
+ {id:'memory',name:'MiB',aliases:['MiB','MB'],def:'MiB is 1,048,576 bytes. The source’s 621.83 MB result was calculated with 1024×1024 and is therefore 621.83 MiB.'},
+ {id:'head',name:'Attention head',aliases:['n_heads','num_heads'],def:'A parallel set of attention projections inside one transformer block. GPT-2 small uses 12 heads per block.'},
+ {id:'layers',name:'Transformer depth',aliases:['n_layers'],def:'The count of repeated transformer blocks. GPT-2 small uses 12 layers.'},
+ {id:'embeddingdim',name:'Embedding dimension',aliases:['emb_dim','embedding dimension'],def:'The width of each token’s hidden vector. GPT-2 small uses 768.'},
+ {id:'train',name:'Training',aliases:['training','pretraining','pretrain'],def:'The process of adjusting the model parameters based on examples and a loss function. Chapter 4 does not train its GPT yet.'},
+ {id:'torch',name:'PyTorch',aliases:['PyTorch','torch'],def:'A Python library for tensor calculations, neural network modules, and automatic differentiation.'},
+ {id:'nnmodule',name:'nn.Module',aliases:['nn.Module'],def:'The base PyTorch class for learnable neural network components.'},
+ {id:'nnsequential',name:'nn.Sequential',aliases:['nn.Sequential'],def:'A PyTorch container that applies a list of modules in order.'},
+ {id:'register',name:'register_buffer',aliases:['register_buffer'],def:'A PyTorch method for registering state tensors that should move with the model but are not trainable parameters, such as attention masks.'},
+ {id:'decoder',name:'Decoder-only model',aliases:['decoder-only'],def:'A GPT-style architecture that predicts new tokens using preceding tokens, rather than using a separate encoder.'}
+];
+
+const glossaryById=Object.fromEntries(glossary.map(g=>[g.id,g]));
+const aliasToGlossary=new Map();
+for(const g of glossary)for(const alias of g.aliases)aliasToGlossary.set(alias.toLowerCase(),g);
+const allAliases=[...aliasToGlossary.keys()].sort((a,b)=>b.length-a.length);
+const escapedAlias=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+const termRegex=new RegExp('(?<![A-Za-z0-9_])('+allAliases.map(escapedAlias).join('|')+')(?![A-Za-z0-9_])','gi');
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function glossify(s){
+ termRegex.lastIndex=0;let out='',prev=0;
+ for(const match of String(s).matchAll(termRegex)){
+  const at=match.index,word=match[0],g=aliasToGlossary.get(word.toLowerCase());
+  out+=esc(s.slice(prev,at));out+=g?`<button type="button" class="gloss-term" data-term="${g.id}" aria-label="Define ${esc(word)}">${esc(word)}</button>`:esc(word);
+  prev=at+word.length;
+ }
+ return out+esc(s.slice(prev));
+}
+// Flatten into one navigable step per message, whiteboard, and quiz.
+const steps=[];
+sections.forEach((section,si)=>{section.start=steps.length;section.items.forEach((item,local)=>steps.push({...item,section:si,local,global:steps.length,id:`s${si}-m${local}`}));section.end=steps.length-1;});
+const QUIZZES=steps.filter(x=>x.type==='quiz');
+function shuffle(arr){const out=[...arr];for(let i=out.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[out[i],out[j]]=[out[j],out[i]];}return out;}
+const quizOrder=Object.fromEntries(QUIZZES.map(q=>[q.id,shuffle([0,1,2,3])]));
+const quizAnswers={}; // Answers live for this session; skipped quizzes are not counted.
+
+const codeSamples={
+'code-config':String.raw`# Chapter 4: GPT-2-small-style configuration.
+GPT_CONFIG_124M = {
+    "vocab_size": 50257,   # V: number of token IDs in the GPT-2 vocabulary
+    "context_length": 1024,  # C: maximum tokens in one model call
+    "emb_dim": 768,        # D: feature width for each token
+    "n_heads": 12,         # H: attention heads in each transformer block
+    "n_layers": 12,        # L: number of repeated transformer blocks
+    "drop_rate": 0.1,      # Training dropout probability
+    "qkv_bias": False,     # No bias for Q, K, V projections
+}
+
+# Each attention head has D / H = 768 / 12 = 64 features.
+head_dim = GPT_CONFIG_124M["emb_dim"] // GPT_CONFIG_124M["n_heads"]
+print(head_dim)  # 64`,
+'code-dummy':String.raw`import torch
+import torch.nn as nn
+
+# This placeholder illustrates model SHAPES, not learned behavior.
+class DummyTransformerBlock(nn.Module):
+    def forward(self, x):
+        return x  # Does not perform attention or feature changes.
+
+class DummyLayerNorm(nn.Module):
+    def forward(self, x):
+        return x  # Placeholder only.
+
+class DummyGPTModel(nn.Module):
+    def __init__(self, cfg):
+        super().__init__()
+        self.tok_emb = nn.Embedding(cfg["vocab_size"], cfg["emb_dim"])
+        self.pos_emb = nn.Embedding(cfg["context_length"], cfg["emb_dim"])
+        self.drop_emb = nn.Dropout(cfg["drop_rate"])
+        self.trf_blocks = nn.Sequential(*[
+            DummyTransformerBlock() for _ in range(cfg["n_layers"])
+        ])
+        self.final_norm = DummyLayerNorm()
+        self.out_head = nn.Linear(cfg["emb_dim"], cfg["vocab_size"], bias=False)
+
+    def forward(self, ids):
+        # ids: (B,T) -> token embeddings: (B,T,D).
+        B, T = ids.shape
+        positions = torch.arange(T, device=ids.device)
+        x = self.tok_emb(ids) + self.pos_emb(positions)  # (B,T,D)
+        x = self.drop_emb(x)
+        x = self.trf_blocks(x)
+        x = self.final_norm(x)
+        return self.out_head(x)  # (B,T,V)
+
+# Small settings keep this demonstration quick on a CPU.
+cfg = dict(vocab_size=64, context_length=16, emb_dim=32,
+           n_layers=2, drop_rate=0.0)
+model = DummyGPTModel(cfg)
+ids = torch.tensor([[1, 2, 3, 4], [5, 6, 7, 8]])  # (2,4)
+print(model(ids).shape)  # torch.Size([2, 4, 64])`,
+'code-layernorm':String.raw`import torch
+import torch.nn as nn
+
+class LayerNorm(nn.Module):
+    def __init__(self, emb_dim):
+        super().__init__()
+        self.eps = 1e-5  # Prevent zero denominator.
+        self.scale = nn.Parameter(torch.ones(emb_dim))  # gamma: (D,)
+        self.shift = nn.Parameter(torch.zeros(emb_dim)) # beta: (D,)
+
+    def forward(self, x):
+        # x: (...,D), e.g. (B=2,T=4,D=768).
+        mean = x.mean(dim=-1, keepdim=True)                # (...,1)
+        var = x.var(dim=-1, unbiased=False, keepdim=True) # (...,1)
+        norm_x = (x - mean) / torch.sqrt(var + self.eps)  # (...,D)
+        return self.scale * norm_x + self.shift           # (...,D)
+
+x = torch.tensor([[0.2260, 0.3470, 0.0, 0.2216, 0.0, 0.0]])
+layer = LayerNorm(emb_dim=6)
+out = layer(x)
+print(out.shape)   # (1,6)
+print(out.mean(-1), out.var(-1, unbiased=False))
+# Nearly zero mean and near-unit population variance.`,
+'code-gelu':String.raw`import torch
+from torch import nn
+
+class GELU(nn.Module):
+    def forward(self, x):
+        # Approximation used in the book and in the original GPT-2.
+        # x can be any tensor shape. Output shape is unchanged.
+        c = torch.sqrt(torch.tensor(2.0 / torch.pi, device=x.device,
+                                    dtype=x.dtype))
+        return 0.5 * x * (1.0 + torch.tanh(c * (x + 0.044715 * x**3)))
+
+x = torch.tensor([-1.0, 0.0, 1.0])
+print('GELU:', GELU()(x))
+print('ReLU:', nn.ReLU()(x))
+# GELU(-1) is about -0.159; ReLU(-1) is exactly zero.`,
+'code-ffn':String.raw`import torch
+from torch import nn
+
+class FeedForward(nn.Module):
+    def __init__(self, cfg):
+        super().__init__()
+        D = cfg["emb_dim"]
+        self.layers = nn.Sequential(
+            nn.Linear(D, 4*D),             # (...,D) -> (...,4D)
+            nn.GELU(approximate='tanh'),  # Same GELU approximation as the text
+            nn.Linear(4*D, D),             # (...,4D) -> (...,D)
+        )
+
+    def forward(self, x):
+        return self.layers(x)
+
+ffn = FeedForward({"emb_dim": 768})
+x = torch.rand(2, 3, 768)  # (B=2, T=3, D=768)
+print(ffn(x).shape)  # (2,3,768)
+# Intermediate hidden tensor after the first Linear: (2,3,3072).`,
+'code-residual':String.raw`import torch
+from torch import nn
+
+class ExampleDeepNeuralNetwork(nn.Module):
+    def __init__(self, layer_sizes, use_shortcut):
+        super().__init__()
+        self.use_shortcut = use_shortcut
+        self.layers = nn.ModuleList([
+            nn.Sequential(nn.Linear(layer_sizes[i], layer_sizes[i+1]),
+                          nn.GELU(approximate='tanh'))
+            for i in range(len(layer_sizes)-1)
+        ])
+
+    def forward(self, x):
+        for layer in self.layers:
+            transformed = layer(x)
+            # Residual addition is valid only if widths match.
+            if self.use_shortcut and x.shape == transformed.shape:
+                x = x + transformed
+            else:
+                x = transformed
+        return x
+
+def gradients(use_shortcut):
+    torch.manual_seed(123)
+    net = ExampleDeepNeuralNetwork([3,3,3,3,3,1], use_shortcut)
+    x = torch.tensor([[1.0, 0.0, -1.0]])
+    loss = nn.MSELoss()(net(x), torch.tensor([[0.0]]))
+    loss.backward()  # Fill parameter gradients.
+    return [layer[0].weight.grad.abs().mean().item() for layer in net.layers]
+
+print('Without shortcut:', gradients(False))
+print('With shortcut:   ', gradients(True))
+# This is one illustrative initialization, not a universal guarantee.`,
+'code-block':String.raw`# Requires: MultiHeadAttention from Chapter 3,
+# LayerNorm (Listing 4.2) and FeedForward (Listing 4.4).
+import torch
+from torch import nn
+
+class TransformerBlock(nn.Module):
+    def __init__(self, cfg):
+        super().__init__()
+        D = cfg["emb_dim"]
+        self.att = MultiHeadAttention(
+            d_in=D, d_out=D, context_length=cfg["context_length"],
+            dropout=cfg["drop_rate"], num_heads=cfg["n_heads"],
+            qkv_bias=cfg["qkv_bias"])
+        self.ff = FeedForward(cfg)
+        self.norm1 = LayerNorm(D)
+        self.norm2 = LayerNorm(D)
+        self.drop_shortcut = nn.Dropout(cfg["drop_rate"])
+
+    def forward(self, x):
+        # x: (B,T,D); first residual branch is attention.
+        shortcut = x
+        x = self.drop_shortcut(self.att(self.norm1(x)))
+        x = x + shortcut  # (B,T,D)
+
+        # Second residual branch is a position-wise FFN.
+        shortcut = x
+        x = self.drop_shortcut(self.ff(self.norm2(x)))
+        x = x + shortcut  # (B,T,D)
+        return x
+
+# Full, standalone implementation appears in the last code whiteboard.`,
+'code-gpt':String.raw`# Requires: TransformerBlock and LayerNorm defined previously.
+import torch
+from torch import nn
+
+class GPTModel(nn.Module):
+    def __init__(self, cfg):
+        super().__init__()
+        self.tok_emb = nn.Embedding(cfg["vocab_size"], cfg["emb_dim"])
+        self.pos_emb = nn.Embedding(cfg["context_length"], cfg["emb_dim"])
+        self.drop_emb = nn.Dropout(cfg["drop_rate"])
+        self.trf_blocks = nn.Sequential(*[
+            TransformerBlock(cfg) for _ in range(cfg["n_layers"])
+        ])
+        self.final_norm = LayerNorm(cfg["emb_dim"])
+        # Untied from the token embedding table in the chapter's model.
+        self.out_head = nn.Linear(cfg["emb_dim"], cfg["vocab_size"], bias=False)
+
+    def forward(self, ids):
+        # ids: (B,T); T <= context_length
+        B, T = ids.shape
+        pos_ids = torch.arange(T, device=ids.device)
+        x = self.tok_emb(ids) + self.pos_emb(pos_ids)  # (B,T,D)
+        x = self.drop_emb(x)
+        x = self.trf_blocks(x)  # (B,T,D)
+        x = self.final_norm(x)
+        return self.out_head(x)  # (B,T,V), raw logits
+
+# Full working model, including dependencies, appears in the next whiteboard.`,
+'code-count':String.raw`# Run after constructing a GPTModel from the full-code example.
+# The math below uses the model's actual parameter tensors.
+total_params = sum(p.numel() for p in model.parameters())
+output_params = sum(p.numel() for p in model.out_head.parameters())
+print(f'Untied model: {total_params:,} parameters')
+print(f'Tied equivalent: {total_params-output_params:,} parameters')
+
+# An fp32 tensor uses four bytes per number.
+bytes_fp32 = total_params * 4
+mib = bytes_fp32 / (1024**2)
+print(f'Parameter-only fp32 memory: {mib:.2f} MiB')
+
+# For chapter's GPT_CONFIG_124M, model uses untied output weights:
+# 163,009,536 parameters, 621.83 MiB in float32.
+# With output weights tied to token embeddings: 124,412,160.
+# Note: activations, gradients and optimizer state add memory.`,
+'code-generate':String.raw`import torch
+
+def generate_text_simple(model, idx, max_new_tokens, context_size):
+    # idx: (B,T) integer token IDs.
+    for _ in range(max_new_tokens):
+        # Crop the INPUT context; idx itself retains the full generated text.
+        idx_cond = idx[:, -context_size:]  # (B,min(T,C))
+        with torch.no_grad():
+            logits = model(idx_cond)       # (B,current_T,V)
+        logits = logits[:, -1, :]         # (B,V): last-position scores
+        probs = torch.softmax(logits, dim=-1)  # (B,V)
+        idx_next = torch.argmax(probs, dim=-1, keepdim=True)  # (B,1)
+        idx = torch.cat((idx, idx_next), dim=1)  # (B,T+1)
+    return idx
+
+# Before generation, call model.eval() to disable dropout.
+# Softmax is optional for argmax: both choose the same largest logit.
+# An UNTRAINED model will normally generate incoherent text.`,
+'code-all':String.raw`# Self-contained educational GPT, based on Chapters 3 and 4.
+# Requires PyTorch only. Uses small dimensions for a quick CPU run.
+import torch
+from torch import nn
+
+class LayerNorm(nn.Module):
+    def __init__(self, dim):
+        super().__init__()
+        self.scale = nn.Parameter(torch.ones(dim))
+        self.shift = nn.Parameter(torch.zeros(dim))
+    def forward(self, x):
+        mean = x.mean(dim=-1, keepdim=True)
+        var = x.var(dim=-1, unbiased=False, keepdim=True)
+        return self.scale * ((x-mean)/torch.sqrt(var+1e-5)) + self.shift
+
+class FeedForward(nn.Module):
+    def __init__(self, cfg):
+        super().__init__()
+        D = cfg['emb_dim']
+        self.layers = nn.Sequential(nn.Linear(D,4*D),
+                                    nn.GELU(approximate='tanh'),
+                                    nn.Linear(4*D,D))
+    def forward(self, x):
+        return self.layers(x)
+
+class MultiHeadAttention(nn.Module):
+    def __init__(self, d_in, d_out, context_length, dropout, num_heads,
+                 qkv_bias=False):
+        super().__init__()
+        assert d_out % num_heads == 0
+        self.n_heads = num_heads
+        self.head_dim = d_out // num_heads
+        self.W_query = nn.Linear(d_in,d_out,bias=qkv_bias)
+        self.W_key = nn.Linear(d_in,d_out,bias=qkv_bias)
+        self.W_value = nn.Linear(d_in,d_out,bias=qkv_bias)
+        self.out_proj = nn.Linear(d_out,d_out)
+        self.dropout = nn.Dropout(dropout)
+        mask = torch.triu(torch.ones(context_length,context_length),diagonal=1)
+        self.register_buffer('mask', mask)
+
+    def forward(self, x):
+        # x: (B,T,D_in)
+        B,T,_ = x.shape
+        def split(t):
+            # (B,T,D_out) -> (B,H,T,head_dim)
+            return t.view(B,T,self.n_heads,self.head_dim).transpose(1,2)
+        Q = split(self.W_query(x))
+        K = split(self.W_key(x))
+        V = split(self.W_value(x))
+        scores = Q @ K.transpose(2,3)  # (B,H,T,T)
+        scores = scores.masked_fill(self.mask[:T,:T].bool(),-torch.inf)
+        weights = torch.softmax(scores/(self.head_dim**0.5),dim=-1)
+        weights = self.dropout(weights)
+        context = (weights @ V).transpose(1,2).contiguous() # (B,T,H,head_dim)
+        context = context.view(B,T,-1)   # (B,T,D_out)
+        return self.out_proj(context)    # (B,T,D_out)
+
+class TransformerBlock(nn.Module):
+    def __init__(self,cfg):
+        super().__init__()
+        D=cfg['emb_dim']
+        self.att=MultiHeadAttention(D,D,cfg['context_length'],cfg['drop_rate'],
+                                    cfg['n_heads'],cfg['qkv_bias'])
+        self.ff=FeedForward(cfg)
+        self.norm1=LayerNorm(D)
+        self.norm2=LayerNorm(D)
+        self.drop=nn.Dropout(cfg['drop_rate'])
+    def forward(self,x):
+        x = x + self.drop(self.att(self.norm1(x)))
+        x = x + self.drop(self.ff(self.norm2(x)))
+        return x
+
+class GPTModel(nn.Module):
+    def __init__(self,cfg):
+        super().__init__()
+        self.tok_emb=nn.Embedding(cfg['vocab_size'],cfg['emb_dim'])
+        self.pos_emb=nn.Embedding(cfg['context_length'],cfg['emb_dim'])
+        self.drop_emb=nn.Dropout(cfg['drop_rate'])
+        self.blocks=nn.Sequential(*[TransformerBlock(cfg)
+                                    for _ in range(cfg['n_layers'])])
+        self.final_norm=LayerNorm(cfg['emb_dim'])
+        self.out_head=nn.Linear(cfg['emb_dim'],cfg['vocab_size'],bias=False)
+    def forward(self,idx):
+        # idx: (B,T) -> logits: (B,T,V)
+        B,T=idx.shape
+        assert T <= self.pos_emb.num_embeddings
+        positions=torch.arange(T,device=idx.device)
+        x=self.drop_emb(self.tok_emb(idx)+self.pos_emb(positions))
+        return self.out_head(self.final_norm(self.blocks(x)))
+
+def generate_text_simple(model,idx,max_new_tokens,context_size):
+    for _ in range(max_new_tokens):
+        with torch.no_grad():
+            logits=model(idx[:,-context_size:])[:, -1, :] # (B,V)
+        new_id=torch.argmax(logits,dim=-1,keepdim=True)  # (B,1)
+        idx=torch.cat((idx,new_id),dim=1)
+    return idx
+
+small={"vocab_size":64,"context_length":16,"emb_dim":32,
+       "n_heads":4,"n_layers":2,"drop_rate":0.0,"qkv_bias":False}
+torch.manual_seed(123)
+model=GPTModel(small)
+ids=torch.tensor([[1,2,3,4],[5,6,7,8]])  # (B=2,T=4)
+print('Logit shape:',model(ids).shape)     # (2,4,64)
+model.eval()
+result=generate_text_simple(model,ids,3,small['context_length'])
+print('Generated ID shape:',result.shape) # (2,7)
+# These output IDs have NO language meaning yet; model is untrained.`
+};
+
+const demoState={batch:2,tokens:4,normPreset:0,normUnbiased:false,geluX:-1,ffnWidth:768,residual:true,blockStage:0,modelStage:0,modelSize:'small',tied:false,precision:32,genStep:0,genContext:4};
+const fmt=(n,d=4)=>Number.isFinite(n)?Number(n).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d}):String(n);
+const int=n=>Math.round(n).toLocaleString('en-US');
+const softmax=a=>{const m=Math.max(...a),exps=a.map(v=>Math.exp(v-m)),s=exps.reduce((x,y)=>x+y,0);return exps.map(v=>v/s);};
+const gelu=x=>.5*x*(1+Math.tanh(Math.sqrt(2/Math.PI)*(x+0.044715*x*x*x)));
+const relu=x=>Math.max(0,x);
+const cellBox=(title,strong,small='',good=false)=>`<div class="diagram-box ${good?'good':''}"><div class="diagram-eyebrow">${esc(title)}</div><div class="box-h">${esc(strong)}</div>${small?`<div class="box-p">${esc(small)}</div>`:''}</div>`;
+const codeBoard=key=>`<div class="board-inner"><div class="code-card"><div class="code-title"><span>PYTHON · COMMENTED EXAMPLE</span><button class="run-code" data-copy-code="${key}" aria-label="Copy Python code">Copy code</button></div><pre class="python-code"><code>${esc(codeSamples[key])}</code></pre></div><div class="board-footnote">Python code is provided for study and copying. This HTML file works offline and runs the visual demonstrations in JavaScript. It does not execute Python.</div></div>`;
+const pick=(action,label,selected)=>`<button type="button" class="pick-btn" data-demo-action="${action}" aria-pressed="${selected}">${esc(label)}</button>`;
+const shapeBox=(name,value,note)=>`<div class="shape-cell"><strong>${esc(name)}: ${esc(value)}</strong><span>${esc(note)}</span></div>`;
+const rowBar=(label,value,maximum)=>`<div class="prob-row" style="grid-template-columns:105px 1fr 66px"><span>${esc(label)}</span><div class="prob-track"><div class="prob-fill" style="width:${Math.min(100,Math.max(0,value/maximum*100)).toFixed(2)}%"></div></div><strong class="num">${fmt(value,3)}</strong></div>`;
+const CFG={small:{label:'GPT-2 small',V:50257,C:1024,D:768,H:12,L:12},medium:{label:'GPT-2 medium',V:50257,C:1024,D:1024,H:16,L:24},large:{label:'GPT-2 large',V:50257,C:1024,D:1280,H:20,L:36},xl:{label:'GPT-2 XL',V:50257,C:1024,D:1600,H:25,L:48}};
+function modelCounts(cfg){
+ const {V,C,D,L}=cfg,token=V*D,position=C*D;
+ const attention=3*D*D + (D*D+D); // Q/K/V are bias-free, output projection has bias.
+ const ffn=D*(4*D)+(4*D)+(4*D)*D+D;
+ const blockNorm=4*D; // Two LayerNorm instances, each with scale and shift.
+ const block=attention+ffn+blockNorm,finalNorm=2*D;
+ return {token,position,attention,ffn,blockNorm,block,finalNorm,out:token,untied:token+position+L*block+finalNorm+token,tied:token+position+L*block+finalNorm};
+}
+function boardHTML(kind){
+ if(Object.prototype.hasOwnProperty.call(codeSamples,kind))return codeBoard(kind);
+ switch(kind){
+ case 'gpt-map':return `<div class="board-inner"><div class="demo-kicker">One simple data path — the architecture developed in Chapter 4</div><div class="diagram-row">${cellBox('Input','Token IDs','(B,T)')}<div class="diagram-arrow">→</div>${cellBox('Chapter 2','Token + position vectors','(B,T,768)')}<div class="diagram-arrow">→</div>${cellBox('Chapter 3','Masked multi-head attention','Inside blocks',true)}</div><div class="formula">12 × [ LayerNorm → attention → residual → LayerNorm → FFN → residual ]</div><div class="diagram-row">${cellBox('Final normalization','(B,T,768)')}<div class="diagram-arrow">→</div>${cellBox('Output head','(B,T,50257)','One logit for each token choice',true)}</div><div class="board-note">The arrows show conceptual data flow, not the full detail of every branch. Chapter 3 supplies attention; Chapter 4 implements the surrounding GPT architecture. Training comes in Chapter 5.</div></div>`;
+ case 'config-board':return `<div class="board-inner"><div class="demo-kicker">GPT_CONFIG_124M</div><div class="shape-grid">${shapeBox('vocab_size','50,257','Known token IDs')}${shapeBox('context_length','1,024','Maximum input positions')}${shapeBox('emb_dim','768','Features per hidden token')}${shapeBox('n_heads','12','Heads inside each block')}${shapeBox('n_layers','12','Sequential transformer blocks')}${shapeBox('drop_rate','0.1','10% dropout in training')}${shapeBox('qkv_bias','False','No Q/K/V projection biases')}${shapeBox('head_dim','64','768 ÷ 12 features per head')}</div><div class="board-footnote">n_heads and n_layers are different settings, even though both happen to be 12. The output head is separate from the attention heads.</div></div>`;
+ case 'tensor-flow':{
+ const B=demoState.batch,T=demoState.tokens,D=768,V=50257;
+ return `<div class="board-inner" data-board-demo="tensor-flow"><div class="demo-kicker">Explore the batch and context dimensions</div><div class="example-row">Batch: ${[1,2,4].map(v=>pick('batch-'+v,String(v),B===v)).join('')}</div><div class="example-row">Tokens per sequence: ${[1,4,16].map(v=>pick('tokens-'+v,String(v),T===v)).join('')}</div><div class="shape-grid">${shapeBox('Input IDs',`(${B},${T})`,'Integer token IDs')}${shapeBox('Token embeddings',`(${B},${T},${D})`,'Look up one D-vector per ID')}${shapeBox('Position embeddings',`(${T},${D})`,'Shared across the batch')}${shapeBox('Hidden states',`(${B},${T},${D})`,'Position vectors broadcast and add')}${shapeBox('Output logits',`(${B},${T},${V})`,'Vocabulary-sized output for each token')}</div><div class="formula">(B,T) → (B,T,D) → (B,T,V)<small>For this demo: B=${B}, T=${T}, D=768, V=50,257</small></div><div class="board-footnote">The result of the forward pass includes scores for every position. The generation loop later selects only the last position’s score vector.</div></div>`;
+ }
+ case 'norm-demo':{
+ const presets=[[.226,.347,0,.2216,0,0],[5,5,5,5,5,5],[2,4,6,8,10,12]];
+ const xs=presets[demoState.normPreset],mean=xs.reduce((a,b)=>a+b)/xs.length;
+ const ss=xs.reduce((a,b)=>a+(b-mean)**2,0),variance=ss/(demoState.normUnbiased?xs.length-1:xs.length);
+ const y=xs.map(x=>(x-mean)/Math.sqrt(variance+1e-5)),ym=y.reduce((a,b)=>a+b)/y.length,vy=y.reduce((a,b)=>a+(b-ym)**2,0)/y.length;
+ return `<div class="board-inner" data-board-demo="norm-demo"><div class="demo-kicker">Choose a six-feature input</div><div class="example-row">${pick('norm-0','Chapter example',demoState.normPreset===0)}${pick('norm-1','Constant values',demoState.normPreset===1)}${pick('norm-2','Rising values',demoState.normPreset===2)}</div><div class="example-row">Variance formula: ${pick('variance-pop','divide by n',!demoState.normUnbiased)}${pick('variance-sample','divide by n−1',demoState.normUnbiased)}</div><div class="math-row"><div class="math-box"><strong>[${xs.map(x=>fmt(x,3)).join(', ')}]</strong><span>Input values</span></div><div class="math-box"><strong>μ = ${fmt(mean)}</strong><span>Feature mean</span></div><div class="math-box"><strong>σ² = ${fmt(variance)}</strong><span>Variance</span></div></div><div class="formula">yᵢ = (xᵢ − μ) / √(σ² + 0.00001)</div><div class="math-box"><strong>[${y.map(n=>fmt(n,3)).join(', ')}]</strong><span>Normalized values · output shape remains (6,)</span></div><div class="outcome">Normalized population mean: ${fmt(ym,5)} · population variance: ${fmt(vy,5)}</div><div class="board-note">The book's final LayerNorm class uses divide-by-n (unbiased=False), shown by default. This demonstration omits the trainable scale and shift to isolate the normalization step. A constant vector becomes zeros without division by zero.</div></div>`;
+ }
+ case 'norm-formula':return `<div class="board-inner"><div class="formula">μ = mean(x, axis = features)</div><div class="formula">σ² = mean((x−μ)², axis = features)</div><div class="formula">normal(x) = (x−μ) / √(σ²+ε)</div><div class="formula">LayerNorm(x) = γ · normal(x) + β<small>ε=10⁻⁵, γ starts at 1, β starts at 0; both learned per feature</small></div><div class="diagram-row">${cellBox('Tensor in','B × T × D','') }<div class="diagram-arrow">→</div>${cellBox('Feature statistics','B × T × 1','') }<div class="diagram-arrow">→</div>${cellBox('Tensor out','B × T × D','',true)}</div><div class="board-footnote">For every token, the model computes the mean and variance of its D features. Learned scale and shift mean the final statistics need not remain exactly 0 and 1 after training.</div></div>`;
+ case 'gelu-demo':{
+  const W=580,H=245,pad=31,xMin=-3,xMax=3,yMin=-.45,yMax=3.2;
+  const px=x=>pad+(x-xMin)/(xMax-xMin)*(W-2*pad),py=y=>H-pad-(y-yMin)/(yMax-yMin)*(H-2*pad);
+  const makePath=f=>{const pts=[];for(let i=0;i<=120;i++){const x=-3+i*.05;pts.push((i?'L':'M')+px(x).toFixed(2)+','+py(f(x)).toFixed(2));}return pts.join(' ');};
+  const x=demoState.geluX;
+  return `<div class="board-inner" data-board-demo="gelu-demo"><div class="demo-kicker">Choose the input x</div><div class="example-row">${[-2,-1,-.5,0,.5,1,2].map(v=>pick('gelu-'+v,String(v),v===x)).join('')}</div><div class="plot-svg-wrap"><svg role="img" aria-label="Graph of GELU and ReLU from x minus three to plus three, showing the selected input" viewBox="0 0 ${W} ${H}" style="display:block;width:100%;height:auto;min-width:260px"><line x1="${px(0)}" y1="14" x2="${px(0)}" y2="${H-12}" stroke="var(--line)" stroke-width="2"/><line x1="10" y1="${py(0)}" x2="${W-10}" y2="${py(0)}" stroke="var(--line)" stroke-width="2"/><path d="${makePath(gelu)}" fill="none" stroke="var(--brand)" stroke-width="3.2"/><path d="${makePath(relu)}" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-dasharray="7 5"/><circle cx="${px(x)}" cy="${py(gelu(x))}" r="6" fill="var(--brand)" stroke="var(--paper)" stroke-width="2"/><circle cx="${px(x)}" cy="${py(relu(x))}" r="4" fill="var(--accent)"/>${[-3,-2,-1,0,1,2,3].map(v=>`<text x="${px(v)}" y="${H-8}" text-anchor="middle" fill="var(--muted)" font-size="12">${v}</text>`).join('')}<text x="${W-10}" y="19" text-anchor="end" fill="var(--brand)" font-weight="700" font-size="13">━━ GELU</text><text x="${W-10}" y="36" text-anchor="end" fill="var(--accent)" font-weight="700" font-size="13">┄ ReLU</text></svg></div><div class="math-row"><div class="math-box"><strong>x = ${fmt(x,2)}</strong><span>Selected input</span></div><div class="math-box"><strong>GELU(x) = ${fmt(gelu(x))}</strong><span>Smooth tanh approximation</span></div><div class="math-box"><strong>ReLU(x) = ${fmt(relu(x))}</strong><span>max(0,x)</span></div></div><div class="board-footnote">This is a plot of the chapter's approximate GELU function, not learned weights. GELU preserves tensor shape and acts independently on each value.</div></div>`;
+ }
+ case 'gelu-equation':return `<div class="board-inner"><div class="demo-kicker">Smooth function · used in Chapter 4</div><div class="formula">Exact GELU(x) = x · Φ(x)<small>Φ(x) is the standard normal cumulative distribution function</small></div><div class="formula">GELU(x) ≈ ½x [ 1 + tanh(√(2/π) · (x + 0.044715x³)) ]</div><div class="diagram-row">${cellBox('ReLU','max(0,x)','Negative inputs become 0')}${cellBox('GELU','smooth gate','Small negative outputs are possible',true)}</div><div class="board-footnote">The source uses this computationally efficient GELU approximation. Its behavior is different from a binary gate.</div></div>`;
+ case 'ffn-demo':{
+ const D=demoState.ffnWidth,inner=4*D,params=(D*inner+inner)+(inner*D+D);
+ return `<div class="board-inner" data-board-demo="ffn-demo"><div class="demo-kicker">Choose the feature width D</div><div class="example-row">${[128,256,768,1024].map(v=>pick('ffn-'+v,String(v),v===D)).join('')}</div><div class="diagram-row">${cellBox('Input','B × T × '+int(D),'Each token starts with D features')}<div class="diagram-arrow">→</div>${cellBox('Linear + GELU','B × T × '+int(inner),'Expand to 4D')}<div class="diagram-arrow">→</div>${cellBox('Linear','B × T × '+int(D),'Shrink to D again',true)}</div><div class="outcome">First linear layer: ${int(D*inner+inner)} parameters. Second: ${int(inner*D+D)} parameters. Total FFN: <strong>${int(params)}</strong>.</div><div class="board-note">All token positions share the same FFN weights within a block. The FFN works on each token independently. It does not perform attention between positions.</div></div>`;
+ }
+ case 'residual-demo':{
+ const no=[.0002017359,.0001201116,.0007152042,.001398874,.005049646];
+ const yes=[.22169793,.20694105,.32896996,.26657325,1.32585418];
+ const chosen=demoState.residual?yes:no;
+ return `<div class="board-inner" data-board-demo="residual-demo"><div class="demo-kicker">Chapter 4’s five-layer test · mean |gradient|</div><div class="example-row">${pick('residual-on','With shortcuts',demoState.residual)}${pick('residual-off','Without shortcuts',!demoState.residual)}</div><div class="formula">${demoState.residual?'y = x + F(x)':'y = F(x)'}<small>The final layer changes feature width and cannot use direct addition in this example.</small></div>${chosen.map((v,i)=>rowBar('Layer '+(i+1),v,Math.max(...chosen))).join('')}<div class="outcome">First-layer gradient (example): <strong>${fmt(chosen[0],6)}</strong>. Without shortcuts: ${fmt(no[0],6)}. With shortcuts: ${fmt(yes[0],6)}.</div><div class="board-note">These are the book’s reported measurements for one seeded demonstration, not guaranteed gradient magnitudes for other runs. Shortcuts provide an identity route through deep layers.</div></div>`;
+ }
+ case 'block-demo':{
+ const steps=[['Start','x has shape (B,T,D). Save it for the first residual path.'],['Norm 1','LayerNorm normalizes features at each token before attention.'],['Attention','Masked multi-head attention lets each token use allowed earlier token positions.'],['Dropout + add','Apply dropout to the attention result during training, then add the saved x.'],['Norm 2','Normalize the current tensor again, now for the FFN branch.'],['FFN','Apply Linear → GELU → Linear at each token position.'],['Dropout + add','Apply dropout to the FFN result, then add the second saved shortcut.']];
+ return `<div class="board-inner" data-board-demo="block-demo"><div class="demo-kicker">Select a stage · two pre-normalized residual branches</div><div class="example-row">${steps.map((s,i)=>pick('block-'+i,String(i+1)+': '+s[0],i===demoState.blockStage)).join('')}</div><div class="formula">${demoState.blockStage<=3?'x₁ = x + Dropout(Attention(LayerNorm(x)))':'y = x₁ + Dropout(FFN(LayerNorm(x₁)))'}</div><div class="math-box"><strong>${esc(steps[demoState.blockStage][0])}</strong><span>${esc(steps[demoState.blockStage][1])}</span></div><div class="shape-grid" style="margin-top:12px">${shapeBox('Input','(2,4,768)','Batch, positions, features')}${shapeBox('Output','(2,4,768)','Same shape, changed values')}</div><div class="board-footnote">A transformer block contains two LayerNorm modules, one attention module, one FFN, and two residual additions. All operations preserve the outer tensor shape.</div></div>`;
+ }
+ case 'gpt-model-demo':{
+ const steps=[['Token IDs','Input integers (B,T)'],['Embedding sum','Token vectors plus positional vectors (B,T,D)'],['Embedding dropout','Regularize combined embeddings in training (B,T,D)'],['Transformer stack','Apply 12 blocks, each with attention and FFN (B,T,D)'],['Final LayerNorm','Normalize features after the stack (B,T,D)'],['Output head','Project D features to V vocabulary logits (B,T,V)']];
+ return `<div class="board-inner" data-board-demo="gpt-model-demo"><div class="demo-kicker">Step through the whole model</div><div class="example-row">${steps.map((s,i)=>pick('modelstage-'+i,String(i+1)+': '+s[0],demoState.modelStage===i)).join('')}</div><div class="math-box"><strong>${esc(steps[demoState.modelStage][0])}</strong><span>${esc(steps[demoState.modelStage][1])}</span></div><div class="formula">Input (B,T) → hidden (B,T,768) → logits (B,T,50257)</div><div class="board-note">The final output is not text and not a list of token IDs. It is a score tensor. The generation loop chooses token IDs and passes them to the tokenizer's decoder.</div></div>`;
+ }
+ case 'params-demo':{
+ const c=CFG[demoState.modelSize],n=modelCounts(c),total=demoState.tied?n.tied:n.untied,bytes=demoState.precision/8,mem=total*bytes/(1024**2);
+ return `<div class="board-inner" data-board-demo="params-demo"><div class="demo-kicker">Parameter calculator · GPT-2-style configurations</div><div class="example-row">${Object.entries(CFG).map(([id,cfg])=>pick('size-'+id,cfg.label,demoState.modelSize===id)).join('')}</div><div class="example-row">Vocabulary weights: ${pick('tie-no','Separate output',!demoState.tied)}${pick('tie-yes','Weight tying',demoState.tied)}</div><div class="example-row">Storage: ${pick('precision-32','float32 · 4 B',demoState.precision===32)}${pick('precision-16','float16 · 2 B',demoState.precision===16)}</div><div class="math-row"><div class="math-box"><strong>${int(total)}</strong><span>Counted parameters</span></div><div class="math-box"><strong>${fmt(mem,2)} MiB</strong><span>Parameter-only storage</span></div><div class="math-box"><strong>${int(n.out)}</strong><span>Output-table parameters saved by tying</span></div></div><div class="shape-grid">${shapeBox('Token table',int(n.token),'V×D')}${shapeBox('Position table',int(n.position),'C×D')}${shapeBox('Blocks',int(n.block*c.L),'Stack of L blocks')}${shapeBox('Output table',demoState.tied?'TIED':int(n.out),'V×D separate copy when untied')}</div><div class="board-note">These counts are computed from the chapter's GPTModel architecture with qkv_bias=False. The labels identify standard GPT-2 configurations; the totals here depend on the chapter’s untied/tied code conventions. They do not count optimizer state, activations, temporary tensors, or gradients.</div></div>`;
+ }
+ case 'param-breakdown':{
+ const c=CFG.small,n=modelCounts(c);return `<div class="board-inner"><div class="demo-kicker">Exact GPT-2-small-style architecture counts</div><div class="table-wrap"><table class="board-table" style="width:100%;border-collapse:collapse;text-align:left;font-size:13px"><thead><tr><th>Component</th><th>Parameters</th><th>How counted</th></tr></thead><tbody>${[['Token embedding',n.token,'50,257 × 768'],['Position embedding',n.position,'1,024 × 768'],['One attention module',n.attention,'Q/K/V + output projection'],['One FFN',n.ffn,'768 → 3,072 → 768, with biases'],['Two normalizations in a block',n.blockNorm,'Four vectors of width 768'],['One complete block',n.block,'Attention + FFN + LayerNorm'],['12 blocks',n.block*12,'12 × block count'],['Final normalization',n.finalNorm,'Two vectors of width 768'],['Separate output projection',n.out,'50,257 × 768']].map(row=>`<tr>${row.map((v,i)=>`<td style="padding:9px 7px;border-bottom:1px solid var(--line)">${i===1?int(v):esc(v)}</td>`).join('')}</tr>`).join('')}</tbody></table></div><div class="outcome"><strong>Untied:</strong> ${int(n.untied)} · <strong>Tied:</strong> ${int(n.tied)} · <strong>Savings:</strong> ${int(n.out)} parameters.</div><div class="board-footnote">The source gives 163,009,536 parameters for its untied GPTModel and 124,412,160 when the output weight is tied. The calculation here reproduces both.</div></div>`;
+ }
+ case 'generation-demo':{
+ const generated=['a','model','ready','to','help','.'];
+ const candidates=[['a','the','one','robot'],['model','person','program','friend'],['ready','here','made','open'],['to','for','and','can'],['help','talk','learn','write'],['.','!','now','today']];
+ const logits=[[2.8,1.4,.9,.5],[2.4,1.7,1.1,.6],[2.6,1.5,1.2,.2],[3.0,1.4,.8,.2],[2.6,1.9,.8,.4],[2.2,1.8,1.0,.5]];
+ const i=demoState.genStep,context=['Hello',',','I','am',...generated.slice(0,i)],used=context.slice(-demoState.genContext);
+ const labelTokens=arr=>arr.map((w,j)=>`<span class="token-ids-item ${j===arr.length-1?'em':''}">${esc(w)}</span>`).join('');
+ return `<div class="board-inner" data-board-demo="generation-demo"><div class="demo-kicker">Toy generator · not real GPT-2 predictions</div><div class="example-row">${pick('gen-context-4','Use last 4 tokens',demoState.genContext===4)}${pick('gen-context-6','Use last 6 tokens',demoState.genContext===6)}</div><div class="token-strip" aria-label="All generated tokens">${labelTokens(context)}</div><div class="small" style="font-size:12px;color:var(--muted)">Full generated sequence: ${context.length} tokens. Model sees only last ${used.length} tokens:</div><div class="token-strip">${labelTokens(used)}</div>${i>=generated.length?`<div class="outcome"><strong>Toy run complete:</strong> Hello, I am a model ready to help.</div>`:`<div class="demo-kicker">Next token probabilities · example logits</div>${(() =>{const p=softmax(logits[i]);return candidates[i].map((w,j)=>`<div class="prob-row" style="grid-template-columns:100px 1fr 76px"><span>${esc(w)}</span><div class="prob-track"><div class="prob-fill" style="width:${(p[j]*100).toFixed(2)}%"></div></div><strong class="num">${(p[j]*100).toFixed(1)}%</strong></div>`).join('');})()}<div class="outcome">Argmax chooses <strong>${esc(candidates[i][0])}</strong>, the token with the highest logit ${fmt(logits[i][0],1)}.</div>`}<div class="example-row">${i<generated.length?`<button class="pick-btn" data-demo-action="gen-next">Generate toy token →</button>`:''}<button class="pick-btn" data-demo-action="gen-reset">Start toy sequence over ↺</button></div><div class="board-note">This is a deterministic example showing the steps in Figure 4.17. The probabilities and scores are invented for teaching; they are NOT from the PDF's random GPT weights. A real untrained Chapter 4 model produces incoherent text.</div></div>`;
+ }
+ case 'generation-shapes':return `<div class="board-inner"><div class="demo-kicker">One greedy next-token iteration</div><div class="diagram-row">${cellBox('Model logits','(B,T,V)','Output for every position')}<div class="diagram-arrow">→</div>${cellBox('Last position','(B,V)','logits[:, −1, :]')}<div class="diagram-arrow">→</div>${cellBox('Argmax','(B,1)','One token ID per sequence',true)}</div><div class="formula">idx_next = argmax( softmax(logits[:, −1, :]) )</div><div class="diagram-row">${cellBox('Current IDs','(B,T)','') }<div class="diagram-arrow">+</div>${cellBox('Next ID','(B,1)','') }<div class="diagram-arrow">→</div>${cellBox('New IDs','(B,T+1)','Append one token',true)}</div><div class="board-footnote">The model's input can be cropped to its maximum context length. The output sequence still grows as tokens are appended. Softmax is mathematically optional before argmax.</div></div>`;
+ default:return `<div class="board-inner">Unknown whiteboard.</div>`;
+ }
+}
+function refreshDemo(kind){document.querySelectorAll(`[data-board-demo="${kind}"]`).forEach(old=>{const div=document.createElement('div');div.innerHTML=boardHTML(kind);if(div.firstElementChild)old.replaceWith(div.firstElementChild);});}
+function handleDemo(action){
+ let kind='';
+ if(action.startsWith('batch-')){demoState.batch=Number(action.slice(6));kind='tensor-flow';}
+ else if(action.startsWith('tokens-')){demoState.tokens=Number(action.slice(7));kind='tensor-flow';}
+ else if(action.startsWith('norm-')){demoState.normPreset=Number(action.slice(5));kind='norm-demo';}
+ else if(action==='variance-pop'||action==='variance-sample'){demoState.normUnbiased=action==='variance-sample';kind='norm-demo';}
+ else if(action.startsWith('gelu-')){demoState.geluX=Number(action.slice(5));kind='gelu-demo';}
+ else if(action.startsWith('ffn-')){demoState.ffnWidth=Number(action.slice(4));kind='ffn-demo';}
+ else if(action==='residual-on'||action==='residual-off'){demoState.residual=action==='residual-on';kind='residual-demo';}
+ else if(action.startsWith('block-')){demoState.blockStage=Number(action.slice(6));kind='block-demo';}
+ else if(action.startsWith('modelstage-')){demoState.modelStage=Number(action.slice(11));kind='gpt-model-demo';}
+ else if(action.startsWith('size-')){demoState.modelSize=action.slice(5);kind='params-demo';}
+ else if(action==='tie-no'||action==='tie-yes'){demoState.tied=action==='tie-yes';kind='params-demo';}
+ else if(action.startsWith('precision-')){demoState.precision=Number(action.slice(10));kind='params-demo';}
+ else if(action==='gen-reset'){demoState.genStep=0;kind='generation-demo';}
+ else if(action==='gen-next'){demoState.genStep=Math.min(6,demoState.genStep+1);kind='generation-demo';}
+ else if(action==='gen-context-4'||action==='gen-context-6'){demoState.genContext=Number(action.slice(-1));kind='generation-demo';}
+ if(kind)refreshDemo(kind);
+}
+
+const storageKey='llm-ch4-dialogue-v1';let saved={};
+try{saved=JSON.parse(localStorage.getItem(storageKey)||'{}')||{}}catch{}
+let cursor=Number.isInteger(saved.cursor)?Math.max(0,Math.min(steps.length-1,saved.cursor)):0;
+let theme=['reading','light','dark'].includes(saved.theme)?saved.theme:'reading';
+let font=Number.isFinite(saved.font)?Math.max(16,Math.min(28,Math.round(saved.font/2)*2)):20;
+const E=id=>document.getElementById(id),timeline=E('conversation'),scroller=E('conversationWrap');
+function persist(){try{localStorage.setItem(storageKey,JSON.stringify({cursor,theme,font}))}catch{}}
+function setTheme(next){theme=next;document.documentElement.dataset.theme=theme;document.querySelectorAll('[data-theme-choice]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.themeChoice===theme)));persist();if(!E('tooltip').hidden)hideTooltip();}
+function setFont(next){font=Math.min(28,Math.max(16,next));document.documentElement.style.setProperty('--font-size',font+'px');E('fontValue').textContent=font;E('smallerText').disabled=font<=16;E('largerText').disabled=font>=28;persist();}
+function messageHTML(step,isCurrent){
+ const student=step.who==='student';let inside='';
+ if(step.type==='message')inside=`<div class="bubble">${glossify(step.text)}</div>`;
+ if(step.type==='attachment')inside=`<div class="bubble"><div class="attachment-label"><span class="paperclip">▤</span> Teacher's whiteboard</div><div class="attachment-title">${esc(step.title)}</div><div class="attachment-desc">${esc(step.description)}</div><div class="board">${boardHTML(step.kind)}</div><div class="attachment-actions"><div class="attachment-source">${esc(step.source)}</div><button class="expand-btn" data-view-board="${esc(step.kind)}" data-board-title="${esc(step.title)}" data-board-source="${esc(step.source)}">Expand ↗</button></div></div>`;
+ if(step.type==='quiz'){
+  const answer=quizAnswers[step.id];const order=quizOrder[step.id];
+  inside=`<div class="bubble"><div class="quiz-kicker">Optional knowledge check · ${sections[step.section].title}</div><div class="quiz-q">${glossify(step.question)}</div><div class="option-list">${order.map((original,j)=>{
+   const o=step.options[original];const answered=answer!==undefined;
+   const cls=answered?(original===step.correct?'answer-correct':original===answer?'answer-selected-wrong':''):'';
+   return `<button class="quiz-opt ${cls}" data-quiz="${step.id}" data-opt="${original}" ${answered?'disabled':''} aria-label="Option ${'ABCD'[j]}: ${esc(o.text)}"><span class="option-letter">${'ABCD'[j]}</span><span>${esc(o.text)}</span></button>`;
+  }).join('')}</div>${answer===undefined?`<div class="skip-line">This quiz is optional. Choose one answer for instant feedback, or press Next to skip it.</div>`:`<div class="quiz-feedback" role="status"><div class="feedback-title ${answer===step.correct?'correct':'wrong'}">${answer===step.correct?'✓ Correct answer':'Review the answer'}</div><div><strong>Correct:</strong> ${esc(step.options[step.correct].text)}</div><div style="margin-top:7px">${glossify(step.explanation)}</div>${answer===step.correct?'':`<div class="feedback-why"><strong>Why your answer was not correct:</strong> ${glossify(step.options[answer].why)}</div>`}</div>`}</div>`;
+ }
+ if(step.type==='finish'){
+  const answered=QUIZZES.filter(q=>quizAnswers[q.id]!==undefined),correct=answered.filter(q=>quizAnswers[q.id]===q.correct).length;
+  inside=`<div class="bubble end-card"><div class="end-medallion">✦</div><div class="quiz-kicker">End of chapter four</div><h3>You reached the final page.</h3><p>You followed the GPT architecture from token embeddings through normalization, GELU, residual connections, transformer blocks, parameter counting, and greedy decoding. Chapter 5 will train the model.</p><div class="end-stats"><span><strong>${sections.length}</strong> sections visited</span><span><strong>${correct}/${answered.length}</strong> quizzes correct</span><span><strong>${QUIZZES.length-answered.length}</strong> optional quizzes skipped</span></div><button class="expand-btn" data-restart="true">Read from the beginning ↺</button></div>`;
+ }
+ return `<article class="message ${student?'student':'teacher'} ${step.type==='attachment'?'attachment':''} ${step.type==='quiz'?'quiz-step':''} ${step.type==='finish'?'complete-step':''} ${isCurrent?'current':''}" data-step="${step.global}" ${isCurrent?'aria-live="polite"':''}>${student?'':`<div class="avatar" aria-hidden="true">T</div>`}<div class="bubble-wrap"><div class="who">${student?'Student':'Teacher'}</div>${inside}</div>${student?`<div class="avatar" aria-hidden="true">S</div>`:''}</article>`;
+}
+function updateSidebar(){
+ let html='';for(let si=0;si<sections.length;si++){
+   const s=sections[si],done=Math.max(0,Math.min(s.items.length,cursor-s.start+1)),percent=Math.round(done/s.items.length*100);
+   html+=`<button class="section-item ${si===steps[cursor].section?'active':''} ${percent===100?'complete':''}" data-section="${si}" ${si===steps[cursor].section?'aria-current="step"':''}><div class="section-index">${percent===100?'✓':String(si+1).padStart(2,'0')}</div><div class="section-copy"><div class="section-name">${esc(s.title)}</div><div class="section-page">${esc(s.pages)}</div><div class="section-trail"><i style="width:${percent}%"></i></div></div></button>`;
+ }
+ E('sectionNav').innerHTML=html;
+ E('sideStatus').textContent=`${Math.round((cursor+1)/steps.length*100)}% of the conversation revealed · Saved locally`;
+}
+function render(scroll=true,instant=false){
+ const current=steps[cursor];let html='';
+ for(let i=0;i<=cursor;i++){
+  const step=steps[i];if(step.global===sections[step.section].start){const s=sections[step.section];html+=`<div class="section-divider"><div class="section-mark">${String(step.section+1).padStart(2,'0')}</div><div><div class="section-heading">${esc(s.title)}</div><div class="section-details">Source: Chapter 4 · ${esc(s.pages)}</div></div></div>`;}
+  html+=messageHTML(step,i===cursor);
+ }
+ timeline.innerHTML=html;
+ E('activeSectionTitle').textContent=sections[current.section].title;
+ E('activeSectionSubtitle').textContent=`Source: Chapter 4 · ${sections[current.section].pages}`;
+ const percent=(cursor+1)/steps.length*100;
+ E('progressFill').style.width=percent.toFixed(2)+'%';
+ E('progressTrack').setAttribute('aria-valuenow',String(Math.round(percent)));
+ E('positionLabel').textContent=`Step ${cursor+1} of ${steps.length} · ${Math.round(percent)}%`;
+ const answered=QUIZZES.filter(q=>quizAnswers[q.id]!==undefined),correct=answered.filter(q=>quizAnswers[q.id]===q.correct).length;
+ E('scoreLabel').textContent=answered.length?`${correct} correct · ${answered.length} answered · Space / → next`:'Space / → next · ← back';
+ E('backBtn').disabled=cursor===0;
+ E('nextBtn').disabled=cursor===steps.length-1;
+ E('nextBtn').textContent=cursor===steps.length-1?'Finished ✓':current.type==='quiz'&&quizAnswers[current.id]===undefined?'Skip quiz →':'Next →';
+ updateSidebar();persist();hideTooltip();
+ if(scroll){const target=timeline.querySelector('.message.current');if(target){const tall=target.offsetHeight>scroller.clientHeight*.72;target.scrollIntoView({block:tall?'start':'end',behavior:instant||window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});}}
+}
+function goTo(index){if(index<0||index>=steps.length)return;const previous=cursor;cursor=index;closeMenu();render(true,Math.abs(index-previous)>2);}
+const back=()=>goTo(cursor-1),next=()=>goTo(cursor+1);
+function closeMenu(){E('sidebar').classList.remove('open');E('scrim').classList.remove('open');E('menuBtn').setAttribute('aria-expanded','false');}
+function openMenu(){E('sidebar').classList.add('open');E('scrim').classList.add('open');E('menuBtn').setAttribute('aria-expanded','true');}
+function reset(){if(confirm('Restart Chapter 4? This resets your reading position and quiz answers. Your theme and text size will stay the same.')){cursor=0;for(const k in quizAnswers)delete quizAnswers[k];Object.assign(demoState,{batch:2,tokens:4,normPreset:0,normUnbiased:false,geluX:-1,ffnWidth:768,residual:true,blockStage:0,modelStage:0,modelSize:'small',tied:false,precision:32,genStep:0,genContext:4});render(true);}}
+function renderGlossary(){const query=E('glossarySearch').value.trim().toLowerCase();const matches=glossary.filter(g=>[g.name,g.def,...g.aliases].some(x=>x.toLowerCase().includes(query))).sort((a,b)=>a.name.localeCompare(b.name));E('glossaryEntries').innerHTML=`<div class="gloss-count">${matches.length} ${matches.length===1?'entry':'entries'}</div>${matches.map(g=>`<div class="gloss-entry"><b>${esc(g.name)}</b><p>${esc(g.def)}</p></div>`).join('')||'<p class="small-line">No matching entries. Try a shorter term.</p>'}`;}
+function openGlossary(){closeMenu();hideTooltip();E('glossarySearch').value='';renderGlossary();E('glossaryModal').showModal();E('glossarySearch').focus();}
+function openViewer(kind,title,source){hideTooltip();E('viewerTitle').textContent=title;E('viewerSubtitle').textContent=source;E('viewerBody').innerHTML=`<div class="board"><div class="board-canvas">${boardHTML(kind)}</div></div>`;E('viewerModal').showModal();}
+let tooltipAnchor=null,hoverTimer=null;
+function hideTooltip(){clearTimeout(hoverTimer);E('tooltip').hidden=true;tooltipAnchor=null;}
+function showTooltip(anchor){const g=glossaryById[anchor.dataset.term];if(!g)return;clearTimeout(hoverTimer);tooltipAnchor=anchor;const tip=E('tooltip');tip.innerHTML=`<div class="tooltip-name">${esc(g.name)}</div><div class="tooltip-description">${esc(g.def)}</div><div class="tooltip-hint">Press Esc or tap outside to close</div>`;tip.hidden=false;tip.style.left='12px';tip.style.top='12px';
+ const box=anchor.getBoundingClientRect(),w=tip.offsetWidth,h=tip.offsetHeight,margin=12;
+ const left=Math.max(margin,Math.min(window.innerWidth-w-margin,box.left));
+ let top=box.bottom+10;if(top+h>window.innerHeight-margin)top=box.top-h-10;
+ top=Math.max(margin,Math.min(window.innerHeight-h-margin,top));tip.style.left=left+'px';tip.style.top=top+'px';
+}
+E('backBtn').addEventListener('click',back);E('nextBtn').addEventListener('click',next);
+E('menuBtn').addEventListener('click',()=>E('sidebar').classList.contains('open')?closeMenu():openMenu());E('scrim').addEventListener('click',closeMenu);
+E('glossaryBtn').addEventListener('click',openGlossary);E('sidebarGlossary').addEventListener('click',openGlossary);E('closeGlossary').addEventListener('click',()=>E('glossaryModal').close());E('closeViewer').addEventListener('click',()=>E('viewerModal').close());
+E('glossarySearch').addEventListener('input',renderGlossary);
+E('resetBtn').addEventListener('click',reset);
+E('smallerText').addEventListener('click',()=>setFont(font-2));E('largerText').addEventListener('click',()=>setFont(font+2));
+document.querySelectorAll('[data-theme-choice]').forEach(b=>b.addEventListener('click',()=>setTheme(b.dataset.themeChoice)));
+E('sectionNav').addEventListener('click',e=>{const b=e.target.closest('[data-section]');if(b)goTo(sections[Number(b.dataset.section)].start);});
+function fallbackCopy(value,done,button){const el=document.createElement('textarea');el.value=value;el.style.cssText='position:fixed;top:-9999px;left:-9999px';document.body.appendChild(el);el.focus();el.select();let ok=false;try{ok=document.execCommand('copy');}catch{}el.remove();if(ok)done();else if(button){const pre=button.closest('.code-card')?.querySelector('pre');if(pre){const range=document.createRange();range.selectNodeContents(pre);const sel=window.getSelection();sel.removeAllRanges();sel.addRange(range);}button.textContent='Selected — press Ctrl/Cmd+C';}}
+document.addEventListener('click',e=>{
+ const term=e.target.closest('.gloss-term');if(term){e.stopPropagation();showTooltip(term);return;}
+ const quizBtn=e.target.closest('[data-quiz]');if(quizBtn){const id=quizBtn.dataset.quiz;if(quizAnswers[id]===undefined){quizAnswers[id]=Number(quizBtn.dataset.opt);const y=scroller.scrollTop;render(false);scroller.scrollTop=y;const feedback=timeline.querySelector('.message.current .quiz-feedback');if(feedback)feedback.scrollIntoView({block:'nearest',behavior:'smooth'});}return;}
+ const expand=e.target.closest('[data-view-board]');if(expand){openViewer(expand.dataset.viewBoard,expand.dataset.boardTitle,expand.dataset.boardSource);return;}
+ const copy=e.target.closest('[data-copy-code]');if(copy){const code=codeSamples[copy.dataset.copyCode];if(code){const original=copy.textContent;const done=()=>{copy.textContent='Copied ✓';setTimeout(()=>{if(copy.isConnected)copy.textContent=original;},1700);}; if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(code).then(done,()=>fallbackCopy(code,done,copy));}else fallbackCopy(code,done,copy);}return;}
+ const demo=e.target.closest('[data-demo-action]');if(demo){handleDemo(demo.dataset.demoAction);return;}
+ if(e.target.closest('[data-restart]')){reset();return;}
+ if(!e.target.closest('#tooltip')&&!E('tooltip').hidden)hideTooltip();
+});
+document.addEventListener('pointerover',e=>{const term=e.target.closest('.gloss-term');if(term&&e.pointerType==='mouse'&&term!==tooltipAnchor)showTooltip(term);});
+document.addEventListener('pointerout',e=>{const term=e.target.closest('.gloss-term');if(term&&e.pointerType==='mouse'&&tooltipAnchor===term){clearTimeout(hoverTimer);hoverTimer=setTimeout(()=>{if(!E('tooltip').matches(':hover'))hideTooltip();},180);}});
+E('tooltip').addEventListener('pointerenter',()=>clearTimeout(hoverTimer));E('tooltip').addEventListener('pointerleave',hideTooltip);
+document.addEventListener('focusin',e=>{const term=e.target.closest('.gloss-term');if(term)showTooltip(term);else if(tooltipAnchor&&!E('tooltip').contains(e.target))hideTooltip();});
+document.addEventListener('keydown',e=>{
+ if(e.key==='Escape'){hideTooltip();if(E('viewerModal').open)E('viewerModal').close();if(E('glossaryModal').open)E('glossaryModal').close();if(E('sidebar').classList.contains('open'))closeMenu();return;}
+ if(E('glossaryModal').open||E('viewerModal').open)return;
+ if(e.ctrlKey||e.altKey||e.metaKey||e.shiftKey)return;
+ const active=e.target,tag=active.tagName;
+ if(['BUTTON','INPUT','TEXTAREA','SELECT','A','SUMMARY'].includes(tag)||active.isContentEditable||active.closest('[role="dialog"]'))return;
+ if(e.key===' '||e.code==='Space'||e.key==='ArrowRight'){e.preventDefault();next();}
+ else if(e.key==='ArrowLeft'){e.preventDefault();back();}
+});
+for(const id of ['glossaryModal','viewerModal']){
+ const el=E(id);el.addEventListener('click',e=>{if(e.target===el){const r=el.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)el.close();}});
+}
+scroller.addEventListener('scroll',hideTooltip,{passive:true});window.addEventListener('resize',hideTooltip,{passive:true});
+setTheme(theme);setFont(font);render(false);
+requestAnimationFrame(()=>{const step=timeline.querySelector('.message.current');if(step)step.scrollIntoView({block:step.offsetHeight>scroller.clientHeight*.72?'start':'end',behavior:'instant'});});
+// Public read-only counters support basic smoke tests in a local browser console.
+Object.defineProperty(window,'guideInfo',{get:()=>({sections:sections.length,steps:steps.length,quizzes:QUIZZES.length,cursor,theme,font,answered:Object.keys(quizAnswers).length})});
+</script>
+</body>
+</html>
