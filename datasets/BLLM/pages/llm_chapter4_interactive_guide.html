@@ -1053,11 +1053,19 @@ document.addEventListener('focusin',e=>{const term=e.target.closest('.gloss-term
 document.addEventListener('keydown',e=>{
  if(e.key==='Escape'){hideTooltip();if(E('viewerModal').open)E('viewerModal').close();if(E('glossaryModal').open)E('glossaryModal').close();if(E('sidebar').classList.contains('open'))closeMenu();return;}
  if(E('glossaryModal').open||E('viewerModal').open)return;
- if(e.ctrlKey||e.altKey||e.metaKey||e.shiftKey)return;
- const active=e.target,tag=active.tagName;
- if(['BUTTON','INPUT','TEXTAREA','SELECT','A','SUMMARY'].includes(tag)||active.isContentEditable||active.closest('[role="dialog"]'))return;
- if(e.key===' '||e.code==='Space'||e.key==='ArrowRight'){e.preventDefault();next();}
+ if(e.defaultPrevented||e.isComposing||e.ctrlKey||e.altKey||e.metaKey||e.shiftKey)return;
+ const active=e.target;
+ if(!(active instanceof Element))return;
+ // Keep typing, sliders, lists, and dialogs in control of their own arrow keys.
+ if(active.isContentEditable||active.closest('input,textarea,select,dialog,[role="dialog"],[role="textbox"],[role="combobox"],[role="slider"],[role="spinbutton"],[role="listbox"],[role="menu"],[role="menubar"],[role="tablist"],[role="radiogroup"],[role="tree"],[role="grid"],audio,video'))return;
+ // Buttons can keep focus after a click. Arrows must still navigate the guide.
+ if(e.key==='ArrowRight'){e.preventDefault();next();}
  else if(e.key==='ArrowLeft'){e.preventDefault();back();}
+ else if(e.key===' '||e.code==='Space'){
+  // Space must activate a focused control once, without also advancing.
+  if(active.closest('button,a,summary,[role="button"],[role="link"],[role="checkbox"],[role="radio"],[role="switch"]'))return;
+  e.preventDefault();next();
+ }
 });
 for(const id of ['glossaryModal','viewerModal']){
  const el=E(id);el.addEventListener('click',e=>{if(e.target===el){const r=el.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)el.close();}});
