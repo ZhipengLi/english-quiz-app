@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pages Directory | GitHub Pages SPA</title>
+    
+    <!-- Emoji Favicon (🗂️ Card Index Dividers) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗂️</text></svg>">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom scrollbar and subtle animations */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.05);
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.4);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(100, 116, 139, 0.4);
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(100, 116, 139, 0.6);
+        }
+        @keyframes pulse-subtle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .animate-pulse-subtle {
+            animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen flex flex-col font-sans transition-colors duration-200 selection:bg-brand-500 selection:text-white">
+
+    <header class="sticky top-0 z-30 backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
+            <!-- Brand / Logo -->
+            <div class="flex items-center gap-3 min-w-0">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-purple-600 flex items-center justify-center text-white shadow-md shadow-brand-500/20 shrink-0 text-xl select-none" aria-hidden="true">
+                    🗂️
+                </div>
+                <div class="truncate">
+                    <div class="flex items-center gap-2">
+                        <h1 class="font-bold text-base sm:text-lg tracking-tight truncate">Pages Explorer</h1>
+                        <span id="statusBadge" class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60">
+                            Auto-Detected
+                        </span>
+                    </div>
+                    <p id="subHeaderSource" class="text-xs text-slate-500 dark:text-slate-400 font-mono truncate">
+                        ./pages/*.html &bull; ./quiz/*.json
+                    </p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+                <!-- Refresh Button -->
+                <button id="refreshBtn" onclick="app.loadPages()" title="Refresh directory"
+                    class="p-2.5 rounded-xl text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500">
+                    <svg id="refreshIcon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                    </svg>
+                </button>
+
+                <!-- Repository Settings Modal Trigger -->
+                <button onclick="app.toggleSettingsModal(true)" title="Configure GitHub Source"
+                    class="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-200 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span class="hidden sm:inline">Source Config</span>
+                </button>
+
+                <!-- Theme Toggle Button -->
+                <button onclick="app.toggleTheme()" title="Toggle Light/Dark Mode"
+                    class="p-2.5 rounded-xl text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                    <!-- Sun icon for dark mode -->
+                    <svg id="themeIconSun" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hidden dark:block text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                    <!-- Moon icon for light mode -->
+                    <svg id="themeIconMoon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 block dark:hidden text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 flex flex-col">
+        
+        <!-- DIRECTORY VIEW -->
+        <div id="directoryView" class="flex-1 flex flex-col space-y-6">
+            
+            <!-- Info Banner when running in Demo / Preview Mode -->
+            <div id="demoBanner" class="hidden rounded-2xl bg-gradient-to-r from-brand-500/10 via-purple-500/10 to-pink-500/10 border border-brand-500/20 p-4 sm:p-5">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div class="flex items-start gap-3.5">
+                        <div class="p-2 rounded-xl bg-brand-500/20 text-brand-600 dark:text-brand-400 shrink-0 mt-0.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="text-sm font-semibold text-slate-900 dark:text-white">
+                                Sandbox Preview Mode Active
+                            </h2>
+                            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-0.5 leading-relaxed">
+                                Since this page isn't currently hosted on a live <code class="font-mono text-xs px-1.5 py-0.5 rounded bg-slate-200 dark:bg-slate-800">*.github.io</code> URL, sample HTML files from <code class="font-mono text-xs px-1.5 py-0.5 rounded bg-slate-200 dark:bg-slate-800">pages/</code> and sample JSON quizzes from <code class="font-mono text-xs px-1.5 py-0.5 rounded bg-slate-200 dark:bg-slate-800">quiz/</code> are shown below. Once pushed to GitHub Pages, it will automatically scan your repository's <code class="font-mono text-xs">pages</code> and <code class="font-mono text-xs">quiz</code> folders!
+                            </p>
+                        </div>
+                    </div>
+                    <button onclick="app.toggleSettingsModal(true)" class="shrink-0 w-full sm:w-auto px-4 py-2 rounded-xl text-xs font-semibold bg-brand-600 hover:bg-brand-500 text-white shadow-sm transition-colors text-center">
+                        Connect Live Repo
+                    </button>
+                </div>
+            </div>
+
+            <!-- Search & Controls Bar -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 bg-white dark:bg-slate-900 p-3 sm:p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                <!-- Search Input -->
+                <div class="relative flex-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        oninput="app.handleSearch(this.value)"
+                        placeholder="Filter HTML pages or JSON quizzes by name..." 
+                        class="w-full pl-11 pr-9 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
+                    >
+                    <button id="clearSearchBtn" onclick="app.clearSearch()" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Right Side Controls: Sort indicator, Navigation Mode, View Layout -->
+                <div class="flex items-center justify-between sm:justify-end gap-2 pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-100 dark:border-slate-800">
+                    <!-- Ascending Sort Badge -->
+                    <div class="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800/70 text-xs font-medium text-slate-600 dark:text-slate-300" title="Files are strictly sorted in ascending alphabetical order (A to Z)">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
+                        </svg>
+                        <span>Name (A–Z)</span>
+                    </div>
+
+                    <!-- Click Behavior Toggle (Direct Link vs SPA Preview) -->
+                    <button id="navModeBtn" onclick="app.toggleNavMode()" class="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-xs font-medium text-slate-700 dark:text-slate-300 transition-colors" title="Choose whether clicking a file navigates directly or opens inside the SPA viewer">
+                        <span id="navModeLabel">Mode: Direct Navigate</span>
+                    </button>
+
+                    <!-- Grid / List Layout Toggle -->
+                    <div class="flex items-center bg-slate-100 dark:bg-slate-800 p-1 rounded-xl">
+                        <button id="viewGridBtn" onclick="app.setViewLayout('grid')" class="p-1.5 rounded-lg bg-white dark:bg-slate-900 text-brand-600 dark:text-brand-400 shadow-sm transition-all" title="Grid View">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                            </svg>
+                        </button>
+                        <button id="viewListBtn" onclick="app.setViewLayout('list')" class="p-1.5 rounded-lg text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 transition-all" title="Compact List View">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading Skeleton State -->
+            <div id="loadingState" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="h-28 rounded-2xl bg-slate-200/70 dark:bg-slate-800/50 animate-pulse-subtle p-4 flex flex-col justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-slate-300 dark:bg-slate-700"></div>
+                        <div class="space-y-2 flex-1">
+                            <div class="h-4 bg-slate-300 dark:bg-slate-700 rounded w-3/4"></div>
+                            <div class="h-3 bg-slate-300 dark:bg-slate-700 rounded w-1/2"></div>
+                        </div>
+                    </div>
+                    <div class="h-3 bg-slate-300 dark:bg-slate-700 rounded w-1/3"></div>
+                </div>
+                <div class="h-28 rounded-2xl bg-slate-200/70 dark:bg-slate-800/50 animate-pulse-subtle p-4 flex flex-col justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-slate-300 dark:bg-slate-700"></div>
+                        <div class="space-y-2 flex-1">
+                            <div class="h-4 bg-slate-300 dark:bg-slate-700 rounded w-2/3"></div>
+                            <div class="h-3 bg-slate-300 dark:bg-slate-700 rounded w-1/2"></div>
+                        </div>
+                    </div>
+                    <div class="h-3 bg-slate-300 dark:bg-slate-700 rounded w-1/4"></div>
+                </div>
+                <div class="h-28 rounded-2xl bg-slate-200/70 dark:bg-slate-800/50 animate-pulse-subtle p-4 flex flex-col justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-slate-300 dark:bg-slate-700"></div>
+                        <div class="space-y-2 flex-1">
+                            <div class="h-4 bg-slate-300 dark:bg-slate-700 rounded w-4/5"></div>
+                            <div class="h-3 bg-slate-300 dark:bg-slate-700 rounded w-1/2"></div>
+                        </div>
+                    </div>
+                    <div class="h-3 bg-slate-300 dark:bg-slate-700 rounded w-1/3"></div>
+                </div>
+            </div>
+
+            <!-- SECTION 1: HTML PAGES -->
+            <section id="pagesSection" class="space-y-3">
+                <div class="flex items-center justify-between px-1">
+                    <div class="flex items-center gap-2.5">
+                        <span class="w-7 h-7 rounded-lg bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center text-sm select-none">📄</span>
+                        <h2 class="text-sm sm:text-base font-bold text-slate-900 dark:text-white tracking-tight">HTML Pages</h2>
+                        <span id="folderPathDisplay" class="font-mono text-xs px-2 py-0.5 rounded-md bg-slate-200/70 dark:bg-slate-800 text-slate-600 dark:text-slate-300">./pages/</span>
+                    </div>
+                    <span id="fileCountSummary" class="text-xs text-slate-500 dark:text-slate-400">Loading files...</span>
+                </div>
+
+                <!-- Error / Empty State for HTML Pages -->
+                <div id="emptyState" class="hidden flex-col items-center justify-center text-center py-10 px-4 bg-white dark:bg-slate-900 rounded-2xl border border-dashed border-slate-300 dark:border-slate-800">
+                    <div class="w-12 h-12 rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <h3 id="emptyStateTitle" class="text-sm font-semibold text-slate-900 dark:text-white">No HTML files found</h3>
+                    <p id="emptyStateDesc" class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 max-w-md mt-1">
+                        Make sure you have a folder named <code class="font-mono text-xs px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800">pages</code> at the same level as this <code class="font-mono text-xs px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800">index.html</code> containing <code class="font-mono text-xs">.html</code> files.
+                    </p>
+                    <div class="mt-4 flex flex-wrap items-center justify-center gap-3">
+                        <button onclick="app.toggleSettingsModal(true)" class="px-4 py-2 rounded-xl text-xs font-semibold bg-brand-600 hover:bg-brand-500 text-white transition-colors">
+                            Configure GitHub Repository
+                        </button>
+                        <button onclick="app.loadDemoPages()" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition-colors">
+                            Load Demo Data
+                        </button>
+                    </div>
+                </div>
+
+                <!-- File List Container -->
+                <div id="filesContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+            </section>
+
+            <!-- SECTION 2: QUIZZES (JSON FILES IN ./quiz) -->
+            <section id="quizSection" class="hidden space-y-3 pt-4 border-t border-slate-200/80 dark:border-slate-800/80">
+                <div class="flex items-center justify-between px-1">
+                    <div class="flex items-center gap-2.5">
+                        <span class="w-7 h-7 rounded-lg bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center text-sm select-none">🧠</span>
+                        <h2 class="text-sm sm:text-base font-bold text-slate-900 dark:text-white tracking-tight">Interactive Quizzes</h2>
+                        <span id="quizFolderPathDisplay" class="font-mono text-xs px-2 py-0.5 rounded-md bg-purple-500/10 text-purple-700 dark:text-purple-300 border border-purple-500/20">./quiz/</span>
+                    </div>
+                    <span id="quizCountSummary" class="text-xs text-slate-500 dark:text-slate-400">0 quizzes</span>
+                </div>
+
+                <!-- Empty Search State for Quizzes -->
+                <div id="quizEmptyState" class="hidden flex-col items-center justify-center text-center py-8 px-4 bg-white dark:bg-slate-900 rounded-2xl border border-dashed border-slate-300 dark:border-slate-800">
+                    <p id="quizEmptyStateDesc" class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">No matching quiz files found.</p>
+                </div>
+
+                <!-- Quiz List Container -->
+                <div id="quizzesContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+            </section>
+
+        </div>
+
+        <div id="viewerView" class="hidden flex-1 flex flex-col space-y-4">
+            <!-- Viewer Toolbar -->
+            <div class="flex flex-wrap items-center justify-between gap-3 bg-white dark:bg-slate-900 p-3 sm:px-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                <div class="flex items-center gap-3 min-w-0">
+                    <button onclick="app.closeViewer()" class="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-200 transition-colors shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                        </svg>
+                        <span>Back to List</span>
+                    </button>
+                    <div class="truncate">
+                        <h2 id="viewerTitle" class="text-sm sm:text-base font-semibold text-slate-900 dark:text-white truncate">filename.html</h2>
+                        <p id="viewerPath" class="text-xs font-mono text-slate-500 dark:text-slate-400 truncate">pages/filename.html</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2 shrink-0">
+                    <!-- Prev / Next Page Buttons (Sorted Ascending Order) -->
+                    <div class="flex items-center bg-slate-100 dark:bg-slate-800 rounded-xl p-0.5">
+                        <button id="prevPageBtn" onclick="app.navigateAdjacent(-1)" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-white dark:hover:bg-slate-700 disabled:opacity-40 disabled:pointer-events-none transition-all" title="Previous HTML File">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <button id="nextPageBtn" onclick="app.navigateAdjacent(1)" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-white dark:hover:bg-slate-700 disabled:opacity-40 disabled:pointer-events-none transition-all" title="Next HTML File">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Open Full Page Link -->
+                    <a id="viewerDirectLink" href="#" class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-xs sm:text-sm font-medium shadow-sm transition-colors">
+                        <span>Open Full Page</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Iframe Container -->
+            <div class="flex-1 min-h-[65vh] bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden relative">
+                <iframe id="viewerFrame" class="w-full h-full min-h-[65vh] border-0 bg-white" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+            </div>
+        </div>
+
+    </main>
+
+    <div id="settingsModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/60 backdrop-blur-sm">
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl max-w-lg w-full p-6 shadow-2xl space-y-5 animate-in fade-in zoom-in-95 duration-150">
+            <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
+                <div class="flex items-center gap-2.5">
+                    <div class="p-2 rounded-xl bg-brand-500/10 text-brand-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white">GitHub Pages Discovery Setup</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">How this SPA finds all <code class="font-mono">.html</code> files in <code class="font-mono">pages/</code> &amp; <code class="font-mono">.json</code> files in <code class="font-mono">quiz/</code></p>
+                    </div>
+                </div>
+                <button onclick="app.toggleSettingsModal(false)" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="space-y-4 text-xs sm:text-sm">
+                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 space-y-1.5">
+                    <p class="font-semibold text-slate-900 dark:text-white">Zero-Config on <code class="font-mono text-brand-500">*.github.io</code></p>
+                    <p class="text-xs leading-relaxed">
+                        When hosted on <code class="font-mono">https://{owner}.github.io/{repo}/</code>, this SPA automatically queries the GitHub Contents API for the <code class="font-mono">pages/</code> directory at the same level as this file. If you use a <strong>custom domain</strong> or want to test against any public GitHub repo right now, enter the details below:
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">GitHub Username / Org</label>
+                        <input type="text" id="cfgOwner" placeholder="e.g. octocat" class="w-full px-3 py-2 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-brand-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Repository Name</label>
+                        <input type="text" id="cfgRepo" placeholder="e.g. my-pages-site" class="w-full px-3 py-2 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-brand-500">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Pages Folder Name</label>
+                        <input type="text" id="cfgFolder" placeholder="pages" value="pages" class="w-full px-3 py-2 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-brand-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Quiz Folder Name</label>
+                        <input type="text" id="cfgQuizFolder" placeholder="quiz" value="quiz" class="w-full px-3 py-2 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-brand-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Branch (Optional)</label>
+                    <input type="text" id="cfgBranch" placeholder="Auto (main / gh-pages)" class="w-full px-3 py-2 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-brand-500">
+                </div>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-between gap-2 pt-3 border-t border-slate-100 dark:border-slate-800">
+                <button onclick="app.resetToAutoDetect()" class="px-3 py-2 rounded-xl text-xs font-medium text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 transition-colors">
+                    Reset to Auto-Detect
+                </button>
+                <div class="flex items-center gap-2">
+                    <button onclick="app.toggleSettingsModal(false)" class="px-4 py-2 rounded-xl text-xs font-medium bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition-colors">
+                        Cancel
+                    </button>
+                    <button onclick="app.saveSettings()" class="px-4 py-2 rounded-xl text-xs font-semibold bg-brand-600 hover:bg-brand-500 text-white shadow-sm transition-colors">
+                        Save & Fetch Files
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Box -->
+    <div id="toastBox" class="fixed bottom-5 right-5 z-50 hidden items-center gap-2.5 px-4 py-3 rounded-xl bg-slate-900 dark:bg-slate-800 text-white text-xs sm:text-sm font-medium shadow-xl border border-slate-700/60">
+        <span id="toastMessage">Notification</span>
+    </div>
+
+    <footer class="border-t border-slate-200 dark:border-slate-800/80 py-6 px-4 sm:px-6 lg:px-8 mt-auto">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span>Sorted strictly by filename in <strong>ascending order (A &rarr; Z)</strong></span>
+            </div>
+            <div class="text-center sm:text-right font-mono">
+                <span>Supports GitHub Pages API + Optional <code class="text-brand-500">pages/manifest.json</code> fallback</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /**
+         * ============================================================================
+         * GITHUB PAGES CONFIGURATION (OPTIONAL HARDCODED OVERRIDE)
+         * ============================================================================
+         * By default, this SPA automatically detects your username, repository, and
+         * relative path when hosted on `https://<username>.github.io/<repo>/`.
+         *
+         * If you use a custom domain (e.g. `https://example.com`), you can hardcode
+         * your GitHub repository details below so visitors don't need to configure it:
+         */
+        const DEFAULT_GITHUB_CONFIG = {
+            owner: '',        // Leave empty for auto-detect from *.github.io, or set e.g. 'octocat'
+            repo: '',         // Leave empty for auto-detect, or set e.g. 'my-repo'
+            branch: '',       // Leave empty to use default branch, or set e.g. 'main' or 'gh-pages'
+            folder: 'pages',  // HTML folder at the same level as this HTML file
+            quizFolder: 'quiz'// Quiz JSON folder at the same level as the pages folder
+        };
+
+        /**
+         * Fixed URL prefix for constructing quiz links.
+         * Final link format:
+         * https://zhipengli.github.io/english-quiz-app/choice-quiz.html?url=https://raw.githubusercontent.com/ZhipengLi/english-quiz-app/refs/heads/main/<quizFolder>/<filename>.json
+         */
+        const QUIZ_URL_PREFIX = 'https://zhipengli.github.io/english-quiz-app/choice-quiz.html?url=https://raw.githubusercontent.com/ZhipengLi/english-quiz-app/refs/heads/main/';
+
+        /**
+         * Sample mock HTML pages shown when previewing locally or in a sandbox
+         * where no live GitHub repository or local `./pages/` directory exists yet.
+         */
+        const DEMO_HTML_FILES = [
+            {
+                name: '01-getting-started.html',
+                size: 4210,
+                isDemo: true,
+                demoContent: `<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><script src="https://cdn.tailwindcss.com"><\/script></head><body class="bg-slate-50 text-slate-800 p-6 sm:p-10 font-sans"><div class="max-w-2xl mx-auto bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200"><span class="px-2.5 py-1 text-xs font-semibold bg-indigo-100 text-indigo-700 rounded-full">01-getting-started.html</span><h1 class="text-2xl font-bold mt-3">Getting Started Guide</h1><p class="text-slate-600 mt-2 leading-relaxed">This is a sample page located inside <code class="bg-slate-100 px-1.5 py-0.5 rounded">pages/01-getting-started.html</code>. When deployed to GitHub Pages, clicking any item navigates directly to your actual HTML files.</p></div></body></html>`
+            },
+            {
+                name: '02-architecture-notes.html',
+                size: 6840,
+                isDemo: true,
+                demoContent: `<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><script src="https://cdn.tailwindcss.com"><\/script></head><body class="bg-slate-50 text-slate-800 p-6 sm:p-10 font-sans"><div class="max-w-2xl mx-auto bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200"><span class="px-2.5 py-1 text-xs font-semibold bg-emerald-100 text-emerald-700 rounded-full">02-architecture-notes.html</span><h1 class="text-2xl font-bold mt-3">System Architecture Notes</h1><p class="text-slate-600 mt-2 leading-relaxed">Notice how all files are automatically sorted in ascending alphabetical and numerical order!</p></div></body></html>`
+            },
+            {
+                name: 'about-project.html',
+                size: 3120,
+                isDemo: true,
+                demoContent: `<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><script src="https://cdn.tailwindcss.com"><\/script></head><body class="bg-slate-50 text-slate-800 p-6 sm:p-10 font-sans"><div class="max-w-2xl mx-auto bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200"><span class="px-2.5 py-1 text-xs font-semibold bg-purple-100 text-purple-700 rounded-full">about-project.html</span><h1 class="text-2xl font-bold mt-3">About This Project</h1><p class="text-slate-600 mt-2 leading-relaxed">This page demonstrates navigating to <code class="bg-slate-100 px-1.5 py-0.5 rounded">pages/about-project.html</code>.</p></div></body></html>`
+            },
+            {
+                name: 'api-reference.html',
+                size: 12450,
+                isDemo: true,
+                demoContent: `<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><script src="https://cdn.tailwindcss.com"><\/script></head><body class="bg-slate-50 text-slate-800 p-6 sm:p-10 font-sans"><div class="max-w-2xl mx-auto bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200"><span class="px-2.5 py-1 text-xs font-semibold bg-amber-100 text-amber-700 rounded-full">api-reference.html</span><h1 class="text-2xl font-bold mt-3">API Documentation</h1><p class="text-slate-600 mt-2 leading-relaxed">Full documentation inside <code class="bg-slate-100 px-1.5 py-0.5 rounded">pages/api-reference.html</code>.</p></div></body></html>`
+            },
+            {
+                name: 'changelog-2026.html',
+                size: 5390,
+                isDemo: true,
+                demoContent: `<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><script src="https://cdn.tailwindcss.com"><\/script></head><body class="bg-slate-50 text-slate-800 p-6 sm:p-10 font-sans"><div class="max-w-2xl mx-auto bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200"><span class="px-2.5 py-1 text-xs font-semibold bg-pink-100 text-pink-700 rounded-full">changelog-2026.html</span><h1 class="text-2xl font-bold mt-3">2026 Release Changelog</h1><p class="text-slate-600 mt-2 leading-relaxed">Latest updates and release notes.</p></div></body></html>`
+            },
+            {
+                name: 'z-troubleshooting-faq.html',
+                size: 7890,
+                isDemo: true,
+                demoContent: `<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><script src="https://cdn.tailwindcss.com"><\/script></head><body class="bg-slate-50 text-slate-800 p-6 sm:p-10 font-sans"><div class="max-w-2xl mx-auto bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200"><span class="px-2.5 py-1 text-xs font-semibold bg-cyan-100 text-cyan-700 rounded-full">z-troubleshooting-faq.html</span><h1 class="text-2xl font-bold mt-3">Troubleshooting & FAQ</h1><p class="text-slate-600 mt-2 leading-relaxed">Alphabetically last item in the <code class="bg-slate-100 px-1.5 py-0.5 rounded">pages/</code> directory.</p></div></body></html>`
+            }
+        ];
+
+        /**
+         * Sample mock JSON quiz files shown in Sandbox Preview Mode
+         */
+        const DEMO_QUIZ_FILES = [
+            {
+                name: 'deeplearningwithpythonv3chapter01.json',
+                size: 14520,
+                isDemo: true
+            },
+            {
+                name: 'deeplearningwithpythonv3chapter02.json',
+                size: 18340,
+                isDemo: true
+            },
+            {
+                name: 'machine-learning-fundamentals.json',
+                size: 9640,
+                isDemo: true
+            },
+            {
+                name: 'neural-networks-basics.json',
+                size: 11200,
+                isDemo: true
+            }
+        ];
+
+        const app = {
+            state: {
+                allFiles: [],          // Sorted list of .html file objects
+                filteredFiles: [],     // Search-filtered HTML list
+                allQuizzes: [],        // Sorted list of .json quiz objects
+                filteredQuizzes: [],   // Search-filtered quiz list
+                searchQuery: '',
+                viewLayout: 'grid',    // 'grid' | 'list'
+                navMode: 'direct',     // 'direct' (standard link navigation) | 'preview' (SPA iframe viewer)
+                currentViewerIndex: -1,
+                isDemoMode: false,
+                sourceLabel: '',
+                config: {
+                    owner: '',
+                    repo: '',
+                    branch: '',
+                    folder: 'pages',
+                    quizFolder: 'quiz',
+                    subPath: ''        // Directory path if SPA is hosted in a subfolder
+                }
+            },
+
+            /**
+             * Initialize SPA on DOM load
+             */
+            init() {
+                this.initTheme();
+                this.loadSavedPreferences();
+                this.detectGitHubEnvironment();
+                this.setupRouting();
+                this.loadPages();
+            },
+
+            /**
+             * Initialize light/dark theme based on localStorage or system preference
+             */
+            initTheme() {
+                const savedTheme = localStorage.getItem('gh_pages_spa_theme');
+                if (savedTheme === 'light') {
+                    document.documentElement.classList.remove('dark');
+                } else if (savedTheme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                    document.documentElement.classList.remove('dark');
+                }
+            },
+
+            toggleTheme() {
+                const isDark = document.documentElement.classList.toggle('dark');
+                localStorage.setItem('gh_pages_spa_theme', isDark ? 'dark' : 'light');
+            },
+
+            /**
+             * Load saved layout, navigation mode, or manual GitHub repo overrides
+             */
+            loadSavedPreferences() {
+                const savedLayout = localStorage.getItem('gh_pages_spa_layout');
+                if (savedLayout === 'list' || savedLayout === 'grid') {
+                    this.setViewLayout(savedLayout, false);
+                }
+
+                const savedNavMode = localStorage.getItem('gh_pages_spa_navmode');
+                if (savedNavMode === 'preview' || savedNavMode === 'direct') {
+                    this.state.navMode = savedNavMode;
+                    this.updateNavModeUI();
+                }
+            },
+
+            /**
+             * Automatically detect GitHub Pages owner, repository, and relative subfolder path
+             * directly from `window.location`
+             */
+            detectGitHubEnvironment() {
+                // 1. Check if user saved custom config in localStorage
+                const savedCfgRaw = localStorage.getItem('gh_pages_spa_config');
+                if (savedCfgRaw) {
+                    try {
+                        const savedCfg = JSON.parse(savedCfgRaw);
+                        if (savedCfg.owner && savedCfg.repo) {
+                            this.state.config = {
+                                owner: savedCfg.owner.trim(),
+                                repo: savedCfg.repo.trim(),
+                                branch: (savedCfg.branch || '').trim(),
+                                folder: (savedCfg.folder || 'pages').replace(/^\/+|\/+$/g, ''),
+                                quizFolder: (savedCfg.quizFolder || 'quiz').replace(/^\/+|\/+$/g, ''),
+                                subPath: ''
+                            };
+                            this.populateSettingsInputs();
+                            return;
+                        }
+                    } catch (e) {
+                        console.warn('Invalid saved config in localStorage', e);
+                    }
+                }
+
+                // 2. Check hardcoded DEFAULT_GITHUB_CONFIG constants
+                if (DEFAULT_GITHUB_CONFIG.owner && DEFAULT_GITHUB_CONFIG.repo) {
+                    this.state.config = {
+                        owner: DEFAULT_GITHUB_CONFIG.owner.trim(),
+                        repo: DEFAULT_GITHUB_CONFIG.repo.trim(),
+                        branch: (DEFAULT_GITHUB_CONFIG.branch || '').trim(),
+                        folder: (DEFAULT_GITHUB_CONFIG.folder || 'pages').replace(/^\/+|\/+$/g, ''),
+                        quizFolder: (DEFAULT_GITHUB_CONFIG.quizFolder || 'quiz').replace(/^\/+|\/+$/g, ''),
+                        subPath: ''
+                    };
+                    this.populateSettingsInputs();
+                    return;
+                }
+
+                // 3. Auto-detect from *.github.io hostname
+                const hostname = window.location.hostname.toLowerCase();
+                const pathname = window.location.pathname;
+
+                // Clean directory segments (ignore trailing .html filename if present)
+                const rawSegments = pathname.split('/').filter(Boolean);
+                if (rawSegments.length > 0 && rawSegments[rawSegments.length - 1].endsWith('.html')) {
+                    rawSegments.pop();
+                }
+
+                if (hostname.endsWith('.github.io')) {
+                    const owner = hostname.replace('.github.io', '');
+                    let repo = '';
+                    let subPath = '';
+
+                    if (rawSegments.length > 0) {
+                        // Project GitHub Pages site: https://{owner}.github.io/{repo}/[optional-subpath]
+                        repo = rawSegments[0];
+                        subPath = rawSegments.slice(1).join('/');
+                    } else {
+                        // User/Org root GitHub Pages site: https://{owner}.github.io/
+                        repo = `${owner}.github.io`;
+                        subPath = '';
+                    }
+
+                    this.state.config = {
+                        owner,
+                        repo,
+                        branch: '',
+                        folder: DEFAULT_GITHUB_CONFIG.folder || 'pages',
+                        quizFolder: DEFAULT_GITHUB_CONFIG.quizFolder || 'quiz',
+                        subPath
+                    };
+                } else {
+                    // Not on *.github.io (e.g., custom domain or local preview)
+                    this.state.config = {
+                        owner: '',
+                        repo: '',
+                        branch: '',
+                        folder: DEFAULT_GITHUB_CONFIG.folder || 'pages',
+                        quizFolder: DEFAULT_GITHUB_CONFIG.quizFolder || 'quiz',
+                        subPath: ''
+                    };
+                }
+
+                this.populateSettingsInputs();
+            },
+
+            populateSettingsInputs() {
+                const { owner, repo, branch, folder, quizFolder } = this.state.config;
+                document.getElementById('cfgOwner').value = owner || '';
+                document.getElementById('cfgRepo').value = repo || '';
+                document.getElementById('cfgBranch').value = branch || '';
+                document.getElementById('cfgFolder').value = folder || 'pages';
+                document.getElementById('cfgQuizFolder').value = quizFolder || 'quiz';
+            },
+
+            /**
+             * Build the full quiz URL from the relative quiz file path (e.g. `quiz/chapter01.json`)
+             */
+            buildQuizLink(relativeQuizPath) {
+                const cleanPath = relativeQuizPath.replace(/^\/+/, '');
+                return `${QUIZ_URL_PREFIX}${cleanPath}`;
+            },
+
+            /**
+             * Fetch all .html files from `pages/` and all .json files from `quiz/`
+             */
+            async loadPages() {
+                this.setLoadingUI(true);
+                const refreshIcon = document.getElementById('refreshIcon');
+                refreshIcon.classList.add('animate-spin');
+
+                const { owner, repo, branch, folder, quizFolder, subPath } = this.state.config;
+                document.getElementById('folderPathDisplay').textContent = `./${folder}/`;
+                document.getElementById('quizFolderPathDisplay').textContent = `./${quizFolder}/`;
+
+                let discoveredFiles = null;
+                let discoveredQuizzes = null;
+                let sourceDescription = '';
+                this.state.isDemoMode = false;
+
+                try {
+                    // STRATEGY 1: GitHub Repository Contents API
+                    if (owner && repo) {
+                        const [pagesRes, quizRes] = await Promise.allSettled([
+                            this.fetchFromGitHubAPI(owner, repo, folder, subPath, branch, /\.html?$/i),
+                            this.fetchFromGitHubAPI(owner, repo, quizFolder, subPath, branch, /\.json$/i)
+                        ]);
+
+                        if (pagesRes.status === 'fulfilled' && pagesRes.value) {
+                            discoveredFiles = pagesRes.value;
+                        }
+                        if (quizRes.status === 'fulfilled' && quizRes.value) {
+                            discoveredQuizzes = quizRes.value
+                                .filter(item => item.name.toLowerCase() !== 'manifest.json')
+                                .map(item => {
+                                    const relPath = subPath ? `${subPath}/${quizFolder}/${item.name}` : `${quizFolder}/${item.name}`;
+                                    return {
+                                        ...item,
+                                        path: relPath,
+                                        url: this.buildQuizLink(relPath)
+                                    };
+                                });
+                        }
+
+                        if (!discoveredFiles && !discoveredQuizzes && pagesRes.status === 'rejected') {
+                            throw pagesRes.reason;
+                        }
+
+                        sourceDescription = `github:${owner}/${repo}/${subPath ? subPath + '/' : ''}{${folder},${quizFolder}}`;
+                    }
+
+                    // STRATEGY 2: Try probing `./pages/` and `./quiz/` directly (works on local live servers or custom domains)
+                    if (!discoveredFiles && !discoveredQuizzes) {
+                        const [localPages, localQuizzes] = await Promise.all([
+                            this.fetchFromRelativeFolder(folder, /\.html?$/i),
+                            this.fetchFromRelativeFolder(quizFolder, /\.json$/i)
+                        ]);
+
+                        if (localPages && localPages.length > 0) {
+                            discoveredFiles = localPages;
+                            sourceDescription = `./${folder}/ (Direct Discovery)`;
+                        }
+                        if (localQuizzes && localQuizzes.length > 0) {
+                            discoveredQuizzes = localQuizzes
+                                .filter(item => item.name.toLowerCase() !== 'manifest.json')
+                                .map(item => {
+                                    const relPath = `${quizFolder}/${item.name}`;
+                                    return {
+                                        ...item,
+                                        path: relPath,
+                                        url: this.buildQuizLink(relPath)
+                                    };
+                                });
+                            if (!sourceDescription) {
+                                sourceDescription = `./${quizFolder}/ (Direct Discovery)`;
+                            }
+                        }
+                    }
+
+                    // STRATEGY 3: Fallback to interactive demo pages & quizzes if running inside a preview sandbox
+                    if (!discoveredFiles && !discoveredQuizzes) {
+                        this.state.isDemoMode = true;
+                        discoveredFiles = DEMO_HTML_FILES.map(file => ({
+                            name: file.name,
+                            path: `${folder}/${file.name}`,
+                            url: `${folder}/${file.name}`,
+                            size: file.size,
+                            isDemo: true,
+                            demoContent: file.demoContent
+                        }));
+                        discoveredQuizzes = DEMO_QUIZ_FILES.map(q => {
+                            const relPath = `${quizFolder}/${q.name}`;
+                            return {
+                                name: q.name,
+                                path: relPath,
+                                url: this.buildQuizLink(relPath),
+                                size: q.size,
+                                isDemo: true
+                            };
+                        });
+                        sourceDescription = `./${folder}/*.html • ./${quizFolder}/*.json (Preview Mode)`;
+                    }
+
+                    // Strictly sort all .html files and .json quizzes by name in ascending order (A -> Z)
+                    this.state.allFiles = this.sortHtmlFilesAscending(discoveredFiles || []);
+                    this.state.allQuizzes = this.sortHtmlFilesAscending(discoveredQuizzes || []);
+                    this.state.sourceLabel = sourceDescription;
+
+                    this.updateHeaderIndicators();
+                    this.applySearchFilter();
+                    this.checkUrlHashForPreview();
+
+                } catch (error) {
+                    console.error('Error loading pages directory:', error);
+                    this.state.allFiles = [];
+                    this.state.filteredFiles = [];
+                    this.state.allQuizzes = [];
+                    this.state.filteredQuizzes = [];
+                    this.renderQuizzes();
+                    this.renderEmptyState(
+                        'Unable to Load Directory',
+                        error.message || `Could not find folder "${folder}" in ${owner}/${repo}. Verify the folder exists at the same level as this page.`
+                    );
+                } finally {
+                    this.setLoadingUI(false);
+                    setTimeout(() => refreshIcon.classList.remove('animate-spin'), 300);
+                }
+            },
+
+            /**
+             * Query GitHub Contents API for a target folder (`pages` or `quiz`) at the same level as this page.
+             * Automatically falls back across common GitHub Pages branches (`gh-pages`, `main`, `master`)
+             * and root vs `docs/` publishing folders if needed.
+             */
+            async fetchFromGitHubAPI(owner, repo, folder, subPath, preferredBranch, extRegex = /\.html?$/i) {
+                const basePath = subPath ? `${subPath}/${folder}` : folder;
+                const candidatePaths = [basePath];
+                // Also support repositories that publish GitHub Pages from the `/docs` folder
+                if (!subPath) {
+                    candidatePaths.push(`docs/${folder}`);
+                }
+
+                const branchesToTry = preferredBranch
+                    ? [preferredBranch]
+                    : ['', 'gh-pages', 'main', 'master'];
+
+                let lastError = null;
+
+                for (const pathCandidate of candidatePaths) {
+                    for (const branch of branchesToTry) {
+                        const branchQuery = branch ? `?ref=${encodeURIComponent(branch)}` : '';
+                        const apiUrl = `https://api.github.com/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/contents/${pathCandidate}${branchQuery}`;
+
+                        try {
+                            const response = await fetch(apiUrl, {
+                                headers: { 'Accept': 'application/vnd.github.v3+json' }
+                            });
+
+                            if (response.ok) {
+                                const items = await response.json();
+                                if (Array.isArray(items)) {
+                                    // Filter files matching the extension regex
+                                    return items
+                                        .filter(item => item.type === 'file' && extRegex.test(item.name))
+                                        .map(item => ({
+                                            name: item.name,
+                                            // Relative link at the same level of this page
+                                            path: `${folder}/${encodeURIComponent(item.name)}`,
+                                            url: `${folder}/${encodeURIComponent(item.name)}`,
+                                            downloadUrl: item.download_url,
+                                            htmlUrl: item.html_url,
+                                            size: item.size || 0,
+                                            sha: item.sha
+                                        }));
+                                }
+                            } else if (response.status === 403) {
+                                throw new Error('GitHub API rate limit exceeded. Please try again in a few minutes.');
+                            } else {
+                                lastError = new Error(`GitHub folder "${pathCandidate}" not found (HTTP ${response.status}).`);
+                            }
+                        } catch (err) {
+                            lastError = err;
+                            if (err.message.includes('rate limit')) throw err;
+                        }
+                    }
+                }
+
+                throw lastError || new Error(`Could not locate "${folder}/" folder in ${owner}/${repo}.`);
+            },
+
+            /**
+             * Fallback discovery for custom domains or local static web servers:
+             * 1. Checks if `<folder>/manifest.json` exists (array of filenames)
+             * 2. Or parses an auto-generated directory listing HTML from `./<folder>/`
+             */
+            async fetchFromRelativeFolder(folder, extRegex = /\.html?$/i) {
+                // 1. Check optional `<folder>/manifest.json`
+                try {
+                    const manifestRes = await fetch(`./${folder}/manifest.json`, { cache: 'no-store' });
+                    if (manifestRes.ok) {
+                        const list = await manifestRes.json();
+                        if (Array.isArray(list)) {
+                            return list
+                                .map(entry => typeof entry === 'string' ? entry : entry.name)
+                                .filter(name => Boolean(name) && name.toLowerCase() !== 'manifest.json' && extRegex.test(name))
+                                .map(name => ({
+                                    name,
+                                    path: `${folder}/${name}`,
+                                    url: `${folder}/${name}`,
+                                    size: 0
+                                }));
+                        }
+                    }
+                } catch (_) {
+                    // Ignore and try directory listing next
+                }
+
+                // 2. Check if local server provides a directory index at `./<folder>/`
+                try {
+                    const dirRes = await fetch(`./${folder}/`, { cache: 'no-store' });
+                    if (dirRes.ok) {
+                        const contentType = dirRes.headers.get('content-type') || '';
+                        if (contentType.includes('text/html')) {
+                            const htmlText = await dirRes.text();
+                            const parser = new DOMParser();
+                            const doc = parser.parseFromString(htmlText, 'text/html');
+                            const links = Array.from(doc.querySelectorAll('a'));
+                            const matchedFiles = [];
+
+                            for (const a of links) {
+                                const href = a.getAttribute('href') || '';
+                                // Extract clean file name
+                                const cleanHref = decodeURIComponent(href.split('?')[0].split('#')[0]);
+                                const parts = cleanHref.split('/').filter(Boolean);
+                                const fileName = parts[parts.length - 1];
+                                if (fileName && fileName.toLowerCase() !== 'manifest.json' && extRegex.test(fileName)) {
+                                    matchedFiles.push({
+                                        name: fileName,
+                                        path: `${folder}/${fileName}`,
+                                        url: `${folder}/${fileName}`,
+                                        size: 0
+                                    });
+                                }
+                            }
+
+                            if (matchedFiles.length > 0) {
+                                // Deduplicate by filename
+                                const uniqueMap = new Map();
+                                matchedFiles.forEach(f => uniqueMap.set(f.name, f));
+                                return Array.from(uniqueMap.values());
+                            }
+                        }
+                    }
+                } catch (_) {
+                    // Directory listing not available
+                }
+
+                return null;
+            },
+
+            /**
+             * Sorts HTML files strictly by name in ascending order (A -> Z),
+             * using case-insensitive & natural numeric collation (e.g. page-2 before page-10).
+             */
+            sortHtmlFilesAscending(files) {
+                const collator = new Intl.Collator(undefined, {
+                    numeric: true,
+                    sensitivity: 'base'
+                });
+                return [...files].sort((a, b) => collator.compare(a.name, b.name));
+            },
+
+            /**
+             * Filter files based on search bar query while preserving ascending order
+             */
+            handleSearch(query) {
+                this.state.searchQuery = query.trim().toLowerCase();
+                const clearBtn = document.getElementById('clearSearchBtn');
+                if (this.state.searchQuery.length > 0) {
+                    clearBtn.classList.remove('hidden');
+                } else {
+                    clearBtn.classList.add('hidden');
+                }
+                this.applySearchFilter();
+            },
+
+            clearSearch() {
+                const input = document.getElementById('searchInput');
+                input.value = '';
+                this.handleSearch('');
+                input.focus();
+            },
+
+            applySearchFilter() {
+                const q = this.state.searchQuery;
+                if (!q) {
+                    this.state.filteredFiles = [...this.state.allFiles];
+                    this.state.filteredQuizzes = [...this.state.allQuizzes];
+                } else {
+                    this.state.filteredFiles = this.state.allFiles.filter(file =>
+                        file.name.toLowerCase().includes(q) ||
+                        this.formatPrettyTitle(file.name).toLowerCase().includes(q)
+                    );
+                    this.state.filteredQuizzes = this.state.allQuizzes.filter(quiz =>
+                        quiz.name.toLowerCase().includes(q) ||
+                        this.formatPrettyTitle(quiz.name).toLowerCase().includes(q)
+                    );
+                }
+                this.renderFiles();
+                this.renderQuizzes();
+            },
+
+            /**
+             * Render the sorted HTML files into the DOM
+             */
+            renderFiles() {
+                const pagesSection = document.getElementById('pagesSection');
+                const container = document.getElementById('filesContainer');
+                const emptyState = document.getElementById('emptyState');
+                const countSummary = document.getElementById('fileCountSummary');
+
+                const total = this.state.allFiles.length;
+                const showing = this.state.filteredFiles.length;
+                const hasQuizzes = this.state.allQuizzes.length > 0;
+
+                // If `pages/` folder is missing/empty but `quiz/` folder has files, hide the HTML Pages section cleanly
+                if (total === 0 && hasQuizzes) {
+                    pagesSection.classList.add('hidden');
+                    return;
+                }
+
+                pagesSection.classList.remove('hidden');
+
+                countSummary.textContent = this.state.searchQuery
+                    ? `Showing ${showing} of ${total} HTML file${total === 1 ? '' : 's'}`
+                    : `${total} HTML file${total === 1 ? '' : 's'} (Sorted A–Z)`;
+
+                if (showing === 0) {
+                    container.classList.add('hidden');
+                    if (this.state.searchQuery) {
+                        this.renderEmptyState(
+                            'No matching HTML files',
+                            `No files in "${this.state.config.folder}/" matched "${this.state.searchQuery}".`
+                        );
+                    } else {
+                        this.renderEmptyState(
+                            `No .html files or quizzes found`,
+                            `Add .html files to "${this.state.config.folder}/" or .json files to "${this.state.config.quizFolder}/" at the same level as this page.`
+                        );
+                    }
+                    return;
+                }
+
+                emptyState.classList.add('hidden');
+                container.classList.remove('hidden');
+
+                // Apply Grid vs List layout classes
+                if (this.state.viewLayout === 'grid') {
+                    container.className = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4';
+                } else {
+                    container.className = 'flex flex-col space-y-2.5';
+                }
+
+                container.innerHTML = this.state.filteredFiles.map((file, idx) => {
+                    const prettyTitle = this.formatPrettyTitle(file.name);
+                    const fileSizeText = file.size ? this.formatBytes(file.size) : 'HTML Document';
+                    const orderNumber = String(idx + 1).padStart(2, '0');
+                    const safeName = this.escapeHtml(file.name);
+                    const safeHref = this.escapeHtml(file.url);
+
+                    if (this.state.viewLayout === 'grid') {
+                        return `
+                        <a href="${safeHref}" 
+                           onclick="return app.handleFileClick(event, '${safeName}')"
+                           class="group relative bg-white dark:bg-slate-900 rounded-2xl p-4 sm:p-5 border border-slate-200 dark:border-slate-800 hover:border-brand-500 dark:hover:border-brand-500 shadow-sm hover:shadow-md hover:shadow-brand-500/5 transition-all duration-200 flex flex-col justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            
+                            <div class="flex items-start justify-between gap-3">
+                                <div class="flex items-start gap-3.5 min-w-0">
+                                    <!-- File Icon with Index Badge -->
+                                    <div class="w-11 h-11 rounded-xl bg-brand-50 dark:bg-brand-950/60 border border-brand-100 dark:border-brand-900/60 flex items-center justify-center text-brand-600 dark:text-brand-400 shrink-0 group-hover:scale-105 group-hover:bg-brand-600 group-hover:text-white transition-all duration-200">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                        </svg>
+                                    </div>
+                                    <div class="min-w-0 flex-1">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-[11px] font-mono font-semibold text-slate-400 dark:text-slate-500">#${orderNumber}</span>
+                                            <span class="text-xs font-medium text-brand-600 dark:text-brand-400 truncate">${this.escapeHtml(prettyTitle)}</span>
+                                        </div>
+                                        <!-- Exact ascending filename -->
+                                        <h3 class="font-mono font-semibold text-sm sm:text-base text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors truncate mt-0.5" title="${safeName}">
+                                            ${safeName}
+                                        </h3>
+                                    </div>
+                                </div>
+
+                                <!-- Quick In-App Preview Button -->
+                                <button type="button" 
+                                        onclick="app.openInViewer(event, '${safeName}')" 
+                                        title="Preview inside SPA"
+                                        class="p-2 rounded-xl text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-slate-800/80 text-xs text-slate-500 dark:text-slate-400">
+                                <span class="font-mono truncate">${this.escapeHtml(this.state.config.folder)}/${safeName}</span>
+                                <div class="flex items-center gap-1.5 shrink-0 font-medium text-slate-600 dark:text-slate-300 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+                                    <span>${fileSizeText}</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>`;
+                    } else {
+                        // Compact Mobile-Friendly List Item
+                        return `
+                        <a href="${safeHref}" 
+                           onclick="return app.handleFileClick(event, '${safeName}')"
+                           class="group bg-white dark:bg-slate-900 rounded-xl px-4 py-3.5 border border-slate-200 dark:border-slate-800 hover:border-brand-500 dark:hover:border-brand-500 shadow-sm transition-all flex items-center justify-between gap-3 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            
+                            <div class="flex items-center gap-3.5 min-w-0">
+                                <span class="text-xs font-mono font-semibold text-slate-400 dark:text-slate-500 w-6 shrink-0">#${orderNumber}</span>
+                                <div class="w-9 h-9 rounded-lg bg-brand-50 dark:bg-brand-950/60 flex items-center justify-center text-brand-600 dark:text-brand-400 shrink-0 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <div class="min-w-0">
+                                    <h3 class="font-mono font-semibold text-sm sm:text-base text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 truncate">
+                                        ${safeName}
+                                    </h3>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400 truncate">
+                                        ${this.escapeHtml(prettyTitle)} &bull; ${this.escapeHtml(this.state.config.folder)}/${safeName}
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-2 shrink-0">
+                                <span class="hidden sm:inline-block text-xs text-slate-400 font-mono">${fileSizeText}</span>
+                                <button type="button" 
+                                        onclick="app.openInViewer(event, '${safeName}')" 
+                                        title="Preview inside SPA"
+                                        class="p-2 rounded-lg text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                    </svg>
+                                </button>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-400 group-hover:text-brand-500 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </a>`;
+                    }
+                }).join('');
+            },
+
+            /**
+             * Render the separate Interactive Quizzes section from the `quiz/` folder in ascending order
+             */
+            renderQuizzes() {
+                const section = document.getElementById('quizSection');
+                const container = document.getElementById('quizzesContainer');
+                const emptyState = document.getElementById('quizEmptyState');
+                const emptyDesc = document.getElementById('quizEmptyStateDesc');
+                const countSummary = document.getElementById('quizCountSummary');
+
+                const total = this.state.allQuizzes.length;
+                const showing = this.state.filteredQuizzes.length;
+                const hasPages = this.state.allFiles.length > 0;
+
+                // Hide the entire quiz section if no quiz folder / .json files exist
+                if (total === 0) {
+                    section.classList.add('hidden');
+                    return;
+                }
+
+                section.classList.remove('hidden');
+                // Only show the top divider border if the HTML Pages section is also visible above it
+                if (hasPages) {
+                    section.className = 'space-y-3 pt-4 border-t border-slate-200/80 dark:border-slate-800/80';
+                } else {
+                    section.className = 'space-y-3';
+                }
+
+                countSummary.textContent = this.state.searchQuery
+                    ? `Showing ${showing} of ${total} quiz${total === 1 ? '' : 'zes'}`
+                    : `${total} quiz file${total === 1 ? '' : 's'} (Sorted A–Z)`;
+
+                if (showing === 0) {
+                    container.classList.add('hidden');
+                    emptyDesc.textContent = `No quiz files in "${this.state.config.quizFolder}/" matched "${this.state.searchQuery}".`;
+                    emptyState.classList.remove('hidden');
+                    emptyState.classList.add('flex');
+                    return;
+                }
+
+                emptyState.classList.add('hidden');
+                emptyState.classList.remove('flex');
+                container.classList.remove('hidden');
+
+                if (this.state.viewLayout === 'grid') {
+                    container.className = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4';
+                } else {
+                    container.className = 'flex flex-col space-y-2.5';
+                }
+
+                container.innerHTML = this.state.filteredQuizzes.map((quiz, idx) => {
+                    const prettyTitle = this.formatPrettyTitle(quiz.name);
+                    const fileSizeText = quiz.size ? this.formatBytes(quiz.size) : 'Quiz JSON';
+                    const orderNumber = String(idx + 1).padStart(2, '0');
+                    const safeName = this.escapeHtml(quiz.name);
+                    const safePath = this.escapeHtml(quiz.path);
+                    const safeHref = this.escapeHtml(quiz.url);
+
+                    if (this.state.viewLayout === 'grid') {
+                        return `
+                        <a href="${safeHref}"
+                           class="group relative bg-white dark:bg-slate-900 rounded-2xl p-4 sm:p-5 border border-slate-200 dark:border-slate-800 hover:border-purple-500 dark:hover:border-purple-500 shadow-sm hover:shadow-md hover:shadow-purple-500/5 transition-all duration-200 flex flex-col justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            
+                            <div class="flex items-start justify-between gap-3">
+                                <div class="flex items-start gap-3.5 min-w-0">
+                                    <!-- Quiz Icon Badge -->
+                                    <div class="w-11 h-11 rounded-xl bg-purple-50 dark:bg-purple-950/60 border border-purple-100 dark:border-purple-900/60 flex items-center justify-center text-purple-600 dark:text-purple-400 shrink-0 group-hover:scale-105 group-hover:bg-purple-600 group-hover:text-white transition-all duration-200 text-lg select-none">
+                                        🧠
+                                    </div>
+                                    <div class="min-w-0 flex-1">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-[11px] font-mono font-semibold text-slate-400 dark:text-slate-500">#${orderNumber}</span>
+                                            <span class="text-xs font-medium text-purple-600 dark:text-purple-400 truncate">${this.escapeHtml(prettyTitle)}</span>
+                                        </div>
+                                        <!-- Exact ascending JSON filename -->
+                                        <h3 class="font-mono font-semibold text-sm sm:text-base text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors truncate mt-0.5" title="${safeName}">
+                                            ${safeName}
+                                        </h3>
+                                    </div>
+                                </div>
+
+                                <span class="px-2 py-1 rounded-lg text-[11px] font-semibold bg-purple-50 dark:bg-purple-950/80 text-purple-600 dark:text-purple-300 border border-purple-200/60 dark:border-purple-800/60 shrink-0">
+                                    Start Quiz
+                                </span>
+                            </div>
+
+                            <div class="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-slate-800/80 text-xs text-slate-500 dark:text-slate-400">
+                                <span class="font-mono truncate" title="${safePath}">${safePath}</span>
+                                <div class="flex items-center gap-1.5 shrink-0 font-medium text-slate-600 dark:text-slate-300 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                                    <span>${fileSizeText}</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>`;
+                    } else {
+                        // Compact Mobile-Friendly List Item for Quiz
+                        return `
+                        <a href="${safeHref}"
+                           class="group bg-white dark:bg-slate-900 rounded-xl px-4 py-3.5 border border-slate-200 dark:border-slate-800 hover:border-purple-500 dark:hover:border-purple-500 shadow-sm transition-all flex items-center justify-between gap-3 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            
+                            <div class="flex items-center gap-3.5 min-w-0">
+                                <span class="text-xs font-mono font-semibold text-slate-400 dark:text-slate-500 w-6 shrink-0">#${orderNumber}</span>
+                                <div class="w-9 h-9 rounded-lg bg-purple-50 dark:bg-purple-950/60 flex items-center justify-center text-purple-600 dark:text-purple-400 shrink-0 group-hover:bg-purple-600 group-hover:text-white transition-colors text-base select-none">
+                                    🧠
+                                </div>
+                                <div class="min-w-0">
+                                    <h3 class="font-mono font-semibold text-sm sm:text-base text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 truncate">
+                                        ${safeName}
+                                    </h3>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400 truncate">
+                                        ${this.escapeHtml(prettyTitle)} &bull; ${safePath}
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-2.5 shrink-0">
+                                <span class="hidden sm:inline-block text-xs text-slate-400 font-mono">${fileSizeText}</span>
+                                <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-purple-50 dark:bg-purple-950/80 text-purple-600 dark:text-purple-300 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                                    Start Quiz
+                                </span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-400 group-hover:text-purple-500 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </a>`;
+                    }
+                }).join('');
+            },
+
+            /**
+             * Handle clicking on an HTML file card/row
+             */
+            handleFileClick(event, fileName) {
+                if (this.state.navMode === 'preview' || this.state.isDemoMode) {
+                    event.preventDefault();
+                    this.showViewerForFile(fileName);
+                    return false;
+                }
+                return true;
+            },
+
+            openInViewer(event, fileName) {
+                event.preventDefault();
+                event.stopPropagation();
+                this.showViewerForFile(fileName);
+            },
+
+            showViewerForFile(fileName) {
+                const index = this.state.allFiles.findIndex(f => f.name === fileName);
+                if (index === -1) return;
+
+                this.state.currentViewerIndex = index;
+                const file = this.state.allFiles[index];
+
+                document.getElementById('directoryView').classList.add('hidden');
+                document.getElementById('viewerView').classList.remove('hidden');
+
+                document.getElementById('viewerTitle').textContent = file.name;
+                document.getElementById('viewerPath').textContent = file.path;
+                document.getElementById('viewerDirectLink').href = file.url;
+
+                // Update Previous / Next buttons based on ascending index
+                document.getElementById('prevPageBtn').disabled = index <= 0;
+                document.getElementById('nextPageBtn').disabled = index >= this.state.allFiles.length - 1;
+
+                const iframe = document.getElementById('viewerFrame');
+                if (file.isDemo && file.demoContent) {
+                    iframe.removeAttribute('src');
+                    iframe.srcdoc = file.demoContent;
+                } else {
+                    iframe.removeAttribute('srcdoc');
+                    iframe.src = file.url;
+                }
+
+                // Update URL hash for bookmarkable SPA state
+                this.setUrlHash(`#view=${encodeURIComponent(file.name)}`);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            },
+
+            navigateAdjacent(direction) {
+                const nextIndex = this.state.currentViewerIndex + direction;
+                if (nextIndex >= 0 && nextIndex < this.state.allFiles.length) {
+                    this.showViewerForFile(this.state.allFiles[nextIndex].name);
+                }
+            },
+
+            closeViewer() {
+                const iframe = document.getElementById('viewerFrame');
+                iframe.removeAttribute('src');
+                iframe.removeAttribute('srcdoc');
+
+                document.getElementById('viewerView').classList.add('hidden');
+                document.getElementById('directoryView').classList.remove('hidden');
+                this.state.currentViewerIndex = -1;
+
+                if (window.location.hash.startsWith('#view=')) {
+                    this.setUrlHash('');
+                }
+            },
+
+            /**
+             * Safely update or clear the URL hash without triggering a SecurityError
+             * when running inside blob: or sandboxed iframe environments.
+             */
+            setUrlHash(newHash) {
+                try {
+                    const baseUrl = window.location.href.split('#')[0];
+                    const targetUrl = newHash ? `${baseUrl}${newHash}` : baseUrl;
+                    window.history.replaceState(null, '', targetUrl);
+                } catch (err) {
+                    // Fallback if history.replaceState is restricted by sandbox/blob origin rules
+                    try {
+                        if (newHash) {
+                            window.location.hash = newHash;
+                        } else {
+                            window.location.hash = '';
+                        }
+                    } catch (_) {
+                        // Ignore hash update errors in restricted environments
+                    }
+                }
+            },
+
+            setupRouting() {
+                window.addEventListener('hashchange', () => {
+                    this.checkUrlHashForPreview();
+                });
+            },
+
+            checkUrlHashForPreview() {
+                const hash = window.location.hash;
+                if (hash.startsWith('#view=')) {
+                    const targetFile = decodeURIComponent(hash.replace('#view=', ''));
+                    const exists = this.state.allFiles.some(f => f.name === targetFile);
+                    if (exists) {
+                        this.showViewerForFile(targetFile);
+                    }
+                }
+            },
+
+            toggleNavMode() {
+                this.state.navMode = this.state.navMode === 'direct' ? 'preview' : 'direct';
+                localStorage.setItem('gh_pages_spa_navmode', this.state.navMode);
+                this.updateNavModeUI();
+                this.showToast(
+                    this.state.navMode === 'direct'
+                        ? 'Click mode: Direct navigation to HTML page'
+                        : 'Click mode: In-app SPA preview'
+                );
+            },
+
+            updateNavModeUI() {
+                const label = document.getElementById('navModeLabel');
+                if (this.state.navMode === 'direct') {
+                    label.textContent = 'Click: Direct Link';
+                } else {
+                    label.textContent = 'Click: SPA Preview';
+                }
+            },
+
+            setViewLayout(layout, save = true) {
+                this.state.viewLayout = layout;
+                if (save) {
+                    localStorage.setItem('gh_pages_spa_layout', layout);
+                }
+
+                const gridBtn = document.getElementById('viewGridBtn');
+                const listBtn = document.getElementById('viewListBtn');
+
+                if (layout === 'grid') {
+                    gridBtn.className = 'p-1.5 rounded-lg bg-white dark:bg-slate-900 text-brand-600 dark:text-brand-400 shadow-sm transition-all';
+                    listBtn.className = 'p-1.5 rounded-lg text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 transition-all';
+                } else {
+                    listBtn.className = 'p-1.5 rounded-lg bg-white dark:bg-slate-900 text-brand-600 dark:text-brand-400 shadow-sm transition-all';
+                    gridBtn.className = 'p-1.5 rounded-lg text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 transition-all';
+                }
+                if (this.state.allFiles.length > 0 || this.state.allQuizzes.length > 0) {
+                    this.renderFiles();
+                    this.renderQuizzes();
+                }
+            },
+
+            updateHeaderIndicators() {
+                const badge = document.getElementById('statusBadge');
+                const subHeader = document.getElementById('subHeaderSource');
+                const demoBanner = document.getElementById('demoBanner');
+
+                subHeader.textContent = this.state.sourceLabel;
+
+                if (this.state.isDemoMode) {
+                    badge.textContent = 'Demo Preview';
+                    badge.className = 'hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800 dark:bg-amber-950/80 dark:text-amber-300 border border-amber-200 dark:border-amber-800/60';
+                    demoBanner.classList.remove('hidden');
+                } else {
+                    badge.textContent = 'Live Repository';
+                    badge.className = 'hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60';
+                    demoBanner.classList.add('hidden');
+                }
+            },
+
+            setLoadingUI(isLoading) {
+                const loadingState = document.getElementById('loadingState');
+                const pagesSection = document.getElementById('pagesSection');
+                const quizSection = document.getElementById('quizSection');
+
+                if (isLoading) {
+                    loadingState.classList.remove('hidden');
+                    pagesSection.classList.add('hidden');
+                    quizSection.classList.add('hidden');
+                } else {
+                    loadingState.classList.add('hidden');
+                    // Visibility of pagesSection and quizSection is managed by renderFiles() and renderQuizzes()
+                }
+            },
+
+            renderEmptyState(title, description) {
+                const emptyState = document.getElementById('emptyState');
+                document.getElementById('emptyStateTitle').textContent = title;
+                document.getElementById('emptyStateDesc').textContent = description;
+                emptyState.classList.remove('hidden');
+                emptyState.classList.add('flex');
+            },
+
+            loadDemoPages() {
+                this.state.isDemoMode = true;
+                const folder = this.state.config.folder || 'pages';
+                const quizFolder = this.state.config.quizFolder || 'quiz';
+                const demoList = DEMO_HTML_FILES.map(file => ({
+                    name: file.name,
+                    path: `${folder}/${file.name}`,
+                    url: `${folder}/${file.name}`,
+                    size: file.size,
+                    isDemo: true,
+                    demoContent: file.demoContent
+                }));
+                const demoQuizList = DEMO_QUIZ_FILES.map(q => {
+                    const relPath = `${quizFolder}/${q.name}`;
+                    return {
+                        name: q.name,
+                        path: relPath,
+                        url: this.buildQuizLink(relPath),
+                        size: q.size,
+                        isDemo: true
+                    };
+                });
+                this.state.allFiles = this.sortHtmlFilesAscending(demoList);
+                this.state.allQuizzes = this.sortHtmlFilesAscending(demoQuizList);
+                this.state.sourceLabel = `./${folder}/*.html • ./${quizFolder}/*.json (Preview Mode)`;
+                this.updateHeaderIndicators();
+                this.applySearchFilter();
+                this.showToast('Loaded sample HTML pages and JSON quizzes in ascending order');
+            },
+
+            toggleSettingsModal(show) {
+                const modal = document.getElementById('settingsModal');
+                if (show) {
+                    this.populateSettingsInputs();
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                } else {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                }
+            },
+
+            saveSettings() {
+                const owner = document.getElementById('cfgOwner').value.trim();
+                const repo = document.getElementById('cfgRepo').value.trim();
+                const folder = (document.getElementById('cfgFolder').value.trim() || 'pages').replace(/^\/+|\/+$/g, '');
+                const quizFolder = (document.getElementById('cfgQuizFolder').value.trim() || 'quiz').replace(/^\/+|\/+$/g, '');
+                const branch = document.getElementById('cfgBranch').value.trim();
+
+                this.state.config = {
+                    owner,
+                    repo,
+                    folder,
+                    quizFolder,
+                    branch,
+                    subPath: ''
+                };
+
+                if (owner && repo) {
+                    localStorage.setItem('gh_pages_spa_config', JSON.stringify(this.state.config));
+                } else {
+                    localStorage.removeItem('gh_pages_spa_config');
+                }
+
+                this.toggleSettingsModal(false);
+                this.closeViewer();
+                this.loadPages();
+                this.showToast('Repository configuration updated');
+            },
+
+            resetToAutoDetect() {
+                localStorage.removeItem('gh_pages_spa_config');
+                this.detectGitHubEnvironment();
+                this.toggleSettingsModal(false);
+                this.closeViewer();
+                this.loadPages();
+                this.showToast('Reset to automatic URL detection');
+            },
+
+            /**
+             * Convert a raw filename like `01-getting-started.html` or `chapter01.json` into `01 Getting Started`
+             */
+            formatPrettyTitle(filename) {
+                return filename
+                    .replace(/\.(html?|json)$/i, '')
+                    .replace(/[-_]+/g, ' ')
+                    .replace(/\b\w/g, char => char.toUpperCase());
+            },
+
+            formatBytes(bytes) {
+                if (!bytes || bytes === 0) return 'HTML';
+                const k = 1024;
+                const sizes = ['B', 'KB', 'MB'];
+                const i = Math.floor(Math.log(bytes) / Math.log(k));
+                return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+            },
+
+            escapeHtml(str) {
+                return String(str)
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;')
+                    .replace(/'/g, '&#039;');
+            },
+
+            showToast(message) {
+                const box = document.getElementById('toastBox');
+                const msg = document.getElementById('toastMessage');
+                msg.textContent = message;
+                box.classList.remove('hidden');
+                box.classList.add('flex');
+                clearTimeout(this._toastTimer);
+                this._toastTimer = setTimeout(() => {
+                    box.classList.add('hidden');
+                    box.classList.remove('flex');
+                }, 3000);
+            }
+        };
+
+        window.addEventListener('DOMContentLoaded', () => {
+            app.init();
+        });
+    </script>
+</body>
+</html>
