@@ -14,9 +14,9 @@
         }
     </style>
 </head>
-<body class="bg-slate-50 min-h-screen flex items-center justify-center p-4">
+<body class="bg-slate-50 min-h-screen flex items-center justify-center p-4 sm:p-8">
     <!-- Main Container Card -->
-    <div class="max-w-xl w-full bg-white rounded-2xl shadow-xl shadow-slate-200/60 p-8 border border-slate-100 my-6">
+    <div class="max-w-5xl w-full bg-white rounded-2xl shadow-xl shadow-slate-200/60 p-6 sm:p-10 border border-slate-100 my-6">
         <div class="text-center mb-8">
             <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-50 text-blue-600 rounded-full mb-4">
                 <!-- Presentation/Slide Icon -->
@@ -30,19 +30,19 @@
             <p class="text-slate-500 mt-2 text-sm">Pick a country and choose your prompt style</p>
         </div>
 
-        <div class="space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Prompt 1 -->
-            <div class="relative group">
-                <label class="text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1 block ml-1">Option 1: Standard Report</label>
-                <div class="min-h-[80px] w-full bg-slate-50 border border-slate-200 rounded-xl p-4 pr-12 flex items-center justify-start transition-all duration-200 group-hover:border-blue-200 group-hover:bg-blue-50/30">
-                    <p id="prompt1-text" class="text-sm font-medium text-slate-400 italic transition-opacity duration-150">
+            <div class="relative group flex flex-col">
+                <label class="text-xs uppercase tracking-wider font-bold text-slate-400 mb-1.5 block ml-1">Option 1: Standard Report</label>
+                <div class="min-h-[100px] flex-1 w-full bg-slate-50 border border-slate-200 rounded-xl p-5 pr-12 flex items-center justify-start transition-all duration-200 group-hover:border-blue-200 group-hover:bg-blue-50/30">
+                    <p id="prompt1-text" class="text-base font-medium text-slate-400 italic transition-opacity duration-150">
                         Click generate to see the first option...
                     </p>
                 </div>
                 <button 
                     id="copyBtn1" 
                     onclick="copyToClipboard('prompt1-text', 'copyBtn1')" 
-                    class="absolute top-7 right-2 p-2 bg-white text-slate-400 hover:text-blue-600 rounded-lg shadow-sm border border-slate-100 opacity-0 group-hover:opacity-100 focus:opacity-100 transition-all duration-200 hidden"
+                    class="absolute top-8 right-3 p-2 bg-white text-slate-400 hover:text-blue-600 rounded-lg shadow-sm border border-slate-100 opacity-0 group-hover:opacity-100 focus:opacity-100 transition-all duration-200 hidden"
                     title="Copy to clipboard"
                 >
                     <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
@@ -51,17 +51,17 @@
             </div>
 
             <!-- Prompt 2 -->
-            <div class="relative group">
-                <label class="text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1 block ml-1">Option 2: 2-Slide PPTX</label>
-                <div class="min-h-[80px] w-full bg-slate-50 border border-slate-200 rounded-xl p-4 pr-12 flex items-center justify-start transition-all duration-200 group-hover:border-blue-200 group-hover:bg-blue-50/30">
-                    <p id="prompt2-text" class="text-sm font-medium text-slate-400 italic transition-opacity duration-150">
+            <div class="relative group flex flex-col">
+                <label class="text-xs uppercase tracking-wider font-bold text-slate-400 mb-1.5 block ml-1">Option 2: 2-Slide PPTX</label>
+                <div class="min-h-[100px] flex-1 w-full bg-slate-50 border border-slate-200 rounded-xl p-5 pr-12 flex items-center justify-start transition-all duration-200 group-hover:border-blue-200 group-hover:bg-blue-50/30">
+                    <p id="prompt2-text" class="text-base font-medium text-slate-400 italic transition-opacity duration-150">
                         Click generate to see the second option...
                     </p>
                 </div>
                 <button 
                     id="copyBtn2" 
                     onclick="copyToClipboard('prompt2-text', 'copyBtn2')" 
-                    class="absolute top-7 right-2 p-2 bg-white text-slate-400 hover:text-blue-600 rounded-lg shadow-sm border border-slate-100 opacity-0 group-hover:opacity-100 focus:opacity-100 transition-all duration-200 hidden"
+                    class="absolute top-8 right-3 p-2 bg-white text-slate-400 hover:text-blue-600 rounded-lg shadow-sm border border-slate-100 opacity-0 group-hover:opacity-100 focus:opacity-100 transition-all duration-200 hidden"
                     title="Copy to clipboard"
                 >
                     <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
@@ -70,17 +70,17 @@
             </div>
 
             <!-- Prompt 3 -->
-            <div class="relative group">
-                <label class="text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1 block ml-1">Option 3: 2 & 5 Slides (No Search)</label>
-                <div class="min-h-[80px] w-full bg-slate-50 border border-slate-200 rounded-xl p-4 pr-12 flex items-center justify-start transition-all duration-200 group-hover:border-blue-200 group-hover:bg-blue-50/30">
-                    <p id="prompt3-text" class="text-sm font-medium text-slate-400 italic transition-opacity duration-150">
+            <div class="relative group flex flex-col">
+                <label class="text-xs uppercase tracking-wider font-bold text-slate-400 mb-1.5 block ml-1">Option 3: 2 & 5 Slides (No Search)</label>
+                <div class="min-h-[100px] flex-1 w-full bg-slate-50 border border-slate-200 rounded-xl p-5 pr-12 flex items-center justify-start transition-all duration-200 group-hover:border-blue-200 group-hover:bg-blue-50/30">
+                    <p id="prompt3-text" class="text-base font-medium text-slate-400 italic transition-opacity duration-150">
                         Click generate to see the third option...
                     </p>
                 </div>
                 <button 
                     id="copyBtn3" 
                     onclick="copyToClipboard('prompt3-text', 'copyBtn3')" 
-                    class="absolute top-7 right-2 p-2 bg-white text-slate-400 hover:text-blue-600 rounded-lg shadow-sm border border-slate-100 opacity-0 group-hover:opacity-100 focus:opacity-100 transition-all duration-200 hidden"
+                    class="absolute top-8 right-3 p-2 bg-white text-slate-400 hover:text-blue-600 rounded-lg shadow-sm border border-slate-100 opacity-0 group-hover:opacity-100 focus:opacity-100 transition-all duration-200 hidden"
                     title="Copy to clipboard"
                 >
                     <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
@@ -89,17 +89,17 @@
             </div>
 
             <!-- Prompt 4 (Newly Added) -->
-            <div class="relative group">
-                <label class="text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1 block ml-1">Option 4: 1-Page Plain Text (No Search)</label>
-                <div class="min-h-[80px] w-full bg-slate-50 border border-slate-200 rounded-xl p-4 pr-12 flex items-center justify-start transition-all duration-200 group-hover:border-blue-200 group-hover:bg-blue-50/30">
-                    <p id="prompt4-text" class="text-sm font-medium text-slate-400 italic transition-opacity duration-150">
+            <div class="relative group flex flex-col">
+                <label class="text-xs uppercase tracking-wider font-bold text-slate-400 mb-1.5 block ml-1">Option 4: 1-Page Plain Text (No Search)</label>
+                <div class="min-h-[100px] flex-1 w-full bg-slate-50 border border-slate-200 rounded-xl p-5 pr-12 flex items-center justify-start transition-all duration-200 group-hover:border-blue-200 group-hover:bg-blue-50/30">
+                    <p id="prompt4-text" class="text-base font-medium text-slate-400 italic transition-opacity duration-150">
                         Click generate to see the fourth option...
                     </p>
                 </div>
                 <button 
                     id="copyBtn4" 
                     onclick="copyToClipboard('prompt4-text', 'copyBtn4')" 
-                    class="absolute top-7 right-2 p-2 bg-white text-slate-400 hover:text-blue-600 rounded-lg shadow-sm border border-slate-100 opacity-0 group-hover:opacity-100 focus:opacity-100 transition-all duration-200 hidden"
+                    class="absolute top-8 right-3 p-2 bg-white text-slate-400 hover:text-blue-600 rounded-lg shadow-sm border border-slate-100 opacity-0 group-hover:opacity-100 focus:opacity-100 transition-all duration-200 hidden"
                     title="Copy to clipboard"
                 >
                     <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
