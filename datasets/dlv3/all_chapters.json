@@ -1,0 +1,1037 @@
+{
+  "text": "Deep Learning with Python, Third Edition — Full-book concept quiz\n\n172 fill-in-the-blank questions across 20 chapters. Each blank stands for one keyword or multiword term. For several blanks, enter only the terms in the order shown, separated by spaces. The question supplies connecting words and punctuation.\n\nCh. 01 · What is deep learning?  (Q1–8)\nCh. 02 · The mathematical building blocks of neural networks  (Q9–18)\nCh. 03 · Introduction to TensorFlow, PyTorch, JAX, and Keras  (Q19–26)\nCh. 04 · Classification and regression  (Q27–34)\nCh. 05 · Fundamentals of machine learning  (Q35–44)\nCh. 06 · The universal workflow of machine learning  (Q45–53)\nCh. 07 · A deep dive on Keras  (Q54–61)\nCh. 08 · Image classification  (Q62–69)\nCh. 09 · ConvNet architecture patterns  (Q70–75)\nCh. 10 · Interpreting what ConvNets learn  (Q76–80)\nCh. 11 · Image segmentation  (Q81–87)\nCh. 12 · Object detection  (Q88–95)\nCh. 13 · Timeseries forecasting  (Q96–105)\nCh. 14 · Text classification  (Q106–113)\nCh. 15 · Language models and the Transformer  (Q114–123)\nCh. 16 · Text generation  (Q124–135)\nCh. 17 · Image generation  (Q136–144)\nCh. 18 · Best practices for the real world  (Q145–153)\nCh. 19 · The future of AI  (Q154–162)\nCh. 20 · Conclusions  (Q163–172)\n\nBook chapters at https://deeplearningwithpython.io/chapters/",
+  "quiz": [
+    {
+      "question": "Ch. 01 · Within AI, which field learns rules from examples, and which branch of that field learns many layers of representations? In that order, the two fields are  ________ and ________.",
+      "type": "blank",
+      "answer": "machine learning deep learning",
+      "explanation": "A spam filter can learn from labeled messages. A deep spam filter also learns intermediate representations, such as which word combinations signal a scam. Both belong to AI, a field that also includes systems built from hand-written rules."
+    },
+    {
+      "question": "Ch. 01 · A chess engine applies rules and searches legal moves without training on example games. Which branch of AI does this illustrate? ________.",
+      "type": "blank",
+      "answer": "symbolic AI",
+      "explanation": "The board, pieces, and legal moves have explicit meanings. A programmer can specify and combine the rules directly. A system can also combine this style of search with a learned model that scores positions."
+    },
+    {
+      "question": "Ch. 01 · A tutor shows a model recordings paired with the words that were spoken. Later the model transcribes a new recording. Learning from these input–target pairs is called ________.",
+      "type": "blank",
+      "answer": "supervised learning",
+      "explanation": "The transcript supplies the desired output for each recording. Comparing a prediction with that transcript tells the model which changes would improve it. At prediction time, the recording alone is enough to run the model."
+    },
+    {
+      "question": "Ch. 01 · You have recordings without transcripts. You hide part of each recording and train a model to recover it from the remaining audio. Which learning setup turns the recordings themselves into training targets? ________.",
+      "type": "blank",
+      "answer": "self-supervised learning",
+      "explanation": "The original recording supplies the missing segment as a target. You can create many training examples without paying someone to transcribe them. This is the same idea that lets a language model learn from the next word in ordinary text."
+    },
+    {
+      "question": "Ch. 01 · A digit classifier discovers useful strokes from pixels instead of receiving a hand-built stroke counter. What is the name for learning the features themselves? ________.",
+      "type": "blank",
+      "answer": "representation learning",
+      "explanation": "A representation describes the same input in coordinates that help with a task. A slight shift changes many raw pixels, yet a feature such as “closed loop near the top” can remain useful for recognizing a digit."
+    },
+    {
+      "question": "Ch. 01 · In the training loop, which component scores the mismatch between a prediction and its target, and which uses gradients to adjust the weights? Give the two names in order. ________ and ________.",
+      "type": "blank",
+      "answer": "loss function optimizer",
+      "explanation": "If a delivery model predicts 20 minutes and the trip takes 30, the loss turns that miss into a number. Differentiation shows how each weight affected the number. The optimizer uses those gradients to decide the weight update."
+    },
+    {
+      "question": "Ch. 01 · The last layer of an image model makes an error, and one training objective adjusts the edge, shape, and classification layers together. This is ________.",
+      "type": "blank",
+      "answer": "end-to-end learning",
+      "explanation": "The final task supplies feedback to every trainable stage. An early filter can become useful because it helps later layers identify the object, even though no one supplied target labels for edges."
+    },
+    {
+      "question": "Ch. 01 · One model predicts a label for a picture. Another learns a distribution from which it can draw new pictures. In that order, these are ________ and ________ models.",
+      "type": "blank",
+      "answer": "discriminative generative",
+      "explanation": "The first can answer “Which species is shown?” The second can produce another plausible animal image, optionally conditioned on a species. Generation requires modeling enough structure to construct an output, such as the arrangement of eyes and ears."
+    },
+    {
+      "question": "Ch. 02 · A batch of 32 RGB images uses an array with four axes and dimensions (32, 64, 64, 3). Which two tensor properties are four and (32, 64, 64, 3), respectively? ________ and ________.",
+      "type": "blank",
+      "answer": "rank shape",
+      "explanation": "Rank counts axes. Shape records the size of each axis, so the same rank can describe very different batches. The separate dtype property tells you whether each pixel value is stored as an integer or a floating-point number."
+    },
+    {
+      "question": "Ch. 02 · A batch of images has axes for examples, height, width, and channels. You combine height and width into one axis, then separately swap two axes in another copy. The two operations, in order, are ________ and ________.",
+      "type": "blank",
+      "answer": "reshaping transposing",
+      "explanation": "Reshaping 2 rows of 3 values into 3 rows of 2 preserves the sequence of values in a standard reshape. Transposing a matrix sends its entry at row i, column j to row j, column i. The two results can have the same shape and different contents."
+    },
+    {
+      "question": "Ch. 02 · A dense layer adds a bias of shape (8,) to activations of shape (32, 8). Which rule lets all 32 examples share that bias vector? ________.",
+      "type": "blank",
+      "answer": "broadcasting",
+      "explanation": "The last dimensions match. The missing leading dimension behaves like a size-one axis, so the same eight offsets apply to every row. The layer learns eight biases regardless of the batch size."
+    },
+    {
+      "question": "Ch. 02 · A batch has shape (32, 10), and a dense layer has a weight matrix of shape (10, 4). Which operation contracts the shared axis to produce (32, 4)? ________.",
+      "type": "blank",
+      "answer": "matrix multiplication",
+      "explanation": "Each of the four output features is a weighted sum of ten input features. The same four weight columns serve all 32 examples. Element-wise multiplication alone would leave the input features uncombined."
+    },
+    {
+      "question": "Ch. 02 · Two dense layers with only linear activations can be collapsed into one affine map. What property does inserting ReLU between them add? ________.",
+      "type": "blank",
+      "answer": "nonlinearity",
+      "explanation": "ReLU sends negative inputs to zero and keeps positive inputs. Different inputs can therefore activate different units. The network can fit a boundary with bends, even though each individual dense transformation starts with a weighted sum."
+    },
+    {
+      "question": "Ch. 02 · At the current weights, one vector holds the derivative of a scalar loss with respect to every weight. That vector is the ________.",
+      "type": "blank",
+      "answer": "gradient",
+      "explanation": "If one component is +3, increasing that weight a little raises the loss locally, with the other weights fixed. Gradient descent takes a small step in the opposite direction. A gradient describes the slope at the current point."
+    },
+    {
+      "question": "Ch. 02 · Which algorithm sends derivatives backward through the layers, and which calculus rule lets it combine local derivatives? In that order, they are ________ and the ________.",
+      "type": "blank",
+      "answer": "backpropagation chain rule",
+      "explanation": "If a weight changes a hidden activation and that activation changes the loss, multiply those two sensitivities. When a weight influences the loss through several paths, add their contributions. Reusing intermediate results makes the backward pass efficient."
+    },
+    {
+      "question": "Ch. 02 · A training loop samples a mini-batch, computes its gradient, and subtracts the learning rate times that gradient from the weights. Which basic optimizer is this? Give its abbreviation. ________.",
+      "type": "blank",
+      "answer": "SGD",
+      "explanation": "Stochastic gradient descent uses the batch as an estimate of the whole dataset. Backpropagation computes the gradient, and SGD uses it to change the weights. Successive batches can point in slightly different directions while still improving the model on average."
+    },
+    {
+      "question": "Ch. 02 · The gradient says which direction increases loss. In ordinary gradient descent, which hyperparameter sets the size of the move in the opposite direction? ________.",
+      "type": "blank",
+      "answer": "learning rate",
+      "explanation": "With a gradient of 2 and a learning rate of 0.1, a weight of 1 becomes 0.8. A very large step can jump across a valley and raise the loss. Very small steps may need many updates to cover the same ground."
+    },
+    {
+      "question": "Ch. 02 · With 1,000 training examples and groups of 100, training makes ten updates in one complete pass. What are a group used for one update and a complete pass called, in order? ________ and ________.",
+      "type": "blank",
+      "answer": "mini-batch epoch",
+      "explanation": "One mini-batch supplies the gradient estimate for one update. An epoch ends when all 1,000 examples have been used once in this setup. Changing the batch size changes the number of updates per epoch."
+    },
+    {
+      "question": "Ch. 03 · You want the same high-level model definition to run on TensorFlow, PyTorch, or JAX. Which multi-backend API in the book provides the layers and training interface? ________.",
+      "type": "blank",
+      "answer": "Keras",
+      "explanation": "The backend carries out tensor operations and differentiation. Keras supplies a common model interface. A custom layer written with keras.ops can use that interface across backends, while direct calls to one backend can tie the layer to it."
+    },
+    {
+      "question": "Ch. 03 · TensorFlow records tracked operations inside one context manager. PyTorch starts a reverse pass from a scalar loss with one tensor method. Give their short API names, in that order, without parentheses. ________ and ________.",
+      "type": "blank",
+      "answer": "GradientTape backward",
+      "explanation": "In TensorFlow, a tape can return the loss gradient for requested variables. In PyTorch, backward accumulates gradients on tracked leaf parameters. A usual PyTorch training loop clears old gradients before the next independent update."
+    },
+    {
+      "question": "Ch. 03 · A JAX training step takes parameters as arguments and returns updated parameters. Which kind of function makes this explicit handling of state natural? A ________.",
+      "type": "blank",
+      "answer": "pure function",
+      "explanation": "Its result depends on its arguments, with no hidden state changes. You can pass this function to transformations such as jax.grad or jax.jit. A random draw also takes an explicit key, so the source of randomness is visible."
+    },
+    {
+      "question": "Ch. 03 · Reusing the same JAX random key reproduces a draw. To obtain distinct reproducible random streams, which operation should a program use? ________.",
+      "type": "blank",
+      "answer": "key splitting",
+      "explanation": "Splitting one key yields new keys that can be passed to separate draws. Saving the starting key and repeating the same splitting pattern reproduces the experiment, which makes debugging much easier."
+    },
+    {
+      "question": "Ch. 03 · A numerical training step runs repeatedly with compatible input shapes. Which compilation technique can trade some first-call overhead for faster later calls? Give the three-letter abbreviation. ________.",
+      "type": "blank",
+      "answer": "JIT",
+      "explanation": "Just-in-time compilation lets a backend optimize a sequence of tensor operations as a unit. Timing only the first call includes compilation time. A fair speed comparison also measures repeated calls after warm-up."
+    },
+    {
+      "question": "Ch. 03 · When subclassing a Keras layer, which methods can create shape-dependent weights and then define the forward calculation? Give the two method names in order, without parentheses. ________ and ________.",
+      "type": "blank",
+      "answer": "build call",
+      "explanation": "A dense layer needs the input feature count to know the shape of its weight matrix. Keras can build it once when that shape is available. Each later call then uses the same stored weights to transform a new batch."
+    },
+    {
+      "question": "Ch. 03 · Which Keras methods configure the optimizer, loss, and metrics, then run training on batches? Give the method names in order, without parentheses. ________ and ________.",
+      "type": "blank",
+      "answer": "compile fit",
+      "explanation": "Compiling specifies how to score predictions and adjust weights. Fitting runs those operations on the supplied examples. If you provide validation data, Keras can also report held-out metrics after each epoch."
+    },
+    {
+      "question": "Ch. 03 · You have one labeled dataset for scoring a trained Keras model and one unlabeled dataset for getting its outputs. Which methods serve these jobs, in order? Use method names without parentheses. ________ and ________.",
+      "type": "blank",
+      "answer": "evaluate predict",
+      "explanation": "Evaluation can calculate a loss or an accuracy because it has the reference targets. Prediction returns outputs, such as one probability vector per example. Both normally run the model in inference mode."
+    },
+    {
+      "question": "Ch. 04 · Using the same apartment features, one supervised model predicts the neighborhood name and another predicts monthly rent in dollars. The two task families, in that order, are ________ and ________.",
+      "type": "blank",
+      "answer": "classification regression",
+      "explanation": "A neighborhood is a category, even if a database stores it as an integer ID. Rent is a quantity, so the size of a prediction error matters. The meaning of the target determines the task and guides the choice of output and loss."
+    },
+    {
+      "question": "Ch. 04 · A support message must have exactly one routing category. A photo may receive several independent tags. These are which two kinds of classification, in order? ________ and ________.",
+      "type": "blank",
+      "answer": "multiclass classification multilabel classification",
+      "explanation": "For routing, increasing one category's probability leaves less probability for the others. In a photo, “beach” and “sunset” can both be true. Multilabel models commonly use a separate binary prediction for each tag."
+    },
+    {
+      "question": "Ch. 04 · A classifier needs one probability for a yes/no label. Another needs a probability distribution over five exclusive classes. Which output activations fit these cases, in order? ________ and ________.",
+      "type": "blank",
+      "answer": "sigmoid softmax",
+      "explanation": "A sigmoid takes one logit to a number between zero and one. Softmax normalizes several logits together so their probabilities sum to one. When a loss accepts logits directly, it can apply the corresponding transformation internally."
+    },
+    {
+      "question": "Ch. 04 · Two classifiers both choose the correct class, but assign it probabilities of 0.51 and 0.99. Which standard classification loss rewards the more confident correct prediction? ________.",
+      "type": "blank",
+      "answer": "cross-entropy",
+      "explanation": "For one observed class, the loss is the negative logarithm of the probability assigned to that class. Accuracy counts both predictions as correct. Cross-entropy distinguishes them and penalizes a confident wrong answer especially strongly."
+    },
+    {
+      "question": "Ch. 04 · For three exclusive topics, one dataset stores the target as 2, and another as [0, 0, 1]. The first uses an integer label. What is the second encoding called? ________.",
+      "type": "blank",
+      "answer": "one-hot encoding",
+      "explanation": "Only the position for the correct class is one. Sparse categorical cross-entropy accepts the integer ID directly, while categorical cross-entropy accepts the one-hot vector. With matching predictions, both describe the same classification objective."
+    },
+    {
+      "question": "Ch. 04 · For unrestricted scalar regression, which final activation lets a single output represent any positive or negative value? ________.",
+      "type": "blank",
+      "answer": "linear",
+      "explanation": "With a linear output, a weighted sum can produce values such as −4.2 or 160. A bounded output such as sigmoid would force every prediction between zero and one unless you transformed the target."
+    },
+    {
+      "question": "Ch. 04 · One regression measure squares each error before averaging. Another averages absolute errors in the target's original units. Give their abbreviations in order. ________ and ________.",
+      "type": "blank",
+      "answer": "MSE MAE",
+      "explanation": "For errors of 1 and 5 dollars, MSE is 13 squared dollars and MAE is 3 dollars. Squaring gives the larger miss extra influence during fitting. MAE makes the reported size of a miss easier to interpret."
+    },
+    {
+      "question": "Ch. 04 · Before fitting a rent model, you subtract each feature's training mean and divide by its training standard deviation. Which preprocessing method is this? ________.",
+      "type": "blank",
+      "answer": "standardization",
+      "explanation": "Do this separately for features such as area and building age. Save the training statistics and reuse them on validation and future apartments. Recomputing them on a different split changes what the model sees and can leak information into evaluation."
+    },
+    {
+      "question": "Ch. 05 · A model keeps improving on its training examples. Its score on fresh examples stops improving. Which two ideas do these measurements track, in order? ________ and ________.",
+      "type": "blank",
+      "answer": "optimization generalization",
+      "explanation": "Optimization tells you how well training minimizes the chosen loss. Generalization asks whether the learned behavior carries over to new cases. A lookup table could score perfectly on stored examples and still be useless on the next one."
+    },
+    {
+      "question": "Ch. 05 · One model misses patterns even in the training set. A larger model fits training well while its validation error rises. These diagnoses, in order, are ________ and ________.",
+      "type": "blank",
+      "answer": "underfitting overfitting",
+      "explanation": "Start by checking whether the first model has enough capacity and whether optimization makes progress. For the second, examine the epoch of best validation performance, the amount of representative data, and the strength of regularization."
+    },
+    {
+      "question": "Ch. 05 · Real photographs occupy a structured subset of all possible pixel arrays. Which hypothesis helps explain why interpolating among familiar examples can work? ________.",
+      "type": "blank",
+      "answer": "manifold hypothesis",
+      "explanation": "Move a camera a few millimeters and the photo changes along a coordinated direction. Randomly changing every pixel usually gives noise. A model can exploit the lower-dimensional structure of plausible inputs, and its behavior far from that structure can be unreliable."
+    },
+    {
+      "question": "Ch. 05 · You have reserved one split for the final performance estimate. Which other split should guide model size, regularization, and the choice of epoch? The ________.",
+      "type": "blank",
+      "answer": "validation set",
+      "explanation": "Training examples fit weights. Validation examples guide design choices, so repeated tuning uses information from them too. An untouched test set gives a separate estimate after those choices have been made."
+    },
+    {
+      "question": "Ch. 05 · Only 240 independent labeled cases are available. You rotate which fold is held out, retrain on the remaining folds, and average the scores. This protocol is ________.",
+      "type": "blank",
+      "answer": "K-fold cross-validation",
+      "explanation": "With four equal folds, each run trains on 180 cases and scores 60. Every case serves once as validation. The variation across folds can also reveal how sensitive the score is to the particular examples held out."
+    },
+    {
+      "question": "Ch. 05 · A product photograph appears in training and a near-identical crop of the same photograph appears in testing. The inflated test score is an example of ________.",
+      "type": "blank",
+      "answer": "data leakage",
+      "explanation": "The split has given the model a preview of a test case. Assign all versions of an original image to the same split before creating crops. The resulting score better reflects performance on genuinely new photos."
+    },
+    {
+      "question": "Ch. 05 · Validation loss reaches its minimum at epoch 8 while training loss keeps falling through epoch 20. Which regularization technique uses this evidence to choose when to finish? ________.",
+      "type": "blank",
+      "answer": "early stopping",
+      "explanation": "Keep the weights from the best validation epoch. A patience setting can allow a few noisy epochs before stopping. Restoring the best weights matters because the final epoch reached after that wait can be worse."
+    },
+    {
+      "question": "Ch. 05 · Which weight penalties use absolute values and squared values, respectively? Give their short names in order. ________ and ________.",
+      "type": "blank",
+      "answer": "L1 L2",
+      "explanation": "Both add a cost for large weights to the training objective. L1 can encourage some coefficients to become zero. L2 applies a stronger pull as a coefficient grows and tends to spread influence more smoothly."
+    },
+    {
+      "question": "Ch. 05 · A layer randomly zeroes some activations on each training pass and uses the full layer at inference. Which regularizer does this describe? ________.",
+      "type": "blank",
+      "answer": "dropout",
+      "explanation": "The downstream units must learn to use different subsets of available signals. With inverted dropout, surviving training activations are scaled so their expected magnitude matches inference. Permanent deletion of units would produce a different model."
+    },
+    {
+      "question": "Ch. 05 · A classifier learns to recognize a watermark that happens to appear on most training photos of one class. What kind of relationship is it exploiting? A ________.",
+      "type": "blank",
+      "answer": "spurious correlation",
+      "explanation": "The watermark predicts the label in this dataset, but the relationship can disappear at deployment. Testing on images from a different photographer can reveal it. More representative data can address a shortcut that tuning layer widths would leave intact."
+    },
+    {
+      "question": "Ch. 06 · A company wants to “predict late deliveries.” You specify what counts as late, when the prediction is due, and which inputs will be available then. Which first step of an ML project is this? ________.",
+      "type": "blank",
+      "answer": "problem framing",
+      "explanation": "A warning issued at checkout can use the destination and order time. A warning issued after dispatch can also use the carrier's first scan. The decision time changes both the useful features and the value of the prediction."
+    },
+    {
+      "question": "Ch. 06 · You train a rental-price model only on luxury listings and deploy it on every apartment in a city. What data-collection problem does this illustrate? ________.",
+      "type": "blank",
+      "answer": "sampling bias",
+      "explanation": "Perfect labels cannot supply examples from missing price ranges or neighborhoods. Compare the intended population with the examples you actually collected, then measure performance across those groups."
+    },
+    {
+      "question": "Ch. 06 · An alert system must track the fraction of its alerts that are real and the fraction of all real incidents that it catches. Which two metrics measure these quantities, in order? ________ and ________.",
+      "type": "blank",
+      "answer": "precision recall",
+      "explanation": "If six of ten alerts are real, precision is 60%. If there were twelve real incidents, recall is 50%. A stricter threshold can reduce false alarms while missing more incidents. The cost of each error helps determine the operating point."
+    },
+    {
+      "question": "Ch. 06 · A factory rejects 2% of products. A classifier reports 98% accuracy. Which simple reference must it beat before that number supports using the model? The ________.",
+      "type": "blank",
+      "answer": "majority-class baseline",
+      "explanation": "Always accepting the product already gives 98% accuracy and catches no defects. Compare with that rule using a metric that reflects the cost of missed defects and unnecessary rejections."
+    },
+    {
+      "question": "Ch. 06 · A shipping dataset contains a blank parcel weight. You fill it using a value estimated on the training set and add a flag for the blank. The filling step is called ________.",
+      "type": "blank",
+      "answer": "imputation",
+      "explanation": "A typical training-set weight gives the model a usable number. The missingness flag preserves a different piece of information, such as whether a particular intake route often omits weight. Apply the same rule to future parcels."
+    },
+    {
+      "question": "Ch. 06 · Your classifier beats a simple baseline but still fits the training data poorly. You deliberately make it large enough to overfit before tuning regularization. Which model property are you testing? ________.",
+      "type": "blank",
+      "answer": "capacity",
+      "explanation": "A successful overfitting experiment shows the model class can express a strong fit to the training cases. Once that is established, validation results can guide how much capacity, weight penalty, or dropout to keep."
+    },
+    {
+      "question": "Ch. 06 · An image service trained with RGB inputs receives BGR inputs from its production decoder. What is the name for this training-to-deployment mismatch? ________.",
+      "type": "blank",
+      "answer": "training-serving skew",
+      "explanation": "The same photograph now produces different numbers for the same channel positions. Running a saved example through both preprocessing paths can expose the mismatch before you attribute the accuracy drop to the model."
+    },
+    {
+      "question": "Ch. 06 · A camera must recognize packages while disconnected, with a response in milliseconds. Which deployment choice puts the computation on the camera itself? ________.",
+      "type": "blank",
+      "answer": "on-device inference",
+      "explanation": "On-device inference avoids a network round trip and can keep raw images local. The model must fit the camera's memory and compute budget. A server can support a larger model when connectivity and latency permit it."
+    },
+    {
+      "question": "Ch. 06 · A model predicts which customer requests need escalation. A new service policy changes the correct escalation decision even for identical requests. What type of change should monitoring detect? ________.",
+      "type": "blank",
+      "answer": "concept drift",
+      "explanation": "The relationship between inputs and targets has changed. Input-volume dashboards alone could look normal. Collecting recent outcome labels and reviewing errors lets the team decide whether to relabel examples or retrain."
+    },
+    {
+      "question": "Ch. 07 · A Keras model with one straight chain of layers becomes a two-input model with a shared branch. Which two construction APIs fit the original chain and the new graph, respectively? ________ and ________.",
+      "type": "blank",
+      "answer": "Sequential Functional API",
+      "explanation": "Sequential expresses a stack where each layer feeds the next. The Functional API lets you connect named inputs, branch and merge tensors, and expose several outputs. The graph also lets you inspect or reuse intermediate activations."
+    },
+    {
+      "question": "Ch. 07 · A Keras model's forward computation needs custom control flow that is awkward to express as a fixed graph of layer connections. Which model-building approach lets you implement call yourself? ________.",
+      "type": "blank",
+      "answer": "model subclassing",
+      "explanation": "A subclass stores its layers as attributes and defines how to use them for an input. You gain control over the forward pass. A Functional model makes a fixed connectivity graph more directly available for inspection and reuse."
+    },
+    {
+      "question": "Ch. 07 · Two text inputs pass through the very same Keras encoder instance before their vectors are compared. Which design choice ensures the two branches learn one common mapping? ________.",
+      "type": "blank",
+      "answer": "weight sharing",
+      "explanation": "Calling one layer instance twice reuses its variables. Gradients from both inputs update the same encoder. Creating two new encoders with identical settings would create two independent sets of weights."
+    },
+    {
+      "question": "Ch. 07 · A model predicts both a ticket's department and its urgency. Which Keras compile argument controls how strongly each output's loss contributes to the shared objective? Give its Python name. ________.",
+      "type": "blank",
+      "answer": "loss_weights",
+      "explanation": "A total loss might be department loss plus 0.3 times urgency loss. Shared layers receive gradients from both terms. Reporting separate metrics lets you see whether one task improves at the expense of the other."
+    },
+    {
+      "question": "Ch. 07 · You want recall over an entire epoch, and the batches have very different numbers of positives. Which Keras object can accumulate true positives and missed positives before computing the ratio? A ________.",
+      "type": "blank",
+      "answer": "stateful metric",
+      "explanation": "Summing the counts and then dividing gives recall over all examples. Averaging per-batch recalls would give each batch equal weight even when one batch contains many more positives. Reset the counts at the next evaluation boundary."
+    },
+    {
+      "question": "Ch. 07 · Which two Keras callbacks can stop an unproductive run and write its best model to disk? Give their class names in that order. ________ and ________.",
+      "type": "blank",
+      "answer": "EarlyStopping ModelCheckpoint",
+      "explanation": "Monitor validation loss with both callbacks. EarlyStopping can end the run after a patience interval. ModelCheckpoint with save_best_only enabled preserves the best state seen so far, even if the final epoch is worse."
+    },
+    {
+      "question": "Ch. 07 · You want to compare training and validation curves across several Keras runs on one dashboard. Which visualization tool reads the logged histories? ________.",
+      "type": "blank",
+      "answer": "TensorBoard",
+      "explanation": "Curves can separate two runs that end with similar scores. For example, one may overfit after epoch 5 while another improves steadily through epoch 15. Distinct log directories keep the runs comparable."
+    },
+    {
+      "question": "Ch. 07 · You need a special gradient update for each batch but still want Keras fit, callbacks, and epoch reporting. Which Model method should you override? Give its Python name. ________.",
+      "type": "blank",
+      "answer": "train_step",
+      "explanation": "This is where you can compute the loss, obtain gradients, update parameters, and update metrics. Keeping fit as the outer loop preserves its existing orchestration. A fully manual loop is available when you also need control over that outer loop."
+    },
+    {
+      "question": "Ch. 08 · An edge detector uses the same small kernel at every location in an image. Which two design choices give convolution this ability? Give the choice about connections first and parameters second. ________ and ________.",
+      "type": "blank",
+      "answer": "local connectivity weight sharing",
+      "explanation": "The kernel reads a small neighborhood each time it is applied. Reusing its coefficients means one learned edge pattern can appear at many positions without a separate detector for each pixel location."
+    },
+    {
+      "question": "Ch. 08 · If an object shifts right and its feature map shifts right with it, which property does this illustrate? A classifier whose label stays the same under that shift instead shows invariance. The first property is ________.",
+      "type": "blank",
+      "answer": "translation equivariance",
+      "explanation": "A stride-one convolution shares the same computation across locations, away from border effects. Its feature map can track where an edge moved. Pooling or spatial aggregation can help the final classifier give a stable image-level label."
+    },
+    {
+      "question": "Ch. 08 · Stacking small convolutions lets a deeper unit respond to a larger region of the original image. What is that region called? The ________.",
+      "type": "blank",
+      "answer": "receptive field",
+      "explanation": "Two 3-by-3 stride-one convolutions give an interior unit a 5-by-5 receptive field. The first layer can detect short edges, and the second can combine them into a corner using a wider patch of the input."
+    },
+    {
+      "question": "Ch. 08 · Which two convolution settings specify the border added to an image and the spacing between adjacent kernel positions, in that order? ________ and ________.",
+      "type": "blank",
+      "answer": "padding stride",
+      "explanation": "For a 3-by-3 kernel at stride one, one pixel of padding on each side preserves height and width. Stride two samples positions two pixels apart and reduces output resolution. The two controls solve different shape problems."
+    },
+    {
+      "question": "Ch. 08 · A layer divides a feature map into 2-by-2 windows and keeps the strongest activation in each window. Which downsampling operation is this? ________.",
+      "type": "blank",
+      "answer": "max pooling",
+      "explanation": "With stride two, four nearby responses become one. A small motion may leave the local maximum unchanged, which helps image classification. The exact position of the strongest response within the window is lost."
+    },
+    {
+      "question": "Ch. 08 · You have few labeled photos and train on randomly shifted or cropped versions that preserve each label. Which technique are you using? ________.",
+      "type": "blank",
+      "answer": "data augmentation",
+      "explanation": "Each transformation encodes an assumption about what can change without changing the answer. A horizontal flip may be reasonable for a shoe photo and misleading for a printed letter. Evaluate on data that reflects the real task."
+    },
+    {
+      "question": "Ch. 08 · You train a new head on a frozen image backbone, then unfreeze its upper layers and train them gently. The two stages, in order, are ________ and ________.",
+      "type": "blank",
+      "answer": "feature extraction fine-tuning",
+      "explanation": "A frozen backbone gives the new head a stable input while its random weights learn. After that, a low learning rate can adapt high-level visual features to the new task while preserving useful pretrained structure."
+    },
+    {
+      "question": "Ch. 08 · A convolutional backbone produces a 7-by-7 grid for each channel. Which operation gives a classifier one value per channel by averaging across the entire grid? ________.",
+      "type": "blank",
+      "answer": "global average pooling",
+      "explanation": "With 256 channels, the head gets 256 features instead of the 12,544 a flattening operation would produce. The summary retains how strongly a feature appeared overall and discards its exact position, a useful trade-off for many image labels."
+    },
+    {
+      "question": "Ch. 09 · A ConvNet repeats blocks, combines small patterns into larger patterns, and applies learned detectors in many places. Which design principle names the organization from simple features to complex ones? ________.",
+      "type": "blank",
+      "answer": "hierarchy",
+      "explanation": "A block can be reused as a module throughout a network. Across depth, local contrast can become a texture, then part of an object. This hierarchy reduces the burden on any one layer to recognize a complex object directly from pixels."
+    },
+    {
+      "question": "Ch. 09 · A block outputs x + F(x). What connection carries x directly to the addition? A ________.",
+      "type": "blank",
+      "answer": "residual connection",
+      "explanation": "The branch only has to learn a useful change F(x). If a change is unnecessary, a near-zero branch preserves the input. The shortcut also gives gradients a short path through a deep stack."
+    },
+    {
+      "question": "Ch. 09 · A residual branch halves image width and doubles channel count. Which type of shortcut can line up both shapes before addition? A ________.",
+      "type": "blank",
+      "answer": "projection shortcut",
+      "explanation": "A 1-by-1 convolution with stride two can downsample the shortcut and map it to the required channels. Addition requires matching dimensions. Simply forwarding the original tensor cannot align these two branches."
+    },
+    {
+      "question": "Ch. 09 · Which layer normalizes channel activations with batch statistics during training and normally uses stored moving statistics at inference? ________.",
+      "type": "blank",
+      "answer": "batch normalization",
+      "explanation": "With learned scale and offset, the layer can choose the range that helps the next operation. Inference can process one image without estimating new batch statistics. This distinction matters when reusing a pretrained backbone."
+    },
+    {
+      "question": "Ch. 09 · In a depthwise separable convolution, which two operations first process spatial neighborhoods within each channel and then mix the channels? ________ and ________.",
+      "type": "blank",
+      "answer": "depthwise convolution pointwise convolution",
+      "explanation": "A depthwise filter scans each channel separately. A pointwise 1-by-1 convolution then combines channel responses at each location. Splitting the jobs generally uses fewer parameters than a full spatial convolution mixing every input and output channel."
+    },
+    {
+      "question": "Ch. 09 · An image architecture makes a sequence from fixed-size patches and uses self-attention to mix information across them. Which architecture is it? A ________.",
+      "type": "blank",
+      "answer": "Vision Transformer",
+      "explanation": "Each patch becomes a token, and position information tells the model where it came from. Attention can relate distant patches in a single layer. This gives the architecture a different built-in bias from a small convolutional kernel."
+    },
+    {
+      "question": "Ch. 10 · For one actual photo, you display the spatial response of each channel after the first and last convolutional blocks. What are these input-specific tensors called? ________.",
+      "type": "blank",
+      "answer": "intermediate activations",
+      "explanation": "Early maps often retain edges and recognizable spatial detail. Deeper maps may respond strongly only when a particular feature occurs. A quiet channel on one photo may respond strongly on a different photo."
+    },
+    {
+      "question": "Ch. 10 · You start from a noise image and adjust its pixels to increase a chosen filter's mean activation while keeping all weights fixed. Which optimization method are you applying to the input? ________.",
+      "type": "blank",
+      "answer": "gradient ascent",
+      "explanation": "The gradient tells you how to change pixels to raise the filter response. Iterating reveals a pattern the filter favors, such as a repeated texture. Ordinary network training instead adjusts weights to lower a task loss."
+    },
+    {
+      "question": "Ch. 10 · You want to locate the parts of one image that support a particular class score. Which gradient-based class activation mapping method produces the heatmap? ________.",
+      "type": "blank",
+      "answer": "Grad-CAM",
+      "explanation": "Differentiate that class score with respect to the last convolutional feature maps. Spatially averaged gradients weight the channels. Combining the maps and keeping positive contributions gives a coarse heatmap, which you can resize and overlay on the image."
+    },
+    {
+      "question": "Ch. 10 · A classifier sees both a kayak and a person. Keeping the photo fixed, you switch from explaining the kayak score to explaining the person score. Which quantity changes in the Grad-CAM gradient calculation? The ________.",
+      "type": "blank",
+      "answer": "target class score",
+      "explanation": "Each score can depend on different channels of the same feature maps. Gradients for “kayak” may emphasize the hull while gradients for “person” emphasize the upper body. A plain activation map for a fixed channel would be identical for both requests."
+    },
+    {
+      "question": "Ch. 10 · A bird classifier's heatmap highlights the feeder. You cover the feeder in matched photos and measure how the bird score changes. Which interpretation test is this? ________.",
+      "type": "blank",
+      "answer": "occlusion",
+      "explanation": "The heatmap suggests a region worth testing. Hiding that region and comparing score changes gives a direct sensitivity check. Trying several coverings and control regions helps distinguish reliance on the feeder from a reaction to a strange-looking patch."
+    },
+    {
+      "question": "Ch. 11 · In a street photo, one system labels every car pixel “car.” Another gives each individual car its own mask. Which two forms of segmentation are these, in order? ________ and ________.",
+      "type": "blank",
+      "answer": "semantic segmentation instance segmentation",
+      "explanation": "Touching cars may form one continuous region in a semantic mask because their class is identical. An instance mask preserves the boundary between individual cars. Panoptic segmentation combines class labels with separate identities for countable objects."
+    },
+    {
+      "question": "Ch. 11 · An input image is 128 by 128 with four possible classes per pixel. Which model output assigns a class to every pixel while preserving the image layout? A ________.",
+      "type": "blank",
+      "answer": "segmentation mask",
+      "explanation": "Before choosing labels, the model can produce a 128-by-128-by-4 score tensor. Taking the best class along the last axis gives a 128-by-128 mask. An image-level classifier would give only four scores for the whole picture."
+    },
+    {
+      "question": "Ch. 11 · A segmentation network compresses an image into spatial features and then expands those features back into a dense prediction. What are the two halves called, in order? ________ and ________.",
+      "type": "blank",
+      "answer": "encoder decoder",
+      "explanation": "Downsampling lets the encoder gather context about a region. Upsampling lets the decoder turn that context into many local decisions. The final resolution must align with the target mask so pixel positions correspond."
+    },
+    {
+      "question": "Ch. 11 · A learned layer increases spatial resolution by spreading each input activation over several output locations. Which operation does the chapter use for this part of the mask decoder? ________.",
+      "type": "blank",
+      "answer": "transposed convolution",
+      "explanation": "A strided convolution can shrink a grid, and a transposed convolution can expand one. Expansion gives the decoder a learnable way to place features on a finer grid. It cannot by itself recover every detail discarded during downsampling."
+    },
+    {
+      "question": "Ch. 11 · You resize a target mask containing class IDs 0, 1, and 2. Which interpolation rule preserves the discrete labels? ________.",
+      "type": "blank",
+      "answer": "nearest neighbor",
+      "explanation": "The new pixel copies one existing label. Averaging IDs across a boundary could introduce values with no class meaning, or even an unrelated class after rounding. Apply the same geometric transformation to the photograph and its mask."
+    },
+    {
+      "question": "Ch. 11 · A predicted region covers 40 pixels, the true region covers 30, and 20 pixels belong to both. Which overlap metric gives 20 / (40 + 30 − 20) = 0.4? ________.",
+      "type": "blank",
+      "answer": "intersection over union",
+      "explanation": "The denominator counts each pixel covered by either mask once. Correctly predicting a large background cannot inflate this foreground score. The same calculation also works for bounding boxes."
+    },
+    {
+      "question": "Ch. 11 · With Segment Anything, you click one place inside an object and another on a nearby distractor. What are these two kinds of point prompts, in order? ________ and ________ point prompts.",
+      "type": "blank",
+      "answer": "foreground background",
+      "explanation": "The positive click says what to include, and the negative click says what to exclude. SAM combines the prompt representation with an image embedding to decode a mask. The image embedding can be reused as you refine the clicks."
+    },
+    {
+      "question": "Ch. 12 · An object detector must answer both “What object is here?” and “Where is it?” Which two prediction tasks supply the category and box coordinates, in order? ________ and ________.",
+      "type": "blank",
+      "answer": "classification localization",
+      "explanation": "Two bicycles require two labeled boxes, even though the category is the same. Class predictions describe their identities as bicycles. The location predictions describe where each one appears in the image."
+    },
+    {
+      "question": "Ch. 12 · One detector proposes regions and then classifies them. Another predicts boxes and classes directly in one pass. In that order, these are called ________ and ________ detectors.",
+      "type": "blank",
+      "answer": "two-stage single-stage",
+      "explanation": "Faster R-CNN represents the proposal-based approach. YOLO and RetinaNet make dense predictions without a separate proposal-classification pass. The latter design is attractive when inference latency matters."
+    },
+    {
+      "question": "Ch. 12 · In the chapter's grid-based YOLO example, a bicycle crosses four grid cells. Which point determines the cell responsible for that bicycle? The ________.",
+      "type": "blank",
+      "answer": "box center",
+      "explanation": "Assign the target to the cell containing the ground-truth box center. The width and height can extend beyond that cell. The grid assigns responsibility without requiring each object to fit inside a tile."
+    },
+    {
+      "question": "Ch. 12 · In the chapter's YOLO loss, an empty cell should predict zero, while an occupied cell targets the overlap of its proposed box with the true box. Which predicted quantity is this training? ________.",
+      "type": "blank",
+      "answer": "box confidence",
+      "explanation": "A high value should indicate a plausible object with a well-placed box in this formulation. The class output separately scores possible object categories. Estimating overlap gives the confidence target a meaning beyond object presence alone."
+    },
+    {
+      "question": "Ch. 12 · Most cells of a detection grid contain no object. Which adjustment keeps their many easy confidence errors from dominating training? ________.",
+      "type": "blank",
+      "answer": "loss weighting",
+      "explanation": "Give empty-cell confidence terms a smaller weight and emphasize bounding-box placement for occupied cells. Otherwise a detector can reduce aggregate loss by predicting background almost everywhere."
+    },
+    {
+      "question": "Ch. 12 · A detector records x and width as fractions of image width, and y and height as fractions of image height. What coordinate convention is this? ________.",
+      "type": "blank",
+      "answer": "normalized coordinates",
+      "explanation": "A box center at x = 0.25 lies one quarter of the way across the image at any resolution. Pure resizing preserves that fraction. Cropping, padding, and flipping still require corresponding changes to the box coordinates."
+    },
+    {
+      "question": "Ch. 12 · One bicycle produces three high-scoring, heavily overlapping boxes of the same class. Which postprocessing step keeps the best one and suppresses duplicates above an overlap threshold? Give its abbreviation. ________.",
+      "type": "blank",
+      "answer": "NMS",
+      "explanation": "Non-maximum suppression selects a high-scoring box and compares the others with it using IoU. It can prevent one bicycle from being counted three times. An overly aggressive threshold can also suppress a real detection when two bicycles overlap."
+    },
+    {
+      "question": "Ch. 12 · Which RetinaNet component combines detailed shallow maps with coarse, semantically rich maps to detect objects at different sizes? Give the three-letter abbreviation. ________.",
+      "type": "blank",
+      "answer": "FPN",
+      "explanation": "A feature pyramid network passes high-level information down to higher-resolution maps through lateral connections. A small distant bicycle can use a finer map, while a large nearby one can be detected at a coarser level."
+    },
+    {
+      "question": "Ch. 13 · A forecaster consumes the last 48 hours and predicts a value 6 hours beyond the last observation. What are those two time spans called, in order? ________ and ________.",
+      "type": "blank",
+      "answer": "lookback window forecast horizon",
+      "explanation": "The lookback determines how much history the model can see. The horizon determines how far ahead the answer must lie. Moving the horizon from six hours to a week changes the task even if the input window stays the same."
+    },
+    {
+      "question": "Ch. 13 · You evaluate a forecaster by training on earlier dates, validating on later dates, and testing on the most recent dates. What is this split strategy called? A ________.",
+      "type": "blank",
+      "answer": "chronological split",
+      "explanation": "Randomly splitting overlapping windows can put near-copies of a window in training and testing. Build each example using only observations available at its issue time and fit any normalization statistics on training dates."
+    },
+    {
+      "question": "Ch. 13 · For a six-hour temperature forecast, your first model simply predicts the most recently observed temperature. Which baseline is this? ________.",
+      "type": "blank",
+      "answer": "persistence",
+      "explanation": "If the temperature changes slowly, the last reading can be surprisingly hard to beat. Measure that rule on the same timestamps, horizon, and error metric as the learned model to find out how much forecasting skill training adds."
+    },
+    {
+      "question": "Ch. 13 · One model applies the same update at every time step and carries a summary of the past into the next step. What is the architecture called? Give its abbreviation. ________.",
+      "type": "blank",
+      "answer": "RNN",
+      "explanation": "A recurrent neural network combines the current observation with its previous hidden state. The same parameters are reused as time advances, so the effect of a reading can depend on what came before it."
+    },
+    {
+      "question": "Ch. 13 · In a plain RNN, the learning signal from the last step can shrink at each backward step until an early cue barely receives an update. What problem is this? ________.",
+      "type": "blank",
+      "answer": "vanishing gradients",
+      "explanation": "If each of ten steps passes back half the arriving signal, about one thousandth remains at the start. Gated memory paths can preserve information and gradients across longer spans. This is one reason to try an LSTM or GRU."
+    },
+    {
+      "question": "Ch. 13 · An LSTM maintains one vector along a gated memory path and exposes another as the step's output. What are those two vectors called, in order? ________ and ________.",
+      "type": "blank",
+      "answer": "cell state hidden state",
+      "explanation": "The forget and input gates control what to retain and write in the cell state. The output gate selects what to expose from that memory in the hidden state. Both are passed to the next step, so the visible output and stored memory can differ."
+    },
+    {
+      "question": "Ch. 13 · Which gated recurrent layer uses reset and update gates and typically has fewer parameters than an LSTM with the same hidden size? Give the abbreviation. ________.",
+      "type": "blank",
+      "answer": "GRU",
+      "explanation": "A gated recurrent unit keeps one recurrent state. Its update gate mixes retained information with newly computed content. This gives the model a way to preserve an important reading across multiple time steps."
+    },
+    {
+      "question": "Ch. 13 · You stack two Keras recurrent layers. The second needs an input vector for every time step. Which option must the first enable? Give the Python argument name. ________.",
+      "type": "blank",
+      "answer": "return_sequences",
+      "explanation": "For a batch of 16 sequences with 24 steps and 32 hidden units, enabling this option gives shape (16, 24, 32). Returning only the final state would remove the time axis the second recurrent layer needs."
+    },
+    {
+      "question": "Ch. 13 · What kind of RNN reads a fully observed input window in both directions and combines the representations? A ________.",
+      "type": "blank",
+      "answer": "bidirectional RNN",
+      "explanation": "Both directions can use any reading already present in the window. This can be useful when classifying an entire sequence. For a live prediction at time t, allowing the backward pass to read observations after t would leak future information."
+    },
+    {
+      "question": "Ch. 13 · A recurrent layer needs regularization on hidden-to-hidden connections. Which technique masks part of the recurrent signal during training? ________.",
+      "type": "blank",
+      "answer": "recurrent dropout",
+      "explanation": "A mask can be reused across the time steps of one sequence, so the model does not face a completely different memory path at each step. Input dropout instead acts on the observations entering the layer."
+    },
+    {
+      "question": "Ch. 14 · A text pipeline normalizes a string, splits it into units, and assigns integer IDs to those units. What is the overall process called? ________.",
+      "type": "blank",
+      "answer": "tokenization",
+      "explanation": "The model sees a sequence of IDs. Standardization choices matter to the task. Lowercasing “US” and “us,” for example, can remove a distinction a topic classifier might use. Reuse the trained vocabulary at inference."
+    },
+    {
+      "question": "Ch. 14 · Characters give a small vocabulary and long sequences. Whole words give shorter sequences and a long tail of rare words. Which tokenization level balances these trade-offs? ________.",
+      "type": "blank",
+      "answer": "subword tokenization",
+      "explanation": "A rare word can be represented using familiar pieces, while frequent words can remain a single token. This reduces vocabulary growth and typically shortens the sequence compared with splitting every word into characters."
+    },
+    {
+      "question": "Ch. 14 · Which subword algorithm repeatedly merges the most frequent adjacent pair in training data until the vocabulary budget or stopping rule is reached? Give its abbreviation. ________.",
+      "type": "blank",
+      "answer": "BPE",
+      "explanation": "Byte-pair encoding learns an ordered set of merges. A frequent pair such as “e” followed by “r” can become one token. At inference the tokenizer applies the learned merges, so a new document does not redefine the vocabulary."
+    },
+    {
+      "question": "Ch. 14 · “Dogs chase cats” and “cats chase dogs” use the same words. Which unigram representation gives them identical features? ________.",
+      "type": "blank",
+      "answer": "bag of words",
+      "explanation": "Presence or occurrence counts ignore the order of tokens. This can work well when topic words carry the label. A sequence model can preserve order when changing who chased whom changes the answer."
+    },
+    {
+      "question": "Ch. 14 · You keep an unordered collection of adjacent two-token features so that “hardly useful” differs from “useful.” What are these features called? ________.",
+      "type": "blank",
+      "answer": "bigrams",
+      "explanation": "The feature for “hardly useful” records a local ordering that single-word features lose. The document is still represented as a collection, so relationships spanning many words remain hard to capture this way."
+    },
+    {
+      "question": "Ch. 14 · A token ID is an arbitrary index. Which learned representation maps each ID to a dense vector that can place useful words near each other? A ________.",
+      "type": "blank",
+      "answer": "word embedding",
+      "explanation": "The ID 200 is not twice as meaningful as ID 100. An embedding layer looks up a vector for each ID, and gradients update those vectors. The training objective determines which similarities their geometry captures."
+    },
+    {
+      "question": "Ch. 14 · A pretraining model averages nearby word embeddings and predicts the missing center word. Which method is this? Give its abbreviation. ________.",
+      "type": "blank",
+      "answer": "CBOW",
+      "explanation": "Continuous bag of words gets targets from the text itself. Similar words often fit similar neighborhoods, so their embeddings receive related updates. These vectors can then initialize a classifier when sentiment labels are scarce."
+    },
+    {
+      "question": "Ch. 14 · Short reviews in a batch are extended to the same length. Which two operations add the extra positions and tell the sequence model to ignore them, in order? ________ and ________.",
+      "type": "blank",
+      "answer": "padding masking",
+      "explanation": "Without a mask, a model could treat the filler as meaningful content. A mask keeps those positions out of supported sequence computations or pooling, so adding extra filler does not change the intended sentence representation."
+    },
+    {
+      "question": "Ch. 15 · A translation model first represents a source sentence, then produces a target sentence one token at a time conditioned on that representation. What is this model family called? ________.",
+      "type": "blank",
+      "answer": "sequence-to-sequence",
+      "explanation": "Source and target lengths can differ. For each output position, the model uses the source and the target prefix available so far. An encoder reads the source, and a decoder builds the translation."
+    },
+    {
+      "question": "Ch. 15 · During translation training, the decoder receives the true preceding target tokens even if its own earlier predictions would have been wrong. What is this technique called? ________.",
+      "type": "blank",
+      "answer": "teacher forcing",
+      "explanation": "For target “we agree STOP,” the decoder can receive “START we agree” and learn to predict “we agree STOP.” At generation time its own selected tokens form the next prefix, so an early mistake can change later inputs."
+    },
+    {
+      "question": "Ch. 15 · In attention, which vector asks for information, which is matched to that request, and which carries the content returned? Give the three singular terms in order. ________, ________, and ________.",
+      "type": "blank",
+      "answer": "query key value",
+      "explanation": "Think of looking up a record. The query describes what you need, the key determines how well each record matches, and the value carries its contents. Scaled query–key dot products pass through softmax to weight the sum of the values."
+    },
+    {
+      "question": "Ch. 15 · A decoder first mixes its target tokens with each other, then reads the encoder's source representations. Which two attention mechanisms perform these jobs, in order? ________ and ________.",
+      "type": "blank",
+      "answer": "self-attention cross-attention",
+      "explanation": "For self-attention, queries, keys, and values come from the target-side representations. In cross-attention, target queries select from source keys and values. A translated pronoun can attend directly to its source noun, even when the words are far apart."
+    },
+    {
+      "question": "Ch. 15 · One attention mask hides future target tokens, while another hides filler positions in variable-length batches. What are these masks called, in order? ________ and ________.",
+      "type": "blank",
+      "answer": "causal mask padding mask",
+      "explanation": "The causal mask blocks a shortcut to the answer during parallel training. A padding mask prevents artificial batch filler from acting like a real word. A decoder may need to enforce both restrictions in the same computation."
+    },
+    {
+      "question": "Ch. 15 · Which learned vectors are added to token embeddings so a Transformer can distinguish where otherwise identical tokens occur? ________.",
+      "type": "blank",
+      "answer": "positional embeddings",
+      "explanation": "The word “very” has the same input token embedding each time it appears. Positional embeddings add a location signal before attention. That gives the model information it can use to distinguish the first “very” from the second."
+    },
+    {
+      "question": "Ch. 15 · A Transformer with model width 512 uses eight attention heads, each with its own projections. What mechanism lets these heads learn different relationships at the same position? ________.",
+      "type": "blank",
+      "answer": "multi-head attention",
+      "explanation": "With an equal split, each head can use 64 features for its query and key. One head might connect a verb to its subject while another uses a nearby modifier. Their outputs are combined and projected back into the model representation."
+    },
+    {
+      "question": "Ch. 15 · Attention mixes information between positions. Which sublayer of a standard Transformer block then applies the same nonlinear transformation independently at each position? The ________.",
+      "type": "blank",
+      "answer": "feedforward network",
+      "explanation": "A common block expands the feature dimension, applies a nonlinearity, then projects back to the model width. Residual paths and layer normalization help train the stack. Together these parts let tokens exchange information and transform what they receive."
+    },
+    {
+      "question": "Ch. 15 · A bidirectional encoder such as RoBERTa learns to recover selected hidden tokens from both left and right context before it is adapted for classification. Which pretraining objective is this? ________.",
+      "type": "blank",
+      "answer": "masked language modeling",
+      "explanation": "In “the train arrived at the [MASK],” both sides of the gap may offer clues. The original text supplies the answer without manual labels. The pretrained encoder can then be fine-tuned with a small labeled classification dataset."
+    },
+    {
+      "question": "Ch. 15 · A standard attention layer forms a score for every pair of tokens. Doubling length from 100 to 200 multiplies the number of pair scores by four. What complexity in sequence length does that illustrate? ________.",
+      "type": "blank",
+      "answer": "quadratic complexity",
+      "explanation": "A 100-token sequence has 10,000 ordered pairs and a 200-token sequence has 40,000. The scores can be computed in parallel during training. The ability to parallelize changes runtime behavior without removing the growth in pair count."
+    },
+    {
+      "question": "Ch. 16 · A mini-GPT uses each text sequence as both input and source of targets shifted one position ahead. Which prediction task allows pretraining without handwritten labels? ________.",
+      "type": "blank",
+      "answer": "next-token prediction",
+      "explanation": "From “a bell rang,” the prefix “a bell” receives “rang” as its target. A causal mask prevents the model from reading that target in advance. Large text collections generate many such training signals automatically."
+    },
+    {
+      "question": "Ch. 16 · A language model appends a token to the prompt, feeds the longer prefix back in, and repeats until a stopping condition. What is this generation procedure called? ________.",
+      "type": "blank",
+      "answer": "autoregressive decoding",
+      "explanation": "During training the entire target text is already available, so many positions can be scored in parallel. During generation each chosen token becomes part of the input for the next choice. Two different early tokens can send the rest of the answer in different directions."
+    },
+    {
+      "question": "Ch. 16 · One decoder always takes the most probable next token. Another draws according to the probabilities. Which two selection strategies are these, in order? ________ and ________.",
+      "type": "blank",
+      "answer": "greedy decoding random sampling",
+      "explanation": "With probabilities 0.60 and 0.40, greedy decoding always takes the first option. Sampling sometimes takes the second, producing more varied continuations. The locally most probable choice also need not start the most probable whole sentence."
+    },
+    {
+      "question": "Ch. 16 · One sampling control sharpens or flattens probabilities by rescaling logits. Another keeps only a fixed number of top candidates. Give the two controls in order. ________ and ________.",
+      "type": "blank",
+      "answer": "temperature top-k",
+      "explanation": "Lowering a positive temperature concentrates probability on likely tokens. Setting k to 5 removes all but five tokens at that step and renormalizes their probabilities. Combining both controls lets you vary diversity within a restricted candidate set."
+    },
+    {
+      "question": "Ch. 16 · During generation, which cache stores the attention keys and values for previous tokens so the decoder can reuse them? Give its common short name. ________.",
+      "type": "blank",
+      "answer": "KV cache",
+      "explanation": "For a causal decoder, appending a new token leaves earlier positions' keys and values unchanged. Reusing them saves recomputation. The new query still attends to the stored prefix, and the cache takes more memory as the sequence grows."
+    },
+    {
+      "question": "Ch. 16 · A broadly pretrained language model continues training on examples pairing requests with good responses. Which adaptation stage teaches it to follow requests in a chosen format? ________.",
+      "type": "blank",
+      "answer": "instruction fine-tuning",
+      "explanation": "Pretraining can teach a model to continue the text of a question with another question. Supervised request–response examples reward producing the kind of answer you want. Prompt formatting should match the conventions used for this stage."
+    },
+    {
+      "question": "Ch. 16 · A frozen weight matrix gains a trainable update expressed as the product of two smaller matrices. Which parameter-efficient adaptation method is this? Give its abbreviation. ________.",
+      "type": "blank",
+      "answer": "LoRA",
+      "explanation": "A 1,000-by-1,000 full update has a million entries. A rank-8 update can use a 1,000-by-8 matrix and an 8-by-1,000 matrix, totaling 16,000 trainable entries. This also reduces the optimizer state needed for those updated weights."
+    },
+    {
+      "question": "Ch. 16 · People rank candidate answers, a reward model learns those preferences, and a policy is optimized using its scores. Which alignment method does this describe? Give its abbreviation. ________.",
+      "type": "blank",
+      "answer": "RLHF",
+      "explanation": "Reinforcement learning from human feedback turns comparisons into a training signal after text generation. A checker for arithmetic answers can supply a separate, directly verifiable reward. A human preference score alone does not establish factual accuracy."
+    },
+    {
+      "question": "Ch. 16 · A visual encoder turns image patches into vectors compatible with a language model's token representations. What type of language model can then answer questions about the image? A ________.",
+      "type": "blank",
+      "answer": "multimodal language model",
+      "explanation": "The decoder can attend to both visual representations and the text question. Training with paired images and captions or answers teaches how visual evidence connects to words. The image encoder provides information a text-only prompt would omit."
+    },
+    {
+      "question": "Ch. 16 · A manual changes weekly. At question time, the system finds relevant passages and gives them to an LLM alongside the question. Which method is this? Give its abbreviation. ________.",
+      "type": "blank",
+      "answer": "RAG",
+      "explanation": "Retrieval-augmented generation can expose the model to a manual revision without changing any weights. Retrieval quality and use of the evidence are separate failure points. Compare the answer with the retrieved passage to judge whether it is grounded."
+    },
+    {
+      "question": "Ch. 16 · A generated answer supplies a plausible article title, author, and date for a paper that does not exist. What is this failure called? ________.",
+      "type": "blank",
+      "answer": "hallucination",
+      "explanation": "Next-token training rewards continuations that fit the text. A made-up citation can match the pattern of a real citation remarkably well. Checking the actual publication gives a factual test that fluency or confident wording cannot provide."
+    },
+    {
+      "question": "Ch. 16 · When a model works through intermediate reasoning steps before producing an answer, which resource is it using more of after training? ________.",
+      "type": "blank",
+      "answer": "test-time compute",
+      "explanation": "Generating extra reasoning tokens, checking a candidate, or trying another solution spends computation on this particular problem. It can help on tasks with checkable answers. More computation alone does not certify that the result is correct."
+    },
+    {
+      "question": "Ch. 17 · A model encodes an image as a distribution, samples a point from it, and decodes that point to reconstruct the image. What type of autoencoder is this? Give its abbreviation. ________.",
+      "type": "blank",
+      "answer": "VAE",
+      "explanation": "A variational autoencoder learns a space of possible codes around each example. Training encourages those codes to occupy a region that is practical to sample. A decoder can then turn a new draw from the prior into an image."
+    },
+    {
+      "question": "Ch. 17 · A VAE must reproduce the input while keeping the encoded distribution near a chosen prior. Which two loss terms enforce those goals, in order? ________ and ________.",
+      "type": "blank",
+      "answer": "reconstruction loss KL divergence",
+      "explanation": "The first term asks whether the decoded image resembles the input. The second charges for departing from the prior, often a standard normal distribution. Their relative strength affects how much individual detail the code retains and how useful random codes are."
+    },
+    {
+      "question": "Ch. 17 · A VAE samples a code as mean + standard deviation × random noise. Which trick lets gradients reach the predicted mean and standard deviation through that sample? ________.",
+      "type": "blank",
+      "answer": "reparameterization trick",
+      "explanation": "Draw the noise independently, then apply a differentiable transformation using the encoder outputs. The sampled code is still random, but the path from the reconstruction loss back to the encoder parameters can now be differentiated."
+    },
+    {
+      "question": "Ch. 17 · In a noise-predicting diffusion model, which schedule maps a sampled time to the relative amounts of clean signal and noise in the training input? The ________.",
+      "type": "blank",
+      "answer": "diffusion schedule",
+      "explanation": "A nearly clean image and a nearly random image call for different corrections. Sample different times during training and tell the denoiser the noise level. The same trained network can then operate at many stages of generation."
+    },
+    {
+      "question": "Ch. 17 · A training pipeline corrupts a clean photo using a random array it just sampled. Which denoising objective uses that known array as the target? ________.",
+      "type": "blank",
+      "answer": "noise prediction",
+      "explanation": "The pipeline already knows every sampled noise value, so it can score the predicted noise directly. Given the noisy input and the mixing coefficients, that prediction also gives an estimate of the underlying clean image."
+    },
+    {
+      "question": "Ch. 17 · The chapter's image denoiser uses a contracting path, an expanding path, and connections between matching resolutions. Which architecture is this? A ________.",
+      "type": "blank",
+      "answer": "U-Net",
+      "explanation": "The low-resolution path provides broad context. Skip connections deliver fine spatial information from earlier stages to the corresponding decoder stages. Both matter when estimating local noise without losing the shapes in an image."
+    },
+    {
+      "question": "Ch. 17 · Which sampling process starts from random noise and repeatedly uses the denoiser to move to a lower noise level? ________.",
+      "type": "blank",
+      "answer": "reverse diffusion",
+      "explanation": "Training can jump straight to a chosen noise level because a clean reference image is available. Generation starts without a reference. Each estimate guides a smaller step until a coherent sample emerges."
+    },
+    {
+      "question": "Ch. 17 · A text-to-image system denoises a compressed representation and runs an image decoder only at the end. What kind of diffusion is this? ________.",
+      "type": "blank",
+      "answer": "latent diffusion",
+      "explanation": "Working on a smaller representation reduces the cost of repeated denoising. A text encoder supplies the prompt information, the denoiser constructs a latent image, and the decoder turns that latent into visible pixels."
+    },
+    {
+      "question": "Ch. 17 · You hold the initial noise fixed and blend the text embeddings for “ceramic teapot” and “glass teapot” in gradually changing proportions. What operation are you performing on the conditioning vectors? ________.",
+      "type": "blank",
+      "answer": "interpolation",
+      "explanation": "Each blend supplies a different conditioning vector to the same generation process. Keeping the noise fixed makes the effect of changing the prompt easier to see. Intermediate images may change smoothly even when their fine details vary."
+    },
+    {
+      "question": "Ch. 18 · Training learns weights from batches. You select layer width and learning rate using validation runs. What are the latter settings called? ________.",
+      "type": "blank",
+      "answer": "hyperparameters",
+      "explanation": "A tuner compares configurations from a search space you define. Searching hundreds of configurations gives that process many chances to fit quirks in the validation set. Save a separate test set for the final estimate."
+    },
+    {
+      "question": "Ch. 18 · One tuner models past trial results to choose the next configuration. Another starts many short trials and allocates longer runs to promising survivors. Name these strategies in order. ________ and ________.",
+      "type": "blank",
+      "answer": "Bayesian optimization Hyperband",
+      "explanation": "Bayesian optimization uses its estimate of performance and uncertainty to decide where to look next. Hyperband focuses on how much compute to spend on each candidate. Its early eliminations work best when short runs predict longer-run performance."
+    },
+    {
+      "question": "Ch. 18 · Three accurate classifiers make different mistakes. You average their predicted probabilities. Which technique exploits this diversity? ________.",
+      "type": "blank",
+      "answer": "ensembling",
+      "explanation": "If different models make errors on different examples, averaging can reduce individual errors. Three copies that produce identical probabilities give exactly the original prediction, so their agreement alone adds no benefit."
+    },
+    {
+      "question": "Ch. 18 · Four accelerators each hold a full copy of the model and process different examples. A larger model instead splits its weights across devices. The two strategies, in order, are ________ and ________.",
+      "type": "blank",
+      "answer": "data parallelism model parallelism",
+      "explanation": "Data parallelism increases how many examples the system can process together and requires synchronizing updates. Model parallelism distributes the parameter or computation footprint, making it possible to train a model that is too large for one device."
+    },
+    {
+      "question": "Ch. 18 · In synchronous data-parallel training, which collective operation can sum gradients from all replicas and return that same sum to each? ________.",
+      "type": "blank",
+      "answer": "all-reduce",
+      "explanation": "With equally sized replica batches, dividing the summed gradients by the replica count gives the global mean gradient. Each replica can apply the same update. Communication cost can limit gains as the device count rises."
+    },
+    {
+      "question": "Ch. 18 · A TPU spends too much time waiting for the host between tiny training steps. Which technique executes several steps in one compiled call to reduce this overhead? ________.",
+      "type": "blank",
+      "answer": "step fusing",
+      "explanation": "Doing multiple batches per execution amortizes host dispatch. Each batch can still cause its own optimizer update. Keras exposes this control through steps_per_execution, which can also change how often batch-level callbacks run."
+    },
+    {
+      "question": "Ch. 18 · Which training policy uses lower-precision computation for suitable operations while keeping selected variables or computations in higher precision? ________.",
+      "type": "blank",
+      "answer": "mixed precision",
+      "explanation": "For example, matrix multiplications can use float16 while master weights remain float32. Lower precision can reduce memory traffic and speed up supported hardware. Higher precision protects small accumulated updates and sensitive calculations."
+    },
+    {
+      "question": "Ch. 18 · Some float16 gradients round to zero. Which technique multiplies the loss before backpropagation and divides gradients back down before the update? ________.",
+      "type": "blank",
+      "answer": "loss scaling",
+      "explanation": "Multiplying by a factor such as 1,024 temporarily enlarges the gradients into a representable range. Unscaling restores their intended magnitude. The technique addresses numerical underflow without deliberately changing the effective learning rate."
+    },
+    {
+      "question": "Ch. 18 · A trained model maps floating-point weights to a limited set of integer levels with scale factors for deployment. What is this conversion called? ________.",
+      "type": "blank",
+      "answer": "quantization",
+      "explanation": "Int8 weights use roughly one quarter of the raw storage of float32 weights. Rounding can change predictions, and speed depends on available kernels. Compare quality and latency on the actual deployment device."
+    },
+    {
+      "question": "Ch. 19 · In the authors' distinction, one model handles nearby variants of a familiar task and another adapts to genuinely unfamiliar task rules. What are these two levels of generalization called, in order? ________ and ________.",
+      "type": "blank",
+      "answer": "local generalization extreme generalization",
+      "explanation": "Changing the lighting in a familiar sorting task tests local variation. Inferring a new sorting rule from a few examples also tests adaptation. The chapter argues that a high score on the familiar task alone cannot settle how adaptable the system is."
+    },
+    {
+      "question": "Ch. 19 · The chapter argues that intelligence should be judged by how efficiently a system converts experience and prior knowledge into new skills. Which efficiency does it emphasize? ________.",
+      "type": "blank",
+      "answer": "skill-acquisition efficiency",
+      "explanation": "Two systems can reach the same score after very different amounts of preparation. Asking what each needed to learn a fresh task makes that difference visible. The authors propose this as a way to distinguish practiced skill from adaptability."
+    },
+    {
+      "question": "Ch. 19 · The authors propose that novel situations can often be understood by recombining familiar abstract pieces. Which named hypothesis uses a changing pattern built from the same pieces as its image? The ________.",
+      "type": "blank",
+      "answer": "kaleidoscope hypothesis",
+      "explanation": "A new visual puzzle might combine reflection, counting, and containment. Each operation can be familiar even when their combination is new. In this hypothesis, acquiring reusable abstractions makes recombination possible."
+    },
+    {
+      "question": "Ch. 19 · Which benchmark family presents a few input–output grid pairs and asks a solver to apply the inferred transformation to a new grid? ________.",
+      "type": "blank",
+      "answer": "ARC-AGI",
+      "explanation": "Each puzzle supplies a small set of demonstrations. A candidate rule must account for those pairs and transfer to a held-out input. The chapter uses these tasks to discuss adaptation and the resources spent per solution."
+    },
+    {
+      "question": "Ch. 19 · The chapter discusses solvers that use a new puzzle's demonstrations to search, refine a hypothesis, or update a small model before answering. What is this called? ________.",
+      "type": "blank",
+      "answer": "test-time adaptation",
+      "explanation": "The solver uses information about this specific task during inference. Extra computation is useful when it helps identify a rule that fits the demonstrations. Checking the same rule on a new input is essential to the test."
+    },
+    {
+      "question": "Ch. 19 · One kind of analogy relies on similarity in a learned space. Another relies on an exact match of relationships or operations. What two adjectives do the authors use for these analogies, in order? ________ and ________.",
+      "type": "blank",
+      "answer": "value-centric program-centric",
+      "explanation": "Recognizing that two handwritten symbols look alike uses graded similarity. Recognizing that two puzzles both require reversing an order can succeed even if the symbols look entirely different. The chapter argues for combining the two abilities."
+    },
+    {
+      "question": "Ch. 19 · A solver searches for a short executable rule that satisfies several input–output examples. Which approach is this? ________.",
+      "type": "blank",
+      "answer": "program synthesis",
+      "explanation": "A candidate such as “reflect the shape, then recolor its outline” can be executed and compared with the examples. Many programs can fit limited data. Search order, useful primitives, and additional tests affect which rule wins."
+    },
+    {
+      "question": "Ch. 19 · In the authors' proposed hybrid approach, a neural network ranks promising program fragments before a symbolic engine tests them. What kind of search does this produce? ________.",
+      "type": "blank",
+      "answer": "neural-guided search",
+      "explanation": "The learned component can prioritize plausible moves without enumerating every candidate first. An executable checker then gives exact feedback about a proposed rule. The two components take on different parts of the inference problem."
+    },
+    {
+      "question": "Ch. 19 · A chatbot writes “I understand” fluently, and an observer infers that it understands in exactly the same way a person does. What interpretive error does the chapter caution against? ________.",
+      "type": "blank",
+      "answer": "anthropomorphism",
+      "explanation": "Fluent language is an observable behavior. Human-like inner mechanisms are a further inference. Testing whether the answer survives a paraphrase, a new example, or a changed rule gives evidence about the underlying capability."
+    },
+    {
+      "question": "Ch. 20 · A crop disease appears anywhere in a leaf photo, while a demand forecast depends on the order of earlier sales. What term describes the assumptions about structure that guide the architecture choice? ________.",
+      "type": "blank",
+      "answer": "inductive bias",
+      "explanation": "A convolution shares local detectors across an image. A recurrent model carries state through time, and attention can relate distant positions. Matching these assumptions to the problem narrows the set of patterns the learner has to discover from data."
+    },
+    {
+      "question": "Ch. 20 · The same store supplies a fixed-length row of numeric features and a shelf photograph. Which network families connect all features in a row and slide learned kernels over a photo, respectively? Use the short plural names. ________ and ________.",
+      "type": "blank",
+      "answer": "dense networks ConvNets",
+      "explanation": "The feature row has named columns with different meanings, so a fully connected network can mix them directly. The photograph has spatial neighborhoods where the same visual patterns can recur, which a convolution exploits."
+    },
+    {
+      "question": "Ch. 20 · A warehouse needs the number of visible cartons and the precise fraction of the floor they cover. Which two vision outputs supply object locations and pixel coverage, in that order? ________ and ________.",
+      "type": "blank",
+      "answer": "bounding boxes segmentation masks",
+      "explanation": "Count one detection per carton after duplicate handling. A rectangle also includes space around its object, so adding box areas can distort coverage. Take the union of the carton-mask pixels to measure the actual covered fraction of the image."
+    },
+    {
+      "question": "Ch. 20 · A team has millions of unlabeled documents and a few hundred labeled support tickets. Which two training stages use those resources in that order? ________ and ________.",
+      "type": "blank",
+      "answer": "pretraining fine-tuning",
+      "explanation": "A text objective can extract a training target from every document. The smaller labeled set can then adapt those representations to ticket routing. Use held-out tickets to judge whether that transfer helps the real decision."
+    },
+    {
+      "question": "Ch. 20 · A broadly pretrained model can be adapted for classification, question answering, and other downstream tasks. What umbrella term describes this reusable starting point across language, image, and other modalities? A ________.",
+      "type": "blank",
+      "answer": "foundation model",
+      "explanation": "The up-front training cost is shared across many uses. A downstream team can adapt the model or condition it with examples. Each application still needs its own evaluation because broad training does not specify what counts as success on a particular task."
+    },
+    {
+      "question": "Ch. 20 · Which Transformer layouts match a bidirectional text classifier, a source-conditioned translator with two stacks, and a GPT-style text completer? Give the three hyphenated layout names in order. ________, ________, and ________.",
+      "type": "blank",
+      "answer": "encoder-only encoder-decoder decoder-only",
+      "explanation": "The classifier can read the entire input before choosing a label. The translator encodes the source once and lets its decoder attend to it as it writes. GPT uses a single causal decoder stack to extend a prefix."
+    },
+    {
+      "question": "Ch. 20 · One generator grows an answer by choosing the next token. Another refines a noisy image in successive steps. Which two generation mechanisms are these, in order? ________ and ________.",
+      "type": "blank",
+      "answer": "autoregression diffusion",
+      "explanation": "For an autoregressive model, the current partial answer determines the distribution for the next token. For a diffusion model, a noise-level-conditioned update refines a whole representation. Both learn from data, but the state they update during generation is different."
+    },
+    {
+      "question": "Ch. 20 · A parcel classifier scores highly on last year's camera images but fails on a new camera. What kind of evaluation deliberately tests performance across such a change? ________.",
+      "type": "blank",
+      "answer": "out-of-distribution evaluation",
+      "explanation": "Hold out an entire camera type, site, or time period to match the change you care about. An average score from randomly mixed historical images answers a narrower question. The result helps decide whether you need broader training data or a different model."
+    },
+    {
+      "question": "Ch. 20 · The closing chapters imagine a system that retains useful modules across tasks and recombines them as it encounters new problems. What long-term learning goal is this? ________.",
+      "type": "blank",
+      "answer": "lifelong learning",
+      "explanation": "Suppose a system learns to recognize objects on one task and to compare sizes on another. Reusing both skills on a third task would reduce how much it must learn from scratch. Retaining earlier abilities as new ones are acquired is part of the challenge."
+    },
+    {
+      "question": "Ch. 20 · You want a public task with a held-out leaderboard to practice evaluation, and a preprint collection to follow new methods. Which two resources does the closing chapter suggest for these roles, in order? ________ and ________.",
+      "type": "blank",
+      "answer": "Kaggle arXiv",
+      "explanation": "A leaderboard gives you a common task and metric on which to compare ideas. A preprint can suggest an experiment. Reproduce its simplest claim against your own baseline and compare error patterns before drawing conclusions."
+    }
+  ]
+}
